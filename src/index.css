@@ -130,3 +130,31 @@ button:disabled, button[aria-disabled="true"] { opacity: 0.65; cursor: default; 
 .tur360-cerceve { position: relative; aspect-ratio: 16 / 9; min-height: 320px; margin-top: 1rem; border-radius: 0.5rem; overflow: hidden; background: #213c35; }
 .tur360-cerceve iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .tur360-baslat { display: block; margin-top: 1rem; min-height: 44px; }
+
+/* İçerik yönetimi */
+.ust-cubuk { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.yonetim { max-width: 54rem; margin-inline: auto; overflow-wrap: anywhere; }
+.yonetim-notu { margin-block: 1.5rem; padding: 1rem; border-left: 4px solid #235c4b; background: #e9efe5; }
+.yonetim-listesi { list-style: none; padding: 0; }
+.yonetim-listesi > li { padding: 1.25rem; margin-block: 1rem; border: 1px solid #a9b9ad; border-radius: 0.5rem; background: white; }
+.yonetim-eylemler { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+.yonetim-eylemler a { padding-block: 0.65rem; }
+.yonetim button { white-space: normal; overflow-wrap: anywhere; max-width: 100%; }
+.form-bolumu { border-top: 1px solid #a9b9ad; margin-top: 2rem; padding-top: 1rem; }
+.form-bolumu > legend { font-size: 1.5rem; }
+.alt-form { margin-block: 1rem; padding: 1rem; border: 1px solid #a9b9ad; border-radius: 0.5rem; background: #fff; }
+.form-alani { display: flex; flex-direction: column; gap: 0.4rem; margin-block: 1rem; font-weight: 600; min-width: 0; }
+.yonetim input, .yonetim textarea, .yonetim select { display: block; width: 100%; min-width: 0; max-width: 100%; min-height: 44px; padding: 0.65rem; font: inherit; color: #213c35; background: #fff; border: 1px solid #52665b; border-radius: 0.3rem; }
+.yonetim textarea { resize: vertical; }
+.yonetim input[readonly] { background: #eef1ec; }
+.yonetim [aria-invalid="true"] { border: 2px solid #92330e; }
+.alan-hatasi { color: #92330e; font-weight: 650; }
+.hata-ozeti { border: 2px solid #92330e; background: #fff0e5; padding: 1rem; margin-top: 1.5rem; }
+.hata-ozeti a { color: #7e2c0b; }
+.koordinatlar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.form-sonu { margin-top: 2rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.dosya-secici { cursor: pointer; }
+.dosya-secici span { width: fit-content; padding: 0.65rem 1rem; border: 1px solid #235c4b; border-radius: 0.4rem; background: #235c4b; color: white; }
+.yonetim .dosya-secici input { position: absolute; width: 1px; height: 1px; min-height: 0; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); border: 0; }
+.dosya-secici:focus-within span { outline: 3px solid #a24c15; outline-offset: 4px; }

@@ -3,14 +3,100 @@
   "ad": "II. Murad (Muradiye) Külliyesi",
   "sehir": "Bursa",
   "ilce": "Osmangazi",
-  "donem": "",
-  "vakif": "",
-  "ozet": "İçerik hazırlanıyor.",
-  "tarihce": "",
-  "dogrulama": "temsili",
+  "donem": "Erken Osmanlı · H. 828-830 / M. 1425-1426",
+  "vakif": "Sultan II. Murad vakfı (14 Temmuz 1430 tarihli vakfiye)",
+  "ozet": "Bursa'daki son selatin külliyesi: cami, medrese, hamam, imaret, sıbyan mektebi, çeşme ve on üç türbeden oluşan bir vakıf yerleşkesi.",
+  "tarihce": "Muradiye Külliyesi, Bursa'daki son selatin külliyesidir. Sultan II. Murad tarafından yaptırılmış; caminin kapısındaki kitabeye göre inşaata H. 828 / M. 1425'te başlanmış, H. 830 / M. 1426'da tamamlanmıştır. Bu yönüyle Osmanlı mimarisinde en kısa sürede tamamlanan sultan külliyelerinden biridir. Külliye; cami, medrese, hamam, imaret, sıbyan mektebi, çeşme ve Osmanlı hanedanı üyelerine ait on üç türbeden oluşur. Sultan II. Murad, 14 Temmuz 1430 tarihli vakfiyesinde külliyenin giderlerini karşılamak üzere birçok mülkü vakfetmiştir. Türbelerin ilki 1442'de, sonuncusu 1573'te inşa edildiği için Ahmet Hamdi Tanpınar Muradiye için \"sabrın acı meyvesi\" ifadesini kullanmıştır. Külliye 2014 yılında UNESCO Dünya Mirası olarak tescillenmiştir.",
+  "dogrulama": "dogrulanmis",
   "kapakGorsel": "",
   "gorseller": [],
-  "bilgiNoktalari": [],
-  "test": [],
-  "kaynaklar": []
+  "bilgiNoktalari": [
+    {
+      "id": "cami",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Muradiye Camii",
+      "metin": "Külliyenin ana yapısıdır. Tabhaneli/zaviyeli plan şemasıyla inşa edilmiştir. Mihrap önü duvarlarındaki zümrüt yeşili çiniler, Yeşil Cami'de çalışan Tebrizli usta grubunun burada da görev aldığını gösterir.",
+      "kaynakId": "mur-s115"
+    },
+    {
+      "id": "medrese",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Medrese",
+      "metin": "Külliyenin batı ucundadır. 17 × 17 m revaklı iç avlusu, tek eyvanı ve on altı hücresiyle bir Erken Osmanlı Dönemi medresesidir.",
+      "kaynakId": "mur-s120"
+    },
+    {
+      "id": "imaret",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "İmaret",
+      "metin": "Caminin kuzeydoğusunda, 13 × 40 m ölçülerindedir. İçinde fırınlardan bazı izler, tahıl ve yağ küpleri bulunur. Kiler, odun ve un ambarları günümüze ulaşmamıştır.",
+      "kaynakId": "mur-s124"
+    },
+    {
+      "id": "hamam",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Hamam",
+      "metin": "Medresenin batısındadır ve 1426'da külliyenin parçası olarak inşa edilmiştir. Soğukluk, sıcaklık, iki halvet odası ve külhandan oluşan sade bir plana sahiptir.",
+      "kaynakId": "mur-s126"
+    },
+    {
+      "id": "ii-murad-turbesi",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Sultan II. Murad Türbesi",
+      "metin": "Türbeler topluluğunun en görkemli yapısıdır. Osmanlı padişah mezarları arasında en sade türbe olarak inşa edilmiştir ve Bursa'da sanduka veya lahit kullanılmayan tek padişah mezarıdır.",
+      "kaynakId": "mur-s130"
+    },
+    {
+      "id": "cem-sultan-turbesi",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Cem Sultan Türbesi",
+      "metin": "Önce Fâtih Sultan Mehmed'in oğlu Şehzade Mustafa için yapılmıştır. Napoli'de vefat eden Cem Sultan'ın naaşı 1499'da Bursa'ya getirilip buraya defnedilince türbe onun adıyla anılmaya başlanmıştır.",
+      "kaynakId": "mur-s141"
+    }
+  ],
+  "test": [
+    {
+      "soru": "Sultan II. Murad'ın külliye için düzenlettiği vakfiyenin tarihi nedir?",
+      "secenekler": ["29 Mayıs 1453", "14 Temmuz 1430", "1 Ocak 1500", "23 Nisan 1426"],
+      "dogru": 1,
+      "aciklama": "Sultan II. Murad, 14 Temmuz 1430 tarihli vakfiyesinde külliyenin giderlerini karşılamak üzere birçok mülkü vakfetmiştir.",
+      "kaynakId": "mur-s111"
+    },
+    {
+      "soru": "Muradiye Külliyesi'nde kaç türbe bulunur?",
+      "secenekler": ["3", "7", "13", "20"],
+      "dogru": 2,
+      "aciklama": "Külliyede Osmanlı hanedanı üyeleri ve saray mensuplarına ait on üç türbe vardır.",
+      "kaynakId": "mur-s111"
+    },
+    {
+      "soru": "Sultan II. Murad Türbesi'ni Bursa'daki diğer padişah mezarlarından ayıran özellik nedir?",
+      "secenekler": ["Çini kaplı olması", "Sanduka veya lahit kullanılmaması", "İki katlı olması", "Mermerden yapılması"],
+      "dogru": 1,
+      "aciklama": "Türbe, Bursa'da sanduka veya lahit kullanılmayan tek padişah mezarıdır.",
+      "kaynakId": "mur-s130"
+    }
+  ],
+  "kaynaklar": [
+    { "id": "mur-s111", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"", "sayfa": "111" },
+    { "id": "mur-s115", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"", "sayfa": "115, 117" },
+    { "id": "mur-s120", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"", "sayfa": "120" },
+    { "id": "mur-s124", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"", "sayfa": "124" },
+    { "id": "mur-s126", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"", "sayfa": "126" },
+    { "id": "mur-s130", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"", "sayfa": "130" },
+    { "id": "mur-s141", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"", "sayfa": "141" },
+    { "id": "mur-tarihce", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"", "sayfa": "111, 113, 118" }
+  ]
 }

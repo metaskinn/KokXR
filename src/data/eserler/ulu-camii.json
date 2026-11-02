@@ -3,14 +3,81 @@
   "ad": "Bursa Ulu Camii",
   "sehir": "Bursa",
   "ilce": "Osmangazi",
-  "donem": "",
-  "vakif": "",
-  "ozet": "İçerik hazırlanıyor.",
-  "tarihce": "",
-  "dogrulama": "temsili",
+  "donem": "Erken Osmanlı · H. 802 / M. 1399-1400",
+  "vakif": "Yıldırım Bayezid evkafı",
+  "ozet": "Yıldırım Bayezid'in yaptırdığı, yirmi kubbesi ve hat levhalarıyla Osmanlı'nın Bursa'daki ilk büyük camisi.",
+  "tarihce": "Ulu Camii, Osmanlı'nın Bursa'da inşa ettirdiği ilk büyük camidir ve altı yüzyıl boyunca şehrin en büyük camisi olarak kalmıştır. Sultan Yıldırım Bayezid tarafından yaptırılmış; minberdeki kitabeye göre H. 802 / M. 1399-1400 yılında tamamlanmıştır. Mimarı kesin olarak bilinmemektedir. Yaklaşık 55 × 69 m boyutlarındaki yapı, yirmi kubbesi ve 3500 m²'lik ibadet alanıyla \"ulucami\" formunun en büyük ve en tanınan örneğidir. Duvar ve payelerindeki hat yazıları nedeniyle adeta bir hat sanatı müzesidir. Evliya Çelebi Seyahatnâme'sinde camiyi \"Bursa'nın Ayasofyası\" olarak tanımlamıştır. Cami en büyük onarımını 1855 depreminden sonra geçirmiş ve 1862'de yeniden ibadete açılmıştır.",
+  "dogrulama": "dogrulanmis",
   "kapakGorsel": "",
   "gorseller": [],
-  "bilgiNoktalari": [],
-  "test": [],
-  "kaynaklar": []
+  "bilgiNoktalari": [
+    {
+      "id": "minber",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Kündekâri minber",
+      "metin": "Minber, kündekâri tekniğiyle çivi, tutkal veya herhangi bir bağlayıcı kullanılmadan, birbirine geçme parçalardan yapılmıştır. Usta kitabesinde Hâc Muhammed bin Abdülazîz ibnü'd-Dakkî'nin adı yazar.",
+      "kaynakId": "ulu-s48"
+    },
+    {
+      "id": "sadirvan",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Cami içindeki şadırvan",
+      "metin": "Caminin merkezinde havuzlu bir şadırvan bulunur. Üzerindeki kubbenin ortası açık bırakılarak iç mekânın doğal ışık alması ve havalandırılması sağlanmıştır.",
+      "kaynakId": "ulu-s60"
+    },
+    {
+      "id": "hat",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Hat levhaları",
+      "metin": "Camide duvarlara nakşedilmiş veya levha hâlinde yaklaşık yüz yetmiş hat eseri bulunur. Payelerin her yüzüne celi sülüs ve kûfi hatlarla esmâ-i hüsnâdan örnekler yazılmıştır.",
+      "kaynakId": "ulu-s57"
+    },
+    {
+      "id": "guduk-minare",
+      "gorsel": "",
+      "x": 0,
+      "y": 0,
+      "baslik": "Güdük Minare",
+      "metin": "Batıdaki minareyi Yıldırım Bayezid yaptırmıştır. Doğudaki minare ilk inşada tamamlanmadığı ve bir süre yarım kullanıldığı için \"Güdük Minare\" olarak anılmıştır.",
+      "kaynakId": "ulu-s63"
+    }
+  ],
+  "test": [
+    {
+      "soru": "Bursa Ulu Camii'nin çatısını kaç kubbe örter?",
+      "secenekler": ["9", "12", "20", "24"],
+      "dogru": 2,
+      "aciklama": "Cami yirmi kubbesiyle dikkat çeker; bu kubbeler on iki kare paye üzerine oturur.",
+      "kaynakId": "ulu-s44"
+    },
+    {
+      "soru": "Ulu Camii'nin minberi hangi teknikle yapılmıştır?",
+      "secenekler": ["Çini mozaik", "Kündekâri", "Kalem işi", "Taş oyma"],
+      "dogru": 1,
+      "aciklama": "Minber, kündekâri tekniğiyle çivi veya tutkal kullanılmadan, birbirine geçme parçalardan yapılmıştır.",
+      "kaynakId": "ulu-s48"
+    },
+    {
+      "soru": "Evliya Çelebi, Ulu Camii'yi neye benzetmiştir?",
+      "secenekler": ["Bursa'nın Ayasofyası", "Bursa'nın incisi", "Kahkaha Kalesi", "Hat müzesi"],
+      "dogru": 0,
+      "aciklama": "Evliya Çelebi, Seyahatnâme'sinde Ulu Camii'yi \"Bursa'nın Ayasofyası\" olarak tanımlamıştır.",
+      "kaynakId": "ulu-s33"
+    }
+  ],
+  "kaynaklar": [
+    { "id": "ulu-s33", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"", "sayfa": "33" },
+    { "id": "ulu-s44", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"", "sayfa": "44" },
+    { "id": "ulu-s48", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"", "sayfa": "48" },
+    { "id": "ulu-s57", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"", "sayfa": "46, 57" },
+    { "id": "ulu-s60", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"", "sayfa": "60" },
+    { "id": "ulu-s63", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"", "sayfa": "63" },
+    { "id": "ulu-tarihce", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"", "sayfa": "33, 34, 35, 44, 66" }
+  ]
 }

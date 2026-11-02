@@ -195,6 +195,152 @@
     {
       "id": "foto-arsiv",
       "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)"
+    },
+    {
+      "id": "ulu-s46",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "sayfa": "46"
+    },
+    {
+      "id": "ulu-s54",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "sayfa": "54"
+    },
+    {
+      "id": "ulu-s72",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "sayfa": "72"
     }
-  ]
+  ],
+  "tur": {
+    "aciklama": "Fotoğraflarla sanal gezinti. Derinlik etkisi yapay zekâ ile tahmin edilmiştir; temsilidir, 360° çekim veya 3B tarama değildir.",
+    "duraklar": [
+      {
+        "id": "avlu",
+        "baslik": "Avlu",
+        "gorsel": "/gorseller/ulu-camii/avlu-sadirvani.jpg",
+        "derinlik": "/derinlik/ulu-camii/avlu-sadirvani.png",
+        "metin": "Caminin kuzey avlusunda aynı hat üzerinde üç şadırvan bulunur. Doğu ve batıdakiler 2011 yılında, eski fotoğraflardaki üsluplarına uygun şekilde sekiz ahşap direk üzerine soğan kubbeyle yeniden yapılmıştır.",
+        "kaynakId": "ulu-s72",
+        "baglantilar": [
+          {
+            "hedef": "kapi",
+            "etiket": "Kapıya yürü"
+          }
+        ]
+      },
+      {
+        "id": "kapi",
+        "baslik": "Giriş kapısı",
+        "gorsel": "/gorseller/ulu-camii/giris-kapisi.jpg",
+        "derinlik": "/derinlik/ulu-camii/giris-kapisi.png",
+        "metin": "Caminin kuzey cephesinde taç kapı, doğu ve batı cephelerinde ise giriş kapıları bulunur. Kuzeydeki kapı \"Sahaflar Kapısı\" olarak bilinir.",
+        "kaynakId": "ulu-s44",
+        "baglantilar": [
+          {
+            "hedef": "ic-mekan",
+            "etiket": "İçeri gir"
+          },
+          {
+            "hedef": "avlu",
+            "etiket": "Avluya dön"
+          }
+        ]
+      },
+      {
+        "id": "ic-mekan",
+        "baslik": "İbadet alanı",
+        "gorsel": "/gorseller/ulu-camii/ic-mekan-uzun.jpg",
+        "derinlik": "/derinlik/ulu-camii/ic-mekan-uzun.png",
+        "metin": "Yaklaşık 3500 m²'lik ibadet alanı, on iki kare paye ile bölünür. Payelerdeki hat yazıları iç mekânı adeta bir hat müzesine dönüştürür.",
+        "kaynakId": "ulu-s46",
+        "baglantilar": [
+          {
+            "hedef": "sadirvan",
+            "etiket": "Şadırvana yürü"
+          },
+          {
+            "hedef": "minber",
+            "etiket": "Minbere yürü"
+          },
+          {
+            "hedef": "kubbeler",
+            "etiket": "Yukarı bak"
+          },
+          {
+            "hedef": "kapi",
+            "etiket": "Kapıya dön"
+          }
+        ]
+      },
+      {
+        "id": "sadirvan",
+        "baslik": "Şadırvan",
+        "gorsel": "/gorseller/ulu-camii/sadirvan.jpg",
+        "derinlik": "/derinlik/ulu-camii/sadirvan.png",
+        "metin": "Caminin merkezindeki havuzlu şadırvanın üzerindeki kubbenin ortası açık bırakılmıştır; iç mekân böylece doğal ışık alır ve havalanır.",
+        "kaynakId": "ulu-s60",
+        "baglantilar": [
+          {
+            "hedef": "minber",
+            "etiket": "Minbere yürü"
+          },
+          {
+            "hedef": "ic-mekan",
+            "etiket": "Geri dön"
+          }
+        ]
+      },
+      {
+        "id": "minber",
+        "baslik": "Minber",
+        "gorsel": "/gorseller/ulu-camii/minber.jpg",
+        "derinlik": "/derinlik/ulu-camii/minber.png",
+        "metin": "Kündekâri tekniğiyle, çivi ve tutkal kullanılmadan birbirine geçme parçalardan yapılmıştır. Kapısındaki kitabeye göre H. 802 / M. 1399-1400 yılında yapılmıştır.",
+        "kaynakId": "ulu-s48",
+        "baglantilar": [
+          {
+            "hedef": "mihrap",
+            "etiket": "Mihraba yürü"
+          },
+          {
+            "hedef": "sadirvan",
+            "etiket": "Şadırvana dön"
+          }
+        ]
+      },
+      {
+        "id": "mihrap",
+        "baslik": "Mihrap",
+        "gorsel": "/gorseller/ulu-camii/mihrap.jpg",
+        "derinlik": "/derinlik/ulu-camii/mihrap.png",
+        "metin": "Mihraptaki süslemeler, 1862 yılında Bursa'ya sürgün edilen Tevfik Paşa tarafından yaptırılmıştır.",
+        "kaynakId": "ulu-s54",
+        "baglantilar": [
+          {
+            "hedef": "kubbeler",
+            "etiket": "Yukarı bak"
+          },
+          {
+            "hedef": "minber",
+            "etiket": "Minbere dön"
+          }
+        ]
+      },
+      {
+        "id": "kubbeler",
+        "baslik": "Kubbeler",
+        "gorsel": "/gorseller/ulu-camii/kubbeler-icten.jpg",
+        "derinlik": "/derinlik/ulu-camii/kubbeler-icten.png",
+        "metin": "Yapıyı örten 11 m çapındaki kubbeler, on iki kare paye üzerine oturur.",
+        "kaynakId": "ulu-s46",
+        "baglantilar": [
+          {
+            "hedef": "ic-mekan",
+            "etiket": "İbadet alanına dön"
+          }
+        ]
+      }
+    ]
+  }
 }

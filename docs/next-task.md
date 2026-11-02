@@ -1,62 +1,77 @@
-# Görev 2 — Eser sayfası: galeri, bilgi paneli, bilgi noktaları, test ve rozet
+# Görev 3 — Derinlikli sanal gezinti
 
 **Atanan:** Codex CLI
-**Önce oku:** `AGENTS.md`, `docs/plan.md`, `src/types/eser.ts`, `src/data/eserler/*.json`
+**Önce oku:** `AGENTS.md`, `docs/plan.md`, `src/types/eser.ts`, `src/data/eserler/*.json` (yeni `tur` alanı)
 
-## Kurallar
+## Amaç
 
-- `src/data/` ve `public/gorseller/` klasörlerine **dokunma**. Veriyi ve görselleri Claude yönetiyor; şu an `gorseller` dizileri ve bilgi noktalarının `gorsel` alanı boş olabilir, sonradan dolacak. Kod bu durumu düzgün karşılamalı.
-- Arayüzde görünen tarihsel metinlerin tamamı JSON'dan gelir. Koda tarihsel bilgi yazma.
-- `src/App.tsx` büyüdüğü için bileşenleri `src/components/` ve `src/pages/` altına böl.
-- Yeni bağımlılık ekleme.
+Kullanıcı eserin içinde "yürüyebilsin": fotoğraflardan oluşan duraklar arasında yön düğmeleriyle gezinsin;
+her durakta fotoğraf, yapay zekâyla üretilmiş derinlik haritası sayesinde fare/dokunma/telefon eğimiyle
+hafif 3B (2.5B parallax) hareket etsin.
+
+**Dürüstlük kuralı:** Bu 360° çekim veya 3B tarama değildir. `tur.aciklama` metni gezinti ekranında
+her zaman görünür olmalı. "360°", "VR", "3B model" gibi ifadeler kullanma.
+
+## Veri (hazır, değiştirme)
+
+Her eser JSON'unda:
+
+```ts
+interface Baglanti { hedef: string; etiket: string }        // hedef = durak id
+interface Durak {
+  id: string; baslik: string;
+  gorsel: string;      // /gorseller/<eser>/<ad>.jpg
+  derinlik: string;    // /derinlik/<eser>/<ad>.png  (gri tonlama: beyaz = yakın, siyah = uzak; ~800 px)
+  metin: string; kaynakId?: string;
+  baglantilar: Baglanti[];
+}
+interface Tur { aciklama: string; baslangic: string; duraklar: Durak[] }
+// Eser'e eklenen alan:  tur?: Tur
+```
+
+Bu tipleri `src/types/eser.ts` dosyasına ekle (`tur` isteğe bağlı olsun; turu olmayan eser de çalışmalı).
 
 ## Yapılacaklar
 
-1. **Eser sayfası** (`/eser/:id`), sırasıyla:
-   - Başlık, konum (şehir · ilçe), dönem, vakıf
-   - Doğrulama etiketi: `dogrulanmis` → "Kaynaklı bilgi", `temsili` → "Temsili içerik"
-   - Galeri, bilgi noktaları, tarihçe, test, kaynaklar bölümleri
-2. **Galeri:** `gorseller` dizisindeki fotoğraflar. Büyük görsel + küçük resim şeridi; tıklayınca tam ekran görüntüleme
-   (Esc ile kapanır, ok tuşlarıyla geçiş, odak tuzağı). Her görselde `alt` metni, altında `aciklama` varsa gösterilir.
-   Dizi boşsa "Fotoğraflar hazırlanıyor." yaz.
-3. **Bilgi noktaları:**
-   - `gorsel` alanı dolu olan noktalar, o görselin üzerinde `x`/`y` yüzde konumunda numaralı düğme olarak gösterilir.
-     Düğmeye tıklayınca (veya Enter) yanında/altında başlık, metin ve kaynak açılır.
-   - `gorsel` alanı boş olan noktalar, görselin altında numaralı bir liste (akordeon) olarak gösterilir.
-   - Bölüm başlığı: "Keşif noktaları".
-4. **Kaynak gösterimi:** Her bilgi noktasının ve test açıklamasının altında
-   "Kaynak: {kaynak.metin}, s. {kaynak.sayfa}" satırı. `kaynakId`'ye göre `kaynaklar` dizisinden bulunur.
-   Sayfanın sonunda "Kaynaklar" bölümünde tüm kaynaklar listelenir.
-5. **Test** ("Bilgini sına"):
-   - Sorular tek tek gösterilir. Seçenekler radyo düğmesi/düğme; seçince doğru/yanlış bildirimi
-     (yalnızca renk değil, metin ve simge de) + `aciklama` + kaynak.
-   - Sonunda "3 sorudan X doğru". Tekrar dene düğmesi.
-   - 3/3 yapılınca o eserin **rozeti** kazanılır ve `localStorage`'a kaydedilir (`kokxr-rozetler` anahtarı, eser id dizisi).
-     `localStorage` erişimi try/catch içinde olmalı.
-6. **Ana sayfa:** Rozeti kazanılan eserin kartında "Rozet kazanıldı" etiketi. Kartlarda `kapakGorsel` doluysa görsel gösterilir.
-7. **Erişilebilirlik:** Tüm etkileşimler klavyeyle yapılabilir, görünür odak, test sonucu `aria-live` ile duyurulur,
-   kontrast en az WCAG AA, en az 16 px yazı. 360 px genişlikte yatay kaydırma olmamalı.
+1. **Bağımlılık:** `three` ekle (ve `@types/three` geliştirme bağımlılığı). Başka bağımlılık ekleme.
+   Three.js **dinamik import** ile yalnızca gezinti açıldığında yüklensin; ana paket büyümesin.
+2. **`src/components/SanalGezinti.tsx`** (+ gerekirse `src/components/gezinti/` altında yardımcılar):
+   - WebGL sahnesi: fotoğrafın en-boy oranında, yüksek alt bölümlü bir düzlem (`PlaneGeometry`, ~200×200;
+     mobilde ~120×120). Vertex shader'da derinlik dokusuna göre z ekseninde öteleme
+     (`z = (derinlik - 0.5) * guc`). Fragment shader fotoğrafı çizer. Kenarlarda bozulma görünmesin
+     (kamerayı biraz yakın tut, kenarları kırp).
+   - **Hareket:** fare konumu / dokunarak sürükleme / `deviceorientation` (izin gerekiyorsa iOS için düğmeyle iste)
+     kamerayı hafifçe döndürür ve kaydırır (parallax). Etkileşim yokken çok yavaş, kendiliğinden salınım.
+     Hareketler yumuşatılmış (lerp) olmalı.
+   - **Duraklar arası geçiş:** bir bağlantıya tıklayınca kamera ~600 ms ileri "yürür" (dolly) ve yeni durağa
+     yumuşak geçiş (crossfade) yapılır. Bağlı durakların görselleri önceden yüklenir.
+   - **Arayüz katmanı (HTML, canvas'ın üstünde):**
+     - Durak başlığı, `metin`, `kaynakId` varsa mevcut `KaynakSatiri` bileşeniyle kaynak satırı
+     - Her `baglanti` için büyük, yön oklu düğme (`etiket` metniyle)
+     - Durak listesi / mini harita: tüm duraklar, şu anki vurgulu, ziyaret edilenler işaretli; tıklayınca o durağa git
+     - `tur.aciklama` etiketi her zaman görünür
+     - "Tam ekran" düğmesi (Fullscreen API; desteklenmiyorsa gizle)
+   - **Yedek mod:** WebGL yoksa, bağlam kaybolursa veya `prefers-reduced-motion: reduce` ise düz fotoğraf gösterilir;
+     gezinti (düğmeler, liste, metin) aynen çalışır. Yedek modda da `alt` metni olsun (durak başlığından türet).
+   - Bileşen kaldırılınca renderer, doku ve geometrileri `dispose` et; olay dinleyicilerini temizle.
+3. **Eser sayfası:** `tur` varsa galeri bölümünden **önce** "Sanal gezinti" bölümü. Başlangıçta canvas yüklenmeden
+   önce başlangıç durağının fotoğrafı ve "Gezintiye başla" düğmesi göster (Three.js ancak tıklanınca yüklensin).
+4. **Ana sayfa:** `tur` olan eser kartında küçük "Sanal gezinti" etiketi.
+5. **Erişilebilirlik:** Tüm gezinti klavyeyle yapılabilir (Tab ile düğmeler; ← → tuşlarıyla görüşü hafifçe kaydırmak isteğe bağlı),
+   durak değişince yeni başlık `aria-live="polite"` ile duyurulur, odak görünür, düğmeler en az 44 px.
+   Canvas `aria-hidden`, bilgi HTML katmanında.
+6. Mevcut galeri, keşif noktaları, test ve rozet davranışını bozma.
 
 ## Yapılmayacaklar
 
-Yönetim ekranı, PWA, dil seçimi, sesli anlatım, harita, 3D/VR. Bunlar sonraki görevler.
+`src/data/`, `public/gorseller/`, `public/derinlik/`, `_eski/`, `kaynaklar/`, `proje bilgileri/` klasörlerine dokunma.
+Yeni içerik veya tarihsel metin yazma. Yönetim ekranı, PWA bu görevde yok.
 
 ## Bitti sayılması için
 
-- `npm run build` hatasız
-- Tarayıcıda iki eser için: tarihçe, keşif noktaları (liste hâlinde), test ve kaynaklar görünüyor; 3/3 yapınca rozet ana sayfada görünüyor
-- `.git` salt okunur olabilir; commit atamazsan sorun değil, Claude commit'leyecek
+- `npm run build` hatasız; ana JS paketi Three.js içermiyor (ayrı chunk)
+- Tarayıcıda (1280 px ve 360 px) iki eserde gezintiye başla → tüm duraklar arasında bağlantılarla gezilebiliyor,
+  parallax hareketi görülüyor, geçiş animasyonu çalışıyor, yedek mod (reduced-motion) çalışıyor, konsolda hata yok
+- Ekran görüntülerini incele: kenarlarda yırtılma/esneme göze batmamalı; batıyorsa `guc` değerini düşür
+- `.git` salt okunur olabilir; commit'i Claude atar
 - Bu dosyanın sonuna "Sonuç" bölümü ekle
-
-## Sonuç
-
-- Görev 2 tamamlandı. `App.tsx`, `src/pages/` ve `src/components/` altında sayfalara ve bileşenlere ayrıldı.
-- İki eserin JSON verilerinden başlık, konum, dönem, vakıf, doğrulama etiketi, tarihçe ve kaynaklar gösteriliyor. Tarihsel metin eklenmedi.
-- Büyük fotoğraf, küçük resim şeridi, açıklama/alt metin ve fotoğraf kaynağı eklendi. Tam ekran galeride Esc, ok tuşları, odak tuzağı ve kapatınca önceki odağa dönüş çalışıyor.
-- Bilgi noktaları verideki görsel ve yüzde konumlarına göre yerleştiriliyor; numaralı listeden de erişilebiliyor. Görseli olmayan noktalar listede açılıyor. Her panelde metin ve kaynak/sayfa bilgisi var.
-- Sorular tek tek sunuluyor; cevaplar kilitleniyor, doğru/yanlış simge ve metinle bildiriliyor, açıklama ve kaynak gösteriliyor. Sonuç ve tekrar deneme eklendi. Üç doğruyla kazanılan rozet `kokxr-rozetler` anahtarında eser kimliği dizisi olarak saklanıyor ve ana sayfa kartında gösteriliyor. Depolama erişimi hata yakalama içinde; erişim engellenirse rozet oturumda korunuyor ve kaydedilemediği açıklanıyor.
-- `npm run build` hatasız geçti. Chromium/Playwright ile 360 ve 1280 px genişliklerde iki eserin 20 fotoğrafı, tüm bilgi noktalarının konumları ve klavyeyle açılması, liste panelleri, kaynaklar, modal klavye/odak davranışı, yanlış/doğru cevaplar, tekrar deneme ve sayfa yenilemesi sonrası rozetler kontrol edildi. Tarayıcı çalışma hatası ve yatay taşma görülmedi. Mobil eser sayfası ve masaüstü ana sayfa ekran görüntüleri görsel olarak incelendi.
-- Kaynak dosyalarını değiştirmeden, tarayıcı ağ yanıtında geçici boş görsel/konum verisiyle yedek görünüm ve engellenmiş `localStorage` davranışı da doğrulandı.
-- Yeni bağımlılık eklenmedi. `src/data/`, `public/gorseller/`, `_eski/`, `kaynaklar/` ve `proje bilgileri/` değiştirilmedi.
-- `vite preview` üzerinden üretim derlemesinde de iki genişlikte aynı ana akış testleri başarıyla tekrarlandı.
-- Commit denendi; `.git` salt okunur olduğu için `index.lock` oluşturulamadı. Değişiklikler commit için hazır bırakıldı.

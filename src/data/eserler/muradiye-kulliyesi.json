@@ -209,6 +209,210 @@
     {
       "id": "foto-arsiv",
       "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)"
+    },
+    {
+      "id": "mur-s112",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
+      "sayfa": "112"
+    },
+    {
+      "id": "mur-s118",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
+      "sayfa": "118"
     }
-  ]
+  ],
+  "tur": {
+    "aciklama": "Fotoğraflarla sanal gezinti. Derinlik etkisi yapay zekâ ile tahmin edilmiştir; temsilidir, 360° çekim veya 3B tarama değildir.",
+    "duraklar": [
+      {
+        "id": "avlu",
+        "baslik": "Avlu",
+        "gorsel": "/gorseller/muradiye-kulliyesi/avlu-sadirvani.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/avlu-sadirvani.png",
+        "metin": "Külliyenin avlusu. Buradan camiye, türbelere, medreseye ve imarete yürüyebilirsin.",
+        "baglantilar": [
+          {
+            "hedef": "kapi",
+            "etiket": "Caminin kapısına yürü"
+          },
+          {
+            "hedef": "turbeler",
+            "etiket": "Türbeler bahçesine yürü"
+          },
+          {
+            "hedef": "medrese",
+            "etiket": "Medreseye yürü"
+          },
+          {
+            "hedef": "imaret",
+            "etiket": "İmarete yürü"
+          }
+        ]
+      },
+      {
+        "id": "kapi",
+        "baslik": "Caminin giriş kapısı",
+        "gorsel": "/gorseller/muradiye-kulliyesi/giris-kapisi.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/giris-kapisi.png",
+        "metin": "Külliyenin inşa kitabesi caminin ana giriş kapısı üzerindedir. Kitabeye göre inşaata H. 828 / M. 1425'te başlanmış, H. 830 / M. 1426'da tamamlanmıştır.",
+        "kaynakId": "mur-s112",
+        "baglantilar": [
+          {
+            "hedef": "cami-ic",
+            "etiket": "İçeri gir"
+          },
+          {
+            "hedef": "avlu",
+            "etiket": "Avluya dön"
+          }
+        ]
+      },
+      {
+        "id": "cami-ic",
+        "baslik": "Caminin iç mekânı",
+        "gorsel": "/gorseller/muradiye-kulliyesi/cami-ic.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/cami-ic.png",
+        "metin": "Mihrap önü duvarları altıgen zümrüt yeşili çinilerle kaplıdır; bu çiniler Yeşil Cami'de çalışan Tebrizli usta grubunun burada da görev aldığını gösterir.",
+        "kaynakId": "mur-s115",
+        "baglantilar": [
+          {
+            "hedef": "mihrap",
+            "etiket": "Mihraba yürü"
+          },
+          {
+            "hedef": "kapi",
+            "etiket": "Kapıya dön"
+          }
+        ]
+      },
+      {
+        "id": "mihrap",
+        "baslik": "Mihrap",
+        "gorsel": "/gorseller/muradiye-kulliyesi/mihrap.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/mihrap.png",
+        "metin": "1790 yılındaki onarımdan sonra caminin mihrabı tamamen alçıdan, Rokoko üslubunda yenilenmiştir.",
+        "kaynakId": "mur-s118",
+        "baglantilar": [
+          {
+            "hedef": "cami-ic",
+            "etiket": "Geri dön"
+          }
+        ]
+      },
+      {
+        "id": "turbeler",
+        "baslik": "Türbeler bahçesi",
+        "gorsel": "/gorseller/muradiye-kulliyesi/turbeler-bahcesi.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/turbeler-bahcesi.png",
+        "metin": "Külliyede Osmanlı hanedanı üyelerine ait on üç türbe vardır. İlki 1442'de, sonuncusu 1573'te inşa edilmiştir.",
+        "kaynakId": "mur-s111",
+        "baglantilar": [
+          {
+            "hedef": "ii-murad",
+            "etiket": "Sultan II. Murad Türbesi'ne yürü"
+          },
+          {
+            "hedef": "cem-sultan",
+            "etiket": "Cem Sultan Türbesi'ne gir"
+          },
+          {
+            "hedef": "avlu",
+            "etiket": "Avluya dön"
+          }
+        ]
+      },
+      {
+        "id": "ii-murad",
+        "baslik": "Sultan II. Murad Türbesi",
+        "gorsel": "/gorseller/muradiye-kulliyesi/ii-murad-turbesi.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/ii-murad-turbesi.png",
+        "metin": "Türbeler topluluğunun en görkemli yapısıdır ve caminin güneybatısında yer alır.",
+        "kaynakId": "mur-s130",
+        "baglantilar": [
+          {
+            "hedef": "ii-murad-ic",
+            "etiket": "İçeri gir"
+          },
+          {
+            "hedef": "turbeler",
+            "etiket": "Bahçeye dön"
+          }
+        ]
+      },
+      {
+        "id": "ii-murad-ic",
+        "baslik": "II. Murad Türbesi, iç mekân",
+        "gorsel": "/gorseller/muradiye-kulliyesi/ii-murad-turbesi-ic.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/ii-murad-turbesi-ic.png",
+        "metin": "Osmanlı padişah mezarları arasında en sade türbe olarak inşa edilmiştir; Bursa'da sanduka veya lahit kullanılmayan tek padişah mezarıdır.",
+        "kaynakId": "mur-s130",
+        "baglantilar": [
+          {
+            "hedef": "ii-murad",
+            "etiket": "Dışarı çık"
+          }
+        ]
+      },
+      {
+        "id": "cem-sultan",
+        "baslik": "Cem Sultan Türbesi",
+        "gorsel": "/gorseller/muradiye-kulliyesi/cem-sultan-turbesi-ic.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/cem-sultan-turbesi-ic.png",
+        "metin": "Napoli'de vefat eden Cem Sultan'ın naaşı 1499'da Bursa'ya getirilip buraya defnedilince türbe onun adıyla anılmaya başlanmıştır.",
+        "kaynakId": "mur-s141",
+        "baglantilar": [
+          {
+            "hedef": "turbeler",
+            "etiket": "Bahçeye dön"
+          }
+        ]
+      },
+      {
+        "id": "medrese",
+        "baslik": "Medrese avlusu",
+        "gorsel": "/gorseller/muradiye-kulliyesi/medrese-avlusu.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/medrese-avlusu.png",
+        "metin": "Medrese, 17 × 17 m revaklı iç avlusu, tek eyvanı ve on altı hücresiyle bir Erken Osmanlı Dönemi medresesidir.",
+        "kaynakId": "mur-s120",
+        "baglantilar": [
+          {
+            "hedef": "hamam",
+            "etiket": "Hamama yürü"
+          },
+          {
+            "hedef": "avlu",
+            "etiket": "Avluya dön"
+          }
+        ]
+      },
+      {
+        "id": "hamam",
+        "baslik": "Hamam",
+        "gorsel": "/gorseller/muradiye-kulliyesi/hamam.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/hamam.png",
+        "metin": "Medresenin batısındaki hamam, 1426 yılında külliyenin parçası olarak inşa edilmiştir.",
+        "kaynakId": "mur-s126",
+        "baglantilar": [
+          {
+            "hedef": "medrese",
+            "etiket": "Medreseye dön"
+          }
+        ]
+      },
+      {
+        "id": "imaret",
+        "baslik": "İmaret",
+        "gorsel": "/gorseller/muradiye-kulliyesi/imaret.jpg",
+        "derinlik": "/derinlik/muradiye-kulliyesi/imaret.png",
+        "metin": "Caminin kuzeydoğusundaki imaretin içinde fırınlardan bazı izler, tahıl ve yağ küpleri bulunur.",
+        "kaynakId": "mur-s124",
+        "baglantilar": [
+          {
+            "hedef": "avlu",
+            "etiket": "Avluya dön"
+          }
+        ]
+      }
+    ]
+  }
 }

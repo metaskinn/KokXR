@@ -87,3 +87,41 @@ Yeni içerik veya tarihsel metin yazma. Yönetim ekranı, PWA bu görevde yok.
 4. **[Düşük] favicon 404:** `public/favicon.svg` (basit, metinsiz bir kubbe/kemer simgesi) ekle ve `index.html`'e bağla.
 5. Tasarım: Keşif listesindeki tekrarlanan `<h3>` başlığını kaldır; yanlış cevap kutusu farklı (kiremit tonu) kenarlıkla gösterilsin;
    telefonda tam ekran galerideki önceki/sonraki düğmeleri aynı satırda olsun.
+
+## Sonuç
+
+**Tamamlandı — 3 Kasım 2026.** Sanal gezinti ve sondaki beş hata/tasarım düzeltmesi uygulandı.
+
+- `SanalGezinti.tsx` ve dinamik yüklenen `gezinti/sahne.ts` eklendi. Fotoğraf/derinlik dokuları, masaüstünde 200×200 ve mobilde 120×120 bölümlü düzlem, yumuşatılmış fare/dokunma/eğim hareketi ve yavaş salınım kullanılıyor. Kenar payı %16, derinlik gücü 0.055 tutuldu.
+- Durak bağlantılarında yaklaşık 600 ms ileri kamera hareketi ve çapraz solma var. Bağlı durakların fotoğraf ve derinlik dokuları önceden yükleniyor. Durak listesi mevcut durağı ve ziyaret edilenleri gösteriyor; kaynaklar ve mevcut `tur.aciklama` metni korunuyor. Desteklenen tarayıcılarda tam ekran kullanılabiliyor.
+- Gezinti galeriden önce yer alıyor; başlangıç fotoğrafı Three.js yüklenmeden gösteriliyor. Ana sayfadaki ilgili kartlarda “Sanal gezinti” etiketi var. Hazır JSON dosyalarında `baslangic` bulunmadığından tipte isteğe bağlı bırakıldı; verilmezse ilk durak kullanılıyor.
+- Hareket azaltma tercihi, WebGL yokluğu, bağlam kaybı veya doku yükleme hatasında alt metinli fotoğraf modu çalışıyor; bağlantılar, metinler ve durak listesi kullanılabiliyor. Kaldırmada animasyon, dinleyiciler, gözlemci, dokular, malzemeler, geometri ve renderer temizleniyor.
+- Testte seçim ile onay ayrıldı: ok tuşlarıyla tüm seçeneklere ulaşılabiliyor, “Cevabı kontrol et” yanıtı kilitliyor. Yanlış yanıt kutusu kiremit tonunda.
+- Fotoğraf numaraları bilgi kartını büyük fotoğrafın hemen altında açıyor ve kart görünür alana kaydırılıyor. Keşif listesinin tekrarlanan başlığı kaldırıldı. Mobil tam ekran galerinin önceki/sonraki düğmeleri aynı satırda.
+- İlk yüklemede odak zorlanmıyor; rota değişiminde ana içeriğe taşınıyor. Programatik odak görünür; gezintide kaldırılan yön düğmesinin odağı yeni durak başlığına aktarılıyor. Metinsiz kemer simgeli `public/favicon.svg` bağlandı.
+
+### Doğrulama
+
+Üretim derlemesi **`npm run build` ile başarılı**. Ana JS paketi 295.85 kB; Three.js içeren sahne parçası 533.40 kB (gzip 132.99 kB). Derlemedeki tek uyarı sahne parçasının 500 kB sınırını aşması. Ana pakette `WebGLRenderer`/`PlaneGeometry` bulunmuyor; sahne dinamik import ile ayrılmış durumda. Ağ istekleri de gezinti başlamadan ve azaltılmış hareket modunda sahne parçasının indirilmediğini doğruladı.
+
+Tarayıcı kontrolleri Playwright ile gerçek Chromium üzerinde, yazılımsal WebGL kullanılarak **4174** portundaki üretim önizlemesinde yapıldı:
+
+| Kontrol | Sonuç |
+|---|---|
+| 1280×900 ve 360×900: Ulu Camii’nin 7, Muradiye’nin 11 durağındaki tüm yön bağlantıları ve durak listesi | Geçti |
+| Fare parallax hareketi, yaklaşık 600 ms geçiş, ziyaret işaretleri, açıklama ve kaynaklar | Geçti |
+| 360×800: dokunma olaylarıyla sürükleme; izinli/izni reddedilmiş eğim akışı; sensör olayları ve eğimi kapatma | Geçti |
+| Masaüstünde tam ekrana giriş/çıkış; klavyeyle başlatma ve durak geçişi; görünür başlık odağı | Geçti |
+| İki genişlikte, iki eserin tüm duraklarında azaltılmış hareket/fotoğraf modu | Geçti |
+| Açık gezintide hareket tercihini değiştirme; gerçek `WEBGL_lose_context` ile bağlam kaybı; WebGL desteğinin bulunmaması | Geçti |
+| Derinlik isteği engellendiğinde fotoğraf moduna geçiş ve bağlantıyla devam | Geçti |
+| Her iki eserin tüm galeri fotoğrafları, numaralı bilgi kartları, tam ekran galeri ve Esc | Geçti |
+| İlk Tab ile atlama bağlantısı; testte dört seçeneğe ok tuşlarıyla erişim, ayrı onay, 3/3 sonuç, tekrar deneme ve yanlış yanıt görünümü | Geçti |
+| Ana sayfada rozet ve yenileme sonrası kalıcılık; rotadan ayrılınca canvas temizliği | Geçti |
+| Yatay taşma, uygulama konsol hataları, beklenmeyen HTTP hataları ve favicon | Sorun yok |
+
+Ekran görüntüleri `docs/test-ekranlari/gorev3/` altında. Masaüstü/mobil gezinti ve fotoğraf modu görüntüleri ile mobil galeri incelendi; belirgin kenar yırtılması/esnemesi görülmedi. Mobil fotoğraf alanı yön düğmelerine yer bırakmak için 320 px yüksekliğe çıkarıldı.
+
+Telefon eğimi ve iOS izin dalı tarayıcıda benzetildi; fiziksel iOS cihazında işletim sistemi izin penceresi denenmedi. Dokuların bilinçli olarak engellendiği hata senaryosundaki ağ hatası beklenen test girdisidir.
+
+Korunan altı klasör değiştirilmedi. **4173 sunucusu durdurulmadı; son kontrolde HTTP 200 yanıtladı.** Commit oluşturulmadı; görev tanımına göre Claude'a bırakıldı.

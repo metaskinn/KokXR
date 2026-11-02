@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import type { Eser } from '../types/eser'
+import SanalGezinti from '../components/SanalGezinti'
 import Galeri from '../components/Galeri'
 import Test from '../components/Test'
 import KaynakSatiri, { kaynakMetni } from '../components/KaynakSatiri'
@@ -18,6 +19,7 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
       <p className="etiket">{eser.dogrulama === 'dogrulanmis' ? 'Kaynaklı bilgi' : 'Temsili içerik'}</p>
       <p>{eser.ozet}</p>
     </header>
+    {eser.tur && <SanalGezinti tur={eser.tur} kaynaklar={eser.kaynaklar} />}
     <Galeri eser={eser} />
     <section className="bolum" aria-labelledby="tarihce-basligi">
       <h2 id="tarihce-basligi">Tarihçe</h2><p className="tarihce">{eser.tarihce}</p>

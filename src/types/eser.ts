@@ -26,6 +26,24 @@ export interface Soru {
   kaynakId: string;
 }
 
+export interface Baglanti { hedef: string; etiket: string }
+
+export interface Durak {
+  id: string;
+  baslik: string;
+  gorsel: string;
+  derinlik: string;
+  metin: string;
+  kaynakId?: string;
+  baglantilar: Baglanti[];
+}
+
+export interface Tur {
+  aciklama: string;
+  baslangic?: string; // Belirtilmemişse ilk durak kullanılır.
+  duraklar: Durak[];
+}
+
 export interface Eser {
   id: string;             // "ulu-camii", "muradiye-kulliyesi"
   ad: string;
@@ -41,4 +59,5 @@ export interface Eser {
   bilgiNoktalari: BilgiNoktasi[];
   test: Soru[];           // tam 3 soru
   kaynaklar: Kaynak[];
+  tur?: Tur;
 }

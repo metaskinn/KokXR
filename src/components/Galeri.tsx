@@ -45,6 +45,11 @@ export default function Galeri({ eser }: { eser: Eser }) {
   const [secili, setSecili] = useState(0)
   const [tamEkran, setTamEkran] = useState(false)
   const [acikNokta, setAcikNokta] = useState<string | null>(null)
+  const kart = useRef<HTMLDivElement>(null)
+  const nokta = eser.bilgiNoktalari.find((item) => item.id === acikNokta && item.gorsel === eser.gorseller[secili]?.dosya)
+  useEffect(() => {
+    if (nokta) kart.current?.scrollIntoView({ block: 'nearest' })
+  }, [nokta])
   const gorsel = eser.gorseller[secili]
   return <>
     <section className="bolum" aria-labelledby="galeri-basligi">
@@ -55,11 +60,13 @@ export default function Galeri({ eser }: { eser: Eser }) {
             <button className="buyut" onClick={() => setTamEkran(true)} aria-label="Fotoğrafı tam ekran görüntüle"><img src={gorsel.dosya} alt={gorsel.alt} /></button>
             {eser.bilgiNoktalari.map((nokta, index) => nokta.gorsel && nokta.gorsel === gorsel.dosya && <button
               key={nokta.id} className="bilgi-noktasi" style={{ left: `${nokta.x}%`, top: `${nokta.y}%` }}
-              aria-label={`${index + 1}. ${nokta.baslik}`} aria-expanded={acikNokta === nokta.id} aria-controls={`nokta-${nokta.id}`}
+              aria-label={`${index + 1}. ${nokta.baslik}`} aria-expanded={acikNokta === nokta.id} aria-controls="fotograf-bilgi-karti"
               onClick={() => {
                 setAcikNokta(acikNokta === nokta.id ? null : nokta.id)
-                document.getElementById(`nokta-${nokta.id}`)?.scrollIntoView({ block: 'nearest' })
               }}>{index + 1}</button>)}
+          </div>
+          <div id="fotograf-bilgi-karti" ref={kart} aria-live="polite">
+            {nokta && <div className="bilgi-karti"><h3>{nokta.baslik}</h3><p>{nokta.metin}</p><KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={nokta.kaynakId} /></div>}
           </div>
           <figcaption>{gorsel.aciklama && <p>{gorsel.aciklama}</p>}<KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={gorsel.kaynakId} /></figcaption>
         </figure>
@@ -83,7 +90,7 @@ export default function Galeri({ eser }: { eser: Eser }) {
           const gorselSirasi = eser.gorseller.findIndex((foto) => foto.dosya === nokta.gorsel)
           if (ac && gorselSirasi >= 0) setSecili(gorselSirasi)
         }}>{index + 1}. {nokta.baslik}</summary>
-        <div id={`nokta-${nokta.id}`}><h3>{nokta.baslik}</h3><p>{nokta.metin}</p><KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={nokta.kaynakId} /></div>
+        <div id={`nokta-${nokta.id}`}><p>{nokta.metin}</p><KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={nokta.kaynakId} /></div>
       </details>)}
     </section>
     {tamEkran && gorsel && <TamEkran gorseller={eser.gorseller} kaynaklar={eser.kaynaklar} secili={secili} sec={setSecili} kapat={() => setTamEkran(false)} />}

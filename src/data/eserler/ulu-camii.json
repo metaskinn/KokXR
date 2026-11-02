@@ -214,6 +214,7 @@
   ],
   "tur": {
     "aciklama": "Fotoğraflarla sanal gezinti. Derinlik etkisi yapay zekâ ile tahmin edilmiştir; temsilidir, 360° çekim veya 3B tarama değildir.",
+    "baslangic": "avlu",
     "duraklar": [
       {
         "id": "avlu",

@@ -5,6 +5,7 @@ import KaynakSatiri from './KaynakSatiri'
 export default function Test({ eser, rozetKazan }: { eser: Eser; rozetKazan: (id: string) => boolean }) {
   const [sira, setSira] = useState(0)
   const [cevaplar, setCevaplar] = useState<number[]>([])
+  const [secim, setSecim] = useState<number | undefined>()
   const [bitti, setBitti] = useState(false)
   const [kaydedildi, setKaydedildi] = useState(true)
   const baslik = useRef<HTMLHeadingElement>(null)
@@ -13,6 +14,7 @@ export default function Test({ eser, rozetKazan }: { eser: Eser; rozetKazan: (id
   const dogruSayisi = cevaplar.filter((yanit, index) => yanit === eser.test[index].dogru).length
 
   function ilerle() {
+    setSecim(undefined)
     if (sira + 1 < eser.test.length) setSira(sira + 1)
     else {
       setBitti(true)
@@ -28,7 +30,7 @@ export default function Test({ eser, rozetKazan }: { eser: Eser; rozetKazan: (id
         <div role="status">
           <h3>{eser.test.length} sorudan {dogruSayisi} doğru</h3>
           {eser.test.length === 3 && dogruSayisi === 3 && <p>★ Rozet kazanıldı!{!kaydedildi && ' Rozet bu oturumda kullanılabilir; tarayıcıya kaydedilemedi.'}</p>}
-          <button onClick={() => { setSira(0); setCevaplar([]); setBitti(false); baslik.current?.focus() }}>Tekrar dene</button>
+          <button onClick={() => { setSira(0); setCevaplar([]); setSecim(undefined); setBitti(false); baslik.current?.focus() }}>Tekrar dene</button>
         </div>
       ) : (
         <>
@@ -36,15 +38,16 @@ export default function Test({ eser, rozetKazan }: { eser: Eser; rozetKazan: (id
           <fieldset>
             <legend>{soru.soru}</legend>
             {soru.secenekler.map((secenek, index) => (
-              <label className={`secenek ${cevap === index ? 'secili' : ''}`} key={index}>
-                <input type="radio" name={`soru-${eser.id}-${sira}`} checked={cevap === index} disabled={cevap !== undefined && cevap !== index}
-                  onChange={() => { if (cevap === undefined) setCevaplar([...cevaplar, index]) }} />
+              <label className={`secenek ${(cevap ?? secim) === index ? 'secili' : ''}`} key={index}>
+                <input type="radio" name={`soru-${eser.id}-${sira}`} checked={(cevap ?? secim) === index} disabled={cevap !== undefined}
+                  onChange={() => setSecim(index)} />
                 <span>{secenek}</span>
               </label>
             ))}
           </fieldset>
+          {cevap === undefined && <button disabled={secim === undefined} onClick={() => { if (secim !== undefined) setCevaplar([...cevaplar, secim]) }}>Cevabı kontrol et</button>}
           <div aria-live="polite" aria-atomic="true">
-            {cevap !== undefined && <div className="yanit">
+            {cevap !== undefined && <div className={`yanit ${cevap !== soru.dogru ? 'yanlis' : ''}`}>
               <p><strong>{cevap === soru.dogru ? '✓ Doğru cevap!' : '✗ Yanlış cevap.'}</strong></p>
               {cevap !== soru.dogru && <p>Doğru cevap: {soru.secenekler[soru.dogru]}</p>}
               <p>{soru.aciklama}</p>

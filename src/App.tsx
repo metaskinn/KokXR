@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import { eserleriGetir } from './data'
 import AnaSayfa from './pages/AnaSayfa'
@@ -17,7 +17,10 @@ function rozetleriOku(): string[] {
 export default function App() {
   const [rozetler, setRozetler] = useState(rozetleriOku)
   const { pathname } = useLocation()
+  const oncekiRota = useRef(pathname)
   useEffect(() => {
+    if (oncekiRota.current === pathname) return
+    oncekiRota.current = pathname
     window.scrollTo(0, 0)
     document.getElementById('ana-icerik')?.focus({ preventScroll: true })
   }, [pathname])

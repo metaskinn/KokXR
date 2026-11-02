@@ -16,6 +16,7 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
         <div className="kart-icerik">
           <p className="konum">{eser.sehir} · {eser.ilce}</p>
           <h3>{eser.ad}</h3>
+          {eser.tur && <p className="etiket">Sanal gezinti</p>}
           {rozetler.includes(eser.id) && <p className="etiket">★ Rozet kazanıldı</p>}
           <p>{eser.ozet}</p>
           <span className="kesfet">Eseri keşfet <span aria-hidden="true">→</span></span>

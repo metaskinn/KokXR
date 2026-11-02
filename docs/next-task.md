@@ -39,3 +39,11 @@ oradan dosya kopyalama.
 - Olmayan bir adres "Sayfa bulunamadı" gösteriyor
 - Commit: `İskelet: ana sayfa ve eser seçimi`
 - Bu dosyanın altına kısa bir "Sonuç" bölümü ekle (ne yapıldı, sorun var mı)
+
+## Sonuç
+
+- React + TypeScript + Vite iskeleti doğrudan proje kökünde kuruldu. Mevcut dosyaları korumak için yapılandırma dosyaları elle oluşturuldu; geçici proje klasörü kullanılmadı.
+- Türkçe ana sayfa, iki eser kartı, eser sayfası taslağı ve bulunamayan sayfa rotası tamamlandı. Veri modeli ve JSON dosyalarını otomatik yükleyen `import.meta.glob` fonksiyonu eklendi; tarihsel içerik eklenmedi.
+- `npm run build` hatasız geçti. `npm run dev` üzerinde Chromium ile 360 px ve 1280 px görünüm, iki eser kartı ve sayfaları, doğrudan eser adresleri, Tab + Enter, görünür odak ve bulunamayan adresler doğrulandı. Yatay taşma veya tarayıcı hatası görülmedi.
+- `AGENTS.md`, `.gitignore`, `docs/plan.md`, `_eski/`, `kaynaklar/` ve `proje bilgileri/` değiştirilmedi. npm önbelleğinin yazma kısıtı `/tmp` altında önbellek kullanılarak aşıldı; uygulamada bilinen sorun yok.
+- Commit denendi ancak ortamın `.git` dizini salt okunur olduğu için `.git/index.lock` oluşturulamadı. Değişiklikler çalışma klasöründe hazır; `İskelet: ana sayfa ve eser seçimi` commit'i bu ortamda oluşturulamadı.

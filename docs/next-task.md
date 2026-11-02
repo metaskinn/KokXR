@@ -1,127 +1,55 @@
-# Görev 3 — Derinlikli sanal gezinti
+# Görev 4 — Yönetim ekranı (içerik ekleme ve düzenleme)
 
 **Atanan:** Codex CLI
-**Önce oku:** `AGENTS.md`, `docs/plan.md`, `src/types/eser.ts`, `src/data/eserler/*.json` (yeni `tur` alanı)
+**Önce oku:** `AGENTS.md`, `docs/plan.md`, `src/types/eser.ts`, `src/data/index.ts`, `src/App.tsx`
 
-## Amaç
+Şartname 5.1.1: "İçerik ekleme ve mevcut içerikleri düzenleme imkânı bulunmalıdır. Sistem yeni vakıf eserlerinin
+eklenmesine uygun şekilde kurgulanmalıdır."
 
-Kullanıcı eserin içinde "yürüyebilsin": fotoğraflardan oluşan duraklar arasında yön düğmeleriyle gezinsin;
-her durakta fotoğraf, yapay zekâyla üretilmiş derinlik haritası sayesinde fare/dokunma/telefon eğimiyle
-hafif 3B (2.5B parallax) hareket etsin.
+## Mimari
 
-**Dürüstlük kuralı:** Bu 360° çekim veya 3B tarama değildir. `tur.aciklama` metni gezinti ekranında
-her zaman görünür olmalı. "360°", "VR", "3B model" gibi ifadeler kullanma.
+- Varsayılan içerik `src/data/eserler/*.json` (değişmez). Yönetim ekranındaki değişiklikler `localStorage`'da
+  (`kokxr-icerik` anahtarı) **üst katman** olarak saklanır: eser id'sine göre tam eser nesnesi.
+  Uygulama açılışta JSON + üst katmanı birleştirir (üst katman kazanır). Yeni eserler yalnızca üst katmanda yaşar.
+- `localStorage` erişimi try/catch içinde; bozuk veri gelirse yok sayılır ve uyarı gösterilir.
+- Veriyi okuyan tek yer `src/data/index.ts` olsun; uygulama genelinde bir React context veya App state üzerinden dağıt,
+  yönetimde yapılan değişiklik sayfa yenilemeden ana sayfaya ve eser sayfasına yansısın.
 
-## Veri (hazır, değiştirme)
+## Ekran: `/yonetim`
 
-Her eser JSON'unda:
+Üst çubukta "Yönetim" bağlantısı. Giriş/şifre yok; sayfanın üstünde "Demo yönetim ekranı: değişiklikler yalnızca bu
+tarayıcıda saklanır" notu.
 
-```ts
-interface Baglanti { hedef: string; etiket: string }        // hedef = durak id
-interface Durak {
-  id: string; baslik: string;
-  gorsel: string;      // /gorseller/<eser>/<ad>.jpg
-  derinlik: string;    // /derinlik/<eser>/<ad>.png  (gri tonlama: beyaz = yakın, siyah = uzak; ~800 px)
-  metin: string; kaynakId?: string;
-  baglantilar: Baglanti[];
-}
-interface Tur { aciklama: string; baslangic: string; duraklar: Durak[] }
-// Eser'e eklenen alan:  tur?: Tur
-```
+1. **Eser listesi:** tüm eserler (ad, ilçe, doğrulama durumu, "değiştirildi"/"yeni" etiketi). Düzenle, varsayılana döndür
+   (yalnız JSON'da olanlar), sil (yalnız yeni eklenenler, onay ister).
+2. **Eser formu** (`/yonetim/eser/:id` ve `/yonetim/yeni`):
+   - Metin alanları: ad, şehir, ilçe, dönem, vakıf, özet, tarihçe; `id` yeni eserde addan otomatik (Türkçe karakterleri
+     ASCII'ye çevirerek, tekilliği kontrol ederek) üretilir, sonra değişmez.
+   - **Kaynaklar:** ekle/düzenle/sil (metin, sayfa).
+   - **Test soruları:** tam 3 soru; her biri soru, 4 seçenek, doğru seçenek, açıklama, kaynak (kaynaklar listesinden seçim).
+   - **Bilgi noktaları:** başlık, metin, kaynak; görsel seçimi ve x/y (0–100) sayı alanları.
+   - **Görseller:** mevcut görsellerin alt metni ve açıklaması düzenlenebilir; yeni görsel URL ile eklenebilir
+     (dosya yükleme yok). Kapak görseli seçimi.
+   - `tur` ve `tur360` alanları formda gösterilmez, olduğu gibi korunur.
+3. **Doğrulama kuralı (5.1.3):** "Kaynaklı bilgi" seçilebilmesi için en az bir kaynak, her test sorusu ve bilgi noktası
+   için geçerli kaynak gerekli. Aksi halde kayıt "Temsili içerik" olarak kalır ve form bunu açıklar.
+   Yeni eser varsayılan olarak "temsili".
+4. **Form doğrulama:** zorunlu alanlar, hatalar alanın yanında metinle ve `aria-describedby` ile; kaydet düğmesi
+   hata özetini gösterir ve ilk hatalı alana odaklanır.
+5. **Dışa/içe aktar:** "JSON olarak indir" (tek eser, `src/data/eserler/` formatında — kalıcı yapmak için dosya repoya
+   eklenebilir) ve "Tüm üst katmanı indir / yükle / sıfırla".
 
-Bu tipleri `src/types/eser.ts` dosyasına ekle (`tur` isteğe bağlı olsun; turu olmayan eser de çalışmalı).
+## Kurallar
 
-## Yapılacaklar
-
-1. **Bağımlılık:** `three` ekle (ve `@types/three` geliştirme bağımlılığı). Başka bağımlılık ekleme.
-   Three.js **dinamik import** ile yalnızca gezinti açıldığında yüklensin; ana paket büyümesin.
-2. **`src/components/SanalGezinti.tsx`** (+ gerekirse `src/components/gezinti/` altında yardımcılar):
-   - WebGL sahnesi: fotoğrafın en-boy oranında, yüksek alt bölümlü bir düzlem (`PlaneGeometry`, ~200×200;
-     mobilde ~120×120). Vertex shader'da derinlik dokusuna göre z ekseninde öteleme
-     (`z = (derinlik - 0.5) * guc`). Fragment shader fotoğrafı çizer. Kenarlarda bozulma görünmesin
-     (kamerayı biraz yakın tut, kenarları kırp).
-   - **Hareket:** fare konumu / dokunarak sürükleme / `deviceorientation` (izin gerekiyorsa iOS için düğmeyle iste)
-     kamerayı hafifçe döndürür ve kaydırır (parallax). Etkileşim yokken çok yavaş, kendiliğinden salınım.
-     Hareketler yumuşatılmış (lerp) olmalı.
-   - **Duraklar arası geçiş:** bir bağlantıya tıklayınca kamera ~600 ms ileri "yürür" (dolly) ve yeni durağa
-     yumuşak geçiş (crossfade) yapılır. Bağlı durakların görselleri önceden yüklenir.
-   - **Arayüz katmanı (HTML, canvas'ın üstünde):**
-     - Durak başlığı, `metin`, `kaynakId` varsa mevcut `KaynakSatiri` bileşeniyle kaynak satırı
-     - Her `baglanti` için büyük, yön oklu düğme (`etiket` metniyle)
-     - Durak listesi / mini harita: tüm duraklar, şu anki vurgulu, ziyaret edilenler işaretli; tıklayınca o durağa git
-     - `tur.aciklama` etiketi her zaman görünür
-     - "Tam ekran" düğmesi (Fullscreen API; desteklenmiyorsa gizle)
-   - **Yedek mod:** WebGL yoksa, bağlam kaybolursa veya `prefers-reduced-motion: reduce` ise düz fotoğraf gösterilir;
-     gezinti (düğmeler, liste, metin) aynen çalışır. Yedek modda da `alt` metni olsun (durak başlığından türet).
-   - Bileşen kaldırılınca renderer, doku ve geometrileri `dispose` et; olay dinleyicilerini temizle.
-3. **Eser sayfası:** `tur` varsa galeri bölümünden **önce** "Sanal gezinti" bölümü. Başlangıçta canvas yüklenmeden
-   önce başlangıç durağının fotoğrafı ve "Gezintiye başla" düğmesi göster (Three.js ancak tıklanınca yüklensin).
-4. **Ana sayfa:** `tur` olan eser kartında küçük "Sanal gezinti" etiketi.
-5. **Erişilebilirlik:** Tüm gezinti klavyeyle yapılabilir (Tab ile düğmeler; ← → tuşlarıyla görüşü hafifçe kaydırmak isteğe bağlı),
-   durak değişince yeni başlık `aria-live="polite"` ile duyurulur, odak görünür, düğmeler en az 44 px.
-   Canvas `aria-hidden`, bilgi HTML katmanında.
-6. Mevcut galeri, keşif noktaları, test ve rozet davranışını bozma.
-
-## Yapılmayacaklar
-
-`src/data/`, `public/gorseller/`, `public/derinlik/`, `_eski/`, `kaynaklar/`, `proje bilgileri/` klasörlerine dokunma.
-Yeni içerik veya tarihsel metin yazma. Yönetim ekranı, PWA bu görevde yok.
+- `src/data/eserler/`, `public/`, `_eski/`, `kaynaklar/`, `proje bilgileri/` klasörlerine dokunma.
+- **`src/pages/EserSayfasi.tsx` ve `src/components/Restorasyon*` dosyalarına dokunma** — Claude aynı anda bunlar
+  üzerinde çalışıyor. Eser sayfasının veriyi prop olarak alması zaten yeterli.
+- Yeni bağımlılık ekleme. Arayüz Türkçe, klavyeyle kullanılabilir, 360 px'te taşmasız.
 
 ## Bitti sayılması için
 
-- `npm run build` hatasız; ana JS paketi Three.js içermiyor (ayrı chunk)
-- Tarayıcıda (1280 px ve 360 px) iki eserde gezintiye başla → tüm duraklar arasında bağlantılarla gezilebiliyor,
-  parallax hareketi görülüyor, geçiş animasyonu çalışıyor, yedek mod (reduced-motion) çalışıyor, konsolda hata yok
-- Ekran görüntülerini incele: kenarlarda yırtılma/esneme göze batmamalı; batıyorsa `guc` değerini düşür
-- `.git` salt okunur olabilir; commit'i Claude atar
-- Bu dosyanın sonuna "Sonuç" bölümü ekle
-
-## Ek: Antigravity test raporundaki hatalar (`docs/test-raporu.md`) — bu görevde düzelt
-
-1. **[Kritik] Test klavyeyle çözülemiyor:** Radyo düğmesinde ok tuşu seçimi anında kilitliyor. Seçim serbest olsun,
-   cevap ayrı bir "Cevabı kontrol et" düğmesiyle onaylanınca kilitlensin.
-2. **[Orta] Fotoğraftaki numaraya tıklayınca bilgi görünmüyor:** Bilgi kartını büyük fotoğrafın hemen altında göster
-   (liste aşağıda kalabilir); ya da açıldıktan sonra (effect içinde) kaydır.
-3. **[Orta] Odak:** İlk yüklemede `<main>`'e odaklanma; yalnızca rota değişiminde. `main:focus, h2:focus { outline: none }`
-   kuralını kaldır, programatik odakta görünür bir odak stili olsun.
-4. **[Düşük] favicon 404:** `public/favicon.svg` (basit, metinsiz bir kubbe/kemer simgesi) ekle ve `index.html`'e bağla.
-5. Tasarım: Keşif listesindeki tekrarlanan `<h3>` başlığını kaldır; yanlış cevap kutusu farklı (kiremit tonu) kenarlıkla gösterilsin;
-   telefonda tam ekran galerideki önceki/sonraki düğmeleri aynı satırda olsun.
-
-## Sonuç
-
-**Tamamlandı — 3 Kasım 2026.** Sanal gezinti ve sondaki beş hata/tasarım düzeltmesi uygulandı.
-
-- `SanalGezinti.tsx` ve dinamik yüklenen `gezinti/sahne.ts` eklendi. Fotoğraf/derinlik dokuları, masaüstünde 200×200 ve mobilde 120×120 bölümlü düzlem, yumuşatılmış fare/dokunma/eğim hareketi ve yavaş salınım kullanılıyor. Kenar payı %16, derinlik gücü 0.055 tutuldu.
-- Durak bağlantılarında yaklaşık 600 ms ileri kamera hareketi ve çapraz solma var. Bağlı durakların fotoğraf ve derinlik dokuları önceden yükleniyor. Durak listesi mevcut durağı ve ziyaret edilenleri gösteriyor; kaynaklar ve mevcut `tur.aciklama` metni korunuyor. Desteklenen tarayıcılarda tam ekran kullanılabiliyor.
-- Gezinti galeriden önce yer alıyor; başlangıç fotoğrafı Three.js yüklenmeden gösteriliyor. Ana sayfadaki ilgili kartlarda “Sanal gezinti” etiketi var. Hazır JSON dosyalarında `baslangic` bulunmadığından tipte isteğe bağlı bırakıldı; verilmezse ilk durak kullanılıyor.
-- Hareket azaltma tercihi, WebGL yokluğu, bağlam kaybı veya doku yükleme hatasında alt metinli fotoğraf modu çalışıyor; bağlantılar, metinler ve durak listesi kullanılabiliyor. Kaldırmada animasyon, dinleyiciler, gözlemci, dokular, malzemeler, geometri ve renderer temizleniyor.
-- Testte seçim ile onay ayrıldı: ok tuşlarıyla tüm seçeneklere ulaşılabiliyor, “Cevabı kontrol et” yanıtı kilitliyor. Yanlış yanıt kutusu kiremit tonunda.
-- Fotoğraf numaraları bilgi kartını büyük fotoğrafın hemen altında açıyor ve kart görünür alana kaydırılıyor. Keşif listesinin tekrarlanan başlığı kaldırıldı. Mobil tam ekran galerinin önceki/sonraki düğmeleri aynı satırda.
-- İlk yüklemede odak zorlanmıyor; rota değişiminde ana içeriğe taşınıyor. Programatik odak görünür; gezintide kaldırılan yön düğmesinin odağı yeni durak başlığına aktarılıyor. Metinsiz kemer simgeli `public/favicon.svg` bağlandı.
-
-### Doğrulama
-
-Üretim derlemesi **`npm run build` ile başarılı**. Ana JS paketi 295.85 kB; Three.js içeren sahne parçası 533.40 kB (gzip 132.99 kB). Derlemedeki tek uyarı sahne parçasının 500 kB sınırını aşması. Ana pakette `WebGLRenderer`/`PlaneGeometry` bulunmuyor; sahne dinamik import ile ayrılmış durumda. Ağ istekleri de gezinti başlamadan ve azaltılmış hareket modunda sahne parçasının indirilmediğini doğruladı.
-
-Tarayıcı kontrolleri Playwright ile gerçek Chromium üzerinde, yazılımsal WebGL kullanılarak **4174** portundaki üretim önizlemesinde yapıldı:
-
-| Kontrol | Sonuç |
-|---|---|
-| 1280×900 ve 360×900: Ulu Camii’nin 7, Muradiye’nin 11 durağındaki tüm yön bağlantıları ve durak listesi | Geçti |
-| Fare parallax hareketi, yaklaşık 600 ms geçiş, ziyaret işaretleri, açıklama ve kaynaklar | Geçti |
-| 360×800: dokunma olaylarıyla sürükleme; izinli/izni reddedilmiş eğim akışı; sensör olayları ve eğimi kapatma | Geçti |
-| Masaüstünde tam ekrana giriş/çıkış; klavyeyle başlatma ve durak geçişi; görünür başlık odağı | Geçti |
-| İki genişlikte, iki eserin tüm duraklarında azaltılmış hareket/fotoğraf modu | Geçti |
-| Açık gezintide hareket tercihini değiştirme; gerçek `WEBGL_lose_context` ile bağlam kaybı; WebGL desteğinin bulunmaması | Geçti |
-| Derinlik isteği engellendiğinde fotoğraf moduna geçiş ve bağlantıyla devam | Geçti |
-| Her iki eserin tüm galeri fotoğrafları, numaralı bilgi kartları, tam ekran galeri ve Esc | Geçti |
-| İlk Tab ile atlama bağlantısı; testte dört seçeneğe ok tuşlarıyla erişim, ayrı onay, 3/3 sonuç, tekrar deneme ve yanlış yanıt görünümü | Geçti |
-| Ana sayfada rozet ve yenileme sonrası kalıcılık; rotadan ayrılınca canvas temizliği | Geçti |
-| Yatay taşma, uygulama konsol hataları, beklenmeyen HTTP hataları ve favicon | Sorun yok |
-
-Ekran görüntüleri `docs/test-ekranlari/gorev3/` altında. Masaüstü/mobil gezinti ve fotoğraf modu görüntüleri ile mobil galeri incelendi; belirgin kenar yırtılması/esnemesi görülmedi. Mobil fotoğraf alanı yön düğmelerine yer bırakmak için 320 px yüksekliğe çıkarıldı.
-
-Telefon eğimi ve iOS izin dalı tarayıcıda benzetildi; fiziksel iOS cihazında işletim sistemi izin penceresi denenmedi. Dokuların bilinçli olarak engellendiği hata senaryosundaki ağ hatası beklenen test girdisidir.
-
-Korunan altı klasör değiştirilmedi. **4173 sunucusu durdurulmadı; son kontrolde HTTP 200 yanıtladı.** Commit oluşturulmadı; görev tanımına göre Claude'a bırakıldı.
+- `npm run build` hatasız
+- Tarayıcıda: Ulu Camii özetini değiştir → ana sayfada ve eser sayfasında yeni metin; varsayılana döndür → eski metin;
+  yeni eser ekle (temsili) → ana sayfada görünür, sayfası açılır, testi çalışır; JSON indir; yenilemeden sonra
+  değişiklikler duruyor; bozuk `localStorage` verisinde uygulama çökmez
+- `.git` salt okunur olabilir; commit'i Claude atar. Bu dosyanın sonuna "Sonuç" bölümü ekle.

@@ -75,3 +75,15 @@ Yeni içerik veya tarihsel metin yazma. Yönetim ekranı, PWA bu görevde yok.
 - Ekran görüntülerini incele: kenarlarda yırtılma/esneme göze batmamalı; batıyorsa `guc` değerini düşür
 - `.git` salt okunur olabilir; commit'i Claude atar
 - Bu dosyanın sonuna "Sonuç" bölümü ekle
+
+## Ek: Antigravity test raporundaki hatalar (`docs/test-raporu.md`) — bu görevde düzelt
+
+1. **[Kritik] Test klavyeyle çözülemiyor:** Radyo düğmesinde ok tuşu seçimi anında kilitliyor. Seçim serbest olsun,
+   cevap ayrı bir "Cevabı kontrol et" düğmesiyle onaylanınca kilitlensin.
+2. **[Orta] Fotoğraftaki numaraya tıklayınca bilgi görünmüyor:** Bilgi kartını büyük fotoğrafın hemen altında göster
+   (liste aşağıda kalabilir); ya da açıldıktan sonra (effect içinde) kaydır.
+3. **[Orta] Odak:** İlk yüklemede `<main>`'e odaklanma; yalnızca rota değişiminde. `main:focus, h2:focus { outline: none }`
+   kuralını kaldır, programatik odakta görünür bir odak stili olsun.
+4. **[Düşük] favicon 404:** `public/favicon.svg` (basit, metinsiz bir kubbe/kemer simgesi) ekle ve `index.html`'e bağla.
+5. Tasarım: Keşif listesindeki tekrarlanan `<h3>` başlığını kaldır; yanlış cevap kutusu farklı (kiremit tonu) kenarlıkla gösterilsin;
+   telefonda tam ekran galerideki önceki/sonraki düğmeleri aynı satırda olsun.

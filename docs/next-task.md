@@ -47,3 +47,16 @@ Yönetim ekranı, PWA, dil seçimi, sesli anlatım, harita, 3D/VR. Bunlar sonrak
 - Tarayıcıda iki eser için: tarihçe, keşif noktaları (liste hâlinde), test ve kaynaklar görünüyor; 3/3 yapınca rozet ana sayfada görünüyor
 - `.git` salt okunur olabilir; commit atamazsan sorun değil, Claude commit'leyecek
 - Bu dosyanın sonuna "Sonuç" bölümü ekle
+
+## Sonuç
+
+- Görev 2 tamamlandı. `App.tsx`, `src/pages/` ve `src/components/` altında sayfalara ve bileşenlere ayrıldı.
+- İki eserin JSON verilerinden başlık, konum, dönem, vakıf, doğrulama etiketi, tarihçe ve kaynaklar gösteriliyor. Tarihsel metin eklenmedi.
+- Büyük fotoğraf, küçük resim şeridi, açıklama/alt metin ve fotoğraf kaynağı eklendi. Tam ekran galeride Esc, ok tuşları, odak tuzağı ve kapatınca önceki odağa dönüş çalışıyor.
+- Bilgi noktaları verideki görsel ve yüzde konumlarına göre yerleştiriliyor; numaralı listeden de erişilebiliyor. Görseli olmayan noktalar listede açılıyor. Her panelde metin ve kaynak/sayfa bilgisi var.
+- Sorular tek tek sunuluyor; cevaplar kilitleniyor, doğru/yanlış simge ve metinle bildiriliyor, açıklama ve kaynak gösteriliyor. Sonuç ve tekrar deneme eklendi. Üç doğruyla kazanılan rozet `kokxr-rozetler` anahtarında eser kimliği dizisi olarak saklanıyor ve ana sayfa kartında gösteriliyor. Depolama erişimi hata yakalama içinde; erişim engellenirse rozet oturumda korunuyor ve kaydedilemediği açıklanıyor.
+- `npm run build` hatasız geçti. Chromium/Playwright ile 360 ve 1280 px genişliklerde iki eserin 20 fotoğrafı, tüm bilgi noktalarının konumları ve klavyeyle açılması, liste panelleri, kaynaklar, modal klavye/odak davranışı, yanlış/doğru cevaplar, tekrar deneme ve sayfa yenilemesi sonrası rozetler kontrol edildi. Tarayıcı çalışma hatası ve yatay taşma görülmedi. Mobil eser sayfası ve masaüstü ana sayfa ekran görüntüleri görsel olarak incelendi.
+- Kaynak dosyalarını değiştirmeden, tarayıcı ağ yanıtında geçici boş görsel/konum verisiyle yedek görünüm ve engellenmiş `localStorage` davranışı da doğrulandı.
+- Yeni bağımlılık eklenmedi. `src/data/`, `public/gorseller/`, `_eski/`, `kaynaklar/` ve `proje bilgileri/` değiştirilmedi.
+- `vite preview` üzerinden üretim derlemesinde de iki genişlikte aynı ana akış testleri başarıyla tekrarlandı.
+- Commit denendi; `.git` salt okunur olduğu için `index.lock` oluşturulamadı. Değişiklikler commit için hazır bırakıldı.

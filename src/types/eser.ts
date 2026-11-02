@@ -44,6 +44,14 @@ export interface Tur {
   duraklar: Durak[];
 }
 
+// Dış sağlayıcının resmî 360° oynatıcısı; görüntüler sağlayıcının sunucusundan gelir.
+export interface Tur360 {
+  saglayici: string;
+  embedUrl: string;
+  kaynakUrl: string;
+  aciklama: string;
+}
+
 export interface Eser {
   id: string;             // "ulu-camii", "muradiye-kulliyesi"
   ad: string;
@@ -60,4 +68,5 @@ export interface Eser {
   test: Soru[];           // tam 3 soru
   kaynaklar: Kaynak[];
   tur?: Tur;
+  tur360?: Tur360;
 }

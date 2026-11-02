@@ -343,5 +343,11 @@
         ]
       }
     ]
+  },
+  "tur360": {
+    "saglayici": "360TR",
+    "embedUrl": "https://www.360tr.com/embed/bursa-ulu-camii",
+    "kaynakUrl": "https://www.360tr.com/tr/bursa-ulu-camii/giris",
+    "aciklama": "Gerçek 360° panoramalar: mihrap, abdest havuzu, kubbe altı, giriş ve iç mekân. Fareyle veya parmağınla her yöne bak."
   }
 }

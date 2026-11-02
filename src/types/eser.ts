@@ -52,6 +52,13 @@ export interface Tur360 {
   aciklama: string;
 }
 
+// Fotoğraftan yapılan parça birleştirme oyunu; gorsel sutun:satir oranında olmalı.
+export interface RestorasyonGorevi {
+  baslik: string; gorsel: string; alt: string;
+  sutun: number; satir: number;
+  metin: string; kaynakId: string; not: string;
+}
+
 export interface Eser {
   id: string;             // "ulu-camii", "muradiye-kulliyesi"
   ad: string;
@@ -69,4 +76,5 @@ export interface Eser {
   kaynaklar: Kaynak[];
   tur?: Tur;
   tur360?: Tur360;
+  restorasyon?: RestorasyonGorevi;
 }

@@ -219,6 +219,11 @@
       "id": "mur-s118",
       "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
       "sayfa": "118"
+    },
+    {
+      "id": "mur-s114",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
+      "sayfa": "114-115"
     }
   ],
   "tur": {
@@ -415,5 +420,15 @@
         ]
       }
     ]
+  },
+  "restorasyon": {
+    "baslik": "Muradiye Camii süslemelerindeki geometrik desenli mozaik çini panoyu onar: parçaları doğru yerlerine koy ve doğru yöne çevir.",
+    "gorsel": "/restorasyon/muradiye-cini.jpg",
+    "alt": "Kiremit renkli geçme şeritler arasında mavi yıldız ve çokgenlerden oluşan geometrik mozaik çini",
+    "sutun": 4,
+    "satir": 2,
+    "metin": "Muradiye Camii son cemaat yerinde pencerelerin alınlıkları geometrik desenli mozaik çinilerle kaplanmıştır. Revak cephesi ise farklı boyut ve biçimdeki tuğlaların on beş değişik geometrik düzende örülmesiyle hareketlendirilmiştir.",
+    "kaynakId": "mur-s114",
+    "not": "Fotoğraf: Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi. Bu bir öğrenme oyunudur; gerçek bir restorasyon yöntemini temsil etmez."
   }
 }

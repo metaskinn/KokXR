@@ -13,5 +13,6 @@ export default function Tur360({ tur, ad }: { tur: Tur360Verisi; ad: string }) {
         </div>
       : <button className="tur360-baslat" onClick={() => setAcik(true)}>360° turu başlat</button>}
     <p className="kaynak">360° görüntüler: <a href={tur.kaynakUrl} target="_blank" rel="noopener noreferrer">{tur.saglayici}</a></p>
+    {acik && <p>Tur açılmıyorsa tarayıcının koruma kalkanı (ör. Brave Shields) engelliyor olabilir. <a href={tur.kaynakUrl} target="_blank" rel="noopener noreferrer">Turu {tur.saglayici} sitesinde yeni sekmede aç</a>.</p>}
   </section>
 }

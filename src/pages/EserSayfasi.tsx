@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import type { Eser } from '../types/eser'
 import SanalGezinti from '../components/SanalGezinti'
 import Tur360 from '../components/Tur360'
+import EseriEleAl from '../components/EseriEleAl'
 import Restorasyon from '../components/Restorasyon'
 import Galeri from '../components/Galeri'
 import Test from '../components/Test'
@@ -21,6 +22,7 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
       <p className="etiket">{eser.dogrulama === 'dogrulanmis' ? 'Kaynaklı bilgi' : 'Temsili içerik'}</p>
       <p>{eser.ozet}</p>
     </header>
+    {eser.maket && <EseriEleAl maket={eser.maket} kaynaklar={eser.kaynaklar} ad={eser.ad} />}
     {eser.tur360 && <Tur360 tur={eser.tur360} ad={eser.ad} />}
     {eser.tur && <SanalGezinti tur={eser.tur} kaynaklar={eser.kaynaklar} />}
     <Galeri eser={eser} />

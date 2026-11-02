@@ -59,6 +59,13 @@ export interface RestorasyonGorevi {
   metin: string; kaynakId: string; not: string;
 }
 
+// Kodla oluşturulan temsili 3B maket; model adı src/components/maket/maketSahnesi.ts içinde tanımlı.
+export interface Maket {
+  model: string;
+  aciklama: string;
+  bilgiler: { metin: string; kaynakId: string }[];
+}
+
 export interface Eser {
   id: string;             // "ulu-camii", "muradiye-kulliyesi"
   ad: string;
@@ -77,4 +84,5 @@ export interface Eser {
   tur?: Tur;
   tur360?: Tur360;
   restorasyon?: RestorasyonGorevi;
+  maket?: Maket;
 }

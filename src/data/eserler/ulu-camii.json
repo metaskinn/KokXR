@@ -349,5 +349,27 @@
     "embedUrl": "https://www.360tr.com/embed/bursa-ulu-camii",
     "kaynakUrl": "https://www.360tr.com/tr/bursa-ulu-camii/giris",
     "aciklama": "Gerçek 360° panoramalar: mihrap, abdest havuzu, kubbe altı, giriş ve iç mekân. Fareyle veya parmağınla her yöne bak."
+  },
+  "maket": {
+    "model": "ulu-camii",
+    "aciklama": "Temsili maket: plan ölçüleri, kubbe ve paye düzeni envanterdeki bilgilere göre kodla oluşturuldu; yükseklikler, pencere ve kapı ayrıntıları temsilidir. Gerçek bir 3B tarama değildir.",
+    "bilgiler": [
+      {
+        "metin": "Cami yaklaşık 55 × 69 m boyutlarında, kareye yakın dikdörtgen planlıdır; kuzey cephesinde taç kapı bulunur.",
+        "kaynakId": "ulu-s44"
+      },
+      {
+        "metin": "Yapıyı örten yirmi kubbenin çapı 11 m’dir ve kubbeler on iki kare paye üzerine oturur. \"Parçala\" ile çatıyı kaldırıp payeleri görebilirsin.",
+        "kaynakId": "ulu-s46"
+      },
+      {
+        "metin": "Şadırvanın üzerindeki kubbenin ortası açık bırakılmıştır; iç mekân böylece ışık alır ve havalanır.",
+        "kaynakId": "ulu-s60"
+      },
+      {
+        "metin": "İki minarenin kaideleri mermerden, gövdeleri tuğladandır. Doğudaki minare bir süre yarım kullanıldığı için \"Güdük Minare\" olarak anılmıştır.",
+        "kaynakId": "ulu-s63"
+      }
+    ]
   }
 }

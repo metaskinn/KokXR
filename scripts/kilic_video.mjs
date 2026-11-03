@@ -9,7 +9,7 @@ import { join } from 'node:path'
 
 const cikti = process.argv[2] ?? 'test-sonuclari/kokxr-kilic-atolyesi.webm'
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:4173'
-const boyut = { width: 1600, height: 900 }
+const boyut = { width: 1600, height: 1000 }
 const gecici = mkdtempSync(join(tmpdir(), 'kokxr-kilic-video-'))
 const browser = await chromium.launch({
   channel: 'chromium',
@@ -49,11 +49,13 @@ async function fare(x, y, adim = 20) {
 }
 async function tikla(locator, adim = 18) {
   const h = locator.first(); await h.waitFor({ state: 'visible', timeout: 30000 })
+  await h.scrollIntoViewIfNeeded(); await bekle(120)
   const b = await h.boundingBox()
   await fare(b.x + b.width / 2, b.y + b.height / 2, adim)
   await imlecBas('.8'); await page.mouse.down(); await bekle(70); await page.mouse.up(); await imlecBas('1')
 }
 async function basiliTut(locator, kosul, enCok = 20000) {
+  await locator.first().scrollIntoViewIfNeeded(); await bekle(120)
   const b = await locator.first().boundingBox()
   await fare(b.x + b.width / 2, b.y + b.height / 2, 16)
   await imlecBas('.8'); await page.mouse.down()
@@ -76,7 +78,7 @@ async function bolum(ad, fn) {
 
 await page.goto(`${url}/atolye/kilic`)
 await stage.locator('canvas').waitFor(); await asamaBekle(0, 60000)
-await stage.evaluate((e) => window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 118))
+await stage.evaluate((e) => window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 40))
 await bekle(900)
 
 await bolum('Külçe', async () => {

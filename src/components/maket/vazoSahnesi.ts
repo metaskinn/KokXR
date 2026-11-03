@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 export const parcaAdlari = ['Alt gövde · sağ', 'Alt gövde · arka', 'Alt gövde · sol', 'Üst gövde · sağ', 'Üst gövde · arka', 'Üst gövde · sol']
-export interface VazoDurumu { onarim: boolean; oturum: number; yerlesen: number[]; secili: number | null; ipucu: boolean }
+export interface VazoDurumu { onarim: boolean; kirildi: boolean; oturum: number; yerlesen: number[]; secili: number | null }
 export interface VazoSahnesi {
   guncelle: (durum: VazoDurumu) => void
   dondur: (yatay: number, dikey: number) => void
@@ -31,12 +31,20 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   kaynaklariTopla(gltf.scene)
   const kaynaklariBirak = () => { geometriler.forEach((g) => g.dispose()); malzemeler.forEach((m) => m.dispose()) }
   const parcalar: THREE.Object3D[] = []
+  let saglam: THREE.Object3D | undefined
+  let onarimIzleri: THREE.Object3D | undefined
   gltf.scene.updateMatrixWorld(true)
-  gltf.scene.traverse((o) => { if (Number.isInteger(o.userData.pieceId)) parcalar[o.userData.pieceId] = o })
-  if (parcalar.length !== 6 || Array.from({ length: 6 }, (_, id) => parcalar[id]).some((p) => !p)) {
+  gltf.scene.traverse((o) => {
+    if (Number.isInteger(o.userData.pieceId)) parcalar[o.userData.pieceId] = o
+    if (o.userData.intact) saglam = o
+    if (o.userData.repairMarks) onarimIzleri = o
+  })
+  if (!saglam || !onarimIzleri || parcalar.length !== 6 || Array.from({ length: 6 }, (_, id) => parcalar[id]).some((p) => !p)) {
     kaynaklariBirak()
-    throw new Error('Vazo modelinin altı ayrı parçası bulunamadı.')
+    throw new Error('Vazonun sağlam gövdesi, kırık parçaları veya onarım izleri bulunamadı.')
   }
+  const saglamGorunum = saglam
+  const birlesimIzleri = onarimIzleri
   let renderer: THREE.WebGLRenderer
   try { renderer = new THREE.WebGLRenderer({ antialias: true }) }
   catch (error) { kaynaklariBirak(); throw error }
@@ -52,7 +60,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   controls.minDistance = 70
   controls.maxDistance = 240
   controls.maxPolarAngle = Math.PI * .8
-  let durum: VazoDurumu = { onarim: false, oturum: 0, yerlesen: [], secili: null, ipucu: true }
+  let durum: VazoDurumu = { onarim: false, kirildi: false, oturum: 0, yerlesen: [], secili: null }
   const sifirla = () => {
     camera.position.set(durum.onarim ? 0 : 63, durum.onarim ? 31 : 53, durum.onarim ? 156 : 108)
     controls.target.set(0, 23, 0)
@@ -79,14 +87,15 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
     })
     scene.add(p)
   })
-  const izler = parcalar.map((p) => {
-    const ghost = p.clone(true)
-    ghost.traverse((o) => {
-      if (o instanceof THREE.Mesh) o.material = new THREE.MeshBasicMaterial({ color: '#e1d4ab', transparent: true, opacity: .09, depthWrite: false, side: THREE.DoubleSide })
-    })
-    scene.add(ghost)
-    return ghost
+  scene.attach(saglam)
+  scene.attach(onarimIzleri)
+  // Genel formu gösterir; seçili parçaya göre değişmez veya yerini işaretlemez.
+  const siluet = saglam.clone(true)
+  siluet.name = 'Vazo_Genel_Siluet'
+  siluet.traverse((o) => {
+    if (o instanceof THREE.Mesh) o.material = new THREE.MeshBasicMaterial({ color: '#ded4b9', transparent: true, opacity: .065, depthWrite: false, side: THREE.DoubleSide })
   })
+  scene.add(siluet)
   const raflar = parcalar.map((_, id) => new THREE.Vector3(id < 3 ? -43 : 43, 9 + (id % 3) * 19, 14))
   const etiketler = parcalar.map((_, id) => {
     const button = document.createElement('button')
@@ -99,11 +108,6 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
     alan.append(button)
     return button
   })
-  const hedefIsareti = document.createElement('span')
-  hedefIsareti.className = 'vazo-hedef'
-  hedefIsareti.setAttribute('aria-hidden', 'true')
-  hedefIsareti.textContent = 'Buraya yaklaştır'
-  alan.append(hedefIsareti)
   const ray = new THREE.Raycaster(), plane = new THREE.Plane(), nokta = new THREE.Vector3()
   const hareketler = new Map<number, THREE.Vector3>()
   let drag: { id: number; pointer: number; offset: THREE.Vector3; x: number; y: number; tasindi: boolean } | null = null
@@ -125,13 +129,6 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
         if (!(o instanceof THREE.Mesh)) return
         for (const material of Array.isArray(o.material) ? o.material : [o.material]) {
           if (material instanceof THREE.MeshStandardMaterial) material.emissive.set(secili ? '#352510' : '#000000')
-        }
-      })
-      izler[id].visible = durum.onarim && !durum.yerlesen.includes(id) && (durum.ipucu || secili)
-      izler[id].traverse((o) => {
-        if (o instanceof THREE.Mesh) {
-          o.material.opacity = secili ? .28 : .07
-          o.material.color.set(secili ? '#e6ca8a' : '#e1d4ab')
         }
       })
       etiketler[id].hidden = !durum.onarim || durum.yerlesen.includes(id)
@@ -156,8 +153,13 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
     if (bastan) { captureBirak(); hareketler.clear() }
     const onceki = durum
     durum = yeni
+    const izsizGorunum = !yeni.kirildi && !yeni.onarim
+    saglamGorunum.visible = izsizGorunum
+    birlesimIzleri.visible = yeni.kirildi && yeni.yerlesen.length === 6
+    siluet.visible = yeni.onarim && yeni.yerlesen.length < 6
     if (bastan) sifirla()
     parcalar.forEach((p, id) => {
+      p.visible = !izsizGorunum
       const yerde = !yeni.onarim || yeni.yerlesen.includes(id)
       if (bastan) {
         p.position.copy(yerde ? hedefler[id].position : raflar[id])
@@ -244,16 +246,6 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
       const p = ekran(parcalar[id].position)
       button.style.left = `${p.x}px`; button.style.top = `${p.y}px`
     })
-    const id = drag?.id ?? durum.secili
-    hedefIsareti.hidden = !durum.onarim || id === null || durum.yerlesen.includes(id)
-    if (!hedefIsareti.hidden && id !== null) {
-      const p = ekran(hedefler[id].position)
-      hedefIsareti.style.left = `${p.x}px`; hedefIsareti.style.top = `${p.y}px`
-      hedefIsareti.dataset.hedefId = String(id)
-      const uygun = yakinMi(id)
-      hedefIsareti.classList.toggle('hazir', uygun)
-      hedefIsareti.textContent = uygun ? 'Bırak, yerine otursun' : 'Buraya yaklaştır'
-    }
     renderer.render(scene, camera)
   })
   kaynaklariTopla(scene)
@@ -290,7 +282,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
       alan.removeEventListener('lostpointercapture', pointerCancel, true)
       renderer.domElement.removeEventListener('webglcontextlost', contextLost)
       kaynaklariBirak(); renderer.dispose(); renderer.domElement.remove()
-      etiketler.forEach((b) => b.remove()); hedefIsareti.remove()
+      etiketler.forEach((b) => b.remove())
     },
   }
 }

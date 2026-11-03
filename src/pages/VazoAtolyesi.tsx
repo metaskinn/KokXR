@@ -4,7 +4,7 @@ import type { VazoDurumu, VazoSahnesi } from '../components/maket/vazoSahnesi'
 import './vazo.css'
 
 interface Oyun extends VazoDurumu { hamle: number; mesaj: string }
-const ilkOyun: Oyun = { onarim: false, oturum: 0, yerlesen: [], secili: null, ipucu: true, hamle: 0, mesaj: '' }
+const ilkOyun: Oyun = { onarim: false, kirildi: false, oturum: 0, yerlesen: [], secili: null, hamle: 0, mesaj: '' }
 
 export default function VazoAtolyesi() {
   const alan = useRef<HTMLDivElement>(null)
@@ -27,7 +27,7 @@ export default function VazoAtolyesi() {
             if (!onceki.onarim || onceki.yerlesen.includes(id)) return onceki
             const yeni = oturdu ? [...onceki.yerlesen, id] : onceki.yerlesen
             return { ...onceki, yerlesen: yeni, secili: oturdu ? null : id, hamle: onceki.hamle + 1,
-              mesaj: oturdu ? yeni.length === 6 ? 'Vazo onarıldı! Birleştirdiğin vazoyu çevirip inceleyebilirsin.' : `Parça ${id + 1} yerine oturdu.` : 'Parça henüz yerine yaklaşmadı. Siluetteki işaretli alana taşıyıp bırak.' }
+              mesaj: oturdu ? yeni.length === 6 ? 'Vazo onarıldı! Birleşim izlerini çevirip inceleyebilirsin.' : `Parça ${id + 1} yerine oturdu.` : 'Parça henüz yerine yaklaşmadı. Kırık kenarları ve desenin devamını takip ederek yeniden dene.' }
           })
         },
         hata: () => { if (!iptal) setDurum('hata') },
@@ -42,8 +42,8 @@ export default function VazoAtolyesi() {
   useEffect(() => { sahne.current?.guncelle(oyun) }, [oyun, durum])
 
   function baslat() {
-    setOyun((onceki) => ({ ...ilkOyun, onarim: true, oturum: onceki.oturum + 1,
-      mesaj: 'Parçayı tut, siluetteki yerine sürükle ve bırak. Yaklaştığında kendiliğinden oturur.' }))
+    setOyun((onceki) => ({ ...ilkOyun, onarim: true, kirildi: true, oturum: onceki.oturum + 1,
+      mesaj: 'Parçaları kırık kenarlara ve desenin devamına göre birleştir. Doğru yere yakın bırakılan parça yerine oturur.' }))
   }
 
   return <article className="sayfa vazo-atolyesi">
@@ -58,7 +58,7 @@ export default function VazoAtolyesi() {
     <div className="vazo-duzen">
       <section aria-labelledby="vazo-incele-basligi">
         <div className="vazo-sahne-baslik"><h2 id="vazo-incele-basligi">{onarim && !bitti ? 'Tut. Sürükle. Birleştir.' : bitti ? 'Vazo yeniden bir bütün.' : 'Vazoyu incele'}</h2>{onarim && <span>{yerlesen.length}/6 parça</span>}</div>
-        <div className="vazo-sahne" ref={alan} tabIndex={0} role="group" aria-label="3B vazo atölyesi. Parçaları tutup siluete sürükle. Boş alandan görünümü döndür."
+        <div className="vazo-sahne" ref={alan} tabIndex={0} role="group" aria-label="3B vazo atölyesi. Parçaları tutup birbirine ekle. Boş alandan görünümü döndür."
           onKeyDown={(e) => {
             if (onarim && secili !== null && !yerlesen.includes(secili)) {
               const hareketler: Record<string, [number, number]> = { ArrowLeft: [-12, 0], ArrowRight: [12, 0], ArrowUp: [0, -12], ArrowDown: [0, 12] }
@@ -92,15 +92,14 @@ export default function VazoAtolyesi() {
           <p><strong>{yerlesen.length}/6 parça yerinde</strong> · Deneme: {hamle}</p>
           <progress value={yerlesen.length} max={6} aria-label="Vazo onarım ilerlemesi" />
           {bitti ? <p className="yanit"><strong>Vazo onarıldı!</strong> Eline sağlık. Şimdi bütün ayrıntılarıyla inceleyebilirsin.</p> : <>
-            <ol className="vazo-adimlar"><li>Bir parçayı tut.</li><li>Siluetteki yerine sürükle.</li><li>İşaret belirginleşince bırak.</li></ol>
-            <label className="vazo-ipucu"><input type="checkbox" checked={oyun.ipucu} onChange={(e) => setOyun({ ...oyun, ipucu: e.target.checked })} /> Vazonun siluetini göster</label>
+            <ol className="vazo-adimlar"><li>Bir parçayı tut.</li><li>Kırık kenarlara ve desene göre yerine taşı.</li><li>Yerini bulduğunda bırak.</li></ol>
             <details className="vazo-klavye"><summary>Klavye ile birleştir</summary><p>Bir parça seç; ok tuşlarıyla taşı, Enter ile bırak. Escape parçayı geri alır.</p>
               <div className="vazo-parcalar" role="group" aria-label="Klavye için parça seçimi">{Array.from({ length: 6 }, (_, id) => !yerlesen.includes(id) && <button key={id} aria-pressed={secili === id} onClick={() => { setOyun({ ...oyun, secili: id }); alan.current?.focus({ preventScroll: true }) }}>Parça {id + 1}</button>)}</div>
             </details>
           </>}
           <div className="vazo-kontroller">
             <button onClick={baslat}>Yeniden parçala</button>
-            <button onClick={() => setOyun({ ...oyun, onarim: false, secili: null, mesaj: 'İnceleme moduna dönüldü.' })}>İncelemeye dön</button>
+            <button onClick={() => setOyun(bitti ? { ...oyun, onarim: false, secili: null, mesaj: 'Onarılmış vazoyu birleşim izleriyle inceleyebilirsin.' } : { ...ilkOyun, oturum: oyun.oturum + 1, mesaj: 'Onarım iptal edildi. Vazo başlangıç görünümüne döndü.' })}>{bitti ? 'İncelemeye dön' : 'Onarımı iptal et'}</button>
           </div>
         </>}
         <p className="vazo-mesaj" role="status">{mesaj}</p>

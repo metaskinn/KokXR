@@ -18,6 +18,9 @@ tutulup sahnede sürüklenir; doğru yere yakın bırakılınca otomatik hizalan
 yanlış bırakınca geri dönme, ilerleme, yeniden başlatma, Escape ve klavye alternatifi desteklenir.
 Kaynak `assets/vazo/vazo.blend`, uygulamadaki model `public/modeller/vazo.glb`, yeniden üretim
 betiği `scripts/vazo_uret.py`. Tasarım/etkileşim ve doğrulama ayrıntıları `docs/vazo-modeli.md` içinde.
+**Güncel görünüm:** İlk açılışta ayrı kesintisiz gövdeyle izsiz vazo gösterilir. Parçalanıp tamamen
+birleştirilince onarım izleri belirir ve inceleme modunda korunur. Genel vazo silueti durur;
+seçili parçanın tam konumunu veren halka/yazı ve parçaya özel siluet vurgusu kaldırılmıştır.
 Mevcut cami maketi ve çini bulmacası korunmuştur. İlgili kod: `src/pages/VazoAtolyesi.tsx`,
 `src/pages/vazo.css`, `src/components/maket/vazoSahnesi.ts`.
 Kontrol: `node tests/vazo.mjs` (kurulu Google Chrome, çalışan geliştirme sunucusu;

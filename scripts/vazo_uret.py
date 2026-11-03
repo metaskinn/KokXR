@@ -124,6 +124,77 @@ for band in range(2):
         bevel.limit_method='ANGLE'
         objects.append(obj)
 
+# Başlangıç görünümü için kırık sınırları olmayan, çevresi kesintisiz tek kabuk.
+# Bu ağ onarımda kullanılmaz; altı kırık parçanın yerine yalnız ilk incelemede görünür.
+N=144
+levels=[i/4 for i in range(177)]
+verts=[]; faces=[]; slots=[]
+for inside in (False,True):
+    for y in levels:
+        for i in range(N):
+            theta=i/N*math.tau+.045*math.sin(y*.7)
+            r=radius(y)-(.85 if inside else 0)
+            verts.append((math.sin(theta)*r,-math.cos(theta)*r,max(y,.85) if inside else y))
+layer=N*len(levels)
+for inside in (False,True):
+    offset=layer if inside else 0
+    for j in range(len(levels)-1):
+        y=(levels[j]+levels[j+1])/2
+        for i in range(N):
+            a=offset+j*N+i; b=offset+j*N+(i+1)%N
+            c=b+N; d=a+N
+            faces.append((a,b,c,d) if not inside else (a,d,c,b))
+            theta=(i+.5)/N*math.tau
+            slots.append(3 if inside else 4 if y<2 or y>41.8 else 1 if 8.5<y<10 or 26.5<y<28 or 36.5<y<37.5 else 2 if 13<y<23 and abs(math.sin(theta*8))+abs(math.sin((y-13)*.55))<.8 else 0)
+for i in range(N):
+    a=(len(levels)-1)*N+i; b=(len(levels)-1)*N+(i+1)%N
+    faces.append((a,a+layer,b+layer,b)); slots.append(4)
+bottom_center=len(verts); verts.append((0,0,0))
+inner_center=len(verts); verts.append((0,0,.85))
+for i in range(N):
+    nxt=(i+1)%N
+    faces.append((bottom_center,nxt,i)); slots.append(3)
+    faces.append((inner_center,layer+i,layer+nxt)); slots.append(3)
+mesh=bpy.data.meshes.new('Kesintisiz_saglam_seramik')
+mesh.from_pydata(verts,[],faces)
+for m in materials: mesh.materials.append(m)
+for poly,slot in zip(mesh.polygons,slots):
+    poly.material_index=slot
+    poly.use_smooth=slot!=3
+bm=bmesh.new(); bm.from_mesh(mesh)
+bmesh.ops.recalc_face_normals(bm,faces=bm.faces)
+bm.to_mesh(mesh); bm.free()
+intact=bpy.data.objects.new('Vazo_Saglam',mesh)
+intact['intact']=True
+bpy.context.collection.objects.link(intact)
+objects.append(intact)
+
+# Tamamlanan onarımda görünen ince birleşim çizgileri; hedef yardımı değildir.
+curve=bpy.data.curves.new('Onarim_birlesim_cizgileri','CURVE')
+curve.dimensions='3D'; curve.bevel_depth=.075; curve.bevel_resolution=2
+curve.use_fill_caps=True
+def line(points,closed=False):
+    spline=curve.splines.new('POLY')
+    spline.points.add(len(points)-1)
+    for p,v in zip(spline.points,points): p.co=(*v,1)
+    spline.use_cyclic_u=closed
+def surface_point(a,y):
+    theta=a+.045*math.sin(y*.7)
+    r=radius(y)+.025
+    return (math.sin(theta)*r,-math.cos(theta)*r,y)
+line([surface_point(i/288*math.tau,seam(i/288*math.tau)) for i in range(288)],True)
+for sector in range(3):
+    line([surface_point(sector*math.tau/3,i/4) for i in range(177)])
+curve.materials.append(material('Onarim izi - sicak bronz','a98451',.55))
+marks=bpy.data.objects.new('Onarim_Izleri',curve)
+bpy.context.collection.objects.link(marks)
+bpy.ops.object.select_all(action='DESELECT')
+marks.select_set(True); bpy.context.view_layer.objects.active=marks
+bpy.ops.object.convert(target='MESH')
+marks=bpy.context.object
+marks['repairMarks']=True
+objects.append(marks)
+
 bpy.context.scene.unit_settings.system='METRIC'
 bpy.context.scene['model_note']='KokXR ozgun temsili vazo; ucuncu taraf model veya doku kullanilmadi.'
 bpy.ops.object.select_all(action='DESELECT')
@@ -133,4 +204,4 @@ bpy.context.view_layer.objects.active=objects[0]
 (ROOT/'public/modeller').mkdir(parents=True,exist_ok=True)
 bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'assets/vazo/vazo.blend'))
 bpy.ops.export_scene.gltf(filepath=str(ROOT/'public/modeller/vazo.glb'),export_format='GLB',use_selection=True,export_extras=True,export_apply=True,export_cameras=False,export_lights=False)
-print('KOKXR: 6 kalinlikli parca; .blend ve .glb hazir.')
+print('KOKXR: izsiz saglam vazo, 6 kalinlikli parca ve onarim izleri; .blend ve .glb hazir.')

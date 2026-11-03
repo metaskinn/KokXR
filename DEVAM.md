@@ -29,30 +29,21 @@ Bursa'daki vakıf eserlerini keşfettiren bir **web uygulaması** (React + TypeS
 
 ## 2. Projeyi yeni bilgisayara taşıma
 
-Repo şu an **yalnızca eski bilgisayarda** (`~/Projects/kokxr`), GitHub'a yüklenmedi.
+Repo GitHub'da (**private**): `git@github.com:selamisimsek/kokxr.git` · dal: `master`
 
-### Yol A — GitHub (önerilen, ekip de erişir)
-Eski bilgisayarda:
-1. github.com → New repository → `kokxr` → **Private** (arşiv fotoğraflarının izni netleşmedi!) → README ekleme.
-2. ```bash
-   cd ~/Projects/kokxr
-   git remote add origin https://github.com/<kullanici>/kokxr.git
-   git push -u origin master
-   ```
-   Şifre yerine GitHub **Personal Access Token** istenir (Settings → Developer settings → Tokens).
-
-Yeni bilgisayarda: `git clone https://github.com/<kullanici>/kokxr.git && cd kokxr`
-
-### Yol B — Dosya ile (internet/GitHub olmadan)
-Eski bilgisayarda hazır: **`~/Masaüstü/kokxr.bundle`** (tüm git geçmişi tek dosyada). USB ile taşı, yeni bilgisayarda:
+Yeni bilgisayarda:
 ```bash
-git clone kokxr.bundle kokxr && cd kokxr
+git clone git@github.com:selamisimsek/kokxr.git      # SSH anahtarı o bilgisayarda da GitHub'a eklenmeli
+# ya da: git clone https://github.com/selamisimsek/kokxr.git   (şifre yerine Personal Access Token)
+cd kokxr
 ```
+İki bilgisayar arasında: çalışmaya başlamadan `git pull`, bitirince `git add -A && git commit -m "…" && git push`.
+Repo **private kalmalı** (arşiv fotoğraflarının kullanım izni netleşmedi).
 
 ### Taşınmayanlar (git dışında, gerekirse ayrıca kopyala)
 | Klasör | Boyut | Gerekli mi? |
 |---|---|---|
-| `proje bilgileri/` — şartname, envanter PDF'leri, ham fotoğraf arşivi | 7,6 GB | Yalnızca **yeni içerik/fotoğraf** eklenecekse. Uygulama için gereken fotoğraflar zaten `public/` içinde ve git'te. |
+| `proje bilgileri/` — şartname, envanter PDF'leri, ham fotoğraf arşivi | 7,6 GB | Küçük belgeler (şartname, sunum, mockup PNG) Drive'dan; fotoğraf arşivi paylaşılan "Vakıf Eserleri Envanteri – Bursa Fotoğraf Arşivi" Drive klasöründen. Yalnızca **yeni içerik/fotoğraf** eklenecekse gerekir; uygulamanın fotoğrafları zaten `public/` içinde ve git'te. |
 | `_eski/` | küçük | Hayır (eski, boş deneme dosyaları) |
 | `node_modules/` | — | Hayır, `npm install` ile kurulur |
 

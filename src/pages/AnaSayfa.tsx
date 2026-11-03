@@ -1,27 +1,59 @@
 import { Link } from 'react-router-dom'
 import type { Eser } from '../types/eser'
+import Simge from '../components/Simge'
 
 export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozetler: string[] }) {
+  const oneCikan = eserler.find((eser) => eser.id === 'ulu-camii') ?? eserler[0]
   return <>
     <section className="giris" aria-labelledby="sayfa-basligi">
-      <p className="ust-baslik">Bursa’nın vakıf eserleri</p>
-      <h1 id="sayfa-basligi">KökXR</h1>
-      <p className="slogan">Dokunamadığın tarihe dokun.</p>
-      <p>Bursa'daki vakıf eserlerini keşfet.</p>
+      <div className="giris-metin">
+        <p className="ust-baslik"><span className="durum-noktasi" /> BURSA’NIN DİJİTAL MİRASI</p>
+        <h1 id="sayfa-basligi"><span className="sr-only">KökXR — </span>Geçmişe bak.<br /><em>Bir bağ kur.</em></h1>
+        <p className="slogan">Dokunamadığın tarihe dokun.</p>
+        <p className="giris-aciklama">Bursa’nın vakıf eserlerini yakından keşfet. Ayrıntılarda gez, hikâyelerini öğren, kendi restorasyonunu yap.</p>
+        <div className="giris-eylemler">
+          <a className="dugme" href="#eserler">Keşfetmeye başla <Simge ad="ok" /></a>
+          <Link className="metin-baglanti" to="/atolye/vazo">Vazo atölyesini dene <span aria-hidden="true">↗</span></Link>
+        </div>
+        <div className="giris-alt"><Simge ad="konum" /><span>Bursa, Türkiye</span><span className="ayirici" /> <span>{eserler.length} eser · sana ait bir keşif</span></div>
+      </div>
+      {oneCikan?.kapakGorsel && <figure className="giris-gorsel">
+        <img src={oneCikan.kapakGorsel} alt={oneCikan.gorseller.find((g) => g.dosya === oneCikan.kapakGorsel)?.alt ?? oneCikan.ad} fetchPriority="high" />
+        <span className="gorsel-etiketi"><Simge ad="konum" /> {oneCikan.ilce}, {oneCikan.sehir}</span>
+        <figcaption><div><span>KEŞFİN BAŞLADIĞI YER</span><strong>{oneCikan.ad}</strong></div><Link to={`/eser/${oneCikan.id}`} aria-label={`${oneCikan.ad} eserini keşfet`}><Simge ad="ok" /></Link></figcaption>
+        <span className="gorsel-kose" aria-hidden="true">K / XR</span>
+      </figure>}
     </section>
-    <section aria-labelledby="eserler-basligi">
-      <h2 id="eserler-basligi">Keşfedeceğin eserler</h2>
-      <div className="eserler">{eserler.map((eser) => <Link className="eser-karti" to={`/eser/${eser.id}`} key={eser.id}>
-        {eser.kapakGorsel && <img className="kapak" src={eser.kapakGorsel} alt={eser.gorseller.find((gorsel) => gorsel.dosya === eser.kapakGorsel)?.alt ?? eser.ad} />}
+
+    <section id="eserler" className="eserler-bolumu" aria-labelledby="eserler-basligi">
+      <div className="bolum-basligi"><div><p className="ust-baslik">MİRASA YAKINDAN BAK</p><h2 id="eserler-basligi">Her eserin bir hikâyesi var.</h2></div><p className="bolum-aciklama">Bir eser seç.<br />Keşfine kendi hızında devam et.</p></div>
+      <div className="eserler">{eserler.map((eser, index) => <Link className="eser-karti" to={`/eser/${eser.id}`} key={eser.id}>
+        <div className="kart-gorsel">
+          {eser.kapakGorsel && <img className="kapak" src={eser.kapakGorsel} alt={eser.gorseller.find((g) => g.dosya === eser.kapakGorsel)?.alt ?? eser.ad} loading="lazy" />}
+          <span className="kart-numara">{String(index + 1).padStart(2, '0')}</span>
+          {rozetler.includes(eser.id) && <span className="kart-rozet">★ Rozet kazanıldı</span>}
+        </div>
         <div className="kart-icerik">
-          <p className="konum">{eser.sehir} · {eser.ilce}</p>
+          <p className="konum"><Simge ad="konum" />{eser.sehir} · {eser.ilce}</p>
           <h3>{eser.ad}</h3>
-          {eser.tur && <p className="etiket">Sanal gezinti</p>}
-          {rozetler.includes(eser.id) && <p className="etiket">★ Rozet kazanıldı</p>}
-          <p>{eser.ozet}</p>
-          <span className="kesfet">Eseri keşfet <span aria-hidden="true">→</span></span>
+          <p className="kart-ozet">{eser.ozet}</p>
+          <div className="kart-alt"><span>{eser.tur ? 'Sanal gezinti' : 'Fotoğraf galerisi'} <span aria-hidden="true">·</span> {eser.test.length} soru</span><span className="kesfet">Keşfet <Simge ad="ok" /></span></div>
         </div>
       </Link>)}</div>
     </section>
+
+    <section className="vazo-tanitim" aria-labelledby="vazo-tanitim-basligi">
+      <div className="vazo-cizim" aria-hidden="true">
+        <svg viewBox="0 0 260 240" fill="none"><ellipse cx="130" cy="215" rx="78" ry="9" fill="#122e29" opacity=".12" /><path d="M104 29h52l-9 37c-3 17 9 28 23 43 22 24 31 53 21 74-9 20-30 28-61 28s-52-8-61-28c-10-21-1-50 21-74 14-15 26-26 23-43l-9-37Z" fill="#4f8074" stroke="#234e43" strokeWidth="2" /><path d="M110 56h40M81 123c32 13 66 13 98 0M72 170c37 15 79 15 116 0" stroke="#e0c38e" strokeWidth="8" /><path d="m117 78 12 28-13 30 18 27-9 45M70 145l46-9M134 163l57-10M129 106l35-2" stroke="#f8f5ef" strokeWidth="2" /><ellipse cx="130" cy="29" rx="26" ry="5" fill="#183e35" stroke="#e0c38e" strokeWidth="3" /></svg>
+        <span className="vazo-cizim-not">ÇEVİR · İNCELE · BİRLEŞTİR</span>
+      </div>
+      <div className="vazo-tanitim-metin"><p className="ust-baslik">SEYİRCİ KALMA, DENE</p><h2 id="vazo-tanitim-basligi">Biraz merak.<br />Biraz da senin dokunuşun.</h2><p>Vazoyu eline al, her açıdan incele. Sonra kırık parçaları tutup doğru yere sürükleyerek yeniden birleştir.</p><Link className="dugme" to="/atolye/vazo">Vazo atölyesine gir <Simge ad="ok" /></Link><span className="temsili-not">Temsili 3B model · Tarihî eser rekonstrüksiyonu değildir.</span></div>
+    </section>
+
+    <section className="nasil-calisir" aria-labelledby="nasil-basligi"><div className="bolum-basligi"><div><p className="ust-baslik">KENDİ ROTANI ÇİZ</p><h2 id="nasil-basligi">Merakla başla.</h2></div></div><ol>
+      <li><span className="adim-simge"><Simge ad="kesfet" /></span><h3>Bir eser seç</h3><p>Fotoğraflar ve keşif noktalarıyla ayrıntılara yaklaş.</p></li>
+      <li><span className="adim-simge"><Simge ad="katman" /></span><h3>Deneyerek keşfet</h3><p>Sanal gezintiye katıl veya vazo atölyesinde parçaları birleştir.</p></li>
+      <li><span className="adim-simge"><Simge ad="kitap" /></span><h3>Öğrendiklerini sına</h3><p>Üç soruluk testi tamamla; tümünü doğru yanıtlayıp rozetini kazan.</p></li>
+    </ol></section>
   </>
 }

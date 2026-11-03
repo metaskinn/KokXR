@@ -17,6 +17,7 @@ export default function SanalGezinti({ tur, kaynaklar }: { tur: Tur; kaynaklar: 
   const [egim, setEgim] = useState(false)
   const [bildirim, setBildirim] = useState('')
   const [tamEkran, setTamEkran] = useState(false)
+  const [fotografModu, setFotografModu] = useState(false)
   const alan = useRef<HTMLDivElement>(null)
   const bolum = useRef<HTMLElement>(null)
   const baslik = useRef<HTMLHeadingElement>(null)
@@ -24,7 +25,7 @@ export default function SanalGezinti({ tur, kaynaklar }: { tur: Tur; kaynaklar: 
   const kilit = useRef(false)
   const gecerliDurak = useRef(durak)
   const aktif = useRef(true)
-  const sabit = azalt || yedek
+  const sabit = azalt || yedek || fotografModu
 
   useEffect(() => {
     aktif.current = true
@@ -107,10 +108,12 @@ export default function SanalGezinti({ tur, kaynaklar }: { tur: Tur; kaynaklar: 
       }}>{tamEkran ? 'Tam ekrandan çık' : 'Tam ekran'}</button>}
     </div>
     <p className="gezinti-aciklama">{tur.aciklama}</p>
+    <h3 ref={baslik} tabIndex={-1} className="gezinti-durak-basligi" aria-live="polite" aria-atomic="true">{durak.baslik}</h3>
     <div className="gezinti-sahne">
-      <h3 ref={baslik} tabIndex={-1} className="gezinti-durak-basligi" aria-live="polite" aria-atomic="true">{durak.baslik}</h3>
       <img className="gezinti-fotograf" src={durak.gorsel} alt={`${durak.baslik} — sanal gezinti durağı`} />
       <div ref={alan} className={`gezinti-canvas ${hazir && !sabit ? 'hazir' : ''}`} aria-hidden="true" />
+      {!basladi && <div className="gezinti-baslat"><button onClick={() => setBasladi(true)}>Gezintiye başla <span aria-hidden="true">→</span></button></div>}
+    </div>
       {basladi && <>
         <div className="gezinti-yonler" role="group" aria-label="Bağlı duraklara git">
           {durak.baglantilar.map((link) => {
@@ -119,8 +122,7 @@ export default function SanalGezinti({ tur, kaynaklar }: { tur: Tur; kaynaklar: 
           })}
         </div>
       </>}
-      {!basladi && <div className="gezinti-baslat"><button onClick={() => setBasladi(true)}>Gezintiye başla <span aria-hidden="true">→</span></button></div>}
-    </div>
+    {basladi && !azalt && !yedek && <button className="ikincil-dugme" aria-pressed={fotografModu} onClick={() => setFotografModu(!fotografModu)}>{fotografModu ? 'Derinlik etkisine dön' : 'Fotoğrafın tamamını göster'}</button>}
     {basladi && <p className="gezinti-yardim">{sabit ? 'Fotoğraf modu: hareket etkisi kapalı; duraklar arasında gezinmeye devam edebilirsin.' : 'Görüşü değiştirmek için fareyi hareket ettir veya fotoğrafta parmağınla sürükle.'}</p>}
     <div className="gezinti-bilgi" aria-busy={mesgul}>
       <p>{durak.metin}</p>

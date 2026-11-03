@@ -1,0 +1,44 @@
+.vazo-atolyesi .eser-baslik { margin-bottom: 2.5rem; }
+.vazo-atolyesi .vazo-giris { max-width: 46rem; }
+.vazo-atolyesi .vazo-model-notu { font-size: .8rem; }
+.vazo-duzen { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 1.5rem; align-items: start; }
+.vazo-duzen > section { min-width: 0; }
+.vazo-duzen h2 { font-size: 1.35rem; }
+.vazo-sahne-baslik { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.vazo-sahne-baslik h2 { margin: 0; }
+.vazo-sahne-baslik > span { font-size: .8rem; color: var(--ikincil); white-space: nowrap; }
+.vazo-sahne { position: relative; height: 560px; width: 100%; border-radius: 14px; overflow: hidden; background: #24352d; touch-action: none; cursor: grab; }
+.vazo-sahne:active, .vazo-sahne.parca-surukleniyor { cursor: grabbing; }
+.vazo-sahne:focus-visible { outline-color: #b47839; }
+.vazo-sahne canvas { display: block; width: 100%; height: 100%; }
+.vazo-tutamac { position: absolute; z-index: 2; transform: translate(-50%, -50%); display: grid; place-items: center; width: 44px; height: 44px; min-height: 44px; padding: 0; border: 0; background: transparent; color: #fff; cursor: grab; touch-action: none; }
+.vazo-tutamac > span { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #244d40; border: 1px solid #f0e1bc; box-shadow: 0 2px 8px #10241a55; font-size: .75rem; }
+.vazo-tutamac:hover, .vazo-tutamac[aria-pressed='true'] { background: transparent; }
+.vazo-tutamac[aria-pressed='true'] > span { background: #805521; }
+.vazo-hedef { position: absolute; z-index: 1; transform: translate(-50%, -50%); display: grid; place-items: center; width: 88px; height: 88px; padding: 8px; border: 2px dashed #dec995; border-radius: 50%; background: #20372ba8; text-align: center; color: #fff5d9; font-size: .7rem; line-height: 1.4; pointer-events: none; }
+.vazo-hedef.hazir { background: #4b6c3be6; border-style: solid; border-color: #e3eacb; }
+.vazo-tutamac[hidden], .vazo-hedef[hidden] { display: none; }
+.vazo-kontroller { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+.vazo-kontroller button { background: #fff; color: var(--yesil); border-color: var(--kontrol-cizgi); font-size: .8rem; padding: .7rem .85rem; }
+.vazo-kontroller button:hover { background: var(--yesil-acik); }
+.vazo-gorev { padding: 1.5rem; border: 1px solid var(--cizgi); border-radius: 14px; background: #fff; box-shadow: var(--golge); font-size: .9rem; }
+.vazo-gorev > .ust-baslik { font-size: .65rem; }
+.vazo-adimlar { padding-left: 1.3rem; }
+.vazo-adimlar li { margin-block: .6rem; padding-left: .3rem; }
+.vazo-parcalar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; margin: 1rem 0; }
+.vazo-parcalar button { background: var(--zemin); color: var(--metin); border: 1px solid var(--kontrol-cizgi); }
+.vazo-parcalar button[aria-pressed='true'] { border-color: #99622d; box-shadow: inset 0 0 0 1px #99622d; background: #fdeed5; }
+.vazo-ipucu { display: flex; align-items: center; gap: .6rem; min-height: 44px; font-size: .8rem; }
+.vazo-ipucu input { width: 22px; height: 22px; accent-color: var(--yesil); }
+.vazo-gorev progress { width: 100%; height: 8px; accent-color: var(--yesil); margin-bottom: 1rem; }
+.vazo-klavye { border-top: 1px solid var(--cizgi); margin-top: 1rem; font-size: .8rem; }
+.vazo-klavye summary { padding: .9rem 0; }
+.vazo-mesaj { margin: 1rem 0 0; padding: .8rem; border-left: 3px solid var(--yesil); border-radius: 0 6px 6px 0; background: var(--yesil-acik); }
+.vazo-mesaj:empty { display: none; }
+@media (max-width: 850px) {
+  .vazo-duzen { grid-template-columns: 1fr; }
+  .vazo-sahne { height: 460px; }
+  .vazo-gorev { padding: 1.25rem; }
+  .vazo-atolyesi .eser-baslik { margin-bottom: 1.5rem; }
+  .vazo-hedef { width: 68px; height: 68px; font-size: .6rem; }
+}

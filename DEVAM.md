@@ -8,6 +8,32 @@
 
 ## 1. Proje bir bakışta
 
+**3 Kasım ek not — kullanıcının düzelttiği kapsam:** İstenen deneyim, aynı vazoyu hem 3B olarak
+çevirip incelemek hem de kırık parçalarını birleştirerek restore etmekti. Ulu Camii maketi bu isteğin
+yerine geçmez. Bu nedenle `/atolye/vazo` adresine **Vazo atölyesi** eklendi; ana sayfadan ve üst
+menüden açılır. Vazo açıkça temsili olarak etiketlidir, tarihî eser iddiası yoktur.
+**Son kullanıcı düzeltmesi:** Düğmelerle 90° döndürme/yuva seçme akışı kaldırıldı. Vazo Blender 4.5.3'te
+kalınlıklı altı bağımsız seramik parça olarak üretildi. Modelin kendisi veya üzerindeki numara fareyle
+tutulup sahnede sürüklenir; doğru yere yakın bırakılınca otomatik hizalanır ve oturur. Dokunma,
+yanlış bırakınca geri dönme, ilerleme, yeniden başlatma, Escape ve klavye alternatifi desteklenir.
+Kaynak `assets/vazo/vazo.blend`, uygulamadaki model `public/modeller/vazo.glb`, yeniden üretim
+betiği `scripts/vazo_uret.py`. Tasarım/etkileşim ve doğrulama ayrıntıları `docs/vazo-modeli.md` içinde.
+Mevcut cami maketi ve çini bulmacası korunmuştur. İlgili kod: `src/pages/VazoAtolyesi.tsx`,
+`src/pages/vazo.css`, `src/components/maket/vazoSahnesi.ts`.
+Kontrol: `node tests/vazo.mjs` (kurulu Google Chrome, çalışan geliştirme sunucusu;
+varsayılan `http://127.0.0.1:5173`, `TEST_URL` ile değiştirilebilir).
+
+**Arayüz yenilemesi:** Kullanıcının sade ve modern arayüz isteği doğrultusunda kırık beyaz,
+çam yeşili ve bronz palet; fotoğraf ağırlıklı ana sayfa; aktif menü; eser bölüm bağlantıları;
+ortak form, galeri ve atölye stilleri uygulandı. Araştırma kaynakları, renk oranları ve test
+komutları `docs/ui-tasarim.md` içinde. `node tests/ui.mjs` dört ekran genişliğini kontrol eder.
+
+**Fotoğraf revizyonu:** Palet %90 mevcut + %10 sıcak ton karışımıyla hafif sıcaklaştırıldı.
+Galeri eser sayfasında ilk sıraya alındı; fotoğraflar kırpılmadan sığıyor, keşif işaretleri fotoğrafla
+hizalı kalıyor. Oklar, küçük resimler, klavye, mobil kaydırma ve %100–300 büyütme/sığdırma eklendi.
+Gezinti yönleri fotoğrafın dışına taşındı, bütünü gösteren fotoğraf modu eklendi.
+`node tests/galeri.mjs`: iki eserin 10'ar fotoğrafı, masaüstü ve mobilde doğrulandı.
+
 **KökXR** — "Dokunamadığın tarihe dokun." KÖK&KOD Hackathon'u (Vakıf Katılım + 42 Türkiye) için,
 Bursa'daki vakıf eserlerini keşfettiren bir **web uygulaması** (React + TypeScript + Vite).
 
@@ -16,6 +42,7 @@ Bursa'daki vakıf eserlerini keşfettiren bir **web uygulaması** (React + TypeS
 | Özellik | Nerede | Durum |
 |---|---|---|
 | Ana sayfa, eser seçimi, rozetler | `src/pages/AnaSayfa.tsx` | ✅ |
+| **Vazo atölyesi** — Blender modeli; fare/dokunmayla sahnede parçaları tut, sürükle, birleştir | `src/pages/VazoAtolyesi.tsx`, `maket/vazoSahnesi.ts` | ✅ |
 | Galeri + fotoğraf üzerinde keşif noktaları | `src/components/Galeri.tsx` | ✅ |
 | Tarihçe, kaynaklar, 3 soruluk test | `src/pages/EserSayfasi.tsx`, `Test.tsx` | ✅ |
 | **Eseri eline al** — Ulu Camii temsili 3B maketi (çevir, yakınlaştır, Parçala/Birleştir) | `src/components/EseriEleAl.tsx`, `maket/` | ✅ |
@@ -121,9 +148,8 @@ Aynı dosyaya iki ajan aynı anda dokunmaz.
 
 **4 Kasım akşamı kod dondurma — sonrasında yalnız demoyu bozan hata düzeltilir.**
 
-1. **Koyu-altın tema** — sunum mockup'ındaki görünüm (`proje bilgileri/8c16739f-….png`): koyu zemin, altın vurgu,
-   "KökXR" logosu. Şu an site açık renkli. Renkler `src/index.css` + bileşen CSS'lerinde (`maket.css`, `restorasyon.css`).
-   Değişiklikten sonra kontrast (WCAG AA) ve `npm run test:e2e` tekrar.
+1. **Arayüz yenilemesi tamamlandı** — kullanıcının son isteğine göre açık, sade ve modern tasarım uygulandı.
+   Önceki koyu-altın tema önerisinin yerini bu tasarım aldı. Ayrıntılar: `docs/ui-tasarim.md`.
 2. **PWA** — telefona/masaüstüne kurulabilir uygulama (manifest + service worker; fotoğraflar önbelleğe). Şartnamedeki
    "mobil veya masaüstü uygulaması" maddesini güçlendirir. 360° tur yine internet ister.
 3. **Yedek demo videosu** — özellikle 360° tur (internet riski) ve maket parçalama.

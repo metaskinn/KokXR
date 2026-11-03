@@ -15,17 +15,23 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
   if (!eser) return <Bulunamadi />
   return <article className="sayfa" key={eser.id}>
     <Link to="/">← Ana sayfaya dön</Link>
-    <header className="eser-baslik">
+    <header className="eser-baslik eser-detay-baslik">
+      <p className="ust-baslik">BURSA’NIN VAKIF ESERLERİ</p>
       <h1>{eser.ad}</h1>
       <p className="konum">{eser.sehir} · {eser.ilce}</p>
       <dl><div><dt>Dönem</dt><dd>{eser.donem}</dd></div><div><dt>Vakıf</dt><dd>{eser.vakif}</dd></div></dl>
       <p className="etiket">{eser.dogrulama === 'dogrulanmis' ? 'Kaynaklı bilgi' : 'Temsili içerik'}</p>
       <p>{eser.ozet}</p>
     </header>
+    <nav className="bolum-gezinme" aria-label="Eser bölümleri">
+      <a className="bolum-oncelikli" href="#galeri-basligi">Fotoğrafları keşfet</a><a href="#kesif-basligi">Keşif noktaları</a><a href="#tarihce-basligi">Tarihçe</a>
+      {eser.maket && <a href="#maket-basligi">3B maket</a>}
+      <a href="#test-basligi">Bilgini sına</a><a href="#kaynaklar-basligi">Kaynaklar</a>
+    </nav>
+    <Galeri eser={eser} />
     {eser.maket && <EseriEleAl maket={eser.maket} kaynaklar={eser.kaynaklar} ad={eser.ad} />}
     {eser.tur360 && <Tur360 tur={eser.tur360} ad={eser.ad} />}
     {eser.tur && <SanalGezinti tur={eser.tur} kaynaklar={eser.kaynaklar} />}
-    <Galeri eser={eser} />
     <section className="bolum" aria-labelledby="tarihce-basligi">
       <h2 id="tarihce-basligi">Tarihçe</h2><p className="tarihce">{eser.tarihce}</p>
       {eser.kaynaklar.filter((kaynak) => kaynak.id.endsWith('-tarihce')).map((kaynak) => <KaynakSatiri key={kaynak.id} kaynaklar={eser.kaynaklar} kaynakId={kaynak.id} />)}

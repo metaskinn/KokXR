@@ -1,76 +1,84 @@
-# Görev 4 — Yönetim ekranı (içerik ekleme ve düzenleme)
+# Görev 5 — Kılıç atölyesi (`/atolye/kilic`)
 
 **Atanan:** Codex CLI
-**Önce oku:** `AGENTS.md`, `docs/plan.md`, `src/types/eser.ts`, `src/data/index.ts`, `src/App.tsx`
+**Önce oku:** `AGENTS.md`, `docs/kilic-atolyesi.md`, `docs/ui-tasarim.md`, `src/data/kilic.ts`, `src/pages/VazoAtolyesi.tsx`, `src/components/maket/vazoSahnesi.ts`
 
-Şartname 5.1.1: "İçerik ekleme ve mevcut içerikleri düzenleme imkânı bulunmalıdır. Sistem yeni vakıf eserlerinin
-eklenmesine uygun şekilde kurgulanmalıdır."
+Kullanıcı isteği: "Vazo benzeri, gerçekçi; demiri alıp en baştan Fatih Sultan Mehmed'in kılıcını yapalım, sonra test edelim. En iyi tasarım, kaliteli, yeni nesil." Sıradan bir sayfa değil, **sinematik, tam ekran hissi veren** bir deneyim.
 
-## Mimari
+## Dokunma
 
-- Varsayılan içerik `src/data/eserler/*.json` (değişmez). Yönetim ekranındaki değişiklikler `localStorage`'da
-  (`kokxr-icerik` anahtarı) **üst katman** olarak saklanır: eser id'sine göre tam eser nesnesi.
-  Uygulama açılışta JSON + üst katmanı birleştirir (üst katman kazanır). Yeni eserler yalnızca üst katmanda yaşar.
-- `localStorage` erişimi try/catch içinde; bozuk veri gelirse yok sayılır ve uyarı gösterilir.
-- Veriyi okuyan tek yer `src/data/index.ts` olsun; uygulama genelinde bir React context veya App state üzerinden dağıt,
-  yönetimde yapılan değişiklik sayfa yenilemeden ana sayfaya ve eser sayfasına yansısın.
+`scripts/`, `assets/`, `public/`, `src/data/`, `proje bilgileri/`, `_eski/`. **Tarihsel metin yazma**: tüm tarihsel/kaynaklı metin `src/data/kilic.ts`'ten gelir. Gerekirse yalnızca arayüz/oyun metni ekle (tarih iddiası içermeyen). "360°", "VR", "birebir", "gerçek kılıç" gibi yanıltıcı ifade kullanma. `kilicTanitim.durustluk` metni sayfada her zaman görünür olmalı.
 
-## Ekran: `/yonetim`
+## Dosyalar
 
-Üst çubukta "Yönetim" bağlantısı. Giriş/şifre yok; sayfanın üstünde "Demo yönetim ekranı: değişiklikler yalnızca bu
-tarayıcıda saklanır" notu.
+- `src/pages/KilicAtolyesi.tsx`, `src/pages/kilic.css`
+- `src/components/kilic/sahne.ts` (dinamik import; renderer, ışık, kamera, olaylar)
+- `src/components/kilic/dovme.ts` (namlu deformasyonu), `durum.ts` (saf oyun mantığı, DOM/three yok), `parcacik.ts`, `ses.ts`, `test.ts`
+- `App.tsx`: rota ve üst menüde "Kılıç atölyesi"; `AnaSayfa.tsx`: vazo tanıtımının altına aynı dilde tanıtım bölümü (`kilicTanitim`).
+- `tests/kilic.mjs` (Chromium, 1280 ve 360 px; `TEST_URL`, varsayılan `http://127.0.0.1:4173`; `channel` belirtme).
+- Three.js yalnızca sayfa açılınca yüklensin. Yeni bağımlılık ekleme.
 
-1. **Eser listesi:** tüm eserler (ad, ilçe, doğrulama durumu, "değiştirildi"/"yeni" etiketi). Düzenle, varsayılana döndür
-   (yalnız JSON'da olanlar), sil (yalnız yeni eklenenler, onay ister).
-2. **Eser formu** (`/yonetim/eser/:id` ve `/yonetim/yeni`):
-   - Metin alanları: ad, şehir, ilçe, dönem, vakıf, özet, tarihçe; `id` yeni eserde addan otomatik (Türkçe karakterleri
-     ASCII'ye çevirerek, tekilliği kontrol ederek) üretilir, sonra değişmez.
-   - **Kaynaklar:** ekle/düzenle/sil (metin, sayfa).
-   - **Test soruları:** tam 3 soru; her biri soru, 4 seçenek, doğru seçenek, açıklama, kaynak (kaynaklar listesinden seçim).
-   - **Bilgi noktaları:** başlık, metin, kaynak; görsel seçimi ve x/y (0–100) sayı alanları.
-   - **Görseller:** mevcut görsellerin alt metni ve açıklaması düzenlenebilir; yeni görsel URL ile eklenebilir
-     (dosya yükleme yok). Kapak görseli seçimi.
-   - `tur` ve `tur360` alanları formda gösterilmez, olduğu gibi korunur.
-3. **Doğrulama kuralı (5.1.3):** "Kaynaklı bilgi" seçilebilmesi için en az bir kaynak, her test sorusu ve bilgi noktası
-   için geçerli kaynak gerekli. Aksi halde kayıt "Temsili içerik" olarak kalır ve form bunu açıklar.
-   Yeni eser varsayılan olarak "temsili".
-4. **Form doğrulama:** zorunlu alanlar, hatalar alanın yanında metinle ve `aria-describedby` ile; kaydet düğmesi
-   hata özetini gösterir ve ilk hatalı alana odaklanır.
-5. **Dışa/içe aktar:** "JSON olarak indir" (tek eser, `src/data/eserler/` formatında — kalıcı yapmak için dosya repoya
-   eklenebilir) ve "Tüm üst katmanı indir / yükle / sıfırla".
+## Modeller (hazır)
 
-## Kurallar
+`public/modeller/kilic.glb`: `Namlu`, `Namlu_Kakma`, `Balcak`, `Sap`, `Kabza_Sol`, `Kabza_Sag`, `Percin_1..4`. Birim metre. Başlangıç balçak merkezi; namlu +X, **sırt +Y (ağız −Y)**, kalınlık Z.
 
-- `src/data/eserler/`, `public/`, `_eski/`, `kaynaklar/`, `proje bilgileri/` klasörlerine dokunma.
-- **`src/pages/EserSayfasi.tsx` ve `src/components/Restorasyon*` dosyalarına dokunma** — Claude aynı anda bunlar
-  üzerinde çalışıyor. Eser sayfasının veriyi prop olarak alması zaten yeterli.
-- Yeni bağımlılık ekleme. Arayüz Türkçe, klavyeyle kullanılabilir, 360 px'te taşmasız.
+`public/modeller/kilic-atolye.glb`: düğüm adlarını (Blender → glTF: x→x, z→y, y→−z) kullan. Ana konumlar (glTF):
+- Ocak ağzı / kor `Kor`: (−2.25, 0.95, −2.02); `Koruk_Deri` körük (−3.7, ~0.78, −1.75) (basınca ölçekle)
+- Örs `Ors` üst yüzü: (0, 0.876, −0.1); `Cekic_Bas`, `Masa_1`
+- Su `Su` (1.95, 0.40, 0.15); `Bileme_Tasi` (3.05, 0.82, −1.2), z ekseni çevresinde döndür; `Tezgah_Ust` (2.9, 0.86, −2.5); `Kilic_Yumurtasi` (2.8, 0.93, −2.5)
+- Test alanı x=14 civarı: `Avlu_Zemin`, `Avlu_Duvar`, `Hasir_Rulo`/`Hasir_Direk`/`Hasir_Kaide` (12, 0, 0), `Test_Kutuk` (14, 0.74, −0.1), `Test_Kumas` (16.15, 1.95, −0.1)
+
+Doku yok sayılan yer olmasın. `Kor` emissive şiddetini körükle değiştir.
+
+## Dövme deformasyonu (`dovme.ts`) — projenin kalbi
+
+`Namlu` geometrisinde `uv1` (TEXCOORD_1): `u = uv1.x` (kabzadan uca 0–1), `a = 1 - uv1.y` (halka çevresi). Bitmiş biçim POSITION'dadır. Blender merkez ekseni: `Cf(u) = (1.06·u, 0.070·u^2.3, 0)` (glTF'te Y=eğrilik). Her köşe için `Fsec = P_son − Cf(u)`.
+
+12 bölge: her birinin `ilerleme p` (0–1), `isi` (°C benzeri 20–1200), `cilt` (bileme 0–1), `kabuk` (oksit 0–1). Köşe başına bölgeler arası doğrusal ara değer, `s(p)=smoothstep`:
+
+- Külçe kesiti: `Bsec(a) = (0, cos(2πa)·W, sin(2πa)·T)`, `W=.024, T=.018`; yumurta biçimi için `·sqrt(max(1-(2u-1)^2, .02))^.75`.
+- Her bölgenin uzunluğu `L_i = mix(L0/12, 1.06/12, s(p_i))`, `L0=.20`. Eksen: `X(u)` bu uzunlukların birikimli toplamı (bölge içi ara değer); `Y(u) = Cf(u).y · s(ortalama p)`; böylece külçe **gerçekten uzar**. Sapın (`u=0`) yeri sabit kalır; dövme sırasında kılıcı örsün üstünde vurulan bölge çekicin altına gelecek şekilde kaydır.
+- `P = (X(u), Y(u), 0) + mix(Bsec, Fsec, s(p))`. Yüzey kabarıklığı için `p<1` iken küçük, darbe yerinden gelen çekiç izi (vertex offset gürültü) ekle; `p→1` iken sönsün.
+- Köşe güncellemesi yalnız değişen bölgeler için, `computeVertexNormals` yerine: külçede küresel normali, bitmişte orijinal normali `s(p)` ile karıştır (ucuz ve dikişsiz).
+
+Malzeme `onBeforeCompile`: köşe özellikleri `aIsi`, `aKabuk`, `aCilt`. Fragment: `isi` için siyah cisim rengi (≈500°C koyu kiraz → 800 turuncu → 1100 sarı-beyaz), emissive çarp; `kabuk` taban rengini koyu yap, metalness ve pürüz değiştir (gürültü desenli); `cilt` pürüzü düşürür. Yani kılıç ısındıkça kızarır, kabuk bağlar, bilendikçe parlar. **`Namlu_Kakma`, `Balcak` vb. yalnızca Kuşanma aşamasında görünür.**
+
+## Akış (`durum.ts`, kaydedilmez, her yenilemede baştan)
+
+Üstte ince aşama şeridi. Her aşama: kısa yönerge, ilgili `kilicAsamaBilgileri` metni + `Kaynak:` satırı, ve **"Ustaya bırak"** düğmesi (o aşamayı orta kalitede otomatik, animasyonlu tamamlar; jüri demosu için). Ayrıca "Baştan başla" ve ses aç/kapat.
+
+| Aşama | Etkileşim | Kural |
+|---|---|---|
+| 1 Külçe | Tezgâhtaki `Kilic_Yumurtasi`'na tıkla, maşayla ocağa uçar | — |
+| 2 Isıtma | Körüğü basılı tut (fare/parmak; klavye Boşluk). Sıcaklık çubuğu + gerçek renk | Körüksüz yavaş ısınır. >1180 yanma: kalite düşer, uyarı |
+| 3 Dövme | Kılıç örse gelir. Tıkla/sürükle: vurulan bölge imleçten seçilir; çekiç gerçek bir yay çizip iner, kıvılcım, ses, kamera sarsıntısı | Darbe etkisi sıcaklığa bağlı: 750–1150 tam; 550–750 yarım; <550 etkisiz, `gerilim` artar, >1 çatlak riski. Soğuyunca "Yeniden ısıt". Tüm bölgeler p≥.98 olunca biter |
+| 4 Su verme | Tüm namlu ısınır, "Suya daldır" düğmesi basılı tutulur; buhar, tıslama | En iyi 780–880. Yüksek: çatlak olasılığı/kalite düşer. Düşük: sertlik düşer |
+| 5 Bileme | Kılıç taşa gelir, taş döner. Bölge bölge imleci namlu boyunca sürdür; kıvılcım | `cilt` artar. Fazla aynı yerde kalma ısıtır: 'yanma' cezası |
+| 6 Kuşanma | Sırayla `Balcak`, `Kabza_Sol`, `Kabza_Sag`, `Percin_*`'i tıkla: animasyonla yerine gelir; sonra altın bant (alpha kararı) yavaş belirir. Kolektif yapım notu | — |
+| 7 İnceleme | OrbitControls + yakınlaştırma, ışıklı sunum. `kilicParcaNotlari` numaralı noktalar (three vektörü→ekran koordinatı HTML düğme), tıklayınca panel + kaynak. Kalite kartı. Altında "Test alanına geç" | — |
+| 8 Test alanı | Kamera avluya gider (gündüz ışık). Üç hedef: `Hasir_Rulo`, `Test_Kutuk`, `Test_Kumas`. Hedef seç, sahnede sürükleyerek kesim çizgisi çiz (kılıç o yönde savrulur, iz efekti) | Aşağıda |
+
+**Kalite:** `sertlik` (su verme), `keskinlik` (bileme), `biçim` (dövme sıcaklığı/gerilim), `yanma` cezaları. Ustaya bırak = hepsi ~.6. Çatlak varsa çizgi görünür (kötü), yine de test edilebilir, kırılabilir.
+
+**Kesim:** `güç = keskinlik·.55 + sertlik·.45`, kesim çizgisi açısı dikse/yataysa ve hızlıysa +. Hasır: güç≥.35 ikiye ayrılır (klon + `material.clippingPlanes`, üst parça düşer, basit yerçekimi + zemin). Kütük: güce göre iz derinliği, ≥.8 yarıya kadar; asla "ikiye bölünmedi" der. Kumaş (gevşek): güç≥.72 kesilir, altta kalıyorsa sadece sallanır. Kuvvetsiz denemede çelik sesi, kıvılcım, gerekirse çentik. Puan kartı + kazanılırsa "Kılıç Ustası" rozeti (`rozetKazan('kilic-ustasi')` yerine bu sayfada yerel gösterim yeterli; App'teki `rozetKazan`'ı prop ile alabilirsin). "Hedefleri yenile".
+
+## Görsel kalite (yeni nesil)
+
+- Renderer: `ACESFilmicToneMapping`, `SRGBColorSpace`, `PCFSoftShadowMap`, `Antialias`, `EffectComposer` + `RenderPass` + `UnrealBloomPass` (hafif, ısınınca belirgin) + `OutputPass`. `RoomEnvironment` + PMREM, atölyede düşük yoğunluk, avluda yüksek.
+- Atölye karanlık, ocak `PointLight` titrer (`Math.sin` + gürültü) ve ısıya göre kuvvetlenir; ısınan namlu da küçük ışık saçar. Sahne loşluğu sinematik, ama nesneler okunur.
+- Kıvılcım: `THREE.Points` havuzu, yerçekimi, ömürle renk; buhar/duman: yumuşak sprite havuzu (canvas radial gradient). Bloom kıvılcımı parlatır. Ocağın üstünde hafif kor parçacıkları.
+- Sinematik kamera: aşama değişiminde 1,2 sn yumuşak geçiş; hedef konumlar atölyede sen seç, her aşamada asıl nesne net görünsün.
+- Dokunuş: küçük imleç vurgusu (`Raycaster` ile hover: nesnenin emissive'i hafif artar, imleç değişir).
+- `ses.ts`: dosya yok, `WebAudio` ile üret: çekiç (sinüs/kare kısa çın + gürültü), ocak uğultusu (filtreli gürültü, körükle artar), su tıslaması, bileme (bant gürültü), kesim (hızlı süpürme), çelik "ting". Varsayılan açık ama ilk kullanıcı etkileşiminde başlar; kapatılabilir.
+- Arayüz: sahne tam genişlik ve ekran boyu; kontroller camsı koyu paneller, bronz vurgu (`docs/ui-tasarim.md` renkleri ile uyumlu). Masaüstünde yan panel, telefonda alt çekmece. Tam ekran düğmesi.
+
+## Erişilebilirlik ve sağlamlık
+
+Her etkileşimin klavye karşılığı (bölge seçimi ←→, Enter vur; Boşluk körük; Kesim için hedef + "Kes" düğmesi). `aria-live` aşama/sonuç duyuruları, görünür odak, ≥44 px dokunma, 360 px taşma yok. `prefers-reduced-motion`: sarsıntı ve parçacık az, kamera geçişi kısa. WebGL yok/yükleme hatası: anlaşılır mesaj. Sekme gizlenince döngü durur. Rota değişince her şey `dispose`, olaylar temizlenir, ses durur. FPS düşerse `pixelRatio` ve bloom kademeli azalır.
 
 ## Bitti sayılması için
 
-- `npm run build` hatasız
-- Tarayıcıda: Ulu Camii özetini değiştir → ana sayfada ve eser sayfasında yeni metin; varsayılana döndür → eski metin;
-  yeni eser ekle (temsili) → ana sayfada görünür, sayfası açılır, testi çalışır; JSON indir; yenilemeden sonra
-  değişiklikler duruyor; bozuk `localStorage` verisinde uygulama çökmez
-- `.git` salt okunur olabilir; commit'i Claude atar. Bu dosyanın sonuna "Sonuç" bölümü ekle.
-
-## Sonuç
-
-Görev 4 tamamlandı (3 Kasım 2026).
-
-- Üst çubuğa Yönetim bağlantısı; `/yonetim`, `/yonetim/yeni` ve `/yonetim/eser/:id` ekranları eklendi. Eser listesinde doğrulama, yeni/değiştirildi etiketleri, düzenleme, varsayılana dönüş ve onaylı yeni eser silme bulunuyor.
-- İçerik okuma/birleştirme/yazma `src/data/index.ts` içinde toplandı. `kokxr-icerik` tam eser nesnelerini kimliğe göre saklıyor; App state sayesinde değişiklikler yenilemeden tüm sayfalara yansıyor. Bozuk JSON veya depolama erişim hatasında varsayılanlar ve açıklayıcı uyarı gösteriliyor. Yazma/kota hatasında mevcut içerik ve form korunuyor.
-- Formda metinler, kaynaklar, üç adet dört seçenekli soru, bilgi noktaları, görsel alt metni/açıklaması, URL ile yeni görsel ve kapak seçimi düzenlenebiliyor. Türkçe addan tekil kimlik üretiliyor; kayıt sonrası kimlik sabit. `tur`, `tur360` ve mevcut ek alanlar korunuyor. Ulu Camii'nin görselsiz mevcut keşif noktası destekleniyor; verisi değiştirilmedi.
-- Kaynaklı bilgi koşulları hem formda hem JSON yüklemede uygulanıyor. Koşullar sağlanmayan kayıt temsili kalıyor. Alan hataları `aria-describedby` ile ilişkilendiriliyor; hata özeti gösteriliyor ve ilk hatalı alana odaklanılıyor.
-- Tek eser JSON indirme ve tüm üst katmanı indirme/yükleme/sıfırlama eklendi. Yükleme mevcut üst katmanın yerini alacağını açıklayarak onay istiyor; geçersiz dosya hiçbir kaydı değiştirmiyor. Yeni bağımlılık eklenmedi.
-
-Doğrulama:
-
-- `npm run build` başarılı. Yalnızca mevcut Three.js sahne paketine ilişkin 500 kB boyut uyarısı var; derleme hatası yok.
-- Üretim çıktısı Chromium/Playwright ile **4175** portunda test edildi. **4173** sunucusuna müdahale edilmedi; son kontrolde port dinlemeye devam ediyordu.
-- Ulu Camii özetini düzenleme → ana sayfa ve eser sayfasında yenilemesiz güncelleme → sayfa yenilemesinde kalıcılık → varsayılana dönüş geçti. İndirilmiş JSON üzerinden `tur` ve `tur360` alanlarının korunduğu doğrulandı.
-- Formdan temsili eser oluşturma, Türkçe kimlik/çakışma kontrolü, ad değişince kimliğin sabit kalması, ana sayfa/eser sayfası, üç soruyu cevaplayıp rozet kazanma ve yeniden yükleme geçti.
-- Tek eser/tüm üst katman indirme, JSON geri yükleme, silme/sıfırlama onay ve iptal akışları geçti. Eksik seçenek, geçersiz kaynak/görsel bağlantısı, sınır dışı koordinat, uygunsuz görsel adresi, bozuk tur, bozuk dosya ve bozuk localStorage kontrolleri geçti. JSON ile kaynak koşullarının atlanamadığı doğrulandı.
-- Kaynak ekleme/silme ve doğrulama durumunun değişmesi, görsel/kapak seçimi, bilgi noktası/koordinatlar, alan hatası/ilk odak, klavye sırası ve dosya seçicinin klavye odağı geçti. Depolama erişim reddi ve bağımsız kota hatasında uygulama çökmedi; formdaki bilgiler korundu.
-- 1280 ve 360 px'te yönetim listesi ile dolu/hatalı form taşmasız. Tarayıcı JavaScript hatası görülmedi. Ekran görüntüleri: [masaüstü liste](test-ekranlari/gorev4/liste-1280.png), [telefon liste](test-ekranlari/gorev4/liste-360.png), [masaüstü form](test-ekranlari/gorev4/form-1280.png), [telefon form](test-ekranlari/gorev4/form-360.png).
-- `git diff --check` başarılı. Yasaklanan klasör ve dosyalara bu görev kapsamında yazılmadı; çalışma sırasında görünen Muradiye JSON ve restorasyon değişiklikleri başka çalışmaya ait olup korunmuştur. Commit Claude'a bırakıldı.
+- `npm run build` hatasız; `node tests/uctan-uca.mjs chromium 1280` ve `tests/kilic.mjs` geçer. Kılıç testi: aşamaların tamamı **hem el ile (gerçek fare olayları) hem Ustaya bırak ile**, deformasyonun gerçekten uzaması (ölçülen bounding box), kuşanma sonrası görünürlük, kesimde parça ayrılması, dispose sonrası canvas yok, konsolda hata yok.
+- **Ekran görüntülerine bak** (`test-sonuclari/kilic-*.png`): her aşama, kızgın külçe, dövme ortası, bitmiş kılıç, test. Karanlıksa, boş duruyorsa, kılıç görünmüyorsa düzelt. Gerçekçi değilse iyileştir: kalite bu görevin başarı ölçütü.
+- GPU varsa `--use-gl=angle --use-angle=gl-egl --ignore-gpu-blocklist --enable-gpu` ile çalıştır, yoksa yazılımsal.
+- `.git` salt okunur olabilir; commit'i Claude atar. 4173 portuna dokunma, kendi portunu kullan. Bu dosyanın sonuna "Sonuç" ekle: ne yapıldı, ne test edildi, ne eksik.

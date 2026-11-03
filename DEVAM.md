@@ -155,7 +155,7 @@ Aynı dosyaya iki ajan aynı anda dokunmaz.
    Önceki koyu-altın tema önerisinin yerini bu tasarım aldı. Ayrıntılar: `docs/ui-tasarim.md`.
 2. **PWA** — telefona/masaüstüne kurulabilir uygulama (manifest + service worker; fotoğraflar önbelleğe). Şartnamedeki
    "mobil veya masaüstü uygulaması" maddesini güçlendirir. 360° tur yine internet ister.
-3. **Yedek demo videosu** — özellikle 360° tur (internet riski) ve maket parçalama.
+3. **Yedek demo videosu tamamlandı** — `node scripts/demo_video.mjs <cikti.webm>` ile yeniden çekilir (önce `npm run build` ve 4173'te `npm run preview`). Arayüz değişirse finalden önce tekrar çekin; video git dışındadır.
 4. Küçük: yönetim listesindeki erişilebilir adda fazla boşluk ("Düzenle : …") — `src/pages/Yonetim.tsx` `sr-only` span.
 5. İsteğe bağlı: Muradiye için de maket; Ulu Camii minberi/şadırvanı için "elde çevrilebilir" küçük nesne maketi.
 

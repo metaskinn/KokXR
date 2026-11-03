@@ -268,6 +268,12 @@ t = np.clip(yat * .55 + dik * .45, 0, 1)
 kaydet('hasir_renk', renk_karisim(t, (0, (.30, .22, .09)), (1, (.72, .60, .32))))
 kaydet('hasir_pm', np.dstack([np.ones((A, A)), np.full((A, A), .82), np.zeros((A, A))]))
 kaydet('hasir_normal', normal_haritasi(yat * 2.2, 2.4))
+# Bileği taşı: ince taneli kumtaşı, dönüşü gösteren koyu damarlar
+g7 = gurultu(A, A, 40, 5); d7 = gurultu(A, A, 3, 4, kx=1, ky=18)
+t7 = np.clip(g7 * .55 + d7 * .45, 0, 1)
+kaydet('bileme_renk', renk_karisim(t7, (0, (.20, .18, .155)), (.55, (.47, .44, .385)), (1, (.68, .64, .56))))
+kaydet('bileme_pm', np.dstack([np.ones((A, A)), np.clip(.86 + (g7 - .5) * .16, 0, 1), np.zeros((A, A))]))
+kaydet('bileme_normal', normal_haritasi(g7 * 2.4 + d7 * 1.4, 2.0))
 # Kumaş: test hedefi
 ip = (np.sin(np.arange(A)[:, None] / A * math.tau * 110) * np.sin(np.arange(A)[None, :] / A * math.tau * 110)) * .5 + .5
 g6 = gurultu(A, A, 3, 4)

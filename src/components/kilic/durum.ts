@@ -5,12 +5,12 @@ export interface Bolge { p: number; isi: number; cilt: number; kabuk: number }
 export interface Oyun {
   asama: number; bolgeler: Bolge[]; secili: number; gerilim: number; yanma: number; catlak: boolean
   sertlik: number; bicim: number; takilan: number; daldirma: number; yeniden: boolean; mesaj: string
-  hedef: number; sonuclar: string[]; puan: number; rozet: boolean; usta: boolean; kirildi: boolean
+  hedef: number; sonuclar: string[]; hasarlar: number[]; puan: number; rozet: boolean; usta: boolean; kirildi: boolean
 }
 export const sinir = (n: number, a = 0, b = 1) => Math.max(a, Math.min(b, n))
 export const ortalama = (d: Oyun, key: keyof Bolge) => d.bolgeler.reduce((a, b) => a + b[key], 0) / 12
 export function ilkOyun(): Oyun {
-  return { asama: 0, bolgeler: Array.from({ length: 12 }, () => ({ p: 0, isi: 20, cilt: 0, kabuk: 0 })), secili: 0, gerilim: 0, yanma: 0, catlak: false, sertlik: 0, bicim: 1, takilan: 0, daldirma: 0, yeniden: false, mesaj: 'Tezgâhtaki çelik külçesini seç.', hedef: 0, sonuclar: [], puan: 0, rozet: false, usta: false, kirildi: false }
+  return { asama: 0, bolgeler: Array.from({ length: 12 }, () => ({ p: 0, isi: 20, cilt: 0, kabuk: 0 })), secili: 0, gerilim: 0, yanma: 0, catlak: false, sertlik: 0, bicim: 1, takilan: 0, daldirma: 0, yeniden: false, mesaj: 'Tezgâhtaki çelik külçesini seç.', hedef: 0, sonuclar: [], hasarlar: [0, 0, 0], puan: 0, rozet: false, usta: false, kirildi: false }
 }
 export function ilerle(d: Oyun) { d.asama = Math.min(7, d.asama + 1); d.mesaj = `${asamalar[d.asama]} aşaması.` }
 export function isit(d: Oyun, dt: number, koruk: boolean) {

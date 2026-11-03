@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { mkdirSync } from 'node:fs'
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:4173'
 const gpu = process.env.TEST_GPU === '1'
-const browser = await chromium.launch({ args: gpu ? ['--use-gl=angle', '--use-angle=gl-egl', '--ignore-gpu-blocklist', '--enable-gpu'] : ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+const browser = await chromium.launch({ ...(gpu ? { channel: 'chromium' } : {}), args: gpu ? ['--use-gl=angle', '--use-angle=gl-egl', '--ignore-gpu-blocklist', '--enable-gpu'] : ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 mkdirSync('test-sonuclari', { recursive: true })
 const errors = [], report = []
 try {
@@ -48,18 +48,19 @@ try {
     await hold('Körüğü basılı tut', () => heat(980)); await snap('02-kizgin-kulce')
     await click('Örse geç →'); await waitStage(2)
     async function strike() {
-      await stage.scrollIntoViewIfNeeded(); await p.waitForTimeout(210)
+      await stage.scrollIntoViewIfNeeded(); await p.waitForFunction(() => document.querySelector('.kilic-sahne')?.dataset.cekic === '1', null, { timeout: 15000 })
       const box = await stage.boundingBox(), coords = await stage.evaluate(e => [Number(e.dataset.vurusX), Number(e.dataset.vurusY)])
       await p.mouse.click(box.x + coords[0], box.y + coords[1])
     }
-    for (let i = 0; i < 12; i++) {
-      if (await stage.getAttribute('data-asama') !== '2') break
+    // Gerçek oyuncu gibi: bitmemiş bölgeyi seçip vurur (vuruş tıklanan noktanın bölgesine gider).
+    for (let tur = 0, ortaAlindi = false; tur < 90 && await stage.getAttribute('data-asama') === '2'; tur++) {
       if (Number(await p.locator('#kilic-sicaklik').getAttribute('value')) < 800) {
         await click('Yeniden ısıt'); await hold('Körüğü basılı tut', () => heat(1050)); await click('Örse geç →'); await p.waitForTimeout(1500)
       }
-      await click(new RegExp(`^Bölge ${i + 1}$`)); await p.waitForTimeout(450)
-      for (let k = 0; k < 3; k++) await strike()
-      if (i === 5) { await snap('03-dovme-ortasi'); assert(Number(await stage.getAttribute('data-uzunluk')) > initial * 1.5) }
+      const bolgeler = (await stage.getAttribute('data-bolgeler')).split(',').map(Number), i = bolgeler.findIndex(v => v < .98)
+      if (i < 0) break
+      await click(new RegExp(`^Bölge ${i + 1}$`)); await p.waitForTimeout(250); await strike()
+      if (!ortaAlindi && i >= 5) { ortaAlindi = true; await p.waitForTimeout(400); await snap('03-dovme-ortasi'); assert(Number(await stage.getAttribute('data-uzunluk')) > initial * 1.5) }
     }
     await waitStage(3); await snap('04-su-oncesi')
     // Water cools the steel during the actual press.
@@ -69,8 +70,9 @@ try {
       await click(new RegExp(`^Bölge ${i + 1}$`))
       // A pointer stroke selects the region under the blade and polishes while held.
       await stage.scrollIntoViewIfNeeded(); await p.waitForTimeout(450)
-      const r = await stage.boundingBox(), a = await stage.evaluate(e => [Number(e.dataset.vurusX), Number(e.dataset.vurusY)])
-      await p.mouse.move(r.x + a[0], r.y + a[1]); await p.mouse.down()
+      // Bileme sahnede herhangi bir yere basılı tutularak yapılır; bölge panelden seçildi.
+      const r = await stage.boundingBox()
+      await p.mouse.move(r.x + r.width * .25, r.y + r.height * .22); await p.mouse.down()
       await p.waitForFunction(i => { const b = document.querySelector(`[aria-label="Bölge ${i + 1}"]`); return !b || parseFloat(b.style.getPropertyValue('--ilerleme')) >= 98 }, i, { timeout: 30000 })
       await p.mouse.up()
     }
@@ -86,7 +88,7 @@ try {
       const b = await stage.boundingBox(), x = b.x + (width > 700 ? (b.width - 340) / 2 : b.width / 2), y = b.y + b.height * .52
       await p.mouse.move(x - 90, y); await p.mouse.down(); await p.mouse.move(x + 90, y, { steps: 3 }); await p.mouse.up(); await p.waitForTimeout(800)
       if (i === 0) assert(Number(await stage.getAttribute('data-ayrilan')) > 0)
-      if (i === 1) assert.match(await p.locator('.kilic-mesaj').textContent(), /Kütük tek parça kaldı/)
+      if (i === 1) assert((await stage.getAttribute('data-hasar')).split(',')[1] > 0, 'kütük hasar almadı')
       await snap(`kesim-${i}`)
     }
     assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${width}px taşma`)
@@ -95,7 +97,7 @@ try {
     await click('♪ Ses açık'); assert(await p.getByRole('button', { name: '♪ Ses kapalı', exact: true }).isVisible())
     await click('Baştan başla'); await waitStage(0)
     await p.reload(); await waitStage(0)
-    await p.getByRole('link', { name: 'Keşfe dön' }).click(); assert.equal(await p.locator('.kilic-sahne canvas').count(), 0)
+    await p.getByRole('link', { name: 'Keşfe dön' }).click(); await p.waitForFunction(() => !document.querySelector('.kilic-sahne canvas'), null, { timeout: 5000 })
     report.push({ width, master: '8/8', manual: '8/8', initial, deformation: 'uzama doğrulandı', targets: '3/3', dispose: 'canvas temizlendi' }); console.log(report.at(-1))
     await p.close()
   }

@@ -79,7 +79,7 @@ M = {
     'tugla': malzeme('Tugla', 'tugla', 2.0), 'tas': malzeme('Tas', 'tas', 2.5),
     'ahsap': malzeme('Ahsap', 'ahsap', 1.5), 'demir': malzeme('Demir', 'demir', 1.2),
     'deri': malzeme('Deri', 'deri', 1.5), 'kor': malzeme('Kor', 'kor', 2.2),
-    'hasir': malzeme('Hasir', 'hasir', 1.0), 'kumas': malzeme('Kumas', 'kumas', 2.0),
+    'bileme': malzeme('Bileme_Tasi', 'bileme', 1.4), 'hasir': malzeme('Hasir', 'hasir', 1.0), 'kumas': malzeme('Kumas', 'kumas', 2.0),
     'su': duz('Su', (.03, .07, .08), .06, .0, alfa=.82), 'kulce': duz('Kulce_Celik', (.13, .13, .14), .62, 1),
     'ip': duz('Ip', (.52, .42, .26), .9),
 }
@@ -507,7 +507,7 @@ for ad, b, k in (('Tekne_Uzun_1', (1.5, .06, .46), (sx, sy - .29, .26)), ('Tekne
 kutu('Su', (1.38, .52, .01), (sx, sy, .40), M['su'], ak)
 # Bileği taşı: çerçeve + döner taş
 bx, by = 3.05, 1.2
-tas_cark = donus_cismi('Bileme_Tasi', [(.0, -.06), (.36, -.06), (.375, -.05), (.375, .05), (.36, .06), (.0, .06)], M['tas'], 56, ak, 2, 2)
+tas_cark = donus_cismi('Bileme_Tasi', [(.0, -.06), (.36, -.06), (.375, -.05), (.375, .05), (.36, .06), (.0, .06)], M['bileme'], 72, ak, 3, 5)
 tas_cark.rotation_euler = (math.radians(90), 0, 0); tas_cark.location = (bx, by, .82)
 for d in (-.12, .12):
     for x in (-.28, .28):

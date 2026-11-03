@@ -1,6 +1,12 @@
 import * as T from 'three'
 import type { Bolge } from './durum'
 const s = (p: number) => p * p * (3 - 2 * p)
+// Bitmiş namluda ağzın yerel yüksekliği ve X konumu: bilemede taşa tam temas için (scripts/kilic_uret.py ile aynı biçim).
+export function agizYerel(u: number) {
+  let ga = .028 - .0065 * u
+  if (u > .8) ga *= (1 - ((u - .8) / .2) ** 2.2) ** .9
+  return { x: 1.06 * u, y: .07 * u ** 2.3 - ga }
+}
 export function namluHazirla(mesh: T.Mesh) {
   const g = mesh.geometry = mesh.geometry.clone()
   const pos = g.getAttribute('position'), norm = g.getAttribute('normal'), uv = g.getAttribute('uv1')

@@ -31,6 +31,8 @@ varsayılan `http://127.0.0.1:5173`, `TEST_URL` ile değiştirilebilir).
 ortak form, galeri ve atölye stilleri uygulandı. Araştırma kaynakları, renk oranları ve test
 komutları `docs/ui-tasarim.md` içinde. `node tests/ui.mjs` dört ekran genişliğini kontrol eder.
 
+**Kılıç atölyesi (`/atolye/kilic`):** Topkapı Env. 1/90 kılıcının temsilî modeliyle külçeden kılıca sekiz aşama, sonra test alanı. Kaynaklar ve temsilî sınırlar `docs/kilic-atolyesi.md`; tarihsel metinler yalnız `src/data/kilic.ts`. Yeniden üretim: `blender -b --python scripts/kilic_doku.py`, sonra `scripts/kilic_uret.py` (dokular git dışı). Hedef hasarı `src/components/kilic/hedefler.ts`, hareket `animasyon.ts`. Test: `TEST_GPU=1 node tests/kilic.mjs`, `node tests/kilic-mantik.mjs`. Video: `node scripts/kilic_video.mjs <dosya.webm>`.
+
 **Fotoğraf revizyonu:** Palet %90 mevcut + %10 sıcak ton karışımıyla hafif sıcaklaştırıldı.
 Galeri eser sayfasında ilk sıraya alındı; fotoğraflar kırpılmadan sığıyor, keşif işaretleri fotoğrafla
 hizalı kalıyor. Oklar, küçük resimler, klavye, mobil kaydırma ve %100–300 büyütme/sığdırma eklendi.

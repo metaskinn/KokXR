@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import type { Eser } from '../types/eser'
 import Simge from '../components/Simge'
+import { kilicTanitim } from '../data/kilic'
+import './kilic.css'
 
 export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozetler: string[] }) {
   const oneCikan = eserler.find((eser) => eser.id === 'ulu-camii') ?? eserler[0]
@@ -48,6 +50,11 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
         <span className="vazo-cizim-not">ÇEVİR · İNCELE · BİRLEŞTİR</span>
       </div>
       <div className="vazo-tanitim-metin"><p className="ust-baslik">SEYİRCİ KALMA, DENE</p><h2 id="vazo-tanitim-basligi">Biraz merak.<br />Biraz da senin dokunuşun.</h2><p>Vazoyu eline al, her açıdan incele. Sonra kırık parçaları tutup doğru yere sürükleyerek yeniden birleştir.</p><Link className="dugme" to="/atolye/vazo">Vazo atölyesine gir <Simge ad="ok" /></Link><span className="temsili-not">Temsili 3B model · Tarihî eser rekonstrüksiyonu değildir.</span></div>
+    </section>
+
+    <section className="vazo-tanitim kilic-ana-tanitim" aria-labelledby="kilic-tanitim-basligi">
+      <div className="kilic-ana-cizim" aria-hidden="true"><svg viewBox="0 0 400 130"><defs><linearGradient id="kilic-celik"><stop stopColor="#535d61"/><stop offset=".45" stopColor="#f3f0da"/><stop offset=".65" stopColor="#8d9c9e"/><stop offset="1" stopColor="#d2d6ce"/></linearGradient></defs><path d="M90 65Q240 66 380 35Q345 97 90 88Z" fill="url(#kilic-celik)"/><path d="M95 70Q240 73 356 48" stroke="#b59055" strokeWidth="2" fill="none"/><path d="M85 43L94 43L99 109L88 109Z" fill="#bf9a64"/><path d="M85 65L22 61L12 70L18 88L87 87Z" fill="#e4d4af"/><g fill="#a6804c"><circle cx="30" cy="75" r="2"/><circle cx="45" cy="76" r="2"/><circle cx="60" cy="77" r="2"/><circle cx="75" cy="77" r="2"/></g></svg></div>
+      <div className="vazo-tanitim-metin"><p className="ust-baslik">ATEŞTEN BİÇİME</p><h2 id="kilic-tanitim-basligi">{kilicTanitim.baslik}</h2><p>{kilicTanitim.ozet}</p><Link className="dugme" to="/atolye/kilic">Kılıç atölyesine gir <Simge ad="ok" /></Link><span className="temsili-not">{kilicTanitim.durustluk}</span></div>
     </section>
 
     <section className="nasil-calisir" aria-labelledby="nasil-basligi"><div className="bolum-basligi"><div><p className="ust-baslik">KENDİ ROTANI ÇİZ</p><h2 id="nasil-basligi">Merakla başla.</h2></div></div><ol>

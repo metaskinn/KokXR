@@ -6,7 +6,7 @@ const [, , tarayiciAdi = 'chromium', genislikStr = '1280', out = 'test-sonuclari
 import { mkdirSync } from 'node:fs';
 mkdirSync(out, { recursive: true });
 const genislik = Number(genislikStr);
-const URL = 'http://localhost:4173';
+const URL = process.env.TEST_URL ?? 'http://localhost:4173';
 const tarayici = tarayiciAdi === 'firefox'
   ? await firefox.launch()
   : await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });

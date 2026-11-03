@@ -9,6 +9,7 @@ import AnaSayfa from './pages/AnaSayfa'
 import EserSayfasi from './pages/EserSayfasi'
 import Bulunamadi from './pages/Bulunamadi'
 import VazoAtolyesi from './pages/VazoAtolyesi'
+import KilicAtolyesi from './pages/KilicAtolyesi'
 import Simge from './components/Simge'
 
 const rozetAnahtari = 'kokxr-rozetler'
@@ -50,11 +51,12 @@ export default function App() {
 
   return <>
     <a className="atlama" href="#ana-icerik">Ana içeriğe geç</a>
-    <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/" end>Keşfet</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav></div></header>
+    <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/" end>Keşfet</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink to="/atolye/kilic">Kılıç atölyesi</NavLink><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav></div></header>
     <main id="ana-icerik" tabIndex={-1}>
       {icerik.uyari && <p className="yonetim-notu" role="alert">{icerik.uyari}</p>}
       <Routes>
         <Route path="/" element={<AnaSayfa eserler={eserler} rozetler={rozetler} />} />
+        <Route path="/atolye/kilic" element={<KilicAtolyesi />} />
         <Route path="/atolye/vazo" element={<VazoAtolyesi />} />
         <Route path="/eser/:id" element={<EserSayfasi eserler={eserler} rozetKazan={rozetKazan} />} />
         <Route path="/yonetim" element={<Yonetim {...yonetimProps} />} />

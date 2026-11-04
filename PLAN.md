@@ -68,7 +68,14 @@ Simüle VR raporu gelince başlar. Doğrulama: simüle Quest betiği, sonra ger�
 
 ### 5. Cuma 6 Kasım: gerçek cihaz (kullanıcıyla)
 
-Hazırlık: Quest 3, veri kablosu, geliştirici modu önceden açık, bilgisayarda `adb`.
+Hazırlık: Quest 3, veri kablosu, geliştirici modu önceden açık. `adb` kurulu (`~/.local/bin/adb`).
+
+`adb devices` çıktısında `no permissions` görünürse USB izni gerekir (`sudo` ister, kullanıcı çalıştırır):
+
+```bash
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0666"' | sudo tee /etc/udev/rules.d/51-quest.rules
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
 
 - [ ] `adb reverse tcp:4173 tcp:4173`, Quest Browser'da `http://localhost:4173/yolculuk`
 - [ ] VR'a giriş, FPS ölçümü (hedef 72); altındaysa `DEVIR-QUEST.md`'deki düşürme sırası

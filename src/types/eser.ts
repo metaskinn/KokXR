@@ -64,6 +64,17 @@ export interface Maket {
   model: string;
   aciklama: string;
   bilgiler: { metin: string; kaynakId: string }[];
+  /** İç mekân bilgi noktaları: konum maket metresi, yaricap kartın açıldığı yaklaşma uzaklığı. */
+  icBilgiler?: MaketBilgiNoktasi[];
+}
+
+export interface MaketBilgiNoktasi {
+  id: string;
+  baslik: string;
+  metin: string;
+  kaynakId: string;
+  konum: number[];
+  yaricap: number;
 }
 
 export interface Eser {

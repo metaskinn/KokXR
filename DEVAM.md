@@ -133,10 +133,10 @@ Ekran görüntüleri `test-sonuclari/` klasörüne yazılır (git dışı). Bekl
 | Ajan | Komut | Rol |
 |---|---|---|
 | Claude Code | `claude` | Lider: plan, içerik/veri, kod incelemesi, **commit** |
-| Codex CLI | `codex` | Uygulama kodu (`docs/next-task.md`'deki görevi uygular) |
-| Antigravity | `agy` | Tarayıcıda test, rapor yazar (`docs/test-raporu*.md`) |
+| Codex CLI | `codex` | Uygulama kodu (`docs/arsiv/next-task.md`'deki görevi uygular) |
+| Antigravity | `agy` | Tarayıcıda test, rapor yazar (`docs/arsiv/test-raporu*.md`) |
 
-Akış: Claude `docs/next-task.md` yazar → Codex uygular → Claude inceler + commit → test (Antigravity veya `npm run test:e2e`).
+Akış: Claude `docs/arsiv/next-task.md` yazar → Codex uygular → Claude inceler + commit → test (Antigravity veya `npm run test:e2e`).
 Aynı dosyaya iki ajan aynı anda dokunmaz.
 
 ### Bilinen tuzaklar
@@ -170,7 +170,7 @@ Aynı dosyaya iki ajan aynı anda dokunmaz.
 - [ ] Sunumda "çalışan prototip" ile "vizyon (VR, zaman katmanı…)" ayrı slaytlarda
 - [ ] Her ekip üyesi mimariyi ve veri modelini 1 dakikada anlatabiliyor (şartname 5.1.2)
 
-**Önerilen 3 dakikalık demo akışı:** `docs/test-raporu-2.md` sonunda.
+**Önerilen 3 dakikalık demo akışı:** `docs/arsiv/test-raporu-2.md` sonunda.
 
 ---
 
@@ -190,8 +190,8 @@ Aynı dosyaya iki ajan aynı anda dokunmaz.
 |---|---|
 | `AGENTS.md` | Tüm ajanlar için proje kuralları |
 | `docs/plan.md` | Web MVP planı, şartname eşlemesi |
-| `docs/durum.md` | Gün sonu durum notu |
-| `docs/next-task.md` | Codex'e verilen son görev (Görev 4 — tamamlandı) |
-| `docs/test-raporu.md`, `docs/test-raporu-2.md` | Antigravity raporu ve son uçtan uca test |
-| `docs/sohbet-ozeti.md` | Projenin başlangıç bağlamı (ekip, eski Unity planı, kaynaklar) |
+| `docs/arsiv/durum.md` | Gün sonu durum notu |
+| `docs/arsiv/next-task.md` | Codex'e verilen son görev (Görev 4 — tamamlandı) |
+| `docs/arsiv/test-raporu.md`, `docs/arsiv/test-raporu-2.md` | Antigravity raporu ve son uçtan uca test |
+| `docs/arsiv/sohbet-ozeti.md` | Projenin başlangıç bağlamı (ekip, eski Unity planı, kaynaklar) |
 | `proje bilgileri/KÖK&KOD Hackathon _ Yarışma Şartnamesi_TR.pdf` | Şartname (git dışında) |

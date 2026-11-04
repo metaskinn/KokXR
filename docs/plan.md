@@ -109,11 +109,11 @@ interface Eser {
 |---|---|---|---|
 | Claude Code | `claude` | Lider: plan, veri/içerik, kod incelemesi | `docs/`, `src/data/` |
 | Codex CLI | `codex` | Uygulama kodu, build | `src/` (data hariç), yapılandırma |
-| Antigravity | `agy` | Tarayıcı testi, tasarım raporu | `docs/test-raporu.md` |
+| Antigravity | `agy` | Tarayıcı testi, tasarım raporu | `docs/arsiv/test-raporu.md` |
 
-1. Claude `docs/next-task.md` dosyasına tek bir görev yazar.
+1. Claude `docs/arsiv/next-task.md` dosyasına tek bir görev yazar.
 2. Codex görevi uygular, `npm run build` ile doğrular, commit atar.
-3. Antigravity uygulamayı tarayıcıda test eder, sonucu `docs/test-raporu.md`'ye yazar.
+3. Antigravity uygulamayı tarayıcıda test eder, sonucu `docs/arsiv/test-raporu.md`'ye yazar.
 4. Claude raporu ve kodu inceler, sıradaki görevi yazar.
 
 Aynı anda iki ajan aynı dosyayı düzenlemez. Her görev sonunda commit.

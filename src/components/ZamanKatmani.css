@@ -1,0 +1,11 @@
+.zaman-aciklama { color: var(--ikincil); max-width: 65ch; }
+.zaman-etiket { display: block; margin-top: 1.25rem; font-weight: 650; }
+.zaman-kaydirici { display: block; box-sizing: border-box; width: 100%; max-width: 720px; min-height: 44px; margin: 0.25rem 0 0; accent-color: var(--yesil); cursor: pointer; }
+.zaman-uclar { display: flex; justify-content: space-between; gap: 1rem; max-width: 720px; color: var(--ikincil); font-size: 0.82rem; }
+.zaman-uclar span:last-child { text-align: right; }
+.zaman-kart { box-sizing: border-box; max-width: 720px; margin-top: 1rem; padding: 1.25rem; background: var(--yuzey); border: 1px solid var(--cizgi); border-radius: 0.5rem; overflow-wrap: anywhere; }
+.zaman-kart h3 { margin: 0.25rem 0 0.5rem; }
+.zaman-kart .kaynak { margin-bottom: 0; }
+.zaman-donem { margin: 0; color: var(--bronz); font-weight: 650; }
+.zaman-konum { color: var(--ikincil); font-weight: 400; }
+.zaman-metin { margin: 0 0 0.75rem; }

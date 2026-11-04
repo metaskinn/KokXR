@@ -77,6 +77,15 @@ export interface MaketBilgiNoktasi {
   yaricap: number;
 }
 
+// Zaman Katmanı kaydı: metin yalnız kaynakId'nin gösterdiği kaynaktan alınır.
+export interface ZamanKaydi {
+  id: string;
+  donem: string;          // görünür tarih etiketi
+  baslik: string;
+  metin: string;
+  kaynakId: string;
+}
+
 export interface Eser {
   id: string;             // "ulu-camii", "muradiye-kulliyesi"
   ad: string;
@@ -96,4 +105,5 @@ export interface Eser {
   tur360?: Tur360;
   restorasyon?: RestorasyonGorevi;
   maket?: Maket;
+  zamanKatmani?: ZamanKaydi[];
 }

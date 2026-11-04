@@ -165,6 +165,50 @@
       "kaynakId": "mur-s130"
     }
   ],
+  "zamanKatmani": [
+    {
+      "id": "insa",
+      "donem": "H. 828-830 / M. 1425-1426",
+      "baslik": "Külliyenin inşası",
+      "metin": "Külliyenin inşa kitabesi caminin ana giriş kapısı üzerindedir. Kitabeye göre inşaata H. 828 / M. 1425'te başlanmış, H. 830 / M. 1426'da tamamlanmıştır.",
+      "kaynakId": "mur-s112"
+    },
+    {
+      "id": "vakfiye",
+      "donem": "14 Temmuz 1430",
+      "baslik": "Vakfiye",
+      "metin": "Sultan II. Murad, 14 Temmuz 1430 tarihli vakfiyesinde külliyenin giderlerini karşılamak üzere birçok mülkü vakfetmiştir.",
+      "kaynakId": "mur-s111"
+    },
+    {
+      "id": "turbeler",
+      "donem": "1442-1573",
+      "baslik": "Türbelerin inşası",
+      "metin": "Külliyede Osmanlı hanedanı üyelerine ait on üç türbe vardır. İlki 1442'de, sonuncusu 1573'te inşa edilmiştir.",
+      "kaynakId": "mur-s111"
+    },
+    {
+      "id": "cem-sultan",
+      "donem": "1499",
+      "baslik": "Cem Sultan Türbesi",
+      "metin": "Önce Fâtih Sultan Mehmed'in oğlu Şehzade Mustafa için yapılmıştır. Napoli'de vefat eden Cem Sultan'ın naaşı 1499'da Bursa'ya getirilip buraya defnedilince türbe onun adıyla anılmaya başlanmıştır.",
+      "kaynakId": "mur-s141"
+    },
+    {
+      "id": "mihrap-onarim",
+      "donem": "1790",
+      "baslik": "Onarım ve yeni mihrap",
+      "metin": "1790 yılındaki onarımdan sonra caminin mihrabı tamamen alçıdan, Rokoko üslubunda yenilenmiştir.",
+      "kaynakId": "mur-s118"
+    },
+    {
+      "id": "unesco",
+      "donem": "2014",
+      "baslik": "UNESCO Dünya Mirası",
+      "metin": "Külliye 2014 yılında UNESCO Dünya Mirası olarak tescillenmiştir.",
+      "kaynakId": "mur-tarihce"
+    }
+  ],
   "kaynaklar": [
     {
       "id": "mur-s111",

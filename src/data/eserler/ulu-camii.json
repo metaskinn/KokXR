@@ -156,6 +156,36 @@
       "kaynakId": "ulu-s33"
     }
   ],
+  "zamanKatmani": [
+    {
+      "id": "tamamlanma",
+      "donem": "H. 802 / M. 1399-1400",
+      "baslik": "Caminin tamamlanması",
+      "metin": "Sultan Yıldırım Bayezid tarafından yaptırılan cami, minberdeki kitabeye göre H. 802 / M. 1399-1400 yılında tamamlanmıştır. Mimarı kesin olarak bilinmemektedir.",
+      "kaynakId": "ulu-tarihce"
+    },
+    {
+      "id": "mahfil",
+      "donem": "1549",
+      "baslik": "Müezzin mahfili",
+      "metin": "Zarif sekiz sütun üzerine oturan yüksek ve sade müezzin mahfili, 1549 yılında yaptırılmıştır.",
+      "kaynakId": "kp-ulu"
+    },
+    {
+      "id": "deprem-onarim",
+      "donem": "1855-1862",
+      "baslik": "1855 depremi ve yeniden açılış",
+      "metin": "Cami en büyük onarımını 1855 depreminden sonra geçirmiş ve 1862'de yeniden ibadete açılmıştır.",
+      "kaynakId": "ulu-tarihce"
+    },
+    {
+      "id": "avlu-sadirvanlari",
+      "donem": "2011",
+      "baslik": "Avlu şadırvanları",
+      "metin": "Caminin kuzey avlusunda aynı hat üzerinde üç şadırvan bulunur. Doğu ve batıdakiler 2011 yılında, eski fotoğraflardaki üsluplarına uygun şekilde sekiz ahşap direk üzerine soğan kubbeyle yeniden yapılmıştır.",
+      "kaynakId": "ulu-s72"
+    }
+  ],
   "kaynaklar": [
     {"id": "kp-ulu", "metin": "T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Bursa Ulu Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), kulturportali.gov.tr"},
     {"id": "mwnf-ulu", "metin": "Yekta Demiralp, \"Ulu Cami\", Discover Islamic Art, Museum With No Frontiers, islamicart.museumwnf.org"},

@@ -1,9 +1,9 @@
 // VR oturumu: rig, kumandalar, görünüm geçişleri. Sahnenin kendisine yalnız XrSecenek üzerinden dokunur.
 import * as THREE from 'three'
-import { MASA_OLCEK_ILK, MASA_OLCEK_MAX, MASA_OLCEK_MIN, XR_DONUS, anlikDonus, basCevresindeDon, durakRig, kumandaGirdisi, masaRig, oluBolge, yurumeAdimi, type RigKonumu } from './xrHareket'
+import { MASA_OLCEK_ILK, MASA_OLCEK_MAX, MASA_OLCEK_MIN, XR_DONUS, anlikDonus, basCevresindeDon, durakRig, kumandaGirdisi, masaRig, oluBolge, ortusmeyenAci, yurumeAdimi, type RigKonumu } from './xrHareket'
 import { ZEMIN_Y, type IcDurak, type IcYurume } from './ulucamiIc'
 import { menuOgeleri } from './xrMetin'
-import { bilgiPaneli, etiketPaneli, xrPaneli } from './xrPanel'
+import { KART_G, MENU_G, bilgiPaneli, etiketPaneli, xrPaneli } from './xrPanel'
 import { OYUNCU_YARICAP, carpiyor } from './yurumeCarpisma'
 
 export interface XrSecenek {
@@ -34,8 +34,8 @@ const ARKA_PLAN = '#1a2b25'
 const DISK_YARICAP = 6
 const ISIN_BOY = 1.5
 const PANEL_UZAKLIK = 1.3
-// Kart ve menü aynı anda açılırsa üst üste binip titremesin; kart önde kalır.
-const MENU_PAYI = 0.04
+// Kart ve menü aynı anda açıksa yan yana durur: ışın öndekine takılıp arkadakini seçilemez bırakmasın.
+const PANEL_AYRIM = (MENU_G / 2 + KART_G / 2 + 0.06) / PANEL_UZAKLIK
 const CUBUK_HIZI = 1.2, EN_UZUN_DT = 0.1
 
 export function xrOturumuKur(s: XrSecenek): XrOturum {
@@ -101,21 +101,28 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   // XR kamerası her karenin başında güncellenir; konumu rig içindeki (yerel) baş pozudur.
   const basYerel = () => xr.getCamera()
   const yatayIleri = new THREE.Vector3()
-  const basinOnune = (nesne: THREE.Object3D, uzaklik: number) => {
-    const bas = basYerel()
-    yatayIleri.set(0, 0, -1).applyQuaternion(bas.quaternion).setY(0)
-    if (yatayIleri.lengthSq() < 1e-6) yatayIleri.set(0, 0, -1)
-    yatayIleri.normalize()
-    nesne.position.copy(bas.position).addScaledVector(yatayIleri, uzaklik)
-    nesne.rotation.set(0, Math.atan2(-yatayIleri.x, -yatayIleri.z), 0)
+  /** Başın rig içindeki yatay yönü; artı yön sola. Tam yukarı veya aşağı bakarken 0. */
+  const basYaw = () => {
+    yatayIleri.set(0, 0, -1).applyQuaternion(basYerel().quaternion).setY(0)
+    return yatayIleri.lengthSq() < 1e-6 ? 0 : Math.atan2(-yatayIleri.x, -yatayIleri.z)
   }
+  /** Paneli başın önüne koyar; öteki panel açıksa onunla örtüşmeyecek yana kayar. */
+  const paneliKoy = (nesne: THREE.Object3D, oteki: THREE.Object3D, yon: 1 | -1) => {
+    const bas = basYerel().position
+    const aci = oteki.visible
+      ? ortusmeyenAci(basYaw(), Math.atan2(bas.x - oteki.position.x, bas.z - oteki.position.z), PANEL_AYRIM, yon)
+      : basYaw()
+    nesne.position.set(bas.x - Math.sin(aci) * PANEL_UZAKLIK, bas.y, bas.z - Math.cos(aci) * PANEL_UZAKLIK)
+    nesne.rotation.set(0, aci, 0)
+  }
+  const kartiKoy = () => paneliKoy(kart.nesne, menu.nesne, -1)
 
   const menuCiz = () => menu.ciz(menuOgeleri({ iceride, parcali: s.parcaliMi(), duraklar }))
   const menuGoster = (acik: boolean) => {
     menuAcik = acik
     menu.nesne.visible = acik
     if (!acik) return
-    basinOnune(menu.nesne, PANEL_UZAKLIK + MENU_PAYI)
+    paneliKoy(menu.nesne, kart.nesne, 1)
     menuCiz()
   }
 
@@ -293,7 +300,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
         pozHazir = true
         if (menuAcik) menuGoster(true)
         if (bekleyenKart) {
-          basinOnune(kart.nesne, PANEL_UZAKLIK)
+          kartiKoy()
           kart.goster(bekleyenKart)
           bekleyenKart = null
         }
@@ -312,7 +319,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
         bekleyenKart = null
         kart.gizle()
       } else if (pozHazir) {
-        basinOnune(kart.nesne, PANEL_UZAKLIK)
+        kartiKoy()
         kart.goster(k)
       } else {
         bekleyenKart = k

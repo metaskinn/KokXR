@@ -59,6 +59,19 @@ export function durakRig(konum: number[], bak: number[], basYerel: Duzlem, zemin
   return { x: konum[0] - (basYerel.x * c + basYerel.z * s), y: zeminY, z: konum[2] - (-basYerel.x * s + basYerel.z * c), rotY }
 }
 
+/** (-π, π] aralığına indirir. */
+function aciSar(a: number): number {
+  const t = 2 * Math.PI, s = ((a % t) + t) % t
+  return s > Math.PI ? s - t : s
+}
+
+/** Panelin başa göre yatay açısı: istenen yön diğer panelle örtüşürse diğerinin yanına kayar, ışın ikisine de ulaşır. Tam üst üste gelince `yon` karar verir (+1 sol). */
+export function ortusmeyenAci(istenen: number, diger: number, ayrim: number, yon: 1 | -1): number {
+  const fark = aciSar(istenen - diger)
+  if (Math.abs(fark) >= ayrim) return istenen
+  return diger + (fark === 0 ? yon : Math.sign(fark)) * ayrim
+}
+
 /** Quest'te çubuk axes[2], axes[3]; menü buttons[5] (B/Y). Çubuğu okunan tek kumanda varsa iki el de onu kullanır; yana itişi yalnız dönüştür, kaydırmaz. */
 export function kumandaGirdisi(kaynaklar: Iterable<KumandaKaynagi>): KumandaGirdisi {
   const g: KumandaGirdisi = { solX: 0, solY: 0, sagX: 0, sagY: 0, menu: false }

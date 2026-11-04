@@ -1,10 +1,10 @@
 // Zaman Katmanı: slider, klavye, metin ve kaynak değişimi, 360 px, kaynaksız kayıtta gizlenme.
-// Çalıştırma: npm run build && npm run preview -- --host 127.0.0.1 --port 4181 --strictPort
-//             TEST_URL=http://127.0.0.1:4181 node tests/zaman-katmani.mjs
+// Çalıştırma: npm run build && npm run preview -- --host 127.0.0.1 --port 4173 --strictPort
+//             node tests/zaman-katmani.mjs
 import { readFileSync } from 'node:fs'
 import { chromium } from 'playwright'
 
-const url = process.env.TEST_URL ?? 'http://127.0.0.1:4181'
+const url = process.env.TEST_URL ?? 'http://127.0.0.1:4173'
 const tarayici = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 const sart = (kosul, mesaj) => { if (!kosul) throw new Error(mesaj) }
 const eserOku = (id) => JSON.parse(readFileSync(new URL(`../src/data/eserler/${id}.json`, import.meta.url), 'utf8'))

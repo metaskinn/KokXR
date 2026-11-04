@@ -38,6 +38,7 @@ for (const genislik of [1280, 360, 320]) {
   await odakBaslikta('Adım 2 / 4')
   sart(await sayfa.title() === 'Zamanda yürü · Yolculuk · KökXR', 'sekme başlığı değişmedi')
   sart(await sayfa.getByText('Kaynak', { exact: false }).count(), 'adım 2 kaynak göstermiyor')
+  sart(await sayfa.getByRole('slider').count() === 1, 'adım 2 zaman kaydırıcısı yok')
   await tasmaYok('adım 2')
 
   // Atlamak serbest: 4. adıma doğrudan gidilir

@@ -6,6 +6,7 @@ import EseriEleAl from '../components/EseriEleAl'
 import KaynakSatiri from '../components/KaynakSatiri'
 import Simge from '../components/Simge'
 import Test from '../components/Test'
+import ZamanKatmani from '../components/ZamanKatmani'
 import VazoAtolyesi from './VazoAtolyesi'
 import './yolculuk.css'
 
@@ -71,11 +72,14 @@ export default function Yolculuk({ eserler, rozetKazan }: { eserler: Eser[]; roz
       <p className="yolculuk-not"><strong>VR gözlüğün mü var?</strong> Bu sayfayı Meta Quest tarayıcısında aç ve maketi başlat; <q>VR'da aç</q> düğmesi yalnız VR destekleyen tarayıcıda görünür.</p>
     </>}
 
-    {no === 2 && <section className="bolum" aria-labelledby="yolculuk-tarihce">
-      <h3 id="yolculuk-tarihce">Tarihçe</h3>
-      <p className="tarihce">{eser.tarihce}</p>
-      {eser.kaynaklar.filter((k) => k.id.endsWith('-tarihce')).map((k) => <KaynakSatiri key={k.id} kaynaklar={eser.kaynaklar} kaynakId={k.id} />)}
-    </section>}
+    {no === 2 && <>
+      <ZamanKatmani eser={eser} />
+      <section className="bolum" aria-labelledby="yolculuk-tarihce">
+        <h3 id="yolculuk-tarihce">Tarihçe</h3>
+        <p className="tarihce">{eser.tarihce}</p>
+        {eser.kaynaklar.filter((k) => k.id.endsWith('-tarihce')).map((k) => <KaynakSatiri key={k.id} kaynaklar={eser.kaynaklar} kaynakId={k.id} />)}
+      </section>
+    </>}
 
     {no === 3 && <>
       <VazoAtolyesi gomulu />

@@ -36,7 +36,7 @@ Erişilebilirlik ölçütleri: adımlar kilitsiz, geri tuşu çalışır, adım 
 - [x] Tek kumanda düzeltmesi
 - [x] Belge düzeni, `CLAUDE.md`, hızlı test komutları, Node 24
 - [x] `/yolculuk` iskeleti, ana sayfa ve menü bağlantısı, `tests/yolculuk.mjs`
-- [ ] `maket-ic` testinin son kodla sonucu
+- [x] `maket-ic` ve `maket-xr-dugme` VR düzeltmeleriyle geçti
 - [ ] Simüle VR raporunu işle
 
 ### 2. VR (öncelikli)
@@ -52,7 +52,7 @@ Simüle VR raporu gelince başlar. Doğrulama: simüle Quest betiği, sonra ger�
 
 ### 3. Sunum ekranları
 
-- [ ] Zaman katmanı, kaynaklı dönem verisiyle (ajan çalışıyor) → yolculuk 2. adımına bağla
+- [x] Zaman katmanı, kaynaklı dönem verisiyle; yolculuk 2. adımında. Yapının eski görünümünü canlandırmaz, sunumda da böyle anlatılır. Kaynaklar envanter PDF'iyle karşılaştırılmadı.
 - [ ] Öğretmen paneli (ajan çalışıyor) → menüye bağla
 - [ ] Vizyon ekranı: KökMobil, Dokunulabilir Müze, Kütüphane, tarama akışı (ajan çalışıyor)
 - [ ] Kütüphane ve onay akışı (ajan çalışıyor; süre yetmezse kesilir)
@@ -95,7 +95,7 @@ Süre yetmezse şu sırayla çıkar: AR → onay akışı → kütüphane → VR
 | 10 kat büyüt | Sınırlar 10 kata çıkar | Gerçek |
 | Tut | Vazo; VR'da maket ve vazo | Gerçek, cihazda doğrulanacak |
 | Alt yüzdeki yazı | Temsilî vazoda örnek yazı | Mokap |
-| Zaman katmanı | Kaynaklı dönem verisi | Gerçek |
+| Zaman katmanı | Kaynaklı dönem metinleri; dönemsel görsel yok | Gerçek, vaadin bir kısmı |
 | Restorasyon görevi | Çini bulmacası, vazo atölyesi | Gerçek |
 | Doğrulanmış bilgi | Kaynaklı kartlar + örnek onay akışı | Gerçek + mokap |
 | Öğretmen paneli | Cihazdaki sonuçlar + örnek sınıf verisi | Mokap |

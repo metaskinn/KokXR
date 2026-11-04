@@ -33,6 +33,8 @@ komutları `docs/ui-tasarim.md` içinde. `node tests/ui.mjs` dört ekran genişl
 
 **Kılıç atölyesi (`/atolye/kilic`):** Topkapı Env. 1/90 kılıcının temsilî modeliyle külçeden kılıca sekiz aşama, sonra test alanı. Kaynaklar ve temsilî sınırlar `docs/kilic-atolyesi.md`; tarihsel metinler yalnız `src/data/kilic.ts`. Yeniden üretim: `blender -b --python scripts/kilic_doku.py`, sonra `scripts/kilic_uret.py` (dokular git dışı). Hedef hasarı `src/components/kilic/hedefler.ts`, hareket `animasyon.ts`. Test: `TEST_GPU=1 node tests/kilic.mjs`, `node tests/kilic-mantik.mjs`. Video: `node scripts/kilic_video.mjs <dosya.webm>`.
 
+**Ulu Camii maketi (yeniden yapıldı):** `src/components/maket/ulucami*.ts`, kod ile üretilir. Dış: taş cephe, kaburgalı kurşun kubbeler, sekizgen kasnaklar, on bir sıra mukarnaslı taç kapı, iki farklı minare, avlu köşkleri. İç: `İçeri gir` ile klavyeyle yürünür (`W A S D`, ok tuşları, `Shift`; çarpışmalı), yapıya yaklaşınca `maket.icBilgiler` kartı açılır. Levha ve paye yazıları arşiv fotoğraflarının kırpımıdır (`scripts/levha_kirp.py`, Pillow gerekir; çıktı `public/gorseller/ulu-camii/maket/`), hangi yüzde durdukları temsilîdir. Kapı ekseni, mahfil, kürsü, kapalı güney pencereleri Kültür Portalı metnindendir (`kp-ulu`). Görüntü işleme (AO, parlama) yavaş cihazda kendiliğinden kapanır, yüksek kaliteyi zorlamak için `?kalite=yuksek`. Test: `node tests/maket-ic.mjs`.
+
 **Fotoğraf revizyonu:** Palet %90 mevcut + %10 sıcak ton karışımıyla hafif sıcaklaştırıldı.
 Galeri eser sayfasında ilk sıraya alındı; fotoğraflar kırpılmadan sığıyor, keşif işaretleri fotoğrafla
 hizalı kalıyor. Oklar, küçük resimler, klavye, mobil kaydırma ve %100–300 büyütme/sığdırma eklendi.

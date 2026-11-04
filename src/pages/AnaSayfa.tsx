@@ -14,8 +14,8 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
         <p className="slogan">Dokunamadığın tarihe dokun.</p>
         <p className="giris-aciklama">Bursa’nın vakıf eserlerini yakından keşfet. Ayrıntılarda gez, hikâyelerini öğren, kendi restorasyonunu yap.</p>
         <div className="giris-eylemler">
-          <a className="dugme" href="#eserler">Keşfetmeye başla <Simge ad="ok" /></a>
-          <Link className="metin-baglanti" to="/atolye/vazo">Vazo atölyesini dene <span aria-hidden="true">↗</span></Link>
+          <Link className="dugme" to="/yolculuk">Yolculuğa başla <Simge ad="ok" /></Link>
+          <a className="metin-baglanti" href="#eserler">Keşfetmeye başla <span aria-hidden="true">↓</span></a>
         </div>
         <div className="giris-alt"><Simge ad="konum" /><span>Bursa, Türkiye</span><span className="ayirici" /> <span>{eserler.length} eser · sana ait bir keşif</span></div>
       </div>
@@ -58,9 +58,9 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
     </section>
 
     <section className="nasil-calisir" aria-labelledby="nasil-basligi"><div className="bolum-basligi"><div><p className="ust-baslik">KENDİ ROTANI ÇİZ</p><h2 id="nasil-basligi">Merakla başla.</h2></div></div><ol>
-      <li><span className="adim-simge"><Simge ad="kesfet" /></span><h3>Bir eser seç</h3><p>Fotoğraflar ve keşif noktalarıyla ayrıntılara yaklaş.</p></li>
-      <li><span className="adim-simge"><Simge ad="katman" /></span><h3>Deneyerek keşfet</h3><p>Sanal gezintiye katıl veya vazo atölyesinde parçaları birleştir.</p></li>
-      <li><span className="adim-simge"><Simge ad="kitap" /></span><h3>Öğrendiklerini sına</h3><p>Üç soruluk testi tamamla; tümünü doğru yanıtlayıp rozetini kazan.</p></li>
+      <li><span className="adim-simge"><Simge ad="kesfet" /></span><h3><Link to="/yolculuk?adim=1">Eline al</Link></h3><p>Temsilî maketi çevir, parçalarına ayır, içeri girip yürü.</p></li>
+      <li><span className="adim-simge"><Simge ad="katman" /></span><h3><Link to="/yolculuk?adim=2">Zamanda yürü</Link></h3><p>Yapının geçmişini kaynaklı bilgilerle izle.</p></li>
+      <li><span className="adim-simge"><Simge ad="kitap" /></span><h3><Link to="/yolculuk?adim=3">Hikâyeyi yaşa</Link></h3><p>Vazoyu onar, üç soruyu yanıtla, rozetini kazan.</p></li>
     </ol></section>
   </>
 }

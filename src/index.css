@@ -228,7 +228,7 @@ legend { font-weight: 600; margin-bottom: 1rem; }
   .ust-cubuk-ic { padding: 0.9rem 1.25rem; min-height: 74px; gap: 0.5rem; flex-wrap: wrap; }
   .marka { font-size: 1.5rem; }
   .marka-simge { width: 32px; height: 32px; }
-  .ust-cubuk nav { gap: 0.1rem; }
+  .ust-cubuk nav { gap: 0.1rem; flex-wrap: wrap; }
   .ust-cubuk nav a { padding: 0.5rem 0.65rem; font-size: 0.8rem; }
   .ust-cubuk nav .yonetim-link { margin-left: 0.3rem; }
   .giris { grid-template-columns: 1fr; padding: 2.75rem 0; gap: 2rem; }

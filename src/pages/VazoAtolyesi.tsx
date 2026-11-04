@@ -6,7 +6,8 @@ import './vazo.css'
 interface Oyun extends VazoDurumu { hamle: number; mesaj: string }
 const ilkOyun: Oyun = { onarim: false, kirildi: false, oturum: 0, yerlesen: [], secili: null, hamle: 0, mesaj: '' }
 
-export default function VazoAtolyesi() {
+/** `gomulu`: başka bir sayfanın içinde; sayfa başlığı ve geri bağlantısı o sayfanındır. */
+export default function VazoAtolyesi({ gomulu = false }: { gomulu?: boolean }) {
   const alan = useRef<HTMLDivElement>(null)
   const sahne = useRef<VazoSahnesi | null>(null)
   const [durum, setDurum] = useState<'yukleniyor' | 'hazir' | 'hata'>('yukleniyor')
@@ -47,11 +48,13 @@ export default function VazoAtolyesi() {
   }
 
   return <article className="sayfa vazo-atolyesi">
-    <Link to="/">← Ana sayfaya dön</Link>
+    {!gomulu && <Link to="/">← Ana sayfaya dön</Link>}
     <header className="eser-baslik">
-      <p className="ust-baslik">RESTORASYON ATÖLYESİ</p>
-      <h1>Bir parçadan bütüne.</h1>
-      <p className="vazo-giris">Vazoyu çevir, ayrıntılarına yaklaş. Sonra parçaları elinle taşır gibi sürükleyerek birleştir.</p>
+      {!gomulu && <>
+        <p className="ust-baslik">RESTORASYON ATÖLYESİ</p>
+        <h1>Bir parçadan bütüne.</h1>
+        <p className="vazo-giris">Vazoyu çevir, ayrıntılarına yaklaş. Sonra parçaları elinle taşır gibi sürükleyerek birleştir.</p>
+      </>}
       <p className="etiket">Temsili 3B model</p>
       <p className="vazo-model-notu">Bu vazo uygulama için tasarlandı; belirli bir tarihî eseri temsil etmez.</p>
     </header>

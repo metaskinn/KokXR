@@ -29,7 +29,7 @@ Yalnız görevin gerektirdiği satırı oku.
 |---|---|
 | Sunum vaatleri | `docs/sunum-vaatleri.md` |
 | Şartname, puanlama | `docs/sartname.md` (5. bölüm) |
-| Etkin plan | `docs/plan-vaat-mokap.md` |
+| **Plan ve durum (işe buradan başla)** | `PLAN.md` |
 | Quest durumu | `DEVIR-QUEST.md` |
 | Kurulum, mimari, veri modeli | `DEVAM.md` |
 | Sayfa ve rota | `src/App.tsx`, `src/pages/` |

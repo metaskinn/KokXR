@@ -1,0 +1,56 @@
+/* Mokap ve kütüphane ekranlarının ortak stili; sınıflar `mokap-` önekiyle sınırlıdır. */
+.mokap { max-width: 56rem; margin-inline: auto; overflow-wrap: anywhere; }
+.mokap h1 { margin-top: 0.5rem; font-size: clamp(2rem, 5vw, 3rem); }
+.mokap-giris { color: var(--ikincil); margin-block: 0 1.5rem; }
+.mokap-bolum { margin-top: 2.5rem; }
+.mokap-bolum h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: 0.5rem; }
+.mokap-bolum-not { margin: 0 0 1.25rem; color: var(--ikincil); font-size: 0.9rem; }
+.mokap-not { margin-block: 1.25rem; padding: 1rem 1.25rem; border: 1px solid #c6d1be; border-left: 3px solid var(--yesil); border-radius: 8px; background: var(--yesil-acik); font-size: 0.9rem; }
+.mokap-kartlar { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.mokap-kartlar-uclu { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.mokap-kartlar-ikili { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mokap-kart { display: flex; flex-direction: column; min-width: 0; padding: 1.25rem; border: 1px solid var(--cizgi); border-radius: 12px; background: var(--yuzey); }
+.mokap-kart h2, .mokap-kart h3 { margin: 0 0 0.5rem; font-size: 1.2rem; letter-spacing: -0.02em; }
+.mokap-kart p { margin: 0 0 0.75rem; font-size: 0.9rem; }
+.mokap-ust { color: var(--bronz); font-size: 0.71rem; font-weight: 650; letter-spacing: 0.12em; }
+.mokap .mokap-ikincil { color: var(--ikincil); }
+.mokap-sayi { font-size: 1.8rem; font-weight: 600; line-height: 1.2; }
+
+.mokap-tablo { width: 100%; border-collapse: collapse; background: var(--yuzey); font-size: 0.9rem; overflow-wrap: normal; }
+.mokap-tablo caption { padding-bottom: 0.5rem; color: var(--ikincil); font-size: 0.85rem; text-align: left; }
+.mokap-tablo th, .mokap-tablo td { padding: 0.65rem 0.75rem; border: 1px solid var(--cizgi); text-align: left; vertical-align: top; }
+.mokap-tablo thead th { background: var(--yesil-acik); font-weight: 600; }
+.mokap-tablo tbody th { font-weight: 500; }
+.mokap-tablo .mokap-tek-satir { white-space: nowrap; }
+
+.mokap-akis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem; margin: 0; padding: 0; list-style: none; }
+.mokap-akis li { position: relative; min-width: 0; padding: 1.25rem; border: 1px dashed var(--kontrol-cizgi); border-radius: 12px; background: var(--yuzey); }
+.mokap-akis h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.mokap-akis p { margin: 0; font-size: 0.9rem; }
+.mokap-akis li:not(:last-child)::after { content: '→'; position: absolute; top: 50%; right: -1.45rem; transform: translateY(-50%); color: var(--bronz); font-size: 1.2rem; }
+
+.mokap-durum { display: inline-block; align-self: flex-start; margin-bottom: 0.75rem; padding: 0.15rem 0.65rem; border: 1px solid var(--kontrol-cizgi); border-radius: 999px; background: var(--zemin); font-size: 0.8rem; font-weight: 600; }
+.mokap-durum-onaylandi { border-color: var(--yesil); background: var(--yesil-acik); color: var(--yesil-koyu); }
+.mokap-durum-reddedildi { border-color: #9b3b20; background: #fbeee9; color: #84301a; }
+.mokap-eylemler { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 0.5rem; }
+.mokap-eylemler button, .mokap-ikincil-dugme { background: var(--yuzey); color: var(--yesil); border-color: var(--kontrol-cizgi); }
+.mokap-eylemler button:hover, .mokap-ikincil-dugme:hover { background: var(--yesil-acik); color: var(--yesil-koyu); }
+.mokap-eylemler button[aria-pressed='true'] { background: var(--yesil); border-color: var(--yesil); color: #fff; }
+.mokap-ozet { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-block: 1.25rem; }
+.mokap-ozet p { margin: 0; font-weight: 600; font-size: 0.9rem; }
+
+.mokap-liste { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.mokap-liste dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0 0 0.75rem; }
+.mokap-liste dt { color: var(--ikincil); font-size: 0.75rem; }
+.mokap-liste dd { margin: 0; font-size: 0.9rem; }
+.mokap-liste details { margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--ikincil); }
+.mokap-liste summary { padding: 0.25rem 0; }
+.mokap-liste a { align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; }
+
+@media (max-width: 720px) {
+  .mokap-kartlar-uclu, .mokap-kartlar-ikili, .mokap-akis, .mokap-liste dl { grid-template-columns: minmax(0, 1fr); }
+  .mokap-liste dl { gap: 0.5rem; }
+  .mokap-akis { gap: 1.9rem; }
+  .mokap-akis li:not(:last-child)::after { content: '↓'; top: auto; right: auto; left: 1.25rem; bottom: -1.75rem; transform: none; }
+  .mokap-tablo th, .mokap-tablo td { padding: 0.5rem; font-size: 0.82rem; }
+}

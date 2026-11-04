@@ -51,6 +51,14 @@ yakin(durakRig([0,0,0], [3,0,0], {x:0,z:0}, 0), {rotY:-Math.PI/2}) // ileri (-z)
 const r = durakRig([5,2.7,7], [8,2.7,11], {x:0.4,z:-0.3}, 0)
 const c = Math.cos(r.rotY), s = Math.sin(r.rotY)
 yakin({x: r.x + 0.4*c + -0.3*s, z: r.z - 0.4*s + -0.3*c}, {x:5, z:7})
+// Baş rig içinde dönükse dünyada yine durağa bakar: rotY + basYaw = hedef yön; baş yine durakta
+for (const basYaw of [Math.PI / 2, -1, 2.5]) {
+  const ry = durakRig([5,2.7,7], [8,2.7,11], {x:0.4,z:-0.3}, 0, basYaw)
+  const hedef = Math.atan2(-(8-5), -(11-7))
+  yakin({ fark: Math.sin(ry.rotY + basYaw - hedef), cos: Math.cos(ry.rotY + basYaw - hedef) }, { fark: 0, cos: 1 })
+  const cy = Math.cos(ry.rotY), sy = Math.sin(ry.rotY)
+  yakin({x: ry.x + 0.4*cy + -0.3*sy, z: ry.z - 0.4*sy + -0.3*cy}, {x:5, z:7})
+}
 
 // Panel yerleşimi: açı artı yönde soldur, kart ve menü örtüşmez
 const AYRIM = 0.7

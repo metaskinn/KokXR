@@ -137,7 +137,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       rig.scale.setScalar(1)
     }
     const { x, z } = basYerel().position
-    rigUygula(durakRig(durak.konum, durak.bak, { x, z }, ZEMIN_Y))
+    rigUygula(durakRig(durak.konum, durak.bak, { x, z }, ZEMIN_Y, basYaw()))
   }
   const gorunumMaket = () => {
     if (iceride) {

@@ -52,9 +52,9 @@ export function masaRig(aci: number, olcek: number): RigKonumu {
   return { x: D * Math.sin(aci), y: -MASA_Y * olcek, z: -D * Math.cos(aci), rotY: Math.PI - aci }
 }
 
-/** İç mekân durağı (1× ölçek): `bak`a dönük durur, başı `konum`un x/z'sine getirir. */
-export function durakRig(konum: number[], bak: number[], basYerel: Duzlem, zeminY: number): RigKonumu {
-  const rotY = Math.atan2(-(bak[0] - konum[0]), -(bak[2] - konum[2]))
+/** İç mekân durağı (1× ölçek): başı `konum`un x/z'sine getirir, bakışı `bak`a çevirir. `basYaw` başın rig içindeki yatay yönüdür. */
+export function durakRig(konum: number[], bak: number[], basYerel: Duzlem, zeminY: number, basYaw = 0): RigKonumu {
+  const rotY = Math.atan2(-(bak[0] - konum[0]), -(bak[2] - konum[2])) - basYaw
   const c = Math.cos(rotY), s = Math.sin(rotY)
   return { x: konum[0] - (basYerel.x * c + basYerel.z * s), y: zeminY, z: konum[2] - (-basYerel.x * s + basYerel.z * c), rotY }
 }

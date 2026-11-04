@@ -7,9 +7,12 @@ import { GTAOPass } from 'three/examples/jsm/postprocessing/GTAOPass.js'
 import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
-import type { MaketBilgiNoktasi } from '../../types/eser'
+import type { Kaynak, MaketBilgiNoktasi } from '../../types/eser'
+import { kaynakMetni } from '../KaynakSatiri'
 import { ulucamiMaketi } from './ulucamiMaket'
 import type { Kutu } from './ulucamiIc'
+import { OYUNCU_YARICAP, carpiyor as yurumeCarpiyor } from './yurumeCarpisma'
+import { xrOturumuKur } from './xrOturum'
 
 /** İki nokta arasındaki kuşbakışı doğru parçası kutuyu kesiyor mu? */
 function bakisKesiliyor(ax: number, az: number, bx: number, bz: number, k: Kutu) {
@@ -37,16 +40,20 @@ export interface MaketSahnesi {
   yuruTus: (tus: string, basili: boolean) => void;
   yuruBirak: () => void;
   bilgiKapat: () => void;
+  /** VR oturumu açar; reddedilirse Promise reddedilir, sahne çalışmaya devam eder. */
+  xrBaslat: () => Promise<void>;
   temizle: () => void;
 }
 
 export interface SahneSecenek {
   bilgiler?: MaketBilgiNoktasi[];
+  kaynaklar?: Kaynak[];
   /** Görünecek bilgi kartı değiştiğinde çağrılır. */
   bilgiDegisti?: (id: string | null) => void;
+  xrDegisti?: (aktif: boolean) => void;
 }
 
-const YURUME_HIZI = 5, KOSMA_HIZI = 9, DONUS_HIZI = 1.7, OYUNCU_YARICAP = 0.45
+const YURUME_HIZI = 5, KOSMA_HIZI = 9, DONUS_HIZI = 1.7
 const ISARET_GORUS = 32
 const YAVAS_KARE_MS = 42
 
@@ -145,11 +152,21 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   let aktifBilgi: string | null = null, yakinBilgi: string | null = null
   let secilenBilgi: string | null = null, kapatilanBilgi: string | null = null
   const izdusum = new THREE.Vector3()
+  const dunyaKonumu = new THREE.Vector3()
+  // XR'da kamera rig'e bağlıdır; yerel konumu dünyadaki yeri vermez.
+  const bakisKonumu = () => renderer.xr.isPresenting ? camera.getWorldPosition(dunyaKonumu) : camera.position
+  const xrKarti = (id: string | null) => {
+    const bilgi = isaretler.find((i) => i.bilgi.id === id)?.bilgi
+    if (!bilgi) return null
+    const kaynak = secenek.kaynaklar?.find((k) => k.id === bilgi.kaynakId)
+    return { baslik: bilgi.baslik, metin: bilgi.metin, kaynak: `Kaynak: ${kaynak ? kaynakMetni(kaynak) : 'Kaynak bilgisi bulunamadı.'}` }
+  }
 
   const bilgiGuncelle = () => {
     let enYakin: string | null = null, enKisa = Infinity
+    const bakis = bakisKonumu()
     for (const { bilgi, konum } of isaretler) {
-      const uzaklik = Math.hypot(camera.position.x - konum.x, camera.position.z - konum.z)
+      const uzaklik = Math.hypot(bakis.x - konum.x, bakis.z - konum.z)
       if (iceride && uzaklik < bilgi.yaricap && uzaklik < enKisa) { enYakin = bilgi.id; enKisa = uzaklik }
     }
     if (enYakin !== yakinBilgi) { yakinBilgi = enYakin; kapatilanBilgi = null }
@@ -158,6 +175,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     if (gosterilecek !== aktifBilgi) {
       aktifBilgi = gosterilecek
       secenek.bilgiDegisti?.(aktifBilgi)
+      if (renderer.xr.isPresenting) xr.bilgiGoster(xrKarti(aktifBilgi))
     }
   }
 
@@ -183,13 +201,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
 
   // Yürüme: çarpışma kutuları oyuncu yarıçapı kadar şişirilmiş kabul edilir; eksen eksen denenerek duvar boyunca kayılır.
   const basiliTuslar = new Set<string>()
-  const carpiyor = (x: number, z: number) => {
-    const { sinir, kutular, daireler } = yurume, r = OYUNCU_YARICAP
-    if (x < sinir.x0 + r || x > sinir.x1 - r || z < sinir.z0 + r || z > sinir.z1 - r) return true
-    for (const k of kutular) if (x > k.x0 - r && x < k.x1 + r && z > k.z0 - r && z < k.z1 + r) return true
-    for (const d of daireler) if (Math.hypot(x - d.x, z - d.z) < d.r + r) return true
-    return false
-  }
+  const carpiyor = (x: number, z: number) => yurumeCarpiyor(yurume, x, z, OYUNCU_YARICAP)
   const goz = new THREE.Vector3()
   const yuruYon = new THREE.Vector3(), bakisYon = new THREE.Spherical()
   const yuruGuncelle = (gecenSn: number) => {
@@ -260,6 +272,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   let calisiyor = true
   let composerHazir = false
   const boyutla = () => {
+    if (renderer.xr.isPresenting) return
     const { clientWidth: w, clientHeight: h } = alan
     renderer.setSize(w, h, false)
     camera.aspect = w / Math.max(h, 1)
@@ -297,6 +310,40 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   composerHazir = true
   kaliteUygula()
 
+  // Işık, ortam ve AO geçişi; kameraya dokunmaz, VR'daki iç görünüm de bunu kullanır.
+  const icDurumu = (ic: boolean) => {
+    iceride = ic
+    // VR'da HTML görünmez, işaretler açılmaz.
+    isaretKatmani.hidden = !ic || renderer.xr.isPresenting
+    scene.environmentIntensity = ic ? 0.28 : 0.42
+    hemi.intensity = ic ? 0.5 : disHemi
+    gtao.updateGtaoMaterial(ic
+      ? { radius: 2.2, distanceExponent: 1.3, thickness: 1.2, scale: 1.25, samples: 16, distanceFallOff: 1, screenSpaceRadius: false }
+      : { radius: 5, distanceExponent: 1.3, thickness: 2, scale: 1.2, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
+    icIsiklar.forEach((i) => { i.intensity = ic ? 40 : 0 })
+  }
+  const bilgiKapat = () => {
+    secilenBilgi = null
+    kapatilanBilgi = yakinBilgi
+  }
+
+  const xr = xrOturumuKur({
+    renderer, scene, camera, yurume, duraklar, icDurumu, bilgiKapat,
+    parcalaAyarla: (acik) => { parcali = acik },
+    parcaliMi: () => parcali,
+    oturumBitti: () => {
+      // VR menüsünden parçalanmış kalmasın: sayfadaki düğme birleşik gösterir.
+      parcali = false
+      camera.position.copy(baslangic)
+      controls.target.copy(baslangicHedef)
+      camera.near = 4
+      camera.far = 900
+      controls.update()
+      boyutla()
+      secenek.xrDegisti?.(false)
+    },
+  })
+
   let oncekiZaman = performance.now()
   let kareSayisi = 0, olculenKare = 0, yavasKare = 0
   renderer.setAnimationLoop(() => {
@@ -304,6 +351,17 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     const simdi = performance.now()
     const gecenSn = Math.min((simdi - oncekiZaman) / 1000, 0.5)
     oncekiZaman = simdi
+    if (renderer.xr.isPresenting) {
+      // Katmanlar animasyonsuz gider: gölgeyi her karede yeniden çizmek VR'da pahalıdır.
+      for (const { grup, yukseklik } of katmanlar) {
+        const hedef = parcali ? yukseklik : 0
+        if (grup.position.y !== hedef) { grup.position.y = hedef; renderer.shadowMap.needsUpdate = true }
+      }
+      xr.kare(gecenSn)
+      bilgiGuncelle()
+      renderer.render(scene, camera)
+      return
+    }
     // Uyarlamalı kalite: ısınma karelerinden sonra art arda yavaş kare görülürse efekt azaltılır.
     if (kaliteZorla !== 'yuksek' && kalite < 2 && ++olculenKare > 20) {
       yavasKare = gecenSn * 1000 > YAVAS_KARE_MS ? yavasKare + 1 : Math.max(0, yavasKare - 1)
@@ -344,7 +402,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     else renderer.render(scene, camera)
   })
 
-  return {
+  const sahne: MaketSahnesi = {
     parcala: (acik) => {
       parcali = acik
       // İçerisi ve katmanların tamamı görünsün diye kamera geriye ve yukarıya alınır.
@@ -382,9 +440,15 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     duraklar: duraklar.map(({ id, ad }) => ({ id, ad })),
     yuruTus: (tus, basili) => { if (basili) basiliTuslar.add(tus); else basiliTuslar.delete(tus) },
     yuruBirak: () => basiliTuslar.clear(),
-    bilgiKapat: () => {
-      secilenBilgi = null
-      kapatilanBilgi = yakinBilgi
+    bilgiKapat,
+    // Kullanıcı jesti kaybolmasın: requestSession'dan önce await yok.
+    xrBaslat: async () => {
+      if (iceride) sahne.icMekan(null)
+      parcali = false
+      kameraHedef = null
+      await xr.baslat()
+      controls.autoRotate = false
+      secenek.xrDegisti?.(true)
     },
     icMekan: (durakId) => {
       const durak = duraklar.find((d) => d.id === durakId)
@@ -394,8 +458,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       secilenBilgi = null
       basiliTuslar.clear()
       if (girdi) {
-        iceride = true
-        isaretKatmani.hidden = false
+        icDurumu(true)
         parcali = false
         katmanlar.forEach(({ grup }) => { grup.position.y = 0 })
         renderer.shadowMap.needsUpdate = true
@@ -408,10 +471,6 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
         controls.rotateSpeed = 0.55
         camera.near = 0.15
         camera.far = 400
-        scene.environmentIntensity = 0.28
-        hemi.intensity = 0.5
-        gtao.updateGtaoMaterial({ radius: 2.2, distanceExponent: 1.3, thickness: 1.2, scale: 1.25, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
-        icIsiklar.forEach((i) => { i.intensity = 40 })
         icGorusAcisi = 68
         camera.fov = icGorusAcisi
         camera.updateProjectionMatrix()
@@ -433,8 +492,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
         }
       }
       if (cikti) {
-        iceride = false
-        isaretKatmani.hidden = true
+        icDurumu(false)
         icHedef = null
         controls.enableZoom = true
         controls.minDistance = 40
@@ -444,10 +502,6 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
         controls.rotateSpeed = 1
         camera.near = 4
         camera.far = 900
-        scene.environmentIntensity = 0.42
-        hemi.intensity = disHemi
-        gtao.updateGtaoMaterial({ radius: 5, distanceExponent: 1.3, thickness: 2, scale: 1.2, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
-        icIsiklar.forEach((i) => { i.intensity = 0 })
         boyutla()
         camera.position.copy(baslangic)
         controls.target.copy(baslangicHedef)
@@ -455,6 +509,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       controls.update()
     },
     temizle: () => {
+      xr.bitir()
+      xr.temizle()
       calisiyor = false
       renderer.setAnimationLoop(null)
       gozlemci.disconnect()
@@ -483,4 +539,5 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       canvas.remove()
     },
   }
+  return sahne
 }

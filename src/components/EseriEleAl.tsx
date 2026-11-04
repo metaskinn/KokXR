@@ -18,9 +18,25 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
   const [durak, setDurak] = useState<string | null>(null)
   const [bilgiId, setBilgiId] = useState<string | null>(null)
   const bilgi = maket.icBilgiler?.find((b) => b.id === bilgiId)
+  const [xrDestek, setXrDestek] = useState(false)
+  // Oturum açılırken ve açıkken dolu: bu sırada sayfadaki düğmeler sahneyi değiştirmesin.
+  const [xrMesgul, setXrMesgul] = useState(false)
+  const [xrHata, setXrHata] = useState(false)
+  const hazir = durum === 'hazir' && !xrMesgul
   const alan = useRef<HTMLDivElement>(null)
   const kutu = useRef<HTMLDivElement>(null)
   const sahne = useRef<MaketSahnesi | null>(null)
+
+  useEffect(() => {
+    let iptal = false
+    const denetle = async () => {
+      let destek = false
+      try { destek = !!(await navigator.xr?.isSessionSupported('immersive-vr')) } catch { destek = false }
+      if (!iptal) setXrDestek(destek)
+    }
+    void denetle()
+    return () => { iptal = true }
+  }, [])
 
   useEffect(() => {
     if (!acik || !alan.current) return
@@ -28,13 +44,22 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
     import('./maket/maketSahnesi').then(({ maketSahnesiOlustur }) => {
       if (iptal || !alan.current) return
       try {
-        sahne.current = maketSahnesiOlustur(alan.current, maket.model, azHareket(), { bilgiler: maket.icBilgiler, bilgiDegisti: setBilgiId })
+        sahne.current = maketSahnesiOlustur(alan.current, maket.model, azHareket(), {
+          bilgiler: maket.icBilgiler,
+          kaynaklar,
+          bilgiDegisti: setBilgiId,
+          xrDegisti: (aktif) => {
+            setXrMesgul(aktif)
+            // Oturum açılınca otomatik dönüş kapanır; düğme de bunu göstersin.
+            if (aktif) setOtomatik(false)
+          },
+        })
         setDuraklar(sahne.current.duraklar)
         setDurum('hazir')
       } catch { setDurum('hata') }
     }).catch(() => !iptal && setDurum('hata'))
-    return () => { iptal = true; sahne.current?.temizle(); sahne.current = null; setDurak(null); setBilgiId(null) }
-  }, [acik, maket.model, maket.icBilgiler])
+    return () => { iptal = true; sahne.current?.temizle(); sahne.current = null; setDurak(null); setBilgiId(null); setXrMesgul(false); setXrHata(false) }
+  }, [acik, maket.model, maket.icBilgiler, kaynaklar])
 
   function tus(e: React.KeyboardEvent) {
     const s = sahne.current
@@ -52,7 +77,19 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
     if (eylem[e.key]) { e.preventDefault(); eylem[e.key](); setOtomatik(false); s.otomatik(false) }
   }
 
+  function vrAc() {
+    const s = sahne.current
+    if (!s) return
+    setXrHata(false)
+    setDurak(null)
+    setParcali(false)
+    setXrMesgul(true)
+    // Tarayıcı oturumu yalnız kullanıcı jesti içinde açar: bundan önce await olmamalı.
+    s.xrBaslat().catch(() => { setXrMesgul(false); setXrHata(true) })
+  }
+
   function parcala() {
+    setXrHata(false)
     const yeni = !parcali
     setParcali(yeni)
     sahne.current?.parcala(yeni)
@@ -60,6 +97,7 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
   }
 
   function duragaGit(id: string | null) {
+    setXrHata(false)
     setDurak(id)
     sahne.current?.icMekan(id)
     if (id) { setParcali(false); setOtomatik(false) }
@@ -83,7 +121,7 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
         <div className="maket-alan" ref={alan} tabIndex={0} role="application" onKeyDown={tus}
           onKeyUp={(e) => { if (YURUME_TUSLARI.has(tusAdi(e))) sahne.current?.yuruTus(tusAdi(e), false) }}
           onBlur={(e) => { if (!alan.current?.contains(e.relatedTarget)) sahne.current?.yuruBirak() }}
-          onPointerDown={() => { if (durak) alan.current?.focus({ preventScroll: true }) }}
+          onPointerDown={() => { setXrHata(false); if (durak) alan.current?.focus({ preventScroll: true }) }}
           aria-label={durak
             ? `${ad} iç mekânı. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.`
             : `${ad} 3B maketi. Ok tuşlarıyla döndür, artı ve eksi ile yakınlaştır.`} />
@@ -96,16 +134,19 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
         </aside>}
         {durum === 'yukleniyor' && <p className="maket-durum">Maket hazırlanıyor…</p>}
         {durum === 'hata' && <p className="maket-durum">Bu cihazda 3B görüntüleme (WebGL) kullanılamıyor.</p>}
+        {/* Sahneyi sürüklemeyi engellemez: kullanıcı maketi kullanmayı sürdürebilir. */}
+        {xrHata && <p className="maket-durum" aria-live="polite" style={{ pointerEvents: 'none', textAlign: 'center', padding: '1rem', textShadow: '0 1px 4px #000' }}>VR oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin.</p>}
         <div className="maket-kontrol">
           {durak ? <>
             <button type="button" onClick={() => duragaGit(null)}>← Dışarı çık</button>
             {duraklar.map((d) => <button type="button" key={d.id} aria-pressed={durak === d.id} onClick={() => duragaGit(d.id)}>{d.ad}</button>)}
           </> : <>
-            <button type="button" disabled={durum !== 'hazir' || !duraklar.length} onClick={() => duragaGit(duraklar[0]?.id ?? null)}>İçeri gir</button>
-            <button type="button" onClick={parcala} aria-pressed={parcali} disabled={durum !== 'hazir'}>{parcali ? '⤓ Birleştir' : '⤒ Parçala'}</button>
-            <button type="button" aria-pressed={otomatik} disabled={durum !== 'hazir'}
+            <button type="button" disabled={!hazir || !duraklar.length} onClick={() => duragaGit(duraklar[0]?.id ?? null)}>İçeri gir</button>
+            {xrDestek && <button type="button" disabled={!hazir} onClick={vrAc}>VR'da aç</button>}
+            <button type="button" onClick={parcala} aria-pressed={parcali} disabled={!hazir}>{parcali ? '⤓ Birleştir' : '⤒ Parçala'}</button>
+            <button type="button" aria-pressed={otomatik} disabled={!hazir}
               onClick={() => { setOtomatik(!otomatik); sahne.current?.otomatik(!otomatik) }}>⟳ Kendi kendine dönsün</button>
-            <button type="button" disabled={durum !== 'hazir'} onClick={() => sahne.current?.sifirla()}>Görünümü sıfırla</button>
+            <button type="button" disabled={!hazir} onClick={() => sahne.current?.sifirla()}>Görünümü sıfırla</button>
           </>}
           {document.fullscreenEnabled && <button type="button" onClick={() => document.fullscreenElement ? document.exitFullscreen() : kutu.current?.requestFullscreen()}>Tam ekran</button>}
         </div>

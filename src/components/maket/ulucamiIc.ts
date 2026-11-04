@@ -10,6 +10,8 @@ import { KAPI_Z, KURSU, MAHFIL } from './ulucamiDetay'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 
 const ZEMIN = 0.7
+/** İç döşemenin (halının) üst yüzü: ulucamiMaket'teki halı y 0.65, kalınlık 0.1. */
+export const ZEMIN_Y = ZEMIN
 
 export interface IcDurak { id: string; ad: string; konum: [number, number, number]; bak: [number, number, number] }
 

@@ -11,6 +11,10 @@ import Bulunamadi from './pages/Bulunamadi'
 import VazoAtolyesi from './pages/VazoAtolyesi'
 import KilicAtolyesi from './pages/KilicAtolyesi'
 import Yolculuk from './pages/Yolculuk'
+import OgretmenPaneli from './pages/OgretmenPaneli'
+import Vizyon from './pages/Vizyon'
+import Kutuphane from './pages/Kutuphane'
+import OnayAkisi from './pages/OnayAkisi'
 import Simge from './components/Simge'
 
 const rozetAnahtari = 'kokxr-rozetler'
@@ -52,12 +56,16 @@ export default function App() {
 
   return <>
     <a className="atlama" href="#ana-icerik">Ana içeriğe geç</a>
-    <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/yolculuk">Yolculuk</NavLink><NavLink to="/" end>Keşfet</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink to="/atolye/kilic">Kılıç atölyesi</NavLink><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav></div></header>
+    <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/yolculuk">Yolculuk</NavLink><NavLink to="/" end>Keşfet</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink to="/atolye/kilic">Kılıç atölyesi</NavLink><NavLink to="/ogretmen">Öğretmen</NavLink><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav></div></header>
     <main id="ana-icerik" tabIndex={-1}>
       {icerik.uyari && <p className="yonetim-notu" role="alert">{icerik.uyari}</p>}
       <Routes>
         <Route path="/" element={<AnaSayfa eserler={eserler} rozetler={rozetler} />} />
         <Route path="/yolculuk" element={<Yolculuk eserler={eserler} rozetKazan={rozetKazan} />} />
+        <Route path="/ogretmen" element={<OgretmenPaneli />} />
+        <Route path="/vizyon" element={<Vizyon />} />
+        <Route path="/kutuphane" element={<Kutuphane />} />
+        <Route path="/onay" element={<OnayAkisi />} />
         <Route path="/atolye/kilic" element={<KilicAtolyesi />} />
         <Route path="/atolye/vazo" element={<VazoAtolyesi />} />
         <Route path="/eser/:id" element={<EserSayfasi eserler={eserler} rozetKazan={rozetKazan} />} />
@@ -67,6 +75,6 @@ export default function App() {
         <Route path="*" element={<Bulunamadi />} />
       </Routes>
     </main>
-    <footer className="alt-cubuk"><div><Link className="marka" to="/">Kök<span className="marka-xr">XR</span></Link><p>Geçmişle bugün arasında bir bağ.</p></div><p>Bursa’nın vakıf eserleri için dijital keşif prototipi.</p><Link to="/atolye/vazo">Atölyeye git <span aria-hidden="true">↗</span></Link></footer>
+    <footer className="alt-cubuk"><div><Link className="marka" to="/">Kök<span className="marka-xr">XR</span></Link><p>Geçmişle bugün arasında bir bağ.</p></div><p>Bursa’nın vakıf eserleri için dijital keşif prototipi.</p><nav className="alt-gezinme" aria-label="Diğer sayfalar"><Link to="/kutuphane">Kütüphane</Link><Link to="/vizyon">Vizyon</Link><Link to="/onay">Onay akışı</Link></nav></footer>
   </>
 }

@@ -53,14 +53,15 @@ Simüle VR raporu gelince başlar. Doğrulama: simüle Quest betiği, sonra ger�
 ### 3. Sunum ekranları
 
 - [x] Zaman katmanı, kaynaklı dönem verisiyle; yolculuk 2. adımında. Yapının eski görünümünü canlandırmaz, sunumda da böyle anlatılır. Kaynaklar envanter PDF'iyle karşılaştırılmadı.
-- [ ] Öğretmen paneli (ajan çalışıyor) → menüye bağla
-- [ ] Vizyon ekranı: KökMobil, Dokunulabilir Müze, Kütüphane, tarama akışı (ajan çalışıyor)
-- [ ] Kütüphane ve onay akışı (ajan çalışıyor; süre yetmezse kesilir)
+- [x] Öğretmen paneli: `/ogretmen`. Yalnız kazanılan rozetler gerçek, sınıf verisi örnek.
+- [x] Vizyon ekranı: `/vizyon`. Vaatler `Hedef:`, gerçek durum `Bugün:` olarak yazılı.
+- [x] Kütüphane `/kutuphane`, onay akışı `/onay`
 - [ ] AR: yalnız bu listenin geri kalanı bitince
 
 ### 4. Doğrulama ve teslim
 
 - [ ] Tüm testler: `npm run test:hizli`, `npm run test:tarayici`, `node scripts/test-tarayici.mjs yolculuk`, `npm run test:e2e`
+- [ ] `tests/ui.mjs` odak denetimi bir kez kaldı, yeniden çalıştırınca geçti; aralıklı sorun mu izle
 - [ ] Bağımsız inceleme: etiket eksiği, uydurma içerik, kırık akış, erişilebilirlik
 - [ ] 1280 ve 360 px ekran görüntüleriyle son bakış
 - [ ] Yedek demo videosu (masaüstü), `dist/` kopyaları, `DEVAM.md` güncellemesi

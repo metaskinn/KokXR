@@ -16,6 +16,9 @@
 .yolculuk-gecis .metin-baglanti { margin-right: auto; }
 .yolculuk .vazo-atolyesi { padding-top: 0; }
 
+.alt-gezinme { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+.alt-gezinme a { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.85rem; font-weight: 600; }
+
 @media (max-width: 720px) {
   .yolculuk-adimlar { gap: 0.25rem; }
   .yolculuk-adimlar a { flex-direction: column; justify-content: center; gap: 0.25rem; padding: 0.5rem 0.2rem; font-size: 0.75rem; line-height: 1.2; text-align: center; }

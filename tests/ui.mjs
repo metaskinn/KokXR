@@ -5,7 +5,7 @@ import { mkdirSync } from 'node:fs'
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:5173'
 const browser = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 mkdirSync('test-sonuclari', { recursive: true })
-const routes = ['/', '/eser/ulu-camii', '/eser/muradiye-kulliyesi', '/atolye/vazo', '/yonetim', '/yonetim/yeni']
+const routes = ['/', '/yolculuk', '/ogretmen', '/vizyon', '/kutuphane', '/onay', '/eser/ulu-camii', '/eser/muradiye-kulliyesi', '/atolye/vazo', '/yonetim', '/yonetim/yeni']
 try {
   for (const width of process.argv.includes('--contrast-only') ? [] : [1440, 768, 360, 320]) {
     const page = await browser.newPage({ viewport: { width, height: 1000 } })
@@ -39,7 +39,7 @@ try {
     assert.equal(await page.getByRole('link', { name: 'Vazo atölyesi', exact: true }).getAttribute('aria-current'), 'page')
     assert.equal(await page.evaluate(() => document.activeElement.id), 'ana-icerik')
     assert.deepEqual(errors, [])
-    console.log(`${width}px: 6 rota, taşma, başlıklar, bölüm bağlantıları, 44px gezinme, atlama ve rota odağı geçti.`)
+    console.log(`${width}px: ${routes.length} rota, taşma, başlıklar, bölüm bağlantıları, 44px gezinme, atlama ve rota odağı geçti.`)
     await page.close()
   }
   const page = await browser.newPage()

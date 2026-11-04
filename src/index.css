@@ -50,7 +50,7 @@ main { max-width: 1200px; padding: 0 2rem 5rem; margin: auto; }
 .marka-xr { color: var(--bronz); font-weight: 500; }
 .marka-simge { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid #aebcaa; border-radius: 11px 11px 3px 3px; color: var(--yesil); }
 .marka-simge svg { width: 25px; height: 25px; }
-.ust-cubuk nav { display: flex; align-items: center; gap: 0.5rem; }
+.ust-cubuk nav { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 0.5rem; min-width: 0; }
 .ust-cubuk nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0.6rem 1rem; font-size: 0.875rem; font-weight: 550; color: var(--ikincil); text-decoration: none; border-radius: 8px; }
 .ust-cubuk nav a:hover { color: var(--yesil); background: var(--yesil-acik); }
 .ust-cubuk nav a[aria-current='page'] { color: var(--yesil); background: var(--yesil-acik); box-shadow: inset 0 -2px var(--yesil); }
@@ -228,7 +228,7 @@ legend { font-weight: 600; margin-bottom: 1rem; }
   .ust-cubuk-ic { padding: 0.9rem 1.25rem; min-height: 74px; gap: 0.5rem; flex-wrap: wrap; }
   .marka { font-size: 1.5rem; }
   .marka-simge { width: 32px; height: 32px; }
-  .ust-cubuk nav { gap: 0.1rem; flex-wrap: wrap; }
+  .ust-cubuk nav { gap: 0.1rem; }
   .ust-cubuk nav a { padding: 0.5rem 0.65rem; font-size: 0.8rem; }
   .ust-cubuk nav .yonetim-link { margin-left: 0.3rem; }
   .giris { grid-template-columns: 1fr; padding: 2.75rem 0; gap: 2rem; }

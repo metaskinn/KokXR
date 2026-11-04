@@ -68,6 +68,20 @@ for (const genislik of [1280, 360, 320]) {
   for (const y of await sayfa.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link').evaluateAll((l) => l.map((a) => a.getBoundingClientRect().height))) sart(y >= 44, `menü hedefi ${y}px`)
   await tasmaYok('menü')
 
+  // Tüm ekranlara menüden gidilir; mokaplar etiketlidir, odak ana içeriğe geçer
+  for (const [menu, baglanti, etiket] of [
+    ['Ana gezinme', 'Öğretmen', 'Demo · örnek veri'],
+    ['Diğer sayfalar', 'Kütüphane', null],
+    ['Diğer sayfalar', 'Vizyon', 'Vizyon · henüz uygulanmadı'],
+    ['Diğer sayfalar', 'Onay akışı', 'Demo · örnek veri'],
+  ]) {
+    await sayfa.getByRole('navigation', { name: menu }).getByRole('link', { name: baglanti, exact: true }).click()
+    await sayfa.waitForFunction(() => document.activeElement?.id === 'ana-icerik', null, { timeout: SURE })
+    sart(await sayfa.locator('h1').count() === 1, `${baglanti}: h1 sayısı`)
+    if (etiket) sart((await sayfa.locator('.demo-etiketi').first().textContent()) === etiket, `${baglanti}: etiket yok`)
+    await tasmaYok(baglanti)
+  }
+
   sart(!hatalar.length, `${genislik}px konsol hatası: ${hatalar.join(' | ')}`)
   if (process.env.EKRAN) await sayfa.screenshot({ path: `${process.env.EKRAN}/yolculuk-${genislik}.png` })
   await sayfa.close()

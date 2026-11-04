@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "test:hizli": "tsc --noEmit -p tsconfig.app.json && node tests/maket-xr-mantik.mjs && node tests/maket-xr-metin.mjs",
+    "test:hizli": "tsc --noEmit -p tsconfig.app.json && node tests/maket-xr-mantik.mjs && node tests/maket-xr-metin.mjs && node tests/vazo-xr-mantik.mjs",
     "test:tarayici": "tsc -b && vite build --logLevel error && node scripts/test-tarayici.mjs",
     "test:e2e": "node tests/uctan-uca.mjs chromium 1280 && node tests/uctan-uca.mjs chromium 360 && node tests/uctan-uca.mjs firefox 1280"
   },

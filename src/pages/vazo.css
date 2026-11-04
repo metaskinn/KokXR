@@ -31,6 +31,9 @@
 .vazo-klavye summary { padding: .9rem 0; }
 .vazo-mesaj { margin: 1rem 0 0; padding: .8rem; border-left: 3px solid var(--yesil); border-radius: 0 6px 6px 0; background: var(--yesil-acik); }
 .vazo-mesaj:empty { display: none; }
+.vazo-vr { margin-top: 1rem; }
+.vazo-vr button { width: 100%; min-height: 44px; }
+.vazo-vr [role='alert'] { margin: .75rem 0 0; padding: .8rem; border-left: 3px solid #99622d; border-radius: 0 6px 6px 0; background: #fdeed5; }
 @media (max-width: 850px) {
   .vazo-duzen { grid-template-columns: 1fr; }
   .vazo-sahne { height: 460px; }

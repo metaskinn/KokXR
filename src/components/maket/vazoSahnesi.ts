@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { XR_TABLA_YARICAP, ekranEsigi, vazoXrKur, yerineOturur } from './vazoXr'
 
 export const parcaAdlari = ['Alt gövde · sağ', 'Alt gövde · arka', 'Alt gövde · sol', 'Üst gövde · sağ', 'Üst gövde · arka', 'Üst gövde · sol']
 export interface VazoDurumu { onarim: boolean; kirildi: boolean; oturum: number; yerlesen: number[]; secili: number | null }
@@ -12,9 +13,12 @@ export interface VazoSahnesi {
   parcayiBirak: () => void
   iptal: () => void
   sifirla: () => void
+  /** Kullanıcı jesti içinde çağrılır: requestSession'dan önce await yok. */
+  xrBaslat: () => Promise<void>
+  xrBitir: () => void
   temizle: () => void
 }
-interface Bildirimler { sec: (id: number | null) => void; birak: (id: number, oturdu: boolean) => void; hata: () => void }
+interface Bildirimler { sec: (id: number | null) => void; birak: (id: number, oturdu: boolean) => void; hata: () => void; xrBitti: () => void }
 
 export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler): Promise<VazoSahnesi> {
   // .blend kaynağından dışa aktarılan altı fiziksel seramik parça; harici model/doku yok.
@@ -96,7 +100,8 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
     if (o instanceof THREE.Mesh) o.material = new THREE.MeshBasicMaterial({ color: '#ded4b9', transparent: true, opacity: .065, depthWrite: false, side: THREE.DoubleSide })
   })
   scene.add(siluet)
-  const raflar = parcalar.map((_, id) => new THREE.Vector3(id < 3 ? -43 : 43, 9 + (id % 3) * 19, 14))
+  const masaustuRaflari = parcalar.map((_, id) => new THREE.Vector3(id < 3 ? -43 : 43, 9 + (id % 3) * 19, 14))
+  let raflar = masaustuRaflari
   const etiketler = parcalar.map((_, id) => {
     const button = document.createElement('button')
     button.type = 'button'
@@ -104,7 +109,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
     button.dataset.parcaId = String(id)
     button.setAttribute('aria-label', `Parça ${id + 1}: tut ve sürükle`)
     button.innerHTML = `<span>${id + 1}</span>`
-    button.addEventListener('click', () => { if (!durum.yerlesen.includes(id)) bildir.sec(id) })
+    button.addEventListener('click', () => { if (!durum.yerlesen.includes(id) && !renderer.xr.isPresenting) bildir.sec(id) })
     alan.append(button)
     return button
   })
@@ -112,6 +117,9 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   const hareketler = new Map<number, THREE.Vector3>()
   let drag: { id: number; pointer: number; offset: THREE.Vector3; x: number; y: number; tasindi: boolean } | null = null
   let kapandi = false
+  let xrVurgu: number[] = []
+  // Oturma bildirildi, oyun durumuna henüz yansımadı: VR kumandası bu arada yeniden tutmasın.
+  const oturanlar = new Set<number>()
   const azHareket = matchMedia('(prefers-reduced-motion: reduce)').matches
 
   function ekran(v: THREE.Vector3) {
@@ -120,7 +128,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   }
   function yakinMi(id: number) {
     const a = ekran(parcalar[id].position), b = ekran(hedefler[id].position)
-    return a.distanceTo(b) < Math.max(20, Math.min(34, alan.clientWidth * .055))
+    return yerineOturur(a.distanceTo(b), ekranEsigi(alan.clientWidth))
   }
   function renkleriGuncelle() {
     parcalar.forEach((p, id) => {
@@ -128,7 +136,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
       p.traverse((o) => {
         if (!(o instanceof THREE.Mesh)) return
         for (const material of Array.isArray(o.material) ? o.material : [o.material]) {
-          if (material instanceof THREE.MeshStandardMaterial) material.emissive.set(secili ? '#352510' : '#000000')
+          if (material instanceof THREE.MeshStandardMaterial) material.emissive.set(secili || xrVurgu.includes(id) ? '#352510' : '#000000')
         }
       })
       etiketler[id].hidden = !durum.onarim || durum.yerlesen.includes(id)
@@ -150,14 +158,14 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   }
   const guncelle = (yeni: VazoDurumu) => {
     const bastan = yeni.oturum !== durum.oturum || yeni.onarim !== durum.onarim
-    if (bastan) { captureBirak(); hareketler.clear() }
+    if (bastan) { captureBirak(); hareketler.clear(); oturanlar.clear() }
     const onceki = durum
     durum = yeni
     const izsizGorunum = !yeni.kirildi && !yeni.onarim
     saglamGorunum.visible = izsizGorunum
     birlesimIzleri.visible = yeni.kirildi && yeni.yerlesen.length === 6
     siluet.visible = yeni.onarim && yeni.yerlesen.length < 6
-    if (bastan) sifirla()
+    if (bastan && !renderer.xr.isPresenting) sifirla()
     parcalar.forEach((p, id) => {
       p.visible = !izsizGorunum
       const yerde = !yeni.onarim || yeni.yerlesen.includes(id)
@@ -172,14 +180,14 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
     const rect = renderer.domElement.getBoundingClientRect()
     ray.setFromCamera(new THREE.Vector2((clientX - rect.left) / rect.width * 2 - 1, -(clientY - rect.top) / rect.height * 2 + 1), camera)
   }
-  function birak(id: number) {
+  function birak(id: number, oturdu = yakinMi(id)) {
     if (durum.yerlesen.includes(id)) return
-    const oturdu = yakinMi(id)
+    if (oturdu) oturanlar.add(id)
     hareketler.set(id, (oturdu ? hedefler[id].position : raflar[id]).clone())
     bildir.birak(id, oturdu)
   }
   const pointerDown = (e: PointerEvent) => {
-    if (!durum.onarim || e.button !== 0) return
+    if (!durum.onarim || e.button !== 0 || renderer.xr.isPresenting) return
     if (drag) { e.stopPropagation(); return }
     const etiket = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-parca-id]')
     isin(e.clientX, e.clientY)
@@ -217,7 +225,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
     if (tasindi) birak(id)
   }
   const pointerCancel = (e: PointerEvent) => { if (drag?.pointer === e.pointerId) iptal() }
-  const contextLost = (e: Event) => { e.preventDefault(); iptal(); bildir.hata() }
+  const contextLost = (e: Event) => { e.preventDefault(); iptal(); xr.bitir(); bildir.hata() }
   alan.addEventListener('pointerdown', pointerDown, true)
   alan.addEventListener('pointermove', pointerMove, true)
   alan.addEventListener('pointerup', pointerUp, true)
@@ -225,6 +233,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   alan.addEventListener('lostpointercapture', pointerCancel, true)
   renderer.domElement.addEventListener('webglcontextlost', contextLost)
   const boyutla = () => {
+    if (renderer.xr.isPresenting) return
     const w = alan.clientWidth, h = Math.max(alan.clientHeight, 1)
     renderer.setSize(w, h, false)
     camera.aspect = w / h
@@ -233,11 +242,53 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   }
   const observer = new ResizeObserver(boyutla)
   observer.observe(alan); boyutla(); guncelle(durum)
+  const xr = vazoXrKur({
+    renderer, scene, camera, parcalar, hedefler,
+    butunNesneleri: [birlesimIzleri],
+    serbestMi: (id) => !durum.yerlesen.includes(id) && !oturanlar.has(id),
+    tamamMi: () => durum.yerlesen.length === parcalar.length && hareketler.size === 0,
+    yerlesenSayisi: () => durum.yerlesen.length,
+    tutusBasladi: (id) => { hareketler.delete(id) },
+    birak,
+    tutusIptal: (id) => { hareketler.set(id, raflar[id].clone()) },
+    sec: bildir.sec,
+    vurgula: (idler) => {
+      if (idler.length === xrVurgu.length && idler.every((id, i) => id === xrVurgu[i])) return
+      xrVurgu = idler
+      renkleriGuncelle()
+    },
+    xrModu: (acik, yeniRaflar) => {
+      if (acik) iptal()
+      controls.enabled = !acik
+      raflar = acik && yeniRaflar ? yeniRaflar.map((p) => new THREE.Vector3(...p)) : masaustuRaflari
+      const tabla = acik ? XR_TABLA_YARICAP / 66 : 1
+      base.scale.set(tabla, 1, tabla)
+      hareketler.clear()
+      parcalar.forEach((p, id) => {
+        const yerde = durum.yerlesen.includes(id) || oturanlar.has(id) || !durum.onarim
+        p.position.copy(yerde ? hedefler[id].position : raflar[id])
+        p.quaternion.copy(hedefler[id].quaternion)
+      })
+    },
+    oturumBitti: () => {
+      boyutla()
+      sifirla()
+      bildir.xrBitti()
+    },
+  })
   renderer.setAnimationLoop(() => {
     if (kapandi) return
     for (const [id, hedef] of hareketler) {
-      parcalar[id].position.lerp(hedef, azHareket ? 1 : .2)
-      if (parcalar[id].position.distanceTo(hedef) < .05) { parcalar[id].position.copy(hedef); hareketler.delete(id) }
+      const parca = parcalar[id]
+      parca.position.lerp(hedef, azHareket ? 1 : .2)
+      // Masaüstünde parça dönmez; VR'da elde dönmüş olabilir.
+      if (!parca.quaternion.equals(hedefler[id].quaternion)) parca.quaternion.slerp(hedefler[id].quaternion, azHareket ? 1 : .2)
+      if (parca.position.distanceTo(hedef) < .05) { parca.position.copy(hedef); parca.quaternion.copy(hedefler[id].quaternion); hareketler.delete(id) }
+    }
+    if (renderer.xr.isPresenting) {
+      xr.kare()
+      renderer.render(scene, camera)
+      return
     }
     if (!drag) controls.update()
     scene.updateMatrixWorld(true)
@@ -251,6 +302,8 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   kaynaklariTopla(scene)
   return {
     guncelle, sifirla, iptal,
+    xrBaslat: () => xr.baslat(),
+    xrBitir: () => xr.bitir(),
     parcayiKaydir: (x, y) => {
       const id = durum.secili
       if (id === null || durum.yerlesen.includes(id) || drag) return
@@ -273,6 +326,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
       camera.position.copy(controls.target).add(v); controls.update()
     },
     temizle: () => {
+      xr.temizle()
       kapandi = true; captureBirak(); renderer.setAnimationLoop(null)
       observer.disconnect(); controls.dispose()
       alan.removeEventListener('pointerdown', pointerDown, true)

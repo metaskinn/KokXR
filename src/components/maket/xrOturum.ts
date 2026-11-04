@@ -37,6 +37,7 @@ const PANEL_UZAKLIK = 1.3
 // Kart ve menü aynı anda açıksa yan yana durur: ışın öndekine takılıp arkadakini seçilemez bırakmasın.
 const PANEL_AYRIM = (MENU_G / 2 + KART_G / 2 + 0.06) / PANEL_UZAKLIK
 const CUBUK_HIZI = 1.2, EN_UZUN_DT = 0.1
+const GECIS_KARAR = 0.12, GECIS_ACIL = 0.2
 
 export function xrOturumuKur(s: XrSecenek): XrOturum {
   const { renderer, scene, camera, yurume, duraklar } = s
@@ -64,6 +65,36 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     rig.add(panel.nesne)
   }
   menu.nesne.visible = false
+
+  // Görünüm değişimi kısa karartmayla olur: VR'da tek karelik sıçrama hem göze batar hem rahatsız eder.
+  const kararti = new THREE.Mesh(
+    new THREE.SphereGeometry(0.25, 16, 12),
+    new THREE.MeshBasicMaterial({ color: '#000000', side: THREE.BackSide, transparent: true, opacity: 0, depthTest: false, depthWrite: false }),
+  )
+  kararti.renderOrder = 2000
+  kararti.frustumCulled = false
+  kararti.visible = false
+  rig.add(kararti)
+  let gecis: { t: number; is: () => void; yapildi: boolean } | null = null
+  const gecisYap = (is: () => void) => {
+    if (gecis) return
+    gecis = { t: 0, is, yapildi: false }
+    kararti.visible = true
+  }
+  const gecisIlerle = (dt: number) => {
+    if (!gecis) return
+    gecis.t += dt
+    if (!gecis.yapildi && gecis.t >= GECIS_KARAR) {
+      gecis.yapildi = true
+      gecis.is()
+    }
+    kararti.position.copy(basYerel().position)
+    kararti.material.opacity = gecis.t < GECIS_KARAR ? gecis.t / GECIS_KARAR : Math.max(0, 1 - (gecis.t - GECIS_KARAR) / GECIS_ACIL)
+    if (gecis.t >= GECIS_KARAR + GECIS_ACIL) {
+      gecis = null
+      kararti.visible = false
+    }
+  }
 
   // Etiket başa bağlıdır: menü kapansa, kart önüne geçse veya baş dönse de görüş alanının altında kalır.
   const etiket = etiketPaneli()
@@ -121,7 +152,11 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   const menuGoster = (acik: boolean) => {
     menuAcik = acik
     menu.nesne.visible = acik
-    if (!acik) return
+    if (!acik) {
+      // Yanında menü kalmayan kart görüşün ortasına gelir.
+      if (kart.nesne.visible) kartiKoy()
+      return
+    }
     paneliKoy(menu.nesne, kart.nesne, 1)
     menuCiz()
   }
@@ -152,15 +187,27 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
 
   const eylem = (id: string) => {
     if (id === 'cik') return bitir()
-    if (id === 'iceri') { if (duraklar[0]) gorunumDurak(duraklar[0].id) }
-    else if (id === 'disari') gorunumMaket()
-    else if (id === 'parcala') s.parcalaAyarla(!s.parcaliMi())
-    else if (id.startsWith('durak:')) gorunumDurak(id.slice('durak:'.length))
+    // İçeride menü durak seçilince kapanır: görüş kapanmaz, kart tam önde açılır. Y/B ile yeniden açılır.
+    if (id === 'iceri' || id.startsWith('durak:')) {
+      const hedef = id === 'iceri' ? duraklar[0]?.id : id.slice('durak:'.length)
+      if (!hedef) return
+      menuGoster(false)
+      gecisYap(() => gorunumDurak(hedef))
+      return
+    }
+    if (id === 'disari') {
+      gecisYap(() => {
+        gorunumMaket()
+        menuGoster(true)
+      })
+      return
+    }
+    if (id === 'parcala') s.parcalaAyarla(!s.parcaliMi())
     menuCiz()
   }
 
   const secildi = (kumanda: THREE.XRTargetRaySpace) => {
-    if (!oturum) return
+    if (!oturum || gecis) return
     // Raycaster görünmezliğe bakmaz; kapalı paneller aday olmamalı.
     const adaylar: THREE.Object3D[] = [menu.nesne, kart.nesne].filter((n) => n.visible)
     if (!adaylar.length) return
@@ -217,6 +264,8 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     donusBasili = false
     pozHazir = false
     bekleyenKart = null
+    gecis = null
+    kararti.visible = false
     menu.nesne.visible = false
     kart.gizle()
   }
@@ -305,8 +354,9 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
           bekleyenKart = null
         }
       }
+      gecisIlerle(Math.min(dt, EN_UZUN_DT))
       const girdi = kumandaGirdisi(oturum.inputSources)
-      if (girdi.menu && !menuBasili) menuGoster(!menuAcik)
+      if (girdi.menu && !menuBasili && !gecis) menuGoster(!menuAcik)
       menuBasili = girdi.menu
       const adim = Math.min(dt, EN_UZUN_DT)
       if (iceride) icKare(girdi, adim)
@@ -344,6 +394,8 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       etiket.dispose()
       disk.geometry.dispose()
       disk.material.dispose()
+      kararti.geometry.dispose()
+      kararti.material.dispose()
       isinGeometri.dispose()
       isinMalzeme.dispose()
     },

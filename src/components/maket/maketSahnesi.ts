@@ -334,6 +334,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     oturumBitti: () => {
       // VR menüsünden parçalanmış kalmasın: sayfadaki düğme birleşik gösterir.
       parcali = false
+      controls.enabled = true
       camera.position.copy(baslangic)
       controls.target.copy(baslangicHedef)
       camera.near = 4
@@ -447,6 +448,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       parcali = false
       kameraHedef = null
       await xr.baslat()
+      // VR'da kamera rig yerelindedir: fare masaüstü koordinatıyla ezmesin.
+      controls.enabled = false
       controls.autoRotate = false
       secenek.xrDegisti?.(true)
     },

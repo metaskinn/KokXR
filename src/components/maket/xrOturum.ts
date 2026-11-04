@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { MASA_OLCEK_ILK, MASA_OLCEK_MAX, MASA_OLCEK_MIN, XR_DONUS, anlikDonus, basCevresindeDon, durakRig, kumandaGirdisi, masaRig, oluBolge, yurumeAdimi, type RigKonumu } from './xrHareket'
 import { ZEMIN_Y, type IcDurak, type IcYurume } from './ulucamiIc'
 import { menuOgeleri } from './xrMetin'
-import { bilgiPaneli, xrPaneli } from './xrPanel'
+import { bilgiPaneli, etiketPaneli, xrPaneli } from './xrPanel'
 import { OYUNCU_YARICAP, carpiyor } from './yurumeCarpisma'
 
 export interface XrSecenek {
@@ -65,12 +65,22 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   }
   menu.nesne.visible = false
 
+  // Etiket başa bağlıdır: menü kapansa, kart önüne geçse veya baş dönse de görüş alanının altında kalır.
+  const etiket = etiketPaneli()
+  etiket.nesne.material.transparent = true
+  etiket.nesne.material.depthTest = false
+  etiket.nesne.material.depthWrite = false
+  etiket.nesne.renderOrder = 1003
+  etiket.nesne.frustumCulled = false
+  etiket.nesne.position.set(0, -0.38, -1.2)
+
   const isinGeometri = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3(0, 0, -ISIN_BOY)])
   const isinMalzeme = new THREE.LineBasicMaterial({ color: '#f8f5ef', transparent: true, depthTest: false, depthWrite: false, toneMapped: false })
   const raycaster = new THREE.Raycaster()
 
   let oturum: XRSession | null = null
   let basliyor = false
+  let kapandi = false
   let oncekiArka: THREE.Scene['background'] = null
   let iceride = false
   let aci = 0, olcek = MASA_OLCEK_ILK
@@ -172,6 +182,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   const gir = (yeni: XRSession) => {
     oturum = yeni
     rig.add(camera)
+    camera.add(etiket.nesne)
     scene.add(rig)
     oncekiArka = scene.background
     scene.background = new THREE.Color(ARKA_PLAN)
@@ -183,6 +194,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   }
 
   const geriAl = () => {
+    etiket.nesne.removeFromParent()
     camera.removeFromParent()
     camera.scale.set(1, 1, 1) // Rig'den ayrışırken kalan yuvarlama hatası
     rig.removeFromParent()
@@ -251,8 +263,10 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       let yeni: XRSession | null = null
       try {
         yeni = await navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })
+        // İzin beklenirken sahne kapanmış olabilir: kullanıcı boş oturumda kalmasın.
+        if (kapandi) throw new Error('Sahne kapandı')
         await xr.setSession(yeni)
-        if (xr.getSession() !== yeni) throw new Error('VR oturumu açılırken kapandı')
+        if (kapandi || xr.getSession() !== yeni) throw new Error('VR oturumu açılırken kapandı')
       } catch (hata) {
         // setSession yarıda kaldıysa renderer boyutu bozulabilir (kapanışta boş piksel oranı yazar); kapanınca eskisine döner.
         if (yeni) {
@@ -306,6 +320,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     },
     aktif: () => oturum !== null,
     temizle: () => {
+      kapandi = true
       xr.removeEventListener('sessionend', oturumBitince)
       const acik = oturum
       // Sahne de kapanıyor: oturumBitti çağrılmaz, sonradan gelen sessionend de dinlenmez.
@@ -319,6 +334,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       }
       menu.dispose()
       kart.dispose()
+      etiket.dispose()
       disk.geometry.dispose()
       disk.material.dispose()
       isinGeometri.dispose()

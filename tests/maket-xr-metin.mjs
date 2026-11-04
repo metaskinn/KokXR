@@ -28,6 +28,12 @@ const dev = satirKir('ş'.repeat(100), uzunluk, 30)
 assert.equal(dev.join(''), 'ş'.repeat(100))
 assert(dev.every((s) => s.length <= 30))
 assert.deepEqual(satirKir('ab ' + 'c'.repeat(12) + ' de', uzunluk, 5), ['ab', 'ccccc', 'ccccc', 'cc de'])
+// Intl.Segmenter olmayan tarayıcıda da çalışır; modül yüklenirken gerekmez
+const segmenter = Intl.Segmenter
+delete Intl.Segmenter
+assert.deepEqual(satirKir('ş'.repeat(7), uzunluk, 3), ['şşş', 'şşş', 'ş'])
+await import(`../src/components/maket/xrMetin.ts?segmentersiz`)
+Intl.Segmenter = segmenter
 assert.deepEqual(satirKir('abc', uzunluk, 0), ['a', 'b', 'c']) // Genişlik yetmese de sonsuz döngü olmaz
 assert.deepEqual(satirKir('İ̇ş', uzunluk, 1), ['İ̇', 'ş']) // Birleşen işaret harfinden ayrılmaz
 

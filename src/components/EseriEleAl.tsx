@@ -63,7 +63,7 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
 
   function tus(e: React.KeyboardEvent) {
     const s = sahne.current
-    if (!s) return
+    if (!s || xrMesgul) return // VR'da kamera rig yerelindedir, klavye onu ezmesin
     if (durak && YURUME_TUSLARI.has(tusAdi(e))) {
       e.preventDefault()
       s.yuruTus(tusAdi(e), true)

@@ -42,6 +42,15 @@ function band(c: CanvasRenderingContext2D, yukseklik: number, yazi: string, boyu
   c.fillText(yazi, TUVAL_G / 2, yukseklik / 2, TUVAL_G - 2 * 40) // Sığmazsa yatayda sıkışır, taşmaz
 }
 
+/** Temsilî etiketi: oturum boyunca görünür, menü ve kart kapalıyken de kalır. */
+export function etiketPaneli() {
+  const yukseklik = 72
+  const { c, doku, nesne, dispose } = panel(0.6, yukseklik)
+  band(c, yukseklik, TEMSILI_ETIKET, 40)
+  doku.needsUpdate = true
+  return { nesne, dispose }
+}
+
 export function xrPaneli() {
   const { c, doku, nesne, dispose } = panel(MENU_G, MENU_Y)
   const bandY = MENU_Y * MENU_BASLIK_ORANI

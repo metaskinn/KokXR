@@ -65,8 +65,9 @@ const dugmeler = (basili) => Array.from({ length: 6 }, (_, i) => ({ pressed: bas
 assert.deepEqual(kumandaGirdisi([]), sifir)
 assert.deepEqual(kumandaGirdisi([{ handedness:'right' }]), sifir) // gamepad yok
 assert.deepEqual(kumandaGirdisi([{ handedness:'right', gamepad:{ axes:[.3,.4], buttons:[] } }]), sifir) // axes kısa
+// Tek kumandada yana itiş yalnız dönüştür: aynı çubuk hem kaydırıp hem döndürmesin.
 const tek = kumandaGirdisi([{ handedness:'right', gamepad:{ axes:[0,0,.5,-.8], buttons:[] } }])
-assert.deepEqual(tek, { solX:.5, solY:-.8, sagX:.5, sagY:-.8, menu:false })
+assert.deepEqual(tek, { solX:0, solY:-.8, sagX:.5, sagY:-.8, menu:false })
 const iki = kumandaGirdisi([
   { handedness:'left', gamepad:{ axes:[0,0,.1,.2], buttons:dugmeler(false) } },
   { handedness:'right', gamepad:{ axes:[0,0,.3,.4], buttons:dugmeler(false) } },
@@ -74,7 +75,7 @@ const iki = kumandaGirdisi([
 assert.deepEqual(iki, { solX:.1, solY:.2, sagX:.3, sagY:.4, menu:false })
 // Çubuğu okunamayan ikinci kumanda varken diğeri tek kumanda sayılır
 const yarim = kumandaGirdisi([{ handedness:'left' }, { handedness:'right', gamepad:{ axes:[0,0,.5,-.8], buttons:[] } }])
-assert.deepEqual(yarim, { solX:.5, solY:-.8, sagX:.5, sagY:-.8, menu:false })
+assert.deepEqual(yarim, { solX:0, solY:-.8, sagX:.5, sagY:-.8, menu:false })
 // Menü iki elden de gelir; çubuk okunamasa da çalışır
 assert.equal(kumandaGirdisi([{ handedness:'left', gamepad:{ axes:[0,0,0,0], buttons:dugmeler(true) } }, { handedness:'right', gamepad:{ axes:[0,0,0,0], buttons:dugmeler(false) } }]).menu, true)
 assert.equal(kumandaGirdisi([{ handedness:'right', gamepad:{ axes:[], buttons:dugmeler(true) } }]).menu, true)

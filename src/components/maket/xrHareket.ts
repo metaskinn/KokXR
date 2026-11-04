@@ -59,7 +59,7 @@ export function durakRig(konum: number[], bak: number[], basYerel: Duzlem, zemin
   return { x: konum[0] - (basYerel.x * c + basYerel.z * s), y: zeminY, z: konum[2] - (-basYerel.x * s + basYerel.z * c), rotY }
 }
 
-/** Quest'te çubuk axes[2], axes[3]; menü buttons[5] (B/Y). Çubuğu okunan tek kumanda varsa iki el de onu kullanır. */
+/** Quest'te çubuk axes[2], axes[3]; menü buttons[5] (B/Y). Çubuğu okunan tek kumanda varsa iki el de onu kullanır; yana itişi yalnız dönüştür, kaydırmaz. */
 export function kumandaGirdisi(kaynaklar: Iterable<KumandaKaynagi>): KumandaGirdisi {
   const g: KumandaGirdisi = { solX: 0, solY: 0, sagX: 0, sagY: 0, menu: false }
   const cubuklu: KumandaKaynagi[] = []
@@ -69,7 +69,8 @@ export function kumandaGirdisi(kaynaklar: Iterable<KumandaKaynagi>): KumandaGird
   }
   for (const k of cubuklu) {
     const x = k.gamepad!.axes[2], y = k.gamepad!.axes[3]
-    if (cubuklu.length === 1 || k.handedness === 'left') { g.solX = x; g.solY = y }
+    if (cubuklu.length === 1) g.solY = y
+    else if (k.handedness === 'left') { g.solX = x; g.solY = y }
     if (cubuklu.length === 1 || k.handedness === 'right') { g.sagX = x; g.sagY = y }
   }
   return g

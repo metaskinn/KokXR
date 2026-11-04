@@ -14,7 +14,10 @@ export function menuOgeleri(d: { iceride: boolean; parcali: boolean; duraklar: {
   return [{ id: 'iceri', ad: 'İçeri gir' }, { id: 'parcala', ad: d.parcali ? 'Birleştir' : 'Parçala' }, cik]
 }
 
-const harfler = new Intl.Segmenter('tr', { granularity: 'grapheme' })
+// Modül yüklenirken çalışmamalı: bu dosya masaüstü sahnesiyle birlikte yüklenir, API'si olmayan tarayıcıda maket açılmaz.
+const harflereBol = (soz: string): string[] => typeof Intl.Segmenter === 'function'
+  ? Array.from(new Intl.Segmenter('tr', { granularity: 'grapheme' }).segment(soz), (h) => h.segment)
+  : Array.from(soz)
 
 /** Metni sözcük sınırından kırar; genişliğe sığmayan tek sözcük harf sınırından bölünür. */
 export function satirKir(metin: string, olc: (s: string) => number, genislik: number): string[] {
@@ -32,7 +35,7 @@ export function satirKir(metin: string, olc: (s: string) => number, genislik: nu
       satir = soz
       continue
     }
-    for (const { segment } of harfler.segment(soz)) {
+    for (const segment of harflereBol(soz)) {
       if (satir && olc(satir + segment) > genislik) {
         satirlar.push(satir)
         satir = ''

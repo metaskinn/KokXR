@@ -4,6 +4,7 @@ import SanalGezinti from '../components/SanalGezinti'
 import Tur360 from '../components/Tur360'
 import EseriEleAl from '../components/EseriEleAl'
 import Restorasyon from '../components/Restorasyon'
+import ZamanKatmani from '../components/ZamanKatmani'
 import Galeri from '../components/Galeri'
 import Test from '../components/Test'
 import KaynakSatiri, { kaynakMetni } from '../components/KaynakSatiri'
@@ -36,6 +37,7 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
       <h2 id="tarihce-basligi">Tarihçe</h2><p className="tarihce">{eser.tarihce}</p>
       {eser.kaynaklar.filter((kaynak) => kaynak.id.endsWith('-tarihce')).map((kaynak) => <KaynakSatiri key={kaynak.id} kaynaklar={eser.kaynaklar} kaynakId={kaynak.id} />)}
     </section>
+    <ZamanKatmani eser={eser} />
     {eser.restorasyon && <Restorasyon gorev={eser.restorasyon} kaynaklar={eser.kaynaklar} rozetKazan={rozetKazan} rozetId={`${eser.id}:restorasyon`} />}
     <Test eser={eser} rozetKazan={rozetKazan} />
     <section className="bolum" aria-labelledby="kaynaklar-basligi">

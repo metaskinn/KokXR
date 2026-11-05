@@ -1,10 +1,10 @@
 // VR oturumu: rig, kumandalar, görünüm geçişleri. Sahnenin kendisine yalnız XrSecenek üzerinden dokunur.
 import * as THREE from 'three'
-import { MASA_OLCEK_ILK, MASA_OLCEK_MAX, MASA_OLCEK_MIN, basCevresindeDon, durakRig, kumandaGirdisi, masaRig, oluBolge, ortusmeyenAci, yumusakDonus, yurumeAdimi, type RigKonumu } from './xrHareket'
+import { BASLIK_UZAK, BASLIK_YAKIN, MASA_OLCEK_ILK, MASA_OLCEK_MAX, MASA_OLCEK_MIN, basCevresindeDon, baslikYeri, durakRig, kumandaGirdisi, masaRig, oluBolge, ortusmeyenAci, yumusakDonus, yurumeAdimi, type RigKonumu } from './xrHareket'
 import { ZEMIN_Y, type IcDurak, type IcYurume } from './ulucamiIc'
 import { menuOgeleri } from './xrMetin'
-import { KART_G, MENU_G, bilgiPaneli, etiketPaneli, xrPaneli } from './xrPanel'
-import { OYUNCU_YARICAP, carpiyor } from './yurumeCarpisma'
+import { KART_G, MENU_G, baslikPaneli, bilgiPaneli, etiketPaneli, xrPaneli } from './xrPanel'
+import { OYUNCU_YARICAP, bakisKesiliyor, carpiyor } from './yurumeCarpisma'
 
 export interface XrSecenek {
   renderer: THREE.WebGLRenderer; scene: THREE.Scene; camera: THREE.PerspectiveCamera;
@@ -15,6 +15,10 @@ export interface XrSecenek {
   parcalaAyarla: (acik: boolean) => void;
   parcaliMi: () => boolean;
   bilgiKapat: () => void;
+  /** İç mekânda sahnede duran, tıklanınca kartı açan başlıklar. */
+  basliklar: { id: string; baslik: string; konum: number[] }[];
+  /** Açık kartın başlığına yeniden tıklanırsa kartı kapatır. */
+  bilgiSec: (id: string) => void;
   /** Sahne kamera, near/far, boyut ve React durumunu geri alır. */
   oturumBitti: () => void;
 }
@@ -38,6 +42,7 @@ const PANEL_UZAKLIK = 1.3
 const PANEL_AYRIM = (MENU_G / 2 + KART_G / 2 + 0.06) / PANEL_UZAKLIK
 const CUBUK_HIZI = 1.2, EN_UZUN_DT = 0.1
 const GECIS_KARAR = 0.12, GECIS_ACIL = 0.2
+const BASLIK_RENK = '#c9d4cf', BASLIK_ISIK = '#ffffff', BASLIK_BUYUME = 1.12
 
 export function xrOturumuKur(s: XrSecenek): XrOturum {
   const { renderer, scene, camera, yurume, duraklar } = s
@@ -105,6 +110,15 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   etiket.nesne.frustumCulled = false
   etiket.nesne.position.set(0, -0.38, -1.2)
 
+  // Başlıklar rig'de değil sahnededir, derinlik sınamasına girer: duvarın ardında kalan görünmez.
+  const basliklar = s.basliklar.map(({ id, baslik, konum }) => ({ id, konum, ...baslikPaneli(baslik) }))
+  const baslikGrup = new THREE.Group()
+  baslikGrup.visible = false
+  basliklar.forEach((b) => {
+    b.nesne.userData.bilgi = b.id
+    baslikGrup.add(b.nesne)
+  })
+
   const isinGeometri = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3(0, 0, -ISIN_BOY)])
   const isinMalzeme = new THREE.LineBasicMaterial({ color: '#f8f5ef', transparent: true, depthTest: false, depthWrite: false, toneMapped: false })
   const raycaster = new THREE.Raycaster()
@@ -168,6 +182,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       iceride = true
       s.parcalaAyarla(false)
       s.icDurumu(true)
+      baslikGrup.visible = true
       disk.visible = false
       rig.scale.setScalar(1)
     }
@@ -178,6 +193,8 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     if (iceride) {
       iceride = false
       s.icDurumu(false)
+      baslikGrup.visible = false
+      isinlariSifirla()
       disk.visible = true
     }
     masaUygula()
@@ -191,6 +208,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     if (id === 'iceri' || id.startsWith('durak:')) {
       const hedef = id === 'iceri' ? duraklar[0]?.id : id.slice('durak:'.length)
       if (!hedef) return
+      s.bilgiKapat()
       menuGoster(false)
       gecisYap(() => gorunumDurak(hedef))
       return
@@ -206,18 +224,28 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     menuCiz()
   }
 
-  const secildi = (kumanda: THREE.XRTargetRaySpace) => {
-    if (!oturum || gecis) return
-    // Raycaster görünmezliğe bakmaz; kapalı paneller aday olmamalı.
-    const adaylar: THREE.Object3D[] = [menu.nesne, kart.nesne].filter((n) => n.visible)
-    if (!adaylar.length) return
+  /** Paneller önce denenir: derinlik sınamasına girmedikleri için görünüşte hep öndedirler. */
+  const isabetBul = (kumanda: THREE.XRTargetRaySpace) => {
     // select olayı kare döngüsünün dışında gelir: dünya matrisleri elle tazelenir.
     kumanda.updateWorldMatrix(true, false, true) // matrixAutoUpdate kapalı; zorlanmazsa rig değişimi yansımaz
-    adaylar.forEach((n) => n.updateWorldMatrix(true, false))
     raycaster.setFromXRController(kumanda)
-    const isabet = raycaster.intersectObjects(adaylar, false)[0]
+    // Raycaster görünmezliğe bakmaz; kapalı nesneler aday olmamalı.
+    const paneller = [menu.nesne, kart.nesne].filter((n) => n.visible)
+    paneller.forEach((n) => n.updateWorldMatrix(true, false))
+    const panel = raycaster.intersectObjects(paneller, false)[0]
+    if (panel || !baslikGrup.visible) return panel ?? null
+    const adaylar = basliklar.map((b) => b.nesne).filter((n) => n.visible)
+    adaylar.forEach((n) => n.updateWorldMatrix(true, false))
+    return raycaster.intersectObjects(adaylar, false)[0] ?? null
+  }
+
+  const secildi = (kumanda: THREE.XRTargetRaySpace) => {
+    if (!oturum || gecis) return
+    const isabet = isabetBul(kumanda)
     if (!isabet) return
     if (isabet.object === kart.nesne) return s.bilgiKapat()
+    const bilgi: string | undefined = isabet.object.userData.bilgi
+    if (bilgi) return s.bilgiSec(bilgi)
     const id = isabet.uv ? menu.isabet(isabet.uv.y) : null
     if (id) eylem(id)
   }
@@ -230,14 +258,16 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     rig.add(kumanda)
     const sec = () => secildi(kumanda)
     kumanda.addEventListener('select', sec)
-    return { kumanda, sec }
+    return { kumanda, isin, sec }
   })
+  const isinlariSifirla = () => kumandalar.forEach(({ isin }) => { isin.scale.z = 1 })
 
   const gir = (yeni: XRSession) => {
     oturum = yeni
     rig.add(camera)
     camera.add(etiket.nesne)
     scene.add(rig)
+    scene.add(baslikGrup)
     oncekiArka = scene.background
     scene.background = new THREE.Color(ARKA_PLAN)
     // Near/far rig'in içindeki metreyle işler (görünüm matrisi rig ölçeğine bölünür): 100× iken near 5 sahne birimidir.
@@ -252,6 +282,9 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     camera.removeFromParent()
     camera.scale.set(1, 1, 1) // Rig'den ayrışırken kalan yuvarlama hatası
     rig.removeFromParent()
+    baslikGrup.removeFromParent()
+    baslikGrup.visible = false
+    isinlariSifirla()
     scene.background = oncekiArka
     oncekiArka = null
     if (iceride) s.icDurumu(false)
@@ -278,6 +311,33 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
 
   const basDunya = new THREE.Vector3(), ileriDunya = new THREE.Vector3()
 
+  /** Başlıkları başa çevirir; ışın değen başlık parlar, ışın da ona kadar uzar ki neye nişan alındığı görülsün. */
+  const basliklariGuncelle = () => {
+    camera.updateWorldMatrix(true, false)
+    basDunya.setFromMatrixPosition(camera.matrixWorld)
+    const { x, y, z } = basDunya
+    for (const { nesne, konum } of basliklar) {
+      const yer = baslikYeri(konum, { x, y, z })
+      nesne.visible = yer.yatay > BASLIK_YAKIN && yer.yatay < BASLIK_UZAK &&
+        !yurume.gorusKesenler.some((k) => bakisKesiliyor(x, z, konum[0], konum[2], k))
+      nesne.position.set(yer.x, yer.y, yer.z)
+      nesne.rotation.set(0, yer.rotY, 0)
+      nesne.scale.setScalar(yer.olcek)
+    }
+    const degen = new Set<THREE.Object3D>()
+    for (const { kumanda, isin } of kumandalar) {
+      const isabet = kumanda.visible ? isabetBul(kumanda) : null
+      const baslikta = !!isabet?.object.userData.bilgi
+      if (baslikta) degen.add(isabet.object)
+      isin.scale.z = baslikta ? isabet.distance / ISIN_BOY : 1
+    }
+    for (const { nesne } of basliklar) {
+      const parlak = degen.has(nesne)
+      nesne.material.color.set(parlak ? BASLIK_ISIK : BASLIK_RENK)
+      if (parlak) nesne.scale.multiplyScalar(BASLIK_BUYUME)
+    }
+  }
+
   const icKare = (girdi: ReturnType<typeof kumandaGirdisi>, dt: number) => {
     // Rig bu kare içinde (durak seçimiyle) yer değiştirmiş olabilir; matris tazelenmeden okunmaz.
     camera.updateWorldMatrix(true, false)
@@ -296,6 +356,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       rig.position.z = r.z
       rig.rotation.y += a
     }
+    basliklariGuncelle()
   }
 
   const masaKare = (girdi: ReturnType<typeof kumandaGirdisi>, dt: number) => {
@@ -388,6 +449,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       menu.dispose()
       kart.dispose()
       etiket.dispose()
+      basliklar.forEach((b) => b.dispose())
       disk.geometry.dispose()
       disk.material.dispose()
       kararti.geometry.dispose()

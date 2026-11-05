@@ -5,6 +5,7 @@ import { MENU_BASLIK_ORANI, TEMSILI_ETIKET, menuIsabet, satirKir, type MenuOgesi
 
 const TUVAL_G = 1024
 export const MENU_G = 0.7, KART_G = 1
+const BASLIK_G = 1.2, BASLIK_Y = 130
 const MENU_Y = 840, KART_Y = 760
 
 // docs/ui-tasarim.md paletinden
@@ -47,6 +48,20 @@ export function etiketPaneli() {
   const yukseklik = 72
   const { c, doku, nesne, dispose } = panel(0.6, yukseklik)
   band(c, yukseklik, TEMSILI_ETIKET, 40)
+  doku.needsUpdate = true
+  return { nesne, dispose }
+}
+
+/** Bilgi başlığı: yalnız ad yazar, metin kartta açılır. */
+export function baslikPaneli(baslik: string) {
+  const { c, doku, nesne, dispose } = panel(BASLIK_G, BASLIK_Y)
+  c.fillStyle = CAM
+  c.fillRect(0, 0, TUVAL_G, BASLIK_Y)
+  c.fillStyle = BEYAZ
+  c.font = `700 72px ${YAZI}`
+  c.textAlign = 'center'
+  c.textBaseline = 'middle'
+  c.fillText(baslik, TUVAL_G / 2, BASLIK_Y / 2, TUVAL_G - 2 * 40)
   doku.needsUpdate = true
   return { nesne, dispose }
 }

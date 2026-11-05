@@ -63,6 +63,15 @@
     }
   })
   // Kumandayı rig-yerel bir hedefe çevirir (rig yereli = local-floor uzayı).
+  sim.basliklar = () => t().scene.children.flatMap((c) => c.children).filter((n) => n.userData.bilgi)
+  sim.baslik = (id) => sim.basliklar().find((n) => n.userData.bilgi === id)
+  // Görünen başlıklar: başın baktığı yöne en yakın olan önde.
+  sim.gorunenBasliklar = () => {
+    const { THREE, camera } = t(), bas = camera.getWorldPosition(new THREE.Vector3()), f = camera.getWorldDirection(new THREE.Vector3())
+    return sim.basliklar().filter((n) => n.visible && n.parent.visible)
+      .map((n) => ({ id: n.userData.bilgi, yon: n.getWorldPosition(new THREE.Vector3()).sub(bas).normalize().dot(f) }))
+      .sort((a, b) => b.yon - a.yon).map((b) => b.id)
+  }
   sim.nisanla = (hedef, el = 'right') => {
     const { THREE } = t(), k = d.controllers[el]
     const C = new THREE.Vector3(el === 'right' ? 0.15 : -0.15, 1.25, -0.1)

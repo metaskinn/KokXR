@@ -54,7 +54,7 @@ const K = (s) => ({
     const ei = await s.evaluate((el) => {
       const kaynaklar = [...__sim.d.activeSession.inputSources]; return kaynaklar.findIndex((k) => k.handedness === el)
     }, el)
-    await s.evaluate(([fn, arg, el]) => __sim.nisanla(fn === 'oge' ? __sim.menuOgeNoktasi(arg[0], arg[1]) : __sim.panelNoktasi(__sim.kart(), .5, .5), el), [hedefFn, arg, el])
+    await s.evaluate(([fn, arg, el]) => __sim.nisanla(fn === 'oge' ? __sim.menuOgeNoktasi(arg[0], arg[1]) : __sim.panelNoktasi(fn === 'baslik' ? __sim.baslik(arg) : __sim.kart(), .5, .5), el), [hedefFn, arg, el])
     await s.evaluate(() => __sim.kareBekle(2))
     const tani = await s.evaluate((i) => __sim.isinTani(i), ei)
     await s.evaluate((el) => __sim.bas(el, 'trigger', 1), el)
@@ -65,6 +65,7 @@ const K = (s) => ({
   },
   oge(i, n, el) { return this.nisanTikla('oge', [i, n], el) },
   kartTikla(el) { return this.nisanTikla('kart', null, el) },
+  baslikTikla(id, el) { return this.nisanTikla('baslik', id, el) },
   async dugme(el, ad) {
     await s.evaluate(([e, a]) => __sim.bas(e, a, 1), [el, ad]); await this.kare(3)
     const basiliyken = await this.durum()
@@ -214,14 +215,20 @@ async function ana() {
     const ileriTamam = d.ileri[2] > 0.9 && Math.abs(d.ileri[0]) < 0.05
     rapor('A5 İçeri gir: rig 1×, döşemede, durakta', d.iceride && d.rigOlcek === 1 && yakin(d.rigP[1], 0.7) && !d.disk && !d.carpiyor && yakin(d.bas[0], 0, 0.1) && yakin(d.bas[2], -24.6, 0.1), { tani: t, bas: d.bas, rigP: d.rigP, rigRotY: d.rigRotY, rigOlcek: d.rigOlcek, disk: d.disk, carpiyor: d.carpiyor, icIsik: d.icIsik })
     rapor('A5 durağa dönük (giris: +z)', ileriTamam, { ileri: d.ileri })
-    rapor('A5 giriş kartı açıldı (kapi yarıçapı içinde)', d.aktifBilgi === 'kapi' && d.kartAcik, { aktifBilgi: d.aktifBilgi, kartAcik: d.kartAcik, menuAcik: d.menuAcik, kartYerel: d.kartYerel, menuYerel: d.menuYerel, f })
-    rapor('A5 kart dokusu kaydedildi', true, await x.doku('kart', '05-kart-kapi'))
+    rapor('A5 kart kendiliğinden açılmaz (kapi yarıçapı içinde)', d.aktifBilgi === null && !d.kartAcik, { aktifBilgi: d.aktifBilgi, kartAcik: d.kartAcik, menuAcik: d.menuAcik, f })
+    const gorunen = await s.evaluate(() => __sim.gorunenBasliklar())
+    log('görünen başlıklar', JSON.stringify(gorunen))
+    rapor('A5 başlıklar görünüyor', gorunen.length > 0, { gorunen })
     // menü kartın arkasında mı?
     const tani = await s.evaluate(async () => { __sim.nisanla(__sim.menuOgeNoktasi(0, 10)); await __sim.kareBekle(2); return __sim.isinTani(0) })
     rapor('A5 GÖZLEM kart açıkken menü öğesine nişan karta çarpar (menü erişilemez)', tani?.nesne !== 'kart', { tani })
   })
   await adim('A6 kart kapatma', async () => {
+    const hedef = (await s.evaluate(() => __sim.gorunenBasliklar()))[0]
+    const bt = await x.baslikTikla(hedef); await x.kare(3)
     const d0 = await x.durum()
+    rapor('A6 başlığa tıkla: kart açılır', d0.aktifBilgi === hedef && d0.kartAcik, { hedef, bt, aktifBilgi: d0.aktifBilgi, kartAcik: d0.kartAcik, f: await x.yakala('06-baslik-kart') })
+    rapor('A6 kart dokusu kaydedildi', true, await x.doku('kart', '06-kart'))
     const t = await x.kartTikla()
     await x.kare(3)
     const d = await x.durum()
@@ -251,19 +258,19 @@ async function ana() {
     const sn = (hz1.t - hz0.t) / 1000, kareSure = sn / (hz1.k - hz0.k)
     log('hız ölçümü', JSON.stringify({ metre: hz1.z - hz0.z, sn, kareSure }))
     rapor('A7 yürüme hızı ~1.6 m/sn (yalnız kare süresi <0.1 sn ise sınanır)', kareSure < 0.1 ? yakin((hz1.z - hz0.z) / sn, 1.6, 0.25) : null, { mPerSn: (hz1.z - hz0.z) / sn, kareSure })
-    // Yaklaşınca kart: ileri yürü, şadırvan yarıçapına giriş
-    await x.cubuk('left', 0, -1)
-    let d3, say = 0
-    for (; say < 200; say++) { await x.kare(2); d3 = await x.durum(); if (d3.aktifBilgi && d3.aktifBilgi !== 'kapi') break }
-    await x.cubuk('left', 0, 0); await x.kare(3); d3 = await x.durum()
-    const f = await x.yakala('07-kart-yaklasinca')
+    // Yaklaşmak kart açmaz; başlığa tıklamak açar.
+    await x.cubuk('left', 0, -1); await x.kare(40)
+    await x.cubuk('left', 0, 0); await x.kare(3)
+    let d3 = await x.durum()
+    rapor('A7 yürürken kart kendiliğinden açılmaz', !d3.kartAcik && d3.aktifBilgi === null, { bas: d3.bas, aktifBilgi: d3.aktifBilgi })
+    const f = await x.yakala('07-basliklar')
+    const hedef = (await s.evaluate(() => __sim.gorunenBasliklar()))[0]
+    await x.baslikTikla(hedef); await x.kare(3); d3 = await x.durum()
     const kartBilgi = d3.aktifBilgi ? await s.evaluate((id) => __t.xrKarti(id), d3.aktifBilgi) : null
-    rapor('A7 yapıya yaklaşınca bilgi kartı açılır, kaynak satırıyla', !!d3.aktifBilgi && d3.kartAcik && /^Kaynak: /.test(kartBilgi?.kaynak ?? '') && !/bulunamadı/.test(kartBilgi?.kaynak), { aktifBilgi: d3.aktifBilgi, bas: d3.bas, kaynak: kartBilgi?.kaynak, baslik: kartBilgi?.baslik, f, doku: await x.doku('kart', '07-kart-yaklasinca-doku') })
+    rapor('A7 başlığa tıklanınca bilgi kartı açılır, kaynak satırıyla', d3.aktifBilgi === hedef && d3.kartAcik && /^Kaynak: /.test(kartBilgi?.kaynak ?? ''), { hedef, aktifBilgi: d3.aktifBilgi, kartBilgi, f })
     rapor('A7 kart başın önünde', yakin(Math.hypot(d3.kartYerel[0] - d3.basYerel[0], d3.kartYerel[2] - d3.basYerel[2]), 1.3, 0.05), { kartYerel: d3.kartYerel, basYerel: d3.basYerel })
-    const dom = await s.locator('.maket-bilgi-kart').innerText().catch(() => null)
-    log('DOM kart', dom)
-    const ht = await x.kartTikla(); await x.kare(2)
-    rapor('A7 yaklaşma kartı da tıkla kapanır', !(await x.durum()).kartAcik, { ht })
+    await x.baslikTikla(hedef); await x.kare(3)
+    rapor('A7 aynı başlığa yeniden tıklamak kartı kapatır', !(await x.durum()).kartAcik, {})
     await s.evaluate(() => {
       const r = __t.isaretler.map(({ bilgi }) => { const k = __t.xrKarti(bilgi.id); return [bilgi.id, k.kaynak] })
       window.__kaynaklar = r

@@ -10,22 +10,8 @@ import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPa
 import type { Kaynak, MaketBilgiNoktasi } from '../../types/eser'
 import { kaynakMetni } from '../KaynakSatiri'
 import { ulucamiMaketi } from './ulucamiMaket'
-import type { Kutu } from './ulucamiIc'
-import { OYUNCU_YARICAP, carpiyor as yurumeCarpiyor } from './yurumeCarpisma'
+import { OYUNCU_YARICAP, bakisKesiliyor, carpiyor as yurumeCarpiyor } from './yurumeCarpisma'
 import { xrOturumuKur } from './xrOturum'
-
-/** İki nokta arasındaki kuşbakışı doğru parçası kutuyu kesiyor mu? */
-function bakisKesiliyor(ax: number, az: number, bx: number, bz: number, k: Kutu) {
-  let t0 = 0, t1 = 1
-  for (const [p, q] of [[ax - bx, ax - k.x0], [bx - ax, k.x1 - ax], [az - bz, az - k.z0], [bz - az, k.z1 - az]]) {
-    if (p === 0) { if (q < 0) return false; continue }
-    const t = q / p
-    if (p < 0) t0 = Math.max(t0, t)
-    else t1 = Math.min(t1, t)
-    if (t0 > t1) return false
-  }
-  return true
-}
 
 export interface MaketSahnesi {
   parcala: (acik: boolean) => void;
@@ -171,7 +157,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     }
     if (enYakin !== yakinBilgi) { yakinBilgi = enYakin; kapatilanBilgi = null }
     if (!iceride) { secilenBilgi = null; kapatilanBilgi = null }
-    const gosterilecek = secilenBilgi ?? (yakinBilgi !== kapatilanBilgi ? yakinBilgi : null)
+    // VR'da kart yalnız başlığa tıklanınca açılır; yakınlık masaüstünde geçerlidir.
+    const gosterilecek = secilenBilgi ?? (!renderer.xr.isPresenting && yakinBilgi !== kapatilanBilgi ? yakinBilgi : null)
     if (gosterilecek !== aktifBilgi) {
       aktifBilgi = gosterilecek
       secenek.bilgiDegisti?.(aktifBilgi)
@@ -329,6 +316,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
 
   const xr = xrOturumuKur({
     renderer, scene, camera, yurume, duraklar, icDurumu, bilgiKapat,
+    basliklar: isaretler.map(({ bilgi }) => bilgi),
+    bilgiSec: (id) => { secilenBilgi = secilenBilgi === id ? null : id },
     parcalaAyarla: (acik) => { parcali = acik },
     parcaliMi: () => parcali,
     oturumBitti: () => {

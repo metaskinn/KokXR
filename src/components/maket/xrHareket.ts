@@ -57,6 +57,19 @@ export function durakRig(konum: number[], bak: number[], basYerel: Duzlem, zemin
   return { x: konum[0] - (basYerel.x * c + basYerel.z * s), y: zeminY, z: konum[2] - (-basYerel.x * s + basYerel.z * c), rotY }
 }
 
+/** Bilgi başlığı bu yatay uzaklıkların dışında gösterilmez: üstünde durulan başlık yüze yapışır, uzaktaki okunmaz. */
+export const BASLIK_YAKIN = 1.5, BASLIK_UZAK = 32
+const BASLIK_PAY = 0.5, BASLIK_INIS = 10
+
+/** Bilgi başlığının yeri: başa dönük, uzaklıkla büyür ki okunsun. Yaklaştıkça göz hizasına iner, altında duran da nişan alabilsin; duvara gömülmesin diye başa doğru çekilir. */
+export function baslikYeri(konum: number[], bas: { x: number; y: number; z: number }) {
+  const dx = bas.x - konum[0], dz = bas.z - konum[2], yatay = Math.hypot(dx, dz)
+  const y = bas.y + (konum[1] - bas.y) * Math.max(0.25, Math.min(1, yatay / BASLIK_INIS))
+  const pay = yatay > BASLIK_PAY ? BASLIK_PAY / yatay : 0
+  const olcek = Math.max(0.6, Math.min(2.4, Math.hypot(yatay, y - bas.y) / 5))
+  return { x: konum[0] + dx * pay, y, z: konum[2] + dz * pay, rotY: Math.atan2(dx, dz), olcek, yatay }
+}
+
 /** (-π, π] aralığına indirir. */
 function aciSar(a: number): number {
   const t = 2 * Math.PI, s = ((a % t) + t) % t

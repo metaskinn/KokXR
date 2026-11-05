@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
-import { carpiyor, OYUNCU_YARICAP } from '../src/components/maket/yurumeCarpisma.ts'
+import { bakisKesiliyor, carpiyor, OYUNCU_YARICAP } from '../src/components/maket/yurumeCarpisma.ts'
 import {
-  oluBolge, XR_YURUME_HIZI, XR_DONUS_HIZI, yurumeAdimi, yumusakDonus, basCevresindeDon, masaRig, durakRig, kumandaGirdisi, ortusmeyenAci,
+  oluBolge, XR_YURUME_HIZI, XR_DONUS_HIZI, yurumeAdimi, yumusakDonus, basCevresindeDon, masaRig, durakRig, kumandaGirdisi, ortusmeyenAci, baslikYeri,
   MASA_Y, MASA_UZAKLIK, MASA_OLCEK_ILK, MASA_OLCEK_MIN, MASA_OLCEK_MAX,
 } from '../src/components/maket/xrHareket.ts'
 const yakin = (g, b) => { for (const a in b) assert(Math.abs(g[a] - b[a]) < 1e-6, `${a}: ${g[a]} ≠ ${b[a]}`) }
@@ -68,6 +68,22 @@ yakin({ a: ortusmeyenAci(-0.1, 0, AYRIM, 1) }, { a: -AYRIM })
 yakin({ a: ortusmeyenAci(3.1, -3.1, AYRIM, 1) }, { a: -3.1 - AYRIM }) // ±π sınırında fark doğru hesaplanır
 yakin({ a: ortusmeyenAci(0.7, 0, AYRIM, 1) }, { a: 0.7 })    // sınırda kaymaz
 
+// Bilgi başlığı: başa dönük, uzakta büyür, yaklaşınca göz hizasına iner, duvara gömülmez
+const by = baslikYeri([0, 12, 0], { x: 0, y: 2.3, z: 20 })
+yakin(by, { x: 0, y: 12, z: 0.5, rotY: 0, olcek: 2.4, yatay: 20 }) // +z'deki başa bakar, başa 0.5 çekilir
+yakin({ rotY: baslikYeri([0, 5, 0], { x: 3, y: 2.3, z: 0 }).rotY }, { rotY: Math.PI / 2 }) // +x'teki başa bakar
+yakin({ y: baslikYeri([0, 12, 0], { x: 0, y: 2, z: 5 }).y }, { y: 7 })   // yarı yolda yarı inmiş
+yakin({ y: baslikYeri([0, 12, 0], { x: 0, y: 2, z: 1 }).y }, { y: 4.5 }) // altında en çok çeyreği kalır
+yakin({ o: baslikYeri([0, 2, 0], { x: 0, y: 2, z: 1 }).olcek }, { o: 0.6 }) // yakında alt sınır
+yakin({ o: baslikYeri([0, 2, 0], { x: 0, y: 2, z: 100 }).olcek }, { o: 2.4 }) // uzakta üst sınır
+yakin(baslikYeri([1, 2, 3], { x: 1, y: 2, z: 3 }), { x: 1, z: 3, yatay: 0 }) // tam üstünde: sayı bozulmaz
+
+// Görüş kesilmesi: duvarın ardındaki başlık gösterilmez
+const kolon = { x0: 4, x1: 6, z0: -1, z1: 1 }
+assert.equal(bakisKesiliyor(0, 0, 10, 0, kolon), true)
+assert.equal(bakisKesiliyor(0, 5, 10, 5, kolon), false)
+assert.equal(bakisKesiliyor(0, 0, 3, 0, kolon), false) // kolona varmadan biter
+
 // Çarpışma
 const y = { sinir:{x0:-10,x1:10,z0:-10,z1:10}, kutular:[{x0:1,x1:2,z0:1,z1:2}], daireler:[{x:-5,z:-5,r:1}], gorusKesenler:[], gozY:2.7 }
 assert.equal(carpiyor(y, 0, 0, .45), false); assert.equal(carpiyor(y, 1.5, 1.5, .45), true)
@@ -98,4 +114,4 @@ assert.equal(kumandaGirdisi([{ handedness:'right', gamepad:{ axes:[], buttons:du
 // Dizi olmayan Iterable (XRInputSourceArray gibi)
 assert.equal(kumandaGirdisi(new Set([{ handedness:'right', gamepad:{ axes:[0,0,.5,0], buttons:[] } }])).sagX, .5)
 
-console.log('Maket XR mantığı: ölü bölge, yürüme ve kayma, yumuşak dönüş, rig konumları, çarpışma ve kumanda girdisi başarılı.')
+console.log('Maket XR mantığı: ölü bölge, yürüme ve kayma, yumuşak dönüş, rig konumları, bilgi başlıkları, çarpışma ve kumanda girdisi başarılı.')

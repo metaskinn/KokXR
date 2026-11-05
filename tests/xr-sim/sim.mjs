@@ -170,7 +170,7 @@ async function ana() {
     log('olcek donus', (await x.durum()).rigOlcek)
   })
   await adim('A3 parçala', async () => {
-    let t = await x.oge(1, 3)
+    let t = await x.oge(1, 4)
     await x.kare(3)
     let d = await x.durum()
     rapor('A3 menüden Parçala katmanları kaldırır', d.parcali && d.katmanY.some((y) => y > 0), { tani: t, parcali: d.parcali, katmanY: d.katmanY })
@@ -207,7 +207,7 @@ async function ana() {
   })
   await adim('A5 içeri', async () => {
     // Önce yaw'ı ve aci'yi bilinçli olarak dönük bırakıyoruz (A2'de aci≠0): durak yönü rig açısından bağımsız olmalı.
-    const t = await x.oge(0, 3)
+    const t = await x.oge(0, 4)
     await x.kare(3)
     const d = await x.durum()
     log('iceri durum', JSON.stringify(d))
@@ -399,7 +399,7 @@ async function ana() {
     rapor('A11 Dışarı çık: maket görünümü, ışık/disk geri, kart yok', !d.iceride && d.rigOlcek > 39 && d.disk && d.icIsik === 0 && !d.kartAcik && yakin(d.maketYerel[1], .9) && yakin(d.maketYerel[2], -1.2), { tani: t, rigOlcek: d.rigOlcek, rigP: d.rigP, maketYerel: d.maketYerel, disk: d.disk, icIsik: d.icIsik, kartAcik: d.kartAcik, aktifBilgi: d.aktifBilgi, f })
   })
   await adim('A12 vrdan çık', async () => {
-    const t = await x.oge(2, 3)
+    const t = await x.oge(3, 4)
     log('çık tani', JSON.stringify(t))
     await masaustuDenetle(s, h, 'A12 VRdan-cik', x)
     rapor('A12 konsol hatası yok', !h.hata.length, { hata: h.hata })
@@ -410,7 +410,7 @@ async function ana() {
     await vrAc(s, x)
     const d0 = await x.durum()
     rapor('B yeniden açılış sıfırdan: ölçek 100, açı 0, menü açık', d0.rigOlcek === 100 && yakin(d0.rigRotY, Math.PI) && d0.menuAcik && !d0.iceride, { rigOlcek: d0.rigOlcek, rigRotY: d0.rigRotY, menuAcik: d0.menuAcik })
-    await x.oge(0, 3); await x.kare(3)
+    await x.oge(0, 4); await x.kare(3)
     const d1 = await x.durum()
     rapor('B içeride, kart açık', d1.iceride && d1.kartAcik, { iceride: d1.iceride, aktifBilgi: d1.aktifBilgi })
     await s.evaluate(() => __sim.bitir())
@@ -419,7 +419,7 @@ async function ana() {
   })
   await adim('C parçalı çıkış', async () => {
     await vrAc(s, x)
-    await x.oge(1, 3); await x.kare(3)
+    await x.oge(1, 4); await x.kare(3)
     const d = await x.durum()
     await x.oge(2, 3)
     await s.waitForFunction(() => !__sim.d.activeSession, null, { polling: 100 })
@@ -445,7 +445,7 @@ async function yuksek() {
     await vrAc(s, x)
     const f = await x.yakala('Y-oturum')
     rapor('Y kalite=yuksek ile oturum', f.sol.arkaDisi > 0.02, { f, kalite: (await x.durum()).kalite })
-    await x.oge(2, 3)
+    await x.oge(3, 4)
     await s.waitForFunction(() => !__sim.d.activeSession, null, { polling: 100 })
     await x.kare(3)
     const d = await x.durum()

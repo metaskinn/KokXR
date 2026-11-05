@@ -6,12 +6,15 @@ export const TEMSILI_ETIKET = 'Temsilî maket · Gerçek bir 3B tarama değildir
 /** Menü panelinin üstündeki başlık bandının yükseklik oranı. */
 export const MENU_BASLIK_ORANI = 0.2
 
-export function menuOgeleri(d: { iceride: boolean; parcali: boolean; duraklar: { id: string; ad: string }[] }): MenuOgesi[] {
+export function menuOgeleri(d: { iceride: boolean; parcali: boolean; birlesimde?: boolean; duraklar: { id: string; ad: string }[] }): MenuOgesi[] {
   const cik = { id: 'cik', ad: "VR'dan çık" }
+  if (d.birlesimde) return [{ id: 'birlestirBastan', ad: 'Yeniden başlat' }, { id: 'birlestirBirak', ad: 'Birleştirmeyi bırak' }, cik]
   if (d.iceride) {
     return [{ id: 'disari', ad: 'Dışarı çık' }, ...d.duraklar.map(({ id, ad }) => ({ id: `durak:${id}`, ad })), cik]
   }
-  return [{ id: 'iceri', ad: 'İçeri gir' }, { id: 'parcala', ad: d.parcali ? 'Birleştir' : 'Parçala' }, cik]
+  // Parçalıyken "Birleştir" zaten var; yanında ikinci bir birleştirme adı karışır.
+  if (d.parcali) return [{ id: 'iceri', ad: 'İçeri gir' }, { id: 'parcala', ad: 'Birleştir' }, cik]
+  return [{ id: 'iceri', ad: 'İçeri gir' }, { id: 'parcala', ad: 'Parçala' }, { id: 'birlestir', ad: 'Maketi birleştir' }, cik]
 }
 
 // Modül yüklenirken çalışmamalı: bu dosya masaüstü sahnesiyle birlikte yüklenir, API'si olmayan tarayıcıda maket açılmaz.

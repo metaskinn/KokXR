@@ -315,7 +315,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   }
 
   const xr = xrOturumuKur({
-    renderer, scene, camera, yurume, duraklar, icDurumu, bilgiKapat,
+    renderer, scene, camera, yurume, duraklar, icDurumu, bilgiKapat, katmanlar,
+    golgeYenile: () => { renderer.shadowMap.needsUpdate = true },
     basliklar: isaretler.map(({ bilgi }) => bilgi),
     bilgiSec: (id) => { secilenBilgi = secilenBilgi === id ? null : id },
     parcalaAyarla: (acik) => { parcali = acik },
@@ -342,8 +343,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     const gecenSn = Math.min((simdi - oncekiZaman) / 1000, 0.5)
     oncekiZaman = simdi
     if (renderer.xr.isPresenting) {
-      // Katmanlar animasyonsuz gider: gölgeyi her karede yeniden çizmek VR'da pahalıdır.
-      for (const { grup, yukseklik } of katmanlar) {
+      // Katmanlar animasyonsuz gider: gölgeyi her karede yeniden çizmek VR'da pahalıdır. Birleştirme sırasında katmanlar oyunundur.
+      if (!xr.birlesimde()) for (const { grup, yukseklik } of katmanlar) {
         const hedef = parcali ? yukseklik : 0
         if (grup.position.y !== hedef) { grup.position.y = hedef; renderer.shadowMap.needsUpdate = true }
       }

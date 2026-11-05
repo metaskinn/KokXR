@@ -66,6 +66,25 @@ export function baslikPaneli(baslik: string) {
   return { nesne, dispose }
 }
 
+/** Birleştirme durumu: başa bağlıdır, yalnız durum değişince çizilir. */
+export function birlesimPaneli() {
+  const yukseklik = 190
+  const { c, doku, nesne, dispose } = panel(0.6, yukseklik)
+  const ciz = ({ ust, mesaj, not }: { ust: string; mesaj: string; not: string }) => {
+    c.fillStyle = ZEMIN
+    c.fillRect(0, 0, TUVAL_G, yukseklik)
+    band(c, 72, ust, 42)
+    c.fillStyle = METIN
+    c.font = `600 40px ${YAZI}`
+    c.fillText(mesaj, TUVAL_G / 2, 106, TUVAL_G - 2 * 30)
+    c.fillStyle = IKINCIL
+    c.font = `400 30px ${YAZI}`
+    c.fillText(not, TUVAL_G / 2, 160, TUVAL_G - 2 * 30)
+    doku.needsUpdate = true
+  }
+  return { nesne, ciz, dispose }
+}
+
 export function xrPaneli() {
   const { c, doku, nesne, dispose } = panel(MENU_G, MENU_Y)
   const bandY = MENU_Y * MENU_BASLIK_ORANI

@@ -9,6 +9,7 @@ import Galeri from '../components/Galeri'
 import Test from '../components/Test'
 import KaynakSatiri, { kaynakMetni } from '../components/KaynakSatiri'
 import Bulunamadi from './Bulunamadi'
+import { ACIK_YAYIN } from '../data/acikYayin'
 
 export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; rozetKazan: (id: string) => boolean }) {
   const { id } = useParams()
@@ -25,7 +26,7 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
       <p>{eser.ozet}</p>
     </header>
     <nav className="bolum-gezinme" aria-label="Eser bölümleri">
-      <a className="bolum-oncelikli" href="#galeri-basligi">Fotoğrafları keşfet</a><a href="#kesif-basligi">Keşif noktaları</a><a href="#tarihce-basligi">Tarihçe</a>
+      {!ACIK_YAYIN && <a className="bolum-oncelikli" href="#galeri-basligi">Fotoğrafları keşfet</a>}<a href="#kesif-basligi">Keşif noktaları</a><a href="#tarihce-basligi">Tarihçe</a>
       {eser.maket && <a href="#maket-basligi">3B maket</a>}
       <a href="#test-basligi">Bilgini sına</a><a href="#kaynaklar-basligi">Kaynaklar</a>
     </nav>

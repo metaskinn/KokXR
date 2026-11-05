@@ -1,8 +1,14 @@
 import type { Eser } from '../types/eser'
+import { ACIK_YAYIN } from './acikYayin'
 import { eserGecerli, kaynakliOlabilir } from './dogrulama'
 
 const eserDosyalari = import.meta.glob<Eser>('./eserler/*.json', { eager: true, import: 'default' })
-const varsayilanlar = Object.values(eserDosyalari)
+const fotografsiz = (e: Eser): Eser => ({
+  ...e, kapakGorsel: '', gorseller: [], tur: undefined, restorasyon: undefined,
+  bilgiNoktalari: e.bilgiNoktalari.map((b) => ({ ...b, gorsel: '' })),
+  maket: e.maket && { ...e.maket, aciklama: e.maket.aciklama.replace(/Levha ve paye yazıları[^.]*\./, 'Levha ve paye yüzeyleri bu sürümde yazısız bırakılmıştır.') },
+})
+const varsayilanlar = Object.values(eserDosyalari).map((e) => ACIK_YAYIN ? fotografsiz(e) : e)
 const anahtar = 'kokxr-icerik'
 export type UstKatman = Record<string, Eser>
 export interface IcerikDurumu { ustKatman: UstKatman; uyari: string }

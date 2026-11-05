@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Eser, Gorsel, Kaynak } from '../types/eser'
 import KaynakSatiri from './KaynakSatiri'
+import { ACIK_YAYIN } from '../data/acikYayin'
 
 function TamEkran({ gorseller, kaynaklar, secili, sec, kapat }: {
   gorseller: Gorsel[]; kaynaklar: Kaynak[]; secili: number; sec: (index: number) => void; kapat: () => void
@@ -96,7 +97,7 @@ export default function Galeri({ eser }: { eser: Eser }) {
   }
   const oran = gorsel ? oranlar[gorsel.dosya] ?? 4 / 3 : 4 / 3
   return <>
-    <section className="bolum fotograf-galerisi" aria-labelledby="galeri-basligi">
+    {!(ACIK_YAYIN && !gorsel) && <section className="bolum fotograf-galerisi" aria-labelledby="galeri-basligi">
       <div className="galeri-baslik-satiri"><div><p className="ust-baslik">AYRINTILARA YAKLAŞ</p><h2 id="galeri-basligi" className="sr-only">Fotoğraf galerisi</h2></div><div className="galeri-baslik-eylemler"><span className="galeri-sayac" role="status">{gorsel ? `${secili + 1} / ${eser.gorseller.length}` : '0 / 0'}</span>{gorsel && <button className="ikincil-dugme" onClick={() => setTamEkran(true)}>Fotoğrafı büyüt</button>}</div></div>
       {!gorsel ? <p>Fotoğraflar hazırlanıyor.</p> : <>
         <figure>
@@ -153,10 +154,10 @@ export default function Galeri({ eser }: { eser: Eser }) {
           <figcaption><KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={gorsel.kaynakId} /></figcaption>
         </figure>
       </>}
-    </section>
+    </section>}
     <section className="bolum" aria-labelledby="kesif-basligi">
       <h2 id="kesif-basligi">Keşif noktaları</h2>
-      <p>Fotoğraflardaki numaralardan veya aşağıdaki listeden bir keşif noktası seç.</p>
+      <p>{gorsel ? 'Fotoğraflardaki numaralardan veya aşağıdaki listeden bir keşif noktası seç.' : 'Aşağıdaki listeden bir keşif noktası seç.'}</p>
       {eser.bilgiNoktalari.length === 0 && <p>Keşif noktaları hazırlanıyor.</p>}
       {eser.bilgiNoktalari.map((item, index) => <details key={item.id} open={acikNokta === item.id} className="nokta-detay">
         <summary onClick={(event) => {

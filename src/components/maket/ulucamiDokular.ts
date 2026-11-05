@@ -1,6 +1,7 @@
 // Ulu Camii maketinin dokuları: tamamı tuvalde üretilir, dışarıdan görsel kullanılmaz.
 // Renkler ve örgü düzeni arşiv fotoğraflarına bakılarak yorumlanmıştır; yazı veya hat taklidi çizilmez.
 import * as THREE from 'three'
+import { ACIK_YAYIN } from '../../data/acikYayin'
 
 type Ciz = (c: CanvasRenderingContext2D, g: number, y: number) => void
 
@@ -561,6 +562,7 @@ export function ulucamiMalzemeleri() {
   const pbr = (p: THREE.MeshStandardMaterialParameters) => new THREE.MeshStandardMaterial({ roughness: 0.85, metalness: 0, ...p })
   const yukleyici = new THREE.TextureLoader()
   const fotoDoku = (ad: string) => {
+    if (ACIK_YAYIN) return null
     const f = yukleyici.load(`/gorseller/ulu-camii/maket/${ad}.jpg`)
     f.colorSpace = THREE.SRGBColorSpace
     f.anisotropy = 8

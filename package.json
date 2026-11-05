@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:acik": "tsc -b && VITE_ACIK_YAYIN=1 vite build && node scripts/acik-yayin.mjs dist",
     "preview": "vite preview",
     "test:hizli": "tsc --noEmit -p tsconfig.app.json && node tests/maket-xr-mantik.mjs && node tests/maket-xr-metin.mjs && node tests/vazo-xr-mantik.mjs && node tests/maket-birlestir-mantik.mjs && node tests/restorasyon-mantik.mjs",
     "test:tarayici": "tsc -b && vite build --logLevel error && node scripts/test-tarayici.mjs",

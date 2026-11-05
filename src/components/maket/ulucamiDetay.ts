@@ -3,6 +3,7 @@
 // levha ve paye yazıları arşiv fotoğraflarının perspektifi düzeltilmiş kırpımlarıdır (scripts/levha_kirp.py).
 // Levhaların hangi yüzde durduğu temsilîdir: yazılar gerçek ama konumları bire bir değildir.
 import * as THREE from 'three'
+import { ACIK_YAYIN } from '../../data/acikYayin'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import {
   DUVAR, Kova, type Mal, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
@@ -79,6 +80,7 @@ function kapi(ek: Ekle, m: UlucamiMalzemeleri, y0: number, ic: boolean) {
 function levhaDokulari() {
   const yukleyici = new THREE.TextureLoader()
   const malzeme = (ad: string) => {
+    if (ACIK_YAYIN) return new THREE.MeshStandardMaterial({ color: '#c8b48a', roughness: 0.72, metalness: 0 })
     const t = yukleyici.load(`/gorseller/ulu-camii/maket/${ad}.jpg`)
     t.colorSpace = THREE.SRGBColorSpace
     t.anisotropy = 8

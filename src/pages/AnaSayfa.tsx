@@ -4,6 +4,7 @@ import Simge from '../components/Simge'
 import { kilicTanitim } from '../data/kilic'
 import { ciniTanitim } from '../data/cini'
 import './kilic.css'
+import { ACIK_YAYIN } from '../data/acikYayin'
 
 export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozetler: string[] }) {
   const oneCikan = eserler.find((eser) => eser.id === 'ulu-camii') ?? eserler[0]
@@ -31,16 +32,16 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
     <section id="eserler" className="eserler-bolumu" aria-labelledby="eserler-basligi">
       <div className="bolum-basligi"><div><p className="ust-baslik">MİRASA YAKINDAN BAK</p><h2 id="eserler-basligi">Her eserin bir hikâyesi var.</h2></div><p className="bolum-aciklama">Bir eser seç.<br />Keşfine kendi hızında devam et.</p></div>
       <div className="eserler">{eserler.map((eser, index) => <Link className="eser-karti" to={`/eser/${eser.id}`} key={eser.id}>
-        <div className="kart-gorsel">
+        {!ACIK_YAYIN && <div className="kart-gorsel">
           {eser.kapakGorsel && <img className="kapak" src={eser.kapakGorsel} alt={eser.gorseller.find((g) => g.dosya === eser.kapakGorsel)?.alt ?? eser.ad} loading="lazy" />}
           <span className="kart-numara">{String(index + 1).padStart(2, '0')}</span>
           {rozetler.includes(eser.id) && <span className="kart-rozet">★ Rozet kazanıldı</span>}
-        </div>
+        </div>}
         <div className="kart-icerik">
           <p className="konum"><Simge ad="konum" />{eser.sehir} · {eser.ilce}</p>
           <h3>{eser.ad}</h3>
           <p className="kart-ozet">{eser.ozet}</p>
-          <div className="kart-alt"><span>{eser.tur ? 'Sanal gezinti' : 'Fotoğraf galerisi'} <span aria-hidden="true">·</span> {eser.test.length} soru</span><span className="kesfet">Keşfet <Simge ad="ok" /></span></div>
+          <div className="kart-alt"><span>{eser.tur ? 'Sanal gezinti' : ACIK_YAYIN ? 'Keşif noktaları' : 'Fotoğraf galerisi'} <span aria-hidden="true">·</span> {eser.test.length} soru</span><span className="kesfet">Keşfet <Simge ad="ok" /></span></div>
         </div>
       </Link>)}</div>
     </section>

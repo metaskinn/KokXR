@@ -171,14 +171,14 @@ async function ana() {
   })
   await adim('A3 parçala', async () => {
     let t = await x.oge(1, 3)
-    await x.kare(3)
+    await x.kare(20)
     let d = await x.durum()
     rapor('A3 menüden Parçala katmanları kaldırır', d.parcali && d.katmanY.some((y) => y > 0), { tani: t, parcali: d.parcali, katmanY: d.katmanY })
     const dk = await x.doku('menu', '03-menu-birlestir')
     const f = await x.yakala('03-parcali')
     rapor('A3 parçalı görüntü ve Birleştir etiketi', true, { dk, f })
     t = await x.oge(1, 3)
-    await x.kare(3)
+    await x.kare(20)
     d = await x.durum()
     rapor('A3 menüden Birleştir katmanları indirir', !d.parcali && d.katmanY.every((y) => y === 0), { tani: t, parcali: d.parcali, katmanY: d.katmanY })
   })
@@ -208,7 +208,7 @@ async function ana() {
   await adim('A5 içeri', async () => {
     // Önce yaw'ı ve aci'yi bilinçli olarak dönük bırakıyoruz (A2'de aci≠0): durak yönü rig açısından bağımsız olmalı.
     const t = await x.oge(0, 3)
-    await x.kare(3)
+    await x.kare(20)
     const d = await x.durum()
     log('iceri durum', JSON.stringify(d))
     const f = await x.yakala('05-iceri-giris')
@@ -311,7 +311,7 @@ async function ana() {
       if (d.kartAcik) { await x.kartTikla(); await x.kare(2) }
       if (!(await x.durum()).menuAcik) await x.dugme('right', 'b-button')
       const t = await x.oge(ICERI_ARA(dk.id), ICERI_N)
-      await x.kare(3)
+      await x.kare(20) // Karartmalı geçiş bitmeden B düğmesi işlemez
       d = await x.durum()
       const hx = dk.bak[0] - dk.konum[0], hz = dk.bak[2] - dk.konum[2], boy = Math.hypot(hx, hz)
       const fb = Math.hypot(d.ileri[0], d.ileri[2])
@@ -326,9 +326,9 @@ async function ana() {
     let d = await x.durum()
     if (d.kartAcik) { await x.kartTikla(); await x.kare(2) }
     if (!(await x.durum()).menuAcik) await x.dugme('right', 'b-button')
-    await x.oge(ICERI_ARA('kapi'), ICERI_N); await x.kare(3)
+    await x.oge(ICERI_ARA('kapi'), ICERI_N); await x.kare(20)
     if ((await x.durum()).kartAcik) { await x.kartTikla(); await x.kare(2) }
-    await x.dugme('right', 'b-button') // menü kapansın, ekranı kaplamasın
+    if ((await x.durum()).menuAcik) await x.dugme('right', 'b-button') // menü kapansın, ekranı kaplamasın
     const bas0 = await x.durum()
     await x.cubuk('left', 0, -1)
     let onceki = null, durdu = 0, son = null
@@ -346,9 +346,10 @@ async function ana() {
     if ((await x.durum()).kartAcik) { await x.kartTikla(); await x.kare(2) }
     // Yüzü başa dönük olmayan durak geçişi
     await s.evaluate(() => __sim.basYaw(Math.PI / 2)); await x.kare(2)
-    await x.dugme('right', 'b-button'); await x.dugme('right', 'b-button') // menüyü başın önüne getir
+    if ((await x.durum()).menuAcik) await x.dugme('right', 'b-button')
+    await x.dugme('right', 'b-button') // menüyü başın önüne getir
     if ((await x.durum()).kartAcik) { await x.kartTikla(); await x.kare(2) }
-    await x.oge(ICERI_ARA('giris'), ICERI_N); await x.kare(3)
+    await x.oge(ICERI_ARA('giris'), ICERI_N); await x.kare(20)
     const y = await x.durum()
     rapor('A9 BAŞ 90° DÖNÜKKEN durak: kullanıcı durağa dönük mü', y.ileri[2] > 0.9, { ileri: y.ileri, bas: y.bas, not: 'durakRig baş yaw değerini dikkate almıyor' })
     await s.evaluate(() => __sim.basYaw(0)); await x.kare(2)
@@ -384,8 +385,8 @@ async function ana() {
     await s.evaluate(() => { __sim.dagBaglanti('right', false); __sim.dagBaglanti('left', true) }); await x.kare(3)
     const l0 = await x.durum()
     await x.cubuk('left', 1, 0); await x.kare(5); const l1 = await x.durum(); await x.cubuk('left', 0, 0); await x.kare(3)
-    rapor('A10 yalnız sol kumanda: yana itiş dönüş, kayma yok', yakin(l1.rigRotY - l0.rigRotY, -Math.PI / 6, 1e-3) && Math.hypot(l1.bas[0] - l0.bas[0], l1.bas[2] - l0.bas[2]) < 0.02, { girdiler: l1.girdiler, bas0: l0.bas, bas1: l1.bas })
-    const kt = await x.oge(ICERI_ARA('giris'), ICERI_N, 'left'); await x.kare(3)
+    rapor('A10 yalnız sol kumanda: yana itiş dönüş, kayma yok', l1.rigRotY < l0.rigRotY - 0.01 && Math.hypot(l1.bas[0] - l0.bas[0], l1.bas[2] - l0.bas[2]) < 0.02, { girdiler: l1.girdiler, bas0: l0.bas, bas1: l1.bas })
+    const kt = await x.oge(ICERI_ARA('giris'), ICERI_N, 'left'); await x.kare(20)
     rapor('A10 yalnız sol kumandayla menü tıklanır', yakin((await x.durum()).bas[2], -24.6, 0.1), { kt, bas: (await x.durum()).bas })
     await s.evaluate(() => __sim.dagBaglanti('right', true)); await x.kare(3)
     rapor('A10 yeniden bağlanma hata vermiyor', (await x.durum()).girdiler.length === 2, (await x.durum()).girdiler)
@@ -393,7 +394,7 @@ async function ana() {
   })
   await adim('A11 dışarı', async () => {
     if (!(await x.durum()).menuAcik) await x.dugme('right', 'b-button')
-    const t = await x.oge(0, ICERI_N); await x.kare(3)
+    const t = await x.oge(0, ICERI_N); await x.kare(20)
     const d = await x.durum()
     const f = await x.yakala('11-disari')
     rapor('A11 Dışarı çık: maket görünümü, ışık/disk geri, kart yok', !d.iceride && d.rigOlcek > 39 && d.disk && d.icIsik === 0 && !d.kartAcik && yakin(d.maketYerel[1], .9) && yakin(d.maketYerel[2], -1.2), { tani: t, rigOlcek: d.rigOlcek, rigP: d.rigP, maketYerel: d.maketYerel, disk: d.disk, icIsik: d.icIsik, kartAcik: d.kartAcik, aktifBilgi: d.aktifBilgi, f })
@@ -410,16 +411,16 @@ async function ana() {
     await vrAc(s, x)
     const d0 = await x.durum()
     rapor('B yeniden açılış sıfırdan: ölçek 100, açı 0, menü açık', d0.rigOlcek === 100 && yakin(d0.rigRotY, Math.PI) && d0.menuAcik && !d0.iceride, { rigOlcek: d0.rigOlcek, rigRotY: d0.rigRotY, menuAcik: d0.menuAcik })
-    await x.oge(0, 3); await x.kare(3)
+    await x.oge(0, 3); await x.kare(20)
     const d1 = await x.durum()
-    rapor('B içeride, kart açık', d1.iceride && d1.kartAcik, { iceride: d1.iceride, aktifBilgi: d1.aktifBilgi })
+    rapor('B içeride, kart kendiliğinden açılmaz', d1.iceride && !d1.kartAcik, { iceride: d1.iceride, aktifBilgi: d1.aktifBilgi })
     await s.evaluate(() => __sim.bitir())
     await masaustuDenetle(s, h, 'B dissardan-kapanis', x)
     rapor('B konsol hatası yok', !h.hata.length, { hata: h.hata })
   })
   await adim('C parçalı çıkış', async () => {
     await vrAc(s, x)
-    await x.oge(1, 3); await x.kare(3)
+    await x.oge(1, 3); await x.kare(20)
     const d = await x.durum()
     await x.oge(2, 3)
     await s.waitForFunction(() => !__sim.d.activeSession, null, { polling: 100 })

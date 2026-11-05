@@ -1,0 +1,14 @@
+/* Kılıç atölyesinin düzeni paylaşılır; yalnız çiniye özgü farklar burada. */
+.cini-atolyesi .kilic-asamalar { grid-template-columns:repeat(7,1fr) }
+.cini-atolyesi { --altin:#7fc6c9 }
+.cini-atolyesi .kilic-kucuk { color:#7fc6c9 }
+.cini-atolyesi .kilic-sahne-basligi em { color:#7fc6c9 }
+.cini-atolyesi .kilic-asamalar li[aria-current] { color:#a9e0e2 }
+.cini-atolyesi .kilic-asamalar li[aria-current]:after { background:#7fc6c9 }
+.cini-sahne { cursor:crosshair }
+.cini-renkler { display:grid; grid-template-columns:1fr 1fr; gap:6px }
+.cini-renkler button { display:flex; align-items:center; gap:7px; text-align:left }
+.cini-renkler i { flex:none; width:16px; height:16px; border-radius:50%; border:1px solid #fff8 }
+.cini-atolyesi .cini-renkler button[aria-pressed="true"] { border-color:#7fc6c9; background:#2d4a4c }
+.cini-atolyesi progress { width:100%; accent-color:#7fc6c9 }
+@media (max-width:760px) { .cini-atolyesi .kilic-asamalar { grid-template-columns:repeat(7,minmax(90px,1fr)); overflow-x:auto } }

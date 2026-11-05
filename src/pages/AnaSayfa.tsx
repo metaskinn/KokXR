@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import type { Eser } from '../types/eser'
 import Simge from '../components/Simge'
 import { kilicTanitim } from '../data/kilic'
+import { ciniTanitim } from '../data/cini'
 import './kilic.css'
 
 export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozetler: string[] }) {
@@ -55,6 +56,10 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
     <section className="vazo-tanitim kilic-ana-tanitim" aria-labelledby="kilic-tanitim-basligi">
       <div className="kilic-ana-cizim" aria-hidden="true"><svg viewBox="0 0 400 130"><defs><linearGradient id="kilic-celik"><stop stopColor="#535d61"/><stop offset=".45" stopColor="#f3f0da"/><stop offset=".65" stopColor="#8d9c9e"/><stop offset="1" stopColor="#d2d6ce"/></linearGradient></defs><path d="M90 65Q240 66 380 35Q345 97 90 88Z" fill="url(#kilic-celik)"/><path d="M95 70Q240 73 356 48" stroke="#b59055" strokeWidth="2" fill="none"/><path d="M85 43L94 43L99 109L88 109Z" fill="#bf9a64"/><path d="M85 65L22 61L12 70L18 88L87 87Z" fill="#e4d4af"/><g fill="#a6804c"><circle cx="30" cy="75" r="2"/><circle cx="45" cy="76" r="2"/><circle cx="60" cy="77" r="2"/><circle cx="75" cy="77" r="2"/></g></svg></div>
       <div className="vazo-tanitim-metin"><p className="ust-baslik">ATEŞTEN BİÇİME</p><h2 id="kilic-tanitim-basligi">{kilicTanitim.baslik}</h2><p>{kilicTanitim.ozet}</p><Link className="dugme" to="/atolye/kilic">Kılıç atölyesine gir <Simge ad="ok" /></Link><span className="temsili-not">{kilicTanitim.durustluk}</span></div>
+    </section>
+    <section className="vazo-tanitim" aria-labelledby="cini-tanitim-basligi">
+      <div className="vazo-cizim" aria-hidden="true"><svg viewBox="0 0 200 200" width="190" height="190"><circle cx="100" cy="100" r="92" fill="#f5f0e2" stroke="#17202f" strokeWidth="2"/><circle cx="100" cy="100" r="86" fill="none" stroke="#123f96" strokeWidth="8"/>{[0, 60, 120, 180, 240, 300].map((a) => <g key={a} transform={`rotate(${a} 100 100)`}><path d="M100 68C86 62 82 44 88 28C91 35 94 40 96 41C97 34 99 28 100 23C101 28 103 34 104 41C106 40 109 35 112 28C118 44 114 62 100 68Z" fill="#c5301f" stroke="#17202f"/></g>)}<circle cx="100" cy="100" r="20" fill="#159fa8" stroke="#17202f"/></svg></div>
+      <div className="vazo-tanitim-metin"><p className="ust-baslik">TOPRAKTAN RENGE</p><h2 id="cini-tanitim-basligi">{ciniTanitim.baslik}</h2><p>{ciniTanitim.ozet}</p><Link className="dugme" to="/atolye/cini">Çini atölyesine gir <Simge ad="ok" /></Link><span className="temsili-not">Temsilî model · Web ve VR</span></div>
     </section>
 
     <section className="nasil-calisir" aria-labelledby="nasil-basligi"><div className="bolum-basligi"><div><p className="ust-baslik">KENDİ ROTANI ÇİZ</p><h2 id="nasil-basligi">Merakla başla.</h2></div></div><ol>

@@ -4,7 +4,7 @@ import { eserGecerli, kaynakliOlabilir } from './dogrulama'
 
 const eserDosyalari = import.meta.glob<Eser>('./eserler/*.json', { eager: true, import: 'default' })
 const fotografsiz = (e: Eser): Eser => ({
-  ...e, kapakGorsel: '', gorseller: [], tur: undefined, restorasyon: undefined,
+  ...e, kapakGorsel: '', gorseller: [], tur: undefined,
   bilgiNoktalari: e.bilgiNoktalari.map((b) => ({ ...b, gorsel: '' })),
   maket: e.maket && { ...e.maket, aciklama: e.maket.aciklama.replace(/Levha ve paye yazıları[^.]*\./, 'Levha ve paye yüzeyleri bu sürümde yazısız bırakılmıştır.') },
 })

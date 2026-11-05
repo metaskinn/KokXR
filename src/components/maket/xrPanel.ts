@@ -4,8 +4,8 @@ import * as THREE from 'three'
 import { MENU_BASLIK_ORANI, TEMSILI_ETIKET, menuIsabet, satirKir, type MenuOgesi } from './xrMetin'
 
 const TUVAL_G = 1024
-const MENU_G = 0.7, MENU_Y = 840
-const KART_G = 1, KART_Y = 760
+export const MENU_G = 0.7, KART_G = 1
+const MENU_Y = 840, KART_Y = 760
 
 // docs/ui-tasarim.md paletinden
 const ZEMIN = '#f8f5ef', YUZEY = '#ecefe7', CAM = '#244e40', METIN = '#253a34', IKINCIL = '#5c6358', BRONZ = '#8e6236', BEYAZ = '#ffffff'

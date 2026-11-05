@@ -52,11 +52,24 @@ export function masaRig(aci: number, olcek: number): RigKonumu {
   return { x: D * Math.sin(aci), y: -MASA_Y * olcek, z: -D * Math.cos(aci), rotY: Math.PI - aci }
 }
 
-/** İç mekân durağı (1× ölçek): `bak`a dönük durur, başı `konum`un x/z'sine getirir. */
-export function durakRig(konum: number[], bak: number[], basYerel: Duzlem, zeminY: number): RigKonumu {
-  const rotY = Math.atan2(-(bak[0] - konum[0]), -(bak[2] - konum[2]))
+/** İç mekân durağı (1× ölçek): başı `konum`un x/z'sine getirir, bakışı `bak`a çevirir. `basYaw` başın rig içindeki yatay yönüdür. */
+export function durakRig(konum: number[], bak: number[], basYerel: Duzlem, zeminY: number, basYaw = 0): RigKonumu {
+  const rotY = Math.atan2(-(bak[0] - konum[0]), -(bak[2] - konum[2])) - basYaw
   const c = Math.cos(rotY), s = Math.sin(rotY)
   return { x: konum[0] - (basYerel.x * c + basYerel.z * s), y: zeminY, z: konum[2] - (-basYerel.x * s + basYerel.z * c), rotY }
+}
+
+/** (-π, π] aralığına indirir. */
+function aciSar(a: number): number {
+  const t = 2 * Math.PI, s = ((a % t) + t) % t
+  return s > Math.PI ? s - t : s
+}
+
+/** Panelin başa göre yatay açısı: istenen yön diğer panelle örtüşürse diğerinin yanına kayar, ışın ikisine de ulaşır. Tam üst üste gelince `yon` karar verir (+1 sol). */
+export function ortusmeyenAci(istenen: number, diger: number, ayrim: number, yon: 1 | -1): number {
+  const fark = aciSar(istenen - diger)
+  if (Math.abs(fark) >= ayrim) return istenen
+  return diger + (fark === 0 ? yon : Math.sign(fark)) * ayrim
 }
 
 /** Quest'te çubuk axes[2], axes[3]; menü buttons[5] (B/Y). Çubuğu okunan tek kumanda varsa iki el de onu kullanır; yana itişi yalnız dönüştür, kaydırmaz. */

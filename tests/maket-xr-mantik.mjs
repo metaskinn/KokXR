@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { carpiyor, OYUNCU_YARICAP } from '../src/components/maket/yurumeCarpisma.ts'
 import {
-  oluBolge, XR_YURUME_HIZI, XR_DONUS, yurumeAdimi, anlikDonus, basCevresindeDon, masaRig, durakRig, kumandaGirdisi,
+  oluBolge, XR_YURUME_HIZI, XR_DONUS, yurumeAdimi, anlikDonus, basCevresindeDon, masaRig, durakRig, kumandaGirdisi, ortusmeyenAci,
   MASA_Y, MASA_UZAKLIK, MASA_OLCEK_ILK, MASA_OLCEK_MIN, MASA_OLCEK_MAX,
 } from '../src/components/maket/xrHareket.ts'
 const yakin = (g, b) => { for (const a in b) assert(Math.abs(g[a] - b[a]) < 1e-6, `${a}: ${g[a]} ≠ ${b[a]}`) }
@@ -51,6 +51,24 @@ yakin(durakRig([0,0,0], [3,0,0], {x:0,z:0}, 0), {rotY:-Math.PI/2}) // ileri (-z)
 const r = durakRig([5,2.7,7], [8,2.7,11], {x:0.4,z:-0.3}, 0)
 const c = Math.cos(r.rotY), s = Math.sin(r.rotY)
 yakin({x: r.x + 0.4*c + -0.3*s, z: r.z - 0.4*s + -0.3*c}, {x:5, z:7})
+// Baş rig içinde dönükse dünyada yine durağa bakar: rotY + basYaw = hedef yön; baş yine durakta
+for (const basYaw of [Math.PI / 2, -1, 2.5]) {
+  const ry = durakRig([5,2.7,7], [8,2.7,11], {x:0.4,z:-0.3}, 0, basYaw)
+  const hedef = Math.atan2(-(8-5), -(11-7))
+  yakin({ fark: Math.sin(ry.rotY + basYaw - hedef), cos: Math.cos(ry.rotY + basYaw - hedef) }, { fark: 0, cos: 1 })
+  const cy = Math.cos(ry.rotY), sy = Math.sin(ry.rotY)
+  yakin({x: ry.x + 0.4*cy + -0.3*sy, z: ry.z - 0.4*sy + -0.3*cy}, {x:5, z:7})
+}
+
+// Panel yerleşimi: açı artı yönde soldur, kart ve menü örtüşmez
+const AYRIM = 0.7
+yakin({ a: ortusmeyenAci(0, 2, AYRIM, -1) }, { a: 0 })       // uzakta: istenen yerde kalır
+yakin({ a: ortusmeyenAci(0, 0, AYRIM, -1) }, { a: -AYRIM })  // tam üstünde: yon'a kayar
+yakin({ a: ortusmeyenAci(0, 0, AYRIM, 1) }, { a: AYRIM })
+yakin({ a: ortusmeyenAci(0.1, 0, AYRIM, -1) }, { a: AYRIM }) // baş hangi yana yakınsa o yana
+yakin({ a: ortusmeyenAci(-0.1, 0, AYRIM, 1) }, { a: -AYRIM })
+yakin({ a: ortusmeyenAci(3.1, -3.1, AYRIM, 1) }, { a: -3.1 - AYRIM }) // ±π sınırında fark doğru hesaplanır
+yakin({ a: ortusmeyenAci(0.7, 0, AYRIM, 1) }, { a: 0.7 })    // sınırda kaymaz
 
 // Çarpışma
 const y = { sinir:{x0:-10,x1:10,z0:-10,z1:10}, kutular:[{x0:1,x1:2,z0:1,z1:2}], daireler:[{x:-5,z:-5,r:1}], gorusKesenler:[], gozY:2.7 }

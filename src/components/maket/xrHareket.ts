@@ -5,10 +5,10 @@ export interface KumandaKaynagi { handedness: string; gamepad?: { axes: readonly
 export interface KumandaGirdisi { solX: number; solY: number; sagX: number; sagY: number; menu: boolean }
 
 export const XR_YURUME_HIZI = 1.6 // m/sn
-export const XR_DONUS = Math.PI / 6
+export const XR_DONUS_HIZI = Math.PI / 4 // rad/sn, çubuk tam itilince
 export const MASA_Y = 0.9, MASA_UZAKLIK = 1.2
 export const MASA_OLCEK_ILK = 100, MASA_OLCEK_MIN = 40, MASA_OLCEK_MAX = 200
-const OLU_BOLGE = 0.2, DONUS_TETIK = 0.7, DONUS_SILAH = 0.3, EN_UZUN_DT = 0.1
+const OLU_BOLGE = 0.2, EN_UZUN_DT = 0.1
 
 /** Joystick kaymasını keser; kalan aralığı 0-1'e yayar, işareti korur. */
 export function oluBolge(d: number): number {
@@ -33,11 +33,9 @@ export function yurumeAdimi(bas: Duzlem, ileriYon: Duzlem, cubuk: { x: number; y
   return { x, z }
 }
 
-/** Her itişte bir kez tetikler; çubuk ortaya dönmeden yeniden silahlanmaz. */
-export function anlikDonus(sagX: number, basili: boolean): { yon: -1 | 0 | 1; basili: boolean } {
-  const m = Math.abs(sagX)
-  if (!basili && m > DONUS_TETIK) return { yon: sagX > 0 ? 1 : -1, basili: true }
-  return { yon: 0, basili: basili && m >= DONUS_SILAH }
+/** Bu karede dönülecek açı: çubuğun itildiği kadar. Y çevresinde artı yön sola döndürür; sağa itiş sağa çevirsin diye işaret ters. */
+export function yumusakDonus(sagX: number, dt: number): number {
+  return -oluBolge(sagX) * XR_DONUS_HIZI * Math.min(dt, EN_UZUN_DT)
 }
 
 /** Rig `aci` kadar dönerken başın dünyadaki yeri sabit kalsın diye rig'in yeni x/z'si. */

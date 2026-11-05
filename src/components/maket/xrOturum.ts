@@ -1,6 +1,6 @@
 // VR oturumu: rig, kumandalar, görünüm geçişleri. Sahnenin kendisine yalnız XrSecenek üzerinden dokunur.
 import * as THREE from 'three'
-import { MASA_OLCEK_ILK, MASA_OLCEK_MAX, MASA_OLCEK_MIN, XR_DONUS, anlikDonus, basCevresindeDon, durakRig, kumandaGirdisi, masaRig, oluBolge, ortusmeyenAci, yurumeAdimi, type RigKonumu } from './xrHareket'
+import { MASA_OLCEK_ILK, MASA_OLCEK_MAX, MASA_OLCEK_MIN, basCevresindeDon, durakRig, kumandaGirdisi, masaRig, oluBolge, ortusmeyenAci, yumusakDonus, yurumeAdimi, type RigKonumu } from './xrHareket'
 import { ZEMIN_Y, type IcDurak, type IcYurume } from './ulucamiIc'
 import { menuOgeleri } from './xrMetin'
 import { KART_G, MENU_G, bilgiPaneli, etiketPaneli, xrPaneli } from './xrPanel'
@@ -115,7 +115,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   let oncekiArka: THREE.Scene['background'] = null
   let iceride = false
   let aci = 0, olcek = MASA_OLCEK_ILK
-  let menuAcik = true, menuBasili = false, donusBasili = false
+  let menuAcik = true, menuBasili = false
   // Baş pozu gelmeden paneller yerleştirilemez; ilk karelerde bekletilir.
   let pozHazir = false
   let bekleyenKart: { baslik: string; metin: string; kaynak: string } | null = null
@@ -261,7 +261,6 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     olcek = MASA_OLCEK_ILK
     menuAcik = true
     menuBasili = false
-    donusBasili = false
     pozHazir = false
     bekleyenKart = null
     gecis = null
@@ -290,11 +289,8 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     rig.position.x += yeni.x - bas.x
     rig.position.z += yeni.z - bas.z
 
-    const donus = anlikDonus(girdi.sagX, donusBasili)
-    donusBasili = donus.basili
-    if (donus.yon !== 0) {
-      // Y çevresinde artı yön sola döndürür; sağa itince kullanıcı sağa dönsün diye işaret ters.
-      const a = -donus.yon * XR_DONUS
+    const a = yumusakDonus(girdi.sagX, dt)
+    if (a !== 0) {
       const r = basCevresindeDon({ x: rig.position.x, z: rig.position.z }, yeni, a)
       rig.position.x = r.x
       rig.position.z = r.z

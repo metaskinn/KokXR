@@ -1,13 +1,13 @@
 import assert from 'node:assert/strict'
 import { carpiyor, OYUNCU_YARICAP } from '../src/components/maket/yurumeCarpisma.ts'
 import {
-  oluBolge, XR_YURUME_HIZI, XR_DONUS, yurumeAdimi, anlikDonus, basCevresindeDon, masaRig, durakRig, kumandaGirdisi, ortusmeyenAci,
+  oluBolge, XR_YURUME_HIZI, XR_DONUS_HIZI, yurumeAdimi, yumusakDonus, basCevresindeDon, masaRig, durakRig, kumandaGirdisi, ortusmeyenAci,
   MASA_Y, MASA_UZAKLIK, MASA_OLCEK_ILK, MASA_OLCEK_MIN, MASA_OLCEK_MAX,
 } from '../src/components/maket/xrHareket.ts'
 const yakin = (g, b) => { for (const a in b) assert(Math.abs(g[a] - b[a]) < 1e-6, `${a}: ${g[a]} ≠ ${b[a]}`) }
 
 // Sabitler
-assert.equal(OYUNCU_YARICAP, 0.45); assert.equal(XR_YURUME_HIZI, 1.6); assert.equal(XR_DONUS, Math.PI / 6)
+assert.equal(OYUNCU_YARICAP, 0.45); assert.equal(XR_YURUME_HIZI, 1.6); assert.equal(XR_DONUS_HIZI, Math.PI / 4)
 assert.equal(MASA_Y, 0.9); assert.equal(MASA_UZAKLIK, 1.2)
 assert.equal(MASA_OLCEK_ILK, 100); assert.equal(MASA_OLCEK_MIN, 40); assert.equal(MASA_OLCEK_MAX, 200)
 
@@ -30,14 +30,12 @@ yakin({ h: Math.hypot(kose.x, kose.z) }, { h: 0.16 }) // çapraz daha hızlı de
 yakin(yurumeAdimi({x:0,z:0}, {x:0,z:0}, {x:0,y:-1}, 0.1, serbest), {x:0, z:0}) // yön yoksa ileri hareket de yok
 yakin(yurumeAdimi({x:0,z:0}, {x:0,z:1}, {x:0,y:-1}, 0.1, () => true), {x:0, z:0}) // her yön kapalı
 
-// Anlık dönüş: her itişte bir kez
-let d = anlikDonus(0.9, false); assert.deepEqual(d, {yon:1, basili:true})
-d = anlikDonus(0.9, d.basili); assert.equal(d.yon, 0)
-d = anlikDonus(0.5, d.basili); assert.deepEqual(d, {yon:0, basili:true}) // 0,3-0,7 arası silahlanmaz
-d = anlikDonus(0.9, d.basili); assert.equal(d.yon, 0)
-d = anlikDonus(0.1, d.basili); assert.equal(d.basili, false)
-assert.deepEqual(anlikDonus(-0.9, false), {yon:-1, basili:true})
-assert.deepEqual(anlikDonus(0.5, false), {yon:0, basili:false})
+// Yumuşak dönüş: çubuğun itildiği kadar, saniyede en çok 45°; artı açı sola, sağa itiş sağa döndürür
+yakin({ a: yumusakDonus(1, 0.1) }, { a: -Math.PI / 40 })
+yakin({ a: yumusakDonus(-1, 0.1) }, { a: Math.PI / 40 })
+yakin({ a: yumusakDonus(0.6, 0.1) }, { a: -Math.PI / 80 }) // yarım itiş yarım hız
+assert.equal(Math.abs(yumusakDonus(0.15, 0.1)), 0) // joystick kayması döndürmez
+yakin({ a: yumusakDonus(1, 5) }, { a: -Math.PI / 40 }) // takılan karede zıplamaz
 
 // Rig
 yakin(basCevresindeDon({x:1,z:0}, {x:0,z:0}, Math.PI/2), {x:0, z:-1})
@@ -100,4 +98,4 @@ assert.equal(kumandaGirdisi([{ handedness:'right', gamepad:{ axes:[], buttons:du
 // Dizi olmayan Iterable (XRInputSourceArray gibi)
 assert.equal(kumandaGirdisi(new Set([{ handedness:'right', gamepad:{ axes:[0,0,.5,0], buttons:[] } }])).sagX, .5)
 
-console.log('Maket XR mantığı: ölü bölge, yürüme ve kayma, anlık dönüş, rig konumları, çarpışma ve kumanda girdisi başarılı.')
+console.log('Maket XR mantığı: ölü bölge, yürüme ve kayma, yumuşak dönüş, rig konumları, çarpışma ve kumanda girdisi başarılı.')

@@ -2,6 +2,8 @@
 import * as THREE from 'three'
 import { BASLIK_UZAK, BASLIK_YAKIN, MASA_OLCEK_ILK, MASA_OLCEK_MAX, MASA_OLCEK_MIN, basCevresindeDon, baslikYeri, durakRig, kumandaGirdisi, masaRig, oluBolge, ortusmeyenAci, yumusakDonus, yurumeAdimi, type RigKonumu } from './xrHareket'
 import { ZEMIN_Y, type IcDurak, type IcYurume } from './ulucamiIc'
+import { maketBirlestirKur } from './maketBirlestirXr'
+import type { MaketKatmani } from './ulucamiMaket'
 import { menuOgeleri } from './xrMetin'
 import { KART_G, MENU_G, baslikPaneli, bilgiPaneli, etiketPaneli, xrPaneli } from './xrPanel'
 import { OYUNCU_YARICAP, bakisKesiliyor, carpiyor } from './yurumeCarpisma'
@@ -14,6 +16,8 @@ export interface XrSecenek {
   /** Katmanlar anında hedefe gider. */
   parcalaAyarla: (acik: boolean) => void;
   parcaliMi: () => boolean;
+  katmanlar: MaketKatmani[];
+  golgeYenile: () => void;
   bilgiKapat: () => void;
   /** İç mekânda sahnede duran, tıklanınca kartı açan başlıklar. */
   basliklar: { id: string; baslik: string; konum: number[] }[];
@@ -31,6 +35,8 @@ export interface XrOturum {
   bitir(): void;
   bilgiGoster(k: { baslik: string; metin: string; kaynak: string } | null): void;
   aktif(): boolean;
+  /** Katmanlar birleştirme oyununun elinde mi. */
+  birlesimde(): boolean;
   temizle(): void;
 }
 
@@ -162,7 +168,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   }
   const kartiKoy = () => paneliKoy(kart.nesne, menu.nesne, -1)
 
-  const menuCiz = () => menu.ciz(menuOgeleri({ iceride, parcali: s.parcaliMi(), duraklar }))
+  const menuCiz = () => menu.ciz(menuOgeleri({ iceride, parcali: s.parcaliMi(), birlesimde: birlesim.oyunda(), duraklar }))
   const menuGoster = (acik: boolean) => {
     menuAcik = acik
     menu.nesne.visible = acik
@@ -220,6 +226,30 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       })
       return
     }
+    // Maket başlangıç açı ve ölçeğine döner: raf kullanıcının sağında, elin erişiminde olsun.
+    if (id === 'birlestir') {
+      menuGoster(false)
+      gecisYap(() => {
+        s.parcalaAyarla(false)
+        aci = 0
+        olcek = MASA_OLCEK_ILK
+        masaUygula()
+        birlesim.basla()
+      })
+      return
+    }
+    if (id === 'birlestirBastan') {
+      birlesim.basla()
+      menuGoster(false)
+      return
+    }
+    if (id === 'birlestirBirak') {
+      gecisYap(() => {
+        birlesim.bitir()
+        menuGoster(true)
+      })
+      return
+    }
     if (id === 'parcala') s.parcalaAyarla(!s.parcaliMi())
     menuCiz()
   }
@@ -261,6 +291,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     return { kumanda, isin, sec }
   })
   const isinlariSifirla = () => kumandalar.forEach(({ isin }) => { isin.scale.z = 1 })
+  const birlesim = maketBirlestirKur({ scene, camera, katmanlar: s.katmanlar, kumandalar, golgeYenile: s.golgeYenile, tamamlandi: () => menuGoster(true) })
 
   const gir = (yeni: XRSession) => {
     oturum = yeni
@@ -278,6 +309,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
   }
 
   const geriAl = () => {
+    birlesim.bitir()
     etiket.nesne.removeFromParent()
     camera.removeFromParent()
     camera.scale.set(1, 1, 1) // Rig'den ayrışırken kalan yuvarlama hatası
@@ -416,8 +448,9 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       if (girdi.menu && !menuBasili && !gecis) menuGoster(!menuAcik)
       menuBasili = girdi.menu
       const adim = Math.min(dt, EN_UZUN_DT)
+      birlesim.kare(adim)
       if (iceride) icKare(girdi, adim)
-      else masaKare(girdi, adim)
+      else if (!birlesim.oyunda()) masaKare(girdi, adim)
     },
     bitir,
     bilgiGoster: (k) => {
@@ -433,6 +466,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       }
     },
     aktif: () => oturum !== null,
+    birlesimde: () => birlesim.oyunda(),
     temizle: () => {
       kapandi = true
       xr.removeEventListener('sessionend', oturumBitince)
@@ -442,6 +476,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
         geriAl()
         acik.end().catch(() => {})
       }
+      birlesim.temizle()
       for (const { kumanda, sec } of kumandalar) {
         kumanda.removeEventListener('select', sec)
         kumanda.removeFromParent()

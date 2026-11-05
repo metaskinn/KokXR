@@ -11,7 +11,7 @@ import {
   cikar, dikdortgen, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, uvSigdir, yer,
 } from './ulucamiParca'
 
-export interface MaketKatmani { grup: THREE.Group; yukseklik: number }
+export interface MaketKatmani { grup: THREE.Group; yukseklik: number; ad: string }
 export interface Maket { kok: THREE.Group; katmanlar: MaketKatmani[]; duraklar: IcDurak[]; yurume: IcYurume }
 
 export function ulucamiMaketi(): Maket {
@@ -353,10 +353,11 @@ export function ulucamiMaketi(): Maket {
   kok.add(catiGrup, kasnakGrup, kubbeGrup)
   return {
     kok,
+    // Alttan üste: maketin üst üste oturma sırası.
     katmanlar: [
-      { grup: catiGrup, yukseklik: 24 },
-      { grup: kasnakGrup, yukseklik: 34 },
-      { grup: kubbeGrup, yukseklik: 44 },
+      { grup: catiGrup, yukseklik: 24, ad: 'Çatı' },
+      { grup: kasnakGrup, yukseklik: 34, ad: 'Kasnaklar' },
+      { grup: kubbeGrup, yukseklik: 44, ad: 'Kubbeler' },
     ],
     duraklar: icDuraklar,
     yurume: icYurumeAlani(),

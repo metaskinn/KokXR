@@ -2,7 +2,8 @@
 # Simüle Quest için geçici kopya hazırlar; deponun koduna ve package.json'a dokunmaz.
 # Kullanım: XR_SIM=/gecici/klasor bash tests/xr-sim/kur.sh
 # Sonra:    node_modules/.bin/vite preview --outDir "$XR_SIM/dist" --host 127.0.0.1 --port 4174 --strictPort
-#           XR_SIM=/gecici/klasor node tests/xr-sim/sim.mjs ana
+#           XR_SIM=/gecici/klasor node tests/xr-sim/sim.mjs ana      (Ulu Camii)
+#           XR_SIM=/gecici/klasor TEST_URL=http://127.0.0.1:4174 node tests/xr-sim/vazo-sim.mjs      (Vazo)
 set -e
 : "${XR_SIM:?XR_SIM klasörünü ver}"
 K="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -14,8 +15,6 @@ cp -r "$K/src" "$K/public" "$K/index.html" "$K/vite.config.ts" "$K/package.json"
 [ -e "$XR_SIM/kopya-temiz/node_modules" ] || ln -s "$K/node_modules" "$XR_SIM/kopya-temiz/node_modules"
 cp "$K/tests/xr-sim/sim-sayfa.js" "$XR_SIM/"
 cd "$XR_SIM/kopya"
-node "$K/tests/xr-sim/kanca-ekle.mjs" src/components/maket/maketSahnesi.ts
-# Yazılımsal çizimde hız için XR çerçeve tamponu küçültülür (yalnız kopyada).
-sed -i "s|  const xr = xrOturumuKur({|  renderer.xr.setFramebufferScaleFactor(0.2)\n  const xr = xrOturumuKur({|" src/components/maket/maketSahnesi.ts
+node "$K/tests/xr-sim/kanca-ekle.mjs"
 node_modules/.bin/vite build --logLevel error --outDir "$XR_SIM/dist" --emptyOutDir
 echo "Hazır: $XR_SIM/dist"

@@ -1,4 +1,6 @@
 .restorasyon-onizleme { display: block; width: 100%; max-width: 720px; border-radius: 0.5rem; margin: 1rem 0; }
+.restorasyon-vr { margin: 1rem 0; }
+.restorasyon-vr button { min-height: 44px; }
 .restorasyon-kontrol { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin: 1rem 0; }
 .restorasyon-kontrol button { min-height: 44px; }
 .restorasyon-tahta {

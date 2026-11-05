@@ -163,7 +163,7 @@ const TABLA_UST = -1.25
 const YAZI = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
 const ZEMIN = '#f8f5ef', CAM = '#244e40', METIN = '#253a34', BRONZ = '#8e6236', BEYAZ = '#ffffff'
 
-function tuvalDuzlemi(genislik: number, yukseklik: number, gercekGenislik: number) {
+export function tuvalDuzlemi(genislik: number, yukseklik: number, gercekGenislik: number) {
   const el = document.createElement('canvas')
   el.width = genislik
   el.height = yukseklik
@@ -178,10 +178,11 @@ function tuvalDuzlemi(genislik: number, yukseklik: number, gercekGenislik: numbe
   return { c, doku, nesne, dispose: () => { doku.dispose(); malzeme.dispose(); geometri.dispose() } }
 }
 
-function durumPaneli() {
+/** Başlık, ilerleme, ipucu ve `panelDugmesi` ile eşleşen iki düğme. `gercekGenislik` sahne biriminde. */
+export function durumPaneli(gercekGenislik = 64) {
   const G = 1024, Y = 512
-  const p = tuvalDuzlemi(G, Y, 64)
-  const ciz = ({ baslik, ilerleme, ipucu, dugmeler }: ReturnType<typeof panelMetni>, uzerinde: number | null) => {
+  const p = tuvalDuzlemi(G, Y, gercekGenislik)
+  const ciz = ({ baslik, ilerleme, ipucu, dugmeler }: { baslik: string; ilerleme: string; ipucu: string; dugmeler: { ad: string }[] }, uzerinde: number | null) => {
     const { c } = p
     c.fillStyle = ZEMIN
     c.fillRect(0, 0, G, Y)

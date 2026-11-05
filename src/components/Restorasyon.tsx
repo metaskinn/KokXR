@@ -1,20 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './restorasyon.css'
 import type { Kaynak, RestorasyonGorevi } from '../types/eser'
-import KaynakSatiri from './KaynakSatiri'
-
-interface Parca { id: number; yuva: number | null; donus: number }
-
-function karistir(adet: number): Parca[] {
-  const yuvasiz = Array.from({ length: adet }, (_, id) => ({ id, yuva: null, donus: 1 + Math.floor(Math.random() * 3) }))
-  for (let i = yuvasiz.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [yuvasiz[i], yuvasiz[j]] = [yuvasiz[j], yuvasiz[i]]
-  }
-  return yuvasiz
-}
-
-const yonler = ['düz', '90° dönük', 'ters', '270° dönük']
+import KaynakSatiri, { kaynakMetni } from './KaynakSatiri'
+import { dondur as parcaDondur, karistir, parcaHucresi, tamamMi, yonler, yuvayaKoy as parcaKoy, type Parca } from './restorasyon/kurallar'
+import type { RestorasyonXr } from './restorasyon/xr'
 
 export default function Restorasyon({ gorev, kaynaklar, rozetKazan, rozetId }: {
   gorev: RestorasyonGorevi; kaynaklar: Kaynak[]; rozetKazan: (id: string) => boolean; rozetId: string
@@ -25,13 +14,72 @@ export default function Restorasyon({ gorev, kaynaklar, rozetKazan, rozetId }: {
   const [ipucu, setIpucu] = useState(true)
   const [hamle, setHamle] = useState(0)
   const [duyuru, setDuyuru] = useState('')
+  const [xrDestek, setXrDestek] = useState(false)
+  const [vr, setVr] = useState<'kapali' | 'aciliyor' | 'acik'>('kapali')
+  const [vrHata, setVrHata] = useState('')
+  const xrOturum = useRef<RestorasyonXr | null>(null)
+  const sokuldu = useRef(false)
 
-  const bitti = parcalar !== null && parcalar.every((p) => p.yuva === p.id && p.donus === 0)
+  const bitti = parcalar !== null && tamamMi(parcalar)
+
+  useEffect(() => {
+    let iptal = false
+    const denetle = async () => {
+      let destek = false
+      try { destek = !!(await navigator.xr?.isSessionSupported('immersive-vr')) } catch { destek = false }
+      if (iptal || !destek) return
+      setXrDestek(true)
+      // Üç boyutlu kod yalnız gözlüklü tarayıcıda, önceden iner: düğmeye basınca beklenmesin.
+      void import('./restorasyon/xr').catch(() => {})
+    }
+    void denetle()
+    return () => { iptal = true }
+  }, [])
+
+  useEffect(() => {
+    sokuldu.current = false
+    return () => {
+      sokuldu.current = true
+      xrOturum.current?.kapat()
+    }
+  }, [])
+
+  async function vrBaslat() {
+    setVrHata('')
+    setVr('aciliyor')
+    let oturum: XRSession | null = null
+    try {
+      // Kullanıcı jesti kaybolmasın: requestSession tıklamanın içinde, ilk await'ten önce gider.
+      oturum = await navigator.xr!.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })
+      const { restorasyonXrAc } = await import('./restorasyon/xr')
+      const kaynak = kaynaklar.find((item) => item.id === gorev.kaynakId)
+      xrOturum.current = await restorasyonXrAc(oturum, {
+        gorsel: gorev.gorsel, sutun: gorev.sutun, satir: gorev.satir, ipucu,
+        metin: gorev.metin, not: gorev.not, kaynak: `Kaynak: ${kaynak ? kaynakMetni(kaynak) : 'Kaynak bilgisi bulunamadı.'}`,
+        parcalar, hamle,
+        rozetKazan: () => rozetKazan(rozetId),
+        bitti: (son) => {
+          xrOturum.current = null
+          setVr('kapali')
+          setSecili(null)
+          // Hiç hamle yapılmadıysa sayfa girildiği gibi kalır; yapıldıysa onarım burada sürer.
+          if (son) { setParcalar(son.parcalar); setHamle(son.hamle) }
+          setDuyuru('VR oturumu kapandı.')
+        },
+      })
+      if (sokuldu.current) { xrOturum.current.kapat(); return }
+      setVr('acik')
+    } catch {
+      await oturum?.end().catch(() => {}) // Zaten kapanmış oturumda end() reddeder
+      setVr('kapali')
+      setVrHata('VR oturumu açılamadı. İzin reddedilmiş veya gözlük bağlı olmayabilir. Bulmacayı bu ekranda oynamaya devam edebilirsin.')
+    }
+  }
 
   function guncelle(yeni: Parca[], mesaj: string) {
     setParcalar(yeni)
     setHamle((h) => h + 1)
-    if (yeni.every((p) => p.yuva === p.id && p.donus === 0)) {
+    if (tamamMi(yeni)) {
       setSecili(null)
       rozetKazan(rozetId)
       setDuyuru('Tebrikler, pano onarıldı! Restoratör rozeti kazanıldı.')
@@ -40,23 +88,18 @@ export default function Restorasyon({ gorev, kaynaklar, rozetKazan, rozetId }: {
 
   function yuvayaKoy(yuva: number) {
     if (!parcalar || secili === null || bitti) return
-    const yeni = parcalar.map((p) => ({ ...p }))
-    const tasinan = yeni.find((p) => p.id === secili)!
-    const oradaki = yeni.find((p) => p.yuva === yuva)
-    if (oradaki && oradaki.id !== tasinan.id) oradaki.yuva = tasinan.yuva
-    tasinan.yuva = yuva
     setSecili(null)
-    guncelle(yeni, `Parça ${yuva + 1}. yuvaya yerleştirildi.`)
+    guncelle(parcaKoy(parcalar, secili, yuva), `Parça ${yuva + 1}. yuvaya yerleştirildi.`)
   }
 
   function dondur() {
     if (!parcalar || secili === null) return
-    const yeni = parcalar.map((p) => p.id === secili ? { ...p, donus: (p.donus + 1) % 4 } : p)
+    const yeni = parcaDondur(parcalar, secili)
     guncelle(yeni, `Parça döndürüldü: ${yonler[yeni.find((p) => p.id === secili)!.donus]}.`)
   }
 
   function parcaGorunumu(p: Parca) {
-    const sutun = p.id % gorev.sutun, satir = Math.floor(p.id / gorev.sutun)
+    const { sutun, satir } = parcaHucresi(p.id, gorev.sutun)
     return {
       backgroundImage: `url(${gorev.gorsel})`,
       backgroundSize: `${gorev.sutun * 100}% ${gorev.satir * 100}%`,
@@ -76,7 +119,13 @@ export default function Restorasyon({ gorev, kaynaklar, rozetKazan, rozetId }: {
   return <section className="bolum restorasyon" aria-labelledby="restorasyon-basligi">
     <h2 id="restorasyon-basligi">Restorasyon görevi</h2>
     <p>{gorev.baslik}</p>
-    {!parcalar ? <>
+    {xrDestek && <div className="restorasyon-vr">
+      {vr === 'acik'
+        ? <button type="button" onClick={() => xrOturum.current?.kapat()}>VR'dan çık</button>
+        : <button type="button" disabled={vr === 'aciliyor'} onClick={() => void vrBaslat()}>VR'da onar</button>}
+      {vrHata && <p role="alert">{vrHata}</p>}
+    </div>}
+    {vr === 'acik' ? <p role="status">Bulmaca VR gözlüğünde sürüyor.</p> : !parcalar ? <>
       <img className="restorasyon-onizleme" src={gorev.gorsel} alt={gorev.alt} />
       <button type="button" onClick={() => { setParcalar(karistir(adet)); setHamle(0); setDuyuru('Pano parçalandı. Bir parça seç, sonra yerleştireceğin yuvaya dokun.') }}>Panoyu parçala ve onar</button>
     </> : <>

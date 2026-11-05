@@ -1,13 +1,13 @@
 // Tarayıcı testlerini tek komutla çalıştırır: preview'i açar, testleri sırayla koşar, kısa özet yazar, sunucuyu kapatır.
-// Kullanım: node scripts/test-tarayici.mjs [test adı ...]   örn. maket-xr-dugme   (önce npm run build)
+// Kullanım: TEST_PORT=4178 node scripts/test-tarayici.mjs [test adı ...]   örn. maket-xr-dugme   (önce npm run build)
 import { spawn } from 'node:child_process'
 
-const PORT = '4173'
-const testler = process.argv.slice(2).length ? process.argv.slice(2) : ['maket-xr-dugme', 'maket-ic']
+const PORT = process.env.TEST_PORT ?? '4173'
+const testler = process.argv.slice(2).length ? process.argv.slice(2) : ['maket-xr-dugme', 'vazo-xr-dugme', 'maket-ic']
 
 function calistir(komut, argumanlar) {
   return new Promise((coz) => {
-    const surec = spawn(komut, argumanlar, { stdio: ['ignore', 'pipe', 'pipe'] })
+    const surec = spawn(komut, argumanlar, { stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env, TEST_URL: `http://127.0.0.1:${PORT}` } })
     let cikti = ''
     surec.stdout.on('data', (d) => { cikti += d })
     surec.stderr.on('data', (d) => { cikti += d })
@@ -15,6 +15,11 @@ function calistir(komut, argumanlar) {
   })
 }
 
+// Port doluysa testler o sunucudaki başka bir derlemeye karşı koşup yanıltıcı sonuç verir.
+if (await fetch(`http://127.0.0.1:${PORT}/`).then(() => true, () => false)) {
+  console.error(`${PORT} portu dolu; başka bir sunucu çalışıyor. TEST_PORT ile boş bir port ver.`)
+  process.exit(2)
+}
 const sunucu = spawn(process.execPath, ['node_modules/vite/bin/vite.js', 'preview', '--host', '127.0.0.1', '--port', PORT, '--strictPort'], { stdio: 'ignore' })
 let basarisiz = 0
 try {

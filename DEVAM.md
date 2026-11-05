@@ -22,13 +22,13 @@ Yeni yapay zekâ oturumuna: "DEVAM.md'yi oku, 0. bölümden devam et" de.
 | `master` | Site, kılıç, vazo (masaüstü), Ulu Camii maketi ve VR'ı | GitHub'da, `3286759` |
 | `cini-atolyesi` | `master` + çini atölyesi (web ve VR) + bu not | GitHub'da, **master'a girmedi** |
 | `vr-panel-gecis` | `wip/vr-tutma` + Ulu Camii VR'da kart/menü düzeni ve karartmalı geçiş | GitHub'da, **master'a girmedi** |
-| `wip/vr-vazo` | `vaat-mokap` + vazo VR onarımı (yarım) | GitHub'da, simülasyonda çalıştı |
+| `wip/vr-vazo` | `vaat-mokap` + vazo VR onarımı (yarım) | GitHub'da, yalnız `test:hizli` geçti |
+| `vazo-quest` | Bu dalların birleşimi + bitmiş vazo VR | Yerelde, simülasyonda çalıştı, gerçek Quest'te denenmedi |
 | `vaat-mokap` | Zaman katmanı, yolculuk, öğretmen paneli, vizyon ekranları | GitHub'da, master'a girmedi; birleştirmeden önce kullanıcıya sor |
 
 ### Bekleyen kararlar (kullanıcıya sor)
 1. `cini-atolyesi`, `vr-panel-gecis`, `vaat-mokap` master'a birleştirilecek mi, hangi sırayla? Birleştirmeden önce çakışmalara ve testlere bak.
-2. Vazo VR: panel "altındaki örnek yazıyı oku" diyor ama vazonun altında yazı yok (`ALT_YAZI` sabiti sahneye hiç eklenmemiş). Yazı mı eklenecek, yönerge mi kalkacak? Öneri: yönergeyi kaldırmak.
-3. Sunum (`KokXR_Sunum_v2.pptx`, 3 slayt) güncellenecek mi? Şartname 5.4 başlıkları eksikti.
+2. Sunum (`KokXR_Sunum_v2.pptx`, 3 slayt) güncellenecek mi? Şartname 5.4 başlıkları eksikti.
 
 ### Yapılacaklar
 - [ ] **Gerçek Quest denemesi (cuma, kullanıcıyla):** Ulu Camii, vazo ve çini VR'ı şimdiye dek yalnız simülasyonda (IWER) çalıştı. Performans ve kumanda hissi bilinmiyor.
@@ -47,7 +47,8 @@ Bunlar sahnede değil, kayıttadır. Sabit sahnede çizim tamponu 240/240 aynıy
 - **HTML arayüzlü sayfa:** rAF sonrası `gl.finish()` + CDP ekran yayını JPEG, tarayıcı `--use-angle=vulkan`. gl-egl'de kılıçta tek karelik tam siyah kareler çıktı, Vulkan'da çıkmadı (RTX 3070 Ti; başka bilgisayarda yeniden ölç).
 - **Vulkan'da** yeni WebGL bağlamı açılışta bir kez düşüp geri gelebiliyor: `webglcontextlost`'ta hemen hata gösterme, 2B tuval dokularında `willReadFrequently: true` kullan.
 - Teslimden önce kare panosuna kendin bak. Simülatör için `tests/xr-sim/` `vaat-mokap` dalındadır; kayıt betikleri geçiciydi ve repoda yok.
-- `channel: 'chrome'` kullanan testler (`vazo`, `ui`, `galeri`, `maket-ic`, `maket-xr-dugme`) Google Chrome ister.
+- `channel: 'chrome'` kullanan testler (`vazo`, `vazo-xr-dugme`, `ui`, `galeri`, `maket-ic`, `maket-xr-dugme`) Google Chrome ister.
+- 4173 doluysa `npm run test:tarayici` başlamaz; `TEST_PORT=4178 npm run test:tarayici` ile boş port ver.
 
 ---
 
@@ -94,7 +95,7 @@ Bursa'daki vakıf eserlerini keşfettiren bir **web uygulaması** (React + TypeS
 | Özellik | Nerede | Durum |
 |---|---|---|
 | Ana sayfa, eser seçimi, rozetler | `src/pages/AnaSayfa.tsx` | ✅ |
-| **Vazo atölyesi** — Blender modeli; fare/dokunmayla sahnede parçaları tut, sürükle, birleştir | `src/pages/VazoAtolyesi.tsx`, `maket/vazoSahnesi.ts` | ✅ |
+| **Vazo atölyesi** — Blender modeli; fare/dokunmayla sahnede parçaları tut, sürükle, birleştir; WebXR ile Quest'te (simülasyonda sınandı) | `src/pages/VazoAtolyesi.tsx`, `maket/vazoSahnesi.ts`, `maket/vazoXr.ts` | ✅ |
 | Galeri + fotoğraf üzerinde keşif noktaları | `src/components/Galeri.tsx` | ✅ |
 | Tarihçe, kaynaklar, 3 soruluk test | `src/pages/EserSayfasi.tsx`, `Test.tsx` | ✅ |
 | **Eseri eline al** — Ulu Camii temsili 3B maketi (çevir, yakınlaştır, Parçala/Birleştir) | `src/components/EseriEleAl.tsx`, `maket/` | ✅ |

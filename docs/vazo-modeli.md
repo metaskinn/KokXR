@@ -36,9 +36,26 @@ Bu komut `assets/vazo/vazo.blend` ve `public/modeller/vazo.glb` çıktılarını
 - Yeniden başlatma mevcut sürüklemeyi/animasyonu temizler. Rota değişince renderer, kontroller, dinleyiciler, geometri ve malzemeler bırakılır. Model yüklenemezse hata gösterilir ve onarım başlatılamaz.
 - Azaltılmış hareket tercihinde yerine oturma animasyonu atlanır.
 
+## VR (Meta Quest Browser, WebXR)
+
+`VR'da aç` düğmesi yalnız `immersive-vr` destekleyen tarayıcıda görünür. Kod `src/components/maket/vazoXr.ts`; sahneye yalnız `VazoXrBaglam` üzerinden dokunur, oyun durumu masaüstüyle aynı yoldan geçer.
+
+- Vazo 1:1 ölçekte (44 cm), masa yüksekliğinde, başın 70 cm önünde açılır. Vazo hangi durumdaysa VR'a öyle geçer: izsiz, yarım onarım veya onarılmış.
+- Izsiz vazo ve onarılmış vazo bütün olarak tutulup çevrilir; bırakınca masaya döner. Onarım izleri tamamlanınca görünür. Panel: `Vazoyu parçala` / `Yeniden başlat` / `Yeniden parçala` ve `VR'dan çık`.
+- Parça, ışın + tetik veya değerek/nişanlayarak yan tuşla tutulur. Bırakınca hedefe 9 cm'den (`XR_OTURMA_ESIGI`) yakınsa `yerineOturur` ile oturur, değilse rafa döner. Masaüstünde aynı işlev piksel eşiğiyle çalışır. Hedef işareti yoktur.
+- Kumanda kopar veya oturum kapanırsa eldeki parça deneme sayılmadan rafa döner. Gamepad okunmaz, tek kumanda yeter, `XRControllerModelFactory` kullanılmaz.
+- `Temsilî model · Tarihî eser değildir` etiketi başa bağlıdır, derinlik sınamasına girmez.
+
+Vazonun altında yazı yoktur; önceki panelin "örnek yazı" yönlendirmesi ve `ALT_YAZI` sabiti kaldırıldı.
+
+Gerçek Quest'te denenmedi: aşağıdaki VR testleri IWER taklidiyle çalışır, performansı ve kumanda hissini ölçmez.
+
 ## Doğrulama
 
 - `npm run build`
+- `node tests/vazo-xr-mantik.mjs`: saf hesaplar; `npm run test:hizli` içindedir.
+- `TEST_URL=… node tests/vazo-xr-dugme.mjs`: sahte `navigator.xr` ile düğme: xr yok, destek yok, reddedildi.
+- `XR_SIM=/gecici/klasor bash tests/xr-sim/kur.sh`, kopya derleme önizlenip `XR_SIM=… TEST_URL=… node tests/xr-sim/vazo-sim.mjs`: simüle Quest ile baştan sona.
 - `node tests/vazo.mjs`: Chrome, 1280 ve 360px; gerçek GLB isteği, izsiz başlangıç, parçaya özel hedef işaretinin yokluğu, yanlış bırakma, fare/dokunma ile 6 parça tamamlama, onarım sonrası farklı görünüm, iptalde başlangıç görüntüsüne birebir dönüş, model yüzeyinden tutuş, Escape, klavye, rota temizliği ve model yükleme hatası.
 - Blender'da sağlam gövde ve altı parçanın kapalı manifold olduğu ve pozitif hacim taşıdığı bmesh ile kontrol edildi.
 - `vazo-*-izsiz.png` ile `vazo-*-onarim-izleri.png` aynı kamera açısından başlangıç/onarım karşılaştırmasıdır.

@@ -1,14 +1,13 @@
 import assert from 'node:assert/strict'
 import {
-  ALT_YAZI, METRE, TEMSILI_MODEL_ETIKET, XR_OTURMA_ESIGI, XR_TABLA_YARICAP,
-  cikisDugmesineMi, ekranEsigi, masaYuksekligi, panelMetni, parcaSec, vazoRigi, xrRafDizilimi, yerineOturur,
+  METRE, TEMSILI_MODEL_ETIKET, XR_OTURMA_ESIGI, XR_TABLA_YARICAP,
+  ekranEsigi, masaYuksekligi, panelDugmesi, panelMetni, parcaSec, vazoEvresi, vazoRigi, xrRafDizilimi, yerineOturur,
 } from '../src/components/maket/vazoXr.ts'
 
 const yakin = (a, b, tol = 1e-6) => assert(Math.abs(a - b) <= tol, `${a} ≠ ${b}`)
 
 // Etiketler birebir: başka metin, tarih veya ad eklenmez.
 assert.equal(TEMSILI_MODEL_ETIKET, 'Temsilî model · Tarihî eser değildir')
-assert.equal(ALT_YAZI, 'Örnek yazı · Tarihî kitabe değildir')
 
 // Yerleşme kuralı: masaüstü ve VR aynı işlevden geçer, sınır dahil değildir.
 assert.equal(yerineOturur(XR_OTURMA_ESIGI - 0.1, XR_OTURMA_ESIGI), true)
@@ -64,15 +63,32 @@ assert.equal(parcaSec([0, 0, 0], [0, 0, -1], adaylar.slice(0, 2), 50), null, 'me
 assert.equal(parcaSec([0, 50, 0], [0, 0, -1], adaylar.slice(0, 2), 150), null, 'ıskalar')
 assert.equal(parcaSec([0, 0, 0], [0, 0, -1], [], 150), null)
 
-// Çıkış düğmesi
-assert.equal(cikisDugmesineMi(0.5, 0.19), true)
-assert.equal(cikisDugmesineMi(0.5, 0.6), false)
-assert.equal(cikisDugmesineMi(0.1, 0.19), false)
+// Panel düğmeleri: alt sırada iki düğme, aralarındaki boşluk ve üst bölge düğme değil.
+assert.equal(panelDugmesi(0.25, 0.19), 0)
+assert.equal(panelDugmesi(0.75, 0.19), 1)
+assert.equal(panelDugmesi(0.5, 0.19), null)
+assert.equal(panelDugmesi(0.25, 0.6), null)
+assert.equal(panelDugmesi(0.01, 0.19), null)
 
-// Panel metni: bitişte VR'dan çıkmadan alt yazıya yönlendirir.
-assert.equal(panelMetni(2, '').ilerleme, '2/6 parça yerinde')
-assert.equal(panelMetni(2, 'Deneme').ipucu, 'Deneme')
-assert.equal(panelMetni(6, 'Deneme').baslik, 'Vazo onarıldı!')
-assert.match(panelMetni(6, '').ipucu, /örnek yazı/)
+// Evre: masaüstünde incelemeye dönülse de onarılmış vazo tamamdır.
+assert.equal(vazoEvresi(false, 0), 'izsiz')
+assert.equal(vazoEvresi(true, 2), 'onarim')
+assert.equal(vazoEvresi(true, 6), 'tamam')
+assert.equal(vazoEvresi(false, 6), 'tamam')
+
+// Panel metni: her evrede yeniden başlatma ve çıkış var, tarihsel metin yok.
+assert.equal(panelMetni('onarim', 2, '').ilerleme, '2/6 parça yerinde')
+assert.equal(panelMetni('onarim', 2, 'Deneme').ipucu, 'Deneme')
+assert.equal(panelMetni('tamam', 6, 'Deneme').baslik, 'Vazo onarıldı!')
+assert.match(panelMetni('tamam', 6, '').ipucu, /onarım izlerini/)
+assert.equal(panelMetni('izsiz', 0, '').dugmeler[0].ad, 'Vazoyu parçala')
+assert.equal(panelMetni('onarim', 2, '').dugmeler[0].ad, 'Yeniden başlat')
+assert.equal(panelMetni('tamam', 6, '').dugmeler[0].ad, 'Yeniden parçala')
+for (const evre of ['izsiz', 'onarim', 'tamam']) {
+  const { dugmeler, baslik, ipucu } = panelMetni(evre, evre === 'tamam' ? 6 : 2, '')
+  assert.deepEqual(dugmeler.map((d) => d.id), ['parcala', 'cik'])
+  assert.equal(dugmeler[1].ad, "VR'dan çık")
+  assert.doesNotMatch(baslik + ipucu, /yazı|kitabe|tarih/i)
+}
 
 console.log('Vazo VR saf hesapları geçti.')

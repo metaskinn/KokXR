@@ -3,7 +3,6 @@
 import * as THREE from 'three'
 
 export const TEMSILI_MODEL_ETIKET = 'Temsilî model · Tarihî eser değildir'
-export const ALT_YAZI = 'Örnek yazı · Tarihî kitabe değildir'
 export const PARCA_SAYISI = 6
 
 /** Rig ölçeği: bir cihaz metresi 100 model birimi. Vazo modeli 44 birim, VR'da 44 cm görünür. */
@@ -74,18 +73,43 @@ export function parcaSec(baslangic: Uclu, yon: Uclu, adaylar: ParcaAdayi[], menz
   return dokunan ?? nisanlanan
 }
 
-const DUGME = { uMin: 0.28, uMax: 0.72, vMin: 0.07, vMax: 0.31 }
-/** Durum panelindeki `VR'dan çık` düğmesi. uv.y 1 üst kenardır. */
-export function cikisDugmesineMi(u: number, v: number) {
-  return u >= DUGME.uMin && u <= DUGME.uMax && v >= DUGME.vMin && v <= DUGME.vMax
+export type VazoEvresi = 'izsiz' | 'onarim' | 'tamam'
+
+/** Onarılmış vazo masaüstünde incelemeye dönülmüş olsa da tamamdır: izleri kalıcıdır. */
+export function vazoEvresi(onarim: boolean, yerlesen: number): VazoEvresi {
+  if (yerlesen >= PARCA_SAYISI) return 'tamam'
+  return onarim ? 'onarim' : 'izsiz'
 }
 
-export function panelMetni(yerlesen: number, sonuc: string) {
-  const bitti = yerlesen >= PARCA_SAYISI
+// Panelin alt sırasında yan yana iki düğme. uv.y 1 üst kenardır.
+const DUGME_V = { min: 0.07, max: 0.31 }
+const DUGME_U = [{ min: 0.05, max: 0.48 }, { min: 0.52, max: 0.95 }]
+/** Panelde (u, v) noktasındaki düğmenin sırası; düğme yoksa `null`. */
+export function panelDugmesi(u: number, v: number): number | null {
+  if (v < DUGME_V.min || v > DUGME_V.max) return null
+  const i = DUGME_U.findIndex((d) => u >= d.min && u <= d.max)
+  return i < 0 ? null : i
+}
+
+export type PanelEylemi = 'parcala' | 'cik'
+
+export function panelMetni(evre: VazoEvresi, yerlesen: number, sonuc: string) {
+  const cik = { id: 'cik' as PanelEylemi, ad: "VR'dan çık" }
+  if (evre === 'izsiz') return {
+    baslik: 'Vazoyu incele', ilerleme: 'İzsiz vazo',
+    ipucu: 'Vazoyu tutup çevir. Hazır olunca parçala.',
+    dugmeler: [{ id: 'parcala' as PanelEylemi, ad: 'Vazoyu parçala' }, cik],
+  }
+  const ilerleme = `${yerlesen}/${PARCA_SAYISI} parça yerinde`
+  if (evre === 'tamam') return {
+    baslik: 'Vazo onarıldı!', ilerleme,
+    ipucu: 'Vazoyu tutup çevir, onarım izlerini incele.',
+    dugmeler: [{ id: 'parcala' as PanelEylemi, ad: 'Yeniden parçala' }, cik],
+  }
   return {
-    baslik: bitti ? 'Vazo onarıldı!' : 'Vazoyu onar',
-    ilerleme: `${yerlesen}/${PARCA_SAYISI} parça yerinde`,
-    ipucu: bitti ? 'Vazoyu tutup çevir, altındaki örnek yazıyı oku.' : sonuc || 'Parçayı tetik veya yan tuşla tut, götür, bırak.',
+    baslik: 'Vazoyu onar', ilerleme,
+    ipucu: sonuc || 'Parçayı tetik veya yan tuşla tut, götür, bırak.',
+    dugmeler: [{ id: 'parcala' as PanelEylemi, ad: 'Yeniden başlat' }, cik],
   }
 }
 
@@ -97,13 +121,16 @@ export interface VazoXrBaglam {
   camera: THREE.PerspectiveCamera
   parcalar: THREE.Object3D[]
   hedefler: { position: THREE.Vector3; quaternion: THREE.Quaternion }[]
-  /** Parçalar yerindeyken vazoyla birlikte taşınan nesneler (onarım izleri, alt yazı). */
+  /** Parçalar yerindeyken vazoyla birlikte taşınan nesneler (izsiz gövde, onarım izleri). */
   butunNesneleri: THREE.Object3D[]
   /** Tutulabilir, henüz oturmamış parça mı? */
   serbestMi: (id: number) => boolean
-  /** Bütün parçalar oturdu ve oturma animasyonu bitti mi? */
-  tamamMi: () => boolean
+  /** Bütün vazo elde çevrilebilir mi: izsiz, ya da onarım bitti ve animasyon durdu. */
+  incelemeMi: () => boolean
+  evre: () => VazoEvresi
   yerlesenSayisi: () => number
+  /** Panelden: masaüstündeki parçalama akışı. Sonuç durumu `sifirla` üzerinden geri gelir. */
+  parcalaIstegi: () => void
   tutusBasladi: (id: number) => void
   /** Masaüstündeki bırakma yolu: animasyon ve oyun durumu aynı yerden gider. */
   birak: (id: number, oturdu: boolean) => void
@@ -122,6 +149,8 @@ export interface VazoXr {
   kare: () => void
   bitir: () => void
   aktif: () => boolean
+  /** Oyun baştan başlarken: tutuşları bırakır, vazoyu dayanaktan çıkarır. Parça konumları sahnenindir. */
+  sifirla: () => void
   temizle: () => void
 }
 
@@ -138,7 +167,7 @@ function tuvalDuzlemi(genislik: number, yukseklik: number, gercekGenislik: numbe
   const el = document.createElement('canvas')
   el.width = genislik
   el.height = yukseklik
-  const c = el.getContext('2d')
+  const c = el.getContext('2d', { willReadFrequently: true })
   if (!c) throw new Error('Tuval kullanılamıyor')
   const doku = new THREE.CanvasTexture(el)
   doku.colorSpace = THREE.SRGBColorSpace
@@ -152,8 +181,7 @@ function tuvalDuzlemi(genislik: number, yukseklik: number, gercekGenislik: numbe
 function durumPaneli() {
   const G = 1024, Y = 512
   const p = tuvalDuzlemi(G, Y, 64)
-  const ciz = (yerlesen: number, sonuc: string) => {
-    const { baslik, ilerleme, ipucu } = panelMetni(yerlesen, sonuc)
+  const ciz = ({ baslik, ilerleme, ipucu, dugmeler }: ReturnType<typeof panelMetni>, uzerinde: number | null) => {
     const { c } = p
     c.fillStyle = ZEMIN
     c.fillRect(0, 0, G, Y)
@@ -170,14 +198,17 @@ function durumPaneli() {
     c.fillStyle = METIN
     c.font = `400 38px ${YAZI}`
     c.fillText(ipucu, G / 2, 250, G - 60)
-    const x = G * DUGME.uMin, en = G * (DUGME.uMax - DUGME.uMin), ust = Y * (1 - DUGME.vMax), boy = Y * (DUGME.vMax - DUGME.vMin)
-    c.beginPath()
-    c.roundRect(x, ust, en, boy, 16)
-    c.fillStyle = CAM
-    c.fill()
-    c.fillStyle = BEYAZ
-    c.font = `600 48px ${YAZI}`
-    c.fillText("VR'dan çık", G / 2, ust + boy / 2, en - 30)
+    const ust = Y * (1 - DUGME_V.max), boy = Y * (DUGME_V.max - DUGME_V.min)
+    dugmeler.forEach(({ ad }, i) => {
+      const x = G * DUGME_U[i].min, en = G * (DUGME_U[i].max - DUGME_U[i].min)
+      c.beginPath()
+      c.roundRect(x, ust, en, boy, 16)
+      c.fillStyle = uzerinde === i ? BRONZ : CAM
+      c.fill()
+      c.fillStyle = BEYAZ
+      c.font = `600 48px ${YAZI}`
+      c.fillText(ad, x + en / 2, ust + boy / 2, en - 30)
+    })
     p.doku.needsUpdate = true
   }
   return { nesne: p.nesne, ciz, dispose: p.dispose }
@@ -204,6 +235,8 @@ interface El {
   yan: boolean
   /** Parça kimliği, bütün vazo için VAZO. */
   tutulan: number | null
+  /** Tuş bırakıldı, karar kare başında: kopan kumanda da önce tek başına selectend yollar, sonra `disconnected`. */
+  birakilacak: boolean
   ofset: THREE.Matrix4
   dinleyiciler: [string, () => void][]
 }
@@ -226,7 +259,7 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
   ortam.add(zemin, ayak)
 
   const panel = durumPaneli()
-  panel.nesne.position.set(0, 80, -40)
+  panel.nesne.position.z = -40 // Yüksekliği baş pozu gelince
   const etiket = etiketPaneli()
   etiket.nesne.material.depthTest = false
   etiket.nesne.renderOrder = 1003
@@ -271,10 +304,11 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
   const raycaster = new THREE.Raycaster()
   const m = new THREE.Matrix4(), konum = new THREE.Vector3(), donus = new THREE.Quaternion(), olcek = new THREE.Vector3()
   const yedek = { near: 0, far: 0 }
+  const butunEv = new Map<THREE.Object3D, { konum: THREE.Vector3; donus: THREE.Quaternion }>()
 
   const tutuluyor = (id: number) => eller.some((e) => e.tutulan === id)
   const adaylar = (): ParcaAdayi[] => {
-    if (b.tamamMi()) return tutuluyor(VAZO) ? [] : [{ id: VAZO, merkez: dayanak.position.toArray(), yaricap: VAZO_YARICAP }]
+    if (b.incelemeMi()) return tutuluyor(VAZO) ? [] : [{ id: VAZO, merkez: dayanak.position.toArray(), yaricap: VAZO_YARICAP }]
     const liste: ParcaAdayi[] = []
     parcalar.forEach((p, id) => {
       if (b.serbestMi(id) && !tutuluyor(id)) liste.push({ id, merkez: p.position.toArray(), yaricap: yaricaplar[id] })
@@ -295,6 +329,7 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
     dayanakDolu = true
     scene.add(dayanak)
     dayanak.updateWorldMatrix(true, false)
+    for (const n of b.butunNesneleri) butunEv.set(n, { konum: n.position.clone(), donus: n.quaternion.clone() })
     for (const n of [...parcalar, ...b.butunNesneleri]) dayanak.attach(n)
   }
   const dayanaktanCikar = () => {
@@ -306,7 +341,7 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
     dayanak.updateWorldMatrix(true, false)
     for (const n of [...parcalar, ...b.butunNesneleri]) scene.attach(n)
     parcalar.forEach((p, id) => { p.position.copy(hedefler[id].position); p.quaternion.copy(hedefler[id].quaternion) })
-    for (const n of b.butunNesneleri) { n.position.set(0, 0, 0); n.quaternion.identity() }
+    for (const [n, ev] of butunEv) { n.position.copy(ev.konum); n.quaternion.copy(ev.donus) }
     dayanak.removeFromParent()
   }
 
@@ -331,6 +366,7 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
   const birak = (el: El) => {
     const id = el.tutulan
     el.tutulan = null
+    el.birakilacak = false
     el.isin.visible = true
     if (id === null) return
     if (id === VAZO) { dayanakDonuyor = true; return }
@@ -342,6 +378,7 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
   const tutusuKopar = (el: El) => {
     const id = el.tutulan
     el.tutulan = null
+    el.birakilacak = false
     el.isin.visible = true
     el.tetik = el.yan = false
     if (id === null) return
@@ -351,24 +388,32 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
 
   const bitir = () => { oturum?.end().catch(() => {}) } // Zaten kapanmış oturumda end() reddeder
 
-  const panelDene = (el: El) => {
+  const metin = () => panelMetni(b.evre(), b.yerlesenSayisi(), sonuc)
+  const panelNisani = (el: El) => {
     isinKur(el)
     panel.nesne.updateWorldMatrix(true, false)
     const isabet = raycaster.intersectObject(panel.nesne, false)[0]
-    if (isabet?.uv && cikisDugmesineMi(isabet.uv.x, isabet.uv.y)) bitir()
+    return isabet?.uv ? panelDugmesi(isabet.uv.x, isabet.uv.y) : null
   }
 
   const bas = (el: El, tur: 'tetik' | 'yan') => {
     if (!oturum || !yerlesti) return
     el[tur] = true
+    el.birakilacak = false
     if (el.tutulan !== null) return
+    // Düğmeye nişan alan kullanıcı parça tutmak istemiyor: panel önce gelir.
+    const dugme = tur === 'tetik' ? panelNisani(el) : null
+    if (dugme !== null) {
+      if (metin().dugmeler[dugme].id === 'cik') bitir()
+      else b.parcalaIstegi()
+      return
+    }
     const id = elAdayi(el)
     if (id !== null) tut(el, id)
-    else if (tur === 'tetik') panelDene(el)
   }
   const kaldir = (el: El, tur: 'tetik' | 'yan') => {
     el[tur] = false
-    if (!el.tetik && !el.yan && el.tutulan !== null) birak(el)
+    if (!el.tetik && !el.yan && el.tutulan !== null) el.birakilacak = true
   }
 
   const eller: El[] = [0, 1].map((i) => {
@@ -376,7 +421,7 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
     const isin = new THREE.Line(isinGeometri, isinMalzeme)
     kumanda.add(isin, new THREE.Mesh(elGeometri, elMalzeme))
     rig.add(kumanda)
-    const el: El = { kumanda, isin, tetik: false, yan: false, tutulan: null, ofset: new THREE.Matrix4(), dinleyiciler: [] }
+    const el: El = { kumanda, isin, tetik: false, yan: false, tutulan: null, birakilacak: false, ofset: new THREE.Matrix4(), dinleyiciler: [] }
     el.dinleyiciler = [
       ['selectstart', () => bas(el, 'tetik')], ['selectend', () => kaldir(el, 'tetik')],
       ['squeezestart', () => bas(el, 'yan')], ['squeezeend', () => kaldir(el, 'yan')],
@@ -487,13 +532,20 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
         zemin.position.y = r.y
         ayak.scale.y = ayak.position.y - r.y
         rig.updateWorldMatrix(false, true)
+        // Panel göz hizasından biraz aşağıda: ayakta da oturarak da düz bakınca görünür.
+        panel.nesne.position.y = METRE * (p.y - masaYuksekligi(p.y)) - 5
         yerlesti = true
       }
 
+      for (const el of eller) if (el.birakilacak) birak(el)
+
       const vurgu: number[] = []
+      let uzerinde: number | null = null
       for (const el of eller) {
         if (el.tutulan !== null) { izle(el); continue }
         if (!el.kumanda.visible) continue
+        const dugme = panelNisani(el)
+        if (dugme !== null) { uzerinde = dugme; continue }
         const id = elAdayi(el)
         if (id !== null && id !== VAZO) vurgu.push(id)
       }
@@ -509,11 +561,16 @@ export function vazoXrKur(b: VazoXrBaglam): VazoXr {
         }
       }
 
-      const n = b.yerlesenSayisi(), imza = `${n}|${sonuc}`
-      if (imza !== cizilen) { cizilen = imza; panel.ciz(n, sonuc) }
+      const yazi = metin(), imza = JSON.stringify([yazi, uzerinde])
+      if (imza !== cizilen) { cizilen = imza; panel.ciz(yazi, uzerinde) }
     },
     bitir,
     aktif: () => oturum !== null,
+    sifirla: () => {
+      for (const el of eller) tutusuKopar(el)
+      dayanaktanCikar()
+      sonuc = ''
+    },
     temizle: () => {
       kapandi = true
       xr.removeEventListener('sessionend', oturumBitince)

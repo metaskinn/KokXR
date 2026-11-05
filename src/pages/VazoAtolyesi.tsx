@@ -51,8 +51,9 @@ export default function VazoAtolyesi({ gomulu = false }: { gomulu?: boolean }) {
         xrBitti: () => {
           if (iptal) return
           setVr('kapali')
-          setOyun((onceki) => ({ ...onceki, secili: null, mesaj: onceki.yerlesen.length === 6 ? 'VR oturumu kapandı. Onarılan vazoyu burada da inceleyebilirsin.' : `VR oturumu kapandı. ${onceki.yerlesen.length}/6 parça yerinde; onarıma burada devam edebilirsin.` }))
+          setOyun((onceki) => ({ ...onceki, secili: null, mesaj: onceki.yerlesen.length === 6 ? 'VR oturumu kapandı. Onarılan vazoyu burada da inceleyebilirsin.' : onceki.onarim ? `VR oturumu kapandı. ${onceki.yerlesen.length}/6 parça yerinde; onarıma burada devam edebilirsin.` : 'VR oturumu kapandı.' }))
         },
+        xrParcala: () => { if (!iptal) baslat() },
       })
       if (iptal) { yerel.temizle(); return }
       sahne.current = yerel
@@ -75,13 +76,11 @@ export default function VazoAtolyesi({ gomulu = false }: { gomulu?: boolean }) {
     // Kullanıcı jesti kaybolmasın: requestSession bu çağrının içinde, await'siz gider.
     sahne.current.xrBaslat().then(() => {
       setVr('acik')
-      // Yarım onarım VR'da sürer; başka her durumda yeni onarım başlar.
-      setOyun((onceki) => onceki.onarim && onceki.yerlesen.length < 6
-        ? { ...onceki, secili: null, mesaj: 'Onarım VR gözlüğünde sürüyor.' }
-        : { ...ilkOyun, onarim: true, kirildi: true, oturum: onceki.oturum + 1, mesaj: 'Onarım VR gözlüğünde sürüyor.' })
+      // Vazo olduğu durumda VR'a geçer: izsizse parçalama paneldedir, yarım onarım sürer.
+      setOyun((onceki) => ({ ...onceki, secili: null, mesaj: 'Atölye VR gözlüğünde sürüyor.' }))
     }).catch(() => {
       setVr('kapali')
-      setVrHata('VR oturumu açılamadı. İzin reddedilmiş veya gözlük bağlı olmayabilir. Onarıma bu ekranda devam edebilirsin.')
+      setVrHata('VR oturumu açılamadı. İzin reddedilmiş veya gözlük bağlı olmayabilir. Atölyeyi bu ekranda kullanmaya devam edebilirsin.')
     })
   }
 
@@ -147,7 +146,7 @@ export default function VazoAtolyesi({ gomulu = false }: { gomulu?: boolean }) {
         {xrDestek && <div className="vazo-vr">
           {vr === 'acik'
             ? <button onClick={() => sahne.current?.xrBitir()}>VR'dan çık</button>
-            : <button disabled={durum !== 'hazir' || vr === 'aciliyor'} onClick={vrBaslat}>VR'da onar</button>}
+            : <button disabled={durum !== 'hazir' || vr === 'aciliyor'} onClick={vrBaslat}>VR'da aç</button>}
           {vrHata && <p role="alert">{vrHata}</p>}
         </div>}
         <p className="vazo-mesaj" role="status">{mesaj}</p>

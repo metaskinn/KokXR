@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import { XR_TABLA_YARICAP, ekranEsigi, vazoXrKur, yerineOturur } from './vazoXr'
+import { XR_TABLA_YARICAP, ekranEsigi, vazoEvresi, vazoXrKur, yerineOturur } from './vazoXr'
 
 export const parcaAdlari = ['Alt gövde · sağ', 'Alt gövde · arka', 'Alt gövde · sol', 'Üst gövde · sağ', 'Üst gövde · arka', 'Üst gövde · sol']
 export interface VazoDurumu { onarim: boolean; kirildi: boolean; oturum: number; yerlesen: number[]; secili: number | null }
@@ -18,7 +18,7 @@ export interface VazoSahnesi {
   xrBitir: () => void
   temizle: () => void
 }
-interface Bildirimler { sec: (id: number | null) => void; birak: (id: number, oturdu: boolean) => void; hata: () => void; xrBitti: () => void }
+interface Bildirimler { sec: (id: number | null) => void; birak: (id: number, oturdu: boolean) => void; hata: () => void; xrBitti: () => void; xrParcala: () => void }
 
 export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler): Promise<VazoSahnesi> {
   // .blend kaynağından dışa aktarılan altı fiziksel seramik parça; harici model/doku yok.
@@ -158,7 +158,12 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   }
   const guncelle = (yeni: VazoDurumu) => {
     const bastan = yeni.oturum !== durum.oturum || yeni.onarim !== durum.onarim
-    if (bastan) { captureBirak(); hareketler.clear(); oturanlar.clear() }
+    if (bastan) {
+      captureBirak()
+      // Elde veya dayanakta kalan vazo aşağıdaki konumları bozmasın.
+      if (renderer.xr.isPresenting) xr.sifirla()
+      hareketler.clear(); oturanlar.clear()
+    }
     const onceki = durum
     durum = yeni
     const izsizGorunum = !yeni.kirildi && !yeni.onarim
@@ -244,10 +249,12 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   observer.observe(alan); boyutla(); guncelle(durum)
   const xr = vazoXrKur({
     renderer, scene, camera, parcalar, hedefler,
-    butunNesneleri: [birlesimIzleri],
-    serbestMi: (id) => !durum.yerlesen.includes(id) && !oturanlar.has(id),
-    tamamMi: () => durum.yerlesen.length === parcalar.length && hareketler.size === 0,
+    butunNesneleri: [saglamGorunum, birlesimIzleri],
+    serbestMi: (id) => durum.onarim && !durum.yerlesen.includes(id) && !oturanlar.has(id),
+    incelemeMi: () => (!durum.onarim || durum.yerlesen.length === parcalar.length) && hareketler.size === 0,
+    evre: () => vazoEvresi(durum.onarim, durum.yerlesen.length),
     yerlesenSayisi: () => durum.yerlesen.length,
+    parcalaIstegi: bildir.xrParcala,
     tutusBasladi: (id) => { hareketler.delete(id) },
     birak,
     tutusIptal: (id) => { hareketler.set(id, raflar[id].clone()) },

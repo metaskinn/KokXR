@@ -8,19 +8,33 @@ import './kilic.css'
 const yonergeler = ['Tezgâhtaki külçeyi seç. Ateşe ilk adımı at.', 'Körüğü basılı tut. Çeliğin rengini izle; 750–1150 aralığında örse geç.', 'Namlu boyunca tıkla veya sürükle. Her bölgeyi döverek çeliği uzat.', 'Isının 780–880 aralığına gelmesini bekle. Suya daldır düğmesini basılı tut.', 'Namlu boyunca sürükle. Her bölgeyi bile; aynı yerde fazla kalma.', 'Havada bekleyen parçaları sırayla seç. Her biri yerini bulsun.', 'Çevir, yakınlaş, ayrıntılara bak. Numaralardan parça notlarını aç.', 'Bir hedef seç. Sahnede hızlı bir kesim çizgisi çiz; kılıcını dene.']
 export default function KilicAtolyesi() {
   const alan = useRef<HTMLDivElement>(null), kok = useRef<HTMLElement>(null), scene = useRef<KilicSahnesi | null>(null)
-  const [oyun, setOyun] = useState(ilkOyun), [hazir, setHazir] = useState(false), [hata, setHata] = useState(false), [ses, setSes] = useState(true), [not, setNot] = useState<number | null>(null), [acik, setAcik] = useState(true)
+  const [oyun, setOyun] = useState(ilkOyun), [hazir, setHazir] = useState(false), [hata, setHata] = useState(false), [ses, setSes] = useState(true), [not, setNot] = useState<number | null>(null), [acik, setAcik] = useState(true), [xrDestek, setXrDestek] = useState(false), [xrAcik, setXrAcik] = useState(false), [xrHata, setXrHata] = useState(false)
   useEffect(() => {
     let iptal = false, yerel: KilicSahnesi | undefined
     import('../components/kilic/sahne').then(async ({ sahneOlustur }) => {
       if (iptal || !alan.current) return
-      yerel = await sahneOlustur(alan.current, d => { if (!iptal) setOyun(d) }, () => { if (!iptal) setHata(true) }, id => { if (!iptal) setNot(id) })
+      yerel = await sahneOlustur(alan.current, d => { if (!iptal) setOyun(d) }, () => { if (!iptal) setHata(true) }, id => { if (!iptal) setNot(id) }, a => { if (!iptal) setXrAcik(a) })
       if (iptal) { yerel.temizle(); return }
       scene.current = yerel; setHazir(true)
     }).catch(() => { if (!iptal) setHata(true) })
     return () => { iptal = true; yerel?.temizle(); scene.current = null }
   }, [])
+  useEffect(() => {
+    let iptal = false
+    void (async () => {
+      let destek = false
+      try { destek = !!(await navigator.xr?.isSessionSupported('immersive-vr')) } catch { destek = false }
+      if (!iptal) setXrDestek(destek)
+    })()
+    return () => { iptal = true }
+  }, [])
   const { asama, secili, usta } = oyun, isi = Math.round(ortalama(oyun, 'isi')), aktifNot = not === null ? null : kilicParcaNotlari[not]
   const kaynakli = asama === 3 ? kilicAsamaBilgileri.su : asama >= 5 ? kilicAsamaBilgileri.kusanma : kilicAsamaBilgileri.kulce
+  function vrAc() {
+    setXrHata(false); setXrAcik(true)
+    // Tarayıcı oturumu yalnız kullanıcı jesti içinde açar: bundan önce await olmamalı.
+    scene.current?.xrBaslat().catch(() => { setXrAcik(false); setXrHata(true) })
+  }
   function komut(ad: Komut) { scene.current?.komut(ad); if (ad === 'bastan') setNot(null) }
   const tut = (ad: 'koruk' | 'su' | 'bile') => ({
     onPointerDown: (e: React.PointerEvent<HTMLButtonElement>) => { e.currentTarget.setPointerCapture(e.pointerId); scene.current?.tut(ad, true) },
@@ -29,12 +43,13 @@ export default function KilicAtolyesi() {
     onKeyUp: (e: React.KeyboardEvent) => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); scene.current?.tut(ad, false) } }, onBlur: () => scene.current?.tut(ad, false),
   })
   return <article className="kilic-atolyesi" ref={kok}>
-    <header className="kilic-baslik"><div><Link to="/">← Keşfe dön</Link><span className="kilic-ayrac">/</span><span>ATEŞTEN BİÇİME</span></div><div className="kilic-araclar"><button aria-pressed={ses} onClick={() => { setSes(!ses); scene.current?.ses(!ses) }}>{ses ? '♪ Ses açık' : '♪ Ses kapalı'}</button><button onClick={() => komut('bastan')}>Baştan başla</button><button onClick={() => { if (document.fullscreenElement) void document.exitFullscreen().catch(() => {}); else void kok.current?.requestFullscreen?.().catch(() => {}) }}>⛶ Tam ekran</button></div></header>
+    <header className="kilic-baslik"><div><Link to="/">← Keşfe dön</Link><span className="kilic-ayrac">/</span><span>ATEŞTEN BİÇİME</span></div><div className="kilic-araclar">{xrDestek && <button disabled={!hazir || hata || xrAcik} onClick={vrAc}>{xrAcik ? 'VR açık' : "VR'da aç"}</button>}<button aria-pressed={ses} onClick={() => { setSes(!ses); scene.current?.ses(!ses) }}>{ses ? '♪ Ses açık' : '♪ Ses kapalı'}</button><button onClick={() => komut('bastan')}>Baştan başla</button><button onClick={() => { if (document.fullscreenElement) void document.exitFullscreen().catch(() => {}); else void kok.current?.requestFullscreen?.().catch(() => {}) }}>⛶ Tam ekran</button></div></header>
     <ol className="kilic-asamalar" aria-label="Üretim aşamaları">{asamalar.map((ad, i) => <li key={ad} aria-current={i === asama ? 'step' : undefined} className={i < asama ? 'tamam' : ''}><span>{i < asama ? '✓' : `0${i + 1}`}</span><span>{ad}</span></li>)}</ol>
     <div className="kilic-deneyim">
       <div className="kilic-sahne" ref={alan} tabIndex={0} role="group" aria-label="Kılıç atölyesi sahnesi. Oklarla bölge seç, Enter ile vur, Boşluk ile körük veya bileme; test alanında Enter ile kes." />
       <div className="kilic-sahne-basligi"><span className="kilic-kucuk">ETKİLEŞİMLİ ATÖLYE / 0{asama + 1}</span><h1>{asama === 0 ? <>Bir kıvılcım.<br /><em>Senin eserin.</em></> : asamalar[asama]}</h1><span className="kilic-canli"><i /> {asama === 7 ? 'TEST AVLUSU' : asama === 6 ? 'AYRINTILARI KEŞFET' : 'ÇELİĞE BİÇİM VER'}</span></div>
       {!hazir && !hata && <div className="kilic-yukleme" role="status"><span />Atölye hazırlanıyor…<small>Modeller ve malzemeler yükleniyor.</small></div>}
+      {xrHata && <p className="kilic-xr-hata" role="alert">VR oturumu başlatılamadı. Atölyeyi ekranda kullanmaya devam edebilirsin.</p>}
       {hata && <div className="kilic-yukleme" role="alert">Atölye görüntülenemedi.<small>Model yüklenemedi veya WebGL kullanılamıyor. Bağlantını ve tarayıcı desteğini kontrol edip sayfayı yenile.</small><button onClick={() => location.reload()}>Yeniden yükle</button></div>}
       <aside className={`kilic-panel ${acik ? '' : 'kilic-panel-kapali'}`}>
         <button className="kilic-cekmecesi" aria-expanded={acik} onClick={() => setAcik(!acik)}>{asamalar[asama]} · Kontroller {acik ? '⌄' : '⌃'}</button>

@@ -12,6 +12,7 @@ body:has(.kilic-atolyesi) .alt-cubuk { display:none }
 .kilic-ayrac { color:#7f806e }
 .kilic-araclar { display:flex; gap:8px }
 .kilic-araclar button { background:transparent; border-color:#414948; min-height:44px }
+.kilic-xr-hata { position:absolute; top:12px; left:50%; transform:translateX(-50%); z-index:5; width:min(440px, calc(100% - 32px)); margin:0; padding:10px 14px; border:1px solid #d6b183; border-radius:5px; background:rgba(20,27,28,.94); color:#f6d6ad; font-size:13px; text-align:center; pointer-events:none }
 .kilic-asamalar { list-style:none; padding:0 32px; margin:0; display:grid; grid-template-columns:repeat(8,1fr); background:#171e1f; border-bottom:1px solid #3b3c36 }
 .kilic-asamalar li { display:flex; gap:8px; align-items:center; min-height:56px; font-size:11px; color:#a2aaa5; position:relative }
 .kilic-asamalar li>span:first-child { font-size:10px; color:#9a9e93 }

@@ -2,6 +2,8 @@ import * as T from 'three'
 export function parcacikHavuzu(scene: T.Scene, az: boolean) {
   const n = az ? 90 : 700, positions = new Float32Array(n * 3), colors = positions.slice(), velocities = positions.slice(), life = new Float32Array(n), max = life.slice(), tip = new Uint8Array(n)
   positions.fill(-100)
+  // VR: aynı anda yaşayan parçacık ve üretim oranı düşer; masaüstü değerleri değişmez.
+  let sinirN = n, oran = 1
   const geo = new T.BufferGeometry(); geo.setAttribute('position', new T.BufferAttribute(positions, 3)); geo.setAttribute('color', new T.BufferAttribute(colors, 3))
   const nokta = document.createElement('canvas'); nokta.width = nokta.height = 32
   const nc = nokta.getContext('2d')!, ng = nc.createRadialGradient(16, 16, 0, 16, 16, 16); ng.addColorStop(0, '#fff'); ng.addColorStop(.3, 'rgba(255,255,255,.65)'); ng.addColorStop(1, 'rgba(255,255,255,0)'); nc.fillStyle = ng; nc.fillRect(0, 0, 32, 32)
@@ -18,22 +20,22 @@ export function parcacikHavuzu(scene: T.Scene, az: boolean) {
   })
   function emet(p: T.Vector3, count = 35, buhar = false) {
     if (buhar) {
-      for (let k = 0; k < Math.min(count, steam.length); k++) {
+      for (let k = 0; k < Math.min(Math.ceil(count * oran), steam.length); k++) {
         const a = steam.find(v => v.life <= 0); if (!a) break
         a.o.position.copy(p).add(new T.Vector3((Math.random() - .5) * .7, .05, (Math.random() - .5) * .25)); a.life = a.max = 1 + Math.random(); a.vx = (Math.random() - .5) * .2; a.o.visible = true; a.o.scale.setScalar(.15)
       }
       return
     }
-    for (let k = 0; k < (az ? count * .2 : count); k++) {
-      const i = life.findIndex(v => v <= 0); if (i < 0) break
+    for (let k = 0; k < (az ? count * .2 : count) * oran; k++) {
+      const i = life.findIndex(v => v <= 0); if (i < 0 || i >= sinirN) break
       life[i] = max[i] = .3 + Math.random() * .8; tip[i] = 0
       positions.set(p.toArray(), i * 3); velocities.set([(Math.random() - .5) * 2.5, .6 + Math.random() * 2.8, (Math.random() - .5) * 2], i * 3)
     }
   }
   // Yönlü fışkırma: bileme taşının dönüş yönü, çekiç darbesinin yana açılan yelpazesi, su sıçraması.
   function fiskir(p: T.Vector3, yon: T.Vector3, count: number, yayilma: number, hiz: number, tur: 0 | 1 = 0) {
-    for (let k = 0; k < (az ? Math.ceil(count * .25) : count); k++) {
-      const i = life.findIndex(v => v <= 0); if (i < 0) break
+    for (let k = 0; k < (az ? Math.ceil(count * .25) : Math.ceil(count * oran)); k++) {
+      const i = life.findIndex(v => v <= 0); if (i < 0 || i >= sinirN) break
       life[i] = max[i] = tur ? .25 + Math.random() * .3 : .18 + Math.random() * .55; tip[i] = tur
       const h = hiz * (.45 + Math.random() * .8)
       positions.set(p.toArray(), i * 3)
@@ -50,5 +52,6 @@ export function parcacikHavuzu(scene: T.Scene, az: boolean) {
     geo.attributes.position.needsUpdate = geo.attributes.color.needsUpdate = true
     for (const a of steam) if (a.life > 0) { a.life -= dt; a.o.position.y += dt * .55; a.o.position.x += a.vx * dt; a.o.scale.addScalar(dt * .65); a.o.material.opacity = Math.max(0, Math.sin(a.life / a.max * Math.PI)) * .7; a.o.visible = a.life > 0 }
   }
-  return { emet, fiskir, update, dispose: () => { geo.dispose(); mat.dispose(); texture.dispose(); noktaDoku.dispose(); scene.remove(points); steam.forEach(a => { a.o.material.dispose(); scene.remove(a.o) }) } }
+  function azalt(v: boolean) { oran = v ? .3 : 1; sinirN = v ? Math.floor(n * .3) : n; geo.setDrawRange(0, sinirN) }
+  return { emet, fiskir, update, azalt, dispose: () => { geo.dispose(); mat.dispose(); texture.dispose(); noktaDoku.dispose(); scene.remove(points); steam.forEach(a => { a.o.material.dispose(); scene.remove(a.o) }) } }
 }

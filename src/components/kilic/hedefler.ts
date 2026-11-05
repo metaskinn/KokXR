@@ -347,6 +347,10 @@ export function hedefleriKur(scene: T.Scene, bul: (ad: string) => T.Mesh, azHare
     sifirla,
     ayrilan: () => ayrilan,
     hasarlar: () => hasar.slice(),
+    // VR savurmasının hedefe çekileceği dikdörtgen; rulo kesildikçe tepesi alçalır.
+    kutu: (i: number) => i === 0 ? { minX: RULO.x - RULO.r, maxX: RULO.x + RULO.r, minY: RULO.alt + .06, maxY: Math.max(RULO.alt + .07, ruloUst.y - .03), z: RULO.z }
+      : i === 1 ? { minX: KUTUK.x - KUTUK.yari, maxX: KUTUK.x + KUTUK.yari, minY: KUTUK.y - KUTUK.r, maxY: KUTUK.y + KUTUK.r, z: KUTUK.z }
+      : { minX: KUMAS.x - KUMAS.gen / 2, maxX: KUMAS.x + KUMAS.gen / 2, minY: KUMAS.ust - KUMAS.boy, maxY: KUMAS.ust, z: KUMAS.z },
     guncelle(dt: number, aktif: boolean) {
       // Kumaş yalnız test alanındayken hesaplanır.
       if (aktif) kumasAdim(dt)

@@ -17,13 +17,17 @@ import { parcacikHavuzu } from './parcacik'
 import { sesOlustur } from './ses'
 import { kesimHesapla } from './test'
 import { kilicParcaNotlari } from '../../data/kilic'
+import { xrOturumuKur } from './xrOturum'
+import { enYakinBolge, isinEksenX } from './xrHesap'
 export type Komut = 'al' | 'devam' | 'yeniden' | 'usta' | 'vur' | 'tak' | 'kes' | 'hedefleri-yenile' | 'bastan'
 export interface KilicSahnesi {
   komut: (ad: Komut) => void; tut: (ad: 'koruk' | 'su' | 'bile', v: boolean) => void
   sec: (id: number) => void; hedef: (id: number) => void; ses: (ac: boolean) => void
   zoom: (oran: number) => void; dondur: (x: number) => void; temizle: () => void
+  /** Kullanıcı jesti kaybolmasın: requestSession'dan önce await yok. */
+  xrBaslat: () => Promise<void>
 }
-export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void, hata: () => void, not: (id: number) => void): Promise<KilicSahnesi> {
+export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void, hata: () => void, not: (id: number) => void, xrDegisti?: (aktif: boolean) => void): Promise<KilicSahnesi> {
   const scene = new T.Scene(); scene.background = new T.Color('#11191a'); scene.fog = new T.FogExp2('#11191a', .025)
   const renderer = new T.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' })
   renderer.outputColorSpace = T.SRGBColorSpace; renderer.toneMapping = T.ACESFilmicToneMapping; renderer.toneMappingExposure = .95
@@ -123,7 +127,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
   })
   const action = document.createElement('button'); action.className = 'kilic-sahne-isaret'; alan.append(action)
   const ray = new T.Raycaster(), pointer = new T.Vector2()
-  const emit = () => { if (!disposed) bildir({ ...d, bolgeler: d.bolgeler.map(b => ({ ...b })), sonuclar: [...d.sonuclar] }) }
+  const emit = () => { if (!disposed && !renderer.xr.isPresenting) bildir({ ...d, bolgeler: d.bolgeler.map(b => ({ ...b })), sonuclar: [...d.sonuclar] }) }
   function resetTargets() { hedefler.sifirla(); d.sonuclar = []; d.hasarlar = [0, 0, 0] }
   function tasimaBaslat() {
     if (az) return
@@ -153,7 +157,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
       cameraGoal.set(TAS_X + .42, 1.42, -.32); targetGoal.set(TAS_X - .06, 1.12, TAS_Z)
     }
     else if (a === 5) { cameraGoal.set(3.25, 2.4, -.3); targetGoal.set(2.85, 1, -2.45); swordGoal.set(2.45, 1.04, -2.45) }
-    else if (a === 6) { cameraGoal.set(.5, 1.85, 2.05); targetGoal.set(.42, 1.62, 0); swordGoal.set(0, 1.62, 0); swordRotation.set(.18, swordRotation.y === 0 ? -.1 : swordRotation.y, .13) }
+    else if (a === 6) { cameraGoal.set(.5, 1.85, 2.05); targetGoal.set(.42, 1.62, 0); swordGoal.set(0, 1.62, 0); swordRotation.set(.18, swordRotation.y === 0 ? -.1 : swordRotation.y, .13); if (renderer.xr.isPresenting) xrIncelemeYeri() }
     else { const m = hedefMerkez[d.hedef], h = d.hedef; cameraGoal.set(m.x + .5, h === 1 ? 1.3 : 1.5, h === 2 ? 2.9 : h === 1 ? 2.05 : 2.5); targetGoal.set(m.x, h === 2 ? 1.2 : h === 1 ? .82 : 1.05, -.1); swordGoal.set(m.x - .85, h === 2 ? 1.05 : .9, .55); swordRotation.set(.25, -.25, .95) }
     atolye.visible = a !== 6; supports.visible = stand.visible = a === 6; rim.intensity = a === 6 ? 8 : 22; hammer.visible = a === 2 && !d.yeniden
     scene.environmentIntensity = a === 7 ? .9 : a === 6 ? .9 : .42
@@ -162,6 +166,8 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     ;(scene.fog as T.FogExp2).density = a === 7 ? .009 : .025
     scene.background = new T.Color(a === 7 ? '#879c9d' : a === 6 ? '#0d161a' : '#11191a')
   }
+  // VR: kılıç namlu ortası çevresinde döner; ucu kullanıcıya doğru savrulmaz.
+  function xrIncelemeYeri() { const r = swordRotation.y; swordGoal.set(.42 - .42 * Math.cos(r), 1.62, .42 * Math.sin(r)) }
   function doHit() {
     if (hammerTime < CEKIC_TUR || d.asama !== 2 || d.yeniden || d.usta) return
     hammerTime = 0; darbeOldu = false; bekleyenVurus = true; vurusBolgesi = selected; ses.baslat(); emit()
@@ -172,7 +178,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     if (vuruldu) { const onceki = d.asama; vur(d, vurusBolgesi); if (onceki !== d.asama) stageView() }
     const sicak = d.bolgeler[vurusBolgesi].isi, n = sicak > 750 ? 46 : sicak > 550 ? 24 : 12, nokta = new T.Vector3(0, .925, -.1)
     particles.fiskir(nokta, new T.Vector3(.75, .55, .35), n / 2, 1.1, 3.1); particles.fiskir(nokta, new T.Vector3(-.75, .55, .35), n / 2, 1.1, 3.1)
-    ses.cal('cekic'); flas = sicak > 550 ? 1 : .35; ziplama.v = az ? 0 : .26
+    ses.cal('cekic'); xr.titret(sicak > 550 ? .9 : .5, 70); flas = sicak > 550 ? 1 : .35; ziplama.v = az ? 0 : .26
     if (!az) sarsinti.v = -.34
     if (vuruldu) emit()
   }
@@ -214,7 +220,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     // Darbe zamana bağlıdır: düşük kare hızında savurma evresi atlansa da hasar uygulanır.
     if (!k.vuruldu && k.t >= K_HAZIRLIK + K_SAVUR * .75) { k.vuruldu = true; vurusUygula(k) }
   }
-  function vurusUygula(k: NonNullable<typeof kesim>) {
+  function vurusUygula(k: Pick<NonNullable<typeof kesim>, 'a' | 'b' | 'dx' | 'dy' | 'sec'>) {
     const onceki = { puan: d.puan, rozet: d.rozet, kirildi: d.kirildi }
     const s = kesimHesapla(d, k.dx, k.dy, k.sec), r = hedefler.vur(d.hedef, k.a, k.b, s.guc)
     if (!r.isabet) { d.puan = onceki.puan; d.rozet = onceki.rozet; d.kirildi = onceki.kirildi; d.mesaj = r.mesaj; d.sonuclar[d.hedef] = r.mesaj; emit(); return }
@@ -308,19 +314,77 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     if (e.key === '+' || e.key === '-') camera.position.sub(controls.target).multiplyScalar(e.key === '+' ? .9 : 1.1).add(controls.target)
   }
   function keyup(e: KeyboardEvent) { if (e.code === 'Space') { e.preventDefault(); cancel() } }
-  function contextLost(e: Event) { e.preventDefault(); cancel(); renderer.setAnimationLoop(null); ses.bekle(true); hata() }
-  function visibility() { cancel(); if (document.hidden) { renderer.setAnimationLoop(null); ses.bekle(true) } else { last = performance.now(); renderer.setAnimationLoop(frame); ses.bekle(false) } }
+  function contextLost(e: Event) { e.preventDefault(); cancel(); xr.bitir(); renderer.setAnimationLoop(null); ses.bekle(true); hata() }
+  function visibility() { cancel(); if (renderer.xr.isPresenting) return; if (document.hidden) { renderer.setAnimationLoop(null); ses.bekle(true) } else { last = performance.now(); renderer.setAnimationLoop(frame); ses.bekle(false) } }
   alan.addEventListener('pointerdown', pointerDown); alan.addEventListener('pointermove', pointerMove); alan.addEventListener('pointerup', pointerUp); alan.addEventListener('pointercancel', cancel); alan.addEventListener('lostpointercapture', cancel); alan.addEventListener('keydown', keydown); alan.addEventListener('keyup', keyup); window.addEventListener('blur', cancel); document.addEventListener('visibilitychange', visibility); renderer.domElement.addEventListener('webglcontextlost', contextLost)
-  function size() { const w = alan.clientWidth, h = alan.clientHeight; renderer.setSize(w, h, false); composer.setSize(w, h); fxaa.uniforms.resolution.value.set(1 / (w * renderer.getPixelRatio()), 1 / (h * renderer.getPixelRatio())); camera.aspect = w / h; camera.setViewOffset(w, h, w > 700 ? 165 : 0, 0, w, h); camera.updateProjectionMatrix() }
+  function size() { if (renderer.xr.isPresenting) return; const w = alan.clientWidth, h = alan.clientHeight; renderer.setSize(w, h, false); composer.setSize(w, h); fxaa.uniforms.resolution.value.set(1 / (w * renderer.getPixelRatio()), 1 / (h * renderer.getPixelRatio())); camera.aspect = w / h; camera.setViewOffset(w, h, w > 700 ? 165 : 0, 0, w, h); camera.updateProjectionMatrix() }
   const observer = new ResizeObserver(size); alan.prepend(renderer.domElement); observer.observe(alan); size(); deform.guncelle(d.bolgeler); stageView(); camera.position.copy(cameraGoal); controls.target.copy(targetGoal); kilic.position.copy(swordGoal); kilic.rotation.copy(swordRotation); lastStage = 0
   function screen(p: T.Vector3) { const a = p.clone().project(camera); return { x: (a.x + 1) * alan.clientWidth / 2, y: (1 - a.y) * alan.clientHeight / 2, z: a.z } }
+  function xrDamga() {
+    alan.dataset.takilan = String(ekler.filter(o => o.visible).length); alan.dataset.ayrilan = String(hedefler.ayrilan()); alan.dataset.hasar = hedefler.hasarlar().map(v => v.toFixed(2)).join(','); alan.dataset.asama = String(d.asama); alan.dataset.bolgeler = d.bolgeler.map(b => b.p.toFixed(2)).join(','); alan.dataset.cekic = hammerTime >= CEKIC_TUR ? '1' : '0'
+    alan.dataset.xrSahne = JSON.stringify({ isi: Math.round(ortalama(d, 'isi')), cilt: +ortalama(d, 'cilt').toFixed(3), daldirma: +d.daldirma.toFixed(2), secili: selected, bileU: +bileU.toFixed(3), hedef: d.hedef, puan: d.puan, mesaj: d.mesaj, usta: d.usta, y: +swordRotation.y.toFixed(3), kilic: kilic.position.toArray().map(v => +v.toFixed(3)), golge: key.castShadow, cizim: renderer.info.render.calls, ucgen: renderer.info.render.triangles, program: renderer.info.programs?.length ?? 0, doku: renderer.info.memory.textures, geo: renderer.info.memory.geometries })
+  }
+  // Parça düğümleri kılıçla aynı başlangıçtadır; asıl merkez geometridedir.
+  const parcaMerkezi = new Map(parcalar.map(ad => { const b = new T.Box3(); obj(ad).traverse(c => { if (c instanceof T.Mesh) { c.geometry.computeBoundingBox(); b.union(c.geometry.boundingBox!) } }); return [ad, b.getCenter(new T.Vector3())] }))
+  let xrParca: { ad: string; m: T.Matrix4 } | null = null, xrElleOturdu = false
+  const kutuNokta = new T.Box3(), kutuMerkez = new T.Vector3(), yerelRay = new T.Ray(), tersMat = new T.Matrix4()
+  const incelemeZemini = new T.Mesh(new T.CircleGeometry(3, 48).rotateX(-Math.PI / 2), new T.MeshStandardMaterial({ color: '#141b1c', roughness: .95 })); incelemeZemini.position.set(.42, 0, 0); incelemeZemini.visible = false; scene.add(incelemeZemini)
+  const xr = xrOturumuKur(renderer, scene, camera, {
+    oyun: () => d, reheat: () => reheatSu, komut, tut,
+    bolgeSec: i => { selected = sinir(i, 0, 11); d.secili = selected; bileU = (selected + .5) / 12; stageView() },
+    hedefSec: i => { d.hedef = sinir(i, 0, 2); xr.hedefDegisti(); stageView() },
+    dondur: a => { swordRotation.y += a; xrIncelemeYeri() },
+    bolgeBul: r => {
+      kilic.updateWorldMatrix(true, false); yerelRay.copy(r).applyMatrix4(tersMat.copy(kilic.matrixWorld).invert())
+      const merkezler = gorsel.map((_, i) => deform.merkez(gorsel, i)), boy = merkezler[11] + .05
+      const h = isinEksenX(yerelRay.origin, yerelRay.direction, boy)
+      return h.uzaklik <= .16 ? enYakinBolge(merkezler, h.x) : null
+    },
+    bolgeNoktasi: (i, h) => { kilic.localToWorld(h.set(deform.merkez(gorsel, i), 0, .006)); h.y += .045; return h },
+    nesneNoktasi: (ad, h) => {
+      const n = ad === 'yumurta' ? yumurta : ad === 'koruk' ? koruk : obj(ad)
+      n.updateWorldMatrix(true, true); kutuNokta.setFromObject(n); kutuNokta.getCenter(kutuMerkez); return h.copy(kutuMerkez)
+    },
+    hedefNoktasi: i => hedefMerkez[i], hedefKutu: i => hedefler.kutu(i),
+    bileU: () => bileU, bileSur: u => { bileU = u; selected = Math.min(11, Math.floor(bileU * 12)); d.secili = selected }, tasZ: TAS_Z,
+    kes: c => {
+      if (d.asama !== 7 || d.usta || kesim || d.kirildi) return
+      ses.cal('kesim'); vurusUygula({ a: c.a, b: c.b, dx: c.dx, dy: c.dy, sec: c.sure })
+    },
+    izEkle: () => iz.ekle(kilic), kesimSuruyor: () => !!kesim,
+    kilicKonum: (p, q) => { kilic.position.copy(p); kilic.quaternion.copy(q) },
+    parcaMatris: ad => { const o = obj(ad); o.updateWorldMatrix(true, false); return o.matrixWorld },
+    parcaTasi: (ad, m) => { xrParca = m ? { ad, m } : null; if (!m) { const o = obj(ad); o.quaternion.identity(); o.scale.set(1, 1, 1) } },
+    parcaYeri: (ad, h) => kilic.localToWorld(h.copy(parcaMerkezi.get(ad)!)),
+    parcaUzaklik: ad => xrParca ? kilic.localToWorld(kutuMerkez.copy(parcaMerkezi.get(ad)!)).distanceTo(parcaMerkezi.get(ad)!.clone().applyMatrix4(xrParca.m)) : Infinity,
+    parcaOturt: () => { xrElleOturdu = true; komut('tak') },
+    zemin: v => { incelemeZemini.visible = v },
+    oturumBasladi: () => {
+      cancel(); tasima = null; kameraIz.sifirla(); hedefIz.sifirla(); sarsinti.x = sarsinti.v = 0
+      markers.forEach(({ b }) => { b.hidden = true }); action.hidden = true; onizleme.visible = false
+      // Quest için: gölge haritası ve tepe ışığı kapanır, parçacık azalır. Bir kez gölgelendirici derlenir.
+      key.castShadow = false; rim.visible = false; particles.azalt(true)
+      alan.dataset.xr = '1'; stageView(); xrDamga(); xrDegisti?.(true)
+    },
+    oturumBitti: () => {
+      cancel(); key.castShadow = true; rim.visible = true; particles.azalt(false)
+      // Three.js near/far ve görüş açısını XR'dan kalan değerde bırakır.
+      camera.fov = 42; camera.zoom = 1; camera.near = .025; camera.far = 70
+      delete alan.dataset.xr
+      stageView(); camera.position.copy(cameraGoal); camera.quaternion.identity(); controls.target.copy(targetGoal); kilic.position.copy(swordGoal); kilic.rotation.copy(swordRotation); tasima = null; kilicIz.sifirla(); kameraIz.sifirla(); hedefIz.sifirla()
+      size(); controls.update(); last = performance.now(); slow = 0; emit(); xrDegisti?.(false)
+    },
+    damga: (ad, v) => { alan.dataset[ad] = v },
+  })
   function frame() {
-    if (disposed || document.hidden) return
+    const xrAcik = renderer.xr.isPresenting
+    if (disposed || (document.hidden && !xrAcik)) return
     const now = performance.now(), raw = (now - last) / 1000, gercekDt = Math.min(.1, raw); last = now
     if (durma > 0) durma -= gercekDt
     const dt = durma > 0 ? gercekDt * .08 : gercekDt; time += dt; publish += gercekDt
+    if (xrAcik) xr.kare(gercekDt)
     if (raw > .045) slow += raw; else slow = Math.max(0, slow - gercekDt * .5)
-    if (slow > 1.5 && tier < 2) { tier++; renderer.setPixelRatio(tier === 1 ? .85 : .65); composer.setPixelRatio(tier === 1 ? .85 : .65); bloom.enabled = tier < 2; slow = 0; size() }
+    if (!xrAcik && slow > 1.5 && tier < 2) { tier++; renderer.setPixelRatio(tier === 1 ? .85 : .65); composer.setPixelRatio(tier === 1 ? .85 : .65); bloom.enabled = tier < 2; slow = 0; size() }
     if (d.usta) {
       masterTime += Math.min(.5, raw)
       if (d.asama === 1 || d.yeniden) isit(d, dt * 3, true)
@@ -333,7 +397,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     else if (d.asama === 2) { d.bolgeler.forEach(b => { b.isi = Math.max(20, b.isi - dt * 7) }); if (dragging && hammerTime >= CEKIC_TUR) doHit() }
     else if (d.asama === 3) { if (korukTut) isit(d, dt, true); else if (suTut) suVer(d, dt); else d.bolgeler.forEach(b => { b.isi = b.isi + Math.sign(835 - b.isi) * Math.min(Math.abs(835 - b.isi), dt * 80) }) }
     else if (d.asama === 4 && bileTut) { bile(d, selected, dt); if (time - lastHit > .12) { ses.cal('bileme'); lastHit = time } }
-    if (lastStage !== d.asama || lastReheat !== d.yeniden) { transitionTime = 0; lastStage = d.asama; lastReheat = d.yeniden; cancel(); stageView(); tasimaBaslat(); emit() }
+    if (lastStage !== d.asama || lastReheat !== d.yeniden) { transitionTime = 0; lastStage = d.asama; lastReheat = d.yeniden; cancel(); stageView(); tasimaBaslat(); emit(); xr.asamaDegisti() }
     if (d.asama === 2 || d.asama === 3 || d.asama === 4) stageView()
     transitionTime += dt
 
@@ -342,7 +406,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     deform.guncelle(gorsel)
 
     // Kamera ve kılıç: sönümlü takip; uzak aşama geçişi yukarı kavisli taşımayla.
-    if (d.asama !== 6 || transitionTime < 1.4) { if (az) { camera.position.copy(cameraGoal); controls.target.copy(targetGoal) } else { kameraIz.takip(camera.position, cameraGoal, .5, dt); hedefIz.takip(controls.target, targetGoal, .42, dt) } }
+    if (!xrAcik && (d.asama !== 6 || transitionTime < 1.4)) { if (az) { camera.position.copy(cameraGoal); controls.target.copy(targetGoal) } else { kameraIz.takip(camera.position, cameraGoal, .5, dt); hedefIz.takip(controls.target, targetGoal, .42, dt) } }
     controls.enabled = d.asama === 6 && transitionTime >= 1.4
     hedefQ.setFromEuler(swordRotation)
     if (kesim) kesimKare(dt)
@@ -354,6 +418,8 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
       if (az) kilic.position.copy(swordGoal); else kilicIz.takip(kilic.position, swordGoal, d.asama === 4 ? .045 : d.asama === 7 ? .22 : .1, dt)
       kilic.quaternion.slerp(hedefQ, az ? 1 : 1 - Math.exp(-dt * 11))
     }
+
+    if (xrAcik && !kesim && xr.kilicYerlestir()) tasima = null
 
     // Çekiç: kalkış, hızlanan iniş, darbe, sekme, bekleme.
     hammerTime += dt
@@ -370,7 +436,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
 
     // Kamera sarsıntısı: yay, tek darbede sönen.
     yayAdim(sarsinti, 1500, 32, gercekDt)
-    camera.position.y += sarsinti.x
+    if (!xrAcik) camera.position.y += sarsinti.x
 
     tongs.visible = d.asama >= 1 && d.asama <= 3
     yumurta.visible = d.asama === 0; kilic.visible = d.asama !== 0
@@ -405,7 +471,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     } else if (!suTut) suIciydi = false
 
     // Kuşanma: sıradaki parça yanında süzülür; takılınca kavisle gelip tık diye oturur.
-    if (d.takilan !== lastTak) { takTime = 0; lastTak = d.takilan; takIndi = false }
+    if (d.takilan !== lastTak) { takTime = xrElleOturdu ? .44 : 0; xrElleOturdu = false; lastTak = d.takilan; takIndi = false }
     takTime += dt
     if (!takIndi && takTime >= .44 && d.takilan > 0) { takIndi = true; ses.cal('ting'); const s = kilic.localToWorld(asillar.get(parcalar[d.takilan - 1])!.clone()); particles.fiskir(s, new T.Vector3(0, .6, 0), 12, 1.3, .9) }
     ekler.forEach(o => {
@@ -419,12 +485,19 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
         o.position.y += .12 * (1 - k); o.position.z += .14 * (1 - k)
         if (o.name.startsWith('Percin')) o.rotation.z = (1 - k) * 7
       }
+      if (xrParca?.ad === o.name) tersMat.copy(kilic.matrixWorld).invert().multiply(xrParca.m).decompose(o.position, o.quaternion, o.scale)
     })
     gold = d.takilan >= 7 ? Math.min(1, gold + dt * .7) : 0; kakma.opacity = gold; crack.visible = d.catlak
 
     hedefler.guncelle(gercekDt, d.asama === 7)
-    particles.update(dt); controls.update(); scene.updateMatrixWorld(true)
+    particles.update(dt); if (!xrAcik) controls.update(); scene.updateMatrixWorld(true)
     izGuncelle(dt)
+    if (xrAcik) {
+      // Efekt zinciri yok; HTML görünmez olduğundan ekran hesapları da yok.
+      renderer.render(scene, camera)
+      if (publish > .15) { publish = 0; xrDamga() }
+      return
+    }
     markers.forEach(({ b, p }) => { b.hidden = d.asama !== 6; if (!b.hidden) { const q = screen(kilic.localToWorld(p.clone())); b.style.left = `${q.x}px`; b.style.top = `${q.y - 18}px` } })
     action.hidden = !(d.asama === 0 || d.asama === 5 && d.takilan < 7)
     if (!action.hidden) { const nesne = d.asama === 0 ? yumurta : obj(parcalar[d.takilan]); const q = screen(nesne.getWorldPosition(new T.Vector3())); action.style.left = `${q.x}px`; action.style.top = `${q.y - 35}px`; action.textContent = d.asama === 0 ? '01 · Külçeyi al' : `${d.takilan + 1} · Parçayı yerleştir` }
@@ -437,8 +510,8 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     composer.render(); if (publish > .15) { publish = 0; emit() }
   }
   collect(scene); renderer.setAnimationLoop(frame); emit()
-  return { komut, tut, sec: id => { selected = sinir(id, 0, 11); d.secili = selected; bileU = (selected + .5) / 12; stageView(); emit() }, hedef: id => { d.hedef = sinir(id, 0, 2); stageView(); emit() }, ses: v => { ses.ac(v) }, zoom: oran => { camera.position.sub(controls.target).multiplyScalar(oran).add(controls.target) }, dondur: x => { const v = camera.position.clone().sub(controls.target); v.applyAxisAngle(new T.Vector3(0, 1, 0), x); camera.position.copy(controls.target).add(v) }, temizle: () => {
-    disposed = true; renderer.setAnimationLoop(null); cancel(); observer.disconnect(); controls.dispose(); ses.dispose(); particles.dispose(); hedefler.temizle(); iz.sil(); onizlemeGeo.dispose(); (onizleme.material as T.Material).dispose()
+  return { xrBaslat: async () => { ses.baslat(); await xr.baslat() }, komut, tut, sec: id => { selected = sinir(id, 0, 11); d.secili = selected; bileU = (selected + .5) / 12; stageView(); emit() }, hedef: id => { d.hedef = sinir(id, 0, 2); stageView(); emit() }, ses: v => { ses.ac(v) }, zoom: oran => { camera.position.sub(controls.target).multiplyScalar(oran).add(controls.target) }, dondur: x => { const v = camera.position.clone().sub(controls.target); v.applyAxisAngle(new T.Vector3(0, 1, 0), x); camera.position.copy(controls.target).add(v) }, temizle: () => {
+    disposed = true; xr.temizle(); renderer.setAnimationLoop(null); cancel(); observer.disconnect(); controls.dispose(); ses.dispose(); particles.dispose(); hedefler.temizle(); iz.sil(); onizlemeGeo.dispose(); (onizleme.material as T.Material).dispose()
     alan.removeEventListener('pointerdown', pointerDown); alan.removeEventListener('pointermove', pointerMove); alan.removeEventListener('pointerup', pointerUp); alan.removeEventListener('pointercancel', cancel); alan.removeEventListener('lostpointercapture', cancel); alan.removeEventListener('keydown', keydown); alan.removeEventListener('keyup', keyup); window.removeEventListener('blur', cancel); document.removeEventListener('visibilitychange', visibility); renderer.domElement.removeEventListener('webglcontextlost', contextLost)
     markers.forEach(({ b, click }) => { b.removeEventListener('click', click); b.remove() }); action.removeEventListener('click', actionClick); action.remove(); collect(scene); geometriler.forEach(g => g.dispose()); mats.forEach(m => m.dispose()); textures.forEach(t => t.dispose()); env.dispose(); composer.passes.forEach(p => p.dispose()); composer.dispose(); renderer.dispose(); renderer.domElement.remove()
   } }

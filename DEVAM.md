@@ -1,8 +1,53 @@
 # KökXR — Başka bilgisayarda devam rehberi
 
-> Son güncelleme: 3 Kasım 2026, 15:45 · **Kod dondurma: 4 Kasım akşamı** · **Final: 7–8 Kasım 2026**
+> Son güncelleme: 5 Kasım 2026 · **Final: 7–8 Kasım 2026**
 > Bu dosya, projeye yeni bir bilgisayarda (ve yeni bir Claude / Codex / Antigravity oturumunda) kaldığı yerden
 > devam etmek için gereken her şeyi içerir. Yeni oturumda yapay zekâ ajanına ilk olarak bu dosyayı okutun.
+
+---
+
+## 0. Buradan devam et (5 Kasım 2026)
+
+```bash
+git fetch origin
+git switch cini-atolyesi      # bu not ve çini atölyesi bu dalda; master'da henüz yok
+npm install
+npm run build && npm run preview -- --port 4173
+```
+Yeni yapay zekâ oturumuna: "DEVAM.md'yi oku, 0. bölümden devam et" de.
+
+### Dallar
+| Dal | İçinde ne var | Durum |
+|---|---|---|
+| `master` | Site, kılıç, vazo (masaüstü), Ulu Camii maketi ve VR'ı | GitHub'da, `3286759` |
+| `cini-atolyesi` | `master` + çini atölyesi (web ve VR) + bu not | GitHub'da, **master'a girmedi** |
+| `vr-panel-gecis` | `wip/vr-tutma` + Ulu Camii VR'da kart/menü düzeni ve karartmalı geçiş | GitHub'da, **master'a girmedi** |
+| `wip/vr-vazo` | `vaat-mokap` + vazo VR onarımı (yarım) | GitHub'da, simülasyonda çalıştı |
+| `vaat-mokap` | Zaman katmanı, yolculuk, öğretmen paneli, vizyon ekranları | GitHub'da, master'a girmedi; birleştirmeden önce kullanıcıya sor |
+
+### Bekleyen kararlar (kullanıcıya sor)
+1. `cini-atolyesi`, `vr-panel-gecis`, `vaat-mokap` master'a birleştirilecek mi, hangi sırayla? Birleştirmeden önce çakışmalara ve testlere bak.
+2. Vazo VR: panel "altındaki örnek yazıyı oku" diyor ama vazonun altında yazı yok (`ALT_YAZI` sabiti sahneye hiç eklenmemiş). Yazı mı eklenecek, yönerge mi kalkacak? Öneri: yönergeyi kaldırmak.
+3. Sunum (`KokXR_Sunum_v2.pptx`, 3 slayt) güncellenecek mi? Şartname 5.4 başlıkları eksikti.
+
+### Yapılacaklar
+- [ ] **Gerçek Quest denemesi (cuma, kullanıcıyla):** Ulu Camii, vazo ve çini VR'ı şimdiye dek yalnız simülasyonda (IWER) çalıştı. Performans ve kumanda hissi bilinmiyor.
+- [ ] Videolar `git` dışında, eski bilgisayarın masaüstünde: `kokxr-vr-simulasyon-3`, `kokxr-vazo-vr-simulasyon`, `kokxr-kilic-atolyesi-2`, `kokxr-cini-atolyesi-web`, `kokxr-cini-vr-simulasyon` (hepsi `.webm`). Kod değişirse yeniden çekilmeli.
+- [ ] Çini: ses yok; sürükleme adımlarının klavye karşılığı yok, "Ustaya bırak" ile geçiliyor.
+
+### Çini atölyesi (`/atolye/cini`)
+Kod `src/components/cini/`, metinler `src/data/cini.ts`, kaynaklar ve sınırlar `docs/cini-atolyesi.md`.
+Testler: `node tests/cini-mantik.mjs` ve (4173 açıkken) `node tests/cini.mjs`.
+Oksit eşleştirmesi ve çamur malzeme adları kaynakla doğrulanamadığı için bilerek oyuna alınmadı; kaynaksız eklemeyin.
+
+### Video kaydı: Playwright'ın kaydına güvenme
+`recordVideo` ve CDP ekran yayını WebGL karesini yarım yakalayabiliyor: tek gözde kaybolan nesneler, dış çatının içeri "patlaması".
+Bunlar sahnede değil, kayıttadır. Sabit sahnede çizim tamponu 240/240 aynıyken ekran yayını 200 karede 40 farklı görüntü verdi.
+- **VR:** render sonrası `gl.finish()`, sonra `drawImage` ile 2B tuvale al, `toBlob` JPEG, 30 kare/sn dizip Playwright'ın ffmpeg'iyle (`~/.cache/ms-playwright/ffmpeg-*/ffmpeg-linux`) `libvpx-vp9 -deadline good -crf 20` kodla.
+- **HTML arayüzlü sayfa:** rAF sonrası `gl.finish()` + CDP ekran yayını JPEG, tarayıcı `--use-angle=vulkan`. gl-egl'de kılıçta tek karelik tam siyah kareler çıktı, Vulkan'da çıkmadı (RTX 3070 Ti; başka bilgisayarda yeniden ölç).
+- **Vulkan'da** yeni WebGL bağlamı açılışta bir kez düşüp geri gelebiliyor: `webglcontextlost`'ta hemen hata gösterme, 2B tuval dokularında `willReadFrequently: true` kullan.
+- Teslimden önce kare panosuna kendin bak. Simülatör için `tests/xr-sim/` `vaat-mokap` dalındadır; kayıt betikleri geçiciydi ve repoda yok.
+- `channel: 'chrome'` kullanan testler (`vazo`, `ui`, `galeri`, `maket-ic`, `maket-xr-dugme`) Google Chrome ister.
 
 ---
 

@@ -1,5 +1,7 @@
 # KökXR — Meta Quest çalışması devir notu
 
+> **Eski not.** Güncel durum ve sıradaki işler `PLAN.md` dosyasındadır; burayı yalnız VR teknik ayrıntıları ve yük ölçümleri için kullan. "Sıradaki işler" ve test durumu bölümleri artık geçerli değil.
+
 > Yazıldı: 4 Kasım 2026 akşamı. Kullanıcı bilgisayar değiştirdiği için çalışma burada durduruldu.
 > **Yeni oturumdaki yapay zekâ ajanına:** Önce bu dosyayı, sonra `AGENTS.md`, `DEVAM.md` ve
 > `docs/superpowers/plans/2026-11-04-ulu-camii-quest.md` dosyalarını oku. Ardından "Sıradaki işler" bölümünden devam et.

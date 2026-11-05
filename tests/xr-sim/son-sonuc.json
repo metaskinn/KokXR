@@ -1,0 +1,1431 @@
+[
+ {
+  "ad": "A0 VR'da aç görünüyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "kalite": 2,
+   "kare": 6
+  }
+ },
+ {
+  "ad": "A1 oturum açıldı, WebXRManager sunuyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "sunuyor": true,
+   "xr": {
+    "katman": "$n",
+    "fbNull": true,
+    "ozellikler": [
+     "local-floor",
+     "viewer",
+     "local"
+    ],
+    "uzay": "Pn",
+    "gl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "ua": "Mozilla/5.0 (X11; Linux x86_64; Quest 3) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/33.0.0.x.x.x Chrome/126.0.6478.122 VR Safari/537.36"
+   },
+   "girdiler": [
+    "left:4a/7b",
+    "right:4a/7b"
+   ],
+   "near": 0.05,
+   "far": 900,
+   "arka": "#1a2b25"
+  }
+ },
+ {
+  "ad": "A1 menü görünür",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "menuYerel": [
+    -0.0315,
+    1.6,
+    -1.34
+   ],
+   "basYerel": [
+    -0.0315,
+    1.6,
+    0
+   ]
+  }
+ },
+ {
+  "ad": "A1 rig maket görünümünde (ölçek 100, P=0,-90,-120, rotY=π)",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "rigP": [
+    0,
+    -90,
+    -120
+   ],
+   "rigRotY": 3.1416,
+   "rigOlcek": 100,
+   "maketYerel": [
+    0,
+    0.9,
+    -1.2
+   ],
+   "disk": true,
+   "bas": [
+    3.15,
+    70,
+    -120
+   ]
+  }
+ },
+ {
+  "ad": "A1 sayfa düğmeleri oturumda kilitli",
+  "sonuc": "GECTI",
+  "dayanak": [
+   [
+    "İçeri gir",
+    true
+   ],
+   [
+    "VR'da aç",
+    true
+   ],
+   [
+    "⤒ Parçala",
+    true
+   ],
+   [
+    "⟳ Kendi kendine dönsün",
+    true
+   ],
+   [
+    "Görünümü sıfırla",
+    true
+   ],
+   [
+    "Tam ekran",
+    false
+   ]
+  ]
+ },
+ {
+  "ad": "A1 iki göz framebuffer çizimi",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "yol": "xr-sim/ekran/01-oturum-acilis.png",
+   "w": 960,
+   "h": 540,
+   "sol": {
+    "ort": 36,
+    "arkaDisi": 0.414
+   },
+   "sag": {
+    "ort": 36,
+    "arkaDisi": 0.416
+   },
+   "gozFarki": 3.48
+  }
+ },
+ {
+  "ad": "A1 menü dokusu",
+  "sonuc": "GECTI",
+  "dayanak": "xr-sim/ekran/01-menu-doku.png"
+ },
+ {
+  "ad": "A2 ölü bölge altı hareket yok (0.15)",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    3.1416,
+    100
+   ],
+   "sonra": [
+    3.1416,
+    100
+   ]
+  }
+ },
+ {
+  "ad": "A2 sağ çubuk x maketi döndürür, maket önde kalır",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "rotY": [
+    3.1416,
+    2.1816
+   ],
+   "maketYerel": [
+    0,
+    0.9,
+    -1.2
+   ],
+   "rigP": [
+    98.303,
+    -90,
+    -68.8224
+   ]
+  }
+ },
+ {
+  "ad": "A2 çubuk ileri: alt sınır 40, aşılmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "rigOlcek": 40,
+   "maketYerel": [
+    0,
+    0.9,
+    -1.2
+   ],
+   "rigP": [
+    42.334,
+    -36,
+    -22.6238
+   ],
+   "f40": {
+    "yol": "xr-sim/ekran/02-olcek-40.png",
+    "w": 960,
+    "h": 540,
+    "sol": {
+     "ort": 72,
+     "arkaDisi": 0.481
+    },
+    "sag": {
+     "ort": 98,
+     "arkaDisi": 0.48
+    },
+    "gozFarki": 34.31
+   }
+  }
+ },
+ {
+  "ad": "A2 çubuk geri: üst sınır 200, aşılmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "rigOlcek": 200,
+   "maketYerel": [
+    0,
+    0.9,
+    -1.2
+   ],
+   "f200": {
+    "yol": "xr-sim/ekran/02-olcek-200.png",
+    "w": 960,
+    "h": 540,
+    "sol": {
+     "ort": 36,
+     "arkaDisi": 0.414
+    },
+    "sag": {
+     "ort": 36,
+     "arkaDisi": 0.416
+    },
+    "gozFarki": 2.81
+   }
+  }
+ },
+ {
+  "ad": "A2 yön: ileri itiş maketi görsel büyütür (rig küçülür), arka plan dışı piksel 40>200",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "arkaDisi40": 0.481,
+   "arkaDisi200": 0.414
+  }
+ },
+ {
+  "ad": "A3 menüden Parçala katmanları kaldırır",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.4,
+    "u": 0.5
+   },
+   "parcali": true,
+   "katmanY": [
+    24,
+    34,
+    44
+   ]
+  }
+ },
+ {
+  "ad": "A3 parçalı görüntü ve Birleştir etiketi",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "dk": "xr-sim/ekran/03-menu-birlestir.png",
+   "f": {
+    "yol": "xr-sim/ekran/03-parcali.png",
+    "w": 960,
+    "h": 540,
+    "sol": {
+     "ort": 39,
+     "arkaDisi": 0.441
+    },
+    "sag": {
+     "ort": 80,
+     "arkaDisi": 0.439
+    },
+    "gozFarki": 49.57
+   }
+  }
+ },
+ {
+  "ad": "A3 menüden Birleştir katmanları indirir",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.4,
+    "u": 0.5
+   },
+   "parcali": false,
+   "katmanY": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ {
+  "ad": "A4 B menüyü kapatır, basılı tutunca bir kez",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": true,
+   "basili": false,
+   "birak": false
+  }
+ },
+ {
+  "ad": "A4 Y menüyü açar",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "basili": true,
+   "birak": true
+  }
+ },
+ {
+  "ad": "A4 menü kapalıyken tetik eylem yapmaz",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "iceride": false
+  }
+ },
+ {
+  "ad": "A4 baş 90° sola dönükken menü başın önünde açılır",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "menuYerel": [
+    -1.34,
+    1.6,
+    0.0315
+   ],
+   "basYerel": [
+    0,
+    1.6,
+    0.0315
+   ]
+  }
+ },
+ {
+  "ad": "A5 İçeri gir: rig 1×, döşemede, durakta",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.667,
+    "u": 0.5
+   },
+   "bas": [
+    0,
+    2.3,
+    -24.6
+   ],
+   "rigP": [
+    -0.0315,
+    0.7,
+    -24.6
+   ],
+   "rigRotY": -3.1416,
+   "rigOlcek": 1,
+   "disk": false,
+   "carpiyor": false,
+   "icIsik": 40
+  }
+ },
+ {
+  "ad": "A5 durağa dönük (giris: +z)",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "ileri": [
+    0,
+    0,
+    1
+   ]
+  }
+ },
+ {
+  "ad": "A5 giriş kartı açıldı (kapi yarıçapı içinde)",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "aktifBilgi": "kapi",
+   "kartAcik": true,
+   "menuAcik": true,
+   "kartYerel": [
+    -0.0315,
+    1.6,
+    -1.3
+   ],
+   "menuYerel": [
+    -0.0315,
+    1.6,
+    -1.34
+   ],
+   "f": {
+    "yol": "xr-sim/ekran/05-iceri-giris.png",
+    "w": 960,
+    "h": 540,
+    "sol": {
+     "ort": 157,
+     "arkaDisi": 0.995
+    },
+    "sag": {
+     "ort": 156,
+     "arkaDisi": 0.994
+    },
+    "gozFarki": 9.64
+   }
+  }
+ },
+ {
+  "ad": "A5 kart dokusu kaydedildi",
+  "sonuc": "GECTI",
+  "dayanak": "xr-sim/ekran/05-kart-kapi.png"
+ },
+ {
+  "ad": "A5 GÖZLEM kart açıkken menü öğesine nişan karta çarpar (menü erişilemez)",
+  "sonuc": "KALDI",
+  "dayanak": {
+   "tani": {
+    "nesne": "kart",
+    "v": 0.365,
+    "u": 0.282
+   }
+  }
+ },
+ {
+  "ad": "A6 karta ışınla tıkla: kart kapanır, kapalı kalır",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "kart",
+    "v": 0.5,
+    "u": 0.5
+   },
+   "kartAcik": false,
+   "aktifBilgi": null,
+   "kartDom": 0
+  }
+ },
+ {
+  "ad": "A6 kapatılan kart aynı noktada geri açılmaz",
+  "sonuc": "GECTI",
+  "dayanak": {}
+ },
+ {
+  "ad": "A7 ölü bölge altı yürüyüş yok",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    0,
+    2.3,
+    -24.6
+   ],
+   "sonra": [
+    0,
+    2.3,
+    -24.6
+   ]
+  }
+ },
+ {
+  "ad": "A7 sol çubuk ileri: bakış yönünde (+z) yürür, adım ≤0.16 m/kare",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    0,
+    2.3,
+    -24.6
+   ],
+   "sonra": [
+    0,
+    2.3,
+    -23.3142
+   ],
+   "ileriYol": 1.2858000000000018
+  }
+ },
+ {
+  "ad": "A7 sol çubuk sağa: kullanıcının sağına kayar (+z bakarken −x)",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    0,
+    2.3,
+    -23.1542
+   ],
+   "sonra": [
+    -0.8056,
+    2.3,
+    -23.1542
+   ]
+  }
+ },
+ {
+  "ad": "A7 yapıya yaklaşınca bilgi kartı açılır, kaynak satırıyla",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "aktifBilgi": "sadirvan",
+   "bas": [
+    -0.9656,
+    2.3,
+    -15.9216
+   ],
+   "kaynak": "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 60",
+   "baslik": "Şadırvan",
+   "f": {
+    "yol": "xr-sim/ekran/07-kart-yaklasinca.png",
+    "w": 960,
+    "h": 540,
+    "sol": {
+     "ort": 165,
+     "arkaDisi": 0.995
+    },
+    "sag": {
+     "ort": 165,
+     "arkaDisi": 0.995
+    },
+    "gozFarki": 6.82
+   },
+   "doku": "xr-sim/ekran/07-kart-yaklasinca-doku.png"
+  }
+ },
+ {
+  "ad": "A7 kart başın önünde",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "kartYerel": [
+    -0.0315,
+    1.6,
+    -1.3
+   ],
+   "basYerel": [
+    -0.0315,
+    1.6,
+    0
+   ]
+  }
+ },
+ {
+  "ad": "A7 yaklaşma kartı da tıkla kapanır",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "ht": {
+    "nesne": "kart",
+    "v": 0.5,
+    "u": 0.5
+   }
+  }
+ },
+ {
+  "ad": "A7 11 kartın hepsinde kaynak metni çözülüyor (veri)",
+  "sonuc": "GECTI",
+  "dayanak": [
+   [
+    "kapi",
+    "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 44"
+   ],
+   [
+    "sadirvan",
+    "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 60"
+   ],
+   [
+    "minber",
+    "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 48"
+   ],
+   [
+    "mihrap",
+    "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 54"
+   ],
+   [
+    "kubbeler",
+    "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 46"
+   ],
+   [
+    "ic-mekan",
+    "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 46"
+   ],
+   [
+    "hat",
+    "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 46, 57"
+   ],
+   [
+    "dogu-kapisi",
+    "Kaynak: T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Bursa Ulu Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), kulturportali.gov.tr"
+   ],
+   [
+    "mahfil",
+    "Kaynak: T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Bursa Ulu Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), kulturportali.gov.tr"
+   ],
+   [
+    "kursu",
+    "Kaynak: T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Bursa Ulu Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), kulturportali.gov.tr"
+   ],
+   [
+    "kabe-ortusu",
+    "Kaynak: T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Bursa Ulu Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), kulturportali.gov.tr"
+   ]
+  ]
+ },
+ {
+  "ad": "A8 0.6 itiş tetiklemez (eşik 0.7)",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "rotY": [
+    -3.1416,
+    -3.1416
+   ]
+  }
+ },
+ {
+  "ad": "A8 sağa itiş: 8 kare basılıyken tek 30° dönüş",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "donusDerece": -30.00007015304991,
+   "kare": 8
+  }
+ },
+ {
+  "ad": "A8 dönüş başın çevresinde: baş yeri sabit (tol 2 cm)",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    -0.9656,
+    2.3,
+    -15.9216
+   ],
+   "sonra": [
+    -0.9656,
+    2.3,
+    -15.9216
+   ],
+   "fark": 0
+  }
+ },
+ {
+  "ad": "A8 sağa itiş kullanıcıyı sağa döndürür",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "ileriOnce": [
+    0,
+    0,
+    1
+   ],
+   "ileriSonra": [
+    -0.5,
+    0,
+    0.866
+   ],
+   "not": "+z bakarken sağa dönüş −x yönüne: atan2(x,z) azalır"
+  }
+ },
+ {
+  "ad": "A8 ortaya dönüp sola itiş: yeniden tek 30° ters",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "rotY": [
+    -3.1416,
+    -3.6652,
+    -3.6652,
+    -3.1416
+   ]
+  }
+ },
+ {
+  "ad": "A9 durak giris: konum, yön, çarpmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.68,
+    "u": 0.5
+   },
+   "bas": [
+    0,
+    2.3,
+    -24.6
+   ],
+   "beklenen": [
+    0,
+    -24.6
+   ],
+   "yonKos": 1,
+   "carpiyor": false,
+   "aktifBilgi": "kapi",
+   "kartAcik": true
+  }
+ },
+ {
+  "ad": "A9 durak sadirvan: konum, yön, çarpmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.6,
+    "u": 0.5
+   },
+   "bas": [
+    3,
+    2.3,
+    -13.6
+   ],
+   "beklenen": [
+    3,
+    -13.6
+   ],
+   "yonKos": 1,
+   "carpiyor": false,
+   "aktifBilgi": "sadirvan",
+   "kartAcik": true
+  }
+ },
+ {
+  "ad": "A9 durak mihrap: konum, yön, çarpmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.52,
+    "u": 0.5
+   },
+   "bas": [
+    0,
+    2.3,
+    14.5
+   ],
+   "beklenen": [
+    0,
+    14.5
+   ],
+   "yonKos": 1,
+   "carpiyor": false,
+   "aktifBilgi": "mihrap",
+   "kartAcik": true
+  }
+ },
+ {
+  "ad": "A9 durak minber: konum, yön, çarpmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.44,
+    "u": 0.5
+   },
+   "bas": [
+    -2,
+    2.3,
+    16.5
+   ],
+   "beklenen": [
+    -2,
+    16.5
+   ],
+   "yonKos": 1,
+   "carpiyor": false,
+   "aktifBilgi": "minber",
+   "kartAcik": true
+  }
+ },
+ {
+  "ad": "A9 durak kapi: konum, yön, çarpmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.36,
+    "u": 0.5
+   },
+   "bas": [
+    23.5,
+    2.3,
+    -6.875
+   ],
+   "beklenen": [
+    23.5,
+    -6.875
+   ],
+   "yonKos": 1,
+   "carpiyor": false,
+   "aktifBilgi": "dogu-kapisi",
+   "kartAcik": true
+  }
+ },
+ {
+  "ad": "A9 durak kabe: konum, yön, çarpmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.28,
+    "u": 0.5
+   },
+   "bas": [
+    23,
+    2.3,
+    -20.625
+   ],
+   "beklenen": [
+    23,
+    -20.625
+   ],
+   "yonKos": 1,
+   "carpiyor": false,
+   "aktifBilgi": "kabe-ortusu",
+   "kartAcik": true
+  }
+ },
+ {
+  "ad": "A9 durak levha: konum, yön, çarpmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.2,
+    "u": 0.5
+   },
+   "bas": [
+    13.8,
+    2.3,
+    13
+   ],
+   "beklenen": [
+    13.8,
+    13
+   ],
+   "yonKos": 1,
+   "carpiyor": false,
+   "aktifBilgi": "hat",
+   "kartAcik": true
+  }
+ },
+ {
+  "ad": "A9 durak kubbe: konum, yön, çarpmıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.12,
+    "u": 0.5
+   },
+   "bas": [
+    -13.8,
+    2.3,
+    3.2
+   ],
+   "beklenen": [
+    -13.8,
+    3.2
+   ],
+   "yonKos": 1,
+   "carpiyor": false,
+   "aktifBilgi": "kubbeler",
+   "kartAcik": true
+  }
+ },
+ {
+  "ad": "A9 ileri: duvarda durur, içinden geçmez",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "bas0": [
+    23.5,
+    2.3,
+    -6.875
+   ],
+   "son": [
+    31.9901,
+    2.3,
+    -6.875
+   ],
+   "durduKare": 6,
+   "carpiyor": false,
+   "g": {
+    "yol": "xr-sim/ekran/09-duvar-dibi.png",
+    "w": 960,
+    "h": 540,
+    "sol": {
+     "ort": 56,
+     "arkaDisi": 0.994
+    },
+    "sag": {
+     "ort": 52,
+     "arkaDisi": 0.972
+    },
+    "gozFarki": 47.46
+   }
+  }
+ },
+ {
+  "ad": "A9 duvara çapraz itiş: duvar boyunca kayar",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    32.0058,
+    2.3,
+    -6.8708
+   ],
+   "sonra": [
+    32.0058,
+    2.3,
+    -6.2308
+   ],
+   "ileri": [
+    0.866,
+    0,
+    0.5
+   ]
+  }
+ },
+ {
+  "ad": "A9 BAŞ 90° DÖNÜKKEN durak: kullanıcı durağa dönük mü",
+  "sonuc": "KALDI",
+  "dayanak": {
+   "ileri": [
+    1,
+    0,
+    0
+   ],
+   "bas": [
+    0,
+    2.3,
+    -24.6
+   ],
+   "not": "durakRig baş yaw değerini dikkate almıyor"
+  }
+ },
+ {
+  "ad": "A10 kaynak listesi tek kumanda",
+  "sonuc": "GECTI",
+  "dayanak": [
+   "right:4a/7b"
+  ]
+ },
+ {
+  "ad": "A10 tek kumanda yana itiş: tek dönüş, kayma yok",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "donusDerece": -30.00007015304991,
+   "bas0": [
+    0.0315,
+    2.3,
+    -24.5685
+   ],
+   "bas1": [
+    0.0315,
+    2.3,
+    -24.5685
+   ],
+   "fark": 0
+  }
+ },
+ {
+  "ad": "A10 tek kumanda 0.6 yana itiş: kayma da dönüş de yok",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "bas0": [
+    0.0315,
+    2.3,
+    -24.5685
+   ],
+   "bas1": [
+    0.0315,
+    2.3,
+    -24.5685
+   ]
+  }
+ },
+ {
+  "ad": "A10 tek kumanda ileri itiş: yürür",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    0.0315,
+    2.3,
+    -24.5685
+   ],
+   "sonra": [
+    -0.6085,
+    2.3,
+    -23.46
+   ],
+   "ileri": [
+    -0.5,
+    0,
+    0.866
+   ]
+  }
+ },
+ {
+  "ad": "A10 tek kumanda B menü",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": true,
+   "sonra": false
+  }
+ },
+ {
+  "ad": "A10 yalnız sol kumanda: yana itiş dönüş, kayma yok",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "girdiler": [
+    "left:4a/7b"
+   ],
+   "bas0": [
+    -0.6885,
+    2.3,
+    -23.3214
+   ],
+   "bas1": [
+    -0.6885,
+    2.3,
+    -23.3214
+   ]
+  }
+ },
+ {
+  "ad": "A10 yalnız sol kumandayla menü tıklanır",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "kt": {
+    "nesne": "menu",
+    "v": 0.68,
+    "u": 0.5
+   },
+   "bas": [
+    0,
+    2.3,
+    -24.6
+   ]
+  }
+ },
+ {
+  "ad": "A10 yeniden bağlanma hata vermiyor",
+  "sonuc": "GECTI",
+  "dayanak": [
+   "left:4a/7b",
+   "right:4a/7b"
+  ]
+ },
+ {
+  "ad": "A11 Dışarı çık: maket görünümü, ışık/disk geri, kart yok",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "tani": {
+    "nesne": "menu",
+    "v": 0.76,
+    "u": 0.5
+   },
+   "rigOlcek": 76.5786,
+   "rigP": [
+    81.0469,
+    -68.9207,
+    -43.3124
+   ],
+   "maketYerel": [
+    0,
+    0.9,
+    -1.2
+   ],
+   "disk": true,
+   "icIsik": 0,
+   "kartAcik": false,
+   "aktifBilgi": null,
+   "f": {
+    "yol": "xr-sim/ekran/11-disari.png",
+    "w": 960,
+    "h": 540,
+    "sol": {
+     "ort": 37,
+     "arkaDisi": 0.416
+    },
+    "sag": {
+     "ort": 76,
+     "arkaDisi": 0.412
+    },
+    "gozFarki": 47.26
+   }
+  }
+ },
+ {
+  "ad": "A12 VRdan-cik: masaüstü kamera/near/far/arka plan",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "near": 4,
+   "far": 900,
+   "arka": "artAlan",
+   "fov": 40,
+   "aspect": 2.3704,
+   "kameraOlcek": [
+    1,
+    1,
+    1
+   ],
+   "kameraEbeveyn": null,
+   "bas": [
+    -57.6595,
+    40,
+    -118.1711
+   ],
+   "hedef": [
+    0,
+    14,
+    -3
+   ],
+   "canvas": [
+    896,
+    378
+   ],
+   "canvasEbeveyn": "maket-alan",
+   "pikselOran": 1,
+   "sahneCocuk": 8,
+   "icIsik": 0,
+   "hemi": 0.75,
+   "cevre": 0.42,
+   "katmanY": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ {
+  "ad": "A12 VRdan-cik: canvas boyutu alanla aynı",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "canvas": [
+    896,
+    378
+   ],
+   "alan": {
+    "x": 32,
+    "y": 161.640625,
+    "width": 896,
+    "height": 378
+   },
+   "aspect": 2.3704,
+   "pr": 1
+  }
+ },
+ {
+  "ad": "A12 VRdan-cik: düğmeler yeniden etkin, kart yok",
+  "sonuc": "GECTI",
+  "dayanak": [
+   {
+    "t": "İçeri gir",
+    "d": false,
+    "p": null
+   },
+   {
+    "t": "VR'da aç",
+    "d": false,
+    "p": null
+   },
+   {
+    "t": "⤒ Parçala",
+    "d": false,
+    "p": "false"
+   },
+   {
+    "t": "⟳ Kendi kendine dönsün",
+    "d": false,
+    "p": "false"
+   },
+   {
+    "t": "Görünümü sıfırla",
+    "d": false,
+    "p": null
+   },
+   {
+    "t": "Tam ekran",
+    "d": false,
+    "p": null
+   }
+  ]
+ },
+ {
+  "ad": "A12 VRdan-cik: masaüstü kare çiziyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "yol": "xr-sim/ekran/A12 VRdan-cik-masaustu-fb.png",
+   "w": 896,
+   "h": 378,
+   "sol": {
+    "ort": 77,
+    "arkaDisi": 0.418
+   },
+   "sag": {
+    "ort": 76,
+    "arkaDisi": 0.418
+   },
+   "gozFarki": 79.52
+  }
+ },
+ {
+  "ad": "A12 VRdan-cik: sürükleme kamerayı döndürüyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    -57.3938,
+    40,
+    -118.3038
+   ],
+   "sonra": [
+    33.8353,
+    47.7743,
+    -125.3906
+   ]
+  }
+ },
+ {
+  "ad": "A12 VRdan-cik: masaüstü İçeri gir çalışıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "bas": [
+    0,
+    2.7,
+    -24.6
+   ],
+   "near": 0.15,
+   "far": 400,
+   "fov": 68,
+   "aktifBilgi": "kapi"
+  }
+ },
+ {
+  "ad": "A12 VRdan-cik: masaüstü Dışarı çık çalışıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "bas": [
+    -58,
+    40,
+    -118
+   ],
+   "near": 4,
+   "fov": 40
+  }
+ },
+ {
+  "ad": "A12 konsol hatası yok",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "hata": []
+  }
+ },
+ {
+  "ad": "B yeniden açılış sıfırdan: ölçek 100, açı 0, menü açık",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "rigOlcek": 100,
+   "rigRotY": 3.1416,
+   "menuAcik": true
+  }
+ },
+ {
+  "ad": "B içeride, kart açık",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "iceride": true,
+   "aktifBilgi": "kapi"
+  }
+ },
+ {
+  "ad": "B dissardan-kapanis: masaüstü kamera/near/far/arka plan",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "near": 4,
+   "far": 900,
+   "arka": "artAlan",
+   "fov": 40,
+   "aspect": 2.3704,
+   "kameraOlcek": [
+    1,
+    1,
+    1
+   ],
+   "kameraEbeveyn": null,
+   "bas": [
+    -58,
+    40,
+    -118
+   ],
+   "hedef": [
+    0,
+    14,
+    -3
+   ],
+   "canvas": [
+    896,
+    378
+   ],
+   "canvasEbeveyn": "maket-alan",
+   "pikselOran": 1,
+   "sahneCocuk": 8,
+   "icIsik": 0,
+   "hemi": 0.75,
+   "cevre": 0.42,
+   "katmanY": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ {
+  "ad": "B dissardan-kapanis: canvas boyutu alanla aynı",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "canvas": [
+    896,
+    378
+   ],
+   "alan": {
+    "x": 32,
+    "y": 161.640625,
+    "width": 896,
+    "height": 378
+   },
+   "aspect": 2.3704,
+   "pr": 1
+  }
+ },
+ {
+  "ad": "B dissardan-kapanis: düğmeler yeniden etkin, kart yok",
+  "sonuc": "GECTI",
+  "dayanak": [
+   {
+    "t": "İçeri gir",
+    "d": false,
+    "p": null
+   },
+   {
+    "t": "VR'da aç",
+    "d": false,
+    "p": null
+   },
+   {
+    "t": "⤒ Parçala",
+    "d": false,
+    "p": "false"
+   },
+   {
+    "t": "⟳ Kendi kendine dönsün",
+    "d": false,
+    "p": "false"
+   },
+   {
+    "t": "Görünümü sıfırla",
+    "d": false,
+    "p": null
+   },
+   {
+    "t": "Tam ekran",
+    "d": false,
+    "p": null
+   }
+  ]
+ },
+ {
+  "ad": "B dissardan-kapanis: masaüstü kare çiziyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "yol": "xr-sim/ekran/B dissardan-kapanis-masaustu-fb.png",
+   "w": 896,
+   "h": 378,
+   "sol": {
+    "ort": 77,
+    "arkaDisi": 0.418
+   },
+   "sag": {
+    "ort": 76,
+    "arkaDisi": 0.418
+   },
+   "gozFarki": 79.6
+  }
+ },
+ {
+  "ad": "B dissardan-kapanis: sürükleme kamerayı döndürüyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "once": [
+    -58,
+    40,
+    -118
+   ],
+   "sonra": [
+    32.905,
+    47.7743,
+    -125.644
+   ]
+  }
+ },
+ {
+  "ad": "B dissardan-kapanis: masaüstü İçeri gir çalışıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "bas": [
+    0,
+    2.7,
+    -24.6
+   ],
+   "near": 0.15,
+   "far": 400,
+   "fov": 68,
+   "aktifBilgi": "kapi"
+  }
+ },
+ {
+  "ad": "B dissardan-kapanis: masaüstü Dışarı çık çalışıyor",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "bas": [
+    -58,
+    40,
+    -118
+   ],
+   "near": 4,
+   "fov": 40
+  }
+ },
+ {
+  "ad": "B konsol hatası yok",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "hata": []
+  }
+ },
+ {
+  "ad": "C parçalıyken çıkış: sayfa birleşik, düğme uyumlu",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "parcaliIci": true,
+   "parcaliSon": false,
+   "katmanY": [
+    13.39,
+    18.97,
+    24.55
+   ],
+   "basili": "false|⤒ Parçala"
+  }
+ },
+ {
+  "ad": "Sonuç konsol",
+  "sonuc": "GECTI",
+  "dayanak": {
+   "hata": [],
+   "uyari": []
+  }
+ }
+]

@@ -2,6 +2,55 @@
 
 Tek plan dosyası. İşe buradan başla, iş bitince işaretle. Ayrıntı gerekince: `DEVIR-QUEST.md` (VR), `docs/sunum-vaatleri.md`, `docs/sartname.md`.
 
+## Yeni bilgisayarda başla
+
+> Yazıldı: 4 Kasım 2026, kullanıcı bilgisayar değiştirdiği için çalışma durduruldu. Çalışan ajan ve sunucu yok.
+> **Yeni oturumdaki ajana:** `vaat-mokap` branch'inde bu dosyadan devam et, Türkçe konuş. İlk iş aşağıdaki "Kaldığı yer"dir.
+
+Gerekenler: Git, Node 24+ (`.nvmrc`), Google Chrome. Eski bilgisayarda Node ve `adb` kullanıcı klasörüne kurulmuştu, yeni bilgisayara taşınmadı. `adb` yalnız Quest denemesi için gerekir.
+
+```bash
+git clone git@github.com:selamisimsek/kokxr.git   # zaten varsa: git fetch
+cd kokxr
+git switch vaat-mokap
+npm ci
+npm run test:hizli
+npm run dev -- --host 127.0.0.1 --port 5173 --strictPort   # http://127.0.0.1:5173/yolculuk
+```
+
+### Kaldığı yer
+
+| Branch | İçerik | Durum |
+|---|---|---|
+| `vaat-mokap` | Yolculuk, zaman katmanı, sunum ekranları, simülasyon betiği | Temiz, ana çalışma branch'i |
+| `wip/vr-tutma` | `vaat-mokap` + menü-kart düzeltmesi + durak baş yönü düzeltmesi | Her ikisi birleştirilmedi. Yalnız `test:hizli` geçti; menü-kart düzeltmesinin simülasyon sonucu bu oturumda doğrulanmadı |
+| `wip/vr-vazo` | `vaat-mokap` + `vazoXr.ts` (536 satır), `VR'da onar` düğmesi, alt yazı başlangıcı | Yarım. Ajan rapor veremeden durdu; hangi akışın bittiği bilinmiyor. Simülasyonda ve `tests/vazo.mjs` ile denenmedi |
+
+Sıra:
+
+1. `wip/vr-tutma`'yı `tests/xr-sim` ile doğrula, `npm run test:tarayici` geçince `vaat-mokap`'a birleştir.
+2. Aynı işin kalanını yap: 10 kat büyütme, VR'da maketi tutma, VR menüsünde zaman katmanı.
+3. `wip/vr-vazo`'yu oku; önce neyin bittiğini belirle, sonra simülasyonda tamamla ve birleştir.
+4. Aşağıdaki "Doğrulama ve teslim", ardından cuma cihaz denemesi.
+
+### Simüle Quest (`tests/xr-sim/`)
+
+Gerçek three.js WebXRManager'ı Meta'nın `iwer` paketiyle sürer. `iwer` geçici klasöre kurulur, `package.json`'a girmez.
+
+```bash
+export XR_SIM=/gecici/bir/klasor
+bash tests/xr-sim/kur.sh
+node_modules/.bin/vite preview --outDir "$XR_SIM/dist" --host 127.0.0.1 --port 4174 --strictPort   # ayrı terminalde
+node tests/xr-sim/sim.mjs ana
+```
+
+- Son sonuç, düzeltmelerden önceki kodda: 78 denetimden 76'sı geçti (`tests/xr-sim/son-sonuc.json`). Kalan 2'si: kart açıkken menüye ulaşılamaması, baş dönükken durak yönü. Düzeltmeleri `wip/vr-tutma`'da.
+- Betik depoya taşındı; `kur.sh` çalıştırıldı, ama taşındıktan sonra `sim.mjs` baştan sona çalıştırılmadı.
+- FPS, konfor ve gerçek kumanda eşlemesini kanıtlamaz. Yazılımsal çizimde bir tur uzun sürer.
+- Simülasyon ajanı son raporunu veremeden durduruldu; sonuçlar `son-sonuc.json` dosyasından okundu.
+
+## Hedef
+
 **Hedef:** 7–8 Kasım finalinde tek akışta canlı demo. Önce sunumda gösterilecek mokap; backend sonra.
 
 **Öne çıkaran özellik:** VR. Ana sahne: Quest 3'te maketi tut, incele, içeri gir, vazoyu onar.
@@ -37,16 +86,17 @@ Erişilebilirlik ölçütleri: adımlar kilitsiz, geri tuşu çalışır, adım 
 - [x] Belge düzeni, `CLAUDE.md`, hızlı test komutları, Node 24
 - [x] `/yolculuk` iskeleti, ana sayfa ve menü bağlantısı, `tests/yolculuk.mjs`
 - [x] `maket-ic` ve `maket-xr-dugme` VR düzeltmeleriyle geçti
-- [ ] Simüle VR raporunu işle
+- [x] Simüle VR denemesi: 78 denetimden 76'sı geçti
 
 ### 2. VR (öncelikli)
 
-Simüle VR raporu gelince başlar. Doğrulama: simüle Quest betiği, sonra gerçek cihaz.
+Doğrulama: simüle Quest betiği, sonra gerçek cihaz.
 
+- [ ] Kart açıkken menüye ulaşma ve baş dönükken durak yönü (`wip/vr-tutma`, doğrulanıp birleştirilecek)
 - [ ] Masaüstünde ve VR'da 10 kat büyütme
 - [ ] VR'da kumandayla maketi tutma
-- [ ] VR'da vazo onarımı: parçayı tut, yerine oturt
-- [ ] Vazonun altında örnek yazı (`Demo` etiketli)
+- [ ] VR'da vazo onarımı: parçayı tut, yerine oturt (yarım: `wip/vr-vazo`)
+- [ ] Vazonun altında örnek yazı (yarım: `wip/vr-vazo`)
 - [ ] VR menüsünde zaman katmanı
 - [ ] Yolculuktan VR'a giriş iki tıktan fazla sürmesin
 
@@ -68,7 +118,14 @@ Simüle VR raporu gelince başlar. Doğrulama: simüle Quest betiği, sonra ger�
 
 ### 5. Cuma 6 Kasım: gerçek cihaz (kullanıcıyla)
 
-Hazırlık: Quest 3, veri kablosu, geliştirici modu önceden açık, bilgisayarda `adb`.
+Hazırlık: Quest 3, veri kablosu, geliştirici modu önceden açık, denemenin yapılacağı bilgisayarda `adb`.
+
+`adb devices` çıktısında `no permissions` görünürse USB izni gerekir (`sudo` ister, kullanıcı çalıştırır):
+
+```bash
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0666"' | sudo tee /etc/udev/rules.d/51-quest.rules
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
 
 - [ ] `adb reverse tcp:4173 tcp:4173`, Quest Browser'da `http://localhost:4173/yolculuk`
 - [ ] VR'a giriş, FPS ölçümü (hedef 72); altındaysa `DEVIR-QUEST.md`'deki düşürme sırası
@@ -115,3 +172,5 @@ Kalan kod işi paralel ajanlarla 5–9 saat, cihaz denemesi 1–2 saat. Tahmindi
 
 - Tarama verisi veya gerçek küratör onayı varsa ürüne eklenir; yoksa vizyon olarak kalır.
 - Sonraki push'lar: kullanıcı izniyle.
+- Herkese açık yayın yok; fotoğraf izni netleşmedi. Takım başka cihazdan görecekse şifre korumalı yayın kullanıcıya sorulur.
+- Zaman katmanı tarihleri (Ulu Camii 4, Muradiye 6) envanter PDF'iyle karşılaştırılmalı.

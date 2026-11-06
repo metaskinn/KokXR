@@ -1,10 +1,83 @@
-// Türkiye sınırı: Natural Earth 1:50m (kamu malı), world-atlas 2.0.2 üzerinden, sadeleştirilmiş.
-// Basit eşdikdörtgen izdüşüm
-export const HARITA_G = 1000, HARITA_Y = 435.5
-export const TURKIYE_YOLU = 'M24.0 142.7 12.2 144.8 8.7 142.8 12.4 138.8 19.2 136.3 21.5 136.1 24.4 140.0 24.0 142.7ZM821.0 51.7 837.1 57.3 842.3 53.0 857.0 53.7 870.1 56.8 875.3 48.9 877.3 47.5 881.2 47.1 886.6 48.6 888.2 53.3 892.7 55.0 900.4 62.5 905.0 65.5 906.1 66.8 904.7 68.3 905.2 70.2 908.0 72.6 915.9 73.2 919.6 75.5 920.7 81.6 929.8 90.5 934.6 104.2 934.0 109.1 931.6 113.9 926.6 119.9 929.0 125.8 928.7 128.3 933.8 140.8 931.6 143.4 945.7 150.3 963.6 149.1 969.3 152.0 986.3 168.5 990.7 174.8 988.9 174.8 978.9 167.0 975.2 169.5 972.1 173.8 968.7 189.9 966.0 191.6 955.1 191.1 949.9 192.9 952.9 203.3 957.8 208.3 956.2 218.1 957.5 222.1 962.6 228.5 961.9 237.5 963.9 247.0 964.1 258.2 970.8 260.1 971.9 261.6 968.2 266.9 966.7 274.1 962.5 281.2 959.5 289.8 960.2 291.7 966.0 292.2 977.4 300.6 978.9 302.9 976.7 306.3 978.3 312.7 978.1 321.0 985.3 326.1 989.4 330.6 989.6 332.0 987.6 335.4 987.9 340.3 986.3 338.8 979.8 338.2 963.2 351.2 961.3 350.9 959.1 346.3 958.6 333.2 954.5 329.8 949.3 329.0 940.3 335.0 932.2 334.7 923.9 333.6 902.3 325.4 894.1 328.3 885.8 325.2 884.2 325.9 878.8 333.2 869.6 341.3 864.6 342.5 862.2 334.6 860.0 331.5 856.5 330.1 849.3 336.1 840.4 339.4 821.2 343.9 808.5 345.1 792.8 342.5 779.9 343.3 744.4 361.2 727.4 367.0 710.6 370.7 680.4 370.0 676.3 368.5 663.7 358.8 650.8 356.3 612.0 373.3 593.2 372.6 589.0 369.3 586.8 365.7 572.2 362.8 569.0 369.4 566.1 385.6 571.4 398.3 571.1 400.2 562.9 401.2 557.8 404.4 556.3 415.5 548.7 419.8 546.3 426.7 536.7 421.7 533.0 421.2 536.2 415.8 528.8 395.3 532.5 388.9 548.2 372.2 547.6 362.4 541.0 355.7 521.0 367.9 519.2 372.6 514.8 376.3 507.4 377.8 496.3 373.8 484.3 367.8 477.5 363.0 471.9 361.9 466.8 363.9 451.2 375.8 433.5 396.2 420.2 403.7 411.4 406.2 407.3 405.6 389.8 409.0 380.9 409.4 374.1 413.3 360.8 409.1 352.7 403.6 347.9 398.1 340.1 386.0 334.4 380.4 322.0 375.3 300.0 362.9 279.6 359.7 263.9 358.6 260.5 363.1 259.4 381.0 256.7 385.9 255.6 395.2 253.7 398.0 250.6 399.7 242.6 395.4 235.1 399.2 214.8 405.4 197.4 398.6 190.9 394.3 186.9 389.5 185.4 381.3 182.8 376.8 181.5 370.0 178.0 368.5 174.1 371.3 170.1 371.2 153.1 362.7 143.9 362.1 138.3 370.5 133.9 373.1 129.3 373.9 128.9 371.5 132.6 366.1 118.2 367.1 110.6 371.2 100.3 368.7 100.8 366.5 109.3 363.8 124.8 362.3 128.5 360.8 132.4 355.0 139.8 350.0 140.7 347.8 111.2 349.3 94.8 348.5 92.9 350.9 90.3 351.3 89.8 344.5 92.4 341.4 95.9 341.7 104.4 339.0 103.6 333.3 97.5 329.5 96.2 327.3 91.8 326.7 88.1 324.1 87.4 317.3 84.6 309.9 80.4 306.3 80.9 304.4 88.5 301.8 90.0 291.5 88.8 285.1 85.2 284.7 74.1 279.6 70.8 280.1 67.1 274.6 60.6 270.7 55.4 273.9 42.7 267.7 40.5 265.4 43.2 259.3 46.9 259.5 47.7 254.6 44.7 246.6 45.1 242.5 48.2 241.5 51.9 242.2 55.8 247.0 56.9 251.7 56.2 256.1 60.2 261.6 61.3 256.9 63.0 256.1 65.2 258.1 69.8 259.1 82.0 256.4 84.2 254.0 75.4 254.2 72.2 252.0 68.5 247.0 64.8 236.9 66.1 235.2 72.2 232.5 77.6 225.2 72.8 222.1 70.0 222.8 67.4 220.3 67.1 216.8 69.3 214.0 69.5 210.1 60.6 198.5 62.1 195.3 72.4 183.6 71.7 181.4 68.0 180.6 50.4 183.4 43.6 185.8 31.4 186.9 30.5 183.4 30.9 180.2 33.6 174.5 33.3 160.1 34.9 152.5 41.8 150.2 50.1 138.7 63.6 125.3 77.6 125.7 83.1 121.9 91.4 121.7 94.0 126.9 101.4 130.7 114.3 130.1 120.4 126.6 114.5 120.0 116.4 118.1 121.7 117.9 127.6 119.5 128.0 121.0 124.5 126.7 126.3 127.4 142.9 125.2 160.5 126.9 179.9 126.0 182.3 123.8 168.6 116.5 177.3 110.2 222.9 103.1 223.1 101.6 198.1 98.4 192.8 95.9 185.4 89.9 181.9 85.3 184.3 74.1 187.1 71.2 195.9 70.8 226.6 75.8 248.5 72.7 272.4 80.2 295.1 78.7 299.9 75.4 305.6 64.7 337.7 46.8 349.0 37.7 361.2 32.5 381.8 26.9 399.2 19.5 404.2 18.7 445.7 22.2 474.3 22.7 487.4 15.6 495.2 18.0 493.0 22.7 493.5 27.0 502.4 37.7 515.9 44.0 534.3 38.7 541.2 40.8 547.6 57.6 552.8 63.6 559.2 67.7 564.6 68.5 571.6 62.5 578.3 61.9 589.3 67.6 593.2 73.7 611.9 78.2 629.0 80.5 636.4 85.7 660.6 90.7 669.7 89.9 684.8 84.7 714.1 78.8 733.7 86.9 739.1 88.0 743.7 87.3 750.1 89.6 757.2 88.3 778.8 78.7 785.6 73.2 792.8 71.8 799.1 68.5 816.1 57.8 821.0 51.7ZM128.9 21.9 127.6 29.3 130.8 37.7 138.3 49.1 145.9 55.0 176.7 69.4 182.4 70.7 179.3 81.8 177.3 85.2 168.2 87.5 137.0 80.4 124.3 86.4 115.2 84.9 102.5 87.5 99.0 96.3 90.1 106.4 65.2 118.9 49.7 134.5 42.5 143.6 36.0 146.9 39.0 138.4 38.6 131.0 48.6 122.5 62.6 115.8 66.3 110.4 31.1 111.5 27.6 103.8 31.2 102.3 42.7 88.8 43.8 86.0 42.5 79.4 42.7 70.0 53.2 63.1 56.5 62.4 57.6 59.2 55.4 46.2 51.0 44.0 46.8 39.9 42.1 38.5 42.0 36.7 44.2 32.9 51.9 31.3 55.4 23.2 57.3 22.1 70.9 20.4 77.6 15.9 89.4 13.6 92.0 14.5 104.4 25.0 110.8 22.3 118.0 22.7 122.1 20.7 128.9 21.9Z'
-const BOYLAM = [25.5, 45.0], ENLEM = [35.7, 42.3]
-/** Boylam ve enlemi harita alanında yüzdeye çevirir. */
-export const haritaKonumu = (boylam: number, enlem: number) => ({
-  x: ((boylam - BOYLAM[0]) / (BOYLAM[1] - BOYLAM[0])) * 100,
-  y: ((ENLEM[1] - enlem) / (ENLEM[1] - ENLEM[0])) * 100,
-})
+// VR Eserler haritasının veri modeli ve yükleyicisi. Geometri `harita/*.json`, kabartma `harita/*-kabartma.webp`:
+// ikisi de repoya gömülüdür, internet istemez ve yalnız gereken harita açılınca yüklenir. Kaynak ve lisans: harita/KAYNAK.md
+import kabartmaTurkiye from './harita/turkiye-kabartma.webp'
+import kabartmaBursa from './harita/bursa-kabartma.webp'
+import kabartmaKonya from './harita/konya-kabartma.webp'
+import kabartmaHatay from './harita/hatay-kabartma.webp'
+
+export type HaritaKimlik = 'turkiye' | 'bursa' | 'konya' | 'hatay'
+
+export interface HaritaEtiket { ad: string; x: number; y: number; tur: string; z?: number; alt?: string }
+export interface HaritaVerisi {
+  id: HaritaKimlik
+  ad: string
+  cerceve: { bati: number; dogu: number; guney: number; kuzey: number }
+  g: number
+  y: number
+  zEnCok: number
+  atif: string[]
+  katman: Record<string, string>
+  etiket: HaritaEtiket[]
+}
+
+const YUKLEYICI: Record<HaritaKimlik, () => Promise<{ default: unknown }>> = {
+  turkiye: () => import('./harita/turkiye.json'),
+  bursa: () => import('./harita/bursa.json'),
+  konya: () => import('./harita/konya.json'),
+  hatay: () => import('./harita/hatay.json'),
+}
+
+export const KABARTMA: Record<HaritaKimlik, string> = { turkiye: kabartmaTurkiye, bursa: kabartmaBursa, konya: kabartmaKonya, hatay: kabartmaHatay }
+
+export const haritaYukle = async (k: HaritaKimlik) => (await YUKLEYICI[k]()).default as HaritaVerisi
+
+const mx = (lon: number) => (lon + 180) / 360
+const my = (lat: number) => (1 - Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360)) / Math.PI) / 2
+
+/** Boylam/enlemi harita birimine çevirir (Web Mercator, veriyle aynı izdüşüm). */
+export function haritaNoktasi(v: HaritaVerisi, [lon, lat]: [number, number]) {
+  const c = v.cerceve, k = v.g / (mx(c.dogu) - mx(c.bati))
+  return { x: (mx(lon) - mx(c.bati)) * k, y: (my(lat) - my(c.kuzey)) * k }
+}
+
+/**
+ * Birbirine binen işaretleri, dokunma hedefleri çakışmayacak kadar ayırır ve çerçevede tutar.
+ * Yapının gerçek yeri ayrıca noktayla gösterilir; işaret kaydıysa çizgiyle bağlanır.
+ */
+export function isaretleriAyir(noktalar: { x: number; y: number }[], g: number, y: number, aralik = 46, pay = 24) {
+  const s = noktalar.map((n) => ({ x: n.x, y: n.y }))
+  // Sıkışık öbek önce merkezinden açılır: işaretler birbirine göre yönünü korur (doğudaki yapı doğuda kalır).
+  const grup = s.map((_, i) => i)
+  const kok = (i: number): number => (grup[i] === i ? i : (grup[i] = kok(grup[i])))
+  for (let i = 0; i < s.length; i++) for (let j = i + 1; j < s.length; j++) if (Math.hypot(s[i].x - s[j].x, s[i].y - s[j].y) < aralik) grup[kok(i)] = kok(j)
+  for (const r of new Set(s.map((_, i) => kok(i)))) {
+    const uye = s.filter((_, i) => kok(i) === r)
+    if (uye.length < 2) continue
+    const ox = uye.reduce((t, n) => t + n.x, 0) / uye.length, oy = uye.reduce((t, n) => t + n.y, 0) / uye.length
+    const yaricap = Math.max(...uye.map((n) => Math.hypot(n.x - ox, n.y - oy)), 1)
+    const k = Math.max(1, Math.min(5, (aralik * Math.sqrt(uye.length) * 0.75) / yaricap))
+    for (const n of uye) { n.x = ox + (n.x - ox) * k; n.y = oy + (n.y - oy) * k }
+  }
+  const sinirla = (n: { x: number; y: number }) => {
+    n.x = Math.max(pay, Math.min(g - pay, n.x))
+    n.y = Math.max(pay, Math.min(y - pay, n.y))
+    // Sağ üstteki yakınlaştırma düğmelerinin altına girmesin.
+    if (n.x > g - 76 && n.y < 150) n.y = 150
+  }
+  s.forEach(sinirla)
+  for (let tur = 0; tur < 80; tur++) {
+    let kaydi = false
+    for (let i = 0; i < s.length; i++) for (let j = i + 1; j < s.length; j++) {
+      let dx = s[j].x - s[i].x, dy = s[j].y - s[i].y, d = Math.hypot(dx, dy)
+      if (d >= aralik) continue
+      if (d < 0.01) { const a = (i + j) * 2.399963; dx = Math.cos(a); dy = Math.sin(a); d = 1 }
+      const it = (aralik - d) / 2 + 0.2
+      s[i].x -= (dx / d) * it; s[i].y -= (dy / d) * it
+      s[j].x += (dx / d) * it; s[j].y += (dy / d) * it
+      kaydi = true
+    }
+    s.forEach(sinirla)
+    if (!kaydi) break
+  }
+  return s
+}

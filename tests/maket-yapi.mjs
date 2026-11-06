@@ -19,10 +19,11 @@ const bekle = async (n = 5) => { const k = Number(await alan.getAttribute('data-
 await s.goto(`${url}/vr/${id}`)
 await s.locator('.maket-alan canvas').waitFor()
 await s.locator('.maket-kutu').scrollIntoViewIfNeeded()
-await bekle()
+// Kare sayacı yalnız içeride işler; dışarıda ilk karelerin çizilmesi beklenir.
+await s.waitForTimeout(6000)
 await s.locator('.maket-kutu').screenshot({ path: `test-sonuclari/${id}-dis.png` })
 await s.getByRole('button', { name: /Parçala/ }).click()
-await bekle(8)
+await s.waitForTimeout(8000)
 await s.locator('.maket-kutu').screenshot({ path: `test-sonuclari/${id}-parcali.png` })
 await s.getByRole('button', { name: /Birleştir/ }).click()
 await s.getByRole('button', { name: 'İçeri gir' }).click()

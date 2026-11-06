@@ -1,6 +1,6 @@
 // VR Eserler sekmesinin listesi. Yapı adları "Vakıf Eserleri Envanteri - Bursa Fotoğraf Arşivi" klasör adlarından,
-// yayınlar Vakıf Katılım "Yayınlarımız" sayfasındandır. `eserId` yoksa o yapının VR içeriği yoktur ve açılmaz.
-export interface VrYapi { ad: string; ilce: string; eserId?: string; acilan?: string }
+// yayınlar Vakıf Katılım "Yayınlarımız" sayfasındandır. Yapı, `eserId`'si olan eser verisinde maket veya restorasyon görevi varsa açılır; yoksa "VR henüz yok" yazar.
+export interface VrYapi { ad: string; ilce: string; eserId: string }
 export interface VrYayin { ad: string; adres: string }
 export interface VrSehir { ad: string; konum: [number, number]; yapilar: VrYapi[]; yayinlar: VrYayin[] }
 
@@ -11,16 +11,16 @@ export const vrSehirler: VrSehir[] = [
     ad: 'Bursa',
     konum: [29.06, 40.18],
     yapilar: [
-      { ad: 'Ulu Camii', ilce: 'Osmangazi', eserId: 'ulu-camii', acilan: 'Temsilî 3B maket: içinde yürü, minbere ve mahfile çık' },
-      { ad: 'II. Murat Külliyesi', ilce: 'Osmangazi', eserId: 'muradiye-kulliyesi', acilan: 'Çini panosunu VR\'da onar' },
-      { ad: 'Orhan Bey Külliyesi', ilce: 'Osmangazi' },
-      { ad: 'I. Murat Hüdavendigar Külliyesi', ilce: 'Osmangazi' },
-      { ad: 'Hamzabey Külliyesi', ilce: 'Osmangazi' },
-      { ad: 'Timurtaş Paşa Külliyesi', ilce: 'Osmangazi' },
-      { ad: 'Yeşil Çelebi Mehmed Külliyesi', ilce: 'Yıldırım' },
-      { ad: 'Yıldırım Külliyesi', ilce: 'Yıldırım' },
-      { ad: 'Emir Sultan', ilce: 'Yıldırım' },
-      { ad: 'Umurbey Külliyesi', ilce: 'Yıldırım' },
+      { ad: 'Ulu Camii', ilce: 'Osmangazi', eserId: 'ulu-camii' },
+      { ad: 'II. Murat Külliyesi', ilce: 'Osmangazi', eserId: 'muradiye-kulliyesi' },
+      { ad: 'Orhan Bey Külliyesi', ilce: 'Osmangazi', eserId: 'orhan-bey-kulliyesi' },
+      { ad: 'I. Murat Hüdavendigar Külliyesi', ilce: 'Osmangazi', eserId: 'hudavendigar-kulliyesi' },
+      { ad: 'Hamzabey Külliyesi', ilce: 'Osmangazi', eserId: 'hamzabey-kulliyesi' },
+      { ad: 'Timurtaş Paşa Külliyesi', ilce: 'Osmangazi', eserId: 'timurtas-pasa-kulliyesi' },
+      { ad: 'Yeşil Çelebi Mehmed Külliyesi', ilce: 'Yıldırım', eserId: 'yesil-kulliyesi' },
+      { ad: 'Yıldırım Külliyesi', ilce: 'Yıldırım', eserId: 'yildirim-kulliyesi' },
+      { ad: 'Emir Sultan', ilce: 'Yıldırım', eserId: 'emir-sultan' },
+      { ad: 'Umurbey Külliyesi', ilce: 'Yıldırım', eserId: 'umurbey-kulliyesi' },
     ],
     yayinlar: [
       { ad: 'Bursa Vakıf Eserleri, Cilt 1', adres: `${YAYIN_KOK}/yayinlarimiz/bursa-envanteri-cilt-1.pdf` },

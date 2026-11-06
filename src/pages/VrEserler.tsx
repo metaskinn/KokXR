@@ -25,12 +25,14 @@ function useVrDestegi() {
   return destek
 }
 
-export default function VrEserler() {
+export default function VrEserler({ eserler }: { eserler: Eser[] }) {
   const [parametre, setParametre] = useSearchParams()
   const secili = vrSehirler.find((s) => s.ad === parametre.get('sehir'))
   const destek = useVrDestegi()
   const odak = secili && haritaKonumu(...secili.konum)
   const sec = (ad: string | null) => setParametre(ad ? { sehir: ad } : {})
+  const icerik = (eserId: string) => eserler.find((e) => e.id === eserId && (e.maket || e.restorasyon))
+  const aciklama = (e: Eser) => e.maket ? 'Temsilî 3B maket: içinde yürü' : "Çini panosunu VR'da onar"
 
   return <article className="sayfa vr-eserler">
     <header className="vr-baslik">
@@ -61,7 +63,7 @@ export default function VrEserler() {
         {!secili ? <>
           <h2>Şehirler</h2>
           <ul className="vr-sehirler">{vrSehirler.map((s) => {
-            const adet = s.yapilar.filter((y) => y.eserId).length
+            const adet = s.yapilar.filter((y) => icerik(y.eserId)).length
             return <li key={s.ad}><button type="button" onClick={() => sec(s.ad)}>
               <strong>{s.ad}</strong><span>{adet ? `${adet} yapı VR'da açılıyor` : 'Henüz VR yok'}</span>
             </button></li>
@@ -69,11 +71,12 @@ export default function VrEserler() {
         </> : <>
           <button type="button" className="vr-geri" onClick={() => sec(null)}>← Haritaya dön</button>
           <h2>{secili.ad}</h2>
-          {secili.yapilar.length > 0 ? <ul className="vr-yapilar">{secili.yapilar.map((y) => <li key={y.ad}>
-            {y.eserId
-              ? <Link to={`/vr/${y.eserId}`}><strong>{y.ad}</strong><span>{y.ilce} · {y.acilan}</span></Link>
-              : <div className="vr-yapi-kapali"><strong>{y.ad}</strong><span>{y.ilce} · VR henüz yok</span></div>}
-          </li>)}</ul> : <p>Bu şehirdeki yapılar için henüz VR içeriği yok.</p>}
+          {secili.yapilar.length > 0 ? <ul className="vr-yapilar">{secili.yapilar.map((y) => {
+            const e = icerik(y.eserId)
+            return <li key={y.ad}>{e
+              ? <Link to={`/vr/${y.eserId}`}><strong>{y.ad}</strong><span>{y.ilce} · {aciklama(e)}</span></Link>
+              : <div className="vr-yapi-kapali"><strong>{y.ad}</strong><span>{y.ilce} · VR henüz yok</span></div>}</li>
+          })}</ul> : <p>Bu şehirdeki yapılar için henüz VR içeriği yok.</p>}
           <p className="vr-yayin">Envanter: {secili.yayinlar.map((k, i) => <span key={k.adres}>{i > 0 && ', '}<a href={k.adres} target="_blank" rel="noreferrer">{k.ad}</a></span>)} (Vakıf Katılım)</p>
         </>}
       </section>
@@ -94,8 +97,7 @@ export function VrEser({ eserler, rozetKazan }: { eserler: Eser[]; rozetKazan: (
       {destek === false && <p className="vr-not">Bu tarayıcı VR açamıyor. Gözlükle girmek için bu sayfayı Meta Quest tarayıcısında aç.</p>}
       {destek && <p className="vr-not">Sahne yüklenince VR düğmesine bas. Tarayıcılar VR'ı yalnızca bir dokunuşla başlatır.</p>}
     </header>
-    {eser.maket
-      ? <EseriEleAl maket={eser.maket} kaynaklar={eser.kaynaklar} ad={eser.ad} hemenAc />
-      : eser.restorasyon && <Restorasyon gorev={eser.restorasyon} kaynaklar={eser.kaynaklar} rozetKazan={rozetKazan} rozetId={`${eser.id}:restorasyon`} />}
+    {eser.maket && <EseriEleAl maket={eser.maket} kaynaklar={eser.kaynaklar} ad={eser.ad} hemenAc />}
+    {eser.restorasyon && <Restorasyon gorev={eser.restorasyon} kaynaklar={eser.kaynaklar} rozetKazan={rozetKazan} rozetId={`${eser.id}:restorasyon`} />}
   </article>
 }

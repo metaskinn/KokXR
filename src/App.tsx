@@ -68,7 +68,7 @@ export default function App() {
         <Route path="/vizyon" element={<Vizyon />} />
         <Route path="/kutuphane" element={<Kutuphane />} />
         <Route path="/onay" element={<OnayAkisi />} />
-        <Route path="/vr" element={<VrEserler />} />
+        <Route path="/vr" element={<VrEserler eserler={eserler} />} />
         <Route path="/vr/:id" element={<VrEser eserler={eserler} rozetKazan={rozetKazan} />} />
         <Route path="/atolye/kilic" element={<KilicAtolyesi />} />
         <Route path="/atolye/vazo" element={<VazoAtolyesi />} />

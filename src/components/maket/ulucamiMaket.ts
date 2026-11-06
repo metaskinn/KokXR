@@ -4,6 +4,7 @@
 import * as THREE from 'three'
 import { kapiKanatlari, ulucamiDetaylari } from './ulucamiDetay'
 import { ulucamiMalzemeleri } from './ulucamiDokular'
+import { uluIsikMalzemeleri } from './ulucami/isik'
 import { icDuraklar, icYurumeAlani, ulucamiIcMekani, type IcDurak, type IcYurume } from './ulucamiIc'
 import {
   DOGU_BATI, DOSEME_Y, DUVAR, ETEK_Y, GOZ_X, GOZ_Z, H, KASNAK_TABAN, KUZEY_GUNEY, Kova, type Mal, OCTA,
@@ -22,6 +23,7 @@ export interface Maket {
 
 export function ulucamiMaketi(): Maket {
   const m = ulucamiMalzemeleri()
+  uluIsikMalzemeleri(m)
 
   const k = new Kova(), kCati = new Kova(), kKasnak = new Kova(), kKubbe = new Kova()
   const kutu = (g: number, h: number, dd: number, mal: Mal, x: number, y: number, z: number, kv = k) =>

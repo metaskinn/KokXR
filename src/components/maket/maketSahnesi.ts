@@ -2,6 +2,7 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { hafifCihaz } from './ulucamiZemin'
+import { uluIsikKur } from './ulucami/isik'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js'
 import { GTAOPass } from 'three/examples/jsm/postprocessing/GTAOPass.js'
@@ -88,7 +89,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   artAlan.colorSpace = THREE.SRGBColorSpace
   scene.background = artAlan
   const ortam = new THREE.PMREMGenerator(renderer)
-  const ortamHaritasi = ortam.fromScene(new RoomEnvironment(), 0.04).texture
+  const uluIsik = model === 'ulu-camii' ? uluIsikKur(renderer, ortam, yapi.kok) : null
+  const ortamHaritasi = uluIsik?.disOrtam ?? ortam.fromScene(new RoomEnvironment(), 0.04).texture
   scene.environment = ortamHaritasi
   // İç mekân yansıması: krem duvarlar, gül zemin ve avize noktaları. Altın, mermer ve su bunları yansıtır.
   const icOrtamSahnesi = new THREE.Scene()
@@ -103,7 +105,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     l.position.set(x, 3, z)
     icOrtamSahnesi.add(l)
   }
-  const icOrtam = ortam.fromScene(icOrtamSahnesi, 0.03, 0.5, 100).texture
+  const icOrtam = uluIsik?.icOrtam ?? ortam.fromScene(icOrtamSahnesi, 0.03, 0.5, 100).texture
   ortam.dispose()
   icOrtamGeo.dispose(); icOrtamKutu.dispose(); icOrtamMal.forEach((m) => m.dispose())
   scene.environmentIntensity = 0.42
@@ -125,6 +127,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   gunes.shadow.normalBias = 0.35
   Object.assign(gunes.shadow.camera, { left: -85, right: 85, top: 85, bottom: -85, near: 10, far: 340 })
   scene.add(gunes)
+  uluIsik?.disIsik(hemi, gunes)
 
   const kaide = new THREE.Mesh(new THREE.CylinderGeometry(yapi.kaideYaricap ?? 70, (yapi.kaideYaricap ?? 70) + 1.5, 3, 96), new THREE.MeshStandardMaterial({ color: '#27221c', roughness: 0.65, metalness: 0.15 }))
   kaide.position.y = -1.5; kaide.receiveShadow = true
@@ -354,7 +357,9 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       ? { radius: 2.2, distanceExponent: 1.3, thickness: 1.2, scale: 1.25, samples: 16, distanceFallOff: 1, screenSpaceRadius: false }
       : { radius: 5, distanceExponent: 1.3, thickness: 2, scale: 1.2, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
     icIsiklar.forEach((i) => { i.intensity = ic ? 32 : 0 })
+    uluIsik?.uygula(ic, { scene, hemi, parlama, icIsiklar })
   }
+  uluIsik?.uygula(false, { scene, hemi, parlama, icIsiklar })
   const bilgiKapat = () => {
     secilenBilgi = null
     kapatilanBilgi = yakinBilgi

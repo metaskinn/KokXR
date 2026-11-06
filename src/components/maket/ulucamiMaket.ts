@@ -3,6 +3,7 @@
 // Yükseklikler ve pencere sayıları temsilidir. Birim: metre. Kuzey = -z, kıble (güney) = +z, doğu = +x.
 import * as THREE from 'three'
 import { icPencereAlt, icPencereUst } from './ulucami/icduvar'
+import { ulucamiCevresi } from './ulucami/cevre'
 import { kapiKanatlari, ulucamiDetaylari } from './ulucamiDetay'
 import { icZemini } from './ulucami/zemin'
 import { ulucamiMalzemeleri } from './ulucamiDokular'
@@ -31,11 +32,8 @@ export function ulucamiMaketi(): Maket {
   const kutu = (g: number, h: number, dd: number, mal: Mal, x: number, y: number, z: number, kv = k) =>
     kv.ekle(yer(kutuG(g, h, dd), x, y, z), mal)
 
-  // --- Zemin: taş döşemeli kaide, bina sekisi, halı ---
-  const avlu = new THREE.CircleGeometry(70, 96).rotateX(-Math.PI / 2).translate(0, 0.01, 0)
-  const avluP = avlu.attributes.position, avluUV = avlu.attributes.uv
-  for (let i = 0; i < avluUV.count; i++) avluUV.setXY(i, avluP.getX(i), avluP.getZ(i))
-  k.ekle(avlu, m.doseme)
+  // --- Zemin: çevre ayrı modülde; bina tabanı ve halı burada ---
+  const cevre = ulucamiCevresi(m, k)
   kutu(DOGU_BATI + 1, 0.6, KUZEY_GUNEY + 1, m.mermer, 0, 0.3, 0)
   icZemini(k, m)
 
@@ -336,25 +334,9 @@ export function ulucamiMaketi(): Maket {
   kosk(-17, -YZ - 15)
   kosk(17, -YZ - 15)
 
-  // Avluda ölçek hissi veren selviler (konumları temsilîdir)
-  const selvi = (x: number, z: number, boy: number) => {
-    const p: [number, number][] = [[0.15, 1.5], [1.25, 2.1], [1.8, boy * 0.2], [2.05, boy * 0.33], [1.95, boy * 0.47], [1.65, boy * 0.61], [1.25, boy * 0.75], [0.78, boy * 0.87], [0.32, boy * 0.96], [0, boy]]
-    const g = dondurG(p, 30)
-    const poz = g.attributes.position, tohum = x * 0.37 + z * 0.61
-    for (let v = 0; v < poz.count; v++) {
-      const vx = poz.getX(v), vy = poz.getY(v), vz = poz.getZ(v), a = Math.atan2(vx, vz)
-      const o = 1 + 0.1 * Math.sin(a * 3 + vy * 0.9 + tohum) + 0.07 * Math.sin(a * 7 - vy * 1.9 + tohum * 2) + 0.04 * Math.sin(a * 13 + vy * 3.1)
-      poz.setX(v, vx * o); poz.setZ(v, vz * o)
-    }
-    g.computeVertexNormals()
-    k.ekle(yer(g, x, 0, z), m.selvi)
-    k.ekle(yer(silindirG(0.2, 0.32, 2.2, 10), x, 1.1, z), m.ahsap)
-  }
-  selvi(-48, -38, 17); selvi(-54, -22, 14); selvi(49, -36, 16); selvi(55, -14, 13)
-  selvi(-50, 30, 15); selvi(50, 32, 16)
-
   // --- Katmanlar ---
   const kok = k.grup()
+  kok.add(cevre)
   const catiGrup = kCati.grup(), kasnakGrup = kKasnak.grup(), kubbeGrup = kKubbe.grup()
   kok.add(catiGrup, kasnakGrup, kubbeGrup)
   return {

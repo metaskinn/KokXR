@@ -47,7 +47,8 @@ export function ulucamiMaketi(): Maket {
         ic.holes.push(kemer(new THREE.Path(), px, 7.2 + py, 2.2, duzP, 1.3))
         const pencere = () => new THREE.ShapeGeometry(kemer(new THREE.Shape(), px, 7.2 + py, 2.2, duzP, 1.3), 12)
         k.ekle(yer(pencere().translate(0, 0, -1.1), x, 0, z, ry), m.kafes)
-        k.ekle(yer(uvSigdir(pencere()).translate(0, 0, -1.2), x, 0, z, ry), m.pencereIc)
+        // İç kafes duvar yüzüne yakın durur: yandan bakınca duvara gömülmüş gibi görünmez.
+        k.ekle(yer(uvSigdir(pencere()).translate(0, 0, -1.78), x, 0, z, ry), m.pencereIc)
         const icHalka = kemer(new THREE.Shape(), px, 7.05 + py, 2.72, duzP + 0.15, 1.62)
         icHalka.holes.push(kemer(new THREE.Path(), px, 7.05 + py, 2.2, duzP + 0.15, 1.3))
         k.ekle(yer(cikar(icHalka, 0.07, -2.07), x, 0, z, ry), m.koyu)
@@ -69,7 +70,7 @@ export function ulucamiMaketi(): Maket {
     k.ekle(yer(cikar(govde, 1.15, -1.8), x, 0, z, ry), m.tas)
     k.ekle(yer(cikar(ic, 0.2, -2), x, 0, z, ry), m.icDuvar)
     pencereler.forEach((p) => {
-      k.ekle(yer(p.clone().translate(0, 0, -0.1), x, 0, z, ry), m.camKafes)
+      k.ekle(yer(p.clone().translate(0, 0, -0.72), x, 0, z, ry), m.camKafes)
       k.ekle(yer(p, x, 0, z, ry), m.kafes)
     })
     // Kaide, ara silme ve saçak silmesi

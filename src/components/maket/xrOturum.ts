@@ -6,7 +6,7 @@ import { maketBirlestirKur } from './maketBirlestirXr'
 import type { MaketKatmani } from './ulucamiMaket'
 import { menuOgeleri } from './xrMetin'
 import { KART_G, MENU_G, baslikPaneli, bilgiPaneli, etiketPaneli, xrPaneli } from './xrPanel'
-import { OYUNCU_YARICAP, bakisKesiliyor, carpiyor } from './yurumeCarpisma'
+import { OYUNCU_YARICAP, bakisKesiliyor, durakZemini, zeminAdimi } from './yurumeCarpisma'
 
 export interface XrSecenek {
   renderer: THREE.WebGLRenderer; scene: THREE.Scene; camera: THREE.PerspectiveCamera;
@@ -183,6 +183,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     menuCiz()
   }
 
+  let icZemin = 0
   const gorunumDurak = (id: string) => {
     const durak = duraklar.find((d) => d.id === id)
     if (!durak) return
@@ -195,7 +196,8 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       rig.scale.setScalar(1)
     }
     const { x, z } = basYerel().position
-    rigUygula(durakRig(durak.konum, durak.bak, { x, z }, ZEMIN_Y, basYaw()))
+    icZemin = durakZemini(yurume, durak.konum)
+    rigUygula(durakRig(durak.konum, durak.bak, { x, z }, ZEMIN_Y + icZemin, basYaw()))
   }
   const gorunumMaket = () => {
     if (iceride) {
@@ -379,7 +381,10 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     ileriDunya.set(0, 0, -1).transformDirection(camera.matrixWorld)
     const bas = { x: basDunya.x, z: basDunya.z }
     const yeni = yurumeAdimi(bas, { x: ileriDunya.x, z: ileriDunya.z }, { x: girdi.solX, y: girdi.solY }, dt,
-      (x, z) => carpiyor(yurume, x, z, OYUNCU_YARICAP))
+      (x, z) => zeminAdimi(yurume, x, z, OYUNCU_YARICAP, icZemin) === null)
+    // Merdiven ve platformda rig zeminle birlikte yükselir; eğim sürekli olduğu için sıçramaz.
+    icZemin = zeminAdimi(yurume, yeni.x, yeni.z, OYUNCU_YARICAP, icZemin) ?? icZemin
+    rig.position.y = ZEMIN_Y + icZemin
     rig.position.x += yeni.x - bas.x
     rig.position.z += yeni.z - bas.z
 

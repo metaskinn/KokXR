@@ -11,7 +11,7 @@ import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPa
 import type { Kaynak, MaketBilgiNoktasi } from '../../types/eser'
 import { kaynakMetni } from '../KaynakSatiri'
 import { ulucamiMaketi } from './ulucamiMaket'
-import { OYUNCU_YARICAP, bakisKesiliyor, carpiyor as yurumeCarpiyor } from './yurumeCarpisma'
+import { OYUNCU_YARICAP, bakisKesiliyor, durakZemini, zeminAdimi } from './yurumeCarpisma'
 import { xrOturumuKur } from './xrOturum'
 
 export interface MaketSahnesi {
@@ -204,7 +204,9 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
 
   // Yürüme: çarpışma kutuları oyuncu yarıçapı kadar şişirilmiş kabul edilir; eksen eksen denenerek duvar boyunca kayılır.
   const basiliTuslar = new Set<string>()
-  const carpiyor = (x: number, z: number) => yurumeCarpiyor(yurume, x, z, OYUNCU_YARICAP)
+  // Yürünen zeminin yüksekliği: merdiven ve platformda artar.
+  let icZemin = 0
+  const adimAt = (x: number, z: number) => zeminAdimi(yurume, x, z, OYUNCU_YARICAP, icZemin)
   const goz = new THREE.Vector3()
   const yuruYon = new THREE.Vector3(), bakisYon = new THREE.Spherical()
   const yuruGuncelle = (gecenSn: number) => {
@@ -230,9 +232,11 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       const dx = (yuruYon.x * ileri - yuruYon.z * yan) * yol
       const dz = (yuruYon.z * ileri + yuruYon.x * yan) * yol
       const eskiX = camera.position.x, eskiZ = camera.position.z
-      if (!carpiyor(eskiX + dx, eskiZ)) camera.position.x += dx
-      if (!carpiyor(camera.position.x, eskiZ + dz)) camera.position.z += dz
-      const dy = (yurume.gozY - camera.position.y) * Math.min(1, gecenSn * 4)
+      const yeniX = adimAt(eskiX + dx, eskiZ)
+      if (yeniX !== null) { camera.position.x += dx; icZemin = yeniX }
+      const yeniZ = adimAt(camera.position.x, eskiZ + dz)
+      if (yeniZ !== null) { camera.position.z += dz; icZemin = yeniZ }
+      const dy = (yurume.gozY + icZemin - camera.position.y) * Math.min(1, gecenSn * 6)
       camera.position.y += dy
       controls.target.x += camera.position.x - eskiX
       controls.target.y += dy
@@ -512,6 +516,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       }
       if (durak) {
         const konum = new THREE.Vector3(...durak.konum)
+        icZemin = durakZemini(yurume, durak.konum)
         const yon = new THREE.Vector3(...durak.bak).sub(konum).normalize()
         const bakis = konum.clone().add(yon.multiplyScalar(0.5))
         if (girdi) {

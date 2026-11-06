@@ -2,7 +2,7 @@
 // Bu dosya three'ye bağlıdır; eser sayfası ağırlaşmasın diye dinamik içe aktarılır.
 import * as THREE from 'three'
 import { durumPaneli, panelDugmesi, parcaSec, type ParcaAdayi } from '../maket/vazoXr'
-import { bilgiPaneli } from '../maket/xrPanel'
+import { KART_G, bilgiPaneli } from '../maket/xrPanel'
 import {
   DURUM_DUGMELERI, PANO_GENISLIK, PANO_Y, PANO_Z, TEPSI_OLCEK,
   donusAcisi, dondur, durumMetni, enYakinYuva, hucreOlcusu, karistir, panoIzdusumu, parcaUv, tamamMi, tepsiKonumu, yonler, yuvaMerkezi, yuvayaKoy,
@@ -107,7 +107,7 @@ export async function restorasyonXrAc(oturum: XRSession, s: RestorasyonXrSecenek
   // Bilgi solda, okumak için dönülür. Durum ve düğmeler panonun üstünde, başa eğik: ilk bakışta görünsün.
   const bilgi = bilgiPaneli()
   bilgi.goster({ baslik: 'Restorasyon görevi', metin: s.metin, kaynak: `${s.kaynak} · ${s.not}` })
-  bilgi.nesne.scale.setScalar(PANEL_G)
+  bilgi.nesne.scale.setScalar(PANEL_G / KART_G)
   bilgi.nesne.position.set(-Math.sin(PANEL_ACI) * PANEL_UZAK, PANO_Y, -Math.cos(PANEL_ACI) * PANEL_UZAK)
   bilgi.nesne.rotation.y = PANEL_ACI
   const durum = durumPaneli(PANEL_G)

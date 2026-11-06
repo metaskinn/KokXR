@@ -85,7 +85,7 @@ assert.equal(bakisKesiliyor(0, 5, 10, 5, kolon), false)
 assert.equal(bakisKesiliyor(0, 0, 3, 0, kolon), false) // kolona varmadan biter
 
 // Çarpışma
-const y = { sinir:{x0:-10,x1:10,z0:-10,z1:10}, kutular:[{x0:1,x1:2,z0:1,z1:2}], daireler:[{x:-5,z:-5,r:1}], gorusKesenler:[], gozY:2.7 }
+const y = { sinir:{x0:-10,x1:10,z0:-10,z1:10}, kutular:[{x0:1,x1:2,z0:1,z1:2}], daireler:[{x:-5,z:-5,r:1}], zeminler:[], gorusKesenler:[], gozY:2.7 }
 assert.equal(carpiyor(y, 0, 0, .45), false); assert.equal(carpiyor(y, 1.5, 1.5, .45), true)
 assert.equal(carpiyor(y, -5, -5, .45), true); assert.equal(carpiyor(y, 9.9, 0, .45), true)
 assert.equal(carpiyor(y, 0.6, 1.5, .45), true) // kutuya yarıçap kadar yakın

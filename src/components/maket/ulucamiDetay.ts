@@ -128,13 +128,13 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
     ek(halka, m.altinKoyu)
     ek(new THREE.CircleGeometry(0.92, 40).scale(1.32, 1, 1).translate(0, 0, 0.03), d.madalyon)
   }
-  levha(duvardan(10.2, 5.5, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[3], 2.4, 4.27, m.ceviz)
-  levha(duvardan(px(3.5), 9.2, MIHRAP_Z - 0.02, Math.PI), m, d.altin, 3.6, 3.72)
+  levha(duvardan(10.2, 4.85, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[3], 2.4, 4.27, m.ceviz)
+  levha(duvardan(px(3.5), 9.25, MIHRAP_Z - 0.02, Math.PI), m, d.altin, 3.1, 3.2)
   levha(duvardan(px(3.5) + 3.4, 4.6, MIHRAP_Z - 0.02, Math.PI), m, d.kucuk, 3.2, 1.7, m.ahsap)
-  levha(duvardan(-12.6, 5.6, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[0], 2.5, 4.81, m.ceviz)
-  levha(duvardan(px(1.5) - 3.6, 5.6, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[4], 2.3, 4.6, m.ceviz)
-  levha(duvardan(px(4.5), 5.6, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[2], 2.3, 4.6, m.ceviz)
-  levha(duvardan(px(0.5), 5.6, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[1], 2.4, 4.6, m.ceviz)
+  levha(duvardan(-12.6, 4.6, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[0], 2.5, 4.81, m.ceviz)
+  levha(duvardan(px(1.5) - 3.6, 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[4], 2.3, 4.6, m.ceviz)
+  levha(duvardan(px(4.5), 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[2], 2.3, 4.6, m.ceviz)
+  levha(duvardan(px(0.5), 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[1], 2.4, 4.6, m.ceviz)
   levha(duvardan(YX - DUVAR - 0.02, 8.9, pz(2.5), -Math.PI / 2), m, d.kucuk, 3.4, 1.8, m.ahsap)
   levha(duvardan(-YX + DUVAR + 0.02, 8.9, pz(2.5), Math.PI / 2), m, d.kucuk, 3.4, 1.8, m.ahsap)
   // Kâbe kapısının örtüsü: doğu kapısı tarafında yüksekçe, çerçevede öne eğik asılı (Kültür Portalı; görünüm temsilî)
@@ -242,8 +242,15 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   // --- Vaaz kürsüsü: mahfilin karşısındaki ayağa yerleştirilmiş yuvarlak, tek parça mermer ---
   const { x: kuX, z: kuZ, r: kuR } = KURSU
   const kursu: [number, number][] = [[1.1, 0], [1.1, 0.3], [0.86, 0.5], [0.72, 0.9], [0.68, 1.3], [0.92, 1.75], [1.12, 2.05], [1.12, 2.15], [1, 2.2], [1, 3.1], [1.1, 3.14], [1.1, 3.26], [0.96, 3.26], [0.96, 2.2], [0.1, 2.2]]
-  k.ekle(yer(dondurG(kursu, 32), kuX, ZEMIN, kuZ), m.icMermer)
-  for (const y of [1.3, 2.55, 2.85]) k.ekle(yer(new THREE.TorusGeometry(y === 1.3 ? 0.71 : 1.02, 0.025, 6, 32).rotateX(Math.PI / 2), kuX, ZEMIN + y, kuZ), m.altinKoyu)
+  // Üst duvarın kuzeyi açık: basamaklardan çıkılan giriş.
+  const GIRIS = 1.1
+  const kursuAlt = kursu.slice(0, 8)
+  k.ekle(yer(dondurG(kursuAlt, 32), kuX, ZEMIN, kuZ), m.icMermer)
+  k.ekle(yer(dondurG([[1, 2.2], [0.1, 2.2]], 32), kuX, ZEMIN, kuZ), m.icMermer)
+  const kursuUst = new THREE.LatheGeometry(kursu.slice(8, 14).map(([r, y]) => new THREE.Vector2(r, y)), 32, Math.PI + GIRIS / 2, Math.PI * 2 - GIRIS)
+  k.ekle(yer(kursuUst, kuX, ZEMIN, kuZ), m.icMermer)
+  k.ekle(yer(new THREE.TorusGeometry(0.71, 0.025, 6, 32).rotateX(Math.PI / 2), kuX, ZEMIN + 1.3, kuZ), m.altinKoyu)
+  for (const y of [2.55, 2.85]) k.ekle(yer(new THREE.TorusGeometry(1.02, 0.025, 6, 32, Math.PI * 2 - GIRIS).rotateZ(-Math.PI / 2 + GIRIS / 2).rotateX(Math.PI / 2), kuX, ZEMIN + y, kuZ), m.altinKoyu)
   // Payeye bağlayan basamaklar
   for (let n = 0; n < 6; n++) {
     k.ekle(yer(kutuG(0.8, 0.34, 0.5), kuX, ZEMIN + 0.17 + n * 0.34, kuZ - kuR - 1.6 + n * 0.32), m.icMermer)

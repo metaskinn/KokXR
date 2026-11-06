@@ -1,29 +1,36 @@
 // VR menüsü ve bilgi kartı: tuvale çizilip düzleme giydirilir. Düzlem ölçüleri metredir.
+// Görsel dil web kartıyla aynıdır (maket.css, .maket-bilgi-kart): koyu cam, yuvarlak köşe, ince altın vurgu.
 // Kart metni çağırandan gelir; burada tarihsel metin yazılmaz.
 import * as THREE from 'three'
 import { MENU_BASLIK_ORANI, TEMSILI_ETIKET, menuIsabet, satirKir, type MenuOgesi } from './xrMetin'
 
-const TUVAL_G = 1024
+// Okunan paneller yüksek çözünürlüktedir; sahnede çok sayıda duran küçük piller Quest belleği için düşük kalır.
+const KESKIN_G = 2048, PIL_G = 1024
 export const MENU_G = 0.7, KART_G = 0.66
 const BASLIK_G = 0.85, BASLIK_Y = 130
-const MENU_Y = 840, KART_Y = 760
+const MENU_Y = 1680, KART_Y = 1520
 
-// docs/ui-tasarim.md paletinden
-const ZEMIN = '#f8f5ef', YUZEY = '#ecefe7', CAM = '#244e40', METIN = '#253a34', IKINCIL = '#5c6358', BRONZ = '#8e6236', BEYAZ = '#ffffff'
+const CAM_ZEMIN = 'rgba(18,30,26,0.92)', CAM_SATIR = 'rgba(247,245,239,0.1)', CAM_KENAR = 'rgba(247,245,239,0.22)'
+const METIN = '#f7f5ef', IKINCIL = '#d6dcd5', ALTIN = '#f2c14e'
 const YAZI = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
 
 /** Tuval, dokusu ve düzlemi: `metre` panelin genişliği, yükseklik tuval oranından gelir. */
-function panel(metre: number, tuvalY: number) {
+function panel(metre: number, tuvalG: number, tuvalY: number) {
   const el = document.createElement('canvas')
-  el.width = TUVAL_G
+  el.width = tuvalG
   el.height = tuvalY
   const c = el.getContext('2d')
   if (!c) throw new Error('Tuval kullanılamıyor')
   const doku = new THREE.CanvasTexture(el)
   doku.colorSpace = THREE.SRGBColorSpace
-  doku.anisotropy = 8
-  const geometri = new THREE.PlaneGeometry(metre, (metre * tuvalY) / TUVAL_G)
-  const malzeme = new THREE.MeshBasicMaterial({ map: doku, toneMapped: false })
+  doku.anisotropy = 16
+  doku.minFilter = THREE.LinearMipmapLinearFilter
+  doku.generateMipmaps = true
+  // Önceden çarpılmış alfa: köşe ve mipmap geçişlerinde koyu saçak oluşmaz.
+  doku.premultiplyAlpha = true
+  const geometri = new THREE.PlaneGeometry(metre, (metre * tuvalY) / tuvalG)
+  // alphaTest: sahnedeki pillerin boş köşeleri derinliğe yazıp arkasını silmesin.
+  const malzeme = new THREE.MeshBasicMaterial({ map: doku, toneMapped: false, transparent: true, premultipliedAlpha: true, alphaTest: 0.01 })
   const nesne = new THREE.Mesh(geometri, malzeme)
   const dispose = () => {
     doku.dispose()
@@ -33,35 +40,43 @@ function panel(metre: number, tuvalY: number) {
   return { c, doku, nesne, dispose }
 }
 
-function band(c: CanvasRenderingContext2D, yukseklik: number, yazi: string, boyut: number) {
-  c.fillStyle = BRONZ
-  c.fillRect(0, 0, TUVAL_G, yukseklik)
-  c.fillStyle = BEYAZ
-  c.font = `700 ${boyut}px ${YAZI}`
+/** Koyu cam yüzey: yuvarlak köşe ve ince açık kenar. */
+function camYuzey(c: CanvasRenderingContext2D, x: number, y: number, g: number, h: number, r: number, kenar: number) {
+  c.beginPath()
+  c.roundRect(x + kenar / 2, y + kenar / 2, g - kenar, h - kenar, r)
+  c.fillStyle = CAM_ZEMIN
+  c.fill()
+  c.lineWidth = kenar
+  c.strokeStyle = CAM_KENAR
+  c.stroke()
+}
+
+/** Ortalanmış tek satır: sığmazsa yatayda sıkışır, taşmaz. */
+function ortali(c: CanvasRenderingContext2D, yazi: string, x: number, y: number, boyut: number, agirlik: number, renk: string, enFazla: number) {
+  c.fillStyle = renk
+  c.font = `${agirlik} ${boyut}px ${YAZI}`
   c.textAlign = 'center'
   c.textBaseline = 'middle'
-  c.fillText(yazi, TUVAL_G / 2, yukseklik / 2, TUVAL_G - 2 * 40) // Sığmazsa yatayda sıkışır, taşmaz
+  c.fillText(yazi, x, y, enFazla)
 }
 
 /** Temsilî etiketi: oturum boyunca görünür, menü ve kart kapalıyken de kalır. */
 export function etiketPaneli() {
   const yukseklik = 72
-  const { c, doku, nesne, dispose } = panel(0.6, yukseklik)
-  band(c, yukseklik, TEMSILI_ETIKET, 40)
+  const { c, doku, nesne, dispose } = panel(0.6, PIL_G, yukseklik)
+  camYuzey(c, 0, 0, PIL_G, yukseklik, 36, 3)
+  ortali(c, TEMSILI_ETIKET, PIL_G / 2, yukseklik / 2, 38, 600, ALTIN, PIL_G - 80)
   doku.needsUpdate = true
   return { nesne, dispose }
 }
 
-/** Bilgi başlığı: yalnız ad yazar, metin kartta açılır. */
+/** Bilgi başlığı: yalnız ad yazar, metin kartta açılır. Pil, yazının genişliğine oturur. */
 export function baslikPaneli(baslik: string) {
-  const { c, doku, nesne, dispose } = panel(BASLIK_G, BASLIK_Y)
-  c.fillStyle = CAM
-  c.fillRect(0, 0, TUVAL_G, BASLIK_Y)
-  c.fillStyle = BEYAZ
-  c.font = `700 72px ${YAZI}`
-  c.textAlign = 'center'
-  c.textBaseline = 'middle'
-  c.fillText(baslik, TUVAL_G / 2, BASLIK_Y / 2, TUVAL_G - 2 * 40)
+  const { c, doku, nesne, dispose } = panel(BASLIK_G, PIL_G, BASLIK_Y)
+  c.font = `700 68px ${YAZI}`
+  const g = Math.min(PIL_G - 8, c.measureText(baslik).width + 120)
+  camYuzey(c, (PIL_G - g) / 2, 4, g, BASLIK_Y - 8, (BASLIK_Y - 8) / 2, 4)
+  ortali(c, baslik, PIL_G / 2, BASLIK_Y / 2, 68, 700, METIN, g - 72)
   doku.needsUpdate = true
   return { nesne, dispose }
 }
@@ -69,50 +84,42 @@ export function baslikPaneli(baslik: string) {
 /** Birleştirme durumu: başa bağlıdır, yalnız durum değişince çizilir. */
 export function birlesimPaneli() {
   const yukseklik = 190
-  const { c, doku, nesne, dispose } = panel(0.6, yukseklik)
+  const { c, doku, nesne, dispose } = panel(0.6, PIL_G, yukseklik)
   const ciz = ({ ust, mesaj, not }: { ust: string; mesaj: string; not: string }) => {
-    c.fillStyle = ZEMIN
-    c.fillRect(0, 0, TUVAL_G, yukseklik)
-    band(c, 72, ust, 42)
-    c.fillStyle = METIN
-    c.font = `600 40px ${YAZI}`
-    c.fillText(mesaj, TUVAL_G / 2, 106, TUVAL_G - 2 * 30)
-    c.fillStyle = IKINCIL
-    c.font = `400 30px ${YAZI}`
-    c.fillText(not, TUVAL_G / 2, 160, TUVAL_G - 2 * 30)
+    c.clearRect(0, 0, PIL_G, yukseklik)
+    camYuzey(c, 0, 0, PIL_G, yukseklik, 28, 3)
+    ortali(c, ust, PIL_G / 2, 42, 38, 700, ALTIN, PIL_G - 60)
+    ortali(c, mesaj, PIL_G / 2, 102, 40, 600, METIN, PIL_G - 60)
+    ortali(c, not, PIL_G / 2, 154, 30, 400, IKINCIL, PIL_G - 60)
     doku.needsUpdate = true
   }
   return { nesne, ciz, dispose }
 }
 
 export function xrPaneli() {
-  const { c, doku, nesne, dispose } = panel(MENU_G, MENU_Y)
+  const G = KESKIN_G
+  const { c, doku, nesne, dispose } = panel(MENU_G, G, MENU_Y)
   const bandY = MENU_Y * MENU_BASLIK_ORANI
   let liste: MenuOgesi[] = []
 
   const ciz = (ogeler: MenuOgesi[]) => {
     liste = ogeler
-    c.fillStyle = ZEMIN
-    c.fillRect(0, 0, TUVAL_G, MENU_Y)
-    band(c, bandY, TEMSILI_ETIKET, 36)
+    c.clearRect(0, 0, G, MENU_Y)
+    camYuzey(c, 0, 0, G, MENU_Y, 56, 6)
+    ortali(c, TEMSILI_ETIKET, G / 2, bandY / 2, 72, 600, ALTIN, G - 160)
+    c.fillStyle = ALTIN
+    c.fillRect(80, bandY - 4, G - 160, 4)
     // Satırlar gövdeyi eşit böler; isabet hesabı (menuIsabet) aynı bölmeyi kullanır.
     const satir = (MENU_Y - bandY) / Math.max(1, ogeler.length)
-    const bosluk = Math.min(12, satir * 0.14)
-    const boyut = Math.round(Math.max(34, Math.min(50, satir * 0.5)))
-    c.font = `600 ${boyut}px ${YAZI}`
-    c.textAlign = 'center'
-    c.textBaseline = 'middle'
+    const bosluk = Math.min(24, satir * 0.14)
+    const boyut = Math.round(Math.max(68, Math.min(100, satir * 0.5)))
     ogeler.forEach((oge, i) => {
       const y = bandY + i * satir
       c.beginPath()
-      c.roundRect(40, y + bosluk / 2, TUVAL_G - 80, satir - bosluk, 14)
-      c.fillStyle = YUZEY
+      c.roundRect(80, y + bosluk / 2, G - 160, satir - bosluk, 28)
+      c.fillStyle = CAM_SATIR
       c.fill()
-      c.lineWidth = 3
-      c.strokeStyle = CAM
-      c.stroke()
-      c.fillStyle = CAM
-      c.fillText(oge.ad, TUVAL_G / 2, y + satir / 2, TUVAL_G - 2 * 72)
+      ortali(c, oge.ad, G / 2, y + satir / 2, boyut, 600, METIN, G - 288)
     })
     doku.needsUpdate = true
   }
@@ -127,40 +134,48 @@ export function xrPaneli() {
 }
 
 export function bilgiPaneli() {
-  const { c, doku, nesne, dispose } = panel(KART_G, KART_Y)
-  const YAN = (TUVAL_G - 900) / 2 // 900 px satır genişliği
-  const BANT = 104, UST = BANT + 28, ALT = KART_Y - 28, ARA = 24
+  const G = KESKIN_G
+  const { c, doku, nesne, dispose } = panel(KART_G, G, KART_Y)
+  const YAN = 104, GEN = G - 2 * YAN
+  const BASLIK = 92, BASLIK_UST = 72, CIZGI = BASLIK_UST + BASLIK + 32
+  const UST = CIZGI + 44, ALT = KART_Y - 64, ARA = 56
 
   const goster = (k: { baslik: string; metin: string; kaynak: string }) => {
-    c.fillStyle = ZEMIN
-    c.fillRect(0, 0, TUVAL_G, KART_Y)
-    band(c, BANT, k.baslik, 46)
-
-    // Gövde 42 px (kart küçük olduğu için tuvalde iri yazılır); gerçek yazı tipi tahminden geniş çıkıp karta sığmazsa küçültülür, metin kesilmez.
-    let boyut = 42
-    let satirlar: string[] = [], kaynaklar: string[] = [], aralik = 0, kaynakAralik = 0
-    for (; boyut >= 22; boyut -= 2) {
-      c.font = `400 ${boyut}px ${YAZI}`
-      satirlar = satirKir(k.metin, (s) => c.measureText(s).width, 900)
-      c.font = `400 ${boyut - 4}px ${YAZI}`
-      kaynaklar = satirKir(k.kaynak, (s) => c.measureText(s).width, 900)
-      aralik = Math.round(boyut * 1.3)
-      kaynakAralik = Math.round((boyut - 4) * 1.3)
-      if (satirlar.length * aralik + ARA + kaynaklar.length * kaynakAralik <= ALT - UST) break
-    }
-    if (boyut < 22) boyut = 22
-
+    c.clearRect(0, 0, G, KART_Y)
     c.textAlign = 'left'
     c.textBaseline = 'top'
+
+    // Gövde 84 px; gerçek yazı tipi tahminden geniş çıkıp karta sığmazsa küçültülür, metin kesilmez.
+    let boyut = 84
+    let satirlar: string[] = [], kaynaklar: string[] = [], aralik = 0, kaynakAralik = 0
+    for (; boyut >= 44; boyut -= 2) {
+      c.font = `400 ${boyut}px ${YAZI}`
+      satirlar = satirKir(k.metin, (s) => c.measureText(s).width, GEN)
+      c.font = `400 ${Math.round(boyut * 0.78)}px ${YAZI}`
+      kaynaklar = satirKir(k.kaynak, (s) => c.measureText(s).width, GEN)
+      aralik = Math.round(boyut * 1.32)
+      kaynakAralik = Math.round(boyut * 0.78 * 1.28)
+      if (satirlar.length * aralik + ARA + kaynaklar.length * kaynakAralik <= ALT - UST) break
+    }
+    if (boyut < 44) boyut = 44
+
+    // Cam, içeriğe göre kısalır: kısa metinde boş alan kalmaz. Düzlem aynı kalır, üstü hizalıdır.
+    const kaynakUst = Math.min(ALT, UST + satirlar.length * aralik + ARA + kaynaklar.length * kaynakAralik) - kaynaklar.length * kaynakAralik
+    camYuzey(c, 0, 0, G, Math.min(KART_Y, kaynakUst + kaynaklar.length * kaynakAralik + 64), 56, 6)
+    c.font = `700 ${BASLIK}px ${YAZI}`
+    c.fillStyle = METIN
+    c.fillText(k.baslik, YAN, BASLIK_UST, GEN) // Sığmazsa yatayda sıkışır, taşmaz
+    c.fillStyle = ALTIN
+    c.fillRect(YAN, CIZGI, 168, 6)
+
     c.font = `400 ${boyut}px ${YAZI}`
     c.fillStyle = METIN
     satirlar.forEach((s, i) => c.fillText(s, YAN, UST + i * aralik))
 
-    // Kaynak kartın altına yaslıdır; üstünde ince çizgi.
-    const kaynakUst = ALT - kaynaklar.length * kaynakAralik
-    c.fillStyle = BRONZ
-    c.fillRect(YAN, kaynakUst - ARA / 2, 900, 2)
-    c.font = `400 ${boyut - 4}px ${YAZI}`
+    // Kaynak metnin altındadır; üstünde ince çizgi.
+    c.fillStyle = CAM_KENAR
+    c.fillRect(YAN, kaynakUst - ARA / 2, GEN, 3)
+    c.font = `400 ${Math.round(boyut * 0.78)}px ${YAZI}`
     c.fillStyle = IKINCIL
     kaynaklar.forEach((s, i) => c.fillText(s, YAN, kaynakUst + i * kaynakAralik))
 

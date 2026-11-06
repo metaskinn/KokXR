@@ -159,8 +159,8 @@
   "kaynaklar": [
     { "id": "hb-s177", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Külliyesi\"", "sayfa": "177" },
     { "id": "hb-s178", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Külliyesi\"", "sayfa": "178-179" },
-    { "id": "hb-s180", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"", "sayfa": "180" },
-    { "id": "hb-s181", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"", "sayfa": "181" },
+    { "id": "hb-s180", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"", "sayfa": "180-181" },
+    { "id": "hb-s181", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"", "sayfa": "180-181" },
     { "id": "hb-s182", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"", "sayfa": "182-183" },
     { "id": "hb-s184", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Türbesi\"", "sayfa": "184-185" },
     { "id": "hb-s186", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Ailesi Türbesi\"", "sayfa": "186-187" },
@@ -174,11 +174,11 @@
     "bilgiler": [
       { "metin": "Cami tabhaneli (zaviyeli) plan şemasındadır: son cemaat yeri, kubbeli iç avlu, iki yanda tabhaneler ve ana ibadet mekânı.", "kaynakId": "hb-s180" },
       { "metin": "Orta kubbenin çapı 8,10 m'dir. \"Parçala\" ile örtüleri kaldırıp planı üstten görebilirsin.", "kaynakId": "hb-s181" },
-      { "metin": "Avludaki sekizgen ve kare türbeler Hamza Bey'e, ailesine ve torunu Kara Mustafa Paşa'ya aittir.", "kaynakId": "hb-s178" }
+      { "metin": "Cami bahçesindeki türbeler Hamza Bey'e, eşlerine ve Kara Mustafa Paşa'ya aittir.", "kaynakId": "hb-s178" }
     ],
     "icBilgiler": [
       { "id": "son-cemaat", "baslik": "Son cemaat yeri", "metin": "Beş gözlü revakın orta kubbesi diğerlerinden büyük ve yüksektir; geçişlerde Türk üçgenleri kullanılmıştır. İki orta ayak yaklaşık 80 cm dışa taşar.", "kaynakId": "hb-s180", "konum": [5, 6.6, 6.3], "yaricap": 3.2 },
-      { "id": "kitabe", "baslik": "Cümle kapısı", "metin": "Kapının üzerinde, celi sülüs hatla Fetih suresinin ilk ayeti yazılıdır: \"Şüphesiz biz sana apaçık bir fetih verdik.\" 1874 onarımında kapı üzerine bir kitabe de eklenmiştir.", "kaynakId": "hb-s180", "konum": [5, 5.2, 9.4], "yaricap": 2.6 },
+      { "id": "kitabe", "baslik": "Cümle kapısı", "metin": "Kapının üzerinde, celi sülüs hatla Fetih suresinin ilk ayeti yazılıdır: \"Şüphesiz biz sana apaçık bir fetih verdik.\"", "kaynakId": "hb-s180", "konum": [5, 5.2, 9.4], "yaricap": 2.6 },
       { "id": "kubbe", "baslik": "Büyük kubbe", "metin": "8,10 m çapındaki kubbe önce sekizgen, sonra on altıgen bir kasnağa oturur. Kasnakta renkli camlı altı pencere ve on iki niş vardır; on altıgenin köşeleri üç sıra mukarnaslıdır.", "kaynakId": "hb-s181", "konum": [5, 6.5, 14.5], "yaricap": 2.6 },
       { "id": "buyuk-kemer", "baslik": "Büyük kemer", "metin": "İki kubbe arasındaki büyük kemerin üzengisi sofadan yalnızca 1,75 m yüksektedir. Basık görünümü gidermek için kubbe yüksek kuşaklarla havalandırılmıştır.", "kaynakId": "hb-s182", "konum": [5, 3.8, 18.1], "yaricap": 2 },
       { "id": "mihrap", "baslik": "Mihrap", "metin": "Geniş çerçeveli nişin kavsarası altı sıra mukarnaslıdır. Üstteki kubbe Türk üçgenli geniş bir kuşağa oturur; bu bölümde altlı üstlü altışar sivri kemerli pencere vardır.", "kaynakId": "hb-s182", "konum": [5, 4.2, 26.3], "yaricap": 4 },

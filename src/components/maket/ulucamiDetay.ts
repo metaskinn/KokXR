@@ -5,9 +5,10 @@
 import * as THREE from 'three'
 import { ACIK_YAYIN } from '../../data/acikYayin'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
+import { ahsapKursu, dolapYap, mahfilYap, mermerKursu, rahleYap, sandikYap } from './ulucami/minber'
 import {
   DUVAR, Kova, type Mal, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
-  cikar, dikdortgen, dondurG, kemer, kutuG, px, pz, silindirG, yer,
+  cikar, dikdortgen, kemer, kutuG, px, pz, silindirG, yer,
 } from './ulucamiParca'
 
 const ZEMIN = 0.7
@@ -122,7 +123,7 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   // Kıble duvarı: mihrabın üstünde yeşil levha, yanlarında oval madalyonlar ve panolar (fotoğraflara göre)
   levha(duvardan(0, 10.85, MIHRAP_Z - 0.02, Math.PI), m, d.sancak, 1.85, 3.8, m.altinKoyu)
   for (const s of [-1, 1]) {
-    const ek = duvardan(s * 4.95, 7.2, MIHRAP_Z - 0.03, Math.PI)
+    const ek = duvardan(s < 0 ? -8.6 : s * 4.95, 7.2, MIHRAP_Z - 0.03, Math.PI) // batıdaki, minber köşkünün arkasında kalmasın
     const halka = new THREE.TorusGeometry(0.92, 0.075, 8, 40)
     halka.scale(1.32, 1, 1)
     ek(halka, m.altinKoyu)
@@ -186,71 +187,16 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
     }
   }
 
-  // --- Kur'an dolapları: payelerin kuzey ve güney yüzlerinin dibinde, ahşap raflı ---
-  const dolap = (x: number, z: number, ry: number) => {
-    const ek: Ekle = (g, mal) => k.ekle(yer(g, x, 0, z, ry), mal)
-    const G = 2.7, YK = 1.55, D = 0.44, Y0 = ZEMIN + 0.05, RAF = 3, BOL = 6
-    ek(kutuG(G, YK, 0.06).translate(0, Y0 + YK / 2, 1.53), m.ahsap)
-    for (const s of [-1, 1]) ek(kutuG(0.07, YK, D).translate(s * (G / 2 - 0.035), Y0 + YK / 2, 1.5 + D / 2), m.ceviz)
-    for (let r = 0; r <= RAF; r++) ek(kutuG(G, 0.06, D).translate(0, Y0 + r * (YK - 0.06) / RAF + 0.03, 1.5 + D / 2), m.ceviz)
-    for (let b = 1; b < BOL; b++) ek(kutuG(0.035, YK - 0.06, D - 0.04).translate(-G / 2 + b * G / BOL, Y0 + YK / 2, 1.5 + D / 2), m.ceviz)
-    // Taç silme
-    ek(kutuG(G + 0.12, 0.09, D + 0.08).translate(0, Y0 + YK + 0.04, 1.5 + D / 2), m.altinKoyu)
-  }
+  // --- Dolaplar, mahfil, kürsüler: ulucami/minber.ts ---
   for (let i = 1; i < SUTUN; i++) for (let j = 1; j < SATIR; j++) {
-    dolap(px(i), pz(j), 0)
-    dolap(px(i), pz(j), Math.PI)
+    dolapYap(m, k, px(i), pz(j), 0, ZEMIN)
+    dolapYap(m, k, px(i), pz(j), Math.PI, ZEMIN)
   }
-
-  // --- Müezzin mahfili: sekiz ahşap sütun, korkuluklu platform, merdiven (Kültür Portalı: sekiz sütun) ---
-  const { x: mx, z: mz, enZ } = MAHFIL
-  const PLATFORM_Y = ZEMIN + 3.5
-  const sutun: [number, number][] = [[0.16, 0], [0.11, 0.25], [0.09, 0.45], [0.09, 2.2], [0.13, 2.45], [0.09, 2.7], [0.11, 3.2], [0.18, 3.5]]
-  for (const a of [-3.1, -1.03, 1.03, 3.1]) for (const b of [-enZ, enZ])
-    k.ekle(yer(dondurG(sutun, 12), mx + a, ZEMIN, mz + b), m.ceviz)
-  k.ekle(yer(kutuG(6.9, 0.22, 4.8), mx, PLATFORM_Y + 0.11, mz), m.ceviz)
-  k.ekle(yer(kutuG(7.05, 0.08, 4.95), mx, PLATFORM_Y + 0.26, mz), m.altinKoyu)
-  k.ekle(yer(kutuG(6.7, 0.04, 4.6), mx, PLATFORM_Y - 0.02, mz), m.kundekari)
-  const korkulukY = PLATFORM_Y + 0.3
-  const parmaklik = (x0: number, z0: number, x1: number, z1: number) => {
-    const L = Math.hypot(x1 - x0, z1 - z0), adet = Math.round(L / 0.3)
-    for (let n = 0; n <= adet; n++) {
-      const t = n / adet
-      k.ekle(yer(dondurG([[0.03, 0], [0.05, 0.15], [0.025, 0.35], [0.05, 0.55], [0.03, 0.72]], 6), x0 + (x1 - x0) * t, korkulukY, z0 + (z1 - z0) * t), m.ceviz)
-    }
-    const a = Math.atan2(x1 - x0, z1 - z0)
-    k.ekle(yer(kutuG(0.09, 0.07, L + 0.09), (x0 + x1) / 2, korkulukY + 0.76, (z0 + z1) / 2, a), m.ahsap)
-  }
-  parmaklik(mx - 3.4, mz + 2.35, mx + 3.4, mz + 2.35)
-  parmaklik(mx - 3.4, mz - 2.35, mx + 1.9, mz - 2.35)
-  parmaklik(mx - 3.4, mz - 2.35, mx - 3.4, mz + 2.35)
-  parmaklik(mx + 3.4, mz - 2.35, mx + 3.4, mz + 2.35)
-  // Kuzeydoğu köşesinden inen merdiven
-  const ADIM = 12, merdivenX = mx + 2.65, merdivenBoy = 4.4
-  for (let n = 0; n < ADIM; n++) {
-    const y = ZEMIN + (n + 1) * (3.56 / ADIM), z = mz - 2.4 - merdivenBoy + (n + 0.5) * (merdivenBoy / ADIM)
-    k.ekle(yer(kutuG(1.2, 0.06, merdivenBoy / ADIM + 0.05), merdivenX, y, z), m.ceviz)
-    k.ekle(yer(kutuG(1.2, y - ZEMIN - 0.02, 0.03), merdivenX, ZEMIN + (y - ZEMIN) / 2, z + merdivenBoy / ADIM / 2), m.ahsap)
-  }
-  for (const s of [-1, 1]) {
-    const yan = new THREE.Shape()
-    yan.moveTo(0, ZEMIN); yan.lineTo(merdivenBoy, ZEMIN + 3.56); yan.lineTo(merdivenBoy, ZEMIN + 4.3); yan.lineTo(0, ZEMIN + 0.74); yan.closePath()
-    const g = cikar(yan, 0.08, -0.04).rotateY(-Math.PI / 2).translate(merdivenX + s * 0.62, 0, mz - 2.4 - merdivenBoy)
-    k.ekle(g, m.ceviz)
-  }
-
-  // --- Vaaz kürsüsü: mahfilin karşısındaki ayağa yerleştirilmiş yuvarlak, tek parça mermer ---
+  mahfilYap(m, k, { x: MAHFIL.x, z: MAHFIL.z, enZ: MAHFIL.enZ, zemin: ZEMIN })
   const { x: kuX, z: kuZ, r: kuR } = KURSU
-  const kursu: [number, number][] = [[1.1, 0], [1.1, 0.3], [0.86, 0.5], [0.72, 0.9], [0.68, 1.3], [0.92, 1.75], [1.12, 2.05], [1.12, 2.15], [1, 2.2], [1, 3.1], [1.1, 3.14], [1.1, 3.26], [0.96, 3.26], [0.96, 2.2], [0.1, 2.2]]
   // Üst duvarın kuzeyi açık: basamaklardan çıkılan giriş.
-  const GIRIS = 1.1
-  const kursuAlt = kursu.slice(0, 8)
-  k.ekle(yer(dondurG(kursuAlt, 32), kuX, ZEMIN, kuZ), m.icMermer)
-  k.ekle(yer(dondurG([[1, 2.2], [0.1, 2.2]], 32), kuX, ZEMIN, kuZ), m.icMermer)
-  const kursuUst = new THREE.LatheGeometry(kursu.slice(8, 14).map(([r, y]) => new THREE.Vector2(r, y)), 32, Math.PI + GIRIS / 2, Math.PI * 2 - GIRIS)
-  k.ekle(yer(kursuUst, kuX, ZEMIN, kuZ), m.icMermer)
-  k.ekle(yer(new THREE.TorusGeometry(0.71, 0.025, 6, 32).rotateX(Math.PI / 2), kuX, ZEMIN + 1.3, kuZ), m.altinKoyu)
-  for (const y of [2.55, 2.85]) k.ekle(yer(new THREE.TorusGeometry(1.02, 0.025, 6, 32, Math.PI * 2 - GIRIS).rotateZ(-Math.PI / 2 + GIRIS / 2).rotateX(Math.PI / 2), kuX, ZEMIN + y, kuZ), m.altinKoyu)
+  mermerKursu(m, k, { x: kuX, z: kuZ, r: kuR, zemin: ZEMIN, giris: 1.1 })
+  ahsapKursu(m, k, ZEMIN)
   // Payeye bağlayan basamaklar
   for (let n = 0; n < 6; n++) {
     k.ekle(yer(kutuG(0.8, 0.34, 0.5), kuX, ZEMIN + 0.17 + n * 0.34, kuZ - kuR - 1.6 + n * 0.32), m.icMermer)
@@ -269,13 +215,6 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   }
 
   // --- Ahşap sandıklar ve rahleler ---
-  for (const [x, z] of [[sx - 4.3, sz - 4.3], [sx + 4.3, sz - 4.3], [sx - 4.3, sz + 4.3], [sx + 4.3, sz + 4.3]]) {
-    k.ekle(yer(kutuG(0.8, 0.85, 0.52), x, ZEMIN + 0.53, z), m.ceviz)
-    k.ekle(yer(kutuG(0.86, 0.06, 0.58), x, ZEMIN + 0.98, z), m.ahsap)
-    k.ekle(yer(kutuG(0.66, 0.55, 0.02), x, ZEMIN + 0.55, z + (z < sz ? 0.27 : -0.27)), m.kundekari)
-  }
-  for (const [x, z] of [[-2.9, MIHRAP_Z - 2.9], [2.9, MIHRAP_Z - 2.9]]) {
-    k.ekle(yer(kutuG(0.7, 0.05, 0.42).rotateX(-0.42), x, ZEMIN + 0.62, z), m.ceviz)
-    for (const s of [-1, 1]) k.ekle(yer(kutuG(0.05, 0.62, 0.05).rotateX(s * 0.42), x + s * 0.28, ZEMIN + 0.31, z), m.ahsap)
-  }
+  for (const [x, z] of [[sx - 4.3, sz - 4.3], [sx + 4.3, sz - 4.3], [sx - 4.3, sz + 4.3], [sx + 4.3, sz + 4.3]]) sandikYap(m, k, x, z, z < sz ? 1 : -1, ZEMIN)
+  for (const [x, z] of [[-2.9, MIHRAP_Z - 2.9], [2.9, MIHRAP_Z - 2.9]]) rahleYap(m, k, x, z, ZEMIN)
 }

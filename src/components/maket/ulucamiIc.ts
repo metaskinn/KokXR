@@ -3,7 +3,7 @@
 // Hat yazısı taklit edilmez: panolar ve süslemeler yalnız bitkisel ve geometrik motif taşır.
 import * as THREE from 'three'
 import {
-  DUVAR, GOZ_X, GOZ_Z, H, KASNAK_TABAN, Kova, OCTA, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
+  DUVAR, H, KASNAK_TABAN, Kova, OCTA, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
   cikar, dikdortgen, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
 } from './ulucamiParca'
 import { KAPI_Z, KURSU, MAHFIL } from './ulucamiDetay'
@@ -333,9 +333,7 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
   kutu(1.55, 0.08, 0.2, m.ahsap, MINBER_X + 1.55, ZEMIN + 0.82, korkulukZ0)
 
   // --- Şadırvan: mermer zemin, on altı köşeli havuz, kademeli fıskiye, tabureler, sarkan fener, korkuluk ---
-  // Fotoğraflarda şadırvan gözünün halısı zeytin yeşilidir.
-  kutu(GOZ_X, 0.02, GOZ_Z, m.haliZeytin, sx, ZEMIN + 0.01, sz)
-  kutu(GOZ_X - 3.2, 0.1, GOZ_Z - 3.2, m.mermerDoseme, sx, ZEMIN + 0.05, sz)
+  // Zeytin yeşili halı ve mermer döşeme: ulucami/zemin.ts (üst yüzü ZEMIN + 0.1).
   k.ekle(yer(duzGolge(silindirG(3.55, 3.75, 1, 16)), sx, ZEMIN + 0.6, sz), m.icMermer)
   for (let n = 0; n < 16; n++) {
     const a = (n + 0.5) * Math.PI / 8

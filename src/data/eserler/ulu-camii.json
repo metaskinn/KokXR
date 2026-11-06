@@ -168,8 +168,15 @@
       "id": "mahfil",
       "donem": "1549",
       "baslik": "Müezzin mahfili",
-      "metin": "Zarif sekiz sütun üzerine oturan yüksek ve sade müezzin mahfili, 1549 yılında yaptırılmıştır.",
-      "kaynakId": "kp-ulu"
+      "metin": "Sekiz ahşap sütun üzerindeki müezzin mahfilinin kitabesi H. 956 / M. 1549 tarihini taşır.",
+      "kaynakId": "ulu-s56"
+    },
+    {
+      "id": "kutuphane",
+      "donem": "1786",
+      "baslik": "Hünkâr mahfili altındaki kütüphane",
+      "metin": "Münzevî Abdullah Efendi, hünkâr mahfilinin alt bölümünde bir kütüphane kurarak kendi kitaplarını ve satın aldığı Yenişehirli Hacı Osman Efendi'nin kitaplarını vakfetmiştir.",
+      "kaynakId": "ulu-s57"
     },
     {
       "id": "deprem-onarim",
@@ -188,6 +195,7 @@
   ],
   "kaynaklar": [
     {"id": "kp-ulu", "metin": "T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Bursa Ulu Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), kulturportali.gov.tr"},
+    {"id": "ulu-kabe", "metin": "Kültür Portalı, Bursa Ulu Cami (kulturportali.gov.tr); Anadolu Ajansı, Kâbe kapısı örtüsünün bakımı, 26.01.2024 (aa.com.tr)"},
     {"id": "mwnf-ulu", "metin": "Yekta Demiralp, \"Ulu Cami\", Discover Islamic Art, Museum With No Frontiers, islamicart.museumwnf.org"},
     {
       "id": "ulu-s33",
@@ -197,12 +205,17 @@
     {
       "id": "ulu-s44",
       "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
-      "sayfa": "44"
+      "sayfa": "44, 46"
     },
     {
       "id": "ulu-s48",
       "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
       "sayfa": "48"
+    },
+    {
+      "id": "ulu-s56",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "sayfa": "56"
     },
     {
       "id": "ulu-s57",
@@ -459,9 +472,9 @@
       },
       {"id": "hat", "baslik": "Hat levhaları", "metin": "Camide duvarlara nakşedilmiş veya levha hâlinde yaklaşık yüz yetmiş hat eseri bulunur. Payelerin her yüzüne celi sülüs ve kûfi hatlarla esmâ-i hüsnâdan örnekler yazılmıştır.", "kaynakId": "ulu-s57", "konum": [13.8, 11.4, 24.6], "yaricap": 12},
       {"id": "dogu-kapisi", "baslik": "Doğu kapısı", "metin": "Caminin doğu, batı ve kuzey yönünde olmak üzere üç kapısı vardır. Bu kapılardan kuzey ve batı yöndekiler yeni olup doğudaki kapı kanatları camiyle aynı dönemde yapılmıştır. Ahşap kanatları ceviz ağacındandır. Mihrap ekseni ile her üç kapının ekseni şadırvanın merkezinde birleşir.", "kaynakId": "kp-ulu", "konum": [30.2, 7.1, -6.875], "yaricap": 8},
-      {"id": "mahfil", "baslik": "Müezzin mahfili", "metin": "Zarif sekiz sütun üzerine oturan yüksek ve sade müezzin mahfili, 1549 yılında yaptırılmıştır.", "kaynakId": "kp-ulu", "konum": [0, 6.4, 5.875], "yaricap": 5.5},
-      {"id": "kursu", "baslik": "Taş kürsü", "metin": "Mahfilin karşısındaki ayağa yerleştirilmiş yuvarlak, tek parça mermerden oyulmuş taş kürsü 1815 yılında yaptırılmıştır. Discover Islamic Art ise 1231 / 1816 tarihini verir.", "kaynakId": "kp-ulu", "konum": [4.8, 5, 13.75], "yaricap": 3.6},
-      {"id": "kabe-ortusu", "baslik": "Kâbe kapısının örtüsü", "metin": "Doğu kapısı tarafında yüksekçe bir yere asılan siyah örtü, Kâbe kapısının örtüsüdür. Yavuz Sultan Selim tarafından Ulu Cami'ye hediye edilmiştir. Maketteki işlemeler temsilîdir; gerçek ayet işlemeleri gösterilmez.", "kaynakId": "kp-ulu", "konum": [31.3, 5.6, -20.625], "yaricap": 10}
+      {"id": "mahfil", "baslik": "Müezzin mahfili", "metin": "Sekiz ahşap sütun üzerindeki müezzin mahfilinin kitabesi H. 956 / M. 1549 tarihini taşır.", "kaynakId": "ulu-s56", "konum": [0, 6.4, 5.875], "yaricap": 5.5},
+      {"id": "kursu", "baslik": "Taş kürsü", "metin": "Müezzin mahfilinin karşısındaki mermer vaaz kürsüsü rokoko üslubundadır. Envantere göre üzerindeki kitabe H. 1231 / M. 1816 tarihini taşır; Kültür Portalı ise 1815 tarihini verir.", "kaynakId": "ulu-s56", "konum": [4.8, 5, 13.75], "yaricap": 3.6},
+      {"id": "kabe-ortusu", "baslik": "Kâbe kapısının örtüsü", "metin": "Kâbe kapısına ait örtü cami içindeki camlı koruma alanında sergilenir. Kültür Portalı, örtünün Yavuz Sultan Selim tarafından Ulu Cami'ye hediye edildiğini aktarır. Maketteki işlemeler temsilîdir; gerçek ayet işlemeleri gösterilmez.", "kaynakId": "ulu-kabe", "konum": [31.3, 5.6, -18.425], "yaricap": 10}
     ],
     "aciklama": "Temsili maket: plan ölçüleri, kubbe ve paye düzeni envanterdeki bilgilere göre kodla oluşturuldu; yükseklikler, cephe ve iç mekân ayrıntıları arşiv fotoğraflarına ve Kültür Portalı metnine bakılarak temsilî yorumlanmıştır. Levha ve paye yazıları arşiv fotoğraflarından alınmıştır; hangi yüzde durdukları temsilîdir. Gerçek bir 3B tarama değildir.",
     "bilgiler": [

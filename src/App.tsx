@@ -16,6 +16,7 @@ import OgretmenPaneli from './pages/OgretmenPaneli'
 import Vizyon from './pages/Vizyon'
 import Kutuphane from './pages/Kutuphane'
 import OnayAkisi from './pages/OnayAkisi'
+import VrEserler, { VrEser } from './pages/VrEserler'
 import Simge from './components/Simge'
 
 const rozetAnahtari = 'kokxr-rozetler'
@@ -57,7 +58,7 @@ export default function App() {
 
   return <>
     <a className="atlama" href="#ana-icerik">Ana içeriğe geç</a>
-    <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/yolculuk">Yolculuk</NavLink><NavLink to="/" end>Keşfet</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink to="/atolye/kilic">Kılıç atölyesi</NavLink><NavLink to="/atolye/cini">Çini atölyesi</NavLink><NavLink to="/ogretmen">Öğretmen</NavLink><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav></div></header>
+    <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/yolculuk">Yolculuk</NavLink><NavLink to="/" end>Keşfet</NavLink><NavLink to="/vr">VR Eserler</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink to="/atolye/kilic">Kılıç atölyesi</NavLink><NavLink to="/atolye/cini">Çini atölyesi</NavLink><NavLink to="/ogretmen">Öğretmen</NavLink><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav></div></header>
     <main id="ana-icerik" tabIndex={-1}>
       {icerik.uyari && <p className="yonetim-notu" role="alert">{icerik.uyari}</p>}
       <Routes>
@@ -67,6 +68,8 @@ export default function App() {
         <Route path="/vizyon" element={<Vizyon />} />
         <Route path="/kutuphane" element={<Kutuphane />} />
         <Route path="/onay" element={<OnayAkisi />} />
+        <Route path="/vr" element={<VrEserler />} />
+        <Route path="/vr/:id" element={<VrEser eserler={eserler} rozetKazan={rozetKazan} />} />
         <Route path="/atolye/kilic" element={<KilicAtolyesi />} />
         <Route path="/atolye/vazo" element={<VazoAtolyesi />} />
         <Route path="/atolye/cini" element={<CiniAtolyesi />} />

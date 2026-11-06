@@ -8,8 +8,8 @@ const azHareket = () => matchMedia('(prefers-reduced-motion: reduce)').matches
 const YURUME_TUSLARI = new Set(['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Shift'])
 const tusAdi = (e: React.KeyboardEvent) => e.key.length === 1 ? e.key.toLowerCase() : e.key
 
-export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kaynaklar: Kaynak[]; ad: string }) {
-  const [acik, setAcik] = useState(false)
+export default function EseriEleAl({ maket, kaynaklar, ad, hemenAc = false }: { maket: Maket; kaynaklar: Kaynak[]; ad: string; hemenAc?: boolean }) {
+  const [acik, setAcik] = useState(hemenAc)
   const [durum, setDurum] = useState<'yukleniyor' | 'hazir' | 'hata'>('yukleniyor')
   const [parcali, setParcali] = useState(false)
   const [otomatik, setOtomatik] = useState(!azHareket())

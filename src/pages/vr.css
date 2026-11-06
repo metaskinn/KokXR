@@ -1,0 +1,34 @@
+.vr-baslik { margin-bottom: 1.25rem; }
+.vr-baslik h1 { margin: 0.5rem 0 0.25rem; }
+.vr-baslik p { margin: 0; color: var(--ikincil); }
+.vr-baslik .vr-not { margin-top: 0.6rem; color: var(--metin); }
+
+.vr-duzen { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); gap: 1.25rem; align-items: start; }
+
+/* Harita: seçilen şehre doğru yaklaşır; işaretler ölçeği geri alır ki aynı boyda kalsın. */
+.vr-harita { overflow: hidden; border: 1px solid var(--cizgi); border-radius: 0.5rem; background: #dfe6e4; }
+.vr-harita-ic { position: relative; transition: transform 700ms cubic-bezier(0.3, 0.7, 0.2, 1); }
+.vr-harita svg { display: block; width: 100%; height: 100%; }
+.vr-harita path { fill: var(--zemin); stroke: var(--yesil); stroke-width: 1.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+
+.vr-sehir { position: absolute; display: flex; align-items: center; gap: 0.35rem; min-width: 44px; min-height: 44px; padding: 0 0.4rem; transform: translate(-22px, -50%) scale(calc(1 / var(--olcek))); transform-origin: 22px 50%; transition: transform 700ms cubic-bezier(0.3, 0.7, 0.2, 1); border: 0; background: none; box-shadow: none; color: var(--yesil-koyu); font-weight: 700; white-space: nowrap; }
+.vr-sehir:hover, .vr-sehir:active { background: none; box-shadow: none; color: var(--bronz); }
+.vr-sehir-nokta { flex: none; width: 14px; height: 14px; margin-left: 8px; border: 2px solid #fff; border-radius: 50%; background: var(--bronz); box-shadow: 0 1px 3px rgb(0 0 0 / 40%); }
+.vr-sehir[aria-pressed='true'] .vr-sehir-nokta { background: var(--yesil); outline: 2px solid var(--yesil); outline-offset: 2px; }
+.vr-sehir-ad { font-size: 0.9rem; text-shadow: 0 0 3px var(--zemin), 0 0 3px var(--zemin); }
+.vr-sehir:focus-visible { outline: 3px solid var(--odak); outline-offset: 0; border-radius: 0.4rem; }
+
+.vr-panel h2 { margin: 0 0 0.6rem; font-size: 1.35rem; }
+.vr-sehirler, .vr-yapilar { display: grid; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+.vr-sehirler button, .vr-yapilar a, .vr-yapi-kapali { display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 44px; padding: 0.6rem 0.8rem; border: 1px solid var(--cizgi); border-radius: 0.4rem; background: var(--yuzey); box-shadow: none; color: var(--metin); font-weight: 400; text-align: left; text-decoration: none; }
+.vr-sehirler button:hover, .vr-yapilar a:hover { border-color: var(--yesil); background: var(--yesil-acik); color: var(--metin); }
+.vr-yapilar a strong, .vr-sehirler strong { color: var(--yesil-koyu); }
+.vr-sehirler span, .vr-yapilar span { color: var(--ikincil); font-size: 0.85rem; }
+.vr-yapi-kapali { background: none; border-style: dashed; }
+.vr-yapi-kapali strong { font-weight: 600; color: var(--ikincil); }
+.vr-geri { min-height: 44px; margin-bottom: 0.4rem; padding: 0; border: 0; background: none; box-shadow: none; color: var(--yesil); font-weight: 600; }
+.vr-geri:hover, .vr-geri:active { background: none; box-shadow: none; color: var(--yesil-koyu); text-decoration: underline; }
+.vr-yayin { margin: 0.9rem 0 0; color: var(--ikincil); font-size: 0.85rem; }
+
+@media (prefers-reduced-motion: reduce) { .vr-harita-ic, .vr-sehir { transition: none; } }
+@media (max-width: 760px) { .vr-duzen { grid-template-columns: minmax(0, 1fr); } }

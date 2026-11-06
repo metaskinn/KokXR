@@ -8,6 +8,7 @@ import {
 } from './ulucamiParca'
 import { KAPI_Z, KURSU, MAHFIL } from './ulucamiDetay'
 import { sadirvan } from './ulucami/sadirvan'
+import { AHSAP_KURSU, MAHFIL_ALT_KORKULUK, minberYap, parmaklik } from './ulucami/minber'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import { MIHRAP, SAMDAN, ulucamiMihrabi } from './ulucami/mihrap'
 
@@ -18,7 +19,8 @@ export const ZEMIN_Y = ZEMIN
 export interface IcDurak { id: string; ad: string; konum: [number, number, number]; bak: [number, number, number] }
 
 const sx = px(SADIRVAN_SUTUN + 0.5), sz = pz(SADIRVAN_SATIR + 0.5)
-const MIHRAP_Z = YZ - DUVAR, MINBER_X = -7
+// Minber, batıdaki kemerin doğu yüzüne yaslanır: köşkün üstü kemerde kaybolmaz, alem açıkta kalır (fotoğraflardaki gibi).
+const MIHRAP_Z = YZ - DUVAR, MINBER_X = -5.4
 const MINBER_BOY = 7.2, MINBER_EN = 1.9, MINBER_TEPE = 4.7, MINBER_Z0 = MIHRAP_Z - 1.05 - MINBER_BOY
 /** Minber merdiveni: kapı eşiğinden köşk önüne yükselen eğim. */
 const MINBER_RAMPA = { s0: 0.75, s1: 6.05, h1: 5.1 }
@@ -30,7 +32,7 @@ export const icDuraklar: IcDurak[] = [
   { id: 'giris', ad: 'Giriş', konum: [0, 2.7, -24.6], bak: [0, 4.4, 10] },
   { id: 'sadirvan', ad: 'Şadırvan', konum: [3, 3.1, -13.6], bak: [0, 1.4, -6.9] },
   { id: 'mihrap', ad: 'Mihrap', konum: [0, 2.8, 14.5], bak: [0, 6.4, MIHRAP_Z] },
-  { id: 'minber', ad: 'Minber', konum: [-2, 2.8, 16.5], bak: [MINBER_X, 4.6, 21] },
+  { id: 'minber', ad: 'Minber', konum: [0.4, 2.8, 16], bak: [MINBER_X, 5.6, 21] },
   { id: 'kapi', ad: 'Doğu kapısı', konum: [23.5, 2.7, KAPI_Z], bak: [YX, 3.8, KAPI_Z] },
   { id: 'kabe', ad: 'Kâbe örtüsü', konum: [23, 2.8, pz(0.5)], bak: [YX, 7.2, pz(0.5)] },
   { id: 'levha', ad: 'Levha', konum: [13.8, 2.8, 13], bak: [13.8, 7, 24.5] },
@@ -72,10 +74,13 @@ export function icYurumeAlani(): IcYurume {
       // Minber: yan duvarlar, kapı sövesi ve köşk engeldir; aradaki merdivenden yürünür.
       minberKutu(-MY - 0.07, -MY + 0.07, 0.7, MINBER_BOY), minberKutu(MY - 0.07, MY + 0.07, 0.7, MINBER_BOY),
       minberKutu(-MY - 0.1, -0.65, 0, 0.7), minberKutu(0.65, MY + 0.1, 0, 0.7),
-      minberKutu(-MY, MY, 6.05, MINBER_BOY),
-      { x0: MINBER_X + 2.2, x1: MINBER_X + 2.4, z0: MIHRAP_Z - 9.4, z1: MIHRAP_Z }, // minber korkuluğu
+      minberKutu(-MY, MY, 6.05, MIHRAP_Z - MINBER_Z0), // köşk duvara dayanır
+      { x0: MINBER_X + 1.6, x1: MINBER_X + 1.8, z0: MIHRAP_Z - 9.4, z1: MIHRAP_Z }, // minber korkuluğu
+      kutu(AHSAP_KURSU.x, AHSAP_KURSU.z + 0.2, 1.8, 2.2), // ahşap vaaz kürsüsü
+      // Mahfilin alt korkuluğu: platformda yürürken engellemez
+      ...MAHFIL_ALT_KORKULUK.map(([a, b, c, d]) => ({ x0: MAHFIL.x + Math.min(a, c) - 0.08, x1: MAHFIL.x + Math.max(a, c) + 0.08, z0: MAHFIL.z + Math.min(b, d) - 0.08, z1: MAHFIL.z + Math.max(b, d) + 0.08, ust: 3 })),
       // Ön korkuluğun batısı açıktır: kapının karşısı paye olduğu için minbere bu yandan gelinir.
-      { x0: MINBER_X + 0.8, x1: MINBER_X + 2.3, z0: MIHRAP_Z - 9.5, z1: MIHRAP_Z - 9.3 },
+      { x0: MINBER_X + 0.8, x1: MINBER_X + 1.7, z0: MIHRAP_Z - 9.5, z1: MIHRAP_Z - 9.3 },
     ],
     daireler: [{ x: sx, z: sz, r: 3.75 }, { x: kx, z: kz, r: kr + 0.05, ust: 1.2 }, ...[-1, 1].map((s) => ({ x: s * SAMDAN.x, z: MIHRAP_Z - SAMDAN.z, r: SAMDAN.r }))],
     zeminler: [
@@ -223,54 +228,10 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
   // --- Mihrap: arşiv fotoğrafından cephe, kabartma kademeleri, mukarnas (ulucami/mihrap.ts) ---
   ulucamiMihrabi(k, MIHRAP_Z, ZEMIN, m)
 
-  // --- Minber: kündekâri yüzlü üçgen gövde, basamaklar, köşk ve kapı; önünde ahşap korkuluk ---
-  const minber = () => {
-    const BOY = MINBER_BOY, EN = MINBER_EN, TEPE = MINBER_TEPE, z0 = MINBER_Z0
-    const ek = (g: THREE.BufferGeometry, mal: THREE.Material) => {
-      g.rotateY(-Math.PI / 2)
-      g.translate(MINBER_X, 0, z0)
-      k.ekle(g, mal)
-    }
-    const yan = new THREE.Shape()
-    yan.moveTo(0.7, ZEMIN); yan.lineTo(BOY, ZEMIN); yan.lineTo(BOY, ZEMIN + TEPE + 0.5); yan.lineTo(BOY - 1.2, ZEMIN + TEPE + 0.5)
-    yan.lineTo(1.8, ZEMIN + 0.9); yan.lineTo(0.7, ZEMIN + 0.9); yan.closePath()
-    for (const s of [-1, 1]) ek(cikar(yan, 0.14, s * (EN / 2) - 0.07), m.kundekari)
-    // Korkuluk silmesi ve altın kenar
-    const kenar = new THREE.Shape()
-    kenar.moveTo(1.8, ZEMIN + 0.9); kenar.lineTo(BOY - 1.2, ZEMIN + TEPE + 0.5); kenar.lineTo(BOY - 1.2, ZEMIN + TEPE + 0.72); kenar.lineTo(1.8, ZEMIN + 1.12); kenar.closePath()
-    for (const s of [-1, 1]) ek(cikar(kenar, 0.2, s * (EN / 2) - 0.1), m.altinKoyu)
-    // Kapıdan ilk basamağa inen iki küçük basamak
-    for (const [s, y] of [[1.0, 0.3], [1.45, 0.6]]) ek(kutuG(0.5, y, EN - 0.28).translate(s + 0.2, ZEMIN + y / 2, 0), m.mihrapKirmizi)
-    const ADIM = 11
-    for (let i = 0; i < ADIM; i++) {
-      const t = i / ADIM, s = 1.8 + t * (BOY - 3), y = ZEMIN + 0.9 + t * (TEPE - 0.4)
-      ek(kutuG((BOY - 3) / ADIM + 0.02, y - ZEMIN, EN - 0.28).translate(s + (BOY - 3) / ADIM / 2, (y + ZEMIN) / 2, 0), m.mihrapKirmizi)
-    }
-    // Köşk: üstte ince gövde, kemerli aralık, piramit çatı ve altın alem
-    const koskS = BOY - 0.6
-    ek(kutuG(1.2, 2.5, EN).translate(koskS, ZEMIN + TEPE + 0.5 + 1.25, 0), m.kundekari)
-    ek(kutuG(1.26, 0.14, EN + 0.06).translate(koskS, ZEMIN + TEPE + 3.03, 0), m.altinKoyu)
-    const piramit = duzGolge(silindirG(0.06, EN * 0.74, 1.6, 4).rotateY(Math.PI / 4).scale(0.74, 1, 1))
-    ek(piramit.translate(koskS, ZEMIN + TEPE + 3.85, 0), m.kundekari)
-    ek(dondurG([[0.1, 0], [0.04, 0.2], [0.14, 0.4], [0.04, 0.6], [0.12, 0.8], [0.02, 1.25], [0, 1.3]], 10).translate(koskS, ZEMIN + TEPE + 4.6, 0), m.altin)
-    // Kapı: taçlı giriş
-    // Kapı açıktır: iki söve ve üstte lento, içinden merdivene geçilir.
-    for (const s of [-1, 1]) ek(kutuG(0.7, 3.7, 0.4).translate(0.35, ZEMIN + 1.85, s * (EN / 2 - 0.1)), m.kundekari)
-    ek(kutuG(0.7, 0.7, EN + 0.2).translate(0.35, ZEMIN + 3.35, 0), m.kundekari)
-    ek(kutuG(0.74, 0.14, EN + 0.26).translate(0.35, ZEMIN + 3.72, 0), m.altinKoyu)
-    const tac = new THREE.Shape()
-    tac.moveTo(-EN / 2 - 0.1, 0); tac.quadraticCurveTo(-0.45, 0.12, 0, 0.95); tac.quadraticCurveTo(0.45, 0.12, EN / 2 + 0.1, 0); tac.closePath()
-    const tacG = cikar(tac, 0.3, -0.15)
-    tacG.rotateY(Math.PI / 2)
-    ek(tacG.translate(0.35, ZEMIN + 3.78, 0), m.kundekari)
-  }
-  minber()
-  // Minberi çeviren alçak ahşap korkuluk
-  const korkulukZ0 = MIHRAP_Z - 9.4, korkulukZ1 = MIHRAP_Z - 1
-  kutu(0.12, 0.72, korkulukZ1 - korkulukZ0, m.ahsapKafes, MINBER_X + 2.3, ZEMIN + 0.42, (korkulukZ0 + korkulukZ1) / 2)
-  kutu(1.5, 0.72, 0.12, m.ahsapKafes, MINBER_X + 1.55, ZEMIN + 0.42, korkulukZ0)
-  kutu(0.2, 0.08, korkulukZ1 - korkulukZ0, m.ahsap, MINBER_X + 2.3, ZEMIN + 0.82, (korkulukZ0 + korkulukZ1) / 2)
-  kutu(1.55, 0.08, 0.2, m.ahsap, MINBER_X + 1.55, ZEMIN + 0.82, korkulukZ0)
+  // --- Minber ve alçak korkuluğu: ulucami/minber.ts ---
+  minberYap(m, k, { x: MINBER_X, z0: MINBER_Z0, boy: MINBER_BOY, en: MINBER_EN, tepe: MINBER_TEPE, duvarZ: MIHRAP_Z, zemin: ZEMIN })
+  parmaklik(m, k, MINBER_X + 1.7, MIHRAP_Z - 9.4, MINBER_X + 1.7, MIHRAP_Z - 1, ZEMIN)
+  parmaklik(m, k, MINBER_X + 0.8, MIHRAP_Z - 9.4, MINBER_X + 1.7, MIHRAP_Z - 9.4, ZEMIN)
 
   // --- Şadırvan: halı ve mermer döşeme ulucami/zemin.ts'te; havuz, fıskiye ve çevresi ulucami/sadirvan.ts'te ---
   sadirvan(m, k, { sx, sz, zemin: ZEMIN, gokY: KASNAK_TABAN + gozOlcusu(SADIRVAN_SUTUN).kasnakH + 3.6 })

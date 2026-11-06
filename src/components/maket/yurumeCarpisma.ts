@@ -10,6 +10,7 @@ const YAN_ORNEK = 0.2
 export function carpiyor(yurume: IcYurume, x: number, z: number, r: number, h = 0): boolean {
   const { sinir, kutular, daireler } = yurume
   if (x < sinir.x0 + r || x > sinir.x1 - r || z < sinir.z0 + r || z > sinir.z1 - r) return true
+  if (sinir.daire && Math.hypot(x - sinir.daire.x, z - sinir.daire.z) + r > sinir.daire.r) return true
   for (const k of kutular) if ((k.ust === undefined || h < k.ust) && x > k.x0 - r && x < k.x1 + r && z > k.z0 - r && z < k.z1 + r) return true
   for (const d of daireler) if ((d.ust === undefined || h < d.ust) && Math.hypot(x - d.x, z - d.z) < d.r + r) return true
   return false

@@ -50,7 +50,7 @@ export const icDuraklar: IcDurak[] = [
 export interface Kutu { x0: number; x1: number; z0: number; z1: number; ust?: number }
 /** Üstünde yürünen alan: yükseklik z boyunca h0'dan h1'e değişir. `altGecilir` değilse aşağıdan duvar gibi davranır. */
 export interface ZeminAlani { x0: number; x1: number; z0: number; z1: number; h0: number; h1: number; altGecilir?: boolean }
-export interface IcYurume { sinir: Kutu; kutular: Kutu[]; daireler: { x: number; z: number; r: number; ust?: number }[]; zeminler: ZeminAlani[]; gorusKesenler: Kutu[]; gozY: number; /** İç döşemenin üst yüzü; verilmezse ZEMIN_Y. */ tabanY?: number }
+export interface IcYurume { sinir: Kutu & { /** Dairesel kaidenin dünya koordinatlarındaki sınırı. */ daire?: { x: number; z: number; r: number } }; kutular: Kutu[]; daireler: { x: number; z: number; r: number; ust?: number }[]; zeminler: ZeminAlani[]; gorusKesenler: Kutu[]; gozY: number; /** İç döşemenin üst yüzü; verilmezse ZEMIN_Y. */ tabanY?: number }
 
 /** İçeride yürürken çarpılan yapılar (kuşbakışı). Payeler bakışı da keser. */
 export function icYurumeAlani(): IcYurume {

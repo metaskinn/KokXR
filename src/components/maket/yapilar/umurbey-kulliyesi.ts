@@ -886,7 +886,8 @@ export const yapi = (): Maket => {
     ],
     duraklar,
     yurume: {
-      sinir: { x0: -20, x1: 20, z0: -20, z1: 20 },
+      // Çokgen kaidenin iç çemberi: köşelerde boşluğa çıkılmaz.
+      sinir: { x0: -20, x1: 20, z0: -20, z1: 20, daire: { x: 0, z: 0, r: 23.8 * Math.cos(Math.PI / 64) } },
       kutular: engeller,
       daireler,
       zeminler,

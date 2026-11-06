@@ -54,13 +54,13 @@ export function camiDisi(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, k
     k.ekle(hizala(cikar(dikdortgen(0, 0, L, H_DIS), t), ax, az, bx, bz), mal)
     k.ekle(hizala(kutuG(L + 0.1, 1.5, 0.12).translate(L / 2, 0.75, -0.04), ax, az, bx, bz), m.mermer)
   }
-  yanDuvar(XD, ZK, XD, ZG, 1, m.tas)         // doğu: normal -x (içe)
-  yanDuvar(-XD, ZG, -XD, ZK, 1, m.tas)       // batı
-  yanDuvar(XD, ZG, XE, ZG, 1, m.tas)
-  yanDuvar(-XE, ZG, -XD, ZG, 1, m.tas)
-  yanDuvar(XE, ZG, XE, ZS, 1, m.tas)
-  yanDuvar(-XE, ZS, -XE, ZG, 1, m.tas)
-  yanDuvar(XE, ZS, -XE, ZS, 1.6, m.tas)
+  yanDuvar(XD, ZK, XD, ZG, 1, m.mermerKoyu)         // doğu: normal -x (içe)
+  yanDuvar(-XD, ZG, -XD, ZK, 1, m.mermerKoyu)       // batı
+  yanDuvar(XD, ZG, XE, ZG, 1, m.mermerKoyu)
+  yanDuvar(-XE, ZG, -XD, ZG, 1, m.mermerKoyu)
+  yanDuvar(XE, ZG, XE, ZS, 1, m.mermerKoyu)
+  yanDuvar(-XE, ZS, -XE, ZG, 1, m.mermerKoyu)
+  yanDuvar(XE, ZS, -XE, ZS, 1.6, m.mermerKoyu)
 
   // Kuzey cephesi (a→b doğudan batıya değil, batıdan doğuya: kalınlık içe)
   const NA = -XD, NB = XD
@@ -201,11 +201,6 @@ export function camiDisi(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, k
   cati.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2))
   cati.computeVertexNormals()
   kCati.ekle(cati, m.kursun)
-  // Kapalı kütlelerin çatı altı örtüsü: Parçala'da içeri bakınca boşluk görünmesin
-  const orta = dikdortgen(-XD + 0.8, ZK + 1.5, XD - 0.8, ZG - 0.8)
-  orta.holes.push(dikdortgen(-7.5, ZK + 8.0, 7.5, ZG - 1.2) as unknown as THREE.Path)
-  for (const s of [-1, 1]) orta.holes.push(new THREE.Path().absarc(s * EYVAN_X, -EYVAN_Z, 3.7, 0, Math.PI * 2, true))
-  void orta
 
   // --- Kasnaklar: pembe sıvalı pahlı kare ve sekizgenler (s. 111-112 fotoğrafları) ---
   const KY = 19
@@ -218,7 +213,7 @@ export function camiDisi(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, k
     kose.forEach(([a, b], i) => (i ? ort.lineTo(a, -(b - cz)) : ort.moveTo(a, -(b - cz))))
     ort.closePath()
     ort.holes.push(new THREE.Path().absarc(0, 0, 6.55, 0, Math.PI * 2, true))
-    kKasnak.ekle(new THREE.ShapeGeometry(ort, 32).rotateX(-Math.PI / 2).translate(0, KY, cz), ym.pembe)
+    kKasnak.ekle(new THREE.ShapeGeometry(ort, 32).rotateX(-Math.PI / 2).translate(0, KY, cz), m.kursun)
     // Kafesli kasnak pencereleri
     const adet = cz === ORTA_Z ? 2 : 3
     for (const yon of [0, 1, 2, 3]) {

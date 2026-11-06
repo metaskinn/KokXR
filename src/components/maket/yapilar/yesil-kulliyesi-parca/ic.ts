@@ -68,12 +68,21 @@ const uvDortgen = (u0: number, y0: number, u1: number, y1: number, u2: number, y
 
 /** Duvar bandı: boşlukların çevresini dörtgenlerle kaplar; `bantlu` ise doku yüksekliği banda oturur. */
 export function kaplama(k: Kova, ax: number, az: number, bx: number, bz: number, y0: number, y1: number, mal: Mal, delikler: Bosluk[] = [], bantlu = false, kayma = 0.015) {
+  // U ekseninde çakışan boşluklar (kapının üstündeki mahfil gibi) ayrı yükseklik bantlarında işlenir.
+  const ilgili = delikler.filter((d) => d.y0 < y1 && (d.y1 + (d.kemerH ?? 0)) > y0)
+  for (const a of ilgili) for (const b of ilgili) {
+    if (a !== b && a.u0 < b.u1 && b.u0 < a.u1 && b.y0 > y0 && a.y1 + (a.kemerH ?? 0) <= b.y0) {
+      kaplama(k, ax, az, bx, bz, y0, b.y0, mal, ilgili.filter((d) => d.y0 < b.y0), bantlu, kayma)
+      kaplama(k, ax, az, bx, bz, b.y0, y1, mal, ilgili.filter((d) => d.y0 >= b.y0), bantlu, kayma)
+      return
+    }
+  }
   const L = Math.hypot(bx - ax, bz - az)
   const p: number[] = [], uv: number[] = []
   const ekle = (q: ReturnType<typeof uvDortgen>) => { p.push(...q.p); uv.push(...q.uv) }
   const rect = (u0: number, u1: number, a: number, b: number) => { if (u1 > u0 + 1e-4 && b > a + 1e-4) ekle(uvDortgen(u0, a, u1, a, u1, b, u0, b)) }
   let u = 0
-  const sirali = delikler.filter((d) => d.y0 < y1 && (d.y1 + (d.kemerH ?? 0)) > y0).sort((a, b) => a.u0 - b.u0)
+  const sirali = [...ilgili].sort((a, b) => a.u0 - b.u0)
   for (const d of sirali) {
     rect(u, d.u0, y0, y1)
     rect(d.u0, d.u1, y0, Math.min(y1, d.y0))
@@ -383,7 +392,7 @@ export function camiIci(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, kK
   kKubbe.ekle(yer(dondurG(profilOrta, 64, [1, 1]), 0, 19, ORTA_Z), ym.kubbeKalemA)
   kKubbe.ekle(new THREE.CircleGeometry(1.7, 24).rotateX(Math.PI / 2).translate(0, 25.7, ORTA_Z), ym.camIsik)
   k.ekle(yer(silindirG(0.03, 0.03, 15, 4), 0, 16, ORTA_Z), m.koyu)
-  avize(k, m, 0, ORTA_Z, 6.2, 3.4, 13.5, 32)
+  avize(k, m, 0, ORTA_Z, 7.4, 3.3, 15, 30)
 
   // Kasnak pencereleri: orta kubbede dört, mihrap önünde sekiz (s. 106)
   for (const [[a, b, c, d], c0] of [
@@ -401,8 +410,8 @@ export function camiIci(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, kK
   kaplama(k, M.x0, M.z0, M.x1, M.z0, TABAN, MY, m.mermer, [{ u0: 4.1, u1: 8.9, y0: TABAN, y1: MY }])
   kKasnak.ekle(duzGolge(gecisKusagi(0, MIHRAP_Z, 6.5, 6.5, 15, 19, 6.5)), ym.gecis)
   kKubbe.ekle(yer(dondurG(icKubbeProfil(6.5, 6), 64, [1, 1]), 0, 19, MIHRAP_Z), ym.kubbeKalemA)
-  avize(k, m, 0, MIHRAP_Z, 7.5, 2.6, 15, 24)
-  k.ekle(yer(silindirG(0.03, 0.03, 15, 4), 0, 17.5, MIHRAP_Z), m.koyu)
+  avize(k, m, 0, MIHRAP_Z - 1.5, 9.4, 2.5, 16, 22)
+  k.ekle(yer(silindirG(0.03, 0.03, 13, 4), 0, 18.5, MIHRAP_Z - 1.5), m.koyu)
 
   // Mihrap duvarı: alt ve üst sırada ikişer pencere (s. 106); yan duvarlarda birer pencere, panolar
   const [gx0, gz0, gx1, gz1] = hat(M, 'G')
@@ -440,7 +449,7 @@ export function camiIci(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, kK
   f(prizma(cokgen(8, 2.45), TABAN + 0.14, TABAN + 1.15), ym.siyahMermer)
   f(duzGolge(silindirG(2.72, 2.72, 0.18, 8)).rotateY(Math.PI / 8).translate(0, TABAN + 1.24, 0), m.mermer)
   f(silindirG(2.42, 2.42, 0.02, 8).rotateY(Math.PI / 8).translate(0, TABAN + 1.34, 0), m.su)
-  f(dondurG([[0.72, 0], [0.5, 0.25], [0.5, 0.6], [0.72, 0.68], [0.72, 0.82], [0.46, 0.9], [0.46, 1.5], [0.66, 1.6], [0.56, 1.72], [0.2, 2.18], [0.07, 2.36], [0.14, 2.42], [0, 2.56]], 12).translate(0, TABAN + 1.2, 0), m.mermer)
+  f(dondurG([[0.55, 0], [0.38, 0.2], [0.38, 0.48], [0.56, 0.55], [0.56, 0.66], [0.34, 0.72], [0.34, 1.18], [0.5, 1.26], [0.42, 1.36], [0.15, 1.72], [0.05, 1.86], [0.1, 1.9], [0, 2]], 12).translate(0, TABAN + 1.2, 0), m.mermer)
 }
 
 /** İç kubbe yarım kesiti: `acik` verilirse tepede fener boşluğu kalır. */
@@ -460,6 +469,17 @@ function mihrap(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova) {
   const blok = dikdortgen(0, MY, 6.1, TEPE)
   blok.holes.push(kemer(new THREE.Path(), 3.05, MY + 0.02, NIS.g, NIS.ayak, NIS.kemer))
   levha(k, blok, ax, Z, bx, Z, ym.mihrap, 0.34, 0.01, true)
+  // Çini panolar (Drive fotoğraflarından yazısız kırpılmış; açık yayında tuval deseni kalır)
+  const panel = (u0: number, u1: number, y0: number, y1: number, mal: Mal) => {
+    const g = new THREE.PlaneGeometry(u1 - u0, y1 - y0).translate((u0 + u1) / 2, (y0 + y1) / 2, 0.36)
+    k.ekle(hizala(g, ax, Z, bx, Z), mal)
+  }
+  if (ym.mihrapFoto) {
+    panel(1.05, 5.05, MY + NIS.ayak + NIS.kemer + 0.28, TEPE - 1.05, ym.mihrapYildiz)
+    panel(1.05, 2.2, MY + 0.95, MY + NIS.ayak + NIS.kemer + 0.1, ym.mihrapCini)
+    panel(3.9, 5.05, MY + 0.95, MY + NIS.ayak + NIS.kemer + 0.1, ym.mihrapCini)
+    panel(1.05, 5.05, MY + NIS.ayak + NIS.kemer + 0.1, MY + NIS.ayak + NIS.kemer + 0.28, ym.mihrapKusak)
+  }
   // Çerçeve üstü: düz sarı kuşak ve alt mermer
   k.ekle(yer(kutuG(6.3, 0.16, 0.44), 0, TEPE, Z - 0.22), m.altinKoyu)
   // Niş: lacivert zemin, mukarnaslı kavsara
@@ -588,7 +608,7 @@ export const camiDuraklari: IcDurak[] = [
   { id: 'mihrap', ad: 'Mihrap', konum: [0, GOZ_Y + MIHRAP_H, 7.4], bak: [0, 6.4, 17.8] },
   { id: 'eyvan', ad: 'Doğu eyvanı', konum: [9, GOZ_Y + EYVAN_H, -3.5], bak: [14.9, 4, -3.5] },
   { id: 'hunkar', ad: 'Hünkâr mahfili', konum: [0, GOZ_Y + UST_H, -11.2], bak: [0, 6, 12] },
-  { id: 'muezzin', ad: 'Müezzin mahfili', konum: [4.2, GOZ_Y + EYVAN_H, -11.2], bak: [-2, 3.5, 2] },
+  { id: 'muezzin', ad: 'Müezzin mahfili', konum: [4.2, GOZ_Y + EYVAN_H, -11.2], bak: [2, 3, 8] },
   { id: 'tabhane', ad: 'Tabhane', konum: [11.8, GOZ_Y, 3.3], bak: [11.8, 3.5, 8.1] },
   { id: 'kose', ad: 'Köşe odası', konum: [10, GOZ_Y, -10.5], bak: [11, 3, -17.3] },
   { id: 'minber', ad: 'Minbere çık', konum: [-4.7, GOZ_Y + MIHRAP_H + 2.7, 16.4], bak: [4, 3, 2] },

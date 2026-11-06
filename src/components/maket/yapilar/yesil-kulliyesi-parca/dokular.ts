@@ -1,6 +1,7 @@
 // Yeşil Külliyesi dokuları: tamamı tuvalde üretilir. Renk ve düzen Drive'daki fotoğraflardan yorumlanmıştır
 // (altıgen çini, firuze türbe kaplaması, almaşık duvar, kiremit). Yazı ve hat taklidi çizilmez.
 import * as THREE from 'three'
+import { ACIK_YAYIN } from '../../../../data/acikYayin'
 import { rastgele } from '../../ulucamiZemin'
 
 type Ciz = (c: CanvasRenderingContext2D, g: number, y: number) => void
@@ -245,7 +246,7 @@ export function yesilMalzemeleri() {
   // Teal halı: açık damarlı zemin, köşeli göbek
   const hali = tuval(1024, 1024, (c, G, Y) => {
     const r = rastgele(47)
-    c.fillStyle = '#23767c'
+    c.fillStyle = '#1e7489'
     c.fillRect(0, 0, G, Y)
     c.strokeStyle = 'rgba(180,225,215,.4)'; c.lineWidth = 3
     for (let a = 0; a < 3; a++) for (let b = 0; b < 3; b++) {
@@ -309,6 +310,17 @@ export function yesilMalzemeleri() {
     c.fillRect(0, 0, G, Y)
   })
 
+  const srgb = (t: THREE.Texture) => { t.colorSpace = THREE.SRGBColorSpace; return t }
+  const yukle = new THREE.TextureLoader()
+  const foto = (ad: string) => {
+    if (ACIK_YAYIN) return null
+    const t = yukle.load(`/gorseller/yesil-kulliyesi/maket/${ad}.jpg`)
+    t.colorSpace = THREE.SRGBColorSpace
+    t.anisotropy = 8
+    return t
+  }
+  const fCini = foto('mihrap-cini'), fYildiz = foto('mihrap-yildiz'), fKusak = foto('mihrap-kusak')
+
   const oymaRenk = doku(tuval(256, 256, oymaCiz(false)), 0.9)
   const oymaKab = doku(tuval(256, 256, oymaCiz(true)), 0.9, 0.9, false)
 
@@ -321,17 +333,21 @@ export function yesilMalzemeleri() {
     almasikTuru: pbr({ map: doku(almasik(24), 5, 5), roughness: 0.95 }),
     kiremit: pbr({ map: doku(kiremit, 3.2, 3.2), roughness: 0.85, side: THREE.DoubleSide }),
     pembe: pbr({ map: doku(pembe, 4), roughness: 0.92, side: THREE.DoubleSide }),
-    krem: pbr({ map: doku(krem, 4), roughness: 0.9, side: THREE.DoubleSide }),
+    krem: pbr({ map: doku(krem, 4), roughness: 0.9, side: THREE.DoubleSide, emissive: new THREE.Color('#3b3323') }),
     oyma: pbr({ map: oymaRenk, bumpMap: oymaKab, bumpScale: 1.2, roughness: 0.62 }),
     hali: pbr({ map: doku(hali, 7.5), roughness: 1 }),
     demir: pbr({ map: doku(demir, 0.16), roughness: 0.6, metalness: 0.35, side: THREE.DoubleSide }),
     firizLacivert: parlak(doku(firiz('#101c5c', '#e8e4d8', '#2fa6c6', '#d9a634'), 1.6, 1), THREE.DoubleSide),
     firizFiruze: parlak(doku(firiz('#1a7fa0', '#f0ece0', '#14246d', '#f3f0e6'), 1.4, 1), THREE.DoubleSide),
     firizKoyu: parlak(doku(firiz('#7c2b1e', '#e8d7a6', '#16306f', '#e0c88c'), 1.8, 1), THREE.DoubleSide),
-    mahfilCini: parlak(doku(yildizOrgu('#14246d', '#d9a634', '#2fa6c6', 'rgba(230,226,216,.55)'), 1.2)),
-    mahfilCiniKoyu: parlak(doku(yildizOrgu('#10245a', '#e9e5d8', '#2fa6c6', 'rgba(217,166,52,.55)'), 0.9)),
+    mahfilCini: parlak(doku(yildizOrgu('#14246d', '#d9a634', '#2fa6c6', 'rgba(230,226,216,.55)'), 0.62)),
+    mahfilCiniKoyu: parlak(doku(yildizOrgu('#10245a', '#e9e5d8', '#2fa6c6', 'rgba(217,166,52,.55)'), 0.55)),
     kirmiziKalem: pbr({ map: doku(yildizOrgu('#7c2b1e', '#16306f', '#e0c88c', 'rgba(224,200,140,.7)'), 1.5), roughness: 0.85, side: THREE.DoubleSide }),
-    mihrap: parlak(new THREE.CanvasTexture(mihrapTuval), THREE.DoubleSide),
+    mihrap: parlak(srgb(new THREE.CanvasTexture(mihrapTuval)), THREE.DoubleSide),
+    mihrapFoto: !!fCini,
+    mihrapCini: pbr({ map: fCini, roughness: 0.35 }),
+    mihrapYildiz: pbr({ map: fYildiz, roughness: 0.35 }),
+    mihrapKusak: pbr({ map: fKusak, roughness: 0.35 }),
     kubbeKalemA: pbr({ map: doku(kalemKubbe(48, '#16306f', '#7c2b1e', '#f1e6cd'), 1, 1), roughness: 0.9, side: THREE.DoubleSide }),
     kubbeKalemB: pbr({ map: doku(kalemKubbe(24, '#16306f', '#a2482d', '#efe2c4'), 1, 1), roughness: 0.9, side: THREE.DoubleSide }),
     kubbeBeyaz: pbr({ map: doku(kalemKubbe(32, '#efe8d7', '#e6dcc5', '#f3ecdc'), 1, 1), roughness: 0.92, side: THREE.DoubleSide }),

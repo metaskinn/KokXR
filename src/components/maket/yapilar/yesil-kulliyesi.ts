@@ -7,7 +7,7 @@ import type { Maket } from '../ulucamiMaket'
 import { Kova, kutuG, yer } from '../ulucamiParca'
 import { yesilMalzemeleri } from './yesil-kulliyesi-parca/dokular'
 import { camiDisi, XD, ZK } from './yesil-kulliyesi-parca/dis'
-import { camiDuraklari, camiIci, camiYurumeAlani, EYVAN_X, EYVAN_Z, MIHRAP_Z, ORTA_Z, TABAN } from './yesil-kulliyesi-parca/ic'
+import { camiDuraklari, camiIci, camiYurumeAlani, EYVAN_X, EYVAN_Z, MIHRAP_Z, ORTA_Z } from './yesil-kulliyesi-parca/ic'
 import { agac, avluSadirvani, yesilImaret, yesilMedrese, yesilTurbe } from './yesil-kulliyesi-parca/kulliye'
 
 const KAIDE = 88
@@ -36,16 +36,15 @@ export const yapi = (): Maket => {
   camiDisi(m, ym, k, kCati, kKasnak, kKubbe)
 
   // --- Külliye: güneyde türbe, batıda medrese, güneydoğuda imaret, kuzey avlusunda şadırvan (s. 110, 119, 123, 137) ---
-  yesilTurbe(m, ym, k, kCati, kKasnak, kKubbe, 3, 54)
+  yesilTurbe(m, ym, k, kKasnak, kKubbe, 3, 54)
   yesilMedrese(m, ym, k, kCati, kKasnak, kKubbe, -57, -9)
   yesilImaret(m, ym, k, kCati, kKubbe, 32, 24)
   avluSadirvani(m, ym, k, kKubbe, 0, -44)
 
   // Çınar ve selvi izlenimi (Evliya Çelebi'nin anlattığı çınarlı avlu, s. 113; konumlar temsilî)
   const agaclar: [number, number, number][] = [
-    [-24, -40, 15], [24, -42, 16], [-30, -20, 13], [29, -24, 14], [-16, -56, 14], [17, -58, 13],
-    [40, -14, 14], [34, 4, 13], [-24, 34, 13], [28, 42, 12], [-30, 56, 12], [58, 12, 11],
-    [-16, 66, 10], [46, 62, 10],
+    [-22, -46, 11], [24, -48, 12], [-28, -22, 10], [31, -26, 11], [44, -10, 10], [36, 6, 9],
+    [-24, 36, 10], [26, 44, 9], [-30, 58, 9], [48, 58, 9],
   ]
   agaclar.forEach(([x, z, b], i) => agac(m, ym, k, x, z, b, i + 1))
 
@@ -61,10 +60,9 @@ export const yapi = (): Maket => {
     ],
     duraklar: camiDuraklari,
     yurume: camiYurumeAlani(),
-    kamera: { konum: [-70, 58, -112], hedef: [0, 8, 2] },
+    kamera: { konum: [66, 50, -108], hedef: [0, 8, 2] },
     kaideYaricap: KAIDE,
-    icIsiklar: [[0, 11, ORTA_Z], [0, 11, MIHRAP_Z], [EYVAN_X, 7, EYVAN_Z], [-EYVAN_X, 7, EYVAN_Z]],
+    icIsiklar: [[0, 11, ORTA_Z], [0, 12, MIHRAP_Z - 2], [EYVAN_X, 7, EYVAN_Z], [-EYVAN_X, 7, EYVAN_Z]],
   }
 }
 
-export { TABAN }

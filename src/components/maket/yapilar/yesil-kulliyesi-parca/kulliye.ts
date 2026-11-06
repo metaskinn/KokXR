@@ -8,7 +8,7 @@ import { kubbeDis } from './dis'
 import { cokgen, hizala, kirmaCati, levha, prizma } from './yardim'
 
 /** Yeşil Türbe: sekizgen, kenar 8,20 m; saçak 13,83 m; toplam 25,5 m (s. 138). */
-export function yesilTurbe(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, kCati: Kova, kKasnak: Kova, kKubbe: Kova, cx: number, cz: number) {
+export function yesilTurbe(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, kKasnak: Kova, kKubbe: Kova, cx: number, cz: number) {
   const KENAR = 8.2, R = KENAR / (2 * Math.sin(Math.PI / 8)), APOT = KENAR / (2 * Math.tan(Math.PI / 8))
   const SACAK = 13.83, TABAN_H = 1.6
   // Yükselti: küçük tepe ve teras (s. 137)
@@ -65,7 +65,6 @@ export function yesilTurbe(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova,
   }
   kKasnak.ekle(new THREE.CircleGeometry(kasnakR, 8, Math.PI / 8).rotateX(-Math.PI / 2).rotateY(Math.PI / 2).translate(cx, KY, cz), ym.krem)
   kubbeDis(kKubbe, m, cx, cz, kasnakR - 0.25, KY, 25.2 - KY, 1.2)
-  void kCati
 }
 
 /** Medrese: 36,00 × 38,50 m, üç eyvanlı açık avlu, tonozlu revak; güneyde dışa taşan kubbeli dershane (s. 125-127). */
@@ -220,7 +219,6 @@ export function yesilImaret(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova
   }
   // Anıtsal giriş ve mermer yalaklı çeşme nişi
   ek(cikar(dikdortgen(L2 - 0.4, 0, L2 + 1.8, H + 0.2), 0.3), m.tas)
-  void kKubbe
 }
 
 /** Avlu şadırvanı: sekizgen, sekiz ahşap sütun, kurşun kaplı sivri kubbe, fıskiyeli havuz (s. 110). */

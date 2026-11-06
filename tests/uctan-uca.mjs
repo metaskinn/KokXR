@@ -153,3 +153,4 @@ await kontrol('7c taşma (tüm sayfalar)', async () => {
 
 console.log(JSON.stringify({ tarayiciAdi, genislik, sonuc, uygulamaHatalari: [...new Set(uygulamaHatalari)].slice(0, 8), iframeHataSayisi: iframeHatalari.length, http404: [...new Set(http404)] }, null, 1));
 await tarayici.close();
+if (sonuc.some(([durum]) => durum === '❌')) process.exitCode = 1;

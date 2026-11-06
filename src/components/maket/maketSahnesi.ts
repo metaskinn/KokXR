@@ -1,6 +1,7 @@
 // Bu modül yalnızca «Maketi eline al» sonrasında dinamik olarak yüklenir.
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { hafifCihaz } from './ulucamiZemin'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js'
 import { GTAOPass } from 'three/examples/jsm/postprocessing/GTAOPass.js'
@@ -64,7 +65,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   renderer.shadowMap.autoUpdate = false
   renderer.shadowMap.needsUpdate = true
   renderer.toneMapping = THREE.ACESFilmicToneMapping
-  renderer.toneMappingExposure = 1.02
+  renderer.toneMappingExposure = 1.06
   canvas.setAttribute('aria-hidden', 'true')
   alan.append(canvas)
 
@@ -84,8 +85,23 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   scene.background = artAlan
   const ortam = new THREE.PMREMGenerator(renderer)
   const ortamHaritasi = ortam.fromScene(new RoomEnvironment(), 0.04).texture
-  ortam.dispose()
   scene.environment = ortamHaritasi
+  // İç mekân yansıması: krem duvarlar, gül zemin ve avize noktaları. Altın, mermer ve su bunları yansıtır.
+  const icOrtamSahnesi = new THREE.Scene()
+  const icOrtamGeo = new THREE.SphereGeometry(1, 12, 8), icOrtamKutu = new THREE.BoxGeometry(70, 26, 56)
+  const icOrtamMal = [
+    new THREE.MeshBasicMaterial({ color: '#b9a488', side: THREE.BackSide }),
+    new THREE.MeshBasicMaterial({ color: new THREE.Color(9, 7.4, 5.2) }),
+  ]
+  icOrtamSahnesi.add(new THREE.Mesh(icOrtamKutu, icOrtamMal[0]))
+  for (let x = -27.6; x <= 27.6; x += 13.8) for (let z = -20.6; z <= 20.6; z += 13.75) {
+    const l = new THREE.Mesh(icOrtamGeo, icOrtamMal[1])
+    l.position.set(x, 3, z)
+    icOrtamSahnesi.add(l)
+  }
+  const icOrtam = ortam.fromScene(icOrtamSahnesi, 0.03, 0.5, 100).texture
+  ortam.dispose()
+  icOrtamGeo.dispose(); icOrtamKutu.dispose(); icOrtamMal.forEach((m) => m.dispose())
   scene.environmentIntensity = 0.42
   const camera = new THREE.PerspectiveCamera(40, 1, 4, 900)
   // Açılış kuzeyden: taç kapı, avlu köşkleri ve iki minare fotoğraftaki gibi önde görünür.
@@ -93,14 +109,14 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   const baslangicHedef = new THREE.Vector3(0, 14, -3)
   camera.position.copy(baslangic)
 
-  const hemi = new THREE.HemisphereLight('#fff1dc', '#3a4438', 0.75)
+  const hemi = new THREE.HemisphereLight('#ffeed8', '#39423a', 0.58)
   scene.add(hemi)
-  const gunes = new THREE.DirectionalLight('#ffe2b8', 3)
+  const gunes = new THREE.DirectionalLight('#ffdcaa', 3.7)
   gunes.position.set(-85, 95, -80)
   gunes.castShadow = true
   const dokunmatik = matchMedia('(hover: none)').matches
   gunes.shadow.mapSize.set(dokunmatik ? 2048 : 4096, dokunmatik ? 2048 : 4096)
-  gunes.shadow.radius = 2.5
+  gunes.shadow.radius = 3.5
   gunes.shadow.bias = -0.0004
   gunes.shadow.normalBias = 0.35
   Object.assign(gunes.shadow.camera, { left: -85, right: 85, top: 85, bottom: -85, near: 10, far: 340 })
@@ -232,6 +248,11 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   const icIsiklar = [[-15, 8, -7], [15, 8, -7], [-8, 8, 12], [8, 8, 12]].map(([x, y, z]) => {
     const isik = new THREE.PointLight('#ffdcae', 0, 46, 1.3)
     isik.position.set(x, y, z)
+    Object.assign(isik.shadow.camera, { near: 0.4, far: 46 })
+    isik.shadow.mapSize.set(1024, 1024)
+    isik.shadow.radius = 4
+    isik.shadow.bias = -0.002
+    isik.shadow.normalBias = 0.06
     scene.add(isik)
     return isik
   })
@@ -283,7 +304,15 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   gtao.updateGtaoMaterial({ radius: 5, distanceExponent: 1.3, thickness: 2, scale: 1.2, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
   gtao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 6, rings: 2, samples: 16 })
   composer.addPass(gtao)
-  const parlama = new UnrealBloomPass(new THREE.Vector2(1, 1), 0.14, 0.45, 1.3)
+  // Saydam ışık katmanları AO'nun derinlik geçişine girmez, yoksa etraflarında leke bırakır.
+  const aoDisi: THREE.Object3D[] = []
+  scene.traverse((o) => { if (o instanceof THREE.Mesh && (o.material as THREE.Material).blending === THREE.AdditiveBlending) aoDisi.push(o) })
+  // Three bu iki yöntemi dışa açmıyor; yalnız görünürlük listesini genişletmek için sarılır.
+  const aoIc = gtao as unknown as { _overrideVisibility(): void; _restoreVisibility(): void }
+  const aoGizle = aoIc._overrideVisibility.bind(gtao), aoGoster = aoIc._restoreVisibility.bind(gtao)
+  aoIc._overrideVisibility = () => { aoGizle(); aoDisi.forEach((o) => { o.visible = false }) }
+  aoIc._restoreVisibility = () => { aoGoster(); aoDisi.forEach((o) => { o.visible = true }) }
+  const parlama = new UnrealBloomPass(new THREE.Vector2(1, 1), 0.18, 0.5, 1.2)
   composer.addPass(parlama)
   composer.addPass(new OutputPass())
   const kaliteUygula = () => {
@@ -302,8 +331,17 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     iceride = ic
     // VR'da HTML görünmez, işaretler açılmaz.
     isaretKatmani.hidden = !ic || renderer.xr.isPresenting
-    scene.environmentIntensity = ic ? 0.28 : 0.42
-    hemi.intensity = ic ? 0.5 : disHemi
+    scene.environment = ic ? icOrtam : ortamHaritasi
+    scene.environmentIntensity = ic ? 0.5 : 0.42
+    hemi.intensity = ic ? 0.34 : disHemi
+    parlama.strength = ic ? 0.34 : 0.18
+    parlama.threshold = ic ? 0.95 : 1.2
+    // Gerçek paye ve kemer gölgeleri: bir kez çizilir; Quest, telefon ve yazılımsal çizimde kapalıdır.
+    const icGolge = ic && !hafifCihaz() && kalite < 2
+    if (icIsiklar[0].castShadow !== icGolge) {
+      icIsiklar.forEach((i) => { i.castShadow = icGolge })
+      renderer.shadowMap.needsUpdate = true
+    }
     gtao.updateGtaoMaterial(ic
       ? { radius: 2.2, distanceExponent: 1.3, thickness: 1.2, scale: 1.25, samples: 16, distanceFallOff: 1, screenSpaceRadius: false }
       : { radius: 5, distanceExponent: 1.3, thickness: 2, scale: 1.2, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
@@ -519,6 +557,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
         }
       })
       ortamHaritasi.dispose()
+      icOrtam.dispose()
       artAlan.dispose()
       gtao.dispose()
       parlama.dispose()

@@ -439,6 +439,23 @@ export function ulucamiDokulari() {
     }
   })
 
+  // Lamba halesi: görüntü işleme kapalıyken ve VR'da da parıltı verir.
+  const hale = tuval(128, 128, (c, g, y) => {
+    const z = c.createRadialGradient(g / 2, y / 2, 0, g / 2, y / 2, g / 2)
+    z.addColorStop(0, 'rgba(255,240,210,1)'); z.addColorStop(0.16, 'rgba(255,214,150,0.55)'); z.addColorStop(0.5, 'rgba(255,190,110,0.12)'); z.addColorStop(1, 'rgba(255,180,100,0)')
+    c.fillStyle = '#000'; c.fillRect(0, 0, g, y)
+    c.fillStyle = z; c.fillRect(0, 0, g, y)
+  })
+  // Şadırvan kubbesinden inen ışık: yukarıda parlak, aşağıda sönen, hafif çizgili.
+  const isikSutunu = tuval(256, 256, (c, g, y) => {
+    const r = rastgele(151)
+    const z = c.createLinearGradient(0, 0, 0, y)
+    z.addColorStop(0, '#fff3da'); z.addColorStop(0.55, '#6b6252'); z.addColorStop(1, '#000')
+    c.fillStyle = z; c.fillRect(0, 0, g, y)
+    c.globalCompositeOperation = 'multiply'
+    for (let x = 0; x < g; x += 8) { const t = Math.round(120 + r() * 135); c.fillStyle = `rgb(${t},${t},${t})`; c.fillRect(x, 0, 8, y) }
+  })
+
   const kubbeDoku = doku(tuval(1440, 512, kubbeCiz(false)), 1)
   const kubbeKabartma = doku(tuval(1440, 512, kubbeCiz(true)), 1, false)
   const camDoku = doku(cam, 1)
@@ -476,6 +493,8 @@ export function ulucamiDokulari() {
     mihrapYesil: doku(mihrapYesil, 0.42),
     mihrapKirmizi: doku(mihrapKirmizi, 0.9),
     cam: camDoku,
+    hale: doku(hale, 1),
+    isikSutunu: doku(isikSutunu, 1),
   }
 }
 
@@ -597,7 +616,7 @@ export function ulucamiMalzemeleri() {
     selvi: pbr({ map: d.selvi, bumpMap: d.selviKabartma, bumpScale: 1.6, roughness: 1 }),
     siva: yaslandir(pbr({ map: d.siva, roughness: 0.9, side: THREE.DoubleSide }), 'siva'),
     kafes: pbr({ map: d.kafes, roughness: 0.75, side: THREE.DoubleSide }),
-    hali: hav('#d39a8b', '#e8bdae'),
+    hali: hav('#d9a39b', '#ecc2b6'),
     haliZeytin: hav('#a29b63', '#c9c188'),
     mermerDoseme: yaslandir(cilali({ map: d.mermerDoseme.renk, bumpMap: d.mermerDoseme.kabartma, bumpScale: 0.4, roughness: 0.34 }, 0.55, 0.14), hafif ? 'zeminHafif' : 'mermerDoseme'),
     icMermer: cilali({ map: d.mermerGovde, roughness: 0.36 }, 0.35, 0.2),
@@ -627,6 +646,8 @@ export function ulucamiMalzemeleri() {
     mihrapOn: pbr({ map: fotoDoku('mihrap-on'), roughness: 0.42, metalness: 0.12 }),
     kabeOrtusu: pbr({ map: d.kabeOrtusu, roughness: 0.88, side: THREE.DoubleSide }),
     lamba: new THREE.MeshBasicMaterial({ color: new THREE.Color(3.2, 2.8, 2.1) }),
+    lambaHale: new THREE.MeshBasicMaterial({ map: d.hale, color: new THREE.Color(1.1, 0.95, 0.75), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }),
+    isikSutunu: new THREE.MeshBasicMaterial({ map: d.isikSutunu, color: new THREE.Color(0.2, 0.19, 0.16), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }),
     gok: new THREE.MeshBasicMaterial({ color: new THREE.Color(2.2, 2.5, 2.7), side: THREE.FrontSide }),
   }
 }

@@ -182,6 +182,10 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
     for (let n = 0; n < 14; n++) {
       const a = (n / 14) * Math.PI * 2
       k.ekle(new THREE.SphereGeometry(0.085, 8, 6).translate(x + Math.sin(a) * R, ay - 0.2, z + Math.cos(a) * R), m.lamba)
+      // Çapraz üç düzlemli hale: her bakış açısından yuvarlak parıltı gibi görünür.
+      for (const [rx, ry] of [[0, 0], [0, Math.PI / 2], [Math.PI / 2, 0]]) {
+        k.ekle(new THREE.PlaneGeometry(0.8, 0.8).rotateX(rx).rotateY(ry).translate(x + Math.sin(a) * R, ay - 0.2, z + Math.cos(a) * R), m.lambaHale)
+      }
     }
   }
 
@@ -312,6 +316,8 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
     k.ekle(yer(dondurG([[0.12, 0], [0.09, 0.14], [0.19, 0.36], [0, 0.38]], 10), sx + Math.sin(a) * r, ZEMIN + 0.1, sz + Math.cos(a) * r), m.mermerKoyu)
   }
   const gokY = KASNAK_TABAN + gozOlcusu(SADIRVAN_SUTUN).kasnakH + 3.6
+  // Kubbe açıklığından havuza inen ışık sütunu
+  k.ekle(yer(new THREE.CylinderGeometry(2, 3.3, gokY - 1.5 - ZEMIN - 1.2, 28, 1, true), sx, (gokY - 1.5 + ZEMIN + 1.2) / 2, sz), m.isikSutunu)
   k.ekle(yer(silindirG(0.018, 0.018, gokY - 6, 5), sx, (gokY + 6) / 2, sz), m.koyu)
   k.ekle(yer(duzGolge(silindirG(0.3, 0.42, 0.7, 8)), sx, 5.6, sz), m.altin)
   k.ekle(yer(duzGolge(silindirG(0.05, 0.36, 0.34, 8)), sx, 6.1, sz), m.altin)

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import './maket/maket.css'
 import type { Kaynak, Maket } from '../types/eser'
 import type { MaketSahnesi } from './maket/maketSahnesi'
@@ -7,6 +7,39 @@ import KaynakSatiri from './KaynakSatiri'
 const azHareket = () => matchMedia('(prefers-reduced-motion: reduce)').matches
 const YURUME_TUSLARI = new Set(['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Shift'])
 const tusAdi = (e: React.KeyboardEvent) => e.key.length === 1 ? e.key.toLowerCase() : e.key
+
+/** Dokunmatik yürüme kolu: itilen yön, sahnenin klavye yürüyüşüne çevrilir. Etrafa bakmak için ekran sürüklenir. */
+function YurumeKolu({ tus }: { tus: (ad: string, basili: boolean) => void }) {
+  const YARICAP = 36, ESIK = 0.3
+  const [konum, setKonum] = useState({ x: 0, y: 0 })
+  const basili = useRef(new Set<string>())
+  const uygula = (yeni: Set<string>) => {
+    for (const k of basili.current) if (!yeni.has(k)) tus(k, false)
+    for (const k of yeni) if (!basili.current.has(k)) tus(k, true)
+    basili.current = yeni
+  }
+  const birak = () => { uygula(new Set()); setKonum({ x: 0, y: 0 }) }
+  const hareket = (e: React.PointerEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect()
+    let x = e.clientX - (r.left + r.width / 2), y = e.clientY - (r.top + r.height / 2)
+    const boy = Math.hypot(x, y)
+    if (boy > YARICAP) { x *= YARICAP / boy; y *= YARICAP / boy }
+    setKonum({ x, y })
+    const yeni = new Set<string>()
+    if (y < -YARICAP * ESIK) yeni.add('w')
+    if (y > YARICAP * ESIK) yeni.add('s')
+    if (x < -YARICAP * ESIK) yeni.add('a')
+    if (x > YARICAP * ESIK) yeni.add('d')
+    uygula(yeni)
+  }
+  useEffect(() => () => { for (const k of basili.current) tus(k, false) }, [tus])
+  return <div className="maket-yurume-kolu" role="img" aria-label="Yürüme kolu"
+    onPointerDown={(e) => { e.stopPropagation(); e.currentTarget.setPointerCapture(e.pointerId); hareket(e) }}
+    onPointerMove={(e) => { if (e.currentTarget.hasPointerCapture(e.pointerId)) hareket(e) }}
+    onPointerUp={birak} onPointerCancel={birak} onLostPointerCapture={birak}>
+    <span style={{ transform: `translate(${konum.x}px, ${konum.y}px)` }} />
+  </div>
+}
 
 export default function EseriEleAl({ maket, kaynaklar, ad, hemenAc = false }: { maket: Maket; kaynaklar: Kaynak[]; ad: string; hemenAc?: boolean }) {
   const [acik, setAcik] = useState(hemenAc)
@@ -25,6 +58,8 @@ export default function EseriEleAl({ maket, kaynaklar, ad, hemenAc = false }: { 
   const [xrMesgul, setXrMesgul] = useState(false)
   const [xrHata, setXrHata] = useState(false)
   const hazir = durum === 'hazir' && !xrMesgul
+  const [dokunmatik] = useState(() => matchMedia('(pointer: coarse)').matches)
+  const yuruTus = useCallback((ad: string, basili: boolean) => sahne.current?.yuruTus(ad, basili), [])
   const bilgiMetni = useRef<HTMLParagraphElement>(null)
   const alan = useRef<HTMLDivElement>(null)
   const kutu = useRef<HTMLDivElement>(null)
@@ -134,7 +169,9 @@ export default function EseriEleAl({ maket, kaynaklar, ad, hemenAc = false }: { 
           onPointerDown={() => { setXrHata(false); if (durak) alan.current?.focus({ preventScroll: true }) }}
           aria-label={durak
             ? `${ad} iç mekânı. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.`
-            : `${ad} 3B maketi. Ok tuşlarıyla döndür, artı ve eksi ile yakınlaştır.`} />
+            : `${ad} 3B maketi. Ok tuşlarıyla döndür, artı ve eksi ile yakınlaştır.`}>
+          {durak && dokunmatik && !xrMesgul && <YurumeKolu tus={yuruTus} />}
+        </div>
         {durak && <p className="maket-tuslar" aria-hidden="true"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> yürü · <kbd>←</kbd><kbd>→</kbd> dön · <kbd>Shift</kbd> hızlan</p>}
         {bilgi && <aside className="maket-bilgi-kart" aria-live="polite">
           <button type="button" className="maket-bilgi-kapat" aria-label="Bilgiyi kapat" onClick={bilgiKapat}>×</button>
@@ -163,7 +200,7 @@ export default function EseriEleAl({ maket, kaynaklar, ad, hemenAc = false }: { 
         </div>
       </div>
       <p className="ipucu-metni">{durak
-        ? 'W, A, S, D veya ↑ ↓ ile yürü, ← → ile dön, PageUp/PageDown ile yukarı aşağı bak, Shift ile hızlan. Sürükleyerek de etrafına bakabilirsin. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır. Dokunmatik ekranda duraklar arası geç. Levha ve paye yazıları arşiv fotoğraflarındandır, hangi yüzde durdukları temsilîdir.'
+        ? 'W, A, S, D veya ↑ ↓ ile yürü, ← → ile dön, PageUp/PageDown ile yukarı aşağı bak, Shift ile hızlan. Sürükleyerek de etrafına bakabilirsin. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır. Dokunmatik ekranda alttaki kolla yürü, ekranı sürükleyerek bak. Levha ve paye yazıları arşiv fotoğraflarındandır, hangi yüzde durdukları temsilîdir.'
         : 'Fareyle veya parmağınla sürükleyerek çevir, tekerlek veya iki parmakla yakınlaştır. Klavyede: maketi seçip ok tuşları ile +/−.'}</p>
     </>}
     <ul className="maket-bilgi">

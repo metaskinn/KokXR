@@ -26,3 +26,7 @@ Yerel tarayıcı testleri yazılımsal çizimle yavaş çalışır; süreye değ
 - `package.json` bağımlılığı eklemeden önce sor.
 - Repo private kalır; izni netleşmemiş fotoğraflar herkese açık yayımlanmaz.
 - `master`'a birleştirmeden önce sor.
+
+# Compact instructions
+
+Koru: açık görev ve kararlar, değişen dosya yolları, test sonuçları, kullanıcı düzeltmeleri, doğrulanmamış tarihsel bilgiler. At: dosya dökümleri, ham günlükler, çözülmüş hata ayrıntıları.

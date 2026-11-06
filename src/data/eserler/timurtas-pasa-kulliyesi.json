@@ -1,0 +1,449 @@
+{
+  "id": "timurtas-pasa-kulliyesi",
+  "ad": "Timurtaş Paşa Külliyesi",
+  "sehir": "Bursa",
+  "ilce": "Osmangazi",
+  "donem": "Erken Osmanlı · H. 792 / M. 1390",
+  "vakif": "Timurtaş Paşa ailesi vakfı",
+  "ozet": "Altı tuğla ayak üzerinde yükselen, altında şadırvan bulunan minaresiyle mahallesinin simgesi olmuş 1390 tarihli külliye.",
+  "tarihce": "Külliye, 1390'da cami, imaret ve hamamdan oluşacak biçimde kurulmuştur. Envanter yaptıranı Kara Timurtaş Paşa'nın oğlu Ali Bey olarak verir; 2025 tarihli bir araştırma ise arşiv belgelerine dayanarak banisinin Kara Timurtaş Paşa olduğunu savunur. Yapı mescit olarak inşa edilmiş, 1573'te Cuma namazı ihtiyacıyla şeyhülislâmdan izin alınarak camiye dönüştürülmüş, minber masraflarını Derviş Çelebi karşılamıştır. 1551'de 46.972 akçe harcanarak kapsamlı bir onarım görmüş, 1855 depreminde minarenin şerefesi düşmüş, imareti harap olmuştur. Yıkılan şadırvanlı minare 1966'da yeniden yapılmış, 2017'de Bursa Büyükşehir Belediyesi tarafından restore edilmiştir. Oruç Bey'in 1420'den önce yaptırıp camiye vakfettiği hamam bugün de işlevini sürdürür.",
+  "dogrulama": "dogrulanmis",
+  "kapakGorsel": "/gorseller/timurtas-pasa-kulliyesi/cami-ve-minare.jpg",
+  "gorseller": [
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/cami-ve-minare.jpg",
+      "alt": "Yolun bir yanında beş gözlü cephesi, kubbesi ve feneriyle cami; karşısında altı ayaklı tuğla minare, arkada Uludağ",
+      "aciklama": "Cami ve şadırvanlı minare",
+      "kaynakId": "foto-arsiv"
+    },
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/sadirvanli-minare.jpg",
+      "alt": "Kemerlerle bağlı altı tuğla ayak, taş kasnak ve tuğla gövdeli minare, altında şadırvan",
+      "aciklama": "Şadırvanlı minare",
+      "kaynakId": "foto-arsiv"
+    },
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/sadirvan.jpg",
+      "alt": "Minarenin altında mermer şadırvan, mermer tabureler ve demir korkuluk; arkada cami cephesi",
+      "aciklama": "Minarenin altındaki şadırvan",
+      "kaynakId": "foto-arsiv"
+    },
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/ic-mekan.jpg",
+      "alt": "Tonoz örtülü ibadet mekânı; mavi halı, mihrap, ahşap minber ve renkli kuşaklı beyaz duvarlar",
+      "aciklama": "Mihraplı ibadet mekânı",
+      "kaynakId": "foto-arsiv"
+    },
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/cini-orgu.jpg",
+      "alt": "Tuğla parçaları ve turkuaz çini karelerden oluşan fırıldak biçimli örgü",
+      "aciklama": "Tuğla ve çini örgü",
+      "kaynakId": "foto-arsiv"
+    },
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/hazire.jpg",
+      "alt": "Kademeli taş kaideler üzerinde mezar taşları; arkada caminin taş ve tuğla örgülü kemerli duvarı",
+      "aciklama": "Hazire",
+      "kaynakId": "foto-arsiv"
+    },
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/timurtas-pasa-mezari.jpg",
+      "alt": "Üzerinde Timurtaş Paşa yazılı küçük taşın bulunduğu kademeli mezar ve yanındaki kitabeli şahideler",
+      "aciklama": "Timurtaş Paşa'nın mezarı",
+      "kaynakId": "foto-arsiv"
+    },
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/hamam.jpg",
+      "alt": "Moloz taş ve tuğla duvarlı, oluklu kiremit kubbeli ve fenerli Demirtaşpaşa Hamamı",
+      "aciklama": "Timurtaş Paşa Hamamı",
+      "kaynakId": "foto-arsiv"
+    },
+    {
+      "dosya": "/gorseller/timurtas-pasa-kulliyesi/hamam-kubbeleri.jpg",
+      "alt": "Hamamın ışık gözleriyle delinmiş kubbelerinin havadan görünümü",
+      "aciklama": "Hamamın ışık gözlü kubbeleri",
+      "kaynakId": "foto-arsiv"
+    }
+  ],
+  "bilgiNoktalari": [
+    {
+      "id": "minare",
+      "gorsel": "/gorseller/timurtas-pasa-kulliyesi/cami-ve-minare.jpg",
+      "x": 26,
+      "y": 56,
+      "baslik": "Yapının simgesi: minare",
+      "metin": "Yapının en göze çarpan elemanı minaresidir. Tuğladan örülen minare, kemerlerle birbirine bağlanmış altı paye üzerine inşa edilmiştir; altındaki şadırvanla birlikte mahallenin simgesi hâline gelmiştir.",
+      "kaynakId": "env-s216"
+    },
+    {
+      "id": "cephe",
+      "gorsel": "/gorseller/timurtas-pasa-kulliyesi/cami-ve-minare.jpg",
+      "x": 50,
+      "y": 70,
+      "baslik": "Beş gözlü son cemaat yeri",
+      "metin": "Daha geniş ve yüksek kemerli orta göz, Türk üçgenleri üzerine oturan bir kubbeyle örtülüdür. Yanlarındaki gözlerde aslan göğsü kemerli küçük kubbeler, en dışta çapraz tonozlar vardır.",
+      "kaynakId": "env-s216"
+    },
+    {
+      "id": "kubbe",
+      "gorsel": "/gorseller/timurtas-pasa-kulliyesi/cami-ve-minare.jpg",
+      "x": 62,
+      "y": 49,
+      "baslik": "Fenerli orta kubbe",
+      "metin": "Caminin merkezindeki kubbe altı metre çapındadır; kubbenin tepesinde sekizgen bir ışık bacası bulunur.",
+      "kaynakId": "kahraman"
+    },
+    {
+      "id": "sadirvan",
+      "gorsel": "/gorseller/timurtas-pasa-kulliyesi/sadirvan.jpg",
+      "x": 48,
+      "y": 68,
+      "baslik": "Minarenin altında şadırvan",
+      "metin": "Altıgen kaidedeki kemerlerle birbirine bağlı tuğla ayaklar üzerine oturan minare, şadırvan işlevini de karşılar. Kaide bölümünün daha önceki tarihlerde çiniyle kaplı olduğu ifade edilir.",
+      "kaynakId": "kahraman"
+    },
+    {
+      "id": "ibadet",
+      "gorsel": "/gorseller/timurtas-pasa-kulliyesi/ic-mekan.jpg",
+      "x": 52,
+      "y": 55,
+      "baslik": "Tonozlu mihrap mekânı",
+      "metin": "Mihraplı asıl ibadet mekânı beşik tonozla örtülüdür ve kubbe altından iki basamakla, 50 cm kot farkıyla çıkılır. Beş penceresi vardır: ikisi mihrabın iki yanında, biri üstünde, ikisi yan duvarlarda.",
+      "kaynakId": "kahraman"
+    },
+    {
+      "id": "hazire",
+      "gorsel": "/gorseller/timurtas-pasa-kulliyesi/hazire.jpg",
+      "x": 48,
+      "y": 60,
+      "baslik": "Bursa'nın en eski hazirelerinden",
+      "metin": "Hazirenin dikkat çeken özelliklerinden biri, XV. yüzyıl geleneğine uygun olarak mezar taşı kitabelerinin Arapça yazılmış olmasıdır. Kabirlerin önemli bir kısmı Timurtaş Paşa ailesine aittir.",
+      "kaynakId": "env-s218"
+    },
+    {
+      "id": "hamam",
+      "gorsel": "/gorseller/timurtas-pasa-kulliyesi/hamam.jpg",
+      "x": 42,
+      "y": 32,
+      "baslik": "Soğukluk kubbesi",
+      "metin": "Hamamın soğukluk bölümü 15,75 x 17,85 m iç ölçülere sahiptir ve üzeri kubbeyle örtülüdür. Duvarlar bir sıra tuğla ve bir sıra moloz taşla inşa edilmiştir.",
+      "kaynakId": "env-s220"
+    }
+  ],
+  "test": [
+    {
+      "soru": "Timurtaş Paşa Camii'nin minaresini benzersiz kılan özellik nedir?",
+      "secenekler": [
+        "İki şerefeli olması",
+        "Altı ayak üzerinde yükselmesi ve altında şadırvan bulunması",
+        "Tamamen mermerden yapılması",
+        "Kubbenin üzerine oturması"
+      ],
+      "dogru": 1,
+      "aciklama": "Tuğla minare, kemerlerle birbirine bağlı altı paye üzerine inşa edilmiştir; altındaki şadırvanla birlikte mahallenin simgesi olmuştur.",
+      "kaynakId": "env-s216"
+    },
+    {
+      "soru": "Caminin duvarlarında hangi örgü kullanılmıştır?",
+      "secenekler": [
+        "Üç sıra tuğla, bir sıra kesme taş",
+        "Yalnız mermer",
+        "Bir sıra tuğla, bir sıra moloz taş",
+        "Yalnız kerpiç"
+      ],
+      "dogru": 0,
+      "aciklama": "Cami üç sıra tuğla, bir sıra kesme taşla örülmüştür. Bir sıra tuğla, bir sıra moloz taş hamamın duvarlarında görülür.",
+      "kaynakId": "env-s216"
+    },
+    {
+      "soru": "Yapı hangi yılda mescitten camiye dönüştürülmüştür?",
+      "secenekler": [
+        "1390",
+        "1551",
+        "1573",
+        "1966"
+      ],
+      "dogru": 2,
+      "aciklama": "H. 981 / M. 1573'te şeyhülislâmdan izin alınarak, minber masraflarını Derviş Çelebi'nin karşılamasıyla mescitten camiye dönüştürülmüştür.",
+      "kaynakId": "env-s216"
+    }
+  ],
+  "zamanKatmani": [
+    {
+      "id": "kurulus",
+      "donem": "H. 792 / M. 1390",
+      "baslik": "Külliyenin kuruluşu",
+      "metin": "Cami, imaret ve hamamdan oluşan külliye 1390'da inşa edilmiştir. Yapı başlangıçta mescit olarak kullanılmıştır.",
+      "kaynakId": "env-s215"
+    },
+    {
+      "id": "hamam",
+      "donem": "1420'den önce",
+      "baslik": "Hamam",
+      "metin": "Timurtaş oğlu Oruç Bey, babası adına yaptırdığı hamamı kardeşi Ali Bey'in camisine vakfetmiştir.",
+      "kaynakId": "env-s220"
+    },
+    {
+      "id": "onarim",
+      "donem": "H. 959 / M. 1551",
+      "baslik": "Kapsamlı onarım",
+      "metin": "Harap hâldeki mescit, şadırvan, zaviye matbahı, odalar, evler ve su yolu için 46.972 akçe harcanarak onarım yapılmıştır.",
+      "kaynakId": "env-s216"
+    },
+    {
+      "id": "cami",
+      "donem": "H. 981 / M. 1573",
+      "baslik": "Mescitten camiye",
+      "metin": "Şehre uzaklığı ve Cuma namazı ihtiyacı nedeniyle izin alınmış, Derviş Çelebi minber masraflarını karşılamıştır.",
+      "kaynakId": "env-s216"
+    },
+    {
+      "id": "deprem",
+      "donem": "1855",
+      "baslik": "Bursa depremi",
+      "metin": "Minarenin şerefesi düşmüş, ortasında çatlak oluşmuş ve imaret harap olmuştur.",
+      "kaynakId": "env-s216"
+    },
+    {
+      "id": "minare",
+      "donem": "1966",
+      "baslik": "Minarenin yeniden yapımı",
+      "metin": "Yıkılan şadırvanlı minare 1966'da yeniden inşa edilmiştir.",
+      "kaynakId": "env-s216"
+    },
+    {
+      "id": "restorasyon",
+      "donem": "2017",
+      "baslik": "Son restorasyon",
+      "metin": "Minare, Bursa Büyükşehir Belediyesi tarafından restore edilmiştir.",
+      "kaynakId": "env-s216"
+    }
+  ],
+  "kaynaklar": [
+    {
+      "id": "env-s215",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Timurtaş Paşa Külliyesi\"",
+      "sayfa": "215"
+    },
+    {
+      "id": "env-s216",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Timurtaş Paşa Külliyesi\"",
+      "sayfa": "216-217"
+    },
+    {
+      "id": "env-s218",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Demirtaş (Timurtaş) Camii Haziresi\"",
+      "sayfa": "218-219"
+    },
+    {
+      "id": "env-s220",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Timurtaş Paşa Hamamı\"",
+      "sayfa": "220, 222"
+    },
+    {
+      "id": "kahraman",
+      "metin": "Aras Kahraman, \"Bursa ve Kütahya'da Bulunan Timurtaş Paşa Camilerinin Mekân Tarihi ve Mimari Özelliklerine Dair Bir İnceleme\", Tarih Okulu Dergisi 18(76), 2025 (plan: Ayverdi 1989), doi.org/10.29228/joh.78591",
+      "sayfa": "1877-1884"
+    },
+    {
+      "id": "foto-arsiv",
+      "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)"
+    }
+  ],
+  "maket": {
+    "model": "timurtas-pasa-kulliyesi",
+    "aciklama": "Temsilî maket; gerçek bir 3B tarama değildir. Caminin plan ölçüleri Ayverdi'nin planından, örtü düzeni, minare ve hamam bilgileri envanterden alındı. Yükseklikler, süslemeler, hamamın ve mezarların yeri fotoğraflara bakılarak yorumlandı. Mihrap yüzünde arşiv fotoğrafı kullanıldı. Günümüze ulaşmayan imaret yalnız plandaki yeriyle gösterilir.",
+    "bilgiler": [
+      {
+        "metin": "Cami, üç sıra tuğla ve bir sıra kesme taşla örülmüş, zaviyeli planlı bir yapıdır ve beş gözlü son cemaat yeri vardır.",
+        "kaynakId": "env-s216"
+      },
+      {
+        "metin": "Doğu ve batıdaki zaviyeler ile mihraplı mekân beşik tonozla örtülüdür. \"Parçala\" ile çatıyı ve kubbeleri kaldırıp odaları görebilirsin.",
+        "kaynakId": "env-s216"
+      },
+      {
+        "metin": "Orta kubbe altı metre çapındadır ve tepesinde sekizgen bir ışık bacası vardır.",
+        "kaynakId": "kahraman"
+      },
+      {
+        "metin": "Tuğla minare, kemerlerle bağlı altı paye üzerinde yükselir; altında şadırvan vardır. Yoldan karşıya geçip altına girebilirsin.",
+        "kaynakId": "env-s216"
+      },
+      {
+        "metin": "Batıdaki imaret günümüze ulaşmamıştır; hamam imaretin ilerisindedir ve soğukluğu 15,75 x 17,85 m iç ölçülüdür.",
+        "kaynakId": "env-s220"
+      }
+    ],
+    "icBilgiler": [
+      {
+        "id": "orgu",
+        "baslik": "Taş ve tuğla örgü",
+        "metin": "Cephe, 1887'de onarılan son cemaat yeri cephesiyle benzer biçimde, almaşık üç sıra tuğla ve bir sıra köfeki taşla örülmüştür. Saçaklar iki sıra kirpi saçaktır.",
+        "kaynakId": "kahraman",
+        "konum": [
+          16,
+          4,
+          -12.5
+        ],
+        "yaricap": 3.6
+      },
+      {
+        "id": "son-cemaat",
+        "baslik": "Son cemaat yeri",
+        "metin": "Orta göz Türk üçgenleri üzerine oturan bir kubbeyle örtülüdür. İki yanındaki mekânlarda aslan göğsü kemerli küçük kubbeler, en dışta çapraz tonozlar vardır.",
+        "kaynakId": "env-s216",
+        "konum": [
+          16,
+          5,
+          -6.3
+        ],
+        "yaricap": 5.5
+      },
+      {
+        "id": "orta-kubbe",
+        "baslik": "Orta kubbe",
+        "metin": "Altı metre çapındaki kubbeye geçişte düz yüzeyli \"birim üçgen\" elemanları kullanılmıştır. Üstte sekizgen kasnağa uyan bir silme dolanır, tepede sekizgen ışık bacası vardır.",
+        "kaynakId": "kahraman",
+        "konum": [
+          16,
+          5.5,
+          0
+        ],
+        "yaricap": 2.6
+      },
+      {
+        "id": "zaviye-dogu",
+        "baslik": "Doğu zaviyesi",
+        "metin": "Kubbe altından yan mekânlara birer kapı ve pencere açılır. Dikdörtgen planlı zaviye/tabhaneler beşik tonozla örtülüdür.",
+        "kaynakId": "kahraman",
+        "konum": [
+          22.7,
+          3.6,
+          1
+        ],
+        "yaricap": 3.6
+      },
+      {
+        "id": "zaviye-bati",
+        "baslik": "Batı zaviyesi",
+        "metin": "Caminin doğu ve batı yönlerinde zaviye/tabhaneler yer alır. Bugün batısında ayakta bir imaret yoktur.",
+        "kaynakId": "env-s216",
+        "konum": [
+          9.3,
+          3.6,
+          1
+        ],
+        "yaricap": 3.6
+      },
+      {
+        "id": "eyvan",
+        "baslik": "Mihraplı mekân",
+        "metin": "Tonoz örtülü mihrap önüne iki basamaklı merdivenle 50 cm kot farkıyla çıkılır. İkisi mihrabın yanlarında, biri üstünde, ikisi yan duvarlarda olmak üzere beş pencere vardır.",
+        "kaynakId": "kahraman",
+        "konum": [
+          16,
+          3.6,
+          5.8
+        ],
+        "yaricap": 2.6
+      },
+      {
+        "id": "minber",
+        "baslik": "Minber",
+        "metin": "Yapı 1573'te camiye dönüştürülürken minber masraflarını Derviş Çelebi adlı bir hayırsever karşılamıştır. Buradaki minber biçimi fotoğraftan yorumlanmıştır.",
+        "kaynakId": "env-s216",
+        "konum": [
+          14.05,
+          3.2,
+          7.2
+        ],
+        "yaricap": 1.7
+      },
+      {
+        "id": "mihrap",
+        "baslik": "Beşik tonoz",
+        "metin": "Mihraplı asıl ibadet mekânının üzeri beşik tonozla örtülüdür. Güney cephesinde pencerelerin çevresi dışarıdan kör kemerlerle süslenmiştir.",
+        "kaynakId": "kahraman",
+        "konum": [
+          16,
+          4,
+          9
+        ],
+        "yaricap": 2.4
+      },
+      {
+        "id": "sadirvan",
+        "baslik": "Şadırvan",
+        "metin": "Tuğla ayaklar kemerlerle birbirine bağlanır ve minare şadırvan işlevini de karşılar. Osmanlı mimarisinde bu baldakenli minarenin benzeri bulunmaz.",
+        "kaynakId": "kahraman",
+        "konum": [
+          24,
+          2,
+          -25
+        ],
+        "yaricap": 3.4
+      },
+      {
+        "id": "minare",
+        "baslik": "Şadırvanlı minare",
+        "metin": "Minare, caminin önünden geçen yolun öteki tarafındadır. Altıgen kasnak üzerine oturan gövdesi ve şerefesi tuğladandır. Yıkılmasının ardından 1966'da yeniden yapılmış, 2017'de restore edilmiştir.",
+        "kaynakId": "env-s216",
+        "konum": [
+          24,
+          8,
+          -25
+        ],
+        "yaricap": 8.5
+      },
+      {
+        "id": "imaret",
+        "baslik": "İmaret izi",
+        "metin": "Batıda bulunan yuvarlak kemerli, beşik tonozlu imaret günümüze ulaşmamıştır. 1855 depremi kayıtlarında harap olduğu yazılıdır. Alçak kaide yalnız plandaki yerini gösterir.",
+        "kaynakId": "env-s216",
+        "konum": [
+          0,
+          1.4,
+          -6.2
+        ],
+        "yaricap": 7
+      },
+      {
+        "id": "hazire",
+        "baslik": "Hazire",
+        "metin": "Bursa'nın en eski hazirelerinden biri, caminin doğusundadır. Kabirlerin önemli bir kısmı Timurtaş Paşa ailesine aittir ve XV. yüzyıldandır. Kitabeler Arapçadır.",
+        "kaynakId": "env-s218",
+        "konum": [
+          35,
+          2.2,
+          -4
+        ],
+        "yaricap": 8
+      },
+      {
+        "id": "pasa-mezari",
+        "baslik": "Kara Timurtaş Paşa",
+        "metin": "Aykut Alp'in torunu Kara Timurtaş Paşa, XIV. yüzyıl sonunun önemli Osmanlı komutan ve vezirlerindendir; H. 806 / M. 1404'te vefat etmiş, burada medfundur. Maketteki mezarın yeri temsilîdir.",
+        "kaynakId": "env-s218",
+        "konum": [
+          33.6,
+          2.5,
+          1.4
+        ],
+        "yaricap": 3.2
+      },
+      {
+        "id": "hamam",
+        "baslik": "Timurtaş Paşa Hamamı",
+        "metin": "Oruç Bey'in 1420'den önce babası adına yaptırdığı hamam, camiye vakfedilmiştir. Kubbeli soğukluk, ılıklık ve göbek taşlı sıcaklık bölümleri vardır; külhan doğudadır. En son 2010'da restore edilmiş, bugün de işlevini sürdürür.",
+        "kaynakId": "env-s220",
+        "konum": [
+          -4.5,
+          3,
+          -14
+        ],
+        "yaricap": 6
+      }
+    ]
+  }
+}

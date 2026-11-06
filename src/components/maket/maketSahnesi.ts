@@ -307,7 +307,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     gtao.updateGtaoMaterial(ic
       ? { radius: 2.2, distanceExponent: 1.3, thickness: 1.2, scale: 1.25, samples: 16, distanceFallOff: 1, screenSpaceRadius: false }
       : { radius: 5, distanceExponent: 1.3, thickness: 2, scale: 1.2, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
-    icIsiklar.forEach((i) => { i.intensity = ic ? 40 : 0 })
+    icIsiklar.forEach((i) => { i.intensity = ic ? 32 : 0 })
   }
   const bilgiKapat = () => {
     secilenBilgi = null

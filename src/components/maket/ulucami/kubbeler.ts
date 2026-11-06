@@ -329,28 +329,30 @@ export function icKubbeEkle(m: UlucamiMalzemeleri, kKasnak: Kova, kKubbe: Kova, 
   }
 }
 
-/** Halka avize: bir tel üzerinde göbek, sekiz askı, çift halka ve kandiller. Zemine yakın asılır (DJI_0350). */
+/** DJI_0312/0339: ince koyu halka, yıldız kollar, uzun askılar ve küçük ampuller. */
 export function avizeEkle(k: Kova, m: UlucamiMalzemeleri, x: number, z: number, tepe: number) {
-  const ay = 4.5, R = 1.4, gobekY = ay + 1.3
-  k.ekle(new THREE.TorusGeometry(R, 0.03, 6, 36).rotateX(Math.PI / 2).translate(x, ay, z), m.altin)
-  k.ekle(new THREE.TorusGeometry(R * 0.56, 0.024, 6, 24).rotateX(Math.PI / 2).translate(x, ay + 0.34, z), m.altin)
-  k.ekle(yer(silindirG(0.012, 0.012, tepe - gobekY, 4), x, (tepe + gobekY) / 2, z), m.koyu)
-  k.ekle(yer(dondurG([[0.03, 0], [0.13, -0.08], [0.1, -0.22], [0.03, -0.3]], 8, [1, 1]), x, gobekY, z), m.altin)
-  const yon = new THREE.Vector3(0, 1, 0), q = new THREE.Quaternion(), hedef = new THREE.Vector3()
-  for (let n = 0; n < 8; n++) {
-    const a = (n / 8) * Math.PI * 2, dx = Math.sin(a) * R, dz = Math.cos(a) * R, boy = Math.hypot(R, gobekY - ay)
-    const ip = new THREE.CylinderGeometry(0.009, 0.009, boy, 4)
-    ip.applyQuaternion(q.setFromUnitVectors(yon, hedef.set(-dx, gobekY - ay, -dz).normalize()))
-    k.ekle(ip.translate(x + dx / 2, (ay + gobekY) / 2, z + dz / 2), m.koyu)
-    const c = (n / 8 + 1 / 16) * Math.PI * 2, r2 = R * 0.56
-    k.ekle(new THREE.SphereGeometry(0.045, 6, 4).translate(x + Math.sin(c) * r2, ay + 0.24, z + Math.cos(c) * r2), m.lamba)
+  const ay = 4.5, R = 1.4, gobekY = ay + 2.3, N = 12
+  const yon = new THREE.Vector3(0, 1, 0), q = new THREE.Quaternion(), delta = new THREE.Vector3()
+  const tel = (a: THREE.Vector3, b: THREE.Vector3, r: number) => {
+    delta.subVectors(b, a)
+    const geo = new THREE.CylinderGeometry(r, r, delta.length(), 4)
+    geo.applyQuaternion(q.setFromUnitVectors(yon, delta.normalize()))
+    k.ekle(geo.translate((a.x + b.x) / 2 + x, (a.y + b.y) / 2, (a.z + b.z) / 2 + z), m.bronz)
   }
-  for (let n = 0; n < 14; n++) {
-    const a = (n / 14) * Math.PI * 2, lx = x + Math.sin(a) * R, lz = z + Math.cos(a) * R
-    k.ekle(new THREE.SphereGeometry(0.055, 8, 6).translate(lx, ay - 0.12, lz), m.lamba)
-    // Çapraz üç düzlemli hale: her bakış açısından yuvarlak parıltı gibi görünür.
-    for (const [rx, ry] of [[0, 0], [0, Math.PI / 2], [Math.PI / 2, 0]]) {
-      k.ekle(new THREE.PlaneGeometry(0.46, 0.46).rotateX(rx).rotateY(ry).translate(lx, ay - 0.12, lz), m.lambaHale)
+  const nokta = (n: number, r = R, y = ay) => new THREE.Vector3(Math.sin(n * Math.PI * 2 / N) * r, y, Math.cos(n * Math.PI * 2 / N) * r)
+  k.ekle(new THREE.TorusGeometry(R, 0.012, 4, 48).rotateX(Math.PI / 2).translate(x, ay, z), m.bronz)
+  k.ekle(new THREE.TorusGeometry(R * 0.52, 0.009, 4, 32).rotateX(Math.PI / 2).translate(x, ay + 0.3, z), m.bronz)
+  tel(new THREE.Vector3(0, gobekY, 0), new THREE.Vector3(0, tepe, 0), 0.007)
+  for (let n = 0; n < N; n++) {
+    // İki iç içe üçgen örgüsü yıldız iskeletini kurar; kalın disk yoktur.
+    tel(nokta(n), nokta(n + 5), 0.007)
+    if (n % 2 === 0) tel(nokta(n), new THREE.Vector3(0, gobekY, 0), 0.005)
+    for (const inner of [false, true]) {
+      const p = nokta(n + (inner ? 0.5 : 0), inner ? R * 0.52 : R, inner ? ay + 0.3 : ay)
+      tel(p, p.clone().add(new THREE.Vector3(0, -0.17, 0)), 0.009)
+      k.ekle(new THREE.SphereGeometry(0.04, 6, 4).scale(0.8, 1.2, 0.8).translate(x + p.x, p.y - 0.2, z + p.z), m.lamba)
+      for (const ry of [0, Math.PI / 2])
+        k.ekle(new THREE.PlaneGeometry(0.2, 0.2).rotateY(ry).translate(x + p.x, p.y - 0.2, z + p.z), m.lambaHale)
     }
   }
 }

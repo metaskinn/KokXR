@@ -3,7 +3,7 @@
 import { chromium } from 'playwright'
 
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:5173'
-const tarayici = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox'] })
+const tarayici = await chromium.launch({ channel: process.env.TEST_BROWSER_CHANNEL ?? 'chrome', args: ['--no-sandbox'] })
 const sayfa = await tarayici.newPage()
 await sayfa.goto(url)
 const sonuc = await sayfa.evaluate(async () => {

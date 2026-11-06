@@ -369,7 +369,9 @@ export function icZemini(k: Kova, m: UlucamiMalzemeleri) {
       map: hali.renk, normalMap: hali.normal, normalScale: new THREE.Vector2(0.55, 0.55), color: renk, roughness: 0.97, metalness: 0,
       vertexColors: true, sheen: 0.32, sheenRoughness: 0.75, sheenColor: new THREE.Color(parlama),
     }))
-  const gul = haliMal('#d4b7b6', '#ead6d2')
+  // ERD05018 açık halı örneklerinin RGB medyanları: (197,155,136), (226,190,174).
+  // Bunlar fotoğraf ışığını içerir; orta ton albedo + sahne ışığıyla yorumlanır.
+  const gul = haliMal('#cfb09f', '#e6cfb9')
   const zeytin = haliMal('#a89e79', '#cdc6a0')
   const mermerMal = hafif
     ? new THREE.MeshStandardMaterial({ map: mermer.renk, roughness: 0.3, metalness: 0, vertexColors: true })

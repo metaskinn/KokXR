@@ -5,7 +5,7 @@
 import * as THREE from 'three'
 import { ACIK_YAYIN } from '../../data/acikYayin'
 import { kibleDuvari } from './ulucami/mihrap'
-import { kabeVitrini } from './ulucami/icduvar'
+import { kabeVitrini, ortuYaniKosk } from './ulucami/icduvar'
 import { kapilarMalzemeleri, yanKapi } from './ulucami/kapilar'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import { ahsapKursu, dolapYap, mahfilYap, mermerKursu, sandikYap } from './ulucami/minber'
@@ -40,7 +40,7 @@ function levhaDokulari() {
   return {
     payeler: ['paye-1', 'paye-3', 'paye-5', 'paye-2', 'paye-6', 'paye-4'].map(malzeme),
     altin: malzeme('levha-altin'),
-        madalyon: malzeme('madalyon'),
+    madalyon: malzeme('madalyon'),
     kucuk: malzeme('levha-kucuk'),
   }
 }
@@ -70,11 +70,24 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   levha(duvardan(px(0.5), 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[1], 2.4, 4.6, m.ceviz)
   doguBatiLevhalari(m, k)
   kabeVitrini(k, m)
+  ortuYaniKosk(k, m)
   // Yuvarlak madalyonlar: kırpımın köşeleri görünmesin diye daire biçiminde
-  for (const [x, z, ry] of [[-YX + DUVAR + 0.03, pz(0.5), Math.PI / 2], [px(2.5) - 8, -YZ + DUVAR + 0.03, 0], [px(2.5) + 8, -YZ + DUVAR + 0.03, 0]]) {
+  // Yan duvar madalyonları aşağıda bir kez eklenir. Kuzeyde kemer ayakları
+  // yerine pencere çiftlerinin arasındaki boş duvarı kullan.
+  for (const x of [px(1.5), px(3.5)]) {
+    const z = -YZ + DUVAR + 0.06, ry = 0
     const ek = duvardan(x, 9.6, z, ry)
     ek(new THREE.TorusGeometry(1.32, 0.09, 8, 40), m.altinKoyu)
     ek(new THREE.CircleGeometry(1.3, 40).translate(0, 0, 0.03), d.madalyon)
+  }
+
+  // Üst pencere çiftlerinin arasındaki madalyonlar (ERD05018 ve DJI_0339).
+  // Yazı mevcut referans dokusudur; farklı isimler uydurulmaz, yerleşim temsilîdir.
+  for (const side of [-1, 1]) for (const j of [0.5, 2.5, 3.5]) {
+    const ek = duvardan(side * (YX - DUVAR - 0.04), 10.25, pz(j), -side * Math.PI / 2)
+    ek(new THREE.CircleGeometry(1.04, 32), m.koyu)
+    ek(new THREE.TorusGeometry(1.05, 0.035, 5, 32).translate(0, 0, 0.025), m.altinKoyu)
+    ek(new THREE.CircleGeometry(1, 32).translate(0, 0, 0.04), d.madalyon)
   }
 
   // --- Kapılar: kuzey içi, doğu ve batı (içte ve dışta) ---

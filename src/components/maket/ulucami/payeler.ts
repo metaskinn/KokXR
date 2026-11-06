@@ -282,7 +282,8 @@ function levhaAs(k: Kova, m: UlucamiMalzemeleri, l: Mallar, r: readonly number[]
   const EGIM = 0.1
   const ekle = (geo: THREE.BufferGeometry, mal: Mal) => {
     geo.rotateX(EGIM)
-    geo.translate(0, y, (h / 2) * Math.sin(EGIM) + 0.05)
+    // Eğik çerçevenin üst arka köşesi de sıvanın önünde kalır.
+    geo.translate(0, y, ((h + 0.14) / 2) * Math.sin(EGIM) + 0.09 * Math.cos(EGIM) + 0.035)
     k.ekle(yer(geo, x, 0, z, ry), mal)
   }
   ekle(kutuG(g + 0.14, h + 0.14, 0.09).translate(0, 0, -0.045), m.ceviz)
@@ -305,14 +306,15 @@ function levhaAs(k: Kova, m: UlucamiMalzemeleri, l: Mallar, r: readonly number[]
 export function doguBatiLevhalari(m: UlucamiMalzemeleri, k: Kova) {
   const l = mallar(m)
   const dogu = YX - DUVAR - 0.02, bati = -YX + DUVAR + 0.02
-  const Y = 5.98
+  const Y = 5.75
   const orantili = (r: readonly number[], g: number) => g * (r[3] / r[2])
   const yerles: [readonly number[], number, number, number, number][] = [
-    [LEVHA.galib, 5.4, dogu, pz(2.5), -Math.PI / 2],
-    [LEVHA.hasm, 5, dogu, pz(3.5), -Math.PI / 2],
-    [LEVHA.zikr, 5, bati, pz(2.5), Math.PI / 2],
-    [LEVHA.kuran, 2.6, bati, pz(3.5), Math.PI / 2],
-    [LEVHA.zafer, 3.1, bati, pz(0.5), Math.PI / 2],
+    // Çerçeveler, iki pencere tepeliği arasındaki yaklaşık 4.35 m boşluğa sığar.
+    [LEVHA.galib, 3.8, dogu, pz(2.5), -Math.PI / 2],
+    [LEVHA.hasm, 3.8, dogu, pz(3.5), -Math.PI / 2],
+    [LEVHA.zikr, 3.8, bati, pz(2.5), Math.PI / 2],
+    [LEVHA.kuran, 2.4, bati, pz(3.5), Math.PI / 2],
+    [LEVHA.zafer, 2.8, bati, pz(0.5), Math.PI / 2],
   ]
   for (const [r, g, x, z, ry] of yerles) levhaAs(k, m, l, r, g, orantili(r, g), x, Y, z, ry)
 }

@@ -3,7 +3,7 @@
 import { chromium } from 'playwright'
 
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:5173', id = process.argv[2] ?? 'ulu-camii'
-const b = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+const b = await chromium.launch({ channel: process.env.TEST_BROWSER_CHANNEL ?? 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 const sart = (k, m) => { if (!k) throw new Error(m) }
 const ac = async (ops) => {
   const s = await (await b.newContext(ops)).newPage()

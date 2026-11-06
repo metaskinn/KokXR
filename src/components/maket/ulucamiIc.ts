@@ -6,7 +6,7 @@ import {
   DUVAR, H, KASNAK_TABAN, Kova, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
   gozAcikligi, gozOlcusu, px, pz, 
 } from './ulucamiParca'
-import { KABE_VITRIN } from './ulucami/icduvar'
+import { KABE_VITRIN, ORTU_YANI_KOSK } from './ulucami/icduvar'
 import { KAPI_Z, KURSU, MAHFIL } from './ulucamiDetay'
 import { sadirvan } from './ulucami/sadirvan'
 import { AHSAP_KURSU, MAHFIL_ALT_KORKULUK, minberYap, parmaklik } from './ulucami/minber'
@@ -37,7 +37,7 @@ export const icDuraklar: IcDurak[] = [
   { id: 'mihrap', ad: 'Mihrap', konum: [0, 2.8, 14.5], bak: [0, 6.4, MIHRAP_Z] },
   { id: 'minber', ad: 'Minber', konum: [0.4, 2.8, 16], bak: [MINBER_X, 5.6, 21] },
   { id: 'kapi', ad: 'Doğu kapısı', konum: [23.5, 2.7, KAPI_Z], bak: [YX, 3.8, KAPI_Z] },
-  { id: 'kabe', ad: 'Kâbe örtüsü', konum: [26.5, 2.8, pz(0.5)], bak: [YX, 2.5, pz(0.5)] },
+  { id: 'kabe', ad: 'Kâbe örtüsü', konum: [26.5, 2.8, pz(0.5) + 2.2], bak: [YX, 2.5, pz(0.5) + 2.2] },
   { id: 'levha', ad: 'Levha', konum: [13.8, 2.8, 13], bak: [13.8, 7, 24.5] },
   { id: 'kubbe', ad: 'Kubbe', konum: [-13.8, 2.4, 3.2], bak: [-13.8, 21, 7.6] },
   // Yapıların üstü: yürüyerek de çıkılır, bu duraklar kısa yoldur.
@@ -71,7 +71,7 @@ export function icYurumeAlani(): IcYurume {
   return {
     sinir: { x0: -YX + DUVAR, x1: YX - DUVAR, z0: -YZ + DUVAR, z1: YZ - DUVAR },
     kutular: [
-      ...dolapli, ...korkuluklar, ...mahfil, KABE_VITRIN,
+      ...dolapli, ...korkuluklar, ...mahfil, KABE_VITRIN, ORTU_YANI_KOSK,
       ...[[sx - 4.3, sz - 4.3], [sx + 4.3, sz - 4.3], [sx - 4.3, sz + 4.3], [sx + 4.3, sz + 4.3]].map(([x, z]) => kutu(x, z, 0.85, 0.55)),
       { x0: -MIHRAP.G / 2 - 0.05, x1: MIHRAP.G / 2 + 0.05, z0: MIHRAP_Z - MIHRAP.DER - 0.05, z1: MIHRAP_Z }, // mihrap
       // Minber: yan duvarlar, kapı sövesi ve köşk engeldir; aradaki merdivenden yürünür.

@@ -178,19 +178,27 @@ export function ulucamiDokulari() {
 
   const pandantif = tuval(1024, 256, pandantifCiz)
 
+  // Fotoğraflardaki gibi yaprak dizili dal kuşağı. Yazı üretmez;
+  // açık yayında özel fotoğrafın yerine kullanılan boyalı bezemedir.
   const kemerBant = tuval(256, 256, (c, g, y) => {
-    c.fillStyle = '#e9dcc4'
-    c.fillRect(0, 0, g, y)
-    c.fillStyle = '#6a5136'
-    for (let a = 0; a < 2; a++) for (let b = 0; b < 2; b++) {
-      const x = a * 128 + 64, v = b * 128 + 64
-      for (let n = 0; n < 6; n++) {
-        const aci = (n / 6) * Math.PI * 2
-        yaprak(c, x + Math.sin(aci) * 20, v - Math.cos(aci) * 20, 15, aci)
+    c.fillStyle = '#dfc899'; c.fillRect(0, 0, g, y)
+    for (let row = 0; row < 4; row++) {
+      const cy = row * 64 + 32
+      c.strokeStyle = '#5a493b'; c.lineWidth = 2
+      c.beginPath(); c.moveTo(0, cy); c.lineTo(g, cy); c.stroke()
+      c.fillStyle = '#514337'
+      for (let n = 0; n < 8; n++) {
+        const x = n * 32 + 16
+        for (const side of [-1, 1]) {
+          yaprak(c, x, cy + side * 12, 15, side * 0.8)
+          yaprak(c, x + 10, cy + side * 8, 10, side * 1.1)
+        }
+      }
+      c.strokeStyle = '#a27d3d'; c.lineWidth = 2
+      for (const yy of [cy - 29, cy + 29]) {
+        c.beginPath(); c.moveTo(0, yy); c.lineTo(g, yy); c.stroke()
       }
     }
-    c.fillStyle = '#a9843f'
-    for (let a = 0; a < 2; a++) for (let b = 0; b < 2; b++) gobek(c, a * 128, b * 128, 12, '#a9843f', '#d2b271')
   })
 
   // Pencereden gelen ışık: koyu kafes, sıcak açık boşluklar

@@ -10,7 +10,7 @@ import type { UlucamiMalzemeleri } from '../ulucamiDokular'
 const ZEMIN = 0.7
 const AYAR = {
   dis: { pozlama: 1.06, ortam: 0.78, hemi: 0.58, parlama: 0.14, esik: 1.25 },
-  ic: { pozlama: 1.08, ortam: 0.66, hemi: 0.34, parlama: 0.2, esik: 1.15, lamba: 28 },
+  ic: { pozlama: 1.08, ortam: 0.66, hemi: 0.34, parlama: 0.12, esik: 1.3, lamba: 28 },
 }
 
 /** Lamba ve gökyüzü parıltısı: yalnız Ulu Camii'nin kendi malzeme kopyasında değişir, doku ve çizim sayısı aynı kalır. */
@@ -38,7 +38,7 @@ function disOrtamKur(ortam: THREE.PMREMGenerator) {
   geo.setAttribute('color', new THREE.BufferAttribute(renkler, 3))
   const mal = new THREE.MeshBasicMaterial({ vertexColors: true, side: THREE.BackSide })
   sahne.add(new THREE.Mesh(geo, mal))
-  const doku = ortam.fromScene(sahne, 0.02, 0.5, 100).texture
+  const doku = ortam.fromScene(sahne, 0.02, 0.5, 100)
   geo.dispose(); mal.dispose()
   return doku
 }
@@ -62,7 +62,7 @@ function icOrtamKur(ortam: THREE.PMREMGenerator) {
   goz.position.set(0, 12, -6.9)
   goz.scale.setScalar(3)
   sahne.add(goz)
-  const doku = ortam.fromScene(sahne, 0.04, 0.5, 100).texture
+  const doku = ortam.fromScene(sahne, 0.04, 0.5, 100)
   kutu.dispose(); kure.dispose(); [duvar, tavan, zemin, lamba, gun].forEach((m) => m.dispose())
   return doku
 }
@@ -139,9 +139,11 @@ export function uluIsikKur(renderer: THREE.WebGLRenderer, ortam: THREE.PMREMGene
   renderer.toneMapping = THREE.NeutralToneMapping
   const uUluIc = { value: 0 }
   alaniIsle(kok, uUluIc)
+  const disHedef = disOrtamKur(ortam), icHedef = icOrtamKur(ortam)
   return {
-    disOrtam: disOrtamKur(ortam),
-    icOrtam: icOrtamKur(ortam),
+    disOrtam: disHedef.texture,
+    icOrtam: icHedef.texture,
+    temizle: () => { disHedef.dispose(); icHedef.dispose() },
     /** Dıştaki ana ışıklar: alçak altın güneş, gökten serin dolgu. */
     disIsik: (hemi: THREE.HemisphereLight, gunes: THREE.DirectionalLight) => {
       hemi.color.set('#e6edf2')

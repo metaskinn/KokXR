@@ -4,7 +4,7 @@
 // Vitrinin ölçüsü ve duvardaki yeri temsilîdir.
 import * as THREE from 'three'
 import type { UlucamiMalzemeleri } from '../ulucamiDokular'
-import { DUVAR, Kova, YX, cikar, kutuG, pz, type Mal, yer } from '../ulucamiParca'
+import { DUVAR, Kova, YX, cikar, kutuG, pz, silindirG, type Mal, yer } from '../ulucamiParca'
 
 const ZEMIN = 0.7
 
@@ -72,6 +72,17 @@ export function icPencereUst(k: Kova, m: UlucamiMalzemeleri, cx: number, py: num
   }
   const pano = new THREE.ShapeGeometry(yuvarlak(new THREE.Shape(), y0, g, duz, yuk), 16).translate(0, 0, kible ? -0.12 : -0.07)
   ek(hucreyeOtur(pano, kible ? KIBLE : KAFES), m.pencereIc)
+  if (!foto) {
+    // Açık yayında fotoğraf atlası kullanılmaz; kafes düz karanlık boşluk kalmasın.
+    const adim = g / 6, r = adim * 0.44
+    for (let j = 0; j < 10; j++) for (let i = 0; i < 6; i++) {
+      const xx = -g / 2 + adim * (i + 0.5 + (j % 2) * 0.35)
+      const yy = y0 + adim * (j + 0.5)
+      const tavan = y0 + duz + yuk * Math.sqrt(Math.max(0, 1 - (xx / (g / 2)) ** 2))
+      if (Math.abs(xx) + r > g / 2 || yy + r > tavan) continue
+      ek(new THREE.TorusGeometry(r, 0.022, 4, 10).translate(xx, yy, -0.045), m.krem)
+    }
+  }
   if (kible) {
     renkli(halka(y0, g, duz, yuk, 0.3), 0.008, KAHVE)
     ek(new THREE.ShapeGeometry(halka(y0, g, duz, yuk, 0.36), 16).translate(0, 0, 0.004), m.altinKoyu)
@@ -125,12 +136,12 @@ export function icPencereAlt(k: Kova, m: UlucamiMalzemeleri, cx: number, x: numb
 }
 
 /** Vitrinin kuşbakışı izi: çarpışma kutusu (ulucamiIc). */
-const VITRIN_G = 4.3, VITRIN_D = 1.2
-export const KABE_VITRIN = { x0: YX - DUVAR - VITRIN_D, x1: YX - DUVAR, z0: pz(0.5) - VITRIN_G / 2, z1: pz(0.5) + VITRIN_G / 2 }
+const VITRIN_G = 4.3, VITRIN_D = 1.2, VITRIN_Z = pz(0.5) + 2.2
+export const KABE_VITRIN = { x0: YX - DUVAR - VITRIN_D, x1: YX - DUVAR, z0: VITRIN_Z - VITRIN_G / 2, z1: VITRIN_Z + VITRIN_G / 2 }
 
 /** Kâbe kapısının örtüsü: doğu duvarının dibinde, ışıklı ve geriye eğik vitrin (ERD05018). */
 export function kabeVitrini(k: Kova, m: UlucamiMalzemeleri) {
-  const ek = (g: THREE.BufferGeometry, mal: Mal) => k.ekle(yer(g, YX - DUVAR, 0, pz(0.5), -Math.PI / 2), mal)
+  const ek = (g: THREE.BufferGeometry, mal: Mal) => k.ekle(yer(g, YX - DUVAR, 0, VITRIN_Z, -Math.PI / 2), mal)
   const G = VITRIN_G, D = VITRIN_D, AYAK = ZEMIN + 0.35, TEPE = AYAK + 3.2, TEPE_Z = 0.2
   const L = Math.hypot(TEPE - AYAK, D - TEPE_Z), EGIM = Math.atan2(D - TEPE_Z, TEPE - AYAK)
   /** Eğik pano: y panonun boyunca (0 alt kenar), +z yüzü odaya bakar. */
@@ -156,4 +167,60 @@ export function kabeVitrini(k: Kova, m: UlucamiMalzemeleri) {
   pano(new THREE.PlaneGeometry(ORTU_G, ORTU_Y).translate(SAG, L / 2, 0.012), m.kabeOrtusu)
   pano(new THREE.PlaneGeometry(0.03, L - C * 2 - 0.04).translate(-G / 2 + C + 0.05, L / 2, 0.014), m.lamba)
   pano(new THREE.PlaneGeometry(G - C * 2, 0.018).translate(0, C + 0.012, 0.016), m.lamba)
+}
+
+/** ERD05018: örtü vitrinine bitişik camekân ve üstündeki açık kafes.
+ * Fotoğraf oranları kullanılır; yerleşim maket ölçeğinde temsilîdir. +z odaya bakar.
+ */
+export const ORTU_YANI_KOSK = {
+  x0: YX - DUVAR - 3.5, x1: YX - DUVAR,
+  z0: VITRIN_Z - VITRIN_G / 2 - 4.36,
+  z1: VITRIN_Z - VITRIN_G / 2 - 0.16,
+}
+
+export function ortuYaniKosk(k: Kova, m: UlucamiMalzemeleri) {
+  const G = 4.2, D = 3.5, T = ZEMIN + 3.1
+  const cam = new THREE.MeshStandardMaterial({ color: '#918a77', transparent: true, opacity: 0.38,
+    depthWrite: false, roughness: 0.72, side: THREE.DoubleSide })
+  const ek = (g: THREE.BufferGeometry, mal: Mal) => k.ekle(yer(g, YX - DUVAR, 0,
+    (ORTU_YANI_KOSK.z0 + ORTU_YANI_KOSK.z1) / 2, -Math.PI / 2), mal)
+  ek(kutuG(G, 0.15, D).translate(0, ZEMIN + 0.075, D / 2), m.krem)
+  ek(kutuG(G + 0.22, 0.28, D + 0.12).translate(0, T, D / 2), m.krem)
+  // Ön ve iki yan: koyu, yarı saydam camın önünde ince krem doğrama.
+  const yuz = (uzun: number, cx: number, cz: number, a: number) => {
+    const e = (g: THREE.BufferGeometry, mal: Mal) => ek(g.rotateY(a).translate(cx, 0, cz), mal)
+    e(kutuG(uzun, 0.62, 0.12).translate(0, ZEMIN + 0.43, 0), m.krem)
+    e(new THREE.PlaneGeometry(uzun - 0.08, 2.08).translate(0, ZEMIN + 1.78, 0), cam)
+    const cols = Math.round(uzun / 0.7)
+    for (let n = 0; n <= cols; n++) {
+      const x = -uzun / 2 + n * uzun / cols
+      e(kutuG(0.055, 2.2, 0.09).translate(x, ZEMIN + 1.8, 0.03), m.krem)
+    }
+    // Sık damla/oval gözler ve aralarındaki altın rozetler; arası gerçekten açık.
+    const gozler = Math.round(uzun / 0.28)
+    for (let n = 0; n < gozler; n++) for (const y of [T + 0.4, T + 0.95]) {
+      const x = -uzun / 2 + (n + 0.5) * uzun / gozler
+      e(new THREE.TorusGeometry(0.12, 0.014, 4, 12).scale(0.8, 1.8, 1).translate(x, y, 0), m.krem)
+      e(new THREE.TorusGeometry(0.045, 0.016, 4, 8).translate(x, y - 0.26, 0.018), m.altin)
+    }
+    for (const y of [ZEMIN + 0.79, ZEMIN + 1.63, T - 0.28])
+      e(kutuG(uzun, 0.055, 0.09).translate(0, y, 0.035), m.krem)
+    // Yuvarlak kemerli cam üstlükleri.
+    for (let n = 0; n < Math.round(uzun / 1.4); n++) {
+      const x = -uzun / 2 + (n + 0.5) * uzun / Math.round(uzun / 1.4)
+      e(new THREE.TorusGeometry(0.54, 0.025, 4, 16, Math.PI).translate(x, T - 0.61, 0.05), m.krem)
+    }
+    for (const y of [T + 0.16, T + 0.68, T + 1.24])
+      e(kutuG(uzun + 0.08, 0.06, 0.08).translate(0, y, 0), m.altinKoyu)
+  }
+  yuz(G, 0, D, 0)
+  yuz(D, -G / 2, D / 2, -Math.PI / 2)
+  yuz(D, G / 2, D / 2, Math.PI / 2)
+  // İnce yivli sütunlar, geniş altlık, belirgin altın başlık.
+  for (const x of [-G / 2, 0, G / 2]) for (const z of [0.1, D]) {
+    ek(silindirG(0.13, 0.15, 2.78, 12).translate(x, ZEMIN + 1.5, z), m.krem)
+    ek(silindirG(0.23, 0.25, 0.1, 12).translate(x, ZEMIN + 0.14, z), m.krem)
+    ek(silindirG(0.22, 0.15, 0.18, 12).translate(x, T - 0.29, z), m.altin)
+    ek(kutuG(0.43, 0.08, 0.43).translate(x, T - 0.17, z), m.altin)
+  }
 }

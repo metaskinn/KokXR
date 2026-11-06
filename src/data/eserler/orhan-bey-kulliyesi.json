@@ -1,0 +1,88 @@
+{
+  "id": "orhan-bey-kulliyesi",
+  "ad": "Orhan Bey Külliyesi",
+  "sehir": "Bursa",
+  "ilce": "Osmangazi",
+  "donem": "Erken Osmanlı · H. 740 / M. 1339-40",
+  "vakif": "Orhan Gazi vakfı (vakfiye: H. 761 / M. 1360)",
+  "ozet": "Orhan Bey'in sur dışında yaptırdığı, camisi, hanı ve hamamı bugüne ulaşan ilk Osmanlı külliyelerinden biri.",
+  "tarihce": "Orhan Bey, 1326'da fethettiği Bursa'yı başkent yaptıktan sonra şehri sur dışına doğru büyütmek için bu külliyeyi yaptırdı. Cami H. 740 / M. 1339-40'ta inşa edildi; külliyeden bugüne cami, Emir Hanı ve Orhan Hamamı ulaştı, imaret ve mektep zamanla yok oldu. 1360 tarihli vakfiyeyle köyler, Eski Bedesten, çevresindeki dükkânlar, odalar, evler ve Bıçakçılar Hamamı Orhan Gazi İmareti'ne vakfedildi. Karamanoğlu Mehmed Bey'in 1413'teki kuşatmasında yakılarak zarar gören cami, Çelebi Mehmed'in işaretiyle onarıldı; cümle kapısı üzerindeki kitabe bu onarımı anlatır. 1855 depreminden sonra Fransız mimar Léon Parvillée'nin koordinasyonunda yeniden restore edildi, son kapsamlı restorasyonunu 2020-2023'te gördü. Yapının da içinde bulunduğu Hanlar Bölgesi 2014'te UNESCO Dünya Mirası Alanı'na alındı.",
+  "dogrulama": "dogrulanmis",
+  "kapakGorsel": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg",
+  "gorseller": [
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg", "alt": "Orhan Bey Camii, minaresi ve önündeki şadırvan havadan, arkada Uludağ etekleri", "aciklama": "Cami ve şadırvan, kuzeyden", "kaynakId": "orh-foto" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/cephe.jpg", "alt": "Almaşık örgülü cephede sivri kemerli silmeler içinde altlı üstlü pencereler", "aciklama": "Taş ve tuğla örgülü cephe", "kaynakId": "orh-foto" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/revak.jpg", "alt": "Son cemaat yerinin yan yüzünde mermer sütuna oturan ikiz sivri kemer ve dama dolgulu alınlık", "aciklama": "Son cemaat yerinin ikiz kemeri", "kaynakId": "orh-foto" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/cephe-bezemesi.jpg", "alt": "Sivri kemerler arasında taş ve tuğladan baklava deseni ve ikiz kemer", "aciklama": "Doğu cephesinde baklava deseni", "kaynakId": "orh-foto" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/mihrapli-bolum.jpg", "alt": "Turkuaz halılı mihraplı bölümde altın yaldızlı mihrap, sağda ahşap minber ve kürsü, köşelerde boyalı tromplar", "aciklama": "Mihraplı bölüm", "kaynakId": "orh-foto" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/tabhane.jpg", "alt": "Sivri kemer ardında bir basamak yüksek, turkuaz halılı doğu tabhanesi", "aciklama": "Yükseltilmiş tabhane bölümü", "kaynakId": "orh-foto" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/orhan-hamami.jpg", "alt": "Eski Aynalı Çarşı yazılı, üçgen alınlıklı ve tuğla kuşaklı kuzey girişi", "aciklama": "Orhan Hamamı'nın kuzey girişi", "kaynakId": "orh-foto" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/emir-hani.jpg", "alt": "Emir Hanı'nın ağaçlı avlusu, ortada mermer şadırvan, çevrede iki katlı revaklar", "aciklama": "Emir Hanı avlusu", "kaynakId": "orh-foto" }
+  ],
+  "bilgiNoktalari": [
+    { "id": "tabhaneli-plan", "gorsel": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg", "x": 50, "y": 45, "baslik": "Tabhaneli plan", "metin": "Cami hem ibadet hem tekke işlevini aynı yapıda barındırır: ardışık iki kare bölümün doğu ve batısında tabhaneler yer alır.", "kaynakId": "orh-s192" },
+    { "id": "minare", "gorsel": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg", "x": 33, "y": 30, "baslik": "Minare", "metin": "Kuzeydoğu köşesindeki çokgen gövdeli minare zarif tuğla işçiliğiyle dikkat çeker; tek şerefesinin altı iki sıra stalaktitle süslüdür.", "kaynakId": "orh-s204" },
+    { "id": "sadirvan", "gorsel": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg", "x": 50, "y": 70, "baslik": "Şadırvan", "metin": "Avludaki şadırvan, 2020-2023 restorasyonunda ahşap çatısı ve bezemeli kubbesiyle özgün haline kavuşturuldu.", "kaynakId": "orh-s204" },
+    { "id": "ikiz-kemer", "gorsel": "/gorseller/orhan-bey-kulliyesi/revak.jpg", "x": 50, "y": 37, "baslik": "İkiz kemer", "metin": "Revakın yan cepheleri sağır değildir; devşirme kompozit başlıklara oturan ikişer sivri kemerle dışa açılır.", "kaynakId": "orh-s194" },
+    { "id": "mihrap", "gorsel": "/gorseller/orhan-bey-kulliyesi/mihrapli-bolum.jpg", "x": 50, "y": 60, "baslik": "Alçı mihrap", "metin": "Yaldızlı, yedi katlı mukarnas kavsaralı mihrap, ileri düzey alçı işçiliğinin örneğidir ve Bursa'daki sonraki selatin camilerine örnek olmuştur.", "kaynakId": "orh-s202" }
+  ],
+  "test": [
+    {
+      "soru": "Kitabeye göre 1413'te yanan cami kimin işaretiyle yeniden yapıldı?",
+      "secenekler": ["Sultan Çelebi Mehmed", "Yıldırım Bayezid", "II. Abdülhamid", "Orhan Bey"],
+      "dogru": 0,
+      "aciklama": "Cümle kapısı üzerindeki beş satırlık kitabeye göre vezir Bayezid Paşa, Çelebi Mehmed'in işaretiyle yapının 1417'de yeniden inşasını emretti.",
+      "kaynakId": "orh-s192"
+    },
+    {
+      "soru": "Tabhanelerin doğudaki bölümü bugün ne olarak kullanılıyor?",
+      "secenekler": ["Kadınlar mahfili", "Kütüphane", "İmam odası", "Müze"],
+      "dogru": 0,
+      "aciklama": "Sivri kemerli ikişer pencereyle aydınlanan tabhanelerden doğudaki bugün kadınlar mahfilidir; kadınlar 2020-2023 restorasyonundan beri doğrudan dışarıdan girebilir.",
+      "kaynakId": "orh-s200"
+    },
+    {
+      "soru": "Uzun yıllar çarşı olarak bilinen Aynalı Çarşı'nın aslında ne olduğu 1934'te kim tarafından tespit edildi?",
+      "secenekler": ["Mimar Sedat Çetintaş; yapının bir hamam olduğu anlaşıldı", "Léon Parvillée; yapının bir kervansaray olduğu anlaşıldı", "Ahmed Vefik Paşa; yapının bir bedesten olduğu anlaşıldı", "Reşid Mümtaz Paşa; yapının bir medrese olduğu anlaşıldı"],
+      "dogru": 0,
+      "aciklama": "Maarif Vekâleti'nin Bursa'ya gönderdiği Yüksek Mimar Sedat Çetintaş, yapının aslında hamam olduğunu saptadı. Çifte hamam olduğu ise sonraki arşiv araştırmalarıyla ortaya çıktı.",
+      "kaynakId": "orh-s208"
+    }
+  ],
+  "kaynaklar": [
+    { "id": "orh-s191", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Camii\"", "sayfa": "191" },
+    { "id": "orh-s192", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Camii\"", "sayfa": "192-193" },
+    { "id": "orh-s194", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Camii\"", "sayfa": "194-195" },
+    { "id": "orh-s198", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Camii\"", "sayfa": "198-199" },
+    { "id": "orh-s200", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Camii\"", "sayfa": "200-201" },
+    { "id": "orh-s202", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Camii\"", "sayfa": "202-203" },
+    { "id": "orh-s204", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Camii\"", "sayfa": "204" },
+    { "id": "orh-s207", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Hamamı (Aynalı Çarşı)\"", "sayfa": "207" },
+    { "id": "orh-s208", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Hamamı (Aynalı Çarşı)\"", "sayfa": "208-209" },
+    { "id": "orh-s210", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Hamamı (Aynalı Çarşı)\"", "sayfa": "210-211" },
+    { "id": "orh-s214", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Emir Hanı\"", "sayfa": "214-215" },
+    { "id": "tdv-orhan", "metin": "\"Orhan Gazi Külliyesi\", TDV İslâm Ansiklopedisi, islamansiklopedisi.org.tr/orhan-gazi-kulliyesi" },
+    { "id": "orh-foto", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, \"Orhan Bey Külliyesi\" bölümünün fotoğraf arşivi; kullanıcı izniyle yayımlanmıştır." }
+  ],
+  "maket": {
+    "model": "orhan-bey-kulliyesi",
+    "aciklama": "Kodla yapılmış temsilî bir makettir, gerçek 3B tarama değildir. Plan ölçüleri envanterden, yükseklikler ve süslemeler fotoğraflardan oranlanmıştır. Han ve hamam yalnız dış kütle olarak gösterilir ve aralarındaki mesafe kısaltılmıştır.",
+    "bilgiler": [
+      { "metin": "Beş gözlü son cemaat yeri 25,80 × 6,30 m ölçülerindedir ve tamamen kubbelerle örtülüdür.", "kaynakId": "orh-s192" },
+      { "metin": "Ana mekân ardışık iki kare bölümden oluşur; doğu ve batısındaki tabhanelerle cami tekke işlevini de üstlenir. \"Parçala\" ile çatıyı kaldırıp planı görebilirsin.", "kaynakId": "orh-s192" },
+      { "metin": "Beden duvarları moloz taş ve aralarına yatay ve dikey konan tuğlalarla örülmüştür; kubbeler ve çatı kurşun kaplıdır.", "kaynakId": "orh-s194" },
+      { "metin": "Orhan Hamamı çifte hamam olarak tasarlanmıştır; kadınlar bölümü erkekler bölümüne doğudan bitişiktir. Bugün çarşı olarak kullanılır.", "kaynakId": "orh-s210" },
+      { "metin": "Emir Hanı yaklaşık 45 × 45 m'dir ve 650 m²'ye yakın avlusunu iki katlı revaklar çevreler. Bursa'nın ilk bedesteni kabul edilir.", "kaynakId": "orh-s214" }
+    ],
+    "icBilgiler": [
+      { "id": "revak", "baslik": "Son cemaat yeri", "metin": "Anadolu Türk ve Osmanlı mimarisinin ilk anıtsal son cemaat yerlerinden biridir. İki yanındaki tuğla döşemeli sofalar zeminden yaklaşık 90 cm yüksektir ve demir parmaklıkla çevrilidir.", "kaynakId": "orh-s194", "konum": [38, 3, -8], "yaricap": 3.6 },
+      { "id": "kapi", "baslik": "Onarım kitabesi", "metin": "Basık kemerli, mermer söveli kapının üzerindeki yuvarlak kemerli mermer alınlıkta Çelebi Mehmed devrine ait onarım kitabesi bulunur.", "kaynakId": "orh-s198", "konum": [38, 4.5, -3.2], "yaricap": 2.4 },
+      { "id": "hol", "baslik": "Giriş holü", "metin": "Küçük kubbeli holün yanındaki batı odası, 1863'te Ahmed Vefik Paşa tarafından Orhan Kütüphanesi'ne dönüştürüldü. Bu kütüphane bugünkü İnebey Yazma Eserler Kütüphanesi'nin temelini oluşturur.", "kaynakId": "orh-s198", "konum": [38, 3, -0.8], "yaricap": 1.8 },
+      { "id": "orta", "baslik": "Orta mekân", "metin": "8,90 × 9,90 m ölçülerindeki orta mekânı Türk üçgenli sekizgen kasnağa oturan kubbe örter. Sağında ve solunda iki sakıf, bunların üzerinde müezzin mahfili vardır.", "kaynakId": "orh-s198", "konum": [38, 4, 8], "yaricap": 3.4 },
+      { "id": "tabhane", "baslik": "Tabhane", "metin": "Sivri kemerlerle ayrılan, birer basamakla çıkılan tabhaneler yaklaşık 6,05 × 9,10 m'dir. 1905'te ara duvarlar kaldırılarak camiye katıldı; doğudaki bugün kadınlar mahfilidir.", "kaynakId": "orh-s200", "konum": [46, 3.5, 7.3], "yaricap": 3.2 },
+      { "id": "merdiven", "baslik": "Asıl ibadet mekânı", "metin": "Orta mekândan dört basamaklı mermer merdivenle 9,64 × 8,83 m'lik mihraplı bölüme geçilir. Tabhaneli camilerde bu bölüme asıl ibadet mekânı denir.", "kaynakId": "orh-s200", "konum": [38, 3.6, 12], "yaricap": 2 },
+      { "id": "mihrap", "baslik": "Mihrap", "metin": "Yaldızlı, yedi katlı mukarnas kavsaralı alçı mihrap, diğer camilere göre daha az değişikliğe uğramıştır. Sağında ve solunda tarihi şamdanlar durur.", "kaynakId": "orh-s202", "konum": [38, 4, 19.5], "yaricap": 3.2 },
+      { "id": "minber", "baslik": "Minber ve kürsü", "metin": "Minber ve vaaz kürsüsü ahşaptandır ve sade bir işçiliğe sahiptir. Maketteki minbere çıkabilirsin.", "kaynakId": "orh-s204", "konum": [34, 4, 16.6], "yaricap": 2.2 }
+    ]
+  }
+}

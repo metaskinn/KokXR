@@ -285,17 +285,23 @@ export function ulucamiDokulari() {
     }
   })
 
-  // İç duvar: dokunun yüksekliği duvarın yüksekliğine eşlenir (0–13 m): mermer kaide ve boyalı silmeler
-  const icDuvar = tuval(64, 1024, (c, g, y) => {
+  // İç duvar: dokunun yüksekliği duvarın yüksekliğine eşlenir (0–13 m). Fotoğraflarda (ERD05007, ERD05161) sıva
+  // halıya kadar iner; dipte koyu ve aşı boyası çift bant, yukarıda ince bir çizgi vardır, mermer kaide yoktur.
+  const icDuvar = tuval(64, hafifCihaz() ? 1024 : 2048, (c, g, y) => {
     const cy = (m: number) => ((13 - m) / 13) * y
-    c.fillStyle = '#f1e8d6'
+    c.fillStyle = '#f2e9d8'
     c.fillRect(0, 0, g, y)
-    c.fillStyle = '#c3bdb1'
-    c.fillRect(0, cy(2.1), g, y - cy(2.1))
-    for (const m of [2.1, 6.2, 7.4]) {
-      c.fillStyle = '#2e2a26'; c.fillRect(0, cy(m) - 5, g, 5)
-      c.fillStyle = '#8a6a35'; c.fillRect(0, cy(m) - 10, g, 2)
-    }
+    const bant = (m0: number, m1: number, renk: string) => { c.fillStyle = renk; c.fillRect(0, cy(m1), g, cy(m0) - cy(m1)) }
+    bant(1.16, 1.2, '#a98a4a')
+    bant(1.22, 1.33, '#3b342c')
+    bant(1.35, 1.37, '#a98a4a')
+    bant(6.72, 6.75, '#3b342c')
+    bant(6.77, 6.785, '#a98a4a')
+    // Halı kenarındaki temas gölgesi
+    const dip = c.createLinearGradient(0, cy(1.05), 0, cy(0.7))
+    dip.addColorStop(0, 'rgba(70,52,34,0)'); dip.addColorStop(1, 'rgba(70,52,34,0.42)')
+    c.fillStyle = dip
+    c.fillRect(0, cy(1.05), g, cy(0.7) - cy(1.05))
   })
 
   // Kündekâri izlenimi: koyu ahşapta yıldız ağı. Gerçek minberin deseninin kopyası değildir.
@@ -583,13 +589,18 @@ function yaslandir<M extends THREE.MeshStandardMaterial>(malzeme: M, tur: keyof 
   return malzeme
 }
 
+/** İç pencere atlası: fotoğrafın ışığı dokuda olduğu için kısmen kendinden aydınlık; tepeliğin kenarı alfa ile kesilir. */
+function icPencereMalzemesi(map: THREE.Texture | null) {
+  return new THREE.MeshStandardMaterial({ map, emissive: map ? '#ffffff' : '#000000', emissiveMap: map, emissiveIntensity: 0.5, color: map ? '#ffffff' : '#e7dcc4', roughness: 0.85, alphaTest: 0.5, side: THREE.DoubleSide })
+}
+
 export function ulucamiMalzemeleri() {
   const d = ulucamiDokulari()
   const pbr = (p: THREE.MeshStandardMaterialParameters) => new THREE.MeshStandardMaterial({ roughness: 0.85, metalness: 0, ...p })
   const yukleyici = new THREE.TextureLoader()
   const fotoDoku = (ad: string) => {
     if (ACIK_YAYIN) return null
-    const f = yukleyici.load(`/gorseller/ulu-camii/maket/${ad}.jpg`)
+    const f = yukleyici.load(`/gorseller/ulu-camii/maket/${ad.includes('.') ? ad : `${ad}.jpg`}`)
     f.colorSpace = THREE.SRGBColorSpace
     f.anisotropy = 8
     return f
@@ -644,8 +655,8 @@ export function ulucamiMalzemeleri() {
     cam: new THREE.MeshStandardMaterial({ map: d.cam, transparent: true, depthWrite: false, roughness: 0.15, metalness: 0.3, side: THREE.DoubleSide }),
     krem: pbr({ color: '#e7dcc4', roughness: 0.8, side: THREE.DoubleSide }),
     camKafes: isik(d.camKafes),
-    pencereIc: new THREE.MeshBasicMaterial({ map: fotoDoku('pencere-ic'), color: new THREE.Color(1.25, 1.2, 1.1), side: THREE.DoubleSide }),
-    kabeOrtusu: pbr({ map: d.kabeOrtusu, roughness: 0.88, side: THREE.DoubleSide }),
+    pencereIc: icPencereMalzemesi(fotoDoku('ic-pencere.webp')),
+    kabeOrtusu: new THREE.MeshBasicMaterial({ map: fotoDoku(hafif ? 'kabe-ortusu-1024' : 'kabe-ortusu') ?? d.kabeOrtusu, color: '#d4d0c8' }),
     lamba: new THREE.MeshBasicMaterial({ color: new THREE.Color(3.2, 2.8, 2.1) }),
     lambaHale: new THREE.MeshBasicMaterial({ map: d.hale, color: new THREE.Color(1.1, 0.95, 0.75), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }),
     isikSutunu: new THREE.MeshBasicMaterial({ map: d.isikSutunu, color: new THREE.Color(0.2, 0.19, 0.16), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }),

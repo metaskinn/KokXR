@@ -2,6 +2,7 @@
 // cephe, kasnak, kubbe, minare ve taç kapı biçimleri arşiv fotoğraflarına bakılarak yorumlanmıştır.
 // Yükseklikler ve pencere sayıları temsilidir. Birim: metre. Kuzey = -z, kıble (güney) = +z, doğu = +x.
 import * as THREE from 'three'
+import { icPencereAlt, icPencereUst } from './ulucami/icduvar'
 import { kapiKanatlari, ulucamiDetaylari } from './ulucamiDetay'
 import { icZemini } from './ulucami/zemin'
 import { ulucamiMalzemeleri } from './ulucamiDokular'
@@ -10,7 +11,7 @@ import { icDuraklar, icYurumeAlani, ulucamiIcMekani, type IcDurak, type IcYurume
 import {
   DOGU_BATI, DOSEME_Y, DUVAR, ETEK_Y, GOZ_X, GOZ_Z, H, KASNAK_TABAN, KUZEY_GUNEY, Kova, type Mal, OCTA,
   SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
-  cikar, dikdortgen, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, uvSigdir, yer,
+  cikar, dikdortgen, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
 } from './ulucamiParca'
 
 export interface MaketKatmani { grup: THREE.Group; yukseklik: number; ad: string }
@@ -53,20 +54,15 @@ export function ulucamiMaketi(): Maket {
         const py = kibleOrtasi ? 1.8 : 0, duzD = kibleOrtasi ? 2.6 : 3.1, duzP = kibleOrtasi ? 2.2 : 2.3
         dis.holes.push(kemer(new THREE.Path(), px, 6.5 + py, 3.8, duzD, 1.9))
         govde.holes.push(kemer(new THREE.Path(), px, 7.2 + py, 2.2, duzP, 1.3))
-        ic.holes.push(kemer(new THREE.Path(), px, 7.2 + py, 2.2, duzP, 1.3))
+        ic.holes.push(icPencereUst(k, m, px, py, kibleOrtasi, x, z, ry))
         const pencere = () => new THREE.ShapeGeometry(kemer(new THREE.Shape(), px, 7.2 + py, 2.2, duzP, 1.3), 12)
         k.ekle(yer(pencere().translate(0, 0, -1.1), x, 0, z, ry), m.kafes)
-        // İç kafes duvar yüzüne yakın durur: yandan bakınca duvara gömülmüş gibi görünmez.
-        k.ekle(yer(uvSigdir(pencere()).translate(0, 0, -1.78), x, 0, z, ry), m.pencereIc)
-        const icHalka = kemer(new THREE.Shape(), px, 7.05 + py, 2.72, duzP + 0.15, 1.62)
-        icHalka.holes.push(kemer(new THREE.Path(), px, 7.05 + py, 2.2, duzP + 0.15, 1.3))
-        k.ekle(yer(cikar(icHalka, 0.07, -2.07), x, 0, z, ry), m.koyu)
         kemerHalkasi(px, 6.5 + py, 4.4, duzD, kibleOrtasi ? 2.1 : 2.3, 3.8, 1.9, x, z, ry)
         k.ekle(yer(kutuG(2.7, 0.14, 0.75).translate(px, 7.15 + py, -0.32), x, 0, z, ry), m.mermer)
         if (altYok || (orta && ortaYok === 'alt')) continue
         dis.holes.push(kemer(new THREE.Path(), px, 1.5, 2.8, 1.9, 1.1))
         govde.holes.push(dikdortgen(px - 0.8, 2, px + 0.8, 4.1) as unknown as THREE.Path)
-        ic.holes.push(dikdortgen(px - 0.8, 2, px + 0.8, 4.1) as unknown as THREE.Path)
+        ic.holes.push(icPencereAlt(k, m, px, x, z, ry))
         pencereler.push(new THREE.ShapeGeometry(dikdortgen(px - 0.8, 2, px + 0.8, 4.1)).translate(0, 0, -1.1))
         kemerHalkasi(px, 1.5, 3.3, 1.9, 1.4, 2.8, 1.1, x, z, ry)
         k.ekle(yer(kutuG(2.1, 0.12, 0.7).translate(px, 1.96, -0.3), x, 0, z, ry), m.mermer)

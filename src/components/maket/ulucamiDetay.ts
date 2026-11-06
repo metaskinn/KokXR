@@ -5,6 +5,7 @@
 import * as THREE from 'three'
 import { ACIK_YAYIN } from '../../data/acikYayin'
 import { kibleDuvari } from './ulucami/mihrap'
+import { kabeVitrini } from './ulucami/icduvar'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import { ahsapKursu, dolapYap, mahfilYap, mermerKursu, rahleYap, sandikYap } from './ulucami/minber'
 import { doguBatiLevhalari } from './ulucami/payeler'
@@ -121,35 +122,7 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   levha(duvardan(px(4.5), 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[2], 2.3, 4.6, m.ceviz)
   levha(duvardan(px(0.5), 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[1], 2.4, 4.6, m.ceviz)
   doguBatiLevhalari(m, k)
-  // Kâbe kapısının örtüsü: doğu kapısı tarafında yüksekçe, çerçevede öne eğik asılı (Kültür Portalı; görünüm temsilî)
-  const kabeEk = duvardan(YX - DUVAR - 0.02, 8.9, pz(0.5), -Math.PI / 2)
-  const egik: Ekle = (g, mal) => {
-    g.rotateX(0.13)
-    g.translate(0, 0, 0.42)
-    kabeEk(g, mal)
-  }
-  const ortuG = 3.3, ortuH = 4.3
-  const ortu = new THREE.PlaneGeometry(ortuG, ortuH, 44, 56)
-  const op = ortu.attributes.position
-  for (let i = 0; i < op.count; i++) {
-    const ox = op.getX(i), oy = op.getY(i)
-    // Üstte gergin, aşağı doğru artan dik kıvrımlar
-    const serbest = 0.35 + 0.65 * (0.5 - oy / ortuH)
-    op.setZ(i, serbest * (0.055 * Math.sin(ox * 5.2 + 0.6) + 0.028 * Math.sin(ox * 11.3 + oy * 0.7) + 0.012 * Math.sin(ox * 23 + oy * 2.2)))
-  }
-  ortu.computeVertexNormals()
-  egik(ortu, m.kabeOrtusu)
-  // Ceviz çerçeve ve altın kenar
-  for (const s of [-1, 1]) {
-    egik(kutuG(ortuG + 0.5, 0.2, 0.22).translate(0, s * (ortuH / 2 + 0.1), -0.02), m.ceviz)
-    egik(kutuG(0.2, ortuH + 0.2, 0.22).translate(s * (ortuG / 2 + 0.15), 0, -0.02), m.ceviz)
-    egik(kutuG(ortuG + 0.14, 0.045, 0.1).translate(0, s * (ortuH / 2 - 0.0), 0.1), m.altinKoyu)
-    egik(kutuG(0.045, ortuH + 0.1, 0.1).translate(s * (ortuG / 2), 0, 0.1), m.altinKoyu)
-    // Askı zincirleri
-    kabeEk(silindirG(0.018, 0.018, 1.25, 5).rotateX(0.34).translate(s * 1.2, ortuH / 2 + 0.58, 0.28), m.bronz)
-    kabeEk(new THREE.TorusGeometry(0.07, 0.016, 6, 12).rotateY(Math.PI / 2).translate(s * 1.2, ortuH / 2 + 1.2, 0.08), m.bronz)
-  }
-  egik(kutuG(ortuG + 0.5, 0.05, 0.3).translate(0, ortuH / 2 + 0.22, 0), m.altinKoyu)
+  kabeVitrini(k, m)
   // Yuvarlak madalyonlar: kırpımın köşeleri görünmesin diye daire biçiminde
   for (const [x, z, ry] of [[-YX + DUVAR + 0.03, pz(0.5), Math.PI / 2], [px(2.5) - 8, -YZ + DUVAR + 0.03, 0], [px(2.5) + 8, -YZ + DUVAR + 0.03, 0]]) {
     const ek = duvardan(x, 9.6, z, ry)

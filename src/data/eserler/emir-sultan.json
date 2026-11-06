@@ -1,0 +1,80 @@
+{
+  "id": "emir-sultan",
+  "ad": "Emir Sultan Külliyesi",
+  "sehir": "Bursa",
+  "ilce": "Yıldırım",
+  "donem": "XV. yüzyıl · III. Selim döneminde H. 1219 / M. 1804-1805 yeniden inşa",
+  "vakif": "Emîr Sultan, Hundi Hatun ve Fâtih Sultan Mehmed vakıfları (H. 874 / M. 1470 tarihli vakfiye)",
+  "ozet": "Bursa'ya hâkim bir tepede, cami ile türbesi aynı revaklı avluyu paylaşan; Emîr Sultan adına kurulmuş külliye.",
+  "tarihce": "Külliye, şehre hâkim bir tepe üzerinde kuruludur. Farklı dönemlerdeki ilavelerle cami, zaviye, imaret, türbe, hamam, mektep, muvakkithane, çeşme ve kütüphaneden oluşan bir yapı topluluğuna dönüşmüştür. Cami XV. yüzyılda, Yıldırım Bayezid'in kızı ve Emîr Sultan'ın eşi Hundi Fatma Hatun tarafından Emîr Sultan adına yaptırılmıştır. Bir başka rivayete göre yapıyı tüccar Hoca Kasım yaptırmıştır. Emîr Sultan'ın asıl adı Seyyid Şemseddin Muhammed b. Ali el-Hüseynî el-Buhârî'dir; 1368'de Buhara'da doğmuş, 1429'da Bursa'da vefat etmiştir. Külliyenin ilk vakfiyesi günümüze ulaşmamıştır; H. 874 / M. 1470 tarihli vakfiye mevcuttur. 1795 depreminde büyük yıkım gören cami, Sultan III. Selim'in emriyle 1804-1805'te ampir ve rokoko üsluplarının birleştiği bir tasarımla yeniden inşa edilmiştir. Cami ve türbe 2018-2022 yıllarında Vakıflar Genel Müdürlüğü tarafından kapsamlı biçimde restore edilmiştir.",
+  "dogrulama": "dogrulanmis",
+  "kapakGorsel": "/gorseller/emir-sultan/genel-gorunum.jpg",
+  "gorseller": [
+    { "dosya": "/gorseller/emir-sultan/genel-gorunum.jpg", "alt": "Emir Sultan Camii'nin kubbesi, iki minaresi ve türbenin kubbesi, arkada Bursa ve ova", "aciklama": "Cami ve türbe, kuşbakışı", "kaynakId": "foto-arsiv" },
+    { "dosya": "/gorseller/emir-sultan/kusbakisi.jpg", "alt": "Külliyenin tam üstten görünümü; solda türbe kubbesi, sağda cami kubbesi, ortada avlu ve şadırvan", "aciklama": "Üstten plan görünümü", "kaynakId": "foto-arsiv" },
+    { "dosya": "/gorseller/emir-sultan/cami-revaki.jpg", "alt": "Avludan caminin iki katlı revaklı cephesi; kaş kemerler ve önde mermer şadırvan", "aciklama": "Cami revakı ve şadırvan", "kaynakId": "foto-arsiv" },
+    { "dosya": "/gorseller/emir-sultan/turbe.jpg", "alt": "Avludan Emir Sultan Türbesi; kurşun kubbe, ahşap köşk, revaklar ve şadırvan", "aciklama": "Türbe cephesi", "kaynakId": "foto-arsiv" },
+    { "dosya": "/gorseller/emir-sultan/harim.jpg", "alt": "Kırmızı halılı harim; pencere sıraları, mihrap, minber ve büyük halka avize", "aciklama": "Harim", "kaynakId": "foto-arsiv" },
+    { "dosya": "/gorseller/emir-sultan/mihrap.jpg", "alt": "Yivli niş, altın yaldızlı başlıklar ve tepelikli kalem işi mihrap; iki yanda şamdanlar", "aciklama": "Mihrap", "kaynakId": "foto-arsiv" },
+    { "dosya": "/gorseller/emir-sultan/kubbe-ic.jpg", "alt": "Harim kubbesi içten; dilimli açık tonlu kalem işi ve ortada gül motifi", "aciklama": "Kubbe içi", "kaynakId": "foto-arsiv" },
+    { "dosya": "/gorseller/emir-sultan/turbe-ic.jpg", "alt": "Türbe içi; yeşil örtülü sandukalar, oymalı korkuluk, yuvarlak kemerli pencereler ve avize", "aciklama": "Türbe içi", "kaynakId": "foto-arsiv" }
+  ],
+  "bilgiNoktalari": [
+    { "id": "kubbe", "gorsel": "/gorseller/emir-sultan/genel-gorunum.jpg", "x": 74, "y": 62, "baslik": "Tek kubbeli harim", "metin": "15,20 × 15,20 m ölçülerindeki harim tek kubbeyle örtülüdür. Kubbenin ağırlığını toplam on üç duvar payandası taşır.", "kaynakId": "es-yapi" },
+    { "id": "minareler", "gorsel": "/gorseller/emir-sultan/genel-gorunum.jpg", "x": 66, "y": 34, "baslik": "Çift minare", "metin": "Caminin başlangıçta tek minareli olduğu, III. Selim döneminde çift minareli olarak yeniden yapıldığı bilinmektedir. Tek şerefeli bugünkü minareler 1868-1869'da yenilenmiştir.", "kaynakId": "es-minare" },
+    { "id": "avlu", "gorsel": "/gorseller/emir-sultan/kusbakisi.jpg", "x": 50, "y": 50, "baslik": "Revaklı avlu", "metin": "Doğu-batı doğrultusunda uzanan avlunun ortasında sekizgen planlı, fıskiyeli mermer şadırvan bulunur. Avluyu on altı mermer sütunun taşıdığı kaş kemerli revaklar çevreler.", "kaynakId": "es-avlu" },
+    { "id": "mihrap", "gorsel": "/gorseller/emir-sultan/mihrap.jpg", "x": 50, "y": 45, "baslik": "Mihrap", "metin": "Kalem işiyle süslü mihrabın kavsarası dokuz bölüme ayrılmıştır; nişin iki yanındaki sütunçeler altın yaldızlı İyon başlıklıdır.", "kaynakId": "es-mihrap" },
+    { "id": "turbe", "gorsel": "/gorseller/emir-sultan/turbe.jpg", "x": 40, "y": 35, "baslik": "Emîr Sultan Türbesi", "metin": "Sekizgen planlı, kurşun kaplı kubbeli türbe, cami ile aynı avludadır. Sandukaların bulunduğu iç mekân avlu seviyesinden yaklaşık bir metre aşağıdadır.", "kaynakId": "es-turbe" }
+  ],
+  "test": [
+    { "soru": "Emîr Sultan'ın eşi kimdir?", "secenekler": ["Gülçiçek Hatun", "Hundi Fatma Hatun", "Dilfiruz Hatun", "Hafsa Sultan"], "dogru": 1, "aciklama": "Yıldırım Bayezid'in kızı Hundi Fatma Hatun, Emîr Sultan'ın eşidir; kaynaklara göre camiyi onun adına yaptırmıştır.", "kaynakId": "es-tarih" },
+    { "soru": "1795 depreminden sonra camiyi hangi padişah yeniden yaptırmıştır?", "secenekler": ["Sultan Abdülaziz", "Sultan Abdülmecid", "Sultan III. Selim", "Fâtih Sultan Mehmed"], "dogru": 2, "aciklama": "Cami, Sultan III. Selim'in emriyle 1804-1805 yılları arasında yeniden inşa edilmiştir.", "kaynakId": "es-onarim" },
+    { "soru": "Cami kubbesinin ağırlığını kaç duvar payandası taşır?", "secenekler": ["Sekiz", "On iki", "On üç", "On altı"], "dogru": 2, "aciklama": "Kubbenin ağırlığını toplam on üç duvar payandası taşır: biri mihrabın arkasında, dördü köşelerde, sekizi cephelerde ikişer.", "kaynakId": "es-yapi" }
+  ],
+  "zamanKatmani": [
+    { "id": "vefat", "donem": "1429", "baslik": "Emîr Sultan'ın vefatı", "metin": "Emîr Sultan 1429'da Bursa'da veba hastalığına yakalanarak vefat etmiş ve bugün kendi adıyla anılan türbeye defnedilmiştir.", "kaynakId": "es-tarih" },
+    { "id": "vakfiye", "donem": "H. 874 / M. 1470", "baslik": "Günümüze ulaşan vakfiye", "metin": "İlk vakfiye günümüze ulaşmamıştır. H. 15 Receb 874 / M. 18 Ocak 1470 tarihli vakfiye, Bursa Kadısı Ali b. Yusuf el-Fenârî tarafından tasdik edilmiştir.", "kaynakId": "es-vakfiye" },
+    { "id": "selim", "donem": "1804-1805", "baslik": "III. Selim'in ihyası", "metin": "1795 depreminde büyük yıkım gören cami, Sultan III. Selim'in emriyle ampir ve rokoko üsluplarının birleştiği bir tasarımla yeniden inşa edilmiştir.", "kaynakId": "es-onarim" },
+    { "id": "abdulaziz", "donem": "1868", "baslik": "Türbe ve revaklar", "metin": "1855 depreminden sonra hazırlanan raporlar doğrultusunda, H. 1285 / M. 1868'de Vali Hüsnü Paşa'nın gözetiminde, Sultan Abdülaziz'in emriyle türbe yapısı ve avlu revakları yeniden inşa edilmiştir.", "kaynakId": "es-1868" },
+    { "id": "restorasyon", "donem": "2018-2022", "baslik": "Son restorasyon", "metin": "Cami ve türbe, 2018-2022 yılları arasında Vakıflar Genel Müdürlüğü tarafından kapsamlı bir restorasyona tabi tutulmuş ve yeniden ibadete açılmıştır.", "kaynakId": "es-minare" }
+  ],
+  "kaynaklar": [
+    { "id": "es-giris", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "273" },
+    { "id": "es-tarih", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "274" },
+    { "id": "es-vakfiye", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "276-277" },
+    { "id": "es-onarim", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "280" },
+    { "id": "es-avlu", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "282-283" },
+    { "id": "es-yapi", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "284" },
+    { "id": "es-mihrap", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "284, 288" },
+    { "id": "es-pencere", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "289" },
+    { "id": "es-minare", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Külliyesi\"", "sayfa": "290-291" },
+    { "id": "es-hamam", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Hamamı\"", "sayfa": "295-297" },
+    { "id": "es-turbe", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Türbesi\"", "sayfa": "298, 300" },
+    { "id": "es-1868", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Türbesi\"", "sayfa": "304" },
+    { "id": "es-niyaz", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Türbesi\"", "sayfa": "304, 306" },
+    { "id": "es-cesme", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Darüssaade Ağası Beşir Ağa Çeşmesi\"", "sayfa": "312-313" },
+    { "id": "foto-arsiv", "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi, Emir Sultan Külliyesi bölümü (proje sahibinin paylaştığı Drive klasörü; yayım izni proje sahibince verilmiştir)" }
+  ],
+  "maket": {
+    "model": "emir-sultan",
+    "aciklama": "Temsilî maket, gerçek bir 3B tarama değildir. Kaynakta verilen ölçü harimin 15,20 × 15,20 m boyutudur; avlu, revak, türbe ve hamam yerleşimi kuşbakışı fotoğraftan oranlanmış, yükseklikler ve ayrıntılar fotoğraflara bakılarak yorumlanmıştır. Levha, kartuş ve madalyonlarda yazı gösterilmez. Mezarlık, ağaçlar ve tekke temsilîdir.",
+    "bilgiler": [
+      { "metin": "15,20 × 15,20 m ölçülerindeki harim tek kubbeyle örtülüdür; kubbeyi on üç duvar payandası taşır. \"Parçala\" ile çatıları ve kubbeleri kaldırıp içeriyi görebilirsin.", "kaynakId": "es-yapi" },
+      { "metin": "Cami ve türbe aynı avluyu paylaşır. Avlunun ortasında sekizgen planlı, fıskiyeli mermer şadırvan bulunur.", "kaynakId": "es-avlu" },
+      { "metin": "Cami duvarları alt pencerelerin üstüne kadar kesme taş, yukarısı küfeki taş ve üç sıra tuğladır.", "kaynakId": "es-yapi" },
+      { "metin": "Sekizgen planlı türbenin sandukalı iç mekânı avlu seviyesinden yaklaşık bir metre aşağıdadır.", "kaynakId": "es-turbe" }
+    ],
+    "icBilgiler": [
+      { "id": "avlu", "baslik": "Revaklı avlu", "metin": "Avluyu çevreleyen on altı sade başlıklı beyaz, açık kahverengi ve neftî yeşil mermer sütunun taşıdığı kaş kemerli revaklar, bağdadi sıvalı aynalı tonozlarla örtülüdür. Cami ve türbe girişleri önündeki kemerler daha yüksektir.", "kaynakId": "es-avlu", "konum": [-8, 6.2, -16], "yaricap": 4.5 },
+      { "id": "sadirvan", "baslik": "Şadırvan", "metin": "Doğu-batı doğrultusunda uzanan avlunun ortasında sekizgen planlı, fıskiyeli mermer bir şadırvan yer alır. Şadırvana ve çeşmelere geçmişte \"suların padişahı\" denen Akçağlayan Suyu'nun ulaştığı belirtilir.", "kaynakId": "es-avlu", "konum": [0, 5.2, -16], "yaricap": 6 },
+      { "id": "kapi", "baslik": "Harim kapısı", "metin": "Mermer söveli, iki kanatlı ahşap harim kapısının üzerinde 0,50 × 1,50 m ölçülerinde, talik hatla yazılmış H. 1219 / M. 1804-1805 tarihli III. Selim dönemi ihya kitabesi vardır. Maketteki levha yazısızdır.", "kaynakId": "es-avlu", "konum": [0, 7, -4.8], "yaricap": 4.5 },
+      { "id": "harim", "baslik": "Harim", "metin": "15,20 × 15,20 m ölçülerindeki harim tek kubbeyle örtülüdür. Kubbe, tromp ve kemerler arasına yerleştirilen pandantiflerle geçiş sağlanan yuvarlak bir kasnağa oturur.", "kaynakId": "es-yapi", "konum": [-5.5, 9, 3.5], "yaricap": 4 },
+      { "id": "pencereler", "baslik": "Pencereler", "metin": "İç mekân, duvarlardaki üç sıra hâlinde toplam kırk dört pencere ile kasnaktaki on iki pencereden ışık alır. Alt sıra dikdörtgen ve demir şebekeli, üst sıra yuvarlak kemerli, alçı şebekeli ve revzenlidir. Maketteki pencere sayısı temsilîdir.", "kaynakId": "es-pencere", "konum": [7.4, 8, 3], "yaricap": 3.6 },
+      { "id": "kubbe", "baslik": "Kalem işli kubbe", "metin": "Sekiz dilime ayrılmış kubbe yüzeyinde açık tonlu bitkisel ve geometrik motifler işlenmiştir. Kalem işlerinde Osmanlı Barok üslubunun izleri görülür.", "kaynakId": "es-yapi", "konum": [0, 12, 4.5], "yaricap": 3 },
+      { "id": "mihrap", "baslik": "Mihrap", "metin": "Kavsarası dokuz bölüme ayrılan mihrabın iki yanındaki sütunçeler altın yaldızlı İyon başlıklıdır. Kartuşundaki ayet maketin yazısız levhasında gösterilmez. 1604 tarihli bir kayıtta İznik çinileri ısmarlandığı geçer.", "kaynakId": "es-mihrap", "konum": [0, 8, 12], "yaricap": 5 },
+      { "id": "minber", "baslik": "Minber", "metin": "Ahşap işçiliğiyle dikkat çeken minber ve kürsü sade üsluplarıyla öne çıkar. Merdiveninden yürüyerek çıkabilirsin; yeri ve ölçüsü fotoğraftan temsilîdir.", "kaynakId": "es-mihrap", "konum": [-4.7, 6.2, 8.5], "yaricap": 3.8 },
+      { "id": "niyaz", "baslik": "Niyaz Penceresi", "metin": "Türbenin güney cephesinde, yükseltilmiş revakın önündeki büyük pencerede, toplu merasimlerde cemaat birlikte dua ederdi. Üzerindeki 0,50 × 1,50 m'lik H. 1285 / M. 1868 tarihli kitabe Sultan Abdülaziz dönemi onarımını anlatır.", "kaynakId": "es-niyaz", "konum": [0, 6.2, -26], "yaricap": 4.5 },
+      { "id": "turbe", "baslik": "Sandukalar", "metin": "Türbede Emîr Sultan, eşi Hundi Hatun, oğlu Emîr Ali ve kızlarının sandukaları vardır. Emîr Sultan'ınki daha büyük ve gösterişlidir. Çevresi kalem işi ve yaldızlı, ahşap oyma bir korkulukla sınırlanır. Örtü deseni temsilîdir.", "kaynakId": "es-turbe", "konum": [0, 2.5, -35.2], "yaricap": 5.5 }
+    ]
+  }
+}

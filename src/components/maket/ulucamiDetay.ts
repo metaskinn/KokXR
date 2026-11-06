@@ -257,18 +257,7 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
     k.ekle(yer(kutuG(0.8, n * 0.34 + 0.02, 0.5), kuX, ZEMIN + (n * 0.34) / 2, kuZ - kuR - 1.6 + n * 0.32), m.mermerKoyu)
   }
 
-  // --- Şadırvan: on altı köşeli havuzun her yüzünde bir musluk, fıskiyeden inen sekiz kol ---
-  for (let n = 0; n < 16; n++) {
-    const a = (n + 0.5) * Math.PI / 8
-    k.ekle(yer(silindirG(0.05, 0.05, 0.2, 8).rotateX(Math.PI / 2).translate(0, ZEMIN + 0.68, 3.76), sx, 0, sz, a), m.altinKoyu)
-    k.ekle(yer(new THREE.SphereGeometry(0.1, 8, 5).scale(1, 1, 0.45).translate(0, ZEMIN + 0.68, 3.68), sx, 0, sz, a), m.icMermer)
-  }
-  for (let n = 0; n < 8; n++) {
-    const a = n * Math.PI / 4
-    k.ekle(yer(silindirG(0.035, 0.035, 0.05, 6).translate(0, ZEMIN + 2.01, 0.96), sx, 0, sz, a), m.altinKoyu)
-  }
-
-  // --- Ahşap sandıklar ve rahleler ---
+  // --- Ahşap sandıklar ve rahleler (musluk ve lüleler ulucami/sadirvan.ts'te) ---
   for (const [x, z] of [[sx - 4.3, sz - 4.3], [sx + 4.3, sz - 4.3], [sx - 4.3, sz + 4.3], [sx + 4.3, sz + 4.3]]) {
     k.ekle(yer(kutuG(0.8, 0.85, 0.52), x, ZEMIN + 0.53, z), m.ceviz)
     k.ekle(yer(kutuG(0.86, 0.06, 0.58), x, ZEMIN + 0.98, z), m.ahsap)

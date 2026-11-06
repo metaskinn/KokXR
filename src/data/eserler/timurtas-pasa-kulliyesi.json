@@ -14,55 +14,64 @@
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/cami-ve-minare.jpg",
       "alt": "Yolun bir yanında beş gözlü cephesi, kubbesi ve feneriyle cami; karşısında altı ayaklı tuğla minare, arkada Uludağ",
       "aciklama": "Cami ve şadırvanlı minare",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/sadirvanli-minare.jpg",
       "alt": "Kemerlerle bağlı altı tuğla ayak, taş kasnak ve tuğla gövdeli minare, altında şadırvan",
       "aciklama": "Şadırvanlı minare",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/sadirvan.jpg",
       "alt": "Minarenin altında mermer şadırvan, mermer tabureler ve demir korkuluk; arkada cami cephesi",
       "aciklama": "Minarenin altındaki şadırvan",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/ic-mekan.jpg",
       "alt": "Tonoz örtülü ibadet mekânı; mavi halı, mihrap, ahşap minber ve renkli kuşaklı beyaz duvarlar",
       "aciklama": "Mihraplı ibadet mekânı",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/cini-orgu.jpg",
       "alt": "Tuğla parçaları ve turkuaz çini karelerden oluşan fırıldak biçimli örgü",
       "aciklama": "Tuğla ve çini örgü",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/hazire.jpg",
       "alt": "Kademeli taş kaideler üzerinde mezar taşları; arkada caminin taş ve tuğla örgülü kemerli duvarı",
       "aciklama": "Hazire",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/timurtas-pasa-mezari.jpg",
       "alt": "Üzerinde Timurtaş Paşa yazılı küçük taşın bulunduğu kademeli mezar ve yanındaki kitabeli şahideler",
       "aciklama": "Timurtaş Paşa'nın mezarı",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/hamam.jpg",
       "alt": "Moloz taş ve tuğla duvarlı, oluklu kiremit kubbeli ve fenerli Demirtaşpaşa Hamamı",
       "aciklama": "Timurtaş Paşa Hamamı",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/timurtas-pasa-kulliyesi/hamam-kubbeleri.jpg",
       "alt": "Hamamın ışık gözleriyle delinmiş kubbelerinin havadan görünümü",
       "aciklama": "Hamamın ışık gözlü kubbeleri",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     }
   ],
   "bilgiNoktalari": [
@@ -247,7 +256,7 @@
     },
     {
       "id": "foto-arsiv",
-      "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)"
+      "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     }
   ],
   "maket": {

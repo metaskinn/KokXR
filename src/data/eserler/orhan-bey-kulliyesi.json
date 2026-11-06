@@ -10,14 +10,14 @@
   "dogrulama": "dogrulanmis",
   "kapakGorsel": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg",
   "gorseller": [
-    { "dosya": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg", "alt": "Orhan Bey Camii, minaresi ve önündeki şadırvan havadan, arkada Uludağ etekleri", "aciklama": "Cami ve şadırvan, kuzeyden", "kaynakId": "orh-foto" },
-    { "dosya": "/gorseller/orhan-bey-kulliyesi/cephe.jpg", "alt": "Almaşık örgülü cephede sivri kemerli silmeler içinde altlı üstlü pencereler", "aciklama": "Taş ve tuğla örgülü cephe", "kaynakId": "orh-foto" },
-    { "dosya": "/gorseller/orhan-bey-kulliyesi/revak.jpg", "alt": "Son cemaat yerinin yan yüzünde mermer sütuna oturan ikiz sivri kemer ve dama dolgulu alınlık", "aciklama": "Son cemaat yerinin ikiz kemeri", "kaynakId": "orh-foto" },
-    { "dosya": "/gorseller/orhan-bey-kulliyesi/cephe-bezemesi.jpg", "alt": "Sivri kemerler arasında taş ve tuğladan baklava deseni ve ikiz kemer", "aciklama": "Doğu cephesinde baklava deseni", "kaynakId": "orh-foto" },
-    { "dosya": "/gorseller/orhan-bey-kulliyesi/mihrapli-bolum.jpg", "alt": "Turkuaz halılı mihraplı bölümde altın yaldızlı mihrap, sağda ahşap minber ve kürsü, köşelerde boyalı tromplar", "aciklama": "Mihraplı bölüm", "kaynakId": "orh-foto" },
-    { "dosya": "/gorseller/orhan-bey-kulliyesi/tabhane.jpg", "alt": "Sivri kemer ardında bir basamak yüksek, turkuaz halılı doğu tabhanesi", "aciklama": "Yükseltilmiş tabhane bölümü", "kaynakId": "orh-foto" },
-    { "dosya": "/gorseller/orhan-bey-kulliyesi/orhan-hamami.jpg", "alt": "Eski Aynalı Çarşı yazılı, üçgen alınlıklı ve tuğla kuşaklı kuzey girişi", "aciklama": "Orhan Hamamı'nın kuzey girişi", "kaynakId": "orh-foto" },
-    { "dosya": "/gorseller/orhan-bey-kulliyesi/emir-hani.jpg", "alt": "Emir Hanı'nın ağaçlı avlusu, ortada mermer şadırvan, çevrede iki katlı revaklar", "aciklama": "Emir Hanı avlusu", "kaynakId": "orh-foto" }
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg", "alt": "Orhan Bey Camii, minaresi ve önündeki şadırvan havadan, arkada Uludağ etekleri", "aciklama": "Cami ve şadırvan, kuzeyden", "kaynakId": "orh-foto", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/cephe.jpg", "alt": "Almaşık örgülü cephede sivri kemerli silmeler içinde altlı üstlü pencereler", "aciklama": "Taş ve tuğla örgülü cephe", "kaynakId": "orh-foto", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/revak.jpg", "alt": "Son cemaat yerinin yan yüzünde mermer sütuna oturan ikiz sivri kemer ve dama dolgulu alınlık", "aciklama": "Son cemaat yerinin ikiz kemeri", "kaynakId": "orh-foto", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/cephe-bezemesi.jpg", "alt": "Sivri kemerler arasında taş ve tuğladan baklava deseni ve ikiz kemer", "aciklama": "Doğu cephesinde baklava deseni", "kaynakId": "orh-foto", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/mihrapli-bolum.jpg", "alt": "Turkuaz halılı mihraplı bölümde altın yaldızlı mihrap, sağda ahşap minber ve kürsü, köşelerde boyalı tromplar", "aciklama": "Mihraplı bölüm", "kaynakId": "orh-foto", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/tabhane.jpg", "alt": "Sivri kemer ardında bir basamak yüksek, turkuaz halılı doğu tabhanesi", "aciklama": "Yükseltilmiş tabhane bölümü", "kaynakId": "orh-foto", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/orhan-hamami.jpg", "alt": "Eski Aynalı Çarşı yazılı, üçgen alınlıklı ve tuğla kuşaklı kuzey girişi", "aciklama": "Orhan Hamamı'nın kuzey girişi", "kaynakId": "orh-foto", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/orhan-bey-kulliyesi/emir-hani.jpg", "alt": "Emir Hanı'nın ağaçlı avlusu, ortada mermer şadırvan, çevrede iki katlı revaklar", "aciklama": "Emir Hanı avlusu", "kaynakId": "orh-foto", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "bilgiNoktalari": [
     { "id": "tabhaneli-plan", "gorsel": "/gorseller/orhan-bey-kulliyesi/genel-gorunum.jpg", "x": 50, "y": 45, "baslik": "Tabhaneli plan", "metin": "Cami hem ibadet hem tekke işlevini aynı yapıda barındırır: ardışık iki kare bölümün doğu ve batısında tabhaneler yer alır.", "kaynakId": "orh-s192" },
@@ -62,7 +62,7 @@
     { "id": "orh-s210", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Orhan Bey Hamamı (Aynalı Çarşı)\"", "sayfa": "210-211" },
     { "id": "orh-s214", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, Osmangazi, \"Emir Hanı\"", "sayfa": "214-215" },
     { "id": "tdv-orhan", "metin": "\"Orhan Gazi Külliyesi\", TDV İslâm Ansiklopedisi, islamansiklopedisi.org.tr/orhan-gazi-kulliyesi" },
-    { "id": "orh-foto", "metin": "Vakıf Eserleri Envanteri – Bursa, 1. cilt, \"Orhan Bey Külliyesi\" bölümünün fotoğraf arşivi; kullanıcı izniyle yayımlanmıştır." }
+    { "id": "orh-foto", "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "maket": {
     "model": "orhan-bey-kulliyesi",

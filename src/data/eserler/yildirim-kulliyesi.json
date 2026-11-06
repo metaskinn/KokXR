@@ -10,14 +10,14 @@
   "dogrulama": "dogrulanmis",
   "kapakGorsel": "/gorseller/yildirim-kulliyesi/cami-havadan.jpg",
   "gorseller": [
-    { "dosya": "/gorseller/yildirim-kulliyesi/cami-havadan.jpg", "alt": "Yıldırım Bayezid Camii'nin havadan görünümü: iki büyük kubbe, kurşun çatı ve tuğla gövdeli iki minare", "aciklama": "Cami, havadan", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/yildirim-kulliyesi/revak.jpg", "alt": "Son cemaat yerinin mermer cephesi, Bursa kemerleri ve ortada giriş kapısı", "aciklama": "Son cemaat yeri", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/yildirim-kulliyesi/ic-mekan.jpg", "alt": "Harim içi: turkuaz halı, halka avize, yükseltilmiş eyvan ve mihraplı bölüm", "aciklama": "Harim ve eyvan", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/yildirim-kulliyesi/mihrap.jpg", "alt": "Mihrap, ahşap minber ve vaaz kürsüsü; duvarlarda hat levhaları", "aciklama": "Mihraplı bölüm", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/yildirim-kulliyesi/turbe.jpg", "alt": "Yıldırım Bayezid Türbesi: tuğla-taş almaşık duvarlar, üç kubbeli revak ve büyük kubbe", "aciklama": "Türbe", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/yildirim-kulliyesi/turbe-ic.jpg", "alt": "Türbe içi: kırmızı halı, demir parmaklık içinde Yıldırım Bayezid'in sandukası", "aciklama": "Türbe içi", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/yildirim-kulliyesi/medrese.jpg", "alt": "Medrese avlusu: iki yanda tuğla-taş almaşık sivri kemerli revaklar, ortada havuz", "aciklama": "Medrese avlusu", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/yildirim-kulliyesi/darussifa-havadan.jpg", "alt": "Yıldırım Darüşşifası'nın havadan görünümü: dikdörtgen plan, revaklı avlu ve kubbeli salon", "aciklama": "Darüşşifa, havadan", "kaynakId": "foto-arsiv" }
+    { "dosya": "/gorseller/yildirim-kulliyesi/cami-havadan.jpg", "alt": "Yıldırım Bayezid Camii'nin havadan görünümü: iki büyük kubbe, kurşun çatı ve tuğla gövdeli iki minare", "aciklama": "Cami, havadan", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/yildirim-kulliyesi/revak.jpg", "alt": "Son cemaat yerinin mermer cephesi, Bursa kemerleri ve ortada giriş kapısı", "aciklama": "Son cemaat yeri", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/yildirim-kulliyesi/ic-mekan.jpg", "alt": "Harim içi: turkuaz halı, halka avize, yükseltilmiş eyvan ve mihraplı bölüm", "aciklama": "Harim ve eyvan", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/yildirim-kulliyesi/mihrap.jpg", "alt": "Mihrap, ahşap minber ve vaaz kürsüsü; duvarlarda hat levhaları", "aciklama": "Mihraplı bölüm", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/yildirim-kulliyesi/turbe.jpg", "alt": "Yıldırım Bayezid Türbesi: tuğla-taş almaşık duvarlar, üç kubbeli revak ve büyük kubbe", "aciklama": "Türbe", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/yildirim-kulliyesi/turbe-ic.jpg", "alt": "Türbe içi: kırmızı halı, demir parmaklık içinde Yıldırım Bayezid'in sandukası", "aciklama": "Türbe içi", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/yildirim-kulliyesi/medrese.jpg", "alt": "Medrese avlusu: iki yanda tuğla-taş almaşık sivri kemerli revaklar, ortada havuz", "aciklama": "Medrese avlusu", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/yildirim-kulliyesi/darussifa-havadan.jpg", "alt": "Yıldırım Darüşşifası'nın havadan görünümü: dikdörtgen plan, revaklı avlu ve kubbeli salon", "aciklama": "Darüşşifa, havadan", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "bilgiNoktalari": [
     { "id": "kubbeler", "gorsel": "/gorseller/yildirim-kulliyesi/cami-havadan.jpg", "x": 42, "y": 40, "baslik": "Ardışık iki kubbe", "metin": "Simetrik planlı cami, kuzey-güney doğrultusunda art arda yerleştirilmiş iki büyük kubbeyle örtülüdür; orta mekâna doğu ve batıda daha küçük kubbeli iki eyvan bağlanır.", "kaynakId": "yk-s164" },
@@ -56,7 +56,7 @@
     { "id": "yk-s203", "metin": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Türbesi\"", "sayfa": "203" },
     { "id": "yk-s203-204", "metin": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Türbesi\"", "sayfa": "203, 204" },
     { "id": "yk-s204", "metin": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Türbesi\"", "sayfa": "204" },
-    { "id": "foto-arsiv", "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)" }
+    { "id": "foto-arsiv", "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "maket": {
     "model": "yildirim-kulliyesi",

@@ -103,6 +103,7 @@ export default function EserFormu({ eser, eserler, ustKatman, kaydet }: YonetimP
             }} />)}
             {metin(`gorsel-${i}-alt`, 'Alt metin', g.alt, v => degistir({ alt: v }))}
             {metin(`gorsel-${i}-aciklama`, 'Görsel açıklaması (isteğe bağlı)', g.aciklama ?? '', v => degistir({ aciklama: v }), false, false)}
+            {metin(`gorsel-${i}-kredi`, 'Kredi satırı (isteğe bağlı)', g.kredi ?? '', v => degistir({ kredi: v }), false, false)}
             {kaynakSec(`gorsel-${i}-kaynakId`, g.kaynakId, v => degistir({ kaynakId: v }))}
           </fieldset>
         })}

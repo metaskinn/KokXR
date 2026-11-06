@@ -14,49 +14,57 @@
       "dosya": "/gorseller/hamzabey-kulliyesi/kulliye-kuzeyden.jpg",
       "alt": "Hamza Bey Camii'nin sonbahar ağaçları arasından kuzeyden görünümü; revak, kurşun kubbeler ve minare",
       "aciklama": "Cami, kuzeyden",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/hamzabey-kulliyesi/kusbakisi.jpg",
       "alt": "Külliyenin dik kuşbakışı görünümü: ters T planlı cami, revak, minare ve avludaki türbeler",
       "aciklama": "Kuşbakışı plan",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/hamzabey-kulliyesi/revak.jpg",
       "alt": "Son cemaat yeri: mermer kaplı ayaklar, tuğla kemerler, sağda yüksek orta göz, solda minare kaidesi",
       "aciklama": "Beş gözlü son cemaat yeri",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/hamzabey-kulliyesi/harim-mihrap.jpg",
       "alt": "Harim: yükseltilmiş ahşap sofa, halı, mukarnaslı mihrap, sağda minber, üstte Türk üçgenli kuşak",
       "aciklama": "Mihrap önü",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/hamzabey-kulliyesi/harim-eyvan.jpg",
       "alt": "Harimden batı eyvanına açılan geniş kemer, solda mihrap önü, üstte köşedeki mukarnas",
       "aciklama": "Orta sofa ve batı eyvanı",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/hamzabey-kulliyesi/hamza-bey-turbesi.jpg",
       "alt": "Hamza Bey Türbesi: tuğla ve taş örgülü sekizgen gövde, öne taşkın kapı eyvanı, yüksek kasnak ve kurşun kubbe",
       "aciklama": "Hamza Bey Türbesi",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/hamzabey-kulliyesi/aile-turbesi.jpg",
       "alt": "Hamza Bey Ailesi Türbesi'nin kuzey cephesi: kapı, iki pencere ve üst bölümde zikzak tuğla bezeme",
       "aciklama": "Hamza Bey Ailesi Türbesi",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/hamzabey-kulliyesi/kara-mustafa-turbesi.jpg",
       "alt": "Kara Mustafa Paşa Türbesi: kare gövde, sekizgen kasnak ve kubbe, ağaçlar arasında",
       "aciklama": "Kara Mustafa Paşa Türbesi",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     }
   ],
   "bilgiNoktalari": [
@@ -166,7 +174,7 @@
     { "id": "hb-s186", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Ailesi Türbesi\"", "sayfa": "186-187" },
     { "id": "hb-s188", "metin": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kara Mustafa Paşa Türbesi\"", "sayfa": "188-189" },
     { "id": "kp-hamza", "metin": "T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Hamzabey Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), https://www.kulturportali.gov.tr/turkiye/bursa/gezilecekyer/hamzabey-cami" },
-    { "id": "foto-arsiv", "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)" }
+    { "id": "foto-arsiv", "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "maket": {
     "model": "hamzabey-kulliyesi",

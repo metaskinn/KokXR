@@ -55,7 +55,7 @@ const istegeBagliMetin = (v: Record<string, unknown>, a: string) => v[a] === und
 export function eserGecerli(v: unknown): v is Eser {
   if (!nesne(v) || !metinler(v, ['id', 'ad', 'sehir', 'ilce', 'donem', 'vakif', 'ozet', 'tarihce', 'kapakGorsel']) || !['temsili', 'dogrulanmis'].includes(String(v.dogrulama))) return false
   if (!liste(v.kaynaklar, n => metinler(n, ['id', 'metin']) && istegeBagliMetin(n, 'sayfa')) ||
-    !liste(v.gorseller, n => metinler(n, ['dosya', 'alt', 'kaynakId']) && istegeBagliMetin(n, 'aciklama')) ||
+    !liste(v.gorseller, n => metinler(n, ['dosya', 'alt', 'kaynakId']) && istegeBagliMetin(n, 'aciklama') && istegeBagliMetin(n, 'kredi')) ||
     !liste(v.test, n => metinler(n, ['soru', 'aciklama', 'kaynakId']) && Array.isArray(n.secenekler) && n.secenekler.every(s => typeof s === 'string') && typeof n.dogru === 'number') ||
     !liste(v.bilgiNoktalari, n => metinler(n, ['id', 'gorsel', 'baslik', 'metin', 'kaynakId']) && typeof n.x === 'number' && typeof n.y === 'number')) return false
   if (v.tur !== undefined && (!nesne(v.tur) || !metinler(v.tur, ['aciklama']) || !istegeBagliMetin(v.tur, 'baslangic') || !liste(v.tur.duraklar, n => metinler(n, ['id', 'baslik', 'gorsel', 'derinlik', 'metin']) && istegeBagliMetin(n, 'kaynakId') && liste(n.baglantilar, b => metinler(b, ['hedef', 'etiket']))))) return false

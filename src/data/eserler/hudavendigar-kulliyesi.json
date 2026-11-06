@@ -10,14 +10,14 @@
   "dogrulama": "dogrulanmis",
   "kapakGorsel": "/gorseller/hudavendigar-kulliyesi/cephe.jpg",
   "gorseller": [
-    { "dosya": "/gorseller/hudavendigar-kulliyesi/cephe.jpg", "alt": "Caminin taş ve tuğla örgülü iki katlı cephesi; üst katta ikiz kemerli medrese revağı ve beyaz korkuluklar", "aciklama": "Kuzey ve doğu cephesi", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/hudavendigar-kulliyesi/son-cemaat.jpg", "alt": "Son cemaat yerinin kalın ayaklı kemerleri, ahşap gergileri ve dışarıdaki ağaçlar", "aciklama": "Son cemaat yeri", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/hudavendigar-kulliyesi/sadirvan-mekan.jpg", "alt": "Mavi halılı kubbeli orta mekân, ortada altıgen mermer şadırvan, ileride mihraba açılan tonozlu harim", "aciklama": "Şadırvanlı mekân", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/hudavendigar-kulliyesi/harim.jpg", "alt": "Şadırvanlı mekândan basamaklarla çıkılan tonozlu harim, ahşap korkuluklar ve karşıda mihrap", "aciklama": "Asıl ibadet mekânı", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/hudavendigar-kulliyesi/mihrap.jpg", "alt": "Altın yaldızlı mukarnas kavsaralı, kırmızı ve lacivert bezemeli mihrap", "aciklama": "Mihrap", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/hudavendigar-kulliyesi/medrese-koridor.jpg", "alt": "Üst kattaki medresenin kırmızı halılı, ahşap kirişli uzun koridoru", "aciklama": "Medrese koridoru", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/hudavendigar-kulliyesi/hamam.jpg", "alt": "Taş ve tuğla duvarlı, kurşun kaplı küçük kubbeli Cıkcık Hamamı", "aciklama": "Cıkcık Hamamı", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/hudavendigar-kulliyesi/turbe-ic.jpg", "alt": "Türbenin içinde pirinç parmaklıklı büyük sanduka, yanlarda yeşil örtülü sandukalar ve Korint başlıklı sütunlar", "aciklama": "Türbe içi", "kaynakId": "foto-arsiv" }
+    { "dosya": "/gorseller/hudavendigar-kulliyesi/cephe.jpg", "alt": "Caminin taş ve tuğla örgülü iki katlı cephesi; üst katta ikiz kemerli medrese revağı ve beyaz korkuluklar", "aciklama": "Kuzey ve doğu cephesi", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/hudavendigar-kulliyesi/son-cemaat.jpg", "alt": "Son cemaat yerinin kalın ayaklı kemerleri, ahşap gergileri ve dışarıdaki ağaçlar", "aciklama": "Son cemaat yeri", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/hudavendigar-kulliyesi/sadirvan-mekan.jpg", "alt": "Mavi halılı kubbeli orta mekân, ortada altıgen mermer şadırvan, ileride mihraba açılan tonozlu harim", "aciklama": "Şadırvanlı mekân", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/hudavendigar-kulliyesi/harim.jpg", "alt": "Şadırvanlı mekândan basamaklarla çıkılan tonozlu harim, ahşap korkuluklar ve karşıda mihrap", "aciklama": "Asıl ibadet mekânı", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/hudavendigar-kulliyesi/mihrap.jpg", "alt": "Altın yaldızlı mukarnas kavsaralı, kırmızı ve lacivert bezemeli mihrap", "aciklama": "Mihrap", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/hudavendigar-kulliyesi/medrese-koridor.jpg", "alt": "Üst kattaki medresenin kırmızı halılı, ahşap kirişli uzun koridoru", "aciklama": "Medrese koridoru", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/hudavendigar-kulliyesi/hamam.jpg", "alt": "Taş ve tuğla duvarlı, kurşun kaplı küçük kubbeli Cıkcık Hamamı", "aciklama": "Cıkcık Hamamı", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/hudavendigar-kulliyesi/turbe-ic.jpg", "alt": "Türbenin içinde pirinç parmaklıklı büyük sanduka, yanlarda yeşil örtülü sandukalar ve Korint başlıklı sütunlar", "aciklama": "Türbe içi", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "bilgiNoktalari": [
     { "id": "iki-kat", "gorsel": "/gorseller/hudavendigar-kulliyesi/cephe.jpg", "x": 42, "y": 36, "baslik": "Alt kat cami, üst kat medrese", "metin": "Medresenin caminin üst katında yer alacak şekilde planlanması, Osmanlı mimarisinde görülen ilk ve tek örnektir.", "kaynakId": "hud-s80" },
@@ -82,7 +82,7 @@
     { "id": "hud-s106", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"", "sayfa": "106" },
     { "id": "hud-deprem", "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"", "sayfa": "83, 95, 103" },
     { "id": "dia-hud", "metin": "Semavi Eyice, \"Hudâvendigâr Külliyesi\", TDV İslâm Ansiklopedisi, c. 18, s. 290-295, islamansiklopedisi.org.tr/hudavendigar-kulliyesi" },
-    { "id": "foto-arsiv", "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)" }
+    { "id": "foto-arsiv", "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "maket": {
     "model": "hudavendigar-kulliyesi",

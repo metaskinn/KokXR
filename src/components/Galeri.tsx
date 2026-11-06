@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Eser, Gorsel, Kaynak } from '../types/eser'
 import KaynakSatiri from './KaynakSatiri'
+import FotoKredi from './FotoKredi'
 import { ACIK_YAYIN } from '../data/acikYayin'
 
 function TamEkran({ gorseller, kaynaklar, secili, sec, kapat }: {
@@ -63,7 +64,8 @@ function TamEkran({ gorseller, kaynaklar, secili, sec, kapat }: {
     </figure>
     <div className="galeri-kontrolleri"><button disabled={gorseller.length < 2} onClick={() => git(secili - 1)}>← Önceki fotoğraf</button><button disabled={gorseller.length < 2} onClick={() => git(secili + 1)}>Sonraki fotoğraf →</button></div>
     <p className="galeri-yardim">Ok tuşlarıyla fotoğraf değiştir. Yakınlaştırınca kaydırarak ayrıntıları incele.</p>
-    <KaynakSatiri kaynaklar={kaynaklar} kaynakId={gorsel.kaynakId} />
+    {gorsel.kredi && <FotoKredi metin={gorsel.kredi} />}
+    {kaynaklar.find((k) => k.id === gorsel.kaynakId)?.metin !== gorsel.kredi && <KaynakSatiri kaynaklar={kaynaklar} kaynakId={gorsel.kaynakId} />}
   </dialog>
 }
 
@@ -151,7 +153,7 @@ export default function Galeri({ eser }: { eser: Eser }) {
           <div id="fotograf-bilgi-karti" ref={kart} aria-live="polite">
             {nokta && <div className="bilgi-karti"><h3>{nokta.baslik}</h3><p>{nokta.metin}</p><KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={nokta.kaynakId} /></div>}
           </div>
-          <figcaption><KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={gorsel.kaynakId} /></figcaption>
+          <figcaption>{gorsel.kredi && <FotoKredi metin={gorsel.kredi} />}{eser.kaynaklar.find((k) => k.id === gorsel.kaynakId)?.metin !== gorsel.kredi && <KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={gorsel.kaynakId} />}</figcaption>
         </figure>
       </>}
     </section>}

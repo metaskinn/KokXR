@@ -1,3 +1,4 @@
+import FotoKredi from './FotoKredi'
 import { useEffect, useRef, useState } from 'react'
 import './restorasyon.css'
 import type { Kaynak, RestorasyonGorevi } from '../types/eser'
@@ -127,6 +128,7 @@ export default function Restorasyon({ gorev, kaynaklar, rozetKazan, rozetId }: {
     </div>}
     {vr === 'acik' ? <p role="status">Bulmaca VR gözlüğünde sürüyor.</p> : !parcalar ? <>
       <img className="restorasyon-onizleme" src={gorev.gorsel} alt={gorev.alt} />
+      <FotoKredi />
       <button type="button" onClick={() => { setParcalar(karistir(adet)); setHamle(0); setDuyuru('Pano parçalandı. Bir parça seç, sonra yerleştireceğin yuvaya dokun.') }}>Panoyu parçala ve onar</button>
     </> : <>
       <p className="ipucu-metni">Bir parçaya dokunarak seç, sonra tahtada bir yuvaya dokun. Seçili parçayı "Döndür" düğmesiyle (veya R tuşuyla) çevir.</p>

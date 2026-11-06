@@ -1,3 +1,4 @@
+import FotoKredi from '../components/FotoKredi'
 import { Link } from 'react-router-dom'
 import type { Eser } from '../types/eser'
 import Simge from '../components/Simge'
@@ -24,8 +25,7 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
       {oneCikan?.kapakGorsel && <figure className="giris-gorsel">
         <img src={oneCikan.kapakGorsel} alt={oneCikan.gorseller.find((g) => g.dosya === oneCikan.kapakGorsel)?.alt ?? oneCikan.ad} fetchPriority="high" />
         <span className="gorsel-etiketi"><Simge ad="konum" /> {oneCikan.ilce}, {oneCikan.sehir}</span>
-        <figcaption><div><span>KEŞFİN BAŞLADIĞI YER</span><strong>{oneCikan.ad}</strong></div><Link to={`/eser/${oneCikan.id}`} aria-label={`${oneCikan.ad} eserini keşfet`}><Simge ad="ok" /></Link></figcaption>
-        <span className="gorsel-kose" aria-hidden="true">K / XR</span>
+        <figcaption><div><span>KEŞFİN BAŞLADIĞI YER</span><strong>{oneCikan.ad}</strong>{oneCikan.gorseller.find((g) => g.dosya === oneCikan.kapakGorsel)?.kredi && <FotoKredi metin={oneCikan.gorseller.find((g) => g.dosya === oneCikan.kapakGorsel)?.kredi} />}</div><Link to={`/eser/${oneCikan.id}`} aria-label={`${oneCikan.ad} eserini keşfet`}><Simge ad="ok" /></Link><span className="gorsel-kose" aria-hidden="true">K / XR</span></figcaption>
       </figure>}
     </section>
 
@@ -37,6 +37,7 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
           <span className="kart-numara">{String(index + 1).padStart(2, '0')}</span>
           {rozetler.includes(eser.id) && <span className="kart-rozet">★ Rozet kazanıldı</span>}
         </div>}
+        {!ACIK_YAYIN && eser.gorseller.find((g) => g.dosya === eser.kapakGorsel)?.kredi && <FotoKredi metin={eser.gorseller.find((g) => g.dosya === eser.kapakGorsel)?.kredi} />}
         <div className="kart-icerik">
           <p className="konum"><Simge ad="konum" />{eser.sehir} · {eser.ilce}</p>
           <h3>{eser.ad}</h3>

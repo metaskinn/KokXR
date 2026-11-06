@@ -7,6 +7,7 @@ export interface Gorsel {
   alt: string;            // ekran okuyucu metni
   aciklama?: string;
   kaynakId: string;       // fotoğraf arşivi kaynağı
+  kredi?: string;         // görselin altında gösterilen kredi satırı
 }
 
 export interface BilgiNoktasi {

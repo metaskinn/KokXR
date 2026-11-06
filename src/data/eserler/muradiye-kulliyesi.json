@@ -14,61 +14,71 @@
       "dosya": "/gorseller/muradiye-kulliyesi/cami-havadan.jpg",
       "alt": "Muradiye Camii ve minaresinin ağaçlar arasından havadan görünümü",
       "aciklama": "Muradiye Camii",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/kulliye-havadan.jpg",
       "alt": "Külliyenin ve çevresindeki şehrin havadan geniş görünümü",
       "aciklama": "Külliye ve çevresi",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/cami-ic.jpg",
       "alt": "Muradiye Camii iç mekânı, duvarlarda mavi-yeşil çiniler ve kırmızı halı",
       "aciklama": "Caminin iç mekânı",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/medrese.jpg",
       "alt": "Muradiye Medresesi'nin havadan görünümü, ortadaki avlu ve kubbeli dershane",
       "aciklama": "Medrese",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/medrese-avlusu.jpg",
       "alt": "Medresenin cam çatıyla örtülü revaklı avlusu ve ortadaki şadırvan",
       "aciklama": "Medrese avlusu",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/imaret.jpg",
       "alt": "İmaretin uzun, taş ve tuğla örgülü cephesi",
       "aciklama": "İmaret",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/hamam.jpg",
       "alt": "Muradiye Hamamı'nın kiremit çatılı yapısının havadan görünümü",
       "aciklama": "Hamam",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/ii-murad-turbesi.jpg",
       "alt": "Sultan II. Murad Türbesi'nin geniş ahşap saçaklı girişi",
       "aciklama": "Sultan II. Murad Türbesi",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/ii-murad-turbesi-ic.jpg",
       "alt": "Sultan II. Murad Türbesi'nin iç mekânı",
       "aciklama": "Sultan II. Murad Türbesi, iç mekân",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/muradiye-kulliyesi/cem-sultan-turbesi-ic.jpg",
       "alt": "Cem Sultan Türbesi'nin çinilerle kaplı iç mekânı ve sandukalar",
       "aciklama": "Cem Sultan Türbesi, iç mekân",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     }
   ],
   "bilgiNoktalari": [
@@ -252,7 +262,7 @@
     },
     {
       "id": "foto-arsiv",
-      "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)"
+      "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "id": "mur-s112",

@@ -14,61 +14,71 @@
       "dosya": "/gorseller/ulu-camii/dis-gorunum.jpg",
       "alt": "Ulu Camii ve iki minaresinin dışarıdan görünümü, arkada Uludağ eteklerindeki şehir",
       "aciklama": "Dış görünüm",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/kubbeler-havadan.jpg",
       "alt": "Ulu Camii çatısının havadan görünümü; dörder sıra hâlinde dizilmiş yirmi kubbe",
       "aciklama": "Yirmi kubbe, havadan",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/gece.jpg",
       "alt": "Ulu Camii ve çevresinin gece havadan görünümü, ışıklı caddeler",
       "aciklama": "Gece görünümü",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/sadirvan.jpg",
       "alt": "Cami içinde, ortası açık kubbenin altındaki havuzlu şadırvan; iki yanda büyük hat levhaları",
       "aciklama": "İç mekândaki şadırvan",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/minber.jpg",
       "alt": "Ahşap, oymalı minberin yandan görünümü",
       "aciklama": "Kündekâri minber",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/mihrap.jpg",
       "alt": "Altın yaldızlı süslemelerle çevrili mihrap nişi",
       "aciklama": "Mihrap",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/kubbeler-icten.jpg",
       "alt": "Kubbelerin içten görünümü, kemerler ve hat yazıları",
       "aciklama": "Kubbeler, içeriden",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/ic-mekan.jpg",
       "alt": "Payeler ve kemerlerle bölünmüş geniş ibadet alanının yukarıdan görünümü",
       "aciklama": "İbadet alanı",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/hat-levhasi.jpg",
       "alt": "Siyah zemin üzerine altın renkli hat yazısı içeren çerçeveli levha",
       "aciklama": "Hat levhası",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/ulu-camii/avlu-sadirvani.jpg",
       "alt": "Cami avlusunda sekiz ahşap direk üzerinde soğan kubbeli şadırvan",
       "aciklama": "Avlu şadırvanı",
-      "kaynakId": "foto-arsiv"
+      "kaynakId": "foto-arsiv",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     }
   ],
   "bilgiNoktalari": [
@@ -226,7 +236,7 @@
     },
     {
       "id": "foto-arsiv",
-      "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi (sponsor veri seti)"
+      "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "id": "ulu-s46",

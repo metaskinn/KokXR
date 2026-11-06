@@ -1,3 +1,4 @@
+import FotoKredi from './FotoKredi'
 import { useEffect, useRef, useState } from 'react'
 import type { Durak, Kaynak, Tur } from '../types/eser'
 import type { Sahne } from './gezinti/sahne'
@@ -114,6 +115,7 @@ export default function SanalGezinti({ tur, kaynaklar }: { tur: Tur; kaynaklar: 
       <div ref={alan} className={`gezinti-canvas ${hazir && !sabit ? 'hazir' : ''}`} aria-hidden="true" />
       {!basladi && <div className="gezinti-baslat"><button onClick={() => setBasladi(true)}>Gezintiye başla <span aria-hidden="true">→</span></button></div>}
     </div>
+      <FotoKredi />
       {basladi && <>
         <div className="gezinti-yonler" role="group" aria-label="Bağlı duraklara git">
           {durak.baglantilar.map((link) => {

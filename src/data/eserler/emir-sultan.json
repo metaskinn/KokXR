@@ -10,14 +10,14 @@
   "dogrulama": "dogrulanmis",
   "kapakGorsel": "/gorseller/emir-sultan/genel-gorunum.jpg",
   "gorseller": [
-    { "dosya": "/gorseller/emir-sultan/genel-gorunum.jpg", "alt": "Emir Sultan Camii'nin kubbesi, iki minaresi ve türbenin kubbesi, arkada Bursa ve ova", "aciklama": "Cami ve türbe, kuşbakışı", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/emir-sultan/kusbakisi.jpg", "alt": "Külliyenin tam üstten görünümü; solda türbe kubbesi, sağda cami kubbesi, ortada avlu ve şadırvan", "aciklama": "Üstten plan görünümü", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/emir-sultan/cami-revaki.jpg", "alt": "Avludan caminin iki katlı revaklı cephesi; kaş kemerler ve önde mermer şadırvan", "aciklama": "Cami revakı ve şadırvan", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/emir-sultan/turbe.jpg", "alt": "Avludan Emir Sultan Türbesi; kurşun kubbe, ahşap köşk, revaklar ve şadırvan", "aciklama": "Türbe cephesi", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/emir-sultan/harim.jpg", "alt": "Kırmızı halılı harim; pencere sıraları, mihrap, minber ve büyük halka avize", "aciklama": "Harim", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/emir-sultan/mihrap.jpg", "alt": "Yivli niş, altın yaldızlı başlıklar ve tepelikli kalem işi mihrap; iki yanda şamdanlar", "aciklama": "Mihrap", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/emir-sultan/kubbe-ic.jpg", "alt": "Harim kubbesi içten; dilimli açık tonlu kalem işi ve ortada gül motifi", "aciklama": "Kubbe içi", "kaynakId": "foto-arsiv" },
-    { "dosya": "/gorseller/emir-sultan/turbe-ic.jpg", "alt": "Türbe içi; yeşil örtülü sandukalar, oymalı korkuluk, yuvarlak kemerli pencereler ve avize", "aciklama": "Türbe içi", "kaynakId": "foto-arsiv" }
+    { "dosya": "/gorseller/emir-sultan/genel-gorunum.jpg", "alt": "Emir Sultan Camii'nin kubbesi, iki minaresi ve türbenin kubbesi, arkada Bursa ve ova", "aciklama": "Cami ve türbe, kuşbakışı", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/emir-sultan/kusbakisi.jpg", "alt": "Külliyenin tam üstten görünümü; solda türbe kubbesi, sağda cami kubbesi, ortada avlu ve şadırvan", "aciklama": "Üstten plan görünümü", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/emir-sultan/cami-revaki.jpg", "alt": "Avludan caminin iki katlı revaklı cephesi; kaş kemerler ve önde mermer şadırvan", "aciklama": "Cami revakı ve şadırvan", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/emir-sultan/turbe.jpg", "alt": "Avludan Emir Sultan Türbesi; kurşun kubbe, ahşap köşk, revaklar ve şadırvan", "aciklama": "Türbe cephesi", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/emir-sultan/harim.jpg", "alt": "Kırmızı halılı harim; pencere sıraları, mihrap, minber ve büyük halka avize", "aciklama": "Harim", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/emir-sultan/mihrap.jpg", "alt": "Yivli niş, altın yaldızlı başlıklar ve tepelikli kalem işi mihrap; iki yanda şamdanlar", "aciklama": "Mihrap", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/emir-sultan/kubbe-ic.jpg", "alt": "Harim kubbesi içten; dilimli açık tonlu kalem işi ve ortada gül motifi", "aciklama": "Kubbe içi", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
+    { "dosya": "/gorseller/emir-sultan/turbe-ic.jpg", "alt": "Türbe içi; yeşil örtülü sandukalar, oymalı korkuluk, yuvarlak kemerli pencereler ve avize", "aciklama": "Türbe içi", "kaynakId": "foto-arsiv", "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "bilgiNoktalari": [
     { "id": "kubbe", "gorsel": "/gorseller/emir-sultan/genel-gorunum.jpg", "x": 74, "y": 62, "baslik": "Tek kubbeli harim", "metin": "15,20 × 15,20 m ölçülerindeki harim tek kubbeyle örtülüdür. Kubbenin ağırlığını toplam on üç duvar payandası taşır.", "kaynakId": "es-yapi" },
@@ -53,7 +53,7 @@
     { "id": "es-1868", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Türbesi\"", "sayfa": "304" },
     { "id": "es-niyaz", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Emir Sultan Türbesi\"", "sayfa": "304, 306" },
     { "id": "es-cesme", "metin": "Vakıf Eserleri Envanteri – Bursa, Yıldırım, \"Darüssaade Ağası Beşir Ağa Çeşmesi\"", "sayfa": "312-313" },
-    { "id": "foto-arsiv", "metin": "Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi, Emir Sultan Külliyesi bölümü (proje sahibinin paylaştığı Drive klasörü; yayım izni proje sahibince verilmiştir)" }
+    { "id": "foto-arsiv", "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" }
   ],
   "maket": {
     "model": "emir-sultan",

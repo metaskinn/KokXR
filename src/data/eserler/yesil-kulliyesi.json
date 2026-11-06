@@ -14,49 +14,57 @@
       "dosya": "/gorseller/yesil-kulliyesi/kubbeler.jpg",
       "alt": "Yeşil Camii'nin kurşun kaplı kubbeleri, pembe sıvalı kasnakları, fener kubbesi ve minaresi",
       "aciklama": "Kubbeler ve minare",
-      "kaynakId": "yes-s102"
+      "kaynakId": "yes-s102",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/yesil-kulliyesi/dis-gorunum.jpg",
       "alt": "Yeşil Camii, akşam ışıklarında kuzeydoğudan kuşbakışı; önde tuğla minare, arkada Yeşil Türbe",
       "aciklama": "Kuzeydoğudan görünüm",
-      "kaynakId": "yes-s83"
+      "kaynakId": "yes-s83",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/yesil-kulliyesi/ustten.jpg",
       "alt": "Yeşil Camii'nin üstten görünümü: iki büyük kubbe, iki yan kubbe ve kuzey köşelerindeki minareler",
       "aciklama": "Üstten plan düzeni",
-      "kaynakId": "yes-s85"
+      "kaynakId": "yes-s85",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/yesil-kulliyesi/sadirvan-mihrap.jpg",
       "alt": "Orta mekândaki sekizgen fıskiyeli havuz, büyük halka avize ve geride çini kaplı mihrap",
       "aciklama": "Fıskiyeli orta mekân ve mihrap",
-      "kaynakId": "yes-s90"
+      "kaynakId": "yes-s90",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/yesil-kulliyesi/mihrap-duvari.jpg",
       "alt": "Mihrap bölümünde lacivert altıgen çiniler, hat panoları ve ahşap minber",
       "aciklama": "Lacivert altıgen çiniler",
-      "kaynakId": "yes-s92"
+      "kaynakId": "yes-s92",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/yesil-kulliyesi/yesil-turbe.jpg",
       "alt": "Firuze çinilerle kaplı sekizgen Yeşil Türbe ve hafif sivri kurşun kubbesi",
       "aciklama": "Yeşil Türbe",
-      "kaynakId": "yes-s136"
+      "kaynakId": "yes-s136",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/yesil-kulliyesi/medrese.jpg",
       "alt": "Yeşil Medresesi'nin tuğla ve taş almaşık duvarı, firuze alınlıklı sivri kemerli pencereleri",
       "aciklama": "Medrese",
-      "kaynakId": "yes-s124"
+      "kaynakId": "yes-s124",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     },
     {
       "dosya": "/gorseller/yesil-kulliyesi/imaret.jpg",
       "alt": "Yeşil İmareti'nin almaşık örgülü duvarları ve kiremit kaplı kırma çatısı",
       "aciklama": "İmaret",
-      "kaynakId": "yes-s118"
+      "kaynakId": "yes-s118",
+      "kredi": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
     }
   ],
   "bilgiNoktalari": [
@@ -139,6 +147,7 @@
     }
   ],
   "kaynaklar": [
+    { "id": "foto-arsiv", "metin": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi" },
     { "id": "yes-s83", "metin": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"", "sayfa": "83" },
     { "id": "yes-s85", "metin": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"", "sayfa": "85-86" },
     { "id": "yes-s88", "metin": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"", "sayfa": "88" },

@@ -4,7 +4,7 @@
 import * as THREE from 'three'
 import {
   DUVAR, H, KASNAK_TABAN, Kova, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
-  dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, px, pz, silindirG, yer,
+  gozAcikligi, gozOlcusu, px, pz, 
 } from './ulucamiParca'
 import { KABE_VITRIN } from './ulucami/icduvar'
 import { KAPI_Z, KURSU, MAHFIL } from './ulucamiDetay'

@@ -35,7 +35,7 @@ const TURBE_Z = -19.2, TURBE_DIS = 7, TURBE_IC = 6.2, TURBE_H = 8.9, TURBE_KENAR
 const GIRIS_X0 = 3.3, GIRIS_X1 = 5.5, GIRIS_Z = -15.4
 
 /** Minber: bir hücrelik yürünebilir merdiven için gerçeğinden biraz geniş. */
-const MINBER_X = -4.7, MINBER_EN = 1.5, MINBER_Z0 = HARIM_Z1 - 7.3, MINBER_RAMPA = { z0: MINBER_Z0 + 0.8, z1: MINBER_Z0 + 5.2, h: 3 }
+const MINBER_X = -4.7, MINBER_EN = 1.7, MINBER_Z0 = HARIM_Z1 - 7.3, MINBER_RAMPA = { z0: MINBER_Z0 + 0.8, z1: MINBER_Z0 + 5.2, h: 3 }
 
 function yuvarlakKemer<P extends THREE.Path>(p: P, cx: number, y0: number, g: number, duz: number): P {
   const o = g / 2
@@ -170,12 +170,13 @@ export const yapi = (): Maket => {
   const d = emirDokulari()
   const pbr = (p: THREE.MeshStandardMaterialParameters) => new THREE.MeshStandardMaterial({ roughness: 0.85, metalness: 0, ...p })
   // Ortak zemin malzemeleri Ulu Camii'nin paye gölgesini taşır; burada aynı dokular gölgesiz kullanılır.
-  const avluMermer = pbr({ map: m.mermerDoseme.map, bumpMap: m.mermerDoseme.bumpMap, bumpScale: 0.3, roughness: 0.3 })
+  const avluMermer = pbr({ map: m.mermerDoseme.map, bumpMap: m.mermerDoseme.bumpMap, bumpScale: 0.3, color: '#d5d8db', roughness: 0.3 })
   const hali = m.haliSade.clone(); hali.color.set('#d9452a')
-  const almasik = pbr({ map: d.almasik.renk, bumpMap: d.almasik.kabartma, bumpScale: 0.8, roughness: 0.92 })
+  const almasik = pbr({ map: d.almasik.renk, bumpMap: d.almasik.kabartma, bumpScale: 0.8, color: '#d9d0c4', roughness: 0.92 })
   const siva = pbr({ color: '#efe4cf', roughness: 0.88, side: THREE.DoubleSide })
-  const beyazBoya = pbr({ color: '#f5f0e4', roughness: 0.82, side: THREE.DoubleSide })
-  const icDuvar = pbr({ color: '#efd9c6', roughness: 0.84, side: THREE.DoubleSide })
+  // Hafif öz ışık: revak tavanı içerideki gölgede kahverengiye dönmesin.
+  const beyazBoya = pbr({ color: '#f5f0e4', emissive: '#4a453a', roughness: 0.82, side: THREE.DoubleSide })
+  const icDuvar = pbr({ color: '#f1d6c4', roughness: 0.84, side: THREE.DoubleSide })
   const griSilme = pbr({ color: '#a7a095', roughness: 0.65 })
   const griBant = pbr({ color: '#bdb7ad', roughness: 0.6 })
   const koyuAhsap = pbr({ color: '#33231a', roughness: 0.62, side: THREE.DoubleSide })
@@ -188,7 +189,7 @@ export const yapi = (): Maket => {
   const isikli = (map: THREE.Texture, k = 1.4) => new THREE.MeshBasicMaterial({ map, color: new THREE.Color(k, k, k * 0.98), side: THREE.DoubleSide })
   const camUst = isikli(d.revzen), camAlt = isikli(d.altPencere, 1.25)
   const demir = pbr({ map: d.demir, roughness: 0.55, metalness: 0.3, side: THREE.DoubleSide })
-  const demirIc = isikli(d.demir, 1.7)
+  const demirIc = isikli(d.demirAcik, 1.35)
   const icKubbe = pbr({ map: d.icKubbe, roughness: 0.9, side: THREE.DoubleSide })
   const pandantif = pbr({ map: d.pandantif, roughness: 0.9, side: THREE.DoubleSide })
   const nis = pbr({ map: d.nis, roughness: 0.75, side: THREE.DoubleSide })
@@ -197,9 +198,9 @@ export const yapi = (): Maket => {
   const turbeDuvar = pbr({ map: d.turbeDuvar, roughness: 0.55, side: THREE.DoubleSide })
   const madalyon = pbr({ color: '#17140f', roughness: 0.4 })
   const levha = pbr({ color: '#17140f', roughness: 0.45 })
-  const levhaYesil = pbr({ color: '#123c28', roughness: 0.5, side: THREE.DoubleSide })
-  const cinar = pbr({ map: m.selvi.map, color: '#c9c36d', roughness: 1 })
-  const camLamba = new THREE.MeshBasicMaterial({ color: new THREE.Color(2.2, 2, 1.6) })
+  const levhaYesil = pbr({ color: '#1c5a3c', roughness: 0.5, side: THREE.DoubleSide })
+  const cinar = pbr({ color: '#6c7a34', roughness: 1 })
+  const camLamba = new THREE.MeshBasicMaterial({ color: new THREE.Color(1.5, 1.4, 1.15) })
   const mezar = pbr({ color: '#d9d5ca', roughness: 0.7 })
   const camSari = pbr({ color: '#c8a557', roughness: 0.55 })
 
@@ -306,12 +307,12 @@ export const yapi = (): Maket => {
     ],
     duraklar: duraklar(),
     yurume: yurume(),
-    kamera: { konum: [-98, 56, 44], hedef: [0, 9, -2] },
+    kamera: { konum: [-88, 62, -34], hedef: [0, 8, -8] },
     kaideYaricap: 56,
     icIsiklar: [
       [0, HARIM_Y + 12, HARIM_ORTA + OZ],
       [0, HARIM_Y + 5.5, HARIM_ORTA - 3 + OZ],
-      [0, AVLU_Y + 4.5, 8.5 + OZ],
+      [0, AVLU_Y + 3.4, 3 + OZ],
       [0, TURBE_Y + 6.5, TURBE_Z + OZ],
     ],
   }
@@ -329,7 +330,7 @@ export const yapi = (): Maket => {
       const a = Math.PI / 8 + (n * Math.PI) / 4
       k.ekle(yer(kutuG(0.2, 1.15, 0.2).translate(0, AVLU_Y + 0.8, 2.92), 0, 0, 0, a), sutunBeyaz)
       const yuz = (n * Math.PI) / 4
-      k.ekle(yer(kutuG(1.1, 0.5, 0.05).translate(0, AVLU_Y + 0.72, 2.68), 0, 0, 0, yuz), sutunKahve)
+      k.ekle(yer(kutuG(1.1, 0.5, 0.05).translate(0, AVLU_Y + 0.72, 2.68), 0, 0, 0, yuz), sutunBeyaz)
       k.ekle(yer(new THREE.CylinderGeometry(0.05, 0.05, 0.28, 8).rotateX(Math.PI / 2).translate(0, AVLU_Y + 0.92, 2.8), 0, 0, 0, yuz), m.bronz)
       // Tabureler
       const r = 3.45
@@ -450,9 +451,9 @@ export const yapi = (): Maket => {
 
     // Türbenin iki yanındaki dikdörtgen odalar (kaynak), lead çatılı dış kütle
     for (const s of [-1, 1]) {
-      const x0 = s > 0 ? 6.4 : -13.5, x1 = s > 0 ? 13.5 : -6.4
+      const x0 = s > 0 ? 7.05 : -13.5, x1 = s > 0 ? 13.5 : -7.05
       blok(x0, x1, AVLU_Y, AVLU_Y + 4.2, -24, -13.4, almasik)
-      kCati.ekle(kirmaCati(x0 - 0.5, x1 + 0.5, -24.5, -13, AVLU_Y + 4.2, AVLU_Y + 5.5, 1.5), m.kursun)
+      kCati.ekle(kirmaCati(s > 0 ? x0 : x0 - 0.5, s > 0 ? x1 + 0.5 : x1, -24.5, -13, AVLU_Y + 4.2, AVLU_Y + 5.5, 1.5), m.kursun)
     }
   }
 
@@ -634,7 +635,7 @@ export const yapi = (): Maket => {
 
     // Çatı: kasnağa çıkan kurşun etek
     const YUK = SACAK - 0.15
-    const etek = duzGolge(silindirG(8.25, CAMI_DIS_X * Math.SQRT2 + 0.6, 2.2, 4, true).rotateY(Math.PI / 4))
+    const etek = duzGolge(silindirG(8.3 * Math.SQRT2, CAMI_DIS_X * Math.SQRT2 + 0.6, 2.2, 4, true).rotateY(Math.PI / 4))
     kCati.ekle(yer(etek, 0, YUK + 1.1, HARIM_ORTA), m.kursun)
 
     // Kasnak: on iki pencereli (kaynak), tuğla-taş, yuvarlak
@@ -643,8 +644,8 @@ export const yapi = (): Maket => {
     const ku = kas.attributes.uv
     for (let i = 0; i < ku.count; i++) ku.setXY(i, ku.getX(i), ku.getY(i))
     kKasnak.ekle(yer(kas, 0, KY0 + KH / 2, HARIM_ORTA), almasik)
-    kKasnak.ekle(yer(silindirG(KR + 0.12, KR + 0.12, 0.2, 48), 0, KY0 + KH - 0.05, HARIM_ORTA), m.mermer)
-    kKasnak.ekle(yer(silindirG(KR + 0.1, KR + 0.1, 0.3, 48), 0, KY0 + 0.12, HARIM_ORTA), m.tas)
+    kKasnak.ekle(yer(silindirG(KR + 0.12, KR + 0.12, 0.2, 48, true), 0, KY0 + KH - 0.05, HARIM_ORTA), m.mermer)
+    kKasnak.ekle(yer(silindirG(KR + 0.1, KR + 0.1, 0.3, 48, true), 0, KY0 + 0.12, HARIM_ORTA), m.tas)
     for (let n = 0; n < 12; n++) {
       const a = (n / 12) * Math.PI * 2 + Math.PI / 12
       const pen = (): THREE.Shape => yuvarlakKemer(new THREE.Shape(), 0, KY0 + 0.65, 0.95, 0.95)
@@ -688,7 +689,8 @@ export const yapi = (): Maket => {
     const acikMi = (dx: number, dz: number, y: number, uzak: number) => {
       // Duvara yakın yüzey kemer içinde kalıyorsa tympanum görünsün diye örülmez.
       const dy = (y - KORNIS - 0.35) / (KEMER_YUK - 0.35 - 0.3)
-      const yan = Math.abs(dz) > Math.abs(dx) ? Math.abs(dx) : Math.abs(dz)
+      // Nokta merkezden duvara izdüşürülür: köşeye bakan yönler kemer dışında kalır, delik açılmaz.
+      const yan = (Math.min(Math.abs(dx), Math.abs(dz)) / Math.max(Math.abs(dx), Math.abs(dz), 0.001)) * HARIM_YARI
       const kemer = (HARIM_YARI - 0.3) * Math.sqrt(Math.max(0, 1 - dy * dy))
       return yan < kemer && uzak > 0
     }
@@ -750,25 +752,27 @@ export const yapi = (): Maket => {
 
   function mihrap() {
     const ek = (g: THREE.BufferGeometry, mal: Mal) => k.ekle(yer(g, 0, 0, HARIM_Z1, Math.PI), mal)
-    const y0 = HARIM_Y, G = 5.2, TEPE = y0 + 8, DER = 0.45, NG = 2.5
+    const y0 = HARIM_Y, G = 5.2, TEPE = y0 + 8, DER = 0.8, NG = 2.5
+    const mihrapGovde = pbr({ color: '#f3e4d6', roughness: 0.7, side: THREE.DoubleSide })
+    const mermerTaklit = pbr({ color: '#a97b52', roughness: 0.5 })
     // Yerel +z harime bakar. Söveler, üst kuşak ve tepelik
     const s = dikdortgen(-G / 2, y0, G / 2, TEPE)
     s.holes.push(yuvarlakKemer(new THREE.Path(), 0, y0, NG, 3.5))
-    ek(cikar(s, DER, 0), m.krem)
+    ek(cikar(s, DER, 0), mihrapGovde)
     // Mermer taklidi köşe yüzeyleri
     for (const x of [-1, 1]) {
-      const yan = dikdortgen(x * (NG / 2 + 0.05) - 0.5, y0 + 3.5, x * (NG / 2 + 0.05) + 0.5, y0 + 5.4)
-      ek(cikar(yan, 0.02, DER), pbr({ color: '#b08050', roughness: 0.5 }))
+      const yan = dikdortgen(x * (NG / 2 + 0.34) - 0.28, y0 + 4.4, x * (NG / 2 + 0.34) + 0.28, y0 + 5.36)
+      ek(cikar(yan, 0.02, DER), mermerTaklit)
     }
     // Niş: içe açılan yarım silindir ve yarım kubbe, yivli kalem işi
     const R = NG / 2
     const yuzey = new THREE.CylinderGeometry(R, R, 3.5, 24, 1, true, Math.PI / 2, Math.PI)
-    yuzey.scale(1, 1, 0.75)
+    yuzey.scale(1, 1, (DER - 0.02) / R)
     const uv = yuzey.attributes.uv
     for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * 3, uv.getY(i))
-    ek(yuzey.translate(0, y0 + 1.75, 0.14), nis)
-    const kav = new THREE.SphereGeometry(R, 24, 10, Math.PI / 2, Math.PI, 0, Math.PI / 2).scale(1, 1.05, 0.75)
-    ek(kav.translate(0, y0 + 3.5, 0.14), nis)
+    ek(yuzey.translate(0, y0 + 1.75, DER), nis)
+    const kav = new THREE.SphereGeometry(R, 24, 10, Math.PI, Math.PI, 0, Math.PI / 2).scale(1, 1, (DER - 0.02) / R)
+    ek(kav.translate(0, y0 + 3.5, DER), nis)
     // Sütunçeler ve altın İyon başlıkları (kaynak)
     for (const x of [-1, 1]) {
       ek(yer(dondurG([[0.16, 0], [0.09, 0.2], [0.08, 3.1], [0.14, 3.2]], 10), x * 1.4, y0, DER + 0.09), m.ic)
@@ -792,12 +796,12 @@ export const yapi = (): Maket => {
     ek(new THREE.CircleGeometry(0.22, 16).translate(0, TEPE + 0.45, DER), madalyon)
     // Palmet ve gül motifleri
     for (const [x, y] of [[-1.85, 6.9], [1.85, 6.9], [-1.85, 5], [1.85, 5], [-1.85, 3.6], [1.85, 3.6]]) {
-      ek(new THREE.TorusGeometry(0.2, 0.05, 6, 14).translate(x, y0 + y - 1, DER + 0.04), m.altin)
-      ek(new THREE.SphereGeometry(0.1, 8, 6).translate(x, y0 + y - 1, DER + 0.06), m.altinKoyu)
+      ek(new THREE.TorusGeometry(0.14, 0.04, 6, 14).translate(x, y0 + y - 1, DER + 0.03), m.altin)
+      ek(new THREE.SphereGeometry(0.07, 8, 6).translate(x, y0 + y - 1, DER + 0.04), m.altinKoyu)
     }
     // Askılı kandil
-    ek(new THREE.CylinderGeometry(0.012, 0.012, 3.5, 4).translate(0, y0 + 4.1, 0.9), m.koyu)
-    ek(yer(dondurG([[0.02, 0], [0.32, 0.22], [0.26, 0.44], [0.02, 0.6]], 10), 0, y0 + 1.9, 0.9), m.altinKoyu)
+    ek(new THREE.CylinderGeometry(0.01, 0.01, 2.2, 4).translate(0, y0 + 3.75, 1.5), m.koyu)
+    ek(yer(dondurG([[0.02, 0], [0.2, 0.16], [0.17, 0.3], [0.02, 0.42]], 10), 0, y0 + 2.26, 1.5), m.altinKoyu)
   }
 
   /** Minber: sade ahşap, kapı ve külahlı köşk; merdiveni yürünür. Mihrabın batısında (fotoğraf). */
@@ -818,6 +822,11 @@ export const yapi = (): Maket => {
     const kenar = new THREE.Shape()
     kenar.moveTo(0.8, y0 + 1.2); kenar.lineTo(BOY - 2, y0 + TEPE); kenar.lineTo(BOY - 2, y0 + TEPE + 0.14); kenar.lineTo(0.8, y0 + 1.36); kenar.closePath()
     for (const s of [-1, 1]) ek(cikar(kenar, 0.16, s * EN / 2 - 0.08), m.ceviz)
+    // Alt kuşakta küçük kemerli panolar
+    for (const sd of [-1, 1]) for (let i = 0; i < 6; i++) {
+      const s0 = 1.15 + i * 0.86
+      ek(new THREE.ShapeGeometry(yuvarlakKemer(new THREE.Shape(), s0, y0 + 0.14, 0.56, 0.42), 6).translate(0, 0, sd * (EN / 2 + (sd > 0 ? 0.065 : 0.065))), koyuAhsap)
+    }
     // Basamaklar: yürüme rampasıyla aynı eğimde
     const ADIM = 12
     const r = MINBER_RAMPA
@@ -855,9 +864,9 @@ export const yapi = (): Maket => {
       for (let a = 0; a < n; a++) {
         const t = (a / n) * Math.PI * 2, x = Math.sin(t) * R, z = cz + Math.cos(t) * R
         k.ekle(yer(new THREE.CylinderGeometry(0.008, 0.008, 0.22, 3), x, y - 0.14, z), m.koyu)
-        k.ekle(yer(dondurG([[0.02, 0.32], [0.13, 0.22], [0.14, 0.12], [0.03, 0]], 8), x, y - 0.56, z), camLamba)
-        if (a % 2 === 0) for (const [rx, ry] of [[0, 0], [0, Math.PI / 2], [Math.PI / 2, 0]]) {
-          k.ekle(new THREE.PlaneGeometry(0.8, 0.8).rotateX(rx).rotateY(ry).translate(x, y - 0.45, z), m.lambaHale)
+        k.ekle(yer(dondurG([[0.02, 0.34], [0.11, 0.24], [0.13, 0.13], [0.03, 0]], 10), x, y - 0.56, z), camLamba)
+        if (a % 3 === 0) for (const [rx, ry] of [[0, 0], [0, Math.PI / 2], [Math.PI / 2, 0]]) {
+          k.ekle(new THREE.PlaneGeometry(0.55, 0.55).rotateX(rx).rotateY(ry).translate(x, y - 0.42, z), m.lambaHale)
         }
       }
     })
@@ -955,8 +964,8 @@ export const yapi = (): Maket => {
     const KY0 = TURBE_H + 0.2, KH = 2.6, RK = 7.5
     const ky = (g: THREE.BufferGeometry, mal: Mal) => kKasnak.ekle(yer(g, 0, 0, cz), mal)
     ky(duzGolge(silindirG(RK, RK, KH, 8, true).rotateY(Math.PI / 8)).translate(0, KY0 + KH / 2, 0), siva)
-    ky(duzGolge(silindirG(RK + 0.25, RK + 0.25, 0.28, 8).rotateY(Math.PI / 8)).translate(0, KY0 + 0.12, 0), siva)
-    ky(duzGolge(silindirG(RK + 0.4, RK + 0.05, 0.45, 8).rotateY(Math.PI / 8)).translate(0, KY0 + KH + 0.05, 0), siva)
+    ky(duzGolge(silindirG(RK + 0.25, RK + 0.25, 0.28, 8, true).rotateY(Math.PI / 8)).translate(0, KY0 + 0.12, 0), siva)
+    ky(duzGolge(silindirG(RK + 0.4, RK + 0.05, 0.45, 8, true).rotateY(Math.PI / 8)).translate(0, KY0 + KH + 0.05, 0), siva)
     for (let n = 0; n < 8; n++) {
       const a = (n * Math.PI) / 4, yuz = RK * Math.cos(Math.PI / 8)
       const h = new THREE.Shape(); h.absarc(0, KY0 + KH / 2, 0.52, 0, Math.PI * 2, false)
@@ -1107,18 +1116,20 @@ export const yapi = (): Maket => {
         blok(x - 0.4, x + 0.4, 0.1, 0.22, z - 0.22, z + 0.22, mezar)
       }
     }
-    for (const [x, z, h] of [[-26, -24, 22], [-30, -14, 25], [-25, -2, 20], [-28, 10, 23], [-24, 22, 19], [26, -24, 24], [30, -8, 21], [25, 8, 20], [29, 22, 24], [-34, -30, 22], [33, 28, 19]]) selvi(x, z, h)
+    for (const [x, z, h] of [[-22, -32, 22], [-17, -34, 25], [-36, -24, 20], [-37, 16, 21], [26, -24, 24], [30, -8, 21], [25, 8, 20], [29, 22, 24], [12, -34, 22], [33, 28, 19]]) selvi(x, z, h)
     // Çınar: tekke önünde; bugün meydandaki ulu ağaç (fotoğraf). Taç birleşik kürelerden.
     const ax = 0, az = CAMI_Z1 + 11
     k.ekle(yer(silindirG(0.55, 0.9, 7, 10), ax, 3.5, az), m.ahsap)
     const c = (dx: number, y: number, dz: number, R: number) => {
-      const g = new THREE.IcosahedronGeometry(R, 2)
+      const g = new THREE.IcosahedronGeometry(R, 3)
       const p = g.attributes.position
       for (let v = 0; v < p.count; v++) {
         const o = 1 + 0.12 * Math.sin(p.getX(v) * 1.1 + p.getY(v) * 1.4 + dx) + 0.08 * Math.sin(p.getZ(v) * 2.3 + dz)
         p.setXYZ(v, p.getX(v) * o, p.getY(v) * o, p.getZ(v) * o)
       }
-      g.computeVertexNormals()
+      // Küre normalleri yumuşak taç verir; Icosahedron dizinsiz olduğu için hesaplanan normal köşeli çıkardı.
+      const nrm = g.attributes.normal
+      for (let v = 0; v < p.count; v++) { const l = Math.hypot(p.getX(v), p.getY(v), p.getZ(v)) || 1; nrm.setXYZ(v, p.getX(v) / l, p.getY(v) / l, p.getZ(v) / l) }
       k.ekle(yer(g, ax + dx, y, az + dz), cinar)
     }
     c(0, 11, 0, 6.2); c(-4.6, 9.5, 2, 4.4); c(4.4, 9.8, -2, 4.6); c(1, 9.2, 4.6, 4); c(-1, 13.2, -2, 4.2)
@@ -1145,11 +1156,11 @@ export const yapi = (): Maket => {
       // Sanduka korkuluğu
       { x0: -2.75, x1: 2.75, z0: TURBE_Z - 3.8, z1: TURBE_Z + 3.8 },
       // Mihrap ve minber
-      { x0: -2.6, x1: 2.6, z0: HARIM_Z1 - 0.5, z1: HARIM_Z1 },
+      { x0: -2.6, x1: 2.6, z0: HARIM_Z1 - 0.85, z1: HARIM_Z1 },
       { x0: MINBER_X - MINBER_EN / 2 - 0.06, x1: MINBER_X - MINBER_EN / 2 + 0.06, z0: MINBER_Z0 + 0.7, z1: HARIM_Z1 },
       { x0: MINBER_X + MINBER_EN / 2 - 0.06, x1: MINBER_X + MINBER_EN / 2 + 0.06, z0: MINBER_Z0 + 0.7, z1: HARIM_Z1 },
-      { x0: MINBER_X - MINBER_EN / 2 - 0.15, x1: MINBER_X - 0.62, z0: MINBER_Z0, z1: MINBER_Z0 + 0.76 },
-      { x0: MINBER_X + 0.62, x1: MINBER_X + MINBER_EN / 2 + 0.15, z0: MINBER_Z0, z1: MINBER_Z0 + 0.76 },
+      { x0: MINBER_X - MINBER_EN / 2 - 0.15, x1: MINBER_X - 0.74, z0: MINBER_Z0, z1: MINBER_Z0 + 0.76 },
+      { x0: MINBER_X + 0.74, x1: MINBER_X + MINBER_EN / 2 + 0.15, z0: MINBER_Z0, z1: MINBER_Z0 + 0.76 },
       { x0: MINBER_X - MINBER_EN / 2, x1: MINBER_X + MINBER_EN / 2, z0: MINBER_RAMPA.z1 + 0.8, z1: HARIM_Z1 },
       // Kürsü ve saat
       { x0: 4.9, x1: 6.3, z0: HARIM_Z1 - 4.3, z1: HARIM_Z1 - 2.9 },
@@ -1213,15 +1224,15 @@ export const yapi = (): Maket => {
       ({ id, ad, konum: [x, GOZ + h, z + OZ], bak: [bx, by, bz + OZ] })
     const rp = MINBER_RAMPA
     return [
-      d('avlu', 'Avlu', -6.2, hAvlu, 1.5, 0, 3, -8),
-      d('sadirvan', 'Şadırvan', 5.6, hAvlu, 3, 0, 2.2, 0),
+      d('avlu', 'Avlu', -9.8, hAvlu, 4.6, 1, 3.8, -8),
+      d('sadirvan', 'Şadırvan', 7.2, hAvlu, 3.6, 0, 3, -1),
       d('revak', 'Cami revakı', -4.4, hHarim, 8.6, 0, 3.6, CAMI_Z0),
-      d('harim', 'Harim', 0, hHarim, 14.6, 0, 6.5, HARIM_Z1),
-      d('mihrap', 'Mihrap', 0, hHarim, 24, 0, 6, HARIM_Z1),
+      d('harim', 'Harim', 1.6, hHarim, 13.9, -0.3, 7.6, HARIM_Z1),
+      d('mihrap', 'Mihrap', 0, hHarim, 20.6, 0, 5.4, HARIM_Z1),
       d('kubbe', 'Kubbe', 0.2, hHarim, HARIM_ORTA + 0.6, 0, 23, HARIM_ORTA),
-      d('minber', 'Minber', -2.4, hHarim, HARIM_Z1 - 7, MINBER_X, 4, HARIM_Z1 - 2.2),
+      d('minber', 'Minber', 2.2, hHarim, HARIM_Z1 - 9.6, MINBER_X, 4.2, HARIM_Z1 - 3.4),
       d('minber-ust', 'Minbere çık', MINBER_X, hHarim + rp.h, rp.z1 + 0.3, 2, 4, HARIM_ORTA - 2),
-      d('niyaz', 'Niyaz Penceresi', 0, hHarim, -7.6, 0, 3.4, REVAK_K_Z),
+      d('niyaz', 'Niyaz Penceresi', 0, hAvlu, -4.1, 0, 3.7, REVAK_K_Z),
       d('turbe', 'Türbe', 4.4, 0, -16, 0, TURBE_Y + 1.8, TURBE_Z),
       d('sanduka', 'Sandukalar', -4.2, 0, TURBE_Z + 1.6, 0, TURBE_Y + 1.1, TURBE_Z),
     ]

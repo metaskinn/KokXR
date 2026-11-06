@@ -27,9 +27,9 @@ function almasikDokusu() {
   const B = hafifCihaz() ? 512 : 1024, olc = B / 2.64
   const { el, c } = tuval(B)
   const r = rastgele(211)
-  const tugla = ['#a8583c', '#b3674a', '#98492f', '#ad5f3f', '#8f4a33']
-  const taslar = ['#c9ad7d', '#bfa070', '#d3ba8c', '#b89a6b', '#cdb284']
-  c.fillStyle = '#c3b59b'
+  const tugla = ['#8f5340', '#9a604c', '#7f4635', '#945a44', '#74402f']
+  const taslar = ['#bda888', '#b09a78', '#c6b294', '#a8926f', '#bba684']
+  c.fillStyle = '#a89a82'
   c.fillRect(0, 0, B, B)
   const TAS = 0.36, SIRA = 0.1, DERZ = 0.012
   const PERYOT = TAS + 3 * SIRA
@@ -60,7 +60,7 @@ function almasikDokusu() {
     }
   }
   // Yıpranma lekeleri
-  for (let i = 0; i < 2600; i++) {
+  for (let i = 0; i < 5200; i++) {
     c.fillStyle = `rgba(${r() < 0.5 ? '40,28,18' : '250,235,210'},${0.03 + r() * 0.05})`
     const s = 1 + r() * 6
     c.fillRect(r() * B, r() * B, s * (1 + r() * 3), s)
@@ -125,6 +125,21 @@ function demirDokusu() {
     c.beginPath(); c.moveTo(i + 512, 0); c.lineTo(i, 512); c.stroke()
   }
   c.lineWidth = 12; c.strokeRect(0, 0, 256, 512)
+  return doku(el)
+}
+
+/** Aynı parmaklık, içeriden: gün ışığı dolu pencere ve ince demir. */
+function demirAcikDokusu() {
+  const { el, c } = tuval(256, 512)
+  const g = c.createLinearGradient(0, 0, 0, 512)
+  g.addColorStop(0, '#e6f0f4'); g.addColorStop(0.7, '#d8e6e0'); g.addColorStop(1, '#b6c9a6')
+  c.fillStyle = g; c.fillRect(0, 0, 256, 512)
+  c.strokeStyle = '#2a2a26'; c.lineWidth = 4
+  for (let i = -512; i < 768; i += 44) {
+    c.beginPath(); c.moveTo(i, 0); c.lineTo(i + 512, 512); c.stroke()
+    c.beginPath(); c.moveTo(i + 512, 0); c.lineTo(i, 512); c.stroke()
+  }
+  c.lineWidth = 10; c.strokeRect(0, 0, 256, 512)
   return doku(el)
 }
 
@@ -239,7 +254,7 @@ function korkulukDokusu() {
 function turbeDuvarDokusu() {
   const { el, c } = tuval(512, 512)
   const r = rastgele(55)
-  c.fillStyle = '#c8d0a9'; c.fillRect(0, 0, 512, 512)
+  c.fillStyle = '#b6c79a'; c.fillRect(0, 0, 512, 512)
   for (let i = 0; i < 160; i++) {
     c.strokeStyle = `rgba(${r() < 0.5 ? '96,116,84' : '240,240,214'},${0.12 + r() * 0.2})`
     c.lineWidth = 1 + r() * 4
@@ -257,6 +272,7 @@ export function emirDokulari() {
     revzen: revzenDokusu(),
     altPencere: altPencereDokusu(),
     demir: demirDokusu(),
+    demirAcik: demirAcikDokusu(),
     icKubbe: icKubbeDokusu(),
     pandantif: pandantifDokusu(),
     nis: nisDokusu(),

@@ -7,6 +7,7 @@ import {
   cikar, dikdortgen, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
 } from './ulucamiParca'
 import { KAPI_Z, KURSU, MAHFIL } from './ulucamiDetay'
+import { sadirvan } from './ulucami/sadirvan'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 
 const ZEMIN = 0.7
@@ -332,34 +333,7 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
   kutu(0.2, 0.08, korkulukZ1 - korkulukZ0, m.ahsap, MINBER_X + 2.3, ZEMIN + 0.82, (korkulukZ0 + korkulukZ1) / 2)
   kutu(1.55, 0.08, 0.2, m.ahsap, MINBER_X + 1.55, ZEMIN + 0.82, korkulukZ0)
 
-  // --- Şadırvan: mermer zemin, on altı köşeli havuz, kademeli fıskiye, tabureler, sarkan fener, korkuluk ---
-  // Fotoğraflarda şadırvan gözünün halısı zeytin yeşilidir.
+  // --- Şadırvan: fotoğraflarda gözün halısı zeytin yeşilidir; havuz, fıskiye ve çevresi ulucami/sadirvan.ts'te ---
   kutu(GOZ_X, 0.02, GOZ_Z, m.haliZeytin, sx, ZEMIN + 0.01, sz)
-  kutu(GOZ_X - 3.2, 0.1, GOZ_Z - 3.2, m.mermerDoseme, sx, ZEMIN + 0.05, sz)
-  k.ekle(yer(duzGolge(silindirG(3.55, 3.75, 1, 16)), sx, ZEMIN + 0.6, sz), m.icMermer)
-  for (let n = 0; n < 16; n++) {
-    const a = (n + 0.5) * Math.PI / 8
-    k.ekle(yer(kutuG(0.62, 0.48, 0.04).translate(0, ZEMIN + 0.62, 3.66), sx, 0, sz, a), m.icMermer)
-  }
-  k.ekle(yer(duzGolge(dondurG([[3.42, 0], [3.42, 0.14], [3.72, 0.14], [3.72, 0]], 16)), sx, ZEMIN + 1.08, sz), m.icMermer)
-  k.ekle(yer(silindirG(3.46, 3.46, 0.02, 40), sx, ZEMIN + 1.13, sz), m.su)
-  k.ekle(yer(dondurG([[0.72, 0], [0.24, 0.6], [0.95, 0.85], [1, 0.95], [0.2, 1.05], [0.15, 1.5], [0.58, 1.7], [0.62, 1.8], [0.12, 1.88], [0.09, 2.2], [0.25, 2.34], [0.03, 2.65], [0, 2.7]], 20), sx, ZEMIN + 1.05, sz), m.icMermer)
-  for (let n = 0; n < 14; n++) {
-    const a = (n / 14) * Math.PI * 2, r = 4.25
-    k.ekle(yer(dondurG([[0.12, 0], [0.09, 0.14], [0.19, 0.36], [0, 0.38]], 10), sx + Math.sin(a) * r, ZEMIN + 0.1, sz + Math.cos(a) * r), m.mermerKoyu)
-  }
-  const gokY = KASNAK_TABAN + gozOlcusu(SADIRVAN_SUTUN).kasnakH + 3.6
-  // Kubbe açıklığından havuza inen ışık sütunu
-  k.ekle(yer(new THREE.CylinderGeometry(2, 3.3, gokY - 1.5 - ZEMIN - 1.2, 28, 1, true), sx, (gokY - 1.5 + ZEMIN + 1.2) / 2, sz), m.isikSutunu)
-  k.ekle(yer(silindirG(0.018, 0.018, gokY - 6, 5), sx, (gokY + 6) / 2, sz), m.koyu)
-  k.ekle(yer(duzGolge(silindirG(0.3, 0.42, 0.7, 8)), sx, 5.6, sz), m.altin)
-  k.ekle(yer(duzGolge(silindirG(0.05, 0.36, 0.34, 8)), sx, 6.1, sz), m.altin)
-  for (const s of [-1, 1]) {
-    kutu(0.14, 0.72, 3.6, m.ahsapKafes, sx + s * 5.15, ZEMIN + 0.46, sz - 3)
-    kutu(0.14, 0.72, 3.6, m.ahsapKafes, sx + s * 5.15, ZEMIN + 0.46, sz + 3)
-    kutu(3.8, 0.72, 0.14, m.ahsapKafes, sx + s * 2.95, ZEMIN + 0.46, sz + 5.15)
-    kutu(3.8, 0.72, 0.14, m.ahsapKafes, sx + s * 2.95, ZEMIN + 0.46, sz - 5.15)
-    kutu(3.9, 0.08, 0.2, m.ahsap, sx + s * 2.95, ZEMIN + 0.86, sz + 5.15)
-    kutu(3.9, 0.08, 0.2, m.ahsap, sx + s * 2.95, ZEMIN + 0.86, sz - 5.15)
-  }
+  sadirvan(m, k, { sx, sz, zemin: ZEMIN, gokY: KASNAK_TABAN + gozOlcusu(SADIRVAN_SUTUN).kasnakH + 3.6 })
 }

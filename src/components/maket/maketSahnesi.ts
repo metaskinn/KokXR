@@ -10,7 +10,7 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
 import type { Kaynak, MaketBilgiNoktasi } from '../../types/eser'
 import { kaynakMetni } from '../KaynakSatiri'
-import { ulucamiMaketi } from './ulucamiMaket'
+import { ulucamiMaketi, type Maket as YapiMaketi } from './ulucamiMaket'
 import { OYUNCU_YARICAP, bakisKesiliyor, durakZemini, zeminAdimi } from './yurumeCarpisma'
 import { xrOturumuKur } from './xrOturum'
 
@@ -52,10 +52,14 @@ function yazilimsalCizim(renderer: THREE.WebGLRenderer) {
   return /swiftshader|llvmpipe|software/i.test(ad)
 }
 
-const modeller = { 'ulu-camii': ulucamiMaketi }
+// Her yapı `yapilar/<eser-id>.ts` dosyasından `export const yapi` ile kaydolur; buraya elle eklenmez.
+const yapiDosyalari = import.meta.glob<{ yapi: () => YapiMaketi }>('./yapilar/*.ts', { eager: true })
+const modeller: Record<string, () => YapiMaketi> = { 'ulu-camii': ulucamiMaketi }
+for (const [yol, dosya] of Object.entries(yapiDosyalari)) modeller[yol.replace(/^.*\/|\.ts$/g, '')] = dosya.yapi
 export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket: boolean, secenek: SahneSecenek = {}): MaketSahnesi {
-  const olustur = modeller[model as keyof typeof modeller]
+  const olustur = modeller[model]
   if (!olustur) throw new Error(`Bilinmeyen maket: ${model}`)
+  const yapi = olustur()
   const canvas = document.createElement('canvas')
   if (!canvas.getContext('webgl2')) throw new Error('WebGL kullanılamıyor')
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true })
@@ -105,8 +109,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   scene.environmentIntensity = 0.42
   const camera = new THREE.PerspectiveCamera(40, 1, 4, 900)
   // Açılış kuzeyden: taç kapı, avlu köşkleri ve iki minare fotoğraftaki gibi önde görünür.
-  const baslangic = new THREE.Vector3(-58, 40, -118)
-  const baslangicHedef = new THREE.Vector3(0, 14, -3)
+  const baslangic = new THREE.Vector3(...(yapi.kamera?.konum ?? [-58, 40, -118]))
+  const baslangicHedef = new THREE.Vector3(...(yapi.kamera?.hedef ?? [0, 14, -3]))
   camera.position.copy(baslangic)
 
   const hemi = new THREE.HemisphereLight('#ffeed8', '#39423a', 0.58)
@@ -122,11 +126,11 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   Object.assign(gunes.shadow.camera, { left: -85, right: 85, top: 85, bottom: -85, near: 10, far: 340 })
   scene.add(gunes)
 
-  const kaide = new THREE.Mesh(new THREE.CylinderGeometry(70, 71.5, 3, 96), new THREE.MeshStandardMaterial({ color: '#27221c', roughness: 0.65, metalness: 0.15 }))
+  const kaide = new THREE.Mesh(new THREE.CylinderGeometry(yapi.kaideYaricap ?? 70, (yapi.kaideYaricap ?? 70) + 1.5, 3, 96), new THREE.MeshStandardMaterial({ color: '#27221c', roughness: 0.65, metalness: 0.15 }))
   kaide.position.y = -1.5; kaide.receiveShadow = true
   scene.add(kaide)
 
-  const { kok, katmanlar, duraklar, yurume } = olustur()
+  const { kok, katmanlar, duraklar, yurume } = yapi
   scene.add(kok)
 
   // Bilgi noktası işaretleri: yapıların üstünde duran, sahneye bağlı düğmeler
@@ -249,7 +253,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   }
 
   // İç aydınlatma yalnız içerideyken yanar: gölgesiz olduğu için dışarıdayken duvarlardan sızardı.
-  const icIsiklar = [[-15, 8, -7], [15, 8, -7], [-8, 8, 12], [8, 8, 12]].map(([x, y, z]) => {
+  const icIsiklar = (yapi.icIsiklar ?? [[-15, 8, -7], [15, 8, -7], [-8, 8, 12], [8, 8, 12]]).map(([x, y, z]) => {
     const isik = new THREE.PointLight('#ffdcae', 0, 46, 1.3)
     isik.position.set(x, y, z)
     Object.assign(isik.shadow.camera, { near: 0.4, far: 46 })

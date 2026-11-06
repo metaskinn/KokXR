@@ -617,6 +617,8 @@ export function ulucamiMalzemeleri() {
     siva: yaslandir(pbr({ map: d.siva, roughness: 0.9, side: THREE.DoubleSide }), 'siva'),
     kafes: pbr({ map: d.kafes, roughness: 0.75, side: THREE.DoubleSide }),
     hali: hav('#d9a39b', '#ecc2b6'),
+    // Ulu Camii göz düzeni gölgesi içermez; başka yapılarda bunu kullan.
+    haliSade: pbr({ map: d.hali.renk, normalMap: d.hali.normal, normalScale: new THREE.Vector2(0.75, 0.75), color: '#c9877c', roughness: 0.96 }),
     haliZeytin: hav('#a29b63', '#c9c188'),
     mermerDoseme: yaslandir(cilali({ map: d.mermerDoseme.renk, bumpMap: d.mermerDoseme.kabartma, bumpScale: 0.4, roughness: 0.34 }, 0.55, 0.14), hafif ? 'zeminHafif' : 'mermerDoseme'),
     icMermer: cilali({ map: d.mermerGovde, roughness: 0.36 }, 0.35, 0.2),

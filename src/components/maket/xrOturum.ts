@@ -197,7 +197,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     }
     const { x, z } = basYerel().position
     icZemin = durakZemini(yurume, durak.konum)
-    rigUygula(durakRig(durak.konum, durak.bak, { x, z }, ZEMIN_Y + icZemin, basYaw()))
+    rigUygula(durakRig(durak.konum, durak.bak, { x, z }, (yurume.tabanY ?? ZEMIN_Y) + icZemin, basYaw()))
   }
   const gorunumMaket = () => {
     if (iceride) {
@@ -384,7 +384,7 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
       (x, z) => zeminAdimi(yurume, x, z, OYUNCU_YARICAP, icZemin) === null)
     // Merdiven ve platformda rig zeminle birlikte yükselir; eğim sürekli olduğu için sıçramaz.
     icZemin = zeminAdimi(yurume, yeni.x, yeni.z, OYUNCU_YARICAP, icZemin) ?? icZemin
-    rig.position.y = ZEMIN_Y + icZemin
+    rig.position.y = (yurume.tabanY ?? ZEMIN_Y) + icZemin
     rig.position.x += yeni.x - bas.x
     rig.position.z += yeni.z - bas.z
 

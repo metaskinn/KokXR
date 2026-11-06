@@ -12,7 +12,13 @@ import {
 } from './ulucamiParca'
 
 export interface MaketKatmani { grup: THREE.Group; yukseklik: number; ad: string }
-export interface Maket { kok: THREE.Group; katmanlar: MaketKatmani[]; duraklar: IcDurak[]; yurume: IcYurume }
+export interface Maket {
+  kok: THREE.Group; katmanlar: MaketKatmani[]; duraklar: IcDurak[]; yurume: IcYurume
+  /** Verilmezse Ulu Camii ölçüsüne göre varsayılanlar kullanılır. */
+  kamera?: { konum: [number, number, number]; hedef: [number, number, number] }
+  kaideYaricap?: number
+  icIsiklar?: [number, number, number][]
+}
 
 export function ulucamiMaketi(): Maket {
   const m = ulucamiMalzemeleri()

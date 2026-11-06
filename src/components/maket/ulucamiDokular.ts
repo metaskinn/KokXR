@@ -645,7 +645,6 @@ export function ulucamiMalzemeleri() {
     krem: pbr({ color: '#e7dcc4', roughness: 0.8, side: THREE.DoubleSide }),
     camKafes: isik(d.camKafes),
     pencereIc: new THREE.MeshBasicMaterial({ map: fotoDoku('pencere-ic'), color: new THREE.Color(1.25, 1.2, 1.1), side: THREE.DoubleSide }),
-    mihrapOn: pbr({ map: fotoDoku('mihrap-on'), roughness: 0.42, metalness: 0.12 }),
     kabeOrtusu: pbr({ map: d.kabeOrtusu, roughness: 0.88, side: THREE.DoubleSide }),
     lamba: new THREE.MeshBasicMaterial({ color: new THREE.Color(3.2, 2.8, 2.1) }),
     lambaHale: new THREE.MeshBasicMaterial({ map: d.hale, color: new THREE.Color(1.1, 0.95, 0.75), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }),

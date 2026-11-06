@@ -4,6 +4,7 @@
 // Levhaların hangi yüzde durduğu temsilîdir: yazılar gerçek ama konumları bire bir değildir.
 import * as THREE from 'three'
 import { ACIK_YAYIN } from '../../data/acikYayin'
+import { kibleDuvari } from './ulucami/mihrap'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import {
   DUVAR, Kova, type Mal, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
@@ -89,8 +90,7 @@ function levhaDokulari() {
   return {
     payeler: ['paye-1', 'paye-3', 'paye-5', 'paye-2', 'paye-6', 'paye-4'].map(malzeme),
     altin: malzeme('levha-altin'),
-    sancak: malzeme('sancak-yesil'),
-    madalyon: malzeme('madalyon'),
+        madalyon: malzeme('madalyon'),
     kucuk: malzeme('levha-kucuk'),
   }
 }
@@ -120,14 +120,7 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
 
   // --- Duvar levhaları (güney duvarı kuzeye, doğu duvarı batıya, batı duvarı doğuya bakar) ---
   // Kıble duvarı: mihrabın üstünde yeşil levha, yanlarında oval madalyonlar ve panolar (fotoğraflara göre)
-  levha(duvardan(0, 10.85, MIHRAP_Z - 0.02, Math.PI), m, d.sancak, 1.85, 3.8, m.altinKoyu)
-  for (const s of [-1, 1]) {
-    const ek = duvardan(s * 4.95, 7.2, MIHRAP_Z - 0.03, Math.PI)
-    const halka = new THREE.TorusGeometry(0.92, 0.075, 8, 40)
-    halka.scale(1.32, 1, 1)
-    ek(halka, m.altinKoyu)
-    ek(new THREE.CircleGeometry(0.92, 40).scale(1.32, 1, 1).translate(0, 0, 0.03), d.madalyon)
-  }
+  kibleDuvari(k, MIHRAP_Z, m)
   levha(duvardan(10.2, 4.85, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[3], 2.4, 4.27, m.ceviz)
   levha(duvardan(px(3.5), 9.25, MIHRAP_Z - 0.02, Math.PI), m, d.altin, 3.1, 3.2)
   levha(duvardan(px(3.5) + 3.4, 4.6, MIHRAP_Z - 0.02, Math.PI), m, d.kucuk, 3.2, 1.7, m.ahsap)

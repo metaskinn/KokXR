@@ -4,10 +4,11 @@
 import * as THREE from 'three'
 import {
   DUVAR, GOZ_X, GOZ_Z, H, KASNAK_TABAN, Kova, OCTA, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
-  cikar, dikdortgen, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
+  cikar, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
 } from './ulucamiParca'
 import { KAPI_Z, KURSU, MAHFIL } from './ulucamiDetay'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
+import { MIHRAP, SAMDAN, ulucamiMihrabi } from './ulucami/mihrap'
 
 const ZEMIN = 0.7
 /** İç döşemenin (halının) üst yüzü: ulucamiMaket'teki halı y 0.65, kalınlık 0.1. */
@@ -66,7 +67,7 @@ export function icYurumeAlani(): IcYurume {
     kutular: [
       ...dolapli, ...korkuluklar, ...mahfil,
       ...[[sx - 4.3, sz - 4.3], [sx + 4.3, sz - 4.3], [sx - 4.3, sz + 4.3], [sx + 4.3, sz + 4.3]].map(([x, z]) => kutu(x, z, 0.85, 0.55)),
-      { x0: -3.55, x1: 3.55, z0: MIHRAP_Z - 0.85, z1: MIHRAP_Z }, // mihrap
+      { x0: -MIHRAP.G / 2 - 0.05, x1: MIHRAP.G / 2 + 0.05, z0: MIHRAP_Z - MIHRAP.DER - 0.05, z1: MIHRAP_Z }, // mihrap
       // Minber: yan duvarlar, kapı sövesi ve köşk engeldir; aradaki merdivenden yürünür.
       minberKutu(-MY - 0.07, -MY + 0.07, 0.7, MINBER_BOY), minberKutu(MY - 0.07, MY + 0.07, 0.7, MINBER_BOY),
       minberKutu(-MY - 0.1, -0.65, 0, 0.7), minberKutu(0.65, MY + 0.1, 0, 0.7),
@@ -75,7 +76,7 @@ export function icYurumeAlani(): IcYurume {
       // Ön korkuluğun batısı açıktır: kapının karşısı paye olduğu için minbere bu yandan gelinir.
       { x0: MINBER_X + 0.8, x1: MINBER_X + 2.3, z0: MIHRAP_Z - 9.5, z1: MIHRAP_Z - 9.3 },
     ],
-    daireler: [{ x: sx, z: sz, r: 3.75 }, { x: kx, z: kz, r: kr + 0.05, ust: 1.2 }],
+    daireler: [{ x: sx, z: sz, r: 3.75 }, { x: kx, z: kz, r: kr + 0.05, ust: 1.2 }, ...[-1, 1].map((s) => ({ x: s * SAMDAN.x, z: MIHRAP_Z - SAMDAN.z, r: SAMDAN.r }))],
     zeminler: [
       // Mahfil: alttan geçilir, merdiven kuzeydoğudan çıkar.
       { x0: mx - 3.35, x1: mx + 3.35, z0: mz - 2.35, z1: mz + 2.3, h0: MAHFIL_H, h1: MAHFIL_H, altGecilir: true },
@@ -218,70 +219,8 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
     }
   }
 
-  // --- Mihrap: renkli bantlı çerçeve, süslemeli köşelikler, altın mukarnaslı niş ---
-  const mihrap = () => {
-    const ek = (g: THREE.BufferGeometry, mal: THREE.Material) => k.ekle(yer(g, 0, 0, MIHRAP_Z, Math.PI), mal)
-    // Oranlar mihrap.jpg'ye göre: fotoğrafın 1600 px genişliği çerçevenin G metresine denk gelir.
-    const G = 6.9, TEPE = 8.75, DER = 0.75, NIS_G = 3.22, NIS_DUZ = 4.35, NIS_K = 2.6
-    const FOTO_H = G * (1148 / 1600), FOTO_ALT = TEPE - FOTO_H
-    const blok = dikdortgen(-G / 2, ZEMIN, G / 2, TEPE)
-    blok.holes.push(kemer(new THREE.Path(), 0, ZEMIN + 0.02, NIS_G, NIS_DUZ, NIS_K))
-    ek(cikar(blok, DER), m.bezeme)
-    // Üst bölüm: fotoğraf, niş kemeri boşaltılarak
-    const on = dikdortgen(-G / 2, FOTO_ALT, G / 2, TEPE)
-    on.holes.push(kemer(new THREE.Path(), 0, FOTO_ALT + 0.01, NIS_G, ZEMIN + NIS_DUZ - FOTO_ALT, NIS_K))
-    const onG = new THREE.ShapeGeometry(on, 16).translate(0, 0, DER + 0.012)
-    const onP = onG.attributes.position, onUV = onG.attributes.uv
-    for (let i = 0; i < onP.count; i++) onUV.setXY(i, (onP.getX(i) + G / 2) / G, (onP.getY(i) - FOTO_ALT) / FOTO_H)
-    ek(onG, m.mihrapOn)
-    // Alt bölüm: fotoğraftaki yan bantların devamı (kırpılan bölge fotoğrafın 150-869 px arası)
-    for (const s of [-1, 1]) {
-      const yan = new THREE.PlaneGeometry((G - NIS_G) / 2, FOTO_ALT - ZEMIN).translate(s * (G + NIS_G) / 4, (FOTO_ALT + ZEMIN) / 2, DER + 0.012)
-      const p = yan.attributes.position, uv = yan.attributes.uv
-      for (let i = 0; i < p.count; i++) {
-        const v = (p.getY(i) - ZEMIN) / (FOTO_ALT - ZEMIN)
-        uv.setXY(i, (p.getX(i) + G / 2) / G, 1 - (869 - v * 719) / 1148)
-      }
-      ek(yan, m.mihrapOn)
-    }
-    ek(kutuG(G + 0.05, 0.1, DER + 0.08).translate(0, FOTO_ALT, DER / 2 + 0.02), m.altinKoyu)
-    ek(kutuG(G + 0.3, 0.16, DER + 0.2).translate(0, TEPE + 0.02, DER / 2 + 0.04), m.altinKoyu)
-    for (const s of [-1, 1]) ek(kutuG(0.1, TEPE - ZEMIN, DER + 0.08).translate(s * (G / 2 + 0.02), (TEPE + ZEMIN) / 2, DER / 2 + 0.02), m.altinKoyu)
-    // Niş içi: açık zemin, sütunçeler, altın kuşak
-    ek(kutuG(NIS_G, NIS_DUZ + NIS_K + 0.3, 0.1).translate(0, ZEMIN + (NIS_DUZ + NIS_K + 0.3) / 2, 0.08), m.ic)
-    const nisIc = kemer(new THREE.Shape(), 0, ZEMIN + 0.3, 1.9, 2.5, 1)
-    ek(new THREE.ShapeGeometry(nisIc, 10).translate(0, 0, 0.15), m.krem)
-    const nb = new THREE.Shape()
-    kemer(nb, 0, ZEMIN + 0.3, 2.25, 2.5, 1.2)
-    nb.holes.push(kemer(new THREE.Path(), 0, ZEMIN + 0.3, 1.9, 2.5, 1))
-    ek(cikar(nb, 0.05, 0.14), m.altin)
-    for (const s of [-1, 1]) {
-      const sut = NIS_DUZ - 0.3
-      ek(dondurG([[0.18, 0], [0.09, sut * 0.5], [0.18, sut]], 14).translate(s * (NIS_G / 2 - 0.14), ZEMIN, DER - 0.15), m.ic)
-      ek(new THREE.TorusGeometry(0.1, 0.02, 6, 16).rotateX(Math.PI / 2).translate(s * (NIS_G / 2 - 0.14), ZEMIN + sut * 0.5, DER - 0.15), m.altin)
-      ek(silindirG(0.2, 0.15, 0.32, 12).translate(s * (NIS_G / 2 - 0.14), ZEMIN + NIS_DUZ - 0.2, DER - 0.15), m.altin)
-    }
-    const hat = ZEMIN + NIS_DUZ - 0.1
-    ek(kutuG(NIS_G, 0.34, DER - 0.1).translate(0, hat - 0.2, DER / 2), m.mihrapYesil)
-    ek(kutuG(NIS_G, 0.08, DER - 0.05).translate(0, hat, DER / 2), m.altin)
-    // Altın mukarnas: daralan kademeler, her kademede kemerli hücreler
-    const KADEME = 8
-    for (let i = 0; i < KADEME; i++) {
-      const o = 1 - i / KADEME
-      const g = (NIS_G - 0.05) * Math.pow(o, 0.82), dr = 0.6 * o + 0.08, h = (NIS_K + 0.3) / KADEME, y = hat + 0.04 + i * h
-      ek(kutuG(g, h * 0.86, dr).translate(0, y + h * 0.43, dr / 2 + 0.05), m.altinKoyu)
-      const n = Math.max(1, Math.floor(g / 0.55)), adim = g / n
-      for (let j = 0; j < n; j++) {
-        const x = -g / 2 + (j + 0.5) * adim
-        const hucre = new THREE.SphereGeometry(adim * 0.46, 10, 6, 0, Math.PI * 2, 0, Math.PI / 2)
-        hucre.scale(1, (h * 0.86) / (adim * 0.46), 0.5)
-        hucre.translate(x, y + 0.01, dr + 0.05)
-        ek(hucre, m.altin)
-        ek(kutuG(adim * 0.12, h * 0.5, 0.1).translate(x + adim / 2, y + h * 0.2, dr + 0.08), m.altin)
-      }
-    }
-  }
-  mihrap()
+  // --- Mihrap: arşiv fotoğrafından cephe, kabartma kademeleri, mukarnas (ulucami/mihrap.ts) ---
+  ulucamiMihrabi(k, MIHRAP_Z, ZEMIN, m)
 
   // --- Minber: kündekâri yüzlü üçgen gövde, basamaklar, köşk ve kapı; önünde ahşap korkuluk ---
   const minber = () => {

@@ -6,12 +6,13 @@ import * as THREE from 'three'
 import { ACIK_YAYIN } from '../../data/acikYayin'
 import { kibleDuvari } from './ulucami/mihrap'
 import { kabeVitrini } from './ulucami/icduvar'
+import { kapilarMalzemeleri, yanKapi } from './ulucami/kapilar'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import { ahsapKursu, dolapYap, mahfilYap, mermerKursu, rahleYap, sandikYap } from './ulucami/minber'
 import { doguBatiLevhalari } from './ulucami/payeler'
 import {
   DUVAR, Kova, type Mal, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
-  cikar, dikdortgen, kemer, kutuG, px, pz, silindirG, yer,
+  cikar, dikdortgen, dondurG, kemer, kutuG, px, pz, silindirG, yer,
 } from './ulucamiParca'
 
 const ZEMIN = 0.7
@@ -25,60 +26,6 @@ export const KURSU = { x: px(3) - 2.1, z: pz(3), r: 1.05 }
 export const KAPI_Z = sz
 
 type Ekle = (g: THREE.BufferGeometry, m: Mal) => void
-
-/** Oyma panolu, kabaralı, halkalı iki kanat. +z yüzü dışa bakar. */
-export function kapiKanatlari(ek: Ekle, m: UlucamiMalzemeleri, w: number, y0: number, h: number, z: number) {
-  const SIRA = 3
-  for (const s of [-1, 1]) {
-    const kx = s * (w / 4), kw = w / 2 - 0.03
-    ek(kutuG(kw, h, 0.12).translate(kx, y0 + h / 2, z), m.ceviz)
-    const pw = kw - 0.3, ph = (h - 0.2 * (SIRA + 1)) / SIRA
-    for (let i = 0; i < SIRA; i++) {
-      const py = y0 + 0.2 + ph / 2 + i * (ph + 0.2)
-      ek(kutuG(pw, ph, 0.03).translate(kx, py, z + 0.07), m.kundekari)
-      // Pano çerçevesi
-      for (const u of [-1, 1]) {
-        ek(kutuG(pw + 0.1, 0.05, 0.05).translate(kx, py + u * (ph / 2 + 0.025), z + 0.08), m.altinKoyu)
-        ek(kutuG(0.05, ph, 0.05).translate(kx + u * (pw / 2 + 0.025), py, z + 0.08), m.altinKoyu)
-      }
-    }
-    for (let i = 0; i <= SIRA; i++) for (let j = 0; j < 4; j++) {
-      const ky = y0 + 0.1 + i * (ph + 0.2)
-      ek(new THREE.SphereGeometry(0.03, 6, 4).translate(kx - pw / 2 + j * (pw / 3), ky, z + 0.07), m.bronz)
-    }
-    ek(new THREE.TorusGeometry(0.1, 0.016, 6, 16).translate(s * 0.2, y0 + h * 0.48, z + 0.09), m.bronz)
-    ek(new THREE.SphereGeometry(0.045, 8, 5).translate(s * 0.2, y0 + h * 0.48 + 0.1, z + 0.08), m.bronz)
-  }
-  ek(kutuG(0.05, h, 0.03).translate(0, y0 + h / 2, z + 0.07), m.bronz)
-}
-
-/** Mermer çerçeveli, sivri alınlıklı yan kapı. Duvar yüzünde, +z yüzü dışa bakacak biçimde kurulur. */
-function kapi(ek: Ekle, m: UlucamiMalzemeleri, y0: number, ic: boolean) {
-  const G = 3.9, ACIK = 2.6, KAPI_H = 3.5, DER = 0.55, UST = y0 + KAPI_H + 2.1
-  const cerceve = dikdortgen(-G / 2, y0, G / 2, UST)
-  cerceve.holes.push(kemer(new THREE.Path(), 0, y0 + 0.01, ACIK, KAPI_H, 1.25))
-  ek(cikar(cerceve, DER), m.mermer)
-  // İç içe silmeler
-  const silme = (g: number, y1: number, t: number) => {
-    const s = dikdortgen(-g / 2, y0 + 0.02, g / 2, y1)
-    s.holes.push(dikdortgen(-g / 2 + t, y0 + 0.03, g / 2 - t, y1 - t) as unknown as THREE.Path)
-    ek(cikar(s, 0.07, DER), ic ? m.koyu : m.mermer)
-  }
-  silme(G, UST, 0.14)
-  silme(G - 0.5, UST - 0.25, 0.08)
-  const halka = new THREE.Shape()
-  kemer(halka, 0, y0 + 0.01, ACIK + 0.42, KAPI_H, 1.55)
-  halka.holes.push(kemer(new THREE.Path(), 0, y0 + 0.01, ACIK, KAPI_H, 1.25))
-  ek(cikar(halka, 0.06, DER), ic ? m.altinKoyu : m.tas)
-  ek(kutuG(ACIK, KAPI_H + 1.4, 0.1).translate(0, y0 + (KAPI_H + 1.4) / 2, 0.05), m.koyu)
-  // Alınlık: kafes ve taşıyıcı kiriş
-  ek(new THREE.ShapeGeometry(kemer(new THREE.Shape(), 0, y0 + KAPI_H, ACIK - 0.02, 0, 1.22), 10).translate(0, 0, 0.12), m.kafes)
-  ek(kutuG(ACIK, 0.2, 0.3).translate(0, y0 + KAPI_H - 0.02, 0.2), m.mermer)
-  kapiKanatlari(ek, m, ACIK - 0.06, y0 + 0.02, KAPI_H - 0.14, 0.18)
-  // Söveler ve eşik
-  for (const s of [-1, 1]) ek(kutuG(0.14, KAPI_H, DER).translate(s * (ACIK / 2 - 0.05), y0 + KAPI_H / 2, DER / 2), m.mermer)
-  ek(kutuG(ACIK + 0.5, 0.12, DER + 0.25).translate(0, y0 + 0.06, DER / 2 + 0.1), m.mermer)
-}
 
 /** Fotoğraftan alınmış doku taşıyan malzeme. Tek yüzlüdür: arkadan bakınca yazı aynalanmış görünmez. */
 function levhaDokulari() {
@@ -131,11 +78,12 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   }
 
   // --- Kapılar: kuzey içi, doğu ve batı (içte ve dışta) ---
-  kapi(duvardan(0, 0, -YZ + DUVAR, 0), m, ZEMIN, true)
+  const K = kapilarMalzemeleri(m)
+  yanKapi(duvardan(0, 0, -YZ + DUVAR, 0), m, K, ZEMIN, true)
   for (const [x, ic, dis] of [[YX, -Math.PI / 2, Math.PI / 2], [-YX, Math.PI / 2, -Math.PI / 2]] as const) {
     const s = Math.sign(x)
-    kapi(duvardan(x - s * DUVAR, 0, KAPI_Z, ic), m, ZEMIN, true)
-    kapi(duvardan(x, 0, KAPI_Z, dis), m, 0.72, false)
+    yanKapi(duvardan(x - s * DUVAR, 0, KAPI_Z, ic), m, K, ZEMIN, true)
+    yanKapi(duvardan(x, 0, KAPI_Z, dis), m, K, 0.72, false)
     // Dış basamaklar
     for (let n = 0; n < 3; n++) {
       const der = (3 - n) * 0.75

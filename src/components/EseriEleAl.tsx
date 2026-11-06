@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import './maket/maket.css'
 import type { Kaynak, Maket } from '../types/eser'
 import type { MaketSahnesi } from './maket/maketSahnesi'
@@ -17,12 +17,15 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
   const [duraklar, setDuraklar] = useState<{ id: string; ad: string }[]>([])
   const [durak, setDurak] = useState<string | null>(null)
   const [bilgiId, setBilgiId] = useState<string | null>(null)
+  const [bilgiAcik, setBilgiAcik] = useState(false)
+  const [bilgiTasiyor, setBilgiTasiyor] = useState(false)
   const bilgi = maket.icBilgiler?.find((b) => b.id === bilgiId)
   const [xrDestek, setXrDestek] = useState(false)
   // Oturum açılırken ve açıkken dolu: bu sırada sayfadaki düğmeler sahneyi değiştirmesin.
   const [xrMesgul, setXrMesgul] = useState(false)
   const [xrHata, setXrHata] = useState(false)
   const hazir = durum === 'hazir' && !xrMesgul
+  const bilgiMetni = useRef<HTMLParagraphElement>(null)
   const alan = useRef<HTMLDivElement>(null)
   const kutu = useRef<HTMLDivElement>(null)
   const sahne = useRef<MaketSahnesi | null>(null)
@@ -60,6 +63,13 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
     }).catch(() => !iptal && setDurum('hata'))
     return () => { iptal = true; sahne.current?.temizle(); sahne.current = null; setDurak(null); setBilgiId(null); setXrMesgul(false); setXrHata(false) }
   }, [acik, maket.model, maket.icBilgiler, kaynaklar])
+
+  // Kart her değiştiğinde kısa hâline döner; "Devamı" yalnız metin gerçekten kısaldıysa görünür.
+  useEffect(() => { setBilgiAcik(false) }, [bilgiId])
+  useLayoutEffect(() => {
+    const el = bilgiMetni.current
+    if (el && !bilgiAcik) setBilgiTasiyor(el.scrollHeight > el.clientHeight + 1)
+  }, [bilgiId, bilgiAcik])
 
   function tus(e: React.KeyboardEvent) {
     const s = sahne.current
@@ -129,7 +139,8 @@ export default function EseriEleAl({ maket, kaynaklar, ad }: { maket: Maket; kay
         {bilgi && <aside className="maket-bilgi-kart" aria-live="polite">
           <button type="button" className="maket-bilgi-kapat" aria-label="Bilgiyi kapat" onClick={bilgiKapat}>×</button>
           <h3>{bilgi.baslik}</h3>
-          <p>{bilgi.metin}</p>
+          <p ref={bilgiMetni} id="maket-bilgi-metni" className={bilgiAcik ? 'maket-bilgi-metin acik' : 'maket-bilgi-metin'}>{bilgi.metin}</p>
+          {bilgiTasiyor && <button type="button" className="maket-bilgi-devam" aria-expanded={bilgiAcik} aria-controls="maket-bilgi-metni" onClick={() => setBilgiAcik(!bilgiAcik)}>{bilgiAcik ? 'Daha az' : 'Devamı'}</button>}
           <KaynakSatiri kaynaklar={kaynaklar} kaynakId={bilgi.kaynakId} />
         </aside>}
         {durum === 'yukleniyor' && <p className="maket-durum">Maket hazırlanıyor…</p>}

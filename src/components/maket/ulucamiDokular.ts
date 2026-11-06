@@ -2,17 +2,9 @@
 // Renkler ve örgü düzeni arşiv fotoğraflarına bakılarak yorumlanmıştır; yazı veya hat taklidi çizilmez.
 import * as THREE from 'three'
 import { ACIK_YAYIN } from '../../data/acikYayin'
+import { hafifCihaz, haliDokulari, mermerDosemeDokulari, mermerGovdeDokusu, rastgele, suNormali } from './ulucamiZemin'
 
 type Ciz = (c: CanvasRenderingContext2D, g: number, y: number) => void
-
-function rastgele(tohum: number) {
-  return () => {
-    tohum = (tohum + 0x6d2b79f5) | 0
-    let t = Math.imul(tohum ^ (tohum >>> 15), 1 | tohum)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
 
 function tuval(g: number, y: number, ciz: Ciz) {
   const el = document.createElement('canvas')
@@ -207,21 +199,6 @@ export function ulucamiDokulari() {
       c.closePath(); c.fill()
     }
   }
-
-  const hali = tuval(512, 512, (c, g, y) => {
-    const r = rastgele(83)
-    c.fillStyle = '#d7b9a9'
-    c.fillRect(0, 0, g, y)
-    for (let v = 0; v < y; v += 128) {
-      c.fillStyle = '#b98b76'
-      c.fillRect(0, v, g, 20)
-      c.fillStyle = '#7d4f3d'
-      for (let x = 0; x < g; x += 26) yaprak(c, x + 8, v + 10, 7, x % 52 ? 0.9 : -0.9)
-    }
-    c.fillStyle = 'rgba(138,86,66,0.72)'
-    for (let v = 62; v < y; v += 128) for (let x = 24; x < g; x += 64) { yaprak(c, x, v, 11); yaprak(c, x + 32, v + 32, 8) }
-    benek(c, g, y, r, 3000, 0.02)
-  })
 
   // Paye yüzü: mermer kaide ve koyu çift çizgi. Yazılar ayrı olarak arşiv fotoğrafından gelir.
   const paye = tuval(512, 2048, (c, g, y) => {
@@ -482,7 +459,10 @@ export function ulucamiDokulari() {
     selviKabartma: doku(tuval(512, 512, selviCiz(true)), 4, false),
     siva: doku(siva, 4),
     kafes: doku(kafes, 0.34),
-    hali: doku(hali, 6.8),
+    hali: haliDokulari(),
+    mermerDoseme: mermerDosemeDokulari(),
+    mermerGovde: mermerGovdeDokusu(),
+    suNormal: suNormali(),
     paye: doku(paye, 1),
     icKubbe: doku(icKubbe, 1),
     pandantif: doku(pandantif, 1),
@@ -511,6 +491,15 @@ float yasFbm(vec2 p) {
   for (int i = 0; i < 4; i++) { t += a * yasGurultu(p); p = p * 2.03 + 17.0; a *= 0.5; }
   return t;
 }`
+
+// Zemin için ortak: en yakın paye köşesi, duvar uzaklığı ve göz ortasındaki avizenin düşürdüğü ışık.
+const ZEMIN_ISIK = `vec2 goz = vec2(13.8, 13.75), kayma = vec2(34.5, 27.5), p = vYasPoz.xz;
+    vec2 kose = floor((p + kayma) / goz + 0.5) * goz - kayma;
+    float paye = length(max(abs(p - kose) - vec2(1.62), vec2(0.0)));
+    vec2 merkez = (floor((p + kayma) / goz) + 0.5) * goz - kayma;
+    float havuz = exp(-dot(p - merkez, p - merkez) / 22.0);
+    float duvar = min(32.5 - abs(p.x), 25.5 - abs(p.y));
+    float golge = mix(0.64, 1.0, smoothstep(0.0, 2.4, paye)) * mix(0.72, 1.0, smoothstep(0.0, 2.0, duvar));`
 
 /** Parça koordinatına bağlı yaşlanma: katmanlar kalksa da leke yerinde kalır. */
 const YAS_TURLERI = {
@@ -542,6 +531,24 @@ const YAS_TURLERI = {
     diffuseColor.rgb *= 0.8 + 0.34 * leke;`,
   doseme: `float leke = yasFbm(vYasPoz.xz * 0.12);
     diffuseColor.rgb *= 0.8 + 0.34 * leke;`,
+  // Halı: paye ve duvar diplerinde temas gölgesi, avize altında sıcak ışık havuzu, ayak izi solması
+  hali: `${ZEMIN_ISIK}
+    float genis = yasFbm(p * 0.28);
+    float asinma = smoothstep(0.52, 0.74, yasFbm(p * 0.55 + 9.0));
+    vec3 solgun = mix(diffuseColor.rgb, vec3(dot(diffuseColor.rgb, vec3(0.33))), 0.3) * 1.1;
+    diffuseColor.rgb = mix(diffuseColor.rgb, solgun, asinma * 0.4);
+    diffuseColor.rgb *= golge * (0.92 + 0.16 * genis) * (0.9 + vec3(0.42, 0.36, 0.26) * havuz);`,
+  // Hafif sürüm: gürültüsüz; yalnız temas gölgesi ve ışık havuzu
+  zeminHafif: `${ZEMIN_ISIK}
+    diffuseColor.rgb *= golge * (0.9 + vec3(0.42, 0.36, 0.26) * havuz);`,
+  mermerDoseme: `${ZEMIN_ISIK}
+    diffuseColor.rgb *= golge * (0.94 + 0.12 * yasFbm(p * 0.7));`,
+  // Boyalı sıva: geniş bulutlanma, ince fırça farkı, zemine yakın kir
+  icSiva: `float u = vYasPoz.x + vYasPoz.z;
+    float leke = yasFbm(vec2(u * 0.35, vYasPoz.y * 0.22));
+    float ince = yasFbm(vec2(u * 2.2, vYasPoz.y * 1.6));
+    float taban = 1.0 - smoothstep(0.7, 1.9, vYasPoz.y);
+    diffuseColor.rgb *= (0.93 + 0.12 * leke) * (0.975 + 0.05 * ince) * mix(1.0, 0.84, taban);`,
 } as const
 
 function yaslandir<M extends THREE.MeshStandardMaterial>(malzeme: M, tur: keyof typeof YAS_TURLERI) {
@@ -568,6 +575,14 @@ export function ulucamiMalzemeleri() {
     f.anisotropy = 8
     return f
   }
+  const hafif = hafifCihaz()
+  // Halı havı: sheen, bakış açısına göre kadife parlaklığı verir.
+  const hav = (renk: string, parlama: string) => yaslandir(hafif
+    ? pbr({ map: d.hali.renk, normalMap: d.hali.normal, normalScale: new THREE.Vector2(0.75, 0.75), color: renk, roughness: 0.96 })
+    : new THREE.MeshPhysicalMaterial({ map: d.hali.renk, normalMap: d.hali.normal, normalScale: new THREE.Vector2(0.75, 0.75), color: renk, roughness: 0.96, sheen: 0.28, sheenRoughness: 0.8, sheenColor: new THREE.Color(parlama) }), hafif ? 'zeminHafif' : 'hali')
+  // Cila: masaüstünde ayrı parlak katman, hafif cihazda yalnız düşük pürüzlülük.
+  const cilali = (p: THREE.MeshStandardMaterialParameters, cila: number, cilaPuruz: number) => hafif ? pbr(p) : new THREE.MeshPhysicalMaterial({ ...p, clearcoat: cila, clearcoatRoughness: cilaPuruz })
+  const siva = <M extends THREE.MeshStandardMaterial>(m: M) => hafif ? m : yaslandir(m, 'icSiva')
   const isik = (map: THREE.Texture) => new THREE.MeshBasicMaterial({ map, color: new THREE.Color(1.5, 1.4, 1.25), side: THREE.DoubleSide })
   return {
     tas: yaslandir(pbr({ map: d.tas, bumpMap: d.tasKabartma, bumpScale: 1.1, roughness: 0.92 }), 'duvar'),
@@ -582,11 +597,14 @@ export function ulucamiMalzemeleri() {
     selvi: pbr({ map: d.selvi, bumpMap: d.selviKabartma, bumpScale: 1.6, roughness: 1 }),
     siva: yaslandir(pbr({ map: d.siva, roughness: 0.9, side: THREE.DoubleSide }), 'siva'),
     kafes: pbr({ map: d.kafes, roughness: 0.75, side: THREE.DoubleSide }),
-    hali: pbr({ map: d.hali, roughness: 1 }),
-    paye: pbr({ map: d.paye, roughness: 0.8 }),
-    ic: pbr({ color: '#f1e8d6', roughness: 0.85, side: THREE.DoubleSide }),
-    icDuvar: pbr({ map: d.icDuvar, roughness: 0.85, side: THREE.DoubleSide }),
-    icKubbe: pbr({ map: d.icKubbe, roughness: 0.9, side: THREE.DoubleSide }),
+    hali: hav('#d39a8b', '#e8bdae'),
+    haliZeytin: hav('#a29b63', '#c9c188'),
+    mermerDoseme: yaslandir(cilali({ map: d.mermerDoseme.renk, bumpMap: d.mermerDoseme.kabartma, bumpScale: 0.4, roughness: 0.34 }, 0.55, 0.14), hafif ? 'zeminHafif' : 'mermerDoseme'),
+    icMermer: cilali({ map: d.mermerGovde, roughness: 0.36 }, 0.35, 0.2),
+    paye: siva(pbr({ map: d.paye, roughness: 0.8 })),
+    ic: siva(pbr({ color: '#f1e8d6', roughness: 0.85, side: THREE.DoubleSide })),
+    icDuvar: siva(pbr({ map: d.icDuvar, roughness: 0.85, side: THREE.DoubleSide })),
+    icKubbe: siva(pbr({ map: d.icKubbe, roughness: 0.9, side: THREE.DoubleSide })),
     pandantif: pbr({ map: d.pandantif, roughness: 0.9, side: THREE.DoubleSide }),
     kemerBant: pbr({ map: d.kemerBant, roughness: 0.75, side: THREE.DoubleSide }),
     kundekari: pbr({ map: d.kundekari, roughness: 0.5, metalness: 0.2, side: THREE.DoubleSide }),
@@ -601,7 +619,7 @@ export function ulucamiMalzemeleri() {
     altin: pbr({ color: '#d3a43f', metalness: 0.75, roughness: 0.32, side: THREE.DoubleSide }),
     altinKoyu: pbr({ color: '#a97f2e', metalness: 0.6, roughness: 0.42, side: THREE.DoubleSide }),
     bronz: pbr({ color: '#6f5a35', metalness: 0.75, roughness: 0.4, side: THREE.DoubleSide }),
-    su: pbr({ color: '#3f8c97', metalness: 0, roughness: 0.28 }),
+    su: cilali({ color: '#5fb3b5', normalMap: d.suNormal, normalScale: new THREE.Vector2(0.28, 0.28), roughness: 0.16 }, 1, 0.08),
     cam: new THREE.MeshStandardMaterial({ map: d.cam, transparent: true, depthWrite: false, roughness: 0.15, metalness: 0.3, side: THREE.DoubleSide }),
     krem: pbr({ color: '#e7dcc4', roughness: 0.8, side: THREE.DoubleSide }),
     camKafes: isik(d.camKafes),

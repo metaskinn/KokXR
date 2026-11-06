@@ -242,11 +242,11 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   // --- Vaaz kürsüsü: mahfilin karşısındaki ayağa yerleştirilmiş yuvarlak, tek parça mermer ---
   const { x: kuX, z: kuZ, r: kuR } = KURSU
   const kursu: [number, number][] = [[1.1, 0], [1.1, 0.3], [0.86, 0.5], [0.72, 0.9], [0.68, 1.3], [0.92, 1.75], [1.12, 2.05], [1.12, 2.15], [1, 2.2], [1, 3.1], [1.1, 3.14], [1.1, 3.26], [0.96, 3.26], [0.96, 2.2], [0.1, 2.2]]
-  k.ekle(yer(dondurG(kursu, 32), kuX, ZEMIN, kuZ), m.mermer)
+  k.ekle(yer(dondurG(kursu, 32), kuX, ZEMIN, kuZ), m.icMermer)
   for (const y of [1.3, 2.55, 2.85]) k.ekle(yer(new THREE.TorusGeometry(y === 1.3 ? 0.71 : 1.02, 0.025, 6, 32).rotateX(Math.PI / 2), kuX, ZEMIN + y, kuZ), m.altinKoyu)
   // Payeye bağlayan basamaklar
   for (let n = 0; n < 6; n++) {
-    k.ekle(yer(kutuG(0.8, 0.34, 0.5), kuX, ZEMIN + 0.17 + n * 0.34, kuZ - kuR - 1.6 + n * 0.32), m.mermer)
+    k.ekle(yer(kutuG(0.8, 0.34, 0.5), kuX, ZEMIN + 0.17 + n * 0.34, kuZ - kuR - 1.6 + n * 0.32), m.icMermer)
     k.ekle(yer(kutuG(0.8, n * 0.34 + 0.02, 0.5), kuX, ZEMIN + (n * 0.34) / 2, kuZ - kuR - 1.6 + n * 0.32), m.mermerKoyu)
   }
 
@@ -254,7 +254,7 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   for (let n = 0; n < 16; n++) {
     const a = (n + 0.5) * Math.PI / 8
     k.ekle(yer(silindirG(0.05, 0.05, 0.2, 8).rotateX(Math.PI / 2).translate(0, ZEMIN + 0.68, 3.76), sx, 0, sz, a), m.altinKoyu)
-    k.ekle(yer(new THREE.SphereGeometry(0.1, 8, 5).scale(1, 1, 0.45).translate(0, ZEMIN + 0.68, 3.68), sx, 0, sz, a), m.mermer)
+    k.ekle(yer(new THREE.SphereGeometry(0.1, 8, 5).scale(1, 1, 0.45).translate(0, ZEMIN + 0.68, 3.68), sx, 0, sz, a), m.icMermer)
   }
   for (let n = 0; n < 8; n++) {
     const a = n * Math.PI / 4

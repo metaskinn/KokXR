@@ -4,8 +4,8 @@ import * as THREE from 'three'
 import { MENU_BASLIK_ORANI, TEMSILI_ETIKET, menuIsabet, satirKir, type MenuOgesi } from './xrMetin'
 
 const TUVAL_G = 1024
-export const MENU_G = 0.7, KART_G = 1
-const BASLIK_G = 1.2, BASLIK_Y = 130
+export const MENU_G = 0.7, KART_G = 0.66
+const BASLIK_G = 0.85, BASLIK_Y = 130
 const MENU_Y = 840, KART_Y = 760
 
 // docs/ui-tasarim.md paletinden
@@ -136,8 +136,8 @@ export function bilgiPaneli() {
     c.fillRect(0, 0, TUVAL_G, KART_Y)
     band(c, BANT, k.baslik, 46)
 
-    // Gövde 34 px; gerçek yazı tipi tahminden geniş çıkıp karta sığmazsa küçültülür, metin kesilmez.
-    let boyut = 34
+    // Gövde 42 px (kart küçük olduğu için tuvalde iri yazılır); gerçek yazı tipi tahminden geniş çıkıp karta sığmazsa küçültülür, metin kesilmez.
+    let boyut = 42
     let satirlar: string[] = [], kaynaklar: string[] = [], aralik = 0, kaynakAralik = 0
     for (; boyut >= 22; boyut -= 2) {
       c.font = `400 ${boyut}px ${YAZI}`

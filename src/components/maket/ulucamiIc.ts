@@ -97,7 +97,7 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
   for (let i = 1; i < SUTUN; i++) for (let j = 1; j < SATIR; j++) {
     const x = px(i), z = pz(j)
     k.ekle(yer(new THREE.BoxGeometry(3, H - ZEMIN, 3), x, (H - ZEMIN) / 2 + ZEMIN, z), m.paye)
-    kutu(3.24, 0.5, 3.24, m.mermer, x, ZEMIN + 0.25, z)
+    kutu(3.24, 0.5, 3.24, m.icMermer, x, ZEMIN + 0.25, z)
     kutu(3.3, 0.22, 3.3, m.krem, x, 7.32, z)
     kutu(3.42, 0.09, 3.42, m.koyu, x, 7.47, z)
   }
@@ -296,15 +296,17 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
   kutu(4.7, 0.08, 0.2, m.ahsap, MINBER_X, ZEMIN + 0.82, korkulukZ0)
 
   // --- Şadırvan: mermer zemin, on altı köşeli havuz, kademeli fıskiye, tabureler, sarkan fener, korkuluk ---
-  kutu(GOZ_X - 3.2, 0.1, GOZ_Z - 3.2, m.mermer, sx, ZEMIN + 0.05, sz)
-  k.ekle(yer(duzGolge(silindirG(3.55, 3.75, 1, 16)), sx, ZEMIN + 0.6, sz), m.mermer)
+  // Fotoğraflarda şadırvan gözünün halısı zeytin yeşilidir.
+  kutu(GOZ_X, 0.02, GOZ_Z, m.haliZeytin, sx, ZEMIN + 0.01, sz)
+  kutu(GOZ_X - 3.2, 0.1, GOZ_Z - 3.2, m.mermerDoseme, sx, ZEMIN + 0.05, sz)
+  k.ekle(yer(duzGolge(silindirG(3.55, 3.75, 1, 16)), sx, ZEMIN + 0.6, sz), m.icMermer)
   for (let n = 0; n < 16; n++) {
     const a = (n + 0.5) * Math.PI / 8
-    k.ekle(yer(kutuG(0.62, 0.48, 0.04).translate(0, ZEMIN + 0.62, 3.66), sx, 0, sz, a), m.mermer)
+    k.ekle(yer(kutuG(0.62, 0.48, 0.04).translate(0, ZEMIN + 0.62, 3.66), sx, 0, sz, a), m.icMermer)
   }
-  k.ekle(yer(duzGolge(dondurG([[3.42, 0], [3.42, 0.14], [3.72, 0.14], [3.72, 0]], 16)), sx, ZEMIN + 1.08, sz), m.mermer)
+  k.ekle(yer(duzGolge(dondurG([[3.42, 0], [3.42, 0.14], [3.72, 0.14], [3.72, 0]], 16)), sx, ZEMIN + 1.08, sz), m.icMermer)
   k.ekle(yer(silindirG(3.46, 3.46, 0.02, 40), sx, ZEMIN + 1.13, sz), m.su)
-  k.ekle(yer(dondurG([[0.72, 0], [0.24, 0.6], [0.95, 0.85], [1, 0.95], [0.2, 1.05], [0.15, 1.5], [0.58, 1.7], [0.62, 1.8], [0.12, 1.88], [0.09, 2.2], [0.25, 2.34], [0.03, 2.65], [0, 2.7]], 20), sx, ZEMIN + 1.05, sz), m.mermer)
+  k.ekle(yer(dondurG([[0.72, 0], [0.24, 0.6], [0.95, 0.85], [1, 0.95], [0.2, 1.05], [0.15, 1.5], [0.58, 1.7], [0.62, 1.8], [0.12, 1.88], [0.09, 2.2], [0.25, 2.34], [0.03, 2.65], [0, 2.7]], 20), sx, ZEMIN + 1.05, sz), m.icMermer)
   for (let n = 0; n < 14; n++) {
     const a = (n / 14) * Math.PI * 2, r = 4.25
     k.ekle(yer(dondurG([[0.12, 0], [0.09, 0.14], [0.19, 0.36], [0, 0.38]], 10), sx + Math.sin(a) * r, ZEMIN + 0.1, sz + Math.cos(a) * r), m.mermerKoyu)

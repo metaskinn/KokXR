@@ -44,6 +44,7 @@ const ARKA_PLAN = '#1a2b25'
 const DISK_YARICAP = 6
 const ISIN_BOY = 1.5
 const PANEL_UZAKLIK = 1.3
+const KART_ALT = 0.24
 // Kart ve menü aynı anda açıksa yan yana durur: ışın öndekine takılıp arkadakini seçilemez bırakmasın.
 const PANEL_AYRIM = (MENU_G / 2 + KART_G / 2 + 0.06) / PANEL_UZAKLIK
 const CUBUK_HIZI = 1.2, EN_UZUN_DT = 0.1
@@ -166,7 +167,8 @@ export function xrOturumuKur(s: XrSecenek): XrOturum {
     nesne.position.set(bas.x - Math.sin(aci) * PANEL_UZAKLIK, bas.y, bas.z - Math.cos(aci) * PANEL_UZAKLIK)
     nesne.rotation.set(0, aci, 0)
   }
-  const kartiKoy = () => paneliKoy(kart.nesne, menu.nesne, -1)
+  // Kart bakışın altında durur: sahneyi kapatmaz, okumak için göz hafifçe aşağı iner.
+  const kartiKoy = () => { paneliKoy(kart.nesne, menu.nesne, -1); kart.nesne.position.y -= KART_ALT }
 
   const menuCiz = () => menu.ciz(menuOgeleri({ iceride, parcali: s.parcaliMi(), birlesimde: birlesim.oyunda(), duraklar }))
   const menuGoster = (acik: boolean) => {

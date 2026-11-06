@@ -513,7 +513,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
           o.geometry.dispose()
           for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
             const dokulu = m as THREE.MeshStandardMaterial
-            dokulu.map?.dispose(); dokulu.bumpMap?.dispose()
+            dokulu.map?.dispose(); dokulu.bumpMap?.dispose(); dokulu.normalMap?.dispose()
             m.dispose()
           }
         }

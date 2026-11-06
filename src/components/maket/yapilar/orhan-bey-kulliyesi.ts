@@ -31,7 +31,7 @@ const duraklar: IcDurak[] = [
   dur('revak', 'Son cemaat yeri', [0, GOZ_Y, -14.6], [0, 3.4, -9.8]),
   dur('giris', 'Giriş holü', [0, GOZ_Y, -6.9], [0, 3, 2]),
   dur('orta', 'Orta mekân', [0, GOZ_Y, -1.6], [0, 6.2, 12]),
-  dur('tabhane', 'Doğu tabhanesi', [7.6, GOZ_Y + TABHANE, 1.3], [TX, 4.6, 1.3]),
+  dur('tabhane', 'Doğu tabhanesi', [7.6, GOZ_Y + TABHANE, 1.3], [TX, 3.1, 1.3]),
   dur('kubbe', 'Kubbe', [0, GOZ_Y, 1.2], [0, 16, 1.5]),
   dur('mihrap', 'Mihrap', [0, GOZ_Y + MIHRAP, 9.4], [0, 4.2, M1]),
   dur('minber', 'Minber', [-1.4, GOZ_Y + MIHRAP, 9.2], [-3.9, 3.2, 13.5]),
@@ -64,7 +64,7 @@ function yurumeAlani(): IcYurume {
     k(MINBER.x0, MINBER.x0 + 0.12, MINBER.z0, M1), k(MINBER.x1 - 0.12, MINBER.x1, MINBER.z0, M1),
     k(MINBER.x0, MINBER.x1, MINBER.z1, M1),
     // Kürsü
-    k(-MX, -3.75, 8.6, 10.2),
+    k(-MX, -3.75, 7.6, 9.2),
     // Mihrap ve şamdanlar
     k(-2, 2, M1 - 0.5, M1),
   ]
@@ -92,6 +92,9 @@ function yurumeAlani(): IcYurume {
 export const yapi = (): Maket => {
   const u = ulucamiMalzemeleri()
   const o = orhanMalzemeleri()
+  // Kurşun bugünkü fotoğraflarda gri-mavidir; Ulu Camii dokusu daha açık tonda kalır.
+  const kubbeMal = u.kubbe.clone(), kursunMal = u.kursun.clone()
+  kubbeMal.color.set('#a4adb6'); kursunMal.color.set('#a0a8ae')
   const k = new YerliKova(), kCati = new YerliKova(), kKasnak = new YerliKova(), kKubbe = new YerliKova()
 
   // --- Zemin ve komşu yapılar ---
@@ -160,7 +163,7 @@ export const yapi = (): Maket => {
     const pS = 1.35 + 2.3, pK = 1.35 - 2.3
     const ac: Acik[] = [altPencere(yon, x, pS, TABAN + 1.3, 1), altPencere(yon, x, pK, TABAN + 1.3, 1), ustPencere(yon, x, 1.35, 4.8, 1)]
     duvar(k, yon, x, R0, TS, 0, H, 1, a, ac)
-    duvar(k, yon, s * (TX + 0.02), T0, T1, TABAN, H, 0.05, u.ic, ac.map((b) => ({ ...b })))
+    duvar(k, yon, s * (TX + 0.02), T0, T1, TABAN, H, 0.05, o.siva, ac.map((b) => ({ ...b })))
     silme(yon, x, pS, 3.7)
     silme(yon, x, pK, 3.7)
     silme(yon, x, -6.1, 3.7)
@@ -172,29 +175,29 @@ export const yapi = (): Maket => {
     const pT = s * (BX + MB) / 2
     const acT = [altPencere('G', TS, pT - 1.3, TABAN + 1.3, 1), altPencere('G', TS, pT + 1.3, TABAN + 1.3, 1)]
     duvar(k, 'G', TS, Math.min(s * MB, s * BX), Math.max(s * MB, s * BX), 0, H, 1, a, acT)
-    duvar(k, 'G', T1 + 0.02, Math.min(s * PX, s * TX), Math.max(s * PX, s * TX), TABAN, H, 0.05, u.ic, acT)
+    duvar(k, 'G', T1 + 0.02, Math.min(s * PX, s * TX), Math.max(s * PX, s * TX), TABAN, H, 0.05, o.siva, acT)
     silme('G', TS, pT - 1.5, 2.9)
     silme('G', TS, pT + 1.5, 2.9)
     kirpiSacak(k, 'G', TS, Math.min(s * MB, s * BX), Math.max(s * MB, s * BX), H, u.tugla, u.koyu)
 
     // Kuzey kütlesi: yan odalar dıştan görünür, içi modellenmez. Holü ve tabhane kuzey yüzünü sıva kaplar.
-    kutu(BX - 0.8 - PX, H - 0.05, T0 - R0, u.ic, s * (BX - 0.8 + PX) / 2, (H - 0.05) / 2, (R0 + T0) / 2)
-    kutu(PX - 1.9, H - 0.05, G1 - R0, u.ic, s * (PX + 1.9) / 2, (H - 0.05) / 2, (R0 + G1) / 2)
+    kutu(BX - 0.8 - PX, H - 0.05, T0 - R0, o.siva, s * (BX - 0.8 + PX) / 2, (H - 0.05) / 2, (R0 + T0) / 2)
+    kutu(PX - 1.9, H - 0.05, G1 - R0, o.siva, s * (PX + 1.9) / 2, (H - 0.05) / 2, (R0 + G1) / 2)
 
     // Mihraplı bölüm yan duvarı: kaynakta altlı üstlü ikişer pencere
     const xM = s * MB, mp = [(M0 + M1) / 2 - 2.1, (M0 + M1) / 2 + 2.1]
     const acM = mp.flatMap((p) => [altPencere(yon, xM, p, TABAN + MIHRAP + 0.45, 1.28), ustPencere(yon, xM, p, 4.75, 1.28)])
     duvar(k, yon, xM, TS, S1, 0, H, 1.2, a, acM)
-    duvar(k, yon, s * (MX + 0.03), M0, M1, TABAN + MIHRAP, H, 0.05, u.ic, acM)
+    duvar(k, yon, s * (MX + 0.03), M0, M1, TABAN + MIHRAP, H, 0.05, o.siva, acM)
     for (const p of mp) silme(yon, xM, p, 3.5)
     kirpiSacak(k, yon, xM, TS, S1, H, u.tugla, u.koyu)
 
     // Doğu-batı kemerleri: orta mekânla tabhaneyi ayıran payeler
     const kemerAc = { p: 1.25, y0: TABAN, g: 7.3, duz: 4.2, kh: 2.8 }
-    duvar(k, yon, s * PX, C0, C1, 0, H, 0.9, u.ic, [kemerAc])
+    duvar(k, yon, s * PX, C0, C1, 0, H, 0.9, o.siva, [kemerAc])
     for (const [z0, z1] of [[C0, -2.4], [4.9, C1]]) {
       k.ekle(yer(kutuG(PX - CX + 0.06, 4.1, z1 - z0 + 0.02), s * (PX + CX) / 2, TABAN + 2.05, (z0 + z1) / 2), u.tas)
-      kutu(PX - CX + 0.14, 0.18, z1 - z0 + 0.1, u.ic, s * (PX + CX) / 2, TABAN + 4.17, (z0 + z1) / 2)
+      kutu(PX - CX + 0.14, 0.18, z1 - z0 + 0.1, o.siva, s * (PX + CX) / 2, TABAN + 4.17, (z0 + z1) / 2)
     }
   }
 
@@ -274,43 +277,43 @@ export const yapi = (): Maket => {
   // Revak tavanı: enine sivri kemerler ve bezemesiz kubbe içleri
   for (let n = -2; n <= 2; n++) {
     const p = n * SEFE, Rx = n === 0 ? 2.25 : 2, zm = (N1 + N2) / 2
-    kCati.ekle(gecisG(p, zm, p - SEFE / 2, p + SEFE / 2, N1, N2, 5.4, 7.2, Rx, Rx), u.ic)
-    k.ekle(yer(new THREE.CircleGeometry(Rx + 0.1, 40).rotateX(Math.PI / 2), p, 7.2 + (n === 0 ? 1.0 : 0.8), zm), u.ic)
+    kCati.ekle(gecisG(p, zm, p - SEFE / 2, p + SEFE / 2, N1, N2, 5.4, 7.2, Rx, Rx), o.sivaAcik)
+    k.ekle(yer(new THREE.CircleGeometry(Rx + 0.1, 40).rotateX(Math.PI / 2), p, 7.2, zm), o.sivaAcik)
   }
   for (const n of [-2, -1, 1, 2, 3]) {
     const xk = (n - 0.5) * SEFE
     if (Math.abs(xk) > NX - 1) continue
     const ac = { p: (N1 + N2) / 2, y0: TABAN, g: N2 - N1 - 0.5, duz: 3.5, kh: 2.4 }
-    duvar(k, 'D', xk + 0.25, N1, N2, TABAN, 7.3, 0.5, u.ic, [ac])
+    duvar(k, 'D', xk + 0.25, N1, N2, TABAN, 7.3, 0.5, o.sivaAcik, [ac])
   }
   // Revak iç yüzleri: yan odaların sıvalı tavan altı
-  for (const s of [-1, 1]) kutu(0.05, NH - 0.4, N2 - N1, u.ic, s * (NX - 1.02), 3.9 + 0.3, (N1 + N2) / 2)
+  for (const s of [-1, 1]) kutu(0.05, NH - 0.4, N2 - N1, o.siva, s * (NX - 1.02), 3.9 + 0.3, (N1 + N2) / 2)
 
   // Hol: küçük kubbe ve iki yanda sıvalı duvar
-  kCati.ekle(gecisG(0, (R0 + G1) / 2, -1.9, 1.9, R0, G1, 4.7, 6.2, 1.8, 1.8), u.ic)
+  kCati.ekle(gecisG(0, (R0 + G1) / 2, -1.9, 1.9, R0, G1, 4.7, 6.2, 1.8, 1.8), o.siva)
   k.ekle(yer(new THREE.CircleGeometry(1.9, 32).rotateX(Math.PI / 2), 0, 7.2, (R0 + G1) / 2), o.kubbeSade)
   // Holden orta mekâna geçilen kapı duvarı
   const icKapi = { p: 0, y0: TABAN, g: 2, duz: 2.6, kh: 0.6 }
-  duvar(k, 'G', C0, -CX, CX, 0, H, C0 - G1, u.ic, [icKapi])
+  duvar(k, 'G', C0, -CX, CX, 0, H, C0 - G1, o.siva, [icKapi])
   kemerTaslari(k, 'G', C0, { ...icKapi, g: 2.1 }, 0.24, 0.05, u.mermer, u.mermerKoyu, 7)
   // Holün kuzey duvarı sıvalı
-  duvar(k, 'G', R0 + 0.03, -1.9, 1.9, TABAN, H, 0.03, u.ic, [{ ...kapiAc }])
+  duvar(k, 'G', R0 + 0.03, -1.9, 1.9, TABAN, H, 0.03, o.siva, [{ ...kapiAc }])
 
   // Mihrap duvarı ve mihrap
   const guneyP = [-2.6, 2.6]
   const acG = guneyP.flatMap((p) => [altPencere('G', S1, p, TABAN + MIHRAP + 0.5, S1 - M1), ustPencere('G', S1, p, 4.75, S1 - M1)])
   duvar(k, 'G', S1, -MB, MB, 0, H, S1 - M1, a, acG)
-  duvar(k, 'G', M1 + 0.03, -MX - 0.03, MX + 0.03, TABAN + MIHRAP, H, 0.04, u.ic, acG)
+  duvar(k, 'G', M1 + 0.03, -MX - 0.03, MX + 0.03, TABAN + MIHRAP, H, 0.04, o.siva, acG)
   for (const p of guneyP) silme('G', S1, p, 4.4)
   kirpiSacak(k, 'G', S1, -MB, MB, H, u.tugla, u.koyu)
   // Orta mekân ile mihraplı bölümü ayıran geniş kemer
   const mihrapKemer = { p: 0, y0: TABAN, g: 7.8, duz: 3.9, kh: 2.6 }
-  duvar(k, 'G', M0, -MX, MX, 0, H, M0 - C1, u.ic, [mihrapKemer])
+  duvar(k, 'G', M0, -MX, MX, 0, H, M0 - C1, o.siva, [mihrapKemer])
   for (const s of [-1, 1]) kutu(MX - 3.9 + 0.06, 3.6 + TABAN, M0 - C1 + 0.06, u.tas, s * (MX + 3.9) / 2, 2, (M0 + C1) / 2)
 
   // Mihrap: fotoğraf yüzeyi (açık yayında tuval), üstte taç, yanlarda şamdanlar
   const MG = 4, MY = MG * (985 / 725), MALT = TABAN + MIHRAP + 0.05
-  kutu(MG + 0.5, MY + 0.2, 0.16, u.koyu, 0, MALT + MY / 2, M1 - 0.08)
+  kutu(MG + 0.14, MY + 0.1, 0.16, u.koyu, 0, MALT + MY / 2, M1 - 0.08)
   k.ekle(new THREE.PlaneGeometry(MG, MY).rotateY(Math.PI).translate(0, MALT + MY / 2, M1 - 0.17), o.mihrap)
   const tac = new THREE.Shape()
   tac.moveTo(-MG / 2 - 0.2, 0); tac.quadraticCurveTo(-1, 0.25, -0.75, 0.62); tac.quadraticCurveTo(-0.3, 0.7, 0, 1.25)
@@ -337,7 +340,7 @@ export const yapi = (): Maket => {
 
   // Tabhane pencereleri üstü taçları, sakıflar ve mahfil
   for (const s of [-1, 1]) {
-    kutu(CX - 1.25, TABAN + 2.7, -2.4 - C0, u.ic, s * (CX + 1.25) / 2, (TABAN + 2.7) / 2, (C0 - 2.4) / 2)
+    kutu(CX - 1.25, TABAN + 2.7, -2.4 - C0, o.siva, s * (CX + 1.25) / 2, (TABAN + 2.7) / 2, (C0 - 2.4) / 2)
     kutu(CX - 1.25 + 0.06, 0.1, -2.4 - C0 + 0.3, u.ahsap, s * (CX + 1.25) / 2, TABAN + 2.72, (C0 - 2.4) / 2 + 0.1)
     kutu(CX - 1.25, 0.08, 0.08, u.ceviz, s * (CX + 1.25) / 2, TABAN + 3.72, -2.3)
     for (let c = 0; c < 11; c++) {
@@ -369,13 +372,13 @@ export const yapi = (): Maket => {
     k.ekle(yer(duzGolge(silindirG(0.03, en * 0.62, 2.3, 8).rotateY(Math.PI / 8)), xm, taban + tepe + 3.3, kzm), o.oyma)
     k.ekle(yer(dondurG([[0.07, 0], [0.03, 0.14], [0.08, 0.28], [0, 0.55]], 8), xm, taban + tepe + 4.45, kzm), u.altin)
     // Kapı: iki söve ve taç
-    for (const x of [x0 + 0.1, x1 - 0.1]) kutu(0.2, 2.5, 0.3, o.oyma, x, taban + 1.25, z0)
-    kutu(en, 0.35, 0.3, o.oyma, xm, taban + 2.67, z0)
+    for (const x of [x0 + 0.06, x1 - 0.06]) kutu(0.12, 2.3, 0.2, o.oyma, x, taban + 1.15, z0)
+    kutu(en, 0.25, 0.2, o.oyma, xm, taban + 2.42, z0)
   }
   minberOlustur()
   // Vaaz kürsüsü: minberin batısında sade ahşap, turkuaz panolu
-  kutu(1.05, 3.2, 1.6, o.oyma, -MX + 0.55, TABAN + MIHRAP + 1.6, 9.4)
-  kutu(0.04, 1.7, 1.2, o.cini, -MX + 1.09, TABAN + MIHRAP + 1.15, 9.4)
+  kutu(1.05, 3.2, 1.6, o.oyma, -MX + 0.55, TABAN + MIHRAP + 1.6, 8.4)
+  kutu(0.04, 1.2, 0.9, o.cini, -MX + 1.09, TABAN + MIHRAP + 1.5, 8.4)
 
   // Avize: kristal halkası lamba ve halelerle gösterilir
   const avize = (x: number, y: number, z: number, tepe: number, R: number, adet: number) => {
@@ -386,12 +389,12 @@ export const yapi = (): Maket => {
       const c = (n / adet) * Math.PI * 2, lx = x + Math.sin(c) * R, lz = z + Math.cos(c) * R
       k.ekle(new THREE.SphereGeometry(0.07, 8, 6).translate(lx, y - 0.14, lz), u.lamba)
       for (const [rx, ry] of [[0, 0], [0, Math.PI / 2], [Math.PI / 2, 0]]) {
-        k.ekle(new THREE.PlaneGeometry(0.62, 0.62).rotateX(rx).rotateY(ry).translate(lx, y - 0.14, lz), u.lambaHale)
+        k.ekle(new THREE.PlaneGeometry(0.42, 0.42).rotateX(rx).rotateY(ry).translate(lx, y - 0.14, lz), u.lambaHale)
       }
     }
   }
-  avize(0, 4.2, 1.15, 16, 1, 10)
-  avize(0, 5.1, 11.7, 15.5, 1.15, 12)
+  avize(0, 5.4, 1.15, 16, 0.85, 10)
+  avize(0, 5.9, 11.7, 15.5, 0.95, 12)
   avize(8.375, 4.4, 1.35, 11, 0.5, 6)
   avize(-8.375, 4.4, 1.35, 11, 0.5, 6)
 
@@ -404,10 +407,10 @@ export const yapi = (): Maket => {
   ana.holes.push(new THREE.Path().absellipse(0, -CE, 4.72, 5.05, 0, Math.PI * 2, true))
   ana.holes.push(new THREE.Path().absellipse(0, -ME, 4.92, 4.5, 0, Math.PI * 2, true))
   for (const s of [-1, 1]) ana.holes.push(new THREE.Path().absarc(s * 8.375, -1.35, 3.05, 0, Math.PI * 2, true))
-  kCati.ekle(new THREE.ShapeGeometry(ana, 28).rotateX(-Math.PI / 2).translate(0, H + 0.02, 0), u.kursun)
+  kCati.ekle(new THREE.ShapeGeometry(ana, 28).rotateX(-Math.PI / 2).translate(0, H + 0.02, 0), kursunMal)
   // Hafif eğimli kurşun etekler
   const revakCati = dikdortgen(-NX, -R0, NX, -N0)
-  kCati.ekle(new THREE.ShapeGeometry(revakCati).rotateX(-Math.PI / 2).translate(0, NH + 0.04, 0), u.kursun)
+  kCati.ekle(new THREE.ShapeGeometry(revakCati).rotateX(-Math.PI / 2).translate(0, NH + 0.04, 0), kursunMal)
   for (const [yon, x, a0, b0] of [['D', BX, R0, TS], ['B', -BX, R0, TS], ['G', TS, MB, BX], ['G', TS, -BX, -MB], ['D', MB, TS, S1], ['B', -MB, TS, S1], ['G', S1, -MB, MB]] as const) {
     const L = b0 - a0, m = (a0 + b0) / 2
     kCati.ekle(yonla(kutuG(L + 0.5, 0.1, 0.5).translate(0, H + 0.06, 0.1), yon, x, m), u.koyu)
@@ -420,12 +423,12 @@ export const yapi = (): Maket => {
   // İç geçiş bölgeleri
   kCati.ekle(gecisG(0, CE, -CX, CX, C0, C1, 7.5, 9.4, 4.45, 4.85), o.gecisOrta)
   kCati.ekle(gecisG(0, ME, -MX, MX, M0, M1, 7, 9.4, 4.8, 4.4), o.gecisMihrap)
-  for (const s of [-1, 1]) kCati.ekle(gecisG(s * 8.375, 1.35, s * 8.375 - 3.03, s * 8.375 + 3.03, T0, T1, 5.9, 8.75, 2.95, 2.95), o.gecisOrta)
+  for (const s of [-1, 1]) kCati.ekle(gecisG(s * 8.375, 1.35, s * 8.375 - 3.03, s * 8.375 + 3.03, T0, T1, 5.9, 8.75, 2.95, 2.95), o.gecisSade)
 
   // --- Kasnaklar ---
   const icKasnak = (cx: number, cz: number, y0: number, y1: number, Rx: number, Rz: number, aciler: number[], cisim: Mal) => {
     const g = duzGolge(silindirG(1, 1, y1 - y0, 16, true)).scale(Rx, 1, Rz)
-    kKasnak.ekle(yer(g, cx, (y0 + y1) / 2, cz), u.ic)
+    kKasnak.ekle(yer(g, cx, (y0 + y1) / 2, cz), o.siva)
     for (const a of aciler) {
       const y = y0 + (y1 - y0) * 0.16, boy = (y1 - y0) * 0.54
       const pen = new THREE.ShapeGeometry(kemer(new THREE.Shape(), 0, y, 0.82, boy, 0.42), 8)
@@ -464,14 +467,14 @@ export const yapi = (): Maket => {
 
   // --- Kubbeler ---
   const al = u.altin
-  kursunKubbe(kKubbe, u.kubbe, al, 0, CE, 12.68, 5.2, 4.4, 28)
-  kursunKubbe(kKubbe, u.kubbe, al, 0, ME, 11.98, 5.1, 4.3, 28)
-  for (const s of [-1, 1]) kursunKubbe(kKubbe, u.kubbe, al, s * 8.375, 1.35, H + 0.52, 3.55, 2.4, 22)
+  kursunKubbe(kKubbe, kubbeMal, al, 0, CE, 12.68, 5.2, 4.4, 28)
+  kursunKubbe(kKubbe, kubbeMal, al, 0, ME, 11.98, 5.6, 4.3, 28, true, 0.885)
+  for (const s of [-1, 1]) kursunKubbe(kKubbe, kubbeMal, al, s * 8.375, 1.35, H + 0.52, 3.55, 2.4, 22)
   // Son cemaat yeri: beş göz, ortası büyük
-  kursunKubbe(kKubbe, u.kubbe, al, 0, -12.95, NH + 0.05, 2.75, 2.15, 22)
+  kursunKubbe(kKubbe, kubbeMal, al, 0, -12.95, NH + 0.05, 2.75, 2.15, 22)
   for (const s of [-1, 1]) {
-    kursunKubbe(kKubbe, u.kubbe, al, s * SEFE, -12.95, NH + 0.05, 1.95, 1.5, 18)
-    kursunKubbe(kKubbe, u.kubbe, al, s * SEFE * 2, -12.95, NH + 0.05, 1.8, 1.35, 18)
+    kursunKubbe(kKubbe, kubbeMal, al, s * SEFE, -12.95, NH + 0.05, 1.95, 1.5, 18)
+    kursunKubbe(kKubbe, kubbeMal, al, s * SEFE * 2, -12.95, NH + 0.05, 1.8, 1.35, 18)
   }
   icKubbe(kKubbe, o.kubbeMadalyon, 0, CE, 11.4, 4.45, 4.85, 4.6)
   icKubbe(kKubbe, o.kubbeGul, 0, ME, 10.6, 4.8, 4.4, 5)
@@ -497,7 +500,7 @@ export const yapi = (): Maket => {
     for (let c = 0; c < 22; c++) ek(kutuG(0.56, 0.86, 0.05).translate(0, 22.52, 2.26).rotateY((c / 22) * Math.PI * 2), u.mermer)
     ek(silindirG(1.12, 1.22, 2.9, 12).translate(0, 23.5, 0), u.tugla)
     ek(silindirG(1.34, 1.1, 0.26, 12).translate(0, 25, 0), u.mermerKoyu)
-    ek(duzGolge(silindirG(0.04, 1.3, 6.3, 12).translate(0, 28.2, 0)), u.kursun)
+    ek(duzGolge(silindirG(0.04, 1.3, 6.3, 12).translate(0, 28.2, 0)), kursunMal)
     ek(dondurG([[0.08, 31.2], [0.03, 31.5], [0.13, 31.8], [0.03, 32.1], [0.1, 32.35], [0.01, 32.9], [0, 33]], 8), u.bronz)
   }
   minare(BX - 1.5, -8.9)
@@ -521,10 +524,10 @@ export const yapi = (): Maket => {
       k.ekle(yer(cikar(s, 0.08, yuz - 0.04), x, 0, z, n * Math.PI / 4), u.ceviz)
     }
     // Kuşağın üstünde geniş saçak
-    kCati.ekle(yer(duzGolge(silindirG(3.5, 5.3, 0.75, 8, false).rotateY(Math.PI / 8)), x, 4.3, z), u.kursun)
+    kCati.ekle(yer(duzGolge(silindirG(3.5, 5.3, 0.75, 8, false).rotateY(Math.PI / 8)), x, 4.3, z), kursunMal)
     kCati.ekle(yer(duzGolge(silindirG(5.32, 5.32, 0.14, 8, false).rotateY(Math.PI / 8)), x, 3.9, z), u.koyu)
     disKasnak(kKasnak, u.krem, u.koyu, x, z, 4.65, 5.65, 3.45)
-    kursunKubbe(kKubbe, u.kubbe, al, x, z, 5.62, 3.05, 2.9, 22)
+    kursunKubbe(kKubbe, kubbeMal, al, x, z, 5.62, 3.05, 2.9, 22)
   }
   sadirvan(0, -25)
 
@@ -537,7 +540,7 @@ export const yapi = (): Maket => {
       kutu(1.4, 0.8, 0.8, u.mermer, x + s * 0.55, 0.65, z + 1.5)
     }
     k.ekle(yer(duzGolge(silindirG(0.9, 3, 0.45, 4).rotateY(Math.PI / 4)), x, 3.25, z), u.ceviz)
-    kursunKubbe(k, u.kubbe, al, x, z, 3.45, 1, 0.7, 12)
+    kursunKubbe(k, kubbeMal, al, x, z, 3.45, 1, 0.7, 12)
   }
   cesme(-19, -20)
 
@@ -554,7 +557,7 @@ export const yapi = (): Maket => {
     ],
     duraklar,
     yurume: yurumeAlani(),
-    kamera: { konum: [gx + 40, 44, gz - 92], hedef: [4, 8, 2] },
+    kamera: { konum: [gx + 30, 38, gz - 78], hedef: [6, 7, 0] },
     kaideYaricap: 64,
     icIsiklar: [[gx, 8.2, gz + 1], [gx, 8.2, gz + 11.7], [gx + 8.4, 6, gz + 1.3], [gx - 8.4, 6, gz + 1.3]],
   }

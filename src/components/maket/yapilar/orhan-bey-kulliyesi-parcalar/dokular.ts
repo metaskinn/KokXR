@@ -103,8 +103,8 @@ function meydanTuval() {
     c.fillStyle = `rgb(${t},${t},${t + 3})`
     c.fillRect(x + 1, y + 1, 18, 18)
   }
-  c.strokeStyle = '#a58b78'
-  c.lineWidth = 44
+  c.strokeStyle = '#857265'
+  c.lineWidth = 26
   for (const k of [-B, 0, B]) {
     c.beginPath(); c.moveTo(k, 0); c.lineTo(k + B, B); c.stroke()
     c.beginPath(); c.moveTo(k + B, 0); c.lineTo(k, B); c.stroke()
@@ -127,11 +127,11 @@ function cimTuval() {
 /** Halı: fotoğraftaki turkuaz zemin ve iki yandan koyu çizgili örgü bandı. Bir saf 1,4 m. */
 function haliTuval() {
   const B = hafifCihaz() ? 512 : 1024, { el, c } = tuval(B), r = rastgele(23), olc = B / 1024
-  c.fillStyle = '#1f9aa8'
+  c.fillStyle = '#0b8aa3'
   c.fillRect(0, 0, B, B)
   for (let i = 0; i < 22000 * olc; i++) {
     const t = r()
-    c.fillStyle = `rgba(${t < 0.5 ? '14,110,126' : '74,190,196'},0.32)`
+    c.fillStyle = `rgba(${t < 0.5 ? '6,92,116' : '40,168,186'},0.32)`
     c.fillRect(r() * B, r() * B, 2 + r() * 3, 2 + r() * 3)
   }
   const y0 = B * 0.84, h = B * 0.14
@@ -187,7 +187,7 @@ function baklavaPencereTuval(acik: boolean) {
   return el
 }
 
-const CIZGI = '#f4efe2', KIRMIZI = '#9f3f25', LACIVERT = '#23407a', ALTIN = '#c79a3a', YESIL = '#2e5a43', KOYU = '#1d3029'
+const CIZGI = '#f4efe2', KIRMIZI = '#7f2a18', LACIVERT = '#23407a', ALTIN = '#c79a3a', YESIL = '#2e5a43', KOYU = '#1d3029'
 
 /** Yelpaze üçgenli köşe paneli: fotoğraftaki kırmızı zemin, beyaz kaburga, mavi-altın dolgu. */
 function koseYildizi(c: CanvasRenderingContext2D, cx: number, taban: number, en: number, boy: number) {
@@ -208,16 +208,16 @@ function koseYildizi(c: CanvasRenderingContext2D, cx: number, taban: number, en:
     for (const o of [0.3, 0.55, 0.78]) {
       const rx = (en / 2) * o, ry = boy * o
       c.beginPath()
-      c.ellipse(cx - Math.cos(am) * rx, taban - Math.sin(am) * ry, en * 0.022, boy * 0.05, Math.PI / 2 - am, 0, Math.PI * 2)
+      c.ellipse(cx - Math.cos(am) * rx, taban - Math.sin(am) * ry, en * 0.012, boy * 0.03, Math.PI / 2 - am, 0, Math.PI * 2)
       c.fill()
     }
     c.strokeStyle = CIZGI
-    c.lineWidth = en * 0.022
+    c.lineWidth = en * 0.012
     c.beginPath(); c.moveTo(cx, taban); c.lineTo(cx - Math.cos(a1) * R, taban - Math.sin(a1) * R * (boy / (en / 2)) * 0.5); c.stroke()
   }
   // İkinci halka: içte yıldız kırığı
   c.strokeStyle = CIZGI
-  c.lineWidth = en * 0.016
+  c.lineWidth = en * 0.01
   c.beginPath()
   for (let i = 0; i <= N; i++) {
     const a = Math.PI * (i / N), o = i % 2 ? 0.66 : 0.46
@@ -236,11 +236,11 @@ function koseYildizi(c: CanvasRenderingContext2D, cx: number, taban: number, en:
 }
 
 /** Geçiş bölgesi: u çevre (0 = güney), v taban-tepe. Köşelerde yıldız paneller. */
-function gecisTuval(guneyAlinlik: boolean) {
+function gecisTuval(guneyAlinlik: boolean, yildiz = true) {
   const G = hafifCihaz() ? 1024 : 2048, Y = G / 4, { el, c } = tuval(G, Y)
-  c.fillStyle = '#efe9db'
+  c.fillStyle = '#e9e7df'
   c.fillRect(0, 0, G, Y)
-  for (const u of [1 / 8, 3 / 8, 5 / 8, 7 / 8]) koseYildizi(c, u * G, Y, G * 0.2, Y * 0.92)
+  if (yildiz) for (const u of [1 / 8, 3 / 8, 5 / 8, 7 / 8]) koseYildizi(c, u * G, Y, G * 0.2, Y * 0.92)
   if (guneyAlinlik) {
     // Mihrap duvarındaki alınlık: yalnız geometrik örgü; kuşak yazısı çizilmez.
     for (const cx of [0, G]) {
@@ -270,7 +270,7 @@ function gecisTuval(guneyAlinlik: boolean) {
 /** İç kubbe: u çevre, v kenardan tepeye. Örgü kuşağı, boş alçı ve tepede renkli göbek. */
 function icKubbeTuval(gobek: 'madalyon' | 'gul' | 'sade') {
   const G = hafifCihaz() ? 1024 : 2048, Y = G / 2, { el, c } = tuval(G, Y)
-  c.fillStyle = '#ece8dd'
+  c.fillStyle = '#e9e7df'
   c.fillRect(0, 0, G, Y)
   // Eteğe yakın örgü kuşağı (tuvalde alt taraf kubbe eteğidir)
   const by = Y * 0.9, bh = Y * 0.04
@@ -399,9 +399,9 @@ export function orhanMalzemeleri() {
     meydan: pbr({ map: tekrarli(meydanTuval(), 9), roughness: 0.92 }),
     cim: pbr({ map: tekrarli(cimTuval(), 4), roughness: 1 }),
     hali: pbr({ map: tekrarli(haliTuval(), 1.4), roughness: 0.96 }),
-    sebekeIc: isik(sebekeTuval('#fff6df', '#efe7d4'), 1.45),
+    sebekeIc: isik(sebekeTuval('#fff4d8', '#a8916a'), 1.12),
     sebekeDis: pbr({ map: tekParca(sebekeTuval('#2c3030', '#e6dfd0')), roughness: 0.8, side: THREE.DoubleSide }),
-    pencereIc: isik(baklavaPencereTuval(true), 1.5),
+    pencereIc: isik(baklavaPencereTuval(true), 1.14),
     pencereDis: pbr({ map: tekParca(baklavaPencereTuval(false)), roughness: 0.6, side: THREE.DoubleSide }),
     gecisMihrap: pbr({ map: tekParca(gecisTuval(true)), roughness: 0.82, side: THREE.DoubleSide }),
     gecisOrta: pbr({ map: tekParca(gecisTuval(false)), roughness: 0.82, side: THREE.DoubleSide }),
@@ -410,7 +410,10 @@ export function orhanMalzemeleri() {
     kubbeSade: pbr({ map: tekParca(icKubbeTuval('sade')), roughness: 0.85, side: THREE.DoubleSide }),
     mihrap: pbr({ map: mihrapDoku, roughness: 0.45, metalness: 0.08 }),
     cini: pbr({ map: tekrarli(ciniTuval(), 0.9), roughness: 0.3 }),
-    oyma: pbr({ map: tekrarli(oymaTuval(), 0.5), roughness: 0.55, side: THREE.DoubleSide }),
+    oyma: pbr({ map: tekrarli(oymaTuval(), 0.3), color: '#c9b39a', roughness: 0.55, side: THREE.DoubleSide }),
+    siva: pbr({ color: '#e9e7df', roughness: 0.9, side: THREE.DoubleSide }),
+    sivaAcik: pbr({ color: '#e9e7df', emissive: '#6d6a60', roughness: 0.9, side: THREE.DoubleSide }),
+    gecisSade: pbr({ map: tekParca(gecisTuval(false, false)), roughness: 0.85, side: THREE.DoubleSide }),
     pirinc: pbr({ color: '#c99a42', metalness: 0.8, roughness: 0.28 }),
     mum: pbr({ color: '#d9c98f', roughness: 0.55 }),
     demir: pbr({ color: '#1b1c1d', metalness: 0.55, roughness: 0.5 }),

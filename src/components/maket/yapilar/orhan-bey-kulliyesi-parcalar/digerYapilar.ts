@@ -27,11 +27,11 @@ export function cevre(k: YerliKova, u: UlucamiMalzemeleri, o: O) {
   yama(54, 5, 6, 20)
   yama(21, 26, 12, 8)
   // Temsilî ağaçlar: fotoğraflardaki çınarları anımsatır, konumları kesin değildir
-  agac(k, o.govde, o.yaprak, 49, -23, 15, 4.6)
-  agac(k, o.govde, o.yaprakSari, 27, -21, 16, 5.2)
-  agac(k, o.govde, o.yaprak, 55, 14, 13, 4.2)
-  agac(k, o.govde, o.yaprakSari, 20, 27, 15, 4.8)
-  agac(k, o.govde, o.yaprak, 55, -6, 12, 3.8)
+  agac(k, o.govde, o.yaprak, 56, -29, 14, 4)
+  agac(k, o.govde, o.yaprakSari, 20, -30, 14, 4.2)
+  agac(k, o.govde, o.yaprak, 56, 14, 12, 3.6)
+  agac(k, o.govde, o.yaprakSari, 21, 27, 13, 4)
+  agac(k, o.govde, o.yaprak, 58, -6, 11, 3.2)
 }
 
 /** Emir Hanı: ~45 × 45 m, ~650 m² avlu, iki kat revak (envanter s. 214-215). */
@@ -108,6 +108,8 @@ export function orhanHamami(k: YerliKova, kCati: YerliKova, kKasnak: YerliKova, 
   const X = 2, Z = -10
   for (const kv of [k, kCati, kKasnak, kKubbe]) { kv.x = X; kv.z = Z }
   const H = 6.2, al = u.altin
+  const kubbeMal = u.kubbe.clone()
+  kubbeMal.color.set('#a4adb6')
   // Kütle: batıda 14 m genişlikte erkekler, doğuda 12,4 m genişlikte kadınlar
   const W0 = -13.5, W1 = 0.5, E1 = 12.9, N = -15, S1 = 11, S2 = 3
   const yerles = (x0: number, x1: number, z0: number, z1: number, mal: Mal) =>
@@ -132,7 +134,7 @@ export function orhanHamami(k: YerliKova, kCati: YerliKova, kKasnak: YerliKova, 
       if (yuvarlak) kKasnak.ekle(yer(silindirG(Rk, Rk, kh, 24), x, H + kh / 2, z), o.almasik)
       else disKasnak(kKasnak, o.almasik, u.koyu, x, z, H, H + kh, Rk)
     }
-    kursunKubbe(kKubbe, u.kubbe, al, x, z, H + kh - 0.02, Rk * 0.88, h, 20)
+    kursunKubbe(kKubbe, kubbeMal, al, x, z, H + kh - 0.02, Rk * 0.88, h, 20)
     // Aydınlık feneri
     kKubbe.ekle(yer(silindirG(Rk * 0.1, Rk * 0.14, 0.42, 8), x, H + kh + h + 0.04, z), u.koyu)
   }

@@ -97,7 +97,7 @@ export function ucgenG(a: number[], b: number[], c: number[], d: number[], olcek
 }
 
 /** Kurşun kubbe: alta doğru açılan etek, sekizgen ağızdan daireye geçiş, kurşun dikişleri ve alem. */
-export function kursunKubbe(kv: Kova, kubbe: Mal, alemMal: Mal, cx: number, cz: number, kY: number, R: number, h: number, dikis = 24, alem = true) {
+export function kursunKubbe(kv: Kova, kubbe: Mal, alemMal: Mal, cx: number, cz: number, kY: number, R: number, h: number, dikis = 24, alem = true, zOlcek = 1) {
   const OCTA = Math.cos(Math.PI / 8)
   const profil: [number, number][] = [[R * 1.18, -0.24], [R * 1.11, 0], [R * 1.03, h * 0.07]]
   for (let t = 0; t <= 12; t++) {
@@ -118,6 +118,7 @@ export function kursunKubbe(kv: Kova, kubbe: Mal, alemMal: Mal, cx: number, cz: 
     const kabarti = dikisVar && r > 0.2 ? 1 + 0.05 / r : 1
     poz.setX(v, vx * oran * kabarti); poz.setZ(v, vz * oran * kabarti)
   }
+  g.scale(1, 1, zOlcek)
   g.computeVertexNormals()
   kv.ekle(yer(g, cx, kY, cz), kubbe)
   if (alem) {
@@ -131,7 +132,7 @@ export function kursunKubbe(kv: Kova, kubbe: Mal, alemMal: Mal, cx: number, cz: 
 export function disKasnak(kv: Kova, mal: Mal, silme: Mal, cx: number, cz: number, y0: number, y1: number, R: number, zOlcek = 1) {
   const g = duzGolge(silindirG(R, R, y1 - y0, 8, true).rotateY(Math.PI / 8))
   kv.ekle(yer(g.scale(1, 1, zOlcek), cx, (y0 + y1) / 2, cz), mal)
-  const ust = duzGolge(silindirG(R + 0.14, R + 0.14, 0.24, 8).rotateY(Math.PI / 8))
+  const ust = duzGolge(silindirG(R + 0.14, R + 0.14, 0.24, 8, true).rotateY(Math.PI / 8))
   kv.ekle(yer(ust.scale(1, 1, zOlcek), cx, y1 - 0.1, cz), silme)
 }
 
@@ -178,11 +179,11 @@ export function icKubbe(kv: Kova, mal: Mal, cx: number, cz: number, y: number, R
 export function agac(kv: Kova, govde: Mal, yaprak: Mal, x: number, z: number, boy: number, R: number) {
   kv.ekle(yer(silindirG(R * 0.1, R * 0.16, boy * 0.55, 8), x, boy * 0.275, z), govde)
   for (const [ox, oy, oz, o] of [[0, 0.62, 0, 1], [0.45, 0.72, 0.2, 0.7], [-0.4, 0.7, -0.25, 0.72], [0.1, 0.9, -0.15, 0.62]] as const) {
-    const g = new THREE.IcosahedronGeometry(R * o, 1)
+    const g = new THREE.IcosahedronGeometry(R * o, 2)
     const p = g.attributes.position, t = x * 0.31 + z * 0.17 + ox * 5
     for (let i = 0; i < p.count; i++) {
       const vx = p.getX(i), vy = p.getY(i), vz = p.getZ(i)
-      const n = 1 + 0.16 * Math.sin(vx * 2.1 + t) * Math.cos(vz * 2.3 + vy * 1.7 - t)
+      const n = 1 + 0.1 * Math.sin((vx * 5.1) / R + t) * Math.cos((vz * 4.3 + vy * 3.7) / R - t) + 0.07 * Math.sin((vy * 11 + vx * 9) / R)
       p.setXYZ(i, vx * n, vy * n * 0.86, vz * n)
     }
     g.computeVertexNormals()

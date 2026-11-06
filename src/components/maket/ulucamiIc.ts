@@ -11,6 +11,7 @@ import { sadirvan } from './ulucami/sadirvan'
 import { AHSAP_KURSU, MAHFIL_ALT_KORKULUK, minberYap, parmaklik } from './ulucami/minber'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import { MIHRAP, SAMDAN, ulucamiMihrabi } from './ulucami/mihrap'
+import { kemerleriKur, payeleriKur } from './ulucami/payeler'
 
 const ZEMIN = 0.7
 /** İç döşemenin (halının) üst yüzü: ulucamiMaket'teki halı y 0.65, kalınlık 0.1. */
@@ -129,41 +130,9 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
   const kutu = (g: number, h: number, d: number, mal: THREE.Material, x: number, y: number, z: number, kv = k) =>
     kv.ekle(yer(kutuG(g, h, d), x, y, z), mal)
 
-  // --- Payeler: mermer kaide, boyalı yüzler, başlık silmesi ---
-  for (let i = 1; i < SUTUN; i++) for (let j = 1; j < SATIR; j++) {
-    const x = px(i), z = pz(j)
-    k.ekle(yer(new THREE.BoxGeometry(3, H - ZEMIN, 3), x, (H - ZEMIN) / 2 + ZEMIN, z), m.paye)
-    kutu(3.24, 0.5, 3.24, m.icMermer, x, ZEMIN + 0.25, z)
-    kutu(3.3, 0.22, 3.3, m.krem, x, 7.32, z)
-    kutu(3.42, 0.09, 3.42, m.koyu, x, 7.47, z)
-  }
-
-  // --- Sivri kemerler: dolgu ve kemer yüzünde bitkisel bant ---
-  const icKemer = (a: number, b: number, sabit: number, xBoyunca: boolean) => {
-    const o = (b - a) / 2, orta = (a + b) / 2
-    const dolu = new THREE.Shape()
-    dolu.moveTo(-o, 7.4)
-    dolu.quadraticCurveTo(-o, 10.2, 0, 12.3)
-    dolu.quadraticCurveTo(o, 10.2, o, 7.4)
-    dolu.lineTo(o, H); dolu.lineTo(-o, H); dolu.closePath()
-    // Yalnız kemerin iki yüzünde boyalı bant; alt yüz sade kalır
-    const bant = new THREE.Shape()
-    bant.moveTo(-o, 7.4)
-    bant.quadraticCurveTo(-o, 10.2, 0, 12.3)
-    bant.quadraticCurveTo(o, 10.2, o, 7.4)
-    bant.lineTo(o, 8.2)
-    bant.quadraticCurveTo(o - 0.25, 10.75, 0, 12.92)
-    bant.quadraticCurveTo(-o + 0.25, 10.75, -o, 8.2)
-    bant.closePath()
-    const ry = xBoyunca ? 0 : Math.PI / 2
-    const [x, z] = xBoyunca ? [orta, sabit] : [sabit, orta]
-    k.ekle(yer(cikar(dolu, 2, -1), x, 0, z, ry), m.ic)
-    for (const yuz of [-1.03, 1]) k.ekle(yer(cikar(bant, 0.03, yuz), x, 0, z, ry), m.kemerBant)
-  }
-  for (let j = 1; j < SATIR; j++) for (let i = 0; i < SUTUN; i++)
-    icKemer(i === 0 ? -YX + DUVAR : px(i) + 1.5, i === SUTUN - 1 ? YX - DUVAR : px(i + 1) - 1.5, pz(j), true)
-  for (let i = 1; i < SUTUN; i++) for (let j = 0; j < SATIR; j++)
-    icKemer(j === 0 ? -YZ + DUVAR : pz(j) + 1.5, j === SATIR - 1 ? YZ - DUVAR : pz(j + 1) - 1.5, px(i), false)
+  // --- Payeler ve sivri kemerler: ulucami/payeler.ts ---
+  payeleriKur(m, k)
+  kemerleriKur(m, k)
 
   // --- Tavan: pandantif, iç kasnak ve ışık alan pencereler, boyalı iç kubbe, avize ---
   for (let i = 0; i < SUTUN; i++) for (let j = 0; j < SATIR; j++) {

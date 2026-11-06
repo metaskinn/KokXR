@@ -7,6 +7,7 @@ import { ACIK_YAYIN } from '../../data/acikYayin'
 import { kibleDuvari } from './ulucami/mihrap'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import { ahsapKursu, dolapYap, mahfilYap, mermerKursu, rahleYap, sandikYap } from './ulucami/minber'
+import { doguBatiLevhalari } from './ulucami/payeler'
 import {
   DUVAR, Kova, type Mal, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
   cikar, dikdortgen, kemer, kutuG, px, pz, silindirG, yer,
@@ -109,16 +110,6 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
     k.ekle(yer(g, x, 0, z, ry), mal)
   }
 
-  // --- Paye yazıları: her payenin dört yüzüne, zemin yukarısına ---
-  const YZ_G = 2.5, YZ_H = 4.55, YZ_Y = 4.9
-  let sayac = 0
-  for (let i = 1; i < SUTUN; i++) for (let j = 1; j < SATIR; j++) for (let f = 0; f < 4; f++) {
-    const a = f * Math.PI / 2
-    const mal = d.payeler[(sayac++ * 5 + i) % d.payeler.length]
-    k.ekle(yer(new THREE.PlaneGeometry(YZ_G, YZ_H).translate(0, YZ_Y, 1.515), px(i), 0, pz(j), a), mal)
-    k.ekle(yer(kutuG(YZ_G + 0.12, 0.06, 0.05).translate(0, YZ_Y - YZ_H / 2 - 0.03, 1.52), px(i), 0, pz(j), a), m.koyu)
-  }
-
   // --- Duvar levhaları (güney duvarı kuzeye, doğu duvarı batıya, batı duvarı doğuya bakar) ---
   // Kıble duvarı: mihrabın üstünde yeşil levha, yanlarında oval madalyonlar ve panolar (fotoğraflara göre)
   kibleDuvari(k, MIHRAP_Z, m)
@@ -129,8 +120,7 @@ export function ulucamiDetaylari(m: UlucamiMalzemeleri, k: Kova) {
   levha(duvardan(px(1.5) - 3.6, 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[4], 2.3, 4.6, m.ceviz)
   levha(duvardan(px(4.5), 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[2], 2.3, 4.6, m.ceviz)
   levha(duvardan(px(0.5), 4.7, MIHRAP_Z - 0.02, Math.PI), m, d.payeler[1], 2.4, 4.6, m.ceviz)
-  levha(duvardan(YX - DUVAR - 0.02, 8.9, pz(2.5), -Math.PI / 2), m, d.kucuk, 3.4, 1.8, m.ahsap)
-  levha(duvardan(-YX + DUVAR + 0.02, 8.9, pz(2.5), Math.PI / 2), m, d.kucuk, 3.4, 1.8, m.ahsap)
+  doguBatiLevhalari(m, k)
   // Kâbe kapısının örtüsü: doğu kapısı tarafında yüksekçe, çerçevede öne eğik asılı (Kültür Portalı; görünüm temsilî)
   const kabeEk = duvardan(YX - DUVAR - 0.02, 8.9, pz(0.5), -Math.PI / 2)
   const egik: Ekle = (g, mal) => {

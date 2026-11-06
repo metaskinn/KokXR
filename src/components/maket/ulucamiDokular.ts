@@ -2,6 +2,7 @@
 // Renkler ve örgü düzeni arşiv fotoğraflarına bakılarak yorumlanmıştır; yazı veya hat taklidi çizilmez.
 import * as THREE from 'three'
 import { ACIK_YAYIN } from '../../data/acikYayin'
+import { icKubbeAyari, kubbeDokuBoyu, kursunDuzCiz, kursunKubbeCiz, pandantifCiz } from './ulucami/kubbeler'
 import { hafifCihaz, haliDokulari, mermerDosemeDokulari, mermerGovdeDokusu, rastgele, suNormali } from './ulucamiZemin'
 
 type Ciz = (c: CanvasRenderingContext2D, g: number, y: number) => void
@@ -116,48 +117,11 @@ export function ulucamiDokulari() {
     renk: (r) => `hsl(${28 + r() * 12} ${8 + r() * 8}% ${40 + r() * 11}%)`,
   })
 
-  const kursunDuz = tuval(512, 512, (c, g, y) => {
-    const r = rastgele(53)
-    c.fillStyle = '#8f9aa1'
-    c.fillRect(0, 0, g, y)
-    for (let i = 0; i < 40; i++) {
-      c.fillStyle = `rgba(${r() > 0.5 ? '45,50,55' : '220,228,232'},${r() * 0.05})`
-      c.fillRect(r() * g, 0, 10 + r() * 60, y)
-    }
-    c.strokeStyle = 'rgba(40,46,52,0.55)'
-    c.lineWidth = 2
-    for (let x = 0; x < g; x += 64) { c.beginPath(); c.moveTo(x, 0); c.lineTo(x, y); c.stroke() }
-    for (let v = 0; v < y; v += 128) { c.beginPath(); c.moveTo(0, v); c.lineTo(g, v); c.stroke() }
-  })
-
-  // Kubbe kurşunu: fotoğraflarda eteğe doğru açılan ışınsal dikişler. Bütün kubbeyi bir kez sarar.
-  const kubbeCiz = (kabartma: boolean): Ciz => (c, g, y) => {
-    const r = rastgele(61)
-    c.fillStyle = kabartma ? '#808080' : '#a3adb3'
-    c.fillRect(0, 0, g, y)
-    const adet = 36, d = g / adet
-    for (let i = 0; i < adet; i++) {
-      if (!kabartma) {
-        c.fillStyle = `rgba(${r() > 0.5 ? '255,255,255' : '50,60,68'},${r() * 0.09})`
-        c.fillRect(i * d, 0, d, y)
-      }
-      c.fillStyle = kabartma ? '#f0f0f0' : 'rgba(240,246,250,0.5)'
-      c.fillRect(i * d, 0, 3, y)
-      c.fillStyle = kabartma ? '#303030' : 'rgba(36,44,50,0.5)'
-      c.fillRect(i * d + 3, 0, 2, y)
-    }
-    if (!kabartma) {
-      const leke = c.createLinearGradient(0, 0, 0, y)
-      leke.addColorStop(0, 'rgba(70,72,70,0)')
-      leke.addColorStop(1, 'rgba(70,72,70,0.3)')
-      c.fillStyle = leke
-      c.fillRect(0, 0, g, y)
-    }
-  }
+  const kursunDuz = tuval(512, 512, kursunDuzCiz)
 
   const siva = tuval(256, 256, (c, g, y) => {
     const r = rastgele(71)
-    c.fillStyle = '#d9b869'
+    c.fillStyle = '#e6d283'
     c.fillRect(0, 0, g, y)
     benek(c, g, y, r, 2500, 0.035)
   })
@@ -179,13 +143,6 @@ export function ulucamiDokulari() {
     c.beginPath()
     c.moveTo(0, -b); c.quadraticCurveTo(b * 0.75, -b * 0.15, 0, b); c.quadraticCurveTo(-b * 0.75, -b * 0.15, 0, -b)
     c.closePath(); c.fill(); c.restore()
-  }
-  /** Yelpaze biçimli bitkisel taç; yazı içermez. */
-  const tac = (c: CanvasRenderingContext2D, x: number, y: number, b: number, renk: string) => {
-    c.fillStyle = renk
-    for (let i = -3; i <= 3; i++) yaprak(c, x + i * b * 0.24, y - b * (0.55 - Math.abs(i) * 0.1), b * 0.5, i * 0.42)
-    c.beginPath()
-    c.moveTo(x - b, y); c.quadraticCurveTo(x, y - b * 0.28, x + b, y); c.closePath(); c.fill()
   }
   /** Sekiz köşeli yıldızlı geometrik göbek. */
   const gobek = (c: CanvasRenderingContext2D, x: number, y: number, r: number, dis: string, ic: string) => {
@@ -219,43 +176,7 @@ export function ulucamiDokulari() {
     }
   })
 
-  const icKubbe = tuval(2048, 1024, (c, g, y) => {
-    const z = c.createLinearGradient(0, 0, 0, y)
-    z.addColorStop(0, '#f6eddc'); z.addColorStop(1, '#e8dac2')
-    c.fillStyle = z
-    c.fillRect(0, 0, g, y)
-    // Ağız kuşağı (dokunun altı): çift çizgi ve yaprak dizisi
-    c.fillStyle = '#2e2a26'
-    c.fillRect(0, y - 16, g, 9); c.fillRect(0, y - 128, g, 8)
-    c.fillStyle = '#8a6a35'
-    c.fillRect(0, y - 26, g, 4); c.fillRect(0, y - 138, g, 4)
-    c.fillStyle = '#54402c'
-    for (let x = 0; x < g; x += g / 72) { yaprak(c, x, y - 76, 28, 0.85); yaprak(c, x + g / 144, y - 76, 18, -0.85) }
-    // Pencere hizalarında taçlar
-    for (let n = 0; n < 8; n++) tac(c, ((n / 8) * g) % g, y - 150, 72, '#54402c')
-    // Tepe: yukarıda birleşip gül oluşturan bitkisel dilimler
-    for (let n = 0; n < 16; n++) {
-      const x = (n + 0.5) * g / 16
-      c.fillStyle = n % 2 ? '#54402c' : '#8a6a35'
-      yaprak(c, x, 110, 110, 0)
-      c.fillStyle = '#f0e6d2'
-      yaprak(c, x, 112, 44, 0)
-    }
-    c.fillStyle = '#2e2a26'
-    c.fillRect(0, 214, g, 5)
-    c.fillStyle = '#54402c'
-    c.fillRect(0, 0, g, 16)
-  })
-
-  const pandantif = tuval(1024, 256, (c, g, y) => {
-    c.fillStyle = '#f0e7d4'
-    c.fillRect(0, 0, g, y)
-    c.fillStyle = '#2e2a26'
-    c.fillRect(0, 6, g, 6); c.fillRect(0, y - 12, g, 5)
-    c.fillStyle = '#8a6a35'
-    c.fillRect(0, 17, g, 3); c.fillRect(0, y - 20, g, 3)
-    for (let n = 0; n < 4; n++) tac(c, (n + 0.5) * g / 4, y * 0.62, 34, '#54402c')
-  })
+  const pandantif = tuval(1024, 256, pandantifCiz)
 
   const kemerBant = tuval(256, 256, (c, g, y) => {
     c.fillStyle = '#e9dcc4'
@@ -456,8 +377,8 @@ export function ulucamiDokulari() {
     for (let x = 0; x < g; x += 8) { const t = Math.round(120 + r() * 135); c.fillStyle = `rgb(${t},${t},${t})`; c.fillRect(x, 0, 8, y) }
   })
 
-  const kubbeDoku = doku(tuval(1440, 512, kubbeCiz(false)), 1)
-  const kubbeKabartma = doku(tuval(1440, 512, kubbeCiz(true)), 1, false)
+  const kubbeDoku = doku(tuval(kubbeDokuBoyu(), kubbeDokuBoyu() / 2, kursunKubbeCiz(false)), 1)
+  const kubbeKabartma = doku(tuval(kubbeDokuBoyu() / 2, kubbeDokuBoyu() / 4, kursunKubbeCiz(true)), 1, false)
   const camDoku = doku(cam, 1)
   const icDuvarDoku = doku(icDuvar, 1)
   icDuvarDoku.repeat.set(0.25, 1 / 13)
@@ -481,7 +402,6 @@ export function ulucamiDokulari() {
     mermerGovde: mermerGovdeDokusu(),
     suNormal: suNormali(),
     paye: doku(paye, 1),
-    icKubbe: doku(icKubbe, 1),
     pandantif: doku(pandantif, 1),
     kemerBant: doku(kemerBant, 0.62),
     camKafes: doku(camKafes, 0.34),
@@ -625,7 +545,7 @@ export function ulucamiMalzemeleri() {
     paye: siva(pbr({ map: d.paye, roughness: 0.8 })),
     ic: siva(pbr({ color: '#f1e8d6', roughness: 0.85, side: THREE.DoubleSide })),
     icDuvar: siva(pbr({ map: d.icDuvar, roughness: 0.85, side: THREE.DoubleSide })),
-    icKubbe: siva(pbr({ map: d.icKubbe, roughness: 0.9, side: THREE.DoubleSide })),
+    icKubbe: siva(pbr(icKubbeAyari())),
     pandantif: pbr({ map: d.pandantif, roughness: 0.9, side: THREE.DoubleSide }),
     kemerBant: pbr({ map: d.kemerBant, roughness: 0.75, side: THREE.DoubleSide }),
     kundekari: pbr({ map: d.kundekari, roughness: 0.5, metalness: 0.2, side: THREE.DoubleSide }),

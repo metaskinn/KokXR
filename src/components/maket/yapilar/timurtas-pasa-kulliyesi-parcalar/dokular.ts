@@ -89,18 +89,43 @@ export function molozDokusu() {
     const y0 = p * 0.6
     let x = 0
     while (x < METRE) {
-      const en = 0.16 + r() * 0.26, boy = 0.26 + r() * 0.14
-      c.fillStyle = sec(r, ['#8f7c60', '#74705f', '#a78a62', '#655f53', '#9c927d', '#7f6a52', '#8a8a7e'])
+      const en = 0.18 + r() * 0.3, boy = 0.3 + r() * 0.13
+      c.fillStyle = sec(r, ['#a08d6e', '#918a74', '#ad9570', '#83795f', '#a59a82', '#98846a', '#8e8c7a'])
       c.beginPath()
-      c.ellipse((x + en / 2) * olc, B - (y0 + 0.24) * olc, (en / 2) * olc, (boy / 2) * olc, r() * 0.5, 0, Math.PI * 2)
-      c.fill()
-      x += en + 0.02
+      const cx = (x + en / 2) * olc, cy = B - (y0 + 0.22 + (r() - 0.5) * 0.06) * olc, n = 7, a0 = r()
+      for (let i = 0; i < n; i++) {
+        const a = a0 + (i / n) * Math.PI * 2, o = 0.8 + r() * 0.2
+        const px = cx + Math.cos(a) * (en / 2) * olc * o, py = cy + Math.sin(a) * (boy / 2) * olc * o
+        if (i) c.lineTo(px, py); else c.moveTo(px, py)
+      }
+      c.closePath(); c.fill()
+      x += en * 0.96
     }
     tuglaSirasi(c, B, olc, y0 + 0.45, 0.06, 0.28, p % 2 ? 0.5 : 0, TUGLA_RENK, r)
     tuglaSirasi(c, B, olc, y0 + 0.525, 0.06, 0.28, p % 2 ? 0 : 0.5, TUGLA_RENK, r)
   }
   benek(c, B, r, B * 8, 0.07)
   return { renk: doku(el, METRE, METRE), kabartma: doku(el, METRE, METRE, false) }
+}
+
+/** Minare kasnağı: iri kesme taş sıraları. */
+export function kesmeTasDokusu() {
+  const B = hafifCihaz() ? 256 : 512, METRE = 2.4, olc = B / METRE
+  const { el, c } = tuval(B, B)
+  const r = rastgele(641)
+  c.fillStyle = '#9d9483'
+  c.fillRect(0, 0, B, B)
+  for (let s = 0; s < 6; s++) {
+    let x = -r() * 0.5
+    while (x < METRE) {
+      const boy = 0.55 + r() * 0.55, g = 176 + Math.floor(r() * 34)
+      c.fillStyle = `rgb(${g},${g - 6},${g - 24})`
+      c.fillRect(x * olc + 1.5, s * 0.4 * olc + 1.5, boy * olc - 3, 0.4 * olc - 3)
+      x += boy
+    }
+  }
+  benek(c, B, r, B * 6, 0.06)
+  return doku(el, METRE, METRE)
 }
 
 /** Hamam kubbesindeki oluklu kiremit: dönel gövdenin 0-1 UV'sine sarılır. */

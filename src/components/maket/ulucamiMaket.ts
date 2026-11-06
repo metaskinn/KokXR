@@ -4,7 +4,6 @@
 import * as THREE from 'three'
 import { icPencereAlt, icPencereUst } from './ulucami/icduvar'
 import { ulucamiCevresi } from './ulucami/cevre'
-import { kapiKanatlari, ulucamiDetaylari } from './ulucamiDetay'
 import { icZemini } from './ulucami/zemin'
 import { atlasaOturt, cepheKemeri, kapilarMalzemeleri, kemerDilimleri, kosk, serit, tacKapi } from './ulucami/kapilar'
 import { ulucamiDetaylari } from './ulucamiDetay'

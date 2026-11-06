@@ -3,8 +3,8 @@
 // Hat yazısı taklit edilmez: panolar ve süslemeler yalnız bitkisel ve geometrik motif taşır.
 import * as THREE from 'three'
 import {
-  DUVAR, GOZ_X, GOZ_Z, H, KASNAK_TABAN, Kova, OCTA, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
-  cikar, dikdortgen, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
+  DUVAR, H, KASNAK_TABAN, Kova, OCTA, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
+  dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
 } from './ulucamiParca'
 import { KABE_VITRIN } from './ulucami/icduvar'
 import { KAPI_Z, KURSU, MAHFIL } from './ulucamiDetay'
@@ -128,8 +128,6 @@ function pandantifG(cx: number, cz: number, x0: number, x1: number, z0: number, 
 }
 
 export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKasnak: Kova, kKubbe: Kova) {
-  const kutu = (g: number, h: number, d: number, mal: THREE.Material, x: number, y: number, z: number, kv = k) =>
-    kv.ekle(yer(kutuG(g, h, d), x, y, z), mal)
 
   // --- Payeler ve sivri kemerler: ulucami/payeler.ts ---
   payeleriKur(m, k)

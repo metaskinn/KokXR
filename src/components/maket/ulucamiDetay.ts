@@ -8,11 +8,11 @@ import { kibleDuvari } from './ulucami/mihrap'
 import { kabeVitrini } from './ulucami/icduvar'
 import { kapilarMalzemeleri, yanKapi } from './ulucami/kapilar'
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
-import { ahsapKursu, dolapYap, mahfilYap, mermerKursu, rahleYap, sandikYap } from './ulucami/minber'
+import { ahsapKursu, dolapYap, mahfilYap, mermerKursu, sandikYap } from './ulucami/minber'
 import { doguBatiLevhalari } from './ulucami/payeler'
 import {
   DUVAR, Kova, type Mal, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
-  cikar, dikdortgen, dondurG, kemer, kutuG, px, pz, silindirG, yer,
+  kutuG, px, pz, yer,
 } from './ulucamiParca'
 
 const ZEMIN = 0.7

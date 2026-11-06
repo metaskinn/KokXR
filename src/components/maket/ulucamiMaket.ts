@@ -14,7 +14,7 @@ import { icDuraklar, icYurumeAlani, ulucamiIcMekani, type IcDurak, type IcYurume
 import {
   DOGU_BATI, DOSEME_Y, DUVAR, ETEK_Y, GOZ_X, GOZ_Z, H, KASNAK_TABAN, KUZEY_GUNEY, Kova, type Mal, OCTA,
   SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
-  cikar, dikdortgen, dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
+  cikar, dikdortgen, duzGolge, gozAcikligi, gozOlcusu, kemer, kutuG, px, pz, silindirG, yer,
 } from './ulucamiParca'
 
 export interface MaketKatmani { grup: THREE.Group; yukseklik: number; ad: string }

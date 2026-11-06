@@ -62,10 +62,11 @@ function ortali(c: CanvasRenderingContext2D, yazi: string, x: number, y: number,
 
 /** Temsilî etiketi: oturum boyunca görünür, menü ve kart kapalıyken de kalır. */
 export function etiketPaneli() {
-  const yukseklik = 72
-  const { c, doku, nesne, dispose } = panel(0.6, PIL_G, yukseklik)
+  const yukseklik = 130
+  const { c, doku, nesne, dispose } = panel(0.72, PIL_G, yukseklik)
   camYuzey(c, 0, 0, PIL_G, yukseklik, 36, 3)
-  ortali(c, TEMSILI_ETIKET, PIL_G / 2, yukseklik / 2, 38, 600, ALTIN, PIL_G - 80)
+  ortali(c, TEMSILI_ETIKET, PIL_G / 2, 39, 32, 600, ALTIN, PIL_G - 80)
+  ortali(c, 'Menü: Y / B · Sol çubuk: yürü · Sağ çubuk: dön', PIL_G / 2, 91, 30, 500, METIN, PIL_G - 60)
   doku.needsUpdate = true
   return { nesne, dispose }
 }

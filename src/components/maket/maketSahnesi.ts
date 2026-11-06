@@ -90,7 +90,10 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   scene.background = artAlan
   const ortam = new THREE.PMREMGenerator(renderer)
   const uluIsik = model === 'ulu-camii' ? uluIsikKur(renderer, ortam, yapi.kok) : null
-  const ortamHaritasi = uluIsik?.disOrtam ?? ortam.fromScene(new RoomEnvironment(), 0.04).texture
+  const oda = uluIsik ? null : new RoomEnvironment()
+  const disOrtamHedefi = oda ? ortam.fromScene(oda, 0.04) : null
+  oda?.dispose()
+  const ortamHaritasi = uluIsik?.disOrtam ?? disOrtamHedefi!.texture
   scene.environment = ortamHaritasi
   // İç mekân yansıması: krem duvarlar, gül zemin ve avize noktaları. Altın, mermer ve su bunları yansıtır.
   const icOrtamSahnesi = new THREE.Scene()
@@ -105,7 +108,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     l.position.set(x, 3, z)
     icOrtamSahnesi.add(l)
   }
-  const icOrtam = uluIsik?.icOrtam ?? ortam.fromScene(icOrtamSahnesi, 0.03, 0.5, 100).texture
+  const icOrtamHedefi = uluIsik ? null : ortam.fromScene(icOrtamSahnesi, 0.03, 0.5, 100)
+  const icOrtam = uluIsik?.icOrtam ?? icOrtamHedefi!.texture
   ortam.dispose()
   icOrtamGeo.dispose(); icOrtamKutu.dispose(); icOrtamMal.forEach((m) => m.dispose())
   scene.environmentIntensity = 0.42
@@ -216,6 +220,13 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   const adimAt = (x: number, z: number) => zeminAdimi(yurume, x, z, OYUNCU_YARICAP, icZemin)
   const goz = new THREE.Vector3()
   const yuruYon = new THREE.Vector3(), bakisYon = new THREE.Spherical()
+  const icGecisiBitir = () => {
+    if (!icHedef) return
+    // Geçişin ortası duvar/havuz içinde olabilir; hareket güvenli hedefte başlar.
+    camera.position.copy(icHedef.konum)
+    controls.target.copy(icHedef.bakis)
+    icHedef = null
+  }
   const yuruGuncelle = (gecenSn: number) => {
     const b = basiliTuslar
     const donus = (b.has('ArrowLeft') ? 1 : 0) - (b.has('ArrowRight') ? 1 : 0)
@@ -223,7 +234,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     const ileri = (b.has('w') || b.has('ArrowUp') ? 1 : 0) - (b.has('s') || b.has('ArrowDown') ? 1 : 0)
     const yan = (b.has('d') ? 1 : 0) - (b.has('a') ? 1 : 0)
     if (!donus && !egim && !ileri && !yan) return
-    icHedef = null
+    icGecisiBitir()
     if (donus || egim) {
       bakisYon.setFromVector3(yuruYon.copy(controls.target).sub(camera.position))
       bakisYon.theta += donus * DONUS_HIZI * gecenSn
@@ -239,10 +250,14 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       const dx = (yuruYon.x * ileri - yuruYon.z * yan) * yol
       const dz = (yuruYon.z * ileri + yuruYon.x * yan) * yol
       const eskiX = camera.position.x, eskiZ = camera.position.z
-      const yeniX = adimAt(eskiX + dx, eskiZ)
-      if (yeniX !== null) { camera.position.x += dx; icZemin = yeniX }
-      const yeniZ = adimAt(camera.position.x, eskiZ + dz)
-      if (yeniZ !== null) { camera.position.z += dz; icZemin = yeniZ }
+      // Düşük kare hızında koşarken de ince duvarlar ve basamaklar atlanmasın.
+      const adimlar = Math.max(1, Math.ceil(Math.hypot(dx, dz) / 0.12))
+      for (let n = 0; n < adimlar; n++) {
+        const yeniX = adimAt(camera.position.x + dx / adimlar, camera.position.z)
+        if (yeniX !== null) { camera.position.x += dx / adimlar; icZemin = yeniX }
+        const yeniZ = adimAt(camera.position.x, camera.position.z + dz / adimlar)
+        if (yeniZ !== null) { camera.position.z += dz / adimlar; icZemin = yeniZ }
+      }
       const dy = (yurume.gozY + icZemin - camera.position.y) * Math.min(1, gecenSn * 6)
       camera.position.y += dy
       controls.target.x += camera.position.x - eskiX
@@ -257,7 +272,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
 
   // İç aydınlatma yalnız içerideyken yanar: gölgesiz olduğu için dışarıdayken duvarlardan sızardı.
   const icIsiklar = (yapi.icIsiklar ?? [[-15, 8, -7], [15, 8, -7], [-8, 8, 12], [8, 8, 12]]).map(([x, y, z]) => {
-    const isik = new THREE.PointLight('#ffdcae', 0, 46, 1.3)
+    const isik = new THREE.PointLight('#ffdcae', 0, 46, uluIsik ? 1.3 : 2)
     isik.position.set(x, y, z)
     Object.assign(isik.shadow.camera, { near: 0.4, far: 46 })
     isik.shadow.mapSize.set(1024, 1024)
@@ -280,7 +295,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
   controls.autoRotateSpeed = 0.8
   controls.update()
   // Kullanıcı tutup çevirince otomatik dönüş durur, eser "elinde" kalır.
-  controls.addEventListener('start', () => { controls.autoRotate = false; kameraHedef = null; icHedef = null })
+  controls.addEventListener('start', () => { controls.autoRotate = false; kameraHedef = null; icGecisiBitir() })
 
   const kuresel = new THREE.Spherical()
   let parcali = false
@@ -345,18 +360,18 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
     scene.environment = ic ? icOrtam : ortamHaritasi
     scene.environmentIntensity = ic ? 0.5 : 0.42
     hemi.intensity = ic ? 0.34 : disHemi
-    parlama.strength = ic ? 0.34 : 0.18
-    parlama.threshold = ic ? 0.95 : 1.2
+    parlama.strength = ic ? 0.12 : 0.18
+    parlama.threshold = ic ? 1.3 : 1.2
     // Gerçek paye ve kemer gölgeleri: bir kez çizilir; Quest, telefon ve yazılımsal çizimde kapalıdır.
     const icGolge = ic && !hafifCihaz() && kalite < 2
-    if (icIsiklar[0].castShadow !== icGolge) {
+    if (icIsiklar[0]?.castShadow !== icGolge) {
       icIsiklar.forEach((i) => { i.castShadow = icGolge })
       renderer.shadowMap.needsUpdate = true
     }
     gtao.updateGtaoMaterial(ic
       ? { radius: 2.2, distanceExponent: 1.3, thickness: 1.2, scale: 1.25, samples: 16, distanceFallOff: 1, screenSpaceRadius: false }
       : { radius: 5, distanceExponent: 1.3, thickness: 2, scale: 1.2, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
-    icIsiklar.forEach((i) => { i.intensity = ic ? 32 : 0 })
+    icIsiklar.forEach((i) => { i.intensity = ic ? 18 : 0 })
     uluIsik?.uygula(ic, { scene, hemi, parlama, icIsiklar })
   }
   uluIsik?.uygula(false, { scene, hemi, parlama, icIsiklar })
@@ -423,7 +438,7 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       const adim = azHareket ? 1 : 1 - Math.exp(-gecenSn * 4)
       camera.position.lerp(icHedef.konum, adim)
       controls.target.lerp(icHedef.bakis, adim)
-      if (camera.position.distanceTo(icHedef.konum) < 0.02) icHedef = null
+      if (camera.position.distanceTo(icHedef.konum) < 0.02) icGecisiBitir()
     }
     if (iceride) {
       // Adım sınırı: kare hızı düşse de tek adımda ince korkulukların içinden geçilmez.
@@ -498,6 +513,8 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       const durak = duraklar.find((d) => d.id === durakId)
       const girdi = !!durak && !iceride
       const cikti = !durak && iceride
+      // Yeni durak seçilince eski durağa süren kamera hareketi sona erer.
+      icHedef = null
       kameraHedef = null
       secilenBilgi = null
       basiliTuslar.clear()
@@ -560,18 +577,25 @@ export function maketSahnesiOlustur(alan: HTMLElement, model: string, azHareket:
       renderer.setAnimationLoop(null)
       gozlemci.disconnect()
       controls.dispose()
+      const geometriler = new Set<THREE.BufferGeometry>()
+      const malzemeler = new Set<THREE.Material>()
+      const dokular = new Set<THREE.Texture>()
       scene.traverse((o) => {
-        if (o instanceof THREE.Mesh) {
-          o.geometry.dispose()
+        if (o instanceof THREE.DirectionalLight || o instanceof THREE.PointLight || o instanceof THREE.SpotLight) o.shadow.dispose()
+        if (o instanceof THREE.Mesh || o instanceof THREE.Line || o instanceof THREE.Points) {
+          geometriler.add(o.geometry)
+          if (o instanceof THREE.InstancedMesh) o.dispose()
           for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
-            const dokulu = m as THREE.MeshStandardMaterial
-            dokulu.map?.dispose(); dokulu.bumpMap?.dispose(); dokulu.normalMap?.dispose()
-            m.dispose()
+            malzemeler.add(m)
+            for (const deger of Object.values(m)) if (deger instanceof THREE.Texture) dokular.add(deger)
           }
         }
       })
-      ortamHaritasi.dispose()
-      icOrtam.dispose()
+      geometriler.forEach((g) => g.dispose())
+      dokular.forEach((d) => d.dispose())
+      malzemeler.forEach((m) => m.dispose())
+      if (uluIsik) uluIsik.temizle()
+      else { disOrtamHedefi?.dispose(); icOrtamHedefi?.dispose() }
       artAlan.dispose()
       gtao.dispose()
       parlama.dispose()

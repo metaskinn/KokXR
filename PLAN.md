@@ -2,6 +2,20 @@
 
 Tek plan dosyası. İşe buradan başla, iş bitince işaretle. Ayrıntı gerekince: `DEVIR-QUEST.md` (VR), `docs/sunum-vaatleri.md`, `docs/sartname.md`.
 
+## Güncel durum (6 Kasım 2026)
+
+Çalışma dalı `ulu-camii-grafik`; ayrıntı `DEVAM.md` 0. bölümde. Bu dosyanın altındaki "Yeni bilgisayarda başla" bölümü 4 Kasım tarihlidir.
+
+- [x] VR Eserler sekmesi: harita, şehir, yapı seçimi (`/vr`)
+- [x] Bursa'da 10 yapıya web maketi ve VR girişi (masaüstü testi geçti)
+- [x] Ulu Camii: gerçekçi halı ve mermer, ışık, minber, kürsü ve mahfile çıkma
+- [x] Dokunmatik ekranda yürüme kolu
+- [ ] Gerçek Quest denemesi: yeni 9 yapı, kart okunabilirliği, kare hızı
+- [ ] `ulu-camii-grafik` dalını `master`'a birleştirme kararı
+- [ ] `kokxr.vercel.app` güncellemesi (hesap erişimi gerekiyor)
+- [ ] Sponsor fotoğraf izninin yazılı teyidi
+- [ ] Tarihsel metinlerin kitapla karşılaştırılması
+
 ## Yeni bilgisayarda başla
 
 > Yazıldı: 4 Kasım 2026, kullanıcı bilgisayar değiştirdiği için çalışma durduruldu. Çalışan ajan ve sunucu yok.

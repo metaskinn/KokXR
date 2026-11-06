@@ -1,12 +1,50 @@
 # KökXR — Başka bilgisayarda devam rehberi
 
-> Son güncelleme: 5 Kasım 2026 · **Final: 7–8 Kasım 2026**
+> Son güncelleme: 6 Kasım 2026 · **Final: 7–8 Kasım 2026**
 > Bu dosya, projeye yeni bir bilgisayarda (ve yeni bir Claude / Codex / Antigravity oturumunda) kaldığı yerden
 > devam etmek için gereken her şeyi içerir. Yeni oturumda yapay zekâ ajanına ilk olarak bu dosyayı okutun.
 
 ---
 
-## 0. Buradan devam et (5 Kasım 2026)
+## 0. En güncel durum (6 Kasım 2026, gece)
+
+Çalışma dalı **`ulu-camii-grafik`** (`master` üzerine). Aşağıdaki işler `master`'a birleştirilmedi; `kokxr.vercel.app` da bunları içermiyor.
+
+```bash
+git fetch origin && git switch ulu-camii-grafik
+npm ci
+npm run dev -- --host 127.0.0.1 --port 5173 --strictPort   # http://127.0.0.1:5173/vr
+```
+Node 22+ gerekir (`.nvmrc` 24 ister). Okul makinesindeki sistem Node'u v12'dir, projeyi çalıştırmaz.
+
+### Bu dalda eklenenler
+- **VR Eserler sekmesi (`/vr`):** Türkiye haritası → şehir → yapı → `/vr/<eser-id>`. Liste `src/data/vrEserler.ts`; yapı, eser verisinde `maket` veya `restorasyon` varsa kendiliğinden açılır. Sınır çizgisi Natural Earth (kamu malı). Konya ve Hatay'da VR yok, yalnız kitap bağlantısı var.
+- **9 yeni Bursa maketi (web ve VR):** Orhan Bey, I. Murat Hüdavendigar, Hamzabey, Timurtaş Paşa, II. Murat (Muradiye), Yeşil Çelebi Mehmed, Yıldırım, Emir Sultan, Umurbey. Her biri `src/components/maket/yapilar/<eser-id>.ts`, `src/data/eserler/<eser-id>.json`, `public/gorseller/<eser-id>/`.
+- **Yeni yapı ekleme:** `yapilar/<eser-id>.ts` içinde `export const yapi = (): Maket => ...` yeterlidir, otomatik kaydolur; yardımcı dosyalar alt klasöre konur. Kamera, kaide ve iç ışık `Maket` arayüzünde yapıya özeldir. `m.hali` Ulu Camii'nin paye düzenine bağlıdır, başka yapıda `m.haliSade` kullanın.
+- **Ulu Camii iç mekânı:** kodla üretilen halı ve mermer (`maket/ulucamiZemin.ts`), avize haleleri, ışık sütunu, iç yansıma ortamı, gerçek iç gölgeler. Quest ve dokunmatik cihazda `hafifCihaz()` daha hafif malzeme ve yarı boyutlu doku kullanır.
+- **Yapılara çıkma:** `IcYurume.zeminler` ve `yurumeCarpisma.ts:zeminAdimi` ile yükseklikli yürüme (web ve VR). Ulu Camii'de minber, kürsü ve mahfile çıkılır.
+- **Dokunmatik yürüme kolu:** `EseriEleAl.tsx:YurumeKolu`, iç mekânda ve `pointer: coarse` cihazda görünür.
+- **Paneller:** web kartı ve VR kartı küçültüldü; VR kartı web kartının görsel dilinde (`maket/xrPanel.ts`).
+
+### Testler
+`tests/maket-yapi.mjs <eser-id>` (sahne, parçalama, duraklar, eser sayfası), `tests/maket-tirmanma.mjs`, `tests/maket-dokunmatik.mjs`, `tests/vr-eserler.mjs`. Hepsi `TEST_URL` ile çalışır.
+Son tur: `maket-yapi` 10 yapıda, `vr-eserler` ve `maket-xr-dugme` geçti (yürüme kolundan hemen önceki kodla). `maket-dokunmatik` ve `maket-tirmanma` yalnız Ulu Camii'de çalıştı.
+
+### Doğrulanmayanlar
+- **Yeni 9 yapı Quest'te ve VR simülasyonunda denenmedi;** VR birleştirme oyunu bu yapılarda hiç çalışmadı. `tests/xr-sim/` ile simülasyon yapılabilir.
+- Üçgen sayısı ve kare hızı gerçek cihazda ölçülmedi. Yürüme kolu gerçek telefonda denenmedi.
+- Tarihsel metinlerin sayfa numaraları ajanlar tarafından yazıldı, elle kitapla karşılaştırılmadı.
+- Yıldırım ve Umurbey'in son düzeltmeleri testten geçti ama görüntüleri tek tek incelenmedi.
+
+### Yayın
+- **Geçici adres:** `vercel deploy --temporary` ile girişsiz yayın alınıyor; 60 dakikada kapanır, hesaba alınmazsa silinir.
+- **Tam sürüm:** `npm run build`, ardından `dist/vercel.json` (SPA yönlendirmesi) elle eklenir. Kullanıcı arşiv fotoğraflarının bu yayında yer almasına izin verdi; sponsor izni hâlâ açık konudur.
+- **`kokxr.vercel.app`:** başka bir ekip üyesinin hesabında, elle yüklenmiş açık sürüm (fotoğrafsız). Güncellemek için o hesaba erişim gerekir.
+- `~/.npm` ev kotasını doldurabiliyor: `npm_config_cache` değişkenini geçici klasöre verin.
+
+---
+
+## 0.1. 5 Kasım notu (eski)
 
 ```bash
 git fetch origin

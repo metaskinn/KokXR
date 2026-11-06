@@ -35,6 +35,20 @@ kokxr/
 
 Üretilen ve git'e girmeyenler: `dist/`, `test-sonuclari/`, `node_modules/`, `.env`.
 
+## Kökteki diğer dosyalar
+
+| Yol | Ne için |
+|---|---|
+| `.nvmrc` | Node 24 sürümü; `nvm use` okur |
+| `.gitignore` | Git'e girmeyen yollar |
+| `.env` | Supabase adresi ve anahtarı; git'e girmez, sohbete yapıştırılmaz |
+| `.claude/` | `settings.json` takım ayarı, `settings.local.json` kişisel ayar, `worktrees/` geçici çalışma kopyaları (git dışı, 1,1 GB) |
+| `.vscode/` | Kişisel editör ayarı; git'e girmez |
+| `package-lock.json` | Bağımlılık sürümleri; elle değiştirilmez |
+| `tsconfig.json`, `tsconfig.app.json`, `tsconfig.node.json` | Tip denetimi ayarları |
+| `vite.config.ts` | Derleme ayarı |
+| `node_modules/`, `dist/` | Üretilen klasörler; `npm install` ve `npm run build` |
+
 ## Belgeler
 
 | Dosya | Ne için |
@@ -48,7 +62,6 @@ kokxr/
 | `docs/ui-tasarim.md` | Arayüz kuralları |
 | `docs/kilic-atolyesi.md`, `cini-atolyesi.md`, `vazo-modeli.md` | Atölye ayrıntıları |
 | `docs/token-tasarrufu.md` | Token kurallarının gerekçesi ve ayarları |
-| `docs/test-ekranlari/` | Kayıtlı test ekranları; gerekmedikçe açma |
 
 ## Yeni eser nasıl eklenir
 
@@ -71,6 +84,7 @@ Yönetim ekranı (`/yonetim/yeni`) şu an yalnız tarayıcıya kaydeder. Kalıc�
 | `node scripts/test-tarayici.mjs <test>` | Tek tarayıcı testi, örn. `galeri` | Önce `npm run build` |
 | `npm run test:e2e` | Chromium 1280 ve 360, Firefox 1280 | Ayrı terminalde `npm run preview` (port 4173) açık olmalı |
 | `tests/xr-sim/` | Simüle Quest | Kullanımı `docs/DURUM.md`, "Simüle Quest" başlığında |
+| `node tests/<ad>.mjs` | `package.json`'a bağlı olmayan testler: `cini`, `kilic`, `vr-eserler`, `yolculuk`, `maket-yapi <eser-id>` vb. | Çoğu `TEST_URL` ve 4173'te preview ister |
 
 ## Hangi iş hangi dosyalarda
 

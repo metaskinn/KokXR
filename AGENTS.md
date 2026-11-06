@@ -44,7 +44,7 @@ Yalnız görevin gerektirdiği satırı oku.
 ## Verimli çalışma
 
 - Belgeyi baştan sona okuma: önce ara, sonra gereken aralığı oku.
-- `_arsiv/`, `docs/test-ekranlari/`, `public/`, `assets/`, `dist/`, `node_modules/` ve `package-lock.json`'ı gerekmedikçe açma.
+- `_arsiv/`, `public/`, `assets/`, `dist/`, `node_modules/` ve `package-lock.json`'ı gerekmedikçe açma.
 - Her küçük değişiklikte `npm run test:hizli`; arayüz veya sahne değiştiyse iş sonunda `npm run test:tarayici`. Tek test için: `node scripts/test-tarayici.mjs maket-ic` (önce build).
 - Alt ajanı yalnız bağımsız işe aç. Dosya yolunu ver, içeriğini kopyalama; kısa rapor iste. Aynı dosyaya iki ajan dokunmasın.
 - Biten plan ve raporları `_arsiv/`'e taşı; `docs/` kökünde yalnız etkin belgeler kalsın.

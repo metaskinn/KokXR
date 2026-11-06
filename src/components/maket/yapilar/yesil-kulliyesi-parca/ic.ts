@@ -272,7 +272,7 @@ export function camiIci(m: UlucamiMalzemeleri, ym: YesilMalzemeleri, k: Kova, kK
   for (const s of [-1, 1]) {
     const [x0, x1] = s > 0 ? [2.6, 5.8] : [-5.8, -2.6]
     const mz: Oda = { x0, x1, z0: -12.6, z1: -10 }
-    oda(k, mz, { y0: TABAN, y1: 5.6, duvar: ym.mahfilCini })
+    oda(k, mz, { y0: TABAN, y1: 5.6, duvar: ym.mahfilCini, delik: { G: [{ c0: x0, c1: x1, y0: TABAN, y1: 3.6, kemerH: 1.4 }] } })
     duzlem(k, x0, x1, mz.z0, mz.z1 - 0.5, TABAN + EYVAN_H, ym.hali)
     duzlem(k, x0, x1, mz.z0, mz.z1, 5.5, ym.mahfilCiniKoyu, true)
     k.ekle(yer(kutuG(x1 - x0, EYVAN_H * 0.5, 0.5), (x0 + x1) / 2, TABAN + EYVAN_H * 0.25, mz.z1 - 0.25), m.mermer)

@@ -94,7 +94,7 @@
       { "metin": "Çevrede temsilî olarak batıda imaret, doğuda Cıkcık Hamamı, yolun karşısında türbe ve bahçede şadırvan yer alır. Türbe 17.60 x 17.60 m kare planlıdır.", "kaynakId": "hud-s105" }
     ],
     "icBilgiler": [
-      { "id": "son-cemaat", "baslik": "Son cemaat yeri", "metin": "Beş bölümlü revakın tamamı kubbe ile örtülüdür; üst kat nedeniyle bu kubbeler dışarıdan görünmez. Ön kemerler iki kademelidir, aralarında ahşap gergiler vardır.", "kaynakId": "hud-s83", "konum": [0, 5, -21], "yaricap": 4 },
+      { "id": "son-cemaat", "baslik": "Son cemaat yeri", "metin": "Beş bölümlü revakın tamamı kubbe ile örtülüdür; üst kat nedeniyle bu kubbeler dışarıdan görünmez. Ön kemerler iki kademelidir, aralarında ahşap gergiler vardır.", "kaynakId": "hud-s83", "konum": [0, 5, -21.3], "yaricap": 3 },
       { "id": "merdiven", "baslik": "38 basamak", "metin": "Giriş holünün sağ ve solundaki kapılardan, duvar kalınlığına yerleştirilmiş taş merdivenlerle medrese katına çıkılır. Merdivenler 38 basamaklıdır.", "kaynakId": "hud-s89", "konum": [4.3, 3.6, -12.2], "yaricap": 2.6 },
       { "id": "sadirvan", "baslik": "Kapalı avlu ve şadırvan", "metin": "Ortadaki mekân kapalı bir avlu gibi düşünülmüştür: altıgen, fıskiyeli şadırvanın üstünde 15 m yüksekliğinde, aydınlık fenerli büyük kubbe vardır.", "kaynakId": "hud-s88", "konum": [0, 3.6, -0.56], "yaricap": 4.4 },
       { "id": "eyvan-dogu", "baslik": "Yan eyvan", "metin": "Harim ön mekânının iki yanında, birer basamakla çıkılan 5.29 x 7.49 m ölçülerinde, beşik tonozlu eyvanlar bulunur. Güney duvarlarında ortasında kandil sarkan perde motifi vardır.", "kaynakId": "hud-s88", "konum": [9.6, 3.8, -0.5], "yaricap": 3.4 },
@@ -102,7 +102,7 @@
       { "id": "harim", "baslik": "Asıl ibadet mekânı", "metin": "12.50 x 9.50 m ölçülerinde, dikdörtgen planlı ve tonoz örtülüdür. Üzerinde medrese bulunduğu için kubbe yerine beşik tonozla örtülmüştür.", "kaynakId": "hud-s87", "konum": [1.6, 4.4, 10.5], "yaricap": 3.6 },
       { "id": "mihrap", "baslik": "Mihrap", "metin": "2.50 x 4.22 m ölçülerindeki niş dışa taşar ve dışarıdan beş cepheli görünür. Dokuz sıra mukarnaslı kavsarası altın yaldızla süslüdür; bugünkü görünümü 1904 onarımlarından sonradır.", "kaynakId": "hud-s90", "konum": [1.4, 5, 16.6], "yaricap": 3 },
       { "id": "minber", "baslik": "Ahşap minber", "metin": "Ahşap minber kabartma geometrik ve bitkisel motiflerle süslüdür. Alınlığında ışınsal motifli göbek vardır. Yürüyerek çıkabilirsin; biçimi temsilîdir.", "kaynakId": "hud-s91", "konum": [-3.2, 5, 12], "yaricap": 2.2 },
-      { "id": "revak", "baslik": "Medrese revağı", "metin": "Üst kat revağı medresenin avlusudur ve Bursa Ovası'na bakar. Büyük sivri kemerler, ortalarına konan mermer sütunlarla ikiz kemere ayrılır.", "kaynakId": "hud-s92", "konum": [0, 11.8, -20.5], "yaricap": 7 }
+      { "id": "revak", "baslik": "Medrese revağı", "metin": "Üst kat revağı medresenin avlusudur ve Bursa Ovası'na bakar. Büyük sivri kemerler, ortalarına konan mermer sütunlarla ikiz kemere ayrılır.", "kaynakId": "hud-s92", "konum": [0, 11.8, -20.2], "yaricap": 3 }
     ]
   }
 }

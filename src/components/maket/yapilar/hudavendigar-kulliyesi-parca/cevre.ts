@@ -47,10 +47,10 @@ export function cevreKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova) 
     let t = px * 7.1 + pz * 3.3
     const rs = () => { t += 1; return Math.abs(Math.sin(t * 12.9898) * 43758.5453) % 1 }
     for (let i = 0; i < 3; i++) {
-      const g = new THREE.IcosahedronGeometry(r * (0.62 + rs() * 0.25), 1)
+      const g = new THREE.IcosahedronGeometry(r * (0.62 + rs() * 0.25), 3)
       const p = g.attributes.position
       for (let v = 0; v < p.count; v++) {
-        const o = 1 + 0.14 * Math.sin(p.getX(v) * 2.4 + t) * Math.cos(p.getZ(v) * 2.1)
+        const o = 1 + 0.12 * Math.sin(p.getX(v) * 1.7 + t) * Math.cos(p.getZ(v) * 1.5) + 0.05 * Math.sin(p.getY(v) * 3.2 + p.getX(v) * 3 + t)
         p.setXYZ(v, p.getX(v) * o, p.getY(v) * o * 0.86, p.getZ(v) * o)
       }
       g.computeVertexNormals()
@@ -177,5 +177,4 @@ export function cevreKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova) 
     k.ekle(yer(kutuG(3.2, 0.2, 3.9), sx + 1.5, 4, cz), m.mermer)
     for (let i = 0; i < 3; i++) kutuDik(sx + 2.8 + i * 0.32, sx + 3.12 + i * 0.32, 0, 0.9 - i * 0.3, cz - 1.5, cz + 1.5, m.mermer)
   }
-  void Math
 }

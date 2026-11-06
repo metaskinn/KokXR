@@ -222,6 +222,21 @@ export function kulliyeMalzemeleri(m: UlucamiMalzemeleri) {
   })
   kavsaraAlti.repeat.set(1, 1)
 
+  // Minber yüzü: kabartma geometrik motifli ahşap (s. 91); desen temsilîdir
+  const oyma = doku(256, 256, 0.5, 0.5, 86, (c, w, h) => {
+    c.fillStyle = '#7a4d28'; c.fillRect(0, 0, w, h)
+    c.strokeStyle = '#3f2412'; c.lineWidth = 7
+    for (const [x, y] of [[0, 0], [w, 0], [0, h], [w, h], [w / 2, h / 2]]) {
+      for (let k = 0; k < 2; k++) {
+        c.save(); c.translate(x, y); c.rotate((k * Math.PI) / 4)
+        c.strokeRect(-w * 0.17, -w * 0.17, w * 0.34, w * 0.34)
+        c.restore()
+      }
+    }
+    c.fillStyle = '#a06c3a'
+    for (const [x, y] of [[w / 2, 0], [0, h / 2], [w, h / 2], [w / 2, h]]) { c.beginPath(); c.arc(x, y, w * 0.06, 0, Math.PI * 2); c.fill() }
+  })
+
   const hali = m.haliSade as THREE.MeshStandardMaterial
   const haliMal = (renk: string) => pbr({ map: hali.map, normalMap: hali.normalMap, normalScale: new THREE.Vector2(0.7, 0.7), color: renk, roughness: 0.96 })
   return {
@@ -240,17 +255,18 @@ export function kulliyeMalzemeleri(m: UlucamiMalzemeleri) {
     perde: pbr({ map: perde, roughness: 0.8 }),
     mihrapCerceve: pbr({ map: mihrapCerceve, roughness: 0.42, metalness: 0.22, side: THREE.DoubleSide }),
     kavsaraAlti: pbr({ map: kavsaraAlti, roughness: 0.55 }),
-    haliMavi: haliMal('#2d94aa'),
+    haliMavi: haliMal('#1a86c0'),
     haliKirmizi: haliMal('#b13f34'),
-    duvarIc: pbr({ color: '#dcd5c6', roughness: 0.9 }),
-    tavan: pbr({ color: '#e7e1d3', roughness: 0.9, side: THREE.DoubleSide }),
+    duvarIc: pbr({ color: '#e4e1d9', roughness: 0.9 }),
+    minber: pbr({ map: oyma, roughness: 0.6, side: THREE.DoubleSide }),
+    tavan: pbr({ color: '#ece8df', roughness: 0.9, side: THREE.DoubleSide }),
     beyaz: pbr({ color: '#efece4', roughness: 0.55 }),
     krem: pbr({ color: '#dfcf9e', roughness: 0.9 }),
     tasDoseme: pbr({ color: '#8a7d6b', roughness: 0.92 }),
     yol: pbr({ color: '#57534c', roughness: 0.98 }),
     cim: pbr({ color: '#4f6a36', roughness: 1 }),
-    yaprak: pbr({ color: '#5d7a35', roughness: 1, flatShading: true }),
-    yaprakKoyu: pbr({ color: '#3f5a2b', roughness: 1, flatShading: true }),
+    yaprak: pbr({ color: '#5d7a35', roughness: 1 }),
+    yaprakKoyu: pbr({ color: '#3f5a2b', roughness: 1 }),
     gergi: pbr({ color: '#4a3020', roughness: 0.7 }),
     kapi: pbr({ color: '#94602c', roughness: 0.55 }),
     koyuCam: pbr({ color: '#20262a', roughness: 0.25, metalness: 0.3, side: THREE.DoubleSide }),

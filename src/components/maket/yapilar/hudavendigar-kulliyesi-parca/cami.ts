@@ -122,8 +122,8 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
     kv.ekle(yer(kutuG(x1 - x0, y1 - y0, z1 - z0), (x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2), mal)
 
   // --- Taban kütlesi ve merdivenler ---
-  uvKutu(YARI_X * 2 + 0.3, 1, GOVDE_Z - ON_Z + 0.15, m.tas, 0, 0.5, (ON_Z + GOVDE_Z) / 2)
-  uvKutu(ARKA_X * 2 + 0.3, 1, ARKA_Z - GOVDE_Z + 0.1, m.tas, 0, 0.5, (ARKA_Z + GOVDE_Z) / 2)
+  uvKutu(YARI_X * 2 + 0.3, 0.92, GOVDE_Z - ON_Z + 0.15, m.tas, 0, 0.46, (ON_Z + GOVDE_Z) / 2)
+  uvKutu(ARKA_X * 2 + 0.3, 0.92, ARKA_Z - GOVDE_Z + 0.1, m.tas, 0, 0.46, (ARKA_Z + GOVDE_Z) / 2)
   for (let i = 0; i < 5; i++) {
     const d = (5 - i) * 0.42
     kutu(6.4 - i * 0.12, 0.2, d, m.mermer, 0, (i + 0.5) * 0.2, ON_Z - d / 2)
@@ -136,7 +136,7 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
   }
 
   // --- Duvar kütleleri: yürüme alanıyla aynı plandan ---
-  for (const r of altKutleler()) kutuDik(r.x0, r.x1, 0.98, UST0, r.z0, r.z1, x.duvarIc)
+  for (const r of altKutleler()) kutuDik(r.x0, r.x1, 0.9, UST0, r.z0, r.z1, x.duvarIc)
   for (const r of ustKutleler()) kutuDik(r.x0, r.x1, MEDRESE_Y, SACAK_Y, r.z0, r.z1, x.duvarIc, kUst)
   for (const r of dosemeler()) {
     kutuDik(r.x0, r.x1, UST0, UST0 + 0.2, r.z0, r.z1, x.tavan, kUst)
@@ -289,7 +289,7 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
   const yanZ0 = REVAK_ARKA, yanL = GOVDE_Z - REVAK_ARKA, yanZ = (GOVDE_Z + REVAK_ARKA) / 2
   for (const s of [-1, 1]) {
     const ry = s * Math.PI / 2, X = s * (YARI_X + 0.03)
-    kaplama(yanL, X, yanZ, ry, 1, MEDRESE_Y, k, x.yanCephe)
+    kaplama(yanL, X, yanZ, ry, 0.9, MEDRESE_Y, k, x.yanCephe)
     kaplama(yanL, X, yanZ, ry, MEDRESE_Y, SACAK_Y, kUst, x.yanCephe)
     uvKutu(0.12, 0.24, yanL, m.mermer, X, MEDRESE_Y - 0.05, yanZ)
     // Alt kat pencereleri tabhane odalarını, üsttekiler hücreleri aydınlatır
@@ -305,19 +305,19 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
     sacak(onL + 0.1, s * (YARI_X + 0.05), onZ, ry)
     // Harim kütlesinin yan yüzü ve dönüşleri
     const rX = s * (ARKA_X + 0.03), rZ = (GOVDE_Z + ARKA_Z) / 2, rL = ARKA_Z - GOVDE_Z
-    kaplama(rL, rX, rZ, ry, 1, MEDRESE_Y, k, x.yanCephe)
+    kaplama(rL, rX, rZ, ry, 0.9, MEDRESE_Y, k, x.yanCephe)
     kaplama(rL, rX, rZ, ry, MEDRESE_Y, SACAK_Y, kUst, x.yanCephe)
     for (const z of [12.6, 17.8]) pencereDis(rX, z, ry, 4, 1, 1.9, k, false)
     pencereDis(rX, 15.2, ry, 10, 0.5, 1.3, kUst, true)
     sacak(rL + 0.1, s * (ARKA_X + 0.05), rZ, ry)
     const dL = YARI_X - ARKA_X, dX = s * (YARI_X + ARKA_X) / 2
-    kaplama(dL, dX, GOVDE_Z + 0.03, 0, 1, MEDRESE_Y, k, x.yanCephe)
+    kaplama(dL, dX, GOVDE_Z + 0.03, 0, 0.9, MEDRESE_Y, k, x.yanCephe)
     kaplama(dL, dX, GOVDE_Z + 0.03, 0, MEDRESE_Y, SACAK_Y, kUst, x.yanCephe)
     for (const a of [-2.2, 2.2]) pencereDis(dX + a, GOVDE_Z + 0.03, 0, 3.6, 0.9, 1.5, k, false)
     for (const a of [-2.2, 2.2]) pencereDis(dX + a, GOVDE_Z + 0.03, 0, 10.1, 0.55, 0.85, kUst, false)
     sacak(dL + 0.1, dX, GOVDE_Z + 0.05, 0)
     const gL = ARKA_X - APSIS_X, gX = s * (ARKA_X + APSIS_X) / 2
-    kaplama(gL, gX, ARKA_Z + 0.03, 0, 1, MEDRESE_Y, k, x.yanCephe)
+    kaplama(gL, gX, ARKA_Z + 0.03, 0, 0.9, MEDRESE_Y, k, x.yanCephe)
     kaplama(gL, gX, ARKA_Z + 0.03, 0, MEDRESE_Y, SACAK_Y, kUst, x.yanCephe)
     sacak(gL + 0.1, gX, ARKA_Z + 0.05, 0)
   }
@@ -359,7 +359,7 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
 
   // --- Çatılar: düşük eğimli kurşun kırma çatı (fotoğraflara göre) ---
   const Y = SACAK_Y + 0.08
-  kCati.ekle(kirmaCati(-YARI_X - 0.5, YARI_X + 0.5, -18.2, GOVDE_Z + 0.5, Y, Y + 2.3, 'z'), m.kursun)
+  kCati.ekle(kirmaCati(-YARI_X - 0.5, YARI_X + 0.5, -18.2, GOVDE_Z + 0.5, Y, Y + 3, 'z'), m.kursun)
   kCati.ekle(kirmaCati(-YARI_X - 0.5, YARI_X + 0.5, ON_Z - 0.5, -17.4, Y, Y + 1.5, 'x'), m.kursun)
   kCati.ekle(kirmaCati(-ARKA_X - 0.5, ARKA_X + 0.5, GOVDE_Z - 2, ARKA_Z + 0.5, Y, Y + 1.5, 'z'), m.kursun)
 
@@ -513,13 +513,13 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
   kCati.ekle(pandantifG(0, SAD_Z, SAD.x0, SAD.x1, SAD.z0, SAD.z1, 11.4, 13.3, 5.45), x.tavan)
   {
     const prof: [number, number][] = []
-    for (let t = 0; t <= 16; t++) {
-      const a = (t / 16) * Math.PI / 2, r = 5.45 * Math.cos(a)
-      if (r < 0.55) break
+    for (let t = 0; t <= 32; t++) {
+      const a = (t / 32) * Math.PI / 2, r = 5.45 * Math.cos(a)
+      if (r < 0.62) break
       prof.push([r, 2.72 * Math.sin(a)])
     }
     kKubbe.ekle(ustenUV(yer(dondurG(prof, 64, [1, 1]), 0, 13.3, SAD_Z), 0, SAD_Z, 5.45), x.gobek)
-    kKubbe.ekle(new THREE.CircleGeometry(0.8, 16).rotateX(Math.PI / 2).translate(0, 13.3 + 2.8, SAD_Z), m.gok)
+    kKubbe.ekle(new THREE.CircleGeometry(0.9, 16).rotateX(Math.PI / 2).translate(0, 13.3 + 2.76, SAD_Z), m.gok)
     // Kubbe kuşağı
     kKubbe.ekle(new THREE.TorusGeometry(5.45, 0.08, 6, 48).rotateX(Math.PI / 2).translate(0, 13.3, SAD_Z), m.altinKoyu)
   }
@@ -529,12 +529,11 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
     kv.ekle(yer(kutuG(g ? x1 - x0 : 0.04, h, g ? 0.04 : z1 - z0), (x0 + x1) / 2, y, (z0 + z1) / 2), x.bordur)
   }
   kusak(SAD.x0, SAD.x1, SAD.z0 + 0.02, SAD.z0 + 0.02, 11.05, kUst, 0.45)
-  kusak(SAD.x0, SAD.x1, SAD.z1 - 0.02, SAD.z1 - 0.02, 11.05 + 3, kUst, 0.01)
   for (const s of [-1, 1]) kusak(s * 5.48, s * 5.48, SAD.z0, SAD.z1, 11.05, kUst, 0.45)
   // İkişer pencere: yan koridorlar orta mekâna açılır (s. 93)
   const icPencere = (px: number, pz: number, ry: number, y0: number, g: number, duz: number, kv: Kova, kemerH = 0.6) => {
     const ek = (geo: THREE.BufferGeometry, mal: Mal) => kv.ekle(yer(geo, px, 0, pz, ry), mal)
-    ek(new THREE.ShapeGeometry(kemer(new THREE.Shape(), 0, y0, g, duz, kemerH), 8).translate(0, 0, 0.025), x.pencereIsik)
+    ek(new THREE.ShapeGeometry(kemer(new THREE.Shape(), 0, y0, g, duz, kemerH), 8).translate(0, 0, 0.025), m.camKafes)
     const s = kemer(new THREE.Shape(), 0, y0 - 0.1, g + 0.34, duz + 0.1, kemerH + 0.2)
     s.holes.push(kemer(new THREE.Path(), 0, y0, g, duz, kemerH))
     ek(cikar(s, 0.05, 0.01), x.krem)
@@ -582,8 +581,8 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
     // Mukarnas
     const KADEME = 9, H = NH / KADEME, D = NIS.z1 - NIS.z0
     for (let i = 0; i < KADEME; i++) {
-      const o = 1 - i / KADEME
-      const g = (O * 2 - 0.04) * Math.pow(o, 0.75), dr = D * o, y = S + i * H
+      const t = i / KADEME
+      const g = (O * 2 - 0.04) * Math.pow(1 - t * t * 0.92, 0.75), dr = D * (0.2 + 0.8 * (i + 1) / KADEME), y = S + i * H
       kutuDik(-g / 2, g / 2, y, y + H * 0.92, NIS.z1 - dr, NIS.z1, m.altinKoyu)
       const n = Math.max(1, Math.floor(g / 0.52)), adim = g / n
       for (let j = 0; j < n; j++) {
@@ -593,7 +592,7 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
         k.ekle(h, m.altin)
       }
     }
-    kutuDik(-O, O, S + NH, UST0, NIS.z0, NIS.z1, x.duvarIc)
+    kutuDik(-O, O, S + NH - 0.02, UST0, NIS.z0, NIS.z1, m.altinKoyu)
   }
   // Minber: ahşap, kabartma geometrik yüzlü; alınlıkta ışınsal göbek (s. 91). Biçim temsilîdir.
   {
@@ -601,20 +600,20 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
     const ek = (g: THREE.BufferGeometry, mal: Mal) => k.ekle(g.rotateY(-Math.PI / 2).translate(mx, 0, 0), mal)
     const yan = new THREE.Shape()
     yan.moveTo(z0 - 0.5, y0); yan.lineTo(MINBER.zSon, y0); yan.lineTo(MINBER.zSon, y1 + 1.2); yan.lineTo(z1, y1 + 1.2); yan.lineTo(z0 + 0.2, y0 + 1.05); yan.lineTo(z0 - 0.5, y0 + 1.05); yan.closePath()
-    for (const s of [-1, 1]) ek(cikar(yan, 0.1, s * (EN / 2) - 0.05 + s * 0.05), m.kundekari)
+    for (const s of [-1, 1]) ek(cikar(yan, 0.1, s * (EN / 2) - 0.05 + s * 0.05), x.minber)
     const ADIM = 12
     for (let i = 0; i < ADIM; i++) {
       const a = z0 + (i / ADIM) * (z1 - z0), b = z0 + ((i + 1) / ADIM) * (z1 - z0)
       kutuDik(mx - EN / 2, mx + EN / 2, y0, y0 + ((i + 1) / ADIM) * (y1 - y0), a, b, x.haliKirmizi)
     }
     // Köşk ve külah
-    kutuDik(mx - EN / 2 - 0.1, mx + EN / 2 + 0.1, y1, y1 + 2.5, z1, z1 + 1.6, m.kundekari)
+    kutuDik(mx - EN / 2 - 0.1, mx + EN / 2 + 0.1, y1, y1 + 2.5, z1, z1 + 1.6, x.minber)
     kutuDik(mx - EN / 2 + 0.1, mx + EN / 2 - 0.1, y1 + 0.1, y1 + 2.2, z1 - 0.02, z1, x.gergi)
-    k.ekle(yer(duzGolge(silindirG(0.05, 1.2, 1.5, 4).rotateY(Math.PI / 4)), mx, y1 + 3.25, z1 + 0.8), m.kundekari)
+    k.ekle(yer(duzGolge(silindirG(0.05, 1.2, 1.5, 4).rotateY(Math.PI / 4)), mx, y1 + 3.25, z1 + 0.8), x.minber)
     k.ekle(yer(dondurG([[0.08, 0], [0.04, 0.2], [0.1, 0.35], [0.02, 0.65], [0, 0.7]], 8), mx, y1 + 4, z1 + 0.8), m.altin)
     // Kapı: iki söve, lento ve alınlık
-    for (const s of [-1, 1]) kutuDik(mx + s * (EN / 2) - 0.1, mx + s * (EN / 2) + 0.1, y0, y0 + 2.6, z0 - 0.5, z0, m.kundekari)
-    kutuDik(mx - EN / 2 - 0.1, mx + EN / 2 + 0.1, y0 + 2.6, y0 + 3.2, z0 - 0.5, z0, m.kundekari)
+    for (const s of [-1, 1]) kutuDik(mx + s * (EN / 2) - 0.1, mx + s * (EN / 2) + 0.1, y0, y0 + 2.6, z0 - 0.5, z0, x.minber)
+    kutuDik(mx - EN / 2 - 0.1, mx + EN / 2 + 0.1, y0 + 2.6, y0 + 3.2, z0 - 0.5, z0, x.minber)
     k.ekle(new THREE.CircleGeometry(0.25, 16).rotateY(Math.PI).translate(mx, y0 + 2.9, z0 - 0.51), x.levha)
   }
   // Kürsü: sade ahşap (s. 91)
@@ -637,6 +636,16 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
     for (let z = MAHFIL.z0; z <= MAHFIL.z1; z += 0.4) kutuDik(MAHFIL.merdX1 - 0.02, MAHFIL.merdX1 + 0.02, y, y + 0.72, z - 0.02, z + 0.02, x.gergi)
     for (let px = MAHFIL.x0; px <= MAHFIL.merdX0; px += 0.4) kutuDik(px - 0.02, px + 0.02, y, y + 0.72, MAHFIL.z0 - 0.02, MAHFIL.z0 + 0.02, x.gergi)
   }
+
+  const haliKenar = (x0: number, x1: number, z0: number, z1: number, y: number) => {
+    const E = 0.34
+    k.ekle(yer(kutuG(x1 - x0, 0.004, E), (x0 + x1) / 2, y + 0.002, z0 + E / 2), x.haliKenar)
+    k.ekle(yer(kutuG(x1 - x0, 0.004, E), (x0 + x1) / 2, y + 0.002, z1 - E / 2), x.haliKenar)
+    for (const a of [x0 + E / 2, x1 - E / 2]) k.ekle(yer(kutuG(z1 - z0, 0.004, E).rotateY(Math.PI / 2), a, y + 0.002, (z0 + z1) / 2), x.haliKenar)
+  }
+  haliKenar(SAD.x0, SAD.x1, SAD.z0, SAD.z1, tb)
+  haliKenar(HARIM.x0, HARIM.x1, BASAMAK.z1, HARIM.z1, tb + HARIM_H)
+  for (const s of [-1, 1]) haliKenar(s > 0 ? YESIK.x0 + 0.06 : -YESIK.x1, s > 0 ? YESIK.x1 : -YESIK.x0 - 0.06, YESIK.z0, YESIK.z1, tb + EYVAN_H)
 
   // Şadırvan: altıgen mermer hazne ve fıskiye; basamaklı mermer zemin (s. 88 ve fotoğraf)
   {
@@ -672,15 +681,16 @@ export function camiKur(m: UlucamiMalzemeleri, x: KulliyeMalzemeleri, k: Kova, k
   {
     const cz = 12.4, y = 7.2
     k.ekle(yer(silindirG(0.012, 0.012, 5.6, 4), 0, 10.6, cz), x.gergi)
-    k.ekle(yer(dondurG([[0.1, 0], [0.35, 0.1], [0.5, 0.5], [0.34, 1.2], [0.1, 1.5], [0, 1.6]], 8), 0, y - 1.5, cz), x.fener)
-    for (let n = 0; n < 8; n++) k.ekle(yer(kutuG(0.03, 1.5, 0.03).translate(0, y - 0.8, 0.5), 0, 0, cz, (n * Math.PI) / 4), m.altinKoyu)
+    k.ekle(yer(dondurG([[0.05, 0], [0.2, 0.15], [0.26, 0.6], [0.18, 1.1], [0, 1.25]], 8), 0, y - 1.35, cz), x.fener)
+    k.ekle(yer(dondurG([[0.02, 0], [0.34, 0.12], [0.52, 0.22], [0.5, 0.28], [0, 0.3]], 12), 0, y - 1.55, cz), m.altin)
+    k.ekle(yer(dondurG([[0.52, 0], [0.56, 0.08], [0.3, 0.4], [0.04, 0.7], [0, 0.72]], 12), 0, y - 0.1, cz), m.altin)
+    for (let n = 0; n < 8; n++) k.ekle(yer(kutuG(0.035, 1.5, 0.035).translate(0, y - 0.85, 0.5), 0, 0, cz, (n * Math.PI) / 4), m.altinKoyu)
   }
   // Merdiven ve revak duvar lambaları
   for (const s of [-1, 1]) {
     k.ekle(new THREE.SphereGeometry(0.1, 8, 6).translate(s * (MERDIVEN.x1 - 0.1), 5, -15), m.lamba)
     k.ekle(new THREE.SphereGeometry(0.1, 8, 6).translate(s * 8, 3.8, REVAK_ARKA - 0.14), m.lamba)
   }
-  void REVAK_H
 }
 
 /** Eklenen geometriyi önce dönüştüren ince sarmalayıcı: yan cephe kemerleri için. */

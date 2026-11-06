@@ -175,7 +175,7 @@ export function yurumeAlani(): IcYurume {
 
 const minberH = (z: number) => HARIM_H + (MINBER.h1 - HARIM_H) * ((z - MINBER.z0) / (MINBER.z1 - MINBER.z0))
 export const duraklar: IcDurak[] = [
-  { id: 'revak', ad: 'Son cemaat yeri', konum: [0, GOZ_Y, -20.8], bak: [11, 3.4, -20.8] },
+  { id: 'revak', ad: 'Son cemaat yeri', konum: [0, GOZ_Y, -21.2], bak: [11, 3.4, -20.8] },
   { id: 'giris', ad: 'Giriş', konum: [0, GOZ_Y, -14], bak: [0, 3.2, 8] },
   { id: 'sadirvan', ad: 'Şadırvan', konum: [3.4, GOZ_Y, -5], bak: [0, 1.8, SAD_Z] },
   { id: 'kubbe', ad: 'Kubbe', konum: [-2.6, GOZ_Y, SAD_Z - 2], bak: [0, 16, SAD_Z] },
@@ -184,5 +184,5 @@ export const duraklar: IcDurak[] = [
   { id: 'mihrap', ad: 'Mihrap', konum: [0, GOZ_Y + HARIM_H, 15], bak: [0, 5.4, 20.5] },
   { id: 'mahfil-ust', ad: 'Mahfile çık', konum: [-10.4, GOZ_Y + MAHFIL.h, 0.9], bak: [0, 4.4, 0] },
   { id: 'minber-ust', ad: 'Minbere çık', konum: [MINBER.x, GOZ_Y + minberH(15.4), 15.4], bak: [3, 4.6, 8] },
-  { id: 'medrese', ad: 'Medrese revağı', konum: [0, GOZ_Y + REVAK_H, -20.7], bak: [-13, 9.6, -23.8] },
+  { id: 'medrese', ad: 'Medrese revağı', konum: [0, GOZ_Y + REVAK_H, -20.3], bak: [-13, 9.6, -23.8] },
 ]

@@ -200,7 +200,7 @@ export default function EseriEleAl({ maket, kaynaklar, ad, hemenAc = false }: { 
         </div>
       </div>
       <p className="ipucu-metni">{durak
-        ? 'W, A, S, D veya ↑ ↓ ile yürü, ← → ile dön, PageUp/PageDown ile yukarı aşağı bak, Shift ile hızlan. Sürükleyerek de etrafına bakabilirsin. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır. Dokunmatik ekranda alttaki kolla yürü, ekranı sürükleyerek bak. Levha ve paye yazıları arşiv fotoğraflarındandır, hangi yüzde durdukları temsilîdir.'
+        ? dokunmatik ? 'Alttaki kolla yürü, ekranı sürükleyerek etrafına bak. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır.' : 'W, A, S, D veya ↑ ↓ ile yürü, ← → ile dön, PageUp/PageDown ile yukarı aşağı bak, Shift ile hızlan. Sürükleyerek de etrafına bakabilirsin. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır. Levha ve paye yazıları arşiv fotoğraflarındandır, hangi yüzde durdukları temsilîdir.'
         : 'Fareyle veya parmağınla sürükleyerek çevir, tekerlek veya iki parmakla yakınlaştır. Klavyede: maketi seçip ok tuşları ile +/−.'}</p>
     </>}
     <ul className="maket-bilgi">

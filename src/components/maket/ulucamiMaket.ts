@@ -3,6 +3,7 @@
 // Yükseklikler ve pencere sayıları temsilidir. Birim: metre. Kuzey = -z, kıble (güney) = +z, doğu = +x.
 import * as THREE from 'three'
 import { kapiKanatlari, ulucamiDetaylari } from './ulucamiDetay'
+import { icZemini } from './ulucami/zemin'
 import { ulucamiMalzemeleri } from './ulucamiDokular'
 import { uluIsikMalzemeleri } from './ulucami/isik'
 import { icDuraklar, icYurumeAlani, ulucamiIcMekani, type IcDurak, type IcYurume } from './ulucamiIc'
@@ -35,7 +36,7 @@ export function ulucamiMaketi(): Maket {
   for (let i = 0; i < avluUV.count; i++) avluUV.setXY(i, avluP.getX(i), avluP.getZ(i))
   k.ekle(avlu, m.doseme)
   kutu(DOGU_BATI + 1, 0.6, KUZEY_GUNEY + 1, m.mermer, 0, 0.3, 0)
-  kutu(DOGU_BATI - 4, 0.1, KUZEY_GUNEY - 4, m.hali, 0, 0.65, 0)
+  icZemini(k, m)
 
   // --- Cephe: üç katman (dış taş + kemerli nişler, gövde, iç sıva) ve kafesli pencereler ---
   const cephe = (L: number, x: number, z: number, ry: number, ortaYok: 'hepsi' | 'alt' | 'yok', goz: number, adet: number, altYok = false) => {

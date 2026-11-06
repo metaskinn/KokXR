@@ -15,16 +15,16 @@ export function rastgele(tohum: number) {
 /** Dokunmatik cihaz ve Quest: dokular yarı boyutta, malzemeler ek yüzey hesabı olmadan çalışır. */
 export const hafifCihaz = () => matchMedia('(hover: none)').matches || /OculusBrowser|Quest/i.test(navigator.userAgent)
 
-function tekrarli(el: HTMLCanvasElement, metre: number, renkli: boolean) {
+export function tekrarli(el: HTMLCanvasElement, metre: number, renkli: boolean) {
   const t = new THREE.CanvasTexture(el)
   t.wrapS = t.wrapT = THREE.RepeatWrapping
   t.repeat.set(1 / metre, 1 / metre)
-  t.anisotropy = 16
+  t.anisotropy = hafifCihaz() ? 4 : 16
   if (renkli) t.colorSpace = THREE.SRGBColorSpace
   return t
 }
 
-function tuval(boyut: number) {
+export function tuval(boyut: number) {
   const el = document.createElement('canvas')
   el.width = el.height = boyut
   const c = el.getContext('2d', { willReadFrequently: true })
@@ -33,7 +33,7 @@ function tuval(boyut: number) {
 }
 
 /** Dikişsiz gürültü: `per` hücrede bir kendini tekrarlar. */
-function gurultuUret(tohum: number) {
+export function gurultuUret(tohum: number) {
   const N = 256, r = rastgele(tohum), t = new Float32Array(N * N)
   for (let i = 0; i < t.length; i++) t[i] = r()
   const n = (x: number, y: number, per: number, ek: number) => {
@@ -58,7 +58,7 @@ function gurultuUret(tohum: number) {
   }
 }
 
-const yumusak = (a: number, b: number, x: number) => {
+export const yumusak = (a: number, b: number, x: number) => {
   const t = Math.min(1, Math.max(0, (x - a) / (b - a)))
   return t * t * (3 - 2 * t)
 }

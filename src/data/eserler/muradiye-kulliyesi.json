@@ -268,6 +268,26 @@
       "id": "mur-s114",
       "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
       "sayfa": "114-115"
+    },
+    {
+      "id": "mur-s113",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
+      "sayfa": "113"
+    },
+    {
+      "id": "mur-s116",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
+      "sayfa": "116-117"
+    },
+    {
+      "id": "mur-s117",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
+      "sayfa": "117"
+    },
+    {
+      "id": "mur-s131",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"II. Murad Külliyesi\"",
+      "sayfa": "131-134"
     }
   ],
   "tur": {
@@ -462,6 +482,114 @@
             "etiket": "Avluya dön"
           }
         ]
+      }
+    ]
+  },
+  "maket": {
+    "model": "muradiye-kulliyesi",
+    "aciklama": "Temsilî maket, gerçek bir 3B tarama değildir. Kaynakta plan çizimi yoktur: caminin ölçüleri ve yapıların yerleşimi envanterdeki kuşbakışı fotoğraftan okunarak kodla oluşturuldu. Cami içiyle, öteki yapılar dış kütle olarak modellendi; hamamın ve fotoğrafa girmeyen türbelerin yeri, yapılar arası uzaklıklar, yükseklikler, süsleme ayrıntıları ile mihrap ve minberin biçimi temsilîdir. Levha ve kitabe yüzeyleri yazısız bırakıldı.",
+    "bilgiler": [
+      {
+        "metin": "Caminin beden duvarları, Erken Osmanlı Bursa yapılarında görüldüğü gibi üç sıra tuğla ve bir sıra moloz taşla örülmüştür.",
+        "kaynakId": "mur-s113"
+      },
+      {
+        "metin": "Beş bölümlü son cemaat yerinin revak cephesi, farklı boyut ve biçimdeki tuğlaların on beş değişik geometrik düzende örülmesiyle hareketlendirilmiştir.",
+        "kaynakId": "mur-s114"
+      },
+      {
+        "metin": "Caminin iki tuğla minaresinden doğudaki daha eskidir; batıdakinin kaidesinde Nisan 1904 tarihi yer alır.",
+        "kaynakId": "mur-s117"
+      },
+      {
+        "metin": "İmaret caminin yirmi metre kadar kuzeydoğusunda, 13 × 40 m ölçülerindedir. Kırma ahşap çatısı alaturka kiremitle kaplıdır.",
+        "kaynakId": "mur-s124"
+      },
+      {
+        "metin": "Sultan II. Murad Türbesi 13,45 × 13,45 m ile 6,90 × 6,90 m ölçülerinde iç içe iki kareden oluşur. \"Parçala\" ile çatıları ve kubbeleri kaldırabilirsin.",
+        "kaynakId": "mur-s131"
+      }
+    ],
+    "icBilgiler": [
+      {
+        "id": "son-cemaat",
+        "baslik": "Son cemaat yeri",
+        "metin": "Dört basamakla çıkılan beş bölümlü son cemaat yerinde dört mermer payenin arasında iki granit sütun vardır. Orta bölüm mukarnas dolgulu kubbeyle örtülüdür.",
+        "kaynakId": "mur-s114",
+        "konum": [28, 7, -29],
+        "yaricap": 6
+      },
+      {
+        "id": "kitabe",
+        "baslik": "İnşa kitabesi",
+        "metin": "Külliyenin inşa kitabesi caminin ana giriş kapısı üzerindedir: inşaat H. 828 / M. 1425'te başlamış, H. 830 / M. 1426'da tamamlanmıştır. Maketteki kitabe yüzeyi yazısızdır.",
+        "kaynakId": "mur-s112",
+        "konum": [28, 5.7, -22.6],
+        "yaricap": 3.5
+      },
+      {
+        "id": "ic-avlu",
+        "baslik": "Kubbeli iç avlu",
+        "metin": "Giriş sofası kubbeli iç avluya açılır. Giriş kubbesi dıştan sekizgen kasnaklıdır; içeride kubbeye geçişi büyük prizmatik üçgenler sağlar.",
+        "kaynakId": "mur-s115",
+        "konum": [28, 7, -14.6],
+        "yaricap": 4.5
+      },
+      {
+        "id": "eyvan",
+        "baslik": "Tabhaneden eyvana",
+        "metin": "Sultan II. Abdülhamid'in iradesiyle 1897'de tabhanelerin duvarları kaldırılmış, bu mekânlar camiye dahil edilerek eyvan şekline dönüştürülmüştür.",
+        "kaynakId": "mur-s115",
+        "konum": [38, 6, -14.6],
+        "yaricap": 4.5
+      },
+      {
+        "id": "eyvan-hat",
+        "baslik": "Eyvan yazıları",
+        "metin": "Eyvan kemer ayaklarında ve batı eyvanının kıble duvarında H. 1320 / M. 1902 tarihli yazılar vardır; hattat Ömer Vasfi Efendi'nin eseridir. Makette bu yüzeyler yazısız bırakılmıştır.",
+        "kaynakId": "mur-s116",
+        "konum": [18, 6, -14.6],
+        "yaricap": 4.5
+      },
+      {
+        "id": "cini",
+        "baslik": "Mihrap önü çinileri",
+        "metin": "Mihrap önü duvarları, araları üçgen firuze sırlı tuğlalarla doldurulmuş altıgen zümrüt yeşili çinilerle kaplıdır. Aynı çinilerin Yeşil Cami'de de kullanılmış olması, Tebrizli usta grubunun burada da görev aldığını gösterir.",
+        "kaynakId": "mur-s116",
+        "konum": [33.2, 4.4, -3],
+        "yaricap": 3
+      },
+      {
+        "id": "mihrap",
+        "baslik": "Mihrap",
+        "metin": "1790 yılındaki onarımdan sonra mihrap tamamen alçıdan, Rokoko üslubunda yenilenmiştir. Maketteki biçimi temsilîdir.",
+        "kaynakId": "mur-s118",
+        "konum": [28, 5.6, 2.2],
+        "yaricap": 3.6
+      },
+      {
+        "id": "minber",
+        "baslik": "Minber",
+        "metin": "Eski minber yanınca köyden getirilen H. 1315 / M. 1897 tarihli sade ahşap minber, 2014 restorasyonunda kaldırılıp yerine bugünkü minber konulmuştur. Mihrap ve minberin üslupları birbirinden farklıdır.",
+        "kaynakId": "mur-s118",
+        "konum": [24.9, 5.2, -0.5],
+        "yaricap": 2.6
+      },
+      {
+        "id": "levha",
+        "baslik": "Levha ve Kâbe örtüsü",
+        "metin": "Mihrabın batısındaki duvarda Şeyh Sırrî Efendi'nin celi talik hattıyla bir levha, tam karşısında aynı ölçülerde bir Kâbe örtüsü asılıdır. Makette iki yüzey de yazısız pano olarak gösterilir.",
+        "kaynakId": "mur-s116",
+        "konum": [22.8, 6.1, -2],
+        "yaricap": 2.6
+      },
+      {
+        "id": "kubbe",
+        "baslik": "Mihrap önü kubbesi",
+        "metin": "Mihrap önü kubbesi dıştan sekizgen kasnaklıdır. Geçiş elemanı olarak duvarın ortasına kadar inen iri mukarnaslı, damlalı tromplar kullanılmıştır.",
+        "kaynakId": "mur-s115",
+        "konum": [28, 15, -2],
+        "yaricap": 2
       }
     ]
   },

@@ -9,6 +9,7 @@ import { atlasaOturt, cepheKemeri, kapilarMalzemeleri, kemerDilimleri, kosk, ser
 import { ulucamiDetaylari } from './ulucamiDetay'
 import { ulucamiMalzemeleri } from './ulucamiDokular'
 import { uluIsikMalzemeleri } from './ulucami/isik'
+import { kursunKaideG, kursunKubbeEkle, minareUstu } from './ulucami/kubbeler'
 import { icDuraklar, icYurumeAlani, ulucamiIcMekani, type IcDurak, type IcYurume } from './ulucamiIc'
 import {
   DOGU_BATI, DOSEME_Y, DUVAR, ETEK_Y, GOZ_X, GOZ_Z, H, KASNAK_TABAN, KUZEY_GUNEY, Kova, type Mal, OCTA,
@@ -119,7 +120,7 @@ export function ulucamiMaketi(): Maket {
     const g = new THREE.BufferGeometry()
     g.setAttribute('position', new THREE.Float32BufferAttribute([x0, altY, z0, x1, altY, z1, x2, DOSEME_Y, z2, x0, altY, z0, x2, DOSEME_Y, z2, x3, DOSEME_Y, z3], 3))
     const L = Math.hypot(x1 - x0, z1 - z0)
-    g.setAttribute('uv', new THREE.Float32BufferAttribute([0, 0, L, 0, L, 2, 0, 0, L, 2, 0, 2], 2))
+    g.setAttribute('uv', new THREE.Float32BufferAttribute([0, 0, L, 0, L - 2, 2, 0, 0, L - 2, 2, 2, 2], 2))
     g.computeVertexNormals()
     kCati.ekle(g, m.kursun)
   }
@@ -139,7 +140,7 @@ export function ulucamiMaketi(): Maket {
     const acik = i === SADIRVAN_SUTUN && j === SADIRVAN_SATIR
     const { kasnakH, kubbeH } = gozOlcusu(i)
 
-    const kaide = duzGolge(new THREE.CylinderGeometry(7.9, 9.6, ETEK_Y, 4, 1, true).rotateY(Math.PI / 4))
+    const kaide = kursunKaideG(7.9, 9.6, ETEK_Y)
     kCati.ekle(yer(kaide, x, DOSEME_Y + ETEK_Y / 2, z), m.kursun)
     const halka = dikdortgen(-5.65, -5.65, 5.65, 5.65)
     halka.holes.push(new THREE.Path().absarc(0, 0, 5.4, 0, Math.PI * 2, true))
@@ -154,59 +155,20 @@ export function ulucamiMaketi(): Maket {
       const pilastr = kutuG(0.36, kasnakH - 0.3, 0.2).translate(0, KASNAK_TABAN + kasnakH / 2 - 0.1, R - 0.01)
       kKasnak.ekle(yer(pilastr, x, 0, z, Math.PI / 8 + n * Math.PI / 4), m.krem)
     }
+    // Yüz başına tek kemerli pencere, yüksekliğin yarısından fazlası (DJI_0291): sıvadan hafif içeride, açık çerçeveli.
     const yuz = R * OCTA + 0.04
-    const pH = Math.min(0.95, kasnakH - 1.3)
+    const pG = 1.42, pK = 0.68, pH = kasnakH * 0.62 - pK, y0 = KASNAK_TABAN + kasnakH * 0.17
     for (let n = 0; n < 8; n++) {
       const a = n * Math.PI / 4
-      const y0 = KASNAK_TABAN + (kasnakH - pH - 0.55) / 2
-      const cerceveS = kemer(new THREE.Shape(), 0, y0 - 0.12, 1.45, pH + 0.12, 1)
-      cerceveS.holes.push(kemer(new THREE.Path(), 0, y0, 1.12, pH, 0.8))
-      const cerceve = cikar(cerceveS, 0.12, yuz)
-      const kafes = new THREE.ShapeGeometry(kemer(new THREE.Shape(), 0, y0, 1.12, pH, 0.8), 8).translate(0, 0, yuz + 0.03)
+      const cerceveS = kemer(new THREE.Shape(), 0, y0 - 0.1, pG + 0.26, pH + 0.1, pK + 0.14)
+      cerceveS.holes.push(kemer(new THREE.Path(), 0, y0, pG, pH, pK))
+      const cerceve = cikar(cerceveS, 0.09, yuz)
+      const kafes = new THREE.ShapeGeometry(kemer(new THREE.Shape(), 0, y0, pG, pH, pK), 8).translate(0, 0, yuz + 0.02)
       kKasnak.ekle(yer(cerceve, x, 0, z, a), m.krem)
       kKasnak.ekle(yer(kafes, x, 0, z, a), m.kafes)
     }
 
-    // Kubbe: alta doğru açılan etek, sekizgen ağızdan yuvarlağa geçiş
-    const kY = KASNAK_TABAN + kasnakH
-    const profil: [number, number][] = [[6.75, -0.28], [6.35, 0], [5.85, 0.32]]
-    const ACIK_R = 2.3
-    for (let t = 0; t <= 16; t++) {
-      const a = (t / 16) * Math.PI / 2
-      const r = 5.65 * Math.pow(Math.cos(a), 0.86)
-      if (acik && r < ACIK_R) break
-      profil.push([r, 0.32 + kubbeH * Math.pow(Math.sin(a), 1.08)])
-    }
-    const DIKIS = 36, DIKIS_PARCA = 5
-    const kubbe = dondurG(profil, DIKIS * DIKIS_PARCA, [1, 1])
-    const kubbeUV = kubbe.attributes.uv
-    const poz = kubbe.attributes.position
-    for (let v = 0; v < poz.count; v++) {
-      const vx = poz.getX(v), vy = poz.getY(v), vz = poz.getZ(v)
-      const b = 1 - THREE.MathUtils.smoothstep(vy, 0, kubbeH * 0.34)
-      const teta = Math.atan2(vx, vz)
-      const parca = Math.PI / 4
-      const fark = ((teta + Math.PI * 2 + parca / 2) % parca) - parca / 2
-      const oran = b > 0 ? THREE.MathUtils.lerp(1, OCTA / Math.cos(fark) * 1.04, b) : 1
-      const r = Math.hypot(vx, vz)
-      const dikisVar = Math.round(kubbeUV.getX(v) * DIKIS * DIKIS_PARCA) % DIKIS_PARCA === 0
-      const kabarti = dikisVar && r > 0.2 ? 1 + 0.07 / r : 1
-      poz.setX(v, vx * oran * kabarti); poz.setZ(v, vz * oran * kabarti)
-    }
-    kubbe.computeVertexNormals()
-    kKubbe.ekle(yer(kubbe, x, kY, z), m.kubbe)
-
-    if (acik) {
-      // Fotoğrafta açıklık bugün camla örtülüdür; metin ve kaynak "ortası açık" der.
-      const sonR = profil[profil.length - 1][0], sonY = profil[profil.length - 1][1]
-      kKubbe.ekle(yer(new THREE.TorusGeometry(sonR, 0.14, 8, 32).rotateX(Math.PI / 2), x, kY + sonY, z), m.koyu)
-      const camG = dondurG([[sonR, 0], [sonR * 0.86, 0.5], [sonR * 0.5, 1], [0.01, 1.2]], 32, [1, 1])
-      kKubbe.ekle(yer(camG, x, kY + sonY, z), m.cam)
-      kKubbe.ekle(yer(dondurG([[0.1, 0], [0.04, 0.5], [0, 0.55]], 8), x, kY + sonY + 1.2, z), m.bronz)
-    } else {
-      const alem: [number, number][] = [[0.2, 0], [0.06, 0.14], [0.16, 0.32], [0.05, 0.52], [0.12, 0.66], [0.02, 1], [0, 1.08]]
-      kKubbe.ekle(yer(dondurG(alem, 10), x, kY + 0.32 + kubbeH - 0.08, z), m.bronz)
-    }
+    kursunKubbeEkle(kKubbe, m, x, KASNAK_TABAN + kasnakH, z, kubbeH, acik, i, j)
   }
 
   // --- Minareler: batıdaki mermer çok köşeli kaideli, doğudaki taş kare kaideli (fotoğraflara göre) ---
@@ -226,30 +188,7 @@ export function ulucamiMaketi(): Maket {
       ek(duzGolge(silindirG(2.5, 4.8, 3.2, 4).rotateY(Math.PI / 4).translate(0, 7.6, 0)), m.tas)
       govdeTaban = 9.1
     }
-    ek(dondurG([[2.35, govdeTaban], [2.05, 26.5]], 32), m.tugla)
-    for (const y of [govdeTaban + 0.4, 18.5, 22]) ek(silindirG(2.3, 2.3, 0.28, 32).translate(0, y, 0), m.tas)
-    // Şerefe altı: yukarı açılan kademeler ve küçük hücreler
-    const KADEME = 5
-    for (let t = 0; t < KADEME; t++) {
-      const r = 2.1 + t * 0.2, y = 26.5 + t * 0.55
-      ek(silindirG(r + 0.14, r, 0.55, 28).translate(0, y + 0.27, 0), m.tas)
-      for (let a = 0; a < 20; a++) {
-        const teta = (a + (t % 2) * 0.5) * (Math.PI * 2) / 20
-        const hucre = new THREE.SphereGeometry(0.3, 6, 3, 0, Math.PI * 2, 0, Math.PI / 2).scale(1, 1.2, 0.5)
-        ek(hucre.translate(0, y + 0.02, r + 0.06).rotateY(teta), m.taskoyu)
-      }
-    }
-    ek(silindirG(3.15, 3.15, 0.35, 32).translate(0, 29.5, 0), m.mermer)
-    for (let a = 0; a < 28; a++) {
-      const teta = a * (Math.PI * 2) / 28
-      ek(kutuG(0.58, 1, 0.06).translate(0, 30.2, 3).rotateY(teta), m.kafes)
-      ek(kutuG(0.09, 1.1, 0.09).translate(0.33, 30.22, 3).rotateY(teta), m.mermer)
-    }
-    ek(silindirG(3.08, 3.08, 0.14, 32, true).translate(0, 30.8, 0), m.mermer)
-    ek(dondurG([[1.85, 29.7], [1.72, 37.8]], 28), m.tugla)
-    ek(dondurG([[1.8, 37.6], [2.35, 38.05], [2.35, 38.3], [1.6, 38.55]], 28), m.mermer)
-    ek(dondurG([[1.35, 38.5], [1.65, 39.1], [1.05, 39.8], [1.45, 40.5], [1.65, 41], [0.95, 41.8], [1.05, 42.2], [0.22, 43.6], [0.12, 44.1]], 24), m.taskoyu)
-    ek(dondurG([[0.12, 44.1], [0.06, 44.4], [0.2, 44.7], [0.05, 45], [0.15, 45.3], [0.02, 46], [0, 46.1]], 10), m.bronz)
+    minareUstu(ek, m, govdeTaban)
   }
   minare(-YX - 2.2, -YZ - 1.4, true)
   minare(YX + 2.2, -YZ - 1.4, false)

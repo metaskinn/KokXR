@@ -3,7 +3,7 @@
 // Hat yazısı taklit edilmez: panolar ve süslemeler yalnız bitkisel ve geometrik motif taşır.
 import * as THREE from 'three'
 import {
-  DUVAR, H, KASNAK_TABAN, Kova, OCTA, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
+  DUVAR, H, KASNAK_TABAN, Kova, SADIRVAN_SATIR, SADIRVAN_SUTUN, SATIR, SUTUN, YX, YZ,
   dondurG, duzGolge, gozAcikligi, gozOlcusu, kemer, px, pz, silindirG, yer,
 } from './ulucamiParca'
 import { KABE_VITRIN } from './ulucami/icduvar'
@@ -13,6 +13,7 @@ import { AHSAP_KURSU, MAHFIL_ALT_KORKULUK, minberYap, parmaklik } from './ulucam
 import type { UlucamiMalzemeleri } from './ulucamiDokular'
 import { MIHRAP, SAMDAN, ulucamiMihrabi } from './ulucami/mihrap'
 import { kemerleriKur, payeleriKur } from './ulucami/payeler'
+import { IC_KUBBE_R, avizeEkle, icKubbeEkle } from './ulucami/kubbeler'
 
 const ZEMIN = 0.7
 /** İç döşemenin (halının) üst yüzü: ulucamiMaket'teki halı y 0.65, kalınlık 0.1. */
@@ -139,58 +140,12 @@ export function ulucamiIcMekani(m: UlucamiMalzemeleri, k: Kova, kCati: Kova, kKa
     const acik = i === SADIRVAN_SUTUN && j === SADIRVAN_SATIR
     const { kasnakH, kubbeH } = gozOlcusu(i)
     const { x0, x1, z0, z1 } = gozAcikligi(i, j)
-    kCati.ekle(pandantifG(x, z, x0, x1, z0, z1, H - 0.05, KASNAK_TABAN, 5.25), m.pandantif)
-
-    kKasnak.ekle(yer(duzGolge(silindirG(5.74, 5.74, kasnakH, 8, true).rotateY(Math.PI / 8)), x, KASNAK_TABAN + kasnakH / 2, z), m.ic)
-    const yuz = 5.74 * OCTA - 0.03, pH = Math.min(0.95, kasnakH - 1.3), y0 = KASNAK_TABAN + (kasnakH - pH - 0.55) / 2
-    for (let n = 0; n < 8; n++) {
-      const a = n * Math.PI / 4
-      kKasnak.ekle(yer(new THREE.ShapeGeometry(kemer(new THREE.Shape(), 0, y0 - 0.12, 1.45, pH + 0.12, 1), 8).translate(0, 0, yuz), x, 0, z, a), m.bronz)
-      kKasnak.ekle(yer(new THREE.ShapeGeometry(kemer(new THREE.Shape(), 0, y0, 1.12, pH, 0.8), 8).translate(0, 0, yuz - 0.02), x, 0, z, a), m.camKafes)
-    }
-
-    const kY = KASNAK_TABAN + kasnakH
-    const profil: [number, number][] = [[5.78, -0.02]]
-    for (let t = 0; t <= 18; t++) {
-      const a = (t / 18) * Math.PI / 2
-      const r = 5.38 * Math.pow(Math.cos(a), 0.86)
-      if (acik && r < 2.15) break
-      profil.push([Math.max(r, 0.001), (kubbeH - 0.35) * Math.pow(Math.sin(a), 1.08)])
-    }
-    kKubbe.ekle(yer(dondurG(profil, 64, [1, acik ? 0.82 : 1]), x, kY, z), m.icKubbe)
-
-    if (acik) {
-      // Camın ardındaki gökyüzü: yalnız aşağıdan görünür, dıştan bakınca yok sayılır.
-      const son = profil[profil.length - 1]
-      const gok = new THREE.CircleGeometry(son[0] + 0.4, 32).rotateX(Math.PI / 2).translate(x, kY + son[1] + 1.1, z)
-      kKubbe.ekle(gok, m.gok)
-      continue
-    }
-
+    kCati.ekle(pandantifG(x, z, x0, x1, z0, z1, H - 0.05, KASNAK_TABAN, IC_KUBBE_R), m.pandantif)
+    icKubbeEkle(m, kKasnak, kKubbe, x, z, kasnakH, kubbeH, acik, i, j)
+    if (acik) continue
     // Mihrabın ve Kâbe örtüsünün önü boş kalır
     if ((i === 2 && j === SATIR - 1) || (i === SUTUN - 1 && j === 0)) continue
-
-    // Halka avize: dört askı, halka ve lambalar
-    const ay = 5.6, R = 2.1, tepe = kY + kubbeH - 0.5
-    k.ekle(new THREE.TorusGeometry(R, 0.035, 6, 36).rotateX(Math.PI / 2).translate(x, ay, z), m.altin)
-    k.ekle(new THREE.TorusGeometry(R * 0.55, 0.025, 6, 24).rotateX(Math.PI / 2).translate(x, ay + 0.55, z), m.altin)
-    for (let n = 0; n < 4; n++) {
-      const a = n * Math.PI / 2 + Math.PI / 4
-      const ax = x + Math.sin(a) * R, az = z + Math.cos(a) * R
-      const uzunluk = Math.hypot(ax - x, tepe - ay, az - z)
-      const ip = new THREE.CylinderGeometry(0.014, 0.014, uzunluk, 4)
-      ip.applyQuaternion(new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), new THREE.Vector3(x - ax, tepe - ay, z - az).normalize()))
-      ip.translate((ax + x) / 2, (ay + tepe) / 2, (az + z) / 2)
-      k.ekle(ip, m.koyu)
-    }
-    for (let n = 0; n < 14; n++) {
-      const a = (n / 14) * Math.PI * 2
-      k.ekle(new THREE.SphereGeometry(0.085, 8, 6).translate(x + Math.sin(a) * R, ay - 0.2, z + Math.cos(a) * R), m.lamba)
-      // Çapraz üç düzlemli hale: her bakış açısından yuvarlak parıltı gibi görünür.
-      for (const [rx, ry] of [[0, 0], [0, Math.PI / 2], [Math.PI / 2, 0]]) {
-        k.ekle(new THREE.PlaneGeometry(0.8, 0.8).rotateX(rx).rotateY(ry).translate(x + Math.sin(a) * R, ay - 0.2, z + Math.cos(a) * R), m.lambaHale)
-      }
-    }
+    avizeEkle(k, m, x, z, KASNAK_TABAN + kasnakH + kubbeH - 0.5)
   }
 
   // --- Mihrap: arşiv fotoğrafından cephe, kabartma kademeleri, mukarnas (ulucami/mihrap.ts) ---

@@ -74,7 +74,7 @@ export function cami(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, kCa
   const kutu = (g: number, h: number, dd: number, mal: Mal, x: number, y: number, z: number, kv = k) => kv.ekle(yer(kutuG(g, h, dd), x, y, z), mal)
   const ikiYan = (f: (s: number) => void) => { f(1); f(-1) }
   const hali = m.haliSade.clone()
-  hali.color.set('#e08878')
+  hali.color.set('#c9483c')
 
   // --- Kaide ve döşemeler ---
   kutu(31.6, 0.95, 8.8, m.mermer, 0, 0.475, -13.3)
@@ -161,7 +161,7 @@ export function cami(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, kCa
     kCati.ekle(yer(icKubbeG(R, 1.6), c, 7.3, -13.3), c === 0 ? d.tromp : d.icKubbe)
   }
   kirmaCati(kCati, -15.7, 15.7, -17.8, -8.8, 9.15, 2.9, m.kursun)
-  disKubbe(kCati, 0, 10.8, -13.3, 2.6, 2, m.kubbe, 32)
+  disKubbe(kCati, 0, 10.8, -13.3, 2.6, 2, d.kursunKubbe, 32)
 
   // Giriş duvarı: mermer taç, kündekâri kanatlar, alınlıkta çini
   const KAPI = { u: 0, g: 2.6, y: TABAN + 0.02, duz: 3.2, k: 1.1 }
@@ -223,7 +223,9 @@ export function cami(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, kCa
 
   // --- Çatı: kurşun güverte, sekizgen tuğla kasnaklar, kurşun kubbeler ---
   const DIS_R = 6.9 / Math.cos(Math.PI / 8)
-  delikliDoseme(kCati, -15.4, 15.4, -9.6, 6.2, 9.8, [[0, COURT_Z, A + 0.05], [EYVAN_X, COURT_Z, 3.9], [-EYVAN_X, COURT_Z, 3.9]], m.kursun)
+  // Güverte ana kemerin üstünü kesmesin diye ortada yalnız giriş duvarını örter.
+  ikiYan((s) => delikliDoseme(kCati, s > 0 ? 6.25 : -15.4, s > 0 ? 15.4 : -6.25, -9.6, 6.2, 9.8, [[s * EYVAN_X, COURT_Z, 3.9]], m.kursun))
+  delikliDoseme(kCati, -6.25, 6.25, -9.6, -6.8, 9.8, [], m.kursun)
   delikliDoseme(kCati, -7.3, 7.3, 6.2, 18.4, 14.62, [[0, HALL_Z, 5.2]], m.kursun)
   kasnak(kKasnak, 0, 9.7, 14.7, COURT_Z, DIS_R, 8, d.almasikCami, m.tugla)
   kasnak(kKasnak, 0, 14.4, 15.3, HALL_Z, DIS_R, 8, d.almasikCami, m.tugla)
@@ -235,9 +237,9 @@ export function cami(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, kCa
     kemerHalka(kKasnak, 0, COURT_Z, a, 0, 11.6, 1.1, 1, 0.6, 0.18, 6.9, m.tugla)
   }
   // Kubbeler
-  disKubbe(kKubbe, 0, 14.75, COURT_Z, 6.6, 5.6, m.kubbe, 56)
-  disKubbe(kKubbe, 0, 15.3, HALL_Z, 6.6, 5.6, m.kubbe, 56)
-  ikiYan((s) => disKubbe(kKubbe, s * EYVAN_X, 10.95, COURT_Z, 4.6, 3.8, m.kubbe, 44))
+  disKubbe(kKubbe, 0, 14.75, COURT_Z, 6.6, 5.6, d.kursunKubbe, 56)
+  disKubbe(kKubbe, 0, 15.3, HALL_Z, 6.6, 5.6, d.kursunKubbe, 56)
+  ikiYan((s) => disKubbe(kKubbe, s * EYVAN_X, 10.95, COURT_Z, 4.6, 3.8, d.kursunKubbe, 44))
   alem(kKubbe, 0, 20.3, COURT_Z, m.bronz, 1.1)
   alem(kKubbe, 0, 20.85, HALL_Z, m.bronz, 1.1)
   ikiYan((s) => alem(kKubbe, s * EYVAN_X, 14.7, COURT_Z, m.bronz, 0.9))
@@ -395,7 +397,7 @@ export function cami(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, kCa
     yan.moveTo(0, ZEM); yan.lineTo(MINBER.z1 - MINBER.z0, ZEM); yan.lineTo(MINBER.z1 - MINBER.z0, ZEM + MINBER.h + 1); yan.lineTo(L, ZEM + MINBER.h + 1)
     yan.lineTo(MINBER.rampa0 - MINBER.z0, ZEM + 1); yan.lineTo(0, ZEM + 1); yan.closePath()
     for (const s of [-1, 1]) {
-      k.ekle(yer(cikar(yan, 0.1, 0).rotateY(-Math.PI / 2), my + s * (en / 2 + 0.05) + 0.05, 0, MINBER.z0), m.kundekari)
+      k.ekle(yer(cikar(yan, 0.1, 0).rotateY(-Math.PI / 2), my + s * (en / 2 + 0.05) + 0.05, 0, MINBER.z0), koyu)
     }
     // Basamaklar
     const N = 9
@@ -409,8 +411,8 @@ export function cami(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, kCa
     k.ekle(yer(duzGolge(silindirG(0.05, 0.85, 1.6, 8)), my, ZEM + MINBER.h + 3.3, (MINBER.z1 + MINBER.rampa1) / 2), koyu)
     alem(k, my, ZEM + MINBER.h + 4.1, (MINBER.z1 + MINBER.rampa1) / 2, m.altin, 0.8)
     // Kapı: iki söve ve lento, içinden geçilir
-    for (const s of [-1, 1]) kutu(0.13, 3, 0.4, m.kundekari, my + s * 0.685, ZEM + 1.5, MINBER.z0 + 0.1)
-    kutu(en + 0.25, 0.5, 0.42, koyu, my, ZEM + 3.05, MINBER.z0 + 0.1)
+    for (const s of [-1, 1]) kutu(0.13, 2.2, 0.4, m.kundekari, my + s * 0.685, ZEM + 1.1, MINBER.z0 + 0.1)
+    kutu(en + 0.25, 0.22, 0.42, m.altinKoyu, my, ZEM + 2.25, MINBER.z0 + 0.1)
   }
   minber()
 

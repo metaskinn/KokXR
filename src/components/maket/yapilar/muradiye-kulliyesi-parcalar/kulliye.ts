@@ -43,7 +43,7 @@ export function kulliye(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, 
     for (const s of [-1, 1]) for (let i = 0; i < 5; i++) {
       const z = Z - 8 + i * 4
       const x = X + s * 12.6
-      disKubbe(kKubbe, x, 6.7, z, 1.6, 1.4, m.kubbe, 18)
+      disKubbe(kKubbe, x, 6.7, z, 1.6, 1.4, d.kursunKubbe, 18)
       if (i % 2 === 0) {
         kutu(0.8, 2.6, 0.8, m.tugla, x + s * 2.9, 7.6, z + 1.5, kCati)
         kutu(1, 0.2, 1, m.mermer, x + s * 2.9, 8.95, z + 1.5, kCati)
@@ -55,14 +55,14 @@ export function kulliye(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, 
     kemerHalka(k, X, Z - DER - 1.9, KUZEY, 0, 0.05, 3.6, 3, 2, 0.32, 0, m.tugla)
     for (let i = 0; i < 16; i++) k.ekle(yer(kutuG(0.32, 0.32, 0.32).rotateY(Math.PI / 4), X - 3.6 + i * 0.48, 8.65, Z - DER - 1.9), m.tugla)
     kasnak(kKasnak, X, 8.8, 9.6, Z - DER - 0.4, 2.7, 8, d.almasikCami, m.tugla)
-    disKubbe(kKubbe, X, 9.6, Z - DER - 0.4, 2.4, 2.1, m.kubbe, 24)
+    disKubbe(kKubbe, X, 9.6, Z - DER - 0.4, 2.4, 2.1, d.kursunKubbe, 24)
     // Dershane: güneyde kubbeli eyvan
     kutu(10.6, 8.4, 10.6, d.almasikCami, X, 4.2, Z + DER + 5.2)
     pencereSirasi(X, Z + DER + 10.5, GUNEY, 10.6, 2, 1.6, 1.3, 1.9, 0.22, m.tugla, m.koyu)
     pencereSirasi(X + 5.3, Z + DER + 5.2, DOGU, 10.6, 2, 1.6, 1.3, 1.9, 0.22, m.tugla, m.koyu)
     pencereSirasi(X - 5.3, Z + DER + 5.2, BATI, 10.6, 2, 1.6, 1.3, 1.9, 0.22, m.tugla, m.koyu)
     kasnak(kKasnak, X, 8.3, 9.7, Z + DER + 5.2, 5.6, 8, d.almasikCami, m.tugla)
-    disKubbe(kKubbe, X, 9.7, Z + DER + 5.2, 5.1, 4.2, m.kubbe, 40)
+    disKubbe(kKubbe, X, 9.7, Z + DER + 5.2, 5.1, 4.2, d.kursunKubbe, 40)
     alem(kKubbe, X, 13.8, Z + DER + 5.2, m.bronz)
   }
   medrese()
@@ -133,7 +133,7 @@ export function kulliye(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, 
   type Plan = { x: number; z: number; a: number; n: 4 | 6 | 8; h: number; kasnakH?: number; R?: number; kubbeH?: number; mal?: Mal; acik?: boolean }
   const dome = (p: Plan, y: number, R: number) => {
     const H = p.kubbeH ?? R * 0.85
-    disKubbe(kKubbe, p.x, y, p.z, R, H, m.kubbe, 36)
+    disKubbe(kKubbe, p.x, y, p.z, R, H, d.kursunKubbe, 36)
     alem(kKubbe, p.x, y + H - 0.05, p.z, m.bronz, 0.8)
   }
   /** Çokgen veya kare gövdeli türbe: gövde, silme, pencere, kasnak, kurşun kubbe. */
@@ -180,7 +180,7 @@ export function kulliye(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, 
       k.ekle(yer(cikar(s, 0.5, -0.5), xx, 0, zz, ry), d.almasikTurbe)
     }
     kutu(a + 0.3, 0.2, a + 0.3, m.tugla, x, kaide + h + 0.05, z, kCati)
-    disKubbe(kKubbe, x, kaide + h + 0.15, z, a * 0.42, a * 0.36, m.kubbe, 24)
+    disKubbe(kKubbe, x, kaide + h + 0.15, z, a * 0.42, a * 0.36, d.kursunKubbe, 24)
   }
 
   // II. Murad Türbesi: iç içe iki kare, sekizgen kasnak, açık kubbe; kuzeyde mermer taç kapı ve geniş ahşap saçak (s. 130-133)
@@ -199,7 +199,7 @@ export function kulliye(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, 
     kasnak(kKasnak, X, 10, 11.6, Z, (IC / 2 + 0.8) / Math.cos(Math.PI / 8), 8, d.almasikTurbe, m.tugla)
     for (let n = 0; n < 8; n++) kemerYuz(kKasnak, X, Z, n * Math.PI / 4, 0, 10.3, 0.8, 0.5, 0.4, IC / 2 + 0.82, d.sebeke)
     // Kubbe ortası açık (s. 131: "üstü açık")
-    disKubbe(kKubbe, X, 11.7, Z, IC / 2 + 0.4, 3.4, m.kubbe, 40, 0.75)
+    disKubbe(kKubbe, X, 11.7, Z, IC / 2 + 0.4, 3.4, d.kursunKubbe, 40, 0.75)
     kKubbe.ekle(new THREE.TorusGeometry(0.75, 0.1, 6, 20).rotateX(Math.PI / 2).translate(X, 14.96, Z), m.koyu)
     // Taç kapı ve saçak
     const pz = Z - A / 2 - 2
@@ -255,12 +255,19 @@ export function kulliye(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, 
   }
   parsel(-4, 44, 37, 53, true)
   parsel(-23, -6, 37, 53, true)
-  parsel(4, 24, 25, 36, false)
-  parsel(-24, -10, 10, 25, false)
-  parsel(-52, -24, -16, -8, false)
-  parsel(-52, -28, 8, 26, false)
-  parsel(16, 28, -6, 22, false)
-  parsel(-19, -9, 18, 24, false)
+
+  // Yollar ve meydanlar: taş döşeme (fotoğrafa göre kabaca; çimenin üstünde)
+  const yol = (x0: number, x1: number, z0: number, z1: number) => kutu(x1 - x0, 0.03, z1 - z0, m.doseme, (x0 + x1) / 2, 0.035, (z0 + z1) / 2)
+  yol(-118, 62, -33, -22) // kuzeydeki cadde
+  yol(-18, 18, -22, -17) // cami önü
+  yol(-21, -17, -22, 30) // caminin batısından türbelere
+  yol(-44, -17, 18, 38) // II. Murad meydanı
+  yol(-44, -32, 38, 66)
+  yol(-90, -44, 28, 34) // türbeler arası
+  yol(-70, -66, 17, 28)
+  yol(-17, 40, 34, 37)
+  yol(-90, -48, -20, -14) // medrese kuzeyi
+  yol(-108, -90, -22, 24) // hamam çevresi
 
   // --- Ağaçlar: selvi ve yapraklı ağaçlar. Konumlar fotoğraftaki yoğunluğa göre temsilî ---
   const selvi = (x: number, z: number, boy: number) => {
@@ -268,20 +275,29 @@ export function kulliye(m: UlucamiMalzemeleri, d: MuradiyeMalzemeleri, k: Kova, 
     k.ekle(yer(dondurG(p, 12), x, 0, z), m.selvi)
   }
   const agac = (x: number, z: number, R: number, mal: Mal) => {
-    const g = new THREE.IcosahedronGeometry(R, 2)
-    const poz = g.attributes.position
-    for (let i = 0; i < poz.count; i++) {
-      const a = poz.getX(i), b = poz.getY(i), c = poz.getZ(i)
-      const o = 1 + 0.12 * Math.sin(a * 2.1 + x) + 0.1 * Math.sin(b * 2.7 + z) + 0.08 * Math.sin(c * 3.3 + x + z)
-      poz.setXYZ(i, a * o, b * o * 0.92, c * o)
+    const topak = (ox: number, oy: number, oz: number, r0: number) => {
+      const g = new THREE.IcosahedronGeometry(r0, 3)
+      const poz = g.attributes.position, nor = g.attributes.normal
+      for (let i = 0; i < poz.count; i++) {
+        const a = poz.getX(i), b = poz.getY(i), c = poz.getZ(i)
+        const o = 1 + 0.1 * Math.sin(a * 3.1 + x) * Math.sin(c * 2.3 + z) + 0.07 * Math.sin(b * 4.7 + x + z) + 0.05 * Math.sin(a * 7 + b * 6 + c * 5)
+        const l = Math.hypot(a, b, c) || 1
+        nor.setXYZ(i, a / l, b / l, c / l)
+        poz.setXYZ(i, a * o, b * o * 0.9, c * o)
+      }
+      k.ekle(g.translate(x + ox, oy, z + oz), mal)
     }
-    g.computeVertexNormals()
-    k.ekle(g.translate(x, R * 1.25, z), mal)
-    k.ekle(yer(silindirG(0.22, 0.34, R * 0.9, 7), x, R * 0.45, z), m.ahsap)
+    const y = R * 1.35
+    topak(0, y, 0, R * 0.8)
+    topak(R * 0.55, y - R * 0.25, R * 0.2, R * 0.55)
+    topak(-R * 0.5, y - R * 0.2, -R * 0.3, R * 0.58)
+    topak(R * 0.05, y - R * 0.3, -R * 0.6, R * 0.5)
+    topak(-R * 0.15, y - R * 0.3, R * 0.6, R * 0.5)
+    k.ekle(yer(silindirG(0.22, 0.38, R * 1.1, 7), x, R * 0.55, z), m.ahsap)
   }
   for (const [x, z, b] of [[24, -30, 15], [28, 16, 14], [20, 22, 16], [36, 8, 15], [40, 22, 17], [-24, -14, 14], [-18, 22, 15], [-20, 14, 13], [14, 30, 15], [6, 30, 17], [-6, 34, 14], [44, 35, 14], [-40, 24, 15], [-52, 22, 14], [-88, 18, 16], [-92, 44, 15], [-106, -22, 15], [12, -32, 14], [-40, -20, 15], [-8, -28, 13]] as const) selvi(x, z, b)
   for (const [x, z, R, mal] of [
-    [-22, -20, 5, d.agacTuruncu], [-30, -8, 5.5, d.agacSari], [-46, -22, 6, d.agacTuruncu], [-44, -6, 5, d.agacYesil],
+    [-26, -12, 4.4, d.agacTuruncu], [-30, -2, 4.6, d.agacSari], [-46, -10, 5, d.agacTuruncu], [-42, 4, 4.4, d.agacYesil],
     [-40, 12, 5, d.agacTuruncu], [-10, -26, 5, d.agacSari], [26, -2, 5, d.agacYesil], [22, 10, 4.5, d.agacSari],
     [-34, 18, 4.4, d.agacYesil], [-54, 34, 6, d.agacSari], [-74, 26, 5, d.agacYesil], [-92, -26, 6, d.agacTuruncu],
     [-58, -20, 5.4, d.agacTuruncu], [-76, -26, 5, d.agacSari], [8, -26, 5, d.agacTuruncu], [52, 2, 6, d.agacSari],

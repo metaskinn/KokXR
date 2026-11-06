@@ -98,7 +98,7 @@ function tuglaDesen() {
 
 /** Altıgen çini; aralar `ara` rengiyle dolar, ortada ve çevrede yaldız izi. */
 function altigen(renk: string, koyu: string, ara: string) {
-  const G = 256, H = Math.round(G * Math.sqrt(3))
+  const G = 256, H = Math.round(G / Math.sqrt(3))
   return tuval(G, H, (c) => {
     const r = rastgele(renk.length * 13)
     c.fillStyle = ara
@@ -217,17 +217,44 @@ function kasnakIc() {
 /** Renkli camlı pencere: kurşun ağı arasında kırmızı, yeşil, mavi ve sarı parçalar. */
 function vitray() {
   return tuval(128, 256, (c, g, y) => {
-    const r = rastgele(97)
-    const renk = ['#d8a33a', '#bf3f33', '#3d8a5c', '#3268a8', '#efd27a', '#f2ead0']
-    const a = 21
-    for (let i = 0; i <= g / a; i++) for (let j = 0; j <= y / a; j++) {
-      c.fillStyle = renk[Math.floor(r() * renk.length)]
-      c.fillRect(i * a, j * a, a, a)
+    // Açık sarı zemin, kırmızı-yeşil kenar, ortada servi biçimli bir dal: ışığı boğmayan sade bir cam.
+    c.fillStyle = '#f4e3a8'
+    c.fillRect(0, 0, g, y)
+    c.fillStyle = '#b8402f'
+    c.fillRect(0, 0, 12, y); c.fillRect(g - 12, 0, 12, y); c.fillRect(0, y - 12, g, 12)
+    c.fillStyle = '#2f7f5a'
+    c.fillRect(12, 0, 8, y); c.fillRect(g - 20, 0, 8, y); c.fillRect(0, y - 20, g, 8)
+    for (let n = 0; n < 9; n++) {
+      const v = y - 44 - n * 22, o = 26 - n * 2.2
+      c.fillStyle = n % 2 ? '#3f8f6a' : '#c94f3a'
+      c.beginPath(); c.moveTo(g / 2, v - 18); c.quadraticCurveTo(g / 2 + o, v, g / 2, v + 12); c.quadraticCurveTo(g / 2 - o, v, g / 2, v - 18); c.fill()
     }
-    c.strokeStyle = '#3a2f22'
-    c.lineWidth = 3
-    for (let i = 0; i <= g / a; i++) { c.beginPath(); c.moveTo(i * a, 0); c.lineTo(i * a, y); c.stroke() }
-    for (let j = 0; j <= y / a; j++) { c.beginPath(); c.moveTo(0, j * a); c.lineTo(g, j * a); c.stroke() }
+    c.strokeStyle = '#4a3a24'
+    c.lineWidth = 2
+    for (let i = 1; i < 4; i++) { c.beginPath(); c.moveTo(i * g / 4, 0); c.lineTo(i * g / 4, y); c.stroke() }
+    for (let j = 1; j < 8; j++) { c.beginPath(); c.moveTo(0, j * y / 8); c.lineTo(g, j * y / 8); c.stroke() }
+  })
+}
+
+/** Kurşun kubbe: mavimsi gri, ışınsal dikişli (fotoğraflara göre). Kubbeyi bir kez sarar. */
+function kursunKubbe() {
+  return tuval(1024, 256, (c, g, y) => {
+    const r = rastgele(61)
+    c.fillStyle = '#9db0bd'
+    c.fillRect(0, 0, g, y)
+    const adet = 40, b = g / adet
+    for (let i = 0; i < adet; i++) {
+      c.fillStyle = `rgba(${r() > 0.5 ? '235,244,250' : '50,66,80'},${r() * 0.14})`
+      c.fillRect(i * b, 0, b, y)
+      c.fillStyle = 'rgba(232,240,246,0.65)'
+      c.fillRect(i * b, 0, 2.5, y)
+      c.fillStyle = 'rgba(38,50,60,0.6)'
+      c.fillRect(i * b + 2.5, 0, 2.5, y)
+    }
+    const leke = c.createLinearGradient(0, 0, 0, y)
+    leke.addColorStop(0, 'rgba(60,66,70,0)'); leke.addColorStop(1, 'rgba(60,66,70,0.22)')
+    c.fillStyle = leke
+    c.fillRect(0, 0, g, y)
   })
 }
 
@@ -270,7 +297,7 @@ function cimen() {
 
 /** Son cemaat yerinin altıgen tuğla döşemesi. */
 function altigenTugla() {
-  const G = 128, H = Math.round(G * Math.sqrt(3))
+  const G = 128, H = Math.round(G / Math.sqrt(3))
   return tuval(G, H, (c) => {
     const r = rastgele(37)
     c.fillStyle = '#7d6a55'
@@ -335,7 +362,7 @@ function yaprak(ton: number, doyma: number, parlak: number, tohum: number) {
 export function muradiyeMalzemeleri() {
   const pbr = (p: THREE.MeshStandardMaterialParameters) => new THREE.MeshStandardMaterial({ roughness: 0.85, metalness: 0, ...p })
   const iki = THREE.DoubleSide
-  const cini = (el: HTMLCanvasElement, u: number) => pbr({ map: doku(el, u, u * Math.sqrt(3)), roughness: 0.3, metalness: 0.05 })
+  const cini = (el: HTMLCanvasElement, u: number) => pbr({ map: doku(el, u, u / Math.sqrt(3)), roughness: 0.3, metalness: 0.05 })
   const kend = (el: HTMLCanvasElement) => doku(el, 1, 1)
   return {
     almasikCami: pbr({ map: doku(almasik(3, 7), 1.2), roughness: 0.92 }),
@@ -343,7 +370,8 @@ export function muradiyeMalzemeleri() {
     almasikKaba: pbr({ map: doku(almasik(3, 27), 1.5), color: '#c2a895', roughness: 0.95 }),
     tuglaDesen: pbr({ map: doku(tuglaDesen(), 2.4), roughness: 0.88 }),
     ciniZumrut: cini(altigen('#177a58', '#0d5a42', '#2ca9a2'), 0.42),
-    ciniFiruze: cini(altigen('#1f9fb4', '#14758c', '#123f6a'), 0.42),
+    ciniFiruze: cini(altigen('#2fb7cc', '#1b8fa8', '#14557f'), 0.42),
+    kursunKubbe: pbr({ map: kend(kursunKubbe()), roughness: 0.62, metalness: 0.2, side: iki }),
     ciniLacivert: cini(altigen('#24549f', '#183a78', '#d9d3c0'), 0.42),
     bordur: pbr({ map: doku(bant('#14315f', '#f0e8d4', '#2ba0ac'), 0.8, 0.2), roughness: 0.35 }),
     firuzeBant: pbr({ map: doku(bant('#123f5a', '#2fa8b0', '#b09154'), 1.2, 0.5), roughness: 0.4 }),
@@ -355,16 +383,16 @@ export function muradiyeMalzemeleri() {
     sebeke: pbr({ map: kend(sebeke()), side: iki, roughness: 0.8 }),
     kiremit: pbr({ map: doku(kiremit(), 1.4), side: iki, roughness: 0.92 }),
     cimen: pbr({ map: doku(cimen(), 7), roughness: 1 }),
-    altigenTugla: pbr({ map: doku(altigenTugla(), 0.9, 0.9 * Math.sqrt(3)), roughness: 0.9 }),
+    altigenTugla: pbr({ map: doku(altigenTugla(), 0.9, 0.9 / Math.sqrt(3)), roughness: 0.9 }),
     rokoko: pbr({ map: doku(rokoko(), 1.1), roughness: 0.5, metalness: 0.25 }),
     levha: pbr({ map: kend(koyuPano('#10231c')), roughness: 0.6 }),
     kabe: pbr({ map: kend(koyuPano('#14130f')), roughness: 0.92 }),
     granit: pbr({ color: '#5b5f60', roughness: 0.42 }),
-    camCati: pbr({ color: '#1e2c2c', roughness: 0.18, metalness: 0.7 }),
+    camCati: pbr({ color: '#4d6f72', roughness: 0.22, metalness: 0.45 }),
     celik: pbr({ color: '#2f3331', roughness: 0.5, metalness: 0.6 }),
-    agacTuruncu: pbr({ map: doku(yaprak(32, 72, 46, 3), 3), roughness: 1 }),
-    agacSari: pbr({ map: doku(yaprak(46, 66, 46, 5), 3), roughness: 1 }),
-    agacYesil: pbr({ map: doku(yaprak(112, 34, 30, 9), 3), roughness: 1 }),
+    agacTuruncu: pbr({ map: doku(yaprak(28, 58, 38, 3), 2.4), roughness: 1 }),
+    agacSari: pbr({ map: doku(yaprak(42, 50, 40, 5), 2.4), roughness: 1 }),
+    agacYesil: pbr({ map: doku(yaprak(108, 32, 26, 9), 2.4), roughness: 1 }),
     sacakAlti: pbr({ color: '#6e2f1d', roughness: 0.55, side: iki }),
   }
 }

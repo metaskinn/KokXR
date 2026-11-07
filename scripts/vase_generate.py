@@ -26,7 +26,7 @@ def material(name, hexcolor, roughness, metallic=0):
     p.inputs['Coat Weight'].default_value = .25 if roughness < .4 else 0
     return m
 
-materials = [material('Yesil seramik sir', '4e8b7d', .27), material('Krem bezeme', 'e3d4b0', .36), material('Koyu yesil motif', '28554c', .32), material('Ham seramik kirik yuzey', 'bd9874', .88), material('Agiz ve taban seridi', 'b99b62', .36, .12)]
+materials = [material('Green ceramic glaze', '4e8b7d', .27), material('Cream ornament', 'e3d4b0', .36), material('Dark green motif', '28554c', .32), material('Raw ceramic broken surface', 'bd9874', .88), material('Rim and base band', 'b99b62', .36, .12)]
 profile = [(0,6.5),(1,7),(2,7.4),(4,8),(7,10.8),(11,14),(16,16),(21,16.2),(25,14.3),(29,10.3),(33,6.3),(37,5.4),(41,6.7),(43,8),(44,8.2)]
 
 def radius(y):
@@ -156,7 +156,7 @@ for i in range(N):
     nxt=(i+1)%N
     faces.append((bottom_center,nxt,i)); slots.append(3)
     faces.append((inner_center,layer+i,layer+nxt)); slots.append(3)
-mesh=bpy.data.meshes.new('Kesintisiz_intact_seramik')
+mesh=bpy.data.meshes.new('Seamless_intact_ceramic')
 mesh.from_pydata(verts,[],faces)
 for m in materials: mesh.materials.append(m)
 for poly,slot in zip(mesh.polygons,slots):
@@ -171,7 +171,7 @@ bpy.context.collection.objects.link(intact)
 objects.append(intact)
 
 # Thin joint lines visible after the repair is complete; not a placement aid.
-curve=bpy.data.curves.new('Repair_assembly_cizgileri','CURVE')
+curve=bpy.data.curves.new('Repair_assembly_lines','CURVE')
 curve.dimensions='3D'; curve.bevel_depth=.075; curve.bevel_resolution=2
 curve.use_fill_caps=True
 def line(points,closed=False):
@@ -186,7 +186,7 @@ def surface_point(a,y):
 line([surface_point(i/288*math.tau,seam(i/288*math.tau)) for i in range(288)],True)
 for sector in range(3):
     line([surface_point(sector*math.tau/3,i/4) for i in range(177)])
-curve.materials.append(material('Onarim izi - sicak bronz','a98451',.55))
+curve.materials.append(material('Repair trace - warm bronze','a98451',.55))
 marks=bpy.data.objects.new('Repair_Traces',curve)
 bpy.context.collection.objects.link(marks)
 bpy.ops.object.select_all(action='DESELECT')

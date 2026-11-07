@@ -8,7 +8,7 @@ import type { AdminProps } from './AdminPage'
 import { DemoNote, downloadJson } from './AdminPage'
 
 function emptyArtifact(): Artifact {
-  return { id: '', ad: '', city: '', district: '', period: '', endowment: '', summary: '', history: '', verification: 'illustrative', coverImage: '', images: [], hotspots: [], sources: [],
+  return { id: '', name: '', city: '', district: '', period: '', endowment: '', summary: '', history: '', verification: 'illustrative', coverImage: '', images: [], hotspots: [], sources: [],
     test: Array.from({ length: 3 }, () => ({ question: '', options: ['', '', '', ''], correct: 0, description: '', sourceId: '' })) }
 }
 export default function ArtifactForm({ artifact, artifacts, overlay, save }: AdminProps & { artifact?: Artifact }) {
@@ -18,7 +18,7 @@ export default function ArtifactForm({ artifact, artifacts, overlay, save }: Adm
   const [saveError, setSaveError] = useState('')
   const form = useRef<HTMLFormElement>(null)
   const navigate = useNavigate()
-  const id = artifact?.id ?? uniqueId(artifactId(draft.ad), artifacts.map(e => e.id))
+  const id = artifact?.id ?? uniqueId(artifactId(draft.name), artifacts.map(e => e.id))
   const sourced = maybeSourced(draft)
   function update(patch: Partial<Artifact>) { setDraft(t => ({ ...t, ...patch })); setMessage('') }
   function errorAttrs(area: string) {
@@ -74,7 +74,7 @@ export default function ArtifactForm({ artifact, artifacts, overlay, save }: Adm
       {Object.keys(errors).length > 0 && <div role="alert" className="error-summary"><h2>Kayıt tamamlanamadı</h2><p>{Object.keys(errors).length} alanı kontrol edin. İlk hatalı alana odaklanıldı.</p><ul>{Object.entries(errors).map(([area, message]) => <li key={area}><a href={`#${area}`} onClick={e => { e.preventDefault(); document.getElementById(area)?.focus() }}>{document.querySelector(`label[for="${area}"]`)?.textContent ?? area}: {message}</a></li>)}</ul></div>}
       <p role="status">{message}</p>{saveError && <p role="alert" className="area-error">{saveError}</p>}
       <fieldset className="form-section"><legend>Eser bilgileri</legend>
-        {(['ad', 'city', 'district', 'period', 'endowment', 'summary', 'history'] as const).map((a, i) => text(a, ['Ad', 'Şehir', 'İlçe', 'Dönem', 'Vakıf', 'Özet', 'Tarihçe'][i], draft[a], v => update({ [a]: v }), ['summary', 'history'].includes(a)))}
+        {(['name', 'city', 'district', 'period', 'endowment', 'summary', 'history'] as const).map((a, i) => text(a, ['Ad', 'Şehir', 'İlçe', 'Dönem', 'Vakıf', 'Özet', 'Tarihçe'][i], draft[a], v => update({ [a]: v }), ['summary', 'history'].includes(a)))}
         <p className="identity">Eser kimliği: <strong>{id || 'Addan otomatik üretilecek'}</strong>. Kaydedildikten sonra değişmez.</p>
         <label className="form-area" htmlFor="verification">Doğrulama durumu
           <select id="verification" value={sourced ? draft.verification : 'illustrative'} aria-describedby="verification-help" onChange={e => update({ verification: e.target.value as Artifact['verification'] })}>

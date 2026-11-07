@@ -55,8 +55,8 @@ const names = ['Çatı', 'Kasnaklar', 'Kubbeler']
 let m = assemblyText(0, names)
 assert.match(m.top, /0\/3 katman yerinde/)
 assert.match(m.message, /Kavrama/)
-assert.match(m.not, /maketin üst üste oturma sırasıdır/)
-assert.match(m.not, /inşa sırası değildir/)
+assert.match(m.note, /maketin üst üste oturma sırasıdır/)
+assert.match(m.note, /inşa sırası değildir/)
 assert.equal(assemblyText(0, names, { result: 'row', id: 2 }).message, 'Önce Çatı oturmalı. Sıra alttan üste gider.')
 assert.equal(assemblyText(1, names, { result: 'row', id: 2 }).message, 'Önce Kasnaklar oturmalı. Sıra alttan üste gider.')
 assert.equal(assemblyText(1, names, { result: 'seated', id: 0 }).message, 'Çatı yerine oturdu.')
@@ -65,7 +65,7 @@ m = assemblyText(3, names, { result: 'seated', id: 2 })
 assert.match(m.top, /^Tamamlandı: 3\/3/)
 assert.match(m.message, /birleşti/)
 for (const text of [assemblyText(0, names), assemblyText(0, names, { result: 'row', id: 1 }), m]) {
-  assert(!/\b1[0-9]{3}\b|yüzyıl|padişah|sultan|yapıldı|inşa edildi/i.test(text.top + text.message + text.not), 'historical claim')
+  assert(!/\b1[0-9]{3}\b|yüzyıl|padişah|sultan|yapıldı|inşa edildi/i.test(text.top + text.message + text.note), 'historical claim')
 }
 
 console.log('Model assembly: order, shelf, selection, carrying and text passed.')

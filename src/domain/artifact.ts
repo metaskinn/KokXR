@@ -57,7 +57,7 @@ export interface Tour360 {
 export interface RestorationTask {
   title: string; image: string; alt: string;
   column: number; line: number;
-  text: string; sourceId: string; not: string;
+  text: string; sourceId: string; note: string;
 }
 
 // Illustrative 3D model built in code; the model name is defined in src/features/scale-models/modelScene.ts.
@@ -89,7 +89,7 @@ export interface TimeRecord {
 
 export interface Artifact {
   id: string;             // "ulu-mosque", "muradiye-complex"
-  ad: string;
+  name: string;
   city: string;
   district: string;
   period: string;

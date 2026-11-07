@@ -139,12 +139,12 @@ function carpetCanvas() {
   c.fillRect(0, y0 - 6 * measure, B, h + 12 * measure)
   c.fillStyle = '#cfe8df'
   c.fillRect(0, y0 + 3 * measure, B, 4 * measure); c.fillRect(0, y0 + h - 7 * measure, B, 4 * measure)
-  const count = 8, ad = B / count, mid = y0 + h / 2
+  const count = 8, name = B / count, mid = y0 + h / 2
   c.lineWidth = 7 * measure
   for (let i = 0; i < count; i++) {
-    const x = (i + 0.5) * ad
+    const x = (i + 0.5) * name
     c.strokeStyle = i % 2 ? '#e8efe2' : '#17305f'
-    c.beginPath(); c.ellipse(x, mid, ad * 0.58, h * 0.32, 0, 0, Math.PI * 2); c.stroke()
+    c.beginPath(); c.ellipse(x, mid, name * 0.58, h * 0.32, 0, 0, Math.PI * 2); c.stroke()
     c.fillStyle = '#e8efe2'
     c.beginPath(); c.arc(x, mid, 5 * measure, 0, Math.PI * 2); c.fill()
   }

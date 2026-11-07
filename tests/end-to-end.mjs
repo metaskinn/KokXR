@@ -71,7 +71,7 @@ await control('6 admin: edit, home page, restore default', async () => {
 });
 await control('6b admin: add and delete new artifact', async () => {
   await p.goto(`${URL}/admin/new`);
-  const areas = { ad: 'Deneme Eseri', city: 'Bursa', district: 'Osmangazi', period: 'Deneme', endowment: 'Deneme', summary: 'Deneme özeti', history: 'Deneme tarihçesi' };
+  const areas = { name: 'Deneme Eseri', city: 'Bursa', district: 'Osmangazi', period: 'Deneme', endowment: 'Deneme', summary: 'Deneme özeti', history: 'Deneme tarihçesi' };
   for (const [k, v] of Object.entries(areas)) await p.locator(`#${k}`).fill(v);
   for (let i = 0; i < 3; i++) {
     await p.locator(`#test-${i}-question`).fill(`Soru ${i + 1}?`);

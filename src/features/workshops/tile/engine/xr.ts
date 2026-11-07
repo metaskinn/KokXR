@@ -8,7 +8,7 @@ export interface XrContext {
   game: () => Game; actions: () => Action[]; stageName: () => string; quality: () => number
   heatRange: () => { min: number; max: number }
   markerStart: (r: THREE.Ray) => void; walkMarkers: (r: THREE.Ray) => void; markerRelease: () => void
-  command: (id: string) => void; hold: (ad: HoldName, open: boolean) => void; master: () => void
+  command: (id: string) => void; hold: (name: HoldName, open: boolean) => void; master: () => void
   hideTool: () => void; resize: () => void; plateRadius: number; restoreCamera: () => void
 }
 export interface TileXr { start: () => Promise<void>; finish: () => void; frame: () => void; active: () => boolean; isHeld: () => boolean; clear: () => void }
@@ -20,7 +20,7 @@ const LABEL = 'Temsilî çini · Oyun ölçeği'
 
 /** Panel rows: game actions, leave to the master, and exit. */
 export function panelItems(items: Action[], hasMaster: boolean): Action[] {
-  return [...items, ...(hasMaster ? [{ id: 'master', ad: 'Ustaya bırak', tour: 'head' as const }] : []), { id: 'exit', ad: "VR'dan çık", tour: 'head' as const }]
+  return [...items, ...(hasMaster ? [{ id: 'master', name: 'Ustaya bırak', kind: 'head' as const }] : []), { id: 'exit', name: "VR'dan çık", kind: 'head' as const }]
 }
 /** `v` is 1 at the top edge. */
 export function panelHit(v: number, count: number) {
@@ -77,7 +77,7 @@ export function setupXr(b: XrContext): TileXr {
       const yy = HEAD_Y + i * (LINE + GAP)
       c.fillStyle = o.passive ? '#d9d5c9' : o.selected ? '#d99a36' : o.id === 'exit' ? '#7b2c20' : '#1e4d5e'
       c.beginPath(); c.roundRect(40, yy, G - 80, LINE, 12); c.fill()
-      c.fillStyle = o.passive ? '#857f70' : '#fff'; c.font = `600 34px ${TEXT}`; c.textAlign = 'center'; c.fillText(o.ad, G / 2, yy + LINE / 2 + 1); c.textAlign = 'left'
+      c.fillStyle = o.passive ? '#857f70' : '#fff'; c.font = `600 34px ${TEXT}`; c.textAlign = 'center'; c.fillText(o.name, G / 2, yy + LINE / 2 + 1); c.textAlign = 'left'
     })
     texture.needsUpdate = true
   }
@@ -100,7 +100,7 @@ export function setupXr(b: XrContext): TileXr {
       if (!o || o.passive) return
       if (o.id === 'exit') { finish(); return }
       if (o.id === 'master') { b.master(); return }
-      if (o.tour === 'hold') { e.heldName = o.id as HoldName; b.hold(e.heldName, true); return }
+      if (o.kind === 'hold') { e.heldName = o.id as HoldName; b.hold(e.heldName, true); return }
       b.command(o.id)
       return
     }

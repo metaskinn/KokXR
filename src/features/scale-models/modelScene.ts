@@ -23,7 +23,7 @@ export interface ModelScene {
   zoomIn: (ratio: number) => void;
   /** Goes to an interior stop; `null` exits to the outside. */
   interior: (stopId: string | null) => void;
-  stops: { id: string; ad: string }[];
+  stops: { id: string; name: string }[];
   /** Walking and look keys inside: w a s d, arrow keys, PageUp/PageDown, Shift. */
   walkKey: (keyBtn: string, pressed: boolean) => void;
   walkRelease: () => void;
@@ -494,7 +494,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       camera.position.copy(controls.target).add(dir.setLength(distance))
       controls.update()
     },
-    stops: stops.map(({ id, ad }) => ({ id, ad })),
+    stops: stops.map(({ id, name }) => ({ id, name })),
     walkKey: (keyBtn, pressed) => { if (pressed) pressedKeys.add(keyBtn); else pressedKeys.delete(keyBtn) },
     walkRelease: () => pressedKeys.clear(),
     closeInfo,

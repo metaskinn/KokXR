@@ -247,9 +247,9 @@ export function yildirimMaterials() {
   const alternatingHand = alternatingCanvas(41, ['#cdbf9f', '#c2b18f', '#d6c9ac', '#b9a888'])
   const rubbleHand = rubbleCanvas(53)
   const band = texture(bandCanvas(), 2.4, 0.3)
-  const photo = (ad: string) => {
+  const photo = (name: string) => {
     if (PUBLIC_BUILD) return null
-    const f = new THREE.TextureLoader().load(`${PHOTO}/${ad}.jpg`)
+    const f = new THREE.TextureLoader().load(`${PHOTO}/${name}.jpg`)
     f.colorSpace = THREE.SRGBColorSpace
     f.anisotropy = 8
     return f

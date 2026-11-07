@@ -255,9 +255,9 @@ async function main() {
     await x.frame(20)
     const hz1 = await s.evaluate(() => ({ t: performance.now(), k: __t.frame, z: __sim.state().head[2] }))
     await x.stick('left', 0, 0); await x.frame(2)
-    const sec = (hz1.t - hz0.t) / 1000, frameDuration = sec / (hz1.k - hz0.k)
-    log('speed measurement', JSON.stringify({ meter: hz1.z - hz0.z, sec, frameDuration }))
-    report('A7 walking speed ~1.6 m/s (checked only if frame time <0.1 s)', frameDuration < 0.1 ? near((hz1.z - hz0.z) / sec, 1.6, 0.25) : null, { mPerSec: (hz1.z - hz0.z) / sec, frameDuration })
+    const select = (hz1.t - hz0.t) / 1000, frameDuration = select / (hz1.k - hz0.k)
+    log('speed measurement', JSON.stringify({ meter: hz1.z - hz0.z, select, frameDuration }))
+    report('A7 walking speed ~1.6 m/s (checked only if frame time <0.1 s)', frameDuration < 0.1 ? near((hz1.z - hz0.z) / select, 1.6, 0.25) : null, { mPerSec: (hz1.z - hz0.z) / select, frameDuration })
     // Approaching does not open a card; clicking the title does.
     await x.stick('left', 0, -1); await x.frame(40)
     await x.stick('left', 0, 0); await x.frame(3)

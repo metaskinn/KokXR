@@ -61,7 +61,7 @@
 .sword-source p { margin: 0.4rem 0; font-size: 0.9rem; }
 .sword-source small, .sword-piece-note small { display: block; color: var(--secondary); font-size: 0.8rem; }
 .sword-workshop .sword-master { width: 100%; margin-top: 1rem; justify-content: space-between; }
-.sword-master-not { display: block; margin-top: 0.4rem; color: var(--secondary); font-size: 0.8rem; text-align: center; }
+.sword-master-note { display: block; margin-top: 0.4rem; color: var(--secondary); font-size: 0.8rem; text-align: center; }
 .sword-quality { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--stroke); }
 .sword-quality > div { display: flex; justify-content: space-between; align-items: center; }
 .sword-quality > div span { font-size: 0.85rem; font-weight: 600; }

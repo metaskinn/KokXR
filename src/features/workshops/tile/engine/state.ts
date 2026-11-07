@@ -4,11 +4,11 @@ import { regions, advanceTrace, traces, type N } from './pattern.ts'
 
 export const stages = ['Şekil', 'Astar ve bisküvi', 'Desen', 'Tahrir', 'Boyama', 'Sır ve fırın', 'İnceleme']
 export type ColorId = 'cobalt' | 'turquoiseLight' | 'green' | 'red'
-export const colors: { id: ColorId; ad: string; live: string; mat: string }[] = [
-  { id: 'cobalt', ad: 'Kobalt mavisi', live: '#123f96', mat: '#6f7d96' },
-  { id: 'turquoiseLight', ad: 'Turkuaz', live: '#159fa8', mat: '#8aa3a2' },
-  { id: 'green', ad: 'Yeşil', live: '#1f7d4d', mat: '#7f8f80' },
-  { id: 'red', ad: 'Kırmızı', live: '#c5301f', mat: '#a58d82' },
+export const colors: { id: ColorId; name: string; live: string; mat: string }[] = [
+  { id: 'cobalt', name: 'Kobalt mavisi', live: '#123f96', mat: '#6f7d96' },
+  { id: 'turquoiseLight', name: 'Turkuaz', live: '#159fa8', mat: '#8aa3a2' },
+  { id: 'green', name: 'Yeşil', live: '#1f7d4d', mat: '#7f8f80' },
+  { id: 'red', name: 'Kırmızı', live: '#c5301f', mat: '#a58d82' },
 ]
 export const BISQUE = { min: 850, max: 900 }
 export const GLAZE_KILN = { min: 900, max: 940 }
@@ -145,21 +145,21 @@ export function masterComplete(d: Game) {
   else if (a === 3) { d.iz = traces.length; d.traceIndex = 0; d.traceError += .04; d.traceMeasure++; advance(d, 'Usta tahriri çekti. Şimdi boya.') }
   else if (a === 4) {
     const layoutOf: Record<string, ColorId> = { tulip: 'red', leaf: 'green', center: 'turquoiseLight', ring: 'cobalt' }
-    regions.forEach((b, i) => { d.paints[i] ??= layoutOf[b.tour] })
+    regions.forEach((b, i) => { d.paints[i] ??= layoutOf[b.kind] })
     advance(d, 'Usta boyadı. Sırı dök.')
   } else if (a === 5) { d.glaze = 1; d.inKiln = false; d.alt = 2; d.message = 'Usta fırını yönetti. Fırın soğuyor…' }
 }
 
-export type Action = { id: string; ad: string; tour: 'head' | 'hold'; passive?: boolean; selected?: boolean }
+export type Action = { id: string; name: string; kind: 'head' | 'hold'; passive?: boolean; selected?: boolean }
 /** Desktop panel and VR panel buttons come from the same list. */
 export function actions(d: Game): Action[] {
-  if (d.stage === 1 && d.alt === 0) return [{ id: 'primer', ad: 'Astar sür · basılı tut', tour: 'hold' }]
-  if (d.stage === 5 && d.alt === 0) return [{ id: 'glaze', ad: 'Sır dök · basılı tut', tour: 'hold' }]
-  if (d.inKiln) return [{ id: 'fire', ad: 'Ateşi körükle · basılı tut', tour: 'hold' }]
+  if (d.stage === 1 && d.alt === 0) return [{ id: 'primer', name: 'Astar sür · basılı tut', kind: 'hold' }]
+  if (d.stage === 5 && d.alt === 0) return [{ id: 'glaze', name: 'Sır dök · basılı tut', kind: 'hold' }]
+  if (d.inKiln) return [{ id: 'fire', name: 'Ateşi körükle · basılı tut', kind: 'hold' }]
   if (d.stage === 4) return [
-    ...colors.map((r): Action => ({ id: `color:${r.id}`, ad: r.ad, tour: 'head', selected: d.color === r.id })),
-    { id: 'paintdone', ad: 'Sırlamaya geç →', tour: 'head', passive: !paintDone(d) },
+    ...colors.map((r): Action => ({ id: `color:${r.id}`, name: r.name, kind: 'head', selected: d.color === r.id })),
+    { id: 'paintdone', name: 'Sırlamaya geç →', kind: 'head', passive: !paintDone(d) },
   ]
-  if (d.stage === 6) return [{ id: 'fromStart', ad: 'Yeni çini yap', tour: 'head' }]
+  if (d.stage === 6) return [{ id: 'fromStart', name: 'Yeni çini yap', kind: 'head' }]
   return []
 }

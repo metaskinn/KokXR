@@ -25,7 +25,7 @@ type P2 = [number, number]
 
 interface Opening {
   u: number; g: number; y0: number; flat: number; kh: number
-  tour: 'door' | 'window' | 'glass' | 'cage'
+  kind: 'door' | 'window' | 'glass' | 'cage'
   /** Large blind arch and tile lunette on the outer face. */
   kor?: boolean
   rosette?: boolean
@@ -207,18 +207,18 @@ export const building = (): Model => {
         }
         ext(boxG(o.g, 0.16, dD + 0.06).translate(a.u, o.y0 + 0.08, dD / 2 - 0.02), cornerStone, false)
       }
-      if (a.tour === 'door') continue
+      if (a.kind === 'door') continue
       const shape = () => a.kh > 0 ? arch(new THREE.Shape(), 0, a.y0, a.g, a.flat, a.kh) : rect(-a.g / 2, a.y0, a.g / 2, a.y0 + a.flat)
-      if (a.tour !== 'cage') {
+      if (a.kind !== 'cage') {
         ext(new THREE.ShapeGeometry(shape(), 12).translate(a.u, 0, zc), camInner, false)
         ext(new THREE.ShapeGeometry(shape(), 12).rotateY(Math.PI).translate(a.u, 0, zc - 0.02), glassOuter, false)
       }
       // Grille or joinery
-      const bar = a.tour === 'glass' ? whiteJoinery : iron
+      const bar = a.kind === 'glass' ? whiteJoinery : iron
       const yy = a.kh > 0 ? archPoints(a.u, a.y0, a.g, a.flat, a.kh, 12) : []
       const apexX = (x: number) => { let en = a.y0 + a.flat; for (let i = 0; i < yy.length - 1; i++) { const [x0, y0] = yy[i], [x1, y1] = yy[i + 1]; if ((x0 - x) * (x1 - x) <= 0 && x1 !== x0) en = y0 + (y1 - y0) * ((x - x0) / (x1 - x0)) } return en }
       const sideX = (y: number) => { if (y <= a.y0 + a.flat || !yy.length) return a.g / 2; for (let i = 0; i < 12; i++) if (yy[i][1] <= y && yy[i + 1][1] >= y) return a.u - yy[i][0] - (a.u - yy[i][0] - (a.u - yy[i + 1][0])) * ((y - yy[i][1]) / (yy[i + 1][1] - yy[i][1])); return 0 }
-      const stepX = a.tour === 'glass' ? 0.42 : 0.2, stepY = a.tour === 'glass' ? 0.42 : 0.2, stay = a.tour === 'glass' ? 0.045 : 0.022
+      const stepX = a.kind === 'glass' ? 0.42 : 0.2, stepY = a.kind === 'glass' ? 0.42 : 0.2, stay = a.kind === 'glass' ? 0.045 : 0.022
       const count = Math.floor(a.g / stepX)
       for (let i = 1; i < count; i++) {
         const x = a.u - a.g / 2 + (i * a.g) / count, top = apexX(x)
@@ -229,7 +229,7 @@ export const building = (): Model => {
         if (o > 0.03) for (const zb of [zc - 0.05, zc + 0.03]) ext(boxG(o * 2, stay, stay).translate(a.u, y, zb), bar, false)
       }
       // Blind-arched window: wooden frame on the inner face (based on the photo)
-      if (a.tour === 'window' || a.tour === 'cage') {
+      if (a.kind === 'window' || a.kind === 'cage') {
         const z = thick + 0.02
         ext(boxG(a.g + 0.3, 0.14, 0.1).translate(a.u, topV + 0.06, z), woodLight, false)
         ext(boxG(a.g + 0.3, 0.14, 0.1).translate(a.u, a.y0 - 0.06, z), woodLight, false)
@@ -239,7 +239,7 @@ export const building = (): Model => {
     }
     if (option.collide !== false) {
       // Except for door openings, the wall is a collision box; the same boxes also block the view.
-      const intervals = open.filter((a) => a.tour === 'door').map((a) => [a.u - a.g / 2, a.u + a.g / 2]).sort((p, q) => p[0] - q[0])
+      const intervals = open.filter((a) => a.kind === 'door').map((a) => [a.u - a.g / 2, a.u + a.g / 2]).sort((p, q) => p[0] - q[0])
       let s = 0
       const piece = (u0: number, u1: number) => {
         if (u1 - u0 < 0.02) return
@@ -298,13 +298,13 @@ export const building = (): Model => {
   for (const [z, h, d] of [[-10.05, 0.15, 1.1], [-9.95, 0.3, 0.9], [-9.85, 0.45, 0.7]] as const) box(5.8, h, d, m.marble, 0, h / 2, z)
 
   // --- Walls ---
-  const window = (u: number, g = 1.2, y0 = 1.25, flat = 1.55, kor = true, rosetted = false): Opening => ({ u, g, y0, flat, kh: 0, tour: 'window', kor, rosette: rosetted })
-  const bay = (u: number, g: number, apex: number): Opening => ({ u, g, y0: 1.15, flat: 2.65, kh: apex - 3.8, tour: 'glass' })
+  const window = (u: number, g = 1.2, y0 = 1.25, flat = 1.55, kor = true, rosetted = false): Opening => ({ u, g, y0, flat, kh: 0, kind: 'window', kor, rosette: rosetted })
+  const bay = (u: number, g: number, apex: number): Opening => ({ u, g, y0: 1.15, flat: 2.65, kh: apex - 3.8, kind: 'glass' })
   // Facade: 1.33 · 2.36 · 1.09 · 2.50 · 1.07 · 4.30 · 1.06 · 2.49 · 1.07 · 2.39 · 1.33
   const bayU = [1.33 + 1.18, 1.33 + 2.36 + 1.09 + 1.25, 10.495, 10.495 + 2.15 + 1.06 + 1.245, 10.495 + 2.15 + 1.06 + 2.49 + 1.07 + 1.195]
   wall(-E, FRONT, E, FRONT, 1.2, EAVE, alternating, porchPlaster, [
     bay(bayU[0], 2.36, 5.75), bay(bayU[1], 2.5, 5.85),
-    { u: bayU[2], g: 4.3, y0: 0, flat: 3.8, kh: 2.85, tour: 'door' },
+    { u: bayU[2], g: 4.3, y0: 0, flat: 3.8, kh: 2.85, kind: 'door' },
     bay(bayU[3], 2.49, 5.85), bay(bayU[4], 2.39, 5.75),
   ])
   // Facade arch rings and pink dado (based on the photo)
@@ -340,10 +340,10 @@ export const building = (): Model => {
   wall(E, WING_G, IWAN_OUT, WING_G, 1.18, EAVE, alternating, innerWall, [window(3.15, 1.26, 1.25, 1.55, true, true)])
   wall(-IWAN_OUT, WING_G, -E, WING_G, 1.18, EAVE, alternating, innerWall, [window(3.15, 1.26, 1.25, 1.55, true, true)])
   // Late-comers' portico back wall: middle door 1.40 m, one door to each zaviye (plan).
-  const door = (u: number, g: number): Opening => ({ u, g, y0: 0, flat: 2.5, kh: 0.9, tour: 'door' })
+  const door = (u: number, g: number): Opening => ({ u, g, y0: 0, flat: 2.5, kh: 0.9, kind: 'door' })
   wall(-E + 1.1, SC_BACK, E - 1.1, SC_BACK, SC_BACK * -1 + MID_K, EAVE, porchPlaster, innerWall, [door(9.4 - 6.9, 1.3), door(9.4, 1.4), door(9.4 + 6.9, 1.3)])
   // Side walls of the central space: one door and one window on each side (Kahraman 2025).
-  const sideWall: Opening[] = [door(1.3, 1.2), { u: 4.4, g: 1.1, y0: 1.25, flat: 1.3, kh: 0.5, tour: 'cage' }]
+  const sideWall: Opening[] = [door(1.3, 1.2), { u: 4.4, g: 1.1, y0: 1.25, flat: 1.3, kh: 0.5, kind: 'cage' }]
   wall(WING_IN_X, MID_K, WING_IN_X, MID_G, WING_IN_X - MID_X, EAVE, innerWall, innerWall, sideWall)
   wall(-WING_IN_X, MID_G, -WING_IN_X, MID_K, WING_IN_X - MID_X, EAVE, innerWall, innerWall, [{ ...sideWall[1], u: 1.5 }, { ...sideWall[0], u: 4.6 }])
   // Iwan side walls
@@ -354,7 +354,7 @@ export const building = (): Model => {
   // Qibla wall: windows on both sides of and above the mihrab (Kahraman 2025).
   wall(IWAN_OUT, IWAN_G, -IWAN_OUT, IWAN_G, IWAN_G - IWAN_ING, EAVE, alternating, innerWall, [
     window(IWAN_OUT - 2.05, 1.05, 1.55, 1.5, true, true),
-    { u: IWAN_OUT, g: 0.95, y0: 5.55, flat: 0.75, kh: 0.5, tour: 'window' },
+    { u: IWAN_OUT, g: 0.95, y0: 5.55, flat: 0.75, kh: 0.5, kind: 'window' },
     window(IWAN_OUT + 2.05, 1.05, 1.55, 1.5, true, true),
   ])
   eave(E, FRONT, E, WING_G, EAVE); eave(E, WING_G, IWAN_OUT, WING_G, EAVE)
@@ -566,7 +566,7 @@ export const building = (): Model => {
   const corner = (i: number): P2 => [MIN_X + MIN_R * Math.cos(i * Math.PI / 3), MIN_Z + MIN_R * Math.sin(i * Math.PI / 3)]
   const LEG_D = 1.05, MIN_H1 = 5.4
   const sideG = MIN_R
-  const mBow = (u: number) => ({ u, g: sideG - 1.45, y0: 0, flat: 3.05, kh: 1.55, tour: 'door' as const })
+  const mBow = (u: number) => ({ u, g: sideG - 1.45, y0: 0, flat: 3.05, kh: 1.55, kind: 'door' as const })
   for (let i = 0; i < 6; i++) {
     const [ax, az] = corner(i), [bx, bz] = corner(i + 1)
     wall(ax, az, bx, bz, LEG_D, MIN_H1, brick, brick, [mBow(sideG / 2)], { collide: false, bodyMat: brick })
@@ -776,7 +776,7 @@ export const building = (): Model => {
     baseY: 0,
   }
 
-  const stop = (id: string, ad: string, x: number, z: number, h: number, bx: number, by: number, bz: number): InteriorStop => ({ id, ad, position: [x + OX, BAY + h, z], look: [bx + OX, by, bz] })
+  const stop = (id: string, name: string, x: number, z: number, h: number, bx: number, by: number, bz: number): InteriorStop => ({ id, name, position: [x + OX, BAY + h, z], look: [bx + OX, by, bz] })
   const stops: InteriorStop[] = [
     stop('facade', 'Cephe', -3.5, -18.2, 0, 0, 4.2, FRONT),
     stop('narthex', 'Son cemaat yeri', -6.4, -6.2, IC, 2, 4.6, -6.3),
@@ -800,9 +800,9 @@ export const building = (): Model => {
   return {
     root,
     layers: [
-      { group: roofGroup, height: 13, ad: 'Çatı ve tonozlar' },
-      { group: domeGroup, height: 26, ad: 'Kubbeler' },
-      { group: minaretGroup, height: 17, ad: 'Minare gövdesi' },
+      { group: roofGroup, height: 13, name: 'Çatı ve tonozlar' },
+      { group: domeGroup, height: 26, name: 'Kubbeler' },
+      { group: minaretGroup, height: 17, name: 'Minare gövdesi' },
     ],
     stops,
     walking,
@@ -842,9 +842,9 @@ export const building = (): Model => {
     const W0 = -60, W1 = W0 + 18.35, Z0 = -10.2, Z1 = 10.2, H_D = 8.2
     const hExt = (g: THREE.BufferGeometry, mat: Mat, kv = k) => kv.add(uvWorld(g), mat)
     const buildWall = (ax: number, az: number, bx: number, bz: number, h: number, open: Opening[] = []) => wall(ax, az, bx, bz, 1.3, h, rubble, rubble, open, { collide: false })
-    const hp = (u: number): Opening => ({ u, g: 0.72, y0: 1.2, flat: 0.75, kh: 0, tour: 'window' })
+    const hp = (u: number): Opening => ({ u, g: 0.72, y0: 1.2, flat: 0.75, kh: 0, kind: 'window' })
     // Cold room: interior 15.75 x 17.85 m, domed.
-    buildWall(W0, Z0, W1, Z0, H_D, [hp(4.2), { u: 9.2, g: 1.5, y0: 0, flat: 2.1, kh: 0.8, tour: 'door' }, hp(14.2)])
+    buildWall(W0, Z0, W1, Z0, H_D, [hp(4.2), { u: 9.2, g: 1.5, y0: 0, flat: 2.1, kh: 0.8, kind: 'door' }, hp(14.2)])
     buildWall(W1, Z0, W1, Z1, H_D)
     buildWall(W1, Z1, W0, Z1, H_D, [hp(5.2), hp(13.4)])
     buildWall(W0, Z1, W0, Z0, H_D, [hp(5.2), hp(15.3)])

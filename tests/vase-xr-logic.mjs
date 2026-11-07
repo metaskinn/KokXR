@@ -81,13 +81,13 @@ assert.equal(panelText('repair', 2, '').progress, '2/6 parça yerinde')
 assert.equal(panelText('repair', 2, 'Deneme').hint, 'Deneme')
 assert.equal(panelText('done', 6, 'Deneme').title, 'Vazo onarıldı!')
 assert.match(panelText('done', 6, '').hint, /onarım izlerini/)
-assert.equal(panelText('traceless', 0, '').buttons[0].ad, 'Vazoyu parçala')
-assert.equal(panelText('repair', 2, '').buttons[0].ad, 'Yeniden başlat')
-assert.equal(panelText('done', 6, '').buttons[0].ad, 'Yeniden parçala')
+assert.equal(panelText('traceless', 0, '').buttons[0].name, 'Vazoyu parçala')
+assert.equal(panelText('repair', 2, '').buttons[0].name, 'Yeniden başlat')
+assert.equal(panelText('done', 6, '').buttons[0].name, 'Yeniden parçala')
 for (const phase of ['traceless', 'repair', 'done']) {
   const { buttons, title, hint } = panelText(phase, phase === 'done' ? 6 : 2, '')
   assert.deepEqual(buttons.map((d) => d.id), ['shatter', 'exit'])
-  assert.equal(buttons[1].ad, "VR'dan çık")
+  assert.equal(buttons[1].name, "VR'dan çık")
   assert.doesNotMatch(title + hint, /yazı|kitabe|tarih/i)
 }
 

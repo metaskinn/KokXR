@@ -26,7 +26,7 @@ function texture(el: HTMLCanvasElement, gx = 1, gy = gx, colored = true) {
   return t
 }
 
-const sec = <T,>(r: () => number, l: T[]) => l[Math.floor(r() * l.length)]
+const select = <T,>(r: () => number, l: T[]) => l[Math.floor(r() * l.length)]
 const BRICK = ['#8d4a31', '#975238', '#9f5a3f', '#864429', '#a56247', '#914f36']
 const STONE = ['#a5957a', '#94866c', '#ae9f85', '#9a8c72', '#8a7c64', '#a99a80']
 
@@ -40,11 +40,11 @@ function weave() {
     let x = -r() * 60
     while (x < G) {
       const g = 170 + r() * 150
-      pieces.push({ x, y, g: g - 5, h: STONE_H - 5, color: sec(r, STONE), burden: 150 + r() * 70 })
+      pieces.push({ x, y, g: g - 5, h: STONE_H - 5, color: select(r, STONE), burden: 150 + r() * 70 })
       x += g
       const count = 1 + Math.floor(r() * 2)
       for (let i = 0; i < count; i++) {
-        pieces.push({ x, y, g: 21, h: STONE_H - 5, color: sec(r, BRICK), burden: 210 })
+        pieces.push({ x, y, g: 21, h: STONE_H - 5, color: select(r, BRICK), burden: 210 })
         x += 26
       }
     }
@@ -53,7 +53,7 @@ function weave() {
       let xb = -r() * 130
       while (xb < G) {
         const g = 110 + r() * 40
-        pieces.push({ x: xb, y, g: g - 5, h: BRK_H - 5, color: sec(r, BRICK), burden: 215 })
+        pieces.push({ x: xb, y, g: g - 5, h: BRK_H - 5, color: select(r, BRICK), burden: 215 })
         xb += g
       }
       y += BRK_H
@@ -88,7 +88,7 @@ function brickTexture() {
     for (let s = 0; s < 4; s++) {
       let x = s % 2 ? -110 : 0
       while (x < G) {
-        c.fillStyle = sec(r, BRICK)
+        c.fillStyle = select(r, BRICK)
         c.fillRect(x + 3, s * H + 4, 212, H - 8)
         x += 218
       }
@@ -110,11 +110,11 @@ function zigzagTexture() {
     for (let s = 0; s < Y / B; s++) {
       const yt = s * B
       // Thin brick course between bands
-      c.fillStyle = sec(r, BRICK)
+      c.fillStyle = select(r, BRICK)
       c.fillRect(0, yt, G, 12)
       for (let i = -1; i <= G / (A * 2); i++) {
         const x = i * A * 2 + (s % 2 ? A : 0)
-        c.fillStyle = sec(r, BRICK)
+        c.fillStyle = select(r, BRICK)
         c.beginPath(); c.moveTo(x + 5, yt + B - 6); c.lineTo(x + A, yt + 20); c.lineTo(x + A * 2 - 5, yt + B - 6); c.closePath(); c.fill()
         c.fillStyle = '#efe4cd'
         c.beginPath(); c.moveTo(x + A - 18, yt + B - 8); c.lineTo(x + A, yt + 52); c.lineTo(x + A + 18, yt + B - 8); c.closePath(); c.fill()
@@ -438,7 +438,7 @@ function pavingBrickTexture() {
     c.fillStyle = '#8a7461'
     c.fillRect(0, 0, g, y)
     for (let j = 0; j < 2; j++) for (let i = 0; i < 2; i++) {
-      c.fillStyle = sec(r, ['#b3684f', '#a65c46', '#bd735a', '#9f5541'])
+      c.fillStyle = select(r, ['#b3684f', '#a65c46', '#bd735a', '#9f5541'])
       c.fillRect(i * 128 + 3, j * 128 + 3, 122, 122)
     }
   }), 1)
@@ -450,7 +450,7 @@ function speckled(seed: number, base: string, colors: string[], gx: number) {
     c.fillStyle = base
     c.fillRect(0, 0, g, y)
     for (let i = 0; i < 2200; i++) {
-      c.fillStyle = sec(r, colors)
+      c.fillStyle = select(r, colors)
       const b = 2 + r() * 7
       c.fillRect(r() * g, r() * y, b, b)
     }
@@ -462,9 +462,9 @@ export function hamzabeyMaterials() {
   const shine = (map: THREE.Texture, k: number) => new THREE.MeshBasicMaterial({ map, color: new THREE.Color(k, k, k * 0.97) })
   const o = weave()
   const loader = new THREE.TextureLoader()
-  const photoTexture = (ad: string) => {
+  const photoTexture = (name: string) => {
     if (PUBLIC_BUILD) return null
-    const f = loader.load(`/images/hamzabey-complex/model/${ad}.jpg`)
+    const f = loader.load(`/images/hamzabey-complex/model/${name}.jpg`)
     f.colorSpace = THREE.SRGBColorSpace
     f.anisotropy = 8
     return f

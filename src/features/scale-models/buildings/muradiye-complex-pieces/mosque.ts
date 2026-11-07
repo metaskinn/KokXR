@@ -16,8 +16,8 @@ const IWAN_X = 10, IWAN_AX = 3.8, IWAN_AZ = 4.6
 const MINBAR = { x0: -3.75, x1: -2.45, z0: 12, ramp0: 12.5, ramp1: 15, z1: 16.1, h: 2.2 }
 
 export function mosqueStops(ox: number, oz: number): InteriorStop[] {
-  const d = (id: string, ad: string, k: [number, number, number], b: [number, number, number]): InteriorStop =>
-    ({ id, ad, position: [k[0] + ox, k[1], k[2] + oz], look: [b[0] + ox, b[1], b[2] + oz] })
+  const d = (id: string, name: string, k: [number, number, number], b: [number, number, number]): InteriorStop =>
+    ({ id, name, position: [k[0] + ox, k[1], k[2] + oz], look: [b[0] + ox, b[1], b[2] + oz] })
   const minbarZ = 14.2
   const minbarH = PLATFORM + ((minbarZ - MINBAR.ramp0) / (MINBAR.ramp1 - MINBAR.ramp0)) * MINBAR.h
   return [

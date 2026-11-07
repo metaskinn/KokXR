@@ -39,7 +39,7 @@ function button(c: CanvasRenderingContext2D, k: Frame, ratio?: number) {
   c.lineWidth = b.selected ? 4 : 2; c.strokeStyle = b.selected ? GOLD : EDGE; c.stroke()
   if (ratio !== undefined) { c.fillStyle = GREEN; c.fillRect(k.x + 4, k.y2 - 12, (k.g - 8) * Math.min(1, ratio), 7) }
   c.fillStyle = TEXT_; c.font = `600 ${k.region ? 24 : 27}px ${TEXT}`; c.textAlign = 'center'; c.textBaseline = 'middle'
-  c.fillText(b.ad, k.x + k.g / 2, (k.y + k.y2) / 2 - (ratio !== undefined ? 3 : 0), k.g - 16)
+  c.fillText(b.name, k.x + k.g / 2, (k.y + k.y2) / 2 - (ratio !== undefined ? 3 : 0), k.g - 16)
   c.globalAlpha = 1; c.textAlign = 'left'; c.textBaseline = 'top'
 }
 
@@ -74,9 +74,9 @@ export function controlPanel() {
       c.fillStyle = SECONDARY; c.font = `600 22px ${TEXT}`; c.fillText('ESERİNİN KALİTESİ', SIDE, y)
       c.fillStyle = TEXT_; c.font = `700 36px ${TEXT}`; c.textAlign = 'right'; c.fillText(`${p.quality.score}/100`, PANEL_G - SIDE, y - 8); c.textAlign = 'left'
       const g = (GEN - 2 * 20) / 3
-      p.quality.measurement.forEach(([ad, v], i) => {
+      p.quality.measurement.forEach(([name, v], i) => {
         const x = SIDE + i * (g + 20)
-        c.fillStyle = SECONDARY; c.font = `400 20px ${TEXT}`; c.fillText(ad, x, y + 34); bar(c, x, y + 60, g, 8, v, GOLD)
+        c.fillStyle = SECONDARY; c.font = `400 20px ${TEXT}`; c.fillText(name, x, y + 34); bar(c, x, y + 60, g, 8, v, GOLD)
       })
       c.fillStyle = p.quality.notes.some(n => n.includes('çatlak')) ? WARNING : GOLD; c.font = `400 22px ${TEXT}`; c.fillText(p.quality.notes.join(' · '), SIDE, y + 76, GEN)
       y += 116

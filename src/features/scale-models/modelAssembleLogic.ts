@@ -58,18 +58,18 @@ export function releaseResult(id: number, seatedOne: number, distance: number, t
   return id === seatedOne ? 'seated' : 'row'
 }
 
-export interface AssemblyText { top: string; message: string; not: string }
+export interface AssemblyText { top: string; message: string; note: string }
 
 const ORDER_NOTE = 'Sıra, maketin üst üste oturma sırasıdır; tarihî inşa sırası değildir.'
 
 /** Text of the status panel. `last` is the last release; without it, a hint is shown. */
 export function assemblyText(seatedOne: number, names: string[], last?: { result: ReleaseResult; id: number }): AssemblyText {
   const progress = `${seatedOne}/${names.length} katman yerinde`
-  if (seatedOne >= names.length) return { top: `Tamamlandı: ${progress}`, message: 'Maket birleşti.', not: ORDER_NOTE }
+  if (seatedOne >= names.length) return { top: `Tamamlandı: ${progress}`, message: 'Maket birleşti.', note: ORDER_NOTE }
   const top = `Maketi birleştir: ${progress}`
   let message = 'Kavrama tuşuyla tut, yerine götür, bırak. Menü: B veya Y.'
   if (last?.result === 'seated') message = `${names[last.id]} yerine oturdu.`
   else if (last?.result === 'row') message = `Önce ${names[seatedOne]} oturmalı. Sıra alttan üste gider.`
   else if (last?.result === 'far') message = 'Yerine yaklaşmadı. Yeniden dene.'
-  return { top, message, not: ORDER_NOTE }
+  return { top, message, note: ORDER_NOTE }
 }

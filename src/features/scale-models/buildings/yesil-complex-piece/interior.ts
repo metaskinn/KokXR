@@ -603,14 +603,14 @@ export function mosqueWalkArea(): InteriorWalk {
 }
 
 export const mosqueStops: InteriorStop[] = [
-  { id: 'entrance', ad: 'Giriş holü', position: [0, BAY_Y, -15.2], look: [0, 3, 0] },
-  { id: 'jet', ad: 'Fıskiyeli orta mekân', position: [3.6, BAY_Y, -7.8], look: [0, 2.4, 6] },
-  { id: 'mihrab', ad: 'Mihrap', position: [0, BAY_Y + MIHRAB_H, 7.4], look: [0, 6.4, 17.8] },
-  { id: 'iwan', ad: 'Doğu eyvanı', position: [9, BAY_Y + IWAN_H, -3.5], look: [14.9, 4, -3.5] },
-  { id: 'sultan', ad: 'Hünkâr mahfili', position: [0, BAY_Y + TOP_H, -11.2], look: [0, 6, 12] },
-  { id: 'muezzin', ad: 'Müezzin mahfili', position: [4.2, BAY_Y + IWAN_H, -11.2], look: [2, 3, 8] },
-  { id: 'tabhane', ad: 'Tabhane', position: [11.8, BAY_Y, 3.3], look: [11.8, 3.5, 8.1] },
-  { id: 'corner', ad: 'Köşe odası', position: [10, BAY_Y, -10.5], look: [11, 3, -17.3] },
-  { id: 'minbar', ad: 'Minbere çık', position: [-4.7, BAY_Y + MIHRAB_H + 2.7, 16.4], look: [4, 3, 2] },
+  { id: 'entrance', name: 'Giriş holü', position: [0, BAY_Y, -15.2], look: [0, 3, 0] },
+  { id: 'jet', name: 'Fıskiyeli orta mekân', position: [3.6, BAY_Y, -7.8], look: [0, 2.4, 6] },
+  { id: 'mihrab', name: 'Mihrap', position: [0, BAY_Y + MIHRAB_H, 7.4], look: [0, 6.4, 17.8] },
+  { id: 'iwan', name: 'Doğu eyvanı', position: [9, BAY_Y + IWAN_H, -3.5], look: [14.9, 4, -3.5] },
+  { id: 'sultan', name: 'Hünkâr mahfili', position: [0, BAY_Y + TOP_H, -11.2], look: [0, 6, 12] },
+  { id: 'muezzin', name: 'Müezzin mahfili', position: [4.2, BAY_Y + IWAN_H, -11.2], look: [2, 3, 8] },
+  { id: 'tabhane', name: 'Tabhane', position: [11.8, BAY_Y, 3.3], look: [11.8, 3.5, 8.1] },
+  { id: 'corner', name: 'Köşe odası', position: [10, BAY_Y, -10.5], look: [11, 3, -17.3] },
+  { id: 'minbar', name: 'Minbere çık', position: [-4.7, BAY_Y + MIHRAB_H + 2.7, 16.4], look: [4, 3, 2] },
 ]
 

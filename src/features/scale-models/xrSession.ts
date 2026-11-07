@@ -290,9 +290,9 @@ export function setupXrSession(s: XrOption): XrSession {
     ray.renderOrder = 1002
     controller.add(ray)
     rig.add(controller)
-    const sec = () => wasSelected(controller)
-    controller.addEventListener('select', sec)
-    return { controller, ray, sec }
+    const select = () => wasSelected(controller)
+    controller.addEventListener('select', select)
+    return { controller, ray, select }
   })
   const resetRays = () => controllers.forEach(({ ray }) => { ray.scale.z = 1 })
   const assembly = setupModelAssembly({ scene, camera, layers: s.layers, controllers, refreshShadow: s.refreshShadow, completed: () => showMenu(true) })
@@ -484,8 +484,8 @@ export function setupXrSession(s: XrOption): XrSession {
         open.end().catch(() => {})
       }
       assembly.clear()
-      for (const { controller, sec } of controllers) {
-        controller.removeEventListener('select', sec)
+      for (const { controller, select } of controllers) {
+        controller.removeEventListener('select', select)
         controller.removeFromParent()
       }
       menu.dispose()

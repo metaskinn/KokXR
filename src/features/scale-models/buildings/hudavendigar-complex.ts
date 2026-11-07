@@ -20,9 +20,9 @@ export const building = (): Model => {
   return {
     root,
     layers: [
-      { group: top, height: 16, ad: 'Medrese katı' },
-      { group: roof, height: 32, ad: 'Çatı' },
-      { group: dome, height: 44, ad: 'Kubbe' },
+      { group: top, height: 16, name: 'Medrese katı' },
+      { group: roof, height: 32, name: 'Çatı' },
+      { group: dome, height: 44, name: 'Kubbe' },
     ],
     stops,
     walking: walkArea(),

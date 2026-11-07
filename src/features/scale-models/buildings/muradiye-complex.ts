@@ -36,9 +36,9 @@ export const building = (): Model => {
   return {
     root,
     layers: [
-      { group: roofGroup, height: 14, ad: 'Çatılar' },
-      { group: drumGroup, height: 24, ad: 'Kasnaklar' },
-      { group: domeGroup, height: 36, ad: 'Kubbeler' },
+      { group: roofGroup, height: 14, name: 'Çatılar' },
+      { group: drumGroup, height: 24, name: 'Kasnaklar' },
+      { group: domeGroup, height: 36, name: 'Kubbeler' },
     ],
     stops: mosqueStops(OX, OZ),
     walking: mosqueWalk(OX, OZ),

@@ -74,17 +74,17 @@ def flat(name, color, rough=.5, metal=0.0, glow=None, strength=0.0, alpha=1.0):
 
 M = {
     'blade': material('Steel_Blade', 'blade'), 'inlay': inlay_material(),
-    'guard': material('Guard_Inlay', 'guard'), 'ivory': material('Mors_Disi', 'fildisi'),
+    'guard': material('Guard_Inlay', 'guard'), 'ivory': material('Walrus_Tusk', 'ivory'),
     'gold': flat('Gold', (.95, .68, .28), .26, 1), 'handle': flat('Handle_Steel', (.20, .20, .21), .55, 1),
     'brick': material('Brick', 'brick', 2.0), 'stone': material('Stone', 'stone', 2.5),
     'wood': material('Wood', 'wood', 1.5), 'iron': material('Iron', 'iron', 1.2),
-    'leather': material('Leather', 'leather', 1.5), 'kor': material('Kor', 'kor', 2.2),
+    'leather': material('Leather', 'leather', 1.5), 'embers': material('Embers', 'embers', 2.2),
     'sharpen': material('Sharpen_Stone', 'sharpen', 1.4), 'straw': material('Straw', 'straw', 1.0), 'cloth': material('Cloth', 'cloth', 2.0),
     'water': flat('Water', (.03, .07, .08), .06, .0, alpha=.82), 'ingot': flat('Ingot_Steel', (.13, .13, .14), .62, 1),
-    'rope': flat('Ip', (.52, .42, .26), .9),
+    'rope': flat('Rope', (.52, .42, .26), .9),
 }
 # Ember glow: the app changes the strength with the bellows.
-_k = M['kor'].node_tree; _e = _k.nodes.new('ShaderNodeTexImage'); _e.image = _texture('kor_heat')
+_k = M['embers'].node_tree; _e = _k.nodes.new('ShaderNodeTexImage'); _e.image = _texture('embers_heat')
 _k.links.new(_e.outputs['Color'], _k.nodes['Principled BSDF'].inputs['Emission Color'])
 _k.nodes['Principled BSDF'].inputs['Emission Strength'].default_value = 2.0
 
@@ -426,7 +426,7 @@ def anvil(collection):
     for i in range(len(h)):
         j = (i + 1) % len(h); bm.faces.new((front[j], front[i], back[i], back[j]))
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
-    ob = make_object('Ors', bm, M['iron'], collection)
+    ob = make_object('Anvil', bm, M['iron'], collection)
     apply_modifier(ob, 'BEVEL', width=.008, segments=3, limit_method='ANGLE', angle_limit=math.radians(25))
     box_uv(ob, 3)
     bpy.context.view_layer.objects.active = ob; ob.select_set(True)
@@ -440,13 +440,13 @@ for name, b, k in (('Wall_Back', (9, .3, 4.2), (0, 3.2, 2.1)), ('Wall_Left', (.3
     box(name, b, k, M['brick'], wc, uv=.45)
 # Forge: brick body, ember bed, hood
 ox, oy = -2.25, 2.1
-box('Ocak_Body', (1.9, 1.3, .86), (ox, oy, .43), M['brick'], wc, .012, .75)
-box('Ocak_Mouth', (1.5, .92, .10), (ox, oy - .08, .865), M['iron'], wc, .004, .9)
-for name, d in (('Ocak_Side_Left', -.8), ('Ocak_Side_Right', .8)):
+box('Hearth_Body', (1.9, 1.3, .86), (ox, oy, .43), M['brick'], wc, .012, .75)
+box('Hearth_Mouth', (1.5, .92, .10), (ox, oy - .08, .865), M['iron'], wc, .004, .9)
+for name, d in (('Hearth_Side_Left', -.8), ('Hearth_Side_Right', .8)):
     box(name, (.26, 1.3, 1.35), (ox + d, oy, 1.42), M['brick'], wc, .012, .75)
-box('Ocak_Back', (1.9, .26, 1.35), (ox, oy + .52, 1.42), M['brick'], wc, .012, .75)
-box('Davlumbaz', (2.1, 1.5, .4), (ox, oy, 2.28), M['brick'], wc, .02, .75)
-box('Baca', (.95, .85, 1.5), (ox, oy + .1, 3.2), M['brick'], wc, .012, .75)
+box('Hearth_Back', (1.9, .26, 1.35), (ox, oy + .52, 1.42), M['brick'], wc, .012, .75)
+box('Hood', (2.1, 1.5, .4), (ox, oy, 2.28), M['brick'], wc, .02, .75)
+box('Chimney', (.95, .85, 1.5), (ox, oy + .1, 3.2), M['brick'], wc, .012, .75)
 # Ember bed: clustered ember stones
 bm = bmesh.new(); bed_uv = bm.loops.layers.uv.new('UVMap')
 import random
@@ -456,7 +456,7 @@ for _ in range(240):
     x, y = random.uniform(-.68, .68), random.uniform(-.40, .40)
     for v in ico['verts']:
         v.co = Vector((v.co.x * random.uniform(.8, 1.25) + x, v.co.y * random.uniform(.8, 1.25) + y, v.co.z * .8))
-kor = make_object('Kor', bm, M['kor'], wc)
+kor = make_object('Embers', bm, M['embers'], wc)
 kor.location = (ox, oy - .08, .935); box_uv(kor, 5)
 # Bellows: two wooden boards, leather bellows, pipe
 bm = bmesh.new(); ring = []
@@ -468,12 +468,12 @@ for j in range(len(ring) - 1):
 bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
 kx, ky = -3.7, 1.75
 bellows_leather = make_object('Bellows_Leather', bm, M['leather'], wc, 32); bellows_leather.location = (kx, ky, .62); box_uv(bellows_leather, 2)
-box('Bellows_Alt', (.72, .44, .04), (kx, ky, .60), M['wood'], wc, .004, 1.5)
+box('Bellows_Bottom', (.72, .44, .04), (kx, ky, .60), M['wood'], wc, .004, 1.5)
 box('Bellows_Top', (.72, .44, .04), (kx, ky, .94), M['wood'], wc, .004, 1.5)
-box('Bellows_Sehpa', (.56, .36, .58), (kx, ky, .29), M['wood'], wc, .006, 1.5)
+box('Bellows_Stand', (.56, .36, .58), (kx, ky, .29), M['wood'], wc, .006, 1.5)
 lathe('Bellows_Pipe', [(.035, 0), (.035, .55)], M['iron'], 16, wc, axis='X').location = (kx + .32, ky + .0, .78)
 # Anvil and log
-lathe('Ors_Log', [(.0, 0), (.30, 0), (.31, .03), (.28, .30), (.285, .55), (.29, .58), (.0, .58)], M['wood'], 40, wc, 2.6, .9).location = (0, .1, 0)
+lathe('Anvil_Log', [(.0, 0), (.30, 0), (.31, .03), (.28, .30), (.285, .55), (.29, .58), (.0, .58)], M['wood'], 40, wc, 2.6, .9).location = (0, .1, 0)
 anvil_ob = anvil(wc); anvil_ob.location = (0, .1, .58)
 # Hammer: handle + head
 bm = bmesh.new(); bmesh.ops.create_cube(bm, size=1)
@@ -495,15 +495,15 @@ def tongs(name, side):
 t1 = tongs('Table_1', 1); t2 = tongs('Table_2', -1); t2.parent = t1
 t1.location = (-1.95, 1.42, .92); t1.rotation_euler = (0, 0, math.radians(68))
 # Workbench
-box('Tezgah_Top', (1.6, .62, .07), (2.9, 2.5, .86), M['wood'], wc, .006, 1.2)
+box('Bench_Top', (1.6, .62, .07), (2.9, 2.5, .86), M['wood'], wc, .006, 1.2)
 for x in (-.7, .7):
     for y in (-.24, .24):
-        box('Tezgah_Leg', (.09, .09, .84), (2.9 + x, 2.5 + y, .42), M['wood'], wc, .004, 1.2)
+        box('Bench_Leg', (.09, .09, .84), (2.9 + x, 2.5 + y, .42), M['wood'], wc, .004, 1.2)
 # Water trough: outer walls, inner hollow, water
 sx, sy = 1.95, -.15
-for name, b, k in (('Tekne_Long_1', (1.5, .06, .46), (sx, sy - .29, .26)), ('Tekne_Long_2', (1.5, .06, .46), (sx, sy + .29, .26)),
-                   ('Tekne_Short_1', (.06, .64, .46), (sx - .72, sy, .26)), ('Tekne_Short_2', (.06, .64, .46), (sx + .72, sy, .26)),
-                   ('Tekne_Base', (1.5, .64, .05), (sx, sy, .05))):
+for name, b, k in (('Trough_Long_1', (1.5, .06, .46), (sx, sy - .29, .26)), ('Trough_Long_2', (1.5, .06, .46), (sx, sy + .29, .26)),
+                   ('Trough_Short_1', (.06, .64, .46), (sx - .72, sy, .26)), ('Trough_Short_2', (.06, .64, .46), (sx + .72, sy, .26)),
+                   ('Trough_Base', (1.5, .64, .05), (sx, sy, .05))):
     box(name, b, k, M['wood'], wc, .004, 1.4)
 box('Water', (1.38, .52, .01), (sx, sy, .40), M['water'], wc)
 # Sharpening stone: frame + rotating stone

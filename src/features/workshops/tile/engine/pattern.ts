@@ -2,7 +2,7 @@
 // Coordinates are relative to the plate radius: center (0, 0), rim 1.
 export type N = [number, number]
 export type Tour = 'tulip' | 'leaf' | 'center' | 'ring'
-export interface Region { tour: Tour; outer: N[]; inner?: N[] }
+export interface Region { kind: Tour; outer: N[]; inner?: N[] }
 
 function curve(a: N, b: N, c: N, d: N, step = 14): N[] {
   const o: N[] = []
@@ -40,10 +40,10 @@ const centerCircle = circle(CENTER_R)
 const SECTOR = 6
 
 export const regions: Region[] = [
-  ...Array.from({ length: SECTOR }, (_, i): Region => ({ tour: 'tulip', outer: rotate(tulip, (i * Math.PI) / 3) })),
-  ...Array.from({ length: SECTOR }, (_, i): Region => ({ tour: 'leaf', outer: rotate(leaf, (i * Math.PI) / 3) })),
-  { tour: 'center', outer: centerCircle },
-  { tour: 'ring', outer: circle(RING_OUT, 96), inner: circle(RING_IN, 96) },
+  ...Array.from({ length: SECTOR }, (_, i): Region => ({ kind: 'tulip', outer: rotate(tulip, (i * Math.PI) / 3) })),
+  ...Array.from({ length: SECTOR }, (_, i): Region => ({ kind: 'leaf', outer: rotate(leaf, (i * Math.PI) / 3) })),
+  { kind: 'center', outer: centerCircle },
+  { kind: 'ring', outer: circle(RING_OUT, 96), inner: circle(RING_IN, 96) },
 ]
 
 // Traces the player follows with the brush; the remaining repeats of the same pattern are completed by the apprentice.

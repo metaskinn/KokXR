@@ -175,14 +175,14 @@ export function walkArea(): InteriorWalk {
 
 const minbarH = (z: number) => HALL_H + (MINBAR.h1 - HALL_H) * ((z - MINBAR.z0) / (MINBAR.z1 - MINBAR.z0))
 export const stops: InteriorStop[] = [
-  { id: 'portico', ad: 'Son cemaat yeri', position: [0, BAY_Y, -21.2], look: [11, 3.4, -20.8] },
-  { id: 'entrance', ad: 'Giriş', position: [0, BAY_Y, -14], look: [0, 3.2, 8] },
-  { id: 'fountain', ad: 'Şadırvan', position: [3.4, BAY_Y, -5], look: [0, 1.8, SAD_Z] },
-  { id: 'dome', ad: 'Kubbe', position: [-2.6, BAY_Y, SAD_Z - 2], look: [0, 16, SAD_Z] },
-  { id: 'iwan', ad: 'Doğu eyvanı', position: [7, BAY_Y + IWAN_H, -2.1], look: [12, 3.6, 1.6] },
-  { id: 'hall', ad: 'Harim', position: [0, BAY_Y + HALL_H, 8.6], look: [0, 5.6, 20] },
-  { id: 'mihrab', ad: 'Mihrap', position: [0, BAY_Y + HALL_H, 15], look: [0, 5.4, 20.5] },
-  { id: 'mahfil-top', ad: 'Mahfile çık', position: [-10.4, BAY_Y + MAHFIL.h, 0.9], look: [0, 4.4, 0] },
-  { id: 'minbar-top', ad: 'Minbere çık', position: [MINBAR.x, BAY_Y + minbarH(15.4), 15.4], look: [3, 4.6, 8] },
-  { id: 'madrasa', ad: 'Medrese revağı', position: [0, BAY_Y + PORTICO_H, -20.3], look: [-13, 9.6, -23.8] },
+  { id: 'portico', name: 'Son cemaat yeri', position: [0, BAY_Y, -21.2], look: [11, 3.4, -20.8] },
+  { id: 'entrance', name: 'Giriş', position: [0, BAY_Y, -14], look: [0, 3.2, 8] },
+  { id: 'fountain', name: 'Şadırvan', position: [3.4, BAY_Y, -5], look: [0, 1.8, SAD_Z] },
+  { id: 'dome', name: 'Kubbe', position: [-2.6, BAY_Y, SAD_Z - 2], look: [0, 16, SAD_Z] },
+  { id: 'iwan', name: 'Doğu eyvanı', position: [7, BAY_Y + IWAN_H, -2.1], look: [12, 3.6, 1.6] },
+  { id: 'hall', name: 'Harim', position: [0, BAY_Y + HALL_H, 8.6], look: [0, 5.6, 20] },
+  { id: 'mihrab', name: 'Mihrap', position: [0, BAY_Y + HALL_H, 15], look: [0, 5.4, 20.5] },
+  { id: 'mahfil-top', name: 'Mahfile çık', position: [-10.4, BAY_Y + MAHFIL.h, 0.9], look: [0, 4.4, 0] },
+  { id: 'minbar-top', name: 'Minbere çık', position: [MINBAR.x, BAY_Y + minbarH(15.4), 15.4], look: [3, 4.6, 8] },
+  { id: 'madrasa', name: 'Medrese revağı', position: [0, BAY_Y + PORTICO_H, -20.3], look: [-13, 9.6, -23.8] },
 ]

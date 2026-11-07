@@ -21,8 +21,8 @@ import { setupXrSession } from './xrSession'
 import { nearestRegion, rayAxisX } from './xrCalc'
 export type Command = 'al' | 'continue' | 'again' | 'master' | 'strike' | 'clink' | 'cutOff' | 'targets-renew' | 'fromStart'
 export interface SwordScene {
-  command: (ad: Command) => void; hold: (ad: 'bellows' | 'water' | 'wrist', v: boolean) => void
-  sec: (id: number) => void; target: (id: number) => void; sound: (ac: boolean) => void
+  command: (name: Command) => void; hold: (name: 'bellows' | 'water' | 'wrist', v: boolean) => void
+  select: (id: number) => void; target: (id: number) => void; sound: (ac: boolean) => void
   zoom: (ratio: number) => void; rotate: (x: number) => void; clear: () => void
   /** Keep the user gesture: no await before requestSession. */
   startXr: () => Promise<void>
@@ -50,7 +50,7 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
   scene.add(workshop, sword); collect(scene)
   const objVal = (name: string) => { const o = scene.getObjectByName(name); if (!o) throw new Error(`Model part missing: ${name}`); return o }
   const mesh = (name: string) => { const o = scene.getObjectByName(name); if (!(o instanceof T.Mesh)) throw new Error(`Model part missing: ${name}`); return o }
-  const blade = mesh('Blade'), deform = prepareBlade(blade), eggShape = mesh('Sword_Egg'), kor = mesh('Kor'), bellows = mesh('Bellows_Leather'), stone = mesh('Sharpen_Stone')
+  const blade = mesh('Blade'), deform = prepareBlade(blade), eggShape = mesh('Sword_Egg'), kor = mesh('Embers'), bellows = mesh('Bellows_Leather'), stone = mesh('Sharpen_Stone')
   const extras = ['Blade_Inlay', 'Guard', 'Handle', 'Hilt_Left', 'Hilt_Right', ...pieces.slice(3)].map(objVal)
   const actuals = new Map(extras.map(o => [o.name, o.position.clone()]))
   extras.forEach(o => o.traverse(c => { if (c instanceof T.Mesh) c.material = (c.material as T.MeshStandardMaterial).clone() }))
@@ -62,7 +62,7 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
   const fire = new T.PointLight('#ff681e', 65, 9, 2); fire.position.set(-2.25, 1.3, -1.8); scene.add(fire)
   const bladeLight = new T.PointLight('#ff7825', 0, 2.5); scene.add(bladeLight)
   const rim = new T.SpotLight('#f4d1a4', 22, 8, .6, .6); rim.position.set(1, 4, 1); rim.target = sword; scene.add(rim)
-  workshop.traverse(o => { if (o instanceof T.Mesh) { o.receiveShadow = true; o.castShadow = !['Water', 'Kor'].includes(o.name) } }); sword.traverse(o => { if (o instanceof T.Mesh) o.castShadow = true })
+  workshop.traverse(o => { if (o instanceof T.Mesh) { o.receiveShadow = true; o.castShadow = !['Water', 'Embers'].includes(o.name) } }); sword.traverse(o => { if (o instanceof T.Mesh) o.castShadow = true })
   const camera = new T.PerspectiveCamera(42, 1, .025, 70)
   const controls = new OrbitControls(camera, renderer.domElement); controls.enableDamping = true; controls.enablePan = false; controls.minDistance = .65; controls.maxDistance = 4
   const composer = new EffectComposer(renderer); composer.addPass(new RenderPass(scene, camera))
@@ -75,7 +75,7 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
   hammerHand.add(hammerHead); hammerHead.position.set(0, .34, 0); hammerHead.quaternion.identity(); hammerHand.add(hammerHandle); hammerHandle.position.set(0, .34, 0); hammerHandle.quaternion.identity()
   // Tongs: grip the sword's tang and move with the sword.
   const tongs = new T.Group(); sword.add(tongs); tongs.position.set(-.16, 0, 0); tongs.visible = false
-  for (const ad of ['Table_1', 'Table_2']) { const m = mesh(ad); tongs.add(m); m.position.set(0, 0, 0); m.quaternion.identity() }
+  for (const name of ['Table_1', 'Table_2']) { const m = mesh(name); tongs.add(m); m.position.set(0, 0, 0); m.quaternion.identity() }
   const crackGeo = new T.BufferGeometry().setFromPoints([new T.Vector3(.6, -.027, .006), new T.Vector3(.61, -.01, .006), new T.Vector3(.597, .002, .006), new T.Vector3(.62, .023, .006)])
   const crack = new T.Line(crackGeo, new T.LineBasicMaterial({ color: '#111111' })); sword.add(crack)
   const stand = new T.Mesh(new T.CylinderGeometry(.8, .9, .08, 64), new T.MeshStandardMaterial({ color: '#182023', metalness: .45, roughness: .4 })); stand.scale.set(.65, 1, .65); stand.position.set(.35, 1.15, 0); stand.visible = false; stand.receiveShadow = true; scene.add(stand)
@@ -89,7 +89,7 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
   const wheelAxis = new T.Vector3(0, 1, 0).applyQuaternion(stone.getWorldQuaternion(new T.Quaternion())), wheelDir = wheelAxis.z >= 0 ? 1 : -1
   const sparkDir = new T.Vector3().crossVectors(wheelAxis.clone().multiplyScalar(wheelDir), new T.Vector3(0, 1, 0)).x >= 0 ? 1 : -1
   let carry: { a: T.Vector3; q: T.Quaternion; t: number; duration: number; bend: number } | null = null
-  let cut: { t: number; a: T.Vector3; b: T.Vector3; dx: number; dy: number; sec: number; wasHit: boolean; q0: T.Quaternion; p0: T.Vector3; z: number } | null = null, traceStart: T.Vector3 | null = null
+  let cut: { t: number; a: T.Vector3; b: T.Vector3; dx: number; dy: number; select: number; wasHit: boolean; q0: T.Quaternion; p0: T.Vector3; z: number } | null = null, traceStart: T.Vector3 | null = null
   const heatPause = new T.Euler().setFromRotationMatrix(new T.Matrix4().makeBasis(new T.Vector3(0, 0, -1), new T.Vector3(-1, 0, 0), new T.Vector3(0, 1, 0)), 'XYZ')
   const cameraTrace = new DampedVector(), targetTrace = new DampedVector(), swordTrace = new DampedVector(), targetQ = new T.Quaternion()
   let transitionTime = 0, time = 0, lastVal = performance.now(), slow = 0, tier = 0
@@ -187,10 +187,10 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
     [new T.Vector3(13.92, 1.1, -.1), new T.Vector3(14.08, .45, -.1)],
     [new T.Vector3(15.5, 1.7, -.1), new T.Vector3(16.8, 1.1, -.1)],
   ]
-  function cutObj(dx = .4, dy = .4, sec = .22, a?: T.Vector3, b?: T.Vector3) {
+  function cutObj(dx = .4, dy = .4, select = .22, a?: T.Vector3, b?: T.Vector3) {
     if (d.stage !== 7 || d.master || cut || d.broke) return
     const [va, vb] = defaultCuts[d.target]
-    cut = { t: 0, a: (a ?? va).clone(), b: (b ?? vb).clone(), dx, dy, sec, wasHit: false, q0: sword.quaternion.clone(), p0: sword.position.clone(), z: targetPlaneZ[d.target] + .14 }
+    cut = { t: 0, a: (a ?? va).clone(), b: (b ?? vb).clone(), dx, dy, select, wasHit: false, q0: sword.quaternion.clone(), p0: sword.position.clone(), z: targetPlaneZ[d.target] + .14 }
     iz.clear(); sound.play('cut')
   }
   const K_PREP = .16, K_SWING = .11, K_FOLLOW = .2
@@ -220,9 +220,9 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
     // The blow is time-based: damage applies even if the swing phase is skipped at low frame rates.
     if (!k.wasHit && k.t >= K_PREP + K_SWING * .75) { k.wasHit = true; applyStrike(k) }
   }
-  function applyStrike(k: Pick<NonNullable<typeof cut>, 'a' | 'b' | 'dx' | 'dy' | 'sec'>) {
+  function applyStrike(k: Pick<NonNullable<typeof cut>, 'a' | 'b' | 'dx' | 'dy' | 'select'>) {
     const previous = { score: d.score, rosette: d.rosette, broke: d.broke }
-    const s = computeCut(d, k.dx, k.dy, k.sec), r = targets.strike(d.target, k.a, k.b, s.power)
+    const s = computeCut(d, k.dx, k.dy, k.select), r = targets.strike(d.target, k.a, k.b, s.power)
     if (!r.hit) { d.score = previous.score; d.rosette = previous.rosette; d.broke = previous.broke; d.message = r.message; d.results[d.target] = r.message; emit(); return }
     d.rosette = previous.rosette || r.detached && s.power >= .7
     d.message = s.broke ? s.message : r.message; d.results[d.target] = d.message; d.damages = targets.damages()
@@ -233,31 +233,31 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
     if (!az) shake.v = r.detached ? -.3 : -.14
     emit()
   }
-  function command(ad: Command) {
+  function command(name: Command) {
     sound.start()
-    if (ad === 'fromStart') { resetTargets(); d = firstGame(); d.selected = selected = 0; lastClink = 0; blade.visible = true; lastStage = -1; gold = 0; masterTime = 0; reheatWater = false; holdBellows = holdWater = wristHold = false; cut = null; wristU = .03; image.forEach(g => { g.p = 0 }); hammerTime = HAMMER_TURN }
-    else if (ad === 'targets-renew') resetTargets()
+    if (name === 'fromStart') { resetTargets(); d = firstGame(); d.selected = selected = 0; lastClink = 0; blade.visible = true; lastStage = -1; gold = 0; masterTime = 0; reheatWater = false; holdBellows = holdWater = wristHold = false; cut = null; wristU = .03; image.forEach(g => { g.p = 0 }); hammerTime = HAMMER_TURN }
+    else if (name === 'targets-renew') resetTargets()
     else if (d.master) return
-    else if (ad === 'master') { d.master = true; masterTime = 0; masterTotal = 2.8; lastMasterStage = d.stage; d.message = 'Usta çalışıyor… Orta kaliteyle tamamlanıyor.' }
-    else if (ad === 'al' && d.stage === 0) { advance(d) }
-    else if (ad === 'continue') {
+    else if (name === 'master') { d.master = true; masterTime = 0; masterTotal = 2.8; lastMasterStage = d.stage; d.message = 'Usta çalışıyor… Orta kaliteyle tamamlanıyor.' }
+    else if (name === 'al' && d.stage === 0) { advance(d) }
+    else if (name === 'continue') {
       if (d.stage === 1 && average(d, 'heat') >= 750) advance(d)
       else if (d.again && average(d, 'heat') >= 750) d.again = false
       else if (d.stage === 6) advance(d)
     }
-    else if (ad === 'again') { if (d.stage === 2) d.again = true; if (d.stage === 3) reheatWater = !reheatWater }
-    else if (ad === 'strike') doHit()
-    else if (ad === 'clink' && d.stage === 5) clink(d)
-    else if (ad === 'cutOff') cutObj()
+    else if (name === 'again') { if (d.stage === 2) d.again = true; if (d.stage === 3) reheatWater = !reheatWater }
+    else if (name === 'strike') doHit()
+    else if (name === 'clink' && d.stage === 5) clink(d)
+    else if (name === 'cutOff') cutObj()
     stageView(); emit()
   }
   action.addEventListener('click', actionClick)
   function actionClick() { if (d.stage === 0) command('al'); else if (d.stage === 5) command('clink') }
-  function hold(ad: 'bellows' | 'water' | 'wrist', v: boolean) {
+  function hold(name: 'bellows' | 'water' | 'wrist', v: boolean) {
     if (v) sound.start()
-    if (ad === 'bellows') { holdBellows = v; sound.bellows(v); if (d.stage === 3) reheatWater = v }
-    if (ad === 'water') { holdWater = v; if (v) reheatWater = false }
-    if (ad === 'wrist') wristHold = v
+    if (name === 'bellows') { holdBellows = v; sound.bellows(v); if (d.stage === 3) reheatWater = v }
+    if (name === 'water') { holdWater = v; if (v) reheatWater = false }
+    if (name === 'wrist') wristHold = v
     stageView()
   }
   function raycast(e: PointerEvent) {
@@ -325,8 +325,8 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
     area.dataset.xrScene = JSON.stringify({ heat: Math.round(average(d, 'heat')), skin: +average(d, 'skin').toFixed(3), dip: +d.dip.toFixed(2), selected: selected, wristU: +wristU.toFixed(3), target: d.target, score: d.score, message: d.message, master: d.master, y: +swordRotation.y.toFixed(3), sword: sword.position.toArray().map(v => +v.toFixed(3)), shadow: key.castShadow, drawing: renderer.info.render.calls, triangle: renderer.info.render.triangles, program: renderer.info.programs?.length ?? 0, texture: renderer.info.memory.textures, geo: renderer.info.memory.geometries })
   }
   // Part nodes share the sword origin; the real center is in the geometry.
-  const pieceCenter = new Map(pieces.map(ad => { const b = new T.Box3(); objVal(ad).traverse(c => { if (c instanceof T.Mesh) { c.geometry.computeBoundingBox(); b.union(c.geometry.boundingBox!) } }); return [ad, b.getCenter(new T.Vector3())] }))
-  let xrPiece: { ad: string; m: T.Matrix4 } | null = null, xrHandSeated = false
+  const pieceCenter = new Map(pieces.map(name => { const b = new T.Box3(); objVal(name).traverse(c => { if (c instanceof T.Mesh) { c.geometry.computeBoundingBox(); b.union(c.geometry.boundingBox!) } }); return [name, b.getCenter(new T.Vector3())] }))
+  let xrPiece: { name: string; m: T.Matrix4 } | null = null, xrHandSeated = false
   const boxPoint = new T.Box3(), boxCenter = new T.Vector3(), localRay = new T.Ray(), inverseMat = new T.Matrix4()
   const inspectFloor = new T.Mesh(new T.CircleGeometry(3, 48).rotateX(-Math.PI / 2), new T.MeshStandardMaterial({ color: '#141b1c', roughness: .95 })); inspectFloor.position.set(.42, 0, 0); inspectFloor.visible = false; scene.add(inspectFloor)
   const xr = setupXrSession(renderer, scene, camera, {
@@ -341,23 +341,23 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
       return h.distance <= .16 ? nearestRegion(centers, h.x) : null
     },
     regionPoint: (i, h) => { sword.localToWorld(h.set(deform.center(image, i), 0, .006)); h.y += .045; return h },
-    objPoint: (ad, h) => {
-      if (ad === 'water') return h.set(1.95, .42, .15) // Center of the dip and the water effect.
-      const n = ad === 'eggShape' ? eggShape : ad === 'bellows' ? bellows : objVal(ad)
+    objPoint: (name, h) => {
+      if (name === 'water') return h.set(1.95, .42, .15) // Center of the dip and the water effect.
+      const n = name === 'eggShape' ? eggShape : name === 'bellows' ? bellows : objVal(name)
       n.updateWorldMatrix(true, true); boxPoint.setFromObject(n); boxPoint.getCenter(boxCenter); return h.copy(boxCenter)
     },
     targetPointAt: i => targetCenter[i], targetBox: i => targets.box(i),
     wristU: () => wristU, wristDrag: u => { wristU = u; selected = Math.min(11, Math.floor(wristU * 12)); d.selected = selected }, stoneZ: STONE_Z,
     cutOff: c => {
       if (d.stage !== 7 || d.master || cut || d.broke) return
-      sound.play('cut'); applyStrike({ a: c.a, b: c.b, dx: c.dx, dy: c.dy, sec: c.sure })
+      sound.play('cut'); applyStrike({ a: c.a, b: c.b, dx: c.dx, dy: c.dy, select: c.duration })
     },
     addTrace: () => iz.add(sword), cutOngoing: () => !!cut,
     swordPos: (p, q) => { sword.position.copy(p); sword.quaternion.copy(q) },
-    pieceMatrix: ad => { const o = objVal(ad); o.updateWorldMatrix(true, false); return o.matrixWorld },
-    movePiece: (ad, m) => { xrPiece = m ? { ad, m } : null; if (!m) { const o = objVal(ad); o.quaternion.identity(); o.scale.set(1, 1, 1) } },
-    piecePlace: (ad, h) => sword.localToWorld(h.copy(pieceCenter.get(ad)!)),
-    pieceDistance: ad => xrPiece ? sword.localToWorld(boxCenter.copy(pieceCenter.get(ad)!)).distanceTo(pieceCenter.get(ad)!.clone().applyMatrix4(xrPiece.m)) : Infinity,
+    pieceMatrix: name => { const o = objVal(name); o.updateWorldMatrix(true, false); return o.matrixWorld },
+    movePiece: (name, m) => { xrPiece = m ? { name, m } : null; if (!m) { const o = objVal(name); o.quaternion.identity(); o.scale.set(1, 1, 1) } },
+    piecePlace: (name, h) => sword.localToWorld(h.copy(pieceCenter.get(name)!)),
+    pieceDistance: name => xrPiece ? sword.localToWorld(boxCenter.copy(pieceCenter.get(name)!)).distanceTo(pieceCenter.get(name)!.clone().applyMatrix4(xrPiece.m)) : Infinity,
     seatPiece: () => { xrHandSeated = true; command('clink') },
     floor: v => { inspectFloor.visible = v },
     sessionStarted: () => {
@@ -375,7 +375,7 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
       stageView(); camera.position.copy(cameraGoal); camera.quaternion.identity(); controls.target.copy(targetGoal); sword.position.copy(swordGoal); sword.rotation.copy(swordRotation); carry = null; swordTrace.reset(); cameraTrace.reset(); targetTrace.reset()
       size(); controls.update(); lastVal = performance.now(); slow = 0; emit(); xrChanged?.(false)
     },
-    stamp: (ad, v) => { area.dataset[ad] = v },
+    stamp: (name, v) => { area.dataset[name] = v },
   })
   function frame() {
     const xrOpen = renderer.xr.isPresenting
@@ -486,7 +486,7 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
         o.position.y += .12 * (1 - k); o.position.z += .14 * (1 - k)
         if (o.name.startsWith('Rivet')) o.rotation.z = (1 - k) * 7
       }
-      if (xrPiece?.ad === o.name) inverseMat.copy(sword.matrixWorld).invert().multiply(xrPiece.m).decompose(o.position, o.quaternion, o.scale)
+      if (xrPiece?.name === o.name) inverseMat.copy(sword.matrixWorld).invert().multiply(xrPiece.m).decompose(o.position, o.quaternion, o.scale)
     })
     gold = d.attached >= 7 ? Math.min(1, gold + dt * .7) : 0; inlay.opacity = gold; crack.visible = d.crack_
 
@@ -511,7 +511,7 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
     composer.render(); if (publish > .15) { publish = 0; emit() }
   }
   collect(scene); renderer.setAnimationLoop(frame); emit()
-  return { startXr: async () => { sound.start(); await xr.start() }, command, hold, sec: id => { selected = limit(id, 0, 11); d.selected = selected; wristU = (selected + .5) / 12; stageView(); emit() }, target: id => { d.target = limit(id, 0, 2); stageView(); emit() }, sound: v => { sound.ac(v) }, zoom: ratio => { camera.position.sub(controls.target).multiplyScalar(ratio).add(controls.target) }, rotate: x => { const v = camera.position.clone().sub(controls.target); v.applyAxisAngle(new T.Vector3(0, 1, 0), x); camera.position.copy(controls.target).add(v) }, clear: () => {
+  return { startXr: async () => { sound.start(); await xr.start() }, command, hold, select: id => { selected = limit(id, 0, 11); d.selected = selected; wristU = (selected + .5) / 12; stageView(); emit() }, target: id => { d.target = limit(id, 0, 2); stageView(); emit() }, sound: v => { sound.ac(v) }, zoom: ratio => { camera.position.sub(controls.target).multiplyScalar(ratio).add(controls.target) }, rotate: x => { const v = camera.position.clone().sub(controls.target); v.applyAxisAngle(new T.Vector3(0, 1, 0), x); camera.position.copy(controls.target).add(v) }, clear: () => {
     disposed = true; xr.clear(); renderer.setAnimationLoop(null); cancel(); observer.disconnect(); controls.dispose(); sound.dispose(); particles.dispose(); targets.clear(); iz.remove(); previewGeo.dispose(); (preview.material as T.Material).dispose()
     area.removeEventListener('pointerdown', pointerDown); area.removeEventListener('pointermove', pointerMove); area.removeEventListener('pointerup', pointerUp); area.removeEventListener('pointercancel', cancel); area.removeEventListener('lostpointercapture', cancel); area.removeEventListener('keydown', keydown); area.removeEventListener('keyup', keyup); window.removeEventListener('blur', cancel); document.removeEventListener('visibilitychange', visibility); renderer.domElement.removeEventListener('webglcontextlost', contextLost)
     markers.forEach(({ b, click }) => { b.removeEventListener('click', click); b.remove() }); action.removeEventListener('click', actionClick); action.remove(); collect(scene); geometries.forEach(g => g.dispose()); mats.forEach(m => m.dispose()); textures.forEach(t => t.dispose()); env.dispose(); composer.passes.forEach(p => p.dispose()); composer.dispose(); renderer.dispose(); renderer.domElement.remove()

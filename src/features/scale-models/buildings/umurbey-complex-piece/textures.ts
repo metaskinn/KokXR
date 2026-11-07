@@ -373,9 +373,9 @@ function leafTexture() {
 export function umurbeyMaterials() {
   const pbr = (p: THREE.MeshStandardMaterialParameters) => new THREE.MeshStandardMaterial({ roughness: 0.85, metalness: 0, ...p })
   const loader = new THREE.TextureLoader()
-  const photo = (ad: string) => {
+  const photo = (name: string) => {
     if (PUBLIC_BUILD) return null
-    const f = loader.load(`/images/umurbey-complex/model/${ad}.jpg`)
+    const f = loader.load(`/images/umurbey-complex/model/${name}.jpg`)
     f.colorSpace = THREE.SRGBColorSpace
     f.anisotropy = 8
     return f

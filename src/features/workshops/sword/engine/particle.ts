@@ -33,10 +33,10 @@ export function particlePool(scene: T.Scene, az: boolean) {
     }
   }
   // Directional burst: grindstone spin direction, sideways fan of a hammer blow, water splash.
-  function spray(p: T.Vector3, dir: T.Vector3, count: number, spread: number, speed: number, tour: 0 | 1 = 0) {
+  function spray(p: T.Vector3, dir: T.Vector3, count: number, spread: number, speed: number, kind: 0 | 1 = 0) {
     for (let k = 0; k < (az ? Math.ceil(count * .25) : Math.ceil(count * ratio)); k++) {
       const i = life.findIndex(v => v <= 0); if (i < 0 || i >= limitN) break
-      life[i] = max[i] = tour ? .25 + Math.random() * .3 : .18 + Math.random() * .55; tip[i] = tour
+      life[i] = max[i] = kind ? .25 + Math.random() * .3 : .18 + Math.random() * .55; tip[i] = kind
       const h = speed * (.45 + Math.random() * .8)
       positions.set(p.toArray(), i * 3)
       velocities.set([(dir.x + (Math.random() - .5) * spread) * h, (dir.y + (Math.random() - .5) * spread) * h, (dir.z + (Math.random() - .5) * spread) * h], i * 3)

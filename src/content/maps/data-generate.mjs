@@ -224,7 +224,7 @@ const FRAME = {
   hatay: { west: 35.86, east: 36.46, south: 36.0, north: 36.42 },
 }
 const write = (name, v) => { const s = JSON.stringify(v); fs.writeFileSync(pathMod.join(OUTPUT, `${name}.json`), s + '\n'); console.log(name, s.length, Object.fromEntries(Object.entries(v.layer).map(([k, x]) => [k, x.length]))) }
-const roundOff = (proj, name, lon, lat, tour, z) => { const [x, y] = proj.p([lon, lat]); return { ad: name, x: Math.round(x), y: Math.round(y), tour, ...(z ? { z } : {}) } }
+const roundOff = (proj, name, lon, lat, kind, z) => { const [x, y] = proj.p([lon, lat]); return { name: name, x: Math.round(x), y: Math.round(y), kind, ...(z ? { z } : {}) } }
 
 async function turkey() {
   const c = FRAME.turkey, proj = projection(c, 2000)
@@ -247,7 +247,7 @@ async function turkey() {
   const riverC = river.features.filter((f) => (f.properties.scalerank ?? 9) <= 7).flatMap((f) => strokes(f.geometry))
   const G = proj.G, H = proj.H
   write('turkey', {
-    id: 'turkey', ad: 'Türkiye', frameBorder: c, g: G, y: H, zMax: 1,
+    id: 'turkey', name: 'Türkiye', frameBorder: c, g: G, y: H, zMax: 1,
     attribution: ['Natural Earth (kamu malı)', 'Kabartma: Terrain Tiles (SRTM, kaynak: AWS Open Data)'],
     layer: {
       land: `M0 0H${G}V${H}H0z` + areaLayer(proj, land.features.flatMap((f) => rings(f.geometry)), 1.1, 3),
@@ -303,7 +303,7 @@ async function bursa() {
   const water = waterLayer(proj, d.water, 3, 250)
   const center = { west: 28.97, east: 29.13, south: 40.15, north: 40.24 }, historical = { west: 29.04, east: 29.087, south: 40.176, north: 40.194 }
   write('bursa', {
-    id: 'bursa', ad: 'Bursa', frameBorder: c, g: proj.G, y: proj.H, zMax: 12,
+    id: 'bursa', name: 'Bursa', frameBorder: c, g: proj.G, y: proj.H, zMax: 12,
     attribution: ['© OpenStreetMap katkıda bulunanlar (ODbL)', 'Kabartma: Terrain Tiles (SRTM, kaynak: AWS Open Data)'],
     layer: {
       sea: sea.path, ...water,
@@ -325,7 +325,7 @@ async function smallCity(name, G) {
   const sea = d.coast.length ? seaArea(proj, d.coast.map((w) => w.p), 1.5) : { path: '' }
   const water = waterLayer(proj, d.water, 4, 500)
   write(name, {
-    id: name, ad: name === 'konya' ? 'Konya' : 'Hatay', frameBorder: c, g: proj.G, y: proj.H, zMax: 4,
+    id: name, name: name === 'konya' ? 'Konya' : 'Hatay', frameBorder: c, g: proj.G, y: proj.H, zMax: 4,
     attribution: ['© OpenStreetMap katkıda bulunanlar (ODbL)', 'Kabartma: Terrain Tiles (SRTM, kaynak: AWS Open Data)'],
     layer: { sea: sea.path, ...water, motorway: drawClass(proj, roads, ['motorway'], 3), ana: drawClass(proj, roads, ['trunk', 'primary'], 3), secondary: drawClass(proj, roads, ['secondary'], 9) },
     label: placeLabel(proj, d.places, name === 'konya' ? ['Selçuklu', 'Meram', 'Karatay', 'Loras Dağı'] : ['Antakya', 'Samandağ', 'Altınözü', 'Musa Dağı']),

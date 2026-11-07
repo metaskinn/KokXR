@@ -12,16 +12,16 @@ export function createSound() {
     }
     if (ctx.state === 'suspended') void ctx.resume()
   }
-  function play(ad: SoundName) {
+  function play(name: SoundName) {
     if (!open) return
-    start(); const c = ctx!, gain = c.createGain(), t = c.currentTime, dur = ad === 'water' ? 1.3 : ad === 'sharpen' ? .2 : .35
-    gain.gain.setValueAtTime(.0001, t); gain.gain.exponentialRampToValueAtTime(ad === 'hammer' ? .7 : .3, t + .008); gain.gain.exponentialRampToValueAtTime(.0001, t + dur); gain.connect(master!)
-    if (['water', 'sharpen', 'cut'].includes(ad)) {
+    start(); const c = ctx!, gain = c.createGain(), t = c.currentTime, dur = name === 'water' ? 1.3 : name === 'sharpen' ? .2 : .35
+    gain.gain.setValueAtTime(.0001, t); gain.gain.exponentialRampToValueAtTime(name === 'hammer' ? .7 : .3, t + .008); gain.gain.exponentialRampToValueAtTime(.0001, t + dur); gain.connect(master!)
+    if (['water', 'sharpen', 'cut'].includes(name)) {
       const buffer = c.createBuffer(1, c.sampleRate * dur, c.sampleRate), a = buffer.getChannelData(0)
       for (let i = 0; i < a.length; i++) a[i] = Math.random() * 2 - 1
-      const n = c.createBufferSource(), f = c.createBiquadFilter(); f.type = 'bandpass'; f.frequency.setValueAtTime(ad === 'cut' ? 400 : 2400, t); f.frequency.exponentialRampToValueAtTime(500, t + dur); n.buffer = buffer; n.connect(f).connect(gain); n.start(); n.onended = () => { n.disconnect(); f.disconnect(); gain.disconnect() }
+      const n = c.createBufferSource(), f = c.createBiquadFilter(); f.type = 'bandpass'; f.frequency.setValueAtTime(name === 'cut' ? 400 : 2400, t); f.frequency.exponentialRampToValueAtTime(500, t + dur); n.buffer = buffer; n.connect(f).connect(gain); n.start(); n.onended = () => { n.disconnect(); f.disconnect(); gain.disconnect() }
     } else {
-      for (const frequency of [ad === 'hammer' ? 230 : 1300, ad === 'hammer' ? 1340 : 2700]) {
+      for (const frequency of [name === 'hammer' ? 230 : 1300, name === 'hammer' ? 1340 : 2700]) {
         const o = c.createOscillator(); o.type = frequency < 300 ? 'square' : 'sine'; o.frequency.setValueAtTime(frequency, t); o.frequency.exponentialRampToValueAtTime(frequency * .7, t + dur); o.connect(gain); o.start(); o.stop(t + dur); o.onended = () => { o.disconnect(); gain.disconnect() }
       }
     }

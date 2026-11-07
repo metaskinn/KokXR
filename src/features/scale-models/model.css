@@ -7,9 +7,9 @@
 .model-marker[hidden] { display: none; }
 .model-marker:hover, .model-marker:active { background: none; box-shadow: none; }
 .model-marker-point { display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: rgb(242 193 78 / 0.88); color: #213c35; font: 700 0.68rem/1 Georgia, serif; border: 1px solid rgb(255 255 255 / 0.85); box-shadow: 0 0 0 0 rgb(242 193 78 / 0.4), 0 1px 4px rgb(0 0 0 / 0.4); animation: model-marker-pulse 3.6s ease-out infinite; }
-.model-marker-ad { position: absolute; top: calc(50% + 13px); left: 50%; transform: translateX(-50%); display: none; padding: 0.08rem 0.4rem; border-radius: 0.25rem; background: rgb(18 30 26 / 0.86); font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
-.model-marker.active .model-marker-ad, .model-marker:focus-visible .model-marker-ad { display: block; }
-@media (hover: hover) { .model-marker:hover .model-marker-ad { display: block; } }
+.model-marker-name { position: absolute; top: calc(50% + 13px); left: 50%; transform: translateX(-50%); display: none; padding: 0.08rem 0.4rem; border-radius: 0.25rem; background: rgb(18 30 26 / 0.86); font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
+.model-marker.active .model-marker-name, .model-marker:focus-visible .model-marker-name { display: block; }
+@media (hover: hover) { .model-marker:hover .model-marker-name { display: block; } }
 .model-marker.active .model-marker-point { background: #fff; animation: none; box-shadow: 0 0 0 3px rgb(242 193 78 / 0.8); }
 .model-marker:focus-visible { outline: 3px solid #f2c14e; outline-offset: 2px; border-radius: 0.4rem; }
 @keyframes model-marker-pulse { 60% { box-shadow: 0 0 0 7px rgb(242 193 78 / 0), 0 1px 4px rgb(0 0 0 / 0.4); } 100% { box-shadow: 0 0 0 0 rgb(242 193 78 / 0), 0 1px 4px rgb(0 0 0 / 0.4); } }

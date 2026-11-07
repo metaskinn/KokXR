@@ -941,8 +941,8 @@ export const building = (): Model => {
   root.add(roof, drum, dome)
   root.position.set(OX, 0, OZ)
 
-  const d = (id: string, ad: string, x: number, h: number, z: number, bx: number, by: number, bz: number): InteriorStop =>
-    ({ id, ad, position: [x + OX, BAY + h, z + OZ], look: [bx + OX, by, bz + OZ] })
+  const d = (id: string, name: string, x: number, h: number, z: number, bx: number, by: number, bz: number): InteriorStop =>
+    ({ id, name, position: [x + OX, BAY + h, z + OZ], look: [bx + OX, by, bz + OZ] })
   const minbarS = 3.6
   const minbarH = PLATFORM + (MINBAR.h1 * (minbarS - MINBAR.s0)) / (MINBAR.s1 - MINBAR.s0)
   const stops: InteriorStop[] = [
@@ -962,9 +962,9 @@ export const building = (): Model => {
   return {
     root,
     layers: [
-      { group: roof, height: 16, ad: 'Çatılar' },
-      { group: drum, height: 26, ad: 'Kasnaklar' },
-      { group: dome, height: 36, ad: 'Kubbeler' },
+      { group: roof, height: 16, name: 'Çatılar' },
+      { group: drum, height: 26, name: 'Kasnaklar' },
+      { group: dome, height: 36, name: 'Kubbeler' },
     ],
     stops,
     walking: {

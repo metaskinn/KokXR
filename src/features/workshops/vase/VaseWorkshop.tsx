@@ -35,7 +35,7 @@ export default function VaseWorkshop() {
     import('./vaseScene').then(async ({ createVaseScene }) => {
       if (cancel || !area.current) return
       local = await createVaseScene(area.current, {
-        sec: (id) => { if (!cancel) setGame((previous) => ({ ...previous, selected: id })) },
+        select: (id) => { if (!cancel) setGame((previous) => ({ ...previous, selected: id })) },
         release: (id, seated) => {
           if (cancel) return
           setGame((previous) => {

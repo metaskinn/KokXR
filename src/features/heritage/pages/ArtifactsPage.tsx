@@ -11,10 +11,10 @@ export default function ArtifactsPage({ artifacts }: { artifacts: Artifact[] }) 
     <ul className="artifacts">{artifacts.map((artifact) => <li key={artifact.id}>
       <Link className="artifact-card" to={`/artifact/${artifact.id}`}>
         {!PUBLIC_BUILD && <div className="card-image">
-          {artifact.coverImage && <img className="cover" src={artifact.coverImage} alt={cover(artifact)?.alt ?? artifact.ad} loading="lazy" />}
+          {artifact.coverImage && <img className="cover" src={artifact.coverImage} alt={cover(artifact)?.alt ?? artifact.name} loading="lazy" />}
         </div>}
         <div className="card-content">
-          <h2>{artifact.ad}</h2>
+          <h2>{artifact.name}</h2>
           <p className="position">{artifact.district}, {artifact.city}</p>
           <p className="card-summary">{artifact.summary}</p>
           <ul className="card-features" aria-label="Bu eserde">

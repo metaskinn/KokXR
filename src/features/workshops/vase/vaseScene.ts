@@ -18,7 +18,7 @@ export interface VaseScene {
   endXr: () => void
   clear: () => void
 }
-interface Notices { sec: (id: number | null) => void; release: (id: number, seated: boolean) => void; error: () => void; xrEnded: () => void; xrShatter: () => void }
+interface Notices { select: (id: number | null) => void; release: (id: number, seated: boolean) => void; error: () => void; xrEnded: () => void; xrShatter: () => void }
 
 export async function createVaseScene(area: HTMLElement, notify: Notices): Promise<VaseScene> {
   // Six physical ceramic pieces exported from the .blend source; no external model/texture.
@@ -109,7 +109,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     button.dataset.pieceIdOf = String(id)
     button.setAttribute('aria-label', `Parça ${id + 1}: tut ve sürükle`)
     button.innerHTML = `<span>${id + 1}</span>`
-    button.addEventListener('click', () => { if (!state.placed.includes(id) && !renderer.xr.isPresenting) notify.sec(id) })
+    button.addEventListener('click', () => { if (!state.placed.includes(id) && !renderer.xr.isPresenting) notify.select(id) })
     area.append(button)
     return button
   })
@@ -154,7 +154,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     const id = drag?.id ?? state.selected
     releaseCapture()
     if (id !== null && !state.placed.includes(id)) moves.set(id, shelves[id].clone())
-    notify.sec(null)
+    notify.select(null)
   }
   const update = (fresh: VaseState) => {
     const fromStart = fresh.session !== state.session || fresh.repair !== state.repair
@@ -213,7 +213,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     area.focus({ preventScroll: true })
     area.setPointerCapture(e.pointerId)
     area.classList.add('piece-dragging')
-    notify.sec(id)
+    notify.select(id)
   }
   const pointerMove = (e: PointerEvent) => {
     if (!drag || drag.pointer !== e.pointerId) return
@@ -258,7 +258,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     gripStarted: (id) => { moves.delete(id) },
     release,
     gripCancel: (id) => { moves.set(id, shelves[id].clone()) },
-    sec: notify.sec,
+    select: notify.select,
     emphasize: (ids) => {
       if (ids.length === xrHighlight.length && ids.every((id, i) => id === xrHighlight[i])) return
       xrHighlight = ids

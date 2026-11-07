@@ -21,7 +21,7 @@ export default function ArtifactPage({ artifacts }: { artifacts: Artifact[] }) {
         <Link className="artifact-backward" to="/artifacts">← Eserlere dön</Link>
         <div className="artifact-cover-text">
           <p className="artifact-cover-position">{artifact.district}, {artifact.city}</p>
-          <h1>{artifact.ad}</h1>
+          <h1>{artifact.name}</h1>
           <p className="artifact-summary">{artifact.summary}</p>
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function ArtifactPage({ artifacts }: { artifacts: Artifact[] }) {
       </aside>
       <div className="artifact-content">
         <Gallery artifact={artifact} />
-        {artifact.model && <ArtifactExplorer model={artifact.model} sources={artifact.sources} name={artifact.ad} />}
+        {artifact.model && <ArtifactExplorer model={artifact.model} sources={artifact.sources} name={artifact.name} />}
         <Section id="history-title" title="Tarihçe">
           <p className="history">{artifact.history}</p>
           {artifact.sources.filter((source) => source.id.endsWith('-history')).map((source) => <SourceLine key={source.id} sources={artifact.sources} sourceId={source.id} />)}

@@ -101,7 +101,7 @@ const clickable = (page) => page.evaluate(() => [...document.querySelectorAll('.
   await page.getByText(/henüz VR içeriği yok/).waitFor()
   await page.getByRole('img', { name: 'Konya haritası' }).waitFor()
   condition(await page.locator('a.vr-marker').count() === 0, 'non-existent building marked in Konya')
-  await page.locator('.vr-map-not', { hasText: 'Henüz VR yok' }).waitFor()
+  await page.locator('.vr-map-note', { hasText: 'Henüz VR yok' }).waitFor()
   await page.waitForTimeout(400)
   await page.screenshot({ path: `${view}/vr-konya-1280.png` })
   await page.goto(`${url}/places?city=Hatay`)

@@ -41,8 +41,8 @@ export const building = (): Model => {
   }
 
   const G = BAY_Y
-  const stop = (id: string, ad: string, x: number, y: number, z: number, bx: number, by: number, bz: number): InteriorStop =>
-    ({ id, ad, position: [x, y, kay(z)], look: [bx, by, kay(bz)] })
+  const stop = (id: string, name: string, x: number, y: number, z: number, bx: number, by: number, bz: number): InteriorStop =>
+    ({ id, name, position: [x, y, kay(z)], look: [bx, by, kay(bz)] })
   const stops: InteriorStop[] = [
     stop('hall', 'Harim', 0, G, -3.2, 0, 5, 12),
     stop('portico', 'Son cemaat yeri', 12.8, G + 0.5, -16.7, -10, 5.2, -16.7),
@@ -57,9 +57,9 @@ export const building = (): Model => {
   return {
     root,
     layers: [
-      { group: roofGroup, height: 22, ad: 'Çatılar' },
-      { group: drumGroup, height: 34, ad: 'Kasnaklar' },
-      { group: domeGroup, height: 46, ad: 'Kubbeler' },
+      { group: roofGroup, height: 22, name: 'Çatılar' },
+      { group: drumGroup, height: 34, name: 'Kasnaklar' },
+      { group: domeGroup, height: 46, name: 'Kubbeler' },
     ],
     stops,
     walking,

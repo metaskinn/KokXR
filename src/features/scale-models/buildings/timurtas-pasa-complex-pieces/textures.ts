@@ -21,7 +21,7 @@ function texture(el: HTMLCanvasElement, mu: number, mv: number, colored = true) 
 }
 
 const size = () => lightDevice() ? 512 : 1024
-const sec = <T,>(r: () => number, l: T[]) => l[Math.floor(r() * l.length)]
+const select = <T,>(r: () => number, l: T[]) => l[Math.floor(r() * l.length)]
 
 function speck(c: CanvasRenderingContext2D, B: number, r: () => number, count: number, power = 0.05) {
   for (let i = 0; i < count; i++) {
@@ -34,7 +34,7 @@ function speck(c: CanvasRenderingContext2D, B: number, r: () => number, count: n
 function brickCourse(c: CanvasRenderingContext2D, B: number, measure: number, y: number, h: number, length: number, slip: number, colors: string[], r: () => number) {
   const count = Math.round(B / (length * measure)), w = B / count, ara = 0.022 * measure
   for (let i = -1; i <= count; i++) {
-    c.fillStyle = sec(r, colors)
+    c.fillStyle = select(r, colors)
     c.fillRect(i * w + slip * w + ara / 2, B - (y + h) * measure, w - ara, h * measure)
   }
 }
@@ -90,7 +90,7 @@ export function rubbleTexture() {
     let x = 0
     while (x < METER) {
       const en = 0.18 + r() * 0.3, length = 0.3 + r() * 0.13
-      c.fillStyle = sec(r, ['#a08d6e', '#918a74', '#ad9570', '#83795f', '#a59a82', '#98846a', '#8e8c7a'])
+      c.fillStyle = select(r, ['#a08d6e', '#918a74', '#ad9570', '#83795f', '#a59a82', '#98846a', '#8e8c7a'])
       c.beginPath()
       const cx = (x + en / 2) * measure, cy = B - (y0 + 0.22 + (r() - 0.5) * 0.06) * measure, n = 7, a0 = r()
       for (let i = 0; i < n; i++) {
@@ -163,11 +163,11 @@ export function tileTexture() {
   const b = s * 0.24
   for (let j = 0; j < N; j++) for (let i = 0; i < N; i++) {
     const x = i * s, y = j * s
-    c.fillStyle = sec(r, BRICK_COLOR.map((k) => k)).replace('#8f4632', '#b5613f')
+    c.fillStyle = select(r, BRICK_COLOR.map((k) => k)).replace('#8f4632', '#b5613f')
     c.beginPath(); c.moveTo(x + b + 3, y + 3); c.lineTo(x + s - 3, y + 3); c.lineTo(x + s - b - 3, y + b - 2); c.lineTo(x + 3 + b * 0.2, y + b - 2); c.closePath(); c.fill()
-    c.fillStyle = sec(r, BRICK_COLOR)
+    c.fillStyle = select(r, BRICK_COLOR)
     c.beginPath(); c.moveTo(x + 3, y + b + 3); c.lineTo(x + b - 2, y + b * 1.2); c.lineTo(x + b - 2, y + s - 3); c.lineTo(x + 3, y + s - b - 3); c.closePath(); c.fill()
-    c.fillStyle = sec(r, ['#127a9c', '#0e6d8e', '#1486aa'])
+    c.fillStyle = select(r, ['#127a9c', '#0e6d8e', '#1486aa'])
     c.fillRect(x + b, y + b, b * 0.9, b * 0.9)
   }
   return texture(el, METER, METER)
@@ -181,7 +181,7 @@ export function stonePavingTexture(seed: number, palette: [number, number, numbe
   const color: [number, number, number][] = []
   for (let i = 0; i < N * N; i++) {
     pointX[i] = r(); pointY[i] = r()
-    const p = sec(r, palette), t = 0.85 + r() * 0.3
+    const p = select(r, palette), t = 0.85 + r() * 0.3
     color.push([p[0] * t, p[1] * t, p[2] * t])
   }
   const v = c.createImageData(B, B)

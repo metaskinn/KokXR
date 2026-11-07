@@ -312,9 +312,9 @@ export function greenMaterials() {
 
   const srgb = (t: THREE.Texture) => { t.colorSpace = THREE.SRGBColorSpace; return t }
   const load = new THREE.TextureLoader()
-  const photo = (ad: string) => {
+  const photo = (name: string) => {
     if (PUBLIC_BUILD) return null
-    const t = load.load(`/images/yesil-complex/model/${ad}.jpg`)
+    const t = load.load(`/images/yesil-complex/model/${name}.jpg`)
     t.colorSpace = THREE.SRGBColorSpace
     t.anisotropy = 8
     return t

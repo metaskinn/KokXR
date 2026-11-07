@@ -98,7 +98,7 @@ function intersects(a: T.Vector2, b: T.Vector2, c: T.Vector2, d: T.Vector2) {
   return y(a, b, c) * y(a, b, d) < 0 && y(c, d, a) * y(c, d, b) < 0
 }
 
-export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, smallMove: boolean) {
+export function setupTargets(scene: T.Scene, find: (name: string) => T.Mesh, smallMove: boolean) {
   // ---------------------------------------------------- debris: the tangible trace of damage
   const COUNT = smallMove ? 24 : 110
   const kiriMat = new T.MeshStandardMaterial({ roughness: .9 })

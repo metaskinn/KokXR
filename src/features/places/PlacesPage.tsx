@@ -40,7 +40,7 @@ function useMapData(identity: MapId) {
 
 interface Marker {
   id: string
-  ad: string
+  name: string
   alt?: string
   position: [number, number]
   label: string
@@ -180,15 +180,15 @@ function MapView({ data, markers, highlight, setHighlight, note }: {
   const textPx = (n: number) => n / s
 
   return <figure className="vr-map-wrapper">
-    <div ref={box} className="vr-map" data-tour={data.id === 'turkey' ? 'country' : 'city'} data-z={zDegree} data-slider={z > 1 ? 'yes' : 'no'} data-near={data.id === 'turkey' ? 'no' : 'yes'}
+    <div ref={box} className="vr-map" data-kind={data.id === 'turkey' ? 'country' : 'city'} data-z={zDegree} data-slider={z > 1 ? 'yes' : 'no'} data-near={data.id === 'turkey' ? 'no' : 'yes'}
       style={{ aspectRatio: `${data.g} / ${data.y}` }}
       onPointerDown={begin} onPointerMove={drag} onPointerUp={release} onPointerCancel={release}>
-      {w > 0 && <svg viewBox={`${vx} ${vy} ${w / s} ${h / s}`} role="img" aria-label={`${data.ad} haritası`}>
+      {w > 0 && <svg viewBox={`${vx} ${vy} ${w / s} ${h / s}`} role="img" aria-label={`${data.name} haritası`}>
         {layers}
-        {data.label.filter((e) => (!e.z || z >= e.z) && (!narrow || e.ad === 'Karadeniz')).map((e) => <g key={e.ad} className={`e-${e.tour}`}>
-          {e.tour === 'peak' && <path d={`M${e.x - textPx(6)} ${e.y + textPx(5)}L${e.x} ${e.y - textPx(6)}L${e.x + textPx(6)} ${e.y + textPx(5)}z`} />}
-          {e.tour === 'city' && <circle cx={e.x} cy={e.y} r={textPx(2.5)} />}
-          <text x={e.x + (e.tour === 'sea' ? 0 : textPx(8))} y={e.y + textPx(4)} fontSize={textPx(e.tour === 'sea' ? 13 : 12)} strokeWidth={textPx(3)} textAnchor={e.tour === 'sea' ? 'middle' : 'start'}>{e.ad}</text>
+        {data.label.filter((e) => (!e.z || z >= e.z) && (!narrow || e.name === 'Karadeniz')).map((e) => <g key={e.name} className={`e-${e.kind}`}>
+          {e.kind === 'peak' && <path d={`M${e.x - textPx(6)} ${e.y + textPx(5)}L${e.x} ${e.y - textPx(6)}L${e.x + textPx(6)} ${e.y + textPx(5)}z`} />}
+          {e.kind === 'city' && <circle cx={e.x} cy={e.y} r={textPx(2.5)} />}
+          <text x={e.x + (e.kind === 'sea' ? 0 : textPx(8))} y={e.y + textPx(4)} fontSize={textPx(e.kind === 'sea' ? 13 : 12)} strokeWidth={textPx(3)} textAnchor={e.kind === 'sea' ? 'middle' : 'start'}>{e.name}</text>
           {e.alt && <text x={e.x + textPx(8)} y={e.y + textPx(17)} fontSize={textPx(10.5)} strokeWidth={textPx(3)}>{e.alt}</text>}
         </g>)}
       </svg>}
@@ -204,14 +204,14 @@ function MapView({ data, markers, highlight, setHighlight, note }: {
           </g>
         })}
       </svg>}
-      {w > 0 && <div className="vr-markers" role="group" aria-label={`${data.ad} haritasındaki işaretler`}>
+      {w > 0 && <div className="vr-markers" role="group" aria-label={`${data.name} haritasındaki işaretler`}>
         {markers.map((i, n) => {
           const b = places[n], a = real[n]
           if (!b) return null
           const atEdge = a.x < 0 || a.y < 0 || a.x > w || a.y > h
           const content = <>
             <span className="vr-marker-point" aria-hidden="true">{i.no}</span>
-            <span className="vr-marker-ad" aria-hidden="true"><strong>{i.ad}</strong>{i.alt && <small>{i.alt}</small>}</span>
+            <span className="vr-marker-name" aria-hidden="true"><strong>{i.name}</strong>{i.alt && <small>{i.alt}</small>}</span>
           </>
           const common = {
             className: `vr-marker${i.no ? '' : ' vr-city'}`,
@@ -231,7 +231,7 @@ function MapView({ data, markers, highlight, setHighlight, note }: {
             : <button key={i.id} type="button" aria-pressed={!!i.selected} onClick={i.click} {...common}>{content}</button>
         })}
       </div>}
-      {note && <p className="vr-map-not">{note}</p>}
+      {note && <p className="vr-map-note">{note}</p>}
       {zoomsIn && <div className="vr-proximity">
         <button type="button" aria-label="Yakınlaştır" disabled={z >= zMax} onClick={() => zoomIn(1.8, focusX, focusY)}>+</button>
         <button type="button" aria-label="Uzaklaştır" disabled={z <= 1} onClick={() => zoomIn(1 / 1.8)}>−</button>
@@ -247,7 +247,7 @@ function MapView({ data, markers, highlight, setHighlight, note }: {
 
 export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
   const [param, setParam] = useSearchParams()
-  const selected = vrCities.find((s) => s.ad === param.get('city'))
+  const selected = vrCities.find((s) => s.name === param.get('city'))
   const support = useVrSupport()
   const choose = (city: string | null) => { setHighlight(null); setParam(city ? { city } : {}) }
   const content = (artifactId: string) => artifacts.find((e) => e.id === artifactId && e.model)
@@ -259,18 +259,18 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
   const markers: Marker[] = selected
     ? selected.buildings.filter((y) => artifacts.some((e) => e.id === y.artifactId)).map((y, i) => ({
       id: y.artifactId,
-      ad: y.ad,
+      name: y.name,
       alt: y.district,
       position: y.position,
       no: i + 1,
       closedState: !content(y.artifactId),
       to: `/artifact/${y.artifactId}`,
-      label: `${y.ad}, ${y.district}: eser sayfasını aç`,
+      label: `${y.name}, ${y.district}: eser sayfasını aç`,
     }))
     : vrCities.map((s) => {
       const count = counts(s)
       const state = count ? `${count} yapı VR'da açılıyor` : 'Henüz VR yok'
-      return { id: s.ad, ad: s.ad, alt: count ? `${count} yapı` : 'Henüz VR yok', position: s.position, closedState: !count, selected: false, click: () => choose(s.ad), label: `${s.ad}: ${state}. Şehir haritasını aç` }
+      return { id: s.name, name: s.name, alt: count ? `${count} yapı` : 'Henüz VR yok', position: s.position, closedState: !count, selected: false, click: () => choose(s.name), label: `${s.name}: ${state}. Şehir haritasını aç` }
     })
   const list = (id: string) => ({
     onMouseEnter: () => setHighlight(id),
@@ -284,33 +284,33 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
     <header className="vr-title">
       <h1>Mekanlar</h1>
       <p>Haritadan bir şehir seç, o şehirdeki yapıya gir.</p>
-      {support === false && <p className="vr-not">Bu tarayıcı VR açamıyor. Gözlükle girmek için bu sayfayı Meta Quest tarayıcısında aç; maketi burada ekranda da gezebilirsin.</p>}
+      {support === false && <p className="vr-note">Bu tarayıcı VR açamıyor. Gözlükle girmek için bu sayfayı Meta Quest tarayıcısında aç; maketi burada ekranda da gezebilirsin.</p>}
     </header>
     <div className="vr-layout-of">
       {data
         ? <MapView key={data.id} data={data} markers={markers} highlight={highlight} setHighlight={setHighlight}
-          note={selected && !selected.buildings.length ? `${selected.ad}: Henüz VR yok` : undefined} />
+          note={selected && !selected.buildings.length ? `${selected.name}: Henüz VR yok` : undefined} />
         : <div className="vr-map-empty" role="status">{error ? 'Harita yüklenemedi. Yandaki listeden devam edebilirsin.' : 'Harita yükleniyor…'}</div>}
-      <section className="vr-panel" aria-live="polite" aria-label={selected ? `${selected.ad} yapıları` : 'Şehirler'}>
+      <section className="vr-panel" aria-live="polite" aria-label={selected ? `${selected.name} yapıları` : 'Şehirler'}>
         {!selected ? <>
           <h2>Şehirler</h2>
           <ul className="vr-cities">{vrCities.map((s) => {
             const count = counts(s)
-            return <li key={s.ad}><button type="button" onClick={() => choose(s.ad)} {...list(s.ad)}>
-              <strong>{s.ad}</strong><span>{count ? `${count} yapı VR'da açılıyor` : 'Henüz VR yok'}</span>
+            return <li key={s.name}><button type="button" onClick={() => choose(s.name)} {...list(s.name)}>
+              <strong>{s.name}</strong><span>{count ? `${count} yapı VR'da açılıyor` : 'Henüz VR yok'}</span>
             </button></li>
           })}</ul>
         </> : <>
           <button type="button" className="vr-backward" onClick={() => choose(null)}>← Haritaya dön</button>
-          <h2>{selected.ad}</h2>
+          <h2>{selected.name}</h2>
           {selected.buildings.length > 0 ? <ul className="vr-buildings">{selected.buildings.map((y, i) => {
             const e = content(y.artifactId)
             const no = <b className="vr-no" aria-hidden="true">{i + 1}</b>
-            return <li key={y.ad}>{e
-              ? <Link to={`/places/${y.artifactId}`} {...list(y.artifactId)}>{no}<strong>{y.ad}</strong><span>{y.district} · {description(e)}</span></Link>
-              : <div className="vr-building-closed-state" {...list(y.artifactId)}>{no}<strong>{y.ad}</strong><span>{y.district} · VR henüz yok</span></div>}</li>
+            return <li key={y.name}>{e
+              ? <Link to={`/places/${y.artifactId}`} {...list(y.artifactId)}>{no}<strong>{y.name}</strong><span>{y.district} · {description(e)}</span></Link>
+              : <div className="vr-building-closed-state" {...list(y.artifactId)}>{no}<strong>{y.name}</strong><span>{y.district} · VR henüz yok</span></div>}</li>
           })}</ul> : <p>Bu şehirdeki yapılar için henüz VR içeriği yok.</p>}
-          <p className="vr-publication">Envanter: {selected.broadcasts.map((k, i) => <span key={k.address}>{i > 0 && ', '}<a href={k.address} target="_blank" rel="noreferrer">{k.ad}</a></span>)} (Vakıf Katılım)</p>
+          <p className="vr-publication">Envanter: {selected.broadcasts.map((k, i) => <span key={k.address}>{i > 0 && ', '}<a href={k.address} target="_blank" rel="noreferrer">{k.name}</a></span>)} (Vakıf Katılım)</p>
         </>}
       </section>
     </div>
@@ -325,11 +325,11 @@ export function PlacePage({ artifacts }: { artifacts: Artifact[] }) {
   return <article className="sayfa vr-eser" key={artifact.id}>
     <Link to={`/places?city=${encodeURIComponent(artifact.city)}`}>← {artifact.city} yapıları</Link>
     <header className="vr-title">
-      <h1>{artifact.ad}</h1>
+      <h1>{artifact.name}</h1>
       <p>{artifact.city} · {artifact.district}</p>
-      {support === false && <p className="vr-not">Bu tarayıcı VR açamıyor. Gözlükle girmek için bu sayfayı Meta Quest tarayıcısında aç.</p>}
-      {support && <p className="vr-not">Sahne yüklenince VR düğmesine bas. Tarayıcılar VR'ı yalnızca bir dokunuşla başlatır.</p>}
+      {support === false && <p className="vr-note">Bu tarayıcı VR açamıyor. Gözlükle girmek için bu sayfayı Meta Quest tarayıcısında aç.</p>}
+      {support && <p className="vr-note">Sahne yüklenince VR düğmesine bas. Tarayıcılar VR'ı yalnızca bir dokunuşla başlatır.</p>}
     </header>
-    {artifact.model && <ArtifactExplorer model={artifact.model} sources={artifact.sources} name={artifact.ad} openNow />}
+    {artifact.model && <ArtifactExplorer model={artifact.model} sources={artifact.sources} name={artifact.name} openNow />}
   </article>
 }

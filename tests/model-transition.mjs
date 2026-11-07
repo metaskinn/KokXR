@@ -43,7 +43,7 @@ try {
   await page.waitForFunction(() => Number(document.querySelector('.model-area')?.dataset.frame) >= 2, null, { polling: 50 })
   const targets = await page.evaluate(async () => {
     const { interiorStops } = await import('/src/features/scale-models/uluMosqueInterior.ts')
-    return Object.fromEntries(interiorStops.map((d) => [d.ad, d.position]))
+    return Object.fromEntries(interiorStops.map((d) => [d.name, d.position]))
   })
   const step = async (ms = 50) => {
     await page.waitForFunction(() => window.__transitionTest.ready(), null, { polling: 50 })

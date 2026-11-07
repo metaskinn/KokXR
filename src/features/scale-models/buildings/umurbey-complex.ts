@@ -856,7 +856,7 @@ export const building = (): Model => {
   bigTree(-16.5, -9.5, 4, 12)
 
   // --- Stops ---
-  const stop = (id: string, ad: string, position: [number, number, number], look: [number, number, number]): InteriorStop => ({ id, ad, position, look })
+  const stop = (id: string, name: string, position: [number, number, number], look: [number, number, number]): InteriorStop => ({ id, name, position, look })
   const ICY = BAY_Y + PAVING
   const SC_CENTER = (ZSC + ZK) / 2
   const stops: InteriorStop[] = [
@@ -880,9 +880,9 @@ export const building = (): Model => {
   return {
     root,
     layers: [
-      { group: roofGroup, height: 18, ad: 'Çatı' },
-      { group: drumGroup, height: 30, ad: 'Kasnaklar' },
-      { group: domeGroup, height: 42, ad: 'Kubbeler' },
+      { group: roofGroup, height: 18, name: 'Çatı' },
+      { group: drumGroup, height: 30, name: 'Kasnaklar' },
+      { group: domeGroup, height: 42, name: 'Kubbeler' },
     ],
     stops,
     walking: {

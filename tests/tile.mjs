@@ -51,7 +51,7 @@ const { regions } = await import('../src/features/workshops/tile/engine/pattern.
 assert(await button('Sırlamaya geç →').isDisabled())
 for (const t of ['tulip', 'leaf', 'center', 'ring']) {
   await button(color[t]).click()
-  for (const b of regions.filter((q) => q.tour === t)) { const c = t === 'ring' ? [.91, 0] : t === 'center' ? [0, 0] : (() => { const g = b.outer, m = g.reduce((a, p) => [a[0] + p[0] / g.length, a[1] + p[1] / g.length], [0, 0]); return m })(); await s.mouse.click(...n(...c)); await s.waitForTimeout(40) }
+  for (const b of regions.filter((q) => q.kind === t)) { const c = t === 'ring' ? [.91, 0] : t === 'center' ? [0, 0] : (() => { const g = b.outer, m = g.reduce((a, p) => [a[0] + p[0] / g.length, a[1] + p[1] / g.length], [0, 0]); return m })(); await s.mouse.click(...n(...c)); await s.waitForTimeout(40) }
 }
 await s.waitForTimeout(300); await see('4-painted'); await button('Sırlamaya geç →').click(); await awaitStage(5); console.log('✅ Painting')
 // 5 Glaze and kiln

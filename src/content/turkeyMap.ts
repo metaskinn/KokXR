@@ -7,10 +7,10 @@ import reliefHatay from './maps/hatay-relief.webp'
 
 export type MapId = 'turkey' | 'bursa' | 'konya' | 'hatay'
 
-export interface MapLabel { ad: string; x: number; y: number; tour: string; z?: number; alt?: string }
+export interface MapLabel { name: string; x: number; y: number; kind: string; z?: number; alt?: string }
 export interface MapData {
   id: MapId
-  ad: string
+  name: string
   frameBorder: { west: number; east: number; south: number; north: number }
   g: number
   y: number

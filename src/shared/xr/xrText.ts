@@ -1,20 +1,20 @@
 // Pure calculations for the VR menu and info card: no three or DOM, so it also runs in Node.
 
-export interface MenuItem { id: string; ad: string }
+export interface MenuItem { id: string; name: string }
 
 export const ILLUSTRATIVE_LABEL = 'Temsilî maket · Gerçek bir 3B tarama değildir'
 /** Height ratio of the title band at the top of the menu panel. */
 export const MENU_TITLE_RATIO = 0.2
 
-export function menuItems(d: { inside: boolean; fragmented: boolean; inAssembly?: boolean; stops: { id: string; ad: string }[] }): MenuItem[] {
-  const exit = { id: 'exit', ad: "VR'dan çık" }
-  if (d.inAssembly) return [{ id: 'assembleFromStart', ad: 'Yeniden başlat' }, { id: 'assembleRelease', ad: 'Birleştirmeyi bırak' }, exit]
+export function menuItems(d: { inside: boolean; fragmented: boolean; inAssembly?: boolean; stops: { id: string; name: string }[] }): MenuItem[] {
+  const exit = { id: 'exit', name: "VR'dan çık" }
+  if (d.inAssembly) return [{ id: 'assembleFromStart', name: 'Yeniden başlat' }, { id: 'assembleRelease', name: 'Birleştirmeyi bırak' }, exit]
   if (d.inside) {
-    return [{ id: 'outside', ad: 'Dışarı çık' }, ...d.stops.map(({ id, ad }) => ({ id: `stop:${id}`, ad })), exit]
+    return [{ id: 'outside', name: 'Dışarı çık' }, ...d.stops.map(({ id, name }) => ({ id: `stop:${id}`, name })), exit]
   }
   // While shattered, "Birleştir" is already there; a second assemble label next to it would confuse.
-  if (d.fragmented) return [{ id: 'inside', ad: 'İçeri gir' }, { id: 'shatter', ad: 'Birleştir' }, exit]
-  return [{ id: 'inside', ad: 'İçeri gir' }, { id: 'shatter', ad: 'Parçala' }, { id: 'assemble', ad: 'Maketi birleştir' }, exit]
+  if (d.fragmented) return [{ id: 'inside', name: 'İçeri gir' }, { id: 'shatter', name: 'Birleştir' }, exit]
+  return [{ id: 'inside', name: 'İçeri gir' }, { id: 'shatter', name: 'Parçala' }, { id: 'assemble', name: 'Maketi birleştir' }, exit]
 }
 
 // Must not run at module load: this file loads with the desktop scene, and the model would fail to open in browsers without the API.

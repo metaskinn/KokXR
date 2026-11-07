@@ -19,7 +19,7 @@ const FLOOR = 0.7
 /** Top face of the interior flooring (the carpet): the carpet in uluMosqueModel is at y 0.65, thickness 0.1. */
 export const FLOOR_Y = FLOOR
 
-export interface InteriorStop { id: string; ad: string; position: [number, number, number]; look: [number, number, number] }
+export interface InteriorStop { id: string; name: string; position: [number, number, number]; look: [number, number, number] }
 
 const sx = px(FOUNTAIN_COLUMN + 0.5), sz = pz(FOUNTAIN_ROW + 0.5)
 // The minbar leans against the east face of the western arch: the top of the kiosk isn't lost in the arch, the finial stays exposed (as in the photos).
@@ -32,18 +32,18 @@ const minbarH = (s: number) => ((s - MINBAR_RAMP.s0) / (MINBAR_RAMP.s1 - MINBAR_
 const BAY_Y = 2.7
 
 export const interiorStops: InteriorStop[] = [
-  { id: 'entrance', ad: 'Giriş', position: [0, 2.7, -24.6], look: [0, 4.4, 10] },
-  { id: 'fountain', ad: 'Şadırvan', position: [3, 3.1, -13.6], look: [0, 1.4, -6.9] },
-  { id: 'mihrab', ad: 'Mihrap', position: [0, 2.8, 14.5], look: [0, 6.4, MIHRAB_Z] },
-  { id: 'minbar', ad: 'Minber', position: [0.4, 2.8, 16], look: [MINBAR_X, 5.6, 21] },
-  { id: 'door', ad: 'Doğu kapısı', position: [23.5, 2.7, DOOR_Z], look: [YX, 3.8, DOOR_Z] },
-  { id: 'kaaba', ad: 'Kâbe örtüsü', position: [26.5, 2.8, pz(0.5) + 2.2], look: [YX, 2.5, pz(0.5) + 2.2] },
-  { id: 'plaque', ad: 'Levha', position: [13.8, 2.8, 13], look: [13.8, 7, 24.5] },
-  { id: 'dome', ad: 'Kubbe', position: [-13.8, 2.4, 3.2], look: [-13.8, 21, 7.6] },
+  { id: 'entrance', name: 'Giriş', position: [0, 2.7, -24.6], look: [0, 4.4, 10] },
+  { id: 'fountain', name: 'Şadırvan', position: [3, 3.1, -13.6], look: [0, 1.4, -6.9] },
+  { id: 'mihrab', name: 'Mihrap', position: [0, 2.8, 14.5], look: [0, 6.4, MIHRAB_Z] },
+  { id: 'minbar', name: 'Minber', position: [0.4, 2.8, 16], look: [MINBAR_X, 5.6, 21] },
+  { id: 'door', name: 'Doğu kapısı', position: [23.5, 2.7, DOOR_Z], look: [YX, 3.8, DOOR_Z] },
+  { id: 'kaaba', name: 'Kâbe örtüsü', position: [26.5, 2.8, pz(0.5) + 2.2], look: [YX, 2.5, pz(0.5) + 2.2] },
+  { id: 'plaque', name: 'Levha', position: [13.8, 2.8, 13], look: [13.8, 7, 24.5] },
+  { id: 'dome', name: 'Kubbe', position: [-13.8, 2.4, 3.2], look: [-13.8, 21, 7.6] },
   // On top of structures: reachable on foot too; these stops are shortcuts.
-  { id: 'minbar-top', ad: 'Minbere çık', position: [MINBAR_X, BAY_Y + minbarH(4.6), MINBAR_Z0 + 4.6], look: [8, 4, 3] },
-  { id: 'kursu-top', ad: 'Kürsüye çık', position: [KURSU.x - 0.1, BAY_Y + 2.2, KURSU.z], look: [-4, 5, 2] },
-  { id: 'mahfil-top', ad: 'Mahfile çık', position: [MAHFIL.x, BAY_Y + MAHFIL_H, MAHFIL.z], look: [0, 6.4, MIHRAB_Z] },
+  { id: 'minbar-top', name: 'Minbere çık', position: [MINBAR_X, BAY_Y + minbarH(4.6), MINBAR_Z0 + 4.6], look: [8, 4, 3] },
+  { id: 'kursu-top', name: 'Kürsüye çık', position: [KURSU.x - 0.1, BAY_Y + 2.2, KURSU.z], look: [-4, 5, 2] },
+  { id: 'mahfil-top', name: 'Mahfile çık', position: [MAHFIL.x, BAY_Y + MAHFIL_H, MAHFIL.z], look: [0, 6.4, MIHRAB_Z] },
 ]
 
 /** `top`: if the player is above this height the box doesn't block (e.g. a column under a platform). */

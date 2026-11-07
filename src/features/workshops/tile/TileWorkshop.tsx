@@ -38,12 +38,12 @@ export default function TileWorkshop() {
 
   const { stage, alt: subStage } = game, note = tileNotes[Math.min(stage, tileNotes.length - 1)], last = stage === 6
   const list = actions(game), interval = stage === 1 ? BISQUE : GLAZE_KILN, locked = !ready || error || vr !== 'closedState'
-  const hold = (ad: HoldName) => ({
-    onPointerDown: (e: React.PointerEvent<HTMLButtonElement>) => { e.currentTarget.setPointerCapture(e.pointerId); scene.current?.hold(ad, true) },
-    onPointerUp: () => scene.current?.hold(ad, false), onPointerCancel: () => scene.current?.hold(ad, false), onLostPointerCapture: () => scene.current?.hold(ad, false),
-    onKeyDown: (e: React.KeyboardEvent) => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); scene.current?.hold(ad, true) } },
-    onKeyUp: (e: React.KeyboardEvent) => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); scene.current?.hold(ad, false) } },
-    onBlur: () => scene.current?.hold(ad, false),
+  const hold = (name: HoldName) => ({
+    onPointerDown: (e: React.PointerEvent<HTMLButtonElement>) => { e.currentTarget.setPointerCapture(e.pointerId); scene.current?.hold(name, true) },
+    onPointerUp: () => scene.current?.hold(name, false), onPointerCancel: () => scene.current?.hold(name, false), onLostPointerCapture: () => scene.current?.hold(name, false),
+    onKeyDown: (e: React.KeyboardEvent) => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); scene.current?.hold(name, true) } },
+    onKeyUp: (e: React.KeyboardEvent) => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); scene.current?.hold(name, false) } },
+    onBlur: () => scene.current?.hold(name, false),
   })
   function vrAc() {
     if (!scene.current) return
@@ -54,7 +54,7 @@ export default function TileWorkshop() {
   return <article className="sword-workshop tile-workshop">
     <header className="sword-title"><div>Çamurdan çiniye</div>
       <div className="sword-tools">{xrSupport && <button disabled={!ready || error || vr === 'opening'} onClick={() => vr === 'open' ? scene.current?.endXr() : vrAc()}>{vr === 'open' ? "VR'dan çık" : "VR'da aç"}</button>}</div></header>
-    <ol className="sword-stages" aria-label="Üretim aşamaları">{stages.map((ad, i) => <li key={ad} aria-current={i === stage ? 'step' : undefined} className={i < stage ? 'done' : ''}><span>{i < stage ? '✓' : `${i + 1}`}</span><span>{ad}</span></li>)}</ol>
+    <ol className="sword-stages" aria-label="Üretim aşamaları">{stages.map((name, i) => <li key={name} aria-current={i === stage ? 'step' : undefined} className={i < stage ? 'done' : ''}><span>{i < stage ? '✓' : `${i + 1}`}</span><span>{name}</span></li>)}</ol>
     <div className="sword-experience">
       <div className="sword-scene tile-scene" ref={area} tabIndex={0} role="group" aria-label="Çini atölyesi sahnesi. Basılı tutup sürükleyerek çalış; ustaya bırak düğmesi her adımı tamamlar." />
       <div className="sword-scene-title"><h1>{stage === 0 ? 'Bir avuç çamurla başla.' : stages[stage]}</h1></div>
@@ -66,10 +66,10 @@ export default function TileWorkshop() {
           {vr !== 'closedState' && <p className="sword-progress">VR oturumu açık: atölye gözlükte sürüyor.</p>}
           {vrError && <p role="alert" className="sword-progress">{vrError}</p>}
           <fieldset disabled={locked} className="sword-actions">
-            {stage === 4 && <div className="tile-colors" role="group" aria-label="Boya rengi">{colors.map((r) => <button key={r.id} aria-pressed={game.color === r.id} onClick={() => scene.current?.command(`color:${r.id}`)}><i style={{ background: r.live }} />{r.ad}</button>)}</div>}
-            {list.filter((e) => !e.id.startsWith('color:')).map((e) => e.tour === 'hold'
-              ? <button key={e.id} className="sword-main" {...hold(e.id as HoldName)}>{e.ad}</button>
-              : <button key={e.id} className="sword-main" disabled={e.passive} onClick={() => scene.current?.command(e.id)}>{e.ad}</button>)}
+            {stage === 4 && <div className="tile-colors" role="group" aria-label="Boya rengi">{colors.map((r) => <button key={r.id} aria-pressed={game.color === r.id} onClick={() => scene.current?.command(`color:${r.id}`)}><i style={{ background: r.live }} />{r.name}</button>)}</div>}
+            {list.filter((e) => !e.id.startsWith('color:')).map((e) => e.kind === 'hold'
+              ? <button key={e.id} className="sword-main" {...hold(e.id as HoldName)}>{e.name}</button>
+              : <button key={e.id} className="sword-main" disabled={e.passive} onClick={() => scene.current?.command(e.id)}>{e.name}</button>)}
             {game.inKiln && <div className="sword-heat"><div><label htmlFor="tile-heat">Fırın sıcaklığı <small>{stage === 1 ? 'Oyun ölçeği' : 'Kaynak: 900-940°'}</small></label><strong>{Math.round(game.heat)}°</strong></div>
               <meter id="tile-heat" min={20} max={1100} low={interval.min} high={interval.max} optimum={(interval.min + interval.max) / 2} value={game.heat} />
               <div className="sword-scale"><span>20°</span><span>{interval.min}–{interval.max}°</span><span>1100°</span></div>
@@ -80,7 +80,7 @@ export default function TileWorkshop() {
           {last && <div className="sword-quality"><div><span>Eserinin kalitesi</span><strong>{quality(game)}<small>/100</small></strong></div></div>}
           <div className="sword-message" role="status" aria-live="polite">{game.message}</div>
           <div className="sword-source"><span>Atölye notu</span><p>{note.text}</p><small>Kaynak: {tileSources[note.source]}</small></div>
-          {!last && <><button disabled={locked || (stage === 5 && subStage === 2)} className="sword-master" onClick={() => scene.current?.master()}>Ustaya bırak <span>↗</span></button><small className="sword-master-not">Bu adımı orta kalitede tamamla.</small></>}
+          {!last && <><button disabled={locked || (stage === 5 && subStage === 2)} className="sword-master" onClick={() => scene.current?.master()}>Ustaya bırak <span>↗</span></button><small className="sword-master-note">Bu adımı orta kalitede tamamla.</small></>}
         </div>
       </aside>
       <div className="sword-footer-label"><span>Toprak · ateş · sabır</span><span>{last ? 'Sürükle: çevir / Tekerlek: yaklaş' : 'Fare, dokunma veya VR kumandası'}</span></div>

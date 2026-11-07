@@ -44,7 +44,7 @@ const DONE_DURATION = 4 // s; the completed message disappears by itself
 
 export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
   const { scene, camera, layers } = b
-  const names = layers.map((k) => k.ad)
+  const names = layers.map((k) => k.name)
   const raycaster = new THREE.Raycaster()
   const place = new THREE.Vector3()
 

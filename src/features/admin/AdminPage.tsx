@@ -44,18 +44,18 @@ export default function AdminPage({ artifacts, overlay, save }: AdminProps) {
     <ul className="admin-list">{artifacts.map(artifact => {
       const defaultVal = defaultIds.includes(artifact.id)
       return <li key={artifact.id}>
-        <h3>{artifact.ad}</h3><p>{artifact.district} · {artifact.verification === 'verified' ? 'Kaynaklı bilgi' : 'Temsili içerik'}
+        <h3>{artifact.name}</h3><p>{artifact.district} · {artifact.verification === 'verified' ? 'Kaynaklı bilgi' : 'Temsili içerik'}
           {' '}{!defaultVal ? <span className="label">Yeni</span> : Object.hasOwn(overlay, artifact.id) ? <span className="label">Değiştirildi</span> : null}</p>
         <div className="admin-actions">
-          <Link to={`/admin/artifact/${artifact.id}`}>Düzenle<span className="sr-only">: {artifact.ad}</span></Link>
-          <Link to={`/artifact/${artifact.id}`}>Eseri aç<span className="sr-only">: {artifact.ad}</span></Link>
-          <button type="button" onClick={() => downloadJson(artifact, `${artifact.id}.json`)}>JSON olarak indir<span className="sr-only">: {artifact.ad}</span></button>
+          <Link to={`/admin/artifact/${artifact.id}`}>Düzenle<span className="sr-only">: {artifact.name}</span></Link>
+          <Link to={`/artifact/${artifact.id}`}>Eseri aç<span className="sr-only">: {artifact.name}</span></Link>
+          <button type="button" onClick={() => downloadJson(artifact, `${artifact.id}.json`)}>JSON olarak indir<span className="sr-only">: {artifact.name}</span></button>
           {defaultVal ? <button type="button" disabled={!Object.hasOwn(overlay, artifact.id)} onClick={() => {
-            const fresh = { ...overlay }; delete fresh[artifact.id]; apply(fresh, `${artifact.ad} varsayılana döndürüldü.`)
-          }}>Varsayılana döndür<span className="sr-only">: {artifact.ad}</span></button> : <button type="button" onClick={() => {
-            if (!window.confirm(`${artifact.ad} silinsin mi? Bu işlem bu tarayıcıdaki eseri kaldırır.`)) return
-            const fresh = { ...overlay }; delete fresh[artifact.id]; apply(fresh, `${artifact.ad} silindi.`)
-          }}>Sil<span className="sr-only">: {artifact.ad}</span></button>}
+            const fresh = { ...overlay }; delete fresh[artifact.id]; apply(fresh, `${artifact.name} varsayılana döndürüldü.`)
+          }}>Varsayılana döndür<span className="sr-only">: {artifact.name}</span></button> : <button type="button" onClick={() => {
+            if (!window.confirm(`${artifact.name} silinsin mi? Bu işlem bu tarayıcıdaki eseri kaldırır.`)) return
+            const fresh = { ...overlay }; delete fresh[artifact.id]; apply(fresh, `${artifact.name} silindi.`)
+          }}>Sil<span className="sr-only">: {artifact.name}</span></button>}
         </div>
       </li>
     })}</ul>

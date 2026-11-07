@@ -17,7 +17,7 @@ import {
   subtract, rect, flatShadow, bayOpening, baySize, arch, boxG, px, pz, cylinderG, place,
 } from './uluMosquePiece'
 
-export interface ModelLayer { group: THREE.Group; height: number; ad: string }
+export interface ModelLayer { group: THREE.Group; height: number; name: string }
 export interface Model {
   root: THREE.Group; layers: ModelLayer[]; stops: InteriorStop[]; walking: InteriorWalk
   /** If not given, defaults based on Ulu Camii dimensions are used. */
@@ -206,9 +206,9 @@ export function uluMosqueModel(): Model {
     root,
     // Bottom to top: the model's stacking order.
     layers: [
-      { group: roofGroup, height: 24, ad: 'Çatı' },
-      { group: drumGroup, height: 34, ad: 'Kasnaklar' },
-      { group: domeGroup, height: 44, ad: 'Kubbeler' },
+      { group: roofGroup, height: 24, name: 'Çatı' },
+      { group: drumGroup, height: 34, name: 'Kasnaklar' },
+      { group: domeGroup, height: 44, name: 'Kubbeler' },
     ],
     stops: interiorStops,
     walking: interiorWalkArea(),

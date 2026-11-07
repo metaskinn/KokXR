@@ -48,7 +48,7 @@ export default function ArtifactExplorer({ model, sources, name, openNow = false
   const [fragmented, setFragmented] = useState(false)
   const [auto, setAuto] = useState(!reducedMotion())
   const [announcement, setAnnouncement] = useState('')
-  const [stops, setStops] = useState<{ id: string; ad: string }[]>([])
+  const [stops, setStops] = useState<{ id: string; name: string }[]>([])
   const [stop, setStop] = useState<string | null>(null)
   const [infoId, setInfoId] = useState<string | null>(null)
   const [infoOpen, setInfoOpen] = useState(false)
@@ -148,7 +148,7 @@ export default function ArtifactExplorer({ model, sources, name, openNow = false
     scene.current?.interior(id)
     if (id) { setFragmented(false); setAuto(false) }
     else setAuto(false)
-    const stopName = stops.find((d) => d.id === id)?.ad
+    const stopName = stops.find((d) => d.id === id)?.name
     setAnnouncement(stopName ? `İç mekân görünümü: ${stopName}. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.` : 'Maketin dış görünümüne dönüldü.')
     // Focus moves to the scene so keys work immediately.
     if (id) area.current?.focus({ preventScroll: true })
@@ -159,7 +159,7 @@ export default function ArtifactExplorer({ model, sources, name, openNow = false
     area.current?.focus({ preventScroll: true })
   }
 
-  return <Section id="model-title" title="Eseri eline al" className="artifact-filter-out-al">
+  return <Section id="model-title" title="Eseri eline al" className="artifact-explorer">
     <p className="label">{model.description}</p>
     {!open ? <button type="button" className="model-start" onClick={() => setOpen(true)}>{name} maketini eline al</button> : <>
       <div className="model-box" ref={box}>
@@ -187,7 +187,7 @@ export default function ArtifactExplorer({ model, sources, name, openNow = false
         <div className="model-control">
           {stop ? <>
             <button type="button" onClick={() => goToStop(null)}>← Dışarı çık</button>
-            {stops.map((d) => <button type="button" key={d.id} aria-pressed={stop === d.id} onClick={() => goToStop(d.id)}>{d.ad}</button>)}
+            {stops.map((d) => <button type="button" key={d.id} aria-pressed={stop === d.id} onClick={() => goToStop(d.id)}>{d.name}</button>)}
           </> : <>
             <button type="button" disabled={!ready || !stops.length} onClick={() => goToStop(stops[0]?.id ?? null)}>İçeri gir</button>
             {xrSupport && <button type="button" disabled={!ready} onClick={openVr}>VR'da aç</button>}

@@ -12,7 +12,7 @@ const PLATE_Y = .94
 export type HoldName = 'primer' | 'glaze' | 'fire'
 export interface TileScene {
   command: (id: string) => void
-  hold: (ad: HoldName, open: boolean) => void
+  hold: (name: HoldName, open: boolean) => void
   master: () => void
   startXr: () => Promise<void>
   endXr: () => void
@@ -231,7 +231,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
     else if (id === 'fromStart') { d = firstGame(); plateM.roughness = .86; plateM.clearcoat = 0; spinning.rotation.y = 0; drawnForm = -1 }
     renew(true)
   }
-  const hold = (ad: HoldName, open: boolean) => { held[ad] = open }
+  const hold = (name: HoldName, open: boolean) => { held[name] = open }
   const master = () => { masterComplete(d); renew(true) }
 
   // Desktop input

@@ -8,20 +8,20 @@ assert.equal(MENU_TITLE_RATIO, 0.2)
 
 // Menu items
 const identity = (l) => l.map((o) => o.id)
-const stops = Array.from({ length: 8 }, (_, i) => ({ id: `d${i}`, ad: `Durak ${i}` }))
+const stops = Array.from({ length: 8 }, (_, i) => ({ id: `d${i}`, name: `Durak ${i}` }))
 let m = menuItems({ inside: false, fragmented: false, stops })
 assert.deepEqual(identity(m), ['inside', 'shatter', 'assemble', 'exit'])
-assert.deepEqual(m.map((o) => o.ad), ['İçeri gir', 'Parçala', 'Maketi birleştir', "VR'dan çık"])
+assert.deepEqual(m.map((o) => o.name), ['İçeri gir', 'Parçala', 'Maketi birleştir', "VR'dan çık"])
 m = menuItems({ inside: false, fragmented: true, stops })
-assert.deepEqual(m.map((o) => o.ad), ['İçeri gir', 'Birleştir', "VR'dan çık"])
+assert.deepEqual(m.map((o) => o.name), ['İçeri gir', 'Birleştir', "VR'dan çık"])
 m = menuItems({ inside: false, fragmented: false, inAssembly: true, stops })
 assert.deepEqual(identity(m), ['assembleFromStart', 'assembleRelease', 'exit'])
-assert.deepEqual(m.map((o) => o.ad), ['Yeniden başlat', 'Birleştirmeyi bırak', "VR'dan çık"])
+assert.deepEqual(m.map((o) => o.name), ['Yeniden başlat', 'Birleştirmeyi bırak', "VR'dan çık"])
 m = menuItems({ inside: true, fragmented: false, stops })
 assert.equal(m.length, 10)
-assert.deepEqual(m[0], { id: 'outside', ad: 'Dışarı çık' })
-assert.deepEqual(m[1], { id: 'stop:d0', ad: 'Durak 0' })
-assert.deepEqual(m[9], { id: 'exit', ad: "VR'dan çık" })
+assert.deepEqual(m[0], { id: 'outside', name: 'Dışarı çık' })
+assert.deepEqual(m[1], { id: 'stop:d0', name: 'Durak 0' })
+assert.deepEqual(m[9], { id: 'exit', name: "VR'dan çık" })
 
 // Line wrapping: words are not split, words that do not fit are hard-split, no letter is lost
 const lengthVal = (s) => s.length

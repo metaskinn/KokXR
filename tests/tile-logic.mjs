@@ -4,9 +4,9 @@ import { findRegion, regions, within, advanceTrace, traces, tulip, leaf, CENTER_
 
 // Pattern: regions in the right place, not overlapping.
 assert.equal(regions.length, 14)
-assert.equal(regions[findRegion([0, .5])].tour, 'tulip')
-assert.equal(regions[findRegion([0, 0])].tour, 'center')
-assert.equal(regions[findRegion([(RING_IN + RING_OUT) / 2, 0])].tour, 'ring')
+assert.equal(regions[findRegion([0, .5])].kind, 'tulip')
+assert.equal(regions[findRegion([0, 0])].kind, 'center')
+assert.equal(regions[findRegion([(RING_IN + RING_OUT) / 2, 0])].kind, 'ring')
 assert.equal(findRegion([0, .25]), -1)
 assert.equal(findRegion([0, 0.99]), -1)
 for (const [x, y] of leaf.filter((_, i) => i % 3 === 0)) assert(!within([x * .98, y * .98], tulip), 'leaf must not overlap the tulip')

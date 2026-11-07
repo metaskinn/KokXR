@@ -86,12 +86,12 @@ export function titlePanel(title: string) {
 export function assemblyPanel() {
   const height = 190
   const { c, texture, obj, dispose } = panel(0.6, PILL_W, height)
-  const draw = ({ top, message, not }: { top: string; message: string; not: string }) => {
+  const draw = ({ top, message, note }: { top: string; message: string; note: string }) => {
     c.clearRect(0, 0, PILL_W, height)
     glassSurface(c, 0, 0, PILL_W, height, 28, 3)
     centered(c, top, PILL_W / 2, 42, 38, 700, GOLD, PILL_W - 60)
     centered(c, message, PILL_W / 2, 102, 40, 600, TEXT_COLOR, PILL_W - 60)
-    centered(c, not, PILL_W / 2, 154, 30, 400, SECONDARY, PILL_W - 60)
+    centered(c, note, PILL_W / 2, 154, 30, 400, SECONDARY, PILL_W - 60)
     texture.needsUpdate = true
   }
   return { obj, draw, dispose }
@@ -120,7 +120,7 @@ export function xrPanel() {
       c.roundRect(80, y + gap / 2, G - 160, line - gap, 28)
       c.fillStyle = GLASS_ROW
       c.fill()
-      centered(c, item.ad, G / 2, y + line / 2, size, 600, TEXT_COLOR, G - 288)
+      centered(c, item.name, G / 2, y + line / 2, size, 600, TEXT_COLOR, G - 288)
     })
     texture.needsUpdate = true
   }

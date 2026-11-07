@@ -94,22 +94,22 @@ export function panelButton(u: number, v: number): number | null {
 export type PanelAction = 'shatter' | 'exit'
 
 export function panelText(phase: VasePhase, placed: number, result: string) {
-  const exit = { id: 'exit' as PanelAction, ad: "VR'dan çık" }
+  const exit = { id: 'exit' as PanelAction, name: "VR'dan çık" }
   if (phase === 'traceless') return {
     title: 'Vazoyu incele', progress: 'İzsiz vazo',
     hint: 'Vazoyu tutup çevir. Hazır olunca parçala.',
-    buttons: [{ id: 'shatter' as PanelAction, ad: 'Vazoyu parçala' }, exit],
+    buttons: [{ id: 'shatter' as PanelAction, name: 'Vazoyu parçala' }, exit],
   }
   const progress = `${placed}/${PIECE_COUNT} parça yerinde`
   if (phase === 'done') return {
     title: 'Vazo onarıldı!', progress,
     hint: 'Vazoyu tutup çevir, onarım izlerini incele.',
-    buttons: [{ id: 'shatter' as PanelAction, ad: 'Yeniden parçala' }, exit],
+    buttons: [{ id: 'shatter' as PanelAction, name: 'Yeniden parçala' }, exit],
   }
   return {
     title: 'Vazoyu onar', progress,
     hint: result || 'Parçayı tetik veya yan tuşla tut, götür, bırak.',
-    buttons: [{ id: 'shatter' as PanelAction, ad: 'Yeniden başlat' }, exit],
+    buttons: [{ id: 'shatter' as PanelAction, name: 'Yeniden başlat' }, exit],
   }
 }
 
@@ -136,7 +136,7 @@ export interface VaseXrContext {
   release: (id: number, seated: boolean) => void
   /** Returns to the shelf without counting a game attempt (controller disconnected, session closed). */
   gripCancel: (id: number) => void
-  sec: (id: number | null) => void
+  select: (id: number | null) => void
   emphasize: (ids: number[]) => void
   /** VR layout and locks; `false` returns to the desktop view. */
   xrMode: (open: boolean, shelves?: Pointed[]) => void
@@ -182,7 +182,7 @@ export function canvasPlane(width: number, height: number, realWidth: number) {
 export function statePanel(realWidth = 64) {
   const G = 1024, Y = 512
   const p = canvasPlane(G, Y, realWidth)
-  const draw = ({ title, progress, hint, buttons }: { title: string; progress: string; hint: string; buttons: { ad: string }[] }, over: number | null) => {
+  const draw = ({ title, progress, hint, buttons }: { title: string; progress: string; hint: string; buttons: { name: string }[] }, over: number | null) => {
     const { c } = p
     c.fillStyle = FLOOR
     c.fillRect(0, 0, G, Y)
@@ -200,7 +200,7 @@ export function statePanel(realWidth = 64) {
     c.font = `400 38px ${TEXT}`
     c.fillText(hint, G / 2, 250, G - 60)
     const top = Y * (1 - BUTTON_V.max), length = Y * (BUTTON_V.max - BUTTON_V.min)
-    buttons.forEach(({ ad }, i) => {
+    buttons.forEach(({ name }, i) => {
       const x = G * BUTTON_U[i].min, en = G * (BUTTON_U[i].max - BUTTON_U[i].min)
       c.beginPath()
       c.roundRect(x, top, en, length, 16)
@@ -208,7 +208,7 @@ export function statePanel(realWidth = 64) {
       c.fill()
       c.fillStyle = WHITE
       c.font = `600 48px ${TEXT}`
-      c.fillText(ad, x + en / 2, top + length / 2, en - 30)
+      c.fillText(name, x + en / 2, top + length / 2, en - 30)
     })
     p.texture.needsUpdate = true
   }
@@ -359,7 +359,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       return
     }
     b.gripStarted(id)
-    b.sec(id)
+    b.select(id)
     pieces[id].updateWorldMatrix(true, false)
     el.offset.copy(el.controller.matrixWorld).invert().multiply(pieces[id].matrixWorld)
   }
@@ -374,7 +374,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     const seated = snapsIn(pieces[id].position.distanceTo(targets[id].position), XR_SEAT_THRESHOLD)
     b.release(id, seated)
     result = seated ? `Parça ${id + 1} yerine oturdu.` : 'Henüz yerine yaklaşmadı. Yeniden dene.'
-    b.sec(null)
+    b.select(null)
   }
   const breakGrip = (el: El) => {
     const id = el.held
@@ -384,7 +384,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     el.trigger = el.side = false
     if (id === null) return
     if (id === VASE) standSpinning = true
-    else { b.gripCancel(id); b.sec(null) }
+    else { b.gripCancel(id); b.select(null) }
   }
 
   const finish = () => { session?.end().catch(() => {}) } // end() rejects on an already closed session
@@ -397,13 +397,13 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     return hit?.uv ? panelButton(hit.uv.x, hit.uv.y) : null
   }
 
-  const head = (el: El, tour: 'trigger' | 'side') => {
+  const head = (el: El, kind: 'trigger' | 'side') => {
     if (!session || !settled) return
-    el[tour] = true
+    el[kind] = true
     el.toRelease = false
     if (el.held !== null) return
     // A user aiming at a button does not want to grab a piece: the panel comes first.
-    const button = tour === 'trigger' ? panelAim(el) : null
+    const button = kind === 'trigger' ? panelAim(el) : null
     if (button !== null) {
       if (text().buttons[button].id === 'exit') finish()
       else b.shatterRequest()
@@ -412,8 +412,8 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     const id = handCandidate(el)
     if (id !== null) hold(el, id)
   }
-  const lift = (el: El, tour: 'trigger' | 'side') => {
-    el[tour] = false
+  const lift = (el: El, kind: 'trigger' | 'side') => {
+    el[kind] = false
     if (!el.trigger && !el.side && el.held !== null) el.toRelease = true
   }
 

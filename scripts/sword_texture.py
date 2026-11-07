@@ -205,9 +205,9 @@ for x0, y0, length in ((180, 40, 210), (505, 500, 280), (760, 20, 170), (880, 26
 t = np.clip(.60 + (vein - .5) * .30 - (stain - .5) * .85, 0, 1)
 color = color_ramp(t, (0, (.46, .34, .19)), (.45, (.76, .64, .43)), (1, (.90, .82, .64)))
 color = color * (1 - c.m[..., None] * .62)
-save('fildisi_color', color)
-save('fildisi_pm', np.dstack([np.ones_like(t), np.clip(.46 + (stain - .5) * .26 + c.m * .3, 0, 1), np.zeros_like(t)]))
-save('fildisi_normal', normal_map(vein * .22 + stain * .5 - c.m * .5, 1.0))
+save('ivory_color', color)
+save('ivory_pm', np.dstack([np.ones_like(t), np.clip(.46 + (stain - .5) * .26 + c.m * .3, 0, 1), np.zeros_like(t)]))
+save('ivory_normal', normal_map(vein * .22 + stain * .5 - c.m * .5, 1.0))
 
 # -------------------------------------------------- Workshop
 A = 1024
@@ -257,10 +257,10 @@ save('leather_pm', np.dstack([np.ones((A, A)), np.clip(.6 + (g4 - .5) * .3, 0, 1
 save('leather_normal', normal_map(g4 * 2.4, 2.2))
 # Embers: the app drives the glow; this is the base and the heat map
 g5 = noise(A, A, 14, 5); heat = np.clip((g5 - .44) * 4, 0, 1)
-save('kor_color', color_ramp(g5, (0, (.012, .010, .010)), (1, (.07, .05, .045))))
-save('kor_heat', color_ramp(heat, (0, (0, 0, 0)), (.45, (.9, .16, .02)), (.8, (1, .45, .06)), (1, (1, .85, .35))))
-save('kor_normal', normal_map(g5 * 4, 2.4))
-save('kor_pm', np.dstack([np.ones((A, A)), np.clip(.82 + (g5 - .5) * .3, 0, 1), np.zeros((A, A))]))
+save('embers_color', color_ramp(g5, (0, (.012, .010, .010)), (1, (.07, .05, .045))))
+save('embers_heat', color_ramp(heat, (0, (0, 0, 0)), (.45, (.9, .16, .02)), (.8, (1, .45, .06)), (1, (1, .85, .35))))
+save('embers_normal', normal_map(g5 * 4, 2.4))
+save('embers_pm', np.dstack([np.ones((A, A)), np.clip(.82 + (g5 - .5) * .3, 0, 1), np.zeros((A, A))]))
 # Straw: test target
 horiz = (np.sin(np.arange(A)[:, None] / A * math.tau * 70) * .5 + .5) * np.ones((A, A))
 vert = noise(A, A, 6, 3, kx=30, ky=1)

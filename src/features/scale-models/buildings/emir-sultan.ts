@@ -301,9 +301,9 @@ export const building = (): Model => {
   return {
     root,
     layers: [
-      { group: roofGroup, height: 16, ad: 'Çatılar' },
-      { group: drumGroup, height: 26, ad: 'Kasnaklar' },
-      { group: domeGroup, height: 36, ad: 'Kubbeler' },
+      { group: roofGroup, height: 16, name: 'Çatılar' },
+      { group: drumGroup, height: 26, name: 'Kasnaklar' },
+      { group: domeGroup, height: 36, name: 'Kubbeler' },
     ],
     stops: stops(),
     walking: walking(),
@@ -507,11 +507,11 @@ export const building = (): Model => {
     const bottomY0 = HALL_Y + 0.95, bottomY1 = HALL_Y + 3.25, midY0 = HALL_Y + 4.75, midD = 1.65, topY0 = HALL_Y + 9.35, topD = 1.05
     const STONE_TOP = HALL_Y + 4.25
     type Face = 'east' | 'west' | 'south' | 'north'
-    const faces: { ad: Face; x: number; z: number; ry: number; alt: number[]; avg: number[]; top: number[] }[] = [
-      { ad: 'east', x: MOSQUE_OUT_X, z: HALL_MID, ry: Math.PI / 2, alt: [-5.6, -2, 2, 5.6], avg: [-5.6, -2, 2, 5.6], top: [-3, 0, 3] },
-      { ad: 'west', x: -MOSQUE_OUT_X, z: HALL_MID, ry: -Math.PI / 2, alt: [-5.6, -2, 2, 5.6], avg: [-5.6, -2, 2, 5.6], top: [-3, 0, 3] },
-      { ad: 'south', x: 0, z: MOSQUE_Z1, ry: 0, alt: [-4.1, 4.1], avg: [-4.1, 4.1], top: [-3, 0, 3] },
-      { ad: 'north', x: 0, z: MOSQUE_Z0, ry: Math.PI, alt: [-4.1, 4.1], avg: [-4.1, 4.1], top: [-3, 0, 3] },
+    const faces: { name: Face; x: number; z: number; ry: number; alt: number[]; avg: number[]; top: number[] }[] = [
+      { name: 'east', x: MOSQUE_OUT_X, z: HALL_MID, ry: Math.PI / 2, alt: [-5.6, -2, 2, 5.6], avg: [-5.6, -2, 2, 5.6], top: [-3, 0, 3] },
+      { name: 'west', x: -MOSQUE_OUT_X, z: HALL_MID, ry: -Math.PI / 2, alt: [-5.6, -2, 2, 5.6], avg: [-5.6, -2, 2, 5.6], top: [-3, 0, 3] },
+      { name: 'south', x: 0, z: MOSQUE_Z1, ry: 0, alt: [-4.1, 4.1], avg: [-4.1, 4.1], top: [-3, 0, 3] },
+      { name: 'north', x: 0, z: MOSQUE_Z0, ry: Math.PI, alt: [-4.1, 4.1], avg: [-4.1, 4.1], top: [-3, 0, 3] },
     ]
     for (const y of faces) {
       const ext = (g: THREE.BufferGeometry, mat: Mat, kv: Bucket = k) => kv.add(place(g, y.x, 0, y.z, y.ry), mat)
@@ -534,20 +534,20 @@ export const building = (): Model => {
         for (const x of y.alt) s.holes.push(rect(x - G_BOTTOM / 2, bottomY0, x + G_BOTTOM / 2, bottomY1) as unknown as THREE.Path)
         for (const x of y.avg) s.holes.push(roundArch(new THREE.Path(), x, midY0, G_MID, midD))
         for (const x of y.top) s.holes.push(roundArch(new THREE.Path(), x, topY0, G_TOP, topD))
-        if (y.ad === 'north') s.holes.push(rect(-1.15, COURT_Y, 1.15, HALL_Y + 3.3) as unknown as THREE.Path)
+        if (y.name === 'north') s.holes.push(rect(-1.15, COURT_Y, 1.15, HALL_Y + 3.3) as unknown as THREE.Path)
       }
       const s = silhouetteOf(); hole(s)
       ext(subtract(s, WALL, -WALL), alternating)
       // Cut-stone lower zone and cornices (the mosque front is inside the portico)
       const alt = rect(-L - 0.05, 0, L + 0.05, STONE_TOP)
       for (const x of y.alt) alt.holes.push(rect(x - G_BOTTOM / 2 - 0.15, bottomY0 - 0.15, x + G_BOTTOM / 2 + 0.15, bottomY1 + 0.15) as unknown as THREE.Path)
-      if (y.ad === 'north') alt.holes.push(rect(-1.15, COURT_Y, 1.15, HALL_Y + 3.3) as unknown as THREE.Path)
+      if (y.name === 'north') alt.holes.push(rect(-1.15, COURT_Y, 1.15, HALL_Y + 3.3) as unknown as THREE.Path)
       ext(subtract(alt, 0.08, 0), m.stone)
       ext(boxG(MOSQUE_L + 0.3, 0.26, 0.3).translate(0, STONE_TOP + 0.13, 0.1), m.marble)
       ext(boxG(MOSQUE_L + 0.2, 0.3, 0.2).translate(0, 0.65, 0.1), m.stone)
 
       // Large middle arch and small arches on the sides (source)
-      if (y.ad !== 'north') {
+      if (y.name !== 'north') {
         const ring = (cx: number, y0: number, rx: number, ry2: number, t: number, kvm: Mat, piece: number) => {
           const outer = new THREE.Shape(), inner = new THREE.Path()
           outer.absellipse(cx, y0, rx + t, ry2 + t, 0, Math.PI, false)
@@ -590,7 +590,7 @@ export const building = (): Model => {
       for (const [x, yy] of [...apex].reverse()) c1.lineTo(x, yy - 0.02)
       c1.closePath()
       ext(subtract(c1, 1.5, -1.25), m.lead, kRoof)
-      if (y.ad === 'south') {
+      if (y.name === 'south') {
         // Birdhouse on the outer face of the mihrab (source)
         ext(boxG(0.7, 0.55, 0.28).translate(0, 7.4, 0.12), m.marble)
         ext(flatShadow(cylinderG(0.01, 0.6, 0.4, 4).rotateY(Math.PI / 4)).scale(0.9, 1, 0.4).translate(0, 7.88, 0.14), m.lead)
@@ -603,7 +603,7 @@ export const building = (): Model => {
       for (const x of y.alt) innerS.holes.push(rect(x - G_BOTTOM / 2, bottomY0, x + G_BOTTOM / 2, bottomY1) as unknown as THREE.Path)
       for (const x of y.avg) innerS.holes.push(roundArch(new THREE.Path(), x, midY0, G_MID, midD))
       for (const x of y.top) innerS.holes.push(roundArch(new THREE.Path(), x, topY0, G_TOP, topD))
-      if (y.ad === 'north') innerS.holes.push(rect(-1.15, COURT_Y, 1.15, HALL_Y + 3.3) as unknown as THREE.Path)
+      if (y.name === 'north') innerS.holes.push(rect(-1.15, COURT_Y, 1.15, HALL_Y + 3.3) as unknown as THREE.Path)
       ext(subtract(innerS, innerThick, -WALL - innerThick), innerWall)
       // Two band belts and vertical corner pilasters
       ext(boxG(2 * HALL_HALF, 0.22, 0.07).translate(0, BAND1, -WALL - 0.04), grayBand)
@@ -1220,8 +1220,8 @@ export const building = (): Model => {
   }
 
   function stops(): InteriorStop[] {
-    const d = (id: string, ad: string, x: number, h: number, z: number, bx: number, by: number, bz: number): InteriorStop =>
-      ({ id, ad, position: [x, BAY + h, z + OZ], look: [bx, by, bz + OZ] })
+    const d = (id: string, name: string, x: number, h: number, z: number, bx: number, by: number, bz: number): InteriorStop =>
+      ({ id, name, position: [x, BAY + h, z + OZ], look: [bx, by, bz + OZ] })
     const rp = MINBAR_RAMP
     return [
       d('courtyard', 'Avlu', -9.8, hCourt, 4.6, 1, 3.8, -8),

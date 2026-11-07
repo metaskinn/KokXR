@@ -33,8 +33,8 @@ for (let h = 0; h < 3; h++) { const i = station({ stage: 7, target: h, again: fa
 
 // --- panel returning
 near(angleDiff(3.1, -3.1), 6.2 - 2 * Math.PI)
-let g = panelShouldReturn(0, .5, 0, .1); assert(!g.shouldCome); assert.equal(g.sure, 0)
-g = panelShouldReturn(2.5, .5, 0, .6); assert(!g.shouldCome); g = panelShouldReturn(2.5, .5, g.sure, .7); assert(g.shouldCome); assert.equal(g.sure, 0)
+let g = panelShouldReturn(0, .5, 0, .1); assert(!g.shouldCome); assert.equal(g.duration, 0)
+g = panelShouldReturn(2.5, .5, 0, .6); assert(!g.shouldCome); g = panelShouldReturn(2.5, .5, g.duration, .7); assert(g.shouldCome); assert.equal(g.duration, 0)
 
 // --- ray and blade
 let h = rayAxisX({ x: .5, y: .3, z: 1 }, { x: 0, y: 0, z: -1 }, 1); near(h.x, .5); near(h.distance, .3)
@@ -75,7 +75,7 @@ const slip = (n, speed, x0 = 12) => Array.from({ length: n }, (_, i) => ({ x: x0
 let o = new SwingMeter(); assert.equal(swing(o, dur(20)).length, 0, 'a still arm is not a swing')
 assert.equal(swing(new SwingMeter(), slip(30, .8)).length, 0, 'a slow arm is not a swing')
 o = new SwingMeter(); let s = swing(o, [...slip(1, 0), ...slip(14, 3), ...Array.from({ length: 4 }, () => ({ x: 12 + 3 * dt * 13, y: 1.3, z: .2 }))])
-assert.equal(s.length, 1); assert(s[0].b.x > s[0].a.x + .4); assert(s[0].sure > .1 && s[0].sure < .4)
+assert.equal(s.length, 1); assert(s[0].b.x > s[0].a.x + .4); assert(s[0].duration > .1 && s[0].duration < .4)
 assert(!o.ongoing)
 // Short jitter and cooldown between consecutive swings
 o = new SwingMeter(); assert.equal(swing(o, [{ x: 0, y: 1, z: 0 }, { x: .03, y: 1, z: 0 }, { x: .03, y: 1, z: 0 }, { x: .03, y: 1, z: 0 }]).length, 0, 'short jitter')
@@ -84,27 +84,27 @@ o.reset(); assert.equal(o.step({ x: 0, y: 0, z: 0 }, dt), null)
 
 // --- swing → cut line and computeCut inputs
 const roll = { minX: 11.9, maxX: 12.1, minY: .6, maxY: 1.55, z: 0 }
-let k = swingCut({ a: { x: 11.7, y: 1.2, z: .4 }, b: { x: 12.4, y: 1.1, z: .4 }, sure: .2 }, roll)
+let k = swingCut({ a: { x: 11.7, y: 1.2, z: .4 }, b: { x: 12.4, y: 1.1, z: .4 }, duration: .2 }, roll)
 near(k.a.z, 0); near(k.a.y, 1.2); near(k.a.x, 11.7); assert(k.near, 'a line through the roll is not shifted')
 near(k.dx, .7 / 2.5); near(k.dy, .1 / 2.5)
-const speed = Math.hypot(k.dx, k.dy) / k.sure; assert(speed > 1 && speed < 2, `speed ${speed}`)
-k = swingCut({ a: { x: 12.3, y: 1.2, z: .4 }, b: { x: 13, y: 1.1, z: .4 }, sure: .2 }, roll)
+const speed = Math.hypot(k.dx, k.dy) / k.duration; assert(speed > 1 && speed < 2, `speed ${speed}`)
+k = swingCut({ a: { x: 12.3, y: 1.2, z: .4 }, b: { x: 13, y: 1.1, z: .4 }, duration: .2 }, roll)
 assert(k.near); assert(k.a.x <= 12.1 + 1e-9, 'a nearby line is pulled to the target'); near(k.b.x - k.a.x, .7)
-k = swingCut({ a: { x: 11.6, y: 2.4, z: .4 }, b: { x: 12.4, y: 2.4, z: .4 }, sure: .2 }, roll)
+k = swingCut({ a: { x: 11.6, y: 2.4, z: .4 }, b: { x: 12.4, y: 2.4, z: .4 }, duration: .2 }, roll)
 assert(!k.near); near(k.a.y, 2.4); assert(2.4 - 1.55 > SWING_TOLERANCE)
-k = swingCut({ a: { x: 14, y: 1.5, z: .4 }, b: { x: 14, y: .95, z: .4 }, sure: .2 }, { minX: 13.6, maxX: 14.4, minY: .62, maxY: .86, z: -.1 })
+k = swingCut({ a: { x: 14, y: 1.5, z: .4 }, b: { x: 14, y: .95, z: .4 }, duration: .2 }, { minX: 13.6, maxX: 14.4, minY: .62, maxY: .86, z: -.1 })
 assert(k.near); assert(k.b.y <= .86 + 1e-9, 'a downward cut touches the log'); assert(k.dy > 0, 'screen Y is positive downward')
 // The converted input exceeds computeCut's speed thresholds (speed > .7) in a real swing
-const dSpeed = Object.assign(firstGame(), { stage: 7 }); computeCut(dSpeed, k.dx, k.dy, k.sure)
+const dSpeed = Object.assign(firstGame(), { stage: 7 }); computeCut(dSpeed, k.dx, k.dy, k.duration)
 assert.equal(dSpeed.broke, false)
 
 // --- panel content: master, restart, exit at every stage; layout does not overflow; hit test correct
-for (let a = 0; a < 8; a++) for (const not of [null, 3]) {
+for (let a = 0; a < 8; a++) for (const note of [null, 3]) {
   const d = firstGame(); for (let i = 0; i < a; i++) masterComplete(d)
   assert.equal(d.stage, a)
-  const p = panelState(d, { reheat: false, not })
-  assert.equal(p.title, stages[a]); assert.deepEqual(p.common.map(b => b.id), ['command:master', 'command:fromStart', 'exit']); assert.equal(p.common[0].ad, 'Ustaya bırak')
-  assert.equal(p.common[2].ad, "VR'dan çık"); assert(p.instruction.length < 180, `stage ${a} instruction too long`)
+  const p = panelState(d, { reheat: false, note })
+  assert.equal(p.title, stages[a]); assert.deepEqual(p.common.map(b => b.id), ['command:master', 'command:fromStart', 'exit']); assert.equal(p.common[0].name, 'Ustaya bırak')
+  assert.equal(p.common[2].name, "VR'dan çık"); assert(p.instruction.length < 180, `stage ${a} instruction too long`)
   const y = panelLayout(p)
   // Title, instruction and message on top (≈285 px); at least this much must remain for gauges and quality.
   const needed = 285 + (p.heat ? 58 : 0) + (p.progress ? 44 : 0) + (p.quality ? 116 : 0)
@@ -116,20 +116,20 @@ for (let a = 0; a < 8; a++) for (const not of [null, 3]) {
   }
   assert.equal(panelFrame(y.squares, .5, .999), null, 'no hit on the title')
   // The honesty note stays unchanged at every stage and with every note open.
-  const b = infoState(a, not); assert.equal(b.honesty, swordIntro.honesty); assert(b.source.startsWith('Kaynak: ')); assert(Object.values(swordSources).some(v => b.source.endsWith(v)))
+  const b = infoState(a, note); assert.equal(b.honesty, swordIntro.honesty); assert(b.source.startsWith('Kaynak: ')); assert(Object.values(swordSources).some(v => b.source.endsWith(v)))
 }
 assert.equal(infoState(6, 3).title, swordPartNotes[3].title); assert.equal(infoState(5, 3).title, 'Atölye notu')
 
 const dA = firstGame()
-assert.deepEqual(panelState(dA, { reheat: false, not: null }).buttons.map(b => b.id), ['command:al'])
+assert.deepEqual(panelState(dA, { reheat: false, note: null }).buttons.map(b => b.id), ['command:al'])
 masterComplete(dA); dA.regions.forEach(b => { b.heat = 100 })
-let p = panelState(dA, { reheat: false, not: null }); assert(p.buttons.find(b => b.id === 'command:continue').passive); assert(p.buttons.find(b => b.id === 'hold:bellows').hold)
-dA.regions.forEach(b => { b.heat = 800 }); assert(!panelState(dA, { reheat: false, not: null }).buttons.find(b => b.id === 'command:continue').passive)
-masterComplete(dA); p = panelState(dA, { reheat: false, not: null }); assert.equal(p.regions.ratio.length, 12); assert(p.buttons.some(b => b.id === 'command:again'))
-dA.again = true; p = panelState(dA, { reheat: false, not: null }); assert(!p.regions); assert(p.buttons.some(b => b.id === 'hold:bellows'))
-dA.again = false; dA.master = true; p = panelState(dA, { reheat: false, not: null }); assert(p.buttons.every(b => b.passive)); assert(p.common[0].passive); assert(!p.common[1].passive)
+let p = panelState(dA, { reheat: false, note: null }); assert(p.buttons.find(b => b.id === 'command:continue').passive); assert(p.buttons.find(b => b.id === 'hold:bellows').hold)
+dA.regions.forEach(b => { b.heat = 800 }); assert(!panelState(dA, { reheat: false, note: null }).buttons.find(b => b.id === 'command:continue').passive)
+masterComplete(dA); p = panelState(dA, { reheat: false, note: null }); assert.equal(p.regions.ratio.length, 12); assert(p.buttons.some(b => b.id === 'command:again'))
+dA.again = true; p = panelState(dA, { reheat: false, note: null }); assert(!p.regions); assert(p.buttons.some(b => b.id === 'hold:bellows'))
+dA.again = false; dA.master = true; p = panelState(dA, { reheat: false, note: null }); assert(p.buttons.every(b => b.passive)); assert(p.common[0].passive); assert(!p.common[1].passive)
 const d7 = firstGame(); for (let i = 0; i < 7; i++) masterComplete(d7); d7.damages = [.5, 0, 0]; d7.broke = true
-p = panelState(d7, { reheat: false, not: null }); assert(p.buttons[0].ad.includes('hasar %50')); assert(p.buttons.find(b => b.id === 'command:cutOff').passive); assert(p.quality.notes.some(n => n.startsWith('Kesim puanı')))
+p = panelState(d7, { reheat: false, note: null }); assert(p.buttons[0].name.includes('hasar %50')); assert(p.buttons.find(b => b.id === 'command:cutOff').passive); assert(p.quality.notes.some(n => n.startsWith('Kesim puanı')))
 
 // --- Forbidden phrases: our VR texts (outside content/sword.ts) contain no historical claims or exaggeration.
 for (const file of ['xrCalc.ts', 'xrPanel.ts', 'xrSession.ts']) {

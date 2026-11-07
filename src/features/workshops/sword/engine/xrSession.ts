@@ -11,20 +11,20 @@ import type { Frame, Box } from './xrCalc'
 export type HoldName = 'bellows' | 'water' | 'wrist'
 export interface SwordBridge {
   game: () => Game; reheat: () => boolean
-  command: (ad: Command) => void; hold: (ad: HoldName, v: boolean) => void
+  command: (name: Command) => void; hold: (name: HoldName, v: boolean) => void
   selectRegion: (i: number) => void; selectTarget: (i: number) => void; rotate: (a: number) => void
   findRegion: (ray3: T.Ray) => number | null; regionPoint: (i: number, h: T.Vector3) => T.Vector3
-  objPoint: (ad: 'eggShape' | 'bellows' | string, h: T.Vector3) => T.Vector3; targetPointAt: (i: number) => T.Vector3
+  objPoint: (name: 'eggShape' | 'bellows' | string, h: T.Vector3) => T.Vector3; targetPointAt: (i: number) => T.Vector3
   targetBox: (i: number) => Box; wristU: () => number; wristDrag: (u: number) => void; stoneZ: number
-  cutOff: (k: { a: T.Vector3; b: T.Vector3; dx: number; dy: number; sure: number }) => void; addTrace: () => void; cutOngoing: () => boolean
+  cutOff: (k: { a: T.Vector3; b: T.Vector3; dx: number; dy: number; duration: number }) => void; addTrace: () => void; cutOngoing: () => boolean
   swordPos: (p: T.Vector3, q: T.Quaternion) => void
   /** Assembly: part world matrix, carrying in hand (null releases), its place on the sword, distance to it, and seating. */
-  pieceMatrix: (ad: string) => T.Matrix4; movePiece: (ad: string, m: T.Matrix4 | null) => void
-  piecePlace: (ad: string, h: T.Vector3) => T.Vector3; pieceDistance: (ad: string) => number; seatPiece: () => void
+  pieceMatrix: (name: string) => T.Matrix4; movePiece: (name: string, m: T.Matrix4 | null) => void
+  piecePlace: (name: string, h: T.Vector3) => T.Vector3; pieceDistance: (name: string) => number; seatPiece: () => void
   floor: (visible: boolean) => void
   /** The scene restores camera, shadows, effects and size. */
   sessionStarted: () => void; sessionEnded: () => void
-  stamp: (ad: string, value: string) => void
+  stamp: (name: string, value: string) => void
 }
 
 const RAY_LENGTH = 3, PANEL_FAR = 1.25, PANEL_BOTTOM = .12, DRAW_INTERVAL = .4
@@ -108,7 +108,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
   const frameLocal = (q: Frame, h: T.Vector3) => h.set(((q.x + q.g / 2) / PANEL_G - .5) * PANEL_METER, (.5 - (q.y + q.y2) / 2 / PANEL_Y) * controlY, .001)
 
   const drawPanel = (force = false) => {
-    const d = k.game(), p = panelState(d, { reheat: k.reheat(), not: note }), keyStr = JSON.stringify(p)
+    const d = k.game(), p = panelState(d, { reheat: k.reheat(), note: note }), keyStr = JSON.stringify(p)
     if (force || keyStr !== drawKey) { drawKey = keyStr; control.draw(p); buttonStamp() }
     const b = infoState(d.stage, note)
     if (force || b.text !== infoKey) { infoKey = b.text; info.draw(b); k.stamp('xrInfo', `${b.title}|${b.source}|${b.honesty.length}`) }
@@ -116,12 +116,12 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
 
   const action = (id: string, el: El) => {
     if (id === 'exit') return finish()
-    const [tour, value] = id.split(':')
-    if (tour === 'command') { k.command(value as Command); if (value === 'fromStart') note = null; if (value === 'clink') vibrate(el, .4, 40) }
-    else if (tour === 'hold') { el.held = value as HoldName; k.hold(el.held, true) }
-    else if (tour === 'region') k.selectRegion(Number(value))
-    else if (tour === 'target') k.selectTarget(Number(value))
-    else if (tour === 'not') note = value === 'close' ? null : Number(value)
+    const [kind, value] = id.split(':')
+    if (kind === 'command') { k.command(value as Command); if (value === 'fromStart') note = null; if (value === 'clink') vibrate(el, .4, 40) }
+    else if (kind === 'hold') { el.held = value as HoldName; k.hold(el.held, true) }
+    else if (kind === 'region') k.selectRegion(Number(value))
+    else if (kind === 'target') k.selectTarget(Number(value))
+    else if (kind === 'note') note = value === 'close' ? null : Number(value)
     drawPanel()
   }
 
@@ -129,7 +129,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
   const sceneAction = (el: El) => {
     const d = k.game(), ray3 = raycaster.ray
     if (d.master) return
-    const near = (ad: string, limit: number) => ray3.distanceToPoint(k.objPoint(ad, tmp)) <= limit
+    const near = (name: string, limit: number) => ray3.distanceToPoint(k.objPoint(name, tmp)) <= limit
     if (d.stage === 0) { if (near('eggShape', NEAR.eggShape)) k.command('al') }
     else if (d.stage === 1 || d.again) { if (near('bellows', NEAR.bellows)) { el.held = 'bellows'; k.hold('bellows', true) } }
     else if (d.stage === 2) {
@@ -148,13 +148,13 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
   const grabPiece = (el: El) => {
     const d = k.game()
     if (pieceHand || d.stage !== 5 || d.master || d.attached >= pieces.length) return
-    const ad = pieces[d.attached]
-    refresh(el); k.objPoint(ad, tmp)
+    const name = pieces[d.attached]
+    refresh(el); k.objPoint(name, tmp)
     el.grip.updateWorldMatrix(true, false, true)
     const didTouch = el.grip.visible && el.grip.getWorldPosition(tmp2).distanceTo(tmp) <= PIECE_TOUCH
     if (!didTouch && raycaster.ray.distanceToPoint(tmp) > NEAR.piece) return
-    pieceHand = el; pieceName = ad; active = el
-    el.offset.copy(el.controller.matrixWorld).invert().multiply(k.pieceMatrix(ad))
+    pieceHand = el; pieceName = name; active = el
+    el.offset.copy(el.controller.matrixWorld).invert().multiply(k.pieceMatrix(name))
     vibrate(el, .3, 30)
     trackPiece()
   }
@@ -209,7 +209,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
       ['squeezestart', () => { el.side = true; el.toRelease = false; if (session && poseReady) grabPiece(el) }], ['squeezeend', () => { el.side = false; keyRelease(el) }],
       ['connected', e => { el.hammer.reset(); el.source = e.data ?? null }], ['disconnected', () => { if (el === pieceHand) pieceCancel(); el.trigger = el.side = false; released(el); el.hammer.reset(); el.source = null }],
     ]
-    for (const [ad, f] of events) controller.addEventListener(ad as never, f as never)
+    for (const [name, f] of events) controller.addEventListener(name as never, f as never)
     el.events = events
     return el
   })
@@ -334,7 +334,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
       trackPiece()
 
       const u = panelShouldReturn(headYaw(), panelYaw, farDuration, dt)
-      farDuration = u.sure
+      farDuration = u.duration
       if (u.shouldCome) placePanel()
 
       drawDuration += dt
@@ -381,8 +381,8 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
           if (swingMotion.ongoing) k.addTrace()
           if (s) {
             const c = swingCut(s, k.targetBox(d.target))
-            active = el; vibrate(el, Math.min(1, .4 + Math.hypot(c.dx, c.dy) / c.sure * .3), 80)
-            k.cutOff({ a: new T.Vector3(c.a.x, c.a.y, c.a.z), b: new T.Vector3(c.b.x, c.b.y, c.b.z), dx: c.dx, dy: c.dy, sure: c.sure })
+            active = el; vibrate(el, Math.min(1, .4 + Math.hypot(c.dx, c.dy) / c.duration * .3), 80)
+            k.cutOff({ a: new T.Vector3(c.a.x, c.a.y, c.a.z), b: new T.Vector3(c.b.x, c.b.y, c.b.z), dx: c.dx, dy: c.dy, duration: c.duration })
           }
         }
       } else swingMotion.reset()
@@ -413,7 +413,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
       // The scene is closing too: sessionEnded is not called and a later sessionend is not listened to.
       if (open) { undo(); open.end().catch(() => {}) }
       for (const el of hands) {
-        for (const [ad, f] of el.events) el.controller.removeEventListener(ad as never, f as never)
+        for (const [name, f] of el.events) el.controller.removeEventListener(name as never, f as never)
         el.controller.removeFromParent(); el.grip.removeFromParent()
       }
       control.dispose(); info.dispose(); highlight.geometry.dispose(); highlightMaterial.dispose()

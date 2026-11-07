@@ -1,6 +1,6 @@
 {
   "id": "muradiye-complex",
-  "ad": "II. Murad (Muradiye) Külliyesi",
+  "name": "II. Murad (Muradiye) Külliyesi",
   "city": "Bursa",
   "district": "Osmangazi",
   "period": "Erken Osmanlı · H. 828-830 / M. 1425-1426",
@@ -651,6 +651,6 @@
     "line": 2,
     "text": "Muradiye Camii son cemaat yerinde pencerelerin alınlıkları geometrik desenli mozaik çinilerle kaplanmıştır. Revak cephesi ise farklı boyut ve biçimdeki tuğlaların on beş değişik geometrik düzende örülmesiyle hareketlendirilmiştir.",
     "sourceId": "mur-s114",
-    "not": "Fotoğraf: Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi. Bu bir öğrenme oyunudur; gerçek bir restorasyon yöntemini temsil etmez."
+    "note": "Fotoğraf: Vakıf Eserleri Envanteri – Bursa fotoğraf arşivi. Bu bir öğrenme oyunudur; gerçek bir restorasyon yöntemini temsil etmez."
   }
 }

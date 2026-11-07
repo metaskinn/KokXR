@@ -22,8 +22,8 @@ const H = 9.5, NH = 8.6, BASE = 0.4, TABHANE = 0.5, MIHRAB = 0.8
 const BAY_Y = BASE + 1.65
 const MINBAR = { x0: -4.75, x1: -3.05, z0: 11, z1: 14.8, apex: 2.4 }
 
-const stop = (id: string, ad: string, k: [number, number, number], b: [number, number, number]): InteriorStop =>
-  ({ id, ad, position: [k[0] + PLACE.x, k[1], k[2] + PLACE.z], look: [b[0] + PLACE.x, b[1], b[2] + PLACE.z] })
+const stop = (id: string, name: string, k: [number, number, number], b: [number, number, number]): InteriorStop =>
+  ({ id, name, position: [k[0] + PLACE.x, k[1], k[2] + PLACE.z], look: [b[0] + PLACE.x, b[1], b[2] + PLACE.z] })
 
 const minbarSlope = (z: number) => MIHRAB + ((z - MINBAR.z0) / (MINBAR.z1 - MINBAR.z0)) * MINBAR.apex
 
@@ -551,9 +551,9 @@ export const building = (): Model => {
   return {
     root: rootGroup,
     layers: [
-      { group: roofGroup, height: 12, ad: 'Çatı' },
-      { group: drumGroup, height: 20, ad: 'Kasnaklar' },
-      { group: domeGroup, height: 28, ad: 'Kubbeler' },
+      { group: roofGroup, height: 12, name: 'Çatı' },
+      { group: drumGroup, height: 20, name: 'Kasnaklar' },
+      { group: domeGroup, height: 28, name: 'Kubbeler' },
     ],
     stops,
     walking: walkArea(),

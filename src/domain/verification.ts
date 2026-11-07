@@ -13,8 +13,8 @@ export function imageUrlValid(address: string): boolean {
 export function artifactErrors(artifact: Artifact): Errors {
   const errors: Errors = {}
   const required = (id: string, value: string) => { if (!value.trim()) errors[id] = 'Bu alan zorunludur.' }
-  for (const area of ['ad', 'city', 'district', 'period', 'endowment', 'summary', 'history'] as const) required(area, artifact[area])
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(artifact.id)) errors.ad = 'Ad, geçerli bir eser kimliği üretmelidir.'
+  for (const area of ['name', 'city', 'district', 'period', 'endowment', 'summary', 'history'] as const) required(area, artifact[area])
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(artifact.id)) errors.name = 'Ad, geçerli bir eser kimliği üretmelidir.'
   const sourceIds = artifact.sources.map(k => k.id)
   artifact.sources.forEach((k, i) => {
     required(`source-${i}-text`, k.text)
@@ -53,7 +53,7 @@ const texts = (v: Record<string, unknown>, areas: string[]) => areas.every(a => 
 const list = (v: unknown, control: (n: Record<string, unknown>) => boolean): boolean => Array.isArray(v) && v.every(n => obj(n) && control(n))
 const optionalText = (v: Record<string, unknown>, a: string) => v[a] === undefined || typeof v[a] === 'string'
 export function artifactValid(v: unknown): v is Artifact {
-  if (!obj(v) || !texts(v, ['id', 'ad', 'city', 'district', 'period', 'endowment', 'summary', 'history', 'coverImage']) || !['illustrative', 'verified'].includes(String(v.verification))) return false
+  if (!obj(v) || !texts(v, ['id', 'name', 'city', 'district', 'period', 'endowment', 'summary', 'history', 'coverImage']) || !['illustrative', 'verified'].includes(String(v.verification))) return false
   if (!list(v.sources, n => texts(n, ['id', 'text']) && optionalText(n, 'page')) ||
     !list(v.images, n => texts(n, ['file', 'alt', 'sourceId']) && optionalText(n, 'description') && optionalText(n, 'credit')) ||
     !list(v.test, n => texts(n, ['question', 'description', 'sourceId']) && Array.isArray(n.options) && n.options.every(s => typeof s === 'string') && typeof n.correct === 'number') ||
@@ -63,8 +63,8 @@ export function artifactValid(v: unknown): v is Artifact {
   return Object.keys(artifactErrors(v as unknown as Artifact)).length === 0
 }
 
-export function artifactId(ad: string): string {
-  return ad.toLocaleLowerCase('tr-TR').replace(/ı/g, 'i').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ö/g, 'o').replace(/ç/g, 'c').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+export function artifactId(name: string): string {
+  return name.toLocaleLowerCase('tr-TR').replace(/ı/g, 'i').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ö/g, 'o').replace(/ç/g, 'c').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 }
 export function uniqueId(foundation: string, existing: string[]): string {
   let id = foundation, row = 2

@@ -45,8 +45,8 @@ export const angleDiff = (a: number, b: number) => Math.atan2(Math.sin(a - b), M
 export const PANEL_TURN_THRESHOLD = 1.55, PANEL_TURN_DURATION = 1.2
 /** State: if the gaze stays away from the panel for this long, the panel returns to view; the honesty note always stays reachable. */
 export function panelShouldReturn(headYaw: number, panelYaw: number, farDuration: number, dt: number) {
-  const sure = Math.abs(angleDiff(headYaw, panelYaw)) > PANEL_TURN_THRESHOLD ? farDuration + dt : 0
-  return { sure: sure >= PANEL_TURN_DURATION ? 0 : sure, shouldCome: sure >= PANEL_TURN_DURATION }
+  const duration = Math.abs(angleDiff(headYaw, panelYaw)) > PANEL_TURN_THRESHOLD ? farDuration + dt : 0
+  return { duration: duration >= PANEL_TURN_DURATION ? 0 : duration, shouldCome: duration >= PANEL_TURN_DURATION }
 }
 
 // ---------------------------------------------------- ray
@@ -111,18 +111,18 @@ export class HammerMeter {
 }
 
 // ---------------------------------------------------- swing
-export interface Swing { a: Point; b: Point; sure: number }
+export interface Swing { a: Point; b: Point; duration: number }
 export const SWING_START = 1.8, SWING_END = .9, SWING_LONGEST = .4, SWING_SHORTEST_PATH = .25, SWING_GAP = .5
 
 /** Detects swings from the velocity history of the blade point. Takes world meters and seconds. */
 export class SwingMeter {
   private once: Point | null = null
   private head: Point | null = null
-  private sure = 0
+  private duration = 0
   private wait = 0
   /** While ongoing, the blade trail is drawn. */
   ongoing = false
-  reset() { this.once = null; this.head = null; this.sure = 0; this.ongoing = false; this.wait = 0 }
+  reset() { this.once = null; this.head = null; this.duration = 0; this.ongoing = false; this.wait = 0 }
   step(p: Point, dt: number): Swing | null {
     const once = this.once
     this.once = { x: p.x, y: p.y, z: p.z }
@@ -131,16 +131,16 @@ export class SwingMeter {
     const speed = Math.hypot(p.x - once.x, p.y - once.y, p.z - once.z) / dt
     if (!this.head) {
       if (speed < SWING_START || this.wait > 0) return null
-      this.head = once; this.sure = dt; this.ongoing = true
+      this.head = once; this.duration = dt; this.ongoing = true
       return null
     }
-    this.sure += dt
-    if (speed >= SWING_END && this.sure < SWING_LONGEST) return null
-    const a = this.head, sure = this.sure
+    this.duration += dt
+    if (speed >= SWING_END && this.duration < SWING_LONGEST) return null
+    const a = this.head, duration = this.duration
     this.head = null; this.ongoing = false
     if (Math.hypot(p.x - a.x, p.y - a.y, p.z - a.z) < SWING_SHORTEST_PATH) return null
     this.wait = SWING_GAP
-    return { a, b: { x: p.x, y: p.y, z: p.z }, sure }
+    return { a, b: { x: p.x, y: p.y, z: p.z }, duration }
   }
 }
 
@@ -163,12 +163,12 @@ export function swingCut(s: Swing, k: Box) {
   const kx = near ? qx - px : 0, ky = near ? qy - py : 0
   return {
     a: { x: s.a.x + kx, y: s.a.y + ky, z: k.z }, b: { x: s.b.x + kx, y: s.b.y + ky, z: k.z },
-    dx: fx / SCREEN_METER, dy: -fy / SCREEN_METER, sure: s.sure, near,
+    dx: fx / SCREEN_METER, dy: -fy / SCREEN_METER, duration: s.duration, near,
   }
 }
 
 // ---------------------------------------------------- panel content
-export interface PanelButton { id: string; ad: string; hold?: boolean; passive?: boolean; selected?: boolean }
+export interface PanelButton { id: string; name: string; hold?: boolean; passive?: boolean; selected?: boolean }
 export interface PanelState {
   step: string; title: string; instruction: string; message: string
   heat?: { value: number; interval: string }
@@ -189,35 +189,35 @@ const instructions = [
   'Kılıç elinde. Hedefi seç, hızlı bir savuruşla kes; diğer elinle paneli kullan. Düğmeyle de kesebilirsin.',
 ]
 
-export function panelState(d: Game, s: { reheat: boolean; not: number | null }): PanelState {
+export function panelState(d: Game, s: { reheat: boolean; note: number | null }): PanelState {
   const a = d.stage, master = d.master, realHeat = average(d, 'heat'), heat = Math.round(realHeat / 10) * 10, heatingPhase = a === 1 || d.again
   const buttons: PanelButton[] = []
   const r: PanelState = {
     step: `ADIM 0${a + 1} / 08`, title: stages[a], instruction: d.again ? instructions[1] : instructions[a], message: d.message, buttons,
     common: [
-      { id: 'command:master', ad: master ? 'Usta çalışıyor…' : 'Ustaya bırak', passive: master },
-      { id: 'command:fromStart', ad: 'Baştan başla' },
-      { id: 'exit', ad: "VR'dan çık" },
+      { id: 'command:master', name: master ? 'Usta çalışıyor…' : 'Ustaya bırak', passive: master },
+      { id: 'command:fromStart', name: 'Baştan başla' },
+      { id: 'exit', name: "VR'dan çık" },
     ],
   }
   if (a >= 1 && a <= 3) r.heat = { value: heat, interval: a === 3 ? '780–880 ideal' : '750–1150 ideal' }
-  if (a === 0) buttons.push({ id: 'command:al', ad: 'Külçeyi al' })
-  else if (heatingPhase) buttons.push({ id: 'hold:bellows', ad: 'Körüğü basılı tut', hold: true }, { id: 'command:continue', ad: 'Örse geç', passive: realHeat < 750 })
-  else if (a === 2) buttons.push({ id: 'command:strike', ad: 'Seçili bölgeye vur' }, { id: 'command:again', ad: 'Yeniden ısıt' })
+  if (a === 0) buttons.push({ id: 'command:al', name: 'Külçeyi al' })
+  else if (heatingPhase) buttons.push({ id: 'hold:bellows', name: 'Körüğü basılı tut', hold: true }, { id: 'command:continue', name: 'Örse geç', passive: realHeat < 750 })
+  else if (a === 2) buttons.push({ id: 'command:strike', name: 'Seçili bölgeye vur' }, { id: 'command:again', name: 'Yeniden ısıt' })
   else if (a === 3) {
-    buttons.push({ id: 'hold:water', ad: 'Suya daldır · basılı tut', hold: true }, { id: 'hold:bellows', ad: 'Su öncesi ısıt · basılı tut', hold: true, selected: s.reheat })
+    buttons.push({ id: 'hold:water', name: 'Suya daldır · basılı tut', hold: true }, { id: 'hold:bellows', name: 'Su öncesi ısıt · basılı tut', hold: true, selected: s.reheat })
     r.progress = { text: 'Su verme', ratio: limit(d.dip / 1.5) }
-  } else if (a === 4) buttons.push({ id: 'hold:wrist', ad: 'Seçili bölgeyi bile · basılı tut', hold: true })
+  } else if (a === 4) buttons.push({ id: 'hold:wrist', name: 'Seçili bölgeyi bile · basılı tut', hold: true })
   else if (a === 5) {
-    buttons.push({ id: 'command:clink', ad: 'Sıradaki parçayı yerleştir' })
+    buttons.push({ id: 'command:clink', name: 'Sıradaki parçayı yerleştir' })
     r.progress = { text: `${d.attached} / ${pieces.length} parça yerinde`, ratio: d.attached / pieces.length }
   } else if (a === 6) {
-    swordPartNotes.forEach((p, i) => buttons.push({ id: `not:${i}`, ad: `${i + 1}. ${p.title}`, selected: s.not === i }))
-    buttons.push({ id: 'command:continue', ad: 'Test alanına geç' })
-    if (s.not !== null) buttons.push({ id: 'not:close', ad: 'Notu kapat' })
+    swordPartNotes.forEach((p, i) => buttons.push({ id: `note:${i}`, name: `${i + 1}. ${p.title}`, selected: s.note === i }))
+    buttons.push({ id: 'command:continue', name: 'Test alanına geç' })
+    if (s.note !== null) buttons.push({ id: 'note:close', name: 'Notu kapat' })
   } else if (a === 7) {
-    targets.forEach((ad, i) => buttons.push({ id: `target:${i}`, ad: d.damages[i] > 0 ? `${ad} · hasar %${Math.round(d.damages[i] * 100)}` : ad, selected: d.target === i }))
-    buttons.push({ id: 'command:cutOff', ad: 'Kes', passive: d.broke }, { id: 'command:targets-renew', ad: 'Hedefleri yenile' })
+    targets.forEach((name, i) => buttons.push({ id: `target:${i}`, name: d.damages[i] > 0 ? `${name} · hasar %${Math.round(d.damages[i] * 100)}` : name, selected: d.target === i }))
+    buttons.push({ id: 'command:cutOff', name: 'Kes', passive: d.broke }, { id: 'command:targets-renew', name: 'Hedefleri yenile' })
   }
   if ((a === 2 && !d.again) || a === 4) {
     const area = a === 2 ? 'p' : 'skin'
@@ -236,8 +236,8 @@ export function panelState(d: Game, s: { reheat: boolean; not: number | null }):
 }
 
 /** Info panel content; the honesty note is never dropped. */
-export function infoState(stage: number, not: number | null) {
-  const p = stage === 6 && not !== null ? swordPartNotes[not] : null
+export function infoState(stage: number, note: number | null) {
+  const p = stage === 6 && note !== null ? swordPartNotes[note] : null
   const k = stage === 3 ? swordStageInfo.water : stage >= 5 ? swordStageInfo.equip : swordStageInfo.ingot
   return {
     title: p ? p.title : 'Atölye notu', text: p ? p.text : k.text, source: `Kaynak: ${swordSources[p ? p.source : k.source]}`,
@@ -269,7 +269,7 @@ export function panelLayout(p: Pick<PanelState, 'buttons' | 'common' | 'regions'
   if (p.buttons.length) line(p.buttons, 2)
   if (p.regions) {
     const g = (gen - 11 * 6) / 12, y = alt - 50
-    p.regions.ratio.forEach((_, i) => squares.push({ id: `region:${i}`, x: EDGE + i * (g + 6), y, g, y2: y + 50, region: true, button: { id: `region:${i}`, ad: String(i + 1) } }))
+    p.regions.ratio.forEach((_, i) => squares.push({ id: `region:${i}`, x: EDGE + i * (g + 6), y, g, y2: y + 50, region: true, button: { id: `region:${i}`, name: String(i + 1) } }))
     alt = y - BETWEEN
   }
   return { squares, contentBottom: alt }

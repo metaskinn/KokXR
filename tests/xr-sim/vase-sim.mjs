@@ -302,7 +302,7 @@ try {
     d = await x.d()
     desktopReturned(d, first, 'exit from panel')
     assert.deepEqual(d.placed, [0], 'progress lost')
-    assert.equal(await page.locator('.vase-handle:not([hidden])').count(), 5)
+    assert.equal(await page.locator('.vase-handle:note([hidden])').count(), 5)
     assert.match(await page.locator('.vase-message').textContent(), /1\/6 parça yerinde/)
     assert.ok(await page.getByRole('button', { name: 'Yeniden parçala' }).isEnabled(), 'desktop buttons stayed locked')
     await page.locator('.vase-scene canvas').screenshot({ path: `${SCREEN}/5-desktop.png` })

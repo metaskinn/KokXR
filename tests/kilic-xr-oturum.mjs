@@ -8,7 +8,7 @@ import { mkdirSync } from 'node:fs'
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:4173'
 const SURE = 240000
 mkdirSync('test-sonuclari', { recursive: true })
-const tarayici = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+const tarayici = await chromium.launch({ channel: process.env.TEST_BROWSER_CHANNEL ?? 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 
 // Sayfaya enjekte edilen sahte WebXR: three'nin kullandığı en küçük yüzey.
 function sahteXr({ gen, yuk }) {
@@ -181,6 +181,8 @@ await olc('2 Dövme'); await goruntu('2-dovme')
 await istasyonda(1.95, 1.05)
 
 await olc('3 Su verme'); await goruntu('3-su')
+await nisanla('right', [4, 2.5, 2]); await tetik('right', true); await kareBekle(8); await tetik('right', false)
+assert.equal((await sahne()).daldirma, 0, 'boşluğa basmak su vermeyi başlatmamalı')
 await nisanla('right', [1.95, .4, .15]); await tetik('right', true); await asamaBekle(4); await tetik('right', false)
 assert((await sahne()).daldirma >= 1.5); await istasyonda(3.05, -.45)
 console.log('su verme: basılı tetikle tamamlandı.')

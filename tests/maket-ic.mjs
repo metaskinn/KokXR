@@ -3,7 +3,7 @@
 import { chromium } from 'playwright'
 
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:4173'
-const tarayici = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+const tarayici = await chromium.launch({ channel: process.env.TEST_BROWSER_CHANNEL ?? 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 const sart = (kosul, mesaj) => { if (!kosul) throw new Error(mesaj) }
 
 async function ac(genislik, yukseklik) {

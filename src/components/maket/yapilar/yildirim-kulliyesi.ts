@@ -47,7 +47,7 @@ export const yapi = (): Maket => {
     durak('harim', 'Harim', 0, G, -3.2, 0, 5, 12),
     durak('revak', 'Son cemaat yeri', 12.8, G + 0.5, -16.7, -10, 5.2, -16.7),
     durak('kubbe', 'Orta kubbe', 0, G, -1.2, 0, 21, -1.9),
-    durak('eyvan', 'Doğu eyvanı', 13.6, G + 0.4, -4.6, 2, 5, -4.6),
+    durak('eyvan', 'Doğu eyvanı', 8.6, G + 0.4, -4.6, 15.2, 4.5, -4.6),
     durak('tabhane', 'Tabhane', 9, G, 2.4, 12, TABAN + 2.2, 6.4),
     durak('mihrap', 'Mihrap', 0, G + 0.4, 8.5, 0, 6, 17.3),
     durak('minber', 'Minber', -2.1, G + 0.4, 12.4, -4.75, 3.8, 15.6),

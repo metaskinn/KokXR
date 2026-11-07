@@ -14,6 +14,7 @@ export default function Kutuphane() {
       <dl>
         <div><dt>Dönem</dt><dd>{e.donem}</dd></div>
         <div><dt>Kaynak sayısı</dt><dd>{e.kaynaklar.length}</dd></div>
+        <div><dt>Bilgi durumu</dt><dd>{e.dogrulama === 'dogrulanmis' ? 'Kaynaklı bilgi' : 'Temsili içerik'}</dd></div>
         <div><dt>Maket</dt><dd>{e.maket ? 'Temsilî 3B maket' : 'Maket yok'}</dd></div>
       </dl>
       {e.maket && <details><summary>Maket notu</summary>{e.maket.aciklama}</details>}

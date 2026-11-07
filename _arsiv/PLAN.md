@@ -2,16 +2,20 @@
 
 Tek plan dosyası. İşe buradan başla, iş bitince işaretle. Ayrıntı gerekince: `DEVIR-QUEST.md` (VR), `docs/sunum-vaatleri.md`, `docs/sartname.md`.
 
-## Güncel durum (6 Kasım 2026)
+## Güncel durum (7 Kasım 2026)
 
-Çalışma dalı `ulu-camii-grafik`; ayrıntı `DEVAM.md` 0. bölümde. Bu dosyanın altındaki "Yeni bilgisayarda başla" bölümü 4 Kasım tarihlidir.
+Çalışma dalı `ulucami-gercekci`; önceki durum `DEVAM.md` 0. bölümde. Bu dosyanın altındaki "Yeni bilgisayarda başla" bölümü 4 Kasım tarihlidir.
 
 - [x] VR Eserler sekmesi: harita, şehir, yapı seçimi (`/vr`)
 - [x] Bursa'da 10 yapıya web maketi ve VR girişi (masaüstü testi geçti)
 - [x] Ulu Camii: gerçekçi halı ve mermer, ışık, minber, kürsü ve mahfile çıkma
 - [x] Dokunmatik ekranda yürüme kolu
+- [x] Ulu Camii: fotoğraf referanslı köşk, avizeler, halı/ışık ve çakışmayan duvar levhaları (mutlak konum ve ölçüler temsilî)
+- [x] Durak geçişini kesince güvenli hedefte yürüme, dairesel kaide sınırları, eyvan bakışları ve sahne kaynaklarının temizlenmesi
+- [x] Kılıç VR: su haznesine nişan zorunluluğu ve el başına süreli darbe hedefi; saf hesap ve oturum testleri geçti
+- [x] Ulu Camii'nin mahfil/kürsü kaynak sayfaları ve kütüphane olayı kitapla karşılaştırıldı; Kâbe kartındaki çelişkili yön ifadesi çıkarıldı
 - [ ] Gerçek Quest denemesi: yeni 9 yapı, kart okunabilirliği, kare hızı
-- [ ] `ulu-camii-grafik` dalını `master`'a birleştirme kararı
+- [ ] `ulucami-gercekci` dalını `master`'a birleştirme kararı
 - [ ] `kokxr.vercel.app` güncellemesi (hesap erişimi gerekiyor)
 - [ ] Sponsor fotoğraf izninin yazılı teyidi
 - [ ] Tarihsel metinlerin kitapla karşılaştırılması

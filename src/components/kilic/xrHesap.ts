@@ -89,6 +89,27 @@ export function cekicSalinimi(dikeyHiz: number, silahli: boolean) {
   return { vur: false, silahli: silahli || dikeyHiz > -CEKIC_SILAH }
 }
 
+/** Her el kendi yakın zamandaki hedefini tutar; kaybolan poz veya rig sıçraması darbe sayılmaz. */
+export class CekicOlcer {
+  private onceY: number | null = null
+  private bolge: number | null = null
+  private hedefYasi = 0
+  private silahli = true
+  sifirla() { this.onceY = null; this.bolge = null; this.hedefYasi = 0; this.silahli = true }
+  tetikle() { this.silahli = false }
+  adim(y: number, dt: number, bolge: number | null): number | null {
+    if (!Number.isFinite(y) || !Number.isFinite(dt) || dt <= 0 || dt > .1) { this.sifirla(); return null }
+    const hiz = this.onceY === null ? 0 : (y - this.onceY) / dt
+    this.onceY = y
+    this.hedefYasi += dt
+    if (bolge !== null) { this.bolge = bolge; this.hedefYasi = 0 }
+    if (this.hedefYasi > .18) this.bolge = null
+    const s = cekicSalinimi(hiz, this.silahli)
+    this.silahli = s.silahli
+    return s.vur ? this.bolge : null
+  }
+}
+
 // ---------------------------------------------------- savurma
 export interface Savurma { a: Nokta; b: Nokta; sure: number }
 export const SAVURMA_BASLA = 1.8, SAVURMA_BIT = .9, SAVURMA_EN_UZUN = .4, SAVURMA_EN_KISA_YOL = .25, SAVURMA_ARA = .5

@@ -342,6 +342,7 @@ export async function sahneOlustur(alan: HTMLElement, bildir: (d: Oyun) => void,
     },
     bolgeNoktasi: (i, h) => { kilic.localToWorld(h.set(deform.merkez(gorsel, i), 0, .006)); h.y += .045; return h },
     nesneNoktasi: (ad, h) => {
+      if (ad === 'su') return h.set(1.95, .42, .15) // Daldırma ve su efektinin merkezi.
       const n = ad === 'yumurta' ? yumurta : ad === 'koruk' ? koruk : obj(ad)
       n.updateWorldMatrix(true, true); kutuNokta.setFromObject(n); kutuNokta.getCenter(kutuMerkez); return h.copy(kutuMerkez)
     },

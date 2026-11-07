@@ -968,7 +968,7 @@ export const yapi = (): Maket => {
     ],
     duraklar,
     yurume: {
-      sinir: { x0: -SINIR_X, x1: SINIR_X, z0: -SINIR_Z, z1: SINIR_Z },
+      sinir: { x0: -SINIR_X, x1: SINIR_X, z0: -SINIR_Z, z1: SINIR_Z, daire: { x: 0, z: 0, r: KAIDE_R * Math.cos(Math.PI / 72) } },
       kutular: [...anaDuvarlar, ...ayrinti, ...minberKutular, ...turbeKutular, koskKutu, minareKutu, ...kaideKoseleri],
       daireler: agaclar.map((a) => ({ x: a.x + OX, z: a.z + OZ, r: a.r })),
       zeminler,

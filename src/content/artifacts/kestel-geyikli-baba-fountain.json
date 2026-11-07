@@ -1,0 +1,106 @@
+{
+  "id": "kestel-geyikli-baba-fountain",
+  "name": "Geyikli Baba Çeşmesi",
+  "city": "Bursa",
+  "district": "Kestel",
+  "period": "Kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Babasultan Camii'nin yanında, devşirme mermerden yapılmış, yalağı eski bir vaftiz havuzu olduğu anlaşılan ve Geyikli Baba ile ilişkilendirildiği için kutsal sayılan çeşme.",
+  "history": "Çeşme, Kestel'de Babasultan Camii'nin yanında yer alır. Tamamı devşirme mermer malzeme kullanılarak inşa edilmiştir.\n\nAslan başı biçimindeki lüleden akan su, yonca planlı bir yalağa dökülür. Aslında eski bir vaftiz havuzu olduğu anlaşılan bu yalak, hayvanların su ihtiyacını karşılayacak şekilde kullanılmıştır. Ayna taşındaki Besmele-i Şerif bugün kırık durumdadır.\n\nÇeşme üzerinde Geyikli Baba'ya ait olduğu rivayet edilen el ve ayak izleri bulunur. Suyu yüzyıllardır kesintisiz akan çeşme, Geyikli Baba ile ilişkilendirildiği için kutsal kabul edilmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/kestel-geyikli-baba-fountain/fountain.jpg",
+  "images": [
+    {
+      "file": "/images/kestel-geyikli-baba-fountain/fountain.jpg",
+      "alt": "Mermer ayna taşı üzerinde Arapça yazı ve oyma bezeme, ortadaki lüleden yonca biçimli mermer yalağa akan su; suda sonbahar yaprakları",
+      "description": "Çeşme ve yalak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-geyikli-baba-fountain/mosque-surroundings.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında kubbeli Geyikli Babasultan Camii ve minaresi, arkada yamaçtaki evler",
+      "description": "Çeşmenin yanında bulunduğu Babasultan Camii",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "basmala",
+      "image": "/images/kestel-geyikli-baba-fountain/fountain.jpg",
+      "x": 46,
+      "y": 20,
+      "title": "Besmele",
+      "text": "Çeşmenin ayna taşında yer alan Besmele-i Şerif bugün kırık durumdadır.",
+      "sourceId": "inv-p569"
+    },
+    {
+      "id": "spout",
+      "image": "/images/kestel-geyikli-baba-fountain/fountain.jpg",
+      "x": 45,
+      "y": 41,
+      "title": "Lüle",
+      "text": "Aslan başı biçiminde tasarlanmış lüleden akan su, yonca planlı bir yalağa dökülür.",
+      "sourceId": "inv-p569"
+    },
+    {
+      "id": "trough",
+      "image": "/images/kestel-geyikli-baba-fountain/fountain.jpg",
+      "x": 46,
+      "y": 67,
+      "title": "Yonca planlı yalak",
+      "text": "Aslında eski bir vaftiz havuzu olduğu anlaşılan yalak, hayvanların su ihtiyacını karşılayacak şekilde kullanılmıştır.",
+      "sourceId": "inv-p569"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşmenin yonca planlı yalağının aslında ne olduğu anlaşılmaktadır?",
+      "options": [
+        "Bir lahit",
+        "Eski bir vaftiz havuzu",
+        "Bir sütun başlığı",
+        "Bir değirmen taşı"
+      ],
+      "correct": 1,
+      "description": "Yalağın aslında eski bir vaftiz havuzu olduğu anlaşılmaktadır.",
+      "sourceId": "inv-p569"
+    },
+    {
+      "question": "Çeşmenin lülesi hangi biçimdedir?",
+      "options": [
+        "Geyik başı",
+        "Kartal başı",
+        "Aslan başı",
+        "Lale"
+      ],
+      "correct": 2,
+      "description": "Su, aslan başı biçiminde tasarlanmış lüleden akar.",
+      "sourceId": "inv-p569"
+    },
+    {
+      "question": "Çeşme neden kutsal kabul edilir?",
+      "options": [
+        "Geyikli Baba ile ilişkilendirildiği için",
+        "Orhan Gazi yaptırdığı için",
+        "Suyu şifalı olduğu için",
+        "Bir kilisenin parçası olduğu için"
+      ],
+      "correct": 0,
+      "description": "Suyu yüzyıllardır kesintisiz akan çeşme, Geyikli Baba ile ilişkilendirildiği için kutsal kabul edilir.",
+      "sourceId": "inv-p569"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p569",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Kestel, \"Geyikli Baba Çeşmesi\"",
+      "page": "569"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

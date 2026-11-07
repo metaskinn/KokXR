@@ -1,0 +1,165 @@
+{
+  "id": "yenisehir-orhan-gazi-mosque",
+  "name": "Orhan Gazi Camii (Ulucami)",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Erken Osmanlı · Orhan Gazi dönemi (1324-1362); 1923'te yeniden inşa",
+  "endowment": "Orhan Gazi (bağımsız vakfı ve mütevellisi olduğu belirtilir)",
+  "summary": "Orhan Gazi'nin yaptırdığı, 1923'te minaresi dışında yıkılıp temelleri üzerinde yeniden inşa edilen, halk arasında \"Ulucami\" olarak anılan cami.",
+  "history": "Yenişehir'in Ulucami Mahallesi'nde, Ulucami Sokak No: 1'de bulunan caminin ilk inşası, kaynaklara göre Orhan Gazi tarafından 1324-1362 yılları arasında gerçekleştirilmiştir. Cuma ve bayram namazlarının uzun yıllar bu camide kılınması \"Ulucami\" adının yerel kullanımda kalıcı hâle gelmesine yol açmıştır; belgelerde \"Câmi-i Kebîr\" olarak da anılır. Giriş kapısının üzerinde sülüs hatla \"Gazi Cennetmekân Sultan Orhan Han Ulu Camii\" yazılıdır.\n\nVakıf muhasebe kayıtlarından mabedin Orhan Gazi'ye ait olduğu anlaşılmaktadır. 1763 tarihli bir belgeye göre dört cephesi kagir duvarlı, çatısı kiremit örtülü olarak yapılan caminin bağımsız bir vakfı ve mütevellisi vardı; ancak cami yanmıştı ve cuma ile bayram namazları yakındaki bir mahalde kılınıyordu. Belge, kasaba ve çevre köy halkı için caminin tamiri ve ihyasının zorunlu bir ihtiyaç olduğunu belirtir. 1882 tarihli bir fotoğraf, eski yapının ön cephesinde ahşap direkli bir son cemaat yeri ve batı duvarında \"eli böğründe\" ile desteklenmiş cumbalı bir çıkma bulunduğunu gösterir.\n\nYapı 1923 yılında minaresi hariç tümüyle yıkılmış ve temelleri üzerine yeniden inşa edilmiştir; bu süreçte özgün mimari özelliklerinin büyük ölçüde kaybolduğu anlaşılmaktadır. Dıştan dışa 20 × 10 m ölçülerindeki caminin duvarları moloz taş ve aralara serpiştirilmiş kesme taşlarla örülmüş, üstü kiremit kaplı kırma çatıyla örtülmüştür. Ahşap düz tavanlı harim 360 m² alana sahiptir.\n\nKuzeybatı köşedeki tek şerefeli minarenin kaidesinden yukarısı 1977'de özgün formuna sadık kalınarak yenilenmiştir. Cami 2018-2020 yılları arasında Vakıflar Genel Müdürlüğü tarafından restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-orhan-gazi-mosque/exterior-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-orhan-gazi-mosque/exterior-minaret.jpg",
+      "alt": "Kiremit kırma çatılı, taş duvarlı cami; sağ köşede tuğla gövdeli, tek şerefeli ince minare, önde merdivenli giriş saçağı ve ağaçlar",
+      "description": "Caminin ve minarenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-mosque/aerial-town.jpg",
+      "alt": "Yenişehir'in kiremit çatılı evleri arasında cami ve minaresi, arkada dağlar",
+      "description": "Kent dokusu içinde cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-mosque/entrance-portal.jpg",
+      "alt": "İki beyaz sütun arasında kemerli taş çerçeveli ahşap çift kanatlı kapı, üstünde yazı levhası, iki yanda pencereler ve merdiven",
+      "description": "Giriş kapısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-mosque/narthex-interior.jpg",
+      "alt": "Ahşap tavanlı uzun bir iç bölüm, kemerli taş çerçeveli kapılar, kırmızı halı ve sonda ahşap merdiven",
+      "description": "Son cemaat mahalli içi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-mosque/mihrab-interior.jpg",
+      "alt": "Ahşap tavanlı geniş harim: ortada tavana yükselen gri mihrap nişi, sağda ahşap minber, iki sıra pencere ve kırmızı halı",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-mosque/prayer-hall-gallery.jpg",
+      "alt": "Harim girişinin üstünde ahşap korkuluklu mahfil, altında ahşap kapı ve iki pencere",
+      "description": "Hanımlar mahfili",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-mosque/aerial-top.jpg",
+      "alt": "Caminin tepeden görünümü: kiremit kaplı kırma çatı, köşede minare şerefesi ve çevredeki avlu",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/yenisehir-orhan-gazi-mosque/exterior-minaret.jpg",
+      "x": 87,
+      "y": 30,
+      "title": "Minare",
+      "text": "Kuzeybatı köşedeki tek şerefeli minarenin kaidesinden yukarısı 1977'de özgün formuna sadık kalınarak yenilenmiştir. Silindirik gövde tamamen tuğladandır; şerefe altında çini bilezik ve panolar vardır.",
+      "sourceId": "inv-p702"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/yenisehir-orhan-gazi-mosque/entrance-portal.jpg",
+      "x": 47,
+      "y": 17,
+      "title": "Giriş kapısı yazısı",
+      "text": "Giriş kapısının üzerinde sülüs hatla \"Gazi Cennetmekân Sultan Orhan Han Ulu Camii\" ifadesi yazılıdır.",
+      "sourceId": "inv-p699"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/yenisehir-orhan-gazi-mosque/mihrab-interior.jpg",
+      "x": 49,
+      "y": 42,
+      "title": "Mihrap",
+      "text": "Mihrap, tavana kadar yükselen dikdörtgen bir alçı niştir. Sekiz kademeli ve üç sıra mukarnaslı düzenlemesiyle, gri ve beyaz tonlarda sıvanmış, genel olarak sade bir mihraptır.",
+      "sourceId": "inv-p702"
+    },
+    {
+      "id": "gallery",
+      "image": "/images/yenisehir-orhan-gazi-mosque/prayer-hall-gallery.jpg",
+      "x": 50,
+      "y": 16,
+      "title": "Hanımlar mahfili",
+      "text": "Hanımlar mahfili harim girişinin üst kısmında yer alır. Minber ve kürsü ahşaptandır.",
+      "sourceId": "inv-p702"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami halk arasında hangi adla anılır?",
+      "options": [
+        "Yeşil Camii",
+        "Ulucami",
+        "Çarşı Camii",
+        "İmaret Camii"
+      ],
+      "correct": 1,
+      "description": "Cuma ve bayram namazlarının uzun yıllar bu camide kılınması \"Ulucami\" adını kalıcı hâle getirmiştir.",
+      "sourceId": "inv-p699"
+    },
+    {
+      "question": "1923 yılında camiye ne olmuştur?",
+      "options": [
+        "Minaresi hariç tümüyle yıkılıp temelleri üzerine yeniden inşa edilmiştir",
+        "Müzeye dönüştürülmüştür",
+        "Yalnız minaresi yıkılmıştır",
+        "Yeni bir avluya taşınmıştır"
+      ],
+      "correct": 0,
+      "description": "Yapı 1923'te minaresi hariç tümüyle yıkılmış ve temelleri üzerine yeniden inşa edilmiştir.",
+      "sourceId": "inv-p699"
+    },
+    {
+      "question": "Minarenin kaidesinden yukarısı hangi yıl yenilenmiştir?",
+      "options": [
+        "1882",
+        "1923",
+        "1977",
+        "2020"
+      ],
+      "correct": 2,
+      "description": "Minarenin kaidesinden yukarısı 1977'de özgün formuna sadık kalınarak yenilenmiştir.",
+      "sourceId": "inv-p702"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p699",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Orhan Gazi Camii (Ulucami)\"",
+      "page": "699"
+    },
+    {
+      "id": "inv-p700",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Orhan Gazi Camii (Ulucami)\"",
+      "page": "700"
+    },
+    {
+      "id": "inv-p701",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Orhan Gazi Camii (Ulucami)\"",
+      "page": "701"
+    },
+    {
+      "id": "inv-p702",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Orhan Gazi Camii (Ulucami)\"",
+      "page": "702"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

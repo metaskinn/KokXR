@@ -1,0 +1,137 @@
+{
+  "id": "orhangazi-gurle-village-bath",
+  "name": "Gürle Köyü Hamamı",
+  "city": "Bursa",
+  "district": "Orhangazi",
+  "period": "XIV. yüzyıl · Orhan Gazi dönemi",
+  "endowment": "Orhan Gazi tarafından yaptırılmıştır (Gürle, Orhan Gazi ve I. Murad'ın vakıfları arasındadır)",
+  "summary": "Bölgenin fethinden sonra XIV. yüzyılda Orhan Gazi'nin yaptırdığı, 1954'e kadar hamam olarak kullanılan kubbeli köy hamamı.",
+  "history": "Orhangazi ilçesi Gürle Mahallesi'ndedir. Yapının bölgenin fethinden sonra XIV. yüzyılda Orhan Gazi tarafından inşa ettirildiği bilinmektedir. Gürle hem Orhan Gazi'nin hem de I. Murad Hudâvendigâr'ın vakıfları arasında yer alır; bazı kaynaklar aynı dönemlerde bölgede hamam dışında cami, han ve tekke bulunduğunu kaydeder. Yapı 1954'e kadar hamam olarak kullanılmış, sonra demir deposuna dönüşmüştür.\n\nHamam kubbeli soğukluk ve sıcaklık bölümlerinden oluşur ve toplam dört yan mekân içerir. Kare planlı soğukluk, üçgenlerle geçilen bir kubbeyle örtülüdür. Sıcaklık bölümü kare planlıdır, pandantif geçişli kubbeyle örtülüdür ve eyvanlarla genişletilmiştir; kuzey eyvanın ortasında su deposuna bakan bir açıklık vardır. Mekânın ortasında sekizgen mermer bir göbek taşı bulunur.\n\nKuzey cephede, su deposu hizasında yuvarlak kemerli bir külhan nişi vardır. Soğukluk kubbesi dışta yuvarlağa yakın çokgen formdadır, sıcaklık kubbesi ise sekizgen bir kasnağa oturur. Duvarlar içten sıvalı, cepheler moloz taş, tuğla ve bol harçla örülmüştür; zemin mermer levhalarla kaplıdır.\n\nHamam 2006-2009 yılları arasında Vakıflar Bursa Bölge Müdürlüğü tarafından kapsamlı bir restorasyondan geçirilmiştir. Bugün turistik ziyaretlere açıktır, ancak hamam olarak işletilmemektedir.",
+  "verification": "verified",
+  "coverImage": "/images/orhangazi-gurle-village-bath/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/orhangazi-gurle-village-bath/aerial.jpg",
+      "alt": "Havadan görünüm: köy evleri ve ağaçlar arasında kiremit kaplı kubbeleri olan taş hamam yapısı, arkada ova ve göl",
+      "description": "Hamamın kubbeleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/orhangazi-gurle-village-bath/exterior.jpg",
+      "alt": "Taş avluda moloz taş duvarlı hamam yapısı, üstte kubbeler, önünde büyük bir çınar ağacı",
+      "description": "Avludan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/orhangazi-gurle-village-bath/interior-hall.jpg",
+      "alt": "Mermer kaplı iç mekân: ortada mermer havuz, iki yanda ahşap sedirler, duvarlarda halı tablolar, karşıda kemerli geçit",
+      "description": "İç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/orhangazi-gurle-village-bath/central-platform.jpg",
+      "alt": "Beyaz sıvalı kubbeli mekânın ortasında üzerine örtü serilmiş sekizgen mermer göbek taşı, arkada kemerli kapı",
+      "description": "Göbek taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/orhangazi-gurle-village-bath/marble-basin.jpg",
+      "alt": "Mermer duvar önünde pirinç musluklu taş kurna, yerde nalın ve pirinç hamam tası",
+      "description": "Kurna, nalın ve tas",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/orhangazi-gurle-village-bath/aerial.jpg",
+      "x": 48,
+      "y": 57,
+      "title": "Kubbeler",
+      "text": "Soğukluk bölümünün kubbesi dışta yuvarlağa yakın çokgen formdadır; sıcaklık kubbesi ise sekizgen bir kasnağa oturur.",
+      "sourceId": "inv-p662"
+    },
+    {
+      "id": "navel-stone",
+      "image": "/images/orhangazi-gurle-village-bath/central-platform.jpg",
+      "x": 52,
+      "y": 80,
+      "title": "Göbek taşı",
+      "text": "Sıcaklık bölümünün ortasında sekizgen formda mermer bir göbek taşı bulunur. Zemin mermer levhalarla kaplıdır.",
+      "sourceId": "inv-p663"
+    },
+    {
+      "id": "facade",
+      "image": "/images/orhangazi-gurle-village-bath/exterior.jpg",
+      "x": 32,
+      "y": 55,
+      "title": "Cepheler",
+      "text": "Yapının duvarları içten sıvalı, cepheleri ise moloz taş, tuğla ve bol harç kullanılarak inşa edilmiştir.",
+      "sourceId": "inv-p663"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gürle Köyü Hamamı'nı kim yaptırmıştır?",
+      "options": [
+        "I. Murad",
+        "Orhan Gazi",
+        "Yıldırım Bayezid",
+        "II. Murad"
+      ],
+      "correct": 1,
+      "description": "Yapının bölgenin fethinden sonra XIV. yüzyılda Orhan Gazi tarafından yaptırıldığı bilinmektedir.",
+      "sourceId": "inv-p661"
+    },
+    {
+      "question": "Hamam 1954'ten sonra ne olarak kullanılmıştır?",
+      "options": [
+        "Okul",
+        "Cami",
+        "Demir deposu",
+        "Müze"
+      ],
+      "correct": 2,
+      "description": "Yapı 1954'e kadar hamam olarak kullanılmış, sonra demir deposu olmuştur.",
+      "sourceId": "inv-p661"
+    },
+    {
+      "question": "Sıcaklık bölümünün ortasında ne bulunur?",
+      "options": [
+        "Sekizgen mermer göbek taşı",
+        "Şadırvan",
+        "Su deposu",
+        "Külhan"
+      ],
+      "correct": 0,
+      "description": "Sıcaklık bölümünün ortasında sekizgen formda mermer bir göbek taşı vardır.",
+      "sourceId": "inv-p663"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p661",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Orhangazi, \"Gürle Köyü Hamamı\"",
+      "page": "661"
+    },
+    {
+      "id": "inv-p662",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Orhangazi, \"Gürle Köyü Hamamı\"",
+      "page": "662"
+    },
+    {
+      "id": "inv-p663",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Orhangazi, \"Gürle Köyü Hamamı\"",
+      "page": "663"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

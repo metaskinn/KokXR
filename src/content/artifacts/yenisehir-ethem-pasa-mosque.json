@@ -1,0 +1,146 @@
+{
+  "id": "yenisehir-ethem-pasa-mosque",
+  "name": "Ethem Paşa Camii",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Geç Osmanlı · banisi Ethem Paşa (ö. 1922)",
+  "endowment": "Ethem Paşa",
+  "summary": "Yenişehir'in büyük toprak sahibi ve belediye başkanı Ethem Paşa'nın yaptırdığı, kırma çatılı ve ahşap direkli açık son cemaat yerli cami.",
+  "history": "Yenişehir'in Tabakhane Mahallesi'nde, Ethem Paşa Sokak No: 19'da bulunan yapı, Yenişehir'in önde gelen isimlerinden Ethem Paşa tarafından yaptırılmıştır. Ethem Paşa, geniş çiftlik ve arazileriyle bölgenin en büyük toprak sahiplerinden biri olarak tanınır; arazileri üzerinde bugün beş ila altı köyün kurulu olduğu ifade edilir.\n\nII. Abdülhamid'e yakınlığıyla bilinen Ethem Bey'e 19 Mayıs 1897'de \"Istabl-ı Âmire\" Müdürlüğü payesi verilmiş, 1900'de \"Mîrü'l-ümerâ\" rütbesiyle \"Alaylı Paşalar\" sınıfına alınmış, 8 Ocak 1904'te \"Mîr-i mîrân\" unvanına yükseltilmiştir. 16 Kasım 1902'den 1908'e kadar Yenişehir Belediye Başkanlığı yapmıştır. II. Meşrutiyet'in ilanından sonra hakkında açılan soruşturmalar nedeniyle Midilli'ye sürgün edilmiş, affedilince Yenişehir'e dönmüştür. Millî Mücadele döneminde çeşitli suçlamalarla zor günler geçirmiş ve 1922'de vefat etmiştir.\n\nCami kuzey-güney doğrultusunda 13 × 20 m ölçülerinde dikdörtgen planlıdır. Beden duvarları kâgir ve sıvalıdır; üstü kiremit kaplı kırma çatıyla örtülüdür. Ahşap direklere oturan, kiremit kaplı son cemaat yeri açıktır. Kuzey cephesindeki ahşap çift kanatlı kapı mermer sövelidir. Ahşap tavanlı harim, tüm cephelerdeki yuvarlak kemerli pencerelerle aydınlanır. Mihrap beyaz sıvalı sade bir niştir. Batı köşedeki nispeten kısa minarenin şerefe altı dört sıra testere dişi tuğla kirpi saçakla hareketlendirilmiş, konik külahı kurşunla kaplanmıştır. 1999 depreminde hasar gören cami yaklaşık on beş yıl ibadete kapalı kalmış, 2015'te Vakıflar Genel Müdürlüğü'nün restorasyonunun ardından yeniden açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-ethem-pasa-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-ethem-pasa-mosque/exterior.jpg",
+      "alt": "Caminin dışı: kiremit kırma çatı, ahşap direkli açık son cemaat yeri, köşede tuğla gövdeli kurşun külahlı minare, arkada ova ve tepeler",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-ethem-pasa-mosque/prayer-hall.jpg",
+      "alt": "Harim: ahşap kaplı tavan, yuvarlak kemerli pencereler, karşıda beyaz sade mihrap nişi ve ahşap minber, kırmızı halı",
+      "description": "Harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-ethem-pasa-mosque/minaret.jpg",
+      "alt": "Tuğla gövdeli minare: şerefe altında testere dişi tuğla sıraları, beyaz bilezikler ve kurşun kaplı konik külah",
+      "description": "Minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-ethem-pasa-mosque/north-facade.jpg",
+      "alt": "Kuzey cephe: ahşap direkli son cemaat yerinin gerisinde ahşap kapı ve iki yanında yuvarlak kemerli pencereler",
+      "description": "Kuzey cephe ve giriş",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-ethem-pasa-mosque/roof-from-top.jpg",
+      "alt": "Tepeden görünüm: kiremit kaplı kırma çatı, yanında minarenin külahı ve çevredeki yapıların çatıları",
+      "description": "Çatı, tepeden",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/yenisehir-ethem-pasa-mosque/minaret.jpg",
+      "x": 49,
+      "y": 46,
+      "title": "Minare",
+      "text": "Batı köşedeki minare kare planlı kaideye oturan silindirik gövdelidir ve nispeten kısadır. Şerefe altı dört sıra testere dişi tuğla kirpi saçakla hareketlendirilmiş, konik külahı kurşunla kaplanmıştır.",
+      "sourceId": "inv-p691"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/yenisehir-ethem-pasa-mosque/exterior.jpg",
+      "x": 37,
+      "y": 69,
+      "title": "Açık son cemaat yeri",
+      "text": "Ahşap direklere oturtulmuş, üzeri kiremitle kaplı son cemaat yeri açıktır.",
+      "sourceId": "inv-p690"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/yenisehir-ethem-pasa-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Sade mihrap",
+      "text": "Mihrap beyaz sıvalı sade bir niştir; çerçevesinde yazı veya süsleme yoktur. Yakın dönemde yenilenen minber ve kürsü ahşaptır.",
+      "sourceId": "inv-p691"
+    },
+    {
+      "id": "door",
+      "image": "/images/yenisehir-ethem-pasa-mosque/north-facade.jpg",
+      "x": 49,
+      "y": 77,
+      "title": "Giriş kapısı",
+      "text": "Kuzey cephesindeki ahşap çift kanatlı giriş kapısı mermer sövelidir; iki yanında yuvarlak kemerli ikişer pencere vardır.",
+      "sourceId": "inv-p691"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ethem Paşa Yenişehir'de hangi görevi yürütmüştür?",
+      "options": [
+        "Kadılık",
+        "Belediye Başkanlığı",
+        "Voyvodalık",
+        "Sancak beyliği"
+      ],
+      "correct": 1,
+      "description": "Ethem Paşa 16 Kasım 1902'den 1908'e kadar Yenişehir Belediye Başkanlığı yapmıştır.",
+      "sourceId": "inv-p690"
+    },
+    {
+      "question": "II. Meşrutiyet'in ilanından sonra Ethem Paşa nereye sürgün edilmiştir?",
+      "options": [
+        "Rodos'a",
+        "Kıbrıs'a",
+        "Midilli'ye",
+        "Sakız'a"
+      ],
+      "correct": 2,
+      "description": "Hakkında açılan soruşturmalar nedeniyle Midilli'ye sürgün edilmiş, affedilince Yenişehir'e dönmüştür.",
+      "sourceId": "inv-p690"
+    },
+    {
+      "question": "1999 depreminde hasar gören cami yeniden ne zaman ibadete açılmıştır?",
+      "options": [
+        "2015'te",
+        "2001'de",
+        "2008'de",
+        "2020'de"
+      ],
+      "correct": 0,
+      "description": "Cami yaklaşık on beş yıl kapalı kaldıktan sonra 2015'te Vakıflar Genel Müdürlüğü'nün restorasyonuyla yeniden açılmıştır.",
+      "sourceId": "inv-p691"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p689",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Ethem Paşa Camii\"",
+      "page": "689"
+    },
+    {
+      "id": "inv-p690",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Ethem Paşa Camii\"",
+      "page": "690"
+    },
+    {
+      "id": "inv-p691",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Ethem Paşa Camii\"",
+      "page": "691"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

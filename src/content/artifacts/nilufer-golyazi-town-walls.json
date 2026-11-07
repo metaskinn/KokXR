@@ -1,0 +1,163 @@
+{
+  "id": "nilufer-golyazi-town-walls",
+  "name": "Gölyazı Sur Duvarları",
+  "city": "Bursa",
+  "district": "Nilüfer",
+  "period": "Antik ve Bizans dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Apollonia ad Rhyndacum antik kentini çevreleyen, antik ve Bizans dönemi tekniklerini yansıtan surlar.",
+  "history": "Gölyazı, \"Apollonia ad Rhyndacum\" adlı Antik Yunan kenti üzerine kurulmuştur. Apollon'a adanan kent, aynı adı taşıyan diğer Apollonia'lardan ayırt edilmek için \"Rhyndacum\" ekiyle anılmıştır; bu ad \"Rhyndakos kenarındaki Apollonia\" anlamına gelir. Rhyndakos, bugün Uluabat Gölü havzasındaki Mustafakemalpaşa Çayı'dır. Kentin tarihi MÖ V. yüzyıla uzanır. Nekropol alanı karaya yakın Zambak Tepe'dedir; sivil yerleşim ise kış aylarında ada görünümü alan diğer tepededir ve modern Gölyazı bu alanın üzerine kurulmuştur.\n\nUluabat Gölü üzerindeki stratejik konumu kente ticari ve askerî önem kazandırmış, kent güçlü surlarla çevrelenmiştir. Göl taşkınlarını engellemek amacıyla da yapılan surlar hem antik hem de Bizans dönemi yapım tekniklerini yansıtır. Büyük taş bloklarla inşa edilen surlar zaman içinde çeşitli onarımlar geçirmiş; taşlar bölgedeki yerel ocaklardan getirilmiştir. Kara ile bağlantı sağlayan geçit noktalarında daha kalın ve sağlam sur yapıları tercih edilmiştir.\n\nHalk arasında \"Taş Kapı\" denen dış kale, daha önce yapıldığı düşünülen stadion oturma sıralarının taşları kullanılarak Bizans döneminde yaklaşık 10 × 6 m boyutlarında bir kuleye dönüştürülmüştür. İç kale ise bugün beton bir köprüyle karaya bağlanan adayı çevreler; yaklaşık 800 m uzunluğundaki iç kale surları dikdörtgen planlı burçlarla desteklenmiştir. Kuzeydeki burç günümüze sağlam ulaşmıştır; bu burçta Roma dönemine ait mimari malzemeler kullanılmış ve İmparator Hadrianus adına yazılmış bir kitabe yerleştirilmiştir.\n\nBizans döneminde surlar, başta Arap akınları olmak üzere çeşitli tehditlere karşı savunmada önemli rol oynamıştır. Osmanlı döneminde Gölyazı tarım ve balıkçılıkla geçinen bir köye dönüşmüş, surlar askerî işlevini yitirmiştir. Bugün surların büyük bölümü yıkılmış ya da ortadan kalkmıştır; özellikle göl kıyısında ve tarihî köy sokaklarında kalıntılar görülebilir.",
+  "verification": "verified",
+  "coverImage": "/images/nilufer-golyazi-town-walls/aerial-island.jpg",
+  "images": [
+    {
+      "file": "/images/nilufer-golyazi-town-walls/aerial-island.jpg",
+      "alt": "Havadan görünüm: göl içinde evlerle kaplı oval ada ve onu karaya bağlayan yol, arkada kıyı yerleşimi",
+      "description": "Ada üzerindeki Gölyazı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-town-walls/island-bridge.jpg",
+      "alt": "Gölün karşı kıyısından ada yerleşimi, kubbeli bir cami, adayı karaya bağlayan köprü ve arkada tepeler",
+      "description": "Ada ve köprü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-town-walls/tower-ruin.jpg",
+      "alt": "Büyük kesme taş bloklarla örülmüş, yer yer yıkılmış kalın duvar kalıntısı ve kemerli açıklık; çevrede bitki örtüsü ve evler",
+      "description": "Sur kalıntısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-town-walls/pier-ruin.jpg",
+      "alt": "Bitkiler arasında yükselen, iri taş bloklardan oluşan yıkık bir duvar ve kemer kalıntısı",
+      "description": "Yıkık duvar ve kemer",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-town-walls/arch-ruin.jpg",
+      "alt": "Patika kenarında kemerli bir yapı kalıntısı ve önünde iri taşlardan oluşan alçak duvar",
+      "description": "Kemer kalıntısı ve duvar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-town-walls/stone-blocks.jpg",
+      "alt": "Büyük, düzensiz kesilmiş taş bloklardan örülmüş duvar yüzeyi ve önünde yeşillik",
+      "description": "Büyük taş bloklu duvar örgüsü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-town-walls/carved-blocks.jpg",
+      "alt": "Sarmaşık altında, üzerinde kabartma süslemeler bulunan taş bloklarla örülmüş duvar",
+      "description": "Süslemeli taş bloklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-town-walls/lake-view.jpg",
+      "alt": "Göl üzerinden uzaktan görünen Gölyazı adası ve kıyı yerleşimi",
+      "description": "Gölden genel görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "island",
+      "image": "/images/nilufer-golyazi-town-walls/aerial-island.jpg",
+      "x": 40,
+      "y": 60,
+      "title": "Ada üzerindeki yerleşim",
+      "text": "Antik kentin sivil yerleşimi kış aylarında ada görünümü alan bir tepe üzerindedir; modern Gölyazı bu alanın üzerine kurulmuştur.",
+      "sourceId": "inv-p643"
+    },
+    {
+      "id": "bridge",
+      "image": "/images/nilufer-golyazi-town-walls/island-bridge.jpg",
+      "x": 67,
+      "y": 64,
+      "title": "İç kale",
+      "text": "İç kale, bugün beton bir köprüyle karaya bağlanan adayı çevreler. Yaklaşık 800 m uzunluğundaki iç kale surları dikdörtgen planlı burçlarla desteklenmiştir.",
+      "sourceId": "inv-p646"
+    },
+    {
+      "id": "blocks",
+      "image": "/images/nilufer-golyazi-town-walls/stone-blocks.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Büyük taş bloklar",
+      "text": "Surlar büyük taş bloklarla inşa edilmiş ve zaman içinde çeşitli onarımlar geçirmiştir. Taşlar bölgedeki yerel ocaklardan getirilmiştir.",
+      "sourceId": "inv-p644"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gölyazı hangi antik kentin üzerine kurulmuştur?",
+      "options": [
+        "Prusa ad Olympum",
+        "Apollonia ad Rhyndacum",
+        "Nikaia",
+        "Kios"
+      ],
+      "correct": 1,
+      "description": "Gölyazı, \"Apollonia ad Rhyndacum\" adlı Antik Yunan kenti üzerine kurulmuştur.",
+      "sourceId": "inv-p643"
+    },
+    {
+      "question": "Surlar savunmanın yanı sıra hangi amaçla da yapılmıştır?",
+      "options": [
+        "Göl taşkınlarını engellemek",
+        "Su kemeri taşımak",
+        "Liman oluşturmak",
+        "Rüzgârı kesmek"
+      ],
+      "correct": 0,
+      "description": "Surlar aynı zamanda göl taşkınlarını engellemek amacıyla da inşa edilmiştir.",
+      "sourceId": "inv-p644"
+    },
+    {
+      "question": "Halk arasında \"Taş Kapı\" denen dış kalede hangi taşlar kullanılmıştır?",
+      "options": [
+        "Tapınak sütunları",
+        "Stadion oturma sıralarının taşları",
+        "Mezar taşları",
+        "Köprü ayakları"
+      ],
+      "correct": 1,
+      "description": "Taş Kapı, stadion oturma sıralarının taşları kullanılarak Bizans döneminde bir kuleye dönüştürülmüştür.",
+      "sourceId": "inv-p646"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p643",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Nilüfer, \"Gölyazı Sur Duvarları\"",
+      "page": "643"
+    },
+    {
+      "id": "inv-p644",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Nilüfer, \"Gölyazı Sur Duvarları\"",
+      "page": "644"
+    },
+    {
+      "id": "inv-p646",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Nilüfer, \"Gölyazı Sur Duvarları\"",
+      "page": "646"
+    },
+    {
+      "id": "inv-p647",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Nilüfer, \"Gölyazı Sur Duvarları\"",
+      "page": "647"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

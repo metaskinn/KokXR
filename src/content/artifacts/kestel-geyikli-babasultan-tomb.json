@@ -1,0 +1,118 @@
+{
+  "id": "kestel-geyikli-babasultan-tomb",
+  "name": "Geyikli Babasultan Türbesi",
+  "city": "Bursa",
+  "district": "Kestel",
+  "period": "Erken Osmanlı · XIV. yüzyıl",
+  "endowment": "Orhan Gazi",
+  "summary": "Geyikli Baba ile Balım Sultan'ın ahşap sandukalarının bulunduğu, sandukaların üzerine geyik boynuzları asılmış sade erken Osmanlı türbesi.",
+  "history": "Türbe, Kestel'in Babasultan Mahallesi'ndeki külliyenin içinde yer alır ve Geyikli Baba'nın vefatının ardından Orhan Gazi tarafından inşa ettirilmiştir. Geyikli Baba'nın ölüm tarihi kesin olarak bilinmemektedir. Caminin doğu duvarına bitişik ve 30 derecelik açıyla verev biçimde inşa edilen türbenin bu konumu, yapının camiye sonradan eklendiği izlenimini verir. Türbenin cami ile aynı mimari özellikleri taşıması, iki yapının aynı dönemde inşa edildiğini düşündürür. Türbe bugün ziyarete açıktır.\n\nİçeride iki ahşap sanduka vardır: biri Geyikli Baba'ya, diğeri Balım Sultan'a aittir. Her iki sandukanın üzerine Geyikli Baba'ya atfen geyik boynuzları asılmıştır.\n\nTürbe, giriş mekânı ve ana türbe bölümünden oluşur. 5 × 5 m ölçülerindeki kare planlı giriş bölümü aynalı tonozla örtülüdür ve sivri bir kemerle asıl türbe mekânına açılır. Ana mekânın kubbesi sekizgen bir kasnağa oturur; geçiş öğeleri prizmatik üçgenlerdir. Kasnağın güney ve doğu yüzlerinde sivri kemerli, alçı revzenli birer pencere bulunur. Kuzey cephede giriş kapısı, batı cephede dikdörtgen bir pencere, güney ve doğu cephelerde üçer pencere açıklığı vardır.\n\nTürbe, erken Osmanlı mimarisine özgü sade ve mütevazı üslubun temsilcilerindendir; mimari karakteri Geyikli Baba'nın zahidane yaşam anlayışıyla örtüşür.",
+  "verification": "verified",
+  "coverImage": "/images/kestel-geyikli-babasultan-tomb/sarcophagi-antlers.jpg",
+  "images": [
+    {
+      "file": "/images/kestel-geyikli-babasultan-tomb/sarcophagi-antlers.jpg",
+      "alt": "Türbe içinde yeşil örtülü sandukalar, üstlerinde ahşap kirişe asılmış çok sayıda geyik boynuzu; beyaz duvarlar ve küçük kemerli pencereler",
+      "description": "Sandukalar ve geyik boynuzları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-geyikli-babasultan-tomb/antlers-detail.jpg",
+      "alt": "Ahşap kirişe asılmış geyik boynuzlarının yakın görünümü",
+      "description": "Geyik boynuzları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-geyikli-babasultan-tomb/complex-view.jpg",
+      "alt": "Ağaçlar arasında kubbeli yapılar ve minare; önde taş istinat duvarları ve merdivenler, arkada dağlar",
+      "description": "Külliyenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "antlers",
+      "image": "/images/kestel-geyikli-babasultan-tomb/sarcophagi-antlers.jpg",
+      "x": 58,
+      "y": 20,
+      "title": "Geyik boynuzları",
+      "text": "Her iki sandukanın üzerine, Geyikli Baba'ya atfen geyik boynuzları asılmıştır.",
+      "sourceId": "inv-p561"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/kestel-geyikli-babasultan-tomb/sarcophagi-antlers.jpg",
+      "x": 52,
+      "y": 56,
+      "title": "Sandukalar",
+      "text": "Türbe içerisinde iki ahşap sanduka bulunur. Bunlardan biri Geyikli Baba'ya, diğeri Balım Sultan'a aittir.",
+      "sourceId": "inv-p561"
+    },
+    {
+      "id": "position",
+      "image": "/images/kestel-geyikli-babasultan-tomb/complex-view.jpg",
+      "x": 40,
+      "y": 50,
+      "title": "Camiye bitişik konum",
+      "text": "Türbe, caminin doğu duvarına bitişik olarak ve 30 derecelik bir açıyla verev biçimde inşa edilmiştir. Caminin güneydoğu köşesinde, türbe ile cami arasındaki boşluğa bir minare yerleştirilmiştir.",
+      "sourceId": "inv-p560"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitaba göre Geyikli Babasultan Türbesi'ni kim inşa ettirmiştir?",
+      "options": [
+        "Osman Gazi",
+        "Turgut Alp",
+        "Orhan Gazi",
+        "I. Murad"
+      ],
+      "correct": 2,
+      "description": "Türbe, Geyikli Baba'nın vefatının ardından Orhan Gazi tarafından inşa ettirilmiştir.",
+      "sourceId": "inv-p560"
+    },
+    {
+      "question": "Türbedeki iki ahşap sanduka kimlere aittir?",
+      "options": [
+        "Geyikli Baba ve Balım Sultan",
+        "Abdal Mûsâ ve Abdal Mehmed",
+        "Geyikli Baba ve Turgut Alp",
+        "Sâmit Dede ve Çiçek Dede"
+      ],
+      "correct": 0,
+      "description": "Sandukalardan biri Geyikli Baba'ya, diğeri Balım Sultan'a aittir.",
+      "sourceId": "inv-p561"
+    },
+    {
+      "question": "Sandukaların üzerine Geyikli Baba'ya atfen ne asılmıştır?",
+      "options": [
+        "Kılıç",
+        "Kandil",
+        "Levha",
+        "Geyik boynuzları"
+      ],
+      "correct": 3,
+      "description": "Her iki sandukanın üzerine Geyikli Baba'ya atfen geyik boynuzları asılmıştır.",
+      "sourceId": "inv-p561"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p560",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Kestel, \"Geyikli Babasultan Türbesi\"",
+      "page": "560"
+    },
+    {
+      "id": "inv-p561",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Kestel, \"Geyikli Babasultan Türbesi\"",
+      "page": "561"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

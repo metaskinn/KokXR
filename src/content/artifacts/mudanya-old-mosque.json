@@ -1,0 +1,134 @@
+{
+  "id": "mudanya-old-mosque",
+  "name": "Eski (Tekke-i Atik, Cami-i Atik) Camii",
+  "city": "Bursa",
+  "district": "Mudanya",
+  "period": "Osmanlı · Tahminen XV. yüzyıl ortası",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "XV. yüzyıl ortalarında inşa edildiği tahmin edilen, çeşitli kaynaklarda Eski Cami, Câmi-i Atîk ve Tekke-i Atik adlarıyla anılan kırma çatılı cami.",
+  "history": "Mudanya'nın Hasanbey Mahallesi'nde, Halit Paşa Caddesi ile Şadırvan Sokak'ın kesişiminde, No: 5'te yer alır. XV. yüzyıl ortalarında inşa edildiği tahmin edilen yapı, çeşitli kaynaklarda \"Hacı Ali Zâbelî-i Mağribî\", \"Eski Cami\", \"Câmi-i Atîk\" ve \"Tekke-i Atik\" adlarıyla anılır.\n\nBatı cephesinde çeşme veya şadırvana ait olduğu düşünülen iki kitabe bulunur. 17 × 35 cm boyutlarındaki ilki \"Müezzin Molla Hasan ruhuna Fâtiha, H. 1174 / M. 1760-61\", 44 × 65 cm ölçülerindeki ikincisi \"Kaymakam Hasan Fehmi Bey'in hayratıdır, H. 1311 / M. 1893-94\" ifadesini taşır.\n\nKuzey-güney doğrultusunda dikdörtgen planlı caminin üzeri kiremit kaplı kırma çatıyla örtülüdür. 12,00 × 12,30 m ölçülerindeki harim düz ahşap tavanlıdır ve tüm pencereleri yuvarlak kemerlidir. Mihrap yeni çinilerle kaplanmış, minber yeni ve ahşaptır; caminin kürsüsü yoktur. Harime, 10 × 6 m ölçülerindeki son cemaat mahallinin ortasındaki kapıdan girilir. Doğuda imam odası, batıda sonradan eklenmiş 7 × 10 m'lik bir hanımlar bölümü vardır. Doğu ve batı cepheleri zamanla yapılan özel mülkiyet yapılarıyla kapanmıştır. Kuzeydoğu köşesinde kare kaideli, beyaz sıvalı, silindirik gövdeli ve tek şerefeli kısa bir minare bulunur.\n\nCami 1760, 1761, 1893-1894, 1972, 1997 ve 2003 yıllarında onarım görmüş, son düzenlemelerle avlusuna sekizgen ahşap çatılı, fıskiyeli bir şadırvan eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/mudanya-old-mosque/exterior-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/mudanya-old-mosque/exterior-minaret.jpg",
+      "alt": "Kiremit kaplı kırma çatılı cami, arkada beyaz sıvalı kısa minare, önde büyük bir ağaç ve arkada deniz",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-old-mosque/aerial-top.jpg",
+      "alt": "Tepeden görünüm: kiremit kaplı kırma çatı, minarenin şerefesi ve yanındaki büyük ağaç, çevresindeki yapılar",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-old-mosque/prayer-hall.jpg",
+      "alt": "Düz ahşap tavanlı harim: ortada çini kaplı mihrap, sağda ahşap minber, yuvarlak kemerli pencereler",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-old-mosque/west-inscriptions.jpg",
+      "alt": "Beyaz duvar üzerinde siyah çerçeveli iki Arap harfli kitabe; üstte küçük dikey, altta geniş kitabe",
+      "description": "Batı cephesindeki kitabeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/mudanya-old-mosque/exterior-minaret.jpg",
+      "x": 50,
+      "y": 34,
+      "title": "Minare",
+      "text": "Kuzeydoğu köşesinde kare kaide üzerine oturan, beyaz sıvalı, silindirik gövdeli ve tek şerefeli kısa bir minare vardır.",
+      "sourceId": "inv-p582"
+    },
+    {
+      "id": "roof",
+      "image": "/images/mudanya-old-mosque/exterior-minaret.jpg",
+      "x": 66,
+      "y": 53,
+      "title": "Kırma çatı",
+      "text": "Kuzey-güney doğrultusunda dikdörtgen planlı caminin üzeri kırma çatılı ve kiremitle örtülüdür.",
+      "sourceId": "inv-p582"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/mudanya-old-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 45,
+      "title": "Mihrap ve minber",
+      "text": "Mihrap yeni çinilerle kaplanmıştır. Kürsüsü bulunmayan caminin minberi yeni ve ahşaptır.",
+      "sourceId": "inv-p582"
+    },
+    {
+      "id": "inscriptions",
+      "image": "/images/mudanya-old-mosque/west-inscriptions.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Batı cephesindeki kitabeler",
+      "text": "Çeşme veya şadırvana ait olduğu düşünülen iki kitabeden biri Müezzin Molla Hasan'ın ruhuna (H. 1174 / M. 1760-61), diğeri Kaymakam Hasan Fehmi Bey'in hayratı olarak (H. 1311 / M. 1893-94) yazılmıştır.",
+      "sourceId": "inv-p581"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin inşasının hangi döneme ait olduğu tahmin edilir?",
+      "options": [
+        "XV. yüzyıl ortaları",
+        "XVII. yüzyıl sonları",
+        "XIX. yüzyıl başları",
+        "XX. yüzyıl ortaları"
+      ],
+      "correct": 0,
+      "description": "Yapının XV. yüzyıl ortalarında inşa edildiği tahmin edilmektedir.",
+      "sourceId": "inv-p581"
+    },
+    {
+      "question": "Batı cephesindeki büyük kitabe kimin hayratı olarak yazılmıştır?",
+      "options": [
+        "Kethüda Halil Ağa",
+        "Sinan Bey",
+        "Mehmet Ağa",
+        "Kaymakam Hasan Fehmi Bey"
+      ],
+      "correct": 3,
+      "description": "44 × 65 cm'lik kitabe \"Kaymakam Hasan Fehmi Bey'in hayratıdır, H. 1311 / M. 1893-94\" ifadesini taşır.",
+      "sourceId": "inv-p581"
+    },
+    {
+      "question": "Son düzenlemelerle caminin avlusuna ne eklenmiştir?",
+      "options": [
+        "Bir türbe",
+        "Sekizgen ahşap çatılı, fıskiyeli bir şadırvan",
+        "İkinci bir minare",
+        "Taş bir medrese"
+      ],
+      "correct": 1,
+      "description": "Son düzenlemelerle avluya sekizgen ahşap çatılı, fıskiyeli bir şadırvan eklenmiştir.",
+      "sourceId": "inv-p582"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p581",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Eski (Tekke-i Atik, Cami-i Atik) Camii\"",
+      "page": "581"
+    },
+    {
+      "id": "inv-p582",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Eski (Tekke-i Atik, Cami-i Atik) Camii\"",
+      "page": "582"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

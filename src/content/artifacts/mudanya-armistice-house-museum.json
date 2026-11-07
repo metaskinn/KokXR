@@ -1,0 +1,142 @@
+{
+  "id": "mudanya-armistice-house-museum",
+  "name": "Mudanya Mütareke Evi Müzesi",
+  "city": "Bursa",
+  "district": "Mudanya",
+  "period": "XIX. yüzyıl sonları · 1922 Mudanya Mütarekesi · 1937'den beri müze",
+  "endowment": "Kitapta belirtilmemiştir (yapıyı Rus tüccar Alexander Ganyanof yaptırmıştır)",
+  "summary": "3-11 Ekim 1922'deki Mudanya Mütarekesi görüşmelerine ev sahipliği yapan, XIX. yüzyıl sonlarında yapılmış ahşap yalı; 1937'den beri müze.",
+  "history": "Mudanya'da 12 Eylül Caddesi üzerindeki Mütareke Meydanı'nda yer alır. Türkiye'de tarihî olaylara tanıklık edip sonra müzeye dönüştürülen sivil mimari örneklerinden biridir.\n\nKurtuluş Savaşı'ndaki askerî zaferin ardından İtilaf Devletleri aracılığıyla barış talebinde bulunan Yunan hükûmeti, mütareke görüşmelerinin Mudanya'da yapılmasını kabul etmiştir. Müzakere binası olarak seçilen yapı, XIX. yüzyıl sonlarında Rus tüccar Alexander Ganyanof tarafından yaptırılmış ahşap bir yalıdır ve görüşmeler öncesinde onarılarak toplantılara uygun hâle getirilmiştir. 3-11 Ekim 1922'deki görüşmeler sonunda Mudanya Mütarekesi imzalanmıştır.\n\nUzun süre atıl kalan yapı, Mudanyalı hayırsever Mehmet Hayri İpar'ın girişimleriyle Mudanya Belediyesi tarafından müze olarak kullanılmak üzere onarılmış; kaybolan eşyaları yeniden temin edilmiş, çevresindeki yapılar satın alınıp yıktırılmış ve etrafı parmaklıklarla çevrilmiştir. Yapı 1937'de ziyarete açılmıştır. Hayri İpar, Mütareke Meydanı'ndaki İsmet Paşa Heykeli'ni ve meydan düzenlemesini de yaptırmıştır. 1959'da Kültür Bakanlığı Müzeler Genel Müdürlüğü'ne devredilen müze, bugün Kültür ve Turizm Bakanlığı'na bağlıdır.\n\nÇatı ve bodrum dışındaki 13 oda ve iki salon çağdaş müzecilik anlayışıyla düzenlenmiştir. Alt katta delegelerin odaları, İsmet Paşa'nın çalışma odası ve imza salonu bulunur; üst kat görüşmeler sırasında Türk heyetinin yaşam alanıydı. Müzede dönemin mobilyaları, avizeleri, tabloları, halıları ile mütareke ve savaş dönemlerine ait belgeler, gazeteler ve fotoğraflar sergilenir. Müze ev 1998, 2014 ve 2022'de yapılan çalışmalarla restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/mudanya-armistice-house-museum/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/mudanya-armistice-house-museum/exterior.jpg",
+      "alt": "Deniz kıyısında beyaz boyalı iki katlı ahşap köşk, cephesinde Türk bayrakları, çevresi beyaz parmaklıklarla çevrili",
+      "description": "Müze binasının genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-armistice-house-museum/museum-room.jpg",
+      "alt": "Dönem mobilyalarıyla döşenmiş oda: kareli koltuklar, yuvarlak masa, duvarda tablolar ve fotoğraflar, aynalı konsol ve vitrin",
+      "description": "Müze odası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-armistice-house-museum/staircase.jpg",
+      "alt": "Ahşap basamaklı, siyah tırabzanlı döner merdiven ve altında ahşap kapılar",
+      "description": "Döner merdiven",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-armistice-house-museum/study-room.jpg",
+      "alt": "Duvarda yağlı boya portre, ahşap çalışma masası, aynalı konsol ve halı",
+      "description": "Çalışma masalı oda",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-armistice-house-museum/salon.jpg",
+      "alt": "Çizgili kanepeler arasında harita serili bir masa, bordo perdeli pencereler ve duvarda tablo",
+      "description": "Salon",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "yali",
+      "image": "/images/mudanya-armistice-house-museum/exterior.jpg",
+      "x": 51,
+      "y": 45,
+      "title": "Ahşap yalı",
+      "text": "Müzakere binası olarak seçilen yapı, XIX. yüzyıl sonlarında Rus tüccar Alexander Ganyanof tarafından inşa ettirilmiş ahşap bir yalıdır.",
+      "sourceId": "inv-p601"
+    },
+    {
+      "id": "floors",
+      "image": "/images/mudanya-armistice-house-museum/staircase.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "İki katın düzeni",
+      "text": "Alt katta delegelerin odaları, İsmet Paşa'nın çalışma odası ve imza salonu yer alır; üst kat görüşmeler sırasında Türk heyetinin yaşam alanı olarak kullanılmıştır.",
+      "sourceId": "inv-p602"
+    },
+    {
+      "id": "exhibits",
+      "image": "/images/mudanya-armistice-house-museum/museum-room.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Sergilenenler",
+      "text": "Müzede dönemin özelliklerini yansıtan mobilyalar, avizeler, tablolar, halılar ile mütareke ve savaş dönemlerine ait belgeler, gazeteler ve fotoğraflar sergilenir.",
+      "sourceId": "inv-p602"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mudanya Mütarekesi görüşmeleri hangi tarihlerde yapılmıştır?",
+      "options": [
+        "3-11 Ekim 1922",
+        "30 Ekim 1918",
+        "24 Temmuz 1923",
+        "9 Eylül 1922"
+      ],
+      "correct": 0,
+      "description": "Görüşmeler 3-11 Ekim 1922 tarihlerinde gerçekleştirilmiştir.",
+      "sourceId": "inv-p601"
+    },
+    {
+      "question": "Müze binası olarak kullanılan yalıyı kim yaptırmıştır?",
+      "options": [
+        "Mehmet Hayri İpar",
+        "Rus tüccar Alexander Ganyanof",
+        "Kethüda Halil Ağa",
+        "Mudanya Belediyesi"
+      ],
+      "correct": 1,
+      "description": "Yapı XIX. yüzyıl sonlarında Rus tüccar Alexander Ganyanof tarafından inşa ettirilmiştir.",
+      "sourceId": "inv-p601"
+    },
+    {
+      "question": "Yapı hangi yıl müze olarak ziyarete açılmıştır?",
+      "options": [
+        "1922",
+        "1959",
+        "1937",
+        "1998"
+      ],
+      "correct": 2,
+      "description": "Hayri İpar'ın girişimleriyle yapılan çalışmaların ardından yapı 1937'de ziyarete açılmıştır.",
+      "sourceId": "inv-p602"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p600",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Mudanya Mütareke Evi Müzesi\"",
+      "page": "600"
+    },
+    {
+      "id": "inv-p601",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Mudanya Mütareke Evi Müzesi\"",
+      "page": "601"
+    },
+    {
+      "id": "inv-p602",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Mudanya Mütareke Evi Müzesi\"",
+      "page": "602"
+    },
+    {
+      "id": "inv-p603",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Mudanya Mütareke Evi Müzesi\"",
+      "page": "603"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

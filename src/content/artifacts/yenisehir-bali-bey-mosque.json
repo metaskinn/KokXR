@@ -1,0 +1,125 @@
+{
+  "id": "yenisehir-bali-bey-mosque",
+  "name": "Bali Bey (Çarşı) Camii",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Osmanlı · yapım tarihi kitapta belirtilmemiştir (banisi Bâlî Bey 1493'te vefat etmiştir)",
+  "endowment": "Bâlî Bey",
+  "summary": "Hamza Bey'in oğlu Bâlî Bey'in Yenişehir'deki vakıf yapılarından günümüze ulaşan tek eser olan kare planlı, kubbeli cami.",
+  "history": "Yenişehir'in Ulucami Mahallesi'nde, İstiklal Caddesi No: 18'de bulunan cami, II. Murad ve Fâtih dönemlerinde önemli görevlerde bulunan Hamza Bey'in oğlu Bâlî Bey tarafından yaptırılmıştır. Yenişehir'de cami, han ve imaret gibi çeşitli yapılar yaptırdığı bilinen Bâlî Bey 1493'te vefat etmiş ve Karacabey'de defnedilmiştir.\n\nBâlî Bey'in Yenişehir'deki vakıf yapılarından günümüze yalnızca camisi ulaşmıştır. Kaynaklarda, bölgedeki eserlerine gelir sağlamak için Bursa'da kendi adıyla anılan Bali Bey Hanı'nı da yaptırdığı belirtilir. Tarihî kaynaklarda cami yakınında bir hanın da bulunduğu yazılıdır, ancak bu yapıdan hiçbir kalıntı günümüze ulaşmamıştır.\n\nCami kare planlı ve kubbelidir. Son cemaat yeri düz tavanla örtülüdür. İbadet mekânı pandantif geçişli bir kubbeyle örtülmüştür. Yapının bir minaresi vardır.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-bali-bey-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-bali-bey-mosque/exterior.jpg",
+      "alt": "Caminin dışı: kemerli camlı son cemaat yeri, kurşun kaplı kubbe, yanında yüksek tek şerefeli minare ve önde sararmış yapraklı büyük çınar",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-bali-bey-mosque/mihrab-minbar.jpg",
+      "alt": "Harim: sarı çerçeveli beyaz mukarnaslı mihrap, sağında yüksek külahlı ahşap minber, kırmızı halı ve avize",
+      "description": "Mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-bali-bey-mosque/entrance-door.jpg",
+      "alt": "Son cemaat yerinden giriş: taş duvarda sivri kemerli niş içinde ahşap çift kanatlı kapı, iki yanda şebekeli pencereler",
+      "description": "Giriş kapısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-bali-bey-mosque/interior-dome.jpg",
+      "alt": "İç mekân: kemerler arasında kubbeye geçişi sağlayan pandantifler, pencereler ve kırmızı halı",
+      "description": "Kubbe ve pandantifler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/yenisehir-bali-bey-mosque/exterior.jpg",
+      "x": 74,
+      "y": 35,
+      "title": "Minare",
+      "text": "Yapının bir minaresi bulunmaktadır.",
+      "sourceId": "inv-p685"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/yenisehir-bali-bey-mosque/exterior.jpg",
+      "x": 52,
+      "y": 80,
+      "title": "Son cemaat yeri",
+      "text": "Caminin son cemaat yeri düz tavanla örtülüdür.",
+      "sourceId": "inv-p685"
+    },
+    {
+      "id": "dome",
+      "image": "/images/yenisehir-bali-bey-mosque/interior-dome.jpg",
+      "x": 50,
+      "y": 18,
+      "title": "Pandantifli kubbe",
+      "text": "Kare planlı ibadet mekânı, pandantif geçişli bir kubbeyle örtülmüştür.",
+      "sourceId": "inv-p685"
+    }
+  ],
+  "test": [
+    {
+      "question": "Camiyi yaptıran Bâlî Bey kimin oğludur?",
+      "options": [
+        "Timurtaş Paşa'nın",
+        "Hamza Bey'in",
+        "Lala Şahin Paşa'nın",
+        "Umur Bey'in"
+      ],
+      "correct": 1,
+      "description": "Cami, II. Murad ve Fâtih dönemlerinde önemli görevlerde bulunan Hamza Bey'in oğlu Bâlî Bey tarafından yaptırılmıştır.",
+      "sourceId": "inv-p684"
+    },
+    {
+      "question": "Bâlî Bey nerede defnedilmiştir?",
+      "options": [
+        "Yenişehir'de",
+        "İznik'te",
+        "Karacabey'de",
+        "Bursa'da"
+      ],
+      "correct": 2,
+      "description": "Bâlî Bey 1493'te vefat etmiş ve Karacabey'de defnedilmiştir.",
+      "sourceId": "inv-p684"
+    },
+    {
+      "question": "Bâlî Bey, Yenişehir'deki eserlerine gelir sağlamak için Bursa'da ne yaptırmıştır?",
+      "options": [
+        "Bir hamam",
+        "Bir medrese",
+        "Bir bedesten",
+        "Bali Bey Hanı"
+      ],
+      "correct": 3,
+      "description": "Kaynaklara göre bölgedeki eserlerine gelir sağlamak için Bursa'da kendi adıyla anılan Bali Bey Hanı'nı yaptırmıştır.",
+      "sourceId": "inv-p685"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p684",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Bali Bey (Çarşı) Camii\"",
+      "page": "684"
+    },
+    {
+      "id": "inv-p685",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Bali Bey (Çarşı) Camii\"",
+      "page": "685"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

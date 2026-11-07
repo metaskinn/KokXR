@@ -1,0 +1,99 @@
+{
+  "id": "yenisehir-yarhisar-fountain",
+  "name": "Yarhisar Köyü Çeşmesi",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Erken Osmanlı · Orhan Gazi dönemine tarihlendirilir (1324-1361)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kitabesi günümüze ulaşmayan, camiye yakınlığı nedeniyle Orhan Gazi dönemine tarihlendirilen, tuğla kemerli küçük bir köy çeşmesi.",
+  "history": "Çeşme, Yenişehir'e bağlı Yarhisar Köyü'nün iç yolu üzerindedir. Kitabesi günümüze ulaşmadığı için yapım yılı kesin olarak bilinmemektedir; ancak camiye yakın konumu nedeniyle Orhan Gazi dönemine (1324-1361) tarihlendirilir.\n\nYaklaşık 1,30 m yüksekliğinde ve 1,20 m genişliğindeki çeşme moloz taşla yığma teknikle inşa edilmiştir. Su akıtma nişi tuğla bir yuvarlak kemerle sınırlanmıştır. Ayna kısmında bir sıra taş, bir sıra tuğladan oluşan almaşık örgü kullanılmıştır. Yaklaşık 1 m yüksekliğinde iki dinlenme sekisi ve aynı genişlikte bir teknesi vardır. Doğu, güneydoğu ve batı cepheleri sağır bırakılmış, üst örtüsü düz betonla kapatılmıştır.\n\nAyna taşının ortasında sivri oymalarla niş açılarak süslenmiş bir \"bardaklık\" bulunur. Musluk sağ tarafta tektir; musluğun ortada olmayışı karşı yönde de bir musluk bulunduğunu ve bunun muhtemelen bakımlar sırasında kapatıldığını gösterir.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-yarhisar-fountain/fountain-mosque.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-yarhisar-fountain/fountain-mosque.jpg",
+      "alt": "Taş döşeli köy yolunda moloz taş örgülü küçük çeşme, önünde taş tekne; arkasında taş duvar, ahşap revaklı cami ve tuğla minare, çevrede sonbahar ağaçları",
+      "description": "Çeşme ve arkasındaki cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "arch",
+      "image": "/images/yenisehir-yarhisar-fountain/fountain-mosque.jpg",
+      "x": 64,
+      "y": 62,
+      "title": "Tuğla kemerli niş",
+      "text": "Su akıtma nişi yuvarlak bir kemerle sınırlanmıştır ve bu kemerde tuğla kullanılmıştır.",
+      "sourceId": "inv-p717"
+    },
+    {
+      "id": "cup-niche",
+      "image": "/images/yenisehir-yarhisar-fountain/fountain-mosque.jpg",
+      "x": 65,
+      "y": 72,
+      "title": "Bardaklık",
+      "text": "Ayna taşının ortasında sivri oymalarla niş açılarak süslenmiş bir \"bardaklık\" bulunur.",
+      "sourceId": "inv-p717"
+    },
+    {
+      "id": "top",
+      "image": "/images/yenisehir-yarhisar-fountain/fountain-mosque.jpg",
+      "x": 76,
+      "y": 61,
+      "title": "Düz beton örtü",
+      "text": "Yaklaşık 1,30 m yüksekliğindeki çeşme moloz taşla yığma teknikle yapılmıştır; doğu, güneydoğu ve batı cepheleri sağırdır, üst örtüsü düz betonla kapatılmıştır.",
+      "sourceId": "inv-p717"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşmenin yapım yılı neden kesin olarak bilinmemektedir?",
+      "options": [
+        "Kitabesi günümüze ulaşmadığı için",
+        "Depremde yıkıldığı için",
+        "Başka köyden taşındığı için",
+        "Vakfiyesi yandığı için"
+      ],
+      "correct": 0,
+      "description": "Kitabesi günümüze ulaşmadığı için çeşmenin yapım yılı kesin olarak bilinmemektedir.",
+      "sourceId": "inv-p717"
+    },
+    {
+      "question": "Çeşme neden Orhan Gazi dönemine tarihlendirilir?",
+      "options": [
+        "Kitabesinde Orhan Gazi'nin adı geçtiği için",
+        "Camiye yakın konumlandığı için",
+        "Mermerden yapıldığı için",
+        "Vakıf kaydında yazdığı için"
+      ],
+      "correct": 1,
+      "description": "Camiye yakın konumlanmış olması nedeniyle Orhan Gazi dönemine (1324-1361) tarihlendirilir.",
+      "sourceId": "inv-p717"
+    },
+    {
+      "question": "Musluğun ortada değil sağda tek olması neyi gösterir?",
+      "options": [
+        "Çeşmenin hiç kullanılmadığını",
+        "Karşı yönde de bir musluk olduğunu ve muhtemelen bakımda kapatıldığını",
+        "Suyun azaldığını",
+        "Çeşmenin taşındığını"
+      ],
+      "correct": 1,
+      "description": "Musluğun ortada olmayışı ters yönde bir musluk olduğunu, ancak muhtemelen bakımlar sırasında kapatıldığını gösterir.",
+      "sourceId": "inv-p717"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p717",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Yarhisar Köyü Çeşmesi\"",
+      "page": "717"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

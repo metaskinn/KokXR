@@ -1,0 +1,144 @@
+{
+  "id": "yenisehir-carsi-bath",
+  "name": "Çarşı (Çifte-Belediye) Hamamı",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Osmanlı · 1645 (kabul edilen yapım yılı)",
+  "endowment": "Vakfiyesi elde değildir; Deli Hüseyin Paşa tarafından yaptırıldığı kabul edilir",
+  "summary": "1645'te Deli Hüseyin Paşa'nın yaptırdığı kabul edilen, erkekler ve kadınlar bölümlü çifte hamam; 2024'te belediye tarafından restore edilmiştir.",
+  "history": "Yenişehir'de Cumhuriyet Caddesi üzerinde, Çatalçeşme ile Belediye Meydanı Sokağı'nın kesiştiği noktada bulunan hamam, Çifte Hamam ve Belediye Hamamı adlarıyla da anılır. Vakfiyesi elde değildir; ancak 1645 yılında Deli Hüseyin Paşa tarafından inşa ettirildiği kabul edilir.\n\nKuzey-güney doğrultusunda dikdörtgen planlı bir çifte hamamdır. İri moloz taş ve horasan harcıyla örülen yapının yalnız kapı ve pencere kemerleri ile kirpi saçakları tuğladandır. Erkekler ve kadınlar bölümlerinin soyunmalık ve ılıklıkları büyük ölçüde benzerdir: iki soyunmalık aynı ölçülerdedir ve iki katlı sekizgen kasnaklara oturan, sivri kemerli tromplarla geçilen kubbelerle örtülüdür.\n\nErkekler bölümünün yıldız planlı sıcaklığında dört eyvan arasında kubbeli halvet hücreleri yer alır; kubbelerin tepesinde altı kollu yıldız biçiminde açıklıklar vardır. Orta bölümde mermerden sekizgen göbek taşı zeminden yaklaşık 75 cm yüksektir. Kadınlar kısmına doğu cephedeki bir kapıdan girilir; soyunmalığın ortasında sekizgen planlı bir şadırvan bulunur. Üç bölümlü su deposu iki bölüm tarafından ortak kullanılır.\n\nIsıtma sistemi verimli çalışmadığı için uzun süre kullanılamayan yapı el değiştirmiş ve terk edilmiştir. Atıl durumdaki hamam 2024 yılında belediye tarafından restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-carsi-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-carsi-bath/exterior.jpg",
+      "alt": "İki büyük kurşun kaplı kubbeli, moloz taş duvarlı hamam; ortada küçük kiremit saçaklı giriş, iki yanında sivri kemerli pencereler, arkada saat kulesi",
+      "description": "Hamamın dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-carsi-bath/aerial-top.jpg",
+      "alt": "Hamamın tepeden görünümü: iki büyük kubbe ve arkada üzerinde çok sayıda küçük ışık deliği bulunan kubbeler ve tonozlar",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-carsi-bath/changing-room.jpg",
+      "alt": "Ahşap dolaplarla çevrili kubbeli mekân, ortada sekizgen mermer havuzlu şadırvan, üstte ahşap korkuluklu galeri ve halka biçimli avize",
+      "description": "Soyunmalık",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-carsi-bath/dome-gallery.jpg",
+      "alt": "Kubbeli soyunmalığın üst galerisinden görünüm: ahşap korkuluklar, aşağıda sekizgen şadırvan ve ahşap bölmeler",
+      "description": "Soyunmalık galerisi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-carsi-bath/interior-cubicle.jpg",
+      "alt": "Beyaz sıvalı tonozlu iç mekânda ahşap kaplı bir bölme, iki yanda kemerli ahşap kapılar, mermer zemin",
+      "description": "Hamam iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-carsi-bath/pool-room.jpg",
+      "alt": "Sivri kemerli beyaz bir mekânda mavi çini kenarlı dikdörtgen havuz ve merdiveni",
+      "description": "Havuzlu iç mekân (günümüz düzenlemesi)",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/yenisehir-carsi-bath/exterior.jpg",
+      "x": 33,
+      "y": 35,
+      "title": "Soyunmalık kubbeleri",
+      "text": "Erkekler ve kadınlar soyunmalıkları aynı ölçülerdedir; sivri kemerli tromplarla geçilen kubbelerle örtülüdür ve bu kubbeler iki katlı sekizgen kasnaklara oturtulmuştur.",
+      "sourceId": "inv-p710"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/yenisehir-carsi-bath/exterior.jpg",
+      "x": 18,
+      "y": 70,
+      "title": "Duvar örgüsü",
+      "text": "Yapı iri moloz taş ve horasan harcıyla inşa edilmiştir; yalnız kapı ve pencere kemerleri ile kirpi saçakları tuğladandır.",
+      "sourceId": "inv-p710"
+    },
+    {
+      "id": "openings",
+      "image": "/images/yenisehir-carsi-bath/aerial-top.jpg",
+      "x": 42,
+      "y": 48,
+      "title": "Kubbelerdeki ışık açıklıkları",
+      "text": "Erkekler sıcaklığındaki halvet kubbelerinin tepesinde altı kollu yıldız biçiminde açıklıklar vardır; orta bölüm kubbesinin merkezinde de altı kollu yıldız biçimli bir açıklık yer alır.",
+      "sourceId": "inv-p711"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam hangi adlarla da anılır?",
+      "options": [
+        "Yeşil ve Eski Hamam",
+        "Çifte Hamam ve Belediye Hamamı",
+        "Sultan ve Kadı Hamamı",
+        "Orhan ve Murad Hamamı"
+      ],
+      "correct": 1,
+      "description": "Hamam Çifte Hamam ve Belediye Hamamı gibi adlarla anılır.",
+      "sourceId": "inv-p710"
+    },
+    {
+      "question": "Hamamın 1645'te kim tarafından yaptırıldığı kabul edilir?",
+      "options": [
+        "Orhan Gazi",
+        "Şemakizade Hüseyin Efendi",
+        "Deli Hüseyin Paşa",
+        "Nilüfer Hatun"
+      ],
+      "correct": 2,
+      "description": "Vakfiyesi elde olmasa da 1645'te Deli Hüseyin Paşa tarafından inşa ettirildiği kabul edilir.",
+      "sourceId": "inv-p710"
+    },
+    {
+      "question": "Uzun süre kullanılamayan hamam 2024'te ne olmuştur?",
+      "options": [
+        "Yıkılmıştır",
+        "Belediye tarafından restore edilmiştir",
+        "Müzeye dönüştürülmüştür",
+        "Camiye çevrilmiştir"
+      ],
+      "correct": 1,
+      "description": "Isıtma sistemi verimli çalışmadığı için terk edilen hamam 2024'te belediye tarafından restore edilmiştir.",
+      "sourceId": "inv-p712"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p710",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Çarşı (Çifte-Belediye) Hamamı\"",
+      "page": "710"
+    },
+    {
+      "id": "inv-p711",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Çarşı (Çifte-Belediye) Hamamı\"",
+      "page": "711"
+    },
+    {
+      "id": "inv-p712",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Çarşı (Çifte-Belediye) Hamamı\"",
+      "page": "712"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

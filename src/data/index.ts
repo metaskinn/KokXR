@@ -1,39 +1,39 @@
-import type { Eser } from '../types/eser'
-import { ACIK_YAYIN } from './acikYayin'
-import { eserGecerli, kaynakliOlabilir } from './dogrulama'
+import type { Artifact } from '../types/artifact'
+import { PUBLIC_BUILD } from './openPublication'
+import { artifactValid, maybeSourced } from './verification'
 
-const eserDosyalari = import.meta.glob<Eser>('./eserler/*.json', { eager: true, import: 'default' })
-const fotografsiz = (e: Eser): Eser => ({
-  ...e, kapakGorsel: '', gorseller: [], tur: undefined,
-  bilgiNoktalari: e.bilgiNoktalari.map((b) => ({ ...b, gorsel: '' })),
-  maket: e.maket && { ...e.maket, aciklama: e.maket.aciklama.replace(/Levha ve paye yazıları[^.]*\./, 'Levha ve paye yüzeyleri bu sürümde yazısız bırakılmıştır.') },
+const artifactFiles = import.meta.glob<Artifact>('./artifacts/*.json', { eager: true, import: 'default' })
+const withoutPhoto = (e: Artifact): Artifact => ({
+  ...e, coverImage: '', images: [], tour: undefined,
+  hotspots: e.hotspots.map((b) => ({ ...b, image: '' })),
+  model: e.model && { ...e.model, description: e.model.description.replace(/Levha ve paye yazıları[^.]*\./, 'Levha ve paye yüzeyleri bu sürümde yazısız bırakılmıştır.') },
 })
-const varsayilanlar = Object.values(eserDosyalari).map((e) => ACIK_YAYIN ? fotografsiz(e) : e)
-const anahtar = 'kokxr-icerik'
-export type UstKatman = Record<string, Eser>
-export interface IcerikDurumu { ustKatman: UstKatman; uyari: string }
-export const varsayilanIdler = varsayilanlar.map(e => e.id)
+const defaults = Object.values(artifactFiles).map((e) => PUBLIC_BUILD ? withoutPhoto(e) : e)
+const keyStr = 'kokxr-content'
+export type Overlay = Record<string, Artifact>
+export interface ContentState { overlay: Overlay; warning: string }
+export const defaultIds = defaults.map(e => e.id)
 
-export function eserleriGetir(ustKatman: UstKatman = {}): Eser[] {
-  return [...varsayilanlar.map(e => ustKatman[e.id] ?? e), ...Object.values(ustKatman).filter(e => !varsayilanIdler.includes(e.id))]
+export function getArtifacts(overlay: Overlay = {}): Artifact[] {
+  return [...defaults.map(e => overlay[e.id] ?? e), ...Object.values(overlay).filter(e => !defaultIds.includes(e.id))]
 }
-export function ustKatmaniCoz(veri: unknown): UstKatman {
-  if (!veri || typeof veri !== 'object' || Array.isArray(veri)) throw new Error('Üst katman, eser kimliklerini tam eser nesnelerine eşleyen bir JSON nesnesi olmalıdır.')
-  const kayitlar = Object.entries(veri)
-  if (!kayitlar.every(([id, e]) => eserGecerli(e) && e.id === id)) throw new Error('JSON içinde geçersiz eser var. Zorunlu alanları, üç soruyu, dört seçeneği ve görsel/kaynak bağlantılarını kontrol edin. Hiçbir kayıt yüklenmedi.')
-  return Object.fromEntries(kayitlar.map(([id, e]) => {
-    const eser = e as Eser
-    return [id, { ...eser, dogrulama: eser.dogrulama === 'dogrulanmis' && kaynakliOlabilir(eser) ? 'dogrulanmis' : 'temsili' }]
+export function parseOverlay(data: unknown): Overlay {
+  if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error('Üst katman, eser kimliklerini tam eser nesnelerine eşleyen bir JSON nesnesi olmalıdır.')
+  const records = Object.entries(data)
+  if (!records.every(([id, e]) => artifactValid(e) && e.id === id)) throw new Error('JSON içinde geçersiz eser var. Zorunlu alanları, üç soruyu, dört seçeneği ve görsel/kaynak bağlantılarını kontrol edin. Hiçbir kayıt yüklenmedi.')
+  return Object.fromEntries(records.map(([id, e]) => {
+    const artifact = e as Artifact
+    return [id, { ...artifact, verification: artifact.verification === 'verified' && maybeSourced(artifact) ? 'verified' : 'illustrative' }]
   }))
 }
-export function icerigiOku(): IcerikDurumu {
-  try { return { ustKatman: ustKatmaniCoz(JSON.parse(localStorage.getItem(anahtar) ?? '{}')), uyari: '' } }
-  catch { return { ustKatman: {}, uyari: 'Tarayıcıdaki içerik okunamadı veya geçersiz. Varsayılan eserler gösteriliyor. Yönetim ekranından geçerli JSON yükleyebilir ya da üst katmanı sıfırlayabilirsiniz.' } }
+export function readContent(): ContentState {
+  try { return { overlay: parseOverlay(JSON.parse(localStorage.getItem(keyStr) ?? '{}')), warning: '' } }
+  catch { return { overlay: {}, warning: 'Tarayıcıdaki içerik okunamadı veya geçersiz. Varsayılan eserler gösteriliyor. Yönetim ekranından geçerli JSON yükleyebilir ya da üst katmanı sıfırlayabilirsiniz.' } }
 }
-export function icerigiYaz(ustKatman: UstKatman): IcerikDurumu {
-  const dogrulanmis = ustKatmaniCoz(ustKatman)
+export function writeContent(overlay: Overlay): ContentState {
+  const verified = parseOverlay(overlay)
   try {
-    localStorage.setItem(anahtar, JSON.stringify(dogrulanmis))
-    return { ustKatman: dogrulanmis, uyari: '' }
+    localStorage.setItem(keyStr, JSON.stringify(verified))
+    return { overlay: verified, warning: '' }
   } catch { throw new Error('Değişiklikler tarayıcıya kaydedilemedi. Depolama iznini ve boş alanı kontrol edin; formdaki bilgiler korunuyor.') }
 }

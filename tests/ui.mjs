@@ -4,8 +4,8 @@ import { mkdirSync } from 'node:fs'
 
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:5173'
 const browser = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
-mkdirSync('test-sonuclari', { recursive: true })
-const routes = ['/eserler', '/vr', '/eser/ulu-camii', '/eser/muradiye-kulliyesi', '/atolye/vazo', '/yonetim', '/yonetim/yeni']
+mkdirSync('test-results', { recursive: true })
+const routes = ['/artifacts', '/vr', '/artifact/ulu-mosque', '/artifact/muradiye-complex', '/workshop/vase', '/admin', '/admin/fresh']
 try {
   for (const width of process.argv.includes('--contrast-only') ? [] : [1440, 768, 360, 320]) {
     const page = await browser.newPage({ viewport: { width, height: 1000 } })
@@ -21,20 +21,20 @@ try {
       const nav = page.getByRole('navigation', { name: 'Ana gezinme' })
       const sizes = await nav.getByRole('link').evaluateAll((links) => links.map((a) => a.getBoundingClientRect().height))
       assert.ok(sizes.every((h) => h >= 44), `${width}px: gezinme hedefleri küçük`)
-      if ([1440, 360].includes(width) && ['/eserler', '/atolye/vazo', '/yonetim'].includes(route)) {
-        if (route === '/atolye/vazo') await page.waitForFunction(() => document.querySelector('.vazo-sahne canvas'))
-        await page.screenshot({ path: `test-sonuclari/ui-${width}-${route.replaceAll('/', '-')}.png`, fullPage: true })
+      if ([1440, 360].includes(width) && ['/artifacts', '/workshop/vase', '/admin'].includes(route)) {
+        if (route === '/workshop/vase') await page.waitForFunction(() => document.querySelector('.vase-scene canvas'))
+        await page.screenshot({ path: `test-results/ui-${width}-${route.replaceAll('/', '-')}.png`, fullPage: true })
       }
     }
     await page.goto(url)
     await page.keyboard.press('Tab')
     assert.match(await page.evaluate(() => document.activeElement.textContent), /Ana içeriğe geç/)
     await page.keyboard.press('Enter')
-    assert.equal(await page.evaluate(() => document.activeElement.id), 'ana-icerik')
+    assert.equal(await page.evaluate(() => document.activeElement.id), 'main-content')
     await page.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Atölyeler' }).click()
-    await page.waitForFunction(() => document.querySelector('nav[aria-label="Ana gezinme"] a[href="/atolye"]')?.getAttribute('aria-current') === 'page' && document.activeElement.id === 'ana-icerik')
+    await page.waitForFunction(() => document.querySelector('nav[aria-label="Main nav"] a[href="/workshop"]')?.getAttribute('aria-current') === 'page' && document.activeElement.id === 'main-content')
     assert.equal(await page.getByRole('navigation', { name: 'Atölyeler', exact: true }).getByRole('link', { name: 'Vazo atölyesi' }).getAttribute('aria-current'), 'page')
-    assert.equal(await page.evaluate(() => document.activeElement.id), 'ana-icerik')
+    assert.equal(await page.evaluate(() => document.activeElement.id), 'main-content')
     assert.deepEqual(errors, [])
     console.log(`${width}px: ${routes.length} rota, taşma, başlıklar, bölüm bağlantıları, 44px gezinme, atlama ve rota odağı geçti.`)
     await page.close()
@@ -49,12 +49,12 @@ try {
       return '#' + value.match(/\d+/g).slice(0, 3).map((n) => Number(n).toString(16).padStart(2, '0')).join('')
     }
     return [
-      ['Ana metin', get('--metin'), get('--zemin')],
-      ['İkincil metin', get('--ikincil'), get('--zemin')],
-      ['Bronz etiket', get('--bronz'), get('--zemin')],
-      ['Ana düğme', '#ffffff', get('--vurgu')],
-      ['Açık panel', get('--vurgu'), get('--vurgu-acik')],
-      ['Kart özeti', color('.kart-ozet', 'color'), color('.eser-karti', 'backgroundColor')],
+      ['Ana metin', get('--text'), get('--floor')],
+      ['İkincil metin', get('--secondary'), get('--floor')],
+      ['Bronz etiket', get('--bronze'), get('--floor')],
+      ['Ana düğme', '#ffffff', get('--highlight')],
+      ['Açık panel', get('--highlight'), get('--highlight-open')],
+      ['Kart özeti', color('.card-summary', 'color'), color('.artifact-card', 'backgroundColor')],
     ]
   })
   const luminance = (hex) => {
@@ -68,6 +68,6 @@ try {
     assert.ok(ratio >= 4.5, `${label}: kontrast düşük`)
   }
   await page.emulateMedia({ reducedMotion: 'reduce' })
-  assert.equal(await page.locator('.kapak').first().evaluate((e) => getComputedStyle(e).transitionDuration), '0s')
+  assert.equal(await page.locator('.cover').first().evaluate((e) => getComputedStyle(e).transitionDuration), '0s')
   await page.close()
 } finally { await browser.close() }

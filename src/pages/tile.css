@@ -1,0 +1,7 @@
+/* Kılıç atölyesinin stüdyo düzeni paylaşılır; yalnız çiniye özgü farklar burada. */
+.tile-workshop .sword-stages { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.tile-scene { cursor: crosshair; }
+.tile-colors { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+.tile-colors button { display: flex; align-items: center; gap: 0.5rem; text-align: left; }
+.tile-colors i { flex: none; width: 18px; height: 18px; border-radius: 50%; border: 1px solid rgb(0 0 0 / 25%); }
+.tile-workshop progress { width: 100%; }

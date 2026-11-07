@@ -1,0 +1,396 @@
+{
+  "id": "hamzabey-complex",
+  "ad": "Hamzabey Külliyesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Fatih Sultan Mehmed devri; 1614'te camiye dönüştürüldü",
+  "endowment": "Banisi Hamza Bey (\"İzmir Fâtihi\")",
+  "summary": "Hamzabey Mahallesi'nde, ovaya hâkim konumda bir külliye. Ana yapısı tabhaneli planlı Hamza Bey Camii; yanında üç türbe ayakta, medrese ve imaret günümüze ulaşmamış.",
+  "history": "Külliyeyi, I. Mehmed ve II. Murad'ın veziriazamı Bayezid Paşa'nın kardeşi, \"İzmir Fâtihi\" lakaplı Hamza Bey yaptırdı. Hamza Bey, 1417'de Lapseki'yi topa tutan Venedik kuvvetlerine karşı karada mücadele etti, İstanbul'un fethi sırasında Baltaoğlu Süleyman Bey'in yerine donanma kumandanı oldu. 1462'de Fatih Sultan Mehmed'in Eflak'a gönderdiği heyetle birlikte Voyvoda Vlad Tepeş tarafından öldürtüldü; naaşı Bursa'daki türbesine defnedildi.\n\nKülliye cami, tabhaneler, medrese, imaret ve türbelerden oluşuyordu. İmaretten iz kalmadı, medrese zamanla yok oldu. Cami başlangıçta mescit olarak yapıldı; cuma namazı için uzak yerlere gitmekte zorlanıldığı dilekçesi üzerine Haziran 1614'te Kazasker Muallimzâde Ahmed Efendi minber ekleterek camiye çevirdi.\n\nCami 1826 ve 1874'te tamir gördü; 1855 depreminde büyük zarar görmedi, yalnız minaresinin şerefesi zedelendi, türbenin kubbesi çatladı. 1959-1962 arasında Bursa Eski Eser Sevenler Derneği, 1969'da Vakıflar Genel Müdürlüğü onardı; son kapsamlı restorasyon 2011'dedir. Cami bugün ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/hamzabey-complex/complex-from-north.jpg",
+  "images": [
+    {
+      "file": "/images/hamzabey-complex/complex-from-north.jpg",
+      "alt": "Hamza Bey Camii'nin sonbahar ağaçları arasından kuzeyden görünümü; revak, kurşun kubbeler ve minare",
+      "description": "Cami, kuzeyden",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hamzabey-complex/birdseye.jpg",
+      "alt": "Külliyenin dik kuşbakışı görünümü: ters T planlı cami, revak, minare ve avludaki türbeler",
+      "description": "Kuşbakışı plan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hamzabey-complex/portico.jpg",
+      "alt": "Son cemaat yeri: mermer kaplı ayaklar, tuğla kemerler, sağda yüksek orta göz, solda minare kaidesi",
+      "description": "Beş gözlü son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hamzabey-complex/hall-mihrab.jpg",
+      "alt": "Harim: yükseltilmiş ahşap sofa, halı, mukarnaslı mihrap, sağda minber, üstte Türk üçgenli kuşak",
+      "description": "Mihrap önü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hamzabey-complex/hall-iwan.jpg",
+      "alt": "Harimden batı eyvanına açılan geniş kemer, solda mihrap önü, üstte köşedeki mukarnas",
+      "description": "Orta sofa ve batı eyvanı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hamzabey-complex/hamza-bey-tomb.jpg",
+      "alt": "Hamza Bey Türbesi: tuğla ve taş örgülü sekizgen gövde, öne taşkın kapı eyvanı, yüksek kasnak ve kurşun kubbe",
+      "description": "Hamza Bey Türbesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hamzabey-complex/family-tomb.jpg",
+      "alt": "Hamza Bey Ailesi Türbesi'nin kuzey cephesi: kapı, iki pencere ve üst bölümde zikzak tuğla bezeme",
+      "description": "Hamza Bey Ailesi Türbesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hamzabey-complex/kara-mustafa-tomb.jpg",
+      "alt": "Kara Mustafa Paşa Türbesi: kare gövde, sekizgen kasnak ve kubbe, ağaçlar arasında",
+      "description": "Kara Mustafa Paşa Türbesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "mid-dome",
+      "image": "/images/hamzabey-complex/complex-from-north.jpg",
+      "x": 51,
+      "y": 42,
+      "title": "Büyük kubbe",
+      "text": "Hazırlık mekânını örten kubbenin çapı 8,10 m'dir. Önce sekizgen, sonra on altıgen biçimde bir kasnağa oturur.",
+      "sourceId": "hb-s181"
+    },
+    {
+      "id": "mid-eye",
+      "image": "/images/hamzabey-complex/complex-from-north.jpg",
+      "x": 52,
+      "y": 70,
+      "title": "Yüksek orta göz",
+      "text": "Beş gözlü revakın orta kubbesi diğerlerinden büyük ve yüksektir. İki orta ayak yaklaşık 80 cm öne taşırılarak taka görünümü verilmiştir.",
+      "sourceId": "hb-s180"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/hamzabey-complex/portico.jpg",
+      "x": 14,
+      "y": 45,
+      "title": "Sonradan eklenen minare",
+      "text": "Son cemaat yeri ile doğu tabhane duvarının birleştiği yerdeki minare özgün değildir. Eski minarenin doğu köşede, duvar üzerinde olduğu düşünülür.",
+      "sourceId": "hb-s182"
+    },
+    {
+      "id": "weave",
+      "image": "/images/hamzabey-complex/portico.jpg",
+      "x": 45,
+      "y": 22,
+      "title": "Taş ve tuğla örgü",
+      "text": "Cami duvarları üç sıra tuğla ve bir sıra moloz taşla örülmüş, aralara düşey beslemeler eklenmiştir.",
+      "sourceId": "hb-s180"
+    },
+    {
+      "id": "band",
+      "image": "/images/hamzabey-complex/hall-mihrab.jpg",
+      "x": 50,
+      "y": 16,
+      "title": "Türk üçgenleri",
+      "text": "Mihrap önü kubbesine geçiş, belirgin çıkıntılı geniş bir kuşak üzerinde Türk üçgenleriyle sağlanır.",
+      "sourceId": "hb-s181"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/hamzabey-complex/hall-mihrab.jpg",
+      "x": 49,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Geniş çerçeve içine alınan mihrap nişinin kavsarası altı sıra mukarnaslıdır.",
+      "sourceId": "hb-s182"
+    },
+    {
+      "id": "tomb",
+      "image": "/images/hamzabey-complex/hamza-bey-tomb.jpg",
+      "x": 40,
+      "y": 58,
+      "title": "Kapı eyvanı",
+      "text": "Türbenin kapısı doğu cephesindedir; dar bir eyvan şeklinde dışa taşkın yapılmıştır.",
+      "sourceId": "hb-s184"
+    },
+    {
+      "id": "zigzagOf",
+      "image": "/images/hamzabey-complex/family-tomb.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Zikzak tuğla",
+      "text": "Cephe pencere kemeri seviyesine kadar tuğla ve kaba yonu taşla örülmüş, bu seviyeden sonra birbirine çatılan zikzak tuğlalarla süslenmiştir.",
+      "sourceId": "hb-s186"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamza Bey Camii başlangıçta ne olarak yapılmıştır?",
+      "options": [
+        "Medrese",
+        "Mescit",
+        "Kervansaray",
+        "Hamam"
+      ],
+      "correct": 1,
+      "description": "Yapı mescit olarak yapıldı; Haziran 1614'te minber eklenerek camiye dönüştürüldü.",
+      "sourceId": "hb-s178"
+    },
+    {
+      "question": "Hazırlık mekânını örten büyük kubbenin çapı kaç metredir?",
+      "options": [
+        "5,40 m",
+        "6,75 m",
+        "8,10 m",
+        "11 m"
+      ],
+      "correct": 2,
+      "description": "Kubbenin çapı 8,10 m'dir; önce sekizgen, sonra on altıgen bir kasnağa oturur.",
+      "sourceId": "hb-s181"
+    },
+    {
+      "question": "Hamza Bey Türbesi'nde, Hamza Bey'inkiyle birlikte kaç sanduka vardır?",
+      "options": [
+        "Üç",
+        "Beş",
+        "Sekiz",
+        "On üç"
+      ],
+      "correct": 3,
+      "description": "Hamza Bey'in sandukasının yanı sıra on iki sanduka daha bulunur.",
+      "sourceId": "hb-s184"
+    }
+  ],
+  "sources": [
+    {
+      "id": "hb-s177",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Külliyesi\"",
+      "page": "177"
+    },
+    {
+      "id": "hb-s178",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Külliyesi\"",
+      "page": "178-179"
+    },
+    {
+      "id": "hb-s180",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"",
+      "page": "180-181"
+    },
+    {
+      "id": "hb-s181",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"",
+      "page": "180-181"
+    },
+    {
+      "id": "hb-s182",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"",
+      "page": "182-183"
+    },
+    {
+      "id": "hb-s184",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Türbesi\"",
+      "page": "184-185"
+    },
+    {
+      "id": "hb-s186",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Ailesi Türbesi\"",
+      "page": "186-187"
+    },
+    {
+      "id": "hb-s188",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kara Mustafa Paşa Türbesi\"",
+      "page": "188-189"
+    },
+    {
+      "id": "kp-hamza",
+      "text": "T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Hamzabey Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), https://www.kulturportali.gov.tr/turkiye/bursa/gezilecekyer/hamzabey-cami"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "model": {
+    "model": "hamzabey-complex",
+    "description": "Temsilî maket, gerçek bir 3B tarama değildir. Kodla oluşturuldu. Orta kubbe çapı, büyük kemerin üzengisi ve orta ayakların taşması envanterden; plan düzeni kuşbakışı fotoğraftan oranlandı. Yükseklikler, pencere yerleri, Kara Mustafa Paşa Türbesi'nin kütlesi ve iç süslemeler fotoğraflara bakılarak temsilî yorumlandı. Yazılı levhalar yazısız gösterildi; cümle kapısındaki kitabenin görseli arşiv fotoğrafıdır, konumu temsilîdir.",
+    "infos": [
+      {
+        "text": "Cami tabhaneli (zaviyeli) plan şemasındadır: son cemaat yeri, kubbeli iç avlu, iki yanda tabhaneler ve ana ibadet mekânı.",
+        "sourceId": "hb-s180"
+      },
+      {
+        "text": "Orta kubbenin çapı 8,10 m'dir. \"Parçala\" ile örtüleri kaldırıp planı üstten görebilirsin.",
+        "sourceId": "hb-s181"
+      },
+      {
+        "text": "Cami bahçesindeki türbeler Hamza Bey'e, eşlerine ve Kara Mustafa Paşa'ya aittir.",
+        "sourceId": "hb-s178"
+      }
+    ],
+    "interiorInfos": [
+      {
+        "id": "narthex",
+        "title": "Son cemaat yeri",
+        "text": "Beş gözlü revakın orta kubbesi diğerlerinden büyük ve yüksektir; geçişlerde Türk üçgenleri kullanılmıştır. İki orta ayak yaklaşık 80 cm dışa taşar.",
+        "sourceId": "hb-s180",
+        "position": [
+          5,
+          6.6,
+          6.3
+        ],
+        "radius": 3.2
+      },
+      {
+        "id": "inscription",
+        "title": "Cümle kapısı",
+        "text": "Kapının üzerinde, celi sülüs hatla Fetih suresinin ilk ayeti yazılıdır: \"Şüphesiz biz sana apaçık bir fetih verdik.\"",
+        "sourceId": "hb-s180",
+        "position": [
+          5,
+          5.2,
+          9.4
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "dome",
+        "title": "Büyük kubbe",
+        "text": "8,10 m çapındaki kubbe önce sekizgen, sonra on altıgen bir kasnağa oturur. Kasnakta renkli camlı altı pencere ve on iki niş vardır; on altıgenin köşeleri üç sıra mukarnaslıdır.",
+        "sourceId": "hb-s181",
+        "position": [
+          5,
+          6.5,
+          14.5
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "big-arch",
+        "title": "Büyük kemer",
+        "text": "İki kubbe arasındaki büyük kemerin üzengisi sofadan yalnızca 1,75 m yüksektedir. Basık görünümü gidermek için kubbe yüksek kuşaklarla havalandırılmıştır.",
+        "sourceId": "hb-s182",
+        "position": [
+          5,
+          3.8,
+          18.1
+        ],
+        "radius": 2
+      },
+      {
+        "id": "mihrab",
+        "title": "Mihrap",
+        "text": "Geniş çerçeveli nişin kavsarası altı sıra mukarnaslıdır. Üstteki kubbe Türk üçgenli geniş bir kuşağa oturur; bu bölümde altlı üstlü altışar sivri kemerli pencere vardır.",
+        "sourceId": "hb-s182",
+        "position": [
+          5,
+          4.2,
+          26.3
+        ],
+        "radius": 4
+      },
+      {
+        "id": "minbar",
+        "title": "Minber",
+        "text": "Yapı mescit olarak yapılmıştı. Kazasker Muallimzâde Ahmed Efendi, Haziran 1614'te minber ekleterek camiye dönüştürdü.",
+        "sourceId": "hb-s178",
+        "position": [
+          2.1,
+          5.2,
+          24.5
+        ],
+        "radius": 2.2
+      },
+      {
+        "id": "west-iwan",
+        "title": "Batı eyvanı",
+        "text": "Sekizgen kasnaklı kubbeyle örtülüdür. Güney duvarındaki mihrap yarı silindirik nişli ve sivri alınlıklıdır; alçı bezemeleri özgündür. Tabhaneler muhtemelen II. Abdülhamid devrinde camiye katılmıştır.",
+        "sourceId": "hb-s182",
+        "position": [
+          -2.1,
+          4.4,
+          15.7
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "east-iwan",
+        "title": "Doğu eyvanı",
+        "text": "Kubbesi iki sıra iri bademden oluşan bir kasnağa oturur. Buradaki mihrabın önceden ocak olarak kullanılmış olabileceği düşünülmektedir.",
+        "sourceId": "hb-s182",
+        "position": [
+          11.5,
+          4.2,
+          16.2
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "window",
+        "title": "Pencere kanatları",
+        "text": "Yapının ceviz ağacından ahşap pencere kanatları özgündür. Bugünkü süslemeler ve renkli camlar ise sonradan eklenmiştir.",
+        "sourceId": "hb-s182",
+        "position": [
+          16,
+          3.6,
+          14
+        ],
+        "radius": 2
+      },
+      {
+        "id": "hamza-tomb",
+        "title": "Hamza Bey Türbesi",
+        "text": "Sekizgen planlıdır. Hamza Bey'in sandukasının yanı sıra on iki sanduka daha vardır; lahitlerin tamamı sıvalıdır. Mihrabı mukarnaslıdır, kasnakta sekiz pencere bulunur.",
+        "sourceId": "hb-s184",
+        "position": [
+          -16.8,
+          3.2,
+          -5.2
+        ],
+        "radius": 3.8
+      },
+      {
+        "id": "family-tomb",
+        "title": "Aile Türbesi",
+        "text": "Kare planlıdır, kubbesi kasnaksızdır. Üç sandukadan biri Hamza Bey'in eşine, ikisi kızlarına aittir.",
+        "sourceId": "hb-s186",
+        "position": [
+          -9.9,
+          3,
+          6.8
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "land-mustafa",
+        "title": "Kara Mustafa Paşa Türbesi",
+        "text": "Avlunun kuzey ucundadır. Hamza Bey'in torunu Kara Mustafa Paşa 1483'te Cem Sultan Vakası sırasında idam edilmiş, naaşı babasının yanındaki türbeye defnedilmiştir. Türbe kare planlı, sekizgen kasnaklıdır.",
+        "sourceId": "hb-s188",
+        "position": [
+          -2.7,
+          4,
+          -17
+        ],
+        "radius": 4.5
+      }
+    ]
+  }
+}

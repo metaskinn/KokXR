@@ -1,0 +1,573 @@
+{
+  "id": "ulu-mosque",
+  "ad": "Bursa Ulu Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Erken Osmanlı · H. 802 / M. 1399-1400",
+  "endowment": "Yıldırım Bayezid evkafı",
+  "summary": "Yıldırım Bayezid'in yaptırdığı, yirmi kubbesi ve hat levhalarıyla Osmanlı'nın Bursa'daki ilk büyük camisi.",
+  "history": "Ulu Camii, Osmanlı'nın Bursa'da inşa ettirdiği ilk büyük camidir ve altı yüzyıl boyunca şehrin en büyük camisi olarak kalmıştır. Sultan Yıldırım Bayezid tarafından yaptırılmış; minberdeki kitabeye göre H. 802 / M. 1399-1400 yılında tamamlanmıştır. Mimarı kesin olarak bilinmemektedir. Yaklaşık 55 × 69 m boyutlarındaki yapı, yirmi kubbesi ve 3500 m²'lik ibadet alanıyla \"ulucami\" formunun en büyük ve en tanınan örneğidir. Duvar ve payelerindeki hat yazıları nedeniyle adeta bir hat sanatı müzesidir. Evliya Çelebi Seyahatnâme'sinde camiyi \"Bursa'nın Ayasofyası\" olarak tanımlamıştır. Cami en büyük onarımını 1855 depreminden sonra geçirmiş ve 1862'de yeniden ibadete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/ulu-mosque/outer-view.jpg",
+  "images": [
+    {
+      "file": "/images/ulu-mosque/outer-view.jpg",
+      "alt": "Ulu Camii ve iki minaresinin dışarıdan görünümü, arkada Uludağ eteklerindeki şehir",
+      "description": "Dış görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/domes-aerial.jpg",
+      "alt": "Ulu Camii çatısının havadan görünümü; dörder sıra hâlinde dizilmiş yirmi kubbe",
+      "description": "Yirmi kubbe, havadan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/night.jpg",
+      "alt": "Ulu Camii ve çevresinin gece havadan görünümü, ışıklı caddeler",
+      "description": "Gece görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/fountain.jpg",
+      "alt": "Cami içinde, ortası açık kubbenin altındaki havuzlu şadırvan; iki yanda büyük hat levhaları",
+      "description": "İç mekândaki şadırvan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/minbar.jpg",
+      "alt": "Ahşap, oymalı minberin yandan görünümü",
+      "description": "Kündekâri minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/mihrab.jpg",
+      "alt": "Altın yaldızlı süslemelerle çevrili mihrap nişi",
+      "description": "Mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/domes-inside.jpg",
+      "alt": "Kubbelerin içten görünümü, kemerler ve hat yazıları",
+      "description": "Kubbeler, içeriden",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/interior-space.jpg",
+      "alt": "Payeler ve kemerlerle bölünmüş geniş ibadet alanının yukarıdan görünümü",
+      "description": "İbadet alanı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/calligraphy-plaque.jpg",
+      "alt": "Siyah zemin üzerine altın renkli hat yazısı içeren çerçeveli levha",
+      "description": "Hat levhası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/ulu-mosque/courtyard-fountain.jpg",
+      "alt": "Cami avlusunda sekiz ahşap direk üzerinde soğan kubbeli şadırvan",
+      "description": "Avlu şadırvanı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/ulu-mosque/domes-aerial.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Yirmi kubbe",
+      "text": "Yaklaşık 55 × 69 m boyutlarındaki cami, yirmi kubbesi ve 3500 m²'lik ibadet bölümüyle dikkat çeker.",
+      "sourceId": "ulu-s44"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/ulu-mosque/minbar.jpg",
+      "x": 62,
+      "y": 45,
+      "title": "Kündekâri minber",
+      "text": "Minber, kündekâri tekniğiyle çivi, tutkal veya herhangi bir bağlayıcı kullanılmadan, birbirine geçme parçalardan yapılmıştır. Usta kitabesinde Hâc Muhammed bin Abdülazîz ibnü'd-Dakkî'nin adı yazar.",
+      "sourceId": "ulu-s48"
+    },
+    {
+      "id": "fountain",
+      "image": "/images/ulu-mosque/fountain.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Cami içindeki şadırvan",
+      "text": "Caminin merkezinde havuzlu bir şadırvan bulunur. Üzerindeki kubbenin ortası açık bırakılarak iç mekânın doğal ışık alması ve havalandırılması sağlanmıştır.",
+      "sourceId": "ulu-s60"
+    },
+    {
+      "id": "calligraphy",
+      "image": "/images/ulu-mosque/fountain.jpg",
+      "x": 88,
+      "y": 52,
+      "title": "Hat levhaları",
+      "text": "Camide duvarlara nakşedilmiş veya levha hâlinde yaklaşık yüz yetmiş hat eseri bulunur. Payelerin her yüzüne celi sülüs ve kûfi hatlarla esmâ-i hüsnâdan örnekler yazılmıştır.",
+      "sourceId": "ulu-s57"
+    },
+    {
+      "id": "stubby-minaret",
+      "image": "",
+      "x": 0,
+      "y": 0,
+      "title": "Güdük Minare",
+      "text": "Batıdaki minareyi Yıldırım Bayezid yaptırmıştır. Doğudaki minare ilk inşada tamamlanmadığı ve bir süre yarım kullanıldığı için \"Güdük Minare\" olarak anılmıştır.",
+      "sourceId": "ulu-s63"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bursa Ulu Camii'nin çatısını kaç kubbe örter?",
+      "options": [
+        "9",
+        "12",
+        "20",
+        "24"
+      ],
+      "correct": 2,
+      "description": "Cami yirmi kubbesiyle dikkat çeker; bu kubbeler on iki kare paye üzerine oturur.",
+      "sourceId": "ulu-s44"
+    },
+    {
+      "question": "Ulu Camii'nin minberi hangi teknikle yapılmıştır?",
+      "options": [
+        "Çini mozaik",
+        "Kündekâri",
+        "Kalem işi",
+        "Taş oyma"
+      ],
+      "correct": 1,
+      "description": "Minber, kündekâri tekniğiyle çivi veya tutkal kullanılmadan, birbirine geçme parçalardan yapılmıştır.",
+      "sourceId": "ulu-s48"
+    },
+    {
+      "question": "Evliya Çelebi, Ulu Camii'yi neye benzetmiştir?",
+      "options": [
+        "Bursa'nın Ayasofyası",
+        "Bursa'nın incisi",
+        "Kahkaha Kalesi",
+        "Hat müzesi"
+      ],
+      "correct": 0,
+      "description": "Evliya Çelebi, Seyahatnâme'sinde Ulu Camii'yi \"Bursa'nın Ayasofyası\" olarak tanımlamıştır.",
+      "sourceId": "ulu-s33"
+    }
+  ],
+  "timeLayer": [
+    {
+      "id": "completion",
+      "period": "H. 802 / M. 1399-1400",
+      "title": "Caminin tamamlanması",
+      "text": "Sultan Yıldırım Bayezid tarafından yaptırılan cami, minberdeki kitabeye göre H. 802 / M. 1399-1400 yılında tamamlanmıştır. Mimarı kesin olarak bilinmemektedir.",
+      "sourceId": "ulu-history"
+    },
+    {
+      "id": "mahfil",
+      "period": "1549",
+      "title": "Müezzin mahfili",
+      "text": "Sekiz ahşap sütun üzerindeki müezzin mahfilinin kitabesi H. 956 / M. 1549 tarihini taşır.",
+      "sourceId": "ulu-s56"
+    },
+    {
+      "id": "library",
+      "period": "1786",
+      "title": "Hünkâr mahfili altındaki kütüphane",
+      "text": "Münzevî Abdullah Efendi, hünkâr mahfilinin alt bölümünde bir kütüphane kurarak kendi kitaplarını ve satın aldığı Yenişehirli Hacı Osman Efendi'nin kitaplarını vakfetmiştir.",
+      "sourceId": "ulu-s57"
+    },
+    {
+      "id": "earthquake-repair",
+      "period": "1855-1862",
+      "title": "1855 depremi ve yeniden açılış",
+      "text": "Cami en büyük onarımını 1855 depreminden sonra geçirmiş ve 1862'de yeniden ibadete açılmıştır.",
+      "sourceId": "ulu-history"
+    },
+    {
+      "id": "courtyard-fountains",
+      "period": "2011",
+      "title": "Avlu şadırvanları",
+      "text": "Caminin kuzey avlusunda aynı hat üzerinde üç şadırvan bulunur. Doğu ve batıdakiler 2011 yılında, eski fotoğraflardaki üsluplarına uygun şekilde sekiz ahşap direk üzerine soğan kubbeyle yeniden yapılmıştır.",
+      "sourceId": "ulu-s72"
+    }
+  ],
+  "sources": [
+    {
+      "id": "kp-ulu",
+      "text": "T.C. Kültür ve Turizm Bakanlığı, Kültür Portalı, \"Bursa Ulu Cami\" (Bursa İl Kültür ve Turizm Müdürlüğü), kulturportali.gov.tr"
+    },
+    {
+      "id": "ulu-kaaba",
+      "text": "Kültür Portalı, Bursa Ulu Cami (kulturportali.gov.tr); Anadolu Ajansı, Kâbe kapısı örtüsünün bakımı, 26.01.2024 (aa.com.tr)"
+    },
+    {
+      "id": "mwnf-ulu",
+      "text": "Yekta Demiralp, \"Ulu Cami\", Discover Islamic Art, Museum With No Frontiers, islamicart.museumwnf.org"
+    },
+    {
+      "id": "ulu-s33",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "33"
+    },
+    {
+      "id": "ulu-s44",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "44, 46"
+    },
+    {
+      "id": "ulu-s48",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "48"
+    },
+    {
+      "id": "ulu-s56",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "56"
+    },
+    {
+      "id": "ulu-s57",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "46, 57"
+    },
+    {
+      "id": "ulu-s60",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "60"
+    },
+    {
+      "id": "ulu-s63",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "63"
+    },
+    {
+      "id": "ulu-history",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "33, 34, 35, 44, 66"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "id": "ulu-s46",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "46"
+    },
+    {
+      "id": "ulu-s54",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "54"
+    },
+    {
+      "id": "ulu-s72",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\"",
+      "page": "72"
+    }
+  ],
+  "tour": {
+    "description": "Fotoğraflarla sanal gezinti. Derinlik etkisi yapay zekâ ile tahmin edilmiştir; temsilidir, 360° çekim veya 3B tarama değildir.",
+    "start_": "courtyard",
+    "stops": [
+      {
+        "id": "courtyard",
+        "title": "Avlu",
+        "image": "/images/ulu-mosque/courtyard-fountain.jpg",
+        "depth": "/depth/ulu-mosque/courtyard-fountain.png",
+        "text": "Caminin kuzey avlusunda aynı hat üzerinde üç şadırvan bulunur. Doğu ve batıdakiler 2011 yılında, eski fotoğraflardaki üsluplarına uygun şekilde sekiz ahşap direk üzerine soğan kubbeyle yeniden yapılmıştır.",
+        "sourceId": "ulu-s72",
+        "links": [
+          {
+            "target": "door",
+            "label": "Kapıya yürü"
+          }
+        ]
+      },
+      {
+        "id": "door",
+        "title": "Giriş kapısı",
+        "image": "/images/ulu-mosque/entrance-door.jpg",
+        "depth": "/depth/ulu-mosque/entrance-door.png",
+        "text": "Caminin kuzey cephesinde taç kapı, doğu ve batı cephelerinde ise giriş kapıları bulunur. Kuzeydeki kapı \"Sahaflar Kapısı\" olarak bilinir.",
+        "sourceId": "ulu-s44",
+        "links": [
+          {
+            "target": "interior-space",
+            "label": "İçeri gir"
+          },
+          {
+            "target": "courtyard",
+            "label": "Avluya dön"
+          }
+        ]
+      },
+      {
+        "id": "interior-space",
+        "title": "İbadet alanı",
+        "image": "/images/ulu-mosque/interior-space-long.jpg",
+        "depth": "/depth/ulu-mosque/interior-space-long.png",
+        "text": "Yaklaşık 3500 m²'lik ibadet alanı, on iki kare paye ile bölünür. Payelerdeki hat yazıları iç mekânı adeta bir hat müzesine dönüştürür.",
+        "sourceId": "ulu-s46",
+        "links": [
+          {
+            "target": "fountain",
+            "label": "Şadırvana yürü"
+          },
+          {
+            "target": "minbar",
+            "label": "Minbere yürü"
+          },
+          {
+            "target": "domes",
+            "label": "Yukarı bak"
+          },
+          {
+            "target": "door",
+            "label": "Kapıya dön"
+          }
+        ]
+      },
+      {
+        "id": "fountain",
+        "title": "Şadırvan",
+        "image": "/images/ulu-mosque/fountain.jpg",
+        "depth": "/depth/ulu-mosque/fountain.png",
+        "text": "Caminin merkezindeki havuzlu şadırvanın üzerindeki kubbenin ortası açık bırakılmıştır; iç mekân böylece doğal ışık alır ve havalanır.",
+        "sourceId": "ulu-s60",
+        "links": [
+          {
+            "target": "minbar",
+            "label": "Minbere yürü"
+          },
+          {
+            "target": "interior-space",
+            "label": "Geri dön"
+          }
+        ]
+      },
+      {
+        "id": "minbar",
+        "title": "Minber",
+        "image": "/images/ulu-mosque/minbar.jpg",
+        "depth": "/depth/ulu-mosque/minbar.png",
+        "text": "Kündekâri tekniğiyle, çivi ve tutkal kullanılmadan birbirine geçme parçalardan yapılmıştır. Kapısındaki kitabeye göre H. 802 / M. 1399-1400 yılında yapılmıştır.",
+        "sourceId": "ulu-s48",
+        "links": [
+          {
+            "target": "mihrab",
+            "label": "Mihraba yürü"
+          },
+          {
+            "target": "fountain",
+            "label": "Şadırvana dön"
+          }
+        ]
+      },
+      {
+        "id": "mihrab",
+        "title": "Mihrap",
+        "image": "/images/ulu-mosque/mihrab.jpg",
+        "depth": "/depth/ulu-mosque/mihrab.png",
+        "text": "Mihraptaki süslemeler, 1862 yılında Bursa'ya sürgün edilen Tevfik Paşa tarafından yaptırılmıştır.",
+        "sourceId": "ulu-s54",
+        "links": [
+          {
+            "target": "domes",
+            "label": "Yukarı bak"
+          },
+          {
+            "target": "minbar",
+            "label": "Minbere dön"
+          }
+        ]
+      },
+      {
+        "id": "domes",
+        "title": "Kubbeler",
+        "image": "/images/ulu-mosque/domes-inside.jpg",
+        "depth": "/depth/ulu-mosque/domes-inside.png",
+        "text": "Yapıyı örten 11 m çapındaki kubbeler, on iki kare paye üzerine oturur.",
+        "sourceId": "ulu-s46",
+        "links": [
+          {
+            "target": "interior-space",
+            "label": "İbadet alanına dön"
+          }
+        ]
+      }
+    ]
+  },
+  "tour360": {
+    "provider": "360TR",
+    "embedUrl": "https://www.360tr.com/embed/bursa-ulu-camii",
+    "sourceUrl": "https://www.360tr.com/tr/bursa-ulu-camii/giris",
+    "description": "Gerçek 360° panoramalar: mihrap, abdest havuzu, kubbe altı, giriş ve iç mekân. Fareyle veya parmağınla her yöne bak."
+  },
+  "model": {
+    "model": "ulu-mosque",
+    "interiorInfos": [
+      {
+        "id": "door",
+        "title": "Giriş kapısı",
+        "text": "Caminin kuzey cephesinde taç kapı, doğu ve batı cephelerinde ise giriş kapıları bulunur. Kuzeydeki kapı \"Sahaflar Kapısı\" olarak bilinir.",
+        "sourceId": "ulu-s44",
+        "position": [
+          0,
+          7.6,
+          -24.9
+        ],
+        "radius": 7
+      },
+      {
+        "id": "fountain",
+        "title": "Şadırvan",
+        "text": "Caminin merkezindeki havuzlu şadırvanın üzerindeki kubbenin ortası açık bırakılmıştır; iç mekân böylece doğal ışık alır ve havalanır.",
+        "sourceId": "ulu-s60",
+        "position": [
+          0,
+          5.1,
+          -6.9
+        ],
+        "radius": 9.5
+      },
+      {
+        "id": "minbar",
+        "title": "Minber",
+        "text": "Kündekâri tekniğiyle, çivi ve tutkal kullanılmadan birbirine geçme parçalardan yapılmıştır. Kapısındaki kitabeye göre H. 802 / M. 1399-1400 yılında yapılmıştır.",
+        "sourceId": "ulu-s48",
+        "position": [
+          -5.4,
+          7.4,
+          20.8
+        ],
+        "radius": 8
+      },
+      {
+        "id": "mihrab",
+        "title": "Mihrap",
+        "text": "Mihraptaki süslemeler, 1862 yılında Bursa'ya sürgün edilen Tevfik Paşa tarafından yaptırılmıştır.",
+        "sourceId": "ulu-s54",
+        "position": [
+          0,
+          9.3,
+          24.8
+        ],
+        "radius": 11
+      },
+      {
+        "id": "domes",
+        "title": "Kubbeler",
+        "text": "Yapıyı örten 11 m çapındaki kubbeler, on iki kare paye üzerine oturur.",
+        "sourceId": "ulu-s46",
+        "position": [
+          -13.8,
+          9,
+          6.9
+        ],
+        "radius": 5
+      },
+      {
+        "id": "interior-space",
+        "title": "İbadet alanı",
+        "text": "Yaklaşık 3500 m²'lik ibadet alanı, on iki kare paye ile bölünür. Payelerdeki hat yazıları iç mekânı adeta bir hat müzesine dönüştürür.",
+        "sourceId": "ulu-s46",
+        "position": [
+          20.7,
+          8.6,
+          0
+        ],
+        "radius": 6
+      },
+      {
+        "id": "calligraphy",
+        "title": "Hat levhaları",
+        "text": "Camide duvarlara nakşedilmiş veya levha hâlinde yaklaşık yüz yetmiş hat eseri bulunur. Payelerin her yüzüne celi sülüs ve kûfi hatlarla esmâ-i hüsnâdan örnekler yazılmıştır.",
+        "sourceId": "ulu-s57",
+        "position": [
+          13.8,
+          11.4,
+          24.6
+        ],
+        "radius": 12
+      },
+      {
+        "id": "east-door",
+        "title": "Doğu kapısı",
+        "text": "Caminin doğu, batı ve kuzey yönünde olmak üzere üç kapısı vardır. Bu kapılardan kuzey ve batı yöndekiler yeni olup doğudaki kapı kanatları camiyle aynı dönemde yapılmıştır. Ahşap kanatları ceviz ağacındandır. Mihrap ekseni ile her üç kapının ekseni şadırvanın merkezinde birleşir.",
+        "sourceId": "kp-ulu",
+        "position": [
+          30.2,
+          7.1,
+          -6.875
+        ],
+        "radius": 8
+      },
+      {
+        "id": "mahfil",
+        "title": "Müezzin mahfili",
+        "text": "Sekiz ahşap sütun üzerindeki müezzin mahfilinin kitabesi H. 956 / M. 1549 tarihini taşır.",
+        "sourceId": "ulu-s56",
+        "position": [
+          0,
+          6.4,
+          5.875
+        ],
+        "radius": 5.5
+      },
+      {
+        "id": "kursu",
+        "title": "Taş kürsü",
+        "text": "Müezzin mahfilinin karşısındaki mermer vaaz kürsüsü rokoko üslubundadır. Envantere göre üzerindeki kitabe H. 1231 / M. 1816 tarihini taşır; Kültür Portalı ise 1815 tarihini verir.",
+        "sourceId": "ulu-s56",
+        "position": [
+          4.8,
+          5,
+          13.75
+        ],
+        "radius": 3.6
+      },
+      {
+        "id": "kaaba-cover",
+        "title": "Kâbe kapısının örtüsü",
+        "text": "Kâbe kapısına ait örtü cami içindeki camlı koruma alanında sergilenir. Kültür Portalı, örtünün Yavuz Sultan Selim tarafından Ulu Cami'ye hediye edildiğini aktarır. Maketteki işlemeler temsilîdir; gerçek ayet işlemeleri gösterilmez.",
+        "sourceId": "ulu-kaaba",
+        "position": [
+          31.3,
+          5.6,
+          -18.425
+        ],
+        "radius": 10
+      }
+    ],
+    "description": "Temsili maket: plan ölçüleri, kubbe ve paye düzeni envanterdeki bilgilere göre kodla oluşturuldu; yükseklikler, cephe ve iç mekân ayrıntıları arşiv fotoğraflarına ve Kültür Portalı metnine bakılarak temsilî yorumlanmıştır. Levha ve paye yazıları arşiv fotoğraflarından alınmıştır; hangi yüzde durdukları temsilîdir. Gerçek bir 3B tarama değildir.",
+    "infos": [
+      {
+        "text": "Cami yaklaşık 55 × 69 m boyutlarında, kareye yakın dikdörtgen planlıdır; kuzey cephesinde taç kapı bulunur.",
+        "sourceId": "ulu-s44"
+      },
+      {
+        "text": "Yapıyı örten yirmi kubbenin çapı 11 m’dir ve kubbeler on iki kare paye üzerine oturur. \"Parçala\" ile çatıyı kaldırıp payeleri görebilirsin.",
+        "sourceId": "ulu-s46"
+      },
+      {
+        "text": "Şadırvanın üzerindeki kubbenin ortası açık bırakılmıştır; iç mekân böylece ışık alır ve havalanır.",
+        "sourceId": "ulu-s60"
+      },
+      {
+        "text": "İki minarenin kaideleri mermerden, gövdeleri tuğladandır. Doğudaki minare bir süre yarım kullanıldığı için \"Güdük Minare\" olarak anılmıştır.",
+        "sourceId": "ulu-s63"
+      }
+    ]
+  }
+}

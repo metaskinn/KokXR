@@ -19,3 +19,14 @@ export interface InventoryItem {
   /** True only for the main building that an existing artifact's scale model represents. New entries default to false. */
   hasScaleModel: boolean
 }
+
+/** Short facts for one building, written in our own words from the printed inventory. Fields are null-free: absent means the book does not state it. */
+export interface InventoryDetails {
+  builder?: string
+  date?: string
+  architect?: string
+  location?: string
+  summary: string
+  /** Volume and printed page the facts were taken from, e.g. "Cilt 1, s. 37". */
+  source: string
+}

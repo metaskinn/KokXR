@@ -7,6 +7,13 @@ const dir = 'src/content/artifacts'
 const artifacts = Object.fromEntries(readdirSync(dir).filter((f) => f.endsWith('.json'))
   .map((f) => { const a = JSON.parse(readFileSync(`${dir}/${f}`, 'utf8')); return [a.id, a] }))
 
+const details = JSON.parse(readFileSync('src/content/inventory-details.json', 'utf8'))
+const ids = new Set(inventory.map((e) => e.id))
+for (const [id, v] of Object.entries(details)) {
+  assert.ok(ids.has(id), `details for unknown id ${id}`)
+  assert.ok(v.summary && v.source && /^Cilt [123], s\. \d+$/.test(v.source), `${id}: summary and source`)
+  assert.ok(v.summary.split(/\s+/).length <= 45, `${id}: summary too long`)
+}
 const sections = ['complex', 'mosque', 'tomb', 'education', 'commercial', 'water', 'sufi', 'civil']
 assert.equal(new Set(inventory.map((e) => e.id)).size, inventory.length, 'ids are unique')
 for (const e of inventory) {

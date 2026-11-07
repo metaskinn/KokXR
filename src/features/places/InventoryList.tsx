@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Artifact } from '../../domain/artifact'
 import type { InventorySection } from '../../domain/inventory'
-import { inventory, sectionLabels } from '../../content/inventory'
+import { inventory, inventoryDetails, sectionLabels } from '../../content/inventory'
 
 const PAGE = 60
 const collator = new Intl.Collator('tr')
@@ -65,10 +65,18 @@ export default function InventoryList({ artifacts }: { artifacts: Artifact[] }) 
       {results.slice(0, shown).map((e) => {
         const model = e.hasScaleModel && hasModel(e.artifactId)
         const meta = [e.district, sectionLabels[e.section], e.group].filter(Boolean).join(' · ')
+        const d = inventoryDetails[e.id]
+        const facts = d ? ([['Yaptıran', d.builder], ['Tarih', d.date], ['Mimar', d.architect], ['Konum', d.location]] as const).filter(([, v]) => v) : []
         return <li key={e.id} data-model={model ? 'yes' : 'no'}>
           {model
             ? <Link to={`/places/${e.artifactId}`}><strong>{e.name}</strong><span>{meta}</span><em>3B maket var</em></Link>
             : <div><strong>{e.name}</strong><span>{meta}</span><em>3B maket yok</em></div>}
+          {d && <details className="inventory-details">
+            <summary>Bilgi</summary>
+            <p>{d.summary}</p>
+            {facts.length > 0 && <dl>{facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>}
+            <small>Kaynak: Bursa Vakıf Eserleri, {d.source}</small>
+          </details>}
         </li>
       })}
     </ul> : <p>Bu filtrelere uyan yapı yok.</p>}

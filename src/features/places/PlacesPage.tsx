@@ -7,6 +7,7 @@ import NotFound from '../../shared/ui/NotFound'
 import { RELIEF, mapPoint, loadMap, separateMarkers } from '../../content/turkeyMap'
 import type { MapId, MapData } from '../../content/turkeyMap'
 import { vrCities } from '../../content/vrArtifacts'
+import InventoryList from './InventoryList'
 import './places.css'
 
 /** Can this browser open immersive VR? null until known. */
@@ -314,6 +315,7 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
         </>}
       </section>
     </div>
+    <InventoryList artifacts={artifacts} />
   </article>
 }
 

@@ -342,3 +342,6 @@ html[data-kontrast="yuksek"] button, html[data-kontrast="yuksek"] .dugme { borde
 .nav-grup { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.1rem; margin-left: 0.5rem; padding-left: 0.75rem; border-left: 1px solid var(--cizgi); }
 .nav-grup-ad { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ikincil); margin-right: 0.25rem; }
 @media (max-width: 760px) { .nav-grup { margin-left: 0; padding-left: 0; border-left: 0; } .nav-grup-ad { display: none; } }
+
+.katki-listesi { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.katki-etiket { display: inline-block; margin: 0; padding: .15rem .6rem; border-radius: 999px; background: var(--yesil-acik); color: var(--yesil-koyu); font-size: .8rem; font-weight: 600; }

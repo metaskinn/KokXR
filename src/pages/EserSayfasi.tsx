@@ -1,3 +1,5 @@
+import KatkiBolumu from '../components/KatkiBolumu'
+import type { Katki } from '../data/katki'
 import SesliDinle from '../components/SesliDinle'
 import { Link, useParams } from 'react-router-dom'
 import type { Eser } from '../types/eser'
@@ -12,7 +14,7 @@ import KaynakSatiri, { kaynakMetni } from '../components/KaynakSatiri'
 import Bulunamadi from './Bulunamadi'
 import { ACIK_YAYIN } from '../data/acikYayin'
 
-export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; rozetKazan: (id: string) => boolean }) {
+export default function EserSayfasi({ eserler, rozetKazan, katkilar, katkiEkle }: { eserler: Eser[]; rozetKazan: (id: string) => boolean; katkilar: Katki[]; katkiEkle: (eserId: string, baslik: string, metin: string) => void }) {
   const { id } = useParams()
   const eser = eserler.find((item) => item.id === id)
   if (!eser) return <Bulunamadi />
@@ -46,5 +48,6 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
       <h2 id="kaynaklar-basligi">Kaynaklar</h2>
       <ul className="kaynak-listesi">{eser.kaynaklar.map((kaynak) => <li key={kaynak.id}>{kaynakMetni(kaynak)}</li>)}</ul>
     </section>
+    <KatkiBolumu eserId={eser.id} katkilar={katkilar} ekle={katkiEkle} />
   </article>
 }

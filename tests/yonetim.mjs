@@ -49,7 +49,23 @@ try {
   await p.getByRole('button', { name: /Sil\s*: Onay Deneme Eseri/ }).click()
   await p.goto(`${URL_KOK}/onay`)
   assert.equal(await p.getByText('Onay Deneme Eseri').count(), 0, 'silinen eser onay listesinde')
-  console.log('Yönetim: düzenle, varsayılana dön, ekle, onayla, reddet ve sil geçti.')
+  // Topluluk katkısı: gönder, onaysızken görünmesin, onaylanınca etiketli görünsün, reddedilince gizlensin.
+  await p.goto(`${URL_KOK}/eser/ulu-camii`)
+  await p.getByLabel('Başlık').fill('Katkı deneme başlığı'); await p.getByLabel('Metin').fill('Katkı deneme metni')
+  await p.getByRole('button', { name: 'Katkıyı gönder' }).click()
+  await p.getByText('Katkınız alındı').waitFor()
+  assert.equal(await p.getByText('Katkı deneme metni').count(), 0, 'onaysız katkı yayında')
+  await p.getByLabel('Başlık').fill('Başka'); await p.getByLabel('Metin').fill('yazın: ali@ornek.com'); await p.getByRole('button', { name: 'Katkıyı gönder' }).click()
+  await p.getByRole('alert').filter({ hasText: 'kişisel' }).waitFor()
+  const katkiKarari = async (ad) => { await p.goto(`${URL_KOK}/onay`); await p.getByRole('group', { name: /Katkı deneme başlığı/ }).getByRole('button', { name: ad }).click() }
+  await katkiKarari('Onayla')
+  await p.goto(`${URL_KOK}/eser/ulu-camii`)
+  await p.getByText('Katkı deneme metni').waitFor()
+  assert.ok(await p.getByText('Topluluk katkısı · doğrulanmamış bilgi').count() >= 1, 'doğrulanmamış etiketi yok')
+  await katkiKarari('Reddet')
+  await p.goto(`${URL_KOK}/eser/ulu-camii`)
+  assert.equal(await p.getByText('Katkı deneme metni').count(), 0, 'reddedilen katkı yayında')
+  console.log('Yönetim: düzenle, varsayılana dön, ekle, onayla, reddet, sil ve topluluk katkısı geçti.')
 } finally {
   await tarayici.close()
 }

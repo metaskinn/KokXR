@@ -3,6 +3,8 @@ import { Link, NavLink, Route, Routes, useLocation, useParams } from 'react-rout
 import { eserleriGetir, icerigiOku, icerigiYaz } from './data'
 import type { UstKatman } from './data'
 import { bulutVar, durumDegistir, eserleriOku, eserKaydet, eserSil } from './data/bulut'
+import { katkilariOku, katkilariYaz, yeniKatki } from './data/katki'
+import type { KatkiDurumu } from './data/katki'
 import { onayiOku, onayiYaz, yayinKatmani } from './data/onay'
 import type { OnayDurumu } from './data/onay'
 import { ustKatmaniCoz } from './data'
@@ -49,6 +51,15 @@ export default function App() {
     eserleriOku().then((liste) => setBulutKatmani(ustKatmaniCoz(Object.fromEntries(liste.map((b) => [b.eser.id, b.eser]))))).catch(() => {})
   }, [])
   const [onay, setOnay] = useState(onayiOku)
+  const [katkilar, setKatkilar] = useState(katkilariOku)
+  function katkiEkle(eserId: string, baslik: string, metin: string) {
+    const yeni = [...katkilar, yeniKatki(eserId, baslik, metin)]
+    setKatkilar(yeni); katkilariYaz(yeni)
+  }
+  function katkiKarari(id: string, durum: KatkiDurumu) {
+    const yeni = katkilar.map((k) => k.id === id ? { ...k, durum } : k)
+    setKatkilar(yeni); katkilariYaz(yeni)
+  }
   const yonetimEserleri = eserleriGetir({ ...bulutKatmani, ...icerik.ustKatman })
   const eserler = eserleriGetir({ ...bulutKatmani, ...yayinKatmani(icerik.ustKatman, onay) })
   function onayKarari(id: string, durum: OnayDurumu) {
@@ -93,13 +104,13 @@ export default function App() {
         <Route path="/ogretmen" element={<OgretmenPaneli />} />
         <Route path="/vizyon" element={<Vizyon />} />
         <Route path="/kutuphane" element={<Kutuphane />} />
-        <Route path="/onay" element={<OnayAkisi eserler={yonetimEserleri} ustKatman={icerik.ustKatman} onay={onay} karar={onayKarari} />} />
+        <Route path="/onay" element={<OnayAkisi eserler={yonetimEserleri} ustKatman={icerik.ustKatman} onay={onay} karar={onayKarari} katkilar={katkilar} katkiKarari={katkiKarari} />} />
         <Route path="/vr" element={<VrEserler eserler={eserler} />} />
         <Route path="/vr/:id" element={<VrEser eserler={eserler} rozetKazan={rozetKazan} />} />
         <Route path="/atolye/kilic" element={<KilicAtolyesi />} />
         <Route path="/atolye/vazo" element={<VazoAtolyesi />} />
         <Route path="/atolye/cini" element={<CiniAtolyesi />} />
-        <Route path="/eser/:id" element={<EserSayfasi eserler={eserler} rozetKazan={rozetKazan} />} />
+        <Route path="/eser/:id" element={<EserSayfasi eserler={eserler} rozetKazan={rozetKazan} katkilar={katkilar} katkiEkle={katkiEkle} />} />
         <Route path="/yonetim" element={<YonetimKapisi {...yonetimProps}><Yonetim {...yonetimProps} /></YonetimKapisi>} />
         <Route path="/yonetim/yeni" element={<YonetimKapisi {...yonetimProps}><YonetimFormRotasi {...yonetimProps} /></YonetimKapisi>} />
         <Route path="/yonetim/eser/:id" element={<YonetimKapisi {...yonetimProps}><YonetimFormRotasi {...yonetimProps} /></YonetimKapisi>} />

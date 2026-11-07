@@ -2,13 +2,14 @@ import type { Eser } from '../types/eser'
 import type { UstKatman } from '../data'
 import { onayBekleyenler } from '../data/onay'
 import type { OnayDurumu, OnayHaritasi } from '../data/onay'
+import type { Katki, KatkiDurumu } from '../data/katki'
 import './mokap.css'
 
 const durumEtiketi: Record<OnayDurumu, string> = { beklemede: 'Onay bekliyor', onaylandi: 'Onaylandı, yayında', reddedildi: 'Reddedildi, yayında değil' }
 
-interface Props { eserler: Eser[]; ustKatman: UstKatman; onay: OnayHaritasi; karar: (id: string, durum: OnayDurumu) => void }
+interface Props { eserler: Eser[]; ustKatman: UstKatman; onay: OnayHaritasi; karar: (id: string, durum: OnayDurumu) => void; katkilar: Katki[]; katkiKarari: (id: string, durum: KatkiDurumu) => void }
 
-export default function OnayAkisi({ eserler, ustKatman, onay, karar }: Props) {
+export default function OnayAkisi({ eserler, ustKatman, onay, karar, katkilar, katkiKarari }: Props) {
   const idler = onayBekleyenler(ustKatman)
   const durumu = (id: string): OnayDurumu => onay[id] ?? 'beklemede'
   const sayi = (d: OnayDurumu) => idler.filter((id) => durumu(id) === d).length
@@ -30,6 +31,19 @@ export default function OnayAkisi({ eserler, ustKatman, onay, karar }: Props) {
           <div className="mokap-eylemler" role="group" aria-label={`${eser?.ad ?? id} için karar`}>
             <button type="button" aria-pressed={d === 'onaylandi'} onClick={() => karar(id, d === 'onaylandi' ? 'beklemede' : 'onaylandi')}>Onayla</button>
             <button type="button" aria-pressed={d === 'reddedildi'} onClick={() => karar(id, d === 'reddedildi' ? 'beklemede' : 'reddedildi')}>Reddet</button>
+          </div>
+        </li>
+      })}</ul>}
+    <h2>Topluluk katkıları</h2>
+    {katkilar.length === 0 ? <p>Bekleyen katkı yok. Eser sayfalarındaki "Topluluk katkıları" formundan gelen metinler burada onay bekler.</p> :
+      <ul className="mokap-kartlar mokap-kartlar-uclu" aria-label="Topluluk katkıları">{katkilar.map((k) => {
+        const eser = eserler.find((e) => e.id === k.eserId)
+        return <li className="mokap-kart" key={k.id}>
+          <span className={`mokap-durum mokap-durum-${k.durum === 'beklemede' ? 'bekliyor' : k.durum}`}>{durumEtiketi[k.durum]}</span>
+          <h3>{k.baslik}</h3><p>{k.metin}</p><p className="mokap-ikincil">Eser: {eser?.ad ?? k.eserId}</p>
+          <div className="mokap-eylemler" role="group" aria-label={`${k.baslik} katkısı için karar`}>
+            <button type="button" aria-pressed={k.durum === 'onaylandi'} onClick={() => katkiKarari(k.id, k.durum === 'onaylandi' ? 'beklemede' : 'onaylandi')}>Onayla</button>
+            <button type="button" aria-pressed={k.durum === 'reddedildi'} onClick={() => katkiKarari(k.id, k.durum === 'reddedildi' ? 'beklemede' : 'reddedildi')}>Reddet</button>
           </div>
         </li>
       })}</ul>}

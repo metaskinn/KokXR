@@ -1,9 +1,32 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Artifact, Image, Source } from '../../../domain/artifact'
 import SourceLine from '../../../shared/ui/SourceLine'
 import PhotoCredit from '../../../shared/ui/PhotoCredit'
 import Section from '../../../shared/ui/Section'
 import { PUBLIC_BUILD } from '../../../shared/config/publicBuild'
+
+/** Marker positions in pixels: kept inside the photo, and pushed apart where they would overlap at this size. */
+export function placeMarkers(points: { x: number; y: number }[], width: number, height: number, size: number) {
+  const r = size / 2, min = size + 4
+  const out = points.map((p) => ({ x: p.x / 100 * width, y: p.y / 100 * height }))
+  const clamp = () => out.forEach((p) => { p.x = Math.min(Math.max(p.x, r), width - r); p.y = Math.min(Math.max(p.y, r), height - r) })
+  clamp()
+  for (let round = 0; round < 30; round++) {
+    let moved = false
+    for (let i = 0; i < out.length; i++) for (let j = i + 1; j < out.length; j++) {
+      const a = out[i], b = out[j]
+      let dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy)
+      if (d >= min) continue
+      if (d < 0.01) { dx = 0; dy = 1; d = 1 }
+      const push = (min - d) / 2 + 0.5
+      a.x -= dx / d * push; a.y -= dy / d * push; b.x += dx / d * push; b.y += dy / d * push
+      moved = true
+    }
+    clamp()
+    if (!moved) break
+  }
+  return out
+}
 
 function Fullscreen({ images, sources, selected, select, close }: {
   images: Image[]; sources: Source[]; selected: number; select: (index: number) => void; close: () => void
@@ -79,7 +102,17 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
   const thumbnails = useRef<HTMLDivElement>(null)
   const touch = useRef<{ x: number; y: number } | null>(null)
   const scrolled = useRef(false)
-  const point = artifact.hotspots.find((item) => item.id === openPoint && item.image === artifact.images[selected]?.file)
+  const [box, setBox] = useState({ w: 0, h: 0 })
+  const observer = useRef<ResizeObserver | null>(null)
+  // Measure the photo area whenever it is mounted or resized; marker placement needs its pixel size.
+  const area = useCallback((el: HTMLDivElement | null) => {
+    observer.current?.disconnect()
+    observer.current = null
+    if (!el) return
+    observer.current = new ResizeObserver(() => setBox({ w: el.clientWidth, h: el.clientHeight }))
+    observer.current.observe(el)
+  }, [])
+  const point =artifact.hotspots.find((item) => item.id === openPoint && item.image === artifact.images[selected]?.file)
   useEffect(() => {
     if (point) card.current?.scrollIntoView({ block: 'nearest' })
   }, [point])
@@ -99,6 +132,10 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
     setOpenPoint(null)
   }
   const ratio = image ? ratios[image.file] ?? 4 / 3 : 4 / 3
+  const shown = image ? artifact.hotspots.map((item, index) => ({ item, index })).filter(({ item }) => item.image && item.image === image.file) : []
+  // Smaller markers on narrow photos so nearby points stay separately tappable.
+  const markerSize = box.w && box.w < 480 ? 34 : 44
+  const places = box.w ? placeMarkers(shown.map(({ item }) => item), box.w, box.h, markerSize) : null
   return <>
     {!(PUBLIC_BUILD && !image) && <Section id="gallery-title" title="Fotoğraflar" className="photo-gallery" action={<div className="gallery-title-actions"><span className="gallery-counter" role="status">{image ? `${selected + 1} / ${artifact.images.length}` : '0 / 0'}</span>{image && <button className="secondary-button" onClick={() => setFullscreen(true)}>Fotoğrafı büyüt</button>}</div>}>
       {!image ? <p>Fotoğraflar hazırlanıyor.</p> : <>
@@ -123,10 +160,11 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
                 select(selected + (dx < 0 ? 1 : -1))
               }
             }}>
-            <div className="image-area" style={{ width: `min(100%, calc(var(--gallery-height) * ${ratio}))`, aspectRatio: String(ratio) }}>
+            <div className="image-area" ref={area} style={{ width: `min(100%, calc(var(--gallery-height) * ${ratio}))`, aspectRatio: String(ratio) }}>
               <button className="zoom" onClick={() => { if (scrolled.current) { scrolled.current = false; return }; setFullscreen(true) }} aria-label="Fotoğrafı tam ekran görüntüle"><img src={image.file} alt={image.alt} onLoad={(e) => { const imageEl = e.currentTarget; setRatios((old) => ({ ...old, [image.file]: imageEl.naturalWidth / imageEl.naturalHeight })) }} /></button>
-              {artifact.hotspots.map((item, index) => item.image && item.image === image.file && <button
-                key={item.id} className="info-point" style={{ left: `${item.x}%`, top: `${item.y}%` }}
+              {shown.map(({ item, index }, k) => <button
+                key={item.id} className="info-point"
+                style={places ? { left: places[k].x, top: places[k].y, width: markerSize, height: markerSize, minWidth: markerSize, minHeight: markerSize } : { left: `${item.x}%`, top: `${item.y}%` }}
                 aria-label={`${index + 1}. ${item.title}`} aria-expanded={openPoint === item.id} aria-controls="photo-info-card"
                 onClick={() => setOpenPoint(openPoint === item.id ? null : item.id)}>{index + 1}</button>)}
             </div>

@@ -1,0 +1,113 @@
+{
+  "id": "karacabey-bulbul-hatun-tomb",
+  "name": "Bülbül Hatun Türbesi",
+  "city": "Bursa",
+  "district": "Karacabey",
+  "period": "Osmanlı · yapım tarihi kitapta belirtilmemiştir; vakfı H. 897 / M. 1491",
+  "endowment": "Bülbül Hatun vakfı (H. 897 / M. 1491); mütevelli Mahmud Çelebi",
+  "summary": "Dayı Karaca Bey'in eşi Bülbül Hatun'un, Karacabey Camii'nin yanındaki türbesi.",
+  "history": "Karacabey'in Selimiye Mahallesi'nde, İmaret Caddesi, 4. Sokak, No: 2 adresinde yer alır.\n\nBülbül Hatun, Dayı Karaca Bey'in eşidir. Aynı zamanda Bursa'da Ulucami'nin doğusunda yer alan ve günümüze ulaşmayan mektebi yaptıran Hundi Hatun'un annesidir. Hundi Hatun ise Sadrazam Çandarlı İbrahim Paşa'nın eşidir.\n\nBülbül Hatun H. 897 / M. 1491'de Simav'daki Melek (Ananeşte) Köyü'nü, Leçler sınırındaki Sarı Ali değirmenini, Bursa'da Karaca Bey'in yaptırdığı Gelincik Çarşısı yakınlarındaki otuz iki odalı yapıyı ve bu yapıya bitişik on bir dükkânı vakfetmiştir. Her gün kendi türbesinde yedi cüz okunmasını ve sevabının kardeşi Ahmed Bey ile kendi ruhuna bağışlanmasını şart koşmuştur. Vakıflarının idaresi için Ahmed Bey'in oğlu Mahmud Çelebi'yi mütevelli olarak tayin etmiştir.\n\nBülbül Hatun, Karacabey Camii'nin yanındaki bu türbeye defnedilmiştir. Uzun yıllar bakımsız kalan ve harap durumdaki türbe onarılarak ziyarete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/karacabey-bulbul-hatun-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/karacabey-bulbul-hatun-tomb/exterior.jpg",
+      "alt": "Kare gövdeli türbe: taş ve tuğla örgülü duvarlar, cephede tuğla kemer ve demir parmaklıklı pencere, üstte gri kaplamalı kubbe; arkada caminin taş-tuğla duvarları, çevrede ağaçlar",
+      "description": "Türbe ve arkasındaki cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-bulbul-hatun-tomb/interior.jpg",
+      "alt": "Türbenin içi: yeşil demir parmaklık içinde yazılı örtülerle örtülü sandukalar, beyaz kubbe ve sivri kemerli nişler, duvarlarda resimli halılar ve ahşap pencereler",
+      "description": "Türbenin içi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-bulbul-hatun-tomb/aerial-top.jpg",
+      "alt": "Türbenin tepeden görünümü: kare gövde üzerinde dilimli görünen gri kubbe, çevresinde ağaçlar ve yol",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "location",
+      "image": "/images/karacabey-bulbul-hatun-tomb/exterior.jpg",
+      "x": 48,
+      "y": 62,
+      "title": "Caminin yanındaki türbe",
+      "text": "Bülbül Hatun, Karacabey Camii'nin yanında bulunan bu türbeye defnedilmiştir.",
+      "sourceId": "inv-p534"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/karacabey-bulbul-hatun-tomb/interior.jpg",
+      "x": 55,
+      "y": 60,
+      "title": "Türbede okunan cüzler",
+      "text": "Bülbül Hatun, her gün kendi türbesinde yedi cüz okunmasını ve sevabının kardeşi Ahmed Bey ile kendi ruhuna bağışlanmasını şart koşmuştur.",
+      "sourceId": "inv-p534"
+    },
+    {
+      "id": "restoration",
+      "image": "/images/karacabey-bulbul-hatun-tomb/aerial-top.jpg",
+      "x": 50,
+      "y": 47,
+      "title": "Onarım",
+      "text": "Uzun yıllar bakımsız kalan ve harap bir durumda bulunan türbe, onarılarak ziyarete açılmıştır.",
+      "sourceId": "inv-p534"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bülbül Hatun kimin eşidir?",
+      "options": [
+        "Çandarlı İbrahim Paşa",
+        "Ahmed Bey",
+        "Dayı Karaca Bey",
+        "Mahmud Çelebi"
+      ],
+      "correct": 2,
+      "description": "Bülbül Hatun, Dayı Karaca Bey'in eşidir; kızı Hundi Hatun ise Çandarlı İbrahim Paşa'nın eşidir.",
+      "sourceId": "inv-p534"
+    },
+    {
+      "question": "Bülbül Hatun vakıflarının idaresi için kimi mütevelli tayin etmiştir?",
+      "options": [
+        "Mahmud Çelebi",
+        "Karaca Bey",
+        "Hundi Hatun",
+        "Ahmed Bey"
+      ],
+      "correct": 0,
+      "description": "Vakıflarının idaresi için kardeşi Ahmed Bey'in oğlu Mahmud Çelebi'yi mütevelli olarak tayin etmiştir.",
+      "sourceId": "inv-p534"
+    },
+    {
+      "question": "Bülbül Hatun türbesinde her gün ne okunmasını şart koşmuştur?",
+      "options": [
+        "Bir hatim",
+        "Yedi cüz",
+        "Mevlid",
+        "Kırk Yâsin"
+      ],
+      "correct": 1,
+      "description": "Her gün türbesinde yedi cüz okunmasını ve sevabının kardeşi Ahmed Bey ile kendi ruhuna bağışlanmasını şart koşmuştur.",
+      "sourceId": "inv-p534"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p534",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Karacabey, \"Bülbül Hatun Türbesi\"",
+      "page": "534"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

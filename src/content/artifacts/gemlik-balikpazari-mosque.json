@@ -1,0 +1,139 @@
+{
+  "id": "gemlik-balikpazari-mosque",
+  "name": "Balıkpazarı (Yeni) Camii",
+  "city": "Bursa",
+  "district": "Gemlik",
+  "period": "Kilise olarak inşa edildi · 1922-1923'te camiye çevrildi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Gemlik şehir merkezinde, \"Panagia Pazariotissa\" adlı kiliseyken 1922-1923'te camiye çevrilen, Yunan haçı planlı yapı.",
+  "history": "Gemlik ilçesi, Balıkpazarı Mahallesi, Avukat Özgür Aksoy Caddesi üzerinde yer alır. Şehir merkezindeki yapı, geçmişte kilise olarak inşa edilmiş, daha sonra camiye dönüştürülmüştür. Günümüzde \"Balıkpazarı Camii\" ya da \"Yeni Camii\" adıyla anılır.\n\nTürkçe kitabesine göre yapı, daha önce \"Panagia Pazariotissa\" adıyla bilinen bir Hristiyan ibadethanesiyken 1922-1923 yıllarında camiye çevrilmiştir. Yapının geçmişte kilise olduğunu belgeleyen bir Rumca kitabe bulunmaz; camiye dönüştürülmesine ilişkin bilgileri içeren Türkçe kitabe ise mevcuttur.\n\nDoğu-batı doğrultusunda yerleştirilmiş yapı dikdörtgen planlıdır; plan şeması Yunan haçı biçiminde düzenlenmiştir. Merkezî kubbe, dört yönde konumlanan yarım kubbelerle desteklenir. Yapı günümüzde de cami olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/gemlik-balikpazari-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/gemlik-balikpazari-mosque/exterior.jpg",
+      "alt": "Balıkpazarı Camii: pembe sıvalı, yuvarlak kemerli pencereli yapı; üstte kasnaklı merkezî kubbe ve yarım kubbeler, kiremit çatılı kollar, çevresinde apartmanlar",
+      "description": "Yapının genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-balikpazari-mosque/dome-top.jpg",
+      "alt": "Tepeden yakın görünüm: kurşun kaplı merkezî kubbe ve çevresindeki yarım kubbeler, kubbenin tepesinde hoparlörler",
+      "description": "Kubbeler, tepeden",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-balikpazari-mosque/entrance-facade.jpg",
+      "alt": "Pembe sıvalı giriş cephesi: büyük yuvarlak kemer içinde üçlü pencere, altında sütunlu giriş, yanlarda yuvarlak kemerli pencereler",
+      "description": "Giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-balikpazari-mosque/aerial-top.jpg",
+      "alt": "Tepeden görünüm: apartmanlarla çevrili meydanda kubbeli ve kiremit çatılı yapı",
+      "description": "Şehir merkezindeki konumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-balikpazari-mosque/interior-dome.jpg",
+      "alt": "Beyaz iç mekân: kalın payeler arasında kubbe ve yarım kubbelere doğru açılan görünüm, ortada halka avize, mavi halı",
+      "description": "İç mekân ve kubbe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-balikpazari-mosque/mihrab-minbar.jpg",
+      "alt": "İç mekânda beyaz payeler arasında ahşap mihrap ve ahşap minber, üstte yuvarlak kemerli pencereler ve halka avize",
+      "description": "Mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/gemlik-balikpazari-mosque/dome-top.jpg",
+      "x": 50,
+      "y": 48,
+      "title": "Merkezî kubbe ve yarım kubbeler",
+      "text": "Merkezî kubbe, dört yönde konumlanan yarım kubbelerle desteklenmiştir.",
+      "sourceId": "inv-p328"
+    },
+    {
+      "id": "plan",
+      "image": "/images/gemlik-balikpazari-mosque/aerial-top.jpg",
+      "x": 47,
+      "y": 50,
+      "title": "Yunan haçı planı",
+      "text": "Doğu-batı doğrultusunda yerleştirilmiş yapı dikdörtgen planlıdır; plan şeması Yunan haçı biçiminde düzenlenmiştir.",
+      "sourceId": "inv-p328"
+    },
+    {
+      "id": "conversion",
+      "image": "/images/gemlik-balikpazari-mosque/exterior.jpg",
+      "x": 45,
+      "y": 55,
+      "title": "Kiliseden camiye",
+      "text": "Türkçe kitabesine göre yapı, daha önce \"Panagia Pazariotissa\" adıyla bilinen bir Hristiyan ibadethanesiyken 1922-1923 yıllarında camiye çevrilmiştir.",
+      "sourceId": "inv-p327"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türkçe kitabesine göre yapı camiye çevrilmeden önce hangi adla biliniyordu?",
+      "options": [
+        "Aya Sofya",
+        "Panagia Pazariotissa",
+        "Aya Yorgi",
+        "Meryem Ana Kilisesi"
+      ],
+      "correct": 1,
+      "description": "Yapı daha önce \"Panagia Pazariotissa\" adıyla bilinen bir Hristiyan ibadethanesiydi.",
+      "sourceId": "inv-p327"
+    },
+    {
+      "question": "Yapı hangi yıllarda camiye çevrilmiştir?",
+      "options": [
+        "1890",
+        "1950-1958",
+        "1922-1923",
+        "2010-2012"
+      ],
+      "correct": 2,
+      "description": "Türkçe kitabesine göre 1922-1923 yıllarında camiye çevrilmiştir.",
+      "sourceId": "inv-p327"
+    },
+    {
+      "question": "Yapının plan şeması hangi biçimde düzenlenmiştir?",
+      "options": [
+        "Yunan haçı",
+        "Kare, tek kubbeli",
+        "Bazilika",
+        "Ters T"
+      ],
+      "correct": 0,
+      "description": "Dikdörtgen planlı yapının plan şeması Yunan haçı biçimindedir; merkezî kubbe dört yarım kubbeyle desteklenir.",
+      "sourceId": "inv-p328"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p327",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Gemlik, \"Balıkpazarı (Yeni) Camii (Panagia Pazariotissa)\"",
+      "page": "327"
+    },
+    {
+      "id": "inv-p328",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Gemlik, \"Balıkpazarı (Yeni) Camii (Panagia Pazariotissa)\"",
+      "page": "328"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

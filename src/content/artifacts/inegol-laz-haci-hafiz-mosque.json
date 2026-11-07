@@ -1,0 +1,97 @@
+{
+  "id": "inegol-laz-haci-hafiz-mosque",
+  "name": "Laz-Hacı Hafız (Lazlar) Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "İlk cami 1890-1895; bugünkü yapı 1940",
+  "endowment": "İlk caminin banisi Hacı Hafız adıyla bilinen Mehmet Özsaraç",
+  "summary": "Laz-Hacı Hafız Camii, 1890-1895’teki ilk yapının yerine 1940’ta yeniden inşa edilen, ahşap tavanlı bir mahalle camisidir.",
+  "history": "Cami, Kemalpaşa Mahallesi, Atatürk Bulvarı No: 26’dadır. Hacı Hafız adıyla tanınan Mehmet Özsaraç 1890-1895 arasında burada bir cami yaptırmıştır. Zamanla yetersiz kalan cami 1940’ta yıkılarak yerine yenisi yapılmış ve aynı yıl ibadete açılmıştır.\n\nCami ve müştemilatının alanı 450 m², iç alanı 192 m²’dir. İki katlı, betonarme ve kırma çatılı yapıya son cemaat yeri daha sonra eklenmiştir. Bu bölümden yükselen tek şerefeli minare demir doğramadır. İçeride ahşap tavan, alçıdan mukarnaslı beyaz mihrap, ahşap minber ve vaiz kürsüsü bulunur. Cami 1989’da tescil edilmiştir.\n\nLaz veya Lazlar Camii adı, Rize Çayeli doğumlu İsmail Zühtü Bilgili, yani Laz İsmail Efendi ile ilişkilendirilir. Kitap onun 1920-1922 arasında İnegöl Belediye Başkanlığı yaptığını, 1922’de esir alınıp esir değişimiyle serbest kaldığını ve 1954’te vefat ettiğini anlatır. Cami, 2006’da namaz sırasında cep telefonu kullanımına karşı sinyal kesici cihaz yerleştirilmesiyle kamuoyunda gündeme gelmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-laz-haci-hafiz-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-laz-haci-hafiz-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı caminin camla kapatılmış giriş bölümü ve yeşil külahlı tek şerefeli minaresi",
+      "description": "Kiremit çatılı caminin camla kapatılmış giriş bölümü ve yeşil külahlı tek şerefeli minaresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-laz-haci-hafiz-mosque/mihrab.jpg",
+      "alt": "Kırmızı halılı harimde açık renkli mukarnaslı mihrap, yeşil çerçeve, iki yanda pencereler ve ahşap tavan",
+      "description": "Kırmızı halılı harimde açık renkli mukarnaslı mihrap, yeşil çerçeve, iki yanda pencereler ve ahşap tavan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-laz-haci-hafiz-mosque/exterior.jpg",
+      "x": 60,
+      "y": 34,
+      "title": "Demir doğrama minare",
+      "text": "Son cemaat yerinden yükselen minare, demir doğrama malzemeyle tek şerefeli yapılmıştır.",
+      "sourceId": "inv-p174"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-laz-haci-hafiz-mosque/mihrab.jpg",
+      "x": 49,
+      "y": 48,
+      "title": "Mukarnaslı mihrap",
+      "text": "İç mekânda alçıdan mukarnaslı beyaz bir mihrap bulunur.",
+      "sourceId": "inv-p174"
+    }
+  ],
+  "test": [
+    {
+      "question": "İlk camiyi kim yaptırmıştır?",
+      "options": [
+        "İshak Paşa",
+        "Karaca Bey",
+        "Hacı Hafız Mehmet Özsaraç",
+        "Hacı Hasan Efendi"
+      ],
+      "correct": 2,
+      "description": "İlk camiyi Hacı Hafız adıyla bilinen Mehmet Özsaraç yaptırmıştır.",
+      "sourceId": "inv-p174"
+    },
+    {
+      "question": "Eski caminin yerine yenisi hangi yıl yapılmıştır?",
+      "options": [
+        "1940",
+        "1989",
+        "1998",
+        "2014"
+      ],
+      "correct": 0,
+      "description": "Cami 1940’ta yıkılarak yeniden yapılmış ve aynı yıl açılmıştır.",
+      "sourceId": "inv-p174"
+    },
+    {
+      "question": "Cami hangi yıl tescil edilmiştir?",
+      "options": [
+        "1895",
+        "1922",
+        "2006",
+        "1989"
+      ],
+      "correct": 3,
+      "description": "Cami 1989’da tescil edilmiştir.",
+      "sourceId": "inv-p174"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p174",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Laz-Hacı Hafız (Lazlar) Camii\"",
+      "page": "174"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

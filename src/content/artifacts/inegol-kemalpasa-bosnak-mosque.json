@@ -1,0 +1,102 @@
+{
+  "id": "inegol-kemalpasa-bosnak-mosque",
+  "name": "Kemalpaşa (Boşnak) Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "1937 · Minare 1947",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kemalpaşa (Boşnak) Camii, 1937’de Mimar İbrahim Kırcalı’nın yaptığı, kırma çatılı ve bahçesinde ahşap şadırvan bulunan bir camidir.",
+  "history": "Kemalpaşa Mahallesi, Cami Çıkmazı No: 2’deki cami, 1937’de Mimar İbrahim Kırcalı tarafından inşa edilmiştir. 8,66 × 12,61 metre ölçülerinde, derinlemesine dikdörtgen planlı ve kırma çatılıdır. Göçmen nüfusun yoğun olduğu çevresi nedeniyle Boşnak Camisi adıyla da bilinir.\n\nKuzeye eklenen bölümden enine dikdörtgen son cemaat yerine geçilir; burada imam odası ve mahfile geçiş düzenlemeleri vardır. Harime çift kanatlı kapıdan girilir. Dış örtü kiremitli kırma çatı, iç örtü ahşap tavandır. Beden duvarlarında iki sıra sivri kemerli pencere bulunur; üst sıradakiler daha küçüktür. Mihrap süslemeleri solmuş, ahşap minber ile vaaz kürsüsü yenilenmiştir.\n\nBatı cephedeki minare 1947’de taş kaide üzerine metal malzemeyle yapılmıştır. Geniş bahçedeki ahşap şadırvan Bosna Kardeşlik Çeşmesi’nden esinlenmiştir; kitap bunu Boşnak kültürel mirasıyla bir bağ olarak değerlendirir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-kemalpasa-bosnak-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-kemalpasa-bosnak-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı açık renkli cami, önünde ahşap direkli küçük şadırvan ve arkasında minare",
+      "description": "Kiremit çatılı açık renkli cami, önünde ahşap direkli küçük şadırvan ve arkasında minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-kemalpasa-bosnak-mosque/prayer-hall.jpg",
+      "alt": "Ahşap tavanlı, mavi halılı harim; mihrap, ahşap minber ve iki sıra kemerli pencere",
+      "description": "Ahşap tavanlı, mavi halılı harim; mihrap, ahşap minber ve iki sıra kemerli pencere",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-kemalpasa-bosnak-mosque/exterior.jpg",
+      "x": 58,
+      "y": 75,
+      "title": "Ahşap şadırvan",
+      "text": "Bahçedeki ahşap şadırvan, Bosna Kardeşlik Çeşmesi’nden ilhamla tasarlanmıştır.",
+      "sourceId": "inv-p173"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-kemalpasa-bosnak-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 10,
+      "title": "Ahşap tavan",
+      "text": "Dışta kiremitli kırma çatı, iç mekânda ahşap tavan kullanılmıştır.",
+      "sourceId": "inv-p173"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin mimarı kimdir?",
+      "options": [
+        "Karaca Bey",
+        "İbrahim Kırcalı",
+        "Kasım Efendi",
+        "Ekrem Hakkı Ayverdi"
+      ],
+      "correct": 1,
+      "description": "Yapı 1937’de Mimar İbrahim Kırcalı tarafından inşa edilmiştir.",
+      "sourceId": "inv-p172"
+    },
+    {
+      "question": "Cami hangi yıl inşa edilmiştir?",
+      "options": [
+        "1468",
+        "1896",
+        "1910",
+        "1937"
+      ],
+      "correct": 3,
+      "description": "Kemalpaşa Camii 1937 tarihlidir.",
+      "sourceId": "inv-p172"
+    },
+    {
+      "question": "Bahçedeki şadırvan hangi malzemedendir?",
+      "options": [
+        "Ahşap",
+        "Kerpiç",
+        "Cam",
+        "Dökme demir"
+      ],
+      "correct": 0,
+      "description": "Bahçede Bosna Kardeşlik Çeşmesi’nden esinlenen ahşap şadırvan vardır.",
+      "sourceId": "inv-p173"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p172",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Kemalpaşa (Boşnak) Camii\"",
+      "page": "172"
+    },
+    {
+      "id": "inv-p173",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Kemalpaşa (Boşnak) Camii\"",
+      "page": "173"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "inegol-tahtakopru-hamidiye-mosque",
+  "name": "Tahtaköprü Hamidiye Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · II. Abdülhamid dönemi, 1896",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Tahtaköprü Hamidiye Camii, 1896 tarihli dikdörtgen planı, kiremitli kırma çatısı ve tuğla minaresiyle II. Abdülhamid dönemi örneklerindendir.",
+  "history": "Cami, Tahtaköprü Mahallesi, Hüseyin Alp Caddesi üzerindedir. 1896’da yapılmış ve II. Abdülhamid döneminin tipik camilerinden biri olarak değerlendirilmiştir. İçeri alınmış son cemaat yeriyle birlikte dikdörtgen planlıdır. Ahşap iskeletli kırma çatısı kiremit kaplıdır; yüksek kotlu harime birkaç basamakla ulaşılır.\n\nSıvalı duvarların köşeleri kesme taşla sağlamlaştırılmıştır. Sivri kemerli pencerelerin söveleri mermerdir; harimdeki pencereler son cemaat yerindekilerden büyüktür. Toplam on yedi pencere bulunur. Kare kaideli minarenin silindirik gövdesi, peteği ve şerefe altı tuğladır; alemi armudi biçimdedir. Bir dönem ibadete kapalı kalan ve yıkılma tehlikesi gösteren cami, 1986’da mahalle halkının desteğiyle yeniden ihya edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-tahtakopru-hamidiye-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-tahtakopru-hamidiye-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı, iki sıra kemerli pencereli açık sarı cami ve sağda tuğla minare; arkada ağaçlı tepeler",
+      "description": "Kiremit çatılı, iki sıra kemerli pencereli açık sarı cami ve sağda tuğla minare; arkada ağaçlı tepeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-tahtakopru-hamidiye-mosque/minaret.jpg",
+      "alt": "Kırmızı tuğla gövdeli, renkli kuşaklı ve sivri külahlı minare; önünde caminin kiremit çatısı",
+      "description": "Kırmızı tuğla gövdeli, renkli kuşaklı ve sivri külahlı minare; önünde caminin kiremit çatısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-tahtakopru-hamidiye-mosque/exterior.jpg",
+      "x": 44,
+      "y": 43,
+      "title": "Kırma çatı",
+      "text": "Caminin kırma çatısı ahşap iskeletli ve kiremit kaplıdır.",
+      "sourceId": "inv-p178"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-tahtakopru-hamidiye-mosque/minaret.jpg",
+      "x": 67,
+      "y": 48,
+      "title": "Tuğla minare",
+      "text": "Minarenin silindirik gövdesi, peteği ve şerefe altı tuğla ile örülmüştür.",
+      "sourceId": "inv-p178"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi yıl yapılmıştır?",
+      "options": [
+        "1937",
+        "1521",
+        "1896",
+        "1940"
+      ],
+      "correct": 2,
+      "description": "Tahtaköprü Hamidiye Camii 1896’da inşa edilmiştir.",
+      "sourceId": "inv-p178"
+    },
+    {
+      "question": "Yapı hangi padişah dönemi örneklerinden sayılır?",
+      "options": [
+        "II. Murad",
+        "II. Abdülhamid",
+        "Kanûnî Sultan Süleyman",
+        "Yıldırım Bayezid"
+      ],
+      "correct": 1,
+      "description": "Kitap yapıyı II. Abdülhamid devrinin tipik camilerinden sayar.",
+      "sourceId": "inv-p178"
+    },
+    {
+      "question": "Cami mahalle halkının desteğiyle hangi yıl ihya edilmiştir?",
+      "options": [
+        "1896",
+        "1955",
+        "2008",
+        "1986"
+      ],
+      "correct": 3,
+      "description": "Yıkılma tehlikesindeki cami 1986’da mahalle halkının desteğiyle ihya edilmiştir.",
+      "sourceId": "inv-p178"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p178",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Tahtaköprü Hamidiye Camii\"",
+      "page": "178"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

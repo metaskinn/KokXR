@@ -1,0 +1,102 @@
+{
+  "id": "inegol-osmaniye-camasirlik-mosque",
+  "name": "Osmaniye (Çamaşırlık) Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · 1907-1910 yeniden inşa; 1982 kapsamlı tadilat",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Osmaniye (Çamaşırlık) Camii, eski ahşap mescidin yerine 1907-1910’da yapılmış ve 1982’de eklerle genişletilmiştir.",
+  "history": "Burhaniye Mahallesi, Kemalettin Sami Paşa Caddesi No: 24’teki caminin bulunduğu yol, Eski Bursa Yolu diye de anılır. Kitapta adlandırmaya ilişkin rivayetlere göre Hocaköy Deresi’nin eski yatağı kadınların çamaşır yıkadığı, çobanların sürüleriyle dinlendiği bir alandı; burası Kızlar, Çamaşırlık ve Eğrek Deresi adlarıyla anılırdı. İhtiyaç üzerine burada Eğrek Camii adıyla ahşap bir mescit yapılmıştır.\n\n1877-1878 Osmanlı-Rus Savaşı sonrasında Kafkas göçmenleriyle Osmaniye Mahallesi oluşmuştur. Yetersiz kalan ahşap mescit 1907-1910 arasında yeniden yapılarak Osmaniye Camii adıyla açılmış, Çamaşırlık Camii adı da yaşamaya devam etmiştir. Moloz taş duvarlı yapı 1982’de kapsamlı tadilat görmüş; kuzey, doğu ve batıya bitişik ikişer katlı betonarme eklerle özgün mimari kimliğinden büyük ölçüde uzaklaşmıştır. Dikdörtgen planlı caminin oturum alanı yaklaşık 550 m², harimi 300 m²’dir.\n\nKuzeydeki son cemaat yerine on basamaklı beton merdivenle ulaşılır; altında abdesthane ve tuvaletler vardır, üzeri beton kubbelerle örtülüdür. Harimin dışı kiremitli kırma çatı, içi ahşap tavandır. Minber farklı renk mermerlerden, mihrap çini kaplı, kürsü ahşaptır. Ahşap direkli kadınlar mahfili giriş üzerindedir. Kuzeydeki tek şerefeli minare, kesme taş kaplı betonarme kaide üzerinde beyaza boyalı metal gövde ve mavi şeffaf plastik külaha sahiptir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-osmaniye-camasirlik-mosque/entrance-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-osmaniye-camasirlik-mosque/entrance-exterior.jpg",
+      "alt": "Sarı ve yeşil renkli caminin kubbeli giriş bölümü, altında gölgelikli alan ve sağda mavi külahlı minare",
+      "description": "Sarı ve yeşil renkli caminin kubbeli giriş bölümü, altında gölgelikli alan ve sağda mavi külahlı minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-osmaniye-camasirlik-mosque/prayer-hall.jpg",
+      "alt": "Ahşap tavanlı iç mekânda solda mermer minber, çini kaplı mihrap ve sağda ahşap mahfil",
+      "description": "Ahşap tavanlı iç mekânda solda mermer minber, çini kaplı mihrap ve sağda ahşap mahfil",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-osmaniye-camasirlik-mosque/entrance-exterior.jpg",
+      "x": 45,
+      "y": 46,
+      "title": "Son cemaat yeri",
+      "text": "Kuzeydeki son cemaat yerinin üzeri beton kubbelerle örtülmüştür.",
+      "sourceId": "inv-p176"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-osmaniye-camasirlik-mosque/prayer-hall.jpg",
+      "x": 14,
+      "y": 42,
+      "title": "Mermer minber",
+      "text": "Harimde farklı renklerde mermerlerin kullanıldığı bir minber vardır.",
+      "sourceId": "inv-p176"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi yıllarda yeniden inşa edilmiştir?",
+      "options": [
+        "1468-1469",
+        "1907-1910",
+        "1960-1965",
+        "2008-2014"
+      ],
+      "correct": 1,
+      "description": "Ahşap mescit 1907-1910 arasında yeniden inşa edilmiştir.",
+      "sourceId": "inv-p176"
+    },
+    {
+      "question": "Kapsamlı tadilat ve betonarme ekler hangi yıldadır?",
+      "options": [
+        "1937",
+        "1955",
+        "1982",
+        "1998"
+      ],
+      "correct": 2,
+      "description": "1982 tadilatında üç cepheye betonarme ekler yapılmıştır.",
+      "sourceId": "inv-p176"
+    },
+    {
+      "question": "Harimdeki mihrap hangi malzemeyle kaplıdır?",
+      "options": [
+        "Çini",
+        "Sac",
+        "Ahşap",
+        "Cam"
+      ],
+      "correct": 0,
+      "description": "Mihrap çiniyle kaplıdır.",
+      "sourceId": "inv-p176"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p175",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Osmaniye (Çamaşırlık) Camii\"",
+      "page": "175"
+    },
+    {
+      "id": "inv-p176",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Osmaniye (Çamaşırlık) Camii\"",
+      "page": "176"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

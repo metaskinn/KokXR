@@ -1,0 +1,107 @@
+{
+  "id": "inegol-hancerli-fatma-sultan-mosque",
+  "name": "Hançerli Fatma Sultan (Yıldırım-Yukarı İmaret) Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · Kitapta XV. yüzyıl sonları; Yıldırım Bayezid dönemi görüşü de aktarılır",
+  "endowment": "Hançerli Fatma Sultan Vakfı; sonraki dönemlerde görevli maaşları bu vakıftan ödenmiştir",
+  "summary": "Kurşunlu’daki Hançerli Fatma Sultan Camii, kuzeyde giriş ve güneyde kubbeli harime bitişen yan mekânlarıyla zaviyeli cami tipindedir.",
+  "history": "Kurşunlu Mahallesi’nin eski köy yerleşimindeki yapı, Hançerli Fatma Sultan, Yukarı Cami, Yıldırım ve Yukarı İmaret adlarıyla anılır. İnşa kitabesi günümüze ulaşmamıştır. Kitap banisini, II. Bayezid’in oğlu Şehzade Mahmud’un kızı Hançerli Fatma Sultan olarak verir. Fatma Sultan’ın H. 939 / M. 1533 tarihli vakfiyesi Bursa’daki mektep, medrese ve hamamlarına ilişkindir. Cami ilk vakıf listesinde bulunmasa da sonraki görevli maaşlarının bu vakıftan ödendiği kayıtlar, yapının daha sonra vakfa dahil edildiğini gösterir. Kitap, mimari özellikleri nedeniyle XV. yüzyıl sonlarına tarihlendirmeyi uygun bulan araştırmaları aktarır; Semavi Eyice’nin belge ya da somut kanıt göstermeden Yıldırım Bayezid dönemi ihtimalini ileri sürdüğünü de belirtir.\n\nKuzey-güney eksenindeki yapı, kuzeyde giriş, güneyde ana ibadet mekânı ve doğu-batı yönünde ona bitişen iki yan bölümden oluşur. Bu düzen zaviyeli cami tipindedir. Dikdörtgen giriş mekânı tekne tonozludur. Kare harim pandantiflerle geçilen kubbeyle örtülüdür. Güney duvarındaki beş cepheli mihrap nişinin iki yanında dikdörtgen nişler, batı köşede minber bulunur. Yan mekânlar çapraz tonozlarla örtülüdür.\n\nKuzey cephedeki minare kübik kaideli, silindirik gövdeli ve tek şerefelidir; şerefe altında beş sıra testere dişi silme vardır. Dış duvarlar moloz taş; pencere alınlıkları, kemerler, bacalar ve minare gövdesi tuğladır. Kapı ve pencere lento ve söveleri mermer, minare kaidesi kesme taştır. Kubbe ve tonozlar oluklu kiremitle kaplıdır. Minber, vaaz kürsüsü ve mahfiller ahşaptır. Cami 1960’lı yıllarda onarılmış, 2017’de Vakıflar Genel Müdürlüğü restorasyon programına alınarak kapsamlı onarımın ardından yeniden ibadete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-hancerli-fatma-sultan-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-hancerli-fatma-sultan-mosque/exterior.jpg",
+      "alt": "Moloz taş duvarlı, kırmızı kiremit örtülü cami; taş kaideden yükselen tuğla minare ve çevresinde ağaçlar",
+      "description": "Moloz taş duvarlı, kırmızı kiremit örtülü cami; taş kaideden yükselen tuğla minare ve çevresinde ağaçlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-hancerli-fatma-sultan-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harim, kubbe altındaki beyaz duvarlar, ortada mihrap ve sağda ahşap minber",
+      "description": "Mavi halılı harim, kubbe altındaki beyaz duvarlar, ortada mihrap ve sağda ahşap minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-hancerli-fatma-sultan-mosque/exterior.jpg",
+      "x": 34,
+      "y": 37,
+      "title": "Minare",
+      "text": "Kübik kaide üzerinde yükselen silindirik minare tek şerefelidir.",
+      "sourceId": "inv-p165"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-hancerli-fatma-sultan-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 56,
+      "title": "Mihrap",
+      "text": "Harimin güney duvarında beş cepheli mihrap nişi ve iki yanında dikdörtgen yan nişler vardır.",
+      "sourceId": "inv-p164"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi mahallededir?",
+      "options": [
+        "Kurşunlu",
+        "Burhaniye",
+        "Mahmudiye",
+        "Kemalpaşa"
+      ],
+      "correct": 0,
+      "description": "Cami Kurşunlu Mahallesi’nin eski köy yerleşimindedir.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "question": "Caminin planı hangi tiptedir?",
+      "options": [
+        "Dairesel planlı",
+        "Zaviyeli cami",
+        "Avlusuz bazilika",
+        "Sekizgen türbe"
+      ],
+      "correct": 1,
+      "description": "Ana harime bitişen iki yan mekân zaviyeli cami düzenini oluşturur.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "question": "Kubbe ve tonozlar hangi malzemeyle kaplıdır?",
+      "options": [
+        "Cam",
+        "Kurşun",
+        "Oluklu kiremit",
+        "Mermer"
+      ],
+      "correct": 2,
+      "description": "Kitapta kubbe ve tonoz örtülerinin oluklu kiremitle kaplandığı belirtilir.",
+      "sourceId": "inv-p165"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p162",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hançerli Fatma Sultan (Yıldırım-Yukarı İmaret) Camii\"",
+      "page": "162"
+    },
+    {
+      "id": "inv-p164",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hançerli Fatma Sultan (Yıldırım-Yukarı İmaret) Camii\"",
+      "page": "164"
+    },
+    {
+      "id": "inv-p165",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hançerli Fatma Sultan (Yıldırım-Yukarı İmaret) Camii\"",
+      "page": "165"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

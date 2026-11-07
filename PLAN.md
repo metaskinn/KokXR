@@ -84,7 +84,7 @@ node tests/xr-sim/sim.mjs ana
 
 ## Product structure
 
-Top menu: **Eserler (`/artifacts`, `/` redirects here), Mekanlar (`/places`), Atölyeler (`/workshops`: vase, sword, tile).** The Admin link was removed from the top menu on 2026-11-07; `/admin` opens by address. The Keşfet home page was removed on 2026-11-07; the Bilgini sına, Zaman katmanı, Sanal gezinti and 360° tur sections were also removed from artifact pages (the data stays in JSON). The journey, teacher panel, vision and approval flow pages were removed on 2026-11-07 at the user's request.
+Top menu: **Eserler (`/artifacts`, `/` redirects here), Mekanlar (`/places`), Atölyeler (`/workshops`: vase, sword).** The tile workshop was removed on 2026-11-07. The Admin link was removed from the top menu on 2026-11-07; `/admin` opens by address. The Keşfet home page was removed on 2026-11-07; the Bilgini sına, Zaman katmanı, Sanal gezinti and 360° tur sections were also removed from artifact pages (the data stays in JSON). The journey, teacher panel, vision and approval flow pages were removed on 2026-11-07 at the user's request.
 
 | User | Where they enter |
 |---|---|
@@ -167,7 +167,7 @@ If time is not enough, cut in this order: AR → time layer in the VR menu. Hold
 | Hold | Vase; scale model and vase in VR | Real, to be verified on device |
 | Text on the underside | Sample text on the representative vase | Mockup |
 | Time layer | Removed from the interface (2026-11-07); data stays | None |
-| Restoration task | Tile puzzle, vase workshop | Real |
+| Restoration task | Vase workshop | Real |
 | Verified information | Source-backed cards | Real |
 | Teacher panel | Screen removed (2026-11-07) | None, vision only in the presentation |
 | KökMobil, Dokunulabilir Müze | Screen removed (2026-11-07) | None, vision only in the presentation |

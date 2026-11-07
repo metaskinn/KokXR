@@ -69,14 +69,9 @@ Tell the new AI session: "Read HANDOFF.md, continue from section 0".
 2. Will the presentation (`KokXR_Sunum_v2.pptx`, 3 slides) be updated? The specification 5.4 headings were missing.
 
 ### To do
-- [ ] **Real Quest trial (Friday, with the user):** Ulu Camii, vase and tile VR have so far run only in simulation (IWER). Performance and controller feel are unknown.
+- [ ] **Real Quest trial (Friday, with the user):** Ulu Camii and vase VR have so far run only in simulation (IWER). Performance and controller feel are unknown.
 - [ ] The videos are outside `git`, on the old computer's desktop: `kokxr-vr-simulasyon-3`, `kokxr-vazo-vr-simulasyon`, `kokxr-kilic-atolyesi-2`, `kokxr-cini-atolyesi-web`, `kokxr-cini-vr-simulasyon` (all `.webm`). They must be re-recorded if the code changes.
-- [ ] Tile: no sound; the drag steps have no keyboard equivalent, "Ustaya bırak" is used to advance.
 
-### Tile workshop (`/workshops/tile`)
-Code is in `src/features/workshops/tile/engine/`, texts in `src/content/tile.ts`, sources and limits in `docs/tile-workshop.md`.
-Tests: `node tests/tile-logic.mjs` and (with 4173 open) `node tests/tile.mjs`.
-The oxide matching and the clay material names could not be verified against a source, so they were deliberately left out of the game; do not add them without a source.
 
 ### Video recording: do not trust Playwright's recording
 `recordVideo` and the CDP screencast can capture a WebGL frame only partially: objects disappearing in one eye, the outer roof "bursting" inward.
@@ -96,7 +91,7 @@ These are in the recording, not in the scene. On a static scene the draw buffer 
 **Latest user correction:** The flow of rotating by 90° with buttons / choosing slots was removed. The vase was produced in Blender 4.5.3 as six independent ceramic pieces with thickness. The model itself or the number on it is held with the mouse and dragged in the scene; when dropped close to the right place it aligns and seats automatically. Touch, returning on a wrong drop, progress, restart, Escape and a keyboard alternative are supported.
 The source is `assets/vazo/vazo.blend`, the model in the app is `public/models/vase.glb`, the regeneration script is `scripts/vase_generate.py`. Design/interaction and verification details are in `docs/vase-model.md`.
 **Current look:** On first opening, the vase is shown without marks, with a separate seamless body. When it has been broken apart and fully reassembled, the repair marks appear and are kept in examination mode. The general vase silhouette stays; the ring/text giving the exact position of the selected piece and the piece-specific silhouette highlight were removed.
-The existing mosque scale model and the tile puzzle were kept. Related code: `src/features/workshops/vase/VaseWorkshop.tsx`,
+The existing mosque scale model was kept. Related code: `src/features/workshops/vase/VaseWorkshop.tsx`,
 `src/features/workshops/vase/vase.css`, `src/features/workshops/vase/vaseScene.ts`.
 Check: `node tests/vase.mjs` (installed Google Chrome, running development server;
 default `http://127.0.0.1:5173`, can be changed with `TEST_URL`).

@@ -23,6 +23,8 @@ export interface XrOption {
   closeInfo: () => void;
   /** Titles standing in the interior scene that open the card when clicked. */
   titles: { id: string; title: string; position: number[]; radius?: number }[];
+  /** The recordings describe Ulu Camii only: other buildings share spot ids such as `mihrab` and must stay silent. */
+  narrated: boolean;
   /** Clicking the open card's title again closes the card. */
   selectInfo: (id: string) => void;
   /** The scene restores camera, near/far, size and React state. */
@@ -430,7 +432,7 @@ export function setupXrSession(s: XrOption): XrSession {
       rig.position.z = r.z
       rig.rotation.y += a
     }
-    narration.update(fresh, s.titles)
+    if (s.narrated) narration.update(fresh, s.titles)
     updateTitles()
   }
 
@@ -447,7 +449,7 @@ export function setupXrSession(s: XrOption): XrSession {
       if (session || starting) return
       if (!navigator.xr) throw new Error('WebXR is not available in this browser')
       starting = true
-      narration.unlock() // inside the click that starts VR, so the browser lets the guide play later
+      if (s.narrated) narration.unlock() // inside the click that starts VR, so the browser lets the guide play later
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
       let fresh: XRSession | null = null
       try {

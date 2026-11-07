@@ -305,9 +305,10 @@ export function fountain(m: UluMosqueMaterials, k: Bucket, { sx, sz, floor, skyY
   const base = floor + 0.1, yBody = base + PEDESTAL_H, yTop = yBody + BODY_H, yWater = yTop + 0.005
 
   // --- Paving ---
-  const dg = new THREE.BoxGeometry(FLOOR_G, 0.1, FLOOR_D)
+  // Same footprint as the marble grid in floor.ts (top at floor + 0.1): sit 1 cm above it, or the two tops z-fight.
+  const dg = new THREE.BoxGeometry(FLOOR_G, 0.11, FLOOR_D)
   for (let i = 0, p = dg.attributes.position, uv = dg.attributes.uv; i < p.count; i++) uv.setXY(i, p.getX(i) / FLOOR_G + 0.5, 0.5 - p.getZ(i) / FLOOR_D)
-  k.add(place(dg, sx, floor + 0.05, sz), paving)
+  k.add(place(dg, sx, floor + 0.055, sz), paving)
 
   // --- Base and rim: sixteen-sided, flat-shaded ---
   k.add(place(uvRegion(flatShadow(rotate([[3.97, 0], [3.95, 0.09], [3.86, PEDESTAL_H + 0.01], [3.8, PEDESTAL_H + 0.01]], CORNER)), PEDESTAL), sx, base, sz), stone)

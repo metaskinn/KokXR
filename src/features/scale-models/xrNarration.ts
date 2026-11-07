@@ -80,6 +80,8 @@ export function createNarration() {
     },
     /** Call every frame with the head position and the labelled spots. */
     update(head: { x: number; z: number }, spots: { id: string; position: number[]; radius?: number }[]) {
+      // The headset may suspend audio when the immersive session opens or the page loses focus; wake it again.
+      if (context && context.state !== 'running') void context.resume().catch(() => undefined)
       const nearest = nearestNarrated(head, spots)
       if (nearest === wanted) return
       wanted = nearest

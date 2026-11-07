@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import type { Artifact, Image, Source } from '../../../domain/artifact'
 import SourceLine from '../../../shared/ui/SourceLine'
 import PhotoCredit from '../../../shared/ui/PhotoCredit'
-import Section from '../../../shared/ui/Section'
+import UiIcon from '../../../shared/ui/UiIcon'
 import { PUBLIC_BUILD } from '../../../shared/config/publicBuild'
 
 /** Marker positions in pixels: kept inside the photo, and pushed apart where they would overlap at this size. */
@@ -27,6 +27,9 @@ export function placeMarkers(points: { x: number; y: number }[], width: number, 
   }
   return out
 }
+
+/** Touch target of a discovery marker (the hexagon drawn inside is smaller). */
+const MARKER = 44
 
 function Fullscreen({ images, sources, selected, select, close }: {
   images: Image[]; sources: Source[]; selected: number; select: (index: number) => void; close: () => void
@@ -93,15 +96,21 @@ function Fullscreen({ images, sources, selected, select, close }: {
   </dialog>
 }
 
-export default function Gallery({ artifact }: { artifact: Artifact }) {
+/**
+ * Photo, discovery markers and their card, laid out with the artifact's title column (`side`) between the main photo and the
+ * thumbnails/point lists, so on a phone the order is photo → title → thumbnails. Tapping the photo does not zoom (markers sit on it);
+ * zoom is the "Fotoğrafı büyüt" button or a double tap.
+ */
+export default function Gallery({ artifact, side }: { artifact: Artifact; side: ReactNode }) {
   const [selected, setSelected] = useState(0)
   const [fullscreen, setFullscreen] = useState(false)
   const [openPoint, setOpenPoint] = useState<string | null>(null)
   const [ratios, setRatios] = useState<Record<string, number>>({})
+  const [failed, setFailed] = useState<Record<string, boolean>>({})
   const card = useRef<HTMLDivElement>(null)
   const thumbnails = useRef<HTMLDivElement>(null)
   const touch = useRef<{ x: number; y: number } | null>(null)
-  const scrolled = useRef(false)
+  const lastTap = useRef<{ t: number; x: number; y: number } | null>(null)
   const [box, setBox] = useState({ w: 0, h: 0 })
   const observer = useRef<ResizeObserver | null>(null)
   // Measure the photo area whenever it is mounted or resized; marker placement needs its pixel size.
@@ -112,103 +121,143 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
     observer.current = new ResizeObserver(() => setBox({ w: el.clientWidth, h: el.clientHeight }))
     observer.current.observe(el)
   }, [])
-  const point =artifact.hotspots.find((item) => item.id === openPoint && item.image === artifact.images[selected]?.file)
+  const images = PUBLIC_BUILD ? [] : artifact.images
+  const image = images[selected]
+  const point = artifact.hotspots.find((item) => item.id === openPoint)
   useEffect(() => {
     if (point) card.current?.scrollIntoView({ block: 'nearest' })
   }, [point])
   useEffect(() => {
     const button = thumbnails.current?.querySelector<HTMLElement>('[aria-pressed="true"]')
-    const area = thumbnails.current
-    if (!button || !area) return
+    const strip = thumbnails.current
+    if (!button || !strip) return
     // Scroll only the thumbnail strip; keep the page's vertical position.
-    const left = button.offsetLeft - area.offsetLeft
-    if (left < area.scrollLeft) area.scrollLeft = left
-    else if (left + button.offsetWidth > area.scrollLeft + area.clientWidth) area.scrollLeft = left + button.offsetWidth - area.clientWidth
+    const left = button.offsetLeft - strip.offsetLeft
+    if (left < strip.scrollLeft) strip.scrollLeft = left
+    else if (left + button.offsetWidth > strip.scrollLeft + strip.clientWidth) strip.scrollLeft = left + button.offsetWidth - strip.clientWidth
   }, [selected])
-  const image = artifact.images[selected]
   function select(index: number) {
-    if (!artifact.images.length) return
-    setSelected((index + artifact.images.length) % artifact.images.length)
+    if (!images.length) return
+    setSelected((index + images.length) % images.length)
     setOpenPoint(null)
   }
+  /** Opens a point's card, switching to the photo it sits on; tapping the open point again closes it. */
+  function togglePoint(id: string) {
+    if (openPoint === id) { setOpenPoint(null); return }
+    const item = artifact.hotspots.find((h) => h.id === id)
+    const photo = images.findIndex((p) => p.file === item?.image)
+    if (photo >= 0 && photo !== selected) setSelected(photo)
+    setOpenPoint(id)
+  }
+  const many = images.length > 1
   const ratio = image ? ratios[image.file] ?? 4 / 3 : 4 / 3
-  const shown = image ? artifact.hotspots.map((item, index) => ({ item, index })).filter(({ item }) => item.image && item.image === image.file) : []
-  // Smaller markers on narrow photos so nearby points stay separately tappable.
-  const markerSize = box.w && box.w < 480 ? 34 : 44
-  const places = box.w ? placeMarkers(shown.map(({ item }) => item), box.w, box.h, markerSize) : null
-  return <>
-    {!(PUBLIC_BUILD && !image) && <Section id="gallery-title" title="Fotoğraflar" className="photo-gallery" action={<div className="gallery-title-actions"><span className="gallery-counter" role="status">{image ? `${selected + 1} / ${artifact.images.length}` : '0 / 0'}</span>{image && <button className="secondary-button" onClick={() => setFullscreen(true)}>Fotoğrafı büyüt</button>}</div>}>
-      {!image ? <p>Fotoğraflar hazırlanıyor.</p> : <>
-        <figure>
-          <div className="gallery-scene" tabIndex={0} role="group" aria-label="Fotoğraflar; sağ ve sol ok tuşlarıyla gezinebilirsin"
-            onKeyDown={(e) => {
-              if (e.target !== e.currentTarget && !(e.target as HTMLElement).closest('.zoom')) return
-              if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); select(selected + (e.key === 'ArrowLeft' ? -1 : 1)) }
-            }}
-            onTouchStart={(e) => {
-              scrolled.current = false
-              touch.current = e.touches.length === 1 ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : null
-            }}
-            onTouchMove={(e) => { if (e.touches.length !== 1) touch.current = null }}
-            onTouchCancel={() => { touch.current = null }}
-            onTouchEnd={(e) => {
-              if (!touch.current || !e.changedTouches[0]) return
-              const dx = e.changedTouches[0].clientX - touch.current.x, dy = e.changedTouches[0].clientY - touch.current.y
-              touch.current = null
-              if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-                scrolled.current = true
-                select(selected + (dx < 0 ? 1 : -1))
-              }
-            }}>
-            <div className="image-area" ref={area} style={{ width: `min(100%, calc(var(--gallery-height) * ${ratio}))`, aspectRatio: String(ratio) }}>
-              <button className="zoom" onClick={() => { if (scrolled.current) { scrolled.current = false; return }; setFullscreen(true) }} aria-label="Fotoğrafı tam ekran görüntüle"><img src={image.file} alt={image.alt} onLoad={(e) => { const imageEl = e.currentTarget; setRatios((old) => ({ ...old, [image.file]: imageEl.naturalWidth / imageEl.naturalHeight })) }} /></button>
-              {shown.map(({ item, index }, k) => <button
-                key={item.id} className="info-point"
-                style={places ? { left: places[k].x, top: places[k].y, width: markerSize, height: markerSize, minWidth: markerSize, minHeight: markerSize } : { left: `${item.x}%`, top: `${item.y}%` }}
+  const numbered = artifact.hotspots.map((item, index) => ({ item, index }))
+  const here = image ? numbered.filter(({ item }) => item.image === image.file) : []
+  const elsewhere = numbered.filter(({ item }) => !image || item.image !== image.file)
+  const places = box.w && !failed[image?.file ?? ''] ? placeMarkers(here.map(({ item }) => item), box.w, box.h, MARKER) : null
+  const photoNo = (file: string) => images.findIndex((p) => p.file === file) + 1
+
+  const infoCard = point && <div className="info-card">
+    <div className="info-card-head">
+      <span className="hex-no" aria-hidden="true">{artifact.hotspots.indexOf(point) + 1}</span>
+      <h3>{point.title}</h3>
+      <button type="button" className="btn-ghost" onClick={() => setOpenPoint(null)}><UiIcon name="x" />Kapat</button>
+    </div>
+    <p>{point.text}</p>
+    <SourceLine sources={artifact.sources} sourceId={point.sourceId} />
+  </div>
+
+  const pointButton = ({ item, index }: { item: (typeof numbered)[number]['item']; index: number }, other: boolean) =>
+    <li key={item.id}><button type="button" className={other ? 'btn-ghost' : undefined} aria-expanded={openPoint === item.id} aria-controls="photo-info-card" onClick={() => togglePoint(item.id)}>
+      <span className="hex-no" aria-hidden="true">{index + 1}</span>{item.title}{other && photoNo(item.image) > 0 && <small>fotoğraf {photoNo(item.image)}</small>}
+    </button></li>
+
+  const pointLists = artifact.hotspots.length > 0 && <div className="gallery-points">
+    {here.length > 0 && <><p>Bu fotoğraftaki noktalar</p><ul>{here.map((p) => pointButton(p, false))}</ul></>}
+    {elsewhere.length > 0 && <><p className={here.length ? 'elsewhere-t' : undefined}>{image ? 'Öteki fotoğraflarda' : 'Keşif noktaları'}</p><ul className="elsewhere">{elsewhere.map((p) => pointButton(p, true))}</ul></>}
+  </div>
+
+  if (!image) {
+    // Public build without photos: the points stay readable as a list.
+    return <div className="artifact-layout">
+      <section className="gallery-main" id="fotograflar" aria-label="Keşif noktaları">
+        <div id="photo-info-card" ref={card} aria-live="polite">{infoCard}</div>
+      </section>
+      {side}
+      <div className="gallery-more">{pointLists}</div>
+    </div>
+  }
+
+  const missing = failed[image.file]
+  return <div className="artifact-layout">
+    <section className="gallery-main" id="fotograflar" aria-label="Fotoğraflar">
+      <figure>
+        <div className="gallery-scene" tabIndex={0} role="group" aria-label={many ? 'Fotoğraflar; sağ ve sol ok tuşlarıyla gezinebilirsin' : 'Fotoğraf'}
+          onKeyDown={(e) => {
+            if (e.target !== e.currentTarget && !(e.target as HTMLElement).closest('.zoom')) return
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); select(selected + (e.key === 'ArrowLeft' ? -1 : 1)) }
+          }}
+          onTouchStart={(e) => { touch.current = e.touches.length === 1 ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : null }}
+          onTouchMove={(e) => { if (e.touches.length !== 1) touch.current = null }}
+          onTouchCancel={() => { touch.current = null }}
+          onTouchEnd={(e) => {
+            const start = touch.current, end = e.changedTouches[0]
+            touch.current = null
+            if (!start || !end) return
+            const dx = end.clientX - start.x, dy = end.clientY - start.y
+            if (many && Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) { lastTap.current = null; select(selected + (dx < 0 ? 1 : -1)); return }
+            if (Math.hypot(dx, dy) > 10 || (e.target as HTMLElement).closest('.info-point')) { lastTap.current = null; return }
+            // Double tap on the photo opens the zoom view; a single tap does nothing.
+            const prev = lastTap.current, now = e.timeStamp
+            if (prev && now - prev.t < 350 && Math.hypot(end.clientX - prev.x, end.clientY - prev.y) < 40) {
+              lastTap.current = null
+              e.preventDefault()
+              if (!missing) setFullscreen(true)
+            } else lastTap.current = { t: now, x: end.clientX, y: end.clientY }
+          }}>
+          {missing
+            ? <div className="photo-missing"><div><strong>Fotoğraf yüklenemedi.</strong><br />Bağlantını kontrol edip sayfayı yenile.{artifact.hotspots.length > 0 && ' Keşif noktaları aşağıdaki listede.'}<br /><span className="sr-only">{image.alt}</span></div></div>
+            : <div className="image-area" ref={area} style={{ width: `min(100%, calc(var(--gallery-height) * ${ratio}))`, aspectRatio: String(ratio) }}>
+              <div className="zoom" onDoubleClick={() => setFullscreen(true)}>
+                <img src={image.file} alt={image.alt} fetchPriority={selected === 0 ? 'high' : undefined}
+                  onLoad={(e) => { const el = e.currentTarget; setRatios((old) => ({ ...old, [image.file]: el.naturalWidth / el.naturalHeight })) }}
+                  onError={() => setFailed((old) => ({ ...old, [image.file]: true }))} />
+              </div>
+              {here.map(({ item, index }, k) => <button
+                key={item.id} type="button" className="info-point"
+                // Percent of the photo, so the marker keeps its place when the photo is resized.
+                style={places ? { left: `${places[k].x / box.w * 100}%`, top: `${places[k].y / box.h * 100}%` } : { left: `${item.x}%`, top: `${item.y}%` }}
                 aria-label={`${index + 1}. ${item.title}`} aria-expanded={openPoint === item.id} aria-controls="photo-info-card"
-                onClick={() => setOpenPoint(openPoint === item.id ? null : item.id)}>{index + 1}</button>)}
-            </div>
-          </div>
-          <div className="gallery-nav" role="group" aria-label="Galeri gezinme">
-            <button className="secondary-button" disabled={artifact.images.length < 2} onClick={() => select(selected - 1)} aria-label="Önceki fotoğraf">← <span>Önceki</span></button>
-            <div className="gallery-photo-name" aria-live="polite"><strong>{image.description || 'Eser fotoğrafı'}</strong><span>Fotoğraf {selected + 1} / {artifact.images.length}</span></div>
-            <button className="secondary-button" disabled={artifact.images.length < 2} onClick={() => select(selected + 1)} aria-label="Sonraki fotoğraf"><span>Sonraki</span> →</button>
-          </div>
-          <div className="small-images" ref={thumbnails} role="group" aria-label="Fotoğraf seçimi">
-            {artifact.images.map((photo, index) => <button key={photo.file} aria-label={`${index + 1}. fotoğraf: ${photo.description || photo.alt}`} aria-pressed={selected === index} onClick={() => select(index)}
-              onKeyDown={(e) => {
-                let fresh: number | undefined
-                if (e.key === 'ArrowLeft') fresh = (index - 1 + artifact.images.length) % artifact.images.length
-                if (e.key === 'ArrowRight') fresh = (index + 1) % artifact.images.length
-                if (e.key === 'Home') fresh = 0
-                if (e.key === 'End') fresh = artifact.images.length - 1
-                if (fresh !== undefined) { e.preventDefault(); select(fresh); thumbnails.current?.querySelectorAll<HTMLButtonElement>('button')[fresh]?.focus({ preventScroll: true }) }
-              }}>
-              <img src={photo.file} alt="" loading="lazy" /><span>{index + 1}</span>
-            </button>)}
-          </div>
-          <p className="gallery-help">Oklarla veya küçük fotoğraflarla gezin. Telefonda yana kaydır; ayrıntıları büyütmek için fotoğrafa dokun.</p>
-          <div id="photo-info-card" ref={card} aria-live="polite">
-            {point && <div className="info-card"><h3>{point.title}</h3><p>{point.text}</p><SourceLine sources={artifact.sources} sourceId={point.sourceId} /></div>}
-          </div>
-          <figcaption>{image.credit && <PhotoCredit text={image.credit} />}{artifact.sources.find((k) => k.id === image.sourceId)?.text !== image.credit && <SourceLine sources={artifact.sources} sourceId={image.sourceId} />}</figcaption>
-        </figure>
-      </>}
-    </Section>}
-    <Section id="discover-title" title="Keşif noktaları">
-      <p>{image ? 'Fotoğraflardaki numaralardan veya aşağıdaki listeden bir keşif noktası seç.' : 'Aşağıdaki listeden bir keşif noktası seç.'}</p>
-      {artifact.hotspots.length === 0 && <p>Keşif noktaları hazırlanıyor.</p>}
-      {artifact.hotspots.map((item, index) => <details key={item.id} open={openPoint === item.id} className="point-detail">
-        <summary onClick={(event) => {
-          event.preventDefault()
-          const opening = openPoint !== item.id
-          setOpenPoint(opening ? item.id : null)
-          const imageIndex = artifact.images.findIndex((photo) => photo.file === item.image)
-          if (opening && imageIndex >= 0) setSelected(imageIndex)
-        }}>{index + 1}. {item.title}</summary>
-        <div id={`point-${item.id}`}><p>{item.text}</p><SourceLine sources={artifact.sources} sourceId={item.sourceId} /></div>
-      </details>)}
-    </Section>
-    {fullscreen && image && <Fullscreen images={artifact.images} sources={artifact.sources} selected={selected} select={select} close={() => setFullscreen(false)} />}
-  </>
+                onClick={() => togglePoint(item.id)}>{index + 1}</button>)}
+            </div>}
+        </div>
+        <div id="photo-info-card" ref={card} aria-live="polite">{infoCard}</div>
+        <div className={`gallery-nav${many ? '' : ' single'}`} role="group" aria-label="Galeri gezinme">
+          {many && <button type="button" onClick={() => select(selected - 1)} aria-label="Önceki fotoğraf"><UiIcon name="back" /></button>}
+          <div className="gallery-photo-name" aria-live="polite"><strong>{image.description || 'Eser fotoğrafı'}</strong>{many && <span>Fotoğraf {selected + 1} / {images.length}</span>}</div>
+          {many && <button type="button" onClick={() => select(selected + 1)} aria-label="Sonraki fotoğraf"><UiIcon name="next" /></button>}
+        </div>
+        <figcaption>{image.credit && <PhotoCredit text={image.credit} />}{artifact.sources.find((k) => k.id === image.sourceId)?.text !== image.credit && <SourceLine sources={artifact.sources} sourceId={image.sourceId} />}</figcaption>
+      </figure>
+    </section>
+    {side}
+    <div className="gallery-more">
+      {many && <div className="small-images" ref={thumbnails} role="group" aria-label="Fotoğraf seçimi">
+        {images.map((photo, index) => <button key={photo.file} type="button" aria-label={`${index + 1}. fotoğraf: ${photo.description || photo.alt}`} aria-pressed={selected === index} onClick={() => select(index)}
+          onKeyDown={(e) => {
+            let fresh: number | undefined
+            if (e.key === 'ArrowLeft') fresh = (index - 1 + images.length) % images.length
+            if (e.key === 'ArrowRight') fresh = (index + 1) % images.length
+            if (e.key === 'Home') fresh = 0
+            if (e.key === 'End') fresh = images.length - 1
+            if (fresh !== undefined) { e.preventDefault(); select(fresh); thumbnails.current?.querySelectorAll<HTMLButtonElement>('button')[fresh]?.focus({ preventScroll: true }) }
+          }}>
+          <img src={photo.file} alt="" loading="lazy" />
+        </button>)}
+      </div>}
+      {!missing && <div className="gallery-tools"><button type="button" className="btn-ghost" onClick={() => setFullscreen(true)}><UiIcon name="zoom" />Fotoğrafı büyüt</button></div>}
+      {pointLists}
+    </div>
+    {fullscreen && <Fullscreen images={images} sources={artifact.sources} selected={selected} select={select} close={() => setFullscreen(false)} />}
+  </div>
 }

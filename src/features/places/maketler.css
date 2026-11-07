@@ -1,0 +1,56 @@
+/* Tasarım: ui2/components.css bölümü. Belirteçler src/app/styles/tokens.css içinde. */
+/* 7. Maketler (/places) ve maket sayfası (/places/:id) */
+.vr-title { padding: var(--s-5) 0 var(--s-4); }
+.vr-title h1 { margin: 0 0 var(--s-2); }
+.vr-title p { margin: 0; color: var(--ink-2); max-width: 44rem; }
+.vr-title .vr-note { margin-top: var(--s-2); font-size: var(--fs-small); }
+
+/* Şehir segmenti */
+.city-segment { display: grid; gap: 0; margin: 0 0 var(--s-5); padding: 3px; max-width: 32rem; background: var(--mat); border: 0; border-radius: var(--r-control); }
+.city-segment label { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 52px; padding: var(--s-1) 2px; border-radius: 6px; cursor: pointer; text-align: center; color: var(--ink-2); }
+.city-segment input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+.city-segment strong { font-size: 0.9375rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+.city-segment small { font-size: 0.8125rem; line-height: 1.2; }
+.city-segment label:has(input:checked) { background: var(--surface); box-shadow: 0 0 0 1px var(--line-strong); }
+.city-segment label:has(input:checked) strong { color: var(--action-press); }
+.city-segment label:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 0; }
+
+/* Maketli yapıların listesi: ayırıcı çizgiler, kart yok */
+.vr-buildings { display: grid; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.vr-buildings li { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; grid-template-rows: auto auto; gap: 0 var(--s-3); align-items: center; padding: var(--s-2) 0; border-bottom: 1px solid var(--line); }
+.vr-buildings li[data-highlight] { background: var(--band); }
+.vr-buildings li > a:first-of-type { grid-column: 2; grid-row: 1; display: flex; align-items: flex-end; min-height: var(--target); padding-top: var(--s-1); font-weight: 700; font-size: var(--fs-title); line-height: 1.25; color: var(--ink); text-decoration: none; }
+.vr-buildings li > a:first-of-type:hover, .vr-buildings li > a:first-of-type[data-highlight] { color: var(--action-press); text-decoration: underline; text-underline-offset: 0.2em; }
+.vr-buildings .vr-no { grid-column: 1; grid-row: 1 / span 2; justify-self: center; }
+.vr-buildings .position { grid-column: 2; grid-row: 2; margin: 0 0 var(--s-1); color: var(--ink-2); font-size: var(--fs-small); }
+.vr-buildings .btn-ghost { grid-column: 3; grid-row: 1 / span 2; padding: 0 var(--s-1); white-space: nowrap; }
+.vr-no { display: inline-grid; place-items: center; width: 30px; height: 26px; clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%); background: var(--action); color: var(--on-action); font: 700 0.875rem/1 var(--font-ui); }
+li[data-highlight] > .vr-no { background: var(--action-press); }
+.vr-publication { margin: var(--s-4) 0 0; color: var(--ink-2); font-size: var(--fs-small); }
+
+/* Haritadaki işaret: listedeki numarayla aynı altıgen */
+.vr-marker-point { width: 30px; height: 26px; border: 0; border-radius: 0; clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%); background: var(--action); color: var(--on-action); box-shadow: none; font: 700 0.8125rem/1 var(--font-ui); }
+.vr-marker[data-highlight] .vr-marker-point, .vr-marker:hover .vr-marker-point, .vr-marker:focus-visible .vr-marker-point { background: var(--action-press); border: 0; transform: scale(1.15); }
+
+/* Maketi olmayan şehir */
+.vr-map-empty { padding: var(--s-5); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); }
+.vr-map-empty h2 { margin: 0 0 var(--s-2); font-size: var(--fs-h2); }
+.vr-map-empty p { margin: 0 0 var(--s-4); color: var(--ink-2); }
+
+/* Maket sayfası */
+.model-page-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0 var(--s-4); padding-top: var(--s-2); }
+.model-page-top .btn-ghost { padding-inline: 0; }
+/* Telefonda üst çubuktaki geri bağlantısı yeter; "Fotoğraflar ve tarihçe" aynı eser sayfasına gider */
+@media (max-width: 600px) { .model-page-top .link-back { display: none; } }
+.model-page .vr-title { padding-top: var(--s-3); }
+.honesty-line { margin: var(--s-3) 0 0; color: var(--ink-2); font-size: var(--fs-small); }
+.model-how summary { display: inline-flex; align-items: center; gap: var(--s-1); min-height: var(--target); color: var(--action); font-weight: 600; cursor: pointer; list-style: none; }
+.model-how summary::-webkit-details-marker { display: none; }
+.model-how summary .icon { width: 20px; height: 20px; transition: transform var(--dur-2) var(--ease-out); }
+.model-how[open] summary .icon { transform: rotate(180deg); }
+.model-how p { margin: 0 0 var(--s-3); max-width: var(--measure); }
+.model-page .hint-text { margin: 0; color: var(--ink-2); font-size: var(--fs-small); }
+.model-page .model-infos { margin-top: var(--s-7); max-width: var(--measure); }
+.model-page .model-infos h2 { margin: 0 0 var(--s-3); }
+@media (prefers-reduced-motion: reduce) { .model-how summary .icon { transition: none; } }
+

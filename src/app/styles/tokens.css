@@ -1,0 +1,149 @@
+/* KökXR tasarım belirteçleri. Yön: kireç badanalı duvar, Bursa yeşili çini, kitap sayfası.
+   Bütün renk, ölçü ve süreler buradan okunur; bileşen dosyasında ham hex yoktur (HUD camı dahil). */
+
+@font-face {
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/literata-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Literata';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/literata-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/franklin-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/franklin-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* Renk: zemin ve yüzeyler (60) */
+  --ground: #f4f5f2;        /* kireç badana: sayfa zemini */
+  --surface: #ffffff;       /* kâğıt: arama alanı, kart, soru */
+  --mat: #e7eae6;           /* fotoğraf paspartusu: zeminden bir ton koyu */
+  --band: #e3ece8;          /* maket bandı ve seçili satır: çini yeşilinin çok açık hâli */
+
+  /* Renk: yazı (30) */
+  --ink: #1a2321;           /* ana metin, 14.7:1 zeminde */
+  --ink-2: #4b5652;         /* ikincil metin, 6.97:1 zeminde, 6.33:1 bantta */
+  --line: #d6dbd7;          /* ayırıcı çizgi (dekoratif, bilgi taşımaz) */
+  --line-strong: #7c8682;   /* form ve ikincil düğme kenarı, 3.43:1 zeminde */
+
+  /* Renk: eylem (10) — Yeşil Türbe çinisinin koyu tonu */
+  --action: #0e5a4e;        /* birincil düğme, bağlantı, seçili durum; beyaz metinle 8.1:1 */
+  --action-hover: #0a463c;
+  --action-press: #083a32;
+  --on-action: #ffffff;
+
+  /* Renk: durum */
+  --focus: #2347a6;         /* İznik laciverdi; yalnız odak halkası. Zeminde 7.6:1 */
+  --danger: #a1271b;        /* tuğla kırmızısı: hata, "Senin cevabın" */
+  --danger-tint: #f8e9e6;
+
+  /* HUD camı (yalnız 3B sahnelerin üstünde) */
+  --glass: rgb(16 24 21 / 0.66);      /* en kötü durumda (beyaz sahne) metin 5.28:1 */
+  --glass-fallback: rgb(16 24 21 / 0.88); /* backdrop-filter desteklenmiyorsa */
+  --glass-solid: #18221f;             /* backdrop-filter yoksa, azaltılmış saydamlıkta ve forced-colors'ta */
+  --glass-line: rgb(255 255 255 / 0.28);
+  --glass-hover: rgb(255 255 255 / 0.12);
+  --glass-pressed: rgb(255 255 255 / 0.22);
+  --glass-ink: #f4f5f2;
+  --glass-primary: #a6decf;           /* çini firuzesi; üstünde --glass-primary-ink 10.65:1, camdan 3.8:1 ayrılır */
+  --glass-primary-hover: #bce8dc;
+  --glass-primary-ink: #0b2620;
+  --glass-focus: #ffffff;
+  --glass-blur: blur(14px) saturate(1.2);
+  --scene: #1d2f2a;                   /* WebGL sahnesinin kendi zemini (modelScene.ts ile aynı) */
+
+  /* Yazı */
+  --font-text: 'Literata', 'Iowan Old Style', 'Charter', Georgia, serif;           /* başlık ve okuma */
+  --font-ui: 'Libre Franklin', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; /* arayüz */
+  --fs-display: clamp(2rem, 1.35rem + 2.6vw, 3rem);      /* 32 → 48, eser adı ve sayfa H1 */
+  --lh-display: 1.1;
+  --fs-h2: clamp(1.375rem, 1.15rem + 0.9vw, 1.75rem);    /* 22 → 28 */
+  --lh-h2: 1.25;
+  --fs-title: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem); /* 17 → 18, kart ve satır başlığı */
+  --lh-title: 1.3;
+  --fs-read: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem);  /* 17 → 18, tarihçe ve özet (Literata) */
+  --lh-read: 1.65;
+  --fs-ui: 1rem;            /* 16: düğme, form, liste */
+  --lh-ui: 1.4;
+  --fs-small: 0.875rem;     /* 14: konum, künye etiketi, kredi */
+  --lh-small: 1.45;
+  --measure: 68ch;
+
+  /* Boşluk: yalnız bu değerler */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --gutter: 16px;           /* telefon kenar boşluğu; masaüstünde --s-6 */
+  --section-gap: var(--s-7);
+
+  /* Köşe: role göre */
+  --r-photo: 4px;           /* fotoğraf ve küçük resim: müze paspartusu gibi neredeyse keskin */
+  --r-control: 8px;         /* düğme, arama, seçim, segment */
+  --r-card: 12px;           /* soru kartı, maket kartı, HUD paneli */
+  --r-pill: 999px;          /* yalnız etkin filtre çipi */
+
+  /* Hedef boyutları */
+  --target: 44px;
+  --target-primary: 48px;
+  --tabbar-h: 64px;
+  --topbar-h: 48px;
+  --pagenav-h: 44px;
+
+  /* Hareket */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-1: 120ms;           /* renk, dolgu, işaret seçimi */
+  --dur-2: 180ms;           /* kart açılması, HUD aç/kapa */
+  --dur-3: 240ms;           /* fotoğraf geçişi */
+
+  /* Katman sırası: başka değer kullanılmaz */
+  --z-content: 0;
+  --z-marker: 1;
+  --z-hud: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+
+  /* Gölge: yalnız yüzen öğeler (HUD, açılır kart). Kartlarda gölge yok. */
+  --shadow-float: 0 2px 6px rgb(10 20 17 / 0.18);
+
+  color-scheme: light;
+}
+
+@media (min-width: 900px) {
+  :root { --gutter: 32px; --section-gap: var(--s-8); }
+}
+
+/* Quest tarayıcısı: kök öğede data-xr="yes" */
+:root[data-xr='yes'] {
+  --target: 56px;
+  --target-primary: 56px;
+  --fs-ui: 1.125rem;
+  --fs-small: 1rem;
+  --surface: #f4f5f2;      /* Quest: geniş saf beyaz yüzey yok */
+  --ground: #e9ece8;
+}

@@ -37,7 +37,7 @@ for (const d of stops) {
 }
 await s.getByRole('button', { name: /Dışarı çık/ }).click()
 await s.goto(`${url}/artifact/${id}`)
-await s.getByRole('heading', { name: 'Eseri eline al' }).waitFor()
+await s.getByRole('link', { name: '3B maketi incele' }).waitFor()
 if (errors.length) throw new Error(errors.join(' | '))
 await b.close()
 console.log(`${id}: scene, shatter, ${stops.length} stops, artifact page passed.`)

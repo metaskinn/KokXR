@@ -30,8 +30,12 @@ export interface ModelScene {
   closeInfo: () => void;
   /** Opens a VR session; if refused, the Promise rejects and the scene keeps running. */
   startXr: () => Promise<void>;
+  /** Pixels of the stage covered by the HUD. Outside, the model is framed in the rest (the safe rectangle). */
+  setSafeInsets: (insets: SafeInsets) => void;
   clear: () => void;
 }
+
+export interface SafeInsets { top: number; right: number; bottom: number; left: number }
 
 export interface SceneOption {
   infos?: ModelHotspot[];
@@ -305,14 +309,36 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   let cameraTarget: THREE.Vector3 | null = null
   let running = true
   let composerReady = false
+  let safe: SafeInsets = { top: 0, right: 0, bottom: 0, left: 0 }
+  /** Outside, the image is shifted and scaled with a view offset so the model sits in the part of the stage the HUD leaves free.
+   *  Inside, the first-person view uses the whole stage. */
+  const project = () => {
+    const w = Math.max(area.clientWidth, 1), h = Math.max(area.clientHeight, 1)
+    const left = Math.min(safe.left, w * 0.6), right = Math.min(safe.right, w * 0.6 - left)
+    const top = Math.min(safe.top, h * 0.6), bottom = Math.min(safe.bottom, h * 0.6 - top)
+    const sw = w - left - right, sh = h - top - bottom
+    // On narrow screens the field of view is widened so the whole model fits.
+    const fov = inside ? interiorFov : sw / sh < 1 ? 62 : 40
+    if (inside || (!left && !right && !top && !bottom)) {
+      camera.clearViewOffset()
+      camera.aspect = w / h
+      camera.fov = fov
+    } else {
+      // A larger virtual frame centred on the safe rectangle; the canvas shows a window of it.
+      const cx = left + sw / 2, cy = top + sh / 2
+      const fw = 2 * Math.max(cx, w - cx), fh = 2 * Math.max(cy, h - cy)
+      camera.aspect = fw / fh
+      camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(fov) / 2) * fh / sh))
+      camera.setViewOffset(fw, fh, fw / 2 - cx, fh / 2 - cy, w, h)
+    }
+    camera.updateProjectionMatrix()
+    area.dataset.safe = `${top},${right},${bottom},${left}`
+  }
   const resize = () => {
     if (renderer.xr.isPresenting) return
     const { clientWidth: w, clientHeight: h } = area
     renderer.setSize(w, h, false)
-    camera.aspect = w / Math.max(h, 1)
-    // On narrow screens the field of view is widened so the whole model fits.
-    camera.fov = inside ? interiorFov : camera.aspect < 1 ? 62 : 40
-    camera.updateProjectionMatrix()
+    project()
     if (composerReady) {
       composer.setPixelRatio(renderer.getPixelRatio())
       composer.setSize(w, h)
@@ -485,8 +511,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     zoomIn: (ratio) => {
       if (inside) {
         interiorFov = THREE.MathUtils.clamp(interiorFov * ratio, 32, 85)
-        camera.fov = interiorFov
-        camera.updateProjectionMatrix()
+        project()
         return
       }
       const dir = camera.position.clone().sub(controls.target)
@@ -498,6 +523,12 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     walkKey: (keyBtn, pressed) => { if (pressed) pressedKeys.add(keyBtn); else pressedKeys.delete(keyBtn) },
     walkRelease: () => pressedKeys.clear(),
     closeInfo,
+    setSafeInsets: (insets) => {
+      const fresh = { top: Math.max(0, insets.top), right: Math.max(0, insets.right), bottom: Math.max(0, insets.bottom), left: Math.max(0, insets.left) }
+      if (fresh.top === safe.top && fresh.right === safe.right && fresh.bottom === safe.bottom && fresh.left === safe.left) return
+      safe = fresh
+      if (!renderer.xr.isPresenting) project()
+    },
     // Don't lose the user gesture: no await before requestSession.
     startXr: async () => {
       if (inside) scene.interior(null)
@@ -533,8 +564,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
         camera.near = 0.15
         camera.far = 400
         interiorFov = 68
-        camera.fov = interiorFov
-        camera.updateProjectionMatrix()
+        project()
         // Don't let leftover momentum from the outside rotation shift the view inside.
         controls.enableDamping = false
         controls.update()
@@ -606,6 +636,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       delete area.dataset.position
       delete area.dataset.frame
       delete area.dataset.quality
+      delete area.dataset.safe
       canvas.remove()
     },
   }

@@ -44,15 +44,14 @@ await control('1d hotspot card visible', async () => {
   condition(visible, 'card not in visible area');
 });
 await control('2 model: open, rotate, zoom, shatter, keyboard', async () => {
-  await p.goto(`${URL}/artifact/ulu-mosque`);
-  await p.getByRole('button', { name: /maketini eline al/ }).click();
+  await p.goto(`${URL}/places/ulu-mosque`);
   await p.locator('.model-area canvas').waitFor({ timeout: 30000 });
   await p.waitForFunction(() => !document.querySelector('.model-state'), null, { timeout: 30000 });
   const a = p.locator('.model-area'); await a.scrollIntoViewIfNeeded(); const b = await a.boundingBox();
   await p.mouse.move(b.x + b.width / 2, b.y + b.height / 2); await p.mouse.down(); await p.mouse.move(b.x + b.width / 2 + 150, b.y + b.height / 2, { steps: 8 }); await p.mouse.up();
   await p.mouse.wheel(0, -300);
-  await p.getByRole('button', { name: '⤒ Parçala' }).click(); await p.waitForTimeout(1500); await screen('model-fragmented');
-  await p.getByRole('button', { name: '⤓ Birleştir' }).click();
+  await p.getByRole('button', { name: 'Parçala' }).click(); await p.waitForTimeout(1500); await screen('model-fragmented');
+  await p.getByRole('button', { name: 'Birleştir' }).click();
   await a.focus(); await p.keyboard.press('ArrowLeft'); await p.keyboard.press('+');
   await p.getByRole('button', { name: 'Görünümü sıfırla' }).click();
   condition(await p.getByText('Temsili maket').count(), 'illustrative label missing');

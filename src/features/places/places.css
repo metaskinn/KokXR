@@ -1,9 +1,8 @@
-.vr-title { margin-bottom: 1.25rem; }
-.vr-title h1 { margin: 0.5rem 0 0.25rem; }
-.vr-title p { margin: 0; color: var(--secondary); }
-.vr-title .vr-note { margin-top: 0.6rem; color: var(--text); }
 
-.vr-layout-of { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); gap: 1.25rem; align-items: start; }
+.vr-layout-of { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); gap: var(--s-5); align-items: start; }
+.vr-layout-of > .vr-map-wrapper, .vr-layout-of > .inline-error, .vr-layout-of > .vr-map-loading { grid-column: 1; grid-row: 1; }
+.vr-layout-of > .vr-panel { grid-column: 2; grid-row: 1; }
+.vr-map-loading { display: grid; place-items: center; min-height: 320px; border: 1px solid var(--line); border-radius: var(--r-photo); background: var(--mat); color: var(--ink-2); }
 
 /* Map: the svg view fills the canvas exactly; markers live on a separate layer and stay in pixel units. */
 .vr-map-wrapper { min-width: 0; margin: 0; }
@@ -12,7 +11,6 @@
 .vr-map[data-slider='yes'] { touch-action: none; }
 .vr-map:active { cursor: grabbing; }
 .vr-map > svg:first-child { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
-.vr-map-empty { display: grid; place-items: center; min-height: 320px; border: 1px solid var(--stroke); border-radius: var(--card-radius); background: var(--highlight-open); color: var(--secondary); padding: 1rem; text-align: center; }
 
 .vr-map path { fill: none; stroke: none; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round; }
 .vr-map .k-land { fill: #f1ece0; }
@@ -52,8 +50,8 @@
 .vr-link { position: absolute; inset: 0; pointer-events: none; }
 .vr-link line { stroke: var(--highlight-dark); stroke-width: 1.2; stroke-opacity: 0.75; }
 .vr-link circle { fill: var(--highlight-dark); stroke: #fff; stroke-width: 1; }
-.vr-link [data-highlight] line { stroke: var(--bronze); stroke-width: 2; stroke-opacity: 1; }
-.vr-link [data-highlight] circle { fill: var(--bronze); }
+.vr-link [data-highlight] line { stroke: var(--action-press); stroke-width: 2; stroke-opacity: 1; }
+.vr-link [data-highlight] circle { fill: var(--action-press); }
 
 /* Marker: 44 px touch target with a visible dot in the centre. */
 .vr-markers { position: absolute; inset: 0; pointer-events: none; }
@@ -64,7 +62,7 @@
 .vr-marker[data-closed-state] .vr-marker-point { background: #fff; border-color: var(--control-stroke); color: var(--secondary); }
 .vr-marker[data-at-edge] .vr-marker-point { opacity: 0.72; border-style: dashed; }
 .vr-marker[data-highlight], .vr-marker:hover, .vr-marker:focus-visible { z-index: 3; }
-.vr-marker[data-highlight] .vr-marker-point, .vr-marker:hover .vr-marker-point, .vr-marker:focus-visible .vr-marker-point { transform: scale(1.22); background: var(--bronze); border-color: #fff; color: #fff; opacity: 1; }
+.vr-marker[data-highlight] .vr-marker-point, .vr-marker:hover .vr-marker-point, .vr-marker:focus-visible .vr-marker-point { transform: scale(1.22); background: var(--action-press); border-color: #fff; color: #fff; opacity: 1; }
 
 .vr-marker-name { position: absolute; top: 50%; display: none; flex-direction: column; width: max-content; max-width: 150px; padding: 0.25rem 0.5rem; transform: translateY(-50%); border: 1px solid var(--stroke); border-radius: 0.3rem; background: var(--surface); box-shadow: var(--shadow); color: var(--highlight-dark); font-size: 0.82rem; line-height: 1.2; text-align: left; pointer-events: none; }
 .vr-marker-name strong { font-weight: 700; }
@@ -78,7 +76,6 @@
 .vr-city .vr-marker-name { display: flex; border: 0; background: rgb(255 255 255 / 86%); box-shadow: none; padding: 0.1rem 0.35rem; }
 .vr-city[data-closed-state] .vr-marker-point { background: #fff; border-color: var(--secondary); }
 
-.vr-map-note { position: absolute; left: 0.6rem; top: 0.6rem; margin: 0; padding: 0.35rem 0.65rem; border: 1px dashed var(--control-stroke); border-radius: 0.3rem; background: var(--surface); color: var(--text); font-size: 0.88rem; font-weight: 600; }
 
 .vr-proximity { position: absolute; top: 0.5rem; right: 0.5rem; z-index: 4; display: grid; gap: 2px; }
 .vr-proximity button { width: 44px; min-width: 44px; height: 44px; min-height: 44px; padding: 0; border: 1px solid var(--control-stroke); border-radius: 0.3rem; background: var(--surface); box-shadow: none; color: var(--highlight-dark); font-size: 1.3rem; font-weight: 700; line-height: 1; }
@@ -88,57 +85,12 @@
 .vr-attribution { margin-top: 0.3rem; color: var(--secondary); font-size: 0.72rem; line-height: 1.35; }
 .vr-attribution a { color: inherit; }
 
-.vr-panel h2 { margin: 0 0 0.6rem; font-size: 1.35rem; }
-.vr-cities, .vr-buildings { display: grid; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
-.vr-cities button, .vr-buildings a, .vr-building-closed-state { position: relative; display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 44px; padding: 0.6rem 0.8rem; border: 1px solid var(--stroke); border-radius: var(--radius); background: var(--surface); box-shadow: none; color: var(--text); font-weight: 400; text-align: left; text-decoration: none; }
-.vr-buildings a, .vr-building-closed-state { padding-left: 2.75rem; }
-.vr-cities button:hover, .vr-buildings a:hover, .vr-cities button[data-highlight], .vr-buildings a[data-highlight] { border-color: var(--highlight); background: var(--highlight-open); color: var(--text); }
-.vr-buildings a strong, .vr-cities strong { color: var(--highlight-dark); }
-.vr-cities span, .vr-buildings span { color: var(--secondary); font-size: 0.85rem; }
-.vr-no { position: absolute; left: 0.7rem; top: 50%; display: grid; place-items: center; width: 24px; height: 24px; transform: translateY(-50%); border-radius: 50%; background: var(--highlight); color: #fff; font-size: 0.78rem; line-height: 1; }
-[data-highlight] > .vr-no { background: var(--bronze); }
-.vr-building-closed-state { background: none; border-style: dashed; }
-.vr-building-closed-state strong { font-weight: 600; color: var(--secondary); }
-.vr-building-closed-state .vr-no { background: var(--secondary); }
-.vr-backward { min-height: 44px; margin-bottom: 0.4rem; padding: 0; border: 0; background: none; box-shadow: none; color: var(--highlight); font-weight: 600; }
-.vr-backward:hover, .vr-backward:active { background: none; box-shadow: none; color: var(--highlight-dark); text-decoration: underline; }
-.vr-publication { margin: 0.9rem 0 0; color: var(--secondary); font-size: 0.85rem; }
 
 @media (prefers-reduced-motion: reduce) { .vr-marker-point { transition: none; } }
 @media (forced-colors: active) { .vr-marker-point { border-color: CanvasText; } }
 @media (min-width: 761px) { .vr-map-wrapper { position: sticky; top: 0.75rem; } }
-@media (max-width: 760px) { .vr-layout-of { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) {
+  .vr-layout-of { grid-template-columns: minmax(0, 1fr); }
+  .vr-layout-of > * { grid-column: 1 !important; grid-row: auto !important; }
+}
 @media (max-width: 560px) { .vr-city .vr-marker-name small { display: none; } }
-
-/* Full inventory list below the map: every building of the printed inventory, filterable. */
-.inventory { margin-top: 2rem; }
-.inventory h2 { margin: 0 0 0.4rem; }
-.inventory-note { margin: 0 0 1rem; color: var(--secondary); }
-.inventory-filters { display: grid; grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)); gap: 0.75rem; align-items: end; margin-bottom: 0.75rem; }
-.inventory-filters label { display: grid; gap: 0.25rem; font-weight: 600; }
-.inventory-filters input[type='search'], .inventory-filters select { min-height: 44px; padding: 0.4rem 0.6rem; border: 1px solid var(--stroke); border-radius: var(--radius); background: var(--surface); color: var(--text); font: inherit; font-weight: 400; }
-.inventory-filters .inventory-check { display: flex; align-items: center; gap: 0.5rem; min-height: 44px; grid-column: 1 / -1; font-weight: 400; }
-.inventory-filters .inventory-check input { width: 1.25rem; height: 1.25rem; }
-.inventory-count { margin: 0 0 0.5rem; color: var(--secondary); }
-.inventory-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
-.inventory-list a, .inventory-list li > div { display: flex; flex-direction: column; gap: 0.15rem; height: 100%; padding: 0.6rem 0.8rem; border: 1px solid var(--stroke); border-radius: var(--radius); background: var(--surface); color: var(--text); text-decoration: none; }
-.inventory-list span { color: var(--secondary); font-size: 0.9rem; }
-.inventory-list em { font-style: normal; font-size: 0.9rem; color: var(--secondary); }
-.inventory-list li[data-model='yes'] em { color: var(--text); font-weight: 600; }
-.inventory-more { margin-top: 0.75rem; min-height: 44px; }
-@media (max-width: 640px) { .inventory-filters { grid-template-columns: minmax(0, 1fr); } }
-
-.inventory-details { margin-top: 0.4rem; font-size: 0.9rem; }
-.inventory-details summary { cursor: pointer; color: var(--accent, inherit); }
-.inventory-details dl { display: grid; gap: 0.2rem; margin: 0.4rem 0; }
-.inventory-details dl div { display: flex; gap: 0.5rem; }
-.inventory-details dt { font-weight: 600; min-width: 4.5rem; }
-.inventory-details dd { margin: 0; }
-.inventory-details small { opacity: 0.7; }
-
-.inventory-page { display: grid; gap: 1rem; max-width: 46rem; }
-.inventory-facts { display: grid; gap: 0.3rem; }
-.inventory-facts div { display: flex; gap: 0.6rem; }
-.inventory-facts dt { font-weight: 600; min-width: 5rem; }
-.inventory-facts dd { margin: 0; }
-.inventory-missing { opacity: 0.75; }

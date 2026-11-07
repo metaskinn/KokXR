@@ -3,6 +3,9 @@ import { swordIntro, swordStageInfo, swordSources, swordPartNotes } from '../../
 import { stages, firstGame, average, quality } from './engine/state'
 import type { SwordScene, Command } from './engine/scene'
 import { targets } from './engine/test'
+import UiIcon from '../../../shared/ui/UiIcon'
+import '../../../shared/ui/stage-hud.css'
+import { useHudOpen, useSafeInsets } from '../useStageHud'
 import './sword.css'
 const instructions = ['Tezgâhtaki külçeyi seç. Ateşe ilk adımı at.', 'Körüğü basılı tut. Çeliğin rengini izle; 750–1150 aralığında örse geç.', 'Namlu boyunca tıkla veya sürükle. Her bölgeyi döverek çeliği uzat.', 'Isının 780–880 aralığına gelmesini bekle. Suya daldır düğmesini basılı tut.', 'Namlu boyunca sürükle. Her bölgeyi bile; aynı yerde fazla kalma.', 'Havada bekleyen parçaları sırayla seç. Her biri yerini bulsun.', 'Çevir, yakınlaş, ayrıntılara bak. Numaralardan parça notlarını aç.', 'Bir hedef seç. Sahnede hızlı bir kesim çizgisi çiz; kılıcını dene.']
 export default function SwordWorkshop() {
@@ -29,6 +32,12 @@ export default function SwordWorkshop() {
   }, [])
   const { stage, selected, master } = game, heat = Math.round(average(game, 'heat')), activeNote = note === null ? null : swordPartNotes[note]
   const sourced = stage === 3 ? swordStageInfo.water : stage >= 5 ? swordStageInfo.equip : swordStageInfo.ingot
+  const stageBox = useRef<HTMLDivElement>(null), hud = useRef<HTMLDivElement>(null), title = useRef<HTMLParagraphElement>(null)
+  const [hudOpen, toggleHud] = useHudOpen()
+  const heatShown = stage >= 1 && stage <= 3
+  useSafeInsets(stageBox, hud, title, insets => scene.current?.setSafeInsets(insets), ready, `${hudOpen}-${stage}-${game.again}-${xrSupport}-${xrOpen}`)
+  const busy = !ready || error || master
+  function fullScreen() { if (document.fullscreenElement) void document.exitFullscreen().catch(() => {}); else void root.current?.requestFullscreen?.().catch(() => {}) }
   function vrAc() {
     setXrError(false); setXrOpen(true)
     // The browser only opens the session inside a user gesture: no await before this.
@@ -41,36 +50,71 @@ export default function SwordWorkshop() {
     onKeyDown: (e: React.KeyboardEvent) => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); scene.current?.hold(name, true) } },
     onKeyUp: (e: React.KeyboardEvent) => { if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); scene.current?.hold(name, false) } }, onBlur: () => scene.current?.hold(name, false),
   })
-  return <article className="sword-workshop" ref={root}>
-    <header className="sword-title"><div>Ateşten biçime</div><div className="sword-tools">{xrSupport && <button disabled={!ready || error || xrOpen} onClick={vrAc}>{xrOpen ? 'VR açık' : "VR'da aç"}</button>}<button aria-pressed={sound} onClick={() => { setSound(!sound); scene.current?.sound(!sound) }}>{sound ? '♪ Ses açık' : '♪ Ses kapalı'}</button><button onClick={() => command('fromStart')}>Baştan başla</button><button onClick={() => { if (document.fullscreenElement) void document.exitFullscreen().catch(() => {}); else void root.current?.requestFullscreen?.().catch(() => {}) }}>⛶ Tam ekran</button></div></header>
-    <ol className="sword-stages" aria-label="Üretim aşamaları">{stages.map((name, i) => <li key={name} aria-current={i === stage ? 'step' : undefined} className={i < stage ? 'done' : ''}><span>{i < stage ? '✓' : `${i + 1}`}</span><span>{name}</span></li>)}</ol>
-    <div className="sword-experience">
-      <div className="sword-scene" ref={area} tabIndex={0} role="group" aria-label="Kılıç atölyesi sahnesi. Oklarla bölge seç, Enter ile vur, Boşluk ile körük veya bileme; test alanında Enter ile kes." />
-      <div className="sword-scene-title"><h1>{stage === 0 ? 'Bir kıvılcımla başla.' : stages[stage]}</h1><span className="sword-live">{stage === 7 ? 'Test avlusu' : stage === 6 ? 'Ayrıntıları keşfet' : 'Çeliğe biçim ver'}</span></div>
-      {!ready && !error && <div className="sword-loading" role="status"><span />Atölye hazırlanıyor…<small>Modeller ve malzemeler yükleniyor.</small></div>}
-      {xrError && <p className="sword-xr-error" role="alert">VR oturumu başlatılamadı. Atölyeyi ekranda kullanmaya devam edebilirsin.</p>}
-      {error && <div className="sword-loading" role="alert">Atölye görüntülenemedi.<small>Model yüklenemedi veya WebGL kullanılamıyor. Bağlantını ve tarayıcı desteğini kontrol edip sayfayı yenile.</small><button onClick={() => location.reload()}>Yeniden yükle</button></div>}
-      <aside className={`sword-panel ${open ? '' : 'sword-panel-closed-state'}`}>
-        <button className="sword-drawer" aria-expanded={open} onClick={() => setOpen(!open)}>{stages[stage]} · Kontroller {open ? '⌄' : '⌃'}</button>
-        <div className="sword-panel-interior"><p className="sword-small">Adım {stage + 1} / 8</p><h2>{stage === 0 ? 'Ateş seni bekliyor.' : stages[stage]}</h2><p className="sword-instruction">{instructions[stage]}</p>
-          <fieldset disabled={!ready || error || master} className="sword-actions">
-            {stage === 0 && <button className="sword-main" onClick={() => command('al')}>Külçeyi al <span>↗</span></button>}
-            {(stage === 1 || game.again) && <><button className="sword-main" {...hold('bellows')}>Körüğü basılı tut</button><button disabled={heat < 750} onClick={() => command('continue')}>Örse geç →</button></>}
+  // The stage's main action floats in the HUD; everything else stays in the panel beside (desktop) or below (phone) the scene.
+  const main = stage === 0 ? <button type="button" className="hud-primary sword-main" disabled={busy} onClick={() => command('al')}><UiIcon name="next" /><span>Külçeyi al</span></button>
+    : stage === 1 || game.again ? <button type="button" className="hud-primary sword-main" disabled={busy} {...hold('bellows')}><UiIcon name="up" /><span>Körüğü basılı tut</span></button>
+    : stage === 3 ? <button type="button" className="hud-primary sword-main" disabled={busy} {...hold('water')}><UiIcon name="down" /><span>Suya daldır · basılı tut</span></button>
+    : stage === 5 ? <button type="button" className="hud-primary sword-main" disabled={busy} onClick={() => command('clink')}><UiIcon name="check" /><span>Sıradaki parçayı yerleştir</span></button>
+    : stage === 6 ? <button type="button" className="hud-primary sword-main" disabled={busy} onClick={() => command('continue')}><span>Test alanına geç →</span></button>
+    : stage === 7 ? <button type="button" className="hud-primary sword-main" disabled={busy || game.broke} onClick={() => command('cutOff')}><UiIcon name="next" /><span>Kes</span></button>
+    : null
+  const anvil = (stage === 1 || game.again) && <button type="button" className="sword-next" disabled={busy || heat < 750} onClick={() => command('continue')}><span>Örse geç →</span></button>
+  const vrButton = xrSupport && <button type="button" disabled={!ready || error || xrOpen} onClick={vrAc}><UiIcon name="vr" /><span>{xrOpen ? 'VR açık' : "VR'da aç"}</span></button>
+  const soundButton = <button type="button" aria-pressed={sound} onClick={() => { setSound(!sound); scene.current?.sound(!sound) }}><UiIcon name={sound ? 'check' : 'x'} /><span>{sound ? 'Ses açık' : 'Ses kapalı'}</span></button>
+  return <article className="page workshop sword-workshop" ref={root}>
+    <header className="workshop-head">
+      <h1>Kılıç atölyesi</h1>
+      <p className="workshop-task">Külçeyi ısıt, döv, su ver ve bile; parçaları takıp kılıcını test alanında dene.</p>
+    </header>
+    <ol className="sword-stages" aria-label="Üretim aşamaları">{stages.map((name, i) => <li key={name} aria-current={i === stage ? 'step' : undefined} className={i < stage ? 'done' : ''}><span>{i < stage ? <UiIcon name="check" /> : `${i + 1}`}</span><span>{name}</span></li>)}</ol>
+    <div className="workshop-layout sword-experience">
+      <div className="workshop-scene">
+        <div className="stage sword-stage" ref={stageBox}>
+          <div className="sword-scene" ref={area} tabIndex={0} role="group" aria-label="Kılıç atölyesi sahnesi. Oklarla bölge seç, Enter ile vur, Boşluk ile körük veya bileme; test alanında Enter ile kes." />
+          <p className="stage-title glass sword-scene-title" ref={title}><span>{stage + 1}. {stages[stage]}</span>{heatShown && <span className="sword-live"> · {heat}°</span>}</p>
+          {!ready && !error && <div className="model-state glass sword-loading" role="status"><strong>Atölye hazırlanıyor…</strong><small>Modeller ve malzemeler yükleniyor.</small></div>}
+          {xrError && <p className="model-state glass sword-xr-error" role="alert">VR oturumu başlatılamadı. Atölyeyi ekranda kullanmaya devam edebilirsin.</p>}
+          {error && <div className="model-state glass sword-loading" role="alert" data-actions="">Atölye görüntülenemedi.<small>Model yüklenemedi veya WebGL kullanılamıyor. Bağlantını ve tarayıcı desteğini kontrol edip sayfayı yenile.</small><button type="button" onClick={() => location.reload()}>Yeniden yükle</button></div>}
+          <div className="hud glass sword-hud" ref={hud} role="toolbar" aria-label="Atölye kontrolleri" data-open={String(hudOpen)} onPointerDown={e => e.stopPropagation()}>
+            <div className="hud-main">
+              {main}
+              {anvil}
+              <button type="button" className="hud-toggle" aria-expanded={hudOpen} aria-controls="sword-hud-more" onClick={toggleHud}><UiIcon name="up" /><span className="hud-label-short">Kontroller</span><span className="hud-label-long">Kontrolleri gizle</span></button>
+            </div>
+            <div className="hud-more" id="sword-hud-more">
+              {vrButton}
+              {soundButton}
+              <button type="button" onClick={() => command('fromStart')}><UiIcon name="reset" /><span>Baştan başla</span></button>
+              <button type="button" onClick={fullScreen}><UiIcon name="full" /><span>Tam ekran</span></button>
+            </div>
+            <div className="hud-rail">
+              {vrButton}
+              {soundButton}
+              <button type="button" onClick={() => command('fromStart')} aria-label="Baştan başla"><UiIcon name="reset" /><span>Baştan</span></button>
+              <button type="button" onClick={fullScreen}><UiIcon name="full" /><span>Tam ekran</span></button>
+            </div>
+            <p className="sword-keys">{stage === 6 ? 'Sürükle: çevir · Tekerlek: yaklaş' : stage === 7 ? 'Sürükle: kesim çiz' : 'Fare, dokunma veya klavye'}</p>
+          </div>
+          {activeNote && stage === 6 && <section className="model-info-card glass sword-piece-note" role="dialog" aria-label={activeNote.title}><button type="button" className="model-info-close" aria-label="Parça notunu kapat" onClick={() => setNote(null)}><UiIcon name="x" /></button><h3>{activeNote.title}</h3><p>{activeNote.text}</p><small className="source">Kaynak: {swordSources[activeNote.source]}</small></section>}
+        </div>
+      </div>
+      <aside className={`workshop-panel sword-panel ${open ? '' : 'sword-panel-closed-state'}`} aria-label="Aşama paneli">
+        <button type="button" className="sword-drawer" aria-expanded={open} onClick={() => setOpen(!open)}><span>Adım {stage + 1} / 8 · {stages[stage]}</span><UiIcon name={open ? 'up' : 'down'} /></button>
+        <div className="sword-panel-interior"><p className="sword-small">Adım {stage + 1} / 8</p><h2>{stages[stage]}</h2><p className="sword-instruction">{instructions[stage]}</p>
+          <fieldset disabled={busy} className="sword-actions">
             {(stage === 1 || stage === 2 || stage === 3) && <div className="sword-heat"><div><label htmlFor="sword-temperature">Çelik sıcaklığı <small>Oyun ölçeği</small></label><strong>{heat}°</strong></div><meter id="sword-temperature" min={20} max={1200} low={550} high={1150} optimum={830} value={heat} /><div className="sword-scale"><span>Soğuk</span><span>{stage === 3 ? '780–880 ideal' : '750–1150 ideal'}</span><span>Yanma</span></div></div>}
-            {(stage === 2 || stage === 4) && <><div className="sword-regions" role="group" aria-label="Namlu bölgeleri">{game.regions.map((b, i) => <button key={i} aria-label={`Bölge ${i + 1}`} aria-pressed={selected === i} style={{ '--progress': `${(stage === 2 ? b.p : b.skin) * 100}%` } as React.CSSProperties} onClick={() => scene.current?.select(i)}>{i + 1}</button>)}</div><p className="sword-progress">{stage === 2 ? 'Biçim' : 'Bileme'} %{Math.round(average(game, stage === 2 ? 'p' : 'skin') * 100)} · Bölge {selected + 1}</p>{stage === 2 ? <><button onClick={() => command('strike')}>Seçili bölgeye vur ↧</button><button onClick={() => command('again')}>{game.again ? 'Ocakta ısınıyor…' : 'Yeniden ısıt'}</button></> : <button {...hold('wrist')}>Seçili bölgeyi bile · basılı tut</button>}</>}
-            {stage === 3 && <><button className="sword-main" {...hold('water')}>Suya daldır · basılı tut</button><button {...hold('bellows')}>Su öncesi ısıt · basılı tut</button><progress aria-label="Su verme ilerlemesi" max="1.5" value={game.dip} /></>}
-            {stage === 5 && <><p className="sword-progress">{game.attached} / 7 parça yerinde</p><button className="sword-main" onClick={() => command('clink')}>Sıradaki parçayı yerleştir</button></>}
-            {stage === 6 && <><div className="sword-proximity"><button aria-label="Sola çevir" onClick={() => scene.current?.rotate(-.2)}>↶</button><button aria-label="Yakınlaştır" onClick={() => scene.current?.zoom(.85)}>＋</button><button aria-label="Uzaklaştır" onClick={() => scene.current?.zoom(1.15)}>−</button><button aria-label="Sağa çevir" onClick={() => scene.current?.rotate(.2)}>↷</button></div><button className="sword-main" onClick={() => command('continue')}>Test alanına geç →</button></>}
-            {stage === 7 && <><div className="sword-targets">{targets.map((name, i) => <button key={name} aria-pressed={game.target === i} onClick={() => scene.current?.target(i)}>{name}{game.damages[i] > 0 && <small> · hasar %{Math.round(game.damages[i] * 100)}</small>}</button>)}</div><button className="sword-main" disabled={game.broke} onClick={() => command('cutOff')}>Kes ↗</button><button onClick={() => command('targets-renew')}>Hedefleri yenile</button></>}
+            {(stage === 2 || stage === 4) && <><div className="sword-regions" role="group" aria-label="Namlu bölgeleri">{game.regions.map((b, i) => <button type="button" key={i} aria-label={`Bölge ${i + 1}`} aria-pressed={selected === i} style={{ '--progress': `${(stage === 2 ? b.p : b.skin) * 100}%` } as React.CSSProperties} onClick={() => scene.current?.select(i)}>{i + 1}</button>)}</div><p className="sword-progress">{stage === 2 ? 'Biçim' : 'Bileme'} %{Math.round(average(game, stage === 2 ? 'p' : 'skin') * 100)} · Bölge {selected + 1}</p>{stage === 2 ? <><button type="button" onClick={() => command('strike')}>Seçili bölgeye vur</button><button type="button" onClick={() => command('again')}>{game.again ? 'Ocakta ısınıyor…' : 'Yeniden ısıt'}</button></> : <button type="button" {...hold('wrist')}>Seçili bölgeyi bile · basılı tut</button>}</>}
+            {stage === 3 && <><button type="button" {...hold('bellows')}>Su öncesi ısıt · basılı tut</button><progress aria-label="Su verme ilerlemesi" max="1.5" value={game.dip} /></>}
+            {stage === 5 && <p className="sword-progress">{game.attached} / 7 parça yerinde</p>}
+            {stage === 6 && <div className="sword-proximity"><button type="button" onClick={() => scene.current?.rotate(-.2)}><UiIcon name="back" />Sola çevir</button><button type="button" onClick={() => scene.current?.rotate(.2)}>Sağa çevir<UiIcon name="next" /></button><button type="button" onClick={() => scene.current?.zoom(.85)}><UiIcon name="zoom" />Yakınlaştır</button><button type="button" onClick={() => scene.current?.zoom(1.15)}>Uzaklaştır</button></div>}
+            {stage === 7 && <><div className="sword-targets">{targets.map((name, i) => <button type="button" key={name} aria-pressed={game.target === i} onClick={() => scene.current?.target(i)}>{name}{game.damages[i] > 0 && <small> · hasar %{Math.round(game.damages[i] * 100)}</small>}</button>)}</div><button type="button" onClick={() => command('targets-renew')}><UiIcon name="reset" />Hedefleri yenile</button></>}
           </fieldset>
-          {stage >= 6 && <div className="sword-quality"><div><span>Eserinin kalitesi</span><strong>{quality(game)}<small>/100</small></strong></div>{[['Sertlik', game.hardness], ['Keskinlik', average(game, 'skin')], ['Biçim', game.form]].map(([name, v]) => <label key={name}>{name}<progress max="1" value={v} /></label>)}{game.crack_ && <p>⚠ Namluda çatlak var.</p>}{game.rosette && <p className="sword-rosette">✦ Kılıç Ustası</p>}{stage === 7 && <p>Kesim puanı: {game.score}/100</p>}</div>}
+          {stage >= 6 && <div className="sword-quality"><div><span>Eserinin kalitesi</span><strong>{quality(game)}<small>/100</small></strong></div>{[['Sertlik', game.hardness], ['Keskinlik', average(game, 'skin')], ['Biçim', game.form]].map(([name, v]) => <label key={name}>{name}<progress max="1" value={v} /></label>)}{game.crack_ && <p><UiIcon name="alert" /> Namluda çatlak var.</p>}{game.rosette && <p className="sword-rosette">Kılıç Ustası</p>}{stage === 7 && <p>Kesim puanı: {game.score}/100</p>}</div>}
           <div className="sword-message" role="status" aria-live="polite">{game.message}</div>
           <div className="sword-source"><span>Atölye notu</span><p>{sourced.text}</p><small>Kaynak: {swordSources[sourced.source]}</small></div>
-          <button disabled={!ready || error || master} className="sword-master" onClick={() => command('master')}>{master ? 'Usta çalışıyor…' : 'Ustaya bırak'} <span>↗</span></button><small className="sword-master-note">Bu adımı animasyonla, orta kalitede tamamla.</small>
+          <button type="button" disabled={busy} className="sword-master btn-wide" onClick={() => command('master')}>{master ? 'Usta çalışıyor…' : 'Ustaya bırak'}</button><small className="sword-master-note">Bu adımı animasyonla, orta kalitede tamamla.</small>
         </div>
       </aside>
-      <div className="sword-footer-label"><span>Ateş · çelik · ustalık</span><span>{stage === 6 ? 'Sürükle: çevir / Tekerlek: yaklaş' : stage === 7 ? 'Sürükle: kesim çiz' : 'Fare, dokunma veya klavye'}</span></div>
-      {activeNote && stage === 6 && <section className="sword-piece-note" role="dialog" aria-label={activeNote.title}><button aria-label="Parça notunu kapat" onClick={() => setNote(null)}>×</button><h3>{activeNote.title}</h3><p>{activeNote.text}</p><small>Kaynak: {swordSources[activeNote.source]}</small></section>}
     </div>
     <footer className="sword-honesty"><div><span>Model hakkında</span><strong>{swordIntro.title}</strong><small>{swordIntro.position}</small></div><p>{swordIntro.honesty}</p></footer>
     <details className="sword-keyboard"><summary>Kaynaklar</summary>{Object.values(swordSources).map(k => <p key={k}>{k}</p>)}</details>

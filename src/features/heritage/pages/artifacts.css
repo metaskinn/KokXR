@@ -1,0 +1,138 @@
+/* Tasarım: ui2/components.css bölümü. Belirteçler src/app/styles/tokens.css içinde. */
+/* 4. Eserler (hub) */
+.section-title { padding: var(--s-5) 0 var(--s-4); }
+.section-title h1 { margin-bottom: var(--s-2); }
+.section-description { margin: 0; color: var(--ink-2); font-size: var(--fs-ui); max-width: 40rem; }
+
+.finder { display: grid; gap: var(--s-3); padding-bottom: var(--s-4); }
+.search-field { display: grid; gap: var(--s-1); }
+.search-field label { font-weight: 600; font-size: var(--fs-small); color: var(--ink); }
+.search-box { position: relative; display: flex; align-items: center; }
+.search-box .icon { position: absolute; left: var(--s-3); color: var(--ink-2); pointer-events: none; }
+.search-box input {
+  width: 100%; min-height: 48px; padding: 0 var(--s-4) 0 44px;
+  font: 400 1rem/1.2 var(--font-ui); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--r-control);
+}
+.search-box input::placeholder { color: var(--ink-2); }
+.search-box kbd { position: absolute; right: var(--s-3); display: none; padding: 1px 7px; font: 600 0.8125rem/1.4 var(--font-ui); color: var(--ink-2); border: 1px solid var(--line-strong); border-radius: 4px; background: var(--ground); }
+@media (hover: hover) and (pointer: fine) { .search-box kbd { display: inline-block; } }
+
+.segment { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; padding: 3px; background: var(--mat); border-radius: var(--r-control); border: 0; margin: 0; }
+.segment label { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 52px; padding: var(--s-1) 2px; border-radius: 6px; cursor: pointer; text-align: center; color: var(--ink-2); }
+.segment input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.segment strong { font-weight: 700; font-size: 0.9375rem; line-height: 1.2; color: var(--ink); }
+.segment small { font-size: 0.8125rem; line-height: 1.2; }
+.segment label:has(input:checked) { background: var(--surface); box-shadow: 0 0 0 1px var(--line-strong); color: var(--ink-2); }
+.segment label:has(input:checked) strong { color: var(--action-press); }
+.segment label:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 0; }
+
+.filter-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-2); }
+.select { position: relative; }
+.select select {
+  appearance: none; width: 100%; min-height: var(--target); padding: 0 32px 0 var(--s-3);
+  font: 600 0.9375rem/1.2 var(--font-ui); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--r-control); text-overflow: ellipsis;
+}
+.select .icon { position: absolute; right: var(--s-2); top: 50%; width: 18px; height: 18px; transform: translateY(-50%); pointer-events: none; }
+.chip-toggle { font-size: 0.9375rem; padding: 0 var(--s-2); gap: 6px; }
+.chip-toggle .icon { width: 18px; height: 18px; }
+.chip-toggle[aria-pressed='true'] .icon { fill: var(--surface); }
+@media (max-width: 400px) { .chip-toggle .icon { display: none; } }
+
+.result-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-2); padding: var(--s-3) 0; border-top: 1px solid var(--line); }
+.result-count { margin: 0; font-weight: 700; }
+.active-filters { display: flex; flex-wrap: wrap; gap: var(--s-2); margin: 0; padding: 0; list-style: none; }
+.active-filters button { min-height: 36px; padding: 0 var(--s-2) 0 var(--s-3); border-radius: var(--r-pill); font-size: var(--fs-small); background: var(--band); border-color: var(--action); }
+/* 36 px görsel, 44 px dokunma alanı */
+.active-filters button { position: relative; }
+.active-filters button::after { content: ''; position: absolute; inset: -4px 0; }
+.active-filters button .icon { width: 16px; height: 16px; margin-left: 4px; }
+.active-filters .clear-filters { background: none; border-color: transparent; border-radius: var(--r-control); padding: 0 var(--s-2); }
+.hub-results { min-width: 0; }
+.opt-group { display: grid; gap: 2px; }
+.opt-group-title { margin: var(--s-2) 0 2px; font-size: var(--fs-small); font-weight: 700; color: var(--ink-2); }
+
+.badge-model { display: inline-flex; align-items: center; gap: 4px; width: fit-content; padding: 2px 8px 2px 6px; font: 700 0.8125rem/1.3 var(--font-ui); color: var(--action-press); background: var(--band); border: 1px solid var(--action); border-radius: 4px; }
+.badge-model .icon { width: 16px; height: 16px; stroke-width: 2; }
+
+/* 3B maketli şerit */
+.model-strip { margin: var(--s-2) calc(var(--gutter) * -1) var(--s-5); padding: var(--s-4) 0 var(--s-5); background: var(--band); }
+.model-strip-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-3); padding: 0 var(--gutter) var(--s-3); }
+.model-strip-head h2 { font-size: var(--fs-h2); }
+.model-strip-head p { margin: var(--s-1) 0 0; color: var(--ink-2); font-size: var(--fs-small); }
+.model-strip ol {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 74%; gap: var(--s-3);
+  margin: 0; padding: 0 var(--gutter); list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); overscroll-behavior-x: contain; scrollbar-width: thin;
+}
+.model-strip ol::after { content: ''; width: 1px; }
+.model-card { position: relative; display: flex; flex-direction: column; scroll-snap-align: start; background: var(--surface); border-radius: var(--r-card); overflow: hidden; }
+.model-card .still { position: relative; aspect-ratio: 16 / 9; background: var(--scene); }
+.model-card .still img { width: 100%; height: 100%; object-fit: cover; }
+.model-card-body { display: flex; flex-direction: column; gap: 2px; flex: 1; padding: var(--s-3) var(--s-3) var(--s-2); }
+.model-card h3 a { color: var(--ink); text-decoration: none; }
+.model-card h3 a::after { content: ''; position: absolute; inset: 0; }
+.model-card h3 a:focus-visible { outline: none; }
+.model-card:has(h3 a:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+.model-card .position { margin: 0; }
+.model-card .btn-ghost { position: relative; z-index: 1; align-self: flex-start; gap: 6px; margin: auto 0 0 calc(var(--s-1) * -1); padding-top: var(--s-1); }
+
+/* Sonuç listesi: telefonda satır, masaüstünde kart (aynı işaretleme) */
+.artifacts { display: grid; margin: 0; padding: 0; list-style: none; }
+.artifacts > li { min-width: 0; border-bottom: 1px solid var(--line); }
+.artifact-card { position: relative; background: var(--ground); display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: center; gap: var(--s-3); padding: var(--s-3) 0; color: var(--ink); text-decoration: none; }
+.card-image { aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--r-photo); background: var(--mat); }
+.cover { width: 100%; height: 100%; object-fit: cover; }
+.card-content { display: grid; gap: 2px; min-width: 0; }
+.card-content h2 { font: 700 var(--fs-title)/var(--lh-title) var(--font-ui); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.position { margin: 0; color: var(--ink-2); font-size: var(--fs-small); line-height: var(--lh-small); }
+.card-summary { display: none; }
+.card-content .badge-model { margin-top: var(--s-1); }
+@media (hover: hover) and (pointer: fine) { .artifact-card:hover h2 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.18em; color: var(--ink); } }
+.artifact-card:hover { color: var(--ink); }
+
+.load-more { display: grid; justify-items: center; gap: var(--s-2); padding: var(--s-6) 0 var(--s-4); }
+.load-more button { width: 100%; max-width: 420px; }
+.load-more p { margin: 0; color: var(--ink-2); font-size: var(--fs-small); }
+.artifacts-credit { color: var(--ink-2); font-size: var(--fs-small); }
+
+.empty-state { padding: var(--s-6) 0; max-width: 34rem; }
+.empty-state h2 { font-size: var(--fs-h2); margin-bottom: var(--s-2); }
+.empty-state p { color: var(--ink-2); }
+.empty-state .actions { display: flex; flex-wrap: wrap; gap: var(--s-3); align-items: center; }
+
+@media (min-width: 900px) {
+  .section-title { padding: var(--s-6) 0 var(--s-5); }
+  .hub { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: var(--s-6); align-items: start; }
+  .finder-desktop { position: sticky; top: var(--s-4); display: grid; gap: var(--s-5); }
+  .finder-desktop fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 2px; }
+  .finder-desktop legend { padding: 0 0 var(--s-2); font: 700 var(--fs-small)/1.3 var(--font-ui); color: var(--ink); }
+  .opt { display: flex; align-items: center; gap: var(--s-2); min-height: 36px; padding: 0 var(--s-2); margin: 0 calc(var(--s-2) * -1); border-radius: 6px; cursor: pointer; font-size: 0.9375rem; }
+  .opt:hover { background: var(--mat); }
+  .opt input { width: 18px; height: 18px; margin: 0; accent-color: var(--action); }
+  .opt span:first-of-type { flex: 1; }
+  .opt small { color: var(--ink-2); font-size: var(--fs-small); }
+  .opt:has(input:checked) { font-weight: 700; }
+  .opt[data-zero] { color: var(--ink-2); }
+  .opt-more { justify-self: start; margin-top: var(--s-1); }
+  .finder-mobile { display: none; }
+  .search-field { max-width: 640px; }
+  .model-strip { margin: 0 0 var(--s-6); padding: var(--s-5) var(--s-5) var(--s-5); border-radius: var(--r-card); }
+  .model-strip-head { padding: 0 0 var(--s-4); }
+  .model-strip ol { grid-auto-flow: row; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-columns: auto; padding: 0; overflow: visible; gap: var(--s-4); }
+  .model-strip ol::after { display: none; }
+  .model-card-body { padding: var(--s-2) var(--s-3) var(--s-1); }
+  .model-card h3 { font-size: 0.9375rem; }
+  .artifacts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-6) var(--s-5); }
+  .artifacts > li { border: 0; }
+  .artifact-card { grid-template-columns: 1fr; align-items: start; gap: var(--s-3); padding: 0; }
+  .artifact-card .card-image { aspect-ratio: 3 / 2; }
+  .card-summary { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin: var(--s-1) 0 0; font: 400 0.9375rem/1.5 var(--font-ui); color: var(--ink); }
+}
+@media (max-width: 899px) { .finder-desktop { display: none; } }
+
+
+/* Dokunmatik ekranda ve Quest'te masaüstü filtre seçenekleri de hedef boyutuna çıkar. */
+@media (min-width: 900px) and (pointer: coarse) { .opt { min-height: var(--target); } }
+:root[data-xr='yes'] .opt { min-height: 56px; }

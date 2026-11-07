@@ -24,6 +24,8 @@ export interface SwordScene {
   command: (name: Command) => void; hold: (name: 'bellows' | 'water' | 'wrist', v: boolean) => void
   select: (id: number) => void; target: (id: number) => void; sound: (ac: boolean) => void
   zoom: (ratio: number) => void; rotate: (x: number) => void; clear: () => void
+  /** Frames the scene inside the stage part that the HUD does not cover (CSS pixels from each edge). */
+  setSafeInsets: (insets: { top: number; right: number; bottom: number; left: number }) => void
   /** Keep the user gesture: no await before requestSession. */
   startXr: () => Promise<void>
 }
@@ -317,7 +319,8 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
   function contextLost(e: Event) { e.preventDefault(); cancel(); xr.finish(); renderer.setAnimationLoop(null); sound.wait(true); error() }
   function visibility() { cancel(); if (renderer.xr.isPresenting) return; if (document.hidden) { renderer.setAnimationLoop(null); sound.wait(true) } else { lastVal = performance.now(); renderer.setAnimationLoop(frame); sound.wait(false) } }
   area.addEventListener('pointerdown', pointerDown); area.addEventListener('pointermove', pointerMove); area.addEventListener('pointerup', pointerUp); area.addEventListener('pointercancel', cancel); area.addEventListener('lostpointercapture', cancel); area.addEventListener('keydown', keydown); area.addEventListener('keyup', keyup); window.addEventListener('blur', cancel); document.addEventListener('visibilitychange', visibility); renderer.domElement.addEventListener('webglcontextlost', contextLost)
-  function size() { if (renderer.xr.isPresenting) return; const w = area.clientWidth, h = area.clientHeight; renderer.setSize(w, h, false); composer.setSize(w, h); fxaa.uniforms.resolution.value.set(1 / (w * renderer.getPixelRatio()), 1 / (h * renderer.getPixelRatio())); camera.aspect = w / h; camera.setViewOffset(w, h, w > 700 ? 165 : 0, 0, w, h); camera.updateProjectionMatrix() }
+  let safe = { top: 0, right: 0, bottom: 0, left: 0 }
+  function size() { if (renderer.xr.isPresenting) return; const w = area.clientWidth, h = area.clientHeight; renderer.setSize(w, h, false); composer.setSize(w, h); fxaa.uniforms.resolution.value.set(1 / (w * renderer.getPixelRatio()), 1 / (h * renderer.getPixelRatio())); const sw = Math.max(1, w - safe.left - safe.right), sh = Math.max(1, h - safe.top - safe.bottom); camera.aspect = sw / sh; camera.setViewOffset(sw, sh, -safe.left, -safe.top, w, h); camera.updateProjectionMatrix() }
   const observer = new ResizeObserver(size); area.prepend(renderer.domElement); observer.observe(area); size(); deform.update(d.regions); stageView(); camera.position.copy(cameraGoal); controls.target.copy(targetGoal); sword.position.copy(swordGoal); sword.rotation.copy(swordRotation); lastStage = 0
   function screen(p: T.Vector3) { const a = p.clone().project(camera); return { x: (a.x + 1) * area.clientWidth / 2, y: (1 - a.y) * area.clientHeight / 2, z: a.z } }
   function xrStamp() {
@@ -501,7 +504,11 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
     }
     markers.forEach(({ b, p }) => { b.hidden = d.stage !== 6; if (!b.hidden) { const q = screen(sword.localToWorld(p.clone())); b.style.left = `${q.x}px`; b.style.top = `${q.y - 18}px` } })
     action.hidden = !(d.stage === 0 || d.stage === 5 && d.attached < 7)
-    if (!action.hidden) { const obj = d.stage === 0 ? eggShape : objVal(pieces[d.attached]); const q = screen(obj.getWorldPosition(new T.Vector3())); action.style.left = `${q.x}px`; action.style.top = `${q.y - 35}px`; action.textContent = d.stage === 0 ? '01 · Külçeyi al' : `${d.attached + 1} · Parçayı yerleştir` }
+    if (!action.hidden) { const obj = d.stage === 0 ? eggShape : objVal(pieces[d.attached]); const q = screen(obj.getWorldPosition(new T.Vector3())); const text = d.stage === 0 ? '01 · Külçeyi al' : `${d.attached + 1} · Parçayı yerleştir`; if (action.textContent !== text) action.textContent = text
+      // Keep the label inside the part of the stage the HUD leaves free, so it is never cut off at the edge (375 px).
+      const half = action.offsetWidth / 2, halfY = action.offsetHeight / 2, w = area.clientWidth, h = area.clientHeight
+      action.style.left = `${Math.round(Math.min(Math.max(q.x, safe.left + half + 8), Math.max(safe.left + half + 8, w - safe.right - half - 8)))}px`
+      action.style.top = `${Math.round(Math.min(Math.max(q.y - 35, safe.top + halfY + 8), Math.max(safe.top + halfY + 8, h - safe.bottom - halfY - 8)))}px` }
     const hitPos = screen(sword.localToWorld(new T.Vector3(deform.center(d.regions, selected), 0, .006)))
     area.dataset.strikeX = String(hitPos.x); area.dataset.strikeY = String(hitPos.y)
     const hm = targetCenter[d.target], hq = screen(hm), hq2 = screen(new T.Vector3(hm.x + 1, hm.y, hm.z))
@@ -511,7 +518,7 @@ export async function createScene(area: HTMLElement, notify: (d: Game) => void, 
     composer.render(); if (publish > .15) { publish = 0; emit() }
   }
   collect(scene); renderer.setAnimationLoop(frame); emit()
-  return { startXr: async () => { sound.start(); await xr.start() }, command, hold, select: id => { selected = limit(id, 0, 11); d.selected = selected; wristU = (selected + .5) / 12; stageView(); emit() }, target: id => { d.target = limit(id, 0, 2); stageView(); emit() }, sound: v => { sound.ac(v) }, zoom: ratio => { camera.position.sub(controls.target).multiplyScalar(ratio).add(controls.target) }, rotate: x => { const v = camera.position.clone().sub(controls.target); v.applyAxisAngle(new T.Vector3(0, 1, 0), x); camera.position.copy(controls.target).add(v) }, clear: () => {
+  return { startXr: async () => { sound.start(); await xr.start() }, command, hold, select: id => { selected = limit(id, 0, 11); d.selected = selected; wristU = (selected + .5) / 12; stageView(); emit() }, target: id => { d.target = limit(id, 0, 2); stageView(); emit() }, sound: v => { sound.ac(v) }, zoom: ratio => { camera.position.sub(controls.target).multiplyScalar(ratio).add(controls.target) }, setSafeInsets: insets => { safe = { ...insets }; area.dataset.safe = `${insets.top},${insets.right},${insets.bottom},${insets.left}`; size() }, rotate: x => { const v = camera.position.clone().sub(controls.target); v.applyAxisAngle(new T.Vector3(0, 1, 0), x); camera.position.copy(controls.target).add(v) }, clear: () => {
     disposed = true; xr.clear(); renderer.setAnimationLoop(null); cancel(); observer.disconnect(); controls.dispose(); sound.dispose(); particles.dispose(); targets.clear(); iz.remove(); previewGeo.dispose(); (preview.material as T.Material).dispose()
     area.removeEventListener('pointerdown', pointerDown); area.removeEventListener('pointermove', pointerMove); area.removeEventListener('pointerup', pointerUp); area.removeEventListener('pointercancel', cancel); area.removeEventListener('lostpointercapture', cancel); area.removeEventListener('keydown', keydown); area.removeEventListener('keyup', keyup); window.removeEventListener('blur', cancel); document.removeEventListener('visibilitychange', visibility); renderer.domElement.removeEventListener('webglcontextlost', contextLost)
     markers.forEach(({ b, click }) => { b.removeEventListener('click', click); b.remove() }); action.removeEventListener('click', actionClick); action.remove(); collect(scene); geometries.forEach(g => g.dispose()); mats.forEach(m => m.dispose()); textures.forEach(t => t.dispose()); env.dispose(); composer.passes.forEach(p => p.dispose()); composer.dispose(); renderer.dispose(); renderer.domElement.remove()

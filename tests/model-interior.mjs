@@ -12,8 +12,7 @@ async function open(width, height) {
   page.on('pageerror', (e) => errors.push(String(e)))
   page.on('console', (m) => { if (m.type() === 'error' && !m.location().url.includes('360tr')) errors.push(m.text()) })
   page.on('response', (r) => { if (r.url().includes('/images/ulu-mosque/model/') && r.status() !== 200) errors.push(`texture failed to load: ${r.url()}`) })
-  await page.goto(`${url}/artifact/ulu-mosque`)
-  await page.getByRole('button', { name: /maketini eline al/ }).click()
+  await page.goto(`${url}/places/ulu-mosque`)
   await page.locator('.model-area canvas').waitFor({ timeout: 30000 })
   await page.locator('.model-box').scrollIntoViewIfNeeded()
   await page.getByRole('button', { name: 'İçeri gir' }).click({ timeout: 30000 })
@@ -112,7 +111,7 @@ async function toWall(page, keyBtn, maxMs = 200000) {
   condition(await page.locator('.model-markers').isHidden(), 'markers visible outside')
 
   // The scene is cleaned up on route change.
-  await page.getByRole('link', { name: /Eserlere dön/ }).first().click()
+  await page.getByRole('navigation', { name: 'Ana gezinme' }).first().getByRole('link', { name: 'Eserler' }).click()
   await page.waitForURL(`${url}/artifacts`)
   await page.locator('.model-area').waitFor({ state: 'detached', timeout: 30000 })
   condition(!(await page.locator('.model-markers').count()), 'marker layer not cleaned up')

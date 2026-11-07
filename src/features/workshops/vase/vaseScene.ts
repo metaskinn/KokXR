@@ -13,6 +13,8 @@ export interface VaseScene {
   releasePiece: () => void
   cancel: () => void
   reset: () => void
+  /** Frames the vase inside the stage part that the HUD does not cover (CSS pixels from each edge). */
+  setSafeInsets: (insets: { top: number; right: number; bottom: number; left: number }) => void
   /** Called inside a user gesture: no await before requestSession. */
   startXr: () => Promise<void>
   endXr: () => void
@@ -170,7 +172,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     intactView.visible = tracelessView
     assemblyTraces.visible = fresh.broke && fresh.placed.length === 6
     silhouette.visible = fresh.repair && fresh.placed.length < 6
-    if (fromStart && !renderer.xr.isPresenting) reset()
+    if (fromStart && !renderer.xr.isPresenting) { resize(); reset() }
     pieces.forEach((p, id) => {
       p.visible = !tracelessView
       const onGround = !fresh.repair || fresh.placed.includes(id)
@@ -237,12 +239,20 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
   area.addEventListener('pointercancel', pointerCancel, true)
   area.addEventListener('lostpointercapture', pointerCancel, true)
   renderer.domElement.addEventListener('webglcontextlost', contextLost)
+  let safe = { top: 0, right: 0, bottom: 0, left: 0 }
   const resize = () => {
     if (renderer.xr.isPresenting) return
     const w = area.clientWidth, h = Math.max(area.clientHeight, 1)
     renderer.setSize(w, h, false)
-    camera.aspect = w / h
+    // The camera frames the safe rectangle; the canvas shows the rest around it (under the HUD).
+    const sw = Math.max(1, w - safe.left - safe.right), sh = Math.max(1, h - safe.top - safe.bottom)
+    camera.aspect = sw / sh
     camera.fov = camera.aspect < 1 ? 62 : 42
+    // During repair the pieces wait on both sides: keep at least 56° horizontally so the shelves stay inside the safe rectangle.
+    if (state.repair) camera.fov = Math.min(75, Math.max(camera.fov, THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(28)) / camera.aspect))))
+    area.dataset.fov = camera.fov.toFixed(3)
+    if (safe.top || safe.right || safe.bottom || safe.left) camera.setViewOffset(sw, sh, -safe.left, -safe.top, w, h)
+    else camera.clearViewOffset()
     camera.updateProjectionMatrix()
   }
   const observer = new ResizeObserver(resize)
@@ -309,6 +319,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
   collectSources(scene)
   return {
     update, reset, cancel,
+    setSafeInsets: (insets) => { safe = { ...insets }; area.dataset.safe = `${insets.top},${insets.right},${insets.bottom},${insets.left}`; resize() },
     startXr: () => xr.start(),
     endXr: () => xr.finish(),
     dragPiece: (x, y) => {

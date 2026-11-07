@@ -54,7 +54,7 @@ try {
   await page.evaluate(() => window.__transitionTest.pause())
   for (const [name, input] of [['Mahfile çık', 'key'], ['Mahfile çık', 'mouse'], ['Mihrap', 'key']]) {
     if (input !== 'key' || name !== 'Mahfile çık') {
-      await click('← Dışarı çık'); await click('İçeri gir')
+      await click('Dışarı çık'); await click('İçeri gir')
     }
     await click(name)
     await step(170)

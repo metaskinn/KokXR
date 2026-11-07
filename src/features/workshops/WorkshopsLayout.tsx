@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import './workshops.css'
 
 /** Groups the vase and sword workshops under one tab; each workshop keeps its own address. */
 export default function WorkshopsLayout() {

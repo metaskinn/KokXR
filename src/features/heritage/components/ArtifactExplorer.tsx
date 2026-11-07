@@ -1,9 +1,13 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../../scale-models/model.css'
 import type { Source, Model } from '../../../domain/artifact'
 import type { ModelScene } from '../../scale-models/modelScene'
 import SourceLine from '../../../shared/ui/SourceLine'
 import Section from '../../../shared/ui/Section'
+import UiIcon from '../../../shared/ui/UiIcon'
+import Hud, { HudButton, useHudInsets, useHudOpen } from '../../../shared/ui/Hud'
+import type { HudInsets } from '../../../shared/ui/Hud'
 
 const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches
 const WALK_KEYS = new Set(['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Shift'])
@@ -34,7 +38,7 @@ function WalkPad({ keyBtn }: { keyBtn: (key: string, pressed: boolean) => void }
     apply(fresh)
   }
   useEffect(() => () => { for (const k of pressed.current) keyBtn(k, false) }, [keyBtn])
-  return <div className="model-walking-pad" role="img" aria-label="Yürüme kolu"
+  return <div className="model-walking-pad glass" role="img" aria-label="Yürüme kolu"
     onPointerDown={(e) => { e.stopPropagation(); e.currentTarget.setPointerCapture(e.pointerId); motion(e) }}
     onPointerMove={(e) => { if (e.currentTarget.hasPointerCapture(e.pointerId)) motion(e) }}
     onPointerUp={release} onPointerCancel={release} onLostPointerCapture={release}>
@@ -42,7 +46,7 @@ function WalkPad({ keyBtn }: { keyBtn: (key: string, pressed: boolean) => void }
   </div>
 }
 
-export default function ArtifactExplorer({ model, sources, name, openNow = false }: { model: Model; sources: Source[]; name: string; openNow?: boolean }) {
+export default function ArtifactExplorer({ model, sources, name, artifactId, openNow = false }: { model: Model; sources: Source[]; name: string; artifactId?: string; openNow?: boolean }) {
   const [open, setOpen] = useState(openNow)
   const [state, setState] = useState<'loading' | 'ready' | 'error'>('loading')
   const [fragmented, setFragmented] = useState(false)
@@ -60,11 +64,17 @@ export default function ArtifactExplorer({ model, sources, name, openNow = false
   const [xrError, setXrError] = useState(false)
   const ready = state === 'ready' && !xrBusy
   const [touchscreen] = useState(() => matchMedia('(pointer: coarse)').matches)
+  const [hudOpen, setHudOpen] = useHudOpen()
   const walkKey = useCallback((key: string, pressed: boolean) => scene.current?.walkKey(key, pressed), [])
   const infoText = useRef<HTMLParagraphElement>(null)
   const area = useRef<HTMLDivElement>(null)
   const box = useRef<HTMLDivElement>(null)
+  const hud = useRef<HTMLDivElement>(null)
+  const vrButton = useRef<HTMLButtonElement>(null)
+  const focusedVr = useRef(false)
   const scene = useRef<ModelScene | null>(null)
+  const insetsChanged = useCallback((insets: HudInsets) => scene.current?.setSafeInsets(insets), [])
+  useHudInsets(box, hud, insetsChanged, open && state === 'ready')
 
   useEffect(() => {
     let cancel = false
@@ -99,6 +109,14 @@ export default function ArtifactExplorer({ model, sources, name, openNow = false
     }).catch(() => !cancel && setState('error'))
     return () => { cancel = true; scene.current?.clear(); scene.current = null; setStop(null); setInfoId(null); setXrBusy(false); setXrError(false) }
   }, [open, model.model, model.interiorInfos, sources])
+
+  // On a VR browser (Quest) "VR'da aç" is the first action: focus goes to it once the scene is ready.
+  useEffect(() => {
+    if (openNow && ready && xrSupport && !focusedVr.current && vrButton.current) {
+      focusedVr.current = true
+      vrButton.current.focus({ preventScroll: true })
+    }
+  }, [openNow, ready, xrSupport])
 
   // The card collapses whenever it changes; "Devamı" appears only if the text was actually truncated.
   useEffect(() => { setInfoOpen(false) }, [infoId])
@@ -159,53 +177,82 @@ export default function ArtifactExplorer({ model, sources, name, openNow = false
     area.current?.focus({ preventScroll: true })
   }
 
+  const fullscreen = document.fullscreenEnabled
+    ? <HudButton icon="full" label="Tam ekran" onClick={() => document.fullscreenElement ? document.exitFullscreen() : box.current?.requestFullscreen()} />
+    : null
+  const goInside = <HudButton icon="door" label="İçeri gir" className={xrSupport ? undefined : 'hud-primary'} disabled={!ready || !stops.length} onClick={() => goToStop(stops[0]?.id ?? null)} />
+
+  const stage = <div className="model-box stage" ref={box}>
+    <div className="model-area" ref={area} tabIndex={0} role="application" onKeyDown={keyBtn}
+      onKeyUp={(e) => { if (WALK_KEYS.has(keyName(e))) scene.current?.walkKey(keyName(e), false) }}
+      onBlur={(e) => { if (!area.current?.contains(e.relatedTarget)) scene.current?.walkRelease() }}
+      onPointerDown={() => { setXrError(false); if (stop) area.current?.focus({ preventScroll: true }) }}
+      aria-label={stop
+        ? `${name} iç mekânı. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.`
+        : `${name} 3B maketi. Ok tuşlarıyla döndür, artı ve eksi ile yakınlaştır.`}>
+      {stop && touchscreen && !xrBusy && <WalkPad keyBtn={walkKey} />}
+    </div>
+    {info && <aside className="model-info-card glass" aria-live="polite">
+      <button type="button" className="model-info-close" aria-label="Bilgiyi kapat" onClick={closeInfo}><UiIcon name="x" /></button>
+      <h3>{info.title}</h3>
+      <p ref={infoText} id="model-info-text" className={infoOpen ? 'model-info-text open' : 'model-info-text'}>{info.text}</p>
+      {infoOverflows && <button type="button" className="model-info-continue" aria-expanded={infoOpen} aria-controls="model-info-text" onClick={() => setInfoOpen(!infoOpen)}>{infoOpen ? 'Daha az' : 'Devamı'}</button>}
+      <SourceLine sources={sources} sourceId={info.sourceId} />
+    </aside>}
+    {state === 'loading' && <p className="model-state glass" role="status">Maket hazırlanıyor…</p>}
+    {state === 'error' && <div className="model-state glass" role="alert" data-actions="yes">
+      <p>Bu cihazda 3B görüntüleme (WebGL) kullanılamıyor. Fotoğraflara ve tarihçeye eser sayfasından bakabilirsin.</p>
+      {artifactId && <Link to={`/artifact/${artifactId}`}>Eser sayfasına git</Link>}
+    </div>}
+    {/* Does not block dragging the scene: the user can keep using the model. */}
+    {xrError && <p className="model-state glass" aria-live="polite">VR oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin.</p>}
+    {state !== 'error' && <Hud id="model-hud-more" label="Maket kontrolleri" hudRef={hud} open={hudOpen} setOpen={setHudOpen} groupClassName="model-control"
+      primary={stop
+        ? <HudButton icon="exit" label="Dışarı çık" onClick={() => goToStop(null)} />
+        : xrSupport ? <HudButton ref={vrButton} icon="vr" label="VR'da aç" className="hud-primary" disabled={!ready} onClick={openVr} /> : goInside}
+      extra={stop ? stops.map((d) => <button type="button" key={d.id} aria-pressed={stop === d.id} onClick={() => goToStop(d.id)}>{d.name}</button>) : null}
+      footer={stop
+        ? <p className="model-keys" aria-hidden="true"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> yürü · <kbd>←</kbd><kbd>→</kbd> dön · <kbd>Shift</kbd> hızlan</p>
+        : <p className="model-keys" aria-hidden="true"><kbd>←</kbd><kbd>→</kbd> çevir · <kbd>+</kbd><kbd>−</kbd> yakınlaş</p>}>
+      {stop ? fullscreen : <>
+        {xrSupport && goInside}
+        <HudButton icon="explode" label={fragmented ? 'Birleştir' : 'Parçala'} onClick={shatter} aria-pressed={fragmented} disabled={!ready} />
+        <HudButton icon="orbit" label="Kendi kendine dönsün" short="Dönsün" aria-pressed={auto} disabled={!ready}
+          onClick={() => { setAuto(!auto); scene.current?.auto(!auto) }} />
+        <HudButton icon="reset" label="Görünümü sıfırla" short="Sıfırla" disabled={!ready} onClick={() => scene.current?.reset()} />
+        {fullscreen}
+      </>}
+    </Hud>}
+  </div>
+
+  const hint = <p className="hint-text">{stop
+    ? touchscreen ? 'Alttaki kolla yürü, ekranı sürükleyerek etrafına bak. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır.' : 'W, A, S, D veya ↑ ↓ ile yürü, ← → ile dön, PageUp/PageDown ile yukarı aşağı bak, Shift ile hızlan. Sürükleyerek de etrafına bakabilirsin. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır. Levha ve paye yazıları arşiv fotoğraflarındandır, hangi yüzde durdukları temsilîdir.'
+    : touchscreen ? 'Sürükleyerek çevir, iki parmakla yakınlaştır.' : 'Sürükleyerek çevir, tekerlekle yakınlaştır. Klavyede maketi seçip ok tuşları ve + / − ile.'}</p>
+  const infos = <ul className="model-info">
+    {model.infos.map((b, i) => <li key={i}>{b.text}<SourceLine sources={sources} sourceId={b.sourceId} /></li>)}
+  </ul>
+  const live = <div className="invisible" aria-live="polite">{announcement}</div>
+
+  // Model page (/places/:id): the stage comes straight after the title; the honesty line is always visible under it.
+  if (openNow) return <>
+    {stage}
+    <p className="honesty-line">Temsilî maket, gerçek bir 3B tarama değil.</p>
+    <details className="more model-how">
+      <summary>Maket nasıl yapıldı<UiIcon name="down" /></summary>
+      <p className="reading">{model.description}</p>
+    </details>
+    {hint}
+    {model.infos.length > 0 && <section className="section reading model-infos" aria-labelledby="model-infos-title">
+      <h2 id="model-infos-title">Maketteki kaynaklı bilgiler</h2>
+      {infos}
+    </section>}
+    {live}
+  </>
+
   return <Section id="model-title" title="Eseri eline al" className="artifact-explorer">
     <p className="label">{model.description}</p>
-    {!open ? <button type="button" className="model-start" onClick={() => setOpen(true)}>{name} maketini eline al</button> : <>
-      <div className="model-box" ref={box}>
-        <div className="model-area" ref={area} tabIndex={0} role="application" onKeyDown={keyBtn}
-          onKeyUp={(e) => { if (WALK_KEYS.has(keyName(e))) scene.current?.walkKey(keyName(e), false) }}
-          onBlur={(e) => { if (!area.current?.contains(e.relatedTarget)) scene.current?.walkRelease() }}
-          onPointerDown={() => { setXrError(false); if (stop) area.current?.focus({ preventScroll: true }) }}
-          aria-label={stop
-            ? `${name} iç mekânı. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.`
-            : `${name} 3B maketi. Ok tuşlarıyla döndür, artı ve eksi ile yakınlaştır.`}>
-          {stop && touchscreen && !xrBusy && <WalkPad keyBtn={walkKey} />}
-        </div>
-        {stop && <p className="model-keys" aria-hidden="true"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> yürü · <kbd>←</kbd><kbd>→</kbd> dön · <kbd>Shift</kbd> hızlan</p>}
-        {info && <aside className="model-info-card" aria-live="polite">
-          <button type="button" className="model-info-close" aria-label="Bilgiyi kapat" onClick={closeInfo}>×</button>
-          <h3>{info.title}</h3>
-          <p ref={infoText} id="model-info-text" className={infoOpen ? 'model-info-text open' : 'model-info-text'}>{info.text}</p>
-          {infoOverflows && <button type="button" className="model-info-continue" aria-expanded={infoOpen} aria-controls="model-info-text" onClick={() => setInfoOpen(!infoOpen)}>{infoOpen ? 'Daha az' : 'Devamı'}</button>}
-          <SourceLine sources={sources} sourceId={info.sourceId} />
-        </aside>}
-        {state === 'loading' && <p className="model-state">Maket hazırlanıyor…</p>}
-        {state === 'error' && <p className="model-state">Bu cihazda 3B görüntüleme (WebGL) kullanılamıyor.</p>}
-        {/* Does not block dragging the scene: the user can keep using the model. */}
-        {xrError && <p className="model-state" aria-live="polite" style={{ pointerEvents: 'none', textAlign: 'center', padding: '1rem', textShadow: '0 1px 4px #000' }}>VR oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin.</p>}
-        <div className="model-control">
-          {stop ? <>
-            <button type="button" onClick={() => goToStop(null)}>← Dışarı çık</button>
-            {stops.map((d) => <button type="button" key={d.id} aria-pressed={stop === d.id} onClick={() => goToStop(d.id)}>{d.name}</button>)}
-          </> : <>
-            <button type="button" disabled={!ready || !stops.length} onClick={() => goToStop(stops[0]?.id ?? null)}>İçeri gir</button>
-            {xrSupport && <button type="button" disabled={!ready} onClick={openVr}>VR'da aç</button>}
-            <button type="button" onClick={shatter} aria-pressed={fragmented} disabled={!ready}>{fragmented ? '⤓ Birleştir' : '⤒ Parçala'}</button>
-            <button type="button" aria-pressed={auto} disabled={!ready}
-              onClick={() => { setAuto(!auto); scene.current?.auto(!auto) }}>⟳ Kendi kendine dönsün</button>
-            <button type="button" disabled={!ready} onClick={() => scene.current?.reset()}>Görünümü sıfırla</button>
-          </>}
-          {document.fullscreenEnabled && <button type="button" onClick={() => document.fullscreenElement ? document.exitFullscreen() : box.current?.requestFullscreen()}>Tam ekran</button>}
-        </div>
-      </div>
-      <p className="hint-text">{stop
-        ? touchscreen ? 'Alttaki kolla yürü, ekranı sürükleyerek etrafına bak. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır.' : 'W, A, S, D veya ↑ ↓ ile yürü, ← → ile dön, PageUp/PageDown ile yukarı aşağı bak, Shift ile hızlan. Sürükleyerek de etrafına bakabilirsin. Bir yapıya yaklaşınca veya üstündeki işarete basınca bilgisi açılır. Levha ve paye yazıları arşiv fotoğraflarındandır, hangi yüzde durdukları temsilîdir.'
-        : 'Fareyle veya parmağınla sürükleyerek çevir, tekerlek veya iki parmakla yakınlaştır. Klavyede: maketi seçip ok tuşları ile +/−.'}</p>
-    </>}
-    <ul className="model-info">
-      {model.infos.map((b, i) => <li key={i}>{b.text}<SourceLine sources={sources} sourceId={b.sourceId} /></li>)}
-    </ul>
-    <div className="invisible" aria-live="polite">{announcement}</div>
+    {!open ? <button type="button" className="model-start" onClick={() => setOpen(true)}>{name} maketini eline al</button> : <>{stage}{hint}</>}
+    {infos}
+    {live}
   </Section>
 }

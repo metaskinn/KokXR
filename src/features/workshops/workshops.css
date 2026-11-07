@@ -1,0 +1,25 @@
+/* Atölyeler: ortak başlık, sahne + görev paneli yerleşimi. Sahne ve HUD görünümü shared/ui/stage-hud.css içinde. */
+.workshop-nav a[aria-current='page'] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
+
+.workshop-head { display: grid; gap: var(--s-2); margin: var(--s-5) 0; max-width: 46rem; }
+.workshop-task { margin: 0; font-size: var(--fs-title); line-height: var(--lh-title); color: var(--ink); }
+.workshop-note { margin: 0; font-size: var(--fs-small); line-height: var(--lh-small); color: var(--ink-2); }
+.workshop-note .label { margin-right: var(--s-2); }
+
+.workshop-layout { display: grid; gap: var(--s-5); align-items: start; }
+.workshop-scene, .workshop-panel { min-width: 0; }
+.workshop-hint { margin: var(--s-3) 0 0; font-size: var(--fs-small); line-height: var(--lh-small); color: var(--ink-2); }
+.workshop-panel { padding: var(--s-4); border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
+.workshop-panel h2 { margin: 0 0 var(--s-2); font-size: 1.375rem; }
+.workshop-panel p { margin: 0 0 var(--s-3); }
+.workshop-panel button .icon { width: 20px; height: 20px; }
+
+/* Sahnedeki durum kartında düğme varsa tıklanabilir olsun. */
+.stage .model-state[role='alert'] button { pointer-events: auto; margin-top: var(--s-3); }
+
+@media (min-width: 601px) { .workshop-panel { padding: 20px; } }
+/* Masaüstünde sahne 8, panel 4 sütun; panel sahnenin yanında, üstünde değil. */
+@media (min-width: 960px) { .workshop-layout { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--s-5); } }
+
+/* Telefonda sabit alt sekme çubuğu: odaklanan/kaydırılan panel düğmesi onun altında kalmasın. (Genel çözüm base.css'te html'e konabilir.) */
+@media (max-width: 600px) { :root:has(.workshop) { scroll-padding-bottom: calc(var(--tabbar-h) + var(--s-2)); } }

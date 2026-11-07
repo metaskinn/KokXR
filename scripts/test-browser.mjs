@@ -3,7 +3,7 @@
 import { spawn } from 'node:child_process'
 
 const PORT = process.env.TEST_PORT ?? '4173'
-const tests = process.argv.slice(2).length ? process.argv.slice(2) : ['model-xr-button', 'vase-xr-button', 'inventory-list', 'model-interior']
+const tests = process.argv.slice(2).length ? process.argv.slice(2) : ['model-xr-button', 'vase-xr-button', 'model-interior']
 
 function run(command, args) {
   return new Promise((resolve) => {

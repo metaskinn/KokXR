@@ -1,0 +1,136 @@
+/* Tasarım: ui2/components.css bölümü 6. Belirteçler src/app/styles/tokens.css içinde.
+   Sahne ve HUD (maket, vazo, kılıç). Cam görünüm yalnız burada: HUD, sahnedeki bilgi kartı, sahne durum kartı.
+   Sınıf API'si (Hud.tsx): .stage, .hud.glass[data-open], .hud-main (birincil + .hud-toggle), .hud-actions, .hud-extra,
+   .hud-more, .hud-rail (isteğe bağlı ayrı kapalı ray), .hud-primary, .hud-label-short / .hud-label-long, .model-keys. */
+
+/* Sahne alanı */
+.stage, .model-box {
+  position: relative; overflow: hidden; isolation: isolate;
+  /* Telefonda HUD şeridi ilk ekranda, alt sekme çubuğunun üstünde kalsın: başlık bloğu + sekme çubuğu ≈ 380 px */
+  height: clamp(320px, 100svh - 380px, 560px);
+  margin: 0 calc(var(--gutter) * -1); background: var(--scene); color: var(--glass-ink);
+}
+.stage canvas, .model-area, .stage-still { position: absolute; inset: 0; width: 100%; height: 100%; }
+.stage-still { object-fit: cover; }
+.model-area { touch-action: none; cursor: grab; }
+.model-area:focus-visible { outline: 3px solid var(--glass-focus); outline-offset: -3px; }
+.stage:fullscreen, .model-box:fullscreen { height: 100svh; margin: 0; border-radius: 0; }
+
+/* Cam */
+.glass {
+  background: var(--glass);
+  -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-line); border-radius: var(--r-card); color: var(--glass-ink);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .glass { background: var(--glass-fallback); } }
+@media (prefers-reduced-transparency: reduce) { .glass { background: var(--glass-solid); -webkit-backdrop-filter: none; backdrop-filter: none; } }
+
+/* HUD: ortak */
+.hud { position: absolute; z-index: var(--z-hud); display: flex; flex-direction: column; gap: var(--s-2); padding: var(--s-2); box-shadow: var(--shadow-float); }
+.hud button, .hud .button {
+  min-height: var(--target); min-width: var(--target); gap: var(--s-2); padding: 0 var(--s-3);
+  font: 600 0.9375rem/1.15 var(--font-ui); color: var(--glass-ink);
+  background: transparent; border: 1px solid var(--glass-line); border-radius: var(--r-control);
+}
+@media (hover: hover) and (pointer: fine) { .hud button:hover:not(:disabled) { background: var(--glass-hover); border-color: var(--glass-ink); color: var(--glass-ink); } }
+.hud button:active:not(:disabled) { background: var(--glass-pressed); border-color: var(--glass-ink); }
+.hud button:disabled { color: var(--glass-ink); opacity: 0.55; background: transparent; border-style: dashed; }
+.hud button[aria-pressed='true'] { background: var(--glass-ink); color: var(--glass-primary-ink); border-color: var(--glass-ink); }
+.hud button:focus-visible, .stage :focus-visible { outline: 2px solid var(--glass-focus); outline-offset: 2px; box-shadow: 0 0 0 5px var(--glass-solid); }
+.hud .hud-primary { min-height: var(--target-primary); background: var(--glass-primary); color: var(--glass-primary-ink); border-color: var(--glass-primary); font-weight: 700; }
+@media (hover: hover) and (pointer: fine) { .hud .hud-primary:hover:not(:disabled) { background: var(--glass-primary-hover); color: var(--glass-primary-ink); border-color: var(--glass-primary-hover); } }
+.hud .hud-primary:disabled { background: transparent; color: var(--glass-ink); border-color: var(--glass-line); }
+.hud .icon { flex: none; width: 20px; height: 20px; }
+.hud-actions { display: contents; }
+.hud-toggle .icon { transition: transform var(--dur-2) var(--ease-out); }
+.hud[data-open='true'] .hud-toggle .icon { transform: rotate(180deg); }
+.hud-label-long { display: none; }
+.hud-more, .hud-rail { display: grid; gap: var(--s-2); }
+.hud-state { font-size: var(--fs-small); }
+.model-keys { display: none; }
+
+/* Telefon (varsayılan): alt şerit. Kapalı: [Birincil] [Kontroller]. Açık: yukarı doğru 2 sütunlu ızgara. */
+.hud { left: max(var(--s-2), env(safe-area-inset-left)); right: max(var(--s-2), env(safe-area-inset-right)); bottom: var(--s-2); max-height: calc(100% - 2 * var(--s-2)); overflow-y: auto; }
+.hud-main { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--s-2); }
+.hud-main > :only-child, .hud-main > .hud-actions:empty + .hud-toggle { grid-column: 1 / -1; }
+.hud-more { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hud-more button { justify-content: flex-start; }
+.hud[data-open='false'] .hud-more { display: none; }
+.hud-rail { display: none; }
+/* Durak düğmeleri gibi her zaman görünen satır: telefonda yatay kaydırılır */
+.hud-extra { display: flex; gap: var(--s-2); overflow-x: auto; scroll-snap-type: x proximity; overscroll-behavior-x: contain; scrollbar-width: thin; }
+.hud-extra button { flex: none; scroll-snap-align: start; white-space: nowrap; }
+
+/* Bilgi kartı: sol üst. HUD'un kapladığı alt bant (--hud-block) ve yürüme kolu için yer bırakır. */
+.model-info-card { position: absolute; z-index: var(--z-overlay); top: var(--s-2); left: max(var(--s-2), env(safe-area-inset-left)); width: min(300px, calc(100% - 2 * var(--s-2))); max-height: calc(100% - var(--hud-block, 64px) - 2 * var(--s-2)); overflow-y: auto; padding: var(--s-3) var(--s-3) var(--s-2); box-shadow: var(--shadow-float); }
+.model-info-card h3 { margin: 0 40px var(--s-1) 0; color: var(--glass-ink); font: 700 1rem/1.3 var(--font-ui); }
+.model-info-card p { margin: 0 0 var(--s-1); font-size: 0.9375rem; line-height: 1.45; }
+.model-info-card .source { color: var(--glass-ink); font-size: 0.8125rem; line-height: 1.35; opacity: 0.9; }
+.model-info-close, .model-info-continue { background: none; border: 0; color: var(--glass-ink); }
+.model-info-close { position: absolute; top: 0; right: 0; min-width: var(--target); min-height: var(--target); padding: 0; }
+.model-info-close .icon { width: 20px; height: 20px; }
+.model-info-continue { min-height: var(--target); padding: 0; text-decoration: underline; text-underline-offset: 0.2em; font-weight: 600; font-size: 0.9375rem; }
+.model-info-close:hover:not(:disabled), .model-info-continue:hover:not(:disabled), .model-info-close:active:not(:disabled), .model-info-continue:active:not(:disabled) { background: none; border: 0; color: var(--glass-ink); }
+
+/* Durum kartı: sahnenin ortasında; sahneyi kilitlemez (bağlantı taşıyorsa tıklanabilir) */
+.model-state { position: absolute; z-index: var(--z-hud); left: 50%; top: 42%; transform: translate(-50%, -50%); width: min(340px, calc(100% - 2 * var(--s-4))); margin: 0; padding: var(--s-4); text-align: center; pointer-events: none; }
+.model-state p { margin: 0; }
+.model-state a { display: inline-flex; align-items: center; min-height: var(--target); margin-top: var(--s-2); color: var(--glass-ink); font-weight: 600; text-underline-offset: 0.2em; }
+.model-state[data-actions] { pointer-events: auto; }
+
+/* Yürüme kolu: sağ alt, HUD şeridinin üstünde */
+.model-walking-pad { position: absolute; z-index: var(--z-hud); right: max(var(--s-3), env(safe-area-inset-right)); bottom: calc(var(--hud-block, 64px) + var(--s-1)); width: 112px; height: 112px; display: grid; place-items: center; border-radius: 50%; border: 2px solid var(--glass-line); touch-action: none; user-select: none; cursor: grab; }
+.model-walking-pad span { width: 48px; height: 48px; border-radius: 50%; background: var(--glass-ink); box-shadow: 0 2px 8px rgb(0 0 0 / 0.45); pointer-events: none; }
+
+.stage-title { position: absolute; z-index: var(--z-hud); top: var(--s-2); left: var(--s-2); max-width: calc(100% - 2 * var(--s-2)); margin: 0; padding: var(--s-2) var(--s-3); font: 700 0.9375rem/1.2 var(--font-ui); }
+
+@media (max-width: 600px) {
+  /* Kart açıkken yürüme kolunun yeri: kart yüksekliği kolun üstünde biter */
+  .model-area:has(.model-walking-pad) ~ .model-info-card { max-height: calc(100% - var(--hud-block, 64px) - 112px - 3 * var(--s-2)); }
+}
+
+/* Masaüstü / tablet: sağ ray. Açık 240 px, tam etiketler; kapalı 84 px, ikon + kısa etiket. */
+@media (min-width: 601px) {
+  .stage, .model-box { margin: 0; border-radius: var(--r-photo); height: min(70vh, 640px); }
+  .hud { left: auto; top: var(--s-3); right: var(--s-3); bottom: auto; max-height: calc(100% - 2 * var(--s-3)); }
+  .hud[data-open='true'] { width: 240px; }
+  .hud[data-open='false'] { width: 84px; }
+  .hud-main { display: contents; }
+  .hud-toggle { order: 9; }
+  .hud .model-keys { order: 10; }
+  .hud-more { grid-template-columns: 1fr; }
+  .hud[data-open='false'] .hud-more { display: grid; }
+  .hud[data-open='true'] button { justify-content: flex-start; text-align: left; }
+  .hud[data-open='true'] .hud-label-short { display: none; }
+  .hud[data-open='true'] .hud-label-long { display: inline; }
+  .hud[data-open='false'] button { flex-direction: column; justify-content: center; gap: 2px; padding: var(--s-1) 2px; min-height: 60px; font-size: 0.75rem; text-align: center; }
+  .hud[data-open='false'] .hud-rail { display: grid; }
+  .hud[data-open='true'] .hud-rail { display: none; }
+  .hud[data-open='false'] .hud-rail ~ .hud-more { display: none; }
+  /* Duraklar açık panelde iki sütun; kapalı rayda gizli */
+  .hud-extra { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; }
+  .hud-extra button { white-space: normal; padding: var(--s-1) var(--s-2); font-size: 0.875rem; justify-content: center !important; text-align: center !important; }
+  .hud[data-open='false'] .hud-extra { display: none; }
+  .model-keys { display: block; margin: 0; padding: var(--s-2) 0 0; border-top: 1px solid var(--glass-line); font-size: 0.8125rem; line-height: 1.6; }
+  .model-keys kbd { display: inline-block; min-width: 1.5em; padding: 0 4px; border: 1px solid var(--glass-line); border-radius: 3px; font: inherit; text-align: center; }
+  .hud[data-open='false'] .model-keys { display: none; }
+  .model-walking-pad { display: none; }
+  /* Bilgi kartı ve sağ ray çakışmasın */
+  .model-info-card { max-height: calc(100% - 2 * var(--s-3)); width: min(300px, calc(100% - var(--hud-inline, 0px) - 2 * var(--s-3))); }
+}
+@media (hover: none) { .model-keys { display: none !important; } }
+
+/* Quest: alt orta, 56 px hedefler, kısa etiketler */
+:root[data-xr='yes'] .hud { left: 50%; right: auto; top: auto; bottom: var(--s-3); transform: translateX(-50%); width: auto; max-width: calc(100% - 2 * var(--s-3)); flex-direction: row; flex-wrap: wrap; justify-content: center; gap: var(--s-3); padding: var(--s-3); }
+:root[data-xr='yes'] .hud button { flex-direction: row; min-height: 56px; padding: 0 var(--s-4); font-size: 1.125rem; white-space: nowrap; }
+:root[data-xr='yes'] .hud .hud-label-long { display: none; }
+:root[data-xr='yes'] .hud .hud-label-short { display: inline; }
+:root[data-xr='yes'] .hud-main, :root[data-xr='yes'] .hud-more, :root[data-xr='yes'] .hud-extra { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-3); }
+:root[data-xr='yes'] .hud[data-open='false'] .hud-more { display: none; }
+:root[data-xr='yes'] .hud[data-open='false'] .hud-extra { display: flex; }
+:root[data-xr='yes'] .hud-rail, :root[data-xr='yes'] .hud .model-keys { display: none; }
+:root[data-xr='yes'] .model-info-card { font-size: 1.125rem; }
+:root[data-xr='yes'] .model-info-card p { font-size: 1.125rem; }
+
+/* Aç/kapa: 180 ms; azaltılmış harekette anında (base.css) */
+.hud { transition: width var(--dur-2) var(--ease-out); }

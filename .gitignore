@@ -7,6 +7,8 @@ kaynaklar/
 proje bilgileri/
 *.zip
 _eski/
-test-sonuclari/
-assets/kilic/doku/
+test-results/
+assets/kilic/textures/
 .claude/worktrees/
+docs/test-screenshots/
+test-sonuclari/

@@ -52,7 +52,7 @@ Bu dosya `node scripts/lisans-cikar.mjs` ile üretilir (bağımlılık bölümü
 |---|---|---|
 | OpenStreetMap karoları (Leaflet haritası) | `/harita` | ODbL; ekranda "© OpenStreetMap katkıcıları" yazar. Karo sunucusu kullanım politikasına uyulmalı (yoğun demo trafiği için değil) |
 | Natural Earth 1:50m (Türkiye sınırı), world-atlas 2.0.2 | `src/data/turkiyeHaritasi.ts` | Kamu malı (dosya başlığında yazılı) |
-| 360TR gömmesi (Ulu Camii gezintisi) | `https://www.360tr.com/embed/bursa-ulu-camii` | Üçüncü taraf hizmet; yazılı izin/embed kodu **doğrulanmadı** (docs/DURUM.md: resmî embed kodu bekleniyor) |
+| 360TR gömmesi (Ulu Camii gezintisi) | `https://www.360tr.com/embed/bursa-ulu-camii` | Üçüncü taraf hizmet; yazılı izin/embed kodu **doğrulanmadı** (docs/guncel/DURUM.md: resmî embed kodu bekleniyor) |
 | Supabase (isteğe bağlı bulut) | `src/data/bulut.ts` | Hizmet koşulları; yalnız `.env` doluyken kullanılır |
 
 ## 3B modeller, derinlik haritaları, görseller

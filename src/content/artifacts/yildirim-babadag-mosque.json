@@ -1,0 +1,97 @@
+{
+  "id": "yildirim-babadag-mosque",
+  "name": "Babadağ Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · 1880 civarı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Balkan muhacirlerinin yerleşmesiyle 1880 civarında yapılan, kiremit çatılı küçük mahalle camisi.",
+  "history": "Yeni Mahalle, Balabancık Caddesi No: 23'teki cami, 1880 civarında çoğunluğu Babadağ'dan gelen Balkan muhacirlerinin bölgeye yerleşmesiyle inşa edilmiştir. Ahşap malzemeli yapı kitabesizdir ve haziresi yoktur. Kare planın üzeri alaturka kiremit kaplı kırma ahşap çatıyla örtülüdür. Silindirik minare çatının içinden yükselir ve miğfer biçimli külahla sonlanır. Mihrap nişi hafifçe dışa taşar; güney ve batı cephelerinde pencere yoktur. Cami 1964 yılında Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-babadag-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-babadag-mosque/exterior-view.jpg",
+      "alt": "Kiremit kırma çatılı beyaz cami, tek şerefeli minare ve çevrede apartmanlar",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-babadag-mosque/detail-view.jpg",
+      "alt": "Ahşap tavanlı, kırmızı desenli halılı harim; beyaz mihrap ve sağda ahşap minber",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-babadag-mosque/exterior-view.jpg",
+      "x": 48,
+      "y": 60,
+      "title": "Kırma çatı",
+      "text": "Kare planlı yapı alaturka kiremit kaplı kırma ahşap çatıyla örtülüdür.",
+      "sourceId": "inv-p468"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-babadag-mosque/exterior-view.jpg",
+      "x": 38,
+      "y": 37,
+      "title": "Minare",
+      "text": "Çatının içinden yükselen silindirik minare miğfer biçimli külahla sonlanır.",
+      "sourceId": "inv-p468"
+    }
+  ],
+  "test": [
+    {
+      "question": "Babadağ Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Yıldırım",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 1,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p468"
+    },
+    {
+      "question": "Babadağ Camii hangi topluluğun yerleşmesiyle inşa edilmiştir?",
+      "options": [
+        "Horasan dervişleri",
+        "Kırım hanları",
+        "Balkan muhacirleri",
+        "İstanbul tüccarları"
+      ],
+      "correct": 2,
+      "description": "Balkan muhacirleri.",
+      "sourceId": "inv-p468"
+    },
+    {
+      "question": "Kitaba göre kırma çatı hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir",
+        "Kare planlı yapı alaturka kiremit kaplı kırma ahşap çatıyla örtülüdür"
+      ],
+      "correct": 3,
+      "description": "Kare planlı yapı alaturka kiremit kaplı kırma ahşap çatıyla örtülüdür.",
+      "sourceId": "inv-p468"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p468",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Babadağ Camii\"",
+      "page": "468"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

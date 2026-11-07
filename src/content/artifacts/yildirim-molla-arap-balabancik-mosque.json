@@ -1,0 +1,112 @@
+{
+  "id": "yildirim-molla-arap-balabancik-mosque",
+  "name": "Molla Arap (Balabancık) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · XVI. yüzyılın ilk yarısı",
+  "endowment": "Banisi Molla Arap (Muhyiddin Mehmed)",
+  "summary": "XVI. yüzyılın ilk yarısında yapılan, onarımlarla dokuz kubbeli formuna kavuşan cami.",
+  "history": "Mollaarap Mahallesi, Balabancık Caddesi No: 35'teki camiyi Molla Arap olarak tanınan Muhyiddin Mehmed yaptırmıştır. 1531'de vefat eden bani, henüz tamamlanmamış caminin haziresine defnedilmiştir. Yapı XVI. yüzyılın ilk yarısına tarihlenir. Kare planlı cami dört büyük payenin taşıdığı dokuz kubbeyle örtülüdür. Duvarları üç sıra tuğla ve bir sıra taşla örülmüş, beş gözlü son cemaat yeri küçük kubbelerle örtülmüştür. Kuzeybatıdaki minare sekizgen taş kaideli ve silindirik tuğla gövdelidir. Doğudaki kubbeli bölüm 1614'te tevhidhaneye çevrilmiştir. 1855 depreminde yedi kubbe ve beden duvarları yıkılmıştır. Sonraki onarımların ardından 1888'de iki kubbeli ve kiremit örtülü olarak yeniden yapılmıştır. 1951 ve 1988 onarımlarıyla dokuz kubbeli formuna kavuşmuş, 1997'de yeniden onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-molla-arap-balabancik-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-molla-arap-balabancik-mosque/exterior-view.jpg",
+      "alt": "Çok kubbeli caminin kemerli ön revakı, sağda minaresi ve arkada Uludağ",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-molla-arap-balabancik-mosque/detail-view.jpg",
+      "alt": "Halı kaplı geniş harimde beyaz payeler, kemerler ve sağda ahşap mahfil",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-molla-arap-balabancik-mosque/exterior-view.jpg",
+      "x": 37,
+      "y": 46,
+      "title": "Dokuz kubbe",
+      "text": "Kare planlı yapı dört büyük payenin taşıdığı dokuz kubbeyle örtülüdür.",
+      "sourceId": "inv-p492"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-molla-arap-balabancik-mosque/exterior-view.jpg",
+      "x": 40,
+      "y": 69,
+      "title": "Beş gözlü son cemaat yeri",
+      "text": "Sivri kemerli beş bölümlü son cemaat yerinin her bölümü küçük kubbeyle örtülüdür.",
+      "sourceId": "inv-p492"
+    }
+  ],
+  "test": [
+    {
+      "question": "Molla Arap (Balabancık) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Yıldırım",
+        "Osmangazi",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 0,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p491"
+    },
+    {
+      "question": "Caminin özgün örtüsünde kaç kubbe vardır?",
+      "options": [
+        "Üç",
+        "Dokuz",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 1,
+      "description": "Dokuz.",
+      "sourceId": "inv-p492"
+    },
+    {
+      "question": "Kitaba göre dokuz kubbe hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "Kare planlı yapı dört büyük payenin taşıdığı dokuz kubbeyle örtülüdür",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 2,
+      "description": "Kare planlı yapı dört büyük payenin taşıdığı dokuz kubbeyle örtülüdür.",
+      "sourceId": "inv-p492"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p491",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Arap (Balabancık) Camii\"",
+      "page": "491"
+    },
+    {
+      "id": "inv-p492",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Arap (Balabancık) Camii\"",
+      "page": "492"
+    },
+    {
+      "id": "inv-p493",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Arap (Balabancık) Camii\"",
+      "page": "493"
+    },
+    {
+      "id": "inv-p494",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Arap (Balabancık) Camii\"",
+      "page": "494"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

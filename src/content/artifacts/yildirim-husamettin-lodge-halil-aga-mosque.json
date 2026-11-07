@@ -1,0 +1,107 @@
+{
+  "id": "yildirim-husamettin-lodge-halil-aga-mosque",
+  "name": "Hüsamettin Tekkesi (Halil Ağa) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 1023 / M. 1614 tarihli vakfiye; I. Ahmed dönemi yeniden inşa",
+  "endowment": "Hüsamettin Efendi'nin 25 Nisan 1614 tarihli vakfiyesi",
+  "summary": "Temenna Zaviyesi adıyla da bilinen, Hüsamettin Efendi’nin vakfettiği ve bugün mescit olarak kullanılan yapı.",
+  "history": "Mollaarap Mahallesi, Hüsamettin Tekke Sokak No: 1'deki yapı dergâh olarak yapılmış, Temenna Zaviyesi adıyla da anılmıştır. Hacı Halil Efendi'nin oğlu Hüsamettin Efendi tarafından inşa edilip vakfedilmiştir. Vefatından sonra I. Ahmed zaviyeyi yeniden yaptırmış, bitişik yapıyı genişleterek camiye çevirmiştir. Şeyhi Mehmet Efendi 1562'de tekkeye vakıflar tahsis etmiştir. Hüsamettin Efendi 41 kitabını camiye vakfetmiştir. 25 Nisan 1614 tarihli vakfiyede Temenna ve Geyikli Baba Köyü'ndeki ev ve bahçeler sayılır. 1811'de onarılan tekke moloz taşla inşa edilmiştir. Son cemaat yeri dört ahşap direğin taşıdığı geniş çatıyla örtülüdür. Çok sayıda onarım nedeniyle özgün niteliğinden uzaklaşan yapı günümüzde mescit olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-husamettin-lodge-halil-aga-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-husamettin-lodge-halil-aga-mosque/exterior-view.jpg",
+      "alt": "Yamaçta ağaçların arasında taş duvarlı, kiremit çatılı ve ahşap sundurmalı yapı",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-husamettin-lodge-halil-aga-mosque/detail-view.jpg",
+      "alt": "Taş duvarın yanında basamaklar, ahşap direklerle taşınan geniş sundurma ve korkuluklar",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-husamettin-lodge-halil-aga-mosque/detail-view.jpg",
+      "x": 16,
+      "y": 43,
+      "title": "Ahşap direkler",
+      "text": "Son cemaat yeri dört direk üzerine oturtulan geniş çatıyla örtülmüştür.",
+      "sourceId": "inv-p480"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-husamettin-lodge-halil-aga-mosque/detail-view.jpg",
+      "x": 68,
+      "y": 36,
+      "title": "Moloz taş duvar",
+      "text": "Yapı moloz taşla inşa edilmiştir.",
+      "sourceId": "inv-p480"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hüsamettin Tekkesi (Halil Ağa) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "İznik",
+        "Yıldırım"
+      ],
+      "correct": 3,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "question": "Yapı hangi adla da anılmaktadır?",
+      "options": [
+        "Temenna Zaviyesi",
+        "Hacı Halife Zaviyesi",
+        "İsmail Hakkı Tekkesi",
+        "Üftâde Dergâhı"
+      ],
+      "correct": 0,
+      "description": "Temenna Zaviyesi.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "question": "Kitaba göre ahşap direkler hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Son cemaat yeri dört direk üzerine oturtulan geniş çatıyla örtülmüştür",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 1,
+      "description": "Son cemaat yeri dört direk üzerine oturtulan geniş çatıyla örtülmüştür.",
+      "sourceId": "inv-p480"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p478",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hüsamettin Tekkesi (Halil Ağa) Camii\"",
+      "page": "478"
+    },
+    {
+      "id": "inv-p479",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hüsamettin Tekkesi (Halil Ağa) Camii\"",
+      "page": "479"
+    },
+    {
+      "id": "inv-p480",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hüsamettin Tekkesi (Halil Ağa) Camii\"",
+      "page": "480"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

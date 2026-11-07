@@ -1,0 +1,97 @@
+{
+  "id": "yildirim-ishak-shah-muftu-onu-mosque",
+  "name": "İshak Şah (Müftü Önü) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Kitapta Çelebi Mehmed devri; H. 824 / M. 1421; kitabede Sultan Mûsâ",
+  "endowment": "Banisi İvaz Şah oğlu İshak Şah",
+  "summary": "1421 tarihli, Müftü Önü adıyla da anılan küçük mahalle camisi.",
+  "history": "Kurdoğlu Mahallesi, Namazgâh Caddesi, Kabakçı Sokak No: 64'teki yapı kitapta Çelebi Mehmed devrine ait ve 1421'de İvaz Şah oğlu İshak Şah tarafından yaptırılmış olarak anlatılır. Yeniden rika hatla yazılıp kapıya yerleştirilen kitabede ise “Sultan Mûsâ zamanında” ifadesi bulunur. Müftü Önü adı, Karaçelebizâde Abdülaziz Efendi'nin aynı mahallede ikamet etmesiyle açıklanır. Cami 6,85 × 6,95 m ölçülerinde, 80 cm duvar kalınlığına ve yaklaşık 4,5 m iç yüksekliğe sahiptir. Batıdaki minarenin moloz taş kaidesi çatıya kadar çıkar; kısa gövde güdük minare tipini andırır. Bir köşesi yol açılması nedeniyle tahrip edilmiş, son cemaat yeri kapatılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-ishak-shah-muftu-onu-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-ishak-shah-muftu-onu-mosque/exterior-view.jpg",
+      "alt": "Kiremit çatılı küçük cami, camlı giriş bölümü ve önde tuğla minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-ishak-shah-muftu-onu-mosque/detail-view.jpg",
+      "alt": "Tepeden görünümde kiremit çatı, solda minare ve çevrede sokaklar",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-ishak-shah-muftu-onu-mosque/exterior-view.jpg",
+      "x": 61,
+      "y": 64,
+      "title": "Minare kaidesi",
+      "text": "Batıdaki minarenin moloz taş kaidesi çatıya kadar yükselir.",
+      "sourceId": "inv-p484"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-ishak-shah-muftu-onu-mosque/exterior-view.jpg",
+      "x": 61,
+      "y": 43,
+      "title": "Kısa gövde",
+      "text": "Kitap kısa gövdeyi Anadolu güdük minare tipine benzetir.",
+      "sourceId": "inv-p484"
+    }
+  ],
+  "test": [
+    {
+      "question": "İshak Şah (Müftü Önü) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Yıldırım",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 1,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p484"
+    },
+    {
+      "question": "Müftü Önü adı kimin mahallede yaşamasıyla ilişkilidir?",
+      "options": [
+        "Hoca Ramazan",
+        "Şıblizâde Mahmud",
+        "Karaçelebizâde Abdülaziz Efendi",
+        "Hacı Emin"
+      ],
+      "correct": 2,
+      "description": "Karaçelebizâde Abdülaziz Efendi.",
+      "sourceId": "inv-p484"
+    },
+    {
+      "question": "Kitaba göre minare kaidesi hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir",
+        "Batıdaki minarenin moloz taş kaidesi çatıya kadar yükselir"
+      ],
+      "correct": 3,
+      "description": "Batıdaki minarenin moloz taş kaidesi çatıya kadar yükselir.",
+      "sourceId": "inv-p484"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p484",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"İshak Şah (Müftü Önü) Camii\"",
+      "page": "484"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

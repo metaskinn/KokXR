@@ -1,0 +1,112 @@
+{
+  "id": "yildirim-meydancik-mosque",
+  "name": "Meydancık Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · II. Bayezid dönemi, 1497'den önce",
+  "endowment": "Banisi Kazzazoğlu Süle Mehmet Paşa",
+  "summary": "II. Bayezid döneminde yaptırılan, tek kubbeli ve kalkan duvarlı mahalle camisi.",
+  "history": "Meydancık Mahallesi, Alancık Sokak No: 18'deki cami II. Bayezid döneminde, 1497'den önce Kazzazoğlu Süle Mehmet Paşa tarafından yaptırılmıştır. Kalkan duvarlı yapının 7 × 7 m kare harimi tek kubbeyle örtülüdür. Son cemaat yeri 3,70 m derinliğinde ve üç gözlüdür. Yan bölümler ayna tonoz, dar orta bölüm beşik tonozla örtülüdür. Orta sivri kemer yanlardan yüksektir. Kitap dış duvarları hem kesme küfeki taşı-tuğla almaşık örgüsüyle hem de göz dolmayı andıran moloz taş ve tuğla örgüsüyle tarif eder. 1855 depreminden zarar görmediği kaydedilir. Batıdaki ahşap çatılı ek bölüm 1860'ta yapılmış, 1871'de kalem işleri eklenmiştir. Günümüzdeki tek şerefeli tuğla minare 1913 onarımındandır. Girişte anıtsal çınar vardır. 2018-2021 arasında Vakıflar Bölge Müdürlüğü kapsamlı restorasyon yapmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-meydancik-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-meydancik-mosque/exterior-view.jpg",
+      "alt": "Kurşun kubbeli ve üç kemerli cami; yanında tuğla minare ve çevrede kent dokusu",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-meydancik-mosque/detail-view.jpg",
+      "alt": "Kırmızı halılı harim, ortada mihrap, sağda ahşap minber ve üstte geometrik bezemeler",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-meydancik-mosque/exterior-view.jpg",
+      "x": 43,
+      "y": 46,
+      "title": "Tek kubbe",
+      "text": "7 × 7 m kare harim tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p488"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-meydancik-mosque/detail-view.jpg",
+      "x": 73,
+      "y": 58,
+      "title": "Ahşap minber",
+      "text": "İç mekânda sade formlu ahşap minber bulunur.",
+      "sourceId": "inv-p489"
+    }
+  ],
+  "test": [
+    {
+      "question": "Meydancık Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "İznik",
+        "Yıldırım"
+      ],
+      "correct": 3,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "question": "Günümüzdeki minare hangi onarımda yapılmıştır?",
+      "options": [
+        "1913",
+        "1968",
+        "1871",
+        "2021"
+      ],
+      "correct": 0,
+      "description": "1913.",
+      "sourceId": "inv-p489"
+    },
+    {
+      "question": "Kitaba göre tek kubbe hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "7 × 7 m kare harim tek kubbeyle örtülüdür",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 1,
+      "description": "7 × 7 m kare harim tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p488"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p487",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Meydancık Camii\"",
+      "page": "487"
+    },
+    {
+      "id": "inv-p488",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Meydancık Camii\"",
+      "page": "488"
+    },
+    {
+      "id": "inv-p489",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Meydancık Camii\"",
+      "page": "489"
+    },
+    {
+      "id": "inv-p490",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Meydancık Camii\"",
+      "page": "490"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "yildirim-haci-sevindik-mosque",
+  "name": "Hacı Sevindik Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Fâtih Sultan Mehmed dönemi",
+  "endowment": "Banisi tüccar Başçı Hacı Sevindik",
+  "summary": "Fâtih döneminde tüccar Başçı Hacı Sevindik’in yaptırdığı kare planlı mescit.",
+  "history": "Meydancık Mahallesi, Sevindik Sokak No: 3'teki camiyi Fâtih döneminde tüccar Başçı Hacı Sevindik yaptırmıştır. Sevindik Mescidi adıyla da anılan yapı sokağa adını vermiştir. 6,50 × 6,50 m ölçülerinde kare planlıdır. İç ve dış yüzeyler kaba sıvalıdır; kırma ahşap çatı alaturka kiremitle kaplıdır. Giriş doğudandır. Tarihî kaynaklarda dört pencere, son cemaat yeri ve imam lojmanı anılır. 1855 depremi kayıtlarında bir pencere ile avlunun bazı duvarlarının yıkıldığı belirtilir. Mescit özgün mimarisinden uzaklaşarak günümüze ulaşmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-haci-sevindik-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-haci-sevindik-mosque/exterior-view.jpg",
+      "alt": "Dar sokakların arasında büyük kiremit kırma çatılı, sıvalı küçük cami",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-haci-sevindik-mosque/detail-view.jpg",
+      "alt": "Ahşap tavanlı, beyaz duvarlı harim; sade mihrap ve sağda ahşap minber",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-haci-sevindik-mosque/exterior-view.jpg",
+      "x": 46,
+      "y": 36,
+      "title": "Kiremit kaplama",
+      "text": "Kırma ahşap çatı alaturka kiremitle kaplanmıştır.",
+      "sourceId": "inv-p473"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-haci-sevindik-mosque/exterior-view.jpg",
+      "x": 53,
+      "y": 65,
+      "title": "Kare plan",
+      "text": "Yapı kitapta 6,50 × 6,50 m ölçülerinde kare planlı olarak tanımlanır.",
+      "sourceId": "inv-p473"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hacı Sevindik Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Yıldırım",
+        "Osmangazi",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 0,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p473"
+    },
+    {
+      "question": "Hacı Sevindik'in kitapta belirtilen mesleği nedir?",
+      "options": [
+        "Mimar",
+        "Tüccar",
+        "Kadı",
+        "Kazasker"
+      ],
+      "correct": 1,
+      "description": "Tüccar.",
+      "sourceId": "inv-p473"
+    },
+    {
+      "question": "Kitaba göre kiremit kaplama hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "Kırma ahşap çatı alaturka kiremitle kaplanmıştır",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 2,
+      "description": "Kırma ahşap çatı alaturka kiremitle kaplanmıştır.",
+      "sourceId": "inv-p473"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p473",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Sevindik Camii\"",
+      "page": "473"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

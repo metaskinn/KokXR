@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-umur-bey-open-air-prayer-area",
+  "name": "Açık (Umur Bey) Namazgâh",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Banisi Kara Timurtaş Paşa'nın oğlu Umur Bey",
+  "summary": "Umur Bey’in sefer öncesi dualar ile cuma ve bayram namazları için yaptırdığı mermer açık namazgâh.",
+  "history": "Namazgâh Mahallesi, Işıklar Caddesi'ndeki açık namazgâh, Umur Bey tarafından cuma ve bayram namazları ile ordunun sefer öncesi namaz ve duası için yaptırılmıştır. Bazı belgelerde ilk yapıldığında beş kapısının bulunduğu belirtilir. Mihrap duvarı, minber, vaaz kürsüsü, korkuluklar, kapılar ve döşeme mermerdir. Sofa 11,66 × 11,30 m ölçülerindedir. Kuzeydeki mermer söveli kapı ayaktadır. Güney duvarının doğusunda vaaz kürsüsü, batısında minber bulunur. Mihrap kavsarası altı sıra stalaktitlidir. Minber külahında Mevlevi sikkesi biçimli alem vardır. Birçok kez onarılan yapının korkuluklarının bir kısmı eksiktir. 2010'larda yeniden başlayan teravih uygulaması bir süre sonra bırakılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-umur-bey-open-air-prayer-area/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-umur-bey-open-air-prayer-area/exterior-view.jpg",
+      "alt": "Mermer döşemeli açık alan, önde kapı ve tel çit, arkada mermer mihrap duvarı ve minber; çevrede evler ve ağaçlar",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-umur-bey-open-air-prayer-area/detail-view.jpg",
+      "alt": "Açık namazgâhın mermer duvarı; ortada mihrap, sağda merdivenli ve külahlı minber",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-umur-bey-open-air-prayer-area/detail-view.jpg",
+      "x": 50,
+      "y": 53,
+      "title": "Mihrap",
+      "text": "Mihrap kavsarası altı sıra stalaktitlidir ve dikdörtgen nişlidir.",
+      "sourceId": "inv-p467"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-umur-bey-open-air-prayer-area/detail-view.jpg",
+      "x": 74,
+      "y": 46,
+      "title": "Mermer minber",
+      "text": "Güney duvarının batı köşesindeki minberin külahı ve basamakları günümüze ulaşmıştır.",
+      "sourceId": "inv-p467"
+    }
+  ],
+  "test": [
+    {
+      "question": "Açık (Umur Bey) Namazgâh Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Yıldırım",
+        "Osmangazi",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 0,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p466"
+    },
+    {
+      "question": "Namazgâhı kim yaptırmıştır?",
+      "options": [
+        "Hoca Ramazan",
+        "Umur Bey",
+        "Raif Ağa",
+        "Hacı Emin"
+      ],
+      "correct": 1,
+      "description": "Umur Bey.",
+      "sourceId": "inv-p466"
+    },
+    {
+      "question": "Kitaba göre mihrap hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "Mihrap kavsarası altı sıra stalaktitlidir ve dikdörtgen nişlidir",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 2,
+      "description": "Mihrap kavsarası altı sıra stalaktitlidir ve dikdörtgen nişlidir.",
+      "sourceId": "inv-p467"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p466",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Açık (Umur Bey) Namazgâh\"",
+      "page": "466"
+    },
+    {
+      "id": "inv-p467",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Açık (Umur Bey) Namazgâh\"",
+      "page": "467"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

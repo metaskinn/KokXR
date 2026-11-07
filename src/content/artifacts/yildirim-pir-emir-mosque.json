@@ -1,0 +1,107 @@
+{
+  "id": "yildirim-pir-emir-mosque",
+  "name": "Pir Emir Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Pir Emir'in Bursa'ya gelişi H. 900 / M. 1495 dolayları",
+  "endowment": "Banisi hayırsever Hoca Alizâde",
+  "summary": "Hoca Alizâde’nin Pir Emir Mehmed adına mescit ve zaviye olarak yaptırdığı kubbeli cami.",
+  "history": "Piremir Mahallesi, Okul Sokak'taki camiyi Hoca Alizâde, Buharalı Pir Emir Mehmed adına mescit ve zaviye olarak yaptırmıştır. 1495 dolaylarında Bursa'ya gelen Pir Emir'in Emîr Sultan dergâhı üzerindeki hak talebi kabul edilmemiş, bunun üzerine dostu Hoca Alizâde bu yapıyı kurmuştur. Pir Emir vefatında kuzeydeki hazireye defnedilmiştir. Eyyühüm Ahmed Efendi mescidi camiye çevirmiş ve kabir üzerine türbe yaptırmıştır. Kare harim 10,35 × 10,35 m, tonozlu son cemaat yeri 5,17 × 10,70 m ölçülerindedir. Üç gözlü son cemaat yerinin orta bölümü daha dardır. Harim kubbesi sekizgen kasnağa oturur. Alçı mihrap beş köşeli biçimdedir. Batı duvarına bitişik minare altı köşeli kaideli, silindirik tuğla gövdeli ve miğfer biçimli külahlıdır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-pir-emir-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-pir-emir-mosque/exterior-view.jpg",
+      "alt": "Ağaçlar içinde kurşun kubbeli cami, tuğla minare ve arka planda dağlar",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-pir-emir-mosque/detail-view.jpg",
+      "alt": "Yeşil halılı harim; ortada yaldızlı mihrap, sağda yeşil-beyaz minber ve yüksek pencereler",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-pir-emir-mosque/exterior-view.jpg",
+      "x": 42,
+      "y": 52,
+      "title": "Harim kubbesi",
+      "text": "Ana ibadet mekânı sekizgen kasnağa oturan kubbeyle örtülüdür.",
+      "sourceId": "inv-p510"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-pir-emir-mosque/exterior-view.jpg",
+      "x": 57,
+      "y": 35,
+      "title": "Minare",
+      "text": "Silindirik tuğla minarenin külahı miğfer biçimindedir.",
+      "sourceId": "inv-p510"
+    }
+  ],
+  "test": [
+    {
+      "question": "Pir Emir Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Yıldırım",
+        "Osmangazi",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 0,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p509"
+    },
+    {
+      "question": "Pir Emir adına mescit ve zaviyeyi kim yaptırmıştır?",
+      "options": [
+        "Eyyühüm Ahmed Efendi",
+        "Hoca Alizâde",
+        "Hoca Ramazan",
+        "Mehmed İzzettin"
+      ],
+      "correct": 1,
+      "description": "Hoca Alizâde.",
+      "sourceId": "inv-p509"
+    },
+    {
+      "question": "Kitaba göre harim kubbesi hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "Ana ibadet mekânı sekizgen kasnağa oturan kubbeyle örtülüdür",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 2,
+      "description": "Ana ibadet mekânı sekizgen kasnağa oturan kubbeyle örtülüdür.",
+      "sourceId": "inv-p510"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p509",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Pir Emir Camii\"",
+      "page": "509"
+    },
+    {
+      "id": "inv-p510",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Pir Emir Camii\"",
+      "page": "510"
+    },
+    {
+      "id": "inv-p511",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Pir Emir Camii\"",
+      "page": "511"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

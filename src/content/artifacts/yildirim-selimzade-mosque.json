@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-selimzade-mosque",
+  "name": "Selimzade Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · XVI. yüzyıl sonu-XVII. yüzyıl başı",
+  "endowment": "Banisi Selimzâde Mehmed Efendi",
+  "summary": "Selimzâde Mehmed Efendi’nin yaptırdığı, ahşap tavanlı ve kiremit çatılı cami.",
+  "history": "Selimzade Mahallesi, Eski Sokak No: 4'teki cami XVI. yüzyıl sonu ile XVII. yüzyıl başlarında Selimzâde Mehmed Efendi tarafından yaptırılmıştır. İnşa kitabesi yoktur; kapıdaki yazı 1906'da fabrikatör Osman Efendi'nin onarımını bildirir. Harim 8,10 × 13,60 m ölçülerinde enine dikdörtgendir. Ahşap tavanın mihrap üstünde küçük bağdadi kubbesi vardır. Son cemaat yeri yaklaşık 3 m derinliğindedir. Duvarlar onarımlarla kaygan taşıyla kaplanmıştır; kırma çatı kiremit örtülüdür. Kuzeybatıdaki minarenin şerefe altında beş sıra kirpi saçak vardır. Avluda tarihî çınar, şadırvan ve hazire bulunur. 1611'de vefat eden bani caminin yanına defnedilmiş ancak mezar taşı günümüze ulaşmamıştır. Hazirede beş kırık mezar taşının yalnız sarık kısımları kalmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-selimzade-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-selimzade-mosque/exterior-view.jpg",
+      "alt": "Kentin arasında kiremit kırma çatılı cami, minare ve büyük avlu ağacı",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-selimzade-mosque/detail-view.jpg",
+      "alt": "Avluda büyük çınar, arkasında cami girişi, sundurma ve minare",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-selimzade-mosque/exterior-view.jpg",
+      "x": 50,
+      "y": 49,
+      "title": "Kırma çatı",
+      "text": "Yapı kiremit kaplı ahşap kırma çatıya sahiptir.",
+      "sourceId": "inv-p514"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-selimzade-mosque/detail-view.jpg",
+      "x": 50,
+      "y": 39,
+      "title": "Tarihî çınar",
+      "text": "Caminin avlusunda tarihî çınar ağacı bulunmaktadır.",
+      "sourceId": "inv-p515"
+    }
+  ],
+  "test": [
+    {
+      "question": "Selimzade Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "Yıldırım",
+        "İznik"
+      ],
+      "correct": 2,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p514"
+    },
+    {
+      "question": "1906 onarımını kim yaptırmıştır?",
+      "options": [
+        "Hacı Emin",
+        "Raif Ağa",
+        "Mevlânâ Hayreddin",
+        "Fabrikatör Osman Efendi"
+      ],
+      "correct": 3,
+      "description": "Fabrikatör Osman Efendi.",
+      "sourceId": "inv-p514"
+    },
+    {
+      "question": "Kitaba göre kırma çatı hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Yapı kiremit kaplı ahşap kırma çatıya sahiptir",
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 0,
+      "description": "Yapı kiremit kaplı ahşap kırma çatıya sahiptir.",
+      "sourceId": "inv-p514"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p514",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Selimzade Camii\"",
+      "page": "514"
+    },
+    {
+      "id": "inv-p515",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Selimzade Camii\"",
+      "page": "515"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

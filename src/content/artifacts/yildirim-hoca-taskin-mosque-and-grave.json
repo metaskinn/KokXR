@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-hoca-taskin-mosque-and-grave",
+  "name": "Hoca Taşkın Camii ve Kabri",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Fâtih dönemi",
+  "endowment": "Banisi Taşkın Sufi (Hoca Taşkın)",
+  "summary": "Taşkın Sufi’nin yaptırdığı, taş-tuğla duvarlı ve 2002’de restore edilen cami.",
+  "history": "Hoca Taşkın Mahallesi, Köprü Sokak No: 8'deki camiyi Fâtih devrinde yaşayan Taşkın Sufi yaptırmıştır. Hoca Taşkın 1492'de vefat edince caminin yanına defnedilmiştir. Kitap yapıyı “içten içe 9,20 x 10,30 m ölçülerinde kare planlı” diye tanımlar. Kesme küfeki taşı ve tuğla duvar işçiliği klasik Bursa mescitleri tarzındadır. 1855 depreminde kubbe ve duvarlar çatlamış, minare şerefesine kadar yıkılmıştır. Yapı daha sonra yeniden inşa edilmiştir. 1950'lerde minaresi yıkılmış, bir süre minbersiz ve ibadete kapalı kalmıştır. 2002'de kapsamlı restorasyon geçirmiştir. Hoca Taşkın'ın mezar taşı günümüze ulaşmamıştır. Kıble yönündeki yazılı baş taşı ise Nisan 1574'te vefat eden Hacı Hüseyin bin Abdullah'a aittir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-hoca-taskin-mosque-and-grave/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-hoca-taskin-mosque-and-grave/exterior-view.jpg",
+      "alt": "Kesme taş ve tuğla sıraları arasında sivri kemerli, camlı giriş kapısının yakın görünümü",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-hoca-taskin-mosque-and-grave/detail-view.jpg",
+      "alt": "Beyaz duvarlı harimde çinili mihrap, ahşap minber ve yeşil-mavi halı",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-hoca-taskin-mosque-and-grave/exterior-view.jpg",
+      "x": 19,
+      "y": 25,
+      "title": "Kesme taş",
+      "text": "Kitap duvar işçiliğinde kesme küfeki taşı kullanıldığını belirtir.",
+      "sourceId": "inv-p477"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-hoca-taskin-mosque-and-grave/exterior-view.jpg",
+      "x": 81,
+      "y": 45,
+      "title": "Tuğla örgü",
+      "text": "Yapının duvarlarında kesme taşla birlikte tuğla kullanılmıştır.",
+      "sourceId": "inv-p477"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hoca Taşkın Camii ve Kabri Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "Yıldırım",
+        "İznik"
+      ],
+      "correct": 2,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p476"
+    },
+    {
+      "question": "Hoca Taşkın'ın mezar taşı günümüze ulaşmış mıdır?",
+      "options": [
+        "Baş taşı eksiksizdir",
+        "Baş ve ayak taşı eksiksizdir",
+        "İnşa kitabesine dönüştürülmüştür",
+        "Hayır, ulaşmamıştır"
+      ],
+      "correct": 3,
+      "description": "Hayır, ulaşmamıştır.",
+      "sourceId": "inv-p477"
+    },
+    {
+      "question": "Kitaba göre kesme taş hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Kitap duvar işçiliğinde kesme küfeki taşı kullanıldığını belirtir",
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 0,
+      "description": "Kitap duvar işçiliğinde kesme küfeki taşı kullanıldığını belirtir.",
+      "sourceId": "inv-p477"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p476",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hoca Taşkın Camii ve Kabri\"",
+      "page": "476"
+    },
+    {
+      "id": "inv-p477",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hoca Taşkın Camii ve Kabri\"",
+      "page": "477"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

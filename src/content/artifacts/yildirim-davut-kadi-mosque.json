@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-davut-kadi-mosque",
+  "name": "Davut Kadı (Eski-Ortayol) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · 1517; 1885'te yeniden inşa",
+  "endowment": "Banisi hayırsever Hacı Emin",
+  "summary": "Hacı Emin’in 1517’de Davut Kadı adına yaptırdığı, 1885’te yeniden inşa edilen cami.",
+  "history": "Hacıseyfettin Mahallesi, Karadavut Sokak'taki cami, 1517'de Hacı Emin tarafından Davut Kadı adına yaptırılmıştır. Kara Davut ve İbn-i Kemal unvanlarıyla tanınan Davut Kadı, müderrislik ve Bursa kadılığı yapmış, Kanûnî'nin emriyle Bursa vakıflarını kaydetmiştir. 1541'de vefat ederek caminin yanına defnedilmiştir; kabri 2017'de yenilenmiştir. Harap olan camiyi hayırsever Emine Hanım 1885'te yeniden yaptırmıştır. Bu dönemde yapının yaklaşık 7,5 × 8 m, son cemaat yerinin 3,75 × 7,5 m olduğu ve minaresinin bulunmadığı belirtilir. Ahşap tavanlı, moloz taş örgülü, kiremit örtülü camiye 1953'te betonarme son cemaat yeri eklenmiştir. Kitabesi yoktur. 1970 onarımında çatı ve son cemaat yeri kiremitle örtülmüştür.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-davut-kadi-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-davut-kadi-mosque/exterior-view.jpg",
+      "alt": "Sokak köşesinde taş dokulu cami, kiremit saçak, pencereler ve arkada tuğla minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-davut-kadi-mosque/detail-view.jpg",
+      "alt": "Ahşap tavanlı harim; çinili mihrap duvarı, kırmızı halı ve ahşap minber",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-davut-kadi-mosque/exterior-view.jpg",
+      "x": 54,
+      "y": 59,
+      "title": "Duvar örgüsü",
+      "text": "Yapı kitapta moloz taş örgülü olarak anlatılır.",
+      "sourceId": "inv-p472"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-davut-kadi-mosque/detail-view.jpg",
+      "x": 49,
+      "y": 10,
+      "title": "Ahşap tavan",
+      "text": "Cami ahşap tavanlı olarak tarif edilir.",
+      "sourceId": "inv-p472"
+    }
+  ],
+  "test": [
+    {
+      "question": "Davut Kadı (Eski-Ortayol) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "İznik",
+        "Yıldırım"
+      ],
+      "correct": 3,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p471"
+    },
+    {
+      "question": "Camiyi Davut Kadı adına kim yaptırmıştır?",
+      "options": [
+        "Hacı Emin",
+        "Emine Hanım",
+        "Davut Kadı",
+        "Raif Ağa"
+      ],
+      "correct": 0,
+      "description": "Hacı Emin.",
+      "sourceId": "inv-p471"
+    },
+    {
+      "question": "Kitaba göre duvar örgüsü hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Yapı kitapta moloz taş örgülü olarak anlatılır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 1,
+      "description": "Yapı kitapta moloz taş örgülü olarak anlatılır.",
+      "sourceId": "inv-p472"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p471",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Davut Kadı (Eski-Ortayol) Camii\"",
+      "page": "471"
+    },
+    {
+      "id": "inv-p472",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Davut Kadı (Eski-Ortayol) Camii\"",
+      "page": "472"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

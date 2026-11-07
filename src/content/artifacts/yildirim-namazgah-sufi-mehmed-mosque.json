@@ -1,0 +1,100 @@
+{
+  "id": "yildirim-namazgah-sufi-mehmed-mosque",
+  "name": "Namazgâh (Sufi Mehmed-Yeni) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · kitapta 1375-1400; 1969-1977'de yeniden inşa",
+  "endowment": "Banisi Sufi Mehmed Efendi olarak kabul edilir",
+  "summary": "Sufi Mehmed Efendi’ye atfedilen, 1969-1977’de yeniden yapılan Namazgâh Parkı içindeki cami.",
+  "history": "Namazgâh Mahallesi, Karınca Dere Sokak No: 4'teki cami Namazgâh Parkı içindedir. Kitap yapının Sufi Mehmed Efendi tarafından 1375-1400 arasında yaptırıldığının kabul edildiğini belirtir. Baninin kabri doğu bitişiğinde açık türbededir. Moloz taş ve kerpiçten, kiremit kaplı kırma çatılı ilk yapı 1969'da yıkılmış, 1969-1977'de temelleri üzerine moloz taş ve tuğlayla yeniden yapılmıştır. Kitaba göre yalnız minare özgünlüğünü korur. 135 m² harim kırma çatılı, içi alçı kaplı ve tavanı beyaz sıvalıdır. Minber ve kürsü ahşaptır. Sarı yaldızlı mihrap nişi üç sıra mukarnaslıdır. Betonarme kadınlar mahfiline son cemaat yerinden ulaşılır. Kuzeydoğudaki minare çokgen kaideli ve silindirik tuğla gövdelidir. Kitap çevredeki açık alanda orduların namaz ve dua için toplandığını, kamusal duyurular yapıldığını ve Islahat Fermanı'nın 13 Teşrinievvel 1875'te burada ilan edildiğini aktarır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-namazgah-sufi-mehmed-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-namazgah-sufi-mehmed-mosque/exterior-view.jpg",
+      "alt": "Kırmızı halılı harimde sarı yaldızlı mihrap, ahşap minber, avize ve renkli üst pencereler",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-namazgah-sufi-mehmed-mosque/exterior-view.jpg",
+      "x": 18,
+      "y": 53,
+      "title": "Mihrap",
+      "text": "Mihrap nişi sarı yaldızlı ve üç sıra mukarnaslıdır.",
+      "sourceId": "inv-p506"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-namazgah-sufi-mehmed-mosque/exterior-view.jpg",
+      "x": 49,
+      "y": 59,
+      "title": "Ahşap minber",
+      "text": "Minber ve kürsü ahşap malzemeden yapılmıştır.",
+      "sourceId": "inv-p506"
+    }
+  ],
+  "test": [
+    {
+      "question": "Namazgâh (Sufi Mehmed-Yeni) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "İznik",
+        "Yıldırım"
+      ],
+      "correct": 3,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p505"
+    },
+    {
+      "question": "Kitaba göre özgünlüğünü koruyan unsur hangisidir?",
+      "options": [
+        "Minare",
+        "İlk yapının kerpiç duvarları",
+        "İlk yapının ahşap çatısı",
+        "İlk yapının tamamı"
+      ],
+      "correct": 0,
+      "description": "Minare.",
+      "sourceId": "inv-p505"
+    },
+    {
+      "question": "Kitaba göre mihrap hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Mihrap nişi sarı yaldızlı ve üç sıra mukarnaslıdır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 1,
+      "description": "Mihrap nişi sarı yaldızlı ve üç sıra mukarnaslıdır.",
+      "sourceId": "inv-p506"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p505",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Namazgâh (Sufi Mehmed-Yeni) Camii\"",
+      "page": "505"
+    },
+    {
+      "id": "inv-p506",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Namazgâh (Sufi Mehmed-Yeni) Camii\"",
+      "page": "506"
+    },
+    {
+      "id": "inv-p507",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Namazgâh (Sufi Mehmed-Yeni) Camii\"",
+      "page": "507"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

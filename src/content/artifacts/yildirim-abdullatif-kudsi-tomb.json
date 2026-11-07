@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-abdullatif-kudsi-tomb",
+  "name": "Abdüllatif Kudsi Türbesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Sultan II. Murad dönemi",
+  "endowment": "Banisi Sultan II. Murad",
+  "summary": "Sultan II. Murad’ın Abdüllatîf el-Kudsî adına yaptırdığı kâgir türbe.",
+  "history": "Emirsultan Mahallesi, Gündoğdu Sokak No: 20'deki türbe Sultan II. Murad tarafından Abdüllatîf el-Kudsî adına yaptırılmıştır. Kitap, Abdüllatîf el-Kudsî'nin 1384'te Kudüs'te doğduğunu, ilk eğitimini burada aldığını ve Şeyh Abdülaziz Gaznevî'ye intisap ettiğini belirtir. 1422'de Kudüs'e uğrayan Zeynüddin el-Hâfî ile tanışarak Horasan'a gitmiş, tasavvuf eğitimini tamamlayıp ikinci icazetini aldıktan sonra Kudüs'e dönmüştür. Daha sonra Anadolu'ya gelerek Bursa'ya yerleşmiş ve Zeyniler'de kurduğu zaviyede irşat faaliyetlerine başlamıştır. Zeyniler Camii bölümünde türbenin kâgir olduğu, caminin yaklaşık 50 m güneybatısında bulunduğu, 2016-2017'de restore edildiği ve Abdüllatîf el-Kudsî'nin kabri yanında beş mezar daha içerdiği belirtilir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-abdullatif-kudsi-tomb/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-abdullatif-kudsi-tomb/exterior-view.jpg",
+      "alt": "Ağaçlar arasında tuğla ve taş sıralı, çokgen üst bölümlü ve kurşun kubbeli türbe",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-abdullatif-kudsi-tomb/detail-view.jpg",
+      "alt": "Tuğla ve taş duvar içinde sivri kemerli, demir parmaklıklı pencerenin yakın görünümü",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-abdullatif-kudsi-tomb/exterior-view.jpg",
+      "x": 49,
+      "y": 59,
+      "title": "Kâgir türbe",
+      "text": "Zeyniler Camii bölümünde Abdüllatîf el-Kudsî türbesi kâgir yapı olarak tanımlanır.",
+      "sourceId": "inv-p527"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-abdullatif-kudsi-tomb/exterior-view.jpg",
+      "x": 49,
+      "y": 35,
+      "title": "Abdüllatîf el-Kudsî Türbesi",
+      "text": "Türbe Sultan II. Murad tarafından Abdüllatîf el-Kudsî adına yaptırılmıştır.",
+      "sourceId": "inv-p531"
+    }
+  ],
+  "test": [
+    {
+      "question": "Abdüllatif Kudsi Türbesi Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Yıldırım",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 1,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p531"
+    },
+    {
+      "question": "Türbeyi kim yaptırmıştır?",
+      "options": [
+        "Sultan II. Bayezid",
+        "Kanûnî Sultan Süleyman",
+        "Sultan II. Murad",
+        "Çelebi Mehmed"
+      ],
+      "correct": 2,
+      "description": "Sultan II. Murad.",
+      "sourceId": "inv-p531"
+    },
+    {
+      "question": "Kitaba göre kâgir türbe hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir",
+        "Zeyniler Camii bölümünde Abdüllatîf el-Kudsî türbesi kâgir yapı olarak tanımlanır"
+      ],
+      "correct": 3,
+      "description": "Zeyniler Camii bölümünde Abdüllatîf el-Kudsî türbesi kâgir yapı olarak tanımlanır.",
+      "sourceId": "inv-p527"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p527",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Zeyniler (Hacı Halife) Camii\"",
+      "page": "527"
+    },
+    {
+      "id": "inv-p531",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Abdüllatif Kudsi Türbesi\"",
+      "page": "531"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

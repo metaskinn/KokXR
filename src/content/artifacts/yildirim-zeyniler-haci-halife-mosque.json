@@ -1,0 +1,117 @@
+{
+  "id": "yildirim-zeyniler-haci-halife-mosque",
+  "name": "Zeyniler (Hacı Halife) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 853 / M. 1449; 1568'de camiye dönüşüm",
+  "endowment": "Hoca Ramazan; Muallimzâde Ahmed Efendi'nin vakfettiği Dökümcüler Hamamı",
+  "summary": "1449’da mescit olarak yaptırılan, 1568’de minber ilavesiyle camiye dönüştürülen kubbeli yapı.",
+  "history": "Emirsultan Mahallesi, Zeyniler Caddesi No: 14'teki yapı II. Murad devrinde, 1449'da Hoca Ramazan tarafından Abdüllatîf el-Kudsî adına mescit olarak yaptırılmıştır. 1568'de Kazasker Muallimzâde Ahmed Efendi'nin minber ilavesiyle camiye dönüşmüş, Dökümcüler Hamamı camiye vakfedilmiştir. Kitap Abdüllatîf el-Kudsî'nin Zeyniyye'yi Anadolu'ya getirdiğini anlatırken Bursa'ya 1448'de gelen ve 1452'de ölen kişi için “Hafî” adını kullanır. 9,18 × 9,18 m kare harimin kuzeyinde 3,75 m derinliğinde son cemaat yeri vardır. Avluya sivri kemerli, kirpi saçaklı kapıdan girilir. Duvarlar kesme taş ve üç sıra tuğlayla örülmüştür; harimi sekizgen kasnaklı kubbe örter. Beyaz sıvalı sade mihrap ile yeşil-beyaz boyalı ahşap minber ve kürsü bulunur. Kuzeybatıdaki minare silindirik tuğla gövdelidir. 1855 depreminde zarar gören cami, uzun süren harap dönemin ardından 1957'de Vakıflar Genel Müdürlüğü ve Bursa Eski Eserleri Sevenler Kurumu tarafından restore edilip ibadete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-zeyniler-haci-halife-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-zeyniler-haci-halife-mosque/exterior-view.jpg",
+      "alt": "Havadan taş-tuğla cami, kurşun kubbe, minare ve çevrede uzun ağaçlar",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-zeyniler-haci-halife-mosque/detail-view.jpg",
+      "alt": "Beyaz duvarlı harim; açık renk mihrap, yeşil-beyaz ahşap minber ve renkli pencereler",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-zeyniler-haci-halife-mosque/exterior-view.jpg",
+      "x": 47,
+      "y": 37,
+      "title": "Kubbe",
+      "text": "Kare harim sekizgen kasnağa oturtulan kubbeyle örtülüdür.",
+      "sourceId": "inv-p528"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-zeyniler-haci-halife-mosque/detail-view.jpg",
+      "x": 71,
+      "y": 47,
+      "title": "Ahşap minber",
+      "text": "Minber ve kürsü ahşaptır, yeşil-beyaza boyanmıştır.",
+      "sourceId": "inv-p529"
+    }
+  ],
+  "test": [
+    {
+      "question": "Zeyniler (Hacı Halife) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Yıldırım",
+        "Osmangazi",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 0,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p526"
+    },
+    {
+      "question": "Mescidi 1568'de camiye dönüştüren ekleme hangisidir?",
+      "options": [
+        "Şadırvan",
+        "Minber",
+        "Kuş evi",
+        "İmam lojmanı"
+      ],
+      "correct": 1,
+      "description": "Minber.",
+      "sourceId": "inv-p526"
+    },
+    {
+      "question": "Kitaba göre kubbe hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "Kare harim sekizgen kasnağa oturtulan kubbeyle örtülüdür",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 2,
+      "description": "Kare harim sekizgen kasnağa oturtulan kubbeyle örtülüdür.",
+      "sourceId": "inv-p528"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p526",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Zeyniler (Hacı Halife) Camii\"",
+      "page": "526"
+    },
+    {
+      "id": "inv-p527",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Zeyniler (Hacı Halife) Camii\"",
+      "page": "527"
+    },
+    {
+      "id": "inv-p528",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Zeyniler (Hacı Halife) Camii\"",
+      "page": "528"
+    },
+    {
+      "id": "inv-p529",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Zeyniler (Hacı Halife) Camii\"",
+      "page": "529"
+    },
+    {
+      "id": "inv-p530",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Zeyniler (Hacı Halife) Camii\"",
+      "page": "530"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

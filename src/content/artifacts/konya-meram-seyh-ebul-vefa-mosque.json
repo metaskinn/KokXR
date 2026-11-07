@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-seyh-ebul-vefa-mosque",
+  "name": "Şeyh Ebul Vefa Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Karamanoğulları · vakfiye tescili H. 869 / M. 1459 (kitaptaki hâliyle); 1850'de yeniden inşa",
+  "endowment": "Banisi Karamanoğlu İbrahim Bey; külliye vakfiyesinin tescil tarihi H. 869 / M. 1459",
+  "summary": "Karamanoğlu İbrahim Bey'in Şeyh Vefa adına yaptırdığı külliyeden geriye kalan ve 1850'de yeniden inşa edilen kubbeli cami.",
+  "history": "Cami, Meram, Selam Mahallesi, Dere Caddesi, No. 28'de yer almaktadır.\n\nCami, bir külliyenin parçası olarak Karamanoğlu İbrahim Bey tarafından Şeyh Vefa adına yaptırılmıştır. Kitapta külliye vakfiyesinin tescil tarihi H. 869 / M. 1459 olarak verilmektedir. Külliyenin doğusundaki kabristan sonradan kaldırılmıştır. XVII. yüzyılda Meram'da yalnızca Vefa Camii ve çevresi Şeyh Vefa Mahallesi olarak anılmıştır. Zamanla eserden geriye yalnızca cami kısmı kalmış; bu kısım da giriş kapısının üstündeki kitâbeye göre 1850'de yeniden inşa edilmiştir.\n\nKareye yakın dikdörtgen planlı, kubbeli cami taş ve tuğladan inşa edilmiştir. Kubbe dıştan kırma çatıyla örtülüdür. Doğu, batı ve güney cephelerindeki ikişer pencere iç mekânı aydınlatır. Son cemaat yeri doğu tarafa sonradan eklenmiştir. Kıble duvarının ortasında sade düzenlenmiş bir mihrap görülür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-seyh-ebul-vefa-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-seyh-ebul-vefa-mosque/exterior.jpg",
+      "alt": "Krem sıvalı tek katlı cami; kiremit kaplı kırma çatı, cephede ahşap çerçeveli pencereler, sağda kemerli \"Şeyhebülvefa Camii\" tabelası ve girişe çıkan merdiven",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-seyh-ebul-vefa-mosque/prayer-hall.jpg",
+      "alt": "Harim içi: açık mavi duvarlar, kubbenin beyaz iç yüzeyi, ahşap çerçeveli pencereler, ortada beyaz sade mihrap, sağda yeşil örtülü minber, kırmızı desenli halılar",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-meram-seyh-ebul-vefa-mosque/exterior.jpg",
+      "x": 55,
+      "y": 32,
+      "title": "Kırma çatı",
+      "text": "Caminin kubbesi dıştan kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p88"
+    },
+    {
+      "id": "dome-interior",
+      "image": "/images/konya-meram-seyh-ebul-vefa-mosque/prayer-hall.jpg",
+      "x": 40,
+      "y": 7,
+      "title": "Kubbe",
+      "text": "Kareye yakın dikdörtgen planlı cami kubbelidir ve taş ile tuğladan inşa edilmiştir.",
+      "sourceId": "inv-p88"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-seyh-ebul-vefa-mosque/prayer-hall.jpg",
+      "x": 59,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasında sade düzenlenmiş bir mihrap görülür.",
+      "sourceId": "inv-p88"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami kimin adına yaptırılmıştır?",
+      "options": [
+        "Şeyh Vefa",
+        "Sadreddin Konevî",
+        "Furgan Dede",
+        "Aşkan Baba"
+      ],
+      "correct": 0,
+      "description": "Cami, külliyenin bir parçası olarak Karamanoğlu İbrahim Bey tarafından Şeyh Vefa adına yaptırılmıştır.",
+      "sourceId": "inv-p88"
+    },
+    {
+      "question": "Giriş kapısının üstündeki kitâbeye göre cami hangi yıl yeniden inşa edilmiştir?",
+      "options": [
+        "1908",
+        "1911",
+        "1850",
+        "1954"
+      ],
+      "correct": 2,
+      "description": "Eserden geriye kalan cami kısmı, giriş kapısının üstündeki kitâbeye göre 1850'de yeniden inşa edilmiştir.",
+      "sourceId": "inv-p88"
+    },
+    {
+      "question": "Son cemaat yeri caminin hangi tarafına sonradan eklenmiştir?",
+      "options": [
+        "Kuzey",
+        "Doğu",
+        "Batı",
+        "Güney"
+      ],
+      "correct": 1,
+      "description": "Son cemaat yeri doğu tarafa sonradan eklenmiştir.",
+      "sourceId": "inv-p88"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p88",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Şeyh Ebul Vefa Camii\"",
+      "page": "88"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

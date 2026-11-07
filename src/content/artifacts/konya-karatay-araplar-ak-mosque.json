@@ -1,0 +1,104 @@
+{
+  "id": "konya-karatay-araplar-ak-mosque",
+  "name": "Araplar (Ak) Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "R. 1323 / M. 1907",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Araplar Mezarlığı’nın batısındaki cami, ahşap direkleri bağlayan bağdadi Bursa kemerleri ve bezemeli harimiyle tanımlanır.",
+  "history": "Cami, Karatay, Büyüksinan Mahallesi, Büyüksinan Caddesi’nde, Araplar Mezarlığı’nın batısındadır. Girişte beden duvarına gömülü üç satırlık kitâbe R. 1323 / M. 1907 tarihini verir; banisi ve sanatkârı bilinmez. Vakıflar Bölge Müdürlüğü 2017’de yapıyı onarmıştır.\n\nDerinlemesine dikdörtgen yapı üç sahınlı harim, son cemaat yeri ve minareden oluşur. Kuzeybatıdaki minare son cemaat birimi içinde kalır; kare kaideli, silindirik gövdeli ve tek şerefelidir. İki sıralı pencere düzeninde doğu ve batıda üçer, kuzey ve güneyde ikişer açıklık bulunur; alttakiler daha büyük ve düz lentoludur. Kuzey son cemaat yerine batı köşeden, harime buradaki kapıdan girilir.\n\nHarim mihraba dik üç sahına ayrılır. Ahşap direkler bağdadi Bursa kemerleriyle bağlanır. Ahşap tavanın göbeğinde çapraz yerleştirilmiş büyük ve küçük karelerden oluşan düzenleme vardır. Duvarlarda bitkisel ve yazılı bezemeler görülür. Kuzeyde ahşap mahfil, kıble duvarında yarım daire planlı mihrap bulunur. Mihrap nişi perde-kandil motifiyle, bordürler geometrik desenlerle süslüdür. Güneybatıdaki ahşap minberin korkulukları geometrik, aynalığı bitkisel ajur bezemelidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-araplar-ak-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-araplar-ak-mosque/exterior.jpg",
+      "alt": "Taş duvarlarda koyu yatay kuşaklar, dikdörtgen pencereler ve köşede tek şerefeli minare",
+      "description": "Taş duvarlarda koyu yatay kuşaklar, dikdörtgen pencereler ve köşede tek şerefeli minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-araplar-ak-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde bezemeli duvarlar, kemerlerle bağlanan ahşap direkler ve solda mihrap",
+      "description": "Mavi halılı harimde bezemeli duvarlar, kemerlerle bağlanan ahşap direkler ve solda mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-araplar-ak-mosque/inscription.jpg",
+      "alt": "Taş duvarda kemerli pencerenin üzerinde dikdörtgen yazılı kitâbe",
+      "description": "Taş duvarda kemerli pencerenin üzerinde dikdörtgen yazılı kitâbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-araplar-ak-mosque/prayer-hall.jpg",
+      "x": 60,
+      "y": 33,
+      "title": "Bağdadi Bursa kemerleri",
+      "text": "Ahşap direkler bağdadi Bursa kemerleriyle birbirine bağlanır.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-araplar-ak-mosque/inscription.jpg",
+      "x": 52,
+      "y": 26,
+      "title": "İnşa kitâbesi",
+      "text": "Üç satırlık kitâbe R. 1323 / M. 1907 inşa tarihini verir.",
+      "sourceId": "inv-p207"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbeye göre cami hangi yıl yapılmıştır?",
+      "options": [
+        "H. 617 / M. 1220",
+        "R. 1323 / M. 1907",
+        "H. 824 / M. 1421",
+        "1930"
+      ],
+      "correct": 1,
+      "description": "Üç satırlık kitâbe R. 1323 / M. 1907 tarihini verir.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "question": "Ahşap direkler birbirine neyle bağlanır?",
+      "options": [
+        "Çelik halatlarla",
+        "Cam kirişlerle",
+        "Mermer levhalarla",
+        "Bağdadi Bursa kemerleri"
+      ],
+      "correct": 3,
+      "description": "Kitap ahşap direklerin bağdadi Bursa kemerleriyle bağlandığını belirtir.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "question": "Mihrap nişindeki motif nedir?",
+      "options": [
+        "Balıksırtı",
+        "Çift başlı kartal",
+        "Perde-kandil",
+        "Gemi"
+      ],
+      "correct": 2,
+      "description": "Mihrap nişinde perde-kandil motifi vardır.",
+      "sourceId": "inv-p207"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p207",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Araplar (Ak) Camii\"",
+      "page": "207"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

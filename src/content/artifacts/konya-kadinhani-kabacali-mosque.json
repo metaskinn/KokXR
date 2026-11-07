@@ -1,0 +1,97 @@
+{
+  "id": "konya-kadinhani-kabacali-mosque",
+  "name": "Kabacalı Camii",
+  "city": "Konya",
+  "district": "Kadınhanı",
+  "period": "1886",
+  "endowment": "Hacı İbrahim Vakfı",
+  "summary": "Kadınhanı Kayabaşı Mahallesi'nde tepelik konumdaki cami Hacı İbrahim Vakfı'na bağlıdır ve 1886'da yaptırılmıştır.",
+  "history": "Kadınhanı Kayabaşı Mahallesi'nde tepelik konumdaki cami Hacı İbrahim Vakfı'na bağlıdır ve 1886'da yaptırılmıştır. Çeşitli onarımlardan sonra 1957'de Konurörenli Hacı Mustafa Ekim önderliğinde yeniden tamir edilmiştir.\n\nDıştan dikdörtgen planlı caminin düz toprak örtüsü sonradan kırma çatıya dönüştürülmüştür. Harime kuzeydoğudaki ahşap kapıdan girilir. Kareye yakın dikdörtgen harim karşılıklı ikişer ahşap direkle üç sahına ayrılır. Kuzey mahfilini dört ahşap direk ve köşelerde duvara bitişik küçük ayaklar taşır. Kıble duvarının ortasındaki öne taşkın mihrap dikdörtgen çerçeveli, yarım daire planlı, yarım kubbeli ve yuvarlak kemerlidir; külah ve alemle sonlanır. Güneybatıdaki ahşap minber mihrapla benzer süslemelidir. Kitap camiyi ibadete açık olarak tanımlar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-kadinhani-kabacali-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-kadinhani-kabacali-mosque/exterior.jpg",
+      "alt": "Ağaçlar arasında pembe sıvalı cami cephesi ve camlı giriş bölümü",
+      "description": "Ağaçlar arasında pembe sıvalı cami cephesi ve camlı giriş bölümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-kadinhani-kabacali-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde ahşap sütunlar, açık renk mihrap ve koyu renkli minber",
+      "description": "Kırmızı halılı harimde ahşap sütunlar, açık renk mihrap ve koyu renkli minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-kadinhani-kabacali-mosque/prayer-hall.jpg",
+      "x": 46,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Kıble duvarındaki mihrap öne taşırılmış ve dikdörtgen çerçeveye alınmıştır.",
+      "sourceId": "inv-p460"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-kadinhani-kabacali-mosque/prayer-hall.jpg",
+      "x": 91,
+      "y": 45,
+      "title": "Ahşap minber",
+      "text": "Güneybatıdaki minber ahşaptır.",
+      "sourceId": "inv-p460"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kabacalı Camii hangi ilçededir?",
+      "options": [
+        "Kadınhanı",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Kabacalı Camii, Konya'nın Kadınhanı ilçesindedir.",
+      "sourceId": "inv-p460"
+    },
+    {
+      "question": "Harime hangi köşedeki kapıdan girilir?",
+      "options": [
+        "Güneydoğu",
+        "Kuzeydoğu",
+        "Kuzeybatı",
+        "Güneybatı"
+      ],
+      "correct": 1,
+      "description": "Kuzeydoğu.",
+      "sourceId": "inv-p460"
+    },
+    {
+      "question": "1957 onarımına kim öncülük etmiştir?",
+      "options": [
+        "Nevşehirli İbrahim Paşa",
+        "Ali Paşa",
+        "Hidayet Nakkaş",
+        "Konurörenli Hacı Mustafa Ekim"
+      ],
+      "correct": 3,
+      "description": "Konurörenli Hacı Mustafa Ekim.",
+      "sourceId": "inv-p460"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p460",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"Kabacalı Camii\"",
+      "page": "460"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

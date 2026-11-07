@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-tolluoglu-mosque",
+  "name": "Tolluoğlu Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Mimari özelliklerine göre XX. yüzyıl başları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Asli öğesi olarak yalnızca taş ve tuğla minaresi korunmuş, içten kubbeli, dıştan kırma çatılı XX. yüzyıl başı camisi.",
+  "history": "Cami, Karatay, Fakıh Dede (bugün Akçeşme) Mahallesi, Garaj Caddesi üzerindedir. İlk inşası ve banisi hakkında bir kitâbe yoktur; mimari özelliklerinden hareketle XX. yüzyıl başlarında inşa edildiği söylenebilir. 2021’de Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nCami dıştan dörtgen planlıdır ve kırma çatıyla örtülüdür; beden duvarlarında taş kullanılmıştır. Yapıya batı ve kuzey cephelerden girilir. Kuzeydeki dikdörtgen giriş kapısının iki yanında birer basık kemerli pencere vardır. Doğu ve güney cephelerde de basık kemerli ikişer pencere iç mekânı aydınlatır. Batı cephesinde, minareye yakın bir dikdörtgen giriş kapısı ve iki basık kemerli pencere yer alır.\n\nKuzeybatı köşedeki minare yapının asli tek öğesidir; kare prizmal kaideli, silindirik gövdeli ve tek şerefelidir. Minarede taş ve tuğla kullanılmış, alemi kurşunla kaplanmıştır. Harimin özgün hâlinde ahşap direkli, ahşap tavanlı Konya mescitleri gibi olduğu düşünülür. Bugün harim içten kubbe, dıştan kırma çatıyla örtülüdür. Mihrap, minber ve mahfil 2009’da yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-tolluoglu-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-tolluoglu-mosque/exterior.jpg",
+      "alt": "Taş duvarlı, kırma çatılı alçak cami; ortada ahşap kapı ve iki yanında pencereler, sağda taş kaideli yüksek minare",
+      "description": "Cami ve minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-tolluoglu-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi halı, beyaz duvarlar, kemerli pencereler arasında mermer mihrap, kubbeden sarkan büyük avize",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minare",
+      "image": "/images/konya-karatay-tolluoglu-mosque/exterior.jpg",
+      "x": 77,
+      "y": 34,
+      "title": "Minare",
+      "text": "Kuzeybatı köşedeki kare prizmal kaideli, silindirik gövdeli, tek şerefeli minare yapının asli tek öğesidir.",
+      "sourceId": "inv-p278"
+    },
+    {
+      "id": "giris-kapisi",
+      "image": "/images/konya-karatay-tolluoglu-mosque/exterior.jpg",
+      "x": 47,
+      "y": 78,
+      "title": "Giriş kapısı",
+      "text": "Dikdörtgen giriş kapısının iki yanında birer basık kemerli pencere açılmıştır.",
+      "sourceId": "inv-p278"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-tolluoglu-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Harimdeki mihrap, minber ve mahfil 2009’da yenilenmiştir.",
+      "sourceId": "inv-p278"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tolluoğlu Camii’nin asli olarak korunan tek öğesi hangisidir?",
+      "options": [
+        "Mihrap",
+        "Minare",
+        "Kubbe",
+        "Ahşap mahfil"
+      ],
+      "correct": 1,
+      "description": "Kuzeybatı köşedeki minare yapının asli ögesi olan tek bölümdür.",
+      "sourceId": "inv-p278"
+    },
+    {
+      "question": "Harimdeki mihrap, minber ve mahfil hangi yıl yenilenmiştir?",
+      "options": [
+        "2021",
+        "1947",
+        "2009",
+        "1981"
+      ],
+      "correct": 2,
+      "description": "Harim mekânındaki mihrap, minber ve mahfil 2009’da yenilenmiştir.",
+      "sourceId": "inv-p278"
+    },
+    {
+      "question": "Bugün harim içten nasıl örtülüdür?",
+      "options": [
+        "Kubbe",
+        "Ahşap direkli düz tavan",
+        "Bağdadi tavan",
+        "Beşik tonoz"
+      ],
+      "correct": 0,
+      "description": "Günümüzde harim içten kubbe, dıştan kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p278"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p278",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Tolluoğlu Camii\"",
+      "page": "278"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

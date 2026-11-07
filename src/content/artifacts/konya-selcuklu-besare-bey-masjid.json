@@ -1,0 +1,130 @@
+{
+  "id": "konya-selcuklu-besare-bey-masjid",
+  "name": "Beşare Bey Mescidi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Selçuklu · kitâbesine göre 15 Cemaziyelevvel 616 / 29 Temmuz 1219",
+  "endowment": "Beşare Bey tarafından yaptırılmış; masrafları için zengin gelirli vakıflar tahsis edilmiştir",
+  "summary": "Alâeddin Tepesi’nin kuzeyinde, Beşare Bey’in 1219’da yaptırdığı, kare planlı ve tek kubbeli Selçuklu mescidi.",
+  "history": "Mescit, Selçuklu, Ferhuniye Mahallesi, Başarabey Sokak No. 3’tedir ve Alâeddin Tepesi’nin kuzeyindedir. Bulunduğu mahalle nedeniyle “Ferhuniye Mescidi” olarak da bilinir. Giriş kapısı üzerindeki celî sülüs hatlı dört satırlık kitâbesine göre Beşare Bey tarafından 15 Cemaziyelevvel 616 / 29 Temmuz 1219’da yaptırılmıştır. Kitâbenin iki yanı siyah çerçeveli turkuaz yeşili Selçuklu çinileriyle bezenmiştir. Beşare Bey, mescidin bütün masraflarının karşılanması için zengin gelirli vakıflar tahsis etmiştir.\n\nBeşare Bey, I. İzzeddin Keykavus ve Alâeddin Keykubat dönemlerinin önemli devlet adamlarındandır. Kitâbelerdeki bilgilere göre adı Zeyneddin Beşşâre bin Abdullah’tır. I. İzzeddin Keykavus’un lalası olmuş, “Emir-i Ahur” makamına getirilmiştir; bu makam devlet için kaliteli atlar yetiştirme ve eğitme görevini üstlenmiştir. Sultanın dostu ve sırdaşı olan Beşare Bey, daha sonra Niğde Valiliği’ne atanmış ve bu görevi sırasında Niğde Alâeddin Camii’ni yaptırmıştır.\n\nMescit günümüze kadar çeşitli onarımlar geçirmiş, mihrabı ve minberi yenilenmiştir. Kare planlı yapı harim ve giriş bölümünden oluşur. Önceden tonozla örtülü olan son cemaat yeri sonradan eğimli çatıyla kapatılmıştır. Yapının özgün hâlinde bulunduğu bilinen minare günümüze ulaşmamıştır. Giriş cephesinde moloz taş, diğer cephelerde pencere altı seviyesine kadar moloz taş, üstte tuğla örgü kullanılmıştır.\n\nKare planlı harim, mukarnas tromplarla geçilen tuğla örgülü bir kubbeyle örtülüdür; kubbe dıştan sekizgen kasnağa oturur. İlk yapımında duvarlarda bulunduğu bilinen çiniler günümüze ulaşmamıştır. Orijinali çinili olan mihrap basit bir niş şeklinde düzenlenmiş, üzerine ayet panosu asılmıştır; minber de özgün değildir. Beşare Bey (Ferhuniye) Mescidi, klasik Selçuklu dönemi mescit özelliklerini yansıtır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-besare-bey-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-besare-bey-masjid/exterior.jpg",
+      "alt": "Moloz taş duvarlı, kurşun kaplı kubbeli mescit; önde ahşap kapı ve üstünde yazı levhası, sağ arkada kubbeli şadırvan, ağaçlar",
+      "description": "Mescidin giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-besare-bey-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: tuğla örgülü kubbe ve trompları, beyaz duvarlar, ahşap kapılı mihrap nişi ve sağda oymalı ahşap minber",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-besare-bey-masjid/inscription.jpg",
+      "alt": "Ortada yazılı taş kitâbe, iki yanında beyaz zemin üzerine turkuaz yazılı çini parçaları",
+      "description": "Kitâbe ve çiniler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-besare-bey-masjid/dome.jpg",
+      "alt": "Tuğla örgülü kubbenin içten görünümü, ortadan sarkan dairesel avize",
+      "description": "Tuğla kubbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kubbe",
+      "image": "/images/konya-selcuklu-besare-bey-masjid/exterior.jpg",
+      "x": 32,
+      "y": 24,
+      "title": "Kubbe",
+      "text": "Kare planlı harim tuğla örgülü kubbeyle örtülüdür; kubbe dıştan sekizgen kasnağa oturur.",
+      "sourceId": "inv-p293"
+    },
+    {
+      "id": "moloz-tas-cephe",
+      "image": "/images/konya-selcuklu-besare-bey-masjid/exterior.jpg",
+      "x": 50,
+      "y": 65,
+      "title": "Moloz taş cephe",
+      "text": "Mescidin giriş cephesinde moloz taş kullanılmıştır.",
+      "sourceId": "inv-p292"
+    },
+    {
+      "id": "kitabe",
+      "image": "/images/konya-selcuklu-besare-bey-masjid/inscription.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Kitâbe",
+      "text": "Celî sülüs hatlı dört satırlık kitâbenin iki yanı turkuaz yeşili Selçuklu çinileriyle bezenmiştir.",
+      "sourceId": "inv-p291"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbesine göre mescit hangi tarihte yaptırılmıştır?",
+      "options": [
+        "1263",
+        "1219",
+        "1233",
+        "1429"
+      ],
+      "correct": 1,
+      "description": "Kitâbeye göre mescit 15 Cemaziyelevvel 616 / 29 Temmuz 1219’da yaptırılmıştır.",
+      "sourceId": "inv-p291"
+    },
+    {
+      "question": "Beşare Bey’in getirildiği “Emir-i Ahur” makamı neyle ilgilidir?",
+      "options": [
+        "Hazine yönetimi",
+        "Saray mutfağı",
+        "Atların yetiştirilmesi ve eğitimi",
+        "Donanma komutanlığı"
+      ],
+      "correct": 2,
+      "description": "Emir-i Ahur makamı devlet için kaliteli atlar yetiştirme ve eğitme görevini üstlenmiştir.",
+      "sourceId": "inv-p291"
+    },
+    {
+      "question": "Beşare Bey, Niğde valiliği sırasında hangi yapıyı yaptırmıştır?",
+      "options": [
+        "Niğde Alâeddin Camii",
+        "Sungur Bey Camii",
+        "Ak Medrese",
+        "Hüdavend Hatun Türbesi"
+      ],
+      "correct": 0,
+      "description": "Niğde Valiliği esnasında Niğde Alâeddin Camii’ni yaptırmıştır.",
+      "sourceId": "inv-p291"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p291",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Beşare Bey Mescidi\"",
+      "page": "291"
+    },
+    {
+      "id": "inv-p292",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Beşare Bey Mescidi\"",
+      "page": "292"
+    },
+    {
+      "id": "inv-p293",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Beşare Bey Mescidi\"",
+      "page": "293"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

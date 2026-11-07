@@ -1,0 +1,97 @@
+{
+  "id": "konya-beysehir-emen-old-mosque",
+  "name": "Emen Eski Camii",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "H. 1032 / M. 1622",
+  "endowment": "Mimar Usta Kadı",
+  "summary": "Beyşehir Emen Köyü'ndeki cami, minaresinin kitabesine göre H. 1032 / M. 1622'de Mimar Usta Kadı tarafından yapılmıştır.",
+  "history": "Beyşehir Emen Köyü'ndeki cami, minaresinin kitabesine göre H. 1032 / M. 1622'de Mimar Usta Kadı tarafından yapılmıştır. Zamanla tahrip olan yapı XX. yüzyılda onarılmış ve kırma çatıyla kaplanmıştır. 1950 ve 1990 onarımları ve ekleriyle bugünkü biçimini almıştır.\n\nDerinlemesine dikdörtgen planlı yapı moloz taştandır; duvarları sıvalıdır. Kuzeybatıdaki minare silindirik gövdeli ve tek şerefelidir. Kuzeydeki son cemaat yerinden girilen harim, silindirik ahşap sütunlarla üç sahına ayrılır. Kuzeyde U biçimli mahfil bulunur. Mihrap ve minber XX. yüzyıl onarımında yenilenmiştir. İlk dönemden kalan mukarnaslı ahşap sütun başlıklarında nakışlar, profilli alanlarda bitkisel motifler görülür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-emen-old-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-emen-old-mosque/aerial-view.jpg",
+      "alt": "Köy evlerinin arasında kırma çatılı cami ve yüksek minare",
+      "description": "Köy evlerinin arasında kırma çatılı cami ve yüksek minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-emen-old-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direkli harimde açık renk mihrap ve renkli sütun başlıkları",
+      "description": "Ahşap direkli harimde açık renk mihrap ve renkli sütun başlıkları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-beysehir-emen-old-mosque/prayer-hall.jpg",
+      "x": 18,
+      "y": 10,
+      "title": "Sütun başlığı",
+      "text": "Mukarnaslı ahşap sütun başlıkları ilk yapım döneminden kalmıştır.",
+      "sourceId": "inv-p384"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-beysehir-emen-old-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 52,
+      "title": "Mihrap",
+      "text": "Mihrap XX. yüzyıldaki tamirat sırasında yenilenmiştir.",
+      "sourceId": "inv-p384"
+    }
+  ],
+  "test": [
+    {
+      "question": "Emen Eski Camii hangi ilçededir?",
+      "options": [
+        "Beyşehir",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Emen Eski Camii, Konya'nın Beyşehir ilçesindedir.",
+      "sourceId": "inv-p384"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Beş"
+      ],
+      "correct": 1,
+      "description": "Üç.",
+      "sourceId": "inv-p384"
+    },
+    {
+      "question": "Harimin kuzeyindeki mahfil hangi biçimdedir?",
+      "options": [
+        "Daire biçiminde",
+        "Altıgen biçiminde",
+        "Üçgen biçiminde",
+        "U biçiminde"
+      ],
+      "correct": 3,
+      "description": "U biçiminde.",
+      "sourceId": "inv-p384"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p384",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Emen Eski Camii\"",
+      "page": "384"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

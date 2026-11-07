@@ -1,0 +1,97 @@
+{
+  "id": "konya-beysehir-gedik-ahmet-pasha-mosque",
+  "name": "Gedik Ahmet Paşa Camii",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "Levhasına göre XVI. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Beyşehir Üstünler Köyü'ndeki caminin banisini belirten kitabe yoktur.",
+  "history": "Beyşehir Üstünler Köyü'ndeki caminin banisini belirten kitabe yoktur. Latin harfli levhasında XVI. yüzyılda inşa edildiği yazılıdır. XVIII-XIX. yüzyıl onarımlarında mihrap, minber, vaaz kürsüsü ve mahfil yenilenmiştir.\n\nDerinlemesine dikdörtgen planlı yapı dört yöne eğimli kırma çatılıdır. Duvarları ahşap hatıllı moloz taş, üst örtüsü ahşaptır. Kuzeydoğudaki minare kesme taştan kare kaideli, silindirik gövdeli ve tek şerefelidir. Kuzeydeki son cemaat yerinden girilen harim üçer ahşap direkle üç sahına ayrılır. Kuzey mahfili köşelerde duvarlara, ortada ahşap direklere oturur. Ahşap mihrap farklı genişlikte beş bordürle ters U biçiminde kuşatılmıştır; bordürleri ajurlu ve eğri kesim tekniğinde S kıvrımlı bitkisel motiflidir. Güneybatıdaki ahşap minber benzer düzenlemededir. Yapı çok destekli ahşap direkli camiler grubundadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-gedik-ahmet-pasha-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-gedik-ahmet-pasha-mosque/aerial-view.jpg",
+      "alt": "Kiremit çatılı cami ve minaresinin yerleşim içindeki görünümü",
+      "description": "Kiremit çatılı cami ve minaresinin yerleşim içindeki görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-gedik-ahmet-pasha-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direkli iç mekânda yeşil mihrap ve sağında yeşil minber",
+      "description": "Ahşap direkli iç mekânda yeşil mihrap ve sağında yeşil minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-beysehir-gedik-ahmet-pasha-mosque/prayer-hall.jpg",
+      "x": 32,
+      "y": 55,
+      "title": "Ahşap mihrap",
+      "text": "Ahşap mihrap beş bordürle üç yönden kuşatılmıştır.",
+      "sourceId": "inv-p385"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-beysehir-gedik-ahmet-pasha-mosque/prayer-hall.jpg",
+      "x": 67,
+      "y": 55,
+      "title": "Ahşap minber",
+      "text": "Mihrabın güneybatısındaki minber ahşaptır.",
+      "sourceId": "inv-p385"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gedik Ahmet Paşa Camii hangi ilçededir?",
+      "options": [
+        "Beyşehir",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Gedik Ahmet Paşa Camii, Konya'nın Beyşehir ilçesindedir.",
+      "sourceId": "inv-p385"
+    },
+    {
+      "question": "Mihrap hangi malzemeden yapılmıştır?",
+      "options": [
+        "Mermer",
+        "Ahşap",
+        "Alçı",
+        "Tuğla"
+      ],
+      "correct": 1,
+      "description": "Ahşap.",
+      "sourceId": "inv-p385"
+    },
+    {
+      "question": "Levhası yapıyı hangi yüzyıla tarihler?",
+      "options": [
+        "XIII. yüzyıl",
+        "XX. yüzyıl",
+        "IX. yüzyıl",
+        "XVI. yüzyıl"
+      ],
+      "correct": 3,
+      "description": "XVI. yüzyıl.",
+      "sourceId": "inv-p385"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p385",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Gedik Ahmet Paşa Camii\"",
+      "page": "385"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

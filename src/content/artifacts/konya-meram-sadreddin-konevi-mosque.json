@@ -1,0 +1,130 @@
+{
+  "id": "konya-meram-sadreddin-konevi-mosque",
+  "name": "Sadreddin Konevi Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu dönemi; inşa kitâbesine göre H. 673 / M. 1274",
+  "endowment": "Kitap, manzumeye vakıflar kurulduğunu ve bunların Osmanlı döneminde de sürdüğünü belirtir; Sadreddin Konevî kitaplarını külliyenin kütüphanesine vakfetmiştir.",
+  "summary": "Ünlü âlim Sadreddin Konevî adına yapılan cami; türbe, zaviye ve kütüphaneyle birlikte H. 673 / M. 1274’te inşa edilmiş bir külliyenin parçasıdır.",
+  "history": "Cami, Meram, Şeyh Sadreddin Mahallesi, Turgutoğlu Sokak üzerindedir. Sadreddin Konevî H. 606 / M. 1209-10’da Malatya’da doğmuş, babasının vefatı üzerine Konya’ya yerleşmiş ve ilmiyle Konya’da tanındığı için “Konevî” lâkabını almıştır. Hânikâhında hadis ilimlerini okutmuş, tasavvuf dersleriyle meşgul olmuş; Hz. Mevlâna’nın vefatından dokuz ay sonra, 1274 yılı Eylül ayında Konya’da vefat ederek bugünkü türbesinin bulunduğu yere defnedilmiştir.\n\nCami, türbe, zaviye ve kütüphaneden oluşan külliye inşa kitâbesine göre H. 673 / M. 1274’te yaptırılmıştır. Cami ve türbe, Sultan II. Abdülhamit döneminde vali Mehmet Ferit Paşa tarafından H. 1317 / M. 1899’da tamir ettirilmiş; bu tamirde tek kubbeli olduğu bilinen cami ahşap direkli ve ahşap tavanlı plana dönüştürülmüştür. Çevredeki mezarlık son yüzyılda kaldırılmış, cami 2004’te yeniden onarılmıştır. Taç kapıdaki iki kitâbeden ilki taş üzerine celî sülüsle Arapça yazılmış inşa kitâbesi, ikincisi mermer üzerine Osmanlı Türkçesiyle yazılmış 1899 onarım kitâbesidir.\n\nKuzey-güney yönünde uzanan dikdörtgen planlı cami düz dam örtülüdür. Batısına bitişik kapalı avlu, artan ihtiyaç nedeniyle ibadete açılarak camiyle bütünleştirilmiştir. Kütüphane avlu giriş kapısının üstündedir; ahşap merdivenle çıkılır ve avluya köşeleri ajur rûmilerle süslü büyük bir Bursa kemeriyle bağlanır. Kapalı avlunun güneybatısındaki tek şerefeli silindirik minare taş kare kaide üzerinde tuğladan yapılmış, sade bir gövdeye ve konik külahlı kısa bir peteğe sahiptir.\n\nHarimin kuzeyinde kadınlar mahfili bulunur. Kıble duvarının ortasındaki çini mozaik mihrap dikdörtgen nişli ve altı sıra mukarnas kavsaralıdır; firuze zemin üzerine patlıcan moru ve lacivert çinilerle yıldız, altıgen, rûmi, palmet, çarkıfelek ve lale motifleri işlenmiş, niş yüzeyine altıgenler içinde üç “Ali” ibaresi yerleştirilmiştir. Kitap yapıyı Selçuklu döneminin Konya’daki en önemli eserlerinden biri olarak niteler.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-sadreddin-konevi-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-sadreddin-konevi-mosque/exterior.jpg",
+      "alt": "Sarı badanalı alçak cami yapısı ve solunda yükselen ince, sivri külahlı tuğla minare",
+      "description": "Sarı badanalı alçak cami yapısı ve solunda yükselen ince, sivri külahlı tuğla minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-sadreddin-konevi-mosque/minaret.jpg",
+      "alt": "Yukarıdan görülen tuğla minare gövdesi, şerefe ve koyu renkli sivri külah",
+      "description": "Yukarıdan görülen tuğla minare gövdesi, şerefe ve koyu renkli sivri külah",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-sadreddin-konevi-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direkli harim, ahşap tavan ve karşıda korkuluklu mahfil",
+      "description": "Ahşap direkli harim, ahşap tavan ve karşıda korkuluklu mahfil",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-sadreddin-konevi-mosque/mihrab.jpg",
+      "alt": "Kıble duvarında çini mihrap, sağında ahşap minber ve kırmızı halı",
+      "description": "Kıble duvarında çini mihrap, sağında ahşap minber ve kırmızı halı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-sadreddin-konevi-mosque/exterior.jpg",
+      "x": 22,
+      "y": 30,
+      "title": "Silindirik minare",
+      "text": "Kapalı avlunun güneybatısındaki tek şerefeli minare taş kaide üzerinde tuğladan yapılmıştır.",
+      "sourceId": "inv-p102"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-sadreddin-konevi-mosque/mihrab.jpg",
+      "x": 49,
+      "y": 60,
+      "title": "Çini mozaik mihrap",
+      "text": "Firuze zemin üzerine patlıcan moru ve lacivert çinilerle süslü mihrap altı sıra mukarnas kavsaralıdır.",
+      "sourceId": "inv-p102"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-meram-sadreddin-konevi-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 50,
+      "title": "Kadınlar mahfili",
+      "text": "Harimin kuzeyinde kadınlar mahfili bulunur; mahfile kuzeybatıdaki merdivenle çıkılır.",
+      "sourceId": "inv-p102"
+    }
+  ],
+  "test": [
+    {
+      "question": "Sadreddin Konevî nerede doğmuştur?",
+      "options": [
+        "Konya",
+        "Malatya",
+        "Kayseri",
+        "Sivas"
+      ],
+      "correct": 1,
+      "description": "Kitap, Sadreddin Konevî’nin H. 606 / M. 1209-10’da Malatya’da doğduğunu belirtir.",
+      "sourceId": "inv-p98"
+    },
+    {
+      "question": "1899 tamirinde tek kubbeli cami hangi plana dönüştürülmüştür?",
+      "options": [
+        "Çok kubbeli plana",
+        "Avlulu plana",
+        "Ahşap direkli ve ahşap tavanlı plana",
+        "Haç planına"
+      ],
+      "correct": 2,
+      "description": "Vali Mehmet Ferit Paşa’nın tamirinde cami ahşap direkli ve ahşap tavanlı plana dönüştürülmüştür.",
+      "sourceId": "inv-p99"
+    },
+    {
+      "question": "Mihrap nişinin yüzeyinde kaç adet “Ali” ibaresi bulunur?",
+      "options": [
+        "Bir",
+        "İki",
+        "Dört",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Niş yüzeyinde altıgenler içinde üç “Ali” ibaresi yer alır.",
+      "sourceId": "inv-p102"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p98",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Sadreddin Konevi Camii\"",
+      "page": "98"
+    },
+    {
+      "id": "inv-p99",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Sadreddin Konevi Camii\"",
+      "page": "99"
+    },
+    {
+      "id": "inv-p102",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Sadreddin Konevi Camii\"",
+      "page": "102"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

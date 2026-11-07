@@ -1,0 +1,97 @@
+{
+  "id": "konya-doganhisar-orta-mosque",
+  "name": "Orta Camii",
+  "city": "Konya",
+  "district": "Doğanhisar",
+  "period": "Kitabeye göre Sultan Abdülhamit Han dönemi; H. 1274 / M. 1857-58",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Doğanhisar Harman Mahallesi'ndeki caminin güneybatı duvarındaki kitabeye göre yapı Sultan Abdülhamit Han döneminde H. 1274 / M. 1857-58'de yapılmıştır.",
+  "history": "Doğanhisar Harman Mahallesi'ndeki caminin güneybatı duvarındaki kitabeye göre yapı Sultan Abdülhamit Han döneminde H. 1274 / M. 1857-58'de yapılmıştır. Vakıflar Genel Müdürlüğü 1952 ve 1991'de köklü onarımlar gerçekleştirmiştir. Kitap camiyi sağlam ve ibadete açık olarak tanımlar.\n\nDerinlemesine dikdörtgen planlı yapı kırma çatılıdır. Kuzeybatı yakınındaki ahşap minarenin şerefe köşkü beş dilimli kemerlidir; köşk üstü ve alem kurşun kaplıdır. Batıdaki dikdörtgen kapıdan ahşap tavanlı harime girilir. Giriş üzerinde kadınlar mahfili, batısında imam odası bulunur. Kalem işleri 1952'de Müslüm Gökçe tarafından yenilenmiştir. Duvarlarda üç güllü buketlerin üzerindeki madalyon ve kartuşlarda Yasin Suresi, Allah, Muhammed ve dört halifenin isimleri; yazı kuşaklarında bitkisel bezemeler vardır. Yeşil zeminli tavan göbeği sarı bitkisel bezemelidir. Ahşap mihrap yarım daire planlı ve yarım kubbe kavsaralıdır; iki bezemeli bordürle çevrilidir. Güneybatıdaki ahşap minber benzer süslemelidir ve kapısının üstünde dua yazıları bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-doganhisar-orta-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-doganhisar-orta-mosque/exterior.jpg",
+      "alt": "Beyaz duvarlı kırma çatılı cami ve ahşap köşk biçimli minaresi",
+      "description": "Beyaz duvarlı kırma çatılı cami ve ahşap köşk biçimli minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-doganhisar-orta-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde bezemeli tavan, mihrap ve sağda ahşap minber",
+      "description": "Kırmızı halılı harimde bezemeli tavan, mihrap ve sağda ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-doganhisar-orta-mosque/exterior.jpg",
+      "x": 48,
+      "y": 27,
+      "title": "Ahşap minare",
+      "text": "Kuzeybatı yakınındaki minare ahşaptır; şerefe köşkü beş dilimli kemerlidir.",
+      "sourceId": "inv-p412"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-doganhisar-orta-mosque/prayer-hall.jpg",
+      "x": 48,
+      "y": 52,
+      "title": "Mihrap",
+      "text": "Ahşap mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+      "sourceId": "inv-p412"
+    }
+  ],
+  "test": [
+    {
+      "question": "Orta Camii hangi ilçededir?",
+      "options": [
+        "Doğanhisar",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Orta Camii, Konya'nın Doğanhisar ilçesindedir.",
+      "sourceId": "inv-p412"
+    },
+    {
+      "question": "Minare hangi malzemeden yapılmıştır?",
+      "options": [
+        "Mermer",
+        "Ahşap",
+        "Kerpiç",
+        "Tuğla"
+      ],
+      "correct": 1,
+      "description": "Ahşap.",
+      "sourceId": "inv-p412"
+    },
+    {
+      "question": "Kalem işi süslemeleri 1952’de kim yenilemiştir?",
+      "options": [
+        "Hasan Usta",
+        "Hidayet Nakkaş",
+        "Ali Paşa",
+        "Müslüm Gökçe"
+      ],
+      "correct": 3,
+      "description": "Müslüm Gökçe.",
+      "sourceId": "inv-p412"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p412",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Doğanhisar, \"Orta Camii\"",
+      "page": "412"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

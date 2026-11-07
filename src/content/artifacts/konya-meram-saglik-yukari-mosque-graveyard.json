@@ -1,0 +1,118 @@
+{
+  "id": "konya-meram-saglik-yukari-mosque-graveyard",
+  "name": "Yukarı Camii ve Haziresi (Sağlık Beldesi)",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XIX. yüzyıl sonları (mimari ve süsleme özelliklerine göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sağlık'ın merkezinde, doğusunda dönem özelliklerini yansıtan mezar taşlarının bulunduğu hazireye sahip, XIX. yüzyıl sonlarına tarihlenen ahşap destekli cami.",
+  "history": "Cami, Meram İlçesi, Sağlık Köyü'nün merkezinde yer almaktadır (başlıkta Sağlık Beldesi olarak geçer). Yapının üzerinde kim tarafından ve ne zaman yaptırıldığını gösteren bir kitâbe yoktur; ancak mimari ve süsleme özellikleri bakımından XIX. yüzyılın sonlarına tarihlendirmek mümkündür.\n\nCaminin doğusunda hazire yer alır; baş ve ayak şahideli mezar taşları dönem özelliklerini yansıtır. Yakın zamanda yol yapımı nedeniyle caminin kuzey ve batı tarafındaki bahçe duvarı yıkılmıştır.\n\nKuzey-güney yönünde uzanan dikdörtgen planlı cami üç sahından oluşur. Oldukça sade görünümlü cepheler açılan pencerelerle hareketlendirilmiştir. Son cemaat yerinin güney duvarındaki kapı açıklığından harime geçilir. Harim mihraba dikey üç sahından oluşur; sahınlar ahşap desteklerle birbirinden ayrılır. Ahşap destekler yine ahşaptan yapılmış düz tavanı taşır; tavan dıştan kırma çatıyla örtülmüştür. Harimin kuzeyinde alttan ahşap desteklerle taşınan mahfil, kıble duvarının ortasında da mihrap bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-saglik-yukari-mosque-graveyard/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-saglik-yukari-mosque-graveyard/exterior.jpg",
+      "alt": "Yol kenarında beyaz badanalı, alt kısmı gri boyalı uzun tek katlı cami; metal kaplı kırma çatı, solda ahşap direkli giriş sundurması, çatıda hoparlör",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-saglik-yukari-mosque-graveyard/prayer-hall.jpg",
+      "alt": "Harim içi: kalın ahşap direkler ve kirişler, düz ahşap tavan, karşıda ahşap çerçeveli mihrap, sağda turkuaz boyalı minber, kırmızı-mavi halılar",
+      "description": "Harim ve ahşap destekler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-saglik-yukari-mosque-graveyard/graveyard.jpg",
+      "alt": "Kuru otlar arasında dağınık duran, bazıları eğilmiş yassı taş mezar şahideleri; arkada yeşil mısır tarlası",
+      "description": "Hazire ve mezar taşları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "wooden-supports",
+      "image": "/images/konya-meram-saglik-yukari-mosque-graveyard/prayer-hall.jpg",
+      "x": 30,
+      "y": 62,
+      "title": "Ahşap destekler",
+      "text": "Sahınlar ahşap desteklerle birbirinden ayrılır; destekler ahşap düz tavanı taşır.",
+      "sourceId": "inv-p95"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-saglik-yukari-mosque-graveyard/prayer-hall.jpg",
+      "x": 53,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasında mihrap görülür.",
+      "sourceId": "inv-p95"
+    },
+    {
+      "id": "gravestones",
+      "image": "/images/konya-meram-saglik-yukari-mosque-graveyard/graveyard.jpg",
+      "x": 77,
+      "y": 70,
+      "title": "Mezar taşları",
+      "text": "Caminin doğusundaki hazirede baş ve ayak şahideli mezar taşları dönem özelliklerini yansıtır.",
+      "sourceId": "inv-p94"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin hazireyi bulunduran tarafı hangisidir?",
+      "options": [
+        "Kuzey",
+        "Batı",
+        "Güney",
+        "Doğu"
+      ],
+      "correct": 3,
+      "description": "Caminin doğu tarafında hazire yer almaktadır.",
+      "sourceId": "inv-p94"
+    },
+    {
+      "question": "Caminin bahçe duvarının bir kısmı neden yıkılmıştır?",
+      "options": [
+        "Deprem nedeniyle",
+        "Yol yapımı nedeniyle",
+        "Genişletme çalışması nedeniyle",
+        "Sel nedeniyle"
+      ],
+      "correct": 1,
+      "description": "Yakın zamanda yol yapımı nedeniyle caminin kuzey ve batı tarafındaki bahçe duvarı yıkılmıştır.",
+      "sourceId": "inv-p94"
+    },
+    {
+      "question": "Harimin sahınları neyle ayrılmıştır?",
+      "options": [
+        "Ahşap desteklerle",
+        "Taş payelerle",
+        "Metal ayaklarla",
+        "Kemerli duvarlarla"
+      ],
+      "correct": 0,
+      "description": "Harim mihraba dikey üç sahından oluşur; sahınlar ahşap desteklerle birbirinden ayrılmıştır.",
+      "sourceId": "inv-p95"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p94",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Yukarı Camii ve Haziresi (Sağlık Beldesi)\"",
+      "page": "94"
+    },
+    {
+      "id": "inv-p95",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Yukarı Camii ve Haziresi (Sağlık Beldesi)\"",
+      "page": "95"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

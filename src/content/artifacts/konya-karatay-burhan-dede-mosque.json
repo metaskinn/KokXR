@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-burhan-dede-mosque",
+  "name": "Burhan Dede Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "1915; aynı yerde Selçuklu dönemi zaviyesi",
+  "endowment": "Burhan Dede Zaviyesi için H. 684 / M. 1285 tarihli vakfiye; caminin banisi kitapta belirtilmemiştir",
+  "summary": "Burhan Dede Zaviyesi’nin yerindeki cami, 1915 tarihli kitâbesi ve ahşap direklerin taşıdığı bağdadi kubbeleriyle tanımlanır.",
+  "history": "Cami, Karatay, Uluırmak Burhandede Mahallesi, Karaman Caddesi’ndedir. Kitâbesinde 1915’te yapıldığı belirtilir; banisi ve sanatkârları bilinmemektedir. Yusuf Küçükdağ, H. 684 / M. 1285 tarihli vakfiyeye dayanarak burada Anadolu Selçuklu döneminde yapılmış Burhan Dede Zaviyesi bulunduğunu belirtir. Osmanlı belgelerinde zaviye H. 1086 / M. 1675’te de ayaktadır. Vakfiyede şeyhlik evlada şart edildiğinden soyundan gelen kadınlar da zaviyedarlık yapmıştır. Ne zaman yıkıldığı bilinmeyen zaviyenin yerine cami yapılmıştır.\n\nDerinlemesine dikdörtgen cami içten bağdadi kubbe, dıştan dört yöne eğimli kırma çatıyla örtülüdür. Taşla yığma duvarlar tamamen sıvalıdır. Cepheler simetrik, pencereler sivri kemerli büyük dikdörtgen biçimlidir. Kuzeybatıda ahşap köşk minare vardır. Merkezde dört taş kaideye oturan yivli ahşap direkler bağdadi kubbeyi taşır. Kuzey mahfili üzerinde ikinci, elips biçimli bağdadi kubbe ve mahfil tavanında iki bezemeli ahşap göbek bulunur. Kıble duvarındaki ahşap mihrap yarım daire planlıdır. Yakın dönemde onarılan minber sadedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-burhan-dede-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-burhan-dede-mosque/exterior.jpg",
+      "alt": "Yeşil sıvalı caminin kiremit çatısı, sivri kemerli penceresi ve ağaç arkasında köşk minaresi",
+      "description": "Yeşil sıvalı caminin kiremit çatısı, sivri kemerli penceresi ve ağaç arkasında köşk minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-burhan-dede-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı aydınlık harimde beyaz direkler, sivri kemerli pencereler, ortada mihrap ve sağda minber",
+      "description": "Kırmızı halılı aydınlık harimde beyaz direkler, sivri kemerli pencereler, ortada mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-burhan-dede-mosque/exterior.jpg",
+      "x": 74,
+      "y": 61,
+      "title": "Sivri kemerli pencereler",
+      "text": "Cephelerde sivri kemerli büyük dikdörtgen pencereler açılmıştır.",
+      "sourceId": "inv-p198"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-burhan-dede-mosque/prayer-hall.jpg",
+      "x": 29,
+      "y": 58,
+      "title": "Ahşap direkler",
+      "text": "Merkezde taş kaidelere oturan yivli ahşap direkler bağdadi kubbeyi taşır.",
+      "sourceId": "inv-p198"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin kitâbesi hangi yılı verir?",
+      "options": [
+        "1421",
+        "1860",
+        "1930",
+        "1915"
+      ],
+      "correct": 3,
+      "description": "Yapı üzerindeki kitâbe 1915 tarihini verir.",
+      "sourceId": "inv-p198"
+    },
+    {
+      "question": "Caminin yerinde daha önce hangi yapı vardı?",
+      "options": [
+        "Obruk Hanı",
+        "Burhan Dede Zaviyesi",
+        "Bir bedesten",
+        "Bir hamam"
+      ],
+      "correct": 1,
+      "description": "Kitap caminin Burhan Dede Zaviyesi’nin yerine yapıldığını aktarır.",
+      "sourceId": "inv-p198"
+    },
+    {
+      "question": "Harimin iç örtüsü nedir?",
+      "options": [
+        "Bağdadi kubbe",
+        "Çapraz tonoz",
+        "Cam çatı",
+        "Açık avlu"
+      ],
+      "correct": 0,
+      "description": "Harim ahşap direklerin taşıdığı bağdadi kubbeyle örtülüdür.",
+      "sourceId": "inv-p198"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p198",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Burhan Dede Camii\"",
+      "page": "198"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

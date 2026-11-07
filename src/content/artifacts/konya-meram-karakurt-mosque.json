@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-karakurt-mosque",
+  "name": "Karakurt Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Cumhuriyet · 1954",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "1954'te Cumhuriyet dönemi geleneksel mimari özellikleriyle betonarme olarak yapılan, alt katı depo olan iki sahınlı cami.",
+  "history": "Cami, Meram, Karakurt Mahallesi, Birhan Sokak, No. 11'de yer almaktadır.\n\nYapı 1954 yılında, Cumhuriyet dönemi geleneksel mimari özelliklerine sahip olarak inşa edilmiştir. Üzerine yapıldığı arazinin şartlarına göre betonarme olarak yapılan caminin düzgün bir planı yoktur.\n\nEnine dikdörtgen biçimde, iki sahınlı olarak yapılan caminin alt katı depo olarak inşa edilmiştir. Harim de iki sahınlıdır. Kıble duvarının ortasındaki mihrap dışa doğru taşıntılı ve yarım daire planlıdır. Caminin baldaken minaresi, Konya bölgesindeki minarelerin devamı niteliğindedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-karakurt-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-karakurt-mosque/exterior.jpg",
+      "alt": "Krem sıvalı iki katlı yapı; alt katta iki küçük ahşap kapı, üst katta parmaklıklı pencere ve camlı ahşap çıkma, çıkmaya çıkan beton merdiven; çatının üstünde ahşap minarenin alt kısmı",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-karakurt-mosque/prayer-hall.jpg",
+      "alt": "Harim içi: beyaz duvarda kemerli mihrap nişi ve üstünde hat levhası, sağda ahşap minber, duvarlarda yuvarlak levhalar, kırmızı halı",
+      "description": "Mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "storage-floor",
+      "image": "/images/konya-meram-karakurt-mosque/exterior.jpg",
+      "x": 28,
+      "y": 68,
+      "title": "Alt kat",
+      "text": "Caminin alt katı depo olarak inşa edilmiştir.",
+      "sourceId": "inv-p81"
+    },
+    {
+      "id": "baldachin-minaret",
+      "image": "/images/konya-meram-karakurt-mosque/exterior.jpg",
+      "x": 70,
+      "y": 8,
+      "title": "Baldaken minare",
+      "text": "Caminin baldaken minaresi Konya bölgesindeki minarelerin devamı niteliğindedir.",
+      "sourceId": "inv-p81"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-karakurt-mosque/prayer-hall.jpg",
+      "x": 27,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap dışa doğru taşıntılı ve yarım daire planlıdır.",
+      "sourceId": "inv-p81"
+    }
+  ],
+  "test": [
+    {
+      "question": "Karakurt Camii hangi yıl yapılmıştır?",
+      "options": [
+        "1908",
+        "1954",
+        "1845",
+        "1966"
+      ],
+      "correct": 1,
+      "description": "Yapı 1954 yılında, Cumhuriyet dönemi geleneksel mimari özelliklerine sahip olarak yapılmıştır.",
+      "sourceId": "inv-p81"
+    },
+    {
+      "question": "Caminin alt katı hangi amaçla inşa edilmiştir?",
+      "options": [
+        "Mektep",
+        "Dükkân",
+        "Lojman",
+        "Depo"
+      ],
+      "correct": 3,
+      "description": "Enine dikdörtgen, iki sahınlı caminin alt katı depo olarak inşa edilmiştir.",
+      "sourceId": "inv-p81"
+    },
+    {
+      "question": "Cami hangi malzemeyle yapılmıştır?",
+      "options": [
+        "Betonarme",
+        "Kerpiç",
+        "Kesme taş",
+        "Ahşap"
+      ],
+      "correct": 0,
+      "description": "Cami, arazinin şartlarına göre betonarme olarak yapılmıştır.",
+      "sourceId": "inv-p81"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p81",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Karakurt Camii\"",
+      "page": "81"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

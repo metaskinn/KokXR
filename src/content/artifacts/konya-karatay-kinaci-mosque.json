@@ -1,0 +1,113 @@
+{
+  "id": "konya-karatay-kinaci-mosque",
+  "name": "Kınacı Camii (Mescit)",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Selçuklu · kitabeye göre H. 604 / M. 1207, I. Gıyaseddin Keyhüsrev dönemi; 1943'te yeniden inşa",
+  "endowment": "Banisi Yusuf oğlu Mahmut (kitabeye göre)",
+  "summary": "Kitabesine göre 1207'de Yusuf oğlu Mahmut'un yaptırdığı, 1943'te mahalleli tarafından yeniden inşa edilen derinlemesine dikdörtgen planlı mescit.",
+  "history": "Kınacı Camii, Karatay, Mihmandar Mahallesi, Şerafettin Caddesi üzerindedir. Kitabesindeki bilgilere göre I. Gıyaseddin Keyhüsrev döneminde, Yusuf oğlu Mahmut tarafından H. 604 / M. 1207'de inşa ettirilmiştir.\n\nZamanla hasar gören yapı, 1943'te mahalleli tarafından betonarme malzemeden yığma tekniğinde yeniden inşa ettirilmiştir.\n\nYapının cephelerinde dikdörtgen biçimli pencere açıklıkları bulunur. Harim derinlemesine dikdörtgen planlıdır ve harime batı cephedeki kapıdan girilir. Kıble duvarının ortasındaki mihrap yarım daire planlıdır. Mahfil ve minber yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-kinaci-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-kinaci-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı, açık sarı boyalı tek katlı yapı; solda ahşap kapı, cephede dikdörtgen pencereler; arkada apartmanlar",
+      "description": "Caminin sokaktan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-kinaci-mosque/mihrab-wall.jpg",
+      "alt": "Yeşil duvarlı iç mekân: iki pencere arasında ahşap mihrap bölümü, turkuaz halı, ahşap lambri ve tavandan sarkan avize",
+      "description": "Kıble duvarı ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-kinaci-mosque/mahfil.jpg",
+      "alt": "Turkuaz halılı harimin arka kısmı; üstte beyaz korkuluklu mahfil, ortada direk ve sağda kitaplık",
+      "description": "Harimin mahfil bulunan bölümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "windows",
+      "image": "/images/konya-karatay-kinaci-mosque/exterior.jpg",
+      "x": 57,
+      "y": 55,
+      "title": "Dikdörtgen pencereler",
+      "text": "Yapının cepheleri üzerinde dikdörtgen formda pencere açıklıkları yer alır.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-karatay-kinaci-mosque/mihrab-wall.jpg",
+      "x": 51,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "id": "mahfil",
+      "image": "/images/konya-karatay-kinaci-mosque/mahfil.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Mahfil",
+      "text": "Caminin mahfili ve minberi yenilenmiştir.",
+      "sourceId": "inv-p214"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabesine göre cami hangi yılda inşa ettirilmiştir?",
+      "options": [
+        "M. 1585",
+        "M. 1254",
+        "M. 1207",
+        "M. 1943"
+      ],
+      "correct": 2,
+      "description": "Kitabeye göre cami I. Gıyaseddin Keyhüsrev döneminde, H. 604 / M. 1207'de Yusuf oğlu Mahmut tarafından yaptırılmıştır.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "question": "Zamanla hasar gören yapı 1943'te kim tarafından yeniden inşa ettirilmiştir?",
+      "options": [
+        "Mahalleli",
+        "Vakıflar Bölge Müdürlüğü",
+        "Konya Valiliği",
+        "Yusuf oğlu Mahmut"
+      ],
+      "correct": 0,
+      "description": "Yapı 1943'te mahalleli tarafından betonarme malzemeden yığma tekniğinde yeniden inşa ettirilmiştir.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "question": "Harime hangi cepheden girilir?",
+      "options": [
+        "Kuzey",
+        "Doğu",
+        "Güney",
+        "Batı"
+      ],
+      "correct": 3,
+      "description": "Harime batı cephedeki kapıdan girilmektedir.",
+      "sourceId": "inv-p214"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p214",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Kınacı Camii (Mescit)\"",
+      "page": "214"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

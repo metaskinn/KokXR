@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-kadi-mursel-mosque",
+  "name": "Kadı Mürsel Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Karamanoğulları dönemi; kitâbesine göre 812 / 1409, bugünkü yapı 1907",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hacı Mustafa oğlu Mürsel’in 1409’da yaptırdığı, bugünkü hâliyle ahşap hatıllı moloz taş duvarlı bir camidir.",
+  "history": "Cami, Meram İlçesi, Mimar Muzaffer Caddesi No. 5’tedir. Dört satırlık Arapça kitâbesi celî sülüs hatla yazılmıştır; kitap bu kitâbenin Hacı Hasan Camii’nin güney cephesinde güneş saatinin yanında bulunduğunu belirtir. Kitâbeye göre cami 812 / 1409’da Karamanoğlu Mehmet Bey zamanında Hacı Mustafa oğlu Mürsel tarafından yaptırılmıştır. Karamanoğulları döneminde harap olan cami Osmanlı devrinde Sultan II. Bayezit tarafından tamir ettirilmiştir. Kitaba göre son olarak II. Abdülhamit zamanında, 1907’de “Gözlülü” lakaplı Konyalı Hacı Halil Ağa camiyi yıktırarak bugünkü yapıyı yaptırmıştır.\n\nGüney-kuzey yönünde uzanan dikdörtgen planlı cami içten düz dam, dıştan kırma çatıyla örtülüdür. Beden duvarları moloz taştır; sade cepheler ahşap hatıllarla desteklenmiştir. Güney cephe sağırdır. Doğu ve batı cephelerde düz lentolu, iki katlı ikişer pencere vardır. Kuzey cephenin ortasında düz lentolu giriş kapısı, altta iki, üstte üç pencere bulunur. Süslemesiz harimin kuzeyinde ahşap desteklerle taşınan bir mahfil vardır. Kıble duvarındaki mihrap özgün değildir; mermerden ve yarım daire formludur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-kadi-mursel-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-kadi-mursel-mosque/exterior.jpg",
+      "alt": "Ahşap hatıllı moloz taş cephe, ortada ahşap kapı, altta iki ve üstte üç pencere",
+      "description": "Ahşap hatıllı moloz taş cephe, ortada ahşap kapı, altta iki ve üstte üç pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-kadi-mursel-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde mermer mihrap, ahşap tavan ve büyük avize",
+      "description": "Turkuaz halılı harimde mermer mihrap, ahşap tavan ve büyük avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-kadi-mursel-mosque/exterior.jpg",
+      "x": 47,
+      "y": 77,
+      "title": "Giriş kapısı",
+      "text": "Kuzey cephenin ortasında düz lentolu giriş kapısı bulunur.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-kadi-mursel-mosque/exterior.jpg",
+      "x": 50,
+      "y": 47,
+      "title": "Ahşap hatıllar",
+      "text": "Moloz taş beden duvarları ahşap hatıllarla desteklenmiştir.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-meram-kadi-mursel-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Mermer mihrap",
+      "text": "Kıble duvarındaki mihrap özgün değildir; mermerden ve yarım daire formludur.",
+      "sourceId": "inv-p147"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbeye göre camiyi kim yaptırmıştır?",
+      "options": [
+        "Hacı Mustafa oğlu Mürsel",
+        "Sahip Ata",
+        "Hacı Emrullah",
+        "Pir Hüseyin"
+      ],
+      "correct": 0,
+      "description": "Kitâbeye göre cami Hacı Mustafa oğlu Mürsel tarafından yaptırılmıştır.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "question": "Beden duvarlarında hangi malzeme kullanılmıştır?",
+      "options": [
+        "Tuğla",
+        "Moloz taş",
+        "Kerpiç",
+        "Mermer"
+      ],
+      "correct": 1,
+      "description": "Yapının beden duvarları moloz taştandır.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "question": "Kuzey cephenin üst sırasında kaç pencere vardır?",
+      "options": [
+        "Bir",
+        "İki",
+        "Dört",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Kuzey cephede altta iki, üstte üç pencere bulunur.",
+      "sourceId": "inv-p147"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p147",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Kadı Mürsel Camii\"",
+      "page": "147"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

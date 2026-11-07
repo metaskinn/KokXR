@@ -1,0 +1,97 @@
+{
+  "id": "konya-kadinhani-pinarbasi-mosque",
+  "name": "Pınarbaşı Camii",
+  "city": "Konya",
+  "district": "Kadınhanı",
+  "period": "Vakıf kayıtlarına göre 1720",
+  "endowment": "Oğulbeyli-Karahisarlı cemaati; 1853’te Hacı İbrahim Ağa tarafından yenilenmiş",
+  "summary": "Kadınhanı Güngören Mahallesi'ndeki caminin ilk inşa kitabesi yoktur.",
+  "history": "Kadınhanı Güngören Mahallesi'ndeki caminin ilk inşa kitabesi yoktur. Kitap, 1720-1730 yıllarında Kadınhanı'na yerleşen Oğulbeyli-Karahisarlı cemaatinin yapıyı 1720'de yaptırdığını vakıf kayıtlarına dayanarak belirtir. Karahisarlı Mahallesi eşrafından Hacı İbrahim Ağa 1853'te yeniden tamir ve inşa ettirmiştir.\n\nKuzey-güney yönündeki dikdörtgen kâgir yapının temeli taş, duvarları kerpiçtir. Kırma çatısı kiremit kaplıdır. Kuzeybatıdaki bağımsız minare sonradan yapılmış, kare kaideli, silindirik gövdeli ve tek şerefeli düzenlenmiştir. Kitap harimi “karşılıklı ikişer ahşap direk” ile üç sahına ayrılmış olarak anlatır ve toplam altı ahşap direk bulunduğunu da belirtir. Mihrap yarım daire planlı, yarım kubbeli ve yuvarlak kemerlidir; ajurlu parçaların ahşaba çakılmasıyla yapılmıştır. Bordürlerde yapraklar, C kıvrımları, papatyalar, rozetler; niş kemerinde palmetler vardır. Güneybatıdaki ahşap minber külahlıdır, aynalığında ajurlu bitkisel motifler bulunur. Kuzey mahfili iki ahşap direkle taşınır. Yapı kitapta ibadete açık olarak tanımlanır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-kadinhani-pinarbasi-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-kadinhani-pinarbasi-mosque/aerial-view.jpg",
+      "alt": "Ağaçlar arasındaki cami ve beyaz minaresinin çevredeki evlerle görünümü",
+      "description": "Ağaçlar arasındaki cami ve beyaz minaresinin çevredeki evlerle görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-kadinhani-pinarbasi-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde ahşap sütunlar, koyu ahşap tavan ve mihrap",
+      "description": "Turkuaz halılı harimde ahşap sütunlar, koyu ahşap tavan ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-kadinhani-pinarbasi-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 64,
+      "title": "Mihrap",
+      "text": "Mihrap ahşap üzerine ajurlu parçaların çakılmasıyla yapılmıştır.",
+      "sourceId": "inv-p462"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-kadinhani-pinarbasi-mosque/prayer-hall.jpg",
+      "x": 27,
+      "y": 50,
+      "title": "Ahşap direkler",
+      "text": "Ahşap direkler harimi üç sahına ayırır.",
+      "sourceId": "inv-p462"
+    }
+  ],
+  "test": [
+    {
+      "question": "Pınarbaşı Camii hangi ilçededir?",
+      "options": [
+        "Kadınhanı",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Pınarbaşı Camii, Konya'nın Kadınhanı ilçesindedir.",
+      "sourceId": "inv-p462"
+    },
+    {
+      "question": "Yapının beden duvarlarında hangi malzeme kullanılmıştır?",
+      "options": [
+        "Mermer",
+        "Kerpiç",
+        "Tuğla",
+        "Betonarme"
+      ],
+      "correct": 1,
+      "description": "Kerpiç.",
+      "sourceId": "inv-p462"
+    },
+    {
+      "question": "Cami 1853’te kim tarafından yenilenmiştir?",
+      "options": [
+        "Ali Paşa",
+        "Mimar Usta Kadı",
+        "Abdülcabbar Zâde",
+        "Hacı İbrahim Ağa"
+      ],
+      "correct": 3,
+      "description": "Hacı İbrahim Ağa.",
+      "sourceId": "inv-p462"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p462",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"Pınarbaşı Camii\"",
+      "page": "462"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

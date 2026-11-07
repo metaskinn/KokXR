@@ -1,0 +1,97 @@
+{
+  "id": "konya-karapinar-cetmi-mosque",
+  "name": "Çetmi Camii",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "Arşiv ve kayıtlarda H. 1300 / M. 1882-83",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karapınar Çetmi Mahallesi'ndeki caminin inşa tarihi ve banisini bildiren kitabesi yoktur.",
+  "history": "Karapınar Çetmi Mahallesi'ndeki caminin inşa tarihi ve banisini bildiren kitabesi yoktur. Arşiv ve kayıtlarda H. 1300 / M. 1882-83 tarihi geçer. Dikdörtgen planlı yapı dört yöne eğimli kırma çatılıdır. Kuzeybatıya sonradan eklenen kesme taş minare kare kaideli, silindirik gövdeli ve tek şerefelidir.\n\nKaba yonu taş duvarlarda ahşap hatıllar kullanılmıştır. Cephelerde düz lentolu dikdörtgen pencereler vardır. Harim iki sıra halinde dört ahşap direkle üç sahına ayrılmış ve düz ahşap tavanla örtülmüştür. Kuzeyde ahşap mahfil, kıble duvarında mihrap ve minber bulunur. Kitap mihrap ve minberin özgünlüğünü koruduğunu, yapının XIX. yüzyıl ahşap direkli camiler grubunda olduğunu belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-cetmi-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-cetmi-mosque/exterior.jpg",
+      "alt": "Apartmanlar arasında tek katlı kiremit çatılı cami ve taş minare",
+      "description": "Apartmanlar arasında tek katlı kiremit çatılı cami ve taş minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karapinar-cetmi-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde ahşap direkler, ahşap tavan ve mihrap",
+      "description": "Mavi halılı harimde ahşap direkler, ahşap tavan ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karapinar-cetmi-mosque/prayer-hall.jpg",
+      "x": 20,
+      "y": 55,
+      "title": "Ahşap direkler",
+      "text": "Dört ahşap direk harimi üç sahına ayırır.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karapinar-cetmi-mosque/exterior.jpg",
+      "x": 61,
+      "y": 30,
+      "title": "Minare",
+      "text": "Sonradan eklenen minare kesme taştan yapılmıştır.",
+      "sourceId": "inv-p463"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çetmi Camii hangi ilçededir?",
+      "options": [
+        "Karapınar",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Çetmi Camii, Konya'nın Karapınar ilçesindedir.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Beş"
+      ],
+      "correct": 1,
+      "description": "Üç.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "question": "Kitaba göre hangi öğeler özgünlüğünü korumuştur?",
+      "options": [
+        "Betonarme kubbe ve asansör",
+        "Çini revak ve avlu havuzu",
+        "Medrese ve hamam",
+        "Mihrap ve minber"
+      ],
+      "correct": 3,
+      "description": "Mihrap ve minber.",
+      "sourceId": "inv-p463"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p463",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karapınar, \"Çetmi Camii\"",
+      "page": "463"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

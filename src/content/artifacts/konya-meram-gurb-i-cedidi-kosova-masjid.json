@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-gurb-i-cedidi-kosova-masjid",
+  "name": "Gurb-i Cedidi (Kosova) Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "H. 1244 / M. 1828-29 tarihli vakfiyede kayıtlı",
+  "endowment": "H. 1244 / M. 1828-29 tarihli vakfiyede Gurbi Cedit adıyla kayıtlı",
+  "summary": "Gurbi Cedit adıyla vakıf ve tapu kayıtlarına geçen mescit, günümüzde Kosova Camii olarak anılır.",
+  "history": "Mescit, Meram, Gurbi Cedit Mahallesi, Kosova Sokak No. 15’te, Hacı Fettah Mezarlığı’nın güneydoğusundadır. H. 1244 / M. 1828-29 tarihli vakfiyede ve 1939 tapu kayıtlarında Gurbi Cedit adıyla geçer; günümüzde Kosova Camii olarak anılır.\n\nDıştan dikdörtgen planlı ve kırma çatılıdır. Kuzeydoğu cephesinde ahşap minaresi bulunur. Çift kanatlı ahşap kapıdan girilen harim derinlemesine dikdörtgen planlıdır. Giriş ekseninde, kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-gurb-i-cedidi-kosova-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-gurb-i-cedidi-kosova-masjid/exterior.jpg",
+      "alt": "Bahçe içindeki açık renkli uzun cephede kapı, pencereler ve kiremit çatı",
+      "description": "Bahçe içindeki açık renkli uzun cephede kapı, pencereler ve kiremit çatı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-gurb-i-cedidi-kosova-masjid/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde iki beyaz direk, karşıda mihrap ve sağda ahşap minber",
+      "description": "Kırmızı halılı harimde iki beyaz direk, karşıda mihrap ve sağda ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-gurb-i-cedidi-kosova-masjid/exterior.jpg",
+      "x": 55,
+      "y": 62,
+      "title": "Dikdörtgen yapı",
+      "text": "Mescit dıştan dikdörtgen planlı ve kırma çatılıdır.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-gurb-i-cedidi-kosova-masjid/prayer-hall.jpg",
+      "x": 59,
+      "y": 56,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+      "sourceId": "inv-p154"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit günümüzde hangi adla anılır?",
+      "options": [
+        "Kosova Camii",
+        "Aziziye Camii",
+        "Sultan Selim Camii",
+        "Sarnıç Camii"
+      ],
+      "correct": 0,
+      "description": "Gurbi Cedit adıyla kayıtlı yapı bugün Kosova Camii olarak anılır.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "question": "1939 tarihli hangi kayıtlarda Gurbi Cedit adı geçer?",
+      "options": [
+        "Seyahatnamede",
+        "Gazetede",
+        "Tapu kayıtlarında",
+        "İnşa kitâbesinde"
+      ],
+      "correct": 2,
+      "description": "Kitap 1939 yılı tapu kayıtlarını anmaktadır.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "question": "Harim hangi plana sahiptir?",
+      "options": [
+        "Dairesel",
+        "Derinlemesine dikdörtgen",
+        "Sekizgen",
+        "Üçgen"
+      ],
+      "correct": 1,
+      "description": "Harim derinlemesine dikdörtgen planlıdır.",
+      "sourceId": "inv-p154"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p154",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Gurb-i Cedidi (Kosova) Mescidi\"",
+      "page": "154"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

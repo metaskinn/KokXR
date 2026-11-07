@@ -1,0 +1,102 @@
+{
+  "id": "konya-altinekin-ali-pasha-mosque",
+  "name": "Ali Paşa Camii",
+  "city": "Konya",
+  "district": "Altınekin",
+  "period": "H. 1271 / M. 1854-55",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Altınekin ilçe merkezindeki caminin giriş kitabesi H. 1271 / M. 1854-55 tarihini verir.",
+  "history": "Altınekin ilçe merkezindeki caminin giriş kitabesi H. 1271 / M. 1854-55 tarihini verir. Kuzeybatıdaki minare 1876'da Ali Paşa tarafından eklenmiş, yapı 1926'da kırma çatıyla örtülmüştür. Kitap, Vakıflar Bölge Müdürlüğünün yakın zamanda yaptığı bir onarımdan da söz eder.\n\nDerinlemesine dikdörtgen planlı caminin son cemaat yeri sekiz direkle yedi bölüme ayrılır. Mermer giriş kitabesi celî sülüs hatla üç satırdır. Harim, mihraba dik dört sıra ahşap sütunla beş sahına ayrılmıştır. Orta sahın tavanında geometrik düzenlemeler ve ışınsal çizgili yuvarlak göbek bulunur. Duvarlar kalem işi ve baskı bezemeler, ayet ve hadislerle süslüdür. Kuzeydeki mahfil dört ahşap direğe oturur. Yarım daire planlı mihrabın sağında sade minber vardır. Minare kare kaideli, çokgen gövdeli ve tek şerefelidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-altinekin-ali-pasha-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-altinekin-ali-pasha-mosque/exterior.jpg",
+      "alt": "Kırma çatılı caminin ahşap kaplı giriş cephesi ve arkasında minaresi",
+      "description": "Kırma çatılı caminin ahşap kaplı giriş cephesi ve arkasında minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-altinekin-ali-pasha-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde ahşap sütunlar, bezemeli tavan, mihrap ve sağda minber",
+      "description": "Kırmızı halılı harimde ahşap sütunlar, bezemeli tavan, mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-altinekin-ali-pasha-mosque/prayer-hall.jpg",
+      "x": 12,
+      "y": 55,
+      "title": "Ahşap sütunlar",
+      "text": "Harim dört sıra ahşap sütunla beş sahına ayrılmıştır.",
+      "sourceId": "inv-p375"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-altinekin-ali-pasha-mosque/prayer-hall.jpg",
+      "x": 55,
+      "y": 57,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p375"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ali Paşa Camii hangi ilçededir?",
+      "options": [
+        "Altınekin",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Ali Paşa Camii, Konya'nın Altınekin ilçesindedir.",
+      "sourceId": "inv-p374"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Beş",
+        "Üç",
+        "Yedi"
+      ],
+      "correct": 1,
+      "description": "Beş.",
+      "sourceId": "inv-p375"
+    },
+    {
+      "question": "Minare hangi yılda eklenmiştir?",
+      "options": [
+        "1521",
+        "1959",
+        "2008",
+        "1876"
+      ],
+      "correct": 3,
+      "description": "1876.",
+      "sourceId": "inv-p374"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p374",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Altınekin, \"Ali Paşa Camii\"",
+      "page": "374"
+    },
+    {
+      "id": "inv-p375",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Altınekin, \"Ali Paşa Camii\"",
+      "page": "375"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

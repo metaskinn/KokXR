@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-digin-mosque",
+  "name": "Diğin Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Üzerinde 1920 tarihi yazılıdır; ilk inşa tarihi bilinmiyor",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "“Çaputçu Camii” olarak da bilinen, üzerinde 1920 tarihi yazan, ahşap çokgen gövdeli minareli Karatay camisi.",
+  "history": "Cami, Karatay’da İstanbul, Aziziye ve Köprübaşı caddelerinin kesiştiği köşededir. “Çaputçu Camii” olarak da bilinir. Üzerinde 1920 tarihi yazar; ancak ilk inşa tarihi ya da banisi hakkında bir kitâbe veya belge yoktur.\n\nYapı enine dikdörtgen planlıdır ve dört yöne kırma çatılıdır. Giriş kapısı üzerinde yükselen ahşap minare çokgen gövdelidir ve köşk tipi şerefeyle sonlanır. Sade cephe düzeninde batıda iki, güneyde dört pencere vardır.\n\nEnine dikdörtgen harim içten ahşap düz tavan, dıştan kırma çatıyla örtülüdür. Harimin kuzeyinde dört ahşap direğin taşıdığı mahfil bulunur. Kıble duvarındaki mihrap yarım daire planlıdır. Mihrabın güneybatısındaki ahşap minberin korkuluk, aynalık ve süpürgelik bölümlerinde geometrik süslemeler görülür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-digin-mosque/minaret.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-digin-mosque/minaret.jpg",
+      "alt": "Ağaçlar arasında kiremit çatı üzerinde yükselen, ahşap korkuluklu köşk şerefeli ve kurşun külahlı ahşap minare",
+      "description": "Ahşap minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-digin-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavan, beyaz duvarlar, kristal avize, sağda ahşap minber, kırmızı halı",
+      "description": "Harim ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ahsap-minare",
+      "image": "/images/konya-karatay-digin-mosque/minaret.jpg",
+      "x": 45,
+      "y": 40,
+      "title": "Ahşap minare",
+      "text": "Giriş kapısı üzerinde yükselen ahşap minare çokgen gövdelidir ve köşk tipi şerefeyle sonlanır.",
+      "sourceId": "inv-p265"
+    },
+    {
+      "id": "ahsap-minber",
+      "image": "/images/konya-karatay-digin-mosque/prayer-hall.jpg",
+      "x": 80,
+      "y": 45,
+      "title": "Ahşap minber",
+      "text": "Mihrabın güneybatısındaki ahşap minberde geometrik süslemeler görülür.",
+      "sourceId": "inv-p265"
+    }
+  ],
+  "test": [
+    {
+      "question": "Diğin Camii halk arasında başka hangi adla bilinir?",
+      "options": [
+        "Sedirler Camii",
+        "Çaputçu Camii",
+        "Yıkık Mahalle Mescidi",
+        "Ak Cami"
+      ],
+      "correct": 1,
+      "description": "Yapı “Çaputçu Camii” olarak da bilinmektedir.",
+      "sourceId": "inv-p265"
+    },
+    {
+      "question": "Caminin üzerinde hangi tarih yazılıdır?",
+      "options": [
+        "1909",
+        "1929",
+        "1946",
+        "1920"
+      ],
+      "correct": 3,
+      "description": "Caminin üzerinde 1920 tarihi yazmaktadır.",
+      "sourceId": "inv-p265"
+    },
+    {
+      "question": "Harimdeki mahfili kaç ahşap direk taşır?",
+      "options": [
+        "Dört",
+        "İki",
+        "Altı",
+        "Üç"
+      ],
+      "correct": 0,
+      "description": "Harimin kuzeyinde dört ahşap direğin taşıdığı mahfil yer alır.",
+      "sourceId": "inv-p265"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p265",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Diğin Camii\"",
+      "page": "265"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "konya-doganhisar-karaaga-old-grand-mosque",
+  "name": "Karaağa Beldesi Eski (Ulu) Camii",
+  "city": "Konya",
+  "district": "Doğanhisar",
+  "period": "XVIII-XIX. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Doğanhisar Karaağa Mahallesi'ndeki cami eğimli arazi üzerine kurulmuştur.",
+  "history": "Doğanhisar Karaağa Mahallesi'ndeki cami eğimli arazi üzerine kurulmuştur. Güney cephesindeki son rakamı okunamayan kitabesine göre XVIII-XIX. yüzyılda yapılmıştır. Minaresi 1959'da eklenmiş, yapı 1969'da büyük ölçüde yenilenmiştir.\n\nDerinlemesine dikdörtgen planlı, ahşap direkli ve tavanlı yapı kırma çatılıdır. Moloz taş duvarlarda ahşap hatıllar kullanılmıştır. Doğudaki tek kapıdan girilir; aynı cephede altta üç, üstte dört pencere vardır. Üç sahınlı harimin alt duvarlarında sarı zemin üzerinde mavi geometrik ve bitkisel motifler, ayet ve hadisler yer alır. Mihrabın iki yanında müsenna yazıyla cami tasvirleri bulunur. Giriş ekseninde olmayan mihrap yarım dikdörtgen planlı ve yarım kubbe kavsaralıdır; nişi perde motifli, tepeliği kıvrık dallı metaldir. Sağdaki ahşap minberde bitkisel süslemeler ve palmetli tepelik görülür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-doganhisar-karaaga-old-grand-mosque/prayer-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-doganhisar-karaaga-old-grand-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde ahşap sütunlar ve yazılarla süslü kıble duvarı",
+      "description": "Turkuaz halılı harimde ahşap sütunlar ve yazılarla süslü kıble duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-doganhisar-karaaga-old-grand-mosque/exterior.jpg",
+      "alt": "Ahşap hatıllı taş cephe, kemerli pencereler ve kiremit çatı",
+      "description": "Ahşap hatıllı taş cephe, kemerli pencereler ve kiremit çatı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-doganhisar-karaaga-old-grand-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Mihrap nişi perde motifiyle bezelidir.",
+      "sourceId": "inv-p411"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-doganhisar-karaaga-old-grand-mosque/prayer-hall.jpg",
+      "x": 11,
+      "y": 55,
+      "title": "Ahşap sütunlar",
+      "text": "Ahşap sütunlar harimi üç sahına ayırır.",
+      "sourceId": "inv-p411"
+    }
+  ],
+  "test": [
+    {
+      "question": "Karaağa Beldesi Eski (Ulu) Camii hangi ilçededir?",
+      "options": [
+        "Doğanhisar",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Karaağa Beldesi Eski (Ulu) Camii, Konya'nın Doğanhisar ilçesindedir.",
+      "sourceId": "inv-p411"
+    },
+    {
+      "question": "Harime hangi cephedeki kapıdan girilir?",
+      "options": [
+        "Kuzey",
+        "Doğu",
+        "Batı",
+        "Güney"
+      ],
+      "correct": 1,
+      "description": "Doğu.",
+      "sourceId": "inv-p411"
+    },
+    {
+      "question": "Cami hangi yıl büyük ölçüde yenilenmiştir?",
+      "options": [
+        "1720",
+        "1314",
+        "2008",
+        "1969"
+      ],
+      "correct": 3,
+      "description": "1969.",
+      "sourceId": "inv-p411"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p411",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Doğanhisar, \"Karaağa Beldesi Eski (Ulu) Camii\"",
+      "page": "411"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

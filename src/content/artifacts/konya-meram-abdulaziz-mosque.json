@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-abdulaziz-mosque",
+  "name": "Abdülaziz Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu dönemi; kitâbesine göre H. 651 / M. 1253",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Selçuklu devlet adamı Abdülaziz’in 1253’te yaptırdığı kare planlı, tromp geçişli tek kubbeli bir camidir.",
+  "history": "Cami, Meram, Kadı İzzet Sokak No. 20’dedir. Mahalle adını Selçuklu döneminin ileri gelen din ve devlet adamlarından Abdülaziz Sultan’dan ve onun adını taşıyan bu camiden alır. Abdülaziz Sultan, III. Alâeddin Keykubat tahta geçince maliyeden sorumlu devlet görevlisi olmuştur. Alâeddin Keykubat’ın onun aracılığıyla Osman Gazi’ye bağımsızlık alâmetleri gönderdiği ve Osman Gazi’nin eşi Rabia’nın Abdülaziz Sultan’ın kızı olabileceği rivayet edilir.\n\n1962 restorasyonunda çini mihrapta bulunan kitâbe ortaya çıkarılmıştır; kitâbe Karatay Medresesi Çini Eserleri Müzesi’nde 914 envanter numarasıyla kayıtlıdır ve 1,00 x 0,85 m ölçüsündedir. Lacivert zemin üzerine beyazla beş satır yazılmış, yer yer bozulmuş bu Arapça kitâbeden caminin II. İzzeddin Keykavus döneminde H. 651 / M. 1253’te Abdülaziz tarafından yaptırıldığı anlaşılır.\n\nTaş ve tuğla ile yığma tekniğinde yapılan cami kare planlı ve tek kubbelidir; kubbeye geçiş tromplarla sağlanır. Beden duvarlarında kesme taş, kubbe ve tromplarda tuğla kullanılmıştır. Dört cephede pencereler vardır. Girişte kapının üzerinde enlemesine uzanan ahşap bir mahfil bulunur. Duvarların alt kısımları mermerle çevrilmiş, mihrapta mermer ve beton görülür. Vakıflar Genel Müdürlüğü 1991’de yapıyı restore etmiştir; cami bugün ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-abdulaziz-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-abdulaziz-mosque/exterior.jpg",
+      "alt": "Kurşun kaplı tek kubbeli, açık renk sıvalı kare yapı ve önünde ahşap giriş bölümü",
+      "description": "Kurşun kaplı tek kubbeli, açık renk sıvalı kare yapı ve önünde ahşap giriş bölümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-abdulaziz-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde beyaz duvar, sade mihrap nişi ve sağda ahşap oymalı minber",
+      "description": "Kırmızı halılı harimde beyaz duvar, sade mihrap nişi ve sağda ahşap oymalı minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-abdulaziz-mosque/exterior.jpg",
+      "x": 50,
+      "y": 14,
+      "title": "Tek kubbe",
+      "text": "Kare planlı cami tromplarla geçilen tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p109"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-abdulaziz-mosque/prayer-hall.jpg",
+      "x": 46,
+      "y": 35,
+      "title": "Mihrap",
+      "text": "Mihrapta mermer ve beton malzeme görülür.",
+      "sourceId": "inv-p109"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbeye göre cami hangi yıl yaptırılmıştır?",
+      "options": [
+        "M. 1201",
+        "M. 1274",
+        "M. 1332",
+        "M. 1253"
+      ],
+      "correct": 3,
+      "description": "Kitâbeden caminin H. 651 / M. 1253’te yaptırıldığı anlaşılır.",
+      "sourceId": "inv-p109"
+    },
+    {
+      "question": "Kubbeye geçiş hangi elemanla sağlanır?",
+      "options": [
+        "Tromplarla",
+        "Pandantiflerle",
+        "Ahşap kirişlerle",
+        "Sütunlarla"
+      ],
+      "correct": 0,
+      "description": "Kitap kubbeye geçişin tromplarla sağlandığını belirtir.",
+      "sourceId": "inv-p109"
+    },
+    {
+      "question": "Mihrapta bulunan kitâbe hangi restorasyonda ortaya çıkarılmıştır?",
+      "options": [
+        "1991",
+        "1962",
+        "2004",
+        "1919"
+      ],
+      "correct": 1,
+      "description": "Kitâbe 1962’deki restorasyon sırasında ortaya çıkarılmıştır.",
+      "sourceId": "inv-p109"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p109",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Abdülaziz Camii\"",
+      "page": "109"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

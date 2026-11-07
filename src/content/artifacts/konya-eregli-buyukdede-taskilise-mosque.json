@@ -1,0 +1,102 @@
+{
+  "id": "konya-eregli-buyukdede-taskilise-mosque",
+  "name": "Büyükdede (Taşkilise) Camii",
+  "city": "Konya",
+  "district": "Ereğli",
+  "period": "Bizans dönemi; kitapta 560 yılları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ereğli Büyükdede Köyü'ndeki yapı ilk olarak Bizans döneminde kilise olarak inşa edilmiştir.",
+  "history": "Ereğli Büyükdede Köyü'ndeki yapı ilk olarak Bizans döneminde kilise olarak inşa edilmiştir. Kitap yapının 560 yıllarında yapıldığını ve yaklaşık dokuz yüzyıl önce camiye çevrildiğini belirtir. Arazi eğiminden dolayı yüksek bir tepe üzerindedir. 1970'lerde define arayıcılarının açtığı tünel zemine zarar vermiş ve yapı terk edilmiştir. Köylülerin talebi üzerine Vakıflar Genel Müdürlüğü 2007'de restore ederek yeniden kullanıma açmıştır.\n\nKitap camiyi enlemesine dikdörtgen planlı, kırma çatılı, minaresiz ve kaba yonu taş yapı olarak tanımlar. Girişteki “Ustası Hidayet Nakkaş” yazısı kalem işlerinin ustasını gösterir. Kıble duvarındaki sade taş mihrap yarım daire nişlidir; çevresindeki üç sıra bordür kalem işi süslemelidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-eregli-buyukdede-taskilise-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-eregli-buyukdede-taskilise-mosque/exterior.jpg",
+      "alt": "Kayalık tepe üzerinde taş duvarlı yapının kemerli kapısı ve küçük pencereleri",
+      "description": "Kayalık tepe üzerinde taş duvarlı yapının kemerli kapısı ve küçük pencereleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-eregli-buyukdede-taskilise-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direkli iç mekânda yeşil mihrap nişi ve bitki tasvirleriyle süslü duvarlar",
+      "description": "Ahşap direkli iç mekânda yeşil mihrap nişi ve bitki tasvirleriyle süslü duvarlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-eregli-buyukdede-taskilise-mosque/prayer-hall.jpg",
+      "x": 65,
+      "y": 49,
+      "title": "Mihrap",
+      "text": "Kıble duvarındaki taş mihrap yarım daire nişlidir.",
+      "sourceId": "inv-p428"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-eregli-buyukdede-taskilise-mosque/prayer-hall.jpg",
+      "x": 91,
+      "y": 43,
+      "title": "Kalem işleri",
+      "text": "Giriş yazısına göre kalem işi süslemeleri Hidayet Nakkaş yapmıştır.",
+      "sourceId": "inv-p428"
+    }
+  ],
+  "test": [
+    {
+      "question": "Büyükdede (Taşkilise) Camii hangi ilçededir?",
+      "options": [
+        "Ereğli",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Büyükdede (Taşkilise) Camii, Konya'nın Ereğli ilçesindedir.",
+      "sourceId": "inv-p427"
+    },
+    {
+      "question": "Kalem işi süslemelerin ustası kimdir?",
+      "options": [
+        "Müslüm Gökçe",
+        "Hidayet Nakkaş",
+        "Hasan Usta",
+        "Fertekli Nazif Usta"
+      ],
+      "correct": 1,
+      "description": "Hidayet Nakkaş.",
+      "sourceId": "inv-p428"
+    },
+    {
+      "question": "Yapı ilk olarak ne olarak inşa edilmiştir?",
+      "options": [
+        "Han",
+        "Medrese",
+        "Hamam",
+        "Kilise"
+      ],
+      "correct": 3,
+      "description": "Kilise.",
+      "sourceId": "inv-p427"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p427",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Büyükdede (Taşkilise) Camii\"",
+      "page": "427"
+    },
+    {
+      "id": "inv-p428",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Büyükdede (Taşkilise) Camii\"",
+      "page": "428"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "konya-karatay-civiloglu-mosque",
+  "name": "Cıvıloğlu Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "1930 · Cumhuriyet dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Cıvıloğlu Camii, Cumhuriyet’in ilk yıllarında yapılmış, üç sahınlı ahşap direkli cami geleneğinin örneklerinden biridir.",
+  "history": "Cami, Karatay Belediyesi’nin batısında, Fakıh Dede Mahallesi, Mengüç Caddesi’ndedir. Cumhuriyet’in ilk döneminde 1930’da yapılmıştır; banisi ve sanatkârları bilinmemektedir.\n\nDerinlemesine dikdörtgen planlı, üç sahınlı ve dört yöne eğimli kırma çatılıdır. Kuzey cephenin doğusunda köşk tipi ahşap minare vardır. Taşla yığma olarak yapılmış yapının duvarları sıvalıdır. Cephelerde altta büyük, üstte küçük yuvarlak kemerli dikdörtgen pencereler iki sıra oluşturur. Kuzey kapısından girilen harim iki sıra ahşap direkle üç sahına ayrılır. Kıble duvarındaki mihrap renkli mermerden, dikdörtgen çerçeveli ve bordürlerle sınırlıdır. Sağdaki minber de yeni tarzda iki renkli mermerdendir. Kitap yapıyı XVIII–XX. yüzyıllarda Konya çevresinde görülen ahşap direkli cami geleneğinin son örneklerinden sayar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-civiloglu-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-civiloglu-mosque/exterior.jpg",
+      "alt": "Ağaçlar arasındaki sarı sıvalı caminin iki sıra kemerli pencereleri ve giriş sundurması",
+      "description": "Ağaçlar arasındaki sarı sıvalı caminin iki sıra kemerli pencereleri ve giriş sundurması",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-civiloglu-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde iki sıra ahşap direk, ahşap tavan ve karşıda mihrap",
+      "description": "Mavi halılı harimde iki sıra ahşap direk, ahşap tavan ve karşıda mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-civiloglu-mosque/pavilion-minaret.jpg",
+      "alt": "Kiremit çatı önünde açık renkli ahşap köşk minare ve ağaçlar",
+      "description": "Kiremit çatı önünde açık renkli ahşap köşk minare ve ağaçlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-civiloglu-mosque/prayer-hall.jpg",
+      "x": 61,
+      "y": 54,
+      "title": "Üç sahınlı harim",
+      "text": "İki sıra ahşap direk harimi üç sahına ayırır.",
+      "sourceId": "inv-p197"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-civiloglu-mosque/pavilion-minaret.jpg",
+      "x": 60,
+      "y": 41,
+      "title": "Ahşap köşk minare",
+      "text": "Kuzey cephesinin doğusunda köşk tipi ahşap minare bulunur.",
+      "sourceId": "inv-p196"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi yıl yapılmıştır?",
+      "options": [
+        "1220",
+        "1748",
+        "1930",
+        "1907"
+      ],
+      "correct": 2,
+      "description": "Kitap Cumhuriyet’in ilk döneminde, 1930’da yapıldığını belirtir.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "question": "Harimi kaç sahına ayıran iki sıra direk vardır?",
+      "options": [
+        "Üç",
+        "İki",
+        "Dört",
+        "Altı"
+      ],
+      "correct": 0,
+      "description": "Harim iki sıra ahşap direkle üç sahına ayrılır.",
+      "sourceId": "inv-p197"
+    },
+    {
+      "question": "Mihrap hangi malzemedendir?",
+      "options": [
+        "Kerpiç",
+        "Çelik",
+        "Ham tuğla",
+        "Renkli mermer"
+      ],
+      "correct": 3,
+      "description": "Kıble duvarının ortasındaki mihrap renkli mermerdendir.",
+      "sourceId": "inv-p197"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p196",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Cıvıloğlu Camii\"",
+      "page": "196"
+    },
+    {
+      "id": "inv-p197",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Cıvıloğlu Camii\"",
+      "page": "197"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "konya-ahirli-kurucay-old-mosque",
+  "name": "Kuruçay Eski Camii",
+  "city": "Konya",
+  "district": "Ahırlı",
+  "period": "XIX. yüzyılın sonları (plan ve mimari dokusuna göre tahmin)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ahırlı'ya bağlı Kuruçay Köyü'nün ulu camisi; eğimli arazide yazlık bölümü ve üç sahınlı harimiyle XIX. yüzyıl sonuna tarihlendirilir.",
+  "history": "Cami, Ahırlı ilçesine bağlı Kuruçay Köyü'nün ulu camisidir. Kitâbesi ve vakfiyesi yoktur; plan ve mimari dokusundan hareketle XIX. yüzyılın sonlarında yapılmış olabileceği düşünülür. Bugün de ibadete açık olan yapı yazlık mekân, minare ve üç sahınlı harimden oluşur.\n\nEğimli bir araziye inşa edilen cami dıştan dikdörtgen planlıdır ve kırma çatıyla örtülüdür. Batı cephedeki merdivenle yazlık bölüme çıkılır; bu bölümün kıble duvarında bir mihrap nişi vardır ve buradaki kapıdan harime geçilir.\n\nDerinlemesine dikdörtgen harim iki sıra ahşap direkle üç sahına ayrılır ve güney, doğu ve batı cephelerdeki iki sıra pencereyle aydınlanır. Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır; kitaba göre ahşap mihrap bordürleri ajur tekniğinde bitkisel ve geometrik motiflerle süslüdür, alınlığa şemse motifi yerleştirilmiştir. Mihrabın sağındaki minberde geometrik ve bitkisel süslemeler, kuzey duvarı kaplayan ahşap kadınlar mahfilinde geometrik süslemeler görülür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ahirli-kurucay-old-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ahirli-kurucay-old-mosque/exterior.jpg",
+      "alt": "Köy yamacında kırmızı kırma çatılı, iki sıra pencereli cami ve yanında ince beyaz minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ahirli-kurucay-old-mosque/interior.jpg",
+      "alt": "Desenli halılı harimde mavi-beyaz çinilerle kaplı mihrap ve minber, tavandan sarkan avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-ahirli-kurucay-old-mosque/exterior.jpg",
+      "x": 50,
+      "y": 64,
+      "title": "Kırma çatı",
+      "text": "Eğimli araziye kurulan dikdörtgen planlı cami kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p319"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-ahirli-kurucay-old-mosque/exterior.jpg",
+      "x": 55,
+      "y": 84,
+      "title": "İki sıra pencere",
+      "text": "Harim güney, doğu ve batı cephelerindeki iki sıra pencereyle aydınlanır.",
+      "sourceId": "inv-p319"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kuruçay Eski Camii Konya'nın hangi ilçesindedir?",
+      "options": [
+        "Akören",
+        "Ahırlı",
+        "Akşehir",
+        "Selçuklu"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Ahırlı.",
+      "sourceId": "inv-p319"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "Üç",
+        "İki",
+        "Dört",
+        "Beş"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Üç.",
+      "sourceId": "inv-p319"
+    },
+    {
+      "question": "Yazlık bölüme hangi cepheden merdivenle çıkılır?",
+      "options": [
+        "Doğu",
+        "Kuzey",
+        "Güney",
+        "Batı"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Batı.",
+      "sourceId": "inv-p319"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p319",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ahırlı, \"Kuruçay Eski Camii\"",
+      "page": "319"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

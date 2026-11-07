@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-haci-omerler-mosque",
+  "name": "Hacı Ömerler Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "H. 1330 / M. 1911-12",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Üçler Mezarlığı’nın güneyindeki Hacı Ömerler Camii, bağdadi kubbeli harimi ve perde motifli mihrabıyla tanımlanır.",
+  "history": "Cami, Karatay, Sarıyakup Mahallesi, Mahmut Dede Sokağı’nda, Üçler Mezarlığı’nın güneyindedir. Banisini ve inşasını anlatan kitâbesi yoktur; mihraptaki tarihe göre H. 1330 / M. 1911-12’de yapılmıştır.\n\nTaşla yığma olarak inşa edilen ve duvarları sıvalı yapı derinlemesine dikdörtgen planlı, kırma çatılıdır. Cephelerinde geniş dikdörtgen biçimli yuvarlak kemerli pencereler, kuzeyde taç kapı bulunur. Kareye yakın dikdörtgen harim içten bağdadi kubbeyle örtülüdür. Kubbe vazolar arasında yaprak motifleriyle bezenmiştir. Kıble duvarındaki mihrap perde motifiyle süslüdür; kilit taşında ters gül motifi, alınlığında mihrap ayeti ile H. 1330 / M. 1911-12 tarihi vardır. Sağdaki güneybatı minberi sade ahşap işçiliklidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-haci-omerler-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-haci-omerler-mosque/exterior.jpg",
+      "alt": "Taş duvarlı, kiremit çatılı caminin kemerli pencereleri ve köşe görünümü",
+      "description": "Taş duvarlı, kiremit çatılı caminin kemerli pencereleri ve köşe görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-haci-omerler-mosque/mihrab.jpg",
+      "alt": "Mavi halılı iç mekânda turkuaz ve altın renkli çerçeveli mihrap, yanında kemerli pencereler",
+      "description": "Mavi halılı iç mekânda turkuaz ve altın renkli çerçeveli mihrap, yanında kemerli pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-haci-omerler-mosque/exterior.jpg",
+      "x": 69,
+      "y": 59,
+      "title": "Kemerli pencereler",
+      "text": "Cephelerde geniş dikdörtgen biçimli, yuvarlak kemerli pencereler açılmıştır.",
+      "sourceId": "inv-p194"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-haci-omerler-mosque/mihrab.jpg",
+      "x": 71,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Mihrabın yüzeyi perde motifiyle süslüdür; alınlığında tarih ve mihrap ayeti yer alır.",
+      "sourceId": "inv-p194"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mihrapta hangi tarih yazılıdır?",
+      "options": [
+        "H. 1330 / M. 1911-12",
+        "H. 617 / M. 1220",
+        "H. 824 / M. 1421",
+        "H. 1162 / M. 1748-49"
+      ],
+      "correct": 0,
+      "description": "İnşa tarihi mihraptaki H. 1330 / M. 1911-12 yazısından anlaşılır.",
+      "sourceId": "inv-p194"
+    },
+    {
+      "question": "Harimin iç örtüsü nedir?",
+      "options": [
+        "Çapraz tonoz",
+        "Cam piramit",
+        "Bağdadi kubbe",
+        "Açık avlu"
+      ],
+      "correct": 2,
+      "description": "Harim içten bağdadi kubbeyle örtülüdür.",
+      "sourceId": "inv-p194"
+    },
+    {
+      "question": "Yapı hangi mezarlığın güneyindedir?",
+      "options": [
+        "Hacı Fettah Mezarlığı",
+        "Üçler Mezarlığı",
+        "Araplar Mezarlığı",
+        "Musalla Mezarlığı"
+      ],
+      "correct": 1,
+      "description": "Kitap konumu Üçler Mezarlığı’nın güneyi olarak verir.",
+      "sourceId": "inv-p194"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p194",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hacı Ömerler Camii\"",
+      "page": "194"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

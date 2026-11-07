@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-tahtatepen-ubeyt-haci-adil-mosque",
+  "name": "Tahtatepen Ubeyt (Hacı Adil) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Karamanoğlu dönemi; 1860’ta yeniden inşa",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ubeyt Mahallesi’ndeki ahşap destekli cami, Karamanoğlu kökenli olup 1860 yılında yeniden yapılmıştır.",
+  "history": "Cami, Meram, Ubeyt Mahallesi, Tahtatepen Caddesi’nde, Hacı Fettah Mezarlığı’nın doğusundadır. Karamanoğlu döneminde yapılmış, Osmanlı döneminde 1860’ta yeniden inşa edilmiştir.\n\nKuzey-güney doğrultusunda dikdörtgen planlı ve ahşap desteklidir. Beden duvarları subasman seviyesine kadar moloz taş, üstte kerpiçtir. Kuzeyi komşu eve bitişiktir. Güney ve batıda ikişer, doğuda biri kapı üzerinde olmak üzere iki düz lentolu pencere vardır; üstlerinde ahşap üçgen alınlıklar bulunur. Harime kuzeydoğudaki düz lentolu kapıdan girilir. Düz dam ahşap desteklerle taşınır, dıştan kiremit kaplı kırma çatıyla örtülüdür.\n\nKuzeyde giriş üzerinde ahşap mahfil yer alır. Kıble duvarının ortasındaki yarım daire biçimli mihrabın kavsarası mukarnas dizisini anımsatır; nişin üstünde iki sıra mukarnaslı kuşak vardır. Sağdaki ahşap minber XIX. yüzyıl özellikleri gösteren orta boy minberler grubundadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-tahtatepen-ubeyt-haci-adil-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-tahtatepen-ubeyt-haci-adil-mosque/exterior.jpg",
+      "alt": "Taş subasman üzerinde açık pembe duvarlar, dikdörtgen pencereler ve geniş saçaklı çatı",
+      "description": "Taş subasman üzerinde açık pembe duvarlar, dikdörtgen pencereler ve geniş saçaklı çatı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-tahtatepen-ubeyt-haci-adil-mosque/prayer-hall.jpg",
+      "alt": "Ahşap kirişli tavanda ortada ahşap taşıyıcı, karşı duvarda mihrap ve çevrede pencereler",
+      "description": "Ahşap kirişli tavanda ortada ahşap taşıyıcı, karşı duvarda mihrap ve çevrede pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-tahtatepen-ubeyt-haci-adil-mosque/exterior.jpg",
+      "x": 36,
+      "y": 63,
+      "title": "Pencere alınlıkları",
+      "text": "Düz lentolu pencerelerin üzerinde ahşap üçgen alınlıklar görülür.",
+      "sourceId": "inv-p157"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-tahtatepen-ubeyt-haci-adil-mosque/prayer-hall.jpg",
+      "x": 39,
+      "y": 54,
+      "title": "Ahşap destekler",
+      "text": "Cami ahşap destekli yapılardandır; üst örtüyü ahşap destekler taşır.",
+      "sourceId": "inv-p157"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami Osmanlı döneminde hangi yıl yeniden inşa edilmiştir?",
+      "options": [
+        "1421",
+        "1929",
+        "2003",
+        "1860"
+      ],
+      "correct": 3,
+      "description": "Kitap yeniden inşa tarihini 1860 olarak verir.",
+      "sourceId": "inv-p157"
+    },
+    {
+      "question": "Subasman üzerindeki duvarlarda hangi malzeme kullanılmıştır?",
+      "options": [
+        "Çelik",
+        "Kerpiç",
+        "Mermer",
+        "Cam"
+      ],
+      "correct": 1,
+      "description": "Subasmanda moloz taş, üzerinde kerpiç kullanılmıştır.",
+      "sourceId": "inv-p157"
+    },
+    {
+      "question": "Cami hangi mezarlığın doğusundadır?",
+      "options": [
+        "Hacı Fettah Mezarlığı",
+        "Üçler Mezarlığı",
+        "Araplar Mezarlığı",
+        "Musalla Mezarlığı"
+      ],
+      "correct": 0,
+      "description": "Cami Hacı Fettah Mezarlığı’nın doğusundadır.",
+      "sourceId": "inv-p157"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p157",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Tahtatepen Ubeyt (Hacı Adil) Camii\"",
+      "page": "157"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

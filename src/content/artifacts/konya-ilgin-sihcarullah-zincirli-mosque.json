@@ -1,0 +1,97 @@
+{
+  "id": "konya-ilgin-sihcarullah-zincirli-mosque",
+  "name": "Şıhcarullah (Zincirli) Camii",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Mimari özelliklerine göre XIX. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ilgın Şıhcarullah Mahallesi'ndeki caminin inşa kitabesi bulunmamaktadır.",
+  "history": "Ilgın Şıhcarullah Mahallesi'ndeki caminin inşa kitabesi bulunmamaktadır. Kitap planı, örtüsü ve süslemelerine bakarak yapıyı XIX. yüzyıla tarihlendirir. Dörtgen planlı harim ahşap desteklidir. Mihrap ve minber ahşaptandır ve dönem özelliklerini yansıtır. Kitap caminin ibadete açık olduğunu belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-sihcarullah-zincirli-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-sihcarullah-zincirli-mosque/aerial-view.jpg",
+      "alt": "Ağaçların arasında kiremit çatılı cami ve ince minare",
+      "description": "Ağaçların arasında kiremit çatılı cami ve ince minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-sihcarullah-zincirli-mosque/prayer-hall.jpg",
+      "alt": "Yeşil halılı harimde açık renk duvarlar, mavi-yeşil mihrap ve sağda minber",
+      "description": "Yeşil halılı harimde açık renk duvarlar, mavi-yeşil mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-ilgin-sihcarullah-zincirli-mosque/prayer-hall.jpg",
+      "x": 40,
+      "y": 50,
+      "title": "Ahşap mihrap",
+      "text": "Caminin mihrabı ahşap malzemedendir.",
+      "sourceId": "inv-p450"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-ilgin-sihcarullah-zincirli-mosque/prayer-hall.jpg",
+      "x": 20,
+      "y": 80,
+      "title": "Harim",
+      "text": "Harim dörtgen planlıdır.",
+      "sourceId": "inv-p450"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şıhcarullah (Zincirli) Camii hangi ilçededir?",
+      "options": [
+        "Ilgın",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Şıhcarullah (Zincirli) Camii, Konya'nın Ilgın ilçesindedir.",
+      "sourceId": "inv-p450"
+    },
+    {
+      "question": "Mihrap ve minber hangi malzemedendir?",
+      "options": [
+        "Mermer",
+        "Ahşap",
+        "Tuğla",
+        "Betonarme"
+      ],
+      "correct": 1,
+      "description": "Ahşap.",
+      "sourceId": "inv-p450"
+    },
+    {
+      "question": "Yapının inşa kitabesi için kitap ne belirtir?",
+      "options": [
+        "Üç satırlı mermer kitabedir",
+        "Minare kapısındadır",
+        "1551 tarihini verir",
+        "İnşa kitabesi bulunmamaktadır"
+      ],
+      "correct": 3,
+      "description": "İnşa kitabesi bulunmamaktadır.",
+      "sourceId": "inv-p450"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p450",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Şıhcarullah (Zincirli) Camii\"",
+      "page": "450"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

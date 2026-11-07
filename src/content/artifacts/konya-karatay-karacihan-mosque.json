@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-karacihan-mosque",
+  "name": "Karacihan Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Mimari özellikleriyle XIX. yüzyıla tarihlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karakayış Caddesi’ndeki Karacihan Camii, üç sahınlı ahşap direkli harim ve U biçimli mahfile sahiptir.",
+  "history": "Cami, Karatay, Karacihan Mahallesi, Karakayış Caddesi’ndedir. Kitap, mimari özellikleriyle XIX. yüzyılda yapılmış olması gerektiğini belirtir; son paragrafta ise yapıyı Anadolu Selçuklu döneminden günümüze gelmiş geç dönem ahşap uygulamalı cami örnekleri arasında sayar.\n\nTemelde taş, diğer bölümlerde kerpiçle yığma olarak yapılmış, kırma çatıyla örtülmüştür. Doğu cephesinde ahşap çardak minaresi bulunur. Alt sırada dikdörtgen, üstte küçük tepe pencereleri; güney duvarının ortasında rozet pencereler vardır. Doğuya sonradan eklenen ayakkabılık bölümünden girilir.\n\nHarim, mihraba dik sıralanan altı ahşap direkle üç sahına ayrılır. Direkler yastıklara oturur ve ahşap işçilikli başlıklara sahiptir. Tavan sonradan kaplanmıştır. Kuzeyde önde iki sütunun taşıdığı U biçimli korkuluklu mahfil vardır. Ortasındaki yarım yuvarlak çıkmanın altı merkezde birleşen dikey hatlarla süslüdür. Mihrap ve minber ahşap işçiliklidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-karacihan-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-karacihan-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı açık yeşil cami, kırmızı ahşap köşk minare ve yüksekten görülen sokak cephesi",
+      "description": "Kiremit çatılı açık yeşil cami, kırmızı ahşap köşk minare ve yüksekten görülen sokak cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-karacihan-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde ahşap sütunlar, iki yanda mahfil korkulukları ve mavi renkli mihrap",
+      "description": "Kırmızı halılı harimde ahşap sütunlar, iki yanda mahfil korkulukları ve mavi renkli mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-karacihan-mosque/exterior.jpg",
+      "x": 69,
+      "y": 24,
+      "title": "Çardak minare",
+      "text": "Doğu cephesinde ahşap çardak minare bulunur.",
+      "sourceId": "inv-p192"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-karacihan-mosque/prayer-hall.jpg",
+      "x": 70,
+      "y": 53,
+      "title": "Ahşap direkler",
+      "text": "Mihraba dik sıralanan altı ahşap direk harimi üç sahına ayırır.",
+      "sourceId": "inv-p192"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harim kaç ahşap direkle üç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Dört",
+        "Altı",
+        "Sekiz"
+      ],
+      "correct": 2,
+      "description": "Kitap altı ahşap direk bulunduğunu belirtir.",
+      "sourceId": "inv-p192"
+    },
+    {
+      "question": "Kuzeydeki mahfil hangi biçimdedir?",
+      "options": [
+        "U biçiminde",
+        "Daire biçiminde",
+        "Üçgen biçiminde",
+        "Sekizgen biçiminde"
+      ],
+      "correct": 0,
+      "description": "Kuzey duvarında önde iki sütuna oturan U biçimli mahfil vardır.",
+      "sourceId": "inv-p192"
+    },
+    {
+      "question": "Mihrap ve minberin işçiliği hangi malzemededir?",
+      "options": [
+        "Mermer",
+        "Çelik",
+        "Cam",
+        "Ahşap"
+      ],
+      "correct": 3,
+      "description": "Kitap mihrap ve minberi ahşap işçilikli olarak tanımlar.",
+      "sourceId": "inv-p192"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p192",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Karacihan Camii\"",
+      "page": "192"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

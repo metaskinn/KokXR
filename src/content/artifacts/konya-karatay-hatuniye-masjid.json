@@ -1,0 +1,111 @@
+{
+  "id": "konya-karatay-hatuniye-masjid",
+  "name": "Hatuniye (Güdük Minare - Akıncılar Mahmut) Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Selçuklu · vakfiyeye göre H. 610 / M. 1213-14; minare kitabesi H. 627 / M. 1229-30; bugünkü mescit 1957",
+  "endowment": "Vakfiyeye göre Selçuklu Hanedanı'ndan Ahmed el-Arûsî'nin kızı Devlet Hatun",
+  "summary": "Vakfiyesine göre 1213-14'te Devlet Hatun'un yaptırdığı, Selçuklu külliyesinden yalnızca Güdük Minare'si kalan ve bugünkü binası 1957'de yapılan mescit.",
+  "history": "Hatuniye Mescidi, Karatay, Mihmandar Mahallesi, Hatuniye Sokak üzerindedir. Alâeddin Tepesi'nin doğusundaki yapı, vakfiyelerde Esediye, şer'iyye sicil kayıtlarında Bremânî olarak geçen bugünkü Mihmandar Mahallesi'ndedir. Arapça vakfiyesinde banisinin H. 610 / M. 1213-14'te Selçuklu Hanedanı'ndan Ahmed el-Arûsî'nin kızı Devlet Hatun olduğu belirtilir.\n\nŞer'iyye sicil kayıtlarına göre Güdük Minare'nin de içinde bulunduğu bahçelik alanda mescit, han, medrese, imaret ve türbeden oluşan bir külliye vardı. Bu yapılardan minare dışında hiçbiri günümüze ulaşmamıştır.\n\nBugünkü mescidin kuzeybatısındaki minare, çevresine sonradan yapılan yüksek binalar nedeniyle fark edilmez. İlk yapıldığında çift şerefeli olan minarenin üst kısmı 1716'da yıkılmış, bu yüzden halk arasında Güdük Minare olarak anılmıştır. Minarenin batı kısmında mavi bir çini çerçevenin kuşattığı H. 627 / M. 1229-30 tarihli kitabede bani olarak \"Bedreddin Bermutî (Bremânî) b. Hacı Mahmud\" adı okunur. Kitaba göre bu kişi Devlet Hatun'un kardeşidir; Devlet Hatun'un vefatından sonra depremde yıkılan mescidi tamir ettirmiş ve mevcut kitabeyi koydurmuştur.\n\nŞer'iyye sicil defterlerindeki tamir kayıtlarından XVIII. yüzyıldaki Hatuniye Mescidi'nin tek kubbeli bir yapı olduğu anlaşılır. Daha sonra aynı yerde 1873'te kerpiçten, üstü ahşap kirişli bir mescit yapılmıştır. Zamanla tahrip olan bu mescidin yerine 1957'de mahalle halkı ahşap örtülü kâgir mescidi yeniden yaptırmıştır.\n\nMescit enlemesine dikdörtgen planlıdır; üzeri içten düz damlı, dıştan dört yöne eğimli kırma çatılıdır. Harime kuzey cephedeki kapı açıklığından geçilir. Cephelerde iki kademeli pencere düzeni görülür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-hatuniye-masjid/exterior-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-hatuniye-masjid/exterior-minaret.jpg",
+      "alt": "Kiremit kaplı kırma çatılı, açık yeşil boyalı iki kademeli pencereli mescit; arkasında tuğla gövdeli, şerefe altı mukarnaslı kısa minare ve yanında ağaçlar",
+      "description": "Mescit ve arkasındaki Güdük Minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-hatuniye-masjid/prayer-hall.jpg",
+      "alt": "Turkuaz halılı aydınlık harim; ortada mihrap, sağda ahşap minber, duvarlarda hat levhaları ve beyaz çıtalı tavan",
+      "description": "Harimin iç görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "guduk-minaret",
+      "image": "/images/konya-karatay-hatuniye-masjid/exterior-minaret.jpg",
+      "x": 50,
+      "y": 25,
+      "title": "Güdük Minare",
+      "text": "İlk yapıldığında çift şerefeli olan minarenin üst kısmı 1716'da yıkılmış, bu yüzden Güdük Minare olarak anılmıştır.",
+      "sourceId": "inv-p220"
+    },
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-karatay-hatuniye-masjid/exterior-minaret.jpg",
+      "x": 38,
+      "y": 48,
+      "title": "Kırma çatı",
+      "text": "Mescit içten düz damlı, dıştan dört yöne eğimli kırma çatılıdır.",
+      "sourceId": "inv-p220"
+    },
+    {
+      "id": "windows",
+      "image": "/images/konya-karatay-hatuniye-masjid/exterior-minaret.jpg",
+      "x": 47,
+      "y": 70,
+      "title": "İki kademeli pencereler",
+      "text": "Mescidin cephelerinde iki kademeli pencere düzenlemesi görülür.",
+      "sourceId": "inv-p220"
+    }
+  ],
+  "test": [
+    {
+      "question": "Minareye neden \"Güdük Minare\" denmiştir?",
+      "options": [
+        "Hiç şerefesi olmadığı için",
+        "Yapımı yarım kaldığı için",
+        "Tuğla yerine taştan yapıldığı için",
+        "Üst kısmı 1716'da yıkıldığı için"
+      ],
+      "correct": 3,
+      "description": "Çift şerefeli olarak yapılan minarenin üst kısmı 1716'da yıkılmış, bu yüzden Güdük Minare adıyla anılmıştır.",
+      "sourceId": "inv-p220"
+    },
+    {
+      "question": "Bugünkü mescidi 1957'de kim yaptırmıştır?",
+      "options": [
+        "Vakıflar Bölge Müdürlüğü",
+        "Mahalle halkı",
+        "Konya Belediyesi",
+        "Devlet Hatun'un torunları"
+      ],
+      "correct": 1,
+      "description": "1873'te yapılan kerpiç mescit zamanla tahrip olunca yerine 1957'de mahalle halkı kâgir mescidi yaptırmıştır.",
+      "sourceId": "inv-p220"
+    },
+    {
+      "question": "Şer'iyye sicil kayıtlarına göre XVIII. yüzyıldaki Hatuniye Mescidi nasıl bir yapıydı?",
+      "options": [
+        "Tek kubbeli",
+        "Ahşap direkli",
+        "Kerpiç ve toprak damlı",
+        "Çift kubbeli"
+      ],
+      "correct": 0,
+      "description": "Şer'iyye sicil defterlerindeki tamir kayıtlarından XVIII. yüzyıldaki mescidin tek kubbeli olduğu anlaşılmaktadır.",
+      "sourceId": "inv-p220"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p219",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hatuniye (Güdük Minare - Akıncılar Mahmut) Mescidi\"",
+      "page": "219"
+    },
+    {
+      "id": "inv-p220",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hatuniye (Güdük Minare - Akıncılar Mahmut) Mescidi\"",
+      "page": "220"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "konya-sarayonu-kucuk-alioglu-mosque",
+  "name": "Küçük Alioğlu Camii",
+  "city": "Konya",
+  "district": "Sarayönü",
+  "period": "Kitabeye göre H. 1281 / M. 1861",
+  "endowment": "Kadir, Ahmet, Mehmet, Seyyid ve Hüseyin isimli kardeşler",
+  "summary": "Sarayönü Hatıp Mahallesi Pir Hüseyin Bey Caddesi'ndeki cami, Karaçayır Deresi ile Şahin Caddesi arasında, Küçük Ali Oğlu Köprüsü'nün kuzeybatısındadır.",
+  "history": "Sarayönü Hatıp Mahallesi Pir Hüseyin Bey Caddesi'ndeki cami, Karaçayır Deresi ile Şahin Caddesi arasında, Küçük Ali Oğlu Köprüsü'nün kuzeybatısındadır. Banileri Kadir, Ahmet, Mehmet, Seyyid ve Hüseyin isimli kardeşlerdir. Doğu cephesindeki altı satırlı dikdörtgen kitabeden, kitapta H. 1281 / M. 1861 olarak verilen tarihte yaptırıldığı anlaşılmaktadır.\n\nYapı harim ve sonradan kapatılarak yazlık bölüm yapılan son cemaat yerinden oluşur. Harim iki sıra halinde dörder ahşap direkle üç sahına ayrılır; kuzey ve güneydeki direkler duvara bitişiktir. Kıble duvarındaki mihrap sade, duvara oyulmuş ve dikdörtgen biçimlidir; niş kemeri dilimlidir. Köşeliklerinde noktalardan oluşan dairevi geometrik motifler, çevresinde yivli silmeli geometrik ve kıvrım dal-yapraklı bitkisel bordürler vardır. Ahşap minber sonradan yağlı boyayla boyandığından özgünlüğünü kaybetmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-sarayonu-kucuk-alioglu-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-sarayonu-kucuk-alioglu-mosque/aerial-view.jpg",
+      "alt": "Açık renk duvarlı, kiremit çatılı cami ve minaresinin havadan görünümü",
+      "description": "Açık renk duvarlı, kiremit çatılı cami ve minaresinin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-sarayonu-kucuk-alioglu-mosque/prayer-hall.jpg",
+      "alt": "Koyu ahşap sütunlu ve ahşap tavanlı harimde desenli kırmızı halılar",
+      "description": "Koyu ahşap sütunlu ve ahşap tavanlı harimde desenli kırmızı halılar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-sarayonu-kucuk-alioglu-mosque/prayer-hall.jpg",
+      "x": 30,
+      "y": 50,
+      "title": "Ahşap direkler",
+      "text": "İki sıra halinde dörder ahşap direk harimi üç sahına ayırır.",
+      "sourceId": "inv-p467"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-sarayonu-kucuk-alioglu-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 52,
+      "title": "Mihrap",
+      "text": "Kıble duvarındaki mihrap dikdörtgen biçimli ve duvara oyulmuştur.",
+      "sourceId": "inv-p467"
+    }
+  ],
+  "test": [
+    {
+      "question": "Küçük Alioğlu Camii hangi ilçededir?",
+      "options": [
+        "Sarayönü",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Küçük Alioğlu Camii, Konya'nın Sarayönü ilçesindedir.",
+      "sourceId": "inv-p467"
+    },
+    {
+      "question": "Ahşap minber neden özgünlüğünü kaybetmiştir?",
+      "options": [
+        "Tamamen mermerle değiştirilmiştir",
+        "Yağlı boyayla boyanmıştır",
+        "Yangında yok olmuştur",
+        "Başka bir binaya taşınmıştır"
+      ],
+      "correct": 1,
+      "description": "Yağlı boyayla boyanmıştır.",
+      "sourceId": "inv-p467"
+    },
+    {
+      "question": "Yapının banileri kimlerdir?",
+      "options": [
+        "Çavuş Oğulları",
+        "Ali Paşa",
+        "Mimar Usta Kadı",
+        "Kadir, Ahmet, Mehmet, Seyyid ve Hüseyin kardeşler"
+      ],
+      "correct": 3,
+      "description": "Kadir, Ahmet, Mehmet, Seyyid ve Hüseyin kardeşler.",
+      "sourceId": "inv-p467"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p467",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Sarayönü, \"Küçük Alioğlu Camii\"",
+      "page": "467"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

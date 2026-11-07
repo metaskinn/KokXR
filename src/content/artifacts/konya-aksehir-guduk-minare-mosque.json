@@ -1,0 +1,121 @@
+{
+  "id": "konya-aksehir-guduk-minare-mosque",
+  "name": "Güdük Minare Camii",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "H. 624 / M. 1227, Sultan Alâeddin Keykubad dönemi (kitâbeye göre)",
+  "endowment": "Kitâbeye göre Abdullah zade Eminüddin Hacı Hasan tarafından Mesudzade Ahmet'e yaptırılmıştır",
+  "summary": "Minaresinin petek üstü uzun süre yıkık kaldığı için “güdük” adını alan, 1227 tarihli tek kubbeli Selçuklu camisi.",
+  "history": "Cami, Akşehir Selçuk Mahallesi, Güdük Minare Sokak üzerindedir. Güneydoğudaki minaresinin petek kısmının uzun süre yıkık kalması nedeniyle “güdük” adını almıştır. Doğu cephesindeki giriş kapısının üzerinde celî sülüs hatla yazılmış yedi satırlık Arapça kitâbe bulunur; buna göre cami Sultan Alâeddin Keykubad zamanında, H. 624 / M. 1227'de Abdullah zade Eminüddin Hacı Hasan tarafından Mesudzade Ahmet'e yaptırılmıştır. Kitapta minarenin petekten sonraki kısmı için H. 1307 / M. 1889-90 tarihi verilir; bir yerde bu kısmın o tarihte yıkıldığı, başka bir yerde yenilendiği yazılıdır. Cami 2006-2007'de esaslı bir onarım geçirmiştir.\n\nKare planlı yapı kubbeyle örtülüdür; tuğla, moloz taş ve devşirme malzeme kullanılmıştır. Cephelerde malzeme farklıdır: güney cephede altta moloz taş, üstte tuğla; batı cephede tuğla ve moloz taş ile iki kat pencere vardır ve izlerden burada sırlı tuğla ve çini plakalar bulunduğu anlaşılır. Doğu cephenin altında devşirme malzeme, üstünde tuğla örgülü, üçgen kemerli yüzeysel nişler görülür; giriş kapısı bu cephenin kuzeydoğu köşesine yakındır.\n\nGüneydoğu köşedeki tuğla minarenin kare kaidesinde devşirme malzeme kullanılmıştır; sekizgen pabuç üzerinde silindirik gövde yükselir. Pabuçta sırlı ve sırsız tuğlalar ile kare çini plakalardan süslemeler, kemer ayaklarının bitiminde ise sekiz kollu yıldızlar içinde kartal ve su kuşu figürlü çini plakalardan bir kuşak vardır; şerefe mukarnas dolguludur. Harime doğudaki kapıdan girilir; kubbeye sivri kemerli tromplarla geçilir ve kubbe tuğladandır. Sonradan sıvanan harimin mihrabı yarım dikdörtgen planlıdır. Kitap camiyi plan ve çini kullanımı bakımından Akşehir'deki klasik Selçuklu mescitlerinin en güzel örneklerinden sayar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-guduk-minare-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-guduk-minare-mosque/aerial-view.jpg",
+      "alt": "Kiremit çatılı evler arasında kurşun kubbeli cami ve yanında yükselen uzun tuğla minare, yukarıdan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-guduk-minare-mosque/entrance.jpg",
+      "alt": "Devşirme taşlı cephede ahşap kapı, üstünde tuğla kemerli pencere ve çini parçalı kuşak",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-guduk-minare-mosque/inscription.jpg",
+      "alt": "Tuğla duvara yerleştirilmiş, kabartma Arapça yazılı çok satırlı taş kitâbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-guduk-minare-mosque/interior.jpg",
+      "alt": "Sıvalı harimde ahşap kaplı duvar, ahşap minber ve tuğla tromp",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-guduk-minare-mosque/aerial-view.jpg",
+      "x": 62,
+      "y": 40,
+      "title": "Tuğla minare",
+      "text": "Güneydoğu köşedeki minare tuğladandır; sekizgen pabuç üzerinde silindirik gövde yükselir.",
+      "sourceId": "inv-p331"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-guduk-minare-mosque/entrance.jpg",
+      "x": 52,
+      "y": 72,
+      "title": "Doğu cephedeki giriş",
+      "text": "Giriş kapısı doğu cephenin kuzeydoğu köşesine yakın yerde açılmıştır.",
+      "sourceId": "inv-p331"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-aksehir-guduk-minare-mosque/inscription.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "İnşa kitâbesi",
+      "text": "Giriş kapısı üzerindeki yedi satırlık celî sülüs Arapça kitâbe yapıyı 1227'ye tarihler.",
+      "sourceId": "inv-p330"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami “güdük” adını neden almıştır?",
+      "options": [
+        "Kubbesi alçak olduğu için",
+        "Minaresinin petek kısmı uzun süre yıkık kaldığı için",
+        "Sokağı dar olduğu için",
+        "Bânisinin lakabı olduğu için"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Minaresinin petek kısmı uzun süre yıkık kaldığı için.",
+      "sourceId": "inv-p330"
+    },
+    {
+      "question": "Kitâbeye göre cami hangi yıl yapılmıştır?",
+      "options": [
+        "M. 1227",
+        "M. 1224",
+        "M. 1236",
+        "M. 1510"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: M. 1227.",
+      "sourceId": "inv-p330"
+    },
+    {
+      "question": "Minaredeki çini plakalarda hangi figürler vardır?",
+      "options": [
+        "Aslan ve ejder",
+        "Geyik ve tavşan",
+        "Kartal ve su kuşu",
+        "Balık ve kuş"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Kartal ve su kuşu.",
+      "sourceId": "inv-p331"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p330",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Güdük Minare Camii\"",
+      "page": "330"
+    },
+    {
+      "id": "inv-p331",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Güdük Minare Camii\"",
+      "page": "331"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

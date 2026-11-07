@@ -1,0 +1,89 @@
+{
+  "id": "konya-aksehir-kizilca-masjid",
+  "name": "Kızılca Mescit",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "XII. yüzyıl (plan, malzeme ve teknik özelliklerine göre tahmin)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Akşehir Kızılca Mahallesi'ndeki, minaresinin kaidesi ilk dönemden kalan, kubbesi balık kılçığı kuşaklı tek kubbeli mescit.",
+  "history": "Mescit, Akşehir Kızılca Mahallesi, İbre Sokak üzerindedir. Kitâbesi yoktur; plan, malzeme ve teknik özelliklerinden hareketle XII. yüzyıla tarihlendirilebilir. 2007'de Vakıflar Genel Müdürlüğü tarafından esaslı bir onarım gören mescit tuğla ve moloz taştan yapılmıştır. Kuzeydeki hazirede yer alan şahidesiz sandukanın bâniye ait olabileceği rivayet edilir.\n\nKare planlı yapı tek kubbeyle örtülü harim, giriş bölümü ve minareden oluşur. Kuzeydoğu köşedeki minarenin kaidesi ilk dönemden kalmadır, diğer kısımları onarımlarda yenilenmiştir. Harime doğu cephedeki girişten girilir. Oyma tekniğiyle yapılmış ahşap kapı kanadının yüzeyi üçe ayrılır: üstte yazı ve rûmilerden oluşan kıvrık dallar, ortada büyük madalyon içinde altıgenler ve sekiz kollu yıldızlar, altta geometrik süslemeler vardır.\n\nKare harim kubbeyle örtülüdür ve kubbeye tromplarla geçilir. Kubbe eteğindeki kuşaklar balık kılçığı motifi biçiminde düzenlenmiştir. Kıble duvarının ortasındaki mihrabın yarım dörtgen bir nişi vardır; mihrap ve minber yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-kizilca-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-kizilca-masjid/exterior.jpg",
+      "alt": "Dağ eteğinde, kurşun kaplı tek kubbeli tuğla mescit ve yanında yüksek ahşap kaplı minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-kizilca-masjid/exterior.jpg",
+      "x": 45,
+      "y": 52,
+      "title": "Tek kubbe",
+      "text": "Kare harim tek kubbeyle örtülüdür; kubbeye tromplarla geçilir.",
+      "sourceId": "inv-p353"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-kizilca-masjid/exterior.jpg",
+      "x": 22,
+      "y": 55,
+      "title": "Kuzeydoğu köşedeki minare",
+      "text": "Minarenin kaide kısmı ilk dönemden kalmadır; diğer kısımları onarımlarda yenilenmiştir.",
+      "sourceId": "inv-p353"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kubbe eteğindeki kuşaklar hangi motif biçimindedir?",
+      "options": [
+        "Zikzak",
+        "Balık kılçığı",
+        "Sekiz kollu yıldız",
+        "Rûmi"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Balık kılçığı.",
+      "sourceId": "inv-p353"
+    },
+    {
+      "question": "Mescit 2007'de kim tarafından esaslı onarım görmüştür?",
+      "options": [
+        "Akşehir Belediyesi",
+        "Mahalle halkı",
+        "Vakıflar Genel Müdürlüğü",
+        "Konya Valiliği"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Vakıflar Genel Müdürlüğü.",
+      "sourceId": "inv-p353"
+    },
+    {
+      "question": "Kuzeydeki hazirede bulunan şahidesiz sandukanın kime ait olabileceği rivayet edilir?",
+      "options": [
+        "Bâniye",
+        "Bir Ahi şeyhine",
+        "Bir Selçuklu sultanına",
+        "Mescidin imamına"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Bâniye.",
+      "sourceId": "inv-p353"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p353",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Kızılca Mescit\"",
+      "page": "353"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

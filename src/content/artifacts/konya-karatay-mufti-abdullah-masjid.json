@@ -1,0 +1,102 @@
+{
+  "id": "konya-karatay-mufti-abdullah-masjid",
+  "name": "Müftü Abdullah Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · XIX. yüzyıl sonu; Müftü Abdullah Vahdi Efendi'nin vefatından (1886) önce",
+  "endowment": "Banisi Konya Müftüsü Abdullah Vahdi Efendi",
+  "summary": "Konya Müftüsü Abdullah Vahdi Efendi'nin 1886'daki vefatından önce yaptırdığı, kareye yakın dikdörtgen planlı ve kırma çatılı mahalle mescidi.",
+  "history": "Müftü Abdullah Mescidi, Karatay, Ovalıoğlu Mahallesi, Köprübaşı Caddesi üzerindedir. Mescit üzerinde inşasına ya da banisine ilişkin bir kitabe bulunmaz. Yapı, Müftü Abdullah Vahdi Efendi tarafından vefatından (1886) önce yaptırılmıştır. Zamanla tahrip olan mescit 1923'te ve yakın zamanda onarım görmüştür.\n\nMescide adını veren Abdullah Vahdi Efendi \"Müsevvidzâde\" olarak da bilinir. \"Kör müsevvid\" namıyla tanınan Mustafa Fehmi Efendi'nin küçük oğlu olarak Konya Ereğli'de doğmuştur. İlk tahsilini babasından alan Abdullah Vahdi Efendi, Kırkağaçlı Süleyman Efendi ile Konya Müftüsü Abdülehad Efendi'den ders görmüş, son icazetini Özdemirî Hacı Mustafa Efendi'den almıştır. Babasının Cevizaltı'nda kurduğu Müsevvit Medresesi'nde uzun yıllar müderrislik yaparak çok sayıda talebe yetiştirmiştir. 1874'te vefat eden Müftü Kafalızade Mehmet Said Efendi'nin yerine 1875'te Konya Müftülüğü'ne getirilmiş ve vefatına kadar bu görevi sürdürmüştür. Âlim, fazıl ve züht ü takva sahibi bir zat olan Abdullah Vahdi Efendi 1886'da vefat etmiş, Mevlâna Dergâhı haziresinde babasının yanına defnedilmiştir.\n\nMescit kareye yakın dikdörtgen planlı ve kırma çatılıdır. Dıştan sade bir düzenlemeye sahip yapının kuzey ve güney cephelerinde basık kemerli pencere açıklıkları bulunur; doğu ve batı cepheleri sağır bırakılmıştır. Mescide sonradan eklenen son cemaat yeri depo ve avlu bölümünden oluşur. Harim dıştan kırma çatılı, içten düz betonarmedir. Beden duvarları moloz taş, pencere kenarları düzgün kesme taştır.\n\nHarime kuzeydeki son cemaat yerinden girilir. Harimin kuzeyinde dört ahşap direğin taşıdığı mahfil, kıble duvarının ortasında mihrap, batıda ise minber yer alır. Mihrap yarım daire planlı ve yarım mukarnas kavsaralıdır. Mescit, Konya genelinde XIX. yüzyıl sonlarından itibaren görülen mahalle mescidi örneklerindendir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-mufti-abdullah-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-mufti-abdullah-masjid/exterior.jpg",
+      "alt": "Kiremit kaplı kırma çatılı, sıvalı tek katlı yapı; cephede taş söveli, kemerli iki pencere ve yeşil demir parmaklıklar; önde ağaçlar",
+      "description": "Mescidin pencereli cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-mufti-abdullah-masjid/green-facade.jpg",
+      "alt": "Ağaçların arasında yeşile boyanmış duvar ve ahşap kapı, önünde taş döşeli yol",
+      "description": "Ağaçlar arasında yeşil boyalı cephe ve kapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-karatay-mufti-abdullah-masjid/exterior.jpg",
+      "x": 60,
+      "y": 32,
+      "title": "Kırma çatı",
+      "text": "Kareye yakın dikdörtgen planlı mescidin üzeri kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p211"
+    },
+    {
+      "id": "window-frame",
+      "image": "/images/konya-karatay-mufti-abdullah-masjid/exterior.jpg",
+      "x": 44,
+      "y": 62,
+      "title": "Kesme taş pencere kenarları",
+      "text": "Beden duvarları moloz taştan, pencere kenarları ise düzgün kesme taştan yapılmıştır.",
+      "sourceId": "inv-p211"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidi yaptıran Abdullah Vahdi Efendi hangi görevi üstlenmiştir?",
+      "options": [
+        "Konya Valisi",
+        "Konya Müftüsü",
+        "Mevlâna Dergâhı postnişini",
+        "Kadı"
+      ],
+      "correct": 1,
+      "description": "Abdullah Vahdi Efendi 1875'te Konya Müftülüğü'ne getirilmiş ve vefatına kadar bu görevi sürdürmüştür.",
+      "sourceId": "inv-p210"
+    },
+    {
+      "question": "Harimin kuzeyindeki mahfil kaç ahşap direk üzerinde durur?",
+      "options": [
+        "İki",
+        "Altı",
+        "Sekiz",
+        "Dört"
+      ],
+      "correct": 3,
+      "description": "Harimin kuzey yönünde dört ahşap direğin taşıdığı bir mahfil yer alır.",
+      "sourceId": "inv-p211"
+    },
+    {
+      "question": "Zamanla tahrip olan mescit hangi yılda onarım görmüştür?",
+      "options": [
+        "1923",
+        "1886",
+        "1875",
+        "1954"
+      ],
+      "correct": 0,
+      "description": "Yapı 1923'te ve yakın zamanda onarılmıştır.",
+      "sourceId": "inv-p210"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p210",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Müftü Abdullah Mescidi\"",
+      "page": "210"
+    },
+    {
+      "id": "inv-p211",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Müftü Abdullah Mescidi\"",
+      "page": "211"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

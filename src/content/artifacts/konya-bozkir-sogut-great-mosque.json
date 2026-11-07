@@ -1,0 +1,102 @@
+{
+  "id": "konya-bozkir-sogut-great-mosque",
+  "name": "Söğüt Büyük Cami",
+  "city": "Konya",
+  "district": "Bozkır",
+  "period": "XX. yüzyıl olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Bozkır Söğüt Mahallesi'ndeki caminin kesin inşa tarihi bilinmez.",
+  "history": "Bozkır Söğüt Mahallesi'ndeki caminin kesin inşa tarihi bilinmez. Mimari özellikleri ve stil değerlendirmesine göre XX. yüzyılda yapıldığı düşünülür. Yığma yapıda moloz, kesme ve kaba yonu taş, ahşap ve kiremit kullanılmıştır. Kuzey-güney yönünde kareye yakın dikdörtgen planlıdır. Önünde ahşap direkli son cemaat yeri, güneydoğuda yapıdan ayrı ve sonradan yapılmış minare, giriş önünde müştemilat bulunur. Cephelerde ahşap hatıllar ve yuvarlak kemerli pencereler vardır.\n\nHarim iki sıra silindirik ahşap sütunla üç sahına ayrılır; orta sahın daha geniştir. Ahşap yastıklarla bağlanan direkler ve konsollar ahşap tavanı destekler. Kuzeyde kadınlar mahfili ve imam odası, kıble duvarında mihrap, sağında minber ve güneydoğuda vaaz kürsüsü vardır. Mihrap bordürleri geometrik düzenlemeler ve S kıvrımlarıyla, alınlığı ajurla süslüdür. Minberde bitkisel ve geometrik motifler, baklava biçimli çıtalar görülür. Orta sahın tavan göbeği kare biçimli dendanlarla çevrilidir; kadınlar mahfilinin altı da dendanlıdır. Kitap yapıyı geç dönem ahşap direkli camiler arasında sayar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-bozkir-sogut-great-mosque/prayer-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-bozkir-sogut-great-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde ahşap sütunlar ve geride ahşap mahfil",
+      "description": "Turkuaz halılı harimde ahşap sütunlar ve geride ahşap mahfil",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-bozkir-sogut-great-mosque/exterior.jpg",
+      "alt": "Ahşap hatıllı taş duvarlar, kemerli pencereler ve kiremit çatı",
+      "description": "Ahşap hatıllı taş duvarlar, kemerli pencereler ve kiremit çatı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-bozkir-sogut-great-mosque/prayer-hall.jpg",
+      "x": 70,
+      "y": 55,
+      "title": "Ahşap direkler",
+      "text": "İki sıra ahşap sütun harimi üç sahına ayırır.",
+      "sourceId": "inv-p393"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-bozkir-sogut-great-mosque/prayer-hall.jpg",
+      "x": 47,
+      "y": 34,
+      "title": "Kadınlar mahfili",
+      "text": "Harimin kuzeyinde kadınlar mahfili bulunur.",
+      "sourceId": "inv-p394"
+    }
+  ],
+  "test": [
+    {
+      "question": "Söğüt Büyük Cami hangi ilçededir?",
+      "options": [
+        "Bozkır",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Söğüt Büyük Cami, Konya'nın Bozkır ilçesindedir.",
+      "sourceId": "inv-p393"
+    },
+    {
+      "question": "Harimin kuzeyinde hangi bölüm bulunur?",
+      "options": [
+        "Hamam",
+        "Kadınlar mahfili",
+        "Bedesten",
+        "Mutfak"
+      ],
+      "correct": 1,
+      "description": "Kadınlar mahfili.",
+      "sourceId": "inv-p394"
+    },
+    {
+      "question": "Orta sahın diğer sahınlara göre nasıldır?",
+      "options": [
+        "Daha dardır",
+        "Tamamen açıktır",
+        "Taş kubbelidir",
+        "Daha geniştir"
+      ],
+      "correct": 3,
+      "description": "Daha geniştir.",
+      "sourceId": "inv-p393"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p393",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Bozkır, \"Söğüt Büyük Cami\"",
+      "page": "393"
+    },
+    {
+      "id": "inv-p394",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Bozkır, \"Söğüt Büyük Cami\"",
+      "page": "394"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

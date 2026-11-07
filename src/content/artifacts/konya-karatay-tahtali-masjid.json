@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-tahtali-masjid",
+  "name": "Tahtalı Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Kitapta kapı lentosundaki tarih: R. 1243 / M. 1927",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Tahtalı Mescidi, kesme taş duvarları, geniş saçakları ve ahşap tavanıyla Aziziye’de yer alan küçük bir mahalle mescididir.",
+  "history": "Mescit, Sırçalı Mescit’in güneyinde, Karatay’ın Hocahabib (Aziziye) Mahallesi, Kadılar Sokak’ındadır. Giriş kapısı lentosundaki tarih kitapta R. 1243 / M. 1927 olarak aktarılır. Banisi bilinmez. Vakıflar Bölge Müdürlüğü tarafından yakın zamanda onarılmıştır.\n\nKesme taşla yığma yapılan mescit kareye yakın dikdörtgen planlı ve dıştan kırma çatılıdır. Saçakların iç yüzlerinde geometrik süslemeler bulunur. Güney ve batıda ikişer pencere vardır; kuzey ve doğu komşu konutlara bitişik olduğundan sağırdır. Batı cephesinin kuzeyindeki sivri kemerli kapıdan girilen harim kare planlı, içten ahşap tavanlı ve dıştan geniş saçaklıdır. Kıble duvarındaki mihrap yarım daire planlı, yarım kubbe kavsaralıdır. Sağdaki sade ahşap minber geometrik bezemelidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-tahtali-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-tahtali-masjid/exterior.jpg",
+      "alt": "Turkuaz geniş saçak altında taş duvarlı köşe cephe, kemerli kapı ve pencereler",
+      "description": "Turkuaz geniş saçak altında taş duvarlı köşe cephe, kemerli kapı ve pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-tahtali-masjid/mihrab.jpg",
+      "alt": "Kırmızı desenli halı önünde yeşil sütunceli açık renk mihrap, sağda pencere ve minber kenarı",
+      "description": "Kırmızı desenli halı önünde yeşil sütunceli açık renk mihrap, sağda pencere ve minber kenarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-tahtali-masjid/exterior.jpg",
+      "x": 46,
+      "y": 25,
+      "title": "Bezemeli saçak",
+      "text": "Geniş saçakların iç yüzlerinde geometrik süslemeler görülür.",
+      "sourceId": "inv-p202"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-tahtali-masjid/mihrab.jpg",
+      "x": 22,
+      "y": 51,
+      "title": "Mihrap",
+      "text": "Kıble duvarındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+      "sourceId": "inv-p202"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi malzemeyle yığma olarak yapılmıştır?",
+      "options": [
+        "Çelik",
+        "Kesme taş",
+        "Cam",
+        "Betonarme panel"
+      ],
+      "correct": 1,
+      "description": "Kitap kesme taş malzemeyle yığma tekniğini belirtir.",
+      "sourceId": "inv-p202"
+    },
+    {
+      "question": "Saçakların içindeki süsleme türü nedir?",
+      "options": [
+        "Figürlü fresk",
+        "Manzara resmi",
+        "Hayvan kabartması",
+        "Geometrik"
+      ],
+      "correct": 3,
+      "description": "Saçak içlerinde geometrik süslemeler vardır.",
+      "sourceId": "inv-p202"
+    },
+    {
+      "question": "Minber hangi malzemedendir?",
+      "options": [
+        "Mermer",
+        "Çelik",
+        "Ahşap",
+        "Cam"
+      ],
+      "correct": 2,
+      "description": "Sağdaki sade minber ahşap malzemeden yapılmıştır.",
+      "sourceId": "inv-p202"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p202",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Tahtalı Mescidi\"",
+      "page": "202"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

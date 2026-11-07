@@ -1,0 +1,97 @@
+{
+  "id": "konya-doganhisar-pazar-bazaar-mosque",
+  "name": "Pazar (Çarşı) Camii",
+  "city": "Konya",
+  "district": "Doğanhisar",
+  "period": "Kanuni Sultan Süleyman dönemi; H. 928 / M. 1521",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Doğanhisar ilçe merkezindeki cami, Kanuni Sultan Süleyman döneminde H. 928 / M. 1521'de Abdullah bin Abdurrahman usta tarafından yapılmıştır; banisi bilinmez.",
+  "history": "Doğanhisar ilçe merkezindeki cami, Kanuni Sultan Süleyman döneminde H. 928 / M. 1521'de Abdullah bin Abdurrahman usta tarafından yapılmıştır; banisi bilinmez. Kitabın inceleme döneminde Vakıflar Genel Müdürlüğünce restore edilmektedir ve harim duvarlarında raspa yapılmaktadır.\n\nDerinlemesine dikdörtgen planlı, ahşap direkli ve tavanlı yapı kırma çatılıdır. Kuzey, güney ve batı cepheler taş, üstleri tuğla; giriş cephesi taş-tuğla almaşık tekniktedir. Kuzey, doğu ve batıdaki ikişer pencere sivri kemerlerle vurgulanır. Kuzeybatıdaki bağımsız minare kare prizmal kaideli, silindirik gövdeli ve tek şerefelidir; kaide ve korkuluk taş, alem kurşun, diğer bölümler tuğladır. Doğudaki dikdörtgen kapıdan girilir. Tavan çıtalarla sekizgene ayrılmış, ortaya on sekiz kollu göbek konmuştur. Kıble duvarındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-doganhisar-pazar-bazaar-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-doganhisar-pazar-bazaar-mosque/aerial-view.jpg",
+      "alt": "Kiremit çatılı, ahşap ve taş görünümlü cepheli caminin havadan görünümü",
+      "description": "Kiremit çatılı, ahşap ve taş görünümlü cepheli caminin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-doganhisar-pazar-bazaar-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde açık renk mihrap, ahşap minber ve bezemeli tavan",
+      "description": "Turkuaz halılı harimde açık renk mihrap, ahşap minber ve bezemeli tavan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-doganhisar-pazar-bazaar-mosque/aerial-view.jpg",
+      "x": 48,
+      "y": 37,
+      "title": "Kırma çatı",
+      "text": "Ahşap direkli ve tavanlı cami dıştan kırma çatı ile örtülüdür.",
+      "sourceId": "inv-p413"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-doganhisar-pazar-bazaar-mosque/prayer-hall.jpg",
+      "x": 45,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Kıble duvarı ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p413"
+    }
+  ],
+  "test": [
+    {
+      "question": "Pazar (Çarşı) Camii hangi ilçededir?",
+      "options": [
+        "Doğanhisar",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Pazar (Çarşı) Camii, Konya'nın Doğanhisar ilçesindedir.",
+      "sourceId": "inv-p413"
+    },
+    {
+      "question": "Tavanın ortasındaki göbek kaç kolludur?",
+      "options": [
+        "Altı",
+        "On sekiz",
+        "Sekiz",
+        "On iki"
+      ],
+      "correct": 1,
+      "description": "On sekiz.",
+      "sourceId": "inv-p413"
+    },
+    {
+      "question": "Yapının ustası kimdir?",
+      "options": [
+        "Müslüm Gökçe",
+        "Hidayet Nakkaş",
+        "Hasan Usta",
+        "Abdullah bin Abdurrahman"
+      ],
+      "correct": 3,
+      "description": "Abdullah bin Abdurrahman.",
+      "sourceId": "inv-p413"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p413",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Doğanhisar, \"Pazar (Çarşı) Camii\"",
+      "page": "413"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

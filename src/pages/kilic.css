@@ -106,7 +106,7 @@ body:has(.kilic-atolyesi) .alt-cubuk { display:none }
   .kilic-asamalar { padding:0 12px; grid-template-columns:repeat(4,1fr); gap:0 5px }
   .kilic-asamalar li { min-height:35px; font-size:9px; gap:5px }
   .kilic-asamalar li>span:first-child { font-size:8px }
-  .kilic-deneyim { height:auto; max-height:none; min-height:0; padding-top:430px; overflow:visible }
+  .kilic-deneyim { height:auto; max-height:none; min-height:0; padding-top:430px; overflow:visible; overflow-x:clip }
   .kilic-sahne { height:430px }
   .kilic-sahne-basligi { top:20px; left:19px }
   .kilic-sahne-basligi h1 { font-size:35px; margin:10px 0 14px; letter-spacing:-1.2px }

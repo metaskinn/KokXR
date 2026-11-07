@@ -35,7 +35,7 @@ Kaynaklar: `docs/sartname.md` (5. bölüm), `docs/kokkod_kazanma_plani.md`, bu g
 Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olmadı.
 
 ### A. Zemin (önce)
-- [ ] **G1. demo/hata-avi:** `tests/hata-avi.mjs` (yazıldı, çalıştırılmadı) ile tüm rotalar 1280/360 pikselde taranır; yalnız demoyu bozan hata düzeltilir. Bilinen: 360 pikselde `/atolye/kilic` yatay taşma.
+- [x] **G1. demo/hata-avi:** `tests/hata-avi.mjs` (yazıldı, çalıştırılmadı) ile tüm rotalar 1280/360 pikselde taranır; yalnız demoyu bozan hata düzeltilir. Bilinen: 360 pikselde `/atolye/kilic` yatay taşma.
 - [ ] **G2. arayuz/menu:** Menü yeniden düzeni (VR'a dokunmadan): öne **Keşfet, Harita, Yolculuk**; **Deneyimler** grubu altına VR Eserler, Vazo/Kılıç/Çini atölyeleri, Öğretmen; **Yönetim** ve vizyon sayfaları en arkaya. Mokap/vizyon etiketleri tutarlı ve dürüst olacak. Ana sayfa "VR'a gir"i ikincil çağrı yapar.
 - [ ] **G3. yonetim/bulut-saglamlastir:** Supabase kurulumu sonrası gerçek denemeler (giriş, eser kaydı, görsel yükleme, onay). Yönetim ekranı bulut açıkken giriş ister; `docs/supabase-kurulum.md` (5 dakikalık adımlar). Kurulum sabaha kalırsa yalnız belge ve yerel yedek yolu.
 
@@ -63,7 +63,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [ ] **G18. docs/sabah-brifingi.md:** 1 sayfa: ne bitti/bitmedi, 09.00 öncesi 5 adım (Supabase kurulumu, push kararı, Vercel'in `master`'a bağlanması, PWA/APK telefonda deneme, Quest şarjı) ve `gorev_dagilimi.md`'deki 4 kişinin ilk 2 saatlik işi. Sonra dur.
 
 ## Sabah sorulacaklar
-(boş)
+- `tests/kilic.mjs` 1280'de zaman aşımı (G1 notu): gerçek hata mı yavaşlık mı, G17'de master'da bakılacak.
 
 ## Günlük
-(boş)
+- G1: Hata avı (tests/hata-avi.mjs, 24 rota + /olmayan-sayfa, 1280 ve 360) tek bulgu verdi: 360 px `/atolye/kilic` yatay taşma (`.kilic-sahne-isaret` 406 px). `src/pages/kilic.css` mobil bloğunda `overflow-x:clip` ile giderildi; hata avı artık temiz, `ui` geçti. Not: `tests/kilic.mjs` 1280'de 'Parçayı yerleştir' tıklamasında zaman aşımı veriyor; düzeltme yalnız mobil medya bloğunda olduğundan ilgisiz, önceden var olan/yazılımsal çizim yavaşlığı olarak izleniyor (G17'de master üzerinde tekrar denenecek). Konsol 404'ü yalnız `.env` doluyken Supabase tablosu olmadığından; testler boş değişkenle derleniyor.

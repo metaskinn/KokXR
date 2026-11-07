@@ -14,16 +14,17 @@ import EserFormu from './pages/EserFormu'
 import AnaSayfa from './pages/AnaSayfa'
 import EserSayfasi from './pages/EserSayfasi'
 import Bulunamadi from './pages/Bulunamadi'
-import VazoAtolyesi from './pages/VazoAtolyesi'
-import CiniAtolyesi from './pages/CiniAtolyesi'
-import KilicAtolyesi from './pages/KilicAtolyesi'
 import Yolculuk from './pages/Yolculuk'
-import OgretmenPaneli from './pages/OgretmenPaneli'
-import Vizyon from './pages/Vizyon'
-import Kutuphane from './pages/Kutuphane'
 import OnayAkisi from './pages/OnayAkisi'
 const Harita = lazy(() => import('./pages/Harita'))
-import VrEserler, { VrEser } from './pages/VrEserler'
+const VazoAtolyesi = lazy(() => import('./pages/VazoAtolyesi'))
+const CiniAtolyesi = lazy(() => import('./pages/CiniAtolyesi'))
+const KilicAtolyesi = lazy(() => import('./pages/KilicAtolyesi'))
+const OgretmenPaneli = lazy(() => import('./pages/OgretmenPaneli'))
+const Vizyon = lazy(() => import('./pages/Vizyon'))
+const Kutuphane = lazy(() => import('./pages/Kutuphane'))
+const VrEserler = lazy(() => import('./pages/VrEserler'))
+const VrEser = lazy(() => import('./pages/VrEserler').then((m) => ({ default: m.VrEser })))
 import Simge from './components/Simge'
 import YonetimKapisi from './components/YonetimKapisi'
 import ErisilebilirlikAraci from './components/ErisilebilirlikAraci'
@@ -99,6 +100,7 @@ export default function App() {
     <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/" end>Keşfet</NavLink><NavLink to="/harita">Harita</NavLink><NavLink to="/yolculuk">Yolculuk</NavLink><span className="nav-grup" role="group" aria-label="Deneyimler"><span className="nav-grup-ad" aria-hidden="true">Deneyimler</span><NavLink to="/vr">VR Eserler</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink to="/atolye/kilic">Kılıç atölyesi</NavLink><NavLink to="/atolye/cini">Çini atölyesi</NavLink><NavLink to="/ogretmen">Öğretmen</NavLink></span><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav><ErisilebilirlikAraci /></div></header>
     <main id="ana-icerik" tabIndex={-1}>
       {icerik.uyari && <p className="yonetim-notu" role="alert">{icerik.uyari}</p>}
+      <Suspense fallback={<p className="sayfa" role="status">Yükleniyor…</p>}>
       <Routes>
         <Route path="/" element={<AnaSayfa eserler={eserler} rozetler={rozetler} />} />
         <Route path="/harita" element={<Suspense fallback={<p className="sayfa" role="status">Harita yükleniyor…</p>}><Harita eserler={eserler} /></Suspense>} />
@@ -118,6 +120,7 @@ export default function App() {
         <Route path="/yonetim/eser/:id" element={<YonetimKapisi {...yonetimProps}><YonetimFormRotasi {...yonetimProps} /></YonetimKapisi>} />
         <Route path="*" element={<Bulunamadi />} />
       </Routes>
+      </Suspense>
     </main>
     <footer className="alt-cubuk"><div><Link className="marka" to="/">Kök<span className="marka-xr">XR</span></Link><p>Geçmişle bugün arasında bir bağ.</p></div><p>Bursa’nın vakıf eserleri için dijital keşif prototipi.</p><nav className="alt-gezinme" aria-label="Diğer sayfalar"><Link to="/kutuphane">Kütüphane</Link><Link to="/vizyon">Vizyon</Link><Link to="/onay">Onay akışı</Link></nav></footer>
   </>

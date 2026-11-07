@@ -58,7 +58,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [x] **G14. docs/juri-soru-cevap.md:** 30 soru; her cevapta dosya yolu. VGM/Vakıf Katılım jürisi için "kılıç neden var", "veri nereden", "doğrulama" öne.
 
 ### E. Performans ve kapanış
-- [ ] **G16. perf:** Büyük parçalar listelenir; 3B/VR sayfaları tembel yüklenir (davranış değişmez, testler geçer); ilk açılış süresi önce/sonra günlüğe.
+- [x] **G16. perf:** Büyük parçalar listelenir; 3B/VR sayfaları tembel yüklenir (davranış değişmez, testler geçer); ilk açılış süresi önce/sonra günlüğe.
 - [ ] **G17. birleştirme:** Dallar `master`'a yerel birleşir; tam test (e2e 3 yapılandırma + tarayıcı testleri).
 - [ ] **G18. docs/sabah-brifingi.md:** 1 sayfa: ne bitti/bitmedi, 09.00 öncesi 5 adım (Supabase kurulumu, push kararı, Vercel'in `master`'a bağlanması, PWA/APK telefonda deneme, Quest şarjı) ve `gorev_dagilimi.md`'deki 4 kişinin ilk 2 saatlik işi. Sonra dur.
 
@@ -87,3 +87,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G15 (arayuz/harita): Leaflet (onaylı bağımlılık) ile /harita (tembel yüklenir): şehir işaretleri, 3 hazır rota (src/data/rotalar.ts; sıra gezi önerisi), tüm eser listesi, çevrimdışı yedek liste. Menüye Harita eklendi. tests/harita.mjs ve hata-avi'ye /harita eklendi.
 - G10 (arayuz/erisilebilirlik-rapor): bağımlılıksız denetim 10 rota × 3 mod; gerçek hata bulundu ve düzeltildi: ana sayfada kılıç tanıtım kartı açık zeminde açık yazı (1,07:1) — CSS sırası; kilic.css seçicileri güçlendirildi. Rapor: docs/erisilebilirlik-raporu.md.
 - G11 (docs/lisanslar): scripts/lisans-cikar.mjs docs/lisanslar.md üretir (18 doğrudan, 12 dolaylı üretim bağımlılığı; MIT/BSD-2/Apache/0BSD). Modeller, sesler, yazı tipi, fotoğraflar için kaynak ve 'doğrulanmadı' işaretleri; README'ye bağlantı.
+- G12 (docs/dogrulama): 10 eski eserin yıl/sayıları kitap IDML metniyle karşılaştırıldı (`scripts/dogrulama-karsilastir.mjs`); 118 sayıdan 117'si bulundu, 1'i (2025) kaynaklarda gösterilen makaleden. Yalnız sayı denetimi; isim ve yorumlar tam okunmadı. Rapor: `docs/dogrulama-raporu.md`.
+- G13 (docs/sunum): `docs/sunum-taslagi.md` şartname 5.4 sırasında 10 slayt; çalışan/vizyon tablosu; Şanlıurfa çıkarıldı; kılıç ek deneyim.
+- G14: `docs/juri-soru-cevap.md` 30 soru, her cevapta dosya yolu.
+- G16 (perf/yukleme): atölye, VR, Öğretmen, Vizyon, Kütüphane sayfaları tembel yüklenir (App.tsx tek Suspense). Ana paket 563,6 → 517,9 kB (gzip 167,1 → 152,6 kB); three ve maket zaten ayrıydı. Davranış değişmedi; `tests/vazo-xr-dugme.mjs` düğmenin etkinleşmesini bekleyecek şekilde düzeltildi (yarış koşulu). FPS ölçülmedi (yalnız gerçek cihazda).

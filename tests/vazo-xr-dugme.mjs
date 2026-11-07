@@ -50,6 +50,7 @@ async function atolyeCalisiyor(sayfa, baslat) {
       configurable: true,
     })
   })
+  await sayfa.waitForFunction(() => window.__xrSoruldu > 0, null, { timeout: 120000 }).catch(() => {})
   sart(await sayfa.evaluate(() => window.__xrSoruldu > 0), 'isSessionSupported sorulmadı')
   sart(!(await vrDugme.count()), "destek yokken VR'da aç görünüyor")
   await atolyeCalisiyor(sayfa, baslat)
@@ -73,6 +74,7 @@ async function atolyeCalisiyor(sayfa, baslat) {
     })
   })
   await vrDugme.waitFor({ timeout: SURE })
+  await sayfa.waitForFunction(() => ![...document.querySelectorAll('button')].find((b) => b.textContent === "VR'da aç")?.disabled, null, { timeout: SURE })
   sart(await vrDugme.isEnabled(), "VR'da aç etkin değil")
   await vrDugme.click()
   const mesaj = sayfa.getByRole('alert')

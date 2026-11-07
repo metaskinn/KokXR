@@ -22,7 +22,7 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 - [x] 9. Testler: yönetim ekle/düzenle ve onay akışı için otomatik test.
 - [x] 10. README.md: kurulum, çalıştırma, testler, mimari ve veri modeli şeması (mermaid), yeni eser/şehir ekleme, kütüphaneler ve lisanslar, fotoğraf kredisi.
 - [x] 11. docs/demo-senaryosu.md: dakika dakika canlı demo (keşfet → eser detay → sesli dinle → VR'da eline al → görev/rozet → yönetimden eser ekle → onay → yeni şehir), her adımın URL'si.
-- [!] 12. 5–9 arası dalları master'a birleştir (yerel). Tam test (e2e 3 yapılandırma + tarayıcı testleri), sonuçları günlüğe yaz.
+- [x] 12. 5–9 arası dalları master'a birleştir (yerel). Tam test (e2e 3 yapılandırma + tarayıcı testleri), sonuçları günlüğe yaz.
 - [x] 13. "Sabah özeti" yaz (ne bitti, ne bitmedi, sabah ilk 3 adım) ve dur.
 
 ## Sabah sorulacaklar
@@ -52,3 +52,10 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 **Bitti (ayrı dallar, push yok):** master = PWA + docs/kaynaklar (3. madde); arayuz/kesif; arayuz/erisilebilirlik; yonetim/supabase; yonetim/onay (+ yonetim testi); docs/readme.
 **Bitmedi:** 5-9 dallarının master'a birleştirilmesi ve tam test (12); axe/Lighthouse raporu; Supabase tabloları kurulu olmadığı için bulut yolu gerçek sunucuda denenmedi.
 **Sabah ilk 3 adım:** (1) `supabase/sema.sql`'i SQL Editor'de çalıştır, kullanıcı aç, yönetici ata. (2) Dalları sırayla master'a birleştirmeye izin ver. (3) `npm run test:hizli`, `npm run test:e2e`, `npm run test:tarayici` çalıştır ve Vercel hesabı sorusunu hatırla.
+
+## Birleştirme ve tam test (master)
+- 5–9 dalları master'a yerel birleşti (kesif, erisilebilirlik, readme, onay+supabase); tek çakışma GECE_PLANI.md'ydi. Push yok.
+- e2e: Chromium 1280 15/15, Chromium 360 15/15, Firefox 1280 15/15. test:hizli ve build geçti.
+- Tarayıcı testleri: pwa, galeri, ui, yolculuk, yonetim, maket-xr-dugme, vazo-xr-dugme, maket-ic geçti.
+- Düzeltmeler: yolculuk testi artık /onay'da demo etiketi beklemiyor; `test:tarayici` derlemeyi Supabase değişkenleri boş yapar (tablolar kurulu değilken oluşan 404 konsol hatasını önler, test çevrimdışı ve belirgin kalır). Not: `test:e2e` ayrı preview ister ve `.env` doluyken derlenmiş sürümde 404 görebilir; sema.sql çalışınca kalkar.
+- Madde 12'deki "Sabah özeti" artık eskidir: birleştirme ve test tamamlandı; kalanlar yukarıdaki "Sabah sorulacaklar" listesidir.

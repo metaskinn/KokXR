@@ -1,84 +1,84 @@
-# Görev 5 — Kılıç atölyesi (`/atolye/kilic`)
+# Task 5 — Sword workshop (`/atolye/kilic`)
 
-**Atanan:** Codex CLI
-**Önce oku:** `AGENTS.md`, `docs/kilic-atolyesi.md`, `docs/ui-tasarim.md`, `src/data/kilic.ts`, `src/pages/VazoAtolyesi.tsx`, `src/components/maket/vazoSahnesi.ts`
+**Assigned to:** Codex CLI
+**Read first:** `AGENTS.md`, `docs/kilic-atolyesi.md`, `docs/ui-tasarim.md`, `src/data/kilic.ts`, `src/pages/VazoAtolyesi.tsx`, `src/components/maket/vazoSahnesi.ts`
 
-Kullanıcı isteği: "Vazo benzeri, gerçekçi; demiri alıp en baştan Fatih Sultan Mehmed'in kılıcını yapalım, sonra test edelim. En iyi tasarım, kaliteli, yeni nesil." Sıradan bir sayfa değil, **sinematik, tam ekran hissi veren** bir deneyim.
+User request: "Vazo benzeri, gerçekçi; demiri alıp en baştan Fatih Sultan Mehmed'in kılıcını yapalım, sonra test edelim. En iyi tasarım, kaliteli, yeni nesil." (Similar to the vase, realistic; let's take the iron and make the sword of Fatih Sultan Mehmed from the very beginning, then test it. Best design, quality, new generation.) Not an ordinary page, but a **cinematic, full-screen-feeling** experience.
 
-## Dokunma
+## Do not touch
 
-`scripts/`, `assets/`, `public/`, `src/data/`, `proje bilgileri/`, `_eski/`. **Tarihsel metin yazma**: tüm tarihsel/kaynaklı metin `src/data/kilic.ts`'ten gelir. Gerekirse yalnızca arayüz/oyun metni ekle (tarih iddiası içermeyen). "360°", "VR", "birebir", "gerçek kılıç" gibi yanıltıcı ifade kullanma. `kilicTanitim.durustluk` metni sayfada her zaman görünür olmalı.
+`scripts/`, `assets/`, `public/`, `src/data/`, `proje bilgileri/`, `_eski/`. **Do not write historical text**: all historical/sourced text comes from `src/data/kilic.ts`. If needed, add only interface/game text (that contains no historical claim). Do not use misleading expressions such as "360°", "VR", "birebir", "gerçek kılıç". The `kilicTanitim.durustluk` text must always be visible on the page.
 
-## Dosyalar
+## Files
 
 - `src/pages/KilicAtolyesi.tsx`, `src/pages/kilic.css`
-- `src/components/kilic/sahne.ts` (dinamik import; renderer, ışık, kamera, olaylar)
-- `src/components/kilic/dovme.ts` (namlu deformasyonu), `durum.ts` (saf oyun mantığı, DOM/three yok), `parcacik.ts`, `ses.ts`, `test.ts`
-- `App.tsx`: rota ve üst menüde "Kılıç atölyesi"; `AnaSayfa.tsx`: vazo tanıtımının altına aynı dilde tanıtım bölümü (`kilicTanitim`).
-- `tests/kilic.mjs` (Chromium, 1280 ve 360 px; `TEST_URL`, varsayılan `http://127.0.0.1:4173`; `channel` belirtme).
-- Three.js yalnızca sayfa açılınca yüklensin. Yeni bağımlılık ekleme.
+- `src/components/kilic/sahne.ts` (dynamic import; renderer, light, camera, events)
+- `src/components/kilic/dovme.ts` (blade deformation), `durum.ts` (pure game logic, no DOM/three), `parcacik.ts`, `ses.ts`, `test.ts`
+- `App.tsx`: route and "Kılıç atölyesi" in the top menu; `AnaSayfa.tsx`: an introduction section in the same style under the vase introduction (`kilicTanitim`).
+- `tests/kilic.mjs` (Chromium, 1280 and 360 px; `TEST_URL`, default `http://127.0.0.1:4173`; do not specify `channel`).
+- Three.js should load only when the page is opened. Do not add a new dependency.
 
-## Modeller (hazır)
+## Models (ready)
 
-`public/modeller/kilic.glb`: `Namlu`, `Namlu_Kakma`, `Balcak`, `Sap`, `Kabza_Sol`, `Kabza_Sag`, `Percin_1..4`. Birim metre. Başlangıç balçak merkezi; namlu +X, **sırt +Y (ağız −Y)**, kalınlık Z.
+`public/modeller/kilic.glb`: `Namlu`, `Namlu_Kakma`, `Balcak`, `Sap`, `Kabza_Sol`, `Kabza_Sag`, `Percin_1..4`. Unit metre. Origin guard (balçak) centre; blade +X, **back +Y (edge −Y)**, thickness Z.
 
-`public/modeller/kilic-atolye.glb`: düğüm adlarını (Blender → glTF: x→x, z→y, y→−z) kullan. Ana konumlar (glTF):
-- Ocak ağzı / kor `Kor`: (−2.25, 0.95, −2.02); `Koruk_Deri` körük (−3.7, ~0.78, −1.75) (basınca ölçekle)
-- Örs `Ors` üst yüzü: (0, 0.876, −0.1); `Cekic_Bas`, `Masa_1`
-- Su `Su` (1.95, 0.40, 0.15); `Bileme_Tasi` (3.05, 0.82, −1.2), z ekseni çevresinde döndür; `Tezgah_Ust` (2.9, 0.86, −2.5); `Kilic_Yumurtasi` (2.8, 0.93, −2.5)
-- Test alanı x=14 civarı: `Avlu_Zemin`, `Avlu_Duvar`, `Hasir_Rulo`/`Hasir_Direk`/`Hasir_Kaide` (12, 0, 0), `Test_Kutuk` (14, 0.74, −0.1), `Test_Kumas` (16.15, 1.95, −0.1)
+`public/modeller/kilic-atolye.glb`: use the node names (Blender → glTF: x→x, z→y, y→−z). Main positions (glTF):
+- Furnace mouth / ember `Kor`: (−2.25, 0.95, −2.02); `Koruk_Deri` bellows (−3.7, ~0.78, −1.75) (scale when pressed)
+- Anvil `Ors` top face: (0, 0.876, −0.1); `Cekic_Bas`, `Masa_1`
+- Water `Su` (1.95, 0.40, 0.15); `Bileme_Tasi` (3.05, 0.82, −1.2), rotate around the z axis; `Tezgah_Ust` (2.9, 0.86, −2.5); `Kilic_Yumurtasi` (2.8, 0.93, −2.5)
+- Test area around x=14: `Avlu_Zemin`, `Avlu_Duvar`, `Hasir_Rulo`/`Hasir_Direk`/`Hasir_Kaide` (12, 0, 0), `Test_Kutuk` (14, 0.74, −0.1), `Test_Kumas` (16.15, 1.95, −0.1)
 
-Doku yok sayılan yer olmasın. `Kor` emissive şiddetini körükle değiştir.
+There should be no ignored texture place. Change the `Kor` emissive intensity with the bellows.
 
-## Dövme deformasyonu (`dovme.ts`) — projenin kalbi
+## Forging deformation (`dovme.ts`) — the heart of the project
 
-`Namlu` geometrisinde `uv1` (TEXCOORD_1): `u = uv1.x` (kabzadan uca 0–1), `a = 1 - uv1.y` (halka çevresi). Bitmiş biçim POSITION'dadır. Blender merkez ekseni: `Cf(u) = (1.06·u, 0.070·u^2.3, 0)` (glTF'te Y=eğrilik). Her köşe için `Fsec = P_son − Cf(u)`.
+In the `Namlu` geometry `uv1` (TEXCOORD_1): `u = uv1.x` (0–1 from hilt to tip), `a = 1 - uv1.y` (around the ring). The finished shape is in POSITION. Blender centre axis: `Cf(u) = (1.06·u, 0.070·u^2.3, 0)` (in glTF Y = curvature). For each vertex `Fsec = P_son − Cf(u)`.
 
-12 bölge: her birinin `ilerleme p` (0–1), `isi` (°C benzeri 20–1200), `cilt` (bileme 0–1), `kabuk` (oksit 0–1). Köşe başına bölgeler arası doğrusal ara değer, `s(p)=smoothstep`:
+12 regions: each with `ilerleme p` (0–1), `isi` (°C-like 20–1200), `cilt` (polish 0–1), `kabuk` (oxide 0–1). Linear interpolation between regions per vertex, `s(p)=smoothstep`:
 
-- Külçe kesiti: `Bsec(a) = (0, cos(2πa)·W, sin(2πa)·T)`, `W=.024, T=.018`; yumurta biçimi için `·sqrt(max(1-(2u-1)^2, .02))^.75`.
-- Her bölgenin uzunluğu `L_i = mix(L0/12, 1.06/12, s(p_i))`, `L0=.20`. Eksen: `X(u)` bu uzunlukların birikimli toplamı (bölge içi ara değer); `Y(u) = Cf(u).y · s(ortalama p)`; böylece külçe **gerçekten uzar**. Sapın (`u=0`) yeri sabit kalır; dövme sırasında kılıcı örsün üstünde vurulan bölge çekicin altına gelecek şekilde kaydır.
-- `P = (X(u), Y(u), 0) + mix(Bsec, Fsec, s(p))`. Yüzey kabarıklığı için `p<1` iken küçük, darbe yerinden gelen çekiç izi (vertex offset gürültü) ekle; `p→1` iken sönsün.
-- Köşe güncellemesi yalnız değişen bölgeler için, `computeVertexNormals` yerine: külçede küresel normali, bitmişte orijinal normali `s(p)` ile karıştır (ucuz ve dikişsiz).
+- Ingot cross-section: `Bsec(a) = (0, cos(2πa)·W, sin(2πa)·T)`, `W=.024, T=.018`; for the egg shape `·sqrt(max(1-(2u-1)^2, .02))^.75`.
+- The length of each region `L_i = mix(L0/12, 1.06/12, s(p_i))`, `L0=.20`. Axis: `X(u)` is the cumulative sum of these lengths (interpolated within the region); `Y(u) = Cf(u).y · s(average p)`; so the ingot **really lengthens**. The position of the hilt (`u=0`) stays fixed; during forging shift the sword on the anvil so that the struck region comes under the hammer.
+- `P = (X(u), Y(u), 0) + mix(Bsec, Fsec, s(p))`. For surface roughness, while `p<1` add a small hammer mark coming from the impact point (vertex offset noise); fade it out as `p→1`.
+- Vertex update only for the changed regions, instead of `computeVertexNormals`: blend the spherical normal on the ingot and the original normal on the finished one with `s(p)` (cheap and seamless).
 
-Malzeme `onBeforeCompile`: köşe özellikleri `aIsi`, `aKabuk`, `aCilt`. Fragment: `isi` için siyah cisim rengi (≈500°C koyu kiraz → 800 turuncu → 1100 sarı-beyaz), emissive çarp; `kabuk` taban rengini koyu yap, metalness ve pürüz değiştir (gürültü desenli); `cilt` pürüzü düşürür. Yani kılıç ısındıkça kızarır, kabuk bağlar, bilendikçe parlar. **`Namlu_Kakma`, `Balcak` vb. yalnızca Kuşanma aşamasında görünür.**
+Material `onBeforeCompile`: vertex attributes `aIsi`, `aKabuk`, `aCilt`. Fragment: black-body colour for `isi` (≈500°C dark cherry → 800 orange → 1100 yellow-white), multiply emissive; for `kabuk` darken the base colour, change metalness and roughness (noise pattern); `cilt` lowers roughness. That is, the sword glows red as it heats, forms scale, and shines as it is sharpened. **`Namlu_Kakma`, `Balcak` etc. are visible only in the Kuşanma (mounting) stage.**
 
-## Akış (`durum.ts`, kaydedilmez, her yenilemede baştan)
+## Flow (`durum.ts`, not saved, from scratch on every refresh)
 
-Üstte ince aşama şeridi. Her aşama: kısa yönerge, ilgili `kilicAsamaBilgileri` metni + `Kaynak:` satırı, ve **"Ustaya bırak"** düğmesi (o aşamayı orta kalitede otomatik, animasyonlu tamamlar; jüri demosu için). Ayrıca "Baştan başla" ve ses aç/kapat.
+A thin stage strip at the top. Each stage: a short instruction, the relevant `kilicAsamaBilgileri` text + `Kaynak:` line, and an **"Ustaya bırak"** button (completes that stage automatically at medium quality, with animation; for the jury demo). Also "Baştan başla" and sound on/off.
 
-| Aşama | Etkileşim | Kural |
+| Stage | Interaction | Rule |
 |---|---|---|
-| 1 Külçe | Tezgâhtaki `Kilic_Yumurtasi`'na tıkla, maşayla ocağa uçar | — |
-| 2 Isıtma | Körüğü basılı tut (fare/parmak; klavye Boşluk). Sıcaklık çubuğu + gerçek renk | Körüksüz yavaş ısınır. >1180 yanma: kalite düşer, uyarı |
-| 3 Dövme | Kılıç örse gelir. Tıkla/sürükle: vurulan bölge imleçten seçilir; çekiç gerçek bir yay çizip iner, kıvılcım, ses, kamera sarsıntısı | Darbe etkisi sıcaklığa bağlı: 750–1150 tam; 550–750 yarım; <550 etkisiz, `gerilim` artar, >1 çatlak riski. Soğuyunca "Yeniden ısıt". Tüm bölgeler p≥.98 olunca biter |
-| 4 Su verme | Tüm namlu ısınır, "Suya daldır" düğmesi basılı tutulur; buhar, tıslama | En iyi 780–880. Yüksek: çatlak olasılığı/kalite düşer. Düşük: sertlik düşer |
-| 5 Bileme | Kılıç taşa gelir, taş döner. Bölge bölge imleci namlu boyunca sürdür; kıvılcım | `cilt` artar. Fazla aynı yerde kalma ısıtır: 'yanma' cezası |
-| 6 Kuşanma | Sırayla `Balcak`, `Kabza_Sol`, `Kabza_Sag`, `Percin_*`'i tıkla: animasyonla yerine gelir; sonra altın bant (alpha kararı) yavaş belirir. Kolektif yapım notu | — |
-| 7 İnceleme | OrbitControls + yakınlaştırma, ışıklı sunum. `kilicParcaNotlari` numaralı noktalar (three vektörü→ekran koordinatı HTML düğme), tıklayınca panel + kaynak. Kalite kartı. Altında "Test alanına geç" | — |
-| 8 Test alanı | Kamera avluya gider (gündüz ışık). Üç hedef: `Hasir_Rulo`, `Test_Kutuk`, `Test_Kumas`. Hedef seç, sahnede sürükleyerek kesim çizgisi çiz (kılıç o yönde savrulur, iz efekti) | Aşağıda |
+| 1 Ingot | Click the `Kilic_Yumurtasi` on the bench, it flies to the furnace with tongs | — |
+| 2 Heating | Hold the bellows pressed (mouse/finger; keyboard Space). Temperature bar + real colour | Heats slowly without bellows. >1180 burning: quality drops, warning |
+| 3 Forging | The sword comes to the anvil. Click/drag: the struck region is chosen from the cursor; the hammer descends drawing a real arc, spark, sound, camera shake | Impact effect depends on temperature: 750–1150 full; 550–750 half; <550 ineffective, `gerilim` (stress) increases, >1 crack risk. When it cools "Yeniden ısıt". Ends when all regions reach p≥.98 |
+| 4 Quenching | The whole blade heats up, the "Suya daldır" button is held pressed; steam, hiss | Best 780–880. High: crack probability/quality drops. Low: hardness drops |
+| 5 Sharpening | The sword comes to the stone, the stone turns. Move the cursor along the blade region by region; sparks | `cilt` increases. Staying too long in the same place heats: 'burning' penalty |
+| 6 Mounting | Click `Balcak`, `Kabza_Sol`, `Kabza_Sag`, `Percin_*` in order: each comes into place with animation; then the gold band (alpha decision) slowly appears. Collective-production note | — |
+| 7 Inspection | OrbitControls + zoom, lit presentation. `kilicParcaNotlari` numbered points (three vector → screen coordinate HTML button), on click a panel + source. Quality card. Below it "Test alanına geç" | — |
+| 8 Test area | The camera goes to the courtyard (daylight). Three targets: `Hasir_Rulo`, `Test_Kutuk`, `Test_Kumas`. Select a target, draw a cutting line by dragging in the scene (the sword is swung in that direction, trail effect) | Below |
 
-**Kalite:** `sertlik` (su verme), `keskinlik` (bileme), `biçim` (dövme sıcaklığı/gerilim), `yanma` cezaları. Ustaya bırak = hepsi ~.6. Çatlak varsa çizgi görünür (kötü), yine de test edilebilir, kırılabilir.
+**Quality:** `sertlik` (quenching), `keskinlik` (sharpening), `biçim` (forging temperature/stress), `yanma` penalties. Ustaya bırak = all ~.6. If there is a crack the line is visible (bad), it can still be tested, it can break.
 
-**Kesim:** `güç = keskinlik·.55 + sertlik·.45`, kesim çizgisi açısı dikse/yataysa ve hızlıysa +. Hasır: güç≥.35 ikiye ayrılır (klon + `material.clippingPlanes`, üst parça düşer, basit yerçekimi + zemin). Kütük: güce göre iz derinliği, ≥.8 yarıya kadar; asla "ikiye bölünmedi" der. Kumaş (gevşek): güç≥.72 kesilir, altta kalıyorsa sadece sallanır. Kuvvetsiz denemede çelik sesi, kıvılcım, gerekirse çentik. Puan kartı + kazanılırsa "Kılıç Ustası" rozeti (`rozetKazan('kilic-ustasi')` yerine bu sayfada yerel gösterim yeterli; App'teki `rozetKazan`'ı prop ile alabilirsin). "Hedefleri yenile".
+**Cutting:** `güç = keskinlik·.55 + sertlik·.45`, plus if the cutting line angle is vertical/horizontal and fast. Straw mat: güç≥.35 splits in two (clone + `material.clippingPlanes`, the top part falls, simple gravity + ground). Log: mark depth according to power, ≥.8 up to halfway; it never says "not split in two". Cloth (loose): güç≥.72 is cut, if it stays below it only sways. On a weak attempt steel sound, spark, a notch if needed. Score card + if won, the "Kılıç Ustası" badge (instead of `rozetKazan('kilic-ustasi')` a local display on this page is enough; you may take `rozetKazan` from App as a prop). "Hedefleri yenile".
 
-## Görsel kalite (yeni nesil)
+## Visual quality (new generation)
 
-- Renderer: `ACESFilmicToneMapping`, `SRGBColorSpace`, `PCFSoftShadowMap`, `Antialias`, `EffectComposer` + `RenderPass` + `UnrealBloomPass` (hafif, ısınınca belirgin) + `OutputPass`. `RoomEnvironment` + PMREM, atölyede düşük yoğunluk, avluda yüksek.
-- Atölye karanlık, ocak `PointLight` titrer (`Math.sin` + gürültü) ve ısıya göre kuvvetlenir; ısınan namlu da küçük ışık saçar. Sahne loşluğu sinematik, ama nesneler okunur.
-- Kıvılcım: `THREE.Points` havuzu, yerçekimi, ömürle renk; buhar/duman: yumuşak sprite havuzu (canvas radial gradient). Bloom kıvılcımı parlatır. Ocağın üstünde hafif kor parçacıkları.
-- Sinematik kamera: aşama değişiminde 1,2 sn yumuşak geçiş; hedef konumlar atölyede sen seç, her aşamada asıl nesne net görünsün.
-- Dokunuş: küçük imleç vurgusu (`Raycaster` ile hover: nesnenin emissive'i hafif artar, imleç değişir).
-- `ses.ts`: dosya yok, `WebAudio` ile üret: çekiç (sinüs/kare kısa çın + gürültü), ocak uğultusu (filtreli gürültü, körükle artar), su tıslaması, bileme (bant gürültü), kesim (hızlı süpürme), çelik "ting". Varsayılan açık ama ilk kullanıcı etkileşiminde başlar; kapatılabilir.
-- Arayüz: sahne tam genişlik ve ekran boyu; kontroller camsı koyu paneller, bronz vurgu (`docs/ui-tasarim.md` renkleri ile uyumlu). Masaüstünde yan panel, telefonda alt çekmece. Tam ekran düğmesi.
+- Renderer: `ACESFilmicToneMapping`, `SRGBColorSpace`, `PCFSoftShadowMap`, `Antialias`, `EffectComposer` + `RenderPass` + `UnrealBloomPass` (light, noticeable when heated) + `OutputPass`. `RoomEnvironment` + PMREM, low intensity in the workshop, high in the courtyard.
+- The workshop is dark, the furnace `PointLight` flickers (`Math.sin` + noise) and strengthens with heat; the heated blade also emits a small light. The dimness of the scene is cinematic, but objects stay readable.
+- Spark: `THREE.Points` pool, gravity, colour over lifetime; steam/smoke: soft sprite pool (canvas radial gradient). Bloom makes the spark glow. Light ember particles above the furnace.
+- Cinematic camera: 1.2 s soft transition on stage change; choose the target positions in the workshop yourself, so that the main object is clear at every stage.
+- Touch: a small cursor highlight (hover with `Raycaster`: the object's emissive increases slightly, the cursor changes).
+- `ses.ts`: no files, produce with `WebAudio`: hammer (sine/square short ring + noise), furnace roar (filtered noise, increases with the bellows), water hiss, sharpening (band noise), cut (fast sweep), steel "ting". On by default but starts at the first user interaction; can be turned off.
+- Interface: the scene is full width and full screen height; controls are glassy dark panels, bronze accent (consistent with the colours of `docs/ui-tasarim.md`). Side panel on desktop, bottom drawer on phone. Full-screen button.
 
-## Erişilebilirlik ve sağlamlık
+## Accessibility and robustness
 
-Her etkileşimin klavye karşılığı (bölge seçimi ←→, Enter vur; Boşluk körük; Kesim için hedef + "Kes" düğmesi). `aria-live` aşama/sonuç duyuruları, görünür odak, ≥44 px dokunma, 360 px taşma yok. `prefers-reduced-motion`: sarsıntı ve parçacık az, kamera geçişi kısa. WebGL yok/yükleme hatası: anlaşılır mesaj. Sekme gizlenince döngü durur. Rota değişince her şey `dispose`, olaylar temizlenir, ses durur. FPS düşerse `pixelRatio` ve bloom kademeli azalır.
+A keyboard equivalent for every interaction (region selection ←→, Enter strike; Space bellows; for Cutting target + "Kes" button). `aria-live` stage/result announcements, visible focus, ≥44 px touch, no overflow at 360 px. `prefers-reduced-motion`: less shake and particles, short camera transition. No WebGL/load error: a clear message. When the tab is hidden the loop stops. When the route changes everything is `dispose`d, events cleaned up, sound stopped. If FPS drops, `pixelRatio` and bloom decrease gradually.
 
-## Bitti sayılması için
+## To count as done
 
-- `npm run build` hatasız; `node tests/uctan-uca.mjs chromium 1280` ve `tests/kilic.mjs` geçer. Kılıç testi: aşamaların tamamı **hem el ile (gerçek fare olayları) hem Ustaya bırak ile**, deformasyonun gerçekten uzaması (ölçülen bounding box), kuşanma sonrası görünürlük, kesimde parça ayrılması, dispose sonrası canvas yok, konsolda hata yok.
-- **Ekran görüntülerine bak** (`test-sonuclari/kilic-*.png`): her aşama, kızgın külçe, dövme ortası, bitmiş kılıç, test. Karanlıksa, boş duruyorsa, kılıç görünmüyorsa düzelt. Gerçekçi değilse iyileştir: kalite bu görevin başarı ölçütü.
-- GPU varsa `--use-gl=angle --use-angle=gl-egl --ignore-gpu-blocklist --enable-gpu` ile çalıştır, yoksa yazılımsal.
-- `.git` salt okunur olabilir; commit'i Claude atar. 4173 portuna dokunma, kendi portunu kullan. Bu dosyanın sonuna "Sonuç" ekle: ne yapıldı, ne test edildi, ne eksik.
+- `npm run build` without errors; `node tests/uctan-uca.mjs chromium 1280` and `tests/kilic.mjs` pass. Sword test: all of the stages **both by hand (real mouse events) and with Ustaya bırak**, the deformation really lengthening (measured bounding box), visibility after mounting, a piece separating on cutting, no canvas after dispose, no errors in the console.
+- **Look at the screenshots** (`test-sonuclari/kilic-*.png`): each stage, the glowing ingot, mid-forging, the finished sword, the test. If it is dark, if it looks empty, if the sword is not visible, fix it. If it is not realistic, improve it: quality is this task's success criterion.
+- If there is a GPU run with `--use-gl=angle --use-angle=gl-egl --ignore-gpu-blocklist --enable-gpu`, otherwise software.
+- `.git` may be read-only; Claude makes the commit. Do not touch port 4173, use your own port. Add a "Sonuç" (Result) at the end of this file: what was done, what was tested, what is missing.

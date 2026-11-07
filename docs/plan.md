@@ -1,50 +1,50 @@
-# KökXR — Web MVP Planı
+# KökXR — Web MVP Plan
 
-> Güncelleme: 2 Kasım 2026 · Final: 7–8 Kasım 2026 · Kod dondurma: 4 Kasım akşamı
-> Eski Unity/VR planı (`proje bilgileri/developer.md`, `gelistirme-plani.md`) geçersizdir.
+> Update: 2 November 2026 · Final: 7–8 November 2026 · Code freeze: evening of 4 November
+> The old Unity/VR plan (`proje bilgileri/developer.md`, `gelistirme-plani.md`) is no longer valid.
 
-## Ürün
+## Product
 
-"Dokunamadığın tarihe dokun." Bursa'daki vakıf eserlerini keşfetmeye yönelik,
-telefona ve masaüstüne kurulabilen (PWA) bir web uygulaması.
+"Dokunamadığın tarihe dokun." A web application aimed at discovering the foundation (vakıf) works in Bursa,
+installable on phone and desktop (PWA).
 
-**Eserler:** Bursa Ulu Camii · II. Murad (Muradiye) Külliyesi
+**Artifacts:** Bursa Ulu Camii · II. Murad (Muradiye) Külliyesi
 
-**Teknoloji:** React + TypeScript + Vite. Backend yok; veriler JSON dosyalarında,
-yönetim ekranındaki değişiklikler tarayıcıda (localStorage) saklanır ve JSON olarak
-dışa aktarılabilir.
+**Technology:** React + TypeScript + Vite. No backend; data is in JSON files,
+changes made in the admin screen are kept in the browser (localStorage) and can be
+exported as JSON.
 
-## Şartname eşlemesi (5.1.1)
+## Specification mapping (5.1.1)
 
-| Şart | Karşılayan özellik |
+| Requirement | Feature that meets it |
 |---|---|
-| Çalışan mobil/masaüstü uygulama | Duyarlı tasarım + PWA (kurulabilir, çevrimdışı) |
-| Birden fazla vakıf eseri | İki eser, eser seçim ekranı |
-| Tarihçe, görsel, kaynak | Eser sayfası: galeri, bilgi paneli, kaynak etiketi |
-| İçerik ekleme/düzenleme | `/admin` ekranı: eser ekle, metin düzenle, JSON dışa/içe aktar |
-| Yeni eser eklenebilir mimari | Her eser = `src/content/artifacts/<id>.json` + görsel klasörü; kod değişmez |
-| Uçtan uca demo | Ana sayfa → eser seç → keşfet → test → rozet |
+| Working mobile/desktop application | Responsive design + PWA (installable, offline) |
+| More than one foundation work | Two artifacts, artifact selection screen |
+| History, image, source | Artifact page: gallery, information panel, source label |
+| Adding/editing content | `/admin` screen: add artifact, edit text, JSON export/import |
+| Architecture that allows adding new artifacts | Each artifact = `src/content/artifacts/<id>.json` + image folder; code does not change |
+| End-to-end demo | Home page → choose artifact → discover → test → badge |
 
-## Kapsam
+## Scope
 
-### MVP (mutlaka)
-1. Ana sayfa (slogan, eser kartları)
-2. Eser sayfası: fotoğraf galerisi (yakınlaştırma), bilgi paneli, kaynak etiketi
-3. Fotoğraf üzerinde bilgi noktaları (külliye yapıları, Ulu Camii detayları)
-4. Eser başına 3 soruluk test + tamamlanınca rozet
-5. Yönetim ekranı (ekle/düzenle/dışa aktar)
-6. Erişilebilirlik: alt metin, klavye ile kullanım, yüksek kontrast, yazı boyutu
+### MVP (a must)
+1. Home page (slogan, artifact cards)
+2. Artifact page: photo gallery (zoom), information panel, source label
+3. Information points on photos (complex buildings, Ulu Camii details)
+4. 3-question test per artifact + badge on completion
+5. Admin screen (add/edit/export)
+6. Accessibility: alt text, keyboard use, high contrast, text size
 
-### İstenirse (MVP bittikten sonra)
-- TR/EN dil seçimi (kaynak metinler iki dilli)
-- Sesli anlatım (Web Speech API, `tr-TR`)
-- Harita (OpenStreetMap)
+### If wanted (after the MVP is finished)
+- TR/EN language selection (source texts bilingual)
+- Voice narration (Web Speech API, `tr-TR`)
+- Map (OpenStreetMap)
 
-### Yapılmayacak
-3D model, 360°, VR/AR, backend, kullanıcı girişi. Sunumda "vizyon" olarak anlatılır,
-uygulamada var gibi gösterilmez.
+### Will not be done
+3D model, 360°, VR/AR, backend, user login. Explained as "vision" in the presentation,
+not shown as if present in the application.
 
-## Veri modeli
+## Data model
 
 ```ts
 type Dogrulama = "dogrulanmis" | "temsili";
@@ -53,15 +53,15 @@ interface Kaynak { id: string; metin: string; sayfa?: string; }
 
 interface Gorsel {
   dosya: string;          // public/images/<eserId>/...
-  alt: string;            // ekran okuyucu metni
+  alt: string;            // screen reader text
   aciklama?: string;
-  kaynakId: string;       // fotoğraf arşivi kaynağı
+  kaynakId: string;       // photo archive source
 }
 
 interface BilgiNoktasi {
   id: string;
-  gorsel: string;         // hangi görselin üzerinde
-  x: number; y: number;   // yüzde (0–100)
+  gorsel: string;         // which image it is on
+  x: number; y: number;   // percent (0–100)
   baslik: string;
   metin: string;
   kaynakId: string;
@@ -70,8 +70,8 @@ interface BilgiNoktasi {
 interface Soru {
   soru: string;
   secenekler: string[];
-  dogru: number;          // secenekler dizisindeki sıra
-  aciklama: string;       // cevaptan sonra gösterilir
+  dogru: number;          // index in the secenekler array
+  aciklama: string;       // shown after the answer
   kaynakId: string;
 }
 
@@ -88,48 +88,48 @@ interface Eser {
   kapakGorsel: string;
   gorseller: Gorsel[];
   bilgiNoktalari: BilgiNoktasi[];
-  test: Soru[];           // tam 3 soru
+  test: Soru[];           // exactly 3 questions
   kaynaklar: Kaynak[];
 }
 ```
 
-**Kural:** Her metin bir `kaynakId`'ye bağlıdır. Kaynak metinleri yalnızca
-`proje bilgileri/` altındaki Vakıf Eserleri Envanteri PDF'lerinden alınır.
+**Rule:** Every text is tied to a `kaynakId`. Source texts are taken only from the
+Vakıf Eserleri Envanteri PDFs under `proje bilgileri/`.
 
-## Görseller
+## Images
 
-- Arşiv `proje bilgileri/` altında, git dışında kalır.
-- Eser başına 8–12 fotoğraf seçilir, 1600 px genişliğe küçültülür,
-  `public/images/<eserId>/` altına konur.
-- Kullanım izni netleşmeden repo herkese açık yapılmaz, demo herkese açık yayınlanmaz.
+- The archive is under `proje bilgileri/`, stays outside git.
+- 8–12 photos are chosen per artifact, reduced to 1600 px width,
+  and put under `public/images/<eserId>/`.
+- The repo is not made public until usage permission is settled, and the demo is not published publicly.
 
-## Ajanlar ve iş akışı
+## Agents and workflow
 
-| Ajan | Komut | Rol | Dokunduğu yer |
+| Agent | Command | Role | Where it touches |
 |---|---|---|---|
-| Claude Code | `claude` | Lider: plan, veri/içerik, kod incelemesi | `docs/`, `src/content/` |
-| Codex CLI | `codex` | Uygulama kodu, build | `src/` (data hariç), yapılandırma |
-| Antigravity | `agy` | Tarayıcı testi, tasarım raporu | `docs/archive/test-report.md` |
+| Claude Code | `claude` | Lead: plan, data/content, code review | `docs/`, `src/content/` |
+| Codex CLI | `codex` | Application code, build | `src/` (except data), configuration |
+| Antigravity | `agy` | Browser testing, design report | `docs/archive/test-report.md` |
 
-1. Claude `docs/archive/next-task.md` dosyasına tek bir görev yazar.
-2. Codex görevi uygular, `npm run build` ile doğrular, commit atar.
-3. Antigravity uygulamayı tarayıcıda test eder, sonucu `docs/archive/test-report.md`'ye yazar.
-4. Claude raporu ve kodu inceler, sıradaki görevi yazar.
+1. Claude writes a single task into the `docs/archive/next-task.md` file.
+2. Codex carries out the task, verifies with `npm run build`, makes a commit.
+3. Antigravity tests the application in the browser, writes the result into `docs/archive/test-report.md`.
+4. Claude reviews the report and the code, writes the next task.
 
-Aynı anda iki ajan aynı dosyayı düzenlemez. Her görev sonunda commit.
+Two agents do not edit the same file at the same time. Commit at the end of every task.
 
-## Takvim
+## Schedule
 
-| Gün | Hedef |
+| Day | Goal |
 |---|---|
-| 2 Kas | Plan, veri modeli, iskelet (Görev 1), içerik çıkarımı başlar |
-| 3 Kas | Eser sayfası, galeri, bilgi paneli, gerçek içerik ve görseller |
-| 4 Kas | Bilgi noktaları, test + rozet, yönetim ekranı, PWA · **akşam kod dondurma** |
-| 5 Kas | Antigravity testi, hata düzeltme, prova 1 |
-| 6 Kas | Prova 2–3, yedek demo videosu, çevrimdışı çalışma kontrolü |
-| 7–8 Kas | Final |
+| 2 Nov | Plan, data model, skeleton (Task 1), content extraction starts |
+| 3 Nov | Artifact page, gallery, information panel, real content and images |
+| 4 Nov | Information points, test + badge, admin screen, PWA · **code freeze in the evening** |
+| 5 Nov | Antigravity test, bug fixing, rehearsal 1 |
+| 6 Nov | Rehearsals 2–3, backup demo video, offline operation check |
+| 7–8 Nov | Final |
 
-## Açık sorular
+## Open questions
 
-- Web tabanlı (PWA) uygulama "mobil veya masaüstü uygulaması" olarak kabul ediliyor mu? → organizasyona sorulacak
-- Arşiv fotoğraflarının demoda ve sunumda kullanım izni → sponsor kuruma teyit
+- Is a web-based (PWA) application accepted as a "mobile or desktop application"? → to be asked to the organizers
+- Permission to use the archive photos in the demo and presentation → confirm with the sponsor institution

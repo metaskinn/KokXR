@@ -1,48 +1,48 @@
-# Test Görevi 2 — Uçtan uca son test (Antigravity)
+# Test Task 2 — Final end-to-end test (Antigravity)
 
-**Atanan:** Antigravity (`agy`)
-**Önce oku:** `AGENTS.md`, `docs/plan.md`, `docs/durum.md`, önceki rapor `docs/test-raporu.md`
+**Assigned to:** Antigravity (`agy`)
+**Read first:** `AGENTS.md`, `docs/plan.md`, `docs/durum.md`, the previous report `docs/test-raporu.md`
 
-Uygulama http://localhost:4173 adresinde çalışıyor (üretim build'i). Sunucuyu başlatma/durdurma.
+The application is running at http://localhost:4173 (production build). Do not start/stop the server.
 
-## Kurallar
+## Rules
 
-- **Kod dosyalarını değiştirme.** Yalnızca `docs/test-raporu-2.md` yaz; ekran görüntüleri `docs/test-ekranlari/son-test/` altına.
-- Paket kurma, git komutu çalıştırma.
-- Gerçek tarayıcıda test et; tarayıcıda yapılmamış bir kontrolü "geçti" diye yazma.
-- 3B/WebGL bölümleri yazılımsal GPU ile yavaş olabilir; yüklenmesini bekle.
+- **Do not change code files.** Write only `docs/test-raporu-2.md`; screenshots under `docs/test-ekranlari/son-test/`.
+- Do not install packages, do not run git commands.
+- Test in a real browser; do not write a check that was not done in the browser as "passed".
+- The 3D/WebGL sections can be slow with a software GPU; wait for them to load.
 
-## Senaryo (1280 px masaüstü ve 360 px telefon)
+## Scenario (1280 px desktop and 360 px phone)
 
-1. **Önceki hatalar:** `docs/test-raporu.md`'deki 4 hata düzeldi mi? (klavyeyle test, keşif kartı görünürlüğü, odak, favicon)
-2. **Eseri eline al (Ulu Camii):** "maketini eline al" → maket yükleniyor; sürükleyerek çevirme, tekerlekle yakınlaştırma;
-   "Parçala" çatıyı kaldırıyor ve içerideki payeler görünüyor, "Birleştir" geri indiriyor; "Kendi kendine dönsün",
-   "Görünümü sıfırla"; maket alanına odaklanıp ok tuşları ve +/− çalışıyor; "temsili maket" etiketi ve kaynaklı bilgi listesi görünüyor.
-3. **360° tur (Ulu Camii):** "360° turu başlat" → 360TR oynatıcısı açılıyor, sürükleyerek bakılabiliyor, sahne değişiyor;
-   altında kaynak bağlantısı ve "açılmıyorsa yeni sekmede aç" bağlantısı var.
-4. **Sanal gezinti (iki eser):** başlat → durak bağlantılarıyla en az 4 durak gez; derinlik/parallax hareketi; durak listesi;
-   "temsilidir, 360° değildir" etiketi görünür.
-5. **Restorasyon görevi (Muradiye):** "Panoyu parçala ve onar" → parça seç, yuvaya koy, döndür; ipucu aç/kapat;
-   paneli tamamla → "Pano onarıldı" ve kaynaklı bilgi; "Baştan başla". Klavyeyle de en az bir parçayı yerleştir ve döndür (R).
-6. **Yönetim:** üst çubuktan "Yönetim" → Ulu Camii özetini değiştir → ana sayfada görünür → varsayılana döndür;
-   yeni bir test eseri ekle (temsili) → ana sayfada ve kendi sayfasında görünür → sil. Kaynak olmadan "Kaynaklı bilgi" seçilemiyor.
-7. **Genel:** galeri, test, rozetler (test rozeti + restorasyon rozeti), bulunamayan sayfa, yatay taşma yok, konsolda
-   uygulamaya ait hata yok (360TR iframe'inin kendi hataları hariç; bunları ayrıca not et), sayfalar arası geçişte bozulma yok.
-8. **Demo akışı:** Jüriye 3 dakikalık bir gösterim yapılacağını düşün: ana sayfa → Ulu Camii (maket parçala, 360° tur) →
-   Muradiye (gezinti, restorasyon) → yönetim. Akışta takılan, yavaş kalan veya kafa karıştıran yerleri yaz.
+1. **Previous bugs:** Have the 4 bugs in `docs/test-raporu.md` been fixed? (test with keyboard, discovery card visibility, focus, favicon)
+2. **Pick up the artifact (Ulu Camii):** "maketini eline al" → the model loads; rotating by dragging, zooming with the wheel;
+   "Parçala" removes the roof and the piers inside become visible, "Birleştir" lowers it back; "Kendi kendine dönsün",
+   "Görünümü sıfırla"; focusing on the model area, the arrow keys and +/− work; the "temsili maket" label and the sourced information list are visible.
+3. **360° tour (Ulu Camii):** "360° turu başlat" → the 360TR player opens, one can look around by dragging, the scene changes;
+   below it there is a source link and an "açılmıyorsa yeni sekmede aç" link.
+4. **Virtual walkthrough (two artifacts):** start → visit at least 4 stops via the stop links; depth/parallax movement; stop list;
+   the "temsilidir, 360° değildir" label is visible.
+5. **Restoration task (Muradiye):** "Panoyu parçala ve onar" → select a piece, put it in the slot, rotate; hint on/off;
+   complete the panel → "Pano onarıldı" and sourced information; "Baştan başla". Also place and rotate at least one piece with the keyboard (R).
+6. **Management:** from the top bar "Yönetim" → change the Ulu Camii summary → it appears on the home page → return to default;
+   add a new test artifact (representative) → it appears on the home page and on its own page → delete. "Kaynaklı bilgi" cannot be selected without a source.
+7. **General:** gallery, test, badges (test badge + restoration badge), page not found, no horizontal overflow, no errors belonging to the
+   application in the console (except the 360TR iframe's own errors; note these separately), no breakage when moving between pages.
+8. **Demo flow:** Imagine a 3-minute presentation will be given to the jury: home page → Ulu Camii (model take-apart, 360° tour) →
+   Muradiye (walkthrough, restoration) → management. Write down the places in the flow that stall, stay slow or are confusing.
 
-## Rapor biçimi (`docs/test-raporu-2.md`)
+## Report format (`docs/test-raporu-2.md`)
 
 ```markdown
-# Test Raporu 2 — <tarih saat>
-Tarayıcı: … (sürüm, GPU/WebGL durumu)
+# Test Report 2 — <date time>
+Browser: … (version, GPU/WebGL status)
 
-| # | Adım | Masaüstü | Telefon | Not |
+| # | Step | Desktop | Phone | Note |
 |---|------|----------|---------|-----|
 
-## Hatalar (önem sırasıyla)
-1. **[Kritik/Orta/Düşük]** Ne oldu — nasıl tekrarlanır — beklenen — ilgili dosya (biliyorsan)
+## Bugs (in order of severity)
+1. **[Critical/Medium/Low]** What happened — how to reproduce — expected — related file (if you know)
 
-## Demo akışı notları
-## Tasarım önerileri (en fazla 5)
+## Demo flow notes
+## Design suggestions (at most 5)
 ```

@@ -1,14 +1,14 @@
-# Harita verisi: kaynak ve lisans
+# Map data: source and licence
 
-Uygulama bu klasördeki gömülü dosyalarla internetsiz çalışır; canlı tile sunucusu kullanılmaz. Veri Kasım 2026'da alındı, sadeleştirildi.
+The application works offline with the embedded files in this folder; a live tile server is not used. The data was obtained in Kasım 2026 and simplified.
 
-| Veri | Kaynak | Lisans |
+| Data | Source | Licence |
 |---|---|---|
-| Türkiye sınırı, iller, kara, göl, nehir, Türkiye haritasındaki şehir noktaları (`turkey.json`) | [Natural Earth](https://www.naturalearthdata.com/) 1:10m | Kamu malı |
-| Bursa, Konya, Hatay yolları, kıyı, su, yer adları, zirve yükseklikleri (`bursa.json`, `konya.json`, `hatay.json`) | [OpenStreetMap](https://www.openstreetmap.org/copyright), Overpass API ile tek seferlik sorgu; tile indirilmedi | ODbL, atıf: © OpenStreetMap katkıda bulunanlar |
-| Kabartma (`*-relief.webp`) | [Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) (AWS Open Data; SRTM dahil kaynaklardan), buradan hesaplanan tepe gölgesi | Kaynak atfıyla açık veri |
-| Eser koordinatları (`../vrArtifacts.ts`) | Her yapı için OSM nesnesi ve Wikidata P625 karşılaştırıldı; kaynak veri satırında | ODbL / CC0 |
+| Turkey border, provinces, land, lakes, rivers, city points on the map of Turkey (`turkey.json`) | [Natural Earth](https://www.naturalearthdata.com/) 1:10m | Public domain |
+| Bursa, Konya, Hatay roads, coast, water, place names, summit heights (`bursa.json`, `konya.json`, `hatay.json`) | [OpenStreetMap](https://www.openstreetmap.org/copyright), one-time query with the Overpass API; no tiles were downloaded | ODbL, attribution: © OpenStreetMap contributors |
+| Relief (`*-relief.webp`) | [Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) (AWS Open Data; from sources including SRTM), hillshade computed from it | Open data with source attribution |
+| Artifact coordinates (`../vrArtifacts.ts`) | For each structure the OSM object and Wikidata P625 were compared; source in the data row | ODbL / CC0 |
 
-Haritada ve OSM türevi veride atıf görünür kalmalıdır. Harita hesaplanmış bir sadeleştirmedir, yol tarifi için değildir.
+Attribution must remain visible on the map and in OSM-derived data. The map is a computed simplification, not for route directions.
 
-Yeniden üretim: `node src/content/maps/data-generate.mjs <ham-klasör>`, ardından `node src/content/maps/relief-generate.mjs <ham-klasör>`.
+Regeneration: `node src/content/maps/data-generate.mjs <ham-klasör>`, then `node src/content/maps/relief-generate.mjs <ham-klasör>`.

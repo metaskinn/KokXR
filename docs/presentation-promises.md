@@ -4,75 +4,75 @@
 
 **Dokunamadığın tarihe dokun.**
 
-Vakıf eserlerini 3D dijital ikizlere dönüştüren, eseri eline almanı ve geçmişteki hâline dönmeni sağlayan XR eğitim platformu.
+An XR education platform that turns foundation (vakıf) works into 3D digital twins, lets you pick up the artifact and return to its past state.
 
-### TAKIMIMIZ
+### OUR TEAM
 
-- Muhammet Ali Divan (Kaptan)
+- Muhammet Ali Divan (Captain)
 - İsmet Bayandur
 - Selami Ali Şimşek
 - Meltem Taşkın
 
 ---
 
-## SORUN VE ÇÖZÜM
+## PROBLEM AND SOLUTION
 
-### Tarih vitrinde kalmasın.
+### Let history not stay in the display case.
 
-Öğrenciler mirasımızı ders kitabı fotoğraflarından görüyor. Müzede bile eserlere dokunamıyor. Şanlıurfa gibi bölgelerde ise yapılara ulaşmak zor.
+Students see our heritage from textbook photographs. Even in a museum they cannot touch the artifacts. In regions such as Şanlıurfa, reaching the structures is hard.
 
-**Mekânı bir kez tarıyoruz, her cihazda kullanıyoruz. Eseri vitrinden çıkarıp eline veriyoruz; bağlamı ve hikâyesiyle birlikte.**
+**We scan the site once, we use it on every device. We take the artifact out of the display case and put it in your hands; together with its context and story.**
 
-> VR burada gösteri değil: fiziksel dünyadaki gerçek bir kısıtı çözüyor.
+> VR here is not a show: it solves a real constraint in the physical world.
 
-### 01 — OKULLAR
+### 01 — SCHOOLS
 
 **KökMobil**
 
-VR gözlüklü mobil sınıf köy okullarına gider. Öğretmen paneli ve test ile öğrenme ölçülür.
+A mobile classroom with VR headsets goes to village schools. Learning is measured with a teacher panel and a test.
 
-### 02 — MÜZELER
+### 02 — MUSEUMS
 
-**Dokunulabilir Müze**
+**Touchable Museum**
 
-Eserin 1:1 dijital ikizini eline al, çevir, büyüt, parçalarına ayır.
+Take the 1:1 digital twin of the artifact in your hands, rotate it, enlarge it, take it apart into its pieces.
 
-### 03 — VAKIFLAR / BAKANLIK
+### 03 — FOUNDATIONS / MINISTRY
 
-**Dijital Miras Kütüphanesi**
+**Digital Heritage Library**
 
-3D model, dönem ve hikâye tek arşivde. İçerik akademisyen onaylı.
+3D model, period and story in a single archive. Content is approved by academics.
 
 ---
 
-## ÖZELLİKLER VE MİMARİ
+## FEATURES AND ARCHITECTURE
 
-### Eline al. Zamanda yürü. Hikâyeyi yaşa.
+### Pick it up. Walk through time. Live the story.
 
-### 01 — Eseri Eline Al
+### 01 — Pick Up the Artifact
 
-Tut, çevir, 10 kat büyüt, parçalarına ayır, alt yüzündeki yazıyı oku.
+Hold it, rotate it, enlarge it 10 times, take it apart into its pieces, read the inscription on its underside.
 
-### 02 — Zaman Katmanı
+### 02 — Time Layer
 
-Slider ile yapıyı ilk yapıldığı döneme taşı; eserin kullanıldığı çağa geç.
+With a slider carry the structure to the period it was first built; move on to the age in which the artifact was used.
 
-### 03 — Restorasyon Görevi
+### 03 — Restoration Task
 
-Hasarlı eseri doğru parça ve motifle onar; görev tabanlı öğrenme.
+Repair the damaged artifact with the right piece and motif; task-based learning.
 
-### 04 — Doğrulanmış Bilgi
+### 04 — Verified Information
 
-Motife işaret et; cevap yapay zekâdan değil, küratör onaylı veriden gelir.
+Point at a motif; the answer comes not from artificial intelligence but from curator-approved data.
 
-### TEK İÇERİK · HER CİHAZ
+### ONE CONTENT · EVERY DEVICE
 
-**Dijital Miras Kütüphanesi** → **VR** → **AR** → **WEB**
+**Digital Heritage Library** → **VR** → **AR** → **WEB**
 
-| Cihaz | Kullanım |
+| Device | Use |
 |---|---|
-| VR | Müze · Okul · KökMobil |
-| AR | Telefon · Tablet |
-| WEB | 3D görüntüleyici |
+| VR | Museum · School · KökMobil |
+| AR | Phone · Tablet |
+| WEB | 3D viewer |
 
-> Demo: tek mekân · tek eser · tek senaryo. Eseri incele → geçmişini gör → görevi tamamla.
+> Demo: one site · one artifact · one scenario. Examine the artifact → see its past → complete the task.

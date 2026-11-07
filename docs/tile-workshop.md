@@ -1,20 +1,20 @@
-# Çini atölyesi
+# Tile workshop (Çini atölyesi)
 
-`/workshops/tile`: çarkta şekillendirmeden fırına çini tabak yapma oyunu. Masaüstü (fare/dokunma) ve WebXR aynı oyun mantığını kullanır.
+`/workshops/tile`: a game of making a tile plate (çini), from shaping on the wheel to the kiln. Desktop (mouse/touch) and WebXR use the same game logic.
 
-## Dosyalar
-- `src/features/workshops/tile/engine/state.ts`: oyun kuralları, Three.js'e bağlı değildir (`tests/tile-logic.mjs`).
-- `src/features/workshops/tile/engine/pattern.ts`: özgün desen, bölgeler ve tahrir izleri.
-- `src/features/workshops/tile/engine/texture.ts`: tabağın yüzey tuvali.
-- `src/features/workshops/tile/engine/scene.ts`: atölye sahnesi ve fare girişi. `src/features/workshops/tile/engine/xr.ts`: VR oturumu, panel ve kumanda.
-- `tests/tile.mjs`: gerçek fare olaylarıyla baştan sona oynar.
+## Files
+- `src/features/workshops/tile/engine/state.ts`: game rules, not tied to Three.js (`tests/tile-logic.mjs`).
+- `src/features/workshops/tile/engine/pattern.ts`: original pattern, regions and tahrir marks.
+- `src/features/workshops/tile/engine/texture.ts`: the surface canvas of the plate.
+- `src/features/workshops/tile/engine/scene.ts`: workshop scene and mouse input. `src/features/workshops/tile/engine/xr.ts`: VR session, panel and controller.
+- `tests/tile.mjs`: plays through from start to finish with real mouse events.
 
-## Kaynaklar ve sınırlar
-- T.C. Kültür ve Turizm Bakanlığı, "Geleneksel Çini Ustalığı": sıraltı süreci, bisküvi, tahrir, ikinci pişirim 900-940°C, renkler, usta adları, UNESCO kaydı. https://yakegm.ktb.gov.tr/TR-345131/geleneksel-cini-ustaligi.html
-- İstanbulumSanat, "Çini Nasıl Yapılır": iğneleme ve kömürleme anlatımı. https://www.istanbulumsanat.com/cini-nasil-yapilir-cini-yapim-asamalari-nelerdir/
+## Sources and limits
+- T.C. Kültür ve Turizm Bakanlığı, "Geleneksel Çini Ustalığı": underglaze process, biscuit, tahrir, second firing 900-940°C, colours, master names, UNESCO listing. https://yakegm.ktb.gov.tr/TR-345131/geleneksel-cini-ustaligi.html
+- İstanbulumSanat, "Çini Nasıl Yapılır": description of pricking (iğneleme) and charcoaling (kömürleme). https://www.istanbulumsanat.com/cini-nasil-yapilir-cini-yapim-asamalari-nelerdir/
 
-Oyun ölçeği (kaynak değil): bisküvi aralığı 850-900°, süreler, puan, boyaların mat görünümü.
+Game scale (not from a source): the biscuit range 850-900°, durations, score, the matte look of the paints.
 
-Kaynakla doğrulanamadığı için oyuna alınmadı: çamur reçetesindeki malzeme adları ve oranları, hangi rengin hangi oksitten geldiği. Doğrulanırsa `src/content/tile.ts` notlarına eklenebilir.
+Not included in the game because it could not be verified with a source: the material names and proportions in the clay recipe, which colour comes from which oxide. If verified, it can be added to the notes in `src/content/tile.ts`.
 
-Desen uygulama için çizildi; belirli bir tarihî eserin kopyası değildir.
+The pattern was drawn for the application; it is not a copy of a specific historical artifact.

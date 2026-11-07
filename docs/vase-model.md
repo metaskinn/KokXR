@@ -1,64 +1,64 @@
-# Vazo modeli ve doğrudan sürükleme
+# Vase model and direct dragging
 
-Kullanıcının isteği: düğmelerle yön/yuva seçmek yerine parçaları fareyle doğrudan tutup birleştirmek; modeli Blender'da tasarlamak.
+The user's request: instead of choosing direction/slot with buttons, grab the pieces directly with the mouse and join them; design the model in Blender.
 
-## Kaynaklar
+## Sources
 
-- `assets/vazo/vazo.blend`: Blender 4.5.3 LTS ile üretilmiş, düzenlenebilir kaynak.
-- `public/models/vase.glb`: tarayıcının GLTFLoader ile yüklediği model.
-- `scripts/vase_generate.py`: Blender Python betiği; kaynak ve GLB dosyalarını yeniden üretir.
+- `assets/vazo/vazo.blend`: editable source produced with Blender 4.5.3 LTS.
+- `public/models/vase.glb`: the model the browser loads with GLTFLoader.
+- `scripts/vase_generate.py`: Blender Python script; regenerates the source and GLB files.
 
-Model proje için özgün oluşturuldu. Üçüncü taraf model, fotoğraf veya doku kullanılmadı. Belirli bir tarihî eseri temsil etmez. Ölçüler oyun sahnesi için seçilmiştir.
+The model was created originally for the project. No third-party model, photograph or texture was used. It does not represent a specific historical artifact. The dimensions were chosen for the game scene.
 
-Blender'da altı kırık parça vardır: `Vazo_Parca_01`–`Vazo_Parca_06`. Her parçanın `pieceId` özel özelliği 0–5 kimliğini taşır ve GLB extras alanına aktarılır. Ayrıca `Vazo_Saglam` (`intact`) başlangıçta görünen kesintisiz gövdedir; `Onarim_Izleri` (`repairMarks`) yalnızca tamamlanmış onarımda görünür. Parçalar fiziksel kalınlık, iç seramik yüzey, kapalı taban payları ve düzensiz kırık hattı içerir. Malzemeler yeşil sır, krem bezeme, koyu yeşil motif, ham seramik ve ağız/taban şerididir. Modelde malzeme renkleri kullanılır; harici doku isteği yoktur.
+There are six broken pieces in Blender: `Vazo_Parca_01`–`Vazo_Parca_06`. Each piece's `pieceId` custom property carries its 0–5 identifier and is exported to the GLB extras field. In addition, `Vazo_Saglam` (`intact`) is the unbroken body visible at the start; `Onarim_Izleri` (`repairMarks`) is visible only in a completed repair. The pieces include physical thickness, an inner ceramic surface, allowances for a closed base, and an irregular break line. The materials are green glaze, cream decoration, dark green motif, raw ceramic, and a rim/base band. The model uses material colours; no external texture is requested.
 
-Yeniden üretim:
+Regeneration:
 
 ```bash
 blender --background --python scripts/vase_generate.py
 ```
 
-Bu komut `assets/vazo/vazo.blend` ve `public/models/vase.glb` çıktılarını günceller. Betiği çalıştırmadan mevcut elle yapılan Blender düzenlemelerini ayrı dosyada saklayın; betik sahneyi yeniden kurar.
+This command updates the outputs `assets/vazo/vazo.blend` and `public/models/vase.glb`. Before running the script, keep any existing manual Blender edits in a separate file; the script rebuilds the scene.
 
-## Etkileşim
+## Interaction
 
-- İnceleme modunda fare/parmakla çevirme ve tekerlek/iki parmakla yakınlaştırma.
-- İlk açılışta sağlam tek gövde görünür; kırık sınırları ve onarım izleri gizlidir.
-- Onarım başlayınca parçalar siluetin iki yanında görünür.
-- Kullanıcının son düzeltmesiyle **genel vazo silueti korunur**. Seçili parçanın tam konumunu gösteren halka/yazı ve parçaya göre değişen siluet vurgusu yoktur. Siluet tüm parçalar yerleşene kadar aynı genel formu gösterir.
-- Modelin kendi yüzeyi veya üzerindeki numara tutularak sürüklenir.
-- Sürükleme boyunca OrbitControls devre dışıdır. Parça, kameraya dönük ve tutuş derinliğinden geçen düzlemde hareket eder; böylece perspektifte imleçten kaçmaz.
-- Parçanın ekrandaki merkezi kendi hedefinin 20–34 piksel yakınına geldiğinde bırakılırsa doğru derinliğe animasyonla oturur. Yakınlık eşiği görünür bir hedef işareti üretmez. Bu eşik ekran genişliğine göre ayarlanır.
-- Altı parça tamamlanınca ince bronz birleşim izleri görünür. “İncelemeye dön” bu izleri korur; yeniden sağlam gövdeye geçmez. Onarım bitmeden “Onarımı iptal et” başlangıçtaki izsiz görünümü geri getirir.
-- Yanlış yerde bırakılan parça rafa geri döner. Basit tıklama yalnızca parçayı seçer; başarısız deneme sayılmaz.
-- Pointer capture, pointercancel ve kaybolan yakalama ele alınır. Escape sürüklemeyi iptal eder; kamera kilidi kalkar.
-- Seçili parça için ok tuşlarıyla taşıma ve Enter ile aynı yakınlık kuralına göre bırakma alternatifi vardır. Parça listesi kapalı “Klavye ile birleştir” bölümündedir.
-- Yeniden başlatma mevcut sürüklemeyi/animasyonu temizler. Rota değişince renderer, kontroller, dinleyiciler, geometri ve malzemeler bırakılır. Model yüklenemezse hata gösterilir ve onarım başlatılamaz.
-- Azaltılmış hareket tercihinde yerine oturma animasyonu atlanır.
+- In inspection mode: rotate with mouse/finger and zoom with wheel/two fingers.
+- On first opening the single intact body is visible; the break boundaries and repair marks are hidden.
+- When repair starts, the pieces appear on both sides of the silhouette.
+- Following the user's last correction, the **overall vase silhouette is preserved**. There is no ring/text showing the exact position of the selected piece, and no silhouette highlight that changes per piece. The silhouette shows the same overall form until all pieces are in place.
+- A piece is dragged by holding the model's own surface or the number on it.
+- OrbitControls is disabled during dragging. The piece moves on a plane facing the camera and passing through the grab depth; so it does not slip away from the cursor in perspective.
+- If released when the piece's on-screen centre is within 20–34 pixels of its own target, it settles into the correct depth with an animation. The proximity threshold does not produce a visible target marker. This threshold is adjusted according to the screen width.
+- When all six pieces are complete, thin bronze joint marks appear. "İncelemeye dön" keeps these marks; it does not return to the intact body. Before the repair is finished, "Onarımı iptal et" restores the initial mark-free appearance.
+- A piece released in the wrong place returns to the shelf. A simple click only selects the piece; it does not count as a failed attempt.
+- Pointer capture, pointercancel and lost capture are handled. Escape cancels the drag; the camera lock is lifted.
+- For the selected piece there is an alternative: moving it with the arrow keys and releasing it with Enter under the same proximity rule. The piece list is in the collapsed "Klavye ile birleştir" section.
+- Restarting clears the current drag/animation. When the route changes, the renderer, controls, listeners, geometry and materials are released. If the model cannot be loaded, an error is shown and repair cannot be started.
+- With the reduced motion preference, the settling animation is skipped.
 
 ## VR (Meta Quest Browser, WebXR)
 
-`VR'da aç` düğmesi yalnız `immersive-vr` destekleyen tarayıcıda görünür. Kod `src/features/workshops/vase/vaseXr.ts`; sahneye yalnız `VazoXrBaglam` üzerinden dokunur, oyun durumu masaüstüyle aynı yoldan geçer.
+The `VR'da aç` button appears only in a browser that supports `immersive-vr`. The code is `src/features/workshops/vase/vaseXr.ts`; it touches the scene only through `VazoXrBaglam`, and game state goes through the same path as on desktop.
 
-- Vazo 1:1 ölçekte (44 cm), masa yüksekliğinde, başın 70 cm önünde açılır. Vazo hangi durumdaysa VR'a öyle geçer: izsiz, yarım onarım veya onarılmış.
-- Izsiz vazo ve onarılmış vazo bütün olarak tutulup çevrilir; bırakınca masaya döner. Onarım izleri tamamlanınca görünür. Panel: `Vazoyu parçala` / `Yeniden başlat` / `Yeniden parçala` ve `VR'dan çık`.
-- Parça, ışın + tetik veya değerek/nişanlayarak yan tuşla tutulur. Bırakınca hedefe 9 cm'den (`XR_OTURMA_ESIGI`) yakınsa `yerineOturur` ile oturur, değilse rafa döner. Masaüstünde aynı işlev piksel eşiğiyle çalışır. Hedef işareti yoktur.
-- Kumanda kopar veya oturum kapanırsa eldeki parça deneme sayılmadan rafa döner. Gamepad okunmaz, tek kumanda yeter, `XRControllerModelFactory` kullanılmaz.
-- `Temsilî model · Tarihî eser değildir` etiketi başa bağlıdır, derinlik sınamasına girmez.
+- The vase opens at 1:1 scale (44 cm), at table height, 70 cm in front of the head. It goes into VR in whatever state it is in: mark-free, half repaired, or repaired.
+- The mark-free vase and the repaired vase are held and rotated as a whole; when released it returns to the table. The repair marks become visible when completed. Panel: `Vazoyu parçala` / `Yeniden başlat` / `Yeniden parçala` and `VR'dan çık`.
+- A piece is grabbed with ray + trigger, or by touching/aiming with the side button. When released, if it is within 9 cm (`XR_OTURMA_ESIGI`) of the target it settles via `yerineOturur`, otherwise it returns to the shelf. On desktop the same function works with the pixel threshold. There is no target marker.
+- If the controller disconnects or the session closes, the piece in hand returns to the shelf without counting as an attempt. The gamepad is not read, one controller is enough, `XRControllerModelFactory` is not used.
+- The `Temsilî model · Tarihî eser değildir` label is attached to the head and does not take part in the depth test.
 
-Vazonun altında yazı yoktur; önceki panelin "örnek yazı" yönlendirmesi ve `ALT_YAZI` sabiti kaldırıldı.
+There is no text under the vase; the "sample text" guidance of the previous panel and the `ALT_YAZI` constant were removed.
 
-Gerçek Quest'te denenmedi: aşağıdaki VR testleri IWER taklidiyle çalışır, performansı ve kumanda hissini ölçmez.
+Not tried on a real Quest: the VR tests below run with an IWER emulation and do not measure performance or controller feel.
 
-## Doğrulama
+## Verification
 
 - `npm run build`
-- `node tests/vase-xr-logic.mjs`: saf hesaplar; `npm run test:hizli` içindedir.
-- `TEST_URL=… node tests/vase-xr-button.mjs`: sahte `navigator.xr` ile düğme: xr yok, destek yok, reddedildi.
-- `XR_SIM=/gecici/klasor bash tests/xr-sim/setup.sh`, kopya derleme önizlenip `XR_SIM=… TEST_URL=… node tests/xr-sim/vase-sim.mjs`: simüle Quest ile baştan sona.
-- `node tests/vase.mjs`: Chrome, 1280 ve 360px; gerçek GLB isteği, izsiz başlangıç, parçaya özel hedef işaretinin yokluğu, yanlış bırakma, fare/dokunma ile 6 parça tamamlama, onarım sonrası farklı görünüm, iptalde başlangıç görüntüsüne birebir dönüş, model yüzeyinden tutuş, Escape, klavye, rota temizliği ve model yükleme hatası.
-- Blender'da sağlam gövde ve altı parçanın kapalı manifold olduğu ve pozitif hacim taşıdığı bmesh ile kontrol edildi.
-- `vazo-*-izsiz.png` ile `vazo-*-onarim-izleri.png` aynı kamera açısından başlangıç/onarım karşılaştırmasıdır.
-- Ekran görüntüleri `test-sonuclari/vazo-*-blender-incele.png`, `vazo-*-surukle-baslangic.png`, `vazo-*-surukle-tamam.png` dosyalarında (git dışında).
+- `node tests/vase-xr-logic.mjs`: pure calculations; it is included in `npm run test:hizli`.
+- `TEST_URL=… node tests/vase-xr-button.mjs`: the button with a fake `navigator.xr`: no xr, no support, rejected.
+- `XR_SIM=/gecici/klasor bash tests/xr-sim/setup.sh`, the copy build is previewed and `XR_SIM=… TEST_URL=… node tests/xr-sim/vase-sim.mjs`: end to end with a simulated Quest.
+- `node tests/vase.mjs`: Chrome, 1280 and 360px; real GLB request, mark-free start, absence of a piece-specific target marker, wrong release, completing 6 pieces with mouse/touch, different appearance after repair, exact return to the initial image on cancel, grabbing from the model surface, Escape, keyboard, route cleanup and model load error.
+- In Blender, it was checked with bmesh that the intact body and the six pieces are closed manifolds and carry positive volume.
+- `vazo-*-izsiz.png` and `vazo-*-onarim-izleri.png` are the start/repair comparison from the same camera angle.
+- Screenshots are in `test-sonuclari/vazo-*-blender-incele.png`, `vazo-*-surukle-baslangic.png`, `vazo-*-surukle-tamam.png` (outside git).
 
-Teknik referanslar: [Three.js Raycaster](https://threejs.org/docs/pages/Raycaster), [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader), [Blender glTF aktarımı](https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html).
+Technical references: [Three.js Raycaster](https://threejs.org/docs/pages/Raycaster), [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader), [Blender glTF import/export](https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html).

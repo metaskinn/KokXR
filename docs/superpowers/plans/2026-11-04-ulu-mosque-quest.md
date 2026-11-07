@@ -1,72 +1,72 @@
-# Ulu Camii maketi — Meta Quest (WebXR) uygulama planı
+# Ulu Camii model — Meta Quest (WebXR) implementation plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Ulu Camii temsilî maketini Quest Browser'da VR'da açmak: önce masa üstünde maket olarak incelemek, sonra içeri girip gerçek ölçekte yürümek ve kaynaklı bilgi kartlarını okumak.
+**Goal:** Open the representative Ulu Camii model in VR in the Quest Browser: first examine it as a model on a table, then go inside, walk at real scale and read the sourced info cards.
 
-**Architecture:** Yeni uygulama veya motor yok. Mevcut `modelScene.ts` sahnesine WebXR oturumu eklenir. Kamera bir "rig" grubuna bağlanır: maket görünümünde rig 100× ölçeklenir (dünya masa boyutunda görünür), iç mekânda 1× olur. Hesaplar `three`suz saf modüllerde tutulur ve Node'da test edilir; VR arayüzü `CanvasTexture` panellerdir, çünkü HTML VR içinde görünmez.
+**Architecture:** No new application or engine. A WebXR session is added to the existing `modelScene.ts` scene. The camera is attached to a "rig" group: in the model view the rig is scaled 100× (the world appears table-sized), indoors it becomes 1×. Calculations are kept in `three`-free pure modules and tested in Node; the VR interface is `CanvasTexture` panels, because HTML is not visible inside VR.
 
-**Tech Stack:** React 19, TypeScript, Three.js 0.187 (`renderer.xr`), Playwright. **Yeni bağımlılık yok.**
+**Tech Stack:** React 19, TypeScript, Three.js 0.187 (`renderer.xr`), Playwright. **No new dependencies.**
 
-**Spec:** Ayrı spec yok; kullanıcı soru aşamasını geçip plan istedi. Ürün kararları aşağıdaki "Varsayımlar" bölümündedir ve kullanıcı onayına açıktır.
+**Spec:** No separate spec; the user skipped the question stage and asked for a plan. Product decisions are in the "Assumptions" section below and are open to user approval.
 
-**Branch:** `ulu-camii-quest` (`origin/ulu-camii-maket` üzerinde, `57722ed`). `master`'a birleştirme bu planın parçası değildir.
+**Branch:** `ulu-camii-quest` (on top of `origin/ulu-camii-maket`, `57722ed`). Merging into `master` is not part of this plan.
 
-## Varsayımlar (kullanıcı onaylayacak)
+## Assumptions (the user will approve)
 
-1. Akış: **maket görünümü → içeri gir → yürü → bilgi kartı oku → çık.**
-2. Hedef cihaz Quest 2 veya üstü, iki kumanda, Quest Browser.
-3. Demo herkese açık yayınlanmaz; Quest'e geliştirici bilgisayarından USB ile açılır (`adb reverse`).
-4. Masaüstü ve telefon deneyimi aynen kalır; VR düğmesi yalnızca destekleyen tarayıcıda görünür.
+1. Flow: **model view → go inside → walk → read an info card → exit.**
+2. Target device is Quest 2 or above, two controllers, Quest Browser.
+3. The demo is not published publicly; it is opened on the Quest from the developer's computer over USB (`adb reverse`).
+4. The desktop and phone experience stays exactly the same; the VR button appears only in browsers that support it.
 
-## Kapsam dışı (sonraya)
+## Out of scope (for later)
 
-El takibi; kumandayla maketi tutup çevirme; maketin içinde 3B "i" işaretleri; sesli anlatım; AR/passthrough; kumandanın gerçek 3B modeli (`XRControllerModelFactory` modeli internetten indirir, demoda risk); kapılardan dışarı yürüme; Muradiye; kılıç ve vazo atölyeleri.
+Hand tracking; holding and turning the model with a controller; 3D "i" markers inside the model; audio narration; AR/passthrough; the real 3D model of the controller (`XRControllerModelFactory` downloads the model from the internet, a risk in the demo); walking out through the doors; Muradiye; the sword and vase workshops.
 
 ## Global Constraints
 
-- Arayüz Türkçe; tarihsel metin yazılmaz, tüm kart metni ve kaynak `maket.icBilgiler` + `kaynaklar` verisinden gelir.
-- VR'da da ekranda şu etiket görünür: `Temsilî maket · Gerçek bir 3B tarama değildir`.
-- "Gerçek", "birebir", "dijital ikiz" gibi yanıltıcı ifade kullanılmaz.
-- Repo private kalır; fotoğraf izni netleşmeden herkese açık yayın yok.
-- Masaüstü davranışı bozulmaz: `node tests/model-interior.mjs` her görevden sonra geçer.
-- `package.json` bağımlılıkları değişmez.
-- Hedef kare hızı: Quest'te en az **72 FPS**.
+- The interface is Turkish; no historical text is written, all card text and sources come from the `maket.icBilgiler` + `kaynaklar` data.
+- In VR too, this label is visible on screen: `Temsilî maket · Gerçek bir 3B tarama değildir`.
+- Misleading expressions such as "gerçek", "birebir", "dijital ikiz" are not used.
+- The repo stays private; no public release until photo permission is clarified.
+- Desktop behavior is not broken: `node tests/model-interior.mjs` passes after every task.
+- The `package.json` dependencies do not change.
+- Target frame rate: at least **72 FPS** on the Quest.
 
-## Dosya yapısı
+## File structure
 
-| Dosya | Sorumluluk |
+| File | Responsibility |
 |---|---|
-| `src/features/scale-models/walkingCollision.ts` (yeni) | `modelScene.ts`'ten taşınan saf çarpışma denetimi |
-| `src/shared/xr/xrMotion.ts` (yeni) | Saf hesaplar: ölü bölge, yürüme, dönüş, rig konumu |
-| `src/shared/xr/xrText.ts` (yeni) | Saf hesaplar: menü öğeleri, satır kırma, panel isabeti |
-| `src/shared/xr/xrPanel.ts` (yeni) | Menü ve bilgi kartını `CanvasTexture` düzlemi olarak çizer |
-| `src/features/scale-models/xrSession.ts` (yeni) | Oturum, rig, kumanda, ışın, görünüm geçişleri |
-| `src/features/scale-models/modelScene.ts` | XR oturumunu bağlar, kare döngüsünde XR dalı açar |
-| `src/features/heritage/components/ArtifactExplorer.tsx` | `VR'da aç` düğmesi, destek denetimi, hata mesajı |
-| `tests/model-xr-logic.mjs` (yeni) | Saf modül testleri (`node`, Node'un yerleşik TS desteği, `tests/sword-logic.mjs` gibi) |
-| `tests/model-xr-button.mjs` (yeni) | Sahte `navigator.xr` ile düğme ve hata akışı (Playwright) |
+| `src/features/scale-models/walkingCollision.ts` (new) | Pure collision check moved from `modelScene.ts` |
+| `src/shared/xr/xrMotion.ts` (new) | Pure calculations: dead zone, walking, turning, rig position |
+| `src/shared/xr/xrText.ts` (new) | Pure calculations: menu items, line wrapping, panel hit-test |
+| `src/shared/xr/xrPanel.ts` (new) | Draws the menu and info card as a `CanvasTexture` plane |
+| `src/features/scale-models/xrSession.ts` (new) | Session, rig, controller, ray, view transitions |
+| `src/features/scale-models/modelScene.ts` | Connects the XR session, opens the XR branch in the frame loop |
+| `src/features/heritage/components/ArtifactExplorer.tsx` | `VR'da aç` button, support check, error message |
+| `tests/model-xr-logic.mjs` (new) | Pure module tests (`node`, Node's built-in TS support, like `tests/sword-logic.mjs`) |
+| `tests/model-xr-button.mjs` (new) | Button and error flow with a fake `navigator.xr` (Playwright) |
 
 ## Review Focus
 
-1. **VR desteklemeyen tarayıcı veya reddedilen izin:** düğme görünmez ya da Türkçe hata çıkar, maket ekranda çalışmaya devam eder → Görev 2 testi.
-2. **Oturumun Meta düğmesiyle dışarıdan kapanması:** görünüm, kamera, ışık ve arka plan masaüstü hâline döner, sekme donmaz → Görev 2 cihaz/emülatör kontrolü.
-3. **Kumanda yok, tek kumanda veya `gamepad` boş:** hata fırlatılmaz; tek kumandayla menü kullanılabilir → Görev 3 testi.
-4. **Joystick kayması ve basılı tutma:** ölü bölge altında hareket yok, anlık dönüş her itişte bir kez olur → Görev 3 testi.
-5. **Uzun kart metni:** en uzun metin (`dogu-kapisi`, 280 karakter) ve kaynak satırı panele sığar, Türkçe harfler bozulmaz → Görev 5 testi.
+1. **A browser that does not support VR, or a denied permission:** the button is not visible or a Turkish error appears, the model keeps working on screen → Task 2 test.
+2. **The session being closed externally with the Meta button:** the view, camera, light and background return to the desktop state, the tab does not freeze → Task 2 device/emulator check.
+3. **No controller, a single controller, or an empty `gamepad`:** no error is thrown; the menu can be used with a single controller → Task 3 test.
+4. **Joystick drift and holding down:** no movement below the dead zone, the snap turn happens once per push → Task 3 test.
+5. **Long card text:** the longest text (`dogu-kapisi`, 280 characters) and the source line fit the panel, Turkish letters are not corrupted → Task 5 test.
 
 ---
 
-### Görev 0: Temel durumu doğrula ve yükü ölç
+### Task 0: Verify the baseline and measure the load
 
-**Files:** Kod değişikliği yok.
+**Files:** No code changes.
 
-- [ ] **Adım 1:** `npm install` çalıştır; `git status` temiz kalmalı. `node -v` şu an v22.23.3, `HANDOFF.md` 24+ istiyor; uyumsuzluk çıkarsa kullanıcıya bildir.
-- [ ] **Adım 2:** `npm run build` ve ayrı terminalde `npm run preview -- --port 4173`. Beklenen: hatasız.
-- [ ] **Adım 3:** `node tests/model-interior.mjs`. Beklenen: `1000px` ve `360px` satırları geçer. Geçmezse dur ve bildir; bu branch `master`'a hiç alınmamış kod içeriyor.
-- [ ] **Adım 4:** Maket açıkken dış ve iç görünümde `renderer.info.render.calls` ve `.triangles` değerlerini geçici olarak yazdırıp not al, geçici kodu geri al. Kaba bütçe: Quest 2 için stereo toplam ~1 milyon üçgen ve ~200 çizim çağrısı. Aşılıyorsa Görev 6'daki düşürme sırası baştan uygulanır.
+- [ ] **Step 1:** Run `npm install`; `git status` must stay clean. `node -v` is currently v22.23.3, `HANDOFF.md` asks for 24+; if a mismatch arises, tell the user.
+- [ ] **Step 2:** `npm run build` and, in a separate terminal, `npm run preview -- --port 4173`. Expected: no errors.
+- [ ] **Step 3:** `node tests/model-interior.mjs`. Expected: the `1000px` and `360px` lines pass. If they do not, stop and report; this branch contains code that was never taken into `master`.
+- [ ] **Step 4:** With the model open, temporarily print the `renderer.info.render.calls` and `.triangles` values in the outside and inside views and note them, then revert the temporary code. Rough budget: for Quest 2, a stereo total of ~1 million triangles and ~200 draw calls. If exceeded, the reduction order in Task 6 is applied from the start.
 
-### Görev 1: Saf hareket hesapları
+### Task 1: Pure motion calculations
 
 **Files:**
 - Create: `src/features/scale-models/walkingCollision.ts`, `src/shared/xr/xrMotion.ts`, `tests/model-xr-logic.mjs`
@@ -75,25 +75,25 @@ El takibi; kumandayla maketi tutup çevirme; maketin içinde 3B "i" işaretleri;
 **Interfaces:**
 - Produces:
   - `carpiyor(yurume: IcYurume, x: number, z: number, r: number): boolean`
-  - `OYUNCU_YARICAP = 0.45` (`modelScene.ts`'ten buraya taşınır)
-  - `oluBolge(d: number): number` — `|d| < 0.2` ise 0, üstü 0–1 aralığına yeniden ölçeklenir, işaret korunur
-  - `XR_YURUME_HIZI = 1.6` (m/sn), `XR_DONUS = Math.PI / 6`
-  - `yurumeAdimi(bas: {x,z}, ileriYon: {x,z}, cubuk: {x,y}, dt: number, engel: (x,z)=>boolean): {x,z}` — yeni baş konumu. `cubuk.y < 0` ileridir (WebXR). Eksen eksen dener, duvar boyunca kayar. `dt` en fazla 0.1 sayılır.
-  - `anlikDonus(sagX: number, basili: boolean): { yon: -1|0|1; basili: boolean }` — `|x| > 0.7` iken bir kez tetikler, `|x| < 0.3` olunca yeniden silahlanır
+  - `OYUNCU_YARICAP = 0.45` (moved here from `modelScene.ts`)
+  - `oluBolge(d: number): number` — 0 if `|d| < 0.2`, above that it is rescaled to the 0–1 range, the sign is preserved
+  - `XR_YURUME_HIZI = 1.6` (m/s), `XR_DONUS = Math.PI / 6`
+  - `yurumeAdimi(bas: {x,z}, ileriYon: {x,z}, cubuk: {x,y}, dt: number, engel: (x,z)=>boolean): {x,z}` — the new head position. `cubuk.y < 0` is forward (WebXR). Tries axis by axis, slides along the wall. `dt` is counted as at most 0.1.
+  - `anlikDonus(sagX: number, basili: boolean): { yon: -1|0|1; basili: boolean }` — triggers once while `|x| > 0.7`, re-arms when `|x| < 0.3`
   - `basCevresindeDon(rig: {x,z}, bas: {x,z}, aci: number): {x,z}` — `x' = (rx-bx)cos a + (rz-bz)sin a + bx`, `z' = -(rx-bx)sin a + (rz-bz)cos a + bz`
   - `masaRig(aci: number, olcek: number): {x,y,z,rotY}` — `MASA_Y = 0.9`, `MASA_UZAKLIK = 1.2`; `x = D sin a`, `y = -MASA_Y·olcek`, `z = -D cos a`, `rotY = π - a`, `D = MASA_UZAKLIK·olcek`
   - `MASA_OLCEK_ILK = 100`, `MASA_OLCEK_MIN = 40`, `MASA_OLCEK_MAX = 200`
-  - `durakRig(konum: number[], bak: number[], basYerel: {x,z}, zeminY: number): {x,y,z,rotY}` — `rotY = atan2(-dx, -dz)`; rig konumu, başı `konum`un x/z'sine getirecek şekilde `basYerel`in `rotY` ile döndürülmüşünü çıkarır
+  - `durakRig(konum: number[], bak: number[], basYerel: {x,z}, zeminY: number): {x,y,z,rotY}` — `rotY = atan2(-dx, -dz)`; the rig position subtracts the `basYerel` rotated by `rotY`, so that the head comes to the x/z of `konum`
 
-- [ ] **Adım 1: Başarısız testi yaz** (`node:assert/strict`, `yakin` yardımcı işlevi 1e-6 toleransla)
+- [ ] **Step 1: Write the failing test** (`node:assert/strict`, the `yakin` helper function with 1e-6 tolerance)
 
 ```js
 assert.equal(oluBolge(0.15), 0); assert.equal(oluBolge(-0.1), 0); assert.equal(oluBolge(1), 1); assert.equal(oluBolge(-1), -1)
 const serbest = () => false
 yakin(yurumeAdimi({x:0,z:0}, {x:0,z:1}, {x:0,y:-1}, 0.1, serbest), {x:0, z:0.16})
-yakin(yurumeAdimi({x:0,z:0}, {x:0,z:1}, {x:0,y:-1}, 5, serbest), {x:0, z:0.16})   // dt sınırı
+yakin(yurumeAdimi({x:0,z:0}, {x:0,z:1}, {x:0,y:-1}, 5, serbest), {x:0, z:0.16})   // dt limit
 yakin(yurumeAdimi({x:0,z:0}, {x:1,z:0}, {x:0,y:0}, 0.1, serbest), {x:0, z:0})
-yakin(yurumeAdimi({x:0,z:0}, {x:0.6,z:0.8}, {x:0,y:-1}, 0.1, (x) => x > 0), {x:0, z:0.128}) // duvar boyunca kayar
+yakin(yurumeAdimi({x:0,z:0}, {x:0.6,z:0.8}, {x:0,y:-1}, 0.1, (x) => x > 0), {x:0, z:0.128}) // slides along the wall
 let d = anlikDonus(0.9, false); assert.deepEqual(d, {yon:1, basili:true})
 d = anlikDonus(0.9, d.basili); assert.equal(d.yon, 0)
 d = anlikDonus(0.1, d.basili); assert.equal(d.basili, false)
@@ -105,142 +105,142 @@ assert.equal(carpiyor(y, 0, 0, .45), false); assert.equal(carpiyor(y, 1.5, 1.5, 
 assert.equal(carpiyor(y, -5, -5, .45), true); assert.equal(carpiyor(y, 9.9, 0, .45), true)
 ```
 
-- [ ] **Adım 2:** `node tests/model-xr-logic.mjs`. Beklenen: modül bulunamadı hatası.
-- [ ] **Adım 3:** İki modülü yaz. `modelScene.ts`'teki `carpiyor` kapanışını yeni işlevi çağıracak şekilde değiştir; davranış aynı kalır.
-- [ ] **Adım 4:** `node tests/model-xr-logic.mjs` geçer; `npm run build` ve `node tests/model-interior.mjs` geçer.
-- [ ] **Adım 5:** Commit: `Quest: saf hareket hesapları ve çarpışma modülü`
+- [ ] **Step 2:** `node tests/model-xr-logic.mjs`. Expected: module-not-found error.
+- [ ] **Step 3:** Write the two modules. Change the `carpiyor` closure in `modelScene.ts` to call the new function; the behavior stays the same.
+- [ ] **Step 4:** `node tests/model-xr-logic.mjs` passes; `npm run build` and `node tests/model-interior.mjs` pass.
+- [ ] **Step 5:** Commit: `Quest: saf hareket hesapları ve çarpışma modülü`
 
-### Görev 2: VR oturumu ve düğme
+### Task 2: VR session and button
 
 **Files:**
 - Create: `src/features/scale-models/xrSession.ts`, `tests/model-xr-button.mjs`
 - Modify: `src/features/scale-models/modelScene.ts`, `src/features/heritage/components/ArtifactExplorer.tsx`
 
 **Interfaces:**
-- Consumes: `masaRig`, `MASA_OLCEK_ILK` (Görev 1)
+- Consumes: `masaRig`, `MASA_OLCEK_ILK` (Task 1)
 - Produces:
-  - `MaketSahnesi.xrBaslat(): Promise<void>` — reddedilirse Promise reddedilir
+  - `MaketSahnesi.xrBaslat(): Promise<void>` — if denied, the Promise is rejected
   - `SahneSecenek.xrDegisti?: (aktif: boolean) => void`
   - `xrOturumuKur({ renderer, scene, camera, ... }): { baslat(): Promise<void>; kare(dt: number): void; bitir(): void; rig: THREE.Group }`
 
-- [ ] **Adım 1: Başarısız testi yaz** (`tests/model-xr-button.mjs`, `addInitScript` ile `navigator.xr` taklidi; `tests/model-interior.mjs`'teki `chrome` + swiftshader ayarları)
-  - `xr_yok`: `navigator.xr` `undefined` → `VR'da aç` düğmesi yok, `İçeri gir` çalışır.
-  - `destek_yok`: `isSessionSupported → false` → düğme yok.
-  - `reddedildi`: `isSessionSupported → true`, `requestSession` `NotAllowedError` fırlatır → düğme görünür; tıklayınca `VR oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin.` görünür; `İçeri gir` hâlâ etkin; konsol hatası yok.
-- [ ] **Adım 2:** Testi çalıştır. Beklenen: `reddedildi` düğmeyi bulamaz.
-- [ ] **Adım 3: Sahneyi bağla**
+- [ ] **Step 1: Write the failing test** (`tests/model-xr-button.mjs`, a `navigator.xr` fake via `addInitScript`; the `chrome` + swiftshader settings from `tests/model-interior.mjs`)
+  - `xr_yok`: `navigator.xr` is `undefined` → no `VR'da aç` button, `İçeri gir` works.
+  - `destek_yok`: `isSessionSupported → false` → no button.
+  - `reddedildi`: `isSessionSupported → true`, `requestSession` throws `NotAllowedError` → the button is visible; on click `VR oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin.` appears; `İçeri gir` is still enabled; no console error.
+- [ ] **Step 2:** Run the test. Expected: `reddedildi` cannot find the button.
+- [ ] **Step 3: Connect the scene**
   - `renderer.xr.enabled = true`, `renderer.xr.setReferenceSpaceType('local-floor')`, `renderer.xr.setFoveation(1)`.
-  - `navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })` düğme tıklamasının içinde çağrılır; sonra `renderer.xr.setSession`.
-  - Girişte: `icMekan(null)` ile dışarı çık, kamerayı rig'e ekle, `masaRig(0, MASA_OLCEK_ILK)` uygula, `scene.background`ı düz `#1a2b25` yap (doku arka plan VR'da başa yapışık görünür), rig'e 6 m yarıçaplı koyu zemin diski ekle (rig'in yerel y=0'ı).
-  - `sessionend`te: kamerayı rig'den çıkar, `baslangic`/`baslangicHedef`, arka plan, `camera.near/far`, `boyutla()` ve `xrDegisti(false)` geri alınır.
-  - Kare döngüsünün başında: `renderer.xr.isPresenting` ise OrbitControls, `composer`, uyarlamalı kalite ve `isaretleriKonumla` atlanır; `xr.kare(dt)`, `bilgiGuncelle()` ve `renderer.render(scene, camera)` çalışır. Katmanlar XR'da animasyonsuz anında hedefe gider ve gölge bir kez güncellenir.
-  - `boyutla`nın başına `if (renderer.xr.isPresenting) return`. `temizle` içinde açık oturum varsa önce `session.end()`.
-- [ ] **Adım 4: Düğmeyi ekle** `EseriEleAl.tsx`: `navigator.xr?.isSessionSupported('immersive-vr')` sonucunu state'e al, `maket-kontrol` içinde `VR'da aç` düğmesi; hata mesajı `maket-durum` + `aria-live` ile. Giriş öncesi `setDurak(null)`, `setParcali(false)`.
-- [ ] **Adım 5:** `node tests/model-xr-button.mjs`, `node tests/model-interior.mjs`, `npm run build` geçer.
-- [ ] **Adım 6: Emülatör kontrolü.** Chrome'da Immersive Web Emulator eklentisiyle: `VR'da aç` → maket önde ve masa yüksekliğinde; emülatörden oturumu kapat → masaüstü görünümü eski hâlinde, sürükleme çalışıyor. Rig ölçeği görüntüyü bozarsa rig yerine maket kökü ve `kaide` tek grupta 0,01 ölçeklenir, gölge kamerası da aynı oranda küçültülür.
-- [ ] **Adım 7:** Commit: `Quest: WebXR oturumu ve VR'da aç düğmesi`
+  - `navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })` is called inside the button click; then `renderer.xr.setSession`.
+  - On entry: leave with `icMekan(null)`, add the camera to the rig, apply `masaRig(0, MASA_OLCEK_ILK)`, make `scene.background` a flat `#1a2b25` (a textured background looks glued to the head in VR), add a dark floor disc of 6 m radius to the rig (the rig's local y=0).
+  - On `sessionend`: take the camera out of the rig, restore `baslangic`/`baslangicHedef`, the background, `camera.near/far`, `boyutla()` and `xrDegisti(false)`.
+  - At the start of the frame loop: if `renderer.xr.isPresenting`, OrbitControls, `composer`, adaptive quality and `isaretleriKonumla` are skipped; `xr.kare(dt)`, `bilgiGuncelle()` and `renderer.render(scene, camera)` run. The layers go to the target instantly without animation in XR and the shadow is updated once.
+  - At the start of `boyutla`: `if (renderer.xr.isPresenting) return`. In `temizle`, if there is an open session, first `session.end()`.
+- [ ] **Step 4: Add the button** in `EseriEleAl.tsx`: put the result of `navigator.xr?.isSessionSupported('immersive-vr')` into state, a `VR'da aç` button inside `maket-kontrol`; the error message via `maket-durum` + `aria-live`. Before entry `setDurak(null)`, `setParcali(false)`.
+- [ ] **Step 5:** `node tests/model-xr-button.mjs`, `node tests/model-interior.mjs`, `npm run build` pass.
+- [ ] **Step 6: Emulator check.** In Chrome with the Immersive Web Emulator extension: `VR'da aç` → the model is in front and at table height; close the session from the emulator → the desktop view is as before, dragging works. If the rig scale distorts the image, the model root and `kaide` are scaled by 0.01 in a single group instead of the rig, and the shadow camera is shrunk by the same ratio.
+- [ ] **Step 7:** Commit: `Quest: WebXR oturumu ve VR'da aç düğmesi`
 
-### Görev 3: Kumandalar ve maket görünümü
+### Task 3: Controllers and model view
 
 **Files:**
 - Modify: `src/features/scale-models/xrSession.ts`, `tests/model-xr-logic.mjs`, `src/shared/xr/xrMotion.ts`
 
 **Interfaces:**
-- Consumes: `oluBolge`, `masaRig`, `MASA_OLCEK_*` (Görev 1), `rig` (Görev 2)
-- Produces: `kumandaGirdisi(kaynaklar: Iterable<{handedness: string; gamepad?: {axes: readonly number[]; buttons: readonly {pressed: boolean}[]}}>): { solX, solY, sagX, sagY, menu: boolean }` (`xrHareket.ts`). Quest'te çubuk `axes[2]`, `axes[3]`; menü `buttons[5]` (B/Y). Tek kumanda varsa onun çubuğu hem sağ hem sol sayılır.
+- Consumes: `oluBolge`, `masaRig`, `MASA_OLCEK_*` (Task 1), `rig` (Task 2)
+- Produces: `kumandaGirdisi(kaynaklar: Iterable<{handedness: string; gamepad?: {axes: readonly number[]; buttons: readonly {pressed: boolean}[]}}>): { solX, solY, sagX, sagY, menu: boolean }` (`xrHareket.ts`). On the Quest the stick is `axes[2]`, `axes[3]`; the menu is `buttons[5]` (B/Y). If there is a single controller, its stick counts as both right and left.
 
-- [ ] **Adım 1: Başarısız test ekle**
-  - Boş dizi → tüm değerler 0, `menu:false`.
-  - `gamepad` yok → hata yok, 0.
-  - `axes` yalnız 2 elemanlı → hata yok, 0.
-  - Tek sağ kumanda `axes:[0,0,.5,-.8]` → `sagX=.5`, `solY=-.8`.
-  - İki kumanda → her el kendi eksenine yazar.
-- [ ] **Adım 2:** Test başarısız olur.
-- [ ] **Adım 3:** `kumandaGirdisi`yi yaz. `xr.kare` içinde maket görünümünde: `oluBolge(sagX)` ile `aci += x·dt·1.2`, `oluBolge(sagY)` ile `olcek *= exp(y·dt·1.2)`, `MASA_OLCEK_MIN..MAX` arası sınırla, `masaRig` uygula.
-- [ ] **Adım 4:** Testler geçer; emülatörde çubukla maket döner ve büyür/küçülür.
-- [ ] **Adım 5:** Commit: `Quest: kumanda girdisi ve maket görünümü`
+- [ ] **Step 1: Add failing tests**
+  - Empty array → all values 0, `menu:false`.
+  - No `gamepad` → no error, 0.
+  - `axes` has only 2 elements → no error, 0.
+  - A single right controller `axes:[0,0,.5,-.8]` → `sagX=.5`, `solY=-.8`.
+  - Two controllers → each hand writes to its own axis.
+- [ ] **Step 2:** The test fails.
+- [ ] **Step 3:** Write `kumandaGirdisi`. In `xr.kare`, in the model view: with `oluBolge(sagX)`, `aci += x·dt·1.2`; with `oluBolge(sagY)`, `olcek *= exp(y·dt·1.2)`, clamp between `MASA_OLCEK_MIN..MAX`, apply `masaRig`.
+- [ ] **Step 4:** The tests pass; in the emulator the model rotates and grows/shrinks with the stick.
+- [ ] **Step 5:** Commit: `Quest: kumanda girdisi ve maket görünümü`
 
-### Görev 4: İç mekânda yürüme
+### Task 4: Walking indoors
 
 **Files:**
-- Modify: `src/features/scale-models/xrSession.ts`, `src/features/scale-models/modelScene.ts`, `src/features/scale-models/uluMosqueInterior.ts` (yalnız döşeme yüksekliğini dışa açmak için)
+- Modify: `src/features/scale-models/xrSession.ts`, `src/features/scale-models/modelScene.ts`, `src/features/scale-models/uluMosqueInterior.ts` (only to expose the floor height)
 
 **Interfaces:**
 - Consumes: `yurumeAdimi`, `anlikDonus`, `basCevresindeDon`, `durakRig`, `carpiyor`, `kumandaGirdisi`
-- Produces: `xr.gorunum(durakId: string | null): void`. `null` maket görünümü, id o durakta 1× ölçek. `ZEMIN_Y`: iç döşemenin üst yüzü, `uluMosqueInterior.ts`'ten dışa açılır (masaüstündeki `gozY = 2.7` oturan veya ayaktaki gerçek kullanıcıya uymaz, VR'da göz yüksekliğini cihaz verir).
+- Produces: `xr.gorunum(durakId: string | null): void`. `null` is the model view, an id is 1× scale at that stop. `ZEMIN_Y`: the top surface of the interior floor, exposed from `uluMosqueInterior.ts` (the desktop `gozY = 2.7` does not suit a real seated or standing user; in VR the device supplies eye height).
 
-- [ ] **Adım 1:** `bilgiGuncelle` içindeki `camera.position` okumalarını `bakisKonumu()` üzerinden yap: XR'da `camera.getWorldPosition`, değilse `camera.position`. Masaüstü testi değişmeden geçer.
-- [ ] **Adım 2:** `icMekan` içindeki ışık, ortam, `iceride` geçişlerini kameraya dokunmayan `icDurumu(iceride: boolean)` işlevine ayır; `icMekan` onu çağırır. `node tests/model-interior.mjs` geçer.
-- [ ] **Adım 3:** `xr.gorunum` ve `kare`deki iç dalı yaz: sol çubukla `yurumeAdimi(bas, ileriYon, ...)`, engel `carpiyor(yurume, x, z, OYUNCU_YARICAP)`, çıkan farkı rig'e uygula. Sağ çubukla `anlikDonus` + `basCevresindeDon` ve `rotY += aci`. Hareket yalnızca çubuktan denetlenir; odada fiziksel yürüyüp duvar içinden geçme kapsam dışıdır.
-- [ ] **Adım 4:** Geçici olarak emülatörde durak açıp doğrula: başlangıçta döşemede duruluyor, `giris` durağında güneye bakılıyor, ileri itince duvarda duruluyor.
-- [ ] **Adım 5:** `npm run build`, `node tests/model-xr-logic.mjs`, `node tests/model-interior.mjs` geçer.
-- [ ] **Adım 6:** Commit: `Quest: iç mekânda çubukla yürüme ve anlık dönüş`
+- [ ] **Step 1:** Make the `camera.position` reads inside `bilgiGuncelle` go through `bakisKonumu()`: in XR `camera.getWorldPosition`, otherwise `camera.position`. The desktop test passes unchanged.
+- [ ] **Step 2:** Split the light, ambient and `iceride` transitions inside `icMekan` into a function `icDurumu(iceride: boolean)` that does not touch the camera; `icMekan` calls it. `node tests/model-interior.mjs` passes.
+- [ ] **Step 3:** Write `xr.gorunum` and the interior branch in `kare`: with the left stick `yurumeAdimi(bas, ileriYon, ...)`, obstacle `carpiyor(yurume, x, z, OYUNCU_YARICAP)`, apply the resulting difference to the rig. With the right stick `anlikDonus` + `basCevresindeDon` and `rotY += aci`. Movement is controlled only by the stick; physically walking in the room and passing through a wall is out of scope.
+- [ ] **Step 4:** Temporarily open a stop in the emulator and verify: one starts standing on the floor, at the `giris` stop one looks south, pushing forward stops at the wall.
+- [ ] **Step 5:** `npm run build`, `node tests/model-xr-logic.mjs`, `node tests/model-interior.mjs` pass.
+- [ ] **Step 6:** Commit: `Quest: iç mekânda çubukla yürüme ve anlık dönüş`
 
-### Görev 5: Menü ve bilgi kartı panelleri
+### Task 5: Menu and info-card panels
 
 **Files:**
 - Create: `src/shared/xr/xrText.ts`, `src/shared/xr/xrPanel.ts`
 - Modify: `src/features/scale-models/xrSession.ts`, `src/features/scale-models/modelScene.ts`, `tests/model-xr-logic.mjs`
 
 **Interfaces:**
-- Consumes: `xr.gorunum` (Görev 4), `parcala`, `kaynakMetni` (`KaynakSatiri.tsx`), `SahneSecenek.bilgiler`
+- Consumes: `xr.gorunum` (Task 4), `parcala`, `kaynakMetni` (`KaynakSatiri.tsx`), `SahneSecenek.bilgiler`
 - Produces:
   - `SahneSecenek.kaynaklar?: Kaynak[]`
-  - `menuOgeleri(d: { iceride: boolean; parcali: boolean; duraklar: {id,ad}[] }): {id: string; ad: string}[]` — dışarıda `iceri`→"İçeri gir", `parcala`→"Parçala" veya "Birleştir", `cik`→"VR'dan çık". İçeride `disari`→"Dışarı çık", her durak `durak:<id>`, `cik`.
+  - `menuOgeleri(d: { iceride: boolean; parcali: boolean; duraklar: {id,ad}[] }): {id: string; ad: string}[]` — outside: `iceri`→"İçeri gir", `parcala`→"Parçala" or "Birleştir", `cik`→"VR'dan çık". Inside: `disari`→"Dışarı çık", each stop `durak:<id>`, `cik`.
   - `satirKir(metin: string, olc: (s: string) => number, genislik: number): string[]`
-  - `menuIsabet(v: number, ogeSayisi: number, baslikOrani: number): number | null` — `v` uv değeri (1 üst); başlık bandına düşerse `null`
+  - `menuIsabet(v: number, ogeSayisi: number, baslikOrani: number): number | null` — `v` is the uv value (1 is top); `null` if it falls in the header band
   - `xrPaneli(...)`: `{ nesne: THREE.Mesh; ciz(ogeler): void; dispose(): void }`; `bilgiPaneli(...)`: `{ nesne; goster(baslik, metin, kaynak): void; gizle(): void; dispose(): void }`
 
-- [ ] **Adım 1: Başarısız test ekle**
-  - `menuOgeleri` dışarıda `['iceri','parcala','cik']`; `parcali:true` iken `Birleştir`.
-  - İçeride 8 durak için 10 öğe, ilk `disari`, son `cik`.
-  - `satirKir` sahte ölçüyle (`s => s.length`) sözcük bölmez; 100 karakterlik sözcükten taşmaz (sert böler).
-  - `ulu-camii.json`'daki tüm `icBilgiler` metni, kaynağıyla birlikte, karakter başına 0,55 × 34 px ölçüyle 900 px genişlikte en fazla 13 satır olur.
+- [ ] **Step 1: Add failing tests**
+  - `menuOgeleri` outside `['iceri','parcala','cik']`; `Birleştir` when `parcali:true`.
+  - Inside, 10 items for 8 stops, the first `disari`, the last `cik`.
+  - `satirKir` with a fake measure (`s => s.length`) does not split words; it does not overflow from a 100-character word (hard-splits).
+  - All the `icBilgiler` text in `ulu-camii.json`, together with its source, at 900 px width with a measure of 0.55 × 34 px per character, comes to at most 13 lines.
   - `menuIsabet(0.95, 3, 0.2)` → `null`; `menuIsabet(0.75, 3, 0.2)` → `0`; `menuIsabet(0.05, 3, 0.2)` → `2`.
-- [ ] **Adım 2:** Test başarısız olur.
-- [ ] **Adım 3:** `xrMetin.ts` ve `xrPanel.ts`'i yaz. 1024 px canvas, `MeshBasicMaterial`, `toneMapped:false`, kalın sans-serif, açık zemin üstüne koyu yazı. Menü başlığında sabit metin: `Temsilî maket · Gerçek bir 3B tarama değildir`.
-- [ ] **Adım 4:** `xrOturum.ts`'e bağla:
-  - İki `renderer.xr.getController(i)` rig'e eklenir, her birinde ince ışın çizgisi.
-  - `select` olayında `Raycaster` menü ve karta bakar. `uv.y` → `menuIsabet` → eylem. Karta tıklamak `bilgiKapat()` çağırır.
-  - B/Y menüyü açıp kapatır; oturum açılışında menü açıktır.
-  - Paneller rig çocuğudur, açıldığı anda başın 1,3 m önünde ve başa dönüktür; rig ölçeğiyle doğru boyutta kalır.
-  - Kart `bilgiDegisti` tetiklenince `maket.icBilgiler` + `kaynakMetni` ile `Kaynak: …` satırını da çizer; kaynak bulunamazsa `Kaynak bilgisi bulunamadı.`
-  - `cik` → `session.end()`. Dokular `temizle`de `dispose` edilir.
-- [ ] **Adım 5:** Testler ve `npm run build` geçer; emülatörde her menü öğesi ve kart denenir.
-- [ ] **Adım 6:** Commit: `Quest: VR menüsü ve kaynaklı bilgi kartları`
+- [ ] **Step 2:** The test fails.
+- [ ] **Step 3:** Write `xrMetin.ts` and `xrPanel.ts`. 1024 px canvas, `MeshBasicMaterial`, `toneMapped:false`, bold sans-serif, dark text on a light background. Fixed text in the menu header: `Temsilî maket · Gerçek bir 3B tarama değildir`.
+- [ ] **Step 4:** Connect to `xrOturum.ts`:
+  - Two `renderer.xr.getController(i)` are added to the rig, with a thin ray line on each.
+  - On the `select` event, `Raycaster` looks at the menu and card. `uv.y` → `menuIsabet` → action. Clicking the card calls `bilgiKapat()`.
+  - B/Y opens and closes the menu; the menu is open when the session opens.
+  - The panels are rig children, at the moment they open they are 1.3 m in front of the head and facing the head; they stay the right size with the rig scale.
+  - When `bilgiDegisti` fires, the card also draws the `Kaynak: …` line with `maket.icBilgiler` + `kaynakMetni`; if no source is found, `Kaynak bilgisi bulunamadı.`
+  - `cik` → `session.end()`. The textures are `dispose`d in `temizle`.
+- [ ] **Step 5:** The tests and `npm run build` pass; try every menu item and the card in the emulator.
+- [ ] **Step 6:** Commit: `Quest: VR menüsü ve kaynaklı bilgi kartları`
 
-### Görev 6: Gerçek cihazda doğrulama ve belgeler
+### Task 6: Verification on a real device and documents
 
 **Files:**
-- Modify: `HANDOFF.md` (Ulu Camii maketi paragrafının altına; yalnız bu branch'te)
+- Modify: `HANDOFF.md` (below the Ulu Camii model paragraph; only on this branch)
 
-**Ön koşul:** Quest cihazı, geliştirici modu, USB kablo, bilgisayarda `adb`. Cihaz yoksa bu görev yapılamaz; özellik "yalnız emülatörde denendi" olarak bildirilir.
+**Prerequisite:** A Quest device, developer mode, a USB cable, `adb` on the computer. Without a device this task cannot be done; the feature is reported as "tried only in the emulator".
 
-- [ ] **Adım 1:** `npm run build && npm run preview -- --port 4173`, `adb reverse tcp:4173 tcp:4173`, Quest Browser'da `http://localhost:4173/artifact/ulu-mosque`. Beklenen: `VR'da aç` görünür (`localhost` güvenli sayılır, HTTPS gerekmez).
-- [ ] **Adım 2:** Geçici `?xrolcum=1` ile menü başlığına FPS yaz. Dış görünüm, şadırvan ve mihrapta oku, not al.
-- [ ] **Adım 3:** 72 FPS altındaysa sırayla uygula, her adımda yeniden ölç, hedefi tutan ilk adımda dur:
-  1. XR'da `renderer.shadowMap.enabled = false` ve malzemeler güncellenir.
-  2. İç ışıkları 4'ten 2'ye indir.
+- [ ] **Step 1:** `npm run build && npm run preview -- --port 4173`, `adb reverse tcp:4173 tcp:4173`, in the Quest Browser `http://localhost:4173/artifact/ulu-mosque`. Expected: `VR'da aç` is visible (`localhost` counts as secure, HTTPS is not needed).
+- [ ] **Step 2:** With a temporary `?xrolcum=1`, write the FPS in the menu header. Read it in the outside view, at the şadırvan and at the mihrab, and note it.
+- [ ] **Step 3:** If below 72 FPS, apply in order, re-measure at each step, and stop at the first step that meets the target:
+  1. In XR, `renderer.shadowMap.enabled = false` and the materials are updated.
+  2. Reduce the interior lights from 4 to 2.
   3. `renderer.xr.setFramebufferScaleFactor(0.8)`.
-  Hâlâ yetmiyorsa dur ve kullanıcıya rakamlarla bildir; model sadeleştirme ayrı iştir.
-- [ ] **Adım 4:** Elle kontrol listesi:
-  - [ ] Maket doğru boyut ve yükseklikte
-  - [ ] Çubukla çevirme ve büyütme
+  If it is still not enough, stop and report the numbers to the user; model simplification is a separate job.
+- [ ] **Step 4:** Manual checklist:
+  - [ ] The model is at the right size and height
+  - [ ] Rotating and enlarging with the stick
   - [ ] Parçala/Birleştir
-  - [ ] İçeri gir, tüm duraklar
-  - [ ] Yürüme ve duvar çarpışması
-  - [ ] Anlık dönüş
-  - [ ] Kart okunuyor, Türkçe harfler doğru, kaynak görünüyor
-  - [ ] Tek kumandayla menü
-  - [ ] Meta düğmesiyle çıkış sonrası sayfa çalışıyor
-  - [ ] 10 dakika sonra aşırı ısınma/donma yok
-- [ ] **Adım 5:** `?xrolcum` kodunu kaldır. `HANDOFF.md`'ye kısa paragraf: kullanım, `adb reverse` komutu, ölçülen FPS, cihaz modeli, test komutları.
-- [ ] **Adım 6:** Tam regresyon: `npm run build`, `node tests/model-xr-logic.mjs`, `node tests/model-xr-button.mjs`, `node tests/model-interior.mjs`, `node tests/end-to-end.mjs chromium 1280`.
-- [ ] **Adım 7:** Commit: `Quest: cihaz ayarları ve DEVAM notu`
+  - [ ] Go inside, all stops
+  - [ ] Walking and wall collision
+  - [ ] Snap turn
+  - [ ] The card is readable, Turkish letters are correct, the source is visible
+  - [ ] Menu with a single controller
+  - [ ] The page works after exiting with the Meta button
+  - [ ] No excessive heating/freezing after 10 minutes
+- [ ] **Step 5:** Remove the `?xrolcum` code. A short paragraph in `HANDOFF.md`: usage, the `adb reverse` command, the measured FPS, the device model, test commands.
+- [ ] **Step 6:** Full regression: `npm run build`, `node tests/model-xr-logic.mjs`, `node tests/model-xr-button.mjs`, `node tests/model-interior.mjs`, `node tests/end-to-end.mjs chromium 1280`.
+- [ ] **Step 7:** Commit: `Quest: cihaz ayarları ve DEVAM notu`
 
-## Açık riskler
+## Open risks
 
-- **Takvim:** Kod dondurma 4 Kasım akşamı. Bu çalışma ayrı branch'te yürür; `master`'a alınmasına, maket branch'inin kaderiyle birlikte kullanıcı karar verir. Görev 3 sonunda maket görünümü tek başına gösterilebilir, Görev 4-5 iç mekânı ekler.
-- **Performans ölçülmedi:** Yöntem Görev 0 ve 6'da; dokular kodla üretiliyor (`uluMosqueTextures.ts`), Quest'te açılış süresi de uzun olabilir.
-- **Rig ölçeği:** 100× rig yaklaşımı cihazda denenmedi; yedeği Görev 2 Adım 6'da.
-- **Baş dönmesi:** Yürüme hızı 1,6 m/sn ve anlık dönüşle sınırlandı, gerçek kişilerle denenmeli.
+- **Schedule:** Code freeze on the evening of 4 November. This work runs on a separate branch; whether it is taken into `master` is the user's decision, together with the fate of the model branch. At the end of Task 3 the model view can be shown on its own, Tasks 4-5 add the interior.
+- **Performance not measured:** The method is in Tasks 0 and 6; the textures are generated in code (`uluMosqueTextures.ts`), so the opening time on the Quest may also be long.
+- **Rig scale:** The 100× rig approach has not been tried on the device; the fallback is in Task 2 Step 6.
+- **Motion sickness:** Walking speed was limited to 1.6 m/s and snap turning; it should be tried with real people.

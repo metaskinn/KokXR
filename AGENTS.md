@@ -1,65 +1,65 @@
-# KökXR Geliştirme Kuralları
+# KökXR Development Rules
 
-KökXR, Bursa'daki vakıf eserlerini dijital olarak keşfetmeye
-yönelik bir hackathon prototipidir.
+KökXR is a hackathon prototype for digitally exploring the
+foundation (vakıf) works in Bursa.
 
-Teknolojiler: React, TypeScript, Vite.
+Technologies: React, TypeScript, Vite.
 
-İlk hedef:
-- Ana sayfa
-- Tarihi eser seçimi
-- Fotoğraf galerisi
-- Bilgi paneli
-- Üç soruluk test
+First goal:
+- Home page
+- Historical artifact selection
+- Photo gallery
+- Information panel
+- Three-question quiz
 
-Kurallar:
-- Arayüz Türkçe olacak.
-- Önce çalışan basit sürümü geliştir.
-- Verisi olmayan 3D veya VR özelliklerini varmış gibi gösterme.
-- Tarihsel bilgi uydurma.
-- Hassas dosyaları veya lisansı belirsiz görselleri yayımlama.
-- Her aşamada uygulamayı test et.
-- Görev kapsamı dışında değişiklik yapma.
+Rules:
+- The UI will be in Turkish.
+- Build the simple working version first.
+- Do not present 3D or VR features that have no data as if they exist.
+- Do not invent historical information.
+- Do not publish sensitive files or images with unclear licenses.
+- Test the app at every stage.
+- Do not make changes outside the task scope.
 
-## Nerede ne var
+## Where things are
 
-Yalnız görevin gerektirdiği satırı oku.
+Read only the row the task needs.
 
-| Konu | Yer |
+| Topic | Location |
 |---|---|
-| Sunum vaatleri | `docs/presentation-promises.md` |
-| Yönetim paneli planı | `docs/admin-panel-plan.md` |
-| Şartname, puanlama | `docs/specification.md` (5. bölüm) |
-| **Plan ve durum (işe buradan başla)** | `PLAN.md` |
-| Quest durumu | `QUEST-HANDOFF.md` |
-| Kurulum, mimari, veri modeli | `HANDOFF.md` |
-| Sayfa ve rota | `src/app/App.tsx`, `src/features/*/` |
-| Eser içeriği | `src/content/artifacts/*.json`, tipler `src/domain/artifact.ts` |
-| Maket ve VR | `src/features/scale-models/` (`xr*.ts`: VR), `src/shared/xr/` |
-| Atölye ayrıntısı | `docs/sword-workshop.md`, `docs/vase-model.md` |
-| Tasarım | `docs/ui-design.md` |
-| Eski raporlar | `docs/archive/` |
+| Presentation promises | `docs/presentation-promises.md` |
+| Admin panel plan | `docs/admin-panel-plan.md` |
+| Competition rules, scoring | `docs/specification.md` (section 5) |
+| **Plan and status (start work here)** | `PLAN.md` |
+| Quest status | `QUEST-HANDOFF.md` |
+| Setup, architecture, data model | `HANDOFF.md` |
+| Pages and routes | `src/app/App.tsx`, `src/features/*/` |
+| Artifact content | `src/content/artifacts/*.json`, types in `src/domain/artifact.ts` |
+| Scale model and VR | `src/features/scale-models/` (`xr*.ts`: VR), `src/shared/xr/` |
+| Workshop details | `docs/sword-workshop.md`, `docs/vase-model.md` |
+| Design | `docs/ui-design.md` |
+| Old reports | `docs/archive/` |
 
-## Verimli çalışma
+## Working efficiently
 
-- Belgeyi baştan sona okuma: önce ara, sonra gereken aralığı oku.
-- `docs/archive/`, `docs/test-screenshots/`, `public/`, `assets/`, `dist/`, `node_modules/` ve `package-lock.json`'ı gerekmedikçe açma.
-- Her küçük değişiklikte `npm run test:hizli`; arayüz veya sahne değiştiyse iş sonunda `npm run test:tarayici`. Tek test için: `node scripts/test-browser.mjs model-interior` (önce build).
-- Alt ajanı yalnız bağımsız işe aç. Dosya yolunu ver, içeriğini kopyalama; kısa rapor iste. Aynı dosyaya iki ajan dokunmasın.
-- Biten plan ve raporları `docs/archive/`'e taşı; `docs/` kökünde yalnız etkin belgeler kalsın.
+- Do not read a document from start to finish: search first, then read the range you need.
+- Do not open `docs/archive/`, `docs/test-screenshots/`, `public/`, `assets/`, `dist/`, `node_modules/` or `package-lock.json` unless necessary.
+- Run `npm run test:hizli` after every small change; if the UI or scene changed, run `npm run test:tarayici` at the end of the task. For a single test: `node scripts/test-browser.mjs model-interior` (build first).
+- Open a subagent only for independent work. Give the file path, do not copy its contents; ask for a short report. Never let two agents touch the same file.
+- Move finished plans and reports to `docs/archive/`; keep only active documents at the root of `docs/`.
 
-## Token kuralları
+## Token rules
 
-Her işte sırayla uygula; gerekçe `docs/token-saving.md`. Testler ve kaynak denetimi tasarruf için atlanmaz.
+Apply these in order on every task; the rationale is in `docs/token-saving.md`. Tests and source checks are never skipped to save tokens.
 
-1. Hedefi daralt: önce `rg`, sonra yalnız gereken aralık.
-2. Konuşmada olanı yeniden okuma, kararı yeniden tartışma.
-3. Uzun çıktıyı `| tail -n 20` veya `rg` ile süz.
-4. Yerel araç ve CLI'ı MCP'ye tercih et; web'de hedefli sorgu kullan.
-5. Araştırmayı tek hedefli sorguyla başlat.
-6. Önce `test:hizli`, sonra tek test; tam paket iş sonunda.
-7. Bağımsız araç çağrılarını tek yanıtta gönder.
-8. Alt ajan seyrek; salt arama için `model: haiku`, tarihsel doğrulamada asla.
-9. Yanıt kısa: sonuç ve karar; kod yapıştırma.
-10. Konu değişince `/clear`, uzayınca `/compact`.
-11. Çok dosyalı işte önce plan.
+1. Narrow the target: `rg` first, then only the range you need.
+2. Do not re-read what is already in the conversation, and do not re-argue a decision.
+3. Filter long output with `| tail -n 20` or `rg`.
+4. Prefer local tools and the CLI over MCP; use targeted queries on the web.
+5. Start research with a single targeted query.
+6. `test:hizli` first, then a single test; the full suite at the end of the task.
+7. Send independent tool calls in a single response.
+8. Use subagents sparingly; `model: haiku` for pure search, never for historical verification.
+9. Keep replies short: the result and the decision, no pasted code.
+10. Run `/clear` when the topic changes and `/compact` when the conversation grows long.
+11. For multi-file work, plan first.

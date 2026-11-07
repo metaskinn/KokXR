@@ -1,192 +1,192 @@
-# KökXR — Faz Faz Geliştirme Planı
+# KökXR — Phase-by-Phase Development Plan
 
-> Bugün: **23 Ekim 2026 Cuma** · Final: **7–8 Kasım 2026 (Cumartesi–Pazar)** · Kalan: 15 gün
-> Kurallar ve teknik detaylar için: `developer.md`
+> Today: **Friday, 23 October 2026** · Final: **7–8 November 2026 (Saturday–Sunday)** · Remaining: 15 days
+> For rules and technical details: `developer.md`
 
 ---
 
-## MVP: üç şey, fazlası yok
+## MVP: three things, nothing more
 
-| # | MVP | Demoda görünen |
+| # | MVP | Visible in the demo |
 |---|---|---|
-| 1 | **Gezilebilir bir mekân** | Kullanıcı tarihi bir odanın içinde yürür, duvarlardan geçemez |
-| 2 | **Mekândaki eşyalarla etkileşim** | Odadaki 3–5 eşya alınır, çevrilir, bırakılır |
-| 3 | **Tek bir eserin bilgisi** | Ana esere yaklaşınca ya da onu tutunca bilgi paneli açılır: ad, dönem, tarihçe, bilgi noktaları, kaynak |
+| 1 | **A walkable space** | The user walks inside a historic room and cannot pass through walls |
+| 2 | **Interaction with the objects in the space** | 3–5 objects in the room are picked up, turned and put down |
+| 3 | **Information about a single artifact** | When approaching or holding the main artifact, an info panel opens: name, period, history, info points, source |
 
-Bunların dışında kalan her şey (galeri, mini test, zaman katmanı, öğretmen paneli…) **yapılmaz**, sunumda "vizyon" olarak anlatılır.
+Everything outside these (gallery, mini quiz, time layer, teacher panel…) **is not built**; it is described in the presentation as "vision".
 
-**İki platform, aynı sahne:**
-- **Masaüstü** (WASD + fare): Her durumda hazır olan ürün. Şartnamedeki "masaüstü uygulaması" şartını karşılar.
-- **VR** (Quest): Faz 0'da cihaz doğrulanırsa eklenir.
+**Two platforms, same scene:**
+- **Desktop** (WASD + mouse): The product that is ready in every case. Meets the specification's "desktop application" requirement.
+- **VR** (Quest): Added if the device is verified in Phase 0.
 
 ---
 
-## Fazlar
+## Phases
 
-Her fazın bir **çıkış kriteri** var. Kriter sağlanmadan bir sonraki faza geçilmez. Kriter tarihinde sağlanamazsa "gecikirse" sütunundaki karar uygulanır.
+Each phase has an **exit criterion**. We do not move to the next phase until the criterion is met. If the criterion cannot be met by the date, the decision in the "If delayed" line is applied.
 
-### Faz 0 · Kurulum ve doğrulama
-**23–24 Eki (Cum–Cmt)** · Hafta 1
+### Phase 0 · Setup and verification
+**23–24 Oct (Fri–Sat)** · Week 1
 
-| Kim | İş |
+| Who | Work |
 |---|---|
-| Unity | Quest geliştirici modu, Quest Link, Unity 6.3 LTS, VR şablonuyla `KokXR` projesi, Git + GitHub Desktop |
-| 3D | Mekân seçimi için 3 aday ortam modeli (oda, medrese hücresi, kütüphane…) + 3 aday eser modeli. Lisans tablosu |
-| İçerik | Ana eser için 3 aday. Her biri için kısa tarihçe ve en az 2 kaynak |
-| Ürün | 2 dakikalık demo senaryosu taslağı. Sunumdaki kapsam ifadelerinin güncellenmesi |
+| Unity | Quest developer mode, Quest Link, Unity 6.3 LTS, `KokXR` project with the VR template, Git + GitHub Desktop |
+| 3D | 3 candidate environment models for choosing the space (room, madrasa cell, library…) + 3 candidate artifact models. License table |
+| Content | 3 candidates for the main artifact. A short history and at least 2 sources for each |
+| Product | Draft of the 2-minute demo scenario. Updating the scope statements in the presentation |
 
-**Çıkış kriteri:** Play'e basınca Quest'te şablon sahnesi görünüyor ve küp tutulabiliyor. Proje GitHub'da.
-**Karar (24 Eki akşamı):** Mekân ve ana eser seçilir. Bu karar bir daha değişmez.
-**Gecikirse:** 25 Eki'ye kadar VR çalışmazsa **VR tamamen bırakılır**, masaüstü yoluna geçilir. Kayıp 0 gün olur, çünkü sonraki fazlar masaüstüyle de ilerleyebilir.
+**Exit criterion:** On pressing Play, the template scene appears on the Quest and the cube can be grabbed. The project is on GitHub.
+**Decision (evening of 24 Oct):** The space and the main artifact are chosen. This decision is never changed again.
+**If delayed:** If VR does not work by 25 Oct, **VR is dropped entirely** and we switch to the desktop path. The loss is 0 days, since the later phases can proceed with desktop too.
 
 ---
 
-### Faz 1 · Gezilebilir mekân
-**25–27 Eki (Paz–Sal)** · Hafta 1
+### Phase 1 · Walkable space
+**25–27 Oct (Sun–Tue)** · Week 1
 
-| Kim | İş |
+| Who | Work |
 |---|---|
-| Unity | `Mekan.unity` sahnesi. Ortam modelinin yerleştirilmesi (ya da ProBuilder ile basit bir oda). Zemin ve duvarlara collider ekleme. Masaüstü için WASD + fare kontrolcüsü. VR için şablonun hareket (locomotion) sistemi: teleport + yürüme. Temel ışık |
-| 3D | Seçilen ortam modelinin Blender'da temizlenmesi: ölçek (1 birim = 1 m), gereksiz detayların silinmesi, poligon azaltma |
-| İçerik | Ana eserin tam metni: ad, dönem, yer, vakıf, 100–150 kelime tarihçe, 3 bilgi noktası, kaynaklar |
-| Ürün | Mekân içinde kullanıcının izleyeceği yolun çizimi: giriş → nereye bakar → esere nasıl yönelir |
+| Unity | The `Mekan.unity` scene. Placing the environment model (or a simple room with ProBuilder). Adding colliders to floor and walls. A WASD + mouse controller for desktop. The template's locomotion system for VR: teleport + walking. Basic lighting |
+| 3D | Cleaning the chosen environment model in Blender: scale (1 unit = 1 m), deleting unnecessary details, polygon reduction |
+| Content | The full text of the main artifact: name, period, place, foundation, 100–150 word history, 3 info points, sources |
+| Product | Drawing the path the user will follow in the space: entrance → where they look → how they head to the artifact |
 
-**Çıkış kriteri:** Hem masaüstünde hem (varsa) VR'da odanın içinde 1 dakika boyunca dolaşılabiliyor. Duvardan ya da zeminden düşülmüyor. Build alınmış hâlde de çalışıyor.
-**Gecikirse:** Hazır ortam modeli sorun çıkarırsa ProBuilder ile 4 duvar, zemin ve bir kapı yapılır. Görsellik sonra iyileştirilir.
+**Exit criterion:** On both desktop and (if available) VR, one can walk around inside the room for 1 minute. One does not fall through walls or floor. It also works as a built version.
+**If delayed:** If the ready environment model causes problems, 4 walls, a floor and a door are made with ProBuilder. Visuals are improved later.
 
 ---
 
-### Faz 2 · Eşyalarla etkileşim
-**28–30 Eki (Çar–Cum)** · Hafta 1 → Hafta 2
+### Phase 2 · Interaction with objects
+**28–30 Oct (Wed–Fri)** · Week 1 → Week 2
 
-| Kim | İş |
+| Who | Work |
 |---|---|
-| Unity | 3–5 eşyayı tutulabilir yapmak. VR: `XR Grab Interactable` + `Rigidbody`. Masaüstü: bakılan eşyaya tıklayınca kameranın önüne gelir, fareyle çevrilir, tekrar tıklayınca yerine döner. Eşyanın üzerine gelince vurgulama (highlight) |
-| 3D | Eşya modellerinin hazırlanması (kitap, şamdan, rahle, kandil…) ve ana eserin son hâli. Pivot ortada, ölçek doğru |
-| İçerik | Diğer eşyalar için birer cümlelik etiket metni ("19. yy pirinç şamdan, temsili") |
-| Ürün | Faz 1 build'ini ekip dışından 2 kişiye test ettirmek, takıldıkları yerleri not etmek |
+| Unity | Making 3–5 objects grabbable. VR: `XR Grab Interactable` + `Rigidbody`. Desktop: on clicking the object being looked at it comes in front of the camera, is turned with the mouse, and returns to its place when clicked again. Highlight when hovering over an object |
+| 3D | Preparing the object models (book, candlestick, rahle, lamp…) and the final state of the main artifact. Pivot in the center, correct scale |
+| Content | A one-sentence label text for each of the other objects ("19. yy pirinç şamdan, temsili") |
+| Product | Having 2 people from outside the team test the Phase 1 build, noting where they get stuck |
 
-**Çıkış kriteri:** Kullanıcı odadaki her eşyayı alıp çevirebiliyor ve bırakabiliyor. Eşyalar duvarın içine düşmüyor ya da kaybolmuyor (düşen eşya yerine döner).
-**Gecikirse:** Eşya sayısı 1'e (yalnızca ana eser) indirilir. Fizik sorun çıkarırsa eşyalar fiziksiz tutulur, bırakılınca yerine döner.
+**Exit criterion:** The user can pick up, turn and put down every object in the room. Objects do not fall into the wall or disappear (a fallen object returns to its place).
+**If delayed:** The number of objects is reduced to 1 (only the main artifact). If physics causes problems, the objects are kept physics-free and return to their place when released.
 
 ---
 
-### Faz 3 · Eserin bilgisi
-**31 Eki–2 Kas (Cmt–Pzt)** · Hafta 2
+### Phase 3 · The artifact's information
+**31 Oct–2 Nov (Sat–Mon)** · Week 2
 
-| Kim | İş |
+| Who | Work |
 |---|---|
-| Unity | Ana eser tutulunca ya da yaklaşılınca açılan **bilgi paneli** (VR'da havada duran, masaüstünde ekranda duran panel). Eserin üzerinde 3 **bilgi noktası** (hotspot): tıklanınca o noktanın açıklaması gösterilir. Panelin altında kaynak satırı ve "doğrulanmış / temsili" etiketi. Metinler bir JSON dosyasından okunur |
-| 3D | Bilgi noktalarının model üzerindeki konumlarının belirlenmesi |
-| İçerik | Metinlerin JSON'a girilmesi, kaynakların son kontrolü. İsteğe bağlı: tarihçenin sesli okunmuş kaydı (.mp3) |
-| Ürün | Erişilebilirlik kontrolü: yazı boyutu, kontrast, altyazı. Sunum taslağı v1 |
+| Unity | An **info panel** that opens when the main artifact is held or approached (a panel floating in the air in VR, fixed on screen on desktop). 3 **info points** (hotspots) on the artifact: clicking shows that point's explanation. A source line and a "doğrulanmış / temsili" label under the panel. Texts are read from a JSON file |
+| 3D | Determining the positions of the info points on the model |
+| Content | Entering the texts into the JSON, final check of the sources. Optional: an audio recording (.mp3) of the history read aloud |
+| Product | Accessibility check: font size, contrast, subtitles. Presentation draft v1 |
 
-**Çıkış kriteri:** Demo senaryosu baştan sona çalışıyor: içeri gir → dolaş → eşyaya dokun → ana eseri al → bilgi paneli ve bilgi noktaları → kaynak görünür.
-**Gecikirse:** Bilgi noktaları kesilir, sadece tek bir bilgi paneli kalır. Ses kaydı kesilir.
+**Exit criterion:** The demo scenario works from start to finish: enter → walk around → touch an object → take the main artifact → info panel and info points → source visible.
+**If delayed:** The info points are cut, only a single info panel remains. The audio recording is cut.
 
 ---
 
-### Faz 4 · Cila ve dondurma
-**3–4 Kas (Sal–Çar)** · Hafta 2
+### Phase 4 · Polish and freeze
+**3–4 Nov (Tue–Wed)** · Week 2
 
-| Kim | İş |
+| Who | Work |
 |---|---|
-| Unity | Karşılama ekranı ("KökXR — başlamak için tıkla" + kontroller). Ortam sesi. Quest'e APK build alma ve performans kontrolü (takılma olmamalı). Hata düzeltme |
-| 3D | Işık ve doku iyileştirmeleri, yalnızca performansı bozmayanlar |
-| İçerik | Sunumdaki tarihsel bilgilerin ve kaynakların kontrolü. Lisans slaytı |
-| Ürün | README: kurulum ve çalıştırma. Test senaryosunun build üzerinde tam koşturulması |
+| Unity | Welcome screen ("KökXR — başlamak için tıkla" + controls). Ambient sound. Building the APK for Quest and checking performance (there must be no stutter). Bug fixing |
+| 3D | Lighting and texture improvements, only those that do not hurt performance |
+| Content | Checking the historical information and sources in the presentation. License slide |
+| Product | README: setup and running. Running the test scenario fully on the build |
 
-**4 Kas Çarşamba akşamı: KOD DONDURMA.** Bu saatten sonra yeni özellik eklenmez, yalnızca demoyu bozan hatalar düzeltilir.
+**Evening of Wednesday, 4 Nov: CODE FREEZE.** After this time no new features are added, only bugs that break the demo are fixed.
 
 ---
 
-### Faz 5 · Prova
-**5–6 Kas (Per–Cum)** · Hafta 2 → Final
+### Phase 5 · Rehearsal
+**5–6 Nov (Thu–Fri)** · Week 2 → Final
 
-| Kim | İş |
+| Who | Work |
 |---|---|
-| Hepsi | 3 tam prova: sunum + canlı demo, süre tutarak |
-| Unity | Son build'in USB'ye ve iki dizüstü bilgisayara kopyalanması |
-| Ürün | Yedek demo videosunun çekilmesi (masaüstü + VR ekran kaydı) |
-| Hepsi | Her üye mimariyi ve kendi kısmını 1 dakikada anlatabilir hâle gelir |
+| Everyone | 3 full rehearsals: presentation + live demo, timed |
+| Unity | Copying the final build to a USB drive and two laptops |
+| Product | Recording the backup demo video (desktop + VR screen recording) |
+| Everyone | Each member becomes able to explain the architecture and their own part in 1 minute |
 
-### Final · 7–8 Kas (Cmt–Paz)
+### Final · 7–8 Nov (Sat–Sun)
 
 ---
 
-## Haftalık düzen
+## Weekly schedule
 
-### Hafta 1 · 23–29 Ekim · "Mekân ve eşyalar"
-**Hafta hedefi:** Odada dolaşılıyor ve eşyalar tutulabiliyor.
+### Week 1 · 23–29 October · "Space and objects"
+**Week goal:** The room can be walked around and the objects can be grabbed.
 
-| Gün | Tarih | Faz | Gün sonu beklenen |
+| Day | Date | Phase | Expected at end of day |
 |---|---|---|---|
-| Cum | 23 Eki | 0 | Unity kuruldu, VR şablonu açıldı |
-| Cmt | 24 Eki | 0 | Quest'te küp tutuldu, mekân ve eser seçildi |
-| Paz | 25 Eki | 1 | Sahnede ortam modeli var |
-| Pzt | 26 Eki | 1 | Masaüstünde WASD ile yürünüyor |
-| Sal | 27 Eki | 1 | VR'da da yürünüyor, build alındı ✅ |
-| Çar | 28 Eki | 2 | VR'da eşyalar tutuluyor |
-| **Per** | **29 Eki** | 2 | **Hafta 1 değerlendirmesi** (aşağıda) |
+| Fri | 23 Oct | 0 | Unity installed, VR template opened |
+| Sat | 24 Oct | 0 | Cube grabbed on Quest, space and artifact chosen |
+| Sun | 25 Oct | 1 | Environment model is in the scene |
+| Mon | 26 Oct | 1 | Walking with WASD on desktop |
+| Tue | 27 Oct | 1 | Walking in VR too, build made ✅ |
+| Wed | 28 Oct | 2 | Objects are grabbed in VR |
+| **Thu** | **29 Oct** | 2 | **Week 1 review** (below) |
 
-### Hafta 2 · 30 Ekim–5 Kasım · "Bilgi ve cila"
-**Hafta hedefi:** Demo senaryosu baştan sona çalışıyor ve kod donduruldu.
+### Week 2 · 30 October–5 November · "Information and polish"
+**Week goal:** The demo scenario works from start to finish and the code is frozen.
 
-| Gün | Tarih | Faz | Gün sonu beklenen |
+| Day | Date | Phase | Expected at end of day |
 |---|---|---|---|
-| Cum | 30 Eki | 2 | Masaüstünde eşya tutma çalışıyor ✅ |
-| Cmt | 31 Eki | 3 | Bilgi paneli JSON'dan doluyor |
-| Paz | 1 Kas | 3 | Bilgi noktaları çalışıyor |
-| Pzt | 2 Kas | 3 | Demo senaryosu uçtan uca çalışıyor ✅ |
-| Sal | 3 Kas | 4 | Karşılama ekranı, Quest APK |
-| **Çar** | **4 Kas** | 4 | **KOD DONDURMA** |
-| **Per** | **5 Kas** | 5 | **Hafta 2 değerlendirmesi**, prova 1 |
+| Fri | 30 Oct | 2 | Object grabbing works on desktop ✅ |
+| Sat | 31 Oct | 3 | Info panel is filled from JSON |
+| Sun | 1 Nov | 3 | Info points work |
+| Mon | 2 Nov | 3 | Demo scenario works end to end ✅ |
+| Tue | 3 Nov | 4 | Welcome screen, Quest APK |
+| **Wed** | **4 Nov** | 4 | **CODE FREEZE** |
+| **Thu** | **5 Nov** | 5 | **Week 2 review**, rehearsal 1 |
 
-### Final haftası · 6–8 Kasım
-| Cum | 6 Kas | Prova 2 ve 3, yedek video, son build kopyaları |
+### Final week · 6–8 November
+| Fri | 6 Nov | Rehearsals 2 and 3, backup video, final build copies |
 |---|---|---|
-| Cmt–Paz | 7–8 Kas | **Final** |
+| Sat–Sun | 7–8 Nov | **Final** |
 
 ---
 
-## İlerleme takip ritmi
+## Progress tracking rhythm
 
-### Her gün · 15 dakikalık durum toplantısı (öğlen veya akşam)
+### Every day · 15-minute status meeting (noon or evening)
 
-Herkes 3 cümle söyler:
-1. **Dün** ne bitti?
-2. **Bugün** ne bitecek?
-3. **Engel** var mı?
+Everyone says 3 sentences:
+1. What was finished **yesterday**?
+2. What will be finished **today**?
+3. Is there a **blocker**?
 
-Engel varsa toplantıdan sonra ilgili iki kişi çözer. Toplantı uzatılmaz. Sonuçlar panodaki görev durumlarına işlenir.
+If there is a blocker, the two relevant people solve it after the meeting. The meeting is not extended. The results are entered into the task statuses on the board.
 
-### Haftalık değerlendirme · Perşembe akşamı, 45 dakika
+### Weekly review · Thursday evening, 45 minutes
 
-1. **Demo (15 dk):** Unity sorumlusu **build alınmış** sürümü gösterir. Editör ekranı sayılmaz.
-2. **Çıkış kriterleri (10 dk):** Haftanın fazları kriterleri sağladı mı? Evet / hayır.
-3. **Kesme kararı (10 dk):** Gecikme varsa ilgili fazın "gecikirse" kararı **o anda** uygulanır. "Biraz daha uğraşalım" seçeneği yoktur.
-4. **Gelecek hafta (10 dk):** Görevler panoda kişilere atanır.
+1. **Demo (15 min):** The Unity lead shows the **built** version. The editor screen does not count.
+2. **Exit criteria (10 min):** Did the week's phases meet the criteria? Yes / no.
+3. **Cut decision (10 min):** If there is a delay, the "If delayed" decision of the relevant phase is applied **at that moment**. There is no "let's try a bit more" option.
+4. **Next week (10 min):** Tasks are assigned to people on the board.
 
-Değerlendirme notu `ilerleme.md` dosyasına şu formatta eklenir:
+The review note is added to the `ilerleme.md` file in the following format:
 
 ```
-## Hafta 1 — 29 Ekim
-Durum: 🟢 yolunda / 🟡 riskli / 🔴 gecikmede
-Çalışan: …
-Çalışmayan: …
-Kesilen: …
-Gelecek hafta: …
+## Week 1 — 29 October
+Status: 🟢 on track / 🟡 at risk / 🔴 delayed
+Working: …
+Not working: …
+Cut: …
+Next week: …
 ```
 
-### Kilometre taşı yedekleri
-Her ✅ işaretli günde çalışan build `KokXR_<tarih>.zip` olarak USB'ye alınır. Finalde bir şey bozulursa en son ✅ sürüme dönülür.
+### Milestone backups
+On each day marked ✅, the working build is saved to a USB drive as `KokXR_<date>.zip`. If something breaks at the final, we go back to the latest ✅ version.
 
 ---
 
-## Şartname notu
+## Specification note
 
-Şartname 5.1.1 maddesi "birden fazla vakıf eseri" ve "içerik ekleme/düzenleme" istiyor. Tek eserli bu kapsam iki maddeyi tam karşılamıyor ve puan kaybı riski taşıyor. Riski azaltan, plana zaten dahil olan iki şey var:
-- Eser bilgisi kodda değil **JSON dosyasında** (Faz 3). Jüriye "Yeni eser = yeni JSON dosyası + model; kod değişmiyor" gösterilebilir.
-- Odadaki diğer eşyaların da kısa etiketleri var (Faz 2).
+Specification item 5.1.1 asks for "multiple foundation artifacts" and "adding/editing content". This single-artifact scope does not fully meet the two items and carries a risk of losing points. Two things reduce the risk and are already included in the plan:
+- The artifact information is **in a JSON file**, not in code (Phase 3). The jury can be shown "A new artifact = a new JSON file + model; the code does not change".
+- The other objects in the room also have short labels (Phase 2).
 
-Faz 4 zamanında biterse ve ekip isterse, ikinci bir eser için yalnızca JSON + model eklemek yaklaşık yarım günlük iş olur. Bu bir karar değil, seçenek.
+If Phase 4 finishes on time and the team wants, adding only a JSON + model for a second artifact would be about half a day's work. This is not a decision, it is an option.

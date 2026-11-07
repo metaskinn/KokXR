@@ -1,34 +1,34 @@
-# KökXR plan ve durum
+# KökXR plan and status
 
-Tek plan dosyası. İşe buradan başla, iş bitince işaretle. Ayrıntı gerekince: `QUEST-HANDOFF.md` (VR), `docs/presentation-promises.md`, `docs/specification.md`.
+A single plan file. Start work here, tick items when done. For details: `QUEST-HANDOFF.md` (VR), `docs/presentation-promises.md`, `docs/specification.md`.
 
-## Güncel durum (7 Kasım 2026)
+## Current status (7 November 2026)
 
-Çalışma dalı `ulucami-gercekci`; önceki durum `HANDOFF.md` 0. bölümde. Bu dosyanın altındaki "Yeni bilgisayarda başla" bölümü 4 Kasım tarihlidir.
+Working branch `ulucami-gercekci`; the previous status is in `HANDOFF.md` section 0. The "Start on a new computer" section below in this file is dated 4 November.
 
-- [x] Mekanlar sekmesi: harita, şehir, yapı seçimi (`/places`)
-- [x] Bursa'da 10 yapıya web maketi ve VR girişi (masaüstü testi geçti)
-- [x] Ulu Camii: gerçekçi halı ve mermer, ışık, minber, kürsü ve mahfile çıkma
-- [x] Dokunmatik ekranda yürüme kolu
-- [x] Ulu Camii: fotoğraf referanslı köşk, avizeler, halı/ışık ve çakışmayan duvar levhaları (mutlak konum ve ölçüler temsilî)
-- [x] Durak geçişini kesince güvenli hedefte yürüme, dairesel kaide sınırları, eyvan bakışları ve sahne kaynaklarının temizlenmesi
-- [x] Kılıç VR: su haznesine nişan zorunluluğu ve el başına süreli darbe hedefi; saf hesap ve oturum testleri geçti
-- [x] Ulu Camii'nin mahfil/kürsü kaynak sayfaları ve kütüphane olayı kitapla karşılaştırıldı; Kâbe kartındaki çelişkili yön ifadesi çıkarıldı
-- [ ] Gerçek Quest denemesi: yeni 9 yapı, kart okunabilirliği, kare hızı
-- [ ] `ulucami-gercekci` dalını `master`'a birleştirme kararı
-- [ ] `kokxr.vercel.app` güncellemesi (hesap erişimi gerekiyor)
-- [ ] Sponsor fotoğraf izninin yazılı teyidi
-- [ ] Tarihsel metinlerin kitapla karşılaştırılması
+- [x] Places tab: map, city, building selection (`/places`)
+- [x] Web scale model and VR entry for 10 buildings in Bursa (desktop test passed)
+- [x] Ulu Camii: realistic carpet and marble, light, climbing onto the minbar, lectern and mahfil
+- [x] Walking stick on touch screens
+- [x] Ulu Camii: photo-referenced pavilion, chandeliers, carpet/light and non-overlapping wall plaques (absolute positions and sizes are representative)
+- [x] Walking to a safe target when a stop transition is cut, circular pedestal limits, eyvan views and cleanup of scene resources
+- [x] Sword VR: requirement to aim at the water trough and a timed strike target per hand; pure calculation and session tests passed
+- [x] The mahfil/lectern source pages and the library event of Ulu Camii were compared with the book; the contradictory direction statement in the Kaaba card was removed
+- [ ] Real Quest trial: the new 9 buildings, card legibility, frame rate
+- [ ] Decision to merge the `ulucami-gercekci` branch into `master`
+- [ ] `kokxr.vercel.app` update (account access needed)
+- [ ] Written confirmation of sponsor photo permission
+- [ ] Comparing the historical texts with the book
 
-## Yeni bilgisayarda başla
+## Start on a new computer
 
-> Yazıldı: 4 Kasım 2026, kullanıcı bilgisayar değiştirdiği için çalışma durduruldu. Çalışan ajan ve sunucu yok.
-> **Yeni oturumdaki ajana:** `vaat-mokap` branch'inde bu dosyadan devam et, Türkçe konuş. İlk iş aşağıdaki "Kaldığı yer"dir.
+> Written: 4 November 2026, work was stopped because the user changed computers. There is no running agent or server.
+> **To the agent in the new session:** Continue from this file on the `vaat-mokap` branch, speak Turkish. The first job is "Where it was left" below.
 
-Gerekenler: Git, Node 24+ (`.nvmrc`), Google Chrome. Eski bilgisayarda Node ve `adb` kullanıcı klasörüne kurulmuştu, yeni bilgisayara taşınmadı. `adb` yalnız Quest denemesi için gerekir.
+Required: Git, Node 24+ (`.nvmrc`), Google Chrome. On the old computer Node and `adb` were installed into the user folder, and were not carried to the new computer. `adb` is needed only for the Quest trial.
 
 ```bash
-git clone git@github.com:selamisimsek/kokxr.git   # zaten varsa: git fetch
+git clone git@github.com:selamisimsek/kokxr.git   # if already present: git fetch
 cd kokxr
 git switch vaat-mokap
 npm ci
@@ -36,154 +36,154 @@ npm run test:hizli
 npm run dev -- --host 127.0.0.1 --port 5173 --strictPort   # http://127.0.0.1:5173/
 ```
 
-### Kaldığı yer
+### Where it was left
 
-| Branch | İçerik | Durum |
+| Branch | Content | Status |
 |---|---|---|
-| `vaat-mokap` | Yolculuk, zaman katmanı, sunum ekranları, simülasyon betiği | Temiz, ana çalışma branch'i |
-| `wip/vr-tutma` | `vaat-mokap` + menü-kart düzeltmesi + durak baş yönü düzeltmesi | Her ikisi birleştirilmedi. Yalnız `test:hizli` geçti; menü-kart düzeltmesinin simülasyon sonucu bu oturumda doğrulanmadı |
-| `wip/vr-vazo` | `vaat-mokap` + `vazoXr.ts` (536 satır), `VR'da onar` düğmesi, alt yazı başlangıcı | Yarım. Ajan rapor veremeden durdu; hangi akışın bittiği bilinmiyor. Simülasyonda ve `tests/vase.mjs` ile denenmedi |
+| `vaat-mokap` | Journey, time layer, presentation screens, simulation script | Clean, main working branch |
+| `wip/vr-tutma` | `vaat-mokap` + menu-card fix + stop head-direction fix | Neither merged. Only `test:hizli` passed; the simulation result of the menu-card fix was not verified in this session |
+| `wip/vr-vazo` | `vaat-mokap` + `vazoXr.ts` (536 lines), `VR'da onar` button, start of the caption | Unfinished. The agent stopped before it could report; it is unknown which flow was finished. Not tried in simulation or with `tests/vase.mjs` |
 
-Sıra:
+Order:
 
-1. `wip/vr-tutma`'yı `tests/xr-sim` ile doğrula, `npm run test:tarayici` geçince `vaat-mokap`'a birleştir.
-2. Aynı işin kalanını yap: 10 kat büyütme, VR'da maketi tutma, VR menüsünde zaman katmanı.
-3. `wip/vr-vazo`'yu oku; önce neyin bittiğini belirle, sonra simülasyonda tamamla ve birleştir.
-4. Aşağıdaki "Doğrulama ve teslim", ardından cuma cihaz denemesi.
+1. Verify `wip/vr-tutma` with `tests/xr-sim`, and when `npm run test:tarayici` passes, merge it into `vaat-mokap`.
+2. Do the rest of the same work: 10× enlargement, holding the scale model in VR, time layer in the VR menu.
+3. Read `wip/vr-vazo`; first determine what is finished, then complete it in the simulation and merge.
+4. The "Verification and delivery" below, then the Friday device trial.
 
-### Simüle Quest (`tests/xr-sim/`)
+### Simulated Quest (`tests/xr-sim/`)
 
-Gerçek three.js WebXRManager'ı Meta'nın `iwer` paketiyle sürer. `iwer` geçici klasöre kurulur, `package.json`'a girmez.
+Drives the real three.js WebXRManager with Meta's `iwer` package. `iwer` is installed into a temporary folder, does not go into `package.json`.
 
 ```bash
-export XR_SIM=/gecici/bir/klasor
+export XR_SIM=/some/temp/folder
 bash tests/xr-sim/setup.sh
-node_modules/.bin/vite preview --outDir "$XR_SIM/dist" --host 127.0.0.1 --port 4174 --strictPort   # ayrı terminalde
+node_modules/.bin/vite preview --outDir "$XR_SIM/dist" --host 127.0.0.1 --port 4174 --strictPort   # in a separate terminal
 node tests/xr-sim/sim.mjs ana
 ```
 
-- Son sonuç, düzeltmelerden önceki kodda: 78 denetimden 76'sı geçti (`tests/xr-sim/last-result.json`). Kalan 2'si: kart açıkken menüye ulaşılamaması, baş dönükken durak yönü. Düzeltmeleri `wip/vr-tutma`'da.
-- Betik depoya taşındı; `kur.sh` çalıştırıldı, ama taşındıktan sonra `sim.mjs` baştan sona çalıştırılmadı.
-- FPS, konfor ve gerçek kumanda eşlemesini kanıtlamaz. Yazılımsal çizimde bir tur uzun sürer.
-- Simülasyon ajanı son raporunu veremeden durduruldu; sonuçlar `son-sonuc.json` dosyasından okundu.
+- Last result, on the code before the fixes: 76 of 78 checks passed (`tests/xr-sim/last-result.json`). The remaining 2: the menu cannot be reached while a card is open, stop direction when the head is turned. The fixes are in `wip/vr-tutma`.
+- The script was moved into the repo; `kur.sh` was run, but after the move `sim.mjs` was not run from start to finish.
+- It does not prove FPS, comfort or the real controller mapping. In software rendering one round takes a long time.
+- The simulation agent was stopped before it could give its final report; the results were read from the `son-sonuc.json` file.
 
-## Hedef
+## Goal
 
-**Hedef:** 7–8 Kasım finalinde tek akışta canlı demo. Önce sunumda gösterilecek mokap; backend sonra.
+**Goal:** A live demo in a single flow at the 7–8 November final. First the mockup to be shown in the presentation; backend later.
 
-**Öne çıkaran özellik:** VR. Ana sahne: Quest 3'te maketi tut, incele, içeri gir, vazoyu onar.
+**Standout feature:** VR. Main scene: on Quest 3, hold the scale model, examine it, go inside, repair the vase.
 
-**Branch:** `vaat-mokap`. `master`'a birleştirmeden önce kullanıcıya sor.
+**Branch:** `vaat-mokap`. Ask the user before merging into `master`.
 
-## Değişmez kurallar
+## Fixed rules
 
-- Mokap ekranında görünür etiket: `Demo · örnek veri` (`src/components/DemoEtiketi.tsx`). Maketlerde `Temsilî maket` etiketi kalır.
-- Tarih, kaynak, kişi, kurum veya onay uydurulmaz. Kaynaklı bilgi mevcut `kaynakId` ile gösterilir.
-- Yeni bağımlılık yok. Mevcut testler bozulmaz.
-- Paralel ajanlar kendi çalışma kopyasında ve kendi dosyalarında çalışır. Rotaları ve birleştirmeyi ana oturum yapar.
+- Visible label on the mockup screen: `Demo · örnek veri` (`src/components/DemoEtiketi.tsx`). The `Temsilî maket` label stays on the scale models.
+- No dates, sources, people, institutions or approvals are invented. Source-backed information is shown with the existing `kaynakId`.
+- No new dependencies. Existing tests are not broken.
+- Parallel agents work in their own working copy and on their own files. The main session does the routes and merging.
 
-## Ürün yapısı
+## Product structure
 
-Üst menü: **Eserler (`/artifacts`, `/` buraya yönlenir), Mekanlar (`/places`), Atölyeler (`/workshops`: vazo, kılıç, çini).** Yönetim bağlantısı 2026-11-07'de üst menüden kaldırıldı; `/admin` adresle açılır. Keşfet ana sayfası 2026-11-07'de kaldırıldı; eser sayfalarından Bilgini sına, Zaman katmanı, Sanal gezinti ve 360° tur bölümleri de çıkarıldı (veriler JSON'da duruyor). Yolculuk, öğretmen paneli, vizyon ve onay akışı sayfaları 2026-11-07'de kullanıcı isteğiyle kaldırıldı.
+Top menu: **Eserler (`/artifacts`, `/` redirects here), Mekanlar (`/places`), Atölyeler (`/workshops`: vase, sword, tile).** The Admin link was removed from the top menu on 2026-11-07; `/admin` opens by address. The Keşfet home page was removed on 2026-11-07; the Bilgini sına, Zaman katmanı, Sanal gezinti and 360° tur sections were also removed from artifact pages (the data stays in JSON). The journey, teacher panel, vision and approval flow pages were removed on 2026-11-07 at the user's request.
 
-| Kullanıcı | Nereden girer |
+| User | Where they enter |
 |---|---|
-| Öğrenci, jüri | Eserler, Mekanlar, Atölyeler |
-| Yönetici | Doğrudan `/admin` adresi |
+| Student, jury | Eserler, Mekanlar, Atölyeler |
+| Admin | Directly at the `/admin` address |
 
-Erişilebilirlik ölçütleri: adımlar kilitsiz, geri tuşu çalışır, adım değişince odak başlığa geçer, durum yalnız renkle anlatılmaz, hedefler en az 44 px, 320 px'te yatay taşma yok.
+Accessibility criteria: steps are unlocked, the back button works, focus moves to the heading when the step changes, status is not conveyed by color alone, targets are at least 44 px, no horizontal overflow at 320 px.
 
-## Yapılacaklar
+## To do
 
-### 1. Temel
+### 1. Foundation
 
-- [x] Quest kod incelemesi ve 4 bulgunun düzeltilmesi
-- [x] Tek kumanda düzeltmesi
-- [x] Belge düzeni, `CLAUDE.md`, hızlı test komutları, Node 24
-- [x] ~~`/yolculuk` iskeleti~~ (2026-11-07'de kaldırıldı)
-- [x] `maket-ic` ve `maket-xr-dugme` VR düzeltmeleriyle geçti
-- [x] Simüle VR denemesi: 78 denetimden 76'sı geçti
+- [x] Quest code review and fixing the 4 findings
+- [x] Single controller fix
+- [x] Document layout, `CLAUDE.md`, quick test commands, Node 24
+- [x] ~~`/yolculuk` skeleton~~ (removed on 2026-11-07)
+- [x] `maket-ic` and `maket-xr-dugme` passed with the VR fixes
+- [x] Simulated VR trial: 76 of 78 checks passed
 
-### 2. VR (öncelikli)
+### 2. VR (priority)
 
-Doğrulama: simüle Quest betiği, sonra gerçek cihaz.
+Verification: simulated Quest script, then a real device.
 
-- [ ] Kart açıkken menüye ulaşma ve baş dönükken durak yönü (`wip/vr-tutma`, doğrulanıp birleştirilecek)
-- [ ] Masaüstünde ve VR'da 10 kat büyütme
-- [ ] VR'da kumandayla maketi tutma
-- [ ] VR'da vazo onarımı: parçayı tut, yerine oturt (yarım: `wip/vr-vazo`)
-- [ ] Vazonun altında örnek yazı (yarım: `wip/vr-vazo`)
-- [ ] VR menüsünde zaman katmanı
-- [ ] Mekanlar'dan VR'a giriş iki tıktan fazla sürmesin
+- [ ] Reaching the menu while a card is open, and stop direction when the head is turned (`wip/vr-tutma`, to be verified and merged)
+- [ ] 10× enlargement on desktop and in VR
+- [ ] Holding the scale model with the controller in VR
+- [ ] Vase repair in VR: hold the piece, seat it in place (unfinished: `wip/vr-vazo`)
+- [ ] Sample text under the vase (unfinished: `wip/vr-vazo`)
+- [ ] Time layer in the VR menu
+- [ ] Entering VR from Mekanlar should not take more than two clicks
 
-### 3. Sunum ekranları
+### 3. Presentation screens
 
-- [x] ~~Zaman katmanı~~ (2026-11-07'de arayüzden kaldırıldı), kaynaklı dönem verisiyle. Yapının eski görünümünü canlandırmaz, sunumda da böyle anlatılır. Kaynaklar envanter PDF'iyle karşılaştırılmadı.
-- [x] Öğretmen paneli, vizyon, onay akışı ve kütüphane ekranları 2026-11-07'de kaldırıldı.
-- [ ] AR: yalnız bu listenin geri kalanı bitince
+- [x] ~~Time layer~~ (removed from the interface on 2026-11-07), with source-backed period data. It does not animate the structure's old appearance, and is explained this way in the presentation too. The sources were not compared with the inventory PDF.
+- [x] Teacher panel, vision, approval flow and library screens were removed on 2026-11-07.
+- [ ] AR: only after the rest of this list is finished
 
-### 4. Doğrulama ve teslim
+### 4. Verification and delivery
 
-- [ ] Tüm testler: `npm run test:hizli`, `npm run test:tarayici`, `npm run test:e2e`
-- [ ] `tests/ui.mjs` odak denetimi bir kez kaldı, yeniden çalıştırınca geçti; aralıklı sorun mu izle
-- [ ] Bağımsız inceleme: etiket eksiği, uydurma içerik, kırık akış, erişilebilirlik
-- [ ] 1280 ve 360 px ekran görüntüleriyle son bakış
-- [ ] Yedek demo videosu (masaüstü), `dist/` kopyaları, `HANDOFF.md` güncellemesi
+- [ ] All tests: `npm run test:hizli`, `npm run test:tarayici`, `npm run test:e2e`
+- [ ] The `tests/ui.mjs` focus check failed once, passed when re-run; watch whether it is an intermittent problem
+- [ ] Independent review: missing labels, invented content, broken flow, accessibility
+- [ ] Final look with 1280 and 360 px screenshots
+- [ ] Backup demo video (desktop), `dist/` copies, `HANDOFF.md` update
 
-### 5. Cuma 6 Kasım: gerçek cihaz (kullanıcıyla)
+### 5. Friday 6 November: real device (with the user)
 
-Hazırlık: Quest 3, veri kablosu, geliştirici modu önceden açık, denemenin yapılacağı bilgisayarda `adb`.
+Preparation: Quest 3, data cable, developer mode already on, `adb` on the computer where the trial will be done.
 
-`adb devices` çıktısında `no permissions` görünürse USB izni gerekir (`sudo` ister, kullanıcı çalıştırır):
+If `no permissions` appears in the `adb devices` output, USB permission is needed (asks for `sudo`, the user runs it):
 
 ```bash
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0666"' | sudo tee /etc/udev/rules.d/51-quest.rules
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-- [ ] `adb reverse tcp:4173 tcp:4173`, Quest Browser'da `http://localhost:4173/places`
-- [ ] VR'a giriş, FPS ölçümü (hedef 72); altındaysa `QUEST-HANDOFF.md`'deki düşürme sırası
-- [ ] `docs/superpowers/plans/2026-11-04-ulu-mosque-quest.md` Görev 6 kontrol listesi
-- [ ] Tutma, vazo onarımı, etiket okunurluğu, tek kumanda, konfor
-- [ ] Gerçek cihazda VR yedek videosu
-- [ ] Çalışmayan özelliği demodan çıkar, vizyon olarak anlat
+- [ ] `adb reverse tcp:4173 tcp:4173`, in Quest Browser `http://localhost:4173/places`
+- [ ] Entering VR, FPS measurement (target 72); if below, the reduction order in `QUEST-HANDOFF.md`
+- [ ] `docs/superpowers/plans/2026-11-04-ulu-mosque-quest.md` Task 6 checklist
+- [ ] Holding, vase repair, label legibility, single controller, comfort
+- [ ] VR backup video on a real device
+- [ ] Remove the non-working feature from the demo, present it as vision
 
-### 6. Final 7–8 Kasım
+### 6. Final 7–8 November
 
-- [ ] `HANDOFF.md`'deki final günü kontrol listesi
-- [ ] Sunumda çalışan özellik ile vizyon ayrımı
-- [ ] VR'ın hangi sorunu çözdüğü net anlatılıyor (şartname 5.2.2)
+- [ ] The final day checklist in `HANDOFF.md`
+- [ ] Separation of working features and vision in the presentation
+- [ ] What problem VR solves is explained clearly (specification 5.2.2)
 
-## Kes listesi
+## Cut list
 
-Süre yetmezse şu sırayla çıkar: AR → VR menüsünde zaman katmanı. VR'da tutma ve vazo onarımı en son kesilir.
+If time is not enough, cut in this order: AR → time layer in the VR menu. Holding and vase repair in VR are cut last.
 
-## Vaat durumu
+## Promise status
 
-| Vaat | Finalde | Tür |
+| Promise | At the final | Type |
 |---|---|---|
-| Çevir, parçala | Mevcut maket | Gerçek |
-| 10 kat büyüt | Sınırlar 10 kata çıkar | Gerçek |
-| Tut | Vazo; VR'da maket ve vazo | Gerçek, cihazda doğrulanacak |
-| Alt yüzdeki yazı | Temsilî vazoda örnek yazı | Mokap |
-| Zaman katmanı | Arayüzden kaldırıldı (2026-11-07); veri duruyor | Yok |
-| Restorasyon görevi | Çini bulmacası, vazo atölyesi | Gerçek |
-| Doğrulanmış bilgi | Kaynaklı kartlar | Gerçek |
-| Öğretmen paneli | Ekran kaldırıldı (2026-11-07) | Yok, yalnız sunumda vizyon |
-| KökMobil, Dokunulabilir Müze | Ekran kaldırıldı (2026-11-07) | Yok, yalnız sunumda vizyon |
-| Dijital Miras Kütüphanesi | Ekran kaldırıldı (2026-11-07); eser listesi `/artifacts` | Kısmen |
-| Tarama, 1:1 dijital ikiz | Ekran kaldırıldı (2026-11-07); `Tarama verisi yok` | Yok, yalnız sunumda vizyon |
-| VR | WebXR | Gerçek, cuma denenecek |
-| AR | `immersive-ar`, süre kalırsa | Cihazda doğrulanacak |
-| Tek senaryo demo | Sayfa kaldırıldı (2026-11-07); `/places` ve `/workshops` | Gerçek |
+| Rotate, split | Existing scale model | Real |
+| 10× enlarge | Limits go up to 10× | Real |
+| Hold | Vase; scale model and vase in VR | Real, to be verified on device |
+| Text on the underside | Sample text on the representative vase | Mockup |
+| Time layer | Removed from the interface (2026-11-07); data stays | None |
+| Restoration task | Tile puzzle, vase workshop | Real |
+| Verified information | Source-backed cards | Real |
+| Teacher panel | Screen removed (2026-11-07) | None, vision only in the presentation |
+| KökMobil, Dokunulabilir Müze | Screen removed (2026-11-07) | None, vision only in the presentation |
+| Digital Heritage Library | Screen removed (2026-11-07); artifact list `/artifacts` | Partial |
+| Scanning, 1:1 digital twin | Screen removed (2026-11-07); `Tarama verisi yok` | None, vision only in the presentation |
+| VR | WebXR | Real, to be tried on Friday |
+| AR | `immersive-ar`, if time remains | To be verified on device |
+| Single-scenario demo | Page removed (2026-11-07); `/places` and `/workshops` | Real |
 
-## Süre tahmini
+## Time estimate
 
-Kalan kod işi paralel ajanlarla 5–9 saat, cihaz denemesi 1–2 saat. Tahmindir, ölçüm değildir.
+Remaining code work 5–9 hours with parallel agents, device trial 1–2 hours. It is an estimate, not a measurement.
 
-## Açık kararlar
+## Open decisions
 
-- Tarama verisi veya gerçek küratör onayı varsa ürüne eklenir; yoksa vizyon olarak kalır.
-- Sonraki push'lar: kullanıcı izniyle.
-- Herkese açık yayın yok; fotoğraf izni netleşmedi. Takım başka cihazdan görecekse şifre korumalı yayın kullanıcıya sorulur.
-- Zaman katmanı tarihleri (Ulu Camii 4, Muradiye 6) envanter PDF'iyle karşılaştırılmalı.
+- If there is scanning data or a real curator approval, it is added to the product; otherwise it stays as vision.
+- Later pushes: with the user's permission.
+- No public release; photo permission is not settled. If the team will view it from another device, a password-protected release is asked of the user.
+- The time layer dates (Ulu Camii 4, Muradiye 6) must be compared with the inventory PDF.

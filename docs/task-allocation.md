@@ -1,57 +1,57 @@
-# KökXR – 24 Saatlik Final Görev Dağılımı (4 kişi, paralel)
+# KökXR – 24-Hour Final Task Allocation (4 people, parallel)
 
-Saatler geliştirmenin başladığı andan itibaren sayılıyor: S0 = başlangıç (açılıştan sonra, tahminen Cumartesi 10.00), S24 = bitiş. Sunum saati açılışta duyurulunca son blok ona göre kaydırılır.
+Hours are counted from the moment development starts: S0 = start (after the opening, estimated Saturday 10.00), S24 = end. When the presentation time is announced at the opening, the last block is shifted accordingly.
 
-## Çakışmayı önleyen kurallar
-1. Herkes kendi dalında çalışır: `veri`, `yonetim`, `arayuz`, `demo`. Ana dala (Vercel'e giden) sadece ortak senkron anlarında birleştirilir.
-2. Her kişinin dokunduğu klasörler ayrıdır (aşağıda "Sahip olduğu yer"). Başkasının alanındaki dosyayı değiştirmek gerekirse önce ona söylenir.
-3. S0–S1 arası herkes birlikte **eser veri şemasını** kilitler. Sonra kimse şemayı tek başına değiştirmez.
-4. Ortak senkron: S4, S8, S12, S16, S20. 10 dakika: ne bitti, ne bloklandı, birleştirme.
-5. S18'de kod dondurma: yeni özellik yok, sadece hata düzeltme ve prova.
+## Rules to avoid conflicts
+1. Everyone works on their own branch: `veri`, `yonetim`, `arayuz`, `demo`. Merging into the main branch (the one that goes to Vercel) happens only at the shared sync points.
+2. The folders each person touches are separate (see "Owns" below). If a file in someone else's area must be changed, tell them first.
+3. Between S0 and S1 everyone locks the **artifact data schema** together. After that nobody changes the schema alone.
+4. Shared syncs: S4, S8, S12, S16, S20. 10 minutes: what is done, what is blocked, merging.
+5. Code freeze at S18: no new features, only bug fixes and rehearsal.
 
-## Kişi 1 – Veri ve İçerik
-Sahip olduğu yer: eser veri dosyaları (veya seed), `public/` altındaki eser görselleri, görsel küçültme script'i.
-- S0–S1: Şemayı birlikte kilitle (id, slug, şehir, ilçe, kategori, dönem, vâkıf, özet, tarihçe, kaynaklar[kitap, cilt, sayfa], görseller[dosya, alt metin, kredi], doğrulama durumu).
-- S1–S4: Drive'dan 10 eser seç (her kategoriden 1–2: cami, külliye, türbe, su yapısı, han/ticari, medrese). Her eser için 3–6 fotoğraf indir, 1600px ve 400px WebP'ye küçült.
-- S4–S12: Her eser için kitaptan kaynaklı kısa tarihçe (80–150 kelime) ve kaynak satırı yaz. Alt metinleri yaz. Bilmediğin alanı boş bırak, uydurma.
-- S12–S16: Konya veya Hatay kitabından 1 eserin verisini hazırla (Kişi 2'nin yönetim ekranından canlı eklenecek).
-- S16–S18: Tüm metinleri kitapla son kez karşılaştır, yazım kontrolü yap.
-- S18–S24: Sunumdaki veri slaytı (kaç eser, kaynak, veri hattı) ve jüri sorularına "veri nereden geldi" cevabı.
+## Person 1 – Data and Content
+Owns: artifact data files (or seed), the artifact images under `public/`, the image downscaling script.
+- S0–S1: Lock the schema together (id, slug, city, district, category, period, founder (vâkıf), summary, history, sources[book, volume, page], images[file, alt text, credit], verification status).
+- S1–S4: Pick 10 artifacts from the Drive (1–2 from each category: mosque, complex (külliye), tomb, water structure, inn/commercial, madrasa). For each artifact download 3–6 photos and downscale them to 1600px and 400px WebP.
+- S4–S12: For each artifact write a short, book-sourced history (80–150 words) and a source line. Write the alt texts. Leave a field you do not know empty; do not make it up.
+- S12–S16: Prepare the data of 1 artifact from the Konya or Hatay book (to be added live from Person 2's management screen).
+- S16–S18: Compare all texts with the book one last time, do a spelling check.
+- S18–S24: The data slide in the presentation (how many artifacts, sources, data pipeline) and the answer to the jury question "where did the data come from".
 
-## Kişi 2 – Yönetim Ekranı ve Onay Akışı
-Sahip olduğu yer: yönetim ekranı, API/veri kaydetme katmanı, giriş (auth), bunların testleri.
-- S0–S1: Şema kilitleme. Mevcut yönetim ekranının gerçekten kaydedip kaydetmediğini kontrol et.
-- S1–S8: Eser ekle / düzenle / görsel yükle / yayınla, kalıcı kayıtla çalışsın. Girdi doğrulama (zorunlu alanlar, dosya tipi ve boyut sınırı, metin temizleme).
-- S8–S12: Onay akışı: kullanıcı katkısı veya yeni içerik "beklemede", küratör "onayla/reddet", sadece onaylanan yayında. Mokap kaldırılır.
-- S12–S16: Yönetim ekranına giriş koruması; ekle, düzenle ve onay için otomatik testler.
-- S16–S18: Kişi 1'in hazırladığı Konya/Hatay eserini panelden ekleme provası.
-- S18–S24: Demoda "canlı eser ekleme" ve "onay" adımlarını sen sun; mimari slaytında backend kısmını anlat.
+## Person 2 – Management Screen and Approval Flow
+Owns: the management screen, the API/data persistence layer, login (auth), and their tests.
+- S0–S1: Schema lock. Check whether the existing management screen actually saves.
+- S1–S8: Add / edit / upload image / publish artifacts, working with persistent storage. Input validation (required fields, file type and size limit, text sanitising).
+- S8–S12: Approval flow: user contributions or new content are "pending", the curator "approves/rejects", only approved content is published. The mock-up is removed.
+- S12–S16: Login protection for the management screen; automated tests for add, edit and approval.
+- S16–S18: Rehearse adding the Konya/Hatay artifact prepared by Person 1 through the panel.
+- S18–S24: Present the "live artifact adding" and "approval" steps in the demo; explain the backend part on the architecture slide.
 
-## Kişi 3 – Keşif Arayüzü, Erişilebilirlik ve Paketleme
-Sahip olduğu yer: ana sayfa, eser listesi ve detay sayfası bileşenleri, PWA dosyaları, masaüstü paketi.
-- S0–S1: Şema kilitleme.
-- S1–S6: Eser detay sayfası 3D'si olmayan eserleri de göstersin (galeri, tarihçe, kaynak, doğrulama rozeti). Ana sayfada şehir/ilçe/kategori filtresi.
-- S6–S10: Harita (Leaflet + OpenStreetMap) ve eser işaretleri; koordinatları Kişi 1 verir.
-- S10–S14: PWA (manifest, ikon, service worker, çevrimdışı önbellek). Masaüstünde ve Android'de "yükle" ile açıldığını dene. Zaman kalırsa Tauri/Electron masaüstü paketi.
-- S14–S18: Erişilebilirlik: alt metinler, klavye ile gezinme, yazı boyutu ve kontrast düğmesi, sesli anlatım. Lighthouse/axe çalıştır, sonucu kaydet.
-- S18–S24: Hata düzeltme; demoda keşif ve erişilebilirlik adımlarını sen sun.
+## Person 3 – Discovery UI, Accessibility and Packaging
+Owns: home page, artifact list and detail page components, PWA files, desktop package.
+- S0–S1: Schema lock.
+- S1–S6: The artifact detail page should also show artifacts that have no 3D (gallery, history, sources, verification badge). City/district/category filter on the home page.
+- S6–S10: Map (Leaflet + OpenStreetMap) and artifact markers; Person 1 provides the coordinates.
+- S10–S14: PWA (manifest, icon, service worker, offline cache). Try opening it with "install" on desktop and Android. If time remains, a Tauri/Electron desktop package.
+- S14–S18: Accessibility: alt texts, keyboard navigation, font size and contrast button, narration. Run Lighthouse/axe and save the result.
+- S18–S24: Bug fixing; present the discovery and accessibility steps in the demo.
 
-## Kişi 4 – VR, Demo ve Sunum
-Sahip olduğu yer: VR sahneleri ve atölyeler (mevcut), sunum dosyası, README, demo senaryosu.
-- S0–S1: Şema kilitleme. Quest'in çalıştığını, şarjını ve sitenin Quest tarayıcısında açıldığını doğrula.
-- S1–S6: Mevcut VR akışlarını gerçek Quest'te dene (Ulu Camii, Muradiye panosu, maket, vazo). Bozuk olanı düzelt; yeni VR özelliği ekleme.
-- S6–S10: Demo senaryosunu yaz (dakika dakika): keşfet → eser detay → sesli dinle → VR'da eline al → görev ve rozet → yönetimden eser ekle → onayla → yeni şehir göründü.
-- S10–S16: Sunumu güncelle: problem, hedef kullanıcı, çözüm, mimari ve veri modeli şeması, veri kullanımı, yenilik, ölçek (Bursa → Konya → Hatay), yol haritası. Şanlıurfa anlatısını çıkar. Kılıcı ek deneyim olarak konumla.
-- S16–S18: README: kurulum, çalıştırma, mimari, yeni şehir/eser ekleme, kullanılan kütüphaneler ve lisanslar.
-- S18–S24: Ekiple 3 tam prova (süre tutarak), yedek demo videosu, wifi olmazsa çalışacak yerel sürüm, son build'in iki bilgisayarda hazır olması.
+## Person 4 – VR, Demo and Presentation
+Owns: VR scenes and workshops (existing), the presentation file, README, demo scenario.
+- S0–S1: Schema lock. Verify that the Quest works, is charged, and that the site opens in the Quest browser.
+- S1–S6: Try the existing VR flows on a real Quest (Ulu Camii, Muradiye board, model, vase). Fix what is broken; do not add new VR features.
+- S6–S10: Write the demo scenario (minute by minute): discover → artifact detail → listen to narration → hold it in VR → task and badge → add an artifact from management → approve → new city appeared.
+- S10–S16: Update the presentation: problem, target user, solution, architecture and data model diagram, data usage, innovation, scale (Bursa → Konya → Hatay), roadmap. Remove the Şanlıurfa narrative. Position the sword as an additional experience.
+- S16–S18: README: setup, running, architecture, adding a new city/artifact, libraries used and licences.
+- S18–S24: 3 full rehearsals with the team (timed), a backup demo video, a local version that works if there is no wifi, the final build ready on two computers.
 
-## Ortak anlar
-- S8: İlk birleştirme. Yeni eserlerin en az 5'i sitede görünüyor olmalı.
-- S12: Yönetim ekranından eklenen eser sitede görünüyor olmalı.
-- S16: Tüm P0'lar ana dalda ve Vercel'de canlı. Değilse P1 işleri durur, herkes P0'a döner.
-- S18: Kod dondurma.
-- S20–S24: Prova, prova, prova. Herkes kendi kısmını ve mimariyi 1 dakikada anlatabilmeli (şartname 5.2.3).
+## Shared moments
+- S8: First merge. At least 5 of the new artifacts should be visible on the site.
+- S12: The artifact added from the management screen should be visible on the site.
+- S16: All P0s are on the main branch and live on Vercel. If not, P1 work stops and everyone returns to P0.
+- S18: Code freeze.
+- S20–S24: Rehearse, rehearse, rehearse. Everyone should be able to explain their part and the architecture in 1 minute (specification 5.2.3).
 
-## Bilinmeyenler
-- Sunum süresi ve teslim formatı açılışta duyurulacak; duyurulunca S18 sonrası buna göre ayarlanır.
-- Geliştirmenin tam başlangıç ve bitiş saati açılışta netleşecek.
+## Unknowns
+- The presentation duration and submission format will be announced at the opening; once announced, the time after S18 is adjusted accordingly.
+- The exact start and end time of development will be clarified at the opening.

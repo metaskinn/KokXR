@@ -1,49 +1,49 @@
-# Test Raporu 2 — 3 Kasım 2026, 15:30
+# Test Report 2 — 3 Kasım 2026, 15:30
 
-**Test eden:** Claude (Playwright ile otomatik; Antigravity bu oturumda izin gerektirdiği için çalıştırılmadı)
-**Tarayıcılar:** Chromium 156 (yazılımsal WebGL, SwiftShader) · Firefox 157
-**Betik:** `tests/uctan-uca.mjs` — `npm run test:e2e` ile tekrar çalıştırılabilir
+**Tested by:** Claude (automatically with Playwright; Antigravity was not run in this session because it required permission)
+**Browsers:** Chromium 156 (software WebGL, SwiftShader) · Firefox 157
+**Script:** `tests/uctan-uca.mjs` — can be re-run with `npm run test:e2e`
 
-## Sonuç: 15/15 adım, 3 yapılandırmanın üçünde de geçti
+## Result: 15/15 steps, passed in all three configurations
 
-| # | Adım | Chromium 1280 | Chromium 360 | Firefox 1280 |
+| # | Step | Chromium 1280 | Chromium 360 | Firefox 1280 |
 |---|------|:-:|:-:|:-:|
-| 1a | İlk Tab "Ana içeriğe geç" bağlantısına gidiyor (önceki hata #3) | ✅ | ✅ | ✅ |
-| 1b | favicon 200 (önceki hata #4) | ✅ | ✅ | ✅ |
-| — | Ana sayfa: başlık, 2 kart, taşma yok | ✅ | ✅ | ✅ |
-| 1c | Test yalnız klavyeyle 3/3 çözülüyor (önceki kritik hata #1) | ✅ | ✅ | ✅ |
-| 1d | Fotoğraftaki keşif noktasına tıklayınca kart görünür alanda (önceki hata #2) | ✅ | ✅ | ✅ |
-| 2 | Maket: aç, sürükle-çevir, tekerlek, Parçala/Birleştir, ok tuşları/+, sıfırla, temsili etiketi | ✅ | ✅ | ✅ |
-| 3 | 360° tur: 360TR oynatıcısı yükleniyor (3 canvas), yedek bağlantı var | ✅ | ✅ | ✅ |
-| 4 | Gezinti Ulu Camii: Giriş kapısı → İbadet alanı → Şadırvan → Minber, dürüstlük etiketi | ✅ | ✅ | ✅ |
-| 4 | Gezinti Muradiye: Caminin giriş kapısı → İç mekân → Mihrap → İç mekân | ✅ | ✅ | ✅ |
-| 5 | Restorasyon: klavyeyle yerleştir + R ile döndür; panoyu tamamla, kaynaklı bilgi | ✅ | ✅ | ✅ |
-| 6 | Yönetim: Ulu Camii özetini değiştir → ana sayfada görünüyor → varsayılana döndür | ✅ | ✅ | ✅ |
-| 6b | Yönetim: kaynaksız "Kaynaklı bilgi" seçilemiyor; yeni eser ekle → ana sayfa + eser sayfası → sil | ✅ | ✅ | ✅ |
-| 7 | Rozetler: test rozeti + restorasyon rozeti kaydediliyor, kartta görünüyor | ✅ | ✅ | ✅ |
+| 1a | The first Tab goes to the "Ana içeriğe geç" link (previous bug #3) | ✅ | ✅ | ✅ |
+| 1b | favicon 200 (previous bug #4) | ✅ | ✅ | ✅ |
+| — | Home page: heading, 2 cards, no overflow | ✅ | ✅ | ✅ |
+| 1c | The test is solved 3/3 with the keyboard only (previous critical bug #1) | ✅ | ✅ | ✅ |
+| 1d | When the discovery point in the photograph is clicked, the card is in the visible area (previous bug #2) | ✅ | ✅ | ✅ |
+| 2 | Model: open, drag-rotate, wheel, Parçala/Birleştir, arrow keys/+, reset, representative label | ✅ | ✅ | ✅ |
+| 3 | 360° tour: the 360TR player loads (3 canvases), a fallback link exists | ✅ | ✅ | ✅ |
+| 4 | Walkthrough Ulu Camii: Giriş kapısı → İbadet alanı → Şadırvan → Minber, honesty label | ✅ | ✅ | ✅ |
+| 4 | Walkthrough Muradiye: Caminin giriş kapısı → İç mekân → Mihrap → İç mekân | ✅ | ✅ | ✅ |
+| 5 | Restoration: place with the keyboard + rotate with R; complete the board, sourced information | ✅ | ✅ | ✅ |
+| 6 | Management: change the Ulu Camii summary → it appears on the home page → return to default | ✅ | ✅ | ✅ |
+| 6b | Management: "Kaynaklı bilgi" cannot be selected without a source; add a new artifact → home page + artifact page → delete | ✅ | ✅ | ✅ |
+| 7 | Badges: test badge + restoration badge are saved, appear on the card | ✅ | ✅ | ✅ |
 | 7b | `/eser/yok` → "Sayfa bulunamadı" | ✅ | ✅ | ✅ |
-| 7c | Yatay taşma yok: `/`, iki eser, `/yonetim`, `/yonetim/yeni` | ✅ | ✅ | ✅ |
+| 7c | No horizontal overflow: `/`, two artifacts, `/yonetim`, `/yonetim/yeni` | ✅ | ✅ | ✅ |
 
-**Konsol:** Uygulamaya ait hata yok, uygulama adreslerinde 4xx/5xx yok.
-360TR oynatıcısı kendi içinde `krpano.get is not a function` hataları veriyor (iframe içi, bizim kod değil; oynatıcı çalışıyor).
+**Console:** No errors belonging to the application, no 4xx/5xx on application addresses.
+The 360TR player itself gives `krpano.get is not a function` errors (inside the iframe, not our code; the player works).
 
-## Bulunan küçük sorunlar
+## Minor problems found
 
-1. **[Düşük]** Yönetim listesindeki bağlantıların erişilebilir adında fazladan boşluk: ekran okuyucu "Düzenle : Bursa Ulu Camii" okuyor
-   (`src/pages/Yonetim.tsx`, `sr-only` span). İşlevi etkilemiyor.
-2. **[Bilgi]** 360° tur internet gerektiriyor; Brave Shields gibi engelleyiciler iframe'i durdurabiliyor (yedek bağlantı mevcut).
-3. **[Bilgi]** Three.js parçası 568 kB (gzip 143 kB); yalnızca maket/gezinti açılınca yükleniyor, ana sayfa etkilenmiyor.
+1. **[Low]** Extra space in the accessible name of the links in the management list: the screen reader reads "Düzenle : Bursa Ulu Camii"
+   (`src/pages/Yonetim.tsx`, `sr-only` span). It does not affect function.
+2. **[Info]** The 360° tour requires the internet; blockers such as Brave Shields can stop the iframe (a fallback link exists).
+3. **[Info]** The Three.js chunk is 568 kB (gzip 143 kB); it loads only when the model/walkthrough is opened, the home page is not affected.
 
-## Test edilmeyenler
+## Not tested
 
-- Gerçek telefon ve iOS eğim (jiroskop) izni — yalnız tarayıcı benzetimiyle
-- Gerçek GPU'lu cihazda performans (testler yazılımsal WebGL ile yapıldı; gerçek cihazda daha hızlı olmalı)
-- Ekran okuyucuyla (NVDA/VoiceOver) manuel dinleme
+- Real phone and iOS tilt (gyroscope) permission — only with browser emulation
+- Performance on a device with a real GPU (tests were done with software WebGL; it should be faster on a real device)
+- Manual listening with a screen reader (NVDA/VoiceOver)
 
-## Demo akışı önerisi (3 dk)
+## Demo flow suggestion (3 min)
 
-1. Ana sayfa (10 sn) → **Ulu Camii**: "Maketi eline al" → çevir → **Parçala** (payeler, şadırvan) → Birleştir (40 sn)
-2. "360° turu başlat" → mihraptan abdest havuzuna geç (30 sn) — *internet şart; yedek video hazır olsun*
-3. **Muradiye**: Sanal gezinti → avlu → türbeler bahçesi → Cem Sultan Türbesi (30 sn)
-4. Restorasyon görevi: 2–3 parça yerleştir, ipucunu göster (önceden çoğunu çözülmüş tutmak zaman kazandırır) (30 sn)
-5. **Yönetim**: bir özeti değiştir → ana sayfada anında görünür → "kaynaksız içerik kaynaklı işaretlenemez" kuralı (30 sn)
+1. Home page (10 sec) → **Ulu Camii**: "Maketi eline al" → rotate → **Parçala** (piers, şadırvan) → Birleştir (40 sec)
+2. "360° turu başlat" → move from the mihrab to the ablution basin (30 sec) — *internet is required; have the backup video ready*
+3. **Muradiye**: Virtual walkthrough → courtyard → tombs garden → Cem Sultan Türbesi (30 sec)
+4. Restoration task: place 2–3 pieces, show the hint (keeping most of it solved beforehand saves time) (30 sec)
+5. **Management**: change a summary → it appears instantly on the home page → the rule "content without a source cannot be marked as sourced" (30 sec)

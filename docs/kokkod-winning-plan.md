@@ -1,182 +1,182 @@
-# KÖK&KOD Hackathon – KökXR Kazanma Planı (ajana verilecek madde listesi)
+# KÖK&KOD Hackathon – KökXR Winning Plan (item list to be handed to the agent)
 
-Kaynaklar: KOKKOD_Sartname.pdf, KokXR_Sunum_v2.pptx, organizasyonun Bursa arşiv duyurusu, Drive klasör yapısı (6 Kasım 2026'da kontrol edildi), vakifkatilim.com.tr yayınlar sayfası.
-Kural: Belgede yazan = [ŞARTNAME], kendi incelememiz = [DOĞRULANDI], önerimiz = [ÖNERİ], emin olmadığımız = [SORU].
+Sources: KOKKOD_Sartname.pdf, KokXR_Sunum_v2.pptx, the organizers' Bursa archive announcement, the Drive folder structure (checked on 6 November 2026), the vakifkatilim.com.tr publications page.
+Rule: what the document states = [SPEC], our own inspection = [VERIFIED], our proposal = [PROPOSAL], what we are unsure of = [QUESTION].
 
-## A. Şartnameden çıkan kurallar (eksiksiz)
+## A. Rules from the specification (complete)
 
-1. [ŞARTNAME] Yarışma: Vakıf Katılım + 42 Türkiye iş birliği, 42 Türkiye & 42 Network kampüsleri için. Organizasyonu Bilişim Vadisi yürütüyor.
-2. [ŞARTNAME] Ana problem: "Türkiye'deki vakıf eserlerini kullanıcıların mobil veya masaüstü cihazlardan keşfedebileceği, güvenilir bilgilerle öğrenebileceği ve kültürel mirasla etkileşim kurabileceği yeni nesil bir dijital deneyime nasıl dönüştürebiliriz?"
-3. [ŞARTNAME] Sadece eser listeleyen uygulama istenmiyor; UX, erişilebilirlik, tasarım, teknik altyapı, veri kullanımı ve yenilikçilik güçlü olmalı, yeni şehir ve eserlerle genişleyebilmeli.
-4. [ŞARTNAME] Ürün: çalışan bir mobil uygulama VEYA masaüstü uygulaması.
-5. [ŞARTNAME] Ürün birden fazla vakıf eserinin keşfine, eserin tarihçe + görsel + kaynak bilgisine erişime ve kültürel içerikle etkileşime izin vermeli.
-6. [ŞARTNAME] Örnek alanlar: Sesli rehber/hikâye anlatıcılığı, Erişilebilirlik odaklı keşif, Oyunlaştırılmış kültür turu, Topluluk katkılı dijital arşiv, Rota planlayıcı/şehir turu asistanı, AR destekli zaman yolculuğu, Serbest çalışma.
-7. [ŞARTNAME] Sadece fikir, sunum, mock-up, wireframe veya statik prototip ana ürün sayılmaz. Temel akışlar çalışan MVP ile gösterilmeli.
-8. [ŞARTNAME] Veri seti hazır API veya veritabanı olarak gelmez; takım içeriği kendi veri modeline dönüştürmeli.
-9. [ŞARTNAME] Takım 2–4 kişi, bir kaptan (iletişim sorumlusu) zorunlu; resmî yazışma ve teslimler kaptan üzerinden. (Sunumda kaptan: Muhammet Ali Divan.)
-10. [ŞARTNAME] Takvim: 8 Ekim–7 Kasım çevrim içi geliştirme; 7–8 Kasım 2026 fiziki final etkinliği (geliştirme maratonu + final sunumları) ve ödül töreni.
-11. [ŞARTNAME] Final fiziki katılımla; organizasyonun bildirdiği tarih, saat ve alanda hazır olunmalı.
-12. [ŞARTNAME] Sunum süresi, sunum şablonu, teknik teslim formatları ve alan gereksinimleri finalistlere ayrıca paylaşılacak. Puan ağırlıkları da ayrıca ilan edilecek.
-13. [ŞARTNAME] MVP şartları: çalışan uygulama; birden fazla eser keşfi; tarihçe, görsel ve kaynak erişimi; İÇERİK EKLEME VE DÜZENLEME imkânı; yeni eser eklemeye uygun kurgu; temel akışların finalde uçtan uca gösterimi; ekran görüntüsü/sunum demo yerine geçmez.
-14. [ŞARTNAME] Mimari: dil, framework, veritabanı serbest; yeni eser, ŞEHİR ve İÇERİK TÜRÜ eklenebilir olmalı; mimari ve veri modeli finalde anlatılabilmeli.
-15. [ŞARTNAME] Üçüncü taraf API kullanılabilir ama demo anında çalışır olması takımın sorumluluğunda.
-16. [ŞARTNAME] Açık kaynak lisanslarına uyulmalı.
-17. [ŞARTNAME] Veri: temizleme, sınıflandırma, etiketleme, ilişkilendirme takımın işi.
-18. [ŞARTNAME] Tarihî/kültürel içerikte kaynak bilgisi gösterilmeli.
-19. [ŞARTNAME] Doğrulanmamış içerik kesin bilgi gibi sunulmamalı.
-20. [ŞARTNAME] Topluluk katkısı varsa yayından önce moderasyon/onay mekanizması zorunlu.
-21. [ŞARTNAME] UX: anlaşılır, tutarlı arayüz; cihaza uygun okunabilirlik ve gezinme.
-22. [ŞARTNAME] Erişilebilirlik örnekleri: ekran okuyucu, alternatif metin, yüksek kontrast, yazı boyutu, renk körlüğü uyumu, sesli anlatım, altyazı, klavye ile kullanım. Bunlar tasarımda değil ÇALIŞAN üründe olmalı.
-23. [ŞARTNAME] Güvenlik: kullanıcı girdisi doğrulanmalı; kişisel veri varsa korunmalı.
-24. [ŞARTNAME] Test: temel akışlar ve kritik işlevler test edilmeli.
-25. [ŞARTNAME] Kod okunabilir, modüler olmalı; kurulum/çalıştırma dokümanı (README) önerilir.
-26. [ŞARTNAME] Ek kriterler: problem uyumu ve kültürel değer; yenilikçilik ve veri kullanımı (teknoloji gösteri için değil ihtiyaç için); takım çalışması ve iletişim (görev paylaşımı açık, herkes teknik detaya hâkim).
-27. [ŞARTNAME] Final sunumu şunları içermeli: problem, hedef kullanıcı, çözüm, teknik mimari, veri kullanımı, yenilikçi özellikler, ölçeklenebilirlik + canlı demo.
-28. [ŞARTNAME] Sunumu yalnızca takım üyeleri yapabilir.
-29. [ŞARTNAME] Jüri 7 kişi: Bilişim Vadisi 2, Vakıf Katılım 2, Bağımsız 2, Vakıflar Genel Müdürlüğü 1.
-30. [ŞARTNAME] Ödüller (kişi başı): 1. MacBook Air M5 13", 2. iPad Air M4 13", 3. iPad 11".
-31. [ŞARTNAME] Genel kurallar: başka takımların sistemlerine müdahale yasak; üçüncü taraf içerik/görsel lisansı takımın sorumluluğunda; teslim formatı ve sürelerine uyulmalı.
-32. [ŞARTNAME] Etik: özgün çalışma; telif ve fikrî mülkiyete saygı; zararlı yazılım/yetkisiz erişim yok; ihlalde diskalifiye.
+1. [SPEC] Competition: Vakıf Katılım + 42 Türkiye collaboration, for the 42 Türkiye & 42 Network campuses. The organization is run by Bilişim Vadisi.
+2. [SPEC] Main problem: "How can we turn the foundation (vakıf) artifacts in Türkiye into a new-generation digital experience that users can explore from mobile or desktop devices, learn about with reliable information, and use to interact with cultural heritage?"
+3. [SPEC] An application that merely lists artifacts is not wanted; UX, accessibility, design, technical infrastructure, data use and innovation must be strong, and it must be able to expand with new cities and artifacts.
+4. [SPEC] Product: a working mobile application OR desktop application.
+5. [SPEC] The product must allow discovery of multiple foundation artifacts, access to an artifact's history + visuals + source information, and interaction with cultural content.
+6. [SPEC] Example areas: Audio guide/storytelling, Accessibility-focused discovery, Gamified cultural tour, Community-contributed digital archive, Route planner/city tour assistant, AR-supported time travel, Free choice.
+7. [SPEC] An idea alone, a presentation, mock-up, wireframe or static prototype does not count as the main product. The core flows must be shown with a working MVP.
+8. [SPEC] The dataset does not come as a ready API or database; the team must convert the content into its own data model.
+9. [SPEC] Team of 2–4 people, one captain (communication lead) required; official correspondence and submissions go through the captain. (Captain in the presentation: Muhammet Ali Divan.)
+10. [SPEC] Calendar: 8 October–7 November online development; 7–8 November 2026 physical final event (development marathon + final presentations) and award ceremony.
+11. [SPEC] The final is attended in person; the team must be ready at the date, time and venue the organization announces.
+12. [SPEC] The presentation duration, presentation template, technical submission formats and venue requirements will be shared separately with the finalists. The scoring weights will also be announced separately.
+13. [SPEC] MVP requirements: a working application; discovery of multiple artifacts; access to history, visuals and sources; the ability to ADD AND EDIT CONTENT; a design suited to adding new artifacts; end-to-end demonstration of the core flows at the final; a screenshot/presentation does not replace a demo.
+14. [SPEC] Architecture: language, framework and database are free; new artifacts, CITIES and CONTENT TYPES must be addable; the architecture and data model must be explainable at the final.
+15. [SPEC] A third-party API may be used, but it is the team's responsibility that it works at demo time.
+16. [SPEC] Open-source licenses must be complied with.
+17. [SPEC] Data: cleaning, classification, tagging and linking are the team's job.
+18. [SPEC] Source information must be shown in historical/cultural content.
+19. [SPEC] Unverified content must not be presented as certain fact.
+20. [SPEC] If there is community contribution, a moderation/approval mechanism before publication is mandatory.
+21. [SPEC] UX: an understandable, consistent interface; readability and navigation suited to the device.
+22. [SPEC] Accessibility examples: screen reader, alternative text, high contrast, font size, color-blindness compatibility, audio narration, subtitles, keyboard use. These must be in the WORKING product, not in the design.
+23. [SPEC] Security: user input must be validated; personal data, if any, must be protected.
+24. [SPEC] Testing: core flows and critical functions must be tested.
+25. [SPEC] Code must be readable and modular; setup/run documentation (README) is recommended.
+26. [SPEC] Additional criteria: fit to the problem and cultural value; innovation and data use (technology for need, not for show); teamwork and communication (task sharing is clear, everyone knows the technical details).
+27. [SPEC] The final presentation must include: problem, target user, solution, technical architecture, data use, innovative features, scalability + live demo.
+28. [SPEC] Only team members may give the presentation.
+29. [SPEC] The jury has 7 people: Bilişim Vadisi 2, Vakıf Katılım 2, Independent 2, General Directorate of Foundations (Vakıflar Genel Müdürlüğü) 1.
+30. [SPEC] Prizes (per person): 1st MacBook Air M5 13", 2nd iPad Air M4 13", 3rd iPad 11".
+31. [SPEC] General rules: interfering with other teams' systems is forbidden; the license of third-party content/images is the team's responsibility; submission formats and deadlines must be complied with.
+32. [SPEC] Ethics: original work; respect for copyright and intellectual property; no malware/unauthorized access; disqualification for violation.
 
-## B. Veri seti hakkında doğruladıklarımız
+## B. What we verified about the dataset
 
-33. [DOĞRULANDI] Drive kökünde 4 klasör var: "I. ve II. Cilt - Osmangazi", "II. Cilt - Yıldırım", "III. Cilt - Diğer İlçeler", "KÖK&KOD".
-34. [DOĞRULANDI] Osmangazi altında kategori/yapı klasörleri: II. Murat Külliyesi, Hamzabey Külliyesi, Sivil Mimari, I. Murat Hüdavendigar Külliyesi, Su Yapıları, Tekke ve Zaviyeler, Osmangazi Camiler ve Hazireler 1/2/3, Eğitim Yapıları, Orhan Bey Külliyesi, Timurtaş Paşa Külliyesi, Türbeler, Ticari Yapılar, Ulucamii.
-35. [DOĞRULANDI] Örnek yaprak klasör (Ulucamii): "2-Ulucamii.indd", "2-Ulucamii.pdf" (~284 MB), "2-Ulucamii.idml" (~324 KB) ve "Links" klasörü (fotoğraflar).
-36. [DOĞRULANDI] Links içindeki görseller DJI_..._ODAK.jpeg (drone) ve ERD....jpg/.tif/.psd; dosyalar 2 MB ile 144 MB arasında. Ham haliyle uygulamada kullanılamaz, mutlaka küçültülmeli.
-37. [ÖNERİ] .idml dosyası InDesign'ın zip+XML formatıdır; kitaptaki METİN buradan otomatik çekilebilir (Stories/*.xml). Bu, yayından kaynaklı ve doğrulanmış metni hızlıca veri modeline almanın en hızlı yolu olabilir. İçeriğini henüz açıp kontrol etmedim.
-38. [DOĞRULANDI] Yayınlar sayfasında Bursa Cilt 1, 2, 3; Hatay; Konya Cilt 1, 2 PDF'leri var. Yani başka şehirlerin envanteri de aynı formatta mevcut: genişletilebilirliği göstermek için Konya veya Hatay'dan 1–2 eser eklemek mümkün.
-39. [SORU] "KÖK&KOD" klasörü bana boş göründü. İçinde size özel hazırlanmış bir veri paketi var mı, yoksa erişim mi kısıtlı?
-40. [SORU] Şartnamedeki "7 bölgeden 60–80 eserlik içerik paketi" ayrıca verildi mi, yoksa sadece Bursa arşivi mi var?
-41. [SORU] Fotoğrafların uygulamada yayın/kullanım izni ve fotoğrafçı kredisi (ör. "Fotoğraf: Vakıf Eserleri Envanteri, Vakıf Katılım") nasıl gösterilmeli? Organizasyona sorulmalı; şimdilik her görselin altına kaynak satırı koyun.
+33. [VERIFIED] There are 4 folders at the Drive root: "I. ve II. Cilt - Osmangazi", "II. Cilt - Yıldırım", "III. Cilt - Diğer İlçeler", "KÖK&KOD".
+34. [VERIFIED] Under Osmangazi, category/structure folders: II. Murat Külliyesi, Hamzabey Külliyesi, Sivil Mimari, I. Murat Hüdavendigar Külliyesi, Su Yapıları, Tekke ve Zaviyeler, Osmangazi Camiler ve Hazireler 1/2/3, Eğitim Yapıları, Orhan Bey Külliyesi, Timurtaş Paşa Külliyesi, Türbeler, Ticari Yapılar, Ulucamii.
+35. [VERIFIED] Sample leaf folder (Ulucamii): "2-Ulucamii.indd", "2-Ulucamii.pdf" (~284 MB), "2-Ulucamii.idml" (~324 KB) and a "Links" folder (photographs).
+36. [VERIFIED] The images inside Links are DJI_..._ODAK.jpeg (drone) and ERD....jpg/.tif/.psd; files range from 2 MB to 144 MB. They cannot be used in the app in their raw form; they must be downsized.
+37. [PROPOSAL] The .idml file is InDesign's zip+XML format; the TEXT in the book can be extracted from it automatically (Stories/*.xml). This may be the fastest way to bring publication-sourced, verified text into the data model. I have not yet opened and checked its contents.
+38. [VERIFIED] The publications page has Bursa Volumes 1, 2, 3; Hatay; Konya Volumes 1, 2 PDFs. That is, the inventories of other cities exist in the same format: to show extensibility, adding 1–2 artifacts from Konya or Hatay is possible.
+39. [QUESTION] The "KÖK&KOD" folder looked empty to me. Is there a data package prepared specifically for you in it, or is access restricted?
+40. [QUESTION] Was the "content package of 60–80 artifacts from 7 regions" mentioned in the specification given separately, or is there only the Bursa archive?
+41. [QUESTION] How should the permission to publish/use the photographs in the app and the photographer credit (e.g. "Fotoğraf: Vakıf Eserleri Envanteri, Vakıf Katılım") be shown? The organization should be asked; for now put a source line under every image.
 
-## C. Mevcut projemiz (KökXR) ve şartnameyle uyum
+## C. Our current project (KökXR) and fit with the specification
 
-42. [DOĞRULANDI] Sunumdaki konum: "Vakıf eserlerini 3D dijital ikizlere dönüştüren, eseri eline almanı ve geçmişteki hâline dönmeni sağlayan XR eğitim platformu." Slogan: "Dokunamadığın tarihe dokun."
-43. [DOĞRULANDI] Sunumda özellikler: Eseri Eline Al, Zaman Katmanı (slider), Restorasyon Görevi, Doğrulanmış Bilgi (küratör onaylı veri). Kanallar: VR, AR, Web. Hedef: okullar (KökMobil), müzeler, vakıflar/bakanlık.
-44. [DOĞRULANDI] Sunumda demo kapsamı "tek mekân · tek eser · tek senaryo". Şartname ise BİRDEN FAZLA eser + içerik ekleme/düzenleme istiyor. Bu en büyük açığımız.
-45. [DOĞRULANDI] Sunum Şanlıurfa örneğinden bahsediyor; verilen veri Bursa. Anlatı ve demo Bursa'ya taşınmalı.
-46. [SORU] Mevcut web sitesi hangi teknolojiyle yazıldı (React/Next, Three.js, Unity WebGL...)? Repo linki ve canlı adres nedir? Ajanın buna göre plan yapması gerekiyor.
-47. [KARAR – 6 Kasım] Web sitesi tek başına yeterli sayılmıyor; ürün MOBİL uygulama olarak teslim edilecek. Sunumda (slayt 3) zaten "AR → Telefon · Tablet" ve "KökMobil" var, yani mobil seçimi kabul edilen sunumla tutarlı. Mevcut web kodu JavaScript tabanlıysa en hızlı yol Capacitor ile Android APK'ya sarmak (kod yeniden yazılmaz). Repo görülünce kesinleşecek.
-48. [SORU] Paralel çalışan kişi tam olarak hangi parçayı yapıyor (3D model mi, site mi, sunum mu)? Görev bölümü buna göre netleşmeli.
-49. [SORU] Mevcutta bir 3D model var mı (hangi eser, hangi format: glb/gltf/fbx)? VR gözlük finalde olacak mı?
+42. [VERIFIED] Position in the presentation: "An XR education platform that turns foundation artifacts into 3D digital twins, lets you hold the artifact in your hands and return to its past state." Slogan: "Dokunamadığın tarihe dokun."
+43. [VERIFIED] Features in the presentation: Eseri Eline Al, Zaman Katmanı (slider), Restorasyon Görevi, Doğrulanmış Bilgi (curator-approved data). Channels: VR, AR, Web. Target: schools (KökMobil), museums, foundations/ministry.
+44. [VERIFIED] The demo scope in the presentation is "one venue · one artifact · one scenario". The specification, however, wants MULTIPLE artifacts + content adding/editing. This is our biggest gap.
+45. [VERIFIED] The presentation mentions the Şanlıurfa example; the data provided is Bursa. The narrative and demo must move to Bursa.
+46. [QUESTION] What technology was the existing website written in (React/Next, Three.js, Unity WebGL...)? What are the repo link and the live address? The agent needs to plan accordingly.
+47. [DECISION – 6 November] The website alone is not considered sufficient; the product will be delivered as a MOBILE application. The presentation (slide 3) already has "AR → Telefon · Tablet" and "KökMobil", so the mobile choice is consistent with the accepted presentation. If the existing web code is JavaScript-based, the fastest path is to wrap it into an Android APK with Capacitor (the code is not rewritten). To be finalized once the repo is seen.
+48. [QUESTION] Exactly which part is the person working in parallel doing (the 3D model, the site, the presentation)? The division of tasks should be clarified accordingly.
+49. [QUESTION] Is there a 3D model currently (which artifact, which format: glb/gltf/fbx)? Will there be a VR headset at the final?
 
-## D. Yapılması gerekenler (öncelik sırasıyla)
+## D. What needs to be done (in priority order)
 
-50. [ÖNERİ][P0] Çok eserli keşif: Bursa'dan en az 8–12 eser, kategori (cami, külliye, türbe, hamam/su yapısı, han/ticari, medrese) ve ilçe filtresiyle liste + harita.
-51. [ÖNERİ][P0] Her eser sayfasında: ad, ilçe, kategori, dönem/yapım yılı, vakfeden kişi, kısa tarihçe, galeri, KAYNAK satırı (ör. "Bursa Vakıf Eserleri Envanteri, Cilt X, s. Y").
-52. [ÖNERİ][P0] Yönetim paneli: eser ekle / düzenle / görsel yükle / yayınla. Şartname açıkça istiyor; demoda canlı olarak yeni bir eser ekleyip anında uygulamada görünmesini gösterin.
-53. [ÖNERİ][P0] Veri modeli genişletilebilir olsun: Şehir → İlçe → Eser; Eser ↔ Kategori, Dönem, Vakıf/Vâkıf, Görsel, Kaynak, Hikâye, Ses, 3D model, Görev. Yeni şehir sadece veri eklemekle gelmeli, kod değişmeden.
-54. [ÖNERİ][P0] Her bilgiye "doğrulama durumu" alanı: Doğrulanmış (envanter kaynaklı) / Kullanıcı katkısı – onay bekliyor / Yorum. Doğrulanmamış içerik ayrı rozetle gösterilsin.
-55. [ÖNERİ][P0] Mevcut "Eseri Eline Al" 3D deneyimini tek bir yıldız eserde (ör. Ulucamii veya Yeşil Türbe çini/minber detayı) çalışır halde tutun; geri kalan eserler fotoğraf + hikâye ile. 3D'yi her esere yaymaya çalışmayın.
-56. [ÖNERİ][P0] Erişilebilirlik çalışan üründe: tüm görsellerde alt metin, büyük yazı ve yüksek kontrast düğmesi, sesli anlatım (tarayıcı TTS ile hızlı çözüm), klavye ile gezinme, renk körlüğüne uygun palet.
-57. [ÖNERİ][P0] Görsel işleme hattı: script ile TIF/PSD/JPEG'leri 1600px ve 400px WebP'ye çevir, EXIF'i koru veya sil, dosya adını eser kimliğine bağla.
-58. [ÖNERİ][P1] Topluluk katkısı + moderasyon: kullanıcı anı/fotoğraf ekler, panelde "onayla/reddet" ile yayına girer. Hem şartname maddesi hem güçlü bir demo anı.
-59. [ÖNERİ][P1] Oyunlaştırma: eseri ziyaret et / quiz çöz / restorasyon görevini tamamla → rozet. Sunumdaki "Restorasyon Görevi" buraya bağlanır.
-60. [ÖNERİ][P1] Rota: seçilen eserlerden yürüyüş rotası (ör. "Hanlar Bölgesi: Koza Han – Emir Han – Ulucamii"). Harita için Leaflet + OpenStreetMap yeterli. Koordinatları doğrulayın.
-61. [ÖNERİ][P1] Zaman Katmanı: aynı eserin farklı kadraj/dönem görselleri arasında slider. Arşivde gerçekten eski fotoğraf yoksa "o dönem" diye uydurmayın; restorasyon öncesi/sonrası gibi doğrulanabilir bir karşılaştırma kullanın.
-62. [ÖNERİ][P1] Yapay zekâ kullanılırsa sadece kendi doğrulanmış veritabanımızdan cevap versin ve her cevapta kaynak göstersin; sunumdaki "cevap yapay zekâdan değil küratör onaylı veriden gelir" vaadiyle tutarlı olsun.
-63. [ÖNERİ][P1] README: kurulum, çalıştırma, mimari şema, veri modeli, yeni şehir ekleme adımları, kullanılan kütüphaneler ve lisansları.
-64. [ÖNERİ][P1] Testler: en azından eser listeleme, eser detay, içerik ekleme/düzenleme, moderasyon onayı ve girdi doğrulama için otomatik test.
-65. [ÖNERİ][P1] Güvenlik: panelde giriş zorunlu, form girdileri doğrulanır, yükleme boyut/tip sınırı, XSS'e karşı metin temizleme.
-66. [ÖNERİ][P2] Genişletilebilirlik kanıtı: Konya veya Hatay envanterinden 1–2 eseri admin panelinden canlı ekleyip "yeni şehir 5 dakikada eklendi" gösterin.
-67. [ÖNERİ][P2] Çevrimdışı mod (PWA cache): eser gezisinde internet olmasa da içerik açılır.
-68. [ÖNERİ][P2] QR kod: eserin önüne konacak QR, uygulamada o eserin sayfasını açar. Basit ve jüriye somut gelir.
-69. [ÖNERİ][P2] Öğretmen modu: bir sınıf için eser seti + quiz; sunumdaki okul hikâyesini korur.
+50. [PROPOSAL][P0] Multi-artifact discovery: at least 8–12 artifacts from Bursa, a list + map with category (mosque, külliye, tomb, bathhouse/water structure, han/commercial, madrasa) and district filters.
+51. [PROPOSAL][P0] On each artifact page: name, district, category, period/construction year, founder (vâkıf), short history, gallery, SOURCE line (e.g. "Bursa Vakıf Eserleri Envanteri, Cilt X, s. Y").
+52. [PROPOSAL][P0] Admin panel: add / edit / upload image / publish artifacts. The specification explicitly asks for it; in the demo, show live adding of a new artifact and its appearing in the app instantly.
+53. [PROPOSAL][P0] The data model should be extensible: City → District → Artifact; Artifact ↔ Category, Period, Foundation/Vâkıf, Image, Source, Story, Audio, 3D model, Quest. A new city should come just by adding data, without code changes.
+54. [PROPOSAL][P0] A "verification status" field on every piece of information: Verified (inventory-sourced) / User contribution – awaiting approval / Commentary. Unverified content should be shown with a separate badge.
+55. [PROPOSAL][P0] Keep the existing "Eseri Eline Al" 3D experience working on a single star artifact (e.g. Ulucamii or the tile/minbar detail of the Yeşil Türbe); the remaining artifacts with photo + story. Do not try to spread 3D to every artifact.
+56. [PROPOSAL][P0] Accessibility in the working product: alt text on all images, a large-text and high-contrast button, audio narration (quick solution with browser TTS), keyboard navigation, a color-blind-friendly palette.
+57. [PROPOSAL][P0] Image processing pipeline: with a script, convert TIF/PSD/JPEGs to 1600px and 400px WebP, keep or strip EXIF, tie the file name to the artifact ID.
+58. [PROPOSAL][P1] Community contribution + moderation: a user adds a memory/photo, and it goes live with "approve/reject" in the panel. Both a specification item and a strong demo moment.
+59. [PROPOSAL][P1] Gamification: visit the artifact / solve a quiz / complete the restoration quest → badge. The "Restorasyon Görevi" in the presentation connects here.
+60. [PROPOSAL][P1] Route: a walking route from selected artifacts (e.g. "Hanlar Bölgesi: Koza Han – Emir Han – Ulucamii"). Leaflet + OpenStreetMap is enough for the map. Verify the coordinates.
+61. [PROPOSAL][P1] Zaman Katmanı: a slider between images of the same artifact from different framings/periods. If there is truly no old photograph in the archive, do not invent "that period"; use a verifiable comparison such as before/after restoration.
+62. [PROPOSAL][P1] If artificial intelligence is used, it should answer only from our own verified database and give a source in every answer; be consistent with the presentation's promise "the answer comes not from artificial intelligence but from curator-approved data".
+63. [PROPOSAL][P1] README: setup, running, architecture diagram, data model, steps to add a new city, the libraries used and their licenses.
+64. [PROPOSAL][P1] Tests: at least automated tests for artifact listing, artifact detail, content adding/editing, moderation approval and input validation.
+65. [PROPOSAL][P1] Security: login required for the panel, form inputs validated, upload size/type limit, text sanitization against XSS.
+66. [PROPOSAL][P2] Proof of extensibility: add 1–2 artifacts from the Konya or Hatay inventory live from the admin panel and show "new city added in 5 minutes".
+67. [PROPOSAL][P2] Offline mode (PWA cache): content opens even without internet during an artifact visit.
+68. [PROPOSAL][P2] QR code: a QR to be placed in front of the artifact opens that artifact's page in the app. Simple and concrete for the jury.
+69. [PROPOSAL][P2] Teacher mode: an artifact set + quiz for a class; keeps the school story in the presentation.
 
-## E. Yapılmaması gerekenler
+## E. What not to do
 
-70. Tek eser/tek senaryo demosuyla gitmeyin; şartname birden fazla eser istiyor.
-71. İçerik ekleme/düzenleme olmadan gitmeyin; açıkça zorunlu.
-72. Ekran görüntüsü, video veya Figma ile "demo" yapmayın; canlı çalışan ürün şart.
-73. Kaynağı olmayan tarihî bilgi yazmayın; yapay zekâya tarihçe ürettirip doğrulamadan koymayın.
-74. Tarih, kişi, yapım yılı uydurmayın. Bilmediğiniz alanı boş bırakın veya "bilgi bekleniyor" yazın.
-75. 100 MB'lık TIF'leri doğrudan uygulamaya koymayın; demo yavaşlar.
-76. Demo internetine güvenmeyin; final alanında wifi çökerse çalışacak yerel/çevrimdışı sürüm hazır olsun.
-77. VR'ı merkeze koyup geri kalanı boş bırakmayın; şartname mobil/masaüstü ürün istiyor, VR artı puan.
-78. Şanlıurfa anlatısını ana hikâyede tutmayın; veri Bursa.
-79. Lisansı belirsiz 3D model, müzik, ikon kullanmayın; kullandıklarınızı README'de listeleyin.
-80. Sunumu takım dışından birine yaptırmayın.
-81. Erişilebilirliği sadece slaytta anlatmayın; jüri butona basıp görecek.
-82. "Yakında" diye çok fazla özellik anlatmayın; çalışanı gösterin, gerisini tek slaytta yol haritası olarak verin.
-83. Kişisel veri toplamayın (ad, telefon vs.) gerekmedikçe; toplarsanız korunma önlemini anlatın.
+70. Do not go with a single artifact/single scenario demo; the specification wants multiple artifacts.
+71. Do not go without content adding/editing; it is explicitly mandatory.
+72. Do not do a "demo" with screenshots, video or Figma; a live working product is required.
+73. Do not write historical information without a source; do not have artificial intelligence produce a history and put it in without verification.
+74. Do not invent dates, persons, construction years. Leave a field you do not know empty or write "bilgi bekleniyor".
+75. Do not put 100 MB TIFs directly into the app; the demo will slow down.
+76. Do not trust the demo internet; have a local/offline version ready that works if the wifi at the final venue goes down.
+77. Do not put VR at the center and leave the rest empty; the specification wants a mobile/desktop product, VR is a bonus.
+78. Do not keep the Şanlıurfa narrative in the main story; the data is Bursa.
+79. Do not use 3D models, music, icons of unclear license; list what you use in the README.
+80. Do not have someone from outside the team give the presentation.
+81. Do not explain accessibility only on a slide; the jury will press the button and see.
+82. Do not describe too many features as "coming soon"; show what works, give the rest as a roadmap on one slide.
+83. Do not collect personal data (name, phone, etc.) unless necessary; if you do, explain the protection measures.
 
-## F. Bizi öne çıkaracak şeyler (öncelik sırasıyla)
+## F. What will make us stand out (in priority order)
 
-84. Jürinin 3'ü (Vakıf Katılım 2 + VGM 1) içerik sahibi kurumlardan. Onların kendi envanter kitabını "yaşayan bir platforma" dönüştürdüğünüzü göstermek en güçlü mesaj: "Envanter kitabı rafta kalmasın."
-85. Kitaptan veriye otomatik hat: IDML/PDF'ten metni çekip yapılandırılmış eser kartına çeviren import aracı (bkz. 37). Bu, "yeni şehir ekleme maliyeti neredeyse sıfır" iddiasını kanıtlar ve ölçeklenebilirlik puanını doğrudan vurur.
-86. Her cümlenin yanında kaynak ve sayfa: "Doğrulanmış Bilgi" rozetini somut gösterin. VGM jürisi için güven çok önemli.
-87. Canlı demo akışı: keşfet → eser detay → sesli dinle → 3D eline al → görevi tamamla → admin panelden yeni eser ekle → kullanıcı katkısını onayla → yeni şehir göründü. Tek akışta şartnamenin tüm MVP maddeleri.
-88. Erişilebilirliği canlı gösterin: ekran okuyucu veya sesli anlatımı açıp bir eseri gözler kapalı dinletin.
-89. Gerçek hedef kullanıcı: Bursa'yı gezen turist / öğrenci / öğretmen. Bir persona ve bir gerçek senaryo ile başlayın.
-90. Ölçek hikâyesi: Bursa (3 cilt) → Konya (2 cilt) → Hatay (1 cilt) zaten basılmış; aynı hat ile hepsi platforma girer.
-91. Sunumda mimari ve veri modelini tek bir net şema ile anlatın; şartname bunu açıkça istiyor.
-92. Her takım üyesi bir teknik parçanın sahibi olsun ve jüri sorusuna o cevap versin (takım çalışması kriteri).
+84. Three of the jury (Vakıf Katılım 2 + VGM 1) are from the institutions that own the content. The strongest message is to show that you are turning their own inventory book into "a living platform": "Envanter kitabı rafta kalmasın."
+85. An automatic book-to-data pipeline: an import tool that pulls text from IDML/PDF and turns it into a structured artifact card (see 37). This proves the claim "the cost of adding a new city is nearly zero" and directly hits the scalability score.
+86. Source and page next to every sentence: show the "Doğrulanmış Bilgi" badge concretely. Trust is very important for the VGM jury.
+87. Live demo flow: discover → artifact detail → listen to audio → take it in hand in 3D → complete the quest → add a new artifact from the admin panel → approve a user contribution → the new city appeared. All the specification's MVP items in a single flow.
+88. Show accessibility live: turn on a screen reader or audio narration and have an artifact listened to with eyes closed.
+89. A real target user: a tourist / student / teacher touring Bursa. Start with one persona and one real scenario.
+90. Scale story: Bursa (3 volumes) → Konya (2 volumes) → Hatay (1 volume) are already printed; with the same pipeline they all enter the platform.
+91. Explain the architecture and the data model in the presentation with a single clear diagram; the specification explicitly asks for this.
+92. Each team member should own a technical part and answer the jury's question on it (teamwork criterion).
 
-## G. Bursa arşivine bağlı somut fikirler
+## G. Concrete ideas tied to the Bursa archive
 
-93. "Osmanlı'nın ilk başkenti" rotası: Orhan Bey, I. Murat Hüdavendigar, II. Murat (Muradiye) ve Ulucamii külliyeleri; arşivde bu klasörlerin hepsi var.
-94. "Külliye nedir?" interaktif şeması: cami, medrese, imaret, hamam, türbe parçalarına dokununca ilgili eser kartı açılır (arşivdeki külliye klasörleriyle eşleşir).
-95. "Su yolculuğu": Su Yapıları klasöründen çeşmeler ve hamamlar; vakfın şehre su hizmeti hikâyesi.
-96. "Hanlar ve ticaret": Ticari Yapılar klasörü; vakfın gelir kaynağı olarak han/çarşı ilişkisi (vakfın nasıl çalıştığını anlatan eğitici katman).
-97. "Vakfiye kartı": her eser için kim vakfetti, ne amaçla, gelir kaynağı ne. Kitapta varsa ekleyin, yoksa alanı boş bırakın.
-98. Drone (DJI) fotoğraflarıyla kuş bakışı giriş görseli; ERD fotoğraflarıyla detay galerisi. Galeride "kadraj tipi" etiketi: dış cephe, iç mekân, detay, havadan.
-99. "Detay avı" oyunu: yüksek çözünürlüklü detay fotoğrafından kırpılmış bir motif gösterilir, kullanıcı hangi eserde olduğunu bulur.
-100. Derin zoom görüntüleyici (ör. OpenSeadragon) ile yüksek çözünürlüklü fotoğrafta yazıt/çini detayına yakınlaşma. Arşivin "yüksek çözünürlüklü" olmasını avantaja çevirir.
-101. Sesli hikâye: her eser için 60–90 saniyelik metin, kaynak kitaptan özetlenip insan kontrolünden geçmiş; TTS ile seslendirilmiş ve altyazılı.
-102. Restorasyon görevi: hasarlı bir motif bulmacası (parçaları yerine koy); doğru tamamlanınca gerçek fotoğraf açılır.
-103. Kategori bazlı rozetler: "Türbe kâşifi", "Külliye ustası", "Su yolu takipçisi".
-104. Topluluk anıları: "Bu yapıyla ilgili anın var mı?" formu; moderasyondan sonra eser sayfasında "Topluluk anıları" bölümünde, "doğrulanmamış" etiketiyle.
-105. Öğretmen paketi: Osmanlı kuruluş dönemi dersi için 5 eserlik set + 10 soruluk quiz.
-106. Şehir ekleme sihirbazı: admin panelde "Yeni şehir" → ilçe → kategori → eser; Konya'yı canlı ekleyin.
+93. The "first capital of the Ottomans" route: the Orhan Bey, I. Murat Hüdavendigar, II. Murat (Muradiye) and Ulucamii külliyes; the archive has all of these folders.
+94. An interactive diagram of "What is a külliye?": touching the mosque, madrasa, imaret, bathhouse, tomb parts opens the relevant artifact card (matches the külliye folders in the archive).
+95. "Water journey": fountains and bathhouses from the Su Yapıları folder; the story of the foundation's water service to the city.
+96. "Hans and trade": the Ticari Yapılar folder; the han/bazaar relation as the foundation's source of income (an educational layer explaining how a foundation works).
+97. "Vakfiye card": for each artifact, who endowed it, for what purpose, what the source of income is. Add it if it is in the book, leave the field empty if not.
+98. An aerial opening image with drone (DJI) photographs; a detail gallery with ERD photographs. A "framing type" label in the gallery: exterior, interior, detail, aerial.
+99. A "detail hunt" game: a motif cropped from a high-resolution detail photograph is shown, and the user finds which artifact it is in.
+100. Zooming into an inscription/tile detail in a high-resolution photograph with a deep-zoom viewer (e.g. OpenSeadragon). Turns the archive being "high-resolution" into an advantage.
+101. Audio story: a 60–90 second text for each artifact, summarized from the source book and checked by a human; voiced with TTS and subtitled.
+102. Restoration quest: a damaged-motif puzzle (put the pieces in place); when completed correctly the real photograph opens.
+103. Category-based badges: "Türbe kâşifi", "Külliye ustası", "Su yolu takipçisi".
+104. Community memories: a "Do you have a memory about this building?" form; after moderation, in the artifact page's "Topluluk anıları" section, with an "unverified" label.
+105. Teacher package: a set of 5 artifacts + a 10-question quiz for the Ottoman founding period lesson.
+106. City-adding wizard: in the admin panel "Yeni şehir" → district → category → artifact; add Konya live.
 
-## H. 2 günlük hızlı uygulama planı
+## H. 2-day quick implementation plan
 
-107. [SORU – önce bunu netleştirin] Final 7–8 Kasım fiziki etkinlik. "2 gün" bu final maratonu mu, yoksa ondan önce mi? Teslim saati, sunum süresi ve teslim formatı (repo linki, APK, video vb.) organizasyonun ilettiği belgede ne diyor?
-108. Saat 0–1: Mevcut kodu açın, çalışanı ve çalışmayanı listeleyin. Teknoloji ve hosting kararını değiştirmeyin; üzerine ekleyin.
-109. Saat 0–1: Görev bölümü. Önerilen: (A) veri + import hattı + görsel küçültme, (B) eser listesi/detay/harita/erişilebilirlik arayüzü, (C) admin panel + moderasyon + auth, (D) 3D/XR yıldız eser + sunum. Paralel çalışan kişiye en bağımsız parçayı (D veya A) verin.
-110. Saat 1–3: Veri modeli şemasını yazın (JSON veya veritabanı): cities, districts, categories, artifacts, media, sources, stories, contributions, quests.
-111. Saat 1–4: 10–12 Bursa eseri seçin (her kategoriden 1–2), her biri için 3–6 fotoğrafı indirip küçültün.
-112. Saat 2–6: Metin: IDML'den çekmeyi deneyin; olmazsa PDF'ten kopyalayıp her eser için kısa tarihçe + kaynak sayfa no girin. Bir kişi her metni kitapla karşılaştırarak kontrol etsin.
-113. Saat 3–8: Liste + filtre + harita + eser detay sayfası + kaynak satırı.
-114. Saat 3–8: Admin panel: giriş, eser ekle/düzenle, görsel yükle, yayınla. Girdi doğrulama.
-115. Saat 8–12: Erişilebilirlik (alt metin, kontrast, yazı boyutu, TTS, klavye) + PWA kurulumu.
-116. Saat 8–12: Topluluk katkısı formu + moderasyon kuyruğu.
-117. Saat 12–16: 3D "Eline Al" yıldız eser entegrasyonu; görev + rozet.
-118. Saat 12–16: Rota (2–3 hazır rota) ve QR.
-119. Saat 16–18: Testler, README, mimari şema, lisans listesi.
-120. Saat 16–20: Konya/Hatay'dan 1 eseri panelden ekleme provası (genişletilebilirlik demosu).
-121. Saat 18–22: Sunum: problem → kullanıcı → çözüm → canlı demo → mimari/veri modeli → veri kullanımı → yenilik → ölçek → yol haritası. Sunum sırasını takım üyelerine dağıtın.
-122. Saat 20–24: En az 3 tam demo provası, süre tutarak. Wifi yoksa çalışacak yedek (lokal build + önceden yüklenmiş veri). Son çare olarak kayıtlı video yedeği, ama ana demo canlı olacak.
-123. Kesme kuralı: Saat 16'da P0 maddelerden biri çalışmıyorsa P1/P2 işleri durdurulur, herkes P0'a döner.
-124. Her 3–4 saatte bir 10 dakikalık senkron: ne bitti, ne bloklandı.
-125. Son 2 saatte yeni özellik eklenmez, sadece hata düzeltilir.
+107. [QUESTION – clarify this first] The final is a physical event on 7–8 November. Is "2 days" this final marathon, or before it? What does the document sent by the organization say about the submission time, presentation duration and submission format (repo link, APK, video, etc.)?
+108. Hour 0–1: Open the existing code, list what works and what does not. Do not change the technology and hosting decision; build on top.
+109. Hour 0–1: Task division. Suggested: (A) data + import pipeline + image downsizing, (B) artifact list/detail/map/accessibility interface, (C) admin panel + moderation + auth, (D) 3D/XR star artifact + presentation. Give the person working in parallel the most independent part (D or A).
+110. Hour 1–3: Write the data model schema (JSON or database): cities, districts, categories, artifacts, media, sources, stories, contributions, quests.
+111. Hour 1–4: Choose 10–12 Bursa artifacts (1–2 from each category), download and downsize 3–6 photographs for each.
+112. Hour 2–6: Text: try pulling from the IDML; if that fails, copy from the PDF and enter a short history + source page number for each artifact. Have one person check every text against the book.
+113. Hour 3–8: List + filter + map + artifact detail page + source line.
+114. Hour 3–8: Admin panel: login, add/edit artifact, upload image, publish. Input validation.
+115. Hour 8–12: Accessibility (alt text, contrast, font size, TTS, keyboard) + PWA setup.
+116. Hour 8–12: Community contribution form + moderation queue.
+117. Hour 12–16: 3D "Eline Al" star-artifact integration; quest + badge.
+118. Hour 12–16: Routes (2–3 ready routes) and QR.
+119. Hour 16–18: Tests, README, architecture diagram, license list.
+120. Hour 16–20: A rehearsal of adding 1 artifact from Konya/Hatay via the panel (extensibility demo).
+121. Hour 18–22: Presentation: problem → user → solution → live demo → architecture/data model → data use → innovation → scale → roadmap. Distribute the presentation order among the team members.
+122. Hour 20–24: At least 3 full demo rehearsals, timed. A backup that works without wifi (local build + pre-loaded data). A recorded-video backup as a last resort, but the main demo will be live.
+123. Cutoff rule: if one of the P0 items is not working at hour 16, P1/P2 work is stopped and everyone returns to P0.
+124. A 10-minute sync every 3–4 hours: what is done, what is blocked.
+125. In the last 2 hours no new features are added, only bugs are fixed.
 
-## I. Ajan için teknik notlar
+## I. Technical notes for the agent
 
-126. Mevcut repoyu bozmadan yeni dal açın; her P0 maddesi ayrı commit.
-127. Veri dosyaları kodun dışında (ör. /data/cities/bursa/*.json veya veritabanı seed) tutulmalı; şehir eklemek kod değişikliği gerektirmemeli.
-128. Görsel küçültme script'i: TIF/PSD/JPEG → WebP 1600px + 400px thumbnail; çıktı adlandırması: <sehir>-<eser-slug>-<sira>.webp.
-129. Her artifact kaydında zorunlu alanlar: id, slug, name, city, district, category, summary, sources[] (kitap, cilt, sayfa), media[] (alt metin + kredi), verification_status.
-130. Kullanıcı katkıları ayrı tabloda, status = pending/approved/rejected; sadece approved olanlar herkese açık.
-131. Erişilebilirlik kontrolü için otomatik araç (ör. axe veya Lighthouse) çalıştırılıp sonucu README'ye eklenmeli.
-132. Uydurma veri yasak: alan bilinmiyorsa null bırak ve arayüzde "bilgi bekleniyor" göster.
+126. Open a new branch without breaking the existing repo; each P0 item as a separate commit.
+127. Data files must be kept outside the code (e.g. /data/cities/bursa/*.json or a database seed); adding a city must not require a code change.
+128. Image downsizing script: TIF/PSD/JPEG → WebP 1600px + 400px thumbnail; output naming: <sehir>-<eser-slug>-<sira>.webp.
+129. Required fields in each artifact record: id, slug, name, city, district, category, summary, sources[] (book, volume, page), media[] (alt text + credit), verification_status.
+130. User contributions in a separate table, status = pending/approved/rejected; only approved ones are public.
+131. For accessibility checking, an automated tool (e.g. axe or Lighthouse) must be run and the result added to the README.
+132. Invented data is forbidden: if a field is unknown, leave null and show "bilgi bekleniyor" in the interface.
 
-## J. GÜNCELLEME (6 Kasım 21:00): gerçek durum ve final için öncelikler
+## J. UPDATE (6 November 21:00): real status and priorities for the final
 
-133. [DOĞRULANDI] Final 24 saat kesintisiz geliştirme maratonu: 7 Kasım Cumartesi 08.45'te 42 İstanbul Şeker Han Kampüsü'nde (Sirkeci) hazır olunacak, program 09.00'da başlıyor, Pazar 19.00–20.00 civarı bitiyor. Program detayları açılış sunumunda verilecek.
-134. [SORU] Sunum süresi ve teslim formatı hâlâ duyurulmadı; açılış sunumunda öğrenilip ajana iletilmeli.
-135. [DOĞRULANDI] Ürün aslında web + WebXR: kokxr.vercel.app. Quest tarayıcısında açılıp tek düğmeyle VR'a geçiliyor. 23 Ekim'deki Unity planı uygulanmamış, ürün web'de geliştirilmiş (Geliştirme Raporu 1).
-136. [DOĞRULANDI] Hazır olanlar: ana sayfa; 2 eser (Ulu Camii, II. Murad/Muradiye Külliyesi), her biri için keşif noktaları ve 3 soru; vazo, kılıç ve çini atölyeleri; Yolculuk akışı (eline al → zamanda yürü → hikâyeyi yaşa); kaynaklı dönem kaydırıcısı (web); VR'da cami içi, bilgi kartı, maket birleştirme, Muradiye panosu, vazo; test ve rozet; yönetim ekranı; simüle Quest otomatik testleri (83/83 vb.).
-137. [DOĞRULANDI] Raporda açıkça eksik yazılanlar: küratör onay akışı mokap, öğretmen paneli mokap, Dijital Miras Kütüphanesi arka yüzü yok, AR yok, gerçek Quest'te sadece Ulu Camii denendi.
-138. [SORU] Yönetim ekranı içeriği gerçekten kaydediyor mu (veritabanı/dosya), yoksa sadece arayüz mü? Kod okunarak kontrol edilmeli.
-139. [P0] Eser sayısını 2'den en az 10'a çıkar. Yeni eserler 3D'siz olabilir: Drive arşivinden fotoğraf + envanter kitabından kaynaklı kısa tarihçe + mevcut eser sayfası şablonu. Şartnamenin "birden fazla eser" maddesi ve "veri setinin ürüne aktarılması" kriteri için en kritik iş.
-140. [P0] Yönetim ekranından eser ekle/düzenle gerçek kalıcı kayıtla çalışsın; finalde canlı olarak bir eser eklenip ana sayfada görünsün.
-141. [P0] Küratör onay akışını mokaptan çalışan hâle getir (beklemede/onaylandı/reddedildi). Hem moderasyon şartı hem "Doğrulanmış Bilgi" vaadi.
-142. [P0] Paketleme: şartname "mobil veya masaüstü uygulaması" diyor. En hızlı yol: siteyi PWA yapmak (masaüstü ve Android'de "yükle" ile uygulama olarak açılır) ve aynı siteyi Tauri/Electron ile masaüstü uygulamasına sarmak. VR demosu Quest tarayıcısında aynen kalır. [SORU] Jürinin PWA'yı uygulama sayıp saymadığını organizasyona sorun.
-143. [P1] Yeni şehir kanıtı: Konya veya Hatay envanterinden 1 eseri yönetim ekranından ekleyin.
-144. [P1] Şehir/ilçe/kategori filtresi ve harita; eser sayısı artınca keşif buna ihtiyaç duyar.
-145. [P1] Erişilebilirlik kontrolü (axe/Lighthouse), sesli anlatım, yazı boyutu ve kontrast; sonucu README'ye ekleyin.
-146. [P1] Sunumdaki ve sitedeki iddiaları ürünle eşleyin: çalışmayan bir şeyi "var" diye anlatmayın. "Şanlıurfa" yerine Bursa → Konya/Hatay ölçek hikâyesi.
-147. [DİKKAT] Kılıç atölyesindeki kılıç Topkapı Sarayı Müzesi'nde ve bir Bursa vakıf eseri değil (sitenin kendi notu). VGM jürisi bunu sorabilir. Ana demo vakıf eserleri üzerinden kurulsun, kılıç ve çini ek deneyim olarak gösterilsin.
-148. Yeni atölye/oyun eklemeyin. Elinizdekiler yeterince güçlü; açık, şartname maddelerindedir (eser sayısı, içerik yönetimi, onay, paketleme).
+133. [VERIFIED] The final is a 24-hour continuous development marathon: be ready at 08.45 on Saturday 7 November at 42 İstanbul Şeker Han Campus (Sirkeci), the program starts at 09.00, and ends around 19.00–20.00 on Sunday. Program details will be given in the opening presentation.
+134. [QUESTION] The presentation duration and submission format have still not been announced; they should be learned at the opening presentation and relayed to the agent.
+135. [VERIFIED] The product is actually web + WebXR: kokxr.vercel.app. It is opened in the Quest browser and switched to VR with one button. The Unity plan of 23 October was not carried out; the product was developed on the web (Development Report 1).
+136. [VERIFIED] What is ready: the home page; 2 artifacts (Ulu Camii, II. Murad/Muradiye Külliyesi), each with discovery points and 3 questions; vase, sword and tile workshops; the Yolculuk flow (take it in hand → walk through time → live the story); the sourced period slider (web); in VR the mosque interior, info card, model assembly, Muradiye board, vase; quiz and badge; admin screen; simulated Quest automated tests (83/83, etc.).
+137. [VERIFIED] What the report explicitly lists as missing: the curator approval flow is a mockup, the teacher panel is a mockup, the Dijital Miras Kütüphanesi back end does not exist, no AR, only Ulu Camii was tried on a real Quest.
+138. [QUESTION] Does the admin screen really save content (database/file), or is it only UI? Must be checked by reading the code.
+139. [P0] Raise the number of artifacts from 2 to at least 10. The new artifacts may be without 3D: photographs from the Drive archive + a sourced short history from the inventory book + the existing artifact page template. The most critical task for the specification's "multiple artifacts" item and the "transferring the dataset into the product" criterion.
+140. [P0] Make adding/editing artifacts from the admin screen work with real persistent storage; at the final, one artifact should be added live and appear on the home page.
+141. [P0] Turn the curator approval flow from a mockup into a working one (pending/approved/rejected). Both the moderation requirement and the "Doğrulanmış Bilgi" promise.
+142. [P0] Packaging: the specification says "mobile or desktop application". Fastest path: make the site a PWA (opens as an app via "install" on desktop and Android) and wrap the same site into a desktop application with Tauri/Electron. The VR demo stays unchanged in the Quest browser. [QUESTION] Ask the organization whether the jury counts a PWA as an application.
+143. [P1] Proof of a new city: add 1 artifact from the Konya or Hatay inventory via the admin screen.
+144. [P1] City/district/category filter and map; as the number of artifacts grows, discovery needs it.
+145. [P1] Accessibility check (axe/Lighthouse), audio narration, font size and contrast; add the result to the README.
+146. [P1] Match the claims in the presentation and on the site to the product: do not describe something that does not work as "existing". The Bursa → Konya/Hatay scale story instead of "Şanlıurfa".
+147. [CAUTION] The sword in the sword workshop is in the Topkapı Palace Museum and is not a Bursa foundation artifact (the site's own note). The VGM jury may ask about this. Build the main demo on foundation artifacts, show the sword and tile as additional experiences.
+148. Do not add new workshops/games. What you have is strong enough; the gaps are in the specification items (number of artifacts, content management, approval, packaging).

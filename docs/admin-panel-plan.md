@@ -1,115 +1,115 @@
-# Yönetim paneli planı (uçtan uca, temiz)
+# Admin panel plan (end to end, clean)
 
-Durum: onaylandı, aşama 1 bekliyor · 2026-11-07
+Status: approved, stage 1 pending · 2026-11-07
 
-## Neden
+## Why
 
-Şartname 5.1.1: "İçerik ekleme ve mevcut içerikleri düzenleme imkânı bulunmalıdır",
-"Sistem yeni vakıf eserlerinin eklenmesine uygun şekilde kurgulanmalıdır", "Temel
-kullanıcı akışları final sırasında uçtan uca gösterilebilmelidir." 5.1.3: kaynak
-gösterimi, doğrulanmamış içerik kesin bilgi gibi sunulmaz.
+Specification 5.1.1: "It must be possible to add content and edit existing content",
+"The system must be designed so that new foundation (vakıf) artifacts can be added", "The
+core user flows must be demonstrable end to end during the final." 5.1.3: source
+attribution; unverified content is not presented as certain fact.
 
-## Bugünkü durum
+## Current state
 
-- `/admin`, `/admin/new`, `/admin/artifact/:id` var. Üst menü bağlantısı 2026-11-07'de kaldırıldı.
-- Kayıt yalnız tarayıcıda: `localStorage` üst katmanı (`src/infrastructure/contentRepository.ts`).
-  Başka cihaz veya tarayıcı değişikliği görmez. Kalıcılık için JSON indirip repoya eklemek gerekir.
-- Giriş koruması yok; adresi bilen herkes düzenler (yalnız kendi tarayıcısında).
-- Görsel yüklenmez; yalnız http/https URL. Lisans alanı zorunlu değil.
-- `AdminPage.tsx` dışa aktarma yardımcılarını da taşıyor; `ArtifactForm.tsx` 142 satırlık tek bileşen.
-- Onaylar `window.confirm`; taslak/yayın ayrımı yok.
+- `/admin`, `/admin/new`, `/admin/artifact/:id` exist. The top-menu link was removed on 2026-11-07.
+- Records live only in the browser: a `localStorage` overlay (`src/infrastructure/contentRepository.ts`).
+  Another device or browser does not see the changes. For persistence, a JSON must be downloaded and added to the repo.
+- No login protection; anyone who knows the address can edit (only in their own browser).
+- Images cannot be uploaded; http/https URLs only. The license field is not required.
+- `AdminPage.tsx` also carries the export helpers; `ArtifactForm.tsx` is a single 142-line component.
+- Confirmations use `window.confirm`; there is no draft/published distinction.
 
-## Hedef akış (demoda gösterilecek)
+## Target flow (to be shown in the demo)
 
-1. `/admin` → giriş (parola).
-2. Panel: eser listesi, arama, şehir ve durum süzgeci.
-3. "Yeni eser" → adım adım form (Bilgiler → Kaynaklar → Görseller → Bilgi noktaları → Test → Önizleme).
-4. Görsel dosyası yükle; kredi ve lisans alanı zorunlu.
-5. Taslak kaydet → önizle → Yayınla.
-6. Eserler sayfasında yeni eser görünür; başka tarayıcıda da görünür.
-7. Düzenle, yayından kaldır, sil, varsayılana döndür.
+1. `/admin` → login (password).
+2. Panel: artifact list, search, city and status filter.
+3. "Yeni eser" → step-by-step form (Info → Sources → Images → Info points → Quiz → Preview).
+4. Upload an image file; credit and license fields are required.
+5. Save draft → preview → Publish.
+6. The new artifact appears on the artifacts page; it is also visible in another browser.
+7. Edit, unpublish, delete, reset to default.
 
-## Mimari
+## Architecture
 
-Önce yerelde çalışır, sonra Vercel'e taşınır. Vercel fonksiyonlarında disk salt okunur
-(yalnız geçici `/tmp`), bu yüzden kayıt yeri baştan değiştirilebilir kurulur.
+First it works locally, then it moves to Vercel. On Vercel functions the disk is read-only
+(only temporary `/tmp`), so the storage location is made swappable from the start.
 
 ```
-src/domain/            Artifact, doğrulama (istemci ve sunucu ortak)
-src/features/admin/    arayüz: AdminLayout, LoginPage, ArtifactListPage, ArtifactEditor/*, ConfirmDialog
+src/domain/            Artifact, validation (shared by client and server)
+src/features/admin/    UI: AdminLayout, LoginPage, ArtifactListPage, ArtifactEditor/*, ConfirmDialog
 src/infrastructure/
-  contentStore.ts      istemci portu: list / get / save / remove / publish / uploadImage
-  localStore.ts        bugünkü localStorage üst katmanı (sunucusuz yedek)
-  apiStore.ts          /api/* istemcisi
+  contentStore.ts      client port: list / get / save / remove / publish / uploadImage
+  localStore.ts        today's localStorage overlay (serverless fallback)
+  apiStore.ts          /api/* client
 server/
-  handlers.ts          Web standardı (Request → Response) API işleyicileri, tek kaynak
-  storage.ts           sunucu portu: readAll / write / remove / putImage
-  fileStorage.ts       yerel: data/artifacts/*.json, data/uploads/
-  blobStorage.ts       Vercel: Vercel Blob (eser JSON'ları + görseller)
-  local-server.mjs     node:http; dist'i sunar, /api'yi handlers'a bağlar
-api/[...path].ts       Vercel fonksiyonu; aynı handlers + blobStorage
+  handlers.ts          web-standard (Request → Response) API handlers, single source
+  storage.ts           server port: readAll / write / remove / putImage
+  fileStorage.ts       local: data/artifacts/*.json, data/uploads/
+  blobStorage.ts       Vercel: Vercel Blob (artifact JSONs + images)
+  local-server.mjs     node:http; serves dist, wires /api to handlers
+api/[...path].ts       Vercel function; same handlers + blobStorage
 ```
 
-- İşleyiciler bir kez yazılır; yerel sunucu, Vite dev eklentisi (`configureServer`) ve Vercel fonksiyonu aynı kodu çağırır.
-- Depo seçimi ortam değişkeniyle: `BLOB_READ_WRITE_TOKEN` varsa Blob, yoksa dosya.
-- İlk okumada depo boşsa `src/content/artifacts/*.json` ile tohumlanır; repo içeriği değişmez.
-- Uygulama açılışta `GET /api/health` dener: yanıt varsa `apiStore`, yoksa `localStore` + görünür "yerel demo" notu.
-- Eserler sayfası aynı porttan okur; yalnız `status: 'published'` gösterilir.
-- Yerel sunucu yalnız Node yerleşik modülleri kullanır. Vercel Blob için `@vercel/blob` gerekir (bkz. Kararlar).
+- The handlers are written once; the local server, the Vite dev plugin (`configureServer`) and the Vercel function call the same code.
+- Storage is chosen by environment variable: Blob if `BLOB_READ_WRITE_TOKEN` exists, otherwise file.
+- If the store is empty on first read, it is seeded from `src/content/artifacts/*.json`; the repo content does not change.
+- On startup the app tries `GET /api/health`: if there is a response, `apiStore`; otherwise `localStore` + a visible "yerel demo" note.
+- The artifacts page reads through the same port; only `status: 'published'` is shown.
+- The local server uses only Node built-in modules. Vercel Blob requires `@vercel/blob` (see Decisions).
 
-### Veri modeli eki (`src/domain/artifact.ts`)
+### Data model addition (`src/domain/artifact.ts`)
 
-- `status: 'draft' | 'published'` (eksikse `published`, mevcut JSON'lar bozulmaz)
-- `updatedAt: string` (sunucu yazar)
-- `Image.license` zorunlu, `Image.credit` zorunlu (yüklenen görsellerde)
+- `status: 'draft' | 'published'` (if missing, `published`, so existing JSONs do not break)
+- `updatedAt: string` (written by the server)
+- `Image.license` required, `Image.credit` required (for uploaded images)
 
-### Giriş
+### Login
 
-- Parola `ADMIN_PASSWORD` ortam değişkeninden (yerelde `.env`, Vercel'de proje ortam değişkeni); `crypto.timingSafeEqual` ile karşılaştırma.
-- Oturum: `SESSION_SECRET` ile HMAC imzalı, süreli, HttpOnly, SameSite=Strict, Vercel'de Secure çerez. Sunucuda oturum tablosu tutulmaz (fonksiyonlar durumsuz).
-- Yazan tüm `/api` uçları oturum ister; okuma uçları açık.
-- Dürüst sınır: hackathon düzeyi. Çok kullanıcı, rol, hız sınırı yok; belgede böyle yazılır.
+- The password comes from the `ADMIN_PASSWORD` environment variable (`.env` locally, a project environment variable on Vercel); compared with `crypto.timingSafeEqual`.
+- Session: HMAC-signed with `SESSION_SECRET`, time-limited, HttpOnly, SameSite=Strict, Secure cookie on Vercel. No session table is kept on the server (functions are stateless).
+- All `/api` endpoints that write require a session; read endpoints are open.
+- Honest limit: hackathon level. No multi-user, roles or rate limiting; the document says so.
 
-### Görsel yükleme
+### Image upload
 
-- `POST /api/uploads`: yalnız jpeg/png/webp, adı sunucu üretir. Vercel fonksiyon gövde sınırı 4,5 MB olduğundan üst sınır 4 MB.
-- Yerelde `data/uploads/` (`.gitignore`'a eklenir); Vercel'de Blob.
-- Lisansı veya kredisi boş görsel kaydedilmez. `build:acik` (herkese açık) yapı yüklenen görselleri de dışarıda bırakır.
+- `POST /api/uploads`: jpeg/png/webp only, the name is generated by the server. Since the Vercel function body limit is 4.5 MB, the upper limit is 4 MB.
+- Locally `data/uploads/` (added to `.gitignore`); on Vercel, Blob.
+- An image with an empty license or credit is not saved. The `build:acik` (public) build also leaves uploaded images out.
 
-## Aşamalar
+## Stages
 
-Her aşama sonunda `npm run test:hizli`; arayüz değiştiyse `npm run test:tarayici`.
+At the end of each stage `npm run test:hizli`; if the UI changed, `npm run test:tarayici`.
 
-| # | İş | Dosyalar | Test |
+| # | Work | Files | Test |
 |---|---|---|---|
-| 1 | Temizlik: `downloadJson`, `DemoNote` ayrı dosyaya; `window.confirm` yerine erişilebilir `ConfirmDialog` | `features/admin/*` | e2e 6, 6b güncelle |
-| 2 | `ContentStore` portu; `localStore` mevcut davranışı taşır; App doğrudan repoyu değil portu kullanır | `infrastructure/*`, `app/App.tsx` | saf test: overlay birleştirme |
-| 3 | Form bölme: adım bileşenleri, adım başlığına odak, kaydedilmemiş değişiklik uyarısı | `features/admin/ArtifactEditor/*` | e2e: adımlar arası, hata odağı |
-| 4 | Liste: arama, şehir/durum süzgeci, boş durum | `ArtifactListPage.tsx` | e2e |
-| 5 | Taslak/yayın alanı ve eserler sayfası süzgeci | `domain/artifact.ts`, `verification.ts`, artifacts listesi | saf test + e2e |
-| 6 | Sunucu: `handlers`, `fileStorage`, yerel sunucu, Vite eklentisi, `apiStore`, health ile seçim | `server/`, `apiStore.ts`, `vite.config.ts` | Node test: API uçları |
-| 7 | Giriş: login sayfası, oturum, korumalı rota | `LoginPage.tsx`, `server/` | e2e: girişsiz yazma 401 |
-| 8 | Görsel yükleme + lisans/kredi zorunluluğu | `server/`, Görseller adımı | e2e: yükle → eserde görün |
-| 9 | Önizleme: formdaki taslağı eser sayfası bileşeniyle göster | `ArtifactEditor/Preview.tsx` | e2e |
-| 10 | Vercel: `blobStorage`, `api/[...path].ts`, `vercel.json` (SPA yönlendirme), ortam değişkenleri | `server/`, `api/`, `vercel.json` | önizleme dağıtımında e2e |
-| 11 | Belgeler: `HANDOFF.md` mimari, `PLAN.md` durum, demo betiği | docs, `scripts/demo_video.mjs` | — |
+| 1 | Cleanup: `downloadJson`, `DemoNote` into a separate file; an accessible `ConfirmDialog` instead of `window.confirm` | `features/admin/*` | update e2e 6, 6b |
+| 2 | `ContentStore` port; `localStore` carries the existing behavior; App uses the port rather than the repo directly | `infrastructure/*`, `app/App.tsx` | pure test: overlay merging |
+| 3 | Split the form: step components, focus on the step heading, unsaved-changes warning | `features/admin/ArtifactEditor/*` | e2e: between steps, error focus |
+| 4 | List: search, city/status filter, empty state | `ArtifactListPage.tsx` | e2e |
+| 5 | Draft/published field and the artifacts-page filter | `domain/artifact.ts`, `verification.ts`, artifacts list | pure test + e2e |
+| 6 | Server: `handlers`, `fileStorage`, local server, Vite plugin, `apiStore`, selection via health | `server/`, `apiStore.ts`, `vite.config.ts` | Node test: API endpoints |
+| 7 | Login: login page, session, protected route | `LoginPage.tsx`, `server/` | e2e: write without login 401 |
+| 8 | Image upload + license/credit requirement | `server/`, Images step | e2e: upload → see in the artifact |
+| 9 | Preview: show the draft in the form with the artifact-page component | `ArtifactEditor/Preview.tsx` | e2e |
+| 10 | Vercel: `blobStorage`, `api/[...path].ts`, `vercel.json` (SPA redirect), environment variables | `server/`, `api/`, `vercel.json` | e2e on the preview deployment |
+| 11 | Docs: `HANDOFF.md` architecture, `PLAN.md` status, demo script | docs, `scripts/demo_video.mjs` | — |
 
-1–5 sunucusuz da değer verir; 6–9 yerelde uçtan uca; 10 Vercel. Vercel'e geçmeden önce izinsiz fotoğrafların yayın yapısından çıktığı doğrulanır (repo private kuralı).
+1–5 give value even without a server; 6–9 are end to end locally; 10 is Vercel. Before moving to Vercel, verify that unpermitted photos are out of the publish build (the repo-private rule).
 
-## Kapsam dışı
+## Out of scope
 
-- Şehir/ilçe için ayrı tablo ve sihirbaz (şehir bugün serbest metin; gerekirse sonra).
-- 3D model, VR, 360° tur düzenleme (verisi olmayanı varmış gibi göstermeme kuralı).
-- Kullanıcı katkısı onay akışı (2026-11-07'de kaldırıldı).
+- A separate table and wizard for city/district (the city is free text today; later if needed).
+- Editing 3D models, VR, 360° tours (the rule of not presenting what has no data as if it existed).
+- A user-contribution approval flow (removed on 2026-11-07).
 
-## Kararlar (2026-11-07)
+## Decisions (2026-11-07)
 
-1. Sunucu yapılacak.
-2. Önce yerel, sonra Vercel.
-3. Taslak/yayın ayrımı olacak.
-4. Yüklenen fotoğraflar repoya girmez; izin netleşmeden herkese açık yayınlanmaz.
-5. `@vercel/blob` bağımlılığı onaylandı; aşama 10'da eklenir.
+1. A server will be built.
+2. Local first, then Vercel.
+3. There will be a draft/published distinction.
+4. Uploaded photos do not enter the repo; they are not published publicly until permission is clarified.
+5. The `@vercel/blob` dependency was approved; it is added in stage 10.
 
-## Açık
+## Open
 
-- Vercel'de herkese açık yapı mı (`build:acik`, fotoğrafsız) yoksa korumalı önizleme mi kullanılacak.
+- Whether to use a public build on Vercel (`build:acik`, without photos) or a protected preview.

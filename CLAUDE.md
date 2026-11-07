@@ -2,31 +2,31 @@
 
 @AGENTS.md
 
-## Vaatler ve kurallar çakışırsa
+## When promises and rules conflict
 
-Vaat, yapılacak işi belirler; yukarıdaki kurallar ise ürünün neyi iddia edebileceğini. Verisi olmayan bir vaat var gibi gösterilmez ve tarihsel bilgi uydurulmaz. Böyle bir durumda eksik veriyi kullanıcıya bildir.
+A promise decides what work to do; the rules above decide what the product may claim. A promise without data is not presented as if it exists, and historical information is never invented. In that case, tell the user about the missing data.
 
-## Komutlar
+## Commands
 
-Node.js 24+ gerekir (`.nvmrc`).
+Node.js 24+ is required (`.nvmrc`).
 
 ```bash
 npm install
 npm run dev
-npm run test:hizli      # tip denetimi + saf testler, saniyeler sürer
-npm run test:tarayici   # build + preview + tarayıcı testleri, kısa özet; sunucuyu kendi kapatır
-npm run test:e2e        # uçtan uca; ayrı terminalde preview açık olmalı
+npm run test:hizli      # type check + pure tests, takes seconds
+npm run test:tarayici   # build + preview + browser tests, short summary; shuts down the server itself
+npm run test:e2e        # end to end; preview must be running in a separate terminal
 ```
 
-Yerel tarayıcı testleri yazılımsal çizimle yavaş çalışır; süreye değil koşula bağlı bekleyin. FPS yalnız gerçek cihazda ölçülür.
+Local browser tests run slowly with software rendering; wait on a condition, not on a duration. FPS is measured only on a real device.
 
-## Çalışma düzeni
+## Working rules
 
-- Kullanıcıyla Türkçe konuş.
-- `package.json` bağımlılığı eklemeden önce sor.
-- Repo private kalır; izni netleşmemiş fotoğraflar herkese açık yayımlanmaz.
-- `master`'a birleştirmeden önce sor.
+- Talk to the user in Turkish.
+- Ask before adding a `package.json` dependency.
+- The repo stays private; photos whose permission is unclear are not published publicly.
+- Ask before merging into `master`.
 
 # Compact instructions
 
-Koru: açık görev ve kararlar, değişen dosya yolları, test sonuçları, kullanıcı düzeltmeleri, doğrulanmamış tarihsel bilgiler. At: dosya dökümleri, ham günlükler, çözülmüş hata ayrıntıları.
+Keep: open tasks and decisions, changed file paths, test results, user corrections, unverified historical information. Drop: file dumps, raw logs, details of resolved errors.

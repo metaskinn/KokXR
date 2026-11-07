@@ -41,7 +41,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 
 ### B. Şartnamenin zorunlu açıkları
 - [!] **G4. paket/capacitor (onaylı bağımlılık):** Capacitor ile Android APK (aynı kod). Quest/VR akışı APK'da denenmez; APK keşif, harita, erişilebilirlik içindir. Android SDK yoksa yalnız proje iskeleti ve derleme adımı belgelenir.
-- [ ] **G5. demo/yedek:** `npm run demo` (derle + önizle), PWA önbelleğini ısıtan sayfa listesi `docs/demo-senaryosu.md`'ye; internetsiz çalışma kontrolü.
+- [x] **G5. demo/yedek:** `npm run demo` (derle + önizle), PWA önbelleğini ısıtan sayfa listesi `docs/demo-senaryosu.md`'ye; internetsiz çalışma kontrolü.
 - [ ] **G6. veri/kategori:** **Eser sayısı en az 10 şartı sağlanmış kalır ve güvenli payla 14'e çıkar.** En az 3 yeni türde eser (han, hamam/çeşme, türbe, eğitim yapısı). Metin yalnız envanter kitabından (Drive PDF veya .idml), her bilgiye cilt ve sayfa. Metin çıkarılamazsa eser eklenmez, `[!]`.
 - [ ] **G7. veri/yeni-sehir:** Konya veya Hatay envanterinden 1 eser (aynı kaynak kuralı). Demodaki "yeni şehir" adımı gerçek veriyle.
 - [ ] **G8. mimari/sehir-ve-tur:** Şehir ve içerik türü eser verisinden türer; şehir eklemek `vrEserler.ts` düzenlemeden olur. Eser sayfasında 3B olmayan eserler (han, türbe) eşit değerde görünür. Yeni şehir kod değişmeden gelir (README + test).
@@ -72,3 +72,4 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G2 (arayuz/menu): Menü sırası Keşfet, Yolculuk, [Deneyimler: VR Eserler, Vazo, Kılıç, Çini, Öğretmen], Yönetim. VR koduna dokunulmadı. Etiketler kontrol edildi: Öğretmen 'Demo · örnek veri', Vizyon 'henüz uygulanmadı', Kütüphane/Onay gerçek veri (etiketsiz). 'Harita' bağlantısı G15'te eklenecek. ui, yolculuk, hata-avi (33 rota) geçti.
 - G3 (yonetim/bulut-saglamlastir): `YonetimKapisi` bulut hazırsa giriş ister, hazır değilse yerel moda düşer; `bulutHazir()` eklendi; docs/supabase-kurulum.md yazıldı. Gerçek sunucu denemesi tablolar kurulmadığı için yapılamadı.
 - G4 (paket/capacitor): Capacitor eklendi, `android/` iskeleti ve Gradle eşitlemesi tamam, `npm run apk:esitle`. APK derlemesi JDK 21 yokluğundan [!] (docs/apk.md).
+- G5 (demo/yedek): `npm run demo` ve `demo:bulut`; çevrimdışı ısıtma listesi ve sınırlar docs/demo-senaryosu.md'de. 360tr gömmesi çevrimdışı açılmaz (yedek bağlantı + fotoğraf modu var).

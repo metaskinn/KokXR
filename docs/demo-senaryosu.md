@@ -21,3 +21,17 @@ Yerel adres `http://localhost:4173` (`npm run build && npm run preview`). Canlı
 - Yönetim adımı için bulut kullanılacaksa `supabase/sema.sql` çalıştırılmış ve yönetici hesabı açılmış olmalı; yoksa adımlar `localStorage` ile aynı akışta çalışır.
 - Demo öncesi `/yonetim` ekranında "Tüm üst katmanı sıfırla" ve tarayıcıda `kokxr-onay` anahtarını temizleyin.
 - Yedek: ağ yoksa PWA çevrimdışı açılır (önceden bir kez açılmış olmalı).
+
+## Wifi çökerse: yerel demo
+
+```bash
+nvm use 24
+npm run demo          # buluttan bağımsız derler, http://127.0.0.1:4173 adresinde açar (eserler ve yönetim yerel kayıtla çalışır)
+npm run demo:bulut    # .env'deki Supabase ile (internet ve kurulu tablo gerekir)
+```
+
+Demo öncesi, **internet varken**, tarayıcıda şu sayfaları bir kez açın (service worker ön belleği dolar; sonra çevrimdışı açılır). Cihazı PWA olarak "Yükle" ile kurmak ek güvence sağlar.
+
+1. `/`  2. `/yolculuk`  3. `/eser/ulu-camii`  4. `/eser/muradiye-kulliyesi`  5. `/vr`  6. `/vr/ulu-camii`  7. `/atolye/vazo`  8. `/yonetim`  9. `/yonetim/yeni`  10. `/onay`
+
+Sınırlar: Ulu Camii'nin 360° gezintisi `360tr.com` gömmesidir ve çevrimdışı açılmaz; sayfada yedek bağlantı ve fotoğraflı gezinti modu vardır, demoda bu iki yolu da gösterin. Quest VR için cihazın aynı ağdan siteye erişmesi gerekir (yerel demo Quest'te çalışmaz; Vercel adresi veya ortak ağ kullanın).

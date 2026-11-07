@@ -10,7 +10,9 @@
     "test:hizli": "tsc --noEmit -p tsconfig.app.json && node tests/maket-xr-mantik.mjs && node tests/maket-xr-metin.mjs && node tests/vazo-xr-mantik.mjs && node tests/maket-birlestir-mantik.mjs && node tests/restorasyon-mantik.mjs && node tests/kredi-veri.mjs",
     "test:tarayici": "tsc -b && VITE_SUPABASE_URL= VITE_SUPABASE_ANON_KEY= vite build --logLevel error && node scripts/test-tarayici.mjs",
     "test:e2e": "node tests/uctan-uca.mjs chromium 1280 && node tests/uctan-uca.mjs chromium 360 && node tests/uctan-uca.mjs firefox 1280",
-    "apk:esitle": "tsc -b && VITE_SUPABASE_URL= VITE_SUPABASE_ANON_KEY= vite build --logLevel error && cap sync android"
+    "apk:esitle": "tsc -b && VITE_SUPABASE_URL= VITE_SUPABASE_ANON_KEY= vite build --logLevel error && cap sync android",
+    "demo": "tsc -b && VITE_SUPABASE_URL= VITE_SUPABASE_ANON_KEY= vite build --logLevel error && vite preview --host 127.0.0.1 --port 4173 --strictPort",
+    "demo:bulut": "tsc -b && vite build --logLevel error && vite preview --host 127.0.0.1 --port 4173 --strictPort"
   },
   "type": "module",
   "dependencies": {

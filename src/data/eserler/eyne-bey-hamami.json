@@ -1,0 +1,59 @@
+{
+  "sehir": "Bursa",
+  "ilce": "Osmangazi",
+  "dogrulama": "dogrulanmis",
+  "kapakGorsel": "",
+  "gorseller": [],
+  "bilgiNoktalari": [],
+  "id": "eyne-bey-hamami",
+  "ad": "Eyne Bey Hamamı",
+  "donem": "Erken Osmanlı · vakfiye H. 3 Şaban 804 / M. 8 Mart 1402",
+  "vakif": "Subaşı Eyne Bey bin Feleküddin",
+  "ozet": "Eyne Bey Subaşı Medresesi'ne bitişik, vakfiyesi medrese müderrisinin maaşını hamamın gelirinden karşılayan tek hamam planlı yapı.",
+  "tarihce": "Hamam, Tahtakale Mahallesi'nde Eyne Bey Subaşı Medresesi'nin batısında, yapıya bitişik konumdadır; bu yakınlıkla “Medrese Hamamı” olarak anılır. Literatürde Ahmet Çavuş adlı bir hayırseverin yaptırdığı yazılsa da H. 3 Şaban 804 / M. 8 Mart 1402 tarihli vakfiye, yapıyı Subaşı İne Bey bin Feleküddin'in yaptırdığını gösterir. Vakfiyeye göre medresenin müderrisine hamamın gelirinden günlük 10 dirhem maaş verilecektir. Hamam tek hamam plan tipindedir; soğukluk, ılıklık ve sıcaklık bölümlerinden oluşur, külhanı güneydedir. Yapı uzun süre özel mülkiyette hamam olarak işletilmiş, 2017'de Bursa Valiliği tarafından kamulaştırılmış, 2022-2023 yıllarında restorasyona alınmıştır.",
+  "test": [
+    {
+      "soru": "Eyne Bey Hamamı yakınlığı nedeniyle hangi adla da anılır?",
+      "secenekler": [
+        "Medrese Hamamı",
+        "Ulu Hamam",
+        "Sultan Hamamı",
+        "Yeni Kaplıca"
+      ],
+      "dogru": 0,
+      "aciklama": "Hamam, Eyne Bey Subaşı Medresesi'ne bitişik olduğu için “Medrese Hamamı” olarak anılır.",
+      "kaynakId": "eh"
+    },
+    {
+      "soru": "Vakfiyeye göre medrese müderrisine hamamın gelirinden günlük kaç dirhem maaş verilecektir?",
+      "secenekler": [
+        "5",
+        "10",
+        "12",
+        "20"
+      ],
+      "dogru": 1,
+      "aciklama": "Vakfiyede müderrise hamamdan günlük 10 dirhem maaş verileceği yazılıdır.",
+      "kaynakId": "eh"
+    },
+    {
+      "soru": "Hamam hangi yılda Bursa Valiliği tarafından kamulaştırılmıştır?",
+      "secenekler": [
+        "1683",
+        "1983",
+        "2017",
+        "2023"
+      ],
+      "dogru": 2,
+      "aciklama": "Envantere göre yapı 2017 yılında Bursa Valiliği tarafından kamulaştırılmıştır.",
+      "kaynakId": "eh"
+    }
+  ],
+  "kaynaklar": [
+    {
+      "id": "eh",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Eyne Bey Hamamı\"",
+      "sayfa": "684–685"
+    }
+  ]
+}

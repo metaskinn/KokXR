@@ -89,6 +89,17 @@ export function setupXrSession(s: XrOption): XrSession {
   darken.frustumCulled = false
   darken.visible = false
   rig.add(darken)
+
+  // Comfort vignette: a dark ring around the view fades in while the stick walks, which reduces motion sickness.
+  const vignette = new THREE.Mesh(
+    new THREE.RingGeometry(0.08, 0.4, 32),
+    new THREE.MeshBasicMaterial({ color: '#000000', transparent: true, opacity: 0, depthTest: false, depthWrite: false, side: THREE.DoubleSide }),
+  )
+  vignette.position.set(0, 0, -0.2)
+  vignette.renderOrder = 1999
+  vignette.frustumCulled = false
+  vignette.visible = false
+  camera.add(vignette)
   let transition: { t: number; is: () => void; wasDone: boolean } | null = null
   const doTransition = (is: () => void) => {
     if (transition) return
@@ -385,6 +396,23 @@ export function setupXrSession(s: XrOption): XrSession {
     headWorld.setFromMatrixPosition(camera.matrixWorld)
     forwardWorld.set(0, 0, -1).transformDirection(camera.matrixWorld)
     const head = { x: headWorld.x, z: headWorld.z }
+    // If the head has ended up inside an obstacle (e.g. by leaning), step the rig out to the nearest free spot.
+    if (floorStep(walking, head.x, head.z, PLAYER_RADIUS, innerFloor) === null) {
+      for (let k = 0; k < 8; k++) {
+        const ang = k * Math.PI / 4, tx = head.x + Math.cos(ang) * 0.35, tz = head.z + Math.sin(ang) * 0.35
+        if (floorStep(walking, tx, tz, PLAYER_RADIUS, innerFloor) !== null) {
+          rig.position.x += tx - head.x
+          rig.position.z += tz - head.z
+          head.x = tx
+          head.z = tz
+          break
+        }
+      }
+    }
+    const moving = Math.abs(input.leftX) > 0.1 || Math.abs(input.leftY) > 0.1
+    const vignetteMaterial = vignette.material as THREE.MeshBasicMaterial
+    vignetteMaterial.opacity = moving ? Math.min(0.65, vignetteMaterial.opacity + dt * 4) : Math.max(0, vignetteMaterial.opacity - dt * 4)
+    vignette.visible = vignetteMaterial.opacity > 0
     const fresh = walkStep(head, { x: forwardWorld.x, z: forwardWorld.z }, { x: input.leftX, y: input.leftY }, dt,
       (x, z) => floorStep(walking, x, z, PLAYER_RADIUS, innerFloor) === null)
     // On stairs and platforms the rig rises with the floor; since the slope is continuous, it doesn't jump.
@@ -502,6 +530,9 @@ export function setupXrSession(s: XrOption): XrSession {
       titles.forEach((b) => b.dispose())
       disk.geometry.dispose()
       disk.material.dispose()
+      camera.remove(vignette)
+      vignette.geometry.dispose()
+      ;(vignette.material as THREE.Material).dispose()
       darken.geometry.dispose()
       darken.material.dispose()
       rayGeometry.dispose()

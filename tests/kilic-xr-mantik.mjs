@@ -5,7 +5,7 @@ import { ilkOyun, ustaTamamla, asamalar } from '../src/components/kilic/durum.ts
 import { kesimHesapla } from '../src/components/kilic/test.ts'
 import { kilicTanitim, kilicKaynaklari, kilicParcaNotlari } from '../src/data/kilic.ts'
 import {
-  istasyon, istasyonRig, OTURMA_GOZ, aciFark, panelGeriGelsin, isinEksenX, enYakinBolge, duzlemX, bileAdim, cekicSalinimi,
+  istasyon, istasyonRig, OTURMA_GOZ, aciFark, panelGeriGelsin, isinEksenX, enYakinBolge, duzlemX, bileAdim, cekicSalinimi, CekicOlcer,
   SavurmaOlcer, savurmaKesimi, SAVURMA_TOLERANS, parcaOturur, PARCA_OTURMA_ESIGI, panelDurumu, bilgiDurumu, panelYerlesim, panelKare, PANEL_G, PANEL_Y,
 } from '../src/components/kilic/xrHesap.ts'
 
@@ -48,6 +48,21 @@ yakin(bileAdim(.5, .106), .4); yakin(bileAdim(.5, -.106), .6); yakin(bileAdim(.0
 let c = cekicSalinimi(-2.5, true); assert(c.vur); assert(!c.silahli)
 c = cekicSalinimi(-2.5, c.silahli); assert(!c.vur); c = cekicSalinimi(-.2, c.silahli); assert(!c.vur); assert(c.silahli); assert(cekicSalinimi(-2, c.silahli).vur)
 assert(!cekicSalinimi(2.5, true).vur, 'kaldırmak vurmaz')
+
+// Geride kalan hedef, öteki el, takip kaybı ve duraklama darbe üretmez.
+const cekic = new CekicOlcer(), digerEl = new CekicOlcer()
+assert.equal(cekic.adim(1.4, .02, 4), null)
+assert.equal(cekic.adim(1.3, .02, null), 4, 'inişte kısa süre önce nişanlanan bölge vurulur')
+assert.equal(cekic.adim(1.2, .02, null), null, 'tek inişte ikinci darbe yok')
+digerEl.adim(1.4, .02, null)
+assert.equal(digerEl.adim(1.2, .02, null), null, 'öteki elin nişanı kullanılamaz')
+cekic.adim(1.4, .02, 4)
+for (let i = 0; i < 12; i++) cekic.adim(1.4, .02, null)
+assert.equal(cekic.adim(1.2, .02, null), null, 'eski hedefe hayalet darbe yok')
+cekic.sifirla(); assert.equal(cekic.adim(.3, .02, 4), null, 'takip/rig değişiminden sonraki ilk poz darbe sayılmaz')
+assert.equal(cekic.adim(-.1, .3, 4), null, 'uzun kare aralığı darbe sayılmaz')
+assert.equal(cekic.adim(.3, .02, 4), null)
+cekic.tetikle(); assert.equal(cekic.adim(.2, .02, 4), null, 'tetik ve aynı iniş iki darbe üretmez')
 
 // --- kuşanma: yakınsa oturur; bekleme yerinde (masaüstü sahnesindeki +12 cm, +14 cm) tutup bırakmak yetmez
 assert(parcaOturur(.05)); assert(!parcaOturur(PARCA_OTURMA_ESIGI)); assert(!parcaOturur(Math.hypot(.12, .14)))

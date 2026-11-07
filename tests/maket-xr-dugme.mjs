@@ -3,20 +3,20 @@
 import { chromium } from 'playwright'
 
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:4173'
-const tarayici = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+const tarayici = await chromium.launch({ channel: process.env.TEST_BROWSER_CHANNEL ?? 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 const sart = (kosul, mesaj) => { if (!kosul) throw new Error(mesaj) }
 const RET_METNI = "VR oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin."
 // Yazılımsal çizimde sahne kurulumu ana iş parçacığını uzun süre tutar; yüklü makinede 30 sn yetmez.
 const SURE = 180000
 
-async function ac(xrTaklidi, arguman) {
+async function ac(xrTaklidi, arguman, hemenAc = false) {
   const sayfa = await tarayici.newPage({ viewport: { width: 1000, height: 700 } })
   const hatalar = []
   sayfa.on('pageerror', (e) => hatalar.push(String(e)))
   sayfa.on('console', (m) => { if (m.type() === 'error' && !m.location().url.includes('360tr')) hatalar.push(m.text()) })
   await sayfa.addInitScript(xrTaklidi, arguman)
-  await sayfa.goto(`${url}/eser/ulu-camii`)
-  await sayfa.getByRole('button', { name: /maketini eline al/ }).click({ timeout: SURE })
+  await sayfa.goto(`${url}/${hemenAc ? 'vr' : 'eser'}/ulu-camii`)
+  if (!hemenAc) await sayfa.getByRole('button', { name: /maketini eline al/ }).click({ timeout: SURE })
   await sayfa.locator('.maket-alan canvas').waitFor({ timeout: SURE })
   await sayfa.locator('.maket-kutu').scrollIntoViewIfNeeded()
   const iceriGir = sayfa.getByRole('button', { name: 'İçeri gir' })
@@ -107,6 +107,17 @@ async function iceriCalisiyor(sayfa, iceriGir) {
   sart(!hatalar.length, `konsol hatası: ${hatalar.join(' | ')}`)
   await sayfa.close()
   console.log('reddedildi: Türkçe mesaj görünür, jest korunur, içeri girilir, konsol temiz.')
+}
+
+// Doğrudan /vr rotasında sahne düğmeye basmadan hazırlanır ve içeri girilebilir.
+{
+  const { sayfa, hatalar, iceriGir } = await ac(() => {
+    Object.defineProperty(navigator, 'xr', { value: undefined, configurable: true })
+  }, undefined, true)
+  await iceriCalisiyor(sayfa, iceriGir)
+  sart(!hatalar.length, `doğrudan VR rotasında hata: ${hatalar.join(' | ')}`)
+  await sayfa.close()
+  console.log('/vr/ulu-camii: sahne kendiliğinden açılır, iç mekân çizimi sürer.')
 }
 
 await tarayici.close()

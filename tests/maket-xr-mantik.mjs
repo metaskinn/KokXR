@@ -91,6 +91,16 @@ assert.equal(carpiyor(y, -5, -5, .45), true); assert.equal(carpiyor(y, 9.9, 0, .
 assert.equal(carpiyor(y, 0.6, 1.5, .45), true) // kutuya yarıçap kadar yakın
 assert.equal(carpiyor(y, 0.5, 1.5, .45), false)
 
+// Dairesel kaidede kare sınırın köşeleri yürünebilir döşeme sayılmaz.
+const dairesel = { ...y, sinir: { x0: -20, x1: 20, z0: -20, z1: 20, daire: { x: 0, z: 0, r: 23.8 } }, kutular: [], daireler: [] }
+assert.equal(carpiyor(dairesel, 19, 19, .45), true)
+assert.equal(carpiyor(dairesel, 16, 16, .45), false)
+// Oyuncunun merkezi içeride olsa da gövdesi döşemenin dışına çıkamaz.
+const kaymisDaire = { ...dairesel, sinir: { x0: -20, x1: 20, z0: -20, z1: 20, daire: { x: 3, z: -2, r: 5 } } }
+assert.equal(carpiyor(kaymisDaire, 7.6, -2, .45), true)
+assert.equal(carpiyor(kaymisDaire, 7.5, -2, .45), false)
+assert.equal(carpiyor(kaymisDaire, 3, -2, .45), false)
+
 // Kumanda girdisi
 const sifir = { solX:0, solY:0, sagX:0, sagY:0, menu:false }
 const dugmeler = (basili) => Array.from({ length: 6 }, (_, i) => ({ pressed: basili && i === 5 }))

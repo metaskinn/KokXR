@@ -5,7 +5,7 @@ import type { Oyun } from './durum'
 import { parcalar } from './durum'
 import type { Komut } from './sahne'
 import { bilgiPaneli, BILGI_Y, kontrolPaneli, PANEL_METRE } from './xrPanel'
-import { bileAdim, bilgiDurumu, cekicSalinimi, duzlemX, istasyon, istasyonRig, panelDurumu, panelGeriGelsin, PANEL_G, PANEL_Y, PARCA_DOKUNMA, parcaOturur, SavurmaOlcer, savurmaKesimi } from './xrHesap'
+import { bileAdim, bilgiDurumu, CekicOlcer, duzlemX, istasyon, istasyonRig, panelDurumu, panelGeriGelsin, PANEL_G, PANEL_Y, PARCA_DOKUNMA, parcaOturur, SavurmaOlcer, savurmaKesimi } from './xrHesap'
 import type { Kare, Kutu } from './xrHesap'
 
 export type TutAd = 'koruk' | 'su' | 'bile'
@@ -28,7 +28,7 @@ export interface KilicKopru {
 }
 
 const ISIN_BOY = 3, PANEL_UZAK = 1.25, PANEL_ALT = .12, CIZIM_ARALIK = .4
-const YAKIN = { yumurta: .25, koruk: .5, parca: .22, bolge: .16, hedef: .6 }
+const YAKIN = { yumurta: .25, koruk: .5, su: .35, parca: .22, bolge: .16, hedef: .6 }
 // Kabza ortası (kılıç yerel x = -.11) avuca oturur; namlu kumandanın önüne uzanır.
 const KABZA = .11, NAMLU_ORTA = .6 + KABZA
 const elTaban = (sol: boolean) => new T.Quaternion().setFromRotationMatrix(new T.Matrix4().makeBasis(
@@ -38,7 +38,7 @@ const EL_SAG = elTaban(false), EL_SOL = elTaban(true)
 interface El {
   kumanda: T.XRTargetRaySpace; tutamak: T.XRGripSpace; isin: T.Line; nokta: T.Mesh
   kaynak: XRInputSource | null; tutulan: TutAd | null; bileX: number | null
-  onceY: number | null; silahli: boolean; tetik: boolean; yan: boolean; birakilacak: boolean; ofset: T.Matrix4; olaylar: [string, (e: { data?: XRInputSource }) => void][]
+  cekic: CekicOlcer; tetik: boolean; yan: boolean; birakilacak: boolean; ofset: T.Matrix4; olaylar: [string, (e: { data?: XRInputSource }) => void][]
 }
 
 export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: T.PerspectiveCamera, k: KilicKopru) {
@@ -67,11 +67,10 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
 
   const raycaster = new T.Raycaster()
   let oturum: XRSession | null = null, basliyor = false, pozHazir = false
-  let not: number | null = null, yerlesBekliyor = true, panelYaw = 0, uzakSure = 0, cizimSure = 0, cizimAnahtar = '', bilgiAnahtar = '', aktif: El | null = null, sonIsabet: number | null = null, stickDon = 0
+  let not: number | null = null, yerlesBekliyor = true, panelYaw = 0, uzakSure = 0, cizimSure = 0, cizimAnahtar = '', bilgiAnahtar = '', aktif: El | null = null, stickDon = 0
   const savurma = new SavurmaOlcer()
   let parcaEl: El | null = null, parcaAd = ''
   const parcaM = new T.Matrix4()
-  let inisHizi = 0
   const tmp = new T.Vector3(), tmp2 = new T.Vector3(), tmpQ = new T.Quaternion(), yon = new T.Vector3(), basQ = new T.Euler(0, 0, 0, 'YXZ')
 
   const titret = (el: El | null, guc: number, ms: number) => {
@@ -94,6 +93,7 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
     const bas = xr.getCamera(), d = k.oyun(), r = istasyonRig(istasyon(d), { x: bas.position.x, y: bas.position.y, z: bas.position.z, yaw: basYaw() })
     rig.position.set(r.x, r.y, r.z); rig.rotation.set(0, r.rotY, 0)
     k.zemin(d.asama === 6)
+    eller.forEach(el => el.cekic.sifirla())
     panelYerles(); yerlesBekliyor = false
   }
   // Masaüstünde ekran koordinatları data-* ile veriliyor; VR testi de düğmeleri buradan bulur.
@@ -119,7 +119,7 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
     const [tur, deger] = id.split(':')
     if (tur === 'komut') { k.komut(deger as Komut); if (deger === 'bastan') not = null; if (deger === 'tak') titret(el, .4, 40) }
     else if (tur === 'tut') { el.tutulan = deger as TutAd; k.tut(el.tutulan, true) }
-    else if (tur === 'bolge') { k.bolgeSec(Number(deger)); sonIsabet = Number(deger) }
+    else if (tur === 'bolge') k.bolgeSec(Number(deger))
     else if (tur === 'hedef') k.hedefSec(Number(deger))
     else if (tur === 'not') not = deger === 'kapat' ? null : Number(deger)
     panelCiz()
@@ -134,9 +134,9 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
     else if (d.asama === 1 || d.yeniden) { if (yakin('koruk', YAKIN.koruk)) { el.tutulan = 'koruk'; k.tut('koruk', true) } }
     else if (d.asama === 2) {
       const b = k.bolgeBul(ray)
-      if (b !== null) { sonIsabet = b; k.bolgeSec(b); k.komut('vur') }
+      if (b !== null) { el.cekic.tetikle(); k.bolgeSec(b); k.komut('vur') }
     }
-    else if (d.asama === 3) { el.tutulan = 'su'; k.tut('su', true) }
+    else if (d.asama === 3) { if (yakin('su', YAKIN.su)) { el.tutulan = 'su'; k.tut('su', true) } }
     else if (d.asama === 4) { el.tutulan = 'bile'; el.bileX = duzlemX(ray.origin, ray.direction, k.tasZ); k.tut('bile', true) }
     else if (d.asama === 5) parcaKavra(el)
     else if (d.asama === 7) {
@@ -203,11 +203,11 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
     const nokta = new T.Mesh(noktaGeo, noktaMat); nokta.renderOrder = 1003; nokta.visible = false; kumanda.add(nokta)
     tutamak.add(new T.Mesh(elGeo, elMat))
     rig.add(kumanda, tutamak)
-    const el: El = { kumanda, tutamak, isin, nokta, kaynak: null, tutulan: null, bileX: null, onceY: null, silahli: true, tetik: false, yan: false, birakilacak: false, ofset: new T.Matrix4(), olaylar: [] }
+    const el: El = { kumanda, tutamak, isin, nokta, kaynak: null, tutulan: null, bileX: null, cekic: new CekicOlcer(), tetik: false, yan: false, birakilacak: false, ofset: new T.Matrix4(), olaylar: [] }
     const olaylar: [string, (e: { data?: XRInputSource }) => void][] = [
       ['selectstart', () => { el.tetik = true; el.birakilacak = false; if (el !== parcaEl) basildi(el) }], ['selectend', () => { el.tetik = false; birakildi(el); tusBirak(el) }],
       ['squeezestart', () => { el.yan = true; el.birakilacak = false; if (oturum && pozHazir) parcaKavra(el) }], ['squeezeend', () => { el.yan = false; tusBirak(el) }],
-      ['connected', e => { el.kaynak = e.data ?? null }], ['disconnected', () => { if (el === parcaEl) parcaIptal(); el.tetik = el.yan = false; birakildi(el); el.kaynak = null }],
+      ['connected', e => { el.cekic.sifirla(); el.kaynak = e.data ?? null }], ['disconnected', () => { if (el === parcaEl) parcaIptal(); el.tetik = el.yan = false; birakildi(el); el.cekic.sifirla(); el.kaynak = null }],
     ]
     for (const [ad, f] of olaylar) kumanda.addEventListener(ad as never, f as never)
     el.olaylar = olaylar
@@ -225,9 +225,9 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
     camera.removeFromParent(); camera.scale.set(1, 1, 1)
     rig.removeFromParent()
     parcaIptal()
-    eller.forEach(el => { birakildi(el); el.kaynak = null; el.onceY = null; el.tetik = el.yan = false })
+    eller.forEach(el => { birakildi(el); el.kaynak = null; el.cekic.sifirla(); el.tetik = el.yan = false })
     k.zemin(false)
-    oturum = null; pozHazir = false; not = null; aktif = null; sonIsabet = null; cizimAnahtar = bilgiAnahtar = ''
+    oturum = null; pozHazir = false; not = null; aktif = null; cizimAnahtar = bilgiAnahtar = ''
     savurma.sifirla(); isaret.visible = false; vurgu.visible = false
   }
   const oturumBitince = () => {
@@ -265,14 +265,13 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
     let var_ = !d.usta, sinir = 0
     if (d.asama === 0) { k.nesneNoktasi('yumurta', tmp); sinir = YAKIN.yumurta }
     else if (d.asama === 1 || d.yeniden) { k.nesneNoktasi('koruk', tmp); sinir = YAKIN.koruk }
+    else if (d.asama === 3) { k.nesneNoktasi('su', tmp); sinir = YAKIN.su }
     else if (d.asama === 5 && parcaEl) k.parcaYeri(parcaAd, tmp) // Taşınırken işaret kılıçtaki yeri gösterir.
     else if (d.asama === 5 && d.takilan < 7) { k.nesneNoktasi(parcalar[d.takilan], tmp); sinir = YAKIN.parca }
     else if (d.asama === 7) tmp.copy(k.hedefNoktasi(d.hedef))
     else if (d.asama === 2) {
       let b: number | null = null
       for (const el of eller) if (el.kaynak) { tazele(el); b = k.bolgeBul(raycaster.ray) ?? b }
-      // Kumanda inerken ışın namludan kayar: vuruş, indirmeden önceki bölgeye gider.
-      if (b !== null && Math.abs(inisHizi) <= 1) sonIsabet = b
       k.bolgeNoktasi(b ?? d.secili, tmp)
       isaret.scale.setScalar(b !== null ? 1.2 : .7)
     } else var_ = false
@@ -357,16 +356,18 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
         el.bileX = x
       }
 
-      // Dövme: kumandayı hızla indirmek, ışının son durduğu bölgeye tetik gibi vurur.
-      if (d.asama === 2 && !d.yeniden && !d.usta) for (const el of eller) {
-        if (!el.kaynak) continue
+      // Dövme: yalnız takip edilen elin kendi yakın zamandaki namlu hedefi vurulur.
+      for (const el of eller) {
+        if (d.asama !== 2 || d.yeniden || d.usta || !el.kaynak || !el.tutamak.visible || !el.kumanda.visible) {
+          el.cekic.sifirla(); continue
+        }
+        tazele(el)
+        if (panelIsabet()) { el.cekic.sifirla(); continue }
+        const bolge = k.bolgeBul(raycaster.ray)
         el.tutamak.updateWorldMatrix(true, false, true); el.tutamak.getWorldPosition(tmp)
-        const hiz = el.onceY === null || dt <= 0 ? 0 : (tmp.y - el.onceY) / dt
-        el.onceY = tmp.y; if (Math.abs(hiz) > Math.abs(inisHizi) || el === aktif) inisHizi = hiz
-        const s = cekicSalinimi(hiz, el.silahli)
-        el.silahli = s.silahli
-        if (s.vur && sonIsabet !== null) { aktif = el; k.bolgeSec(sonIsabet); k.komut('vur') }
-      } else { inisHizi = 0; for (const el of eller) { el.onceY = null; el.silahli = true } }
+        const vurulan = el.cekic.adim(tmp.y, dt, bolge)
+        if (vurulan !== null) { aktif = el; k.bolgeSec(vurulan); k.komut('vur') }
+      }
 
       // Test: kılıç elde; savrulan namlu noktasının yolu kesim çizgisi olur.
       if (eldeMi() && !k.kesimSuruyor() && !d.kirildi) {
@@ -399,8 +400,8 @@ export function xrOturumuKur(renderer: T.WebGLRenderer, scene: T.Scene, camera: 
       return true
     },
     asamaDegisti: () => {
-      not = null; yerlesBekliyor = true; savurma.sifirla(); sonIsabet = null
-      eller.forEach(el => { el.tutulan = null; el.bileX = null }) // Sahne basılı işleri zaten bıraktı.
+      not = null; yerlesBekliyor = true; savurma.sifirla()
+      eller.forEach(el => { el.cekic.sifirla(); el.tutulan = null; el.bileX = null }) // Sahne basılı işleri zaten bıraktı.
       if (pozHazir) panelCiz()
     },
     hedefDegisti: () => { yerlesBekliyor = true; savurma.sifirla() },

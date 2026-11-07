@@ -767,7 +767,7 @@ export const yapi = (): Maket => {
   // Yürüyüş sınırı dışında kalan hamam kütlesi engel listesine girmez; sınır doğusunda kalır.
   const kay = (b: Kutu): Kutu => ({ ...b, x0: b.x0 + OX, x1: b.x1 + OX, z0: b.z0, z1: b.z1 })
   const yurume: IcYurume = {
-    sinir: { x0: -23 + OX, x1: 30.6 + OX, z0: -35, z1: 16.8 },
+    sinir: { x0: -23 + OX, x1: 30.6 + OX, z0: -35, z1: 16.8, daire: { x: 0, z: 0, r: R_ZEMIN * Math.cos(Math.PI / 72) } },
     kutular: kutular.map(kay),
     daireler: daireler.map((d) => ({ ...d, x: d.x + OX })),
     zeminler: zeminler.map((z) => ({ ...z, x0: z.x0 + OX, x1: z.x1 + OX })),

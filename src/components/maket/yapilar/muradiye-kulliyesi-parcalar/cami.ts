@@ -27,8 +27,8 @@ export function camiDuraklari(ox: number, oz: number): IcDurak[] {
     d('minber', 'Minber', [1, GOZ + PLATFORM, 11], [-3.1, 4.6, 14.5]),
     d('cini', 'Çiniler', [2.2, GOZ + PLATFORM, 10], [5.2, 4, 12]),
     d('kubbe', 'Kubbe', [0, GOZ + PLATFORM, 8.4], [0, 19, 11]),
-    d('dogu-eyvan', 'Doğu eyvanı', [11.4, GOZ, -1.6], [-5, 5.4, -1.6]),
-    d('bati-eyvan', 'Batı eyvanı', [-11.4, GOZ, -1.6], [5, 5.4, -1.6]),
+    d('dogu-eyvan', 'Doğu eyvanı', [7.6, GOZ, -1.6], [13.2, 4.6, -1.6]),
+    d('bati-eyvan', 'Batı eyvanı', [-7.6, GOZ, -1.6], [-13.2, 4.6, -1.6]),
     d('minber-ust', 'Minbere çık', [(MINBER.x0 + MINBER.x1) / 2, GOZ + minberH, minberZ], [4, 4.2, 4]),
   ]
 }

@@ -95,6 +95,6 @@ Yönetim ekranı (`/yonetim/yeni`) şu an yalnız tarayıcıya kaydeder. Kalıc�
 | **Kişi 1: Veri ve içerik** | `src/data/eserler/`, `public/gorseller/`, `src/types/eser.ts` (şema ortak), `scripts/levha_kirp.py` | Görsel küçültme betiği, eser kategorisi ve koordinat alanları |
 | **Kişi 2: Yönetim ve onay** | `src/pages/Yonetim.tsx`, `EserFormu.tsx`, `OnayAkisi.tsx`, `src/data/index.ts`, `src/data/dogrulama.ts` | Supabase katmanı, giriş, görsel yükleme, gerçek onay akışı |
 | **Kişi 3: Keşif, erişilebilirlik, paket** | `src/pages/AnaSayfa.tsx`, `EserSayfasi.tsx`, `src/components/Galeri.tsx`, `Test.tsx`, `ZamanKatmani.tsx`, `SanalGezinti.tsx`, `KaynakSatiri.tsx`, `FotoKredi.tsx`, `src/index.css`, `index.html`, `vite.config.ts` | Filtre, harita, PWA, kontrast, yazı boyutu, sesli anlatım, axe raporu |
-| **Kişi 4: VR, demo, sunum** | `src/components/maket/`, `src/pages/VrEserler.tsx`, `src/data/vrEserler.ts`, `turkiyeHaritasi.ts`, atölye sayfaları (`VazoAtolyesi`, `KilicAtolyesi`, `CiniAtolyesi`), `src/components/kilic/`, `cini/`, `tests/xr-sim/`, `docs/eski dosyalar/KokXR_Sunum_v2.pptx` | README, demo senaryosu |
+| **Kişi 4: VR, demo, sunum** | `src/components/maket/`, `src/pages/VrEserler.tsx`, `src/data/vrEserler.ts`, `turkiyeHaritasi.ts`, atölye sayfaları (`VazoAtolyesi`, `KilicAtolyesi`, `CiniAtolyesi`), `src/components/kilic/`, `cini/`, `tests/xr-sim/`, `docs/kaynaklar/KokXR_Sunum_v2.pptx` | README, demo senaryosu |
 
 Ortak dosya: `src/App.tsx` ve şema (`src/types/eser.ts`). Değiştirmeden önce ilgili kişiye söyle.

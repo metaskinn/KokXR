@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import FotoKredi from '../components/FotoKredi'
 import { Link } from 'react-router-dom'
 import type { Eser } from '../types/eser'
@@ -7,7 +8,20 @@ import { ciniTanitim } from '../data/cini'
 import './kilic.css'
 import { ACIK_YAYIN } from '../data/acikYayin'
 
+// Kategori yeni bir alan değil; eserin elindeki içerikten türetilir.
+const kategoriler = (e: Eser): string[] => [
+  ...(e.maket ? ['3B maket'] : []), ...(e.tur ? ['Sanal gezinti'] : []), ...(e.restorasyon ? ['Restorasyon görevi'] : []), ...(e.gorseller.length ? ['Fotoğraf galerisi'] : []),
+]
+const benzersiz = (liste: string[]) => [...new Set(liste)].sort((a, b) => a.localeCompare(b, 'tr'))
+
 export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozetler: string[] }) {
+  const [sehir, setSehir] = useState('')
+  const [ilce, setIlce] = useState('')
+  const [kategori, setKategori] = useState('')
+  const sehirler = benzersiz(eserler.map((e) => e.sehir))
+  const ilceler = benzersiz(eserler.filter((e) => !sehir || e.sehir === sehir).map((e) => e.ilce))
+  const kategoriSecenekleri = benzersiz(eserler.flatMap(kategoriler))
+  const gorunen = eserler.filter((e) => (!sehir || e.sehir === sehir) && (!ilce || e.ilce === ilce) && (!kategori || kategoriler(e).includes(kategori)))
   const oneCikan = eserler.find((eser) => eser.id === 'ulu-camii') ?? eserler[0]
   return <>
     <section className="giris" aria-labelledby="sayfa-basligi">
@@ -31,7 +45,14 @@ export default function AnaSayfa({ eserler, rozetler }: { eserler: Eser[]; rozet
 
     <section id="eserler" className="eserler-bolumu" aria-labelledby="eserler-basligi">
       <div className="bolum-basligi"><div><p className="ust-baslik">MİRASA YAKINDAN BAK</p><h2 id="eserler-basligi">Her eserin bir hikâyesi var.</h2></div><p className="bolum-aciklama">Bir eser seç.<br />Keşfine kendi hızında devam et.</p></div>
-      <div className="eserler">{eserler.map((eser, index) => <Link className="eser-karti" to={`/eser/${eser.id}`} key={eser.id}>
+      <div className="eser-filtre" role="group" aria-label="Eserleri süz">
+        <label>Şehir<select value={sehir} onChange={(e) => { setSehir(e.target.value); setIlce('') }}><option value="">Tümü</option>{sehirler.map((x) => <option key={x}>{x}</option>)}</select></label>
+        <label>İlçe<select value={ilce} onChange={(e) => setIlce(e.target.value)}><option value="">Tümü</option>{ilceler.map((x) => <option key={x}>{x}</option>)}</select></label>
+        <label>Kategori<select value={kategori} onChange={(e) => setKategori(e.target.value)}><option value="">Tümü</option>{kategoriSecenekleri.map((x) => <option key={x}>{x}</option>)}</select></label>
+        <button type="button" disabled={!sehir && !ilce && !kategori} onClick={() => { setSehir(''); setIlce(''); setKategori('') }}>Süzgeci temizle</button>
+        <p role="status">{gorunen.length} eser gösteriliyor</p>
+      </div>
+      <div className="eserler">{gorunen.map((eser, index) => <Link className="eser-karti" to={`/eser/${eser.id}`} key={eser.id}>
         {!ACIK_YAYIN && <div className="kart-gorsel">
           {eser.kapakGorsel && <img className="kapak" src={eser.kapakGorsel} alt={eser.gorseller.find((g) => g.dosya === eser.kapakGorsel)?.alt ?? eser.ad} loading="lazy" />}
           <span className="kart-numara">{String(index + 1).padStart(2, '0')}</span>

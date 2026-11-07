@@ -13,8 +13,8 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 ## Görevler (sırayla)
 - [x] 1. arayuz/pwa: regresyon testi bitince commit, belgeleri güncelle.
 - [x] 2. "docs/eski dosyalar/" boşalt: şartname, sunum, rapor → docs/kaynaklar/; gelistirme-plani.md → _arsiv/docs/. Yolları AGENTS.md, HARITA.md, DURUM.md'de güncelle.
-- [ ] 3. duzen/temizlik-2 ve arayuz/pwa'yı master'a birleştir (yerel, push yok). Tam test.
-- [ ] 4. tests/uctan-uca.mjs başarısız adımda 1 koduyla çıksın.
+- [x] 3. duzen/temizlik-2 ve arayuz/pwa'yı master'a birleştir (yerel, push yok). Tam test.
+- [x] 4. tests/uctan-uca.mjs başarısız adımda 1 koduyla çıksın.
 - [ ] 5. yonetim/supabase: supabase/sema.sql yaz (eserler, gorseller, katkilar + RLS + storage bucket). Kod: .env doluysa Supabase'e kaydet, değilse localStorage'a düş (demo asla kırılmasın). Giriş (Supabase Auth, e-posta) ve görsel yükleme. Tabloları anon anahtarla oluşturamazsın; SQL'in sabah elle çalıştırılma adımlarını "Sabah sorulacaklar"a yaz.
 - [ ] 6. yonetim/onay: onay akışı mokaptan çıksın (beklemede/onaylandı/reddedildi, yalnız onaylanan yayında). Supabase yoksa localStorage ile çalışsın. Bu sayfadan DemoEtiketi'ni kaldır.
 - [ ] 7. arayuz/kesif: ana sayfada şehir/ilçe/kategori filtresi (mevcut veriden).
@@ -31,3 +31,5 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 
 - 1 (af3e01f): PWA commit. Firefox e2e 15/15, pwa/galeri/yolculuk/maket-xr-dugme/vazo-xr-dugme/maket-ic geçti; ui testi PWA'dan bağımsız odak zamanlaması nedeniyle (stash ile doğrulandı) kırıktı, beklemeyle düzeltildi.
 - 2: eski dosyalar boşaltıldı; şartname PDF ile karşılaştırıldı, eksik yok.
+- 3: master ileri sarma ile arayuz/pwa'ya (0912dfa) getirildi (temizlik-2 zaten onun atasıydı); ağaç test edilmiş olanla aynı. Push yok.
+- 4: tests/uctan-uca.mjs:156 zaten başarısız adımda exitCode=1 veriyor (460a8db); ek iş gerekmedi.

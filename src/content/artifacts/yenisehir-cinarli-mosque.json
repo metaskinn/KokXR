@@ -1,0 +1,146 @@
+{
+  "id": "yenisehir-cinarli-mosque",
+  "name": "Çınarlı (Karabaçak-Voyvoda) Camii",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "XV. yüzyıl (mimari özellikler ve tarihsel verilere göre)",
+  "endowment": "Vakfiye kayıtlarına göre Sungur Paşa (bazı kaynaklarda Yenişehir Voyvodası Ahmet Bey)",
+  "summary": "Depremler ve yangınla defalarca yıkılıp yenilenen, ahşap kırma çatılı ve cihannüma biçimli ahşap kubbeli cami.",
+  "history": "Yenişehir'in Gündoğan Mahallesi'nde, Yağhane Sokak'ta bulunan caminin banisinin, vakfiye kayıtlarına göre Sungur Paşa olduğu ve yapının zaviyeli plan şemasında inşa edildiği anlaşılmaktadır. Farklı kaynaklarda caminin Yenişehir Voyvodası Ahmet Bey tarafından yaptırıldığı da yazılıdır; XVIII. yüzyılın sonlarında vakfın mütevellisi olarak aynı adda başka bir Ahmet Bey'in görev yaptığı bilinmektedir. Gerçek baninin kim olduğu, bu kişilerle Sungur Paşa vakıfları arasındaki ilişkilerin incelenmesiyle netleşebilir.\n\nYapı, mimari özellikleri ve tarihsel veriler doğrultusunda XV. yüzyıla tarihlendirilir. Bilinen en erken belge 1786 tarihli bir tamir kaydıdır. 1855 depreminden sonra büyük ölçüde yıkılan cami halkın desteğiyle yeniden yapılmış; çatısı ve kubbesi ahşapla yenilenmiş, üstü kiremitle kaplanmıştır. 1920'ye kadar bu hâliyle ulaşan cami, Yunan işgali sırasında kasabayı terk eden Rumlar tarafından yakılarak kullanılamaz hâle getirilmiştir. 1930'da ahşap çatılı ve ahşap kubbeli olarak onarılıp ibadete açılmıştır. 1967 depreminde minarenin harimin üzerine yıkılmasıyla oluşan hasar cemaatin katkılarıyla giderilmiş; 1985'teki tadilatlardan sonra 2016'daki kapsamlı restorasyonla bugünkü biçimini almıştır.\n\nAhşap kırma çatıyla örtülü cami, cihannüma biçiminde yükselen ahşap bir kubbeye sahiptir. Son cemaat yeri, ahşap kaplamalı direklere oturan ahşap sivri kemerlerle taşınan düz tavanla örtülüdür. Harimdeki maksureler, kadınlar mahfili ve cihannümayı taşıyan strüktür tamamen ahşaptır. Mihrap tüm yüzeyiyle çini kaplıdır; ahşap minber yakın döneme aittir. Batı cephesindeki minare kesme taş kaideye oturan, tuğladan silindirik gövdeli ve çift bilezikli bir yapıdır. Ahşap çatılı ve Bağdadi sistemli kubbeli bu yapı tipine Bursa'da Üftade ve Kaygan camileri ile Mustafakemalpaşa'daki Şeyh Müftü Camii'nde de rastlanır.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-cinarli-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-cinarli-mosque/exterior.jpg",
+      "alt": "Caminin dışı: kiremit kırma çatı, ahşap direkli ve kemerli son cemaat yeri, yanında sivri külahlı minare ve büyük bir çınar",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-cinarli-mosque/prayer-hall.jpg",
+      "alt": "Harim: ahşap kaplı tavan, ortada çini kaplı mihrap, sağda ahşap minber, iki sıra pencere ve büyük avize",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-cinarli-mosque/roof-from-top.jpg",
+      "alt": "Tepeden görünüm: kiremit kaplı kırma çatının ortasında sekizgen külah biçiminde yükselen bölüm, yanda minare ve çınar",
+      "description": "Çatı, tepeden",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-cinarli-mosque/dome-interior.jpg",
+      "alt": "Beyaz kubbe içinin aşağıdan görünümü: ortada halka biçimli büyük avize, iki yanda ışık alan pencereler",
+      "description": "Kubbe içi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-cinarli-mosque/painted-window.jpg",
+      "alt": "Beyaz yüzeyde yarım daire biçimli bir pencere ve üstünde boyalı çiçekli üç vazo motifi",
+      "description": "Kalem işi süsleme ve pencere",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cihannuma",
+      "image": "/images/yenisehir-cinarli-mosque/roof-from-top.jpg",
+      "x": 49,
+      "y": 68,
+      "title": "Cihannüma kubbe",
+      "text": "Ahşap kırma çatıyla örtülü cami, cihannüma biçiminde yükselen ahşap bir kubbeye sahiptir. Kubbe kasnağındaki dört pencere harime giren ışığı artırır.",
+      "sourceId": "inv-p688"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/yenisehir-cinarli-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Çini mihrap",
+      "text": "Mihrap tüm yüzeyiyle çini kaplıdır. Ahşap minber yakın döneme aittir ve gösterişli bezemeleriyle dikkat çeker.",
+      "sourceId": "inv-p688"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/yenisehir-cinarli-mosque/exterior.jpg",
+      "x": 47,
+      "y": 80,
+      "title": "Son cemaat yeri",
+      "text": "Son cemaat yeri, ahşap kaplamalı direklere oturan ve ahşap sivri kemerlerle taşınan düz tavanla örtülmüştür.",
+      "sourceId": "inv-p688"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/yenisehir-cinarli-mosque/exterior.jpg",
+      "x": 61,
+      "y": 26,
+      "title": "Minare",
+      "text": "Batı cephesindeki minare, kesme taş kaide üzerine oturan, tuğladan silindirik gövdeli ve çift bilezikli bir yapıdır.",
+      "sourceId": "inv-p688"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakfiye kayıtlarına göre caminin banisi kimdir?",
+      "options": [
+        "Sungur Paşa",
+        "Bâlî Bey",
+        "Sinan Paşa",
+        "Murat Paşa"
+      ],
+      "correct": 0,
+      "description": "Vakfiye kayıtlarından caminin banisinin Sungur Paşa olduğu anlaşılmaktadır; farklı kaynaklarda Voyvoda Ahmet Bey'in adı da geçer.",
+      "sourceId": "inv-p686"
+    },
+    {
+      "question": "1967 depreminde caminin çatı ve kubbesi neden hasar görmüştür?",
+      "options": [
+        "Sel basmıştır",
+        "Minare harimin üzerine yıkılmıştır",
+        "Yangın çıkmıştır",
+        "Duvarlar çökmüştür"
+      ],
+      "correct": 1,
+      "description": "1967 depreminde minarenin harim üzerine yıkılmasıyla oluşan hasar cemaatin katkılarıyla giderilmiştir.",
+      "sourceId": "inv-p687"
+    },
+    {
+      "question": "Caminin kubbesi hangi biçimdedir?",
+      "options": [
+        "Kurşun kaplı taş kubbe",
+        "Çifte kubbe",
+        "Cihannüma biçiminde ahşap kubbe",
+        "Kubbesi yoktur"
+      ],
+      "correct": 2,
+      "description": "Ahşap kırma çatıyla örtülü cami, cihannüma biçiminde yükselen ahşap bir kubbeye sahiptir.",
+      "sourceId": "inv-p688"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p686",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Çınarlı (Karabaçak-Voyvoda) Camii\"",
+      "page": "686"
+    },
+    {
+      "id": "inv-p687",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Çınarlı (Karabaçak-Voyvoda) Camii\"",
+      "page": "687"
+    },
+    {
+      "id": "inv-p688",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Çınarlı (Karabaçak-Voyvoda) Camii\"",
+      "page": "688"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

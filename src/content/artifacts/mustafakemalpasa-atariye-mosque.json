@@ -1,0 +1,102 @@
+{
+  "id": "mustafakemalpasa-atariye-mosque",
+  "name": "Atariye Camii",
+  "city": "Bursa",
+  "district": "Mustafakemalpaşa",
+  "period": "Kitabe: Y.T. 1906 · Bugünkü yapı 1980'ler",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Adını, \"at erleri\"nin yaşadığı eski Atariye köyünden aldığı düşünülen, 1980'lerde mahallelilerce yeniden yapılmış kubbesiz mahalle camisi.",
+  "history": "Cami, Mustafakemalpaşa'nın Atariye Mahallesi'nde, Karacabey Caddesi üzerindedir. Girişteki yeni mermer kitabede \"Y.T. 1906\" yazar.\n\nYapının, tarihte aynı adla bilinen köyün camisi olması kuvvetle muhtemeldir. Köy halkı, \"Karacabey Harası\" adıyla bilinen at çiftliğinde at bakıcılığı yapan ve \"at erleri\" denilen insanlardan oluşuyordu. Köy sonradan ilçe merkeziyle mahalle olarak birleşerek şehrin bir parçası olmuştur.\n\nEski yapı çok önceleri yıkılmış, yerine 1980'lerde mahalleliler tarafından tamamen yeni bir cami yapılmıştır. Kubbesiz, çatılı ve minareli bir camidir. Minarenin temeli ve kaidesi kesme taştan, yukarısı tuğladandır. Musalla taşı batıdaki bahçededir. Cami 2018'de Bursa Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir; ibadete açıktır ve mahallenin önemli camilerindendir. Batıdaki bahçeden ek arsa ile ara sokağa bir bahçe kapısı açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/mustafakemalpasa-atariye-mosque/aerial-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/mustafakemalpasa-atariye-mosque/aerial-minaret.jpg",
+      "alt": "Ağaçlar arasında kiremit çatılı, beyaz badanalı cami; yanında kesme taş kaideli, tuğla gövdeli, sivri külahlı minare; önde avlu",
+      "description": "Cami ve minarenin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-atariye-mosque/interior-mihrab.jpg",
+      "alt": "Ahşap düz tavanlı beyaz iç mekân: ortada taş mihrap, sağında ahşap minber, tavandan sarkan halka biçimli avize, zeminde mavi halı",
+      "description": "İç mekân ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/mustafakemalpasa-atariye-mosque/aerial-minaret.jpg",
+      "x": 48,
+      "y": 45,
+      "title": "Minare",
+      "text": "Minarenin temeli ve kaidesi kesme taştan yapılmış, yukarısı tuğladan inşa edilmiştir.",
+      "sourceId": "inv-p609"
+    },
+    {
+      "id": "roof",
+      "image": "/images/mustafakemalpasa-atariye-mosque/interior-mihrab.jpg",
+      "x": 50,
+      "y": 8,
+      "title": "Kubbesiz, çatılı yapı",
+      "text": "Eski yapı çok önceleri yıkılmış, yerine 1980'lerde mahalleliler tarafından kubbesiz, çatılı ve minareli yeni bir cami yapılmıştır.",
+      "sourceId": "inv-p609"
+    }
+  ],
+  "test": [
+    {
+      "question": "Atariye köyünün halkına çevrede hangi ad verilirdi?",
+      "options": [
+        "Sipahiler",
+        "At erleri",
+        "Yörükler",
+        "Kervancılar"
+      ],
+      "correct": 1,
+      "description": "Köy halkı \"Karacabey Harası\" adıyla bilinen at çiftliğinde at bakıcılığı yapar ve \"at erleri\" diye anılırdı.",
+      "sourceId": "inv-p609"
+    },
+    {
+      "question": "Bugünkü Atariye Camii ne zaman ve kimler tarafından yapılmıştır?",
+      "options": [
+        "1906'da devlet eliyle",
+        "1950'lerde bir vakıfça",
+        "1980'lerde mahalleliler tarafından",
+        "2018'de Vakıflar tarafından"
+      ],
+      "correct": 2,
+      "description": "Eski yapı çok önceleri yıkılmış, yerine 1980'lerde mahalleliler tarafından tamamen yeni bir cami inşa edilmiştir.",
+      "sourceId": "inv-p609"
+    },
+    {
+      "question": "Cami hangi yıl Bursa Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir?",
+      "options": [
+        "2008",
+        "2012",
+        "2018",
+        "2022"
+      ],
+      "correct": 2,
+      "description": "Cami 2018 senesinde Bursa Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir.",
+      "sourceId": "inv-p609"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p608",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mustafakemalpaşa, \"Atariye Camii\"",
+      "page": "608"
+    },
+    {
+      "id": "inv-p609",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mustafakemalpaşa, \"Atariye Camii\"",
+      "page": "609"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

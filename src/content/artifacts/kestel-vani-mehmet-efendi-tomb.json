@@ -1,0 +1,97 @@
+{
+  "id": "kestel-vani-mehmet-efendi-tomb",
+  "name": "Şeyh Vani Mehmet Efendi Türbesi",
+  "city": "Bursa",
+  "district": "Kestel",
+  "period": "Osmanlı · H. 1096 / M. 1685 (vefat tarihi)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Aslen cami haziresinde olan, sonradan inşa edilen son cemaat yeriyle caminin içine dahil olan Vanî Mehmed Efendi'nin kabri.",
+  "history": "Vanî Mehmed Efendi'nin kabri, caminin son cemaat yerinin batı kenarındadır. Eski fotoğraflardan anlaşıldığına göre kabir aslında cami haziresindeydi; sonradan inşa edilen son cemaat yeri ile birlikte yapının içine dahil olmuştur.\n\nKabrin şahidesinde eyalet üslubunda ve bozulmuş bir sülüs hatla yazılmış Arapça kitabe mealen şöyledir: \"Allah her şeyden münezzehtir. İlmiyle amel eden âlimlerin önderi. Kâmil ve faziletli insanların özü. Hakikati dillendiren. Halka vaaz eden. Allah'a davet eden. Allah'ın huzuruna sığınan. Muhammed Vanî. Allah ruhunu yüceltsin.\"\n\nAyak taşında vefat tarihi H. 13 Zilkade 1096 / M. 1685 olarak yazılıdır. Vefatına şu beyitle de tarih düşürülmüştür: \"O âlî-câh-ı efdâlin melekler fevt-i târîhin / Didiler kürsîye Vanî Efendi çıkdı cennetde.\" Mealen: \"O yüksek makam sahibi faziletli kişinin ölüm tarihini melekler şöyle söyledi: 'Vanî Efendi cennette kürsüye çıktı.'\"",
+  "verification": "verified",
+  "coverImage": "/images/kestel-vani-mehmet-efendi-tomb/grave.jpg",
+  "images": [
+    {
+      "file": "/images/kestel-vani-mehmet-efendi-tomb/grave.jpg",
+      "alt": "Mavi örtülü kabir ve iki mezar taşı, cam korkulukla çevrili; arkada pencereler, ahşap raflar ve hat levhası",
+      "description": "Vanî Mehmed Efendi'nin kabri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-vani-mehmet-efendi-tomb/narthex-interior.jpg",
+      "alt": "Ahşap tavanlı uzun mekân, sol duvarda hat levhası ve yeşil perdeli kapı; dipte cam korkuluklu kabir",
+      "description": "Son cemaat yeri içindeki kabir",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "headstone",
+      "image": "/images/kestel-vani-mehmet-efendi-tomb/grave.jpg",
+      "x": 59,
+      "y": 49,
+      "title": "Kabir taşları",
+      "text": "Şahidedeki Arapça kitabe, Vanî Mehmed Efendi'yi \"ilmiyle amel eden âlimlerin önderi\" ve \"halka vaaz eden\" olarak anar. Ayak taşında vefat tarihi H. 13 Zilkade 1096 olarak yazılıdır.",
+      "sourceId": "inv-p562"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/kestel-vani-mehmet-efendi-tomb/narthex-interior.jpg",
+      "x": 57,
+      "y": 62,
+      "title": "Son cemaat yerindeki kabir",
+      "text": "Kabir aslında cami haziresindeydi; sonradan inşa edilen son cemaat yeri ile birlikte yapının içine dahil olmuştur.",
+      "sourceId": "inv-p562"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vanî Mehmed Efendi'nin kabri aslında nerede bulunuyordu?",
+      "options": [
+        "Caminin mihrabı önünde",
+        "Cami haziresinde",
+        "Kestel'deki hamamın yanında",
+        "İstanbul Vaniköy'de"
+      ],
+      "correct": 1,
+      "description": "Eski fotoğraflara göre kabir aslında cami haziresindeydi; sonradan son cemaat yeri ile birlikte yapının içine dahil olmuştur.",
+      "sourceId": "inv-p562"
+    },
+    {
+      "question": "Ayak taşındaki Hicrî vefat tarihi nedir?",
+      "options": [
+        "1 Muharrem 1084",
+        "Zilhicce 998",
+        "13 Zilkade 1096",
+        "Muharrem 904"
+      ],
+      "correct": 2,
+      "description": "Ayak taşında H. 13 Zilkade 1096 / M. 1685 tarihi yazılıdır.",
+      "sourceId": "inv-p562"
+    },
+    {
+      "question": "Tarih beytine göre melekler Vanî Efendi'nin vefatını nasıl ifade etmiştir?",
+      "options": [
+        "Vanî Efendi cennette kürsüye çıktı",
+        "Vanî Efendi Kestel'e döndü",
+        "Vanî Efendi Yeni Cami'de vaaz etti",
+        "Vanî Efendi yolculuğa çıktı"
+      ],
+      "correct": 0,
+      "description": "Beyit mealen: \"O yüksek makam sahibi faziletli kişinin ölüm tarihini melekler şöyle söyledi: 'Vanî Efendi cennette kürsüye çıktı.'\"",
+      "sourceId": "inv-p562"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p562",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Kestel, \"Şeyh Vani Mehmet Efendi Türbesi\"",
+      "page": "562"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

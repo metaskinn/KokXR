@@ -1,0 +1,134 @@
+{
+  "id": "yenisehir-semakizade-mosque",
+  "name": "Şemakizade Hacı Hüseyin Efendi Camii",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Geç Osmanlı · 1830",
+  "endowment": "Şemakizade Hüseyin Efendi",
+  "summary": "1830'da Şemakizade Hüseyin Efendi'nin yaptırdığı, mihrabı, minberi ve kürsüsü çiniyle bezeli, bağımsız minareli cami.",
+  "history": "Şemakizade Camii, Yenişehir'in Hıdırbali Mahallesi'nde, Şeref Sokak ile Garaj Caddesi'nin kesiştiği noktada, No: 1'de yer alır. 1830 yılında Şemakizade Hüseyin Efendi tarafından inşa ettirilen cami, özgün mimari karakterini büyük ölçüde yitirmiştir.\n\nGeniş bir avlu içindeki yapı yaklaşık 16 × 12 m ölçülerindedir. Duvarları moloz taşla örülmüş, üstü kiremit kaplı kırma çatıyla örtülmüştür. Kuzey cephesindeki çift kanatlı ahşap kapıdan girilen son cemaat mahalli sonradan duvarla örülerek kapatılmıştır.\n\nHarimin ahşap tavanı iç içe geçmiş karelerden oluşan geometrik geçmelerle hareketlendirilmiş, merkezine dairesel ahşap bir madalyon yerleştirilmiştir. İç mekân yuvarlak kemerli on pencereden ışık alır. Mihrabın nişi ve kavsarası çiniyle kaplıdır; minber ve kürsü de çiniyle bezenmiştir.\n\nCamiden bağımsız konumdaki minare kare planlı bir kaide üzerine oturur. Silindirik tuğla gövdesi iki bilezikle hareketlendirilmiş, peteği tuğladan yapılmış, külahı kurşunla kaplanmıştır. Şerefe altı tuğla dolgulu bezemeleriyle dikkat çeker.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-semakizade-mosque/aerial-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-semakizade-mosque/aerial-minaret.jpg",
+      "alt": "Yenişehir'in çatıları arasında yükselen, tuğla gövdeli ve sivri külahlı minare, yanında kiremit çatılı cami",
+      "description": "Minare ve çevresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-semakizade-mosque/aerial-top.jpg",
+      "alt": "Avlu içindeki caminin tepeden görünümü: kiremit kaplı kırma çatı, çevresinde bahçe ve binalar",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-semakizade-mosque/prayer-hall.jpg",
+      "alt": "Geometrik geçmeli açık renkli ahşap tavan, ortadan sarkan avize, mavi-yeşil çinili mihrap ve sağda çinili minber, yuvarlak kemerli pencereler",
+      "description": "Harim, mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-semakizade-mosque/ceiling.jpg",
+      "alt": "Tavanın aşağıdan görünümü: iç içe geçmiş kareler ve merkezde süslü dairesel madalyon",
+      "description": "Ahşap tavan ve göbek",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/yenisehir-semakizade-mosque/aerial-minaret.jpg",
+      "x": 43,
+      "y": 45,
+      "title": "Bağımsız minare",
+      "text": "Camiden bağımsız konumdaki minare kare planlı bir kaide üzerine inşa edilmiştir. Silindirik gövdesi tuğladandır ve iki bilezikle hareketlendirilmiştir; külahı kurşun kaplıdır.",
+      "sourceId": "inv-p709"
+    },
+    {
+      "id": "roof",
+      "image": "/images/yenisehir-semakizade-mosque/aerial-top.jpg",
+      "x": 55,
+      "y": 52,
+      "title": "Kırma çatı",
+      "text": "Yaklaşık 16 × 12 m ölçülerindeki yapının duvarları moloz taşla örülmüş, üstü kırma çatıyla örtülüp kiremitle kaplanmıştır.",
+      "sourceId": "inv-p708"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/yenisehir-semakizade-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Çinili mihrap",
+      "text": "Mihrabın nişi ve kavsarası çiniyle kaplanmıştır. Minber ve kürsü de aynı şekilde çiniyle bezenmiştir.",
+      "sourceId": "inv-p709"
+    },
+    {
+      "id": "ceiling",
+      "image": "/images/yenisehir-semakizade-mosque/ceiling.jpg",
+      "x": 50,
+      "y": 49,
+      "title": "Tavan madalyonu",
+      "text": "Harimin ahşap tavanı iç içe geçmiş karelerden oluşan geometrik geçmelerle hareketlendirilmiş, merkezine dairesel ahşap bir madalyon yerleştirilmiştir.",
+      "sourceId": "inv-p709"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi yıl inşa ettirilmiştir?",
+      "options": [
+        "1645",
+        "1763",
+        "1830",
+        "1923"
+      ],
+      "correct": 2,
+      "description": "Cami 1830 yılında Şemakizade Hüseyin Efendi tarafından inşa ettirilmiştir.",
+      "sourceId": "inv-p708"
+    },
+    {
+      "question": "Mihrabın nişi ve kavsarası neyle kaplanmıştır?",
+      "options": [
+        "Mermerle",
+        "Çiniyle",
+        "Ahşapla",
+        "Kalem işi boyayla"
+      ],
+      "correct": 1,
+      "description": "Mihrabın nişi ve kavsarası çiniyle kaplıdır; minber ve kürsü de çiniyle bezenmiştir.",
+      "sourceId": "inv-p709"
+    },
+    {
+      "question": "Son cemaat mahalline sonradan ne yapılmıştır?",
+      "options": [
+        "Yıkılıp yerine avlu açılmıştır",
+        "Duvarla örülerek kapatılmıştır",
+        "Üstüne kubbe eklenmiştir",
+        "Minareye bağlanmıştır"
+      ],
+      "correct": 1,
+      "description": "Kuzey cephedeki çift kanatlı ahşap kapıdan girilen son cemaat mahalli sonradan duvarla örülerek kapatılmıştır.",
+      "sourceId": "inv-p709"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p708",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Şemakizade Hacı Hüseyin Efendi Camii\"",
+      "page": "708"
+    },
+    {
+      "id": "inv-p709",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Yenişehir, \"Şemakizade Hacı Hüseyin Efendi Camii\"",
+      "page": "709"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

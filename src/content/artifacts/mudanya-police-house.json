@@ -1,0 +1,118 @@
+{
+  "id": "mudanya-police-house",
+  "name": "Mudanya Polis Evi",
+  "city": "Bursa",
+  "district": "Mudanya",
+  "period": "Yapım tarihi kitapta belirtilmemiştir · 2003'ten beri polis evi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Rum yapıları ve Girit göçmenlerinin etkisiyle şekillenen Mudanya'da geleneksel Türk evi mimarisini yansıtan ender örneklerden biri; bugün Mudanya Polis Evi Lokali.",
+  "history": "Mudanya'nın Şükrüçavuş Mahallesi'nde, Parti Sokak No: 5'te yer alır ve bugün \"Mudanya Polis Evi Lokali\" olarak hizmet verir. Geleneksel Türk evi mimarisinin özelliklerini taşıyan yapı, Rum yapıları ve Girit göçmenlerinin etkisiyle şekillenmiş Mudanya'da geleneksel Türk mimarisini yansıtan ender örneklerden biri olmasıyla önemlidir.\n\nTarihî fotoğraflardan yola çıkılarak 1937'de bu konumdaki bir yapının Mudanya Emniyet Komiserliği olarak kullanıldığı ileri sürülür; ancak fotoğraftaki giriş bölümünün bugünkü yapıdan farklı olması ve başka belge bulunamaması nedeniyle bu yorum teyit edilememektedir. Bölge sakinlerinin hatıralarına göre 1950'lerde binada akşam sanat okulu kursları düzenlenmiştir. Yapının erken dönemlerine ait görsel belge günümüze ulaşmamıştır.\n\nBodrum dahil üç katlı kâgir yapının taban alanı 372 m²'dir. 2001'de emniyet müdürlüğü tarafından restore edilmiş, 2003'te polis evi olarak hizmete açılmıştır. Planı XIX. ve XX. yüzyıl Türk konut mimarisinin karakteristik özelliklerini yansıtır. Ana giriş, 17 basamakla çıkılan birinci kattadır. İç mekân, girişin sağından başlayan L biçimli bir salon etrafında şekillenir; salon ahşap çift kanatlı kapılarla bölümlere ayrılır. Yüksek tavanlar ve nitelikli ahşap işçilik dikkat çeker, tavanlarda süsleme yoktur. Dar ve uzun ahşap pencereler iç mekâna yeterli ışık sağlar. Bugün her iki kat restoran olarak kullanılmaktadır.\n\nBeyaz boyalı dış cepheli yapı, çevre duvarlarıyla sınırlanmış geniş bir bahçe içindedir; bahçe son restorasyonda çeşitli değişikliklere uğramıştır.",
+  "verification": "verified",
+  "coverImage": "/images/mudanya-police-house/courtyard-view.jpg",
+  "images": [
+    {
+      "file": "/images/mudanya-police-house/courtyard-view.jpg",
+      "alt": "Beyaz boyalı, koyu renk pencere çerçeveli iki katlı yapı ve önünde büyük ağaçlı, masalı bahçe; girişte bayraklar ve taş çevre duvarı",
+      "description": "Yapı ve bahçesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-police-house/aerial-sea-view.jpg",
+      "alt": "Kiremit kırma çatılı beyaz yapının havadan görünümü; arkada Mudanya evleri, minare ve deniz",
+      "description": "Havadan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-police-house/aerial-top.jpg",
+      "alt": "Tepeden görünüm: kiremit kaplı çatılar ve yanındaki büyük ağaç",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "building",
+      "image": "/images/mudanya-police-house/courtyard-view.jpg",
+      "x": 74,
+      "y": 31,
+      "title": "Kâgir yapı",
+      "text": "Bodrum katı dahil üç katlı kâgir yapının taban alanı 372 m²'dir. Planı XIX. ve XX. yüzyıl Türk konut mimarisinin karakteristik özelliklerini yansıtır.",
+      "sourceId": "inv-p605"
+    },
+    {
+      "id": "entrance",
+      "image": "/images/mudanya-police-house/courtyard-view.jpg",
+      "x": 70,
+      "y": 58,
+      "title": "Ana giriş",
+      "text": "Zemin kotunun altındaki bodrum katına rağmen ana giriş, 17 basamakla çıkılan birinci kattadır.",
+      "sourceId": "inv-p605"
+    },
+    {
+      "id": "garden",
+      "image": "/images/mudanya-police-house/courtyard-view.jpg",
+      "x": 30,
+      "y": 80,
+      "title": "Bahçe",
+      "text": "Beyaz boyalı dış cepheli polis evi, çevre duvarlarıyla sınırlanmış geniş bir bahçe içinde yer alır. Bahçe son restorasyonda çeşitli değişikliklere uğramıştır.",
+      "sourceId": "inv-p605"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapı bugün hangi adla hizmet vermektedir?",
+      "options": [
+        "Mudanya Kent Müzesi",
+        "Mudanya Polis Evi Lokali",
+        "Mudanya Halk Kütüphanesi",
+        "Mudanya Sanat Okulu"
+      ],
+      "correct": 1,
+      "description": "Yapı günümüzde \"Mudanya Polis Evi Lokali\" olarak hizmet vermektedir.",
+      "sourceId": "inv-p604"
+    },
+    {
+      "question": "Yapının ana girişine kaç basamakla çıkılır?",
+      "options": [
+        "5",
+        "9",
+        "17",
+        "23"
+      ],
+      "correct": 2,
+      "description": "Ana giriş, 17 basamakla çıkılan birinci kattadır.",
+      "sourceId": "inv-p605"
+    },
+    {
+      "question": "Yapı hangi yıl polis evi olarak hizmete açılmıştır?",
+      "options": [
+        "2003",
+        "1937",
+        "1950",
+        "2001"
+      ],
+      "correct": 0,
+      "description": "2001'de emniyet müdürlüğü tarafından restore edilen yapı 2003'te polis evi olarak hizmete açılmıştır.",
+      "sourceId": "inv-p605"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p604",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Mudanya Polis Evi\"",
+      "page": "604"
+    },
+    {
+      "id": "inv-p605",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Mudanya Polis Evi\"",
+      "page": "605"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

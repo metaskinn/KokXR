@@ -1,0 +1,118 @@
+{
+  "id": "mustafakemalpasa-hamza-bey-tomb",
+  "name": "Hamza Bey Türbesi",
+  "city": "Bursa",
+  "district": "Mustafakemalpaşa",
+  "period": "Fâtih Sultan Mehmed dönemiyle ilişkilendirilir · Vakfiye H. 867 / M. 1462-63",
+  "endowment": "Hamza Bey (H. 867 / M. 1462-63 vakfiyesiyle tekkesine vakıf)",
+  "summary": "Kitabesi olmayan, içinde yazısız üç lahit bulunan, Fâtih dönemiyle ilişkilendirilen kare planlı kubbeli türbe.",
+  "history": "Türbe, Mustafakemalpaşa'nın Hamzabey Mahallesi'nde, Korucubaşı Çıkmazı'ndadır. Kitabesi yoktur; mimari özellikleri ve çevredeki kitabe verilerine dayanarak Fâtih Sultan Mehmed dönemiyle ilişkilendirilir.\n\nHamza Bey'in kimliği hakkında kesin, belgelere dayanan bilgi yoktur ve kaynaklarda iki görüş öne çıkar. Birincisine göre Murad Hudâvendigâr devrinin önde gelen devlet adamlarından Lala Şahin Paşa'nın torununun torunudur. Kâmil Kepecioğlu'nun Bursa Kütüğü'nde ayrıntılı ele aldığı ikinci görüşe göre ise Hamza Bey, Bazarlu Bey soyundan gelen Murad Bey'in oğludur; türbe aslında Murad Bey tarafından bir zaviye, mutfak ve kervansarayla birlikte yaptırılmış, Hamza Bey'in yapıya vakıflar bağlamasıyla halk arasında \"Hamza Bey Zaviyesi\" diye anılmıştır. Türbenin çevresinde Lala Şahin Paşa ve soyuna ait bir vakfa rastlanmaması bu görüşü daha tutarlı kılar.\n\nVakfiyeye göre Murad Bey'in oğlu Hamza Bey, H. 867 / M. 1462-63'te Karapürçek önündeki iki değirmeni, İbrahim adlı kişiden satın aldığı bir değirmeni ve 10.000 akçe nakdi tekkesine vakfetmiştir.\n\nTürbe 4 × 4 m ölçülerinde, kare planlı ve kubbelidir. Dikdörtgen giriş kapısı kuzey duvarının ortasındadır; güney ve batı cephelerde birer kare pencere vardır. Saçak altı üç sıra testere dişi silmeyle hareketlendirilmiştir. Beden duvarları altta kesme taş, üstte tuğla ve harç karışımıyla örülmüştür; doğu cephede devşirme olarak kullanılmış antik döneme ait bir mezar taşı dikkat çeker. İçeride yazısız üç lahit bulunur. Yakın dönem restorasyonunda üst örtü yenilenmiş ve kurşun kaplı bir kubbeyle kapatılmıştır. Girişe 1997'de konan tabeladaki bilgiler ise buradaki Hamza Bey'e değil, Bursa'da yaşamış aynı adlı başka bir kişiye aittir.",
+  "verification": "verified",
+  "coverImage": "/images/mustafakemalpasa-hamza-bey-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/mustafakemalpasa-hamza-bey-tomb/exterior.jpg",
+      "alt": "Bahçe içinde, taş ve tuğla sıralı duvarlı, kurşun kaplı kubbeli küçük kare türbe; önde yeşil yapraklar ve toprak yol",
+      "description": "Türbenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-hamza-bey-tomb/interior-sarcophagi.jpg",
+      "alt": "Yeşil boyalı kubbe altında, üzerleri yeşil örtülü ve başlarında sarıklı üç sanduka; arkada vitraylı iki pencere",
+      "description": "İç mekândaki lahitler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-hamza-bey-tomb/aerial-top.jpg",
+      "alt": "Tam tepeden çekim: kare gövde üzerinde dilimli kurşun kubbe, çevresinde bahçe tarhları",
+      "description": "Türbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/mustafakemalpasa-hamza-bey-tomb/exterior.jpg",
+      "x": 48,
+      "y": 32,
+      "title": "Kubbe",
+      "text": "Kare planlı türbenin üst örtüsü kubbedir. Yakın dönem restorasyonunda üst örtü yenilenmiş ve kurşun kaplı bir kubbeyle kapatılmıştır.",
+      "sourceId": "inv-p619"
+    },
+    {
+      "id": "walls",
+      "image": "/images/mustafakemalpasa-hamza-bey-tomb/exterior.jpg",
+      "x": 42,
+      "y": 52,
+      "title": "Beden duvarları",
+      "text": "Beden duvarları alt kısımlarda kesme taşla, üst bölümlerde tuğla ve harç karışımıyla örülmüştür. Saçak altı üç sıra testere dişi silmeyle hareketlendirilmiştir.",
+      "sourceId": "inv-p619"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/mustafakemalpasa-hamza-bey-tomb/interior-sarcophagi.jpg",
+      "x": 38,
+      "y": 73,
+      "title": "Üç lahit",
+      "text": "Türbenin iç mekânında yazı bulunmayan üç lahit yer almaktadır.",
+      "sourceId": "inv-p619"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamza Bey Türbesi hangi dönemle ilişkilendirilir?",
+      "options": [
+        "Orhan Gazi dönemi",
+        "Fâtih Sultan Mehmed dönemi",
+        "Kanuni Sultan Süleyman dönemi",
+        "II. Abdülhamid dönemi"
+      ],
+      "correct": 1,
+      "description": "Kitabesi olmayan türbe, mimari özellikleri ve çevredeki kitabe verilerine dayanarak Fâtih Sultan Mehmed dönemiyle ilişkilendirilir.",
+      "sourceId": "inv-p618"
+    },
+    {
+      "question": "Türbenin içinde kaç lahit bulunur?",
+      "options": [
+        "Bir",
+        "İki",
+        "Üç",
+        "Beş"
+      ],
+      "correct": 2,
+      "description": "Türbenin iç mekânında yazı bulunmayan üç lahit vardır.",
+      "sourceId": "inv-p619"
+    },
+    {
+      "question": "Vakfiyeye göre Hamza Bey tekkesine ne vakfetmiştir?",
+      "options": [
+        "Bir han ve hamam",
+        "Değirmenler ve 10.000 akçe nakit",
+        "Zeytinlikler",
+        "Bir köyün geliri"
+      ],
+      "correct": 1,
+      "description": "Hamza Bey H. 867 / M. 1462-63'te Karapürçek önündeki iki değirmeni, satın aldığı bir değirmeni ve 10.000 akçe nakdi tekkesine vakfetmiştir.",
+      "sourceId": "inv-p619"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p618",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mustafakemalpaşa, \"Hamza Bey Türbesi\"",
+      "page": "618"
+    },
+    {
+      "id": "inv-p619",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mustafakemalpaşa, \"Hamza Bey Türbesi\"",
+      "page": "619"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

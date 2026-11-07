@@ -1,0 +1,111 @@
+{
+  "id": "mudanya-halil-aga-house",
+  "name": "Halil Ağa Evi",
+  "city": "Bursa",
+  "district": "Mudanya",
+  "period": "Kesin tarihi kitapta belirtilmemiştir · Mudanya'nın en eski geleneksel evlerinden",
+  "endowment": "Kitapta belirtilmemiştir (cami ile aynı avluyu paylaşan meşruta ev)",
+  "summary": "Halil Ağa Camii ile aynı avluyu paylaşan, Mudanya'nın günümüze ulaşabilmiş en eski geleneksel evlerinden biri olan iki katlı ahşap meşruta ev.",
+  "history": "Mudanya'nın Şükrüçavuş Mahallesi'nde, Mustafakemalpaşa Caddesi, 3. Cami Sokak No: 35'te yer alır. Halk arasında \"Eski Cami\" olarak bilinen ve H. 1053 / M. 1643-44'te Kethüda Halil Ağa tarafından ihya edilen cami ile aynı avluyu paylaşır. Bölgede özellikle XVII. yüzyıldan itibaren gelişen Müslüman mahalle yapılanmasının ilk örneklerinden biri kabul edilen konut, Mudanya'nın günümüze ulaşabilmiş en eski geleneksel evlerinden biridir.\n\nKuzey-güney yönünde uzanan, dikdörtgene yakın planlı yapının uzunluğu 13 m'dir; kuzeydeki ön cephesi 10 m, güneydeki arka cephesi 8 m'dir. İki katlı ahşap yapıya kuzeydeki cami avlusundan girilir. Alt katta mutfak, banyo, tuvalet ve iki oda, üst katta başodanın da bulunduğu üç oda ve bir sofa vardır; başodada ocak ve sedirler yer alır. Sofanın iki ucunda Bursa kemerleriyle ayrılmış iki sekilik, iki oda arasında ise yine Bursa kemeriyle ayrılan penceresiz bir eyvan bulunur.\n\nCami avlusuna bakan cephede, ahşap direklerle taşınan ve \"eli böğründe\" denen desteklerle öne çıkan bir çıkma ve toplam 18 pencere vardır. Üstteki tepe pencereleri yuvarlak kemerli ve ahşap çıtalı şebekelidir. Zemin kat ahşap hatıllı moloz taşla, üst kat kerpiç dolgulu ahşap iskeletle yapılmıştır.\n\nMeşruta ev, 1994'teki yangının ardından kapsamlı bir restorasyonla bugünkü görünümüne kavuşmuştur. Camiyle ortak ön avluda yaşlı bir çınar ve dibek taşı olarak kullanılmış devşirme bir antik mermer blok bulunur. Ev ile cami arasındaki hazirede yedisi kitabeli sekiz mezar taşı vardır; caminin banisi olduğu düşünülen Hoca Hacı Ali bin Muhammed ez-Zâbeli'nin demir parmaklıklarla çevrili mezarı, caminin ihya kitabesindeki tarihten 111 yıl öncesine tarihlenir.",
+  "verification": "verified",
+  "coverImage": "/images/mudanya-halil-aga-house/courtyard-facade.jpg",
+  "images": [
+    {
+      "file": "/images/mudanya-halil-aga-house/courtyard-facade.jpg",
+      "alt": "İki katlı sarı boyalı ahşap ev: üst katta ahşap çerçeveli pencereler ve üstlerinde kemerli şebekeli tepe pencereleri, altta kapı ve taş döşeli avlu",
+      "description": "Cami avlusuna bakan cephe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-halil-aga-house/aerial-view.jpg",
+      "alt": "Avluda büyük çınar ağacının yanında kiremit çatılı, sarı boyalı iki katlı ev, çevresinde taş duvarlar ve evler",
+      "description": "Ev ve avlu havadan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "upper-windows",
+      "image": "/images/mudanya-halil-aga-house/courtyard-facade.jpg",
+      "x": 50,
+      "y": 20,
+      "title": "Tepe pencereleri",
+      "text": "Üst kısımdaki tepe pencereleri yuvarlak kemerli biçimde tasarlanmış ve ahşap çıtalı şebekelerle donatılmıştır. Cami avlusuna bakan cephede toplam 18 pencere vardır.",
+      "sourceId": "inv-p599"
+    },
+    {
+      "id": "projection",
+      "image": "/images/mudanya-halil-aga-house/courtyard-facade.jpg",
+      "x": 43,
+      "y": 50,
+      "title": "Eli böğründe destekli çıkma",
+      "text": "Cami avlusuna bakan cephede ahşap direklerle taşınan ve \"eli böğründe\" olarak adlandırılan destek unsurlarıyla öne çıkan bir çıkma yer alır.",
+      "sourceId": "inv-p599"
+    },
+    {
+      "id": "plane-tree",
+      "image": "/images/mudanya-halil-aga-house/aerial-view.jpg",
+      "x": 32,
+      "y": 25,
+      "title": "Ortak avlu ve çınar",
+      "text": "Camiyle ortak kullanılan ön avluda yaşlı bir çınar ağacı ile dibek taşı olarak kullanılmış devşirme bir antik mermer blok bulunur.",
+      "sourceId": "inv-p599"
+    }
+  ],
+  "test": [
+    {
+      "question": "Halil Ağa Evi hangi yapı ile aynı avluyu paylaşır?",
+      "options": [
+        "Mütareke Evi",
+        "Eski (Halil Ağa) Camii",
+        "Ömer Bey Camii",
+        "Polis Evi"
+      ],
+      "correct": 1,
+      "description": "Ev, Kethüda Halil Ağa'nın ihya ettiği ve halk arasında Eski Cami olarak bilinen cami ile aynı avluyu paylaşır.",
+      "sourceId": "inv-p598"
+    },
+    {
+      "question": "Evin üst katı hangi sistemle inşa edilmiştir?",
+      "options": [
+        "Kesme taş",
+        "Betonarme",
+        "Kerpiç dolgulu ahşap iskelet",
+        "Tuğla almaşık"
+      ],
+      "correct": 2,
+      "description": "Zemin kat moloz taşla, üst kat ise kerpiç dolgulu ahşap iskelet sistemle inşa edilmiştir.",
+      "sourceId": "inv-p599"
+    },
+    {
+      "question": "Meşruta ev hangi olayın ardından kapsamlı bir restorasyondan geçmiştir?",
+      "options": [
+        "1994 yangını",
+        "1999 depremi",
+        "1922 mütarekesi",
+        "2016 bakımı"
+      ],
+      "correct": 0,
+      "description": "Meşruta ev, 1994'te geçirdiği yangının ardından kapsamlı bir restorasyondan geçmiştir.",
+      "sourceId": "inv-p599"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p598",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Halil Ağa Evi\"",
+      "page": "598"
+    },
+    {
+      "id": "inv-p599",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Halil Ağa Evi\"",
+      "page": "599"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

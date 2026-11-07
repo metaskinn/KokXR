@@ -1,0 +1,113 @@
+{
+  "id": "mudanya-sinan-bey-fountain",
+  "name": "Sinan Bey Çeşmesi",
+  "city": "Bursa",
+  "district": "Mudanya",
+  "period": "Osmanlı · XVII. yüzyıl",
+  "endowment": "Sinan Bey",
+  "summary": "Halil Ağa (Eski) Camii'nin avlu duvarına bitişik, Sinan Bey'in yaptırdığı, iki sivri kemerli açıklıklı ve hâlen akan çeşme.",
+  "history": "Mudanya'da Mustafakemalpaşa Caddesi üzerinde, Halil Ağa (Eski) Camii'nin avlu duvarına bitişik konumdadır. Üzerindeki üç satırlık celi sülüs kitabeye göre çeşmeyi Sinan Bey yaptırmıştır. Kitabe mealen \"Merhum Sinan Bey bu hayratı yaptı; ruhu daim şâd olsun. Bu çeşmeyi o hayır sahibi yaptırdı.\" der.\n\nDikdörtgen planlı ve üzeri şapkalı olarak tuğladan inşa edilen çeşme beton sıvayla kaplanmıştır. Cephedeki iki sivri kemerli açıklığın içinde ikiz kurnalı bir düzenleme vardır. Aynalıkları mermerden, yalakları taştan yapılmıştır; yalağın iki yanında yine taştan üçgen formlu sekiler bulunur. Aynaların üst kısmında geometrik desenler yer alır, kitabe ise iki sivri kemerin üzerindeki alınlıktadır.\n\nHâlen akar durumda olan çeşme 2022'de bakım ve onarımdan geçirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/mudanya-sinan-bey-fountain/fountain-front.jpg",
+  "images": [
+    {
+      "file": "/images/mudanya-sinan-bey-fountain/fountain-front.jpg",
+      "alt": "Sıvalı çeşme cephesi: iki sivri kemerli niş içinde mermer aynalıklar, önde taş yalak, üstte kitabe; arkada sararmış ağaç dalları",
+      "description": "Çeşmenin önden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-sinan-bey-fountain/inscription.jpg",
+      "alt": "Dikdörtgen çerçeve içinde aşınmış, Arap harfli kabartma kitabe",
+      "description": "Kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-sinan-bey-fountain/arched-niches.jpg",
+      "alt": "İki sivri kemerli niş içinde lüleli mermer aynalıklar ve aralarında küçük bir levha; üstte kitabe",
+      "description": "Sivri kemerli nişler ve aynalıklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "inscription",
+      "image": "/images/mudanya-sinan-bey-fountain/fountain-front.jpg",
+      "x": 46,
+      "y": 37,
+      "title": "Kitabe",
+      "text": "Üç satırlık celi sülüs kitabe iki sivri kemerin üzerindeki alınlıktadır ve çeşmenin Sinan Bey tarafından yaptırıldığını bildirir.",
+      "sourceId": "inv-p579"
+    },
+    {
+      "id": "mirrors",
+      "image": "/images/mudanya-sinan-bey-fountain/fountain-front.jpg",
+      "x": 32,
+      "y": 62,
+      "title": "İkiz kurnalar",
+      "text": "İki sivri kemerli açıklığın içinde ikiz kurnalı bir düzenleme vardır. Aynalıklar mermerdendir; üst kısımlarında geometrik desenler bulunur.",
+      "sourceId": "inv-p579"
+    },
+    {
+      "id": "trough",
+      "image": "/images/mudanya-sinan-bey-fountain/fountain-front.jpg",
+      "x": 50,
+      "y": 78,
+      "title": "Yalak ve sekiler",
+      "text": "Yalak taştandır; iki yanında yine taştan üçgen formlu sekiler yer alır.",
+      "sourceId": "inv-p579"
+    }
+  ],
+  "test": [
+    {
+      "question": "Sinan Bey Çeşmesi hangi caminin avlu duvarına bitişiktir?",
+      "options": [
+        "Ömer Bey Camii",
+        "Yeni Camii",
+        "Halil Ağa (Eski) Camii",
+        "Hacı Mehmet Ağa Camii"
+      ],
+      "correct": 2,
+      "description": "Çeşme, Mustafakemalpaşa Caddesi üzerinde Halil Ağa (Eski) Camii'nin avlu duvarına bitişiktir.",
+      "sourceId": "inv-p579"
+    },
+    {
+      "question": "Çeşmenin aynalıkları hangi malzemeden yapılmıştır?",
+      "options": [
+        "Mermer",
+        "Ahşap",
+        "Tuğla",
+        "Demir"
+      ],
+      "correct": 0,
+      "description": "Aynalık kısmı mermerden, yalakları ise taştan yapılmıştır.",
+      "sourceId": "inv-p579"
+    },
+    {
+      "question": "Çeşme en son hangi yıl bakım ve onarımdan geçirilmiştir?",
+      "options": [
+        "1994",
+        "2022",
+        "1999",
+        "2016"
+      ],
+      "correct": 1,
+      "description": "Hâlen akar durumda olan çeşme 2022'de bakım ve onarımdan geçirilmiştir.",
+      "sourceId": "inv-p579"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p579",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mudanya, \"Sinan Bey Çeşmesi\"",
+      "page": "579"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

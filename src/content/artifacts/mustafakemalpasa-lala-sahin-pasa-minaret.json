@@ -1,0 +1,125 @@
+{
+  "id": "mustafakemalpasa-lala-sahin-pasa-minaret",
+  "name": "Lala Şahin Paşa Camii Minaresi",
+  "city": "Bursa",
+  "district": "Mustafakemalpaşa",
+  "period": "Kitabe: 1 Recep 1238 / 14 Mart 1823 (yeniden yapım)",
+  "endowment": "Şıhabüddin Lala Şahin Paşa (külliyenin banisi; vakfiye H. 746 / M. 1348)",
+  "summary": "Lala Şahin Paşa Külliyesi'ne bağlı, devşirme taşlı kaidesi ve yarım kalmış tuğla gövdesiyle ayakta duran minare; kitabesi 1823 tarihli bir yeniden yapımı anlatır.",
+  "history": "Minare, Mustafakemalpaşa'nın Lala Şahin Mahallesi'nde, Hamam Sokak'tadır. Külliyenin banisi Şıhabüddin Lala Şahin Paşa'nın H. 746 / M. 1348 tarihli vakfiyesinde baba adının Abdülmuîn olduğu belirtilir.\n\nLala Şahin Paşa, Süleyman Paşa ve diğer Osmanlı komutanlarıyla Rumeli'nin fethine katılmıştır. Beylerbeyliği makamı, hanedan üyesi bir şehzade kalmadığı için hanedan dışından ilk kez H. 763 / M. 1361'de ona verilmiştir. Sultan I. Murad'ın yetiştirilmesine katkısından dolayı \"Lala\" unvanıyla anılır. 1362'de Hacı İlbey ve Evrenos Bey'le birlikte Edirne, Malkara, İpsala ve Dimetoka'yı, 1364'te Filibe'yi fethetmiş; 1368'de vezir olmuş, Filibe ve çevresi kendisine malikâne olarak verilmiştir. 1374 tarihli Makedonya seferlerinde Drama, Kavala, Zihne, Serez, Avrethisarı, Vardaryenicesi ve Karaferye'yi fethetmiştir. Kavala Kalesi'nin fethinde gösterdiği adalet, civar halkın şehirlerinin anahtarlarını kendi rızalarıyla teslim etmesine vesile olmuştur. Hanedana mensup olmadığı hâlde Paşa unvanını alan ilk kişidir.\n\nLala Şahin Paşa Türbesi'nde olduğu gibi devşirme yapı parçalarının kullanıldığı minare, nehre bakan set duvarının oldukça güneydoğusundadır. Duvar işçiliğinin türbeye benzemesi minarenin çok eski olduğu izlenimini verse de, belgelerdeki tarihe dayanarak bugünkü yerine sonradan yapıldığı düşünülmektedir.\n\nBaşka yapılardan taşındığı anlaşılan mermer ve kesme taşlardan oluşan kare kaide, birer sıra taş ve aralarına yerleştirilmiş üç sıra tuğlayla örülmüştür. Kaideden silindirik tuğla gövdeye geçiş Türk üçgenleriyle sağlanır. Gövdenin yalnızca şerefe altındaki tuğla bileziğe kadar olan kısmı günümüze ulaşmıştır. Kaidenin kuzeydoğu cephesindeki talik kitabe, Lala Şahin'in yaptırdığı minarenin soğuk ve sıcak havaların etkisiyle yıkıldığını ve bir hayır sahibinin himmetiyle yeniden yapıldığını anlatır. Yapımı Seyyid Hacı Mehmed Saîd el-Bursavî üstlenmiştir; tarih H. 1 Recep 1238 / M. 14 Mart 1823'tür.",
+  "verification": "verified",
+  "coverImage": "/images/mustafakemalpasa-lala-sahin-pasa-minaret/minaret-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-minaret/minaret-exterior.jpg",
+      "alt": "Ağaçlar arasında, alt kısmı beyaz badanalı, üstünde taş ve tuğla sıralı kare kaide; kaideden yükselen, üstü yıkık silindirik tuğla gövde",
+      "description": "Minarenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-minaret/inscription.jpg",
+      "alt": "Üstü kemerli beyaz mermer levha üzerinde satırlar hâlinde kabartma Osmanlıca yazı",
+      "description": "Minare kaidesindeki talik kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-minaret/minaret-top-aerial.jpg",
+      "alt": "Tepeden çekim: yıkık minare gövdesinin içinde sarmal taş merdiven basamakları, yanında kiremit çatı",
+      "description": "Minare gövdesinin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-minaret/marble-fragment.jpg",
+      "alt": "Uzun dar mermer parça üzerinde yan yana sıralanmış kabartma yaprak motifleri",
+      "description": "Bitkisel bezemeli mermer parça",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "base",
+      "image": "/images/mustafakemalpasa-lala-sahin-pasa-minaret/minaret-exterior.jpg",
+      "x": 49,
+      "y": 66,
+      "title": "Devşirme taşlı kaide",
+      "text": "Başka yapılardan taşındığı anlaşılan mermer ve kesme taşlardan oluşan kare kaide, birer sıra taş ve aralarına yerleştirilmiş üç sıra tuğlayla örülmüştür. Kaideden silindirik gövdeye geçiş Türk üçgenleriyle sağlanır.",
+      "sourceId": "inv-p611"
+    },
+    {
+      "id": "shaft",
+      "image": "/images/mustafakemalpasa-lala-sahin-pasa-minaret/minaret-exterior.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Yarım kalan gövde",
+      "text": "Tuğla bir bilezikten sonra devam eden gövdenin yalnızca şerefe altındaki tuğla bileziğe kadar olan kısmı günümüze ulaşabilmiştir.",
+      "sourceId": "inv-p611"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/mustafakemalpasa-lala-sahin-pasa-minaret/inscription.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Talik kitabe",
+      "text": "Kaidenin kuzeydoğu cephesindeki kitabe, Lala Şahin Paşa'nın yaptırdığı minarenin soğuk ve sıcak havaların etkisiyle yıkıldıktan sonra yeniden yapıldığını anlatır. Yapımı Seyyid Hacı Mehmed Saîd el-Bursavî üstlenmiştir; tarih H. 1 Recep 1238 / M. 14 Mart 1823'tür.",
+      "sourceId": "inv-p611"
+    }
+  ],
+  "test": [
+    {
+      "question": "Lala Şahin Paşa \"Lala\" unvanıyla neden anılmıştır?",
+      "options": [
+        "Edirne'yi fethettiği için",
+        "Sultan I. Murad'ın yetiştirilmesine katkısından dolayı",
+        "Vezir olduğu için",
+        "Kavala'nın anahtarlarını aldığı için"
+      ],
+      "correct": 1,
+      "description": "Sultan I. Murad'ın yetiştirilmesindeki katkılarından dolayı \"Lala\" unvanıyla anılmıştır.",
+      "sourceId": "inv-p610"
+    },
+    {
+      "question": "Minare kaidesinden silindirik tuğla gövdeye geçiş nasıl sağlanır?",
+      "options": [
+        "Mukarnaslarla",
+        "Pandantiflerle",
+        "Türk üçgenleriyle",
+        "Ahşap kirişlerle"
+      ],
+      "correct": 2,
+      "description": "Kare kaideden silindirik tuğla gövdeye geçiş Türk üçgenleri aracılığıyla sağlanır.",
+      "sourceId": "inv-p611"
+    },
+    {
+      "question": "Minare kaidesindeki kitabe hangi tarihi taşır?",
+      "options": [
+        "H. 746 / M. 1348",
+        "H. 763 / M. 1361",
+        "H. 1238 / M. 1823",
+        "H. 1312 / M. 1895"
+      ],
+      "correct": 2,
+      "description": "Talik kitabe H. 1 Recep 1238 / M. 14 Mart 1823 tarihlidir.",
+      "sourceId": "inv-p611"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p610",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mustafakemalpaşa, \"Lala Şahin Paşa Camii Minaresi\"",
+      "page": "610"
+    },
+    {
+      "id": "inv-p611",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Mustafakemalpaşa, \"Lala Şahin Paşa Camii Minaresi\"",
+      "page": "611"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

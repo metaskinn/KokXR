@@ -1,0 +1,114 @@
+{
+  "id": "osmangazi-ahmet-vefik-pasha-theater",
+  "name": "Ahmet Vefik Paşa Tiyatrosu",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Cumhuriyet · 1938 proje yarışması; 1940 kısmi tamamlanma",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Bursa Halkevi olarak tasarlanan yapı, 1957 yılında Ahmet Vefik Paşa Tiyatrosu adıyla açılmıştır.",
+  "history": "Yapı, Alacamescit Mahallesi, Atatürk Caddesi No: 40'tadır. Bursa Devlet Tiyatrosu tarafından kullanılan binanın adı, 1879–1882 yıllarındaki valiliği sırasında Bursa'da ilk Türk tiyatrosunu kuran Ahmet Vefik Paşa'dan gelir. Paşa'nın kurduğu ilk tiyatro, bugünkü Ziraat Bankası merkez şubesinin bulunduğu yerdeydi; burada ilk olarak Molière'in “Meraklı” adlı oyunu sahnelenmiştir.\n\nBugünkü bina başlangıçta Bursa Halkevi olarak tasarlanmıştır. 1938'de Vali Şefik Soyer'in öncülüğünde düzenlenen, beş mimarın katıldığı yarışmada Münevver Belen'in projesi seçilmiştir. Binanın bir bölümü 1940'ta tamamlanmış; 1950–1951'de Dr. Edip Rüştü Akyürek tarafından genişletilmiştir. Üst kat bir süre Marmara Sineması olarak kullanılmıştır. Vali İhsan Sabri Çağlayangil'in girişimleriyle bina Bursa Devlet Tiyatrosu'na tahsis edilmiş, Devlet Tiyatroları Genel Müdürlüğü'nün katkılarıyla 28 Eylül 1957'de Ahmet Vefik Paşa Tiyatrosu adıyla açılmıştır.\n\nÖzgün yapı, bodrum üzerine üç katlı olarak açık avlu çevresinde planlanmıştır. Zemin katta revaklı giriş, kitaplık, derslikler ve sinema salonu; bodrumda jimnastik salonu bulunmaktaydı. Birinci kat idari birimlere, ikinci kat Atatürk'e ayrılmıştı. Dikey bölmeli pencereleri bulunan yapı betonarme taşıyıcı sisteme, tuğla duvarlara ve sıvalı dış cephelere sahiptir; çatı örtüsü ahşap karkaslıdır.\n\nTiyatroya dönüşüm sırasında birinci kat üzerindeki teras kapatılarak özgün plan değiştirilmiştir. Ana caddeye bakan cephe iki katlı, arka cephe arazi eğimi nedeniyle üç ve dört katlıdır. Eski sinema salonu tiyatro sahnesine dönüşmüş; 1985'te başka bir salon “Ferâizcizâde Mehmet Şakir Oda Tiyatrosu” adıyla açılmıştır. Alt katta Devlet Güzel Sanatlar Galerisi'nin kullandığı geniş sergi salonu bulunur. Zamanla teras çatı yerine kiremit kaplı kırma çatı yapılmış ve çeşitli eklentiler eklenmiştir. Sığınak olarak kullanılan bodrumun bir bölümü konferans salonuna, bir bölümü sanat galerisine dönüştürülmüştür.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-ahmet-vefik-pasha-theater/street-facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-ahmet-vefik-pasha-theater/street-facade.jpg",
+      "alt": "Kiremit çatılı açık renkli tiyatro binası; cephede tiyatro yazısı, alt katta sütunlu giriş ve önünde cadde",
+      "description": "Cadde cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ahmet-vefik-pasha-theater/auditorium.jpg",
+      "alt": "Kırmızı koltuk sıralarının karşısında koyu renkli sahne ve perde; yan duvarlarda kırmızı ve sarı paneller",
+      "description": "Tiyatro salonu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ahmet-vefik-pasha-theater/corridor.jpg",
+      "alt": "Kırmızı duvar bölümlerinde çerçeveli afişler, desenli döşeme ve ileride camlı kapı bulunan koridor",
+      "description": "İç koridor",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "arcade",
+      "image": "/images/osmangazi-ahmet-vefik-pasha-theater/street-facade.jpg",
+      "x": 35,
+      "y": 64,
+      "title": "Revaklı giriş",
+      "text": "Ana cadde yönünden giriş revaklı bir kapı aracılığıyla sağlanmaktadır.",
+      "sourceId": "inv-p101"
+    },
+    {
+      "id": "stage",
+      "image": "/images/osmangazi-ahmet-vefik-pasha-theater/auditorium.jpg",
+      "x": 49,
+      "y": 41,
+      "title": "Tiyatro sahnesi",
+      "text": "Başlangıçta sinema salonu olarak kullanılan bölüm, tiyatro sahnesi olarak hizmet vermektedir.",
+      "sourceId": "inv-p101"
+    }
+  ],
+  "test": [
+    {
+      "question": "Halkevi için düzenlenen yarışmada kimin projesi seçilmiştir?",
+      "options": [
+        "Münevver Belen",
+        "Şefik Soyer",
+        "İhsan Sabri Çağlayangil",
+        "Ahmet Vefik Paşa"
+      ],
+      "correct": 0,
+      "description": "1938 yarışmasında Münevver Belen’in projesi seçilmiştir.",
+      "sourceId": "inv-p99"
+    },
+    {
+      "question": "Yapı Ahmet Vefik Paşa Tiyatrosu adıyla ne zaman açılmıştır?",
+      "options": [
+        "1940",
+        "1951",
+        "28 Eylül 1957",
+        "1985"
+      ],
+      "correct": 2,
+      "description": "Tiyatro 28 Eylül 1957 tarihinde açılmıştır.",
+      "sourceId": "inv-p100"
+    },
+    {
+      "question": "1985 yılında açılan ikinci sahnenin adı nedir?",
+      "options": [
+        "Marmara Sineması",
+        "Ferâizcizâde Mehmet Şakir Oda Tiyatrosu",
+        "Bursa Halkevi",
+        "Devlet Güzel Sanatlar Galerisi"
+      ],
+      "correct": 1,
+      "description": "Bir salon 1985’te Ferâizcizâde Mehmet Şakir Oda Tiyatrosu olarak düzenlenmiştir.",
+      "sourceId": "inv-p101"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p99",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Ahmet Vefik Paşa Tiyatrosu\"",
+      "page": "99"
+    },
+    {
+      "id": "inv-p100",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Ahmet Vefik Paşa Tiyatrosu\"",
+      "page": "100"
+    },
+    {
+      "id": "inv-p101",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Ahmet Vefik Paşa Tiyatrosu\"",
+      "page": "101"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

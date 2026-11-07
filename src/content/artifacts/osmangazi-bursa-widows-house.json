@@ -1,0 +1,114 @@
+{
+  "id": "osmangazi-bursa-widows-house",
+  "name": "Bursa Dullar Evi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Geç Osmanlı · 1916 vakıf kuruluşu",
+  "endowment": "Hacı Saffet Bey tarafından 1916’da kurulan Dullar Evi Vakfı",
+  "summary": "Bursa Dullar Evi, kadınların barınma ve temel ihtiyaçlarını karşılamak için kurulmuş bir sosyal yardım yapısıdır.",
+  "history": "Yapı, Alacahırka Mahallesi, Demirkapı Caddesi üzerindedir. Hacı Saffet Bey'in 1916'da kurduğu Dullar Evi Vakfı'nın vakfiyesinde sınırlar doğuda dere ve umumi yol, batıda Değirmenci Kızı Zeynî Hatun'un evi, kuzeyde Sarı Mustafa'nın evi ve güneyde Hamza Bey yolu olarak verilir.\n\nKitap, bahçedeki vakıf binasını alt ve üst katlarında 17'şer oda olmak üzere toplam 34 odalı olarak tarif eder; iki salon, hamam, mutfak, bakkal dükkânı, hamurhane, simit fırını ve ahırdan söz eder. Dükkânlar vakfa gelir sağlamak için kullanılmıştır. Özgün adı “Dul Nisvân-ı Müslimîn” olan kurum zamanla Darülaceze çatısı altındaki sosyal hizmet kurumları arasında yer almıştır.\n\nBalkan Savaşları, I. Dünya Savaşı ve Kurtuluş Savaşı'nda hayatını kaybeden askerlerin eşleri ve çocuklarının bakıma ve barınmaya ihtiyaç duyması, çeşitli yardım kuruluşlarının ortaya çıkmasına yol açmıştır. Kitap, Dullar Evi'ni kadınların güvenli ortamda yaşamasını ve temel ihtiyaçlarını karşılamasını amaçlayan, bireysel girişimle oluşturulmuş bir sosyal yardım örneği olarak değerlendirir.\n\n12 Temmuz 1916 tarihli vakfiyeye dayanan vakıf, Şûrâ-yı Evkaf'ın 25 Ekim 1916 tarihli kararı doğrultusunda 12 Kasım 1916 tarihli iradeyle tescil edilmiştir. 38 maddelik yönetmelikte idare Bursa Belediye Başkanı ile il müftüsüne verilmiştir. Belediye Meclisi ve ilgili nazırın uygun gördüğü Müslüman şehitlerin dul eşleri kabul edilecektir. Şehit eşi bulunmaması durumunda evsiz, kimsesiz, suça karışmamış, sağlıklı ve bedensel engeli olmayan kadınların da alınabileceği belirtilmiştir.\n\nKabul edilen kadınlar arasından dindar, namaz kılan ve okuryazar bir kişinin, mütevellinin önerisi, Belediye Meclisinin kararı ve ilgili nazırın onayıyla müdire seçilmesi öngörülmüştür. Dükkân ve fırının kira gelirleri müdirenin maaşına ayrılmıştır. Kitaba göre Darülaceze binası, 30 Haziran 1999'da on yıl süreyle bedelsiz olarak Bursa Büyükşehir Belediye Başkanlığı'na tahsis edilmiş, onarımın ardından “Alacahırka Aile Eğitim Merkezi” adıyla yeniden açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-bursa-widows-house/neighborhood-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-bursa-widows-house/neighborhood-view.jpg",
+      "alt": "Dere kenarında ağaçlıklı bahçe içindeki beyaz cepheli uzun bina; arkasında Bursa’nın evleri ve kent manzarası",
+      "description": "Çevresiyle havadan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-bursa-widows-house/classroom.jpg",
+      "alt": "Mavi duvarlı odada renkli küçük masa ve sandalyeler, oyuncaklar ve yol desenli halı; sağda ahşap çerçeveli pencereler",
+      "description": "Eğitim için düzenlenmiş oda",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-bursa-widows-house/garden-view.jpg",
+      "alt": "Ağaçlarla çevrili beyaz cepheli, koyu ahşap çizgili ve kiremit çatılı bina; çevresinde bahçe ve sokak",
+      "description": "Bahçe ve bina",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "garden",
+      "image": "/images/osmangazi-bursa-widows-house/garden-view.jpg",
+      "x": 69,
+      "y": 77,
+      "title": "Bahçe",
+      "text": "Vakıf binası bahçe içerisinde konumlanmaktadır.",
+      "sourceId": "inv-p109"
+    },
+    {
+      "id": "rooms",
+      "image": "/images/osmangazi-bursa-widows-house/classroom.jpg",
+      "x": 49,
+      "y": 54,
+      "title": "Odalar",
+      "text": "Kitap, vakıf binasının odalardan oluşan düzenini anlatır; fotoğrafta eğitim için düzenlenmiş bir oda görülür.",
+      "sourceId": "inv-p109"
+    }
+  ],
+  "test": [
+    {
+      "question": "Dullar Evi Vakfı’nı kim kurmuştur?",
+      "options": [
+        "Ahmet Vefik Paşa",
+        "Hacı Saffet Bey",
+        "Şefik Soyer",
+        "Hüseyin Hüsnü Efendi"
+      ],
+      "correct": 1,
+      "description": "Vakıf 1916’da Hacı Saffet Bey tarafından kurulmuştur.",
+      "sourceId": "inv-p109"
+    },
+    {
+      "question": "Vakıf yönetmeliği kaç maddeden oluşur?",
+      "options": [
+        "12",
+        "17",
+        "34",
+        "38"
+      ],
+      "correct": 3,
+      "description": "Vakfın işletilmesi için 38 maddelik yönetmelik hazırlanmıştır.",
+      "sourceId": "inv-p110"
+    },
+    {
+      "question": "Yapı onarım sonrası hangi adla açılmıştır?",
+      "options": [
+        "Alacahırka Aile Eğitim Merkezi",
+        "Marmara Sineması",
+        "Fransız Kültür Merkezi",
+        "İpekçilik Mektebi"
+      ],
+      "correct": 0,
+      "description": "1999 tahsisinin ardından onarılan yapı Alacahırka Aile Eğitim Merkezi adıyla açılmıştır.",
+      "sourceId": "inv-p111"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p109",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bursa Dullar Evi\"",
+      "page": "109"
+    },
+    {
+      "id": "inv-p110",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bursa Dullar Evi\"",
+      "page": "110"
+    },
+    {
+      "id": "inv-p111",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bursa Dullar Evi\"",
+      "page": "111"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

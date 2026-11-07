@@ -104,7 +104,7 @@ const clickable = (page) => page.evaluate(() => [...document.querySelectorAll('.
   await page.locator('.vr-map-not', { hasText: 'Henüz VR yok' }).waitFor()
   await page.waitForTimeout(400)
   await page.screenshot({ path: `${view}/vr-konya-1280.png` })
-  await page.goto(`${url}/vr?city=Hatay`)
+  await page.goto(`${url}/places?city=Hatay`)
   await page.getByRole('img', { name: 'Hatay haritası' }).waitFor()
   condition(await page.locator('a.vr-marker').count() === 0, 'Hatay\'da olmayan yapı işaretlenmiş')
   await page.waitForTimeout(400)
@@ -117,9 +117,9 @@ const clickable = (page) => page.evaluate(() => [...document.querySelectorAll('.
 // VR destekli tarayıcı: maket ve çini düğmeleri görünür.
 {
   const { page, errors } = await ac(1280, true)
-  await page.goto(`${url}/vr/ulu-mosque`)
+  await page.goto(`${url}/places/ulu-mosque`)
   await page.getByRole('button', { name: "VR'da aç" }).waitFor({ timeout: 120000 })
-  await page.goto(`${url}/vr/muradiye-complex`)
+  await page.goto(`${url}/places/muradiye-complex`)
   await page.getByRole('button', { name: "VR'da onar" }).waitFor({ timeout: 30000 })
   condition(!errors.length, errors.join(' | '))
   await page.close()
@@ -128,7 +128,7 @@ const clickable = (page) => page.evaluate(() => [...document.querySelectorAll('.
 // Telefon: dokunma, 44 px hedef, yatay taşma yok.
 {
   const { page } = await ac(360, false, { hasTouch: true, isMobile: true })
-  await page.goto(`${url}/vr`)
+  await page.goto(`${url}/places`)
   await page.getByRole('img', { name: 'Türkiye haritası' }).waitFor()
   await page.waitForTimeout(500)
   condition(await overflow(page) <= 0, 'Türkiye 360 yatay taşma')
@@ -157,7 +157,7 @@ const clickable = (page) => page.evaluate(() => [...document.querySelectorAll('.
     outer.push(r.request().url())
     return r.abort()
   })
-  await page.goto(`${url}/vr?city=Bursa`)
+  await page.goto(`${url}/places?city=Bursa`)
   await page.getByRole('img', { name: 'Bursa haritası' }).waitFor()
   await page.locator('a.vr-marker').first().waitFor()
   condition(!outer.filter((a) => /tile|openstreetmap|amazonaws/.test(a)).length, `harita dış istek yaptı: ${outer.join(', ')}`)

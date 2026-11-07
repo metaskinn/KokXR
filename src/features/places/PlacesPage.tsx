@@ -7,7 +7,7 @@ import NotFound from '../../app/NotFound'
 import { RELIEF, mapPoint, loadMap, separateMarkers } from '../../content/turkeyMap'
 import type { MapId, MapData } from '../../content/turkeyMap'
 import { vrCities } from '../../content/vrArtifacts'
-import './places.css.css'
+import './places.css'
 
 /** Bu tarayıcı sürükleyici VR açabiliyor mu? Bilinmeden önce null. */
 function useVrSupport() {

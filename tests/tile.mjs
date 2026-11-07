@@ -6,7 +6,7 @@ const url = process.env.TEST_URL ?? 'http://127.0.0.1:4173', folder = process.ar
 const b = await chromium.launch({ channel: 'chromium', args: ['--use-gl=angle', '--use-angle=vulkan', '--enable-features=Vulkan', '--ignore-gpu-blocklist', '--enable-gpu'] })
 const s = await b.newPage({ viewport: { width: 1600, height: 1000 } }), errors = []
 s.on('pageerror', (e) => errors.push(e.message)); s.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()) })
-await s.goto(`${url}/workshop/tile`); const area = s.locator('.tile-scene'); await area.locator('canvas').waitFor()
+await s.goto(`${url}/workshops/tile`); const area = s.locator('.tile-scene'); await area.locator('canvas').waitFor()
 await s.waitForFunction(() => document.querySelector('.tile-scene')?.dataset.stage === '0'); await area.scrollIntoViewIfNeeded()
 const data = (k) => area.getAttribute(`data-${k}`), stage = async () => +(await data('stage'))
 const awaitStage = (n, t = 30000) => s.waitForFunction((v) => document.querySelector('.tile-scene')?.dataset.stage === String(v), n, { timeout: t })

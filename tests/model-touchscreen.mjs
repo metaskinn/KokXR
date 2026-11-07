@@ -8,7 +8,7 @@ const condition = (k, m) => { if (!k) throw new Error(m) }
 const ac = async (ops) => {
   const s = await (await b.newContext(ops)).newPage()
   s.setDefaultTimeout(240000)
-  await s.goto(`${url}/vr/${id}`)
+  await s.goto(`${url}/places/${id}`)
   await s.getByRole('button', { name: 'İçeri gir' }).click()
   await s.getByRole('button', { name: /Dışarı çık/ }).waitFor()
   return s

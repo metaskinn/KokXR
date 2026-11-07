@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { tileSources, tileNotes, tileIntro, tileInstructions } from '../../../content/tile'
 import { stages, BISQUE, actions, firstGame, quality, colors, GLAZE_KILN, HOLD_DURATION, type Game } from './engine/state'
 import type { TileScene, HoldName } from './engine/scene'
-import '../sword/sword.cssord.css'
+import '../sword/sword.css'
 import './tile.css'
 
 export default function TileWorkshop() {

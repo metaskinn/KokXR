@@ -2,7 +2,7 @@ import type { Artifact } from '../domain/artifact'
 import { PUBLIC_BUILD } from '../shared/config/publicBuild'
 import { artifactValid, maybeSourced } from '../domain/verification'
 
-const artifactFiles = import.meta.glob<Artifact>('./artifacts/*.json', { eager: true, import: 'default' })
+const artifactFiles = import.meta.glob<Artifact>('../content/artifacts/*.json', { eager: true, import: 'default' })
 const withoutPhoto = (e: Artifact): Artifact => ({
   ...e, coverImage: '', images: [], tour: undefined,
   hotspots: e.hotspots.map((b) => ({ ...b, image: '' })),

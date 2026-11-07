@@ -25,7 +25,7 @@ async function ac(preparation) {
   await page.addInitScript({ path: S + '/paket/node_modules/iwer/build/iwer.min.js' })
   await page.addInitScript({ path: S + '/sim-page.js' })
   await page.addInitScript(pageHelpers)
-  await page.goto(`${url}/workshop/vase`)
+  await page.goto(`${url}/workshops/vase`)
   await page.waitForFunction(() => window.__t?.frame > 2 && ![...document.querySelectorAll('button')].find((b) => b.textContent === 'Vazoyu parçala ve onar')?.disabled, null, { polling: 100 })
   if (preparation) await page.evaluate(preparation)
   return { page, errors, x: short(page) }

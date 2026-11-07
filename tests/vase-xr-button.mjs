@@ -16,7 +16,7 @@ async function ac(xrEmulation) {
   page.on('pageerror', (e) => errors.push(String(e)))
   page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()) })
   await page.addInitScript(xrEmulation)
-  await page.goto(`${url}/workshop/vase`)
+  await page.goto(`${url}/workshops/vase`)
   const start = page.getByRole('button', { name: 'Vazoyu parçala ve onar' })
   await page.waitForFunction(() => ![...document.querySelectorAll('button')].find((b) => b.textContent === 'Vazoyu parçala ve onar')?.disabled, null, { timeout: SURE })
   return { page, errors, start, vrButton: page.getByRole('button', { name: "VR'da aç" }) }

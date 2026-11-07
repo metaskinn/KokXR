@@ -34,7 +34,7 @@ try {
       },
     }
   })
-  await page.goto(`${process.env.TEST_URL ?? 'http://127.0.0.1:4173'}/vr/ulu-mosque`)
+  await page.goto(`${process.env.TEST_URL ?? 'http://127.0.0.1:4173'}/places/ulu-mosque`)
   const area = page.locator('.model-area')
   const click = (name) => page.getByRole('button', { name, exact: true }).evaluate((e) => e.click())
   await page.getByRole('button', { name: 'İçeri gir', exact: true }).waitFor()

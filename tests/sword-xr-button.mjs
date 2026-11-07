@@ -14,7 +14,7 @@ async function ac(xrEmulation) {
   page.on('pageerror', e => errors.push(String(e)))
   page.on('console', m => { if (m.type() === 'error') errors.push(m.text()) })
   await page.addInitScript(xrEmulation)
-  await page.goto(`${url}/workshop/sword`)
+  await page.goto(`${url}/workshops/sword`)
   await page.waitForFunction(() => document.querySelector('.sword-scene')?.dataset.stage === '0', null, { timeout: SURE })
   await page.locator('.sword-loading').waitFor({ state: 'detached', timeout: SURE })
   return { page, errors, vr: page.getByRole('button', { name: "VR'da aç" }) }

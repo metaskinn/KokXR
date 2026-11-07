@@ -76,7 +76,7 @@ async function section(ad, fn) {
   catch (e) { console.log(`❌ ${ad}: ${String(e.message).split('\n')[0].slice(0, 200)}`); errors.push(ad) }
 }
 
-await page.goto(`${url}/workshop/sword`)
+await page.goto(`${url}/workshops/sword`)
 await stageEl.locator('canvas').waitFor(); await waitStage(0, 60000)
 await stageEl.evaluate((e) => window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 40))
 await wait(900)

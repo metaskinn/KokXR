@@ -85,7 +85,7 @@ page.on('console', m => { if (m.type() === 'error') errors.push(m.text()) })
 // Yazılımsal çizim yavaştır: mantık düşük çözünürlükte, ekran görüntüsü XR_GORUNTU=1 ile yüksek çözünürlükte denenir.
 const [GEN, LOAD] = process.env.XR_SCREENSHOT ? [1400, 700] : [240, 120]
 await page.addInitScript(fakeXr, { gen: GEN, burden: LOAD })
-await page.goto(`${url}/workshop/sword`)
+await page.goto(`${url}/workshops/sword`)
 const area = page.locator('.sword-scene')
 await page.waitForFunction(() => document.querySelector('.sword-scene')?.dataset.strikeX, null, { timeout: SURE })
 const vrButton = page.getByRole('button', { name: "VR'da aç" })

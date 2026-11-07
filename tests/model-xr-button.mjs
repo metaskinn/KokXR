@@ -15,7 +15,7 @@ async function ac(xrEmulation, argument, openNow = false) {
   page.on('pageerror', (e) => errors.push(String(e)))
   page.on('console', (m) => { if (m.type() === 'error' && !m.location().url.includes('360tr')) errors.push(m.text()) })
   await page.addInitScript(xrEmulation, argument)
-  await page.goto(`${url}/${openNow ? 'vr' : 'artifact'}/ulu-mosque`)
+  await page.goto(`${url}/${openNow ? 'places' : 'artifact'}/ulu-mosque`)
   if (!openNow) await page.getByRole('button', { name: /maketini eline al/ }).click({ timeout: SURE })
   await page.locator('.model-area canvas').waitFor({ timeout: SURE })
   await page.locator('.model-box').scrollIntoViewIfNeeded()

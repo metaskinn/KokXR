@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import '../../scale-models/model.csss/model.css'
+import '../../scale-models/model.css'
 import type { Source, Model } from '../../../domain/artifact'
 import type { ModelScene } from '../../scale-models/modelScene'
 import SourceLine from '../../../shared/ui/SourceLine'

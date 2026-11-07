@@ -16,7 +16,7 @@ s.on('console', (m) => { if (m.type() === 'error' && !m.location().url.includes(
 s.on('response', (r) => { if (/\/gorseller\//.test(r.url()) && r.status() !== 200) errors.push(`görsel yüklenmedi: ${r.url()}`) })
 const area = s.locator('.model-area')
 const wait = async (n = 5) => { const k = Number(await area.getAttribute('data-frame') ?? 0); await s.waitForFunction(([k, n]) => Number(document.querySelector('.model-area')?.dataset.frame) >= k + n, [k, n]); await s.waitForTimeout(800) }
-await s.goto(`${url}/vr/${id}`)
+await s.goto(`${url}/places/${id}`)
 await s.locator('.model-area canvas').waitFor()
 await s.locator('.model-box').scrollIntoViewIfNeeded()
 // Kare sayacı yalnız içeride işler; dışarıda ilk karelerin çizilmesi beklenir.

@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-hatice-sultan-tomb",
+  "name": "Hatice Sultan Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XVI. yüzyıl başları",
+  "endowment": "Banisi Bursa Subaşısı Mehmed Bey",
+  "summary": "II. Bayezid'in kızı Hatice Sultan adına Bursa Subaşısı Mehmed Bey'in yaptırdığı, kurşun kubbeli ve revaklı türbe.",
+  "history": "Hatice Sultan Türbesi, Osmangazi İlçesi, Kükürtlü Mahallesi, 3. Kaynak Sokak'tadır; Çekirge yolu üzerindeki Kükürtlü Hamamı'nın güneydoğusunda yer alır. Türbe, II. Bayezid'in kızı ve Kara Mustafa Paşa'nın eşi Hatice Sultan adına Bursa Subaşısı Mehmed Bey tarafından yaptırılmıştır.\n\nXVI. yüzyılın başlarında inşa edilen türbe kare planlıdır. Üst örtü, üçgen geçiş elemanlarıyla sekizgen kasnak üzerine oturtulmuş bir kubbedir; kubbenin dışı kurşunla kaplıdır. Güney yönündeki tonoz örtülü revaklı bölümle birlikte yapı, boyuna gelişen dikdörtgen bir plan kazanır.\n\nSandukaların bulunduğu ana mekân kare planlıdır ve iç yüzeyleri badanayla sıvanmıştır. Mihrap nişinin bir bölümü sonradan ahşapla kapatılmıştır; günümüze ulaşan çini parçaları mihrabın geçmişte geometrik ve bitkisel motiflerle bezeli olduğunu gösterir. Bu bölüm, kasnakta açılan üç pencere ile doğu ve batı duvarlarındaki ikişer pencereyle aydınlanır.\n\nTürbede Hatice Sultan'a ve ailesinden dokuz kişiye ait sandukalar bulunur. Yapı 1959'da Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hatice-sultan-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hatice-sultan-tomb/exterior.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında kurşun kaplı kubbeli, taş ve tuğla duvarlı türbe; önünde sütunlu, kemerli bir giriş bölümü, arkada dağ yamacı",
+      "description": "Türbenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hatice-sultan-tomb/mihrab.jpg",
+      "alt": "Beyaz badanalı iç mekân: sağda yeşil çini çerçeveli mihrap nişi, solda yükseltilmiş set üzerinde sıralanmış beyaz sandukalar",
+      "description": "Mihrap ve sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hatice-sultan-tomb/sarcophagi.jpg",
+      "alt": "Yükseltilmiş set üzerinde ve zeminde sıralanmış, çatı biçimli beyaz sıvalı sandukalar; duvarda küçük bir pencere",
+      "description": "Sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-hatice-sultan-tomb/exterior.jpg",
+      "x": 47,
+      "y": 37,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Üst örtü, üçgen geçiş elemanlarıyla sekizgen kasnak üzerine oturtulmuş bir kubbedir; kubbenin dışı kurşunla kaplıdır.",
+      "sourceId": "inv-p218"
+    },
+    {
+      "id": "portico",
+      "image": "/images/osmangazi-hatice-sultan-tomb/exterior.jpg",
+      "x": 50,
+      "y": 72,
+      "title": "Revaklı bölüm",
+      "text": "Kitaba göre güney yönünde tonoz örtülü revaklı bir bölüm bulunur; yapı bununla boyuna gelişen dikdörtgen bir plan kazanır.",
+      "sourceId": "inv-p218"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-hatice-sultan-tomb/mihrab.jpg",
+      "x": 79,
+      "y": 43,
+      "title": "Mihrap",
+      "text": "Mihrap nişinin bir bölümü sonradan ahşapla kapatılmıştır; çini parçaları mihrabın geometrik ve bitkisel motiflerle bezeli olduğunu gösterir.",
+      "sourceId": "inv-p220"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe kimin adına yaptırılmıştır?",
+      "options": [
+        "Kara Mustafa Paşa",
+        "Hatice Sultan",
+        "Mehmed Bey'in annesi",
+        "II. Bayezid"
+      ],
+      "correct": 1,
+      "description": "Türbe, II. Bayezid'in kızı ve Kara Mustafa Paşa'nın eşi Hatice Sultan adına Bursa Subaşısı Mehmed Bey tarafından yaptırılmıştır.",
+      "sourceId": "inv-p218"
+    },
+    {
+      "question": "Türbenin kubbesinin dış yüzeyi neyle kaplıdır?",
+      "options": [
+        "Kiremit",
+        "Çini",
+        "Kurşun",
+        "Bakır"
+      ],
+      "correct": 2,
+      "description": "Sekizgen kasnak üzerine oturan kubbenin dış yüzeyi kurşun kaplamayla tamamlanmıştır.",
+      "sourceId": "inv-p218"
+    },
+    {
+      "question": "Türbe 1959'da hangi kurum tarafından onarılmıştır?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Bursa Büyükşehir Belediyesi",
+        "Kültür Bakanlığı",
+        "Bursa Eski Eserleri Sevenler Kurumu"
+      ],
+      "correct": 3,
+      "description": "Yapı 1959'da Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmıştır.",
+      "sourceId": "inv-p220"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p218",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Hatice Sultan Türbesi\"",
+      "page": "218"
+    },
+    {
+      "id": "inv-p220",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Hatice Sultan Türbesi\"",
+      "page": "220"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

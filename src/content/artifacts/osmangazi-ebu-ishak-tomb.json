@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-ebu-ishak-tomb",
+  "name": "Ebû İshak Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · nakibüleşraf Seyyid Mahmud 1537'de vefat ederek buraya defnedilmiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Halk arasında Ebû İshak Türbesi olarak bilinen, Ebu İshak Camii karşısındaki, 2013'te yenilenen küçük ve mütevazı türbe.",
+  "history": "Ebû İshak Türbesi, Osmangazi ilçesi, Mollafenari Mahallesi, Seyyid Nasır Caddesi No: 91'dedir. Kitaba göre halk arasında Ebû İshak Türbesi olarak bilinen bu mekân, gerçekte Seyyid Nattâ adlı kişiye aittir.\n\nİslam ülkelerinde nakibüleşraflık, Hazreti Hasan ve Hüseyin soyundan gelenlerin (seyit ve şeriflerin) nesebini kayıt altına almak, onlara yönelik gelir düzenlemelerini sağlamak ve ticaretle uğraşanlara vergi muafiyeti tanımak gibi görevleri yürüten bir kurum olarak bilinir. Osmanlı'da benzer bir teşkilata dair ilk bilgiler Yıldırım Bayezid dönemine uzanır.\n\nH. 802 Ramazan / M. Mayıs 1400'de Yıldırım Bayezid, seyit ve şeriflerle ilgilenmek üzere bir makam ihdas etmiştir. Bu makama ilk olarak, Bağdat eşrafından ve Bursa'daki İshâkıyye (Kâzerûniyye) zaviyesinin postnişini Seyyid Muhammed Nattâ el-Hüseynî getirilmiştir. Ankara Savaşı'ndan sonra Timur'un ordularına esir düşen Seyyid Muhammed Nattâ, serbest bırakılınca Hicaz'a gitmiş, II. Murad döneminde Bursa'ya dönerek eski görevine başlamıştır. Vefatından sonra yerine büyük oğlu Zeynelâbidîn tayin edilmiştir.\n\nNakibüleşraf unvanını kullanan ilk kişi olan Seyyid Mahmud, 1537'deki vefatına kadar bu görevde kalmış ve vefat ettiğinde Ebu İshak Camii karşısındaki küçük, mütevazı türbesine defnedilmiştir.\n\nMoloz taş duvarlı, ahşap çatılı ve Alaturka kiremit örtülü türbe, uzun yıllar su deposunu andıran bir görünüme sahipti. Kitapta duvar örgüsünde bir sıra kesme taş ve üç sıra tuğla kullanıldığı belirtilir. 2013'teki kapsamlı onarımla yapı tamamen yenilenmiş, üzeri iki eğimli bir çatıyla örtülerek yeniden Alaturka kiremitle kaplanmıştır.\n\nİç mekândaki lahdin şahidesinde yalnızca \"Abdullah Mustafa\" ismi okunabilir. Lahit üzerinde bazı çini parçacıkları da görülür.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-ebu-ishak-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-ebu-ishak-tomb/exterior.jpg",
+      "alt": "Kesme taş ve tuğla sıralarıyla örülmüş küçük dikdörtgen yapı: iki eğimli kiremit çatı, yeşil boyalı ahşap kapı, üstünde \"Ebu İshak Hazretleri\" levhası; yan cephede tuğla kemerli niş, çevrede toprak meydan ve eski evler",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ebu-ishak-tomb/interior.jpg",
+      "alt": "İç mekân: açık yeşil boyalı tonozlu oda, ortada mermer kaide üzerinde yeşil işlemeli örtülü lahit ve başucunda örtülü sarık; ayakucunda koyu yeşil taş şahide, arkada parmaklıklı küçük pencere ve üstünde levhalar",
+      "description": "Lahit ve şahide",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-ebu-ishak-tomb/exterior.jpg",
+      "x": 45,
+      "y": 22,
+      "title": "İki eğimli çatı",
+      "text": "2013'teki kapsamlı onarımda yapının üzeri iki eğimli bir çatıyla örtülmüş ve yeniden Alaturka kiremitle kaplanmıştır.",
+      "sourceId": "inv-p211"
+    },
+    {
+      "id": "tombstone",
+      "image": "/images/osmangazi-ebu-ishak-tomb/interior.jpg",
+      "x": 72,
+      "y": 60,
+      "title": "Şahide",
+      "text": "Lahdin şahidesinde yalnızca \"Abdullah Mustafa\" ismi okunabilmektedir.",
+      "sourceId": "inv-p211"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-ebu-ishak-tomb/interior.jpg",
+      "x": 45,
+      "y": 80,
+      "title": "Lahit",
+      "text": "İç mekândaki lahit üzerinde bazı çini parçacıkları görülür.",
+      "sourceId": "inv-p211"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yıldırım Bayezid seyit ve şeriflerle ilgilenmek üzere bir makamı hangi tarihte ihdas etmiştir?",
+      "options": [
+        "M. 1537",
+        "H. 860 / M. 1456",
+        "H. 854 / M. 1450",
+        "H. 802 Ramazan / M. Mayıs 1400"
+      ],
+      "correct": 3,
+      "description": "H. 802 Ramazan / M. Mayıs 1400'de Yıldırım Bayezid, seyit ve şeriflerle ilgilenmek üzere bir makam ihdas etmiştir.",
+      "sourceId": "inv-p211"
+    },
+    {
+      "question": "Türbe 2013'teki kapsamlı onarımda nasıl bir çatıyla örtülmüştür?",
+      "options": [
+        "Kurşun kaplı kubbeyle",
+        "İki eğimli, Alaturka kiremitli çatıyla",
+        "Düz betonarme çatıyla",
+        "Piramidal ahşap külahla"
+      ],
+      "correct": 1,
+      "description": "2013'teki onarımda yapının üzeri iki eğimli bir çatıyla örtülmüş ve yeniden Alaturka kiremitle kaplanmıştır.",
+      "sourceId": "inv-p211"
+    },
+    {
+      "question": "Onarımdan önce türbe uzun yıllar neyi andıran bir görünüme sahipti?",
+      "options": [
+        "Bir çeşmeyi",
+        "Bir değirmeni",
+        "Bir su deposunu",
+        "Bir bekçi kulübesini"
+      ],
+      "correct": 2,
+      "description": "Moloz taş duvarlı, ahşap çatılı ve Alaturka kiremit örtülü türbe, uzun yıllar su deposunu andıran bir görünüme sahipti.",
+      "sourceId": "inv-p211"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p211",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Ebû İshak Türbesi\"",
+      "page": "211"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

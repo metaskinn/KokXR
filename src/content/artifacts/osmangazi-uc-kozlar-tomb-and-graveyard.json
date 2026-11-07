@@ -1,0 +1,135 @@
+{
+  "id": "osmangazi-uc-kozlar-tomb-and-graveyard",
+  "name": "Üç Kozlar (Kuzular) Türbe ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Türbe H. 1235 / M. 1820'de yenilendi; hazirenin tespit edilen en eski mezar taşı H. 980 / M. 1572 tarihli",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Üç Kozlar Camii'nin alt kısmında, dergâh şeyhleri ve ailelerinin yattığı yedi sandukalı türbe ile Buhara'dan gelen üç kardeşin ortak mezarını barındıran hazire.",
+  "history": "Üç Kozlar (Kuzular) Türbe ve Haziresi, Osmangazi İlçesi, Mollafenari Mahallesi'nde, aynı adla anılan caminin haziresindedir. Caminin alt kısmında, içinde yedi sanduka bulunan türbe bölümü yer alır.\n\nTürbenin güney duvarındaki manzum kitabe, Sultan II. Mahmud döneminde, Nuri Paşa'nın hazinedarı olan ve silahşörlüğüyle tanınan Mustafa Ağa'nın harap hâldeki dergâhı kendi malından harcayarak yenilediğini anlatır. Kitabeden anlaşıldığı üzere türbe H. 1235 / M. 1820'de Mustafa Ağa tarafından yenilenmiştir.\n\nTürbede dergâhın ilk şeyhi Şeyh Muhyiddin-i Bursevî Efendi, ondan sonra aynı görevi üstlenen çocukları Ömer Efendi, Abdi Efendi, Mustafa Efendi, Abdurrahman Efendi, İbrâhim Efendi ve Şeyh Muhyiddin'in eşi Hürmüz Hatun'a ait toplam yedi sanduka bulunur. Yapının ahşap süslemeli bir tavanı vardır; aydınlatma dikdörtgen biçimli, demir parmaklıklı pencerelerle sağlanır.\n\nCami ve türbenin altındaki set üzerine kurulu hazirede, Bursa dışında vefat eden bir kişi hariç Üç Kozlar Dergâhı şeyhleri ile bazı aile bireyleri defnedilmiştir. Türbenin doğusundaki hazirede, Buhara'dan Bursa'ya gelen üç kardeşin (Safiyyüddin Efendi, Açıkbaş Mehmed Efendi ve Ali Efendi) ortak mezarı da vardır. Türbe dışında, demir parmaklıklarla çevrili tek mezar taşında bu üç kişinin adları ve kısa öyküleri yazılıdır: Emîr Sultan ve Nakşibendi tarikatına mensup oldukları, H. 825 / M. 1421-1422'de Bursa'ya geldikleri ve yalnızca Safiyyüddin Efendi'nin evlenerek aile kurduğu, diğer ikisinin bekâr olarak vefat ettiği.\n\nHazirede türbede yatanların yanı sıra on şeyh ile onlara mensup on iki aile ferdine ait mezar taşları tespit edilmiştir; bugün haziredeki toplam mezar taşı sayısı otuz altıdır. Mezarlığın uzun süre bakımsız kalması ve müdahale sırasında yapılan hatalar nedeniyle bazı taşlar yanlış yerleştirilmiş, farklı kişilere ait baş ve ayak taşları birleştirilmiş, pek çok taşın alt kısmı beton zemine gömüldüğü için tarih bilgilerine ulaşılamamıştır. Tespit edilebilen en eski mezar taşı H. 980 / M. 1572 tarihlidir; ancak taş kırık olduğundan sahibinin adı okunamamaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-uc-kozlar-tomb-and-graveyard/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-uc-kozlar-tomb-and-graveyard/exterior.jpg",
+      "alt": "Kiremit kırma çatılı, taş ve tuğla duvarlı tek katlı yapı; önünde taş döşeli eğimli yol, arkada çam ağaçları",
+      "description": "Cami ve türbe yapısının dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-uc-kozlar-tomb-and-graveyard/tomb-interior.jpg",
+      "alt": "Türbe içi: yeşil örtülü, kavuklu sandukalar; boyalı ızgara desenli tavan, renkli camlı kemerli üst pencereler ve demir parmaklıklı dikdörtgen alt pencereler",
+      "description": "Türbedeki sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-uc-kozlar-tomb-and-graveyard/inscription.jpg",
+      "alt": "Taş duvara gömülü ahşap çerçeve içinde, açık mavi zemin üzerine siyah talik yazılı, kartuşlara bölünmüş manzum kitabe",
+      "description": "Türbenin güney duvarındaki kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-uc-kozlar-tomb-and-graveyard/graveyard.jpg",
+      "alt": "Taş duvarlı yapının önünde, çimenler arasında mermer çerçeveli mezarlar ve sıra sıra dikili eski mezar taşları",
+      "description": "Hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "sarcophagi",
+      "image": "/images/osmangazi-uc-kozlar-tomb-and-graveyard/tomb-interior.jpg",
+      "x": 65,
+      "y": 62,
+      "title": "Yedi sanduka",
+      "text": "Türbede dergâhın ilk şeyhi Şeyh Muhyiddin-i Bursevî Efendi, çocukları ve eşi Hürmüz Hatun'a ait toplam yedi sanduka bulunur.",
+      "sourceId": "inv-p255"
+    },
+    {
+      "id": "barred-windows",
+      "image": "/images/osmangazi-uc-kozlar-tomb-and-graveyard/tomb-interior.jpg",
+      "x": 35,
+      "y": 50,
+      "title": "Demir parmaklıklı pencereler",
+      "text": "Türbenin aydınlatması dikdörtgen biçimli, demir parmaklıklı pencerelerle sağlanır.",
+      "sourceId": "inv-p255"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-uc-kozlar-tomb-and-graveyard/graveyard.jpg",
+      "x": 55,
+      "y": 45,
+      "title": "Hazire",
+      "text": "Hazirede bugün otuz altı mezar taşı vardır; tespit edilebilen en eski taş H. 980 / M. 1572 tarihlidir.",
+      "sourceId": "inv-p256"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabeye göre türbeyi H. 1235 / M. 1820'de kim yenilemiştir?",
+      "options": [
+        "Sultan II. Mahmud'un kendisi",
+        "Şeyh Muhyiddin-i Bursevî Efendi",
+        "Nuri Paşa'nın hazinedarı Mustafa Ağa",
+        "Safiyyüddin Efendi"
+      ],
+      "correct": 2,
+      "description": "Kitabeden anlaşıldığı üzere türbe, Nuri Paşa'nın hazinedarı Mustafa Ağa tarafından H. 1235 / M. 1820'de yenilenmiştir.",
+      "sourceId": "inv-p254"
+    },
+    {
+      "question": "Hazirede ortak mezarı bulunan üç kardeş nereden Bursa'ya gelmiştir?",
+      "options": [
+        "Buhara'dan",
+        "Konya'dan",
+        "Bağdat'tan",
+        "Semerkant'tan"
+      ],
+      "correct": 0,
+      "description": "Türbenin doğusundaki hazirede, Buhara'dan Bursa'ya gelen Safiyyüddin, Açıkbaş Mehmed ve Ali efendilerin ortak mezarı vardır.",
+      "sourceId": "inv-p255"
+    },
+    {
+      "question": "Bugün hazirede toplam kaç mezar taşı bulunmaktadır?",
+      "options": [
+        "Yedi",
+        "On iki",
+        "Yirmi bir",
+        "Otuz altı"
+      ],
+      "correct": 3,
+      "description": "Haziredeki toplam mezar taşı sayısı bugün otuz altıdır.",
+      "sourceId": "inv-p256"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p253",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Üç Kozlar (Kuzular) Türbe ve Haziresi\"",
+      "page": "253"
+    },
+    {
+      "id": "inv-p254",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Üç Kozlar (Kuzular) Türbe ve Haziresi\"",
+      "page": "254"
+    },
+    {
+      "id": "inv-p255",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Üç Kozlar (Kuzular) Türbe ve Haziresi\"",
+      "page": "255"
+    },
+    {
+      "id": "inv-p256",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Üç Kozlar (Kuzular) Türbe ve Haziresi\"",
+      "page": "256"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

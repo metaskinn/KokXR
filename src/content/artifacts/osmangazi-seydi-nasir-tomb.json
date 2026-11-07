@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-seydi-nasir-tomb",
+  "name": "Seydi Nasır Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Seyyid Nâsır XV. yüzyılın ilk yarısında vefat etmiştir; yapı 1893'te ve 2009'da onarıldı",
+  "endowment": "Zaviyeyi Buharalı tüccar Hacı Şehâbeddin Velî yaptırmıştır; zaviyenin çeşitli vakıflarının yanı sıra Sultan Alâaddin ve Timurtaş Paşa vakıflarından da tahsisat sağlanmıştır.",
+  "summary": "Halk arasında Seydi Nâsır diye anılan Seyyid Nâsır'ın yattığı, yığma taş duvarlı ve ahşap çatılı küçük türbe.",
+  "history": "Seydi Nasır Türbesi, Osmangazi İlçesi, Mollafenari Mahallesi, Seydinasır Caddesi No: 95'tedir.\n\nAsıl adı \"Seyyid Nâsır\" olan zat, halk arasında \"Seydi Nâsır\" olarak anılır. Rivayetlere göre Emîr Sultan ile, bazı anlatımlara göre ise Bursa'nın fethinden önce Abdal Murad ile Buhara'dan gelmiştir. Hayatı hakkında yeterli bilgi yoktur.\n\nBuharalı zengin tüccar Hacı Şehâbeddin Velî, Seyyid Nâsır adına bir zaviye ile küçük bir mescit yaptırmıştır. İki odalı bu mekânda zaman zaman seyyahların konakladığı aktarılır. Zaviyenin çeşitli vakıfları bulunduğundan burada kalanların ihtiyaçları vakıf gelirleriyle karşılanmış; Sultan Alâaddin ve Timurtaş Paşa vakıflarından da tahsisat sağlanmıştır.\n\nSeyyid Nâsır XV. yüzyılın ilk yarısında vefat etmiş ve bugün de ayakta olan türbesine defnedilmiştir. Ahşap çatılı türbeye doğu cephesindeki küçük bir kapıdan girilir. İç mekânın ortasında Seyyid Nâsır'a ait sanduka bulunur; duvarlar yığma taşla örülmüştür.\n\nYapı 1893'te Sultan II. Abdülhamid tarafından zaviye ile birlikte onarılmış, 2009'da Osmangazi Belediyesi tarafından kapsamlı biçimde restore edilmiş ve çevre düzenlemesi yapılmıştır.\n\nKitaba göre türbenin ön kısmında harap durumda bir mezar ile kırık bir mezar taşı vardır. H. 855 / M. 1451'de vefat eden zaviye banisi Hacı Şehâbeddin Velî'nin buraya defnedildiği bilinmekle birlikte, kitap mezar taşının günümüze ulaşamadığını da belirtmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-seydi-nasir-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-seydi-nasir-tomb/exterior.jpg",
+      "alt": "Ağaçlar ve eski evler arasında, moloz taş duvarlı, kiremit çatılı ve üç ahşap pencereli küçük tek katlı yapı",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seydi-nasir-tomb/interior.jpg",
+      "alt": "Beyaz duvarlı, ahşap tavanlı iç mekânda yazılı yeşil kadife örtülü sanduka; duvarlarda hat levhaları ve ahşap lambri",
+      "description": "Seyyid Nâsır'ın sandukası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seydi-nasir-tomb/side-view.jpg",
+      "alt": "Taş basamaklı ve demir korkuluklu düzenlenmiş bahçenin üstünde, kiremit çatılı taş türbenin yandan görünümü; arkada servi ağaçları",
+      "description": "Türbe ve çevre düzenlemesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "stone-walls",
+      "image": "/images/osmangazi-seydi-nasir-tomb/exterior.jpg",
+      "x": 30,
+      "y": 68,
+      "title": "Yığma taş duvarlar",
+      "text": "Türbenin duvarları yığma taş malzemeyle inşa edilmiştir.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "id": "wooden-ceiling",
+      "image": "/images/osmangazi-seydi-nasir-tomb/interior.jpg",
+      "x": 55,
+      "y": 8,
+      "title": "Ahşap çatı",
+      "text": "Seyyid Nâsır'ın defnedildiği türbe ahşap çatılıdır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-seydi-nasir-tomb/interior.jpg",
+      "x": 50,
+      "y": 65,
+      "title": "Seyyid Nâsır'ın sandukası",
+      "text": "İç mekânın orta kısmında Seyyid Nâsır'a ait sanduka bulunur.",
+      "sourceId": "inv-p248"
+    }
+  ],
+  "test": [
+    {
+      "question": "Seyyid Nâsır adına zaviye ve küçük mescidi kim yaptırmıştır?",
+      "options": [
+        "Sultan II. Abdülhamid",
+        "Buharalı tüccar Hacı Şehâbeddin Velî",
+        "Timurtaş Paşa",
+        "Abdal Murad"
+      ],
+      "correct": 1,
+      "description": "Buharalı zengin tüccar Hacı Şehâbeddin Velî, Seyyid Nâsır adına bir zaviye ile küçük bir mescit inşa ettirmiştir.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "Türbeye hangi cepheden girilir?",
+      "options": [
+        "Kuzey cephesinden",
+        "Batı cephesinden",
+        "Güney cephesinden",
+        "Doğu cephesinden"
+      ],
+      "correct": 3,
+      "description": "Ahşap çatılı türbeye doğu cephesindeki küçük bir kapıdan girilmektedir.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "2009 yılında türbede kapsamlı restorasyonu hangi kurum yapmıştır?",
+      "options": [
+        "Osmangazi Belediyesi",
+        "Vakıflar Bölge Müdürlüğü",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Bursa Büyükşehir Belediyesi"
+      ],
+      "correct": 0,
+      "description": "2009 yılında Osmangazi Belediyesi tarafından kapsamlı bir restorasyon ve çevre düzenlemesi yapılmıştır.",
+      "sourceId": "inv-p248"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p247",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Seydi Nasır Türbesi\"",
+      "page": "247"
+    },
+    {
+      "id": "inv-p248",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Seydi Nasır Türbesi\"",
+      "page": "248"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

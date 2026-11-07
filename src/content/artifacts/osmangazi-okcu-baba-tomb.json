@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-okcu-baba-tomb",
+  "name": "Okçu Baba Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "XIV. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Halk arasında yanlışlıkla Okçu Baba diye anılan, belgelere göre Nusret Paşa'nın defnedildiği XIV. yüzyıl türbesi.",
+  "history": "Okçu Baba Türbesi, Osmangazi İlçesi, Osmangazi Mahallesi, Osmangazi Caddesi No: 16'dadır. Halk arasında yanlışlıkla \"Okçu Baba\" adıyla anılan türbe, Bursa'nın fethine katıldığı rivayet edilen bir zata atfedilmiştir. Ancak Bursa şer'iyye sicilleri ve Osmanlı arşiv belgeleri, XIV. yüzyılda inşa edilen türbenin farklı bir kimliğe ait olduğunu gösterir.\n\nBelgelere göre türbenin hemen altındaki Balibey Hanı, Nusret Paşa'ya ait bir vakıf arazisi üzerine inşa edilmiş ve bu vakfa her yıl 720 akçe zemin mukataası ödenmiştir. Nusret Paşa'nın vefatından sonra bu türbeye defnedildiği anlaşılmaktadır. Türbe surlara çok yakın olduğundan zamanla tarihî bilgiler unutulmuş ve \"Okçu Baba\" gibi hayalî bir kimlik ortaya çıkmıştır.\n\nYapının duvarları 0,50 m kalınlığındadır ve kesme taş ile tuğladan almaşık teknikle örülmüştür. İç ölçüleri 3,45 × 3,45 m'dir. Üst örtü, içte tromplarla geçilen kare planlı kasnak üzerine oturan bir kubbedir; dıştan kiremit kaplı kırma çatıyla örtülüdür.\n\nZamanla çevresine dolgu yığıldığı için türbeye 12 basamaklı, ara sahanlıklı bir merdivenle inilir. Kuzeydeki 2,00 × 1,50 m ölçülerindeki giriş bölümü dışa doğru 40 cm taşar; kesme taş ve tuğlayla örülmüş, üzeri kiremit kaplı kirpi saçakla tamamlanmıştır. İç mekâna yuvarlak kemerli bir kapıdan girilir ve yapı yuvarlak kemerli üç pencereyle aydınlanır. Türbede yalnızca Nusret Paşa'ya ait bir sanduka bulunur. Türbe 2012'deki çevre düzenlemesi kapsamında onarılarak ziyarete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-okcu-baba-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-okcu-baba-tomb/exterior.jpg",
+      "alt": "Çevresinden alçakta kalan taş ve tuğla örgülü küçük türbe: kiremit kaplı kırma çatı, öne taşan giriş bölümünde yuvarlak kemerli demir parmaklıklı kapı ve iki yanında Türk bayrakları; etrafında oturma bankları ve ağaçlar",
+      "description": "Türbenin giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-okcu-baba-tomb/sarcophagus.jpg",
+      "alt": "Kubbeli beyaz iç mekânda mavi halı üzerinde, Türk bayrağı ve yeşil örtüyle örtülü, baş tarafında yeşil sarık bulunan tek sanduka; duvarlarda levhalar ve perdeli pencereler",
+      "description": "Nusret Paşa'nın sandukası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/osmangazi-okcu-baba-tomb/exterior.jpg",
+      "x": 50,
+      "y": 41,
+      "title": "Kırma çatı",
+      "text": "Türbe içte kubbeyle, dıştan kiremit kaplı kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "id": "entrance",
+      "image": "/images/osmangazi-okcu-baba-tomb/exterior.jpg",
+      "x": 51,
+      "y": 76,
+      "title": "Giriş bölümü",
+      "text": "Dışa doğru 40 cm taşan giriş bölümü kesme taş ve tuğlayla örülmüştür; iç mekâna yuvarlak kemerli bir kapıdan girilir.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-okcu-baba-tomb/sarcophagus.jpg",
+      "x": 47,
+      "y": 69,
+      "title": "Nusret Paşa'nın sandukası",
+      "text": "Türbede yalnızca Nusret Paşa'ya ait bir sanduka bulunur.",
+      "sourceId": "inv-p224"
+    }
+  ],
+  "test": [
+    {
+      "question": "Belgelere göre bu türbede kim yatmaktadır?",
+      "options": [
+        "Okçu Baba",
+        "Bali Bey",
+        "Nusret Paşa",
+        "Orhan Gazi"
+      ],
+      "correct": 2,
+      "description": "Arşiv belgeleri, Nusret Paşa'nın vefatından sonra bu türbeye defnedildiğini gösterir; \"Okçu Baba\" adı sonradan ortaya çıkmış hayalî bir kimliktir.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "question": "Türbeye bugün nasıl ulaşılır?",
+      "options": [
+        "12 basamaklı, ara sahanlıklı bir merdivenle inilerek",
+        "Sokak seviyesinden doğrudan",
+        "Bir köprüden geçilerek",
+        "Han avlusundan"
+      ],
+      "correct": 0,
+      "description": "Zamanla çevresine dolgu yığıldığı için türbeye 12 basamaklı, ara sahanlıklı bir merdivenle inilir.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "question": "Türbe hangi yıl yapılan çevre düzenlemesiyle onarılıp ziyarete açılmıştır?",
+      "options": [
+        "1955",
+        "1985",
+        "2002",
+        "2012"
+      ],
+      "correct": 3,
+      "description": "Türbe 2012'deki çevre düzenlemesi kapsamında onarılarak ziyarete açılmıştır.",
+      "sourceId": "inv-p224"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p224",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Okçu Baba Türbesi\"",
+      "page": "224"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

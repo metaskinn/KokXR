@@ -1,0 +1,104 @@
+{
+  "id": "osmangazi-bekir-dede-tomb",
+  "name": "Bekir Dede Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Bekir Dede 1666'da vefat etmiştir; türbe 1946'da onarılmıştır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Zağferanlık Mescidi'nde görev yaparken 1666'da vefat eden, musikiyle ilgilenen Bekir Dede'nin mescidin kıble yönündeki türbesi.",
+  "history": "Bekir Dede Türbesi, Osmangazi ilçesi, Reyhan Mahallesi, Tekir Çıkmazı'nda, Zağferanlık Mescidi'nin kıble yönündedir.\n\nBurada medfun Bekir Dede, musikiyle ilgilenen ve irşat faaliyetlerinde bulunan bir zattır. Zağferanlık Mescidi'nde görev yaptığı sırada, 1666'da vefat etmiş ve mescidin yanına defnedilmiştir.\n\n1855 depreminde mescit ve minaresi tamamen yıkılmış, yapı daha sonra yeniden inşa edilmiştir. Bu durum, türbenin de aynı afetten etkilenmiş olabileceğini düşündürür.\n\n1946'da onarılan türbe, kitaba göre ahşap malzemeyle inşa edilmiş ve üzeri kiremit örtüyle kaplanmıştır. İçinde ahşap bir sanduka bulunur. Uzun yıllar bakımsız kalan yapı, Bursa Büyükşehir Belediyesi'nin yürüttüğü çalışmalarla Zağferanlık Mescidi ile birlikte onarılmıştır. Türbe bugün bakımlıdır ve ziyarete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-bekir-dede-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-bekir-dede-tomb/exterior.jpg",
+      "alt": "Turuncu sıvalı, köşeleri ve pencere söveleri kesme taştan küçük çokgen yapı; demir parmaklıklı pencereler ve koyu renk metal saçak; solda taş duvarlı büyük pencereli komşu yapı, sağda bahçe kapısı ve ağaç",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-bekir-dede-tomb/interior.jpg",
+      "alt": "İç mekân: yeşil kadife örtülü, başucunda yeşil sarık bulunan uzun sanduka; arkada yeşil perdeli iki pencere, koyu renk ahşap tavan ve kırmızı desenli halı",
+      "description": "Bekir Dede'nin sandukası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-bekir-dede-tomb/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: solda kiremit kaplı büyük kırma çatı, ona bitişik metal levha kaplı çokgen çatı, sağda taş döşeli avlu ve ağaçlar",
+      "description": "Türbe ve bitişiğindeki mescidin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-bekir-dede-tomb/interior.jpg",
+      "x": 45,
+      "y": 68,
+      "title": "Sanduka",
+      "text": "Türbenin içinde Bekir Dede'ye ait ahşap bir sanduka bulunur.",
+      "sourceId": "inv-p210"
+    },
+    {
+      "id": "masjid",
+      "image": "/images/osmangazi-bekir-dede-tomb/top-view.jpg",
+      "x": 22,
+      "y": 40,
+      "title": "Zağferanlık Mescidi",
+      "text": "Türbe, Zağferanlık Mescidi'nin kıble yönündedir; Bursa Büyükşehir Belediyesi'nin çalışmalarıyla mescitle birlikte onarılmıştır.",
+      "sourceId": "inv-p210"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bekir Dede hangi yıl vefat etmiştir?",
+      "options": [
+        "1580",
+        "1855",
+        "1666",
+        "1946"
+      ],
+      "correct": 2,
+      "description": "Bekir Dede, Zağferanlık Mescidi'nde görev yaptığı sırada 1666'da vefat etmiş ve mescidin yanına defnedilmiştir.",
+      "sourceId": "inv-p210"
+    },
+    {
+      "question": "Bekir Dede hangi alanla ilgilenen bir zat olarak tanıtılır?",
+      "options": [
+        "Musiki",
+        "Hat sanatı",
+        "Tıp",
+        "Mimarlık"
+      ],
+      "correct": 0,
+      "description": "Bekir Dede, musikiyle ilgilenen ve irşat faaliyetlerinde bulunan bir zattır.",
+      "sourceId": "inv-p210"
+    },
+    {
+      "question": "Zağferanlık Mescidi ve minaresi hangi yıl meydana gelen depremde tamamen yıkılmıştır?",
+      "options": [
+        "1666",
+        "1946",
+        "1906",
+        "1855"
+      ],
+      "correct": 3,
+      "description": "1855 depreminde mescit ve minaresi tamamen yıkılmış, yapı daha sonra yeniden inşa edilmiştir.",
+      "sourceId": "inv-p210"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p210",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bekir Dede Türbesi\"",
+      "page": "210"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

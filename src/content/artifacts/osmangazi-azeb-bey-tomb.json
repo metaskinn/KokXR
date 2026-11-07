@@ -1,0 +1,104 @@
+{
+  "id": "osmangazi-azeb-bey-tomb",
+  "name": "Azeb Bey Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · kapı kitabesine göre H. 854 (kitaptaki mealde M. 1449)",
+  "endowment": "Kapı kitabesine göre Abdullah oğlu Azeb Bey tarafından yaptırılmıştır",
+  "summary": "Kitabesine göre Azeb Bey'in camisinden yaklaşık altı yıl önce yaptırdığı, Türk üçgenli kubbe geçişine sahip türbe.",
+  "history": "Azeb Bey Türbesi, Osmangazi ilçesi, Kocanaip Mahallesi, Soğukçeşme Sokak No: 23'tedir. Türbe, cami yapısına çok yakın bir noktada inşa edilmiştir ve adeta onunla bitişik izlenimi verir. Türbeye ait hazire geniş bir alan kaplar. Yapının cephelerinde sekiz pencere bulunur; duvarlardan kubbeye geçiş Türk üçgenleriyle sağlanır.\n\nTürbe kapısı üzerindeki Arapça kitabede \"Emâre binâi'd-dâri'l-âhireti hâzihi'l-imâreti'ş-şerîfeti mefharu'l-ümerâi ve'l-ekâbir Azeb Bey bin Abdullah li-seneti erbâe ve hamsîne ve semânie mi'e (H. 854)\" yazar. Kitapta verilen meali şöyledir: \"Bu şerefli yapının, yani ahiret yurdunun (türbenin) inşasını, emirler ve büyükler arasında öne çıkan Abdullah oğlu Azeb Bey, M. 1449 yılında yaptırmıştır.\"\n\nKitabedeki tarihe göre Azeb Bey önce türbeyi, yaklaşık altı yıl sonra da camisini yaptırmıştır. Genellikle önce camilerin, ardından türbelerin yapıldığı düşünüldüğünde bu, alışılmışın dışında bir inşa sıralamasıdır.\n\nTürbede Azeb Bey'in oğlu Turahan Bey ile Abdulvahhab oğlu Mehmet Bey'e ait mezar taşları bulunur; Azeb Bey'e ait bir taş ise günümüze ulaşmamıştır.\n\nKapı aynalığında altı köşeli tuğla süslemeler vardır. Yapının döşeme seviyesinin altı moloz taşla örülmüştür. Türbe bugün bakımlıdır ve ziyarete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-azeb-bey-tomb/facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-azeb-bey-tomb/facade.jpg",
+      "alt": "Tuğla ve taş karma örgülü, kırma çatılı tek hacimli yapı; önünde yeşil tenteli sundurma ve taş bank, cephede demir parmaklıklı açıklıklar ve üstte beyaz kitabe; solda komşu yapının taş duvarı, sağda büyük çınar",
+      "description": "Türbenin giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-azeb-bey-tomb/interior.jpg",
+      "alt": "İç mekân: tuğla ve taş örgülü duvarlar, üstte beyaz badanalı kubbe eteğinde üçgen biçimli geçiş yüzeyleri ve iki küçük pencere; kiremit döşemede üç ahşap sanduka ve yerde yatık bir mezar taşı",
+      "description": "Türk üçgenleri ve sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-azeb-bey-tomb/inscription.jpg",
+      "alt": "Tuğla kemer altında, beyaz mermer çerçeve içinde üç satır kabartma Arapça yazı; çevresinde tuğla ve taş örgü",
+      "description": "Kapı üzerindeki Arapça kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "inscription",
+      "image": "/images/osmangazi-azeb-bey-tomb/facade.jpg",
+      "x": 57,
+      "y": 43,
+      "title": "Kitabe",
+      "text": "Türbe kapısı üzerindeki Arapça kitabe, yapıyı Abdullah oğlu Azeb Bey'in H. 854'te yaptırdığını bildirir.",
+      "sourceId": "inv-p209"
+    },
+    {
+      "id": "turkish-triangles",
+      "image": "/images/osmangazi-azeb-bey-tomb/interior.jpg",
+      "x": 55,
+      "y": 25,
+      "title": "Türk üçgenleri",
+      "text": "Duvarlardan kubbeye geçiş Türk üçgenleriyle sağlanır.",
+      "sourceId": "inv-p209"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabeye göre Azeb Bey türbesini ve camisini hangi sırayla yaptırmıştır?",
+      "options": [
+        "Önce camiyi, sonra türbeyi",
+        "Önce türbeyi, yaklaşık altı yıl sonra camiyi",
+        "İkisini aynı yıl",
+        "Kitabede bu konuda bilgi yoktur"
+      ],
+      "correct": 1,
+      "description": "Kitabedeki tarihe göre Azeb Bey önce türbeyi, yaklaşık altı yıl sonra da camisini yaptırmıştır; bu alışılmışın dışında bir sıralamadır.",
+      "sourceId": "inv-p209"
+    },
+    {
+      "question": "Türbede duvarlardan kubbeye geçiş hangi elemanla sağlanır?",
+      "options": [
+        "Pandantif",
+        "Mukarnaslı tromp",
+        "Türk üçgenleri",
+        "Ahşap kirişler"
+      ],
+      "correct": 2,
+      "description": "Azeb Bey Türbesi'nde duvarlardan kubbeye geçiş Türk üçgenleriyle sağlanır.",
+      "sourceId": "inv-p209"
+    },
+    {
+      "question": "Türbede mezar taşı bulunan kişilerden biri kimdir?",
+      "options": [
+        "Azeb Bey'in oğlu Turahan Bey",
+        "Azeb Bey'in kendisi",
+        "Sultan II. Murad",
+        "Abdullah Bey"
+      ],
+      "correct": 0,
+      "description": "Türbede Azeb Bey'in oğlu Turahan Bey ile Abdulvahhab oğlu Mehmet Bey'e ait mezar taşları vardır; Azeb Bey'e ait taş günümüze ulaşmamıştır.",
+      "sourceId": "inv-p209"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p209",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Azeb Bey Türbesi\"",
+      "page": "209"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

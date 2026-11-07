@@ -1,0 +1,104 @@
+{
+  "id": "osmangazi-akbiyik-sultan-tomb",
+  "name": "Akbıyık Sultan (Şemseddin Ahmed) Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XV. yüzyıl; Akbıyık Sultan H. 860 / M. 1456'da vefat etmiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "II. Murad döneminde yaşamış, Hacı Bayrâm-ı Velî'nin müritlerinden Akbıyık Sultan'ın hayattayken konut olarak kullandığı aktarılan ahşap çatılı türbesi.",
+  "history": "Akbıyık Sultan (Şemseddin Ahmed) Türbesi, Osmangazi ilçesi, Nalbantoğlu Mahallesi, Akbıyık Caddesi No: 12'dedir.\n\nAsıl adının \"Ahmed Şemseddin\" veya \"Abdullah\" olduğu rivayet edilen Akbıyık Sultan, II. Murad döneminde yaşamış ve Hacı Bayrâm-ı Velî'nin müritleri arasında yer alan önemli bir sufidir. Ondan icazet aldıktan sonra bulunduğu yerde bir dergâh ve hemen yanında bir mescit yaptırmış, bu yapılar aracılığıyla çevresindeki halkı irşat etmiştir. Sultan II. Murad'ın Haçlılar'a karşı düzenlediği seferlerde de orduya katılmıştır.\n\nBalkanlardaki fetih hareketlerine katkıları nedeniyle Sultan II. Murad ona Yenişehir'de bir köy temlik etmiş, Akbıyık Sultan da bu köyü daha sonra vakfetmiştir. Bazı kaynaklarda Akşemseddin Hazretleri ile birlikte İstanbul'un fethine katıldığı ve fetihten sonra Fâtih Sultan Mehmed'in Cankurtaran semtinde yaptırdığı bir camiye onun adını verdiği belirtilir.\n\nAkbıyık Sultan H. 860 / M. 1456'da vefat etmiş ve bugün hâlâ ayakta olan türbesine defnedilmiştir. Dergâh zamanla ortadan kalkmış, türbe ve hazire günümüze ulaşmıştır.\n\nAhşap çatılı türbe, XV. yüzyılda yaşamış Ahmed Şemseddin adına inşa ettirilmiştir. İçeride, orta kısımda Akbıyık Sultan'a ait ahşap bir sanduka; ayakucunda ise betondan yapılmış, kime ait olduğu bilinmeyen küçük bir sanduka daha bulunur. Yapının Akbıyık Sultan tarafından hayattayken konut olarak kullanıldığı ve vefatından sonra buraya defnedildiği aktarılır. Çeşitli onarımlarla özgün mimarisinden uzaklaşan türbe, en son 2006'da Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-akbiyik-sultan-tomb/facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-akbiyik-sultan-tomb/facade.jpg",
+      "alt": "Yeşil sıvalı, tek katlı küçük yapı: ortada üstü camlı iki kanatlı ahşap kapı, kiremit örtülü ahşap saçaklı çatı; arkada ve yanlarda apartmanlar, sağda kırmızı uyarı levhalı tel çit",
+      "description": "Türbenin sokak cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-akbiyik-sultan-tomb/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kiremit kaplı kırma çatı, yanlarda sarı apartman ve kiremit çatılı bina, alt kısımda ağaçlar ve küçük hazire",
+      "description": "Kiremit çatının tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-akbiyik-sultan-tomb/interior.jpg",
+      "alt": "İç mekân: yeşil halı üzerinde ahşap korkuluklu, beyaz örtülü sanduka ve başucunda yazılı levha; yeşil ahşap tavan, açık yeşil duvarlarda kemerli pencereler ve çerçeveli levhalar",
+      "description": "Akbıyık Sultan'ın sandukası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-akbiyik-sultan-tomb/facade.jpg",
+      "x": 50,
+      "y": 26,
+      "title": "Ahşap çatı",
+      "text": "Türbe ahşap çatılıdır; çeşitli onarımlar sonucu özgün mimarisinden uzaklaşmış, en son 2006'da restore edilmiştir.",
+      "sourceId": "inv-p208"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-akbiyik-sultan-tomb/interior.jpg",
+      "x": 58,
+      "y": 62,
+      "title": "Akbıyık Sultan'ın sandukası",
+      "text": "Türbenin orta kısmında Akbıyık Sultan'a ait ahşap bir sanduka yer alır.",
+      "sourceId": "inv-p208"
+    }
+  ],
+  "test": [
+    {
+      "question": "Akbıyık Sultan kimin müritleri arasında yer almıştır?",
+      "options": [
+        "Emir Sultan",
+        "Üftâde",
+        "Hacı Bayrâm-ı Velî",
+        "Somuncu Baba"
+      ],
+      "correct": 2,
+      "description": "Akbıyık Sultan, Hacı Bayrâm-ı Velî'nin müritleri arasında yer alan önemli bir sufidir.",
+      "sourceId": "inv-p208"
+    },
+    {
+      "question": "Sultan II. Murad, Akbıyık Sultan'a nerede bir köy temlik etmiştir?",
+      "options": [
+        "Yenişehir'de",
+        "İznik'te",
+        "Mudanya'da",
+        "Gemlik'te"
+      ],
+      "correct": 0,
+      "description": "Balkanlardaki fetihlere katkıları nedeniyle II. Murad ona Yenişehir'de bir köy temlik etmiş, o da bu köyü vakfetmiştir.",
+      "sourceId": "inv-p208"
+    },
+    {
+      "question": "Türbe en son hangi yıl Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir?",
+      "options": [
+        "1946",
+        "2018",
+        "2013",
+        "2006"
+      ],
+      "correct": 3,
+      "description": "Özgün mimarisinden uzaklaşan türbe en son 2006'da Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir.",
+      "sourceId": "inv-p208"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p208",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Akbıyık Sultan (Şemseddin Ahmed) Türbesi\"",
+      "page": "208"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

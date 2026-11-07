@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-sair-ahmet-pasa-tomb",
+  "name": "Şair (Gedik) Ahmet Paşa Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Kitabe tarihi H. 902 / M. 1497",
+  "endowment": "Medreseyle birlikte Şair Ahmed Paşa yaptırmıştır; Ezine'nin Geyikli köyü medreseye vakfedilmiştir.",
+  "summary": "Fâtih Sultan Mehmed'in iltifatına mazhar olan Şair Ahmed Paşa'nın, kendi yaptırdığı Geyikli Medrese'nin bahçesindeki taş-tuğla almaşık örgülü altıgen türbesi.",
+  "history": "Şair (Gedik) Ahmet Paşa Türbesi, Osmangazi İlçesi, Muradiye Mahallesi, Beşikçiler Caddesi No: 2'dedir.\n\nTürbe, içinde bulunduğu Ahmet Paşa Medresesi ile birlikte, Fâtih Sultan Mehmed'in iltifatına mazhar olmuş Veliyyüddinzâde Şair Ahmed Paşa tarafından yaptırılmıştır. Ezine'nin Geyikli köyü medreseye vakfedildiği için yapı halk arasında \"Geyikli Medrese\" olarak anılmıştır.\n\nTürbe girişindeki 42 x 103 cm ölçülerindeki kitabe, Hoca Sâdeddin Efendi'ye göre Eflatunzâde Derviş Mehmed Efendi tarafından Arapça ve aruz kalıbıyla yazılmıştır; son mısrası ebced hesabıyla H. 902 / M. 1497 tarihini verir. Kitabede, Rahman'ın övdüğü kullarından biri için nurlar saçan bir kandilden ve cennette onun ruhuna bir barınak bulunduğundan söz edilir. \"Geçdi meded şâir-i Rûm\" ifadesi de ebced hesabıyla şairin vefat yılı olan H. 902 / M. 1497'ye işaret eder.\n\nTürbe altıgen planlıdır. Duvarları, doğusundaki medreseyle aynı sistemde taş ve tuğla almaşık düzende örülmüş; köşelerde plaster uygulamaları kullanılmıştır. Girişi küçük bir eyvan içine alınmıştır. Kitapta her cephede altlı üstlü beşer pencere bulunduğu belirtilir. Türbede yalnızca Ahmed Paşa'ya ait bir sanduka vardır.\n\nBugün müze olarak kullanılan medresenin bahçesindeki türbe bakımlıdır ve ziyarete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sair-ahmet-pasa-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sair-ahmet-pasa-tomb/exterior.jpg",
+      "alt": "Taş ve tuğla sıralarıyla örülmüş çok kenarlı türbe; kurşun kaplı alçak kubbe, cephelerde şebekeli üst pencereler ve demir parmaklıklı alt pencereler",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sair-ahmet-pasa-tomb/interior.jpg",
+      "alt": "Beyaz badanalı iç mekânda, yerde tek yeşil kadife örtülü sanduka; duvarlarda alt sırada dikdörtgen, üst sırada kemerli pencereler",
+      "description": "Ahmed Paşa'nın sandukası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sair-ahmet-pasa-tomb/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: ağaçlar arasında altıgen, kurşun kaplı çatı; solda medresenin kurşun örtüleri",
+      "description": "Altıgen planın tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "alternating-masonry",
+      "image": "/images/osmangazi-sair-ahmet-pasa-tomb/exterior.jpg",
+      "x": 45,
+      "y": 42,
+      "title": "Taş-tuğla almaşık duvar",
+      "text": "Türbenin duvarları, doğusundaki medreseyle aynı sistemde taş ve tuğla almaşık düzende örülmüştür.",
+      "sourceId": "inv-p251"
+    },
+    {
+      "id": "hexagonal-plan",
+      "image": "/images/osmangazi-sair-ahmet-pasa-tomb/top-view.jpg",
+      "x": 48,
+      "y": 55,
+      "title": "Altıgen plan",
+      "text": "Türbe altıgen planlı olarak inşa edilmiştir.",
+      "sourceId": "inv-p251"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-sair-ahmet-pasa-tomb/interior.jpg",
+      "x": 60,
+      "y": 68,
+      "title": "Ahmed Paşa'nın sandukası",
+      "text": "Türbede yalnızca Ahmed Paşa'ya ait bir sanduka bulunur.",
+      "sourceId": "inv-p251"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medrese neden halk arasında \"Geyikli Medrese\" olarak anılmıştır?",
+      "options": [
+        "Kapısında geyik kabartması bulunduğu için",
+        "Bahçesinde geyik beslendiği için",
+        "Ezine'nin Geyikli köyü medreseye vakfedildiği için",
+        "Banisinin lakabı Geyikli olduğu için"
+      ],
+      "correct": 2,
+      "description": "Ezine'nin Geyikli köyü medreseye vakfedildiğinden yapı halk arasında \"Geyikli Medrese\" olarak anılmıştır.",
+      "sourceId": "inv-p250"
+    },
+    {
+      "question": "Türbe nasıl bir plana sahiptir?",
+      "options": [
+        "Altıgen",
+        "Kare",
+        "Sekizgen",
+        "Dikdörtgen"
+      ],
+      "correct": 0,
+      "description": "Türbe altıgen planlı olarak inşa edilmiştir.",
+      "sourceId": "inv-p251"
+    },
+    {
+      "question": "Türbe girişindeki kitabenin son mısrası ebced hesabıyla hangi tarihi verir?",
+      "options": [
+        "H. 855 / M. 1451",
+        "H. 1235 / M. 1820",
+        "H. 988 / M. 1580",
+        "H. 902 / M. 1497"
+      ],
+      "correct": 3,
+      "description": "Arapça ve aruz kalıbıyla yazılan kitabenin son mısrası ebced hesabıyla H. 902 / M. 1497 tarihini verir.",
+      "sourceId": "inv-p250"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p250",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Şair (Gedik) Ahmet Paşa Türbesi\"",
+      "page": "250"
+    },
+    {
+      "id": "inv-p251",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Şair (Gedik) Ahmet Paşa Türbesi\"",
+      "page": "251"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

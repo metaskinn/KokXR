@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-veled-i-habib-tomb",
+  "name": "Veled-i Habib Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Şeyh Mehmed Emin Efendi H. 1228 / M. 1813'te defnedildi; H. 1264 / M. 1848'de onarıldı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Veled-i Habib Camii'nin bitişiğinde, mescidin yanındaki konağı Nakşibendi dergâhına dönüştüren Kerküklü Şeyh Mehmed Emin Efendi'nin yattığı tek sandukalı türbe.",
+  "history": "Veled-i Habib Türbesi, Osmangazi İlçesi, Alipaşa Mahallesi, İnebey Caddesi üzerindedir. Yapı, İnebey Caddesi ile Maksem Yokuşu'nun kesiştiği yerdeki Veled-i Habib Camii'ne bitişiktir.\n\nAslen Kerküklü olan Mehmed Emin Efendi, H. 1216 / M. 1801'de mescidin yanındaki Hacı Abdullah Ağa Konağı'nı satın almış, buraya bir kütüphane ekleyerek mekânı Nakşibendi dergâhına dönüştürmüştür. Aynı dönemde mescide minber eklenmiş ve yapı cami statüsü kazanmıştır. Şeyh Mehmed Emin Efendi, 6 Muharrem 1228 / 9 Ocak 1813 Cuma günü vefat etmiş ve caminin bitişiğindeki türbeye defnedilmiştir.\n\nTürbede Mehmed Emin Kerkükî'ye ait tek sanduka vardır. Girişi batı cephesindeki kapıdandır. İki köşeli plana sahip türbe, kuzey ve kuzeybatı yönlerindeki sivri kemerli, ahşap karkaslı iki pencereyle aydınlanır.\n\nVakıflar Bursa Bölge Müdürlüğü'nün restorasyonunda zemindeki iki sıra moloz taş örgüsü kaldırılmış, yerine cami duvarlarında da görülen tek sıra taş ve iki sıra tuğladan oluşan almaşık duvar dokusu uygulanmıştır. Daha önce sandukanın başucunda bulunan geç dönem kitabesi son restorasyonda türbenin dış duvarına taşınmıştır. Kitabede dergâhın banisi Hoca Emin Efendi, Nakşibendi yolunun tecelligâhı, ariflerin ve vasılların kutbu, seyitlik neslinden gelen şeref bahçesinin gülü olarak anılır.\n\nDergâh, cami, kütüphane ve türbe H. 1264 / M. 1848'de Sultan Abdülmecid tarafından tamir ettirilmiştir. Son yıllarda türbe ile cami kapsamlı bir onarımdan geçirilmiş, dergâh binası da aslına uygun biçimde restore edilerek \"Eminiye Kültür Evi\" adıyla yeniden hizmete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-veled-i-habib-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-veled-i-habib-tomb/exterior.jpg",
+      "alt": "Tek sıra taş ve ikişer sıra tuğlayla örülmüş köşeli türbe cephesi; ortada ahşap çerçeveli büyük sivri kemerli pencere, yanlarda dar sivri kemerli açıklıklar",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veled-i-habib-tomb/interior.jpg",
+      "alt": "Ahşap tavanlı, beyaz duvarlı iç mekânda altın işlemeli yeşil örtülü tek sanduka ve başucunda ahşap şamdanlar; arkada iki sivri kemerli pencere",
+      "description": "Mehmed Emin Kerkükî'nin sandukası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veled-i-habib-tomb/with-mosque.jpg",
+      "alt": "Önde taş-tuğla almaşık duvarlı, sivri kemerli pencereli türbe; arkasında kurşun kubbeli cami ve tuğla minare",
+      "description": "Türbe ve bitişiğindeki Veled-i Habib Camii",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "alternating-wall",
+      "image": "/images/osmangazi-veled-i-habib-tomb/exterior.jpg",
+      "x": 75,
+      "y": 40,
+      "title": "Almaşık duvar dokusu",
+      "text": "Restorasyonda cami duvarlarında da görülen tek sıra taş ve iki sıra tuğladan oluşan almaşık duvar dokusu uygulanmıştır.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "id": "pointed-window",
+      "image": "/images/osmangazi-veled-i-habib-tomb/exterior.jpg",
+      "x": 45,
+      "y": 55,
+      "title": "Sivri kemerli pencere",
+      "text": "Türbe, kuzey ve kuzeybatı yönlerindeki sivri kemerli, ahşap karkaslı pencerelerle aydınlanır.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-veled-i-habib-tomb/interior.jpg",
+      "x": 45,
+      "y": 72,
+      "title": "Tek sanduka",
+      "text": "Türbede Mehmed Emin Kerkükî'ye ait tek sanduka bulunur.",
+      "sourceId": "inv-p264"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mehmed Emin Efendi aslen nerelidir?",
+      "options": [
+        "Buharalı",
+        "Kerküklü",
+        "Bağdatlı",
+        "Bursalı"
+      ],
+      "correct": 1,
+      "description": "Aslen Kerküklü olan Mehmed Emin Efendi, H. 1216 / M. 1801'de mescidin yanındaki konağı satın almıştır.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "question": "Mehmed Emin Efendi satın aldığı Hacı Abdullah Ağa Konağı'nı neye dönüştürmüştür?",
+      "options": [
+        "Nakşibendi dergâhına",
+        "Medreseye",
+        "Hamama",
+        "Kervansaraya"
+      ],
+      "correct": 0,
+      "description": "Konağa bir kütüphane ekleyerek mekânı Nakşibendi dergâhına dönüştürmüştür.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "question": "Restore edilen dergâh binası bugün hangi adla hizmet vermektedir?",
+      "options": [
+        "Habib Konağı",
+        "Kerkükî Kütüphanesi",
+        "İnebey Sanat Evi",
+        "Eminiye Kültür Evi"
+      ],
+      "correct": 3,
+      "description": "Dergâh binası aslına uygun biçimde restore edilerek \"Eminiye Kültür Evi\" adıyla yeniden hizmete açılmıştır.",
+      "sourceId": "inv-p265"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p264",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Veled-i Habib Türbesi\"",
+      "page": "264"
+    },
+    {
+      "id": "inv-p265",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Veled-i Habib Türbesi\"",
+      "page": "265"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

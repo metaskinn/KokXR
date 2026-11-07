@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-gulcicek-hatun-tomb",
+  "name": "Gülçiçek Hatun Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Erken Osmanlı · vakfiyesi H. 803 / M. 1399-1400 tarihlidir",
+  "endowment": "Gülçiçek Hatun'un H. 803 / M. 1399-1400 tarihli vakfiyesi; tanziminde oğlu Yahşi Bey de görev almıştır",
+  "summary": "I. Murad Hudâvendigâr'ın eşi ve Yıldırım Bayezid'in annesi Gülçiçek Hatun'un, adına türbe yapılan ilk padişah annesi olarak bilinen tek kubbeli kare planlı türbesi.",
+  "history": "Gülçiçek Hatun Türbesi, Osmangazi ilçesi, Altıparmak Mahallesi, Çarklı Değirmen Sokak'tadır.\n\nGülçiçek Hatun, I. Murad Hudâvendigâr'ın Rum asıllı eşi ve Yıldırım Bayezid'in annesidir. Diğer oğlu Yahşi Bey'in de tanziminde görev aldığı H. 803 / M. 1399-1400 tarihli bir vakfiyesi vardır. Bu belgeye göre Gülçiçek Hatun aynı bahçe içinde bir zaviye, türbe, evler ve bir aşhane yaptırmıştır. Kaynaklarda yapı topluluğuna dahil olduğu bilinen ve 1906'ya kadar faaliyet gösterdiği kaydedilen bir medreseden de söz edilir.\n\nTek kubbeli ve kare planlı türbe 6,40 × 6,40 m iç ölçülere sahiptir. Kubbe yüksek tutulmuş sekizgen bir kasnağa oturur; geçişlerde geleneksel Türk üçgenleri kullanılmıştır. Kitaba göre kasnağın beden duvarlarına oranla dikkate değer biçimde yüksek oluşu ve yapının yalnızca kesme taşla inşa edilmesi sonraki müdahalelere işaret eder. İlk hâlinde on altı köşeli olduğu düşünülen kubbe kasnağının, muhtemelen 1958'deki onarımda sekizgene indirgenip yükseltildiği değerlendirilir. Türbenin iç mekânında herhangi bir süsleme yoktur.\n\nKabirlerin bulunduğu mekânın önünde yanları kapalı revaklı bir bölüm yer alır; bu bölümün yan duvarları ve zemini günümüze ulaşmıştır. Duvardaki kiriş izlerinden düz çatılı olduğu anlaşılan girişin ön kısmında, sütunları kaybolmuş iki kaide bulunur.\n\nKitapta duvarların üç sıra tuğla ve bir sıra küfeki taşıyla örüldüğü de belirtilir; bu, erken Osmanlı döneminde Bursa'da sıkça görülen bir örgü biçimidir. Türbenin her cephesinde ikişer olmak üzere toplam sekiz penceresi vardır; pencere aralarına tuğladan kurs motifleri yerleştirilmiştir.\n\nTürbede Gülçiçek Hatun'a ait sandukanın yanı sıra kime ait olduğu belirlenemeyen üç sanduka daha bulunur. Gülçiçek Hatun, Osmanlı tarihinde adına türbe yaptırılan ilk padişah annesi olması bakımından özel bir yere sahiptir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-gulcicek-hatun-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-gulcicek-hatun-tomb/exterior.jpg",
+      "alt": "Havadan yakın görünüm: tuğla ve taş sıralarıyla örülmüş kare gövde, kemerli iki demir parmaklıklı pencere ve tuğla dolgulu bir kemer, pencereler arasında tuğla yuvarlak motif; üstte kesme taştan yüksek kasnak ve kurşun kaplı çatı; arkada Bursa'nın yamaçlardaki evleri",
+      "description": "Türbe gövdesi ve yüksek kasnak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gulcicek-hatun-tomb/entrance.jpg",
+      "alt": "İki yanı yüksek sıvalı duvarlarla kapalı, taş döşeli giriş bölümü; karşıda tuğla-taş örgülü cephede kemerli iki pencere ve ortada küçük saçaklı ahşap kapı, üstte taş kasnak; ön köşelerde taş ayaklar",
+      "description": "Revaklı giriş bölümü ve türbe cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gulcicek-hatun-tomb/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: çokgen biçimli kurşun kaplı kubbe örtüsü ve önünde üstü açık, iki yanı duvarlı giriş bölümü; çevrede ağaçlar ve taş döşeli alan",
+      "description": "Türbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "drum",
+      "image": "/images/osmangazi-gulcicek-hatun-tomb/exterior.jpg",
+      "x": 40,
+      "y": 32,
+      "title": "Yüksek kasnak",
+      "text": "Kubbe yüksek tutulmuş sekizgen bir kasnağa oturur; ilk hâlinde on altı köşeli olduğu düşünülen kasnağın muhtemelen 1958 onarımında sekizgene indirgenip yükseltildiği değerlendirilir.",
+      "sourceId": "inv-p215"
+    },
+    {
+      "id": "brick-motif",
+      "image": "/images/osmangazi-gulcicek-hatun-tomb/exterior.jpg",
+      "x": 38,
+      "y": 59,
+      "title": "Tuğla kurs motifi",
+      "text": "Pencere aralarına tuğladan kurs motifleri yerleştirilmiştir.",
+      "sourceId": "inv-p215"
+    },
+    {
+      "id": "portico",
+      "image": "/images/osmangazi-gulcicek-hatun-tomb/entrance.jpg",
+      "x": 50,
+      "y": 82,
+      "title": "Revaklı bölüm",
+      "text": "Kabirlerin bulunduğu mekânın önündeki yanları kapalı revaklı bölümün yan duvarları ve zemini günümüze ulaşmıştır.",
+      "sourceId": "inv-p215"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gülçiçek Hatun, hangi padişahın annesidir?",
+      "options": [
+        "Orhan Gazi",
+        "Sultan II. Murad",
+        "Çelebi Mehmed",
+        "Yıldırım Bayezid"
+      ],
+      "correct": 3,
+      "description": "Gülçiçek Hatun, I. Murad Hudâvendigâr'ın Rum asıllı eşi ve Yıldırım Bayezid'in annesidir.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "question": "Gülçiçek Hatun Osmanlı tarihinde hangi özelliğiyle özel bir yere sahiptir?",
+      "options": [
+        "İlk vakfiye düzenleyen kadındır",
+        "Adına türbe yaptırılan ilk padişah annesidir",
+        "Bursa'da ilk camiyi yaptırmıştır",
+        "İlk medreseyi kurmuştur"
+      ],
+      "correct": 1,
+      "description": "Gülçiçek Hatun, Osmanlı tarihinde adına türbe yaptırılan ilk padişah annesi olması bakımından özel bir yere sahiptir.",
+      "sourceId": "inv-p215"
+    },
+    {
+      "question": "Vakfiyeye göre Gülçiçek Hatun aynı bahçe içinde türbeyle birlikte neler yaptırmıştır?",
+      "options": [
+        "Zaviye, evler ve aşhane",
+        "Hamam ve çarşı",
+        "Kervansaray ve köprü",
+        "Cami ve sebil"
+      ],
+      "correct": 0,
+      "description": "Vakfiyeye göre Gülçiçek Hatun aynı bahçe içinde bir zaviye, türbe, evler ve bir aşhane yaptırmıştır.",
+      "sourceId": "inv-p215"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p214",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Gülçiçek Hatun Türbesi\"",
+      "page": "214"
+    },
+    {
+      "id": "inv-p215",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Gülçiçek Hatun Türbesi\"",
+      "page": "215"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

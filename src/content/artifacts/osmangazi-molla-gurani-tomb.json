@@ -1,0 +1,104 @@
+{
+  "id": "osmangazi-molla-gurani-tomb",
+  "name": "Molla Gürani (Yeşil Güranlı) Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Kanûnî dönemi; mescit H. 1002 / M. 1594, defin H. 1003 / M. 1595",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Erzincan'ın Güran köyünden Bursa'ya gelen Seyyid Hüseyin Erzincanî'nin, mescidin arkasındaki taş-tuğla almaşık örgülü türbesi.",
+  "history": "Molla Gürani (Yeşil Güranlı) Türbesi, Osmangazi İlçesi, Mollagürani Mahallesi'nde, Güranlı Sokak ile 2. Tahtalı Sokak'ın kesiştiği noktadadır. Türbe, Kanûnî Sultan Süleyman döneminde (1520-1566) Erzincan'ın Güran köyünden Bursa'ya göç eden ve Hz. Muhammed'in (sav) soyundan geldiği rivayet edilen Seyyid Hüseyin Erzincanî bin Seyyid Abdurrahim Efendi'ye aittir. Aynı alanda iki kabir daha bulunur. Hüseyin Erzincanî, H. 1003 / M. 1595'teki vefatının ardından H. 1002 / M. 1594'te inşa edilen caminin arka kısmına defnedilmiştir.\n\nCami, dış cephesindeki yeşil renkli sıva nedeniyle halk arasında \"Yeşil Mescit\" diye anılmıştır. Uzun yıllar farklı amaçlarla kullanılan yapı, 1978'de Vakıflar Genel Müdürlüğü tarafından kamulaştırılarak özgün işlevine uygun biçimde düzenlenmiştir.\n\nKitapta konik biçimli olarak tanımlanan ve taş-tuğla almaşık örgüyle inşa edilen türbe, Osmanlı Dönemi'nin yerel mimari özellikleriyle uyum gösterir. Üst örtüsü kiremit çatıyla tamamlanmıştır. Türbeye cami içinden geçilerek ulaşılır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-molla-gurani-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-molla-gurani-tomb/exterior.jpg",
+      "alt": "Sokak köşesinde kesme taş duvarlı, kiremit çatılı alçak yapı; yeşil demir parmaklıklı pencereler ve \"Güranlı Türbesi\" tabelası; arkasında kiremit çatılı sarı boyalı bina",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-molla-gurani-tomb/sarcophagi.jpg",
+      "alt": "Mavi halılı iç mekânda yeşil örtülü, yeşil sarıklı iki büyük sanduka ve arkada küçük bir sanduka; perdeli pencereler ve avize",
+      "description": "Sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-molla-gurani-tomb/side-wall.jpg",
+      "alt": "Kesme taş duvarda yeşil demir parmaklıklı geniş pencere ve \"2. Tahtalı Sokak\" tabelası; yanda ahşap cumbalı eski bir ev",
+      "description": "Türbenin sokak cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-molla-gurani-tomb/exterior.jpg",
+      "x": 51,
+      "y": 40,
+      "title": "Kiremit çatı",
+      "text": "Türbenin üst örtüsü kiremit çatıyla tamamlanmıştır.",
+      "sourceId": "inv-p223"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/osmangazi-molla-gurani-tomb/sarcophagi.jpg",
+      "x": 36,
+      "y": 64,
+      "title": "Sandukalar",
+      "text": "Türbe Seyyid Hüseyin Erzincanî'ye aittir; kitaba göre aynı alanda iki kabir daha bulunur.",
+      "sourceId": "inv-p223"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbede yatan Seyyid Hüseyin Erzincanî Bursa'ya nereden göç etmiştir?",
+      "options": [
+        "Konya'nın Akşehir ilçesinden",
+        "Erzincan'ın Güran köyünden",
+        "Tebriz'den",
+        "Kastamonu'dan"
+      ],
+      "correct": 1,
+      "description": "Seyyid Hüseyin Erzincanî, Kanûnî döneminde Erzincan'ın Güran köyünden Bursa'ya göç etmiştir.",
+      "sourceId": "inv-p223"
+    },
+    {
+      "question": "Cami halk arasında neden \"Yeşil Mescit\" diye anılmıştır?",
+      "options": [
+        "Yeşil çinileri nedeniyle",
+        "Bahçesindeki ağaçlar nedeniyle",
+        "Dış cephesindeki yeşil renkli sıva nedeniyle",
+        "Yeşil kubbesi nedeniyle"
+      ],
+      "correct": 2,
+      "description": "Cami, dış cephesindeki yeşil renkli sıva nedeniyle \"Yeşil Mescit\" diye anılmıştır.",
+      "sourceId": "inv-p223"
+    },
+    {
+      "question": "Türbeye nasıl ulaşılır?",
+      "options": [
+        "Cami içinden geçilerek",
+        "Ayrı bir sokak kapısından",
+        "Avludaki merdivenle",
+        "Medrese avlusundan"
+      ],
+      "correct": 0,
+      "description": "Türbeye cami içinden geçilerek ulaşılır.",
+      "sourceId": "inv-p223"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p223",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Molla Gürani (Yeşil Güranlı) Türbesi\"",
+      "page": "223"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

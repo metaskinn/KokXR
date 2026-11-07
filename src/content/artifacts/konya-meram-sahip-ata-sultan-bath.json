@@ -1,0 +1,111 @@
+{
+  "id": "konya-meram-sahip-ata-sultan-bath",
+  "name": "Sahip Ata (Sultan) Hamamı",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu · Kitâbesi yok; külliyeye gelir için 656-678 / 1258-1279-80 arasında inşa edilmiş olmalıdır",
+  "endowment": "Sahip Ata Külliyesi'nin cami ve türbesine gelir getirmek için yapılmıştır",
+  "summary": "Sahip Ata Külliyesi'ne gelir sağlamak için yapılan, Anadolu Selçuklu döneminin bilinen en büyük hamamı olan dört eyvanlı, dört köşe halvetli çifte hamam.",
+  "history": "Hamam, Meram'da, Şükran Mahallesi'nde, Taşcami Uzunharmanlar Caddesi üzerinde, Sahip Ata yapılar grubunun doğusunda bulunur. \"Hamam-ı Sultanî, Sahip Ata Hamamı, Sultan Hamamı, Larende Kapısı Hamamı, Larende Hamamı ve Şifa Sultan Hamamı\" gibi adlarla da anılır. Osmanlı döneminde plandaki bir değişiklikle keçelik oluşturulduğu için \"Keçeciler Hamamı\" olarak adlandırıldığı da olmuştur; bugün halk arasında daha çok \"Sultan Hamamı\" olarak bilinir.\n\nYapıda inşa ya da tamir tarihini gösteren bir kitâbe yoktur ve kaynaklarda doğrudan yapım tarihi verilmez. Ancak külliyenin cami ve türbesine gelir getirmesi için yapıldığından 656-678 / 1258-1279-80 yılları arasında inşa edilmiş olmalıdır. Mimarı muhtemelen külliyenin de mimarı olan Kelûk b. Abdullah'tır. Hamam 1960-62 yılları arasında Vakıflar Genel Müdürlüğü tarafından esaslı biçimde onarılmıştır.\n\nDoğu-batı yönünde uzanan yapı çifte hamam olarak inşa edilmiştir: girişi caddeden olan kuzeydeki bölüm erkeklere, sokaktan girilen güneydeki bölüm kadınlara ayrılmıştır. Hamam \"dört eyvanlı ve dört köşe halvetli sıcaklığa sahip hamamlar\" grubundadır. Kesme taş, moloz taş ve tuğla kullanılmış; soğukluk cephelerindeki düz atkılı pencereler dışında cephelerde hareketlilik yoktur ve simetrik kurgu hâkimdir.\n\nErkekler kısmına batıdaki kapıdan girilir. Soyunma bölümünün ortasındaki kare planlı şadırvan son onarımda kaldırılarak bu kısım sedir olarak düzenlenmiştir. İki katlı ve soyunma kabinleriyle çevrili soyunmalığın örtüsü 1962'deki onarımda betonarme olarak yenilenmiş ve ahşapla kaplanmıştır. Buradan üçgen bingili elips kubbeli aralığa, oradan da kare planlı, kubbesindeki ışık gözleriyle aydınlanan ılıklığa geçilir; ılıklığın yanında tuvalet ve tıraşlık bulunur. Sıcaklık dört eyvanlı ve dört köşe halvetlidir; halvetlere eyvanların birleştiği pahlı köşelerden girilir. Sıcaklık kubbesinde ortadaki yuvarlak, çevredeki dördü kare biçimli beş ışıklık vardır; eyvanlar beşik tonozla örtülüdür.\n\nKadınlar bölümü, aralık mekânındaki küçük bir fark dışında erkekler bölümünün planını çok küçük ölçü farklarıyla aynen tekrarlar. Her iki bölümü kapsayan su deposu kuzey-güney yönünde uzanır ve beşik tonozla örtülüdür; deponun gerisinde külhan yer alır.\n\nÖzgün planda olmadığı hâlde Osmanlı döneminde bir bölüm keçelik olarak kullanılmış, kaynaklara göre keçelik Cumhuriyet'in ilk yıllarına kadar sürmüştür. Hangi kısımların değiştirildiği bilinmemekle birlikte kadınlar bölümünün kullanım dışı bırakılıp bazı kısımlarının erkekler bölümüne katılmış olması muhtemeldir. 1960-1962 onarımında bu kısım kaldırılmış ve yapı asıl planına kavuşturulmuştur. Anadolu Selçuklu döneminin bilinen en büyük hamamı olarak inşa edilen eser, Osmanlı döneminde klasikleşen Türk hamam mimarisinin en erken temsilcilerinden biridir. Sağlam durumdaki yapının her iki bölümü bugün de kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-sahip-ata-sultan-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-sahip-ata-sultan-bath/exterior.jpg",
+      "alt": "Moloz taş duvarlı uzun alçak yapı: cephede dikdörtgen pencereler, çatıda iki ahşap fener, köşede saçaklı giriş ve sokak lambaları",
+      "description": "Hamamın dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-sahip-ata-sultan-bath/changing-room.jpg",
+      "alt": "Ahşap kaplı iç mekân: çevrede numaralı kabin kapıları, üstte ahşap korkuluklu ikinci kat ve ahşap kaplı tavan; ortada koltuklar ve soba",
+      "description": "Soyunmalık bölümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cabins",
+      "image": "/images/konya-meram-sahip-ata-sultan-bath/changing-room.jpg",
+      "x": 18,
+      "y": 51,
+      "title": "Soyunma kabinleri",
+      "text": "Erkekler kısmının iki katlı soyunma bölümü soyunma kabinleriyle çevrilidir.",
+      "sourceId": "inv-p213"
+    },
+    {
+      "id": "wooden-roof",
+      "image": "/images/konya-meram-sahip-ata-sultan-bath/changing-room.jpg",
+      "x": 50,
+      "y": 8,
+      "title": "Ahşap kaplı örtü",
+      "text": "Soyunmalığın örtüsü 1962'deki onarımda betonarme olarak yenilenmiş ve üzeri ahşapla kaplanmıştır.",
+      "sourceId": "inv-p213"
+    },
+    {
+      "id": "windows",
+      "image": "/images/konya-meram-sahip-ata-sultan-bath/exterior.jpg",
+      "x": 22,
+      "y": 56,
+      "title": "Düz atkılı pencereler",
+      "text": "Soğukluk cephelerindeki düz atkılı pencereler dışında hamamın cephelerinde hareketlilik yoktur.",
+      "sourceId": "inv-p212"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam bugün halk arasında daha çok hangi adla bilinir?",
+      "options": [
+        "Larende Hamamı",
+        "Şifa Hamamı",
+        "Sultan Hamamı",
+        "Keçeciler Hamamı"
+      ],
+      "correct": 2,
+      "description": "Hamam günümüzde halk arasında daha çok \"Sultan Hamamı\" olarak bilinir.",
+      "sourceId": "inv-p212"
+    },
+    {
+      "question": "Osmanlı döneminde plana eklenen bölüm nedeniyle hamam hangi adla da anılmıştır?",
+      "options": [
+        "Keçeciler Hamamı",
+        "Mahkeme Hamamı",
+        "Yeni Hamam",
+        "Larende Kapısı Hamamı"
+      ],
+      "correct": 0,
+      "description": "Hamamda keçelik oluşturulduğu için \"Keçeciler Hamamı\" olarak da adlandırılmıştır.",
+      "sourceId": "inv-p212"
+    },
+    {
+      "question": "Hamamın sıcaklığı hangi plan tipindedir?",
+      "options": [
+        "Tek eyvanlı, tek halvetli",
+        "Üç eyvanlı, iki köşe halvetli",
+        "Enine sıcaklıklı, çift halvetli",
+        "Dört eyvanlı, dört köşe halvetli"
+      ],
+      "correct": 3,
+      "description": "Hamam \"dört eyvanlı ve dört köşe halvetli sıcaklığa sahip hamamlar\" grubundadır.",
+      "sourceId": "inv-p212"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p212",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Sahip Ata (Sultan) Hamam\"",
+      "page": "212"
+    },
+    {
+      "id": "inv-p213",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Sahip Ata (Sultan) Hamam\"",
+      "page": "213"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

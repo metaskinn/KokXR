@@ -1,0 +1,102 @@
+{
+  "id": "konya-meram-sukran-masjid",
+  "name": "Şükran Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XX. yüzyıl başları (mimari özelliklerine göre); yerinde daha önce Selçuklu dönemine ait bir mescit olabileceği düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Konya surlarının doğu kapılarından birine yakın, alt katında dükkân, üst katında mektep ve harim bulunan, ahşap baldaken minareli küçük mescit.",
+  "history": "Şükran Mescidi, Meram ilçesi, Şükran Mahallesi, Hotuz Sokak No. 2'dedir. Konya surlarının doğuya açılan kapılarından birinin çok yakınında yer alır. Halk arasında yaygın inanışa göre mahalle adını bu mescitten almıştır. Rivayete göre şehre uzak yerlerden gelen konuklar, işlerine gitmeden önce bu mescitte iki rekât şükür namazı kılarlardı.\n\nMescidin kitâbesi yoktur. Mimari özellikleri göz önüne alındığında XX. yüzyılın başlarında yapıldığı, bulunduğu yerde daha önce Selçuklu dönemine ait bir mescit olabileceği düşünülmektedir.\n\nBedestenlerin bulunduğu ticari dokunun içinde yer alan mescidin alt katında dükkân, üst katında mektep ve harim mekânı vardır. Mescidin ahşaptan yapılmış baldaken tarzında bir minaresi bulunur; beden duvarına bitişik bir sokak çeşmesi de vardır.\n\nYapının zemini moloz taş, beden duvarları kerpiç malzemeyle inşa edilmiştir. Harim kare planlı ve iki sahınlıdır. Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır; mihrap tepeliğinde merkezden yayılan ışınsal bir süsleme yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-sukran-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-sukran-masjid/exterior.jpg",
+      "alt": "Sokak köşesinde yeşil sıvalı, kiremit kırma çatılı iki katlı yapı; solda çatının üstünde hoparlörlü küçük ahşap minare, cephede \"Şükran Mescidi\" tabelası ve zemin katta dükkân kapıları",
+      "description": "Mescidin sokaktan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-sukran-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı halılı harim, ortada tepesi yelpaze gibi açılan yeşil boyalı mihrap, sağında ahşap kafesli minber ve önde yeşil boyalı ahşap direk",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "wooden-minaret",
+      "image": "/images/konya-meram-sukran-masjid/exterior.jpg",
+      "x": 10,
+      "y": 25,
+      "title": "Ahşap baldaken minare",
+      "text": "Mescidin ahşap malzemeden yapılmış, baldaken tarzında bir minaresi vardır.",
+      "sourceId": "inv-p79"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-sukran-masjid/prayer-hall.jpg",
+      "x": 41,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır; tepeliğinde merkezden yayılan ışınsal bir süsleme vardır.",
+      "sourceId": "inv-p79"
+    }
+  ],
+  "test": [
+    {
+      "question": "Rivayete göre şehre uzaktan gelen konuklar Şükran Mescidi'nde ne yaparlardı?",
+      "options": [
+        "Yolculuk için dua ederlerdi",
+        "Konaklayıp geceyi geçirirlerdi",
+        "İki rekât şükür namazı kılarlardı",
+        "Mallarını mescidin dükkânlarında satarlardı"
+      ],
+      "correct": 2,
+      "description": "Rivayete göre uzaktan gelen konuklar işlerine gitmeden önce bu mescitte iki rekât şükür namazı kılarlardı.",
+      "sourceId": "inv-p78"
+    },
+    {
+      "question": "Mescidin minaresi hangi malzemeden ve hangi tarzda yapılmıştır?",
+      "options": [
+        "Ahşaptan, baldaken tarzında",
+        "Tuğladan, silindirik gövdeli",
+        "Kesme taştan, iki şerefeli",
+        "Betonarme, köşk tipinde"
+      ],
+      "correct": 0,
+      "description": "Mescidin ahşap malzemeden yapılmış, baldaken tarzında bir minaresi vardır.",
+      "sourceId": "inv-p79"
+    },
+    {
+      "question": "Mescidin beden duvarları hangi malzemeyle inşa edilmiştir?",
+      "options": [
+        "Kesme taş",
+        "Tuğla",
+        "Moloz taş",
+        "Kerpiç"
+      ],
+      "correct": 3,
+      "description": "Yapının zemini moloz taş, beden duvarları ise kerpiç malzemeyle inşa edilmiştir.",
+      "sourceId": "inv-p79"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p78",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Şükran Mescidi\"",
+      "page": "78"
+    },
+    {
+      "id": "inv-p79",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Şükran Mescidi\"",
+      "page": "79"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -48,7 +48,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [x] **G9. yonetim/katki (şartname 5.1.3):** Kullanıcı anısı/fotoğraf formu → `katkilar` (beklemede) → onay sayfasında onayla/reddet → yalnız onaylanan eser sayfasında "Topluluk katkısı, doğrulanmamış" etiketiyle. Kişisel veri toplanmaz (ad/telefon yok). Girdi doğrulama ve metin temizleme testli.
 
 ### C. Keşif ve erişilebilirlik
-- [ ] **G15. arayuz/harita (onaylı bağımlılık Leaflet):** Eser işaretli harita ve 2–3 hazır rota. **Koordinat doğrulanmadan işaret konmaz**; kaynağı olmayan koordinat için mevcut `vrEserler.ts` şehir konumu kullanılır, eser işareti boş kalır ve sabaha sorulur. Tile'lar internetsiz açılmaz; çevrimdışıda liste görünümü yedek.
+- [x] **G15. arayuz/harita (onaylı bağımlılık Leaflet):** Eser işaretli harita ve 2–3 hazır rota. **Koordinat doğrulanmadan işaret konmaz**; kaynağı olmayan koordinat için mevcut `vrEserler.ts` şehir konumu kullanılır, eser işareti boş kalır ve sabaha sorulur. Tile'lar internetsiz açılmaz; çevrimdışıda liste görünümü yedek.
 - [ ] **G10. arayuz/erisilebilirlik-rapor:** axe veya Lighthouse raporu `docs/`'a (indirme izni gerekirse atlanır, sorulur). Renk körlüğü paleti, klavye ve ekran okuyucu denetimi.
 
 ### D. Belgeler ve sunum
@@ -63,6 +63,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [ ] **G18. docs/sabah-brifingi.md:** 1 sayfa: ne bitti/bitmedi, 09.00 öncesi 5 adım (Supabase kurulumu, push kararı, Vercel'in `master`'a bağlanması, PWA/APK telefonda deneme, Quest şarjı) ve `gorev_dagilimi.md`'deki 4 kişinin ilk 2 saatlik işi. Sonra dur.
 
 ## Sabah sorulacaklar
+- Harita: eserlerin doğrulanmış koordinatı yok. Eser.konum {enlem, boylam, kaynak} alanı hazır (kaynak zorunlu); koordinat verilince eser işaretleri ve rota çizgisi kendiliğinden çıkar. Şimdilik şehir işareti ve rota listeleri var. Harita OpenStreetMap karolarını internetten çeker.
 - Topluluk katkıları şimdilik yalnız bu tarayıcıda (localStorage) saklanıyor. Buluta (`katkilar` tablosu) yazmak için anonim ziyaretçiye insert izni vermek gerekir (`sema.sql` bugün yalnız girişli kullanıcıya izin veriyor). Anonim katkıya izin verilsin mi? Spam riski var.
 - G7 (Konya/Hatay eseri): Konya ve Hatay envanter PDF'leri `vakifkatilim.com.tr/documents/KurumsalIletisim/...` adreslerinde. Betik indirmesi bu oturumda izin denetiminden geçmedi (ayrıca Firecrawl kredisi bitti). Çözüm: PDF'i tarayıcıdan indirip `~/Downloads`'a koy; metni macOS PDFKit ile çıkarıp 1 eser eklerim (kaynak cilt+sayfa). Konya/Hatay Drive'da yok (yalnız Bursa arşivi).
 - G6 notu: Yeni 4 eserin fotoğrafı yok (Drive görselleri 2–144 MB, araçla indirilemiyor); eser sayfaları fotoğrafsız çalışır. Fotoğraf eklenecekse el ile küçültülüp `public/gorseller/<eser-id>/` altına, `kredi` alanıyla konmalı.
@@ -81,3 +82,4 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G7: [!] yukarıda.
 - G8 (mimari/sehir-ve-tur): `Eser.yapiTuru` (isteğe bağlı) eklendi, 14 eserde dolduruldu (Cami/Külliye/Han/Hamam/Medrese/Türbe), formda alan, ana sayfada 'Yapı türü' süzgeci. `tests/yonetim.mjs` Konya/Meram/Han eserinin süzgeçlere kod değişmeden geldiğini sınar. VR haritasına şehir eklemek hâlâ konum bilgisi ister (vrSehirler).
 - G9 (yonetim/katki): eser sayfasında 'Topluluk katkıları' formu (başlık ≤80, metin ≤600, e-posta/telefon reddi, kontrol karakteri temizliği), `/onay` sayfasında katkı kararları, yalnız onaylananlar 'Topluluk katkısı · doğrulanmamış bilgi' etiketiyle görünür. `tests/katki-mantik.mjs` (test:hizli'da) ve tarayıcı akışı (`tests/yonetim.mjs`) geçti.
+- G15 (arayuz/harita): Leaflet (onaylı bağımlılık) ile /harita (tembel yüklenir): şehir işaretleri, 3 hazır rota (src/data/rotalar.ts; sıra gezi önerisi), tüm eser listesi, çevrimdışı yedek liste. Menüye Harita eklendi. tests/harita.mjs ve hata-avi'ye /harita eklendi.

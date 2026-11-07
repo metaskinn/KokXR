@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { Link, NavLink, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import { eserleriGetir, icerigiOku, icerigiYaz } from './data'
 import type { UstKatman } from './data'
@@ -22,6 +22,7 @@ import OgretmenPaneli from './pages/OgretmenPaneli'
 import Vizyon from './pages/Vizyon'
 import Kutuphane from './pages/Kutuphane'
 import OnayAkisi from './pages/OnayAkisi'
+const Harita = lazy(() => import('./pages/Harita'))
 import VrEserler, { VrEser } from './pages/VrEserler'
 import Simge from './components/Simge'
 import YonetimKapisi from './components/YonetimKapisi'
@@ -95,11 +96,12 @@ export default function App() {
 
   return <>
     <a className="atlama" href="#ana-icerik">Ana içeriğe geç</a>
-    <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/" end>Keşfet</NavLink><NavLink to="/yolculuk">Yolculuk</NavLink><span className="nav-grup" role="group" aria-label="Deneyimler"><span className="nav-grup-ad" aria-hidden="true">Deneyimler</span><NavLink to="/vr">VR Eserler</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink to="/atolye/kilic">Kılıç atölyesi</NavLink><NavLink to="/atolye/cini">Çini atölyesi</NavLink><NavLink to="/ogretmen">Öğretmen</NavLink></span><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav><ErisilebilirlikAraci /></div></header>
+    <header className="ust-cubuk"><div className="ust-cubuk-ic"><Link className="marka" to="/" aria-label="KökXR ana sayfa"><span className="marka-simge"><Simge ad="isaret" /></span><span>Kök<span className="marka-xr">XR</span></span></Link><nav aria-label="Ana gezinme"><NavLink to="/" end>Keşfet</NavLink><NavLink to="/harita">Harita</NavLink><NavLink to="/yolculuk">Yolculuk</NavLink><span className="nav-grup" role="group" aria-label="Deneyimler"><span className="nav-grup-ad" aria-hidden="true">Deneyimler</span><NavLink to="/vr">VR Eserler</NavLink><NavLink to="/atolye/vazo">Vazo atölyesi</NavLink><NavLink to="/atolye/kilic">Kılıç atölyesi</NavLink><NavLink to="/atolye/cini">Çini atölyesi</NavLink><NavLink to="/ogretmen">Öğretmen</NavLink></span><NavLink className="yonetim-link" to="/yonetim">Yönetim</NavLink></nav><ErisilebilirlikAraci /></div></header>
     <main id="ana-icerik" tabIndex={-1}>
       {icerik.uyari && <p className="yonetim-notu" role="alert">{icerik.uyari}</p>}
       <Routes>
         <Route path="/" element={<AnaSayfa eserler={eserler} rozetler={rozetler} />} />
+        <Route path="/harita" element={<Suspense fallback={<p className="sayfa" role="status">Harita yükleniyor…</p>}><Harita eserler={eserler} /></Suspense>} />
         <Route path="/yolculuk" element={<Yolculuk eserler={eserler} rozetKazan={rozetKazan} />} />
         <Route path="/ogretmen" element={<OgretmenPaneli />} />
         <Route path="/vizyon" element={<Vizyon />} />

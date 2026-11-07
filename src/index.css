@@ -345,3 +345,9 @@ html[data-kontrast="yuksek"] button, html[data-kontrast="yuksek"] .dugme { borde
 
 .katki-listesi { list-style: none; padding: 0; display: grid; gap: 1rem; }
 .katki-etiket { display: inline-block; margin: 0; padding: .15rem .6rem; border-radius: 999px; background: var(--yesil-acik); color: var(--yesil-koyu); font-size: .8rem; font-weight: 600; }
+
+.harita-alani { height: 420px; border: 1px solid var(--cizgi); border-radius: 12px; margin: 1rem 0 1.5rem; }
+.rota-listesi { padding-left: 1.25rem; display: grid; gap: .4rem; }
+.rota-listesi span { color: var(--ikincil); font-size: .9rem; }
+.eser-filtre button[aria-pressed="true"] { background: var(--yesil-koyu); }
+@media (max-width: 600px) { .harita-alani { height: 320px; } }

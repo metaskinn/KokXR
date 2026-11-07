@@ -87,10 +87,10 @@ body:has(.kilic-atolyesi) .alt-cubuk { display:none }
 .kilic-parca-notu h3 { font-family:Georgia,serif; font-weight:400; font-size:24px }
 .kilic-parca-notu p { font-size:12px; color:#d5d7cc }
 .kilic-atolyesi:fullscreen { overflow:auto }
-.kilic-ana-tanitim { background:radial-gradient(ellipse at 15% 50%,#5b3c28,#172829 65%); color:#eee6d7 }
-.kilic-ana-tanitim h2 { color:#eee6d7 }
-.kilic-ana-tanitim p,.kilic-ana-tanitim .temsili-not { color:#d1d5c8 }
-.kilic-ana-tanitim .ust-baslik { color:#d6ad7a }
+.vazo-tanitim.kilic-ana-tanitim { background:radial-gradient(ellipse at 15% 50%,#5b3c28,#172829 65%); color:#eee6d7 }
+.vazo-tanitim.kilic-ana-tanitim h2 { color:#eee6d7 }
+.vazo-tanitim.kilic-ana-tanitim p,.vazo-tanitim.kilic-ana-tanitim .temsili-not { color:#d1d5c8 }
+.vazo-tanitim.kilic-ana-tanitim .ust-baslik { color:#d6ad7a }
 .kilic-ana-cizim { display:grid; place-items:center; min-height:260px; transform:rotate(-25deg); filter:drop-shadow(0 12px 12px #0007) }
 .kilic-ana-cizim svg { width:90%; max-width:370px }
 @media(max-width:700px) {

@@ -1,48 +1,37 @@
-import { useState } from 'react'
-import DemoEtiketi from '../components/DemoEtiketi'
+import type { Eser } from '../types/eser'
+import type { UstKatman } from '../data'
+import { onayBekleyenler } from '../data/onay'
+import type { OnayDurumu, OnayHaritasi } from '../data/onay'
 import './mokap.css'
 
-type Durum = 'bekliyor' | 'onaylandi' | 'reddedildi'
+const durumEtiketi: Record<OnayDurumu, string> = { beklemede: 'Onay bekliyor', onaylandi: 'Onaylandı, yayında', reddedildi: 'Reddedildi, yayında değil' }
 
-const durumEtiketi: Record<Durum, string> = { bekliyor: 'Onay bekliyor', onaylandi: 'Onaylandı', reddedildi: 'Reddedildi' }
+interface Props { eserler: Eser[]; ustKatman: UstKatman; onay: OnayHaritasi; karar: (id: string, durum: OnayDurumu) => void }
 
-// Yer tutucu öneriler: gerçek bir esere veya tarihsel bilgiye bağlı değildir.
-const oneriler = [
-  { id: 'a', baslik: 'Örnek öneri 1: Bilgi kartı düzeltmesi', metin: 'Yer tutucu metin: bir bilgi kartının yazımı için düzeltme önerisi.', oneren: 'Öğretmen (örnek)', inceleyen: 'Küratör (örnek)' },
-  { id: 'b', baslik: 'Örnek öneri 2: Yeni test sorusu', metin: 'Yer tutucu metin: bir eserin testine eklenecek soru önerisi.', oneren: 'Öğretmen (örnek)', inceleyen: 'Akademisyen (örnek)' },
-  { id: 'c', baslik: 'Örnek öneri 3: Görsel açıklaması', metin: 'Yer tutucu metin: bir fotoğrafın açıklaması için öneri.', oneren: 'Öğrenci (örnek)', inceleyen: 'Küratör (örnek)' },
-]
-
-export default function OnayAkisi() {
-  const [durumlar, setDurumlar] = useState<Record<string, Durum>>({})
-  const durumu = (id: string): Durum => durumlar[id] ?? 'bekliyor'
-  const sayi = (d: Durum) => oneriler.filter((o) => durumu(o.id) === d).length
-  // Seçili karara yeniden basmak öneriyi beklemeye döndürür; düğmeler yerinde kaldığı için odak kaybolmaz.
-  const karar = (id: string, d: Durum) => setDurumlar({ ...durumlar, [id]: durumu(id) === d ? 'bekliyor' : d })
-
+export default function OnayAkisi({ eserler, ustKatman, onay, karar }: Props) {
+  const idler = onayBekleyenler(ustKatman)
+  const durumu = (id: string): OnayDurumu => onay[id] ?? 'beklemede'
+  const sayi = (d: OnayDurumu) => idler.filter((id) => durumu(id) === d).length
   return <section className="sayfa mokap" aria-labelledby="onay-basligi">
-    <DemoEtiketi />
     <p className="ust-baslik">İÇERİK ONAY AKIŞI</p>
-    <h1 id="onay-basligi">Öneriden karara</h1>
-    <p className="mokap-not">Bu ekran yalnız akışı gösterir. Öneriler ve roller örnektir, kararlar sayfa yenilenince silinir. Uygulamadaki hiçbir içerik bu ekranla değişmez ve burada onaylanmış sayılmaz.</p>
-
+    <h1 id="onay-basligi">Öneriden yayına</h1>
+    <p className="mokap-not">Yönetim ekranından eklenen yeni eserler önce beklemede kalır; yalnız onaylananlar ana sayfada ve eser sayfalarında yayınlanır. Kararlar bu tarayıcıda saklanır; bulut bağlantısı varsa kayıtlı eserlerin durumu da güncellenir.</p>
     <div className="mokap-ozet">
-      <p role="status">{durumEtiketi.bekliyor}: {sayi('bekliyor')} · {durumEtiketi.onaylandi}: {sayi('onaylandi')} · {durumEtiketi.reddedildi}: {sayi('reddedildi')}</p>
-      <button type="button" className="mokap-ikincil-dugme" onClick={() => setDurumlar({})}>Örneği sıfırla</button>
+      <p role="status">{durumEtiketi.beklemede}: {sayi('beklemede')} · Onaylandı: {sayi('onaylandi')} · Reddedildi: {sayi('reddedildi')}</p>
     </div>
-
-    <ul className="mokap-kartlar mokap-kartlar-uclu" aria-label="Örnek öneriler">{oneriler.map((o) => {
-      const d = durumu(o.id)
-      return <li className="mokap-kart" key={o.id}>
-        <span className={`mokap-durum mokap-durum-${d}`}>{durumEtiketi[d]}</span>
-        <h2>{o.baslik}</h2>
-        <p>{o.metin}</p>
-        <p className="mokap-ikincil">Öneren: {o.oneren}<br />İnceleyen: {o.inceleyen}</p>
-        <div className="mokap-eylemler" role="group" aria-label={`${o.baslik} için karar`}>
-          <button type="button" aria-pressed={d === 'onaylandi'} onClick={() => karar(o.id, 'onaylandi')}>Onayla</button>
-          <button type="button" aria-pressed={d === 'reddedildi'} onClick={() => karar(o.id, 'reddedildi')}>Reddet</button>
-        </div>
-      </li>
-    })}</ul>
+    {idler.length === 0 ? <p>Onay bekleyen eser yok. Yönetim ekranından yeni eser ekleyebilirsiniz.</p> :
+      <ul className="mokap-kartlar mokap-kartlar-uclu" aria-label="Onay bekleyen eserler">{idler.map((id) => {
+        const eser = eserler.find((e) => e.id === id)
+        const d = durumu(id)
+        return <li className="mokap-kart" key={id}>
+          <span className={`mokap-durum mokap-durum-${d === 'beklemede' ? 'bekliyor' : d}`}>{durumEtiketi[d]}</span>
+          <h2>{eser?.ad ?? id}</h2>
+          <p>{eser ? `${eser.sehir} · ${eser.ilce}` : ''}</p>
+          <div className="mokap-eylemler" role="group" aria-label={`${eser?.ad ?? id} için karar`}>
+            <button type="button" aria-pressed={d === 'onaylandi'} onClick={() => karar(id, d === 'onaylandi' ? 'beklemede' : 'onaylandi')}>Onayla</button>
+            <button type="button" aria-pressed={d === 'reddedildi'} onClick={() => karar(id, d === 'reddedildi' ? 'beklemede' : 'reddedildi')}>Reddet</button>
+          </div>
+        </li>
+      })}</ul>}
   </section>
 }

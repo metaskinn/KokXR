@@ -16,7 +16,7 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 - [x] 3. duzen/temizlik-2 ve arayuz/pwa'yı master'a birleştir (yerel, push yok). Tam test.
 - [x] 4. tests/uctan-uca.mjs başarısız adımda 1 koduyla çıksın.
 - [x] 5. yonetim/supabase: supabase/sema.sql yaz (eserler, gorseller, katkilar + RLS + storage bucket). Kod: .env doluysa Supabase'e kaydet, değilse localStorage'a düş (demo asla kırılmasın). Giriş (Supabase Auth, e-posta) ve görsel yükleme. Tabloları anon anahtarla oluşturamazsın; SQL'in sabah elle çalıştırılma adımlarını "Sabah sorulacaklar"a yaz.
-- [ ] 6. yonetim/onay: onay akışı mokaptan çıksın (beklemede/onaylandı/reddedildi, yalnız onaylanan yayında). Supabase yoksa localStorage ile çalışsın. Bu sayfadan DemoEtiketi'ni kaldır.
+- [x] 6. yonetim/onay: onay akışı mokaptan çıksın (beklemede/onaylandı/reddedildi, yalnız onaylanan yayında). Supabase yoksa localStorage ile çalışsın. Bu sayfadan DemoEtiketi'ni kaldır.
 - [ ] 7. arayuz/kesif: ana sayfada şehir/ilçe/kategori filtresi (mevcut veriden).
 - [ ] 8. arayuz/erisilebilirlik: yazı boyutu ve yüksek kontrast düğmesi (hatırlansın), tarihçe için tarayıcı TTS ile "Sesli dinle". axe veya Lighthouse raporunu docs/'a kaydet.
 - [ ] 9. Testler: yönetim ekle/düzenle ve onay akışı için otomatik test.
@@ -39,3 +39,4 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 - 3: master ileri sarma ile arayuz/pwa'ya (0912dfa) getirildi (temizlik-2 zaten onun atasıydı); ağaç test edilmiş olanla aynı. Push yok.
 - 4: tests/uctan-uca.mjs:156 zaten başarısız adımda exitCode=1 veriyor (460a8db); ek iş gerekmedi.
 - 5 (yonetim/supabase): supabase/sema.sql, src/data/bulut.ts (giriş, yükleme, eser kaydı), BulutPaneli. .env boşsa yalnız localStorage. test:hizli ve build geçti.
+- 6 (yonetim/onay): OnayAkisi gerçek oldu (src/data/onay.ts; beklemede/onaylandı/reddedildi, yalnız onaylanan yeni eser yayında, yerel + bulut). DemoEtiketi kaldırıldı. e2e 6b onay adımını içerecek şekilde güncellendi; Chromium 1280 15/15. Konsolda 404: Supabase tabloları henüz kurulu olmadığı için bekleniyor (sema.sql çalışınca kalkar).

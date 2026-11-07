@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import { eserleriGetir, icerigiOku, icerigiYaz } from './data'
 import type { UstKatman } from './data'
-import { bulutVar, eserleriOku, eserKaydet, eserSil } from './data/bulut'
+import { bulutVar, durumDegistir, eserleriOku, eserKaydet, eserSil } from './data/bulut'
+import { onayiOku, onayiYaz, yayinKatmani } from './data/onay'
+import type { OnayDurumu } from './data/onay'
 import { ustKatmaniCoz } from './data'
 import Yonetim from './pages/Yonetim'
 import type { YonetimProps } from './pages/Yonetim'
@@ -44,7 +46,14 @@ export default function App() {
     if (!bulutVar) return
     eserleriOku().then((liste) => setBulutKatmani(ustKatmaniCoz(Object.fromEntries(liste.map((b) => [b.eser.id, b.eser]))))).catch(() => {})
   }, [])
-  const eserler = eserleriGetir({ ...bulutKatmani, ...icerik.ustKatman })
+  const [onay, setOnay] = useState(onayiOku)
+  const yonetimEserleri = eserleriGetir({ ...bulutKatmani, ...icerik.ustKatman })
+  const eserler = eserleriGetir({ ...bulutKatmani, ...yayinKatmani(icerik.ustKatman, onay) })
+  function onayKarari(id: string, durum: OnayDurumu) {
+    const yeni = { ...onay, [id]: durum }
+    setOnay(yeni); onayiYaz(yeni)
+    if (bulutVar) durumDegistir(id, durum).catch(() => {})
+  }
   function icerikKaydet(veri: UstKatman) {
     const onceki = icerik.ustKatman
     setIcerik(icerigiYaz(veri))
@@ -53,7 +62,7 @@ export default function App() {
     for (const [id, e] of Object.entries(veri)) if (JSON.stringify(onceki[id]) !== JSON.stringify(e)) eserKaydet(e).catch(() => {})
     for (const id of Object.keys(onceki)) if (!(id in veri)) eserSil(id).catch(() => {})
   }
-  const yonetimProps = { eserler, ustKatman: icerik.ustKatman, kaydet: icerikKaydet }
+  const yonetimProps = { eserler: yonetimEserleri, ustKatman: icerik.ustKatman, kaydet: icerikKaydet }
   const [rozetler, setRozetler] = useState(rozetleriOku)
   const { pathname } = useLocation()
   const oncekiRota = useRef(pathname)
@@ -82,7 +91,7 @@ export default function App() {
         <Route path="/ogretmen" element={<OgretmenPaneli />} />
         <Route path="/vizyon" element={<Vizyon />} />
         <Route path="/kutuphane" element={<Kutuphane />} />
-        <Route path="/onay" element={<OnayAkisi />} />
+        <Route path="/onay" element={<OnayAkisi eserler={yonetimEserleri} ustKatman={icerik.ustKatman} onay={onay} karar={onayKarari} />} />
         <Route path="/vr" element={<VrEserler eserler={eserler} />} />
         <Route path="/vr/:id" element={<VrEser eserler={eserler} rozetKazan={rozetKazan} />} />
         <Route path="/atolye/kilic" element={<KilicAtolyesi />} />

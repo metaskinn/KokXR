@@ -1,0 +1,177 @@
+{
+  "id": "iznik-haci-hamza-bath",
+  "name": "Hacı Hamza (II. Murad) Hamamı",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "XIV. yüzyıl sonu – XV. yüzyıl başı (tahmini; kitabesi yok)",
+  "endowment": "Banisi bilinmiyor; Hacı Hamza Bey Mescidi evkafına ait olduğu ileri sürülür",
+  "summary": "Kitabesi olmayan, XIV. yüzyıl sonu ile XV. yüzyıl başına tarihlenen ve erkekler bölümü bugün de hamam olarak kullanılan çifte hamam.",
+  "history": "İznik'te, Mahmut Çelebi Mahallesi, Maltepe Caddesi'nde yer alır. İznik'teki ilk Türk eseri olan Hacı Hamza Bey Mescidi evkafına ait olduğu ileri sürüldüğünden \"Hacı Hamza Hamamı\" adıyla da anılır. Kitabesi olmadığı için kim tarafından ve hangi tarihte yaptırıldığı bilinmemektedir; planı, yapım tekniği ve mimari unsurlarındaki benzerlikler nedeniyle XIV. yüzyıl sonu ile XV. yüzyıl başında inşa edilmiş olabileceği tahmin edilir.\n\nEvliya Çelebi, 1648'de uğradığı İznik'te iki çifte hamam bulunduğunu kaydeder; bunlardan biri Hacı Hamza (II. Murad) Hamamı'dır. Osmanlı dönemi boyunca kesintisiz kullanılan hamam, 1930'lu yıllarda Vakıflar İdaresi tarafından belediyeye devredilmiş; belediye yapıyı bir süre depo olarak kullandıktan sonra yeniden hamam olarak açmıştır. Bu nedenle halk arasında \"Belediye Hamamı\" olarak da bilinir. 1987'de dış yüzeylerdeki süslemeli mermer kurnalar sökülmüş, iç mekânda tarihî yapıya aykırı müdahaleler yapılmıştır.\n\nDoğu-batı doğrultusunda uzanan hamam erkekler ve kadınlar kısımlarından oluşur. Erkekler kısmının soyunmalığı yaklaşık 9,50 m çapında büyük bir kubbeyle örtülüdür; ortasında fıskiyeli bir şadırvan vardır. Sıcaklık bölümü dört eyvanlı planı ve köşelerdeki dört halvet hücresiyle eski Türk sivil mimari geleneğini yansıtır. Cephe duvarları moloz taş ve tuğlayla örülmüş, köşelerde kesme taş ve mermer bloklar kullanılmıştır. 2006'daki yangından sonra onarılan yapı 2010'da genel bir tadilattan geçmiştir. Bugün erkekler bölümü hamam olarak çalışmakta, kadınlar bölümü ise çini atölyesi olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-haci-hamza-bath/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-haci-hamza-bath/aerial.jpg",
+      "alt": "Hamamın havadan görünümü: kiremit kaplı büyük kubbe, moloz taş ve tuğla örgülü cephe, kemerli pencereler, solda daha küçük kubbeli bölüm ve yanından geçen cadde",
+      "description": "Havadan genel görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-hamza-bath/roof-top.jpg",
+      "alt": "Hamamın tepeden görünümü: iki büyük kubbe ve aralarında aydınlık fenerli çok sayıda küçük kubbe; solda kazı alanı",
+      "description": "Tepeden çatı görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-hamza-bath/domes.jpg",
+      "alt": "Kiremit kaplı kubbelerin yakından görünümü; taş ve tuğla örgülü kasnaklar ve fenerli küçük kubbeler",
+      "description": "Kubbeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-hamza-bath/tiled-corridor.jpg",
+      "alt": "Duvarları çini desenli, alt kısmı damarlı mermer kaplı, mermer döşemeli bir iç mekân; sağda ahşap kapı, arkada kemerli geçit",
+      "description": "Çini kaplı iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-hamza-bath/squinches.jpg",
+      "alt": "Kare bir mekânın tavana doğru geniş açılı görünümü: köşelerde dilimli tromplar, kubbede iki ışık açıklığı, aşağıda çini atölyesi eşyaları",
+      "description": "Kubbeye geçişteki tromplar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-hamza-bath/tile-workshop.jpg",
+      "alt": "Beyaz kubbeli bir mekânda çini atölyesi ve satış alanı: tezgâhlarda çini tabaklar ve süs eşyaları",
+      "description": "Çini atölyesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-hamza-bath/muqarnas.jpg",
+      "alt": "Sıvalı duvarda dilimli tromp ve altında sarkıt biçimli mukarnas bezemesinin yakın görünümü",
+      "description": "Tromp ve mukarnas",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-hamza-bath/tiled-room.jpg",
+      "alt": "Çini desenli duvarları ve mermer zeminiyle kubbeli küçük bir mekân; kubbe eteğinde kemerli sıra",
+      "description": "Kubbeli küçük mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dressing-dome",
+      "image": "/images/iznik-haci-hamza-bath/aerial.jpg",
+      "x": 61,
+      "y": 36,
+      "title": "Büyük kubbe",
+      "text": "Erkekler kısmının kare planlı soyunmalığı yaklaşık 9,50 m çapında büyük bir kubbeyle örtülüdür. Ortasında fıskiyeli bir şadırvan vardır; mekân iki cephesindeki üçer pencere ve kubbedeki aydınlık penceresiyle ışık alır.",
+      "sourceId": "inv-p491"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/iznik-haci-hamza-bath/aerial.jpg",
+      "x": 46,
+      "y": 45,
+      "title": "Cephe örgüsü",
+      "text": "Cephe duvarları moloz taş ve tuğlanın harçla birlikte kullanılmasıyla örülmüş, köşelerde XV. yüzyıl Bursa yapılarında da görülen bir teknikle kesme taş ve mermer bloklar kullanılmıştır. Pencere kemerleri taş ve tuğladan sivri kemer biçimindedir.",
+      "sourceId": "inv-p492"
+    },
+    {
+      "id": "domes-plan",
+      "image": "/images/iznik-haci-hamza-bath/roof-top.jpg",
+      "x": 40,
+      "y": 48,
+      "title": "İki bölüm, iki büyük kubbe",
+      "text": "Hamam erkekler ve kadınlar kısımlarından oluşur ve doğu-batı doğrultusunda uzanır. Her iki kısmın soyunma yerleri büyük kubbelidir.",
+      "sourceId": "inv-p490"
+    },
+    {
+      "id": "tile-workshop",
+      "image": "/images/iznik-haci-hamza-bath/tile-workshop.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Bugünkü kullanım",
+      "text": "Günümüzde erkekler bölümü hâlen hamam işlevini sürdürür; kadınlar bölümü ise çini atölyesi olarak kullanılmaktadır.",
+      "sourceId": "inv-p493"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam halk arasında başka hangi adla da bilinir?",
+      "options": [
+        "Belediye Hamamı",
+        "Saray Hamamı",
+        "Tekke Hamamı",
+        "Yeni Hamam"
+      ],
+      "correct": 0,
+      "description": "1930'larda belediyeye devredilip yeniden hamam olarak açıldığı için halk arasında \"Belediye Hamamı\" olarak da bilinir.",
+      "sourceId": "inv-p490"
+    },
+    {
+      "question": "Yapının kim tarafından ve ne zaman yaptırıldığı neden bilinmemektedir?",
+      "options": [
+        "Kitabesi bulunmadığı için",
+        "Yangında belgeleri yandığı için",
+        "Depremde yıkıldığı için",
+        "Başka şehre taşındığı için"
+      ],
+      "correct": 0,
+      "description": "Yapının kitabesi bulunmadığından banisi ve tarihi bilinmemektedir; XIV. yüzyıl sonu ile XV. yüzyıl başında yapılmış olabileceği tahmin edilir.",
+      "sourceId": "inv-p489"
+    },
+    {
+      "question": "Hamamın kadınlar bölümü bugün ne olarak kullanılmaktadır?",
+      "options": [
+        "Çini atölyesi",
+        "Müze",
+        "Depo",
+        "Medrese"
+      ],
+      "correct": 0,
+      "description": "Erkekler bölümü hâlen hamam olarak çalışırken kadınlar bölümü çini atölyesi olarak kullanılmaktadır.",
+      "sourceId": "inv-p493"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p489",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Hacı Hamza (II. Murad) Hamamı\"",
+      "page": "489"
+    },
+    {
+      "id": "inv-p490",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Hacı Hamza (II. Murad) Hamamı\"",
+      "page": "490"
+    },
+    {
+      "id": "inv-p491",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Hacı Hamza (II. Murad) Hamamı\"",
+      "page": "491"
+    },
+    {
+      "id": "inv-p492",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Hacı Hamza (II. Murad) Hamamı\"",
+      "page": "492"
+    },
+    {
+      "id": "inv-p493",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Hacı Hamza (II. Murad) Hamamı\"",
+      "page": "493"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

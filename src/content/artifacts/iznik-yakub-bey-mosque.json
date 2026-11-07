@@ -1,0 +1,127 @@
+{
+  "id": "iznik-yakub-bey-mosque",
+  "name": "Yakub Bey Camii",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Osmanlı · banisi Yakup Çelebi (1359-1389); 1963'te onarılarak yeniden ibadete açıldı",
+  "endowment": "Sultan I. Murad Hudâvendigâr'ın oğlu Yakup Çelebi tarafından yaptırıldığı kabul edilir.",
+  "summary": "Sultan I. Murad'ın oğlu Yakup Çelebi'nin yaptırdığı kabul edilen, tabhaneli/zaviyeli plan tipindeki İznik camisi.",
+  "history": "Yapı, İznik'te Yeni Mahalle, Yakup Sokak'ta yer alır. Kosova Savaşı sonrasında şehit edilen Sultan I. Murad Hudâvendigâr'ın oğlu Yakup Çelebi (1359-1389) tarafından inşa ettirildiği kabul edilir. Yakup Çelebi'nin İznik'teki cami ve türbesinin yanı sıra Keles'te bir hamam yaptırdığı da bilinmektedir.\n\n1919'a kadar cami olarak kullanılan yapı bir süre boş kalmış, 1934-1935'te müze deposu olmuş, 1963'te onarılarak yeniden ibadete açılmıştır. Yakın dönemde kapsamlı bir onarımdan daha geçmiştir.\n\nCami, tabhaneli/zaviyeli camiler grubundadır; bu plan tipi Bursa Ulucami dışında erken dönem Bursa sultan külliyelerinin camilerinin tamamında görülür. Kuzey-güney doğrultusunda yaklaşık 21 × 20 m ölçülerindeki yapının duvarları üç sıra tuğla ve bir sıra kesme taşla almaşık örülmüş, üstte üç sıra kirpi saçak kullanılmış, kubbe ve tonozlar kiremitle örtülmüştür. Beş gözlü son cemaat yerinin revakları aynalı tonozludur; devşirme sütun başlıkları dikkat çeker.\n\nGirişten sonraki kubbeli orta bölüm iki yandaki tabhanelere geçiş verir; güneyinde ise daha yüksek kubbeli mihrap bölümü yer alır. Süslemesiz, yuvarlak nişli mihrap 1963 onarımında yeniden yapılmış; sade ahşap minber ve vaaz kürsüsü de aynı dönemde yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-yakub-bey-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-yakub-bey-mosque/aerial-view.jpg",
+      "alt": "Caminin havadan görünümü: kesme taş ve tuğla örgülü duvarlar, kiremit kaplı üç kubbe ve tonoz çatılar, çevresinde konutlar",
+      "description": "Havadan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yakub-bey-mosque/roof-from-top.jpg",
+      "alt": "Caminin tepeden görünümü: art arda iki kiremit kubbe, iki yanında tonoz örtülü birimler, kuzeyde son cemaat yeri çatısı; üstte bahçedeki ayrı kubbeli küçük yapı",
+      "description": "Tepeden plan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yakub-bey-mosque/prayer-hall.jpg",
+      "alt": "Caminin iç mekânı: karşıda mihrap, sağda ahşap minber, beyaz duvarlar, renkli camlı pencereler ve kırmızı halı",
+      "description": "İbadet alanı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "central-dome",
+      "image": "/images/iznik-yakub-bey-mosque/roof-from-top.jpg",
+      "x": 50,
+      "y": 66,
+      "title": "Kubbeli orta bölüm",
+      "text": "İki yandaki tabhanelere geçiş veren orta bölüm 6,00 × 4,50 m ölçülerinde, dikdörtgen planlı ve kubbelidir. Kubbe zeminden 8,10 m yüksektedir; eskiden üstünde bulunan aydınlık feneri 1963 onarımında kapatılmıştır.",
+      "sourceId": "inv-p450"
+    },
+    {
+      "id": "tabhane",
+      "image": "/images/iznik-yakub-bey-mosque/roof-from-top.jpg",
+      "x": 28,
+      "y": 66,
+      "title": "Tabhane birimleri",
+      "text": "Orta kubbenin iki yanında 4,70 × 4,70 m ölçülerinde, kare planlı ve tonoz örtülü tabhane birimleri vardır. Bu odalarda girişin karşısında bir ocak nişi bulunur.",
+      "sourceId": "inv-p451"
+    },
+    {
+      "id": "mihrab-dome",
+      "image": "/images/iznik-yakub-bey-mosque/roof-from-top.jpg",
+      "x": 49,
+      "y": 82,
+      "title": "Mihrap bölümü kubbesi",
+      "text": "Mihraplı alan 6,20 × 6,20 m ölçülerindedir ve 5,50 m çapında bir kubbeyle örtülüdür. Bu kubbe diğerlerinden daha yüksektir; kubbeyi taşıyan kemerin yerden yüksekliği 7,70 m'dir.",
+      "sourceId": "inv-p451"
+    },
+    {
+      "id": "walls",
+      "image": "/images/iznik-yakub-bey-mosque/aerial-view.jpg",
+      "x": 30,
+      "y": 70,
+      "title": "Almaşık duvarlar",
+      "text": "Beden duvarları üç sıra tuğla, bir sıra kesme taş düzeniyle örülmüştür. Duvarların üstünde üç sıra kirpi saçak vardır; kubbe ve tonozlar kiremitle kaplıdır.",
+      "sourceId": "inv-p450"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin kim tarafından inşa ettirildiği kabul edilir?",
+      "options": [
+        "Sultan I. Murad'ın oğlu Yakup Çelebi",
+        "Çandarlı Halil Hayreddin Paşa",
+        "Çandarlı İbrahim Paşa",
+        "Şeyh Kutbüddin İznikî"
+      ],
+      "correct": 0,
+      "description": "Yapının, Kosova Savaşı sonrasında şehit edilen I. Murad Hudâvendigâr'ın oğlu Yakup Çelebi tarafından yaptırıldığı kabul edilir.",
+      "sourceId": "inv-p450"
+    },
+    {
+      "question": "Yapı 1934-1935 yıllarında ne olarak kullanılmıştır?",
+      "options": [
+        "Müze deposu",
+        "Okul",
+        "Hamam",
+        "Kütüphane"
+      ],
+      "correct": 0,
+      "description": "1919'a kadar cami olan yapı bir süre boş kalmış, 1934-1935'te müze deposu olmuş, 1963'te onarılarak yeniden ibadete açılmıştır.",
+      "sourceId": "inv-p450"
+    },
+    {
+      "question": "Mihrap bölümünü örten kubbenin çapı kaç metredir?",
+      "options": [
+        "5,50 m",
+        "8,10 m",
+        "11 m",
+        "3 m"
+      ],
+      "correct": 0,
+      "description": "6,20 × 6,20 m ölçülerindeki mihrap bölümü 5,50 m çapında bir kubbeyle örtülüdür ve bu kubbe diğerlerinden yüksektir.",
+      "sourceId": "inv-p451"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p450",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Yakub Bey Camii\"",
+      "page": "450"
+    },
+    {
+      "id": "inv-p451",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Yakub Bey Camii\"",
+      "page": "451"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

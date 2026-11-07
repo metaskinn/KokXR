@@ -1,0 +1,125 @@
+{
+  "id": "iznik-seyh-kutbuddin-mosque",
+  "name": "Şeyh Kutbüddin Camii",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Osmanlı · XV. yüzyıl; 2007'de restore edildi",
+  "endowment": "Kitabesi günümüze ulaşmamıştır; Sultan II. Bayezid'in vezirlerinden Çandarlı İbrahim Paşa tarafından yaptırıldığı kabul edilir.",
+  "summary": "Nilüfer Hatun İmareti'nin güneydoğusunda, Yeşil Camii'nin batısında, bitişik türbesi ve minaresiyle bir bütün oluşturan kare planlı cami.",
+  "history": "Cami, İznik'te Eşrefzâde Mahallesi, Alaaddin Mısri Sokağı'nda yer alır. Adını aldığı Şeyh Kutbüddin İznikî, oğlu Mehmed İznikî'ye ait bir risaledeki kayda göre aslen Niğde doğumludur ve sonradan İznik'e göç etmiştir. Aralarında Niksârî Hasan Paşa'nın da bulunduğu hocalardan ders almış, şeri ilimlerdeki bilgisi ve tasavvuftaki yüksek derecesiyle tanınmıştır. Evliya Çelebi'ye göre İznik'te bir asitanesi (zaviyesi) vardır. Bazı kaynaklarda Timur'un Anadolu'yu işgali sırasında onunla görüşüp haksız yere kan dökmemesi için uyardığı rivayet edilir. 8 Zilkade 821 / 7 Aralık 1418'de İznik'te vefat etmiş ve kendi zaviyesine defnedilmiştir.\n\nCami ve türbesine ait günümüze ulaşan bir kitabe yoktur; yapının XV. yüzyılda Sultan II. Bayezid'in vezirlerinden Çandarlı İbrahim Paşa tarafından yaptırıldığı kabul edilir. Kare planlı cami, kuzeybatısındaki bitişik kare planlı türbe ve türbenin kuzeydoğusundaki minareyle bir bütündür. Zamanla büyük ölçüde yıkılan yapı, 2007'de orijinaline uygun biçimde restore edilerek yeniden ibadete açılmıştır.\n\nÜç gözlü son cemaat yeri, kaidesiz devşirme mermer sütunlara oturan sivri kemerlerle taşınır; sütun başlıkları kompozit tarzdadır. Duvarlar, son cemaat yeri ve kubbe kasnağı bir sıra kesme taş ve üç sıra tuğla ile örülmüştür. Minarenin alt kısmında, yapı taşları arasında XII-XIII. yüzyıllara tarihlenen İbranice bir kitabe bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-seyh-kutbuddin-mosque/mosque-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-seyh-kutbuddin-mosque/mosque-aerial.jpg",
+      "alt": "Kare planlı, kiremit kaplı kubbeli caminin havadan görünümü: kesme taş ve tuğla sıralı duvarlar, altlı üstlü pencereler, sağda tuğla minare",
+      "description": "Cami ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-seyh-kutbuddin-mosque/district-aerial.jpg",
+      "alt": "İznik'in havadan görünümü: ortada bitişik küçük kubbeli türbesi ve tuğla minaresiyle cami, arkada çinili minareli Yeşil Camii, solda çok kubbeli bir yapı",
+      "description": "Çevresiyle birlikte havadan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-seyh-kutbuddin-mosque/prayer-hall.jpg",
+      "alt": "Caminin iç mekânı: beyaz duvarlar, yeşil nişli mihrap, sağda ahşap minber, renkli camlı pencereler ve turkuaz halı",
+      "description": "İbadet alanı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-seyh-kutbuddin-mosque/brick-minaret.jpg",
+      "alt": "Tuğla örgülü silindirik minare gövdesi ve tuğla şerefesi; sağda kiremit kaplı kubbeler, arkada çinili bir minare",
+      "description": "Tuğla minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "walls",
+      "image": "/images/iznik-seyh-kutbuddin-mosque/mosque-aerial.jpg",
+      "x": 15,
+      "y": 70,
+      "title": "Almaşık duvar örgüsü",
+      "text": "Moloz taş temeller üzerindeki beden duvarları, son cemaat yeri ve kubbe kasnağı bir sıra kesme taş ve üç sıra tuğla ile örülmüştür. Kuzey dışındaki üç cephe, kasnaktakiler dahil toplam 16 pencereyle aydınlanır.",
+      "sourceId": "inv-p448"
+    },
+    {
+      "id": "dome",
+      "image": "/images/iznik-seyh-kutbuddin-mosque/mosque-aerial.jpg",
+      "x": 23,
+      "y": 52,
+      "title": "Kiremit kaplı kubbe",
+      "text": "Revakı örten tonozlar ve kubbe Alaturka kiremitle kaplanmış, kirpi saçakla son bulmuştur.",
+      "sourceId": "inv-p448"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/iznik-seyh-kutbuddin-mosque/brick-minaret.jpg",
+      "x": 9,
+      "y": 40,
+      "title": "Minare",
+      "text": "Minare, moloz taştan kare planlı bir kaideye oturur; kaideden silindirik gövdeye Türk üçgenleriyle geçilir. Gövde, şerefe ve petek tuğla örgülüdür. Alt kısmındaki taşlar arasında XII-XIII. yüzyıllara tarihlenen İbranice bir kitabe vardır.",
+      "sourceId": "inv-p448"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitapta caminin kim tarafından yaptırıldığı kabul edilir?",
+      "options": [
+        "Çandarlı İbrahim Paşa",
+        "Şeyh Kutbüddin İznikî",
+        "Niksârî Hasan Paşa",
+        "Îsâ Çelebi"
+      ],
+      "correct": 0,
+      "description": "Günümüze kitabe ulaşmamıştır; yapının XV. yüzyılda Sultan II. Bayezid'in vezirlerinden Çandarlı İbrahim Paşa tarafından yaptırıldığı kabul edilir.",
+      "sourceId": "inv-p448"
+    },
+    {
+      "question": "Minarenin alt kısmındaki taşlar arasında dikkat çeken nedir?",
+      "options": [
+        "XII-XIII. yüzyıllara tarihlenen İbranice bir kitabe",
+        "Çini bir pano",
+        "Yapının inşa kitabesi",
+        "Bir güneş saati"
+      ],
+      "correct": 0,
+      "description": "Bu yazının ressam veya boyacı Abraham bin Mayer'e ait bir mezar taşı olduğu ifade edilir.",
+      "sourceId": "inv-p448"
+    },
+    {
+      "question": "Şeyh Kutbüddin İznikî aslen nerede doğmuştur?",
+      "options": [
+        "Niğde",
+        "Bursa",
+        "Sivrihisar",
+        "Edirne"
+      ],
+      "correct": 0,
+      "description": "Oğlu Mehmed İznikî'nin risalesindeki kayda göre Niğde doğumludur ve sonradan İznik'e göç etmiştir.",
+      "sourceId": "inv-p446"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p446",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Şeyh Kutbüddin Camii\"",
+      "page": "446"
+    },
+    {
+      "id": "inv-p448",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Şeyh Kutbüddin Camii\"",
+      "page": "448"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

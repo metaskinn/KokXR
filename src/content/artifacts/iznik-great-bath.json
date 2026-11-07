@@ -1,0 +1,118 @@
+{
+  "id": "iznik-great-bath",
+  "name": "Büyük (Eski – I. Murad – Meydan – Tekke) Hamamı",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Erken Osmanlı · I. Murad dönemi (kitabesi yok)",
+  "endowment": "I. Murad tarafından yaptırıldığı bilinir; vakfı kitapta belirtilmemiştir",
+  "summary": "I. Murad'ın yaptırdığı bilinen, erken Osmanlı tarzında çifte hamam olarak inşa edilmiş ve restorasyondan sonra müze olarak açılmış yapı.",
+  "history": "İznik'te, Beyler Mahallesi, Atatürk Caddesi No: 88'de yer alır. I. Murad tarafından yaptırıldığı bilinen yapı, halk arasında I. Murad Hamamı, Büyük Hamam, Eski Hamam, Meydan Hamamı ve Tekke Hamamı gibi adlarla anılır. Herhangi bir kitabesi yoktur.\n\nErken dönem Osmanlı hamamları tarzında, dikdörtgen planlı ve kadınlar ile erkekler bölümü ayrı olan \"çifte hamam\" tipinde inşa edildiği anlaşılmaktadır. İki bölümün mimari özellikleri büyük ölçüde benzerdir; kadınlar bölümü daha küçüktür. Kapı ve pencere kemerleri tuğladandır; iç duvarlar ve üst örtü sıva ve badanayla kaplanmıştır. Tamir öncesinde dökülen sıvalar, alt yapının kesme taş, moloz taş ve tuğla kullanılarak düzensiz almaşık teknikte yapıldığını göstermiştir.\n\nHamamın temelleri, yanından geçen Atatürk Caddesi'nin yaklaşık 3 m altında kalmıştır. Batı cephesinin önünden İstanbul Kapı ile Yenişehir Kapı'yı bağlayan ana yol geçer; bu yolun 4 m altında, hamamın hemen yanında eski Roma yolu kalıntıları ortaya çıkarılmıştır. Hayli harap durumdaki yapı 1970'li yıllarda belediye deposu olarak kullanılmış, tarihî ve mimari değeri ortaya konduktan sonra restore edilerek müze olarak hizmete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-great-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-great-bath/exterior.jpg",
+      "alt": "Hamamın dıştan görünümü: kiremit kaplı büyük kubbe, kesme ve moloz taş örgülü cephe, tuğla kemerli kapı ve pencere, sağda fenerli küçük kubbeler",
+      "description": "Dış görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-great-bath/museum-hall.jpg",
+      "alt": "Beyaz sıvalı, sivri kemerli bir iç mekân; duvarlarda bilgi panoları, ortada sergi vitrinleri ve ahşap zemin",
+      "description": "Müze salonu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-great-bath/museum-exhibit.jpg",
+      "alt": "Kemerli nişler ve sergi panolarıyla müze olarak düzenlenmiş iç mekân; ortadaki nişte bir canlandırma figürü",
+      "description": "Müze sergisi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "double-bath",
+      "image": "/images/iznik-great-bath/exterior.jpg",
+      "x": 67,
+      "y": 55,
+      "title": "Çifte hamam",
+      "text": "Yapı, kadınlar ile erkekler bölümü ayrı olan \"çifte hamam\" tipindedir. İki bölümün mimari özellikleri büyük ölçüde benzer, kadınlar bölümü ise daha küçüktür.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "id": "brick-arches",
+      "image": "/images/iznik-great-bath/exterior.jpg",
+      "x": 32,
+      "y": 66,
+      "title": "Tuğla kemerler",
+      "text": "Kapı ve pencere kemerleri tuğladan yapılmıştır. Dökülen sıvalar alt yapının kesme taş, moloz taş ve tuğla ile düzensiz almaşık teknikte örüldüğünü göstermiştir.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "id": "museum",
+      "image": "/images/iznik-great-bath/museum-exhibit.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Depodan müzeye",
+      "text": "Harap durumdaki yapı 1970'li yıllarda belediye deposu olarak kullanılmış, değeri ortaya konduktan sonra restore edilerek müze olarak açılmıştır.",
+      "sourceId": "inv-p487"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam hangi tipte inşa edilmiştir?",
+      "options": [
+        "Kadınlar ve erkekler bölümü ayrı çifte hamam",
+        "Tek bölümlü tek hamam",
+        "Kaplıca",
+        "Saray hamamı"
+      ],
+      "correct": 0,
+      "description": "Yapı, kadınlar ile erkekler bölümü ayrı olan çifte hamam tipinde inşa edilmiştir.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "question": "Hamamın yanında, ana yolun 4 m altında hangi kalıntılar ortaya çıkarılmıştır?",
+      "options": [
+        "Eski Roma yolu kalıntıları",
+        "Bizans kilisesi",
+        "Osmanlı çeşmesi",
+        "Su kemeri"
+      ],
+      "correct": 0,
+      "description": "İstanbul Kapı ile Yenişehir Kapı'yı bağlayan yolun 4 m alt kotunda, hamamın hemen yanında eski Roma yolu kalıntıları bulunmuştur.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "question": "Yapı 1970'li yıllarda ne olarak kullanılmıştır?",
+      "options": [
+        "Belediye deposu",
+        "Okul",
+        "Cami",
+        "Çini atölyesi"
+      ],
+      "correct": 0,
+      "description": "Hayli harap durumdaki yapı 1970'li yıllarda belediye deposu olarak kullanılmış, sonra restore edilerek müze olmuştur.",
+      "sourceId": "inv-p487"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p486",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Büyük (Eski-I. Murad-Meydan-Tekke) Hamamı\"",
+      "page": "486"
+    },
+    {
+      "id": "inv-p487",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Büyük (Eski-I. Murad-Meydan-Tekke) Hamamı\"",
+      "page": "487"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

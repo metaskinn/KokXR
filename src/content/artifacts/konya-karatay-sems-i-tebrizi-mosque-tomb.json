@@ -1,0 +1,121 @@
+{
+  "id": "konya-karatay-sems-i-tebrizi-mosque-tomb",
+  "name": "Şems-i Tebrizi Camii ve Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Selçuklu · XIII. yüzyıl olarak düşünülmektedir",
+  "endowment": "Emir İshak Bey’in H. 915 / M. 1510 tarihli vakfiyesi",
+  "summary": "Şems Mahallesi’ndeki cami ve bitişik türbe, farklı dönemlerin ek ve onarımlarını taşıyan Şems Külliyesi’nin günümüze ulaşan yapılarıdır.",
+  "history": "Cami, Şems Mahallesi, Şems Caddesi’nde, Şerafeddin Camii’nin kuzeyindedir. Mevlâna’nın yakın dostu Şems-i Tebrizî’nin bitişik türbede medfun olduğu belirtilir. Türbe, cami ve semahaneden oluşan ilk külliyenin kesin tarihi bilinmez; XIII. yüzyılda yapıldığı düşünülür. Alan Selçuklu döneminde Âhi Bedreddin Gühertaş’ın bağıdır.\n\nEmir İshak Bey’in 1510 tarihli Arapça vakfiyesi mescidin güneyine bina eklenmesini, dârülhuffâzın genişletilmesini, batıya iki oda, bir mektep ve dershane yapılmasını anlatır. Külliyenin yaşatılması için vakıflar kurulmuştur. Sonraki eklerle türbe, mescit, eğitim mekânları, Şems Dedesi Evi, derviş hücreleri, salon, kuyu ve şadırvan bir araya gelmiştir. Çevresindeki mezarlık 26 Nisan 1944’te yol için kaldırılmış; bazı mezar taşları Sırçalı Medrese Mezar Anıtları Müzesi’ne taşınmış, alan parka dönüştürülmüştür.\n\n1954’te Türkiye Anıtlar Derneği Konya Şubesi yapıyı onarmıştır. 1960 ve 1977 restorasyonları özgünlüğünü büyük ölçüde değiştirmiş, 1992 ve 2000’de de onarımlar yapılmıştır. Cami, türbe ve 1992’de yenilenen şadırvan günümüze gelmiştir. Taş yapı derinlemesine dikdörtgen planlı, kırma çatılıdır. Harimi ortadaki büyük sivri kemerin taşıdığı ahşap düz örtü kapatır. Kuzeyde iki ahşap desteğe oturan Bursa kemerlerinin taşıdığı mahfil bulunur. Ahşap mihrap ve minber sonradan eklenmiştir; özgün mihrap mukarnas kavsaralı ve iki kabaralıdır. Doğuda sonradan camekânla kapatılan altı sütunlu revak, kuzeybatıda daha yeni bir tek şerefeli minare vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-sems-i-tebrizi-mosque-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-sems-i-tebrizi-mosque-tomb/exterior.jpg",
+      "alt": "Ağaçlar içinde kırma çatılı taş yapı ve yanında yükselen tek minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-sems-i-tebrizi-mosque-tomb/gallery.jpg",
+      "alt": "Kırmızı halılı harimin arkasında ahşap kafes korkuluklu üst mahfil ve büyük kemer",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-sems-i-tebrizi-mosque-tomb/wooden-minbar.jpg",
+      "alt": "Pencere yanında geometrik işlemeli ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-sems-i-tebrizi-mosque-tomb/gallery.jpg",
+      "x": 48,
+      "y": 30,
+      "title": "Ahşap mahfil",
+      "text": "Kuzeydeki mahfil iki ahşap desteğe oturan Bursa kemerleriyle taşınır.",
+      "sourceId": "inv-p227"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-sems-i-tebrizi-mosque-tomb/wooden-minbar.jpg",
+      "x": 47,
+      "y": 60,
+      "title": "Ahşap minber",
+      "text": "Ahşap minber yapıya sonradan eklenmiştir.",
+      "sourceId": "inv-p227"
+    }
+  ],
+  "test": [
+    {
+      "question": "1510 tarihli vakfiyede ek yapılar yaptırdığı belirtilen kişi kimdir?",
+      "options": [
+        "Halil Bey",
+        "Hasan Usta",
+        "Emir İshak Bey",
+        "Hacı Abdullah Ağa"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Emir İshak Bey.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "question": "Şems Mezarlığı hangi yıl kaldırılmıştır?",
+      "options": [
+        "1833",
+        "1905",
+        "2015",
+        "1944"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: 1944.",
+      "sourceId": "inv-p225"
+    },
+    {
+      "question": "Şems-i Tebrizi Camii ve Türbesi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p223"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p223",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Şems-i Tebrizi Camii ve Türbesi\"",
+      "page": "223"
+    },
+    {
+      "id": "inv-p224",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Şems-i Tebrizi Camii ve Türbesi\"",
+      "page": "224"
+    },
+    {
+      "id": "inv-p225",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Şems-i Tebrizi Camii ve Türbesi\"",
+      "page": "225"
+    },
+    {
+      "id": "inv-p226",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Şems-i Tebrizi Camii ve Türbesi\"",
+      "page": "226"
+    },
+    {
+      "id": "inv-p227",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Şems-i Tebrizi Camii ve Türbesi\"",
+      "page": "227"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

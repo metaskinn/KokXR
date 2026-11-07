@@ -1,0 +1,116 @@
+{
+  "id": "konya-sarayonu-pir-huseyin-bey-upper-mosque",
+  "name": "Pir Hüseyin Bey (Yukarı) Camii",
+  "city": "Konya",
+  "district": "Sarayönü",
+  "period": "H. 811 / M. 1408",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sarayönü Yukarı Mahalle’deki cami, ahşap direkli harimi ve mukarnas kavsaralı alçı mihrabıyla dikkat çeker.",
+  "history": "Cami, Sarayönü Yukarı Mahalle, Pir Hüseyin Bey Caddesi’ndedir. Büyük Camii adıyla da bilinir. H. 811 / M. 1408’de yaptırılmış; kitapta H. 1310 / M. 1894 olarak verilen tarihte Hacı Abdullah Ağa tarafından tamir ettirilmiştir. 1944’te minare eklenmiştir. Derinlemesine dikdörtgen yapı giriş, üç sahınlı harim ve avludan oluşur. Cepheler onarımlarla sıvanıp boyanmış; güney ve batıda taşların kenarları kırmızıyla belirginleştirilmiştir. Batı cephesinin kuzeyindeki minare kare kaideli, silindirik ve tek şerefelidir.\n\nHarimi mihraba dik iki sıra hâlinde beşer ahşap direk üç sahına ayırır; orta sahın daha geniş ve yüksektir. Duvarlarda Allah, Muhammed, dört halife, Hasan ve Hüseyin adlarını taşıyan sekiz yuvarlak levha vardır. Alçı mihrap iki bölümlüdür; nişin üstü mukarnas kavsaralı, çevresi celî sülüs yazılı bordürlüdür. Yivli sütunceler ve geometrik-bitkisel bezemelerle kuşatılmıştır. Turkuaz tepeliğinde Bakara Suresi 144. ayet, yan panolarda Allah ve Muhammed isimleri yer alır. Sonradan yağlı boyayla kaplanması özgün görünümünü kısmen değiştirmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-sarayonu-pir-huseyin-bey-upper-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-sarayonu-pir-huseyin-bey-upper-mosque/aerial.jpg",
+      "alt": "Ağaçlar arasındaki kiremit çatılı cami, uzun minare ve çevredeki ilçe dokusu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-sarayonu-pir-huseyin-bey-upper-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direk ve kirişli harimde turkuaz üst panolu mihrap ve yanındaki minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-sarayonu-pir-huseyin-bey-upper-mosque/muqarnas-mihrab.jpg",
+      "alt": "Alçı mukarnaslı mihrap nişinin üst kısmı ve etrafındaki yazılı-geometrik bordür",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-sarayonu-pir-huseyin-bey-upper-mosque/prayer-hall.jpg",
+      "x": 45,
+      "y": 46,
+      "title": "Ahşap destekler",
+      "text": "İki sıra hâlindeki beşer ahşap direk harimi üç sahına ayırır.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-sarayonu-pir-huseyin-bey-upper-mosque/muqarnas-mihrab.jpg",
+      "x": 52,
+      "y": 57,
+      "title": "Mukarnas kavsara",
+      "text": "Alçı mihrabın niş üstü mukarnas kavsaralı, çevresi yazılı bordürlüdür.",
+      "sourceId": "inv-p470"
+    }
+  ],
+  "test": [
+    {
+      "question": "Minare hangi yıl eklenmiştir?",
+      "options": [
+        "1236",
+        "1944",
+        "1815",
+        "2006"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: 1944.",
+      "sourceId": "inv-p468"
+    },
+    {
+      "question": "Harim duvarlarında kaç yuvarlak isim levhası vardır?",
+      "options": [
+        "Dört",
+        "Altı",
+        "Sekiz",
+        "On iki"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Sekiz.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "question": "Pir Hüseyin Bey (Yukarı) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Sarayönü"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Sarayönü.",
+      "sourceId": "inv-p468"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p468",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Sarayönü, \"Pir Hüseyin Bey (Yukarı) Camii\"",
+      "page": "468"
+    },
+    {
+      "id": "inv-p469",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Sarayönü, \"Pir Hüseyin Bey (Yukarı) Camii\"",
+      "page": "469"
+    },
+    {
+      "id": "inv-p470",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Sarayönü, \"Pir Hüseyin Bey (Yukarı) Camii\"",
+      "page": "470"
+    },
+    {
+      "id": "inv-p471",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Sarayönü, \"Pir Hüseyin Bey (Yukarı) Camii\"",
+      "page": "471"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

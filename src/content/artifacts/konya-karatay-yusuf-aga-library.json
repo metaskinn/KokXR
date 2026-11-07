@@ -1,0 +1,123 @@
+{
+  "id": "konya-karatay-yusuf-aga-library",
+  "name": "Yusuf Ağa (Abit Çelebi) Kütüphanesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · H. 1210 / M. 1796 (Şair Rıfat'ın yazdığı inşa kitâbesine göre)",
+  "endowment": "Yusuf Ağa tarafından yaptırılmıştır",
+  "summary": "Sultan Selim Camii'nin güneybatı köşesinde, 1796'da Yusuf Ağa'nın yaptırdığı, köşelerinde ağırlık kuleleri bulunan kubbeli kütüphane; bugün yazma eserler kütüphanesi.",
+  "history": "Kütüphane, Karatay'da, Müze Alanı Caddesi No. 5'te, Sultan Selim Camii'nin güneybatı köşesindedir. İlk girişi, Sultan Selim Camii'nin batıya bakan penceresinden sağlanıyordu. Bu pencerenin üstündeki, Şair Rıfat'ın yazdığı inşa kitâbesine göre eser H. 1210 / M. 1796 yılında yaptırılmıştır.\n\nKütüphanenin içi yapıldığı yıllarda süslemeliydi; süslemeler zamanla bozulunca 1978-1979'da iç mekân sıvaları kazınmış ve yapı bugünkü görünümünü almıştır. Yapının kuzey köşesinde iki pencere arasına pano hâlinde kitâbeler yerleştirilmiştir; bunlarda Besmele-i Şerif ve Beyyine Suresi'nden ayet ile \"Mehmet Sadık H. 1210\" ve \"Maşallah 1210\" tarihli ibareler bulunur. İç mekânın güney duvarında pano hâlinde iki kitâbe daha vardır ve bunlar dış cephedeki kitâbelerle aynı ifadeleri taşır.\n\nKitaba göre Yusuf Ağa, Osmanlı döneminde, XVIII. yüzyılın sonu ile XIX. yüzyılın başlarında Mihrimah Valide Sultan'ın kethüdalığını yapmış devlet adamlarındandır. Konya'da yaşamamış, ancak şehre bir kütüphane ve medrese yaptırmıştır; kaynaklarda bunun sebebinin Mevlevî tarikatına bağlılığı olduğu belirtilir.\n\nKütüphane, iki kademeli bir kaide üzerinde, köşeleri pahlanarak yuvarlatılmış kare planlıdır. Beden duvarının üzerine bir kasnak, kasnağın üzerine de kubbe oturtulmuştur. Yapının her köşesinde silindirik ağırlık kuleleri vardır. Bina Gödene kesme taşından, bazı yerlerde Sille taşından kâgir (yığma) teknikte yapılmıştır; kasnak eteklerinde, kubbede ve ağırlık kulelerinin üzerinde kurşun kullanılmıştır.\n\nCephelerde kemerli, dikdörtgen pencereler sıralanır; kemerlerde renkli taş kullanımı görülür. Cephenin pahlı köşelerine de pencereler açılmış, pencereler demir parmaklıklarla kapatılmıştır. İlk inşasında yapının girişi caminin içine açılıyordu. İçeriye doğru genişleyen kapının yan yüzlerinde yarım daire biçimli nişler, girişin solunda bir dolap, sağ köşesinde bir duvar açıklığı bulunur. İç mekânda kubbeye geçiş tromplarla sağlanmış, trompların kuzeydoğu ve güneydoğu köşelerine püsküller yerleştirilmiştir. Alt pencereler kapaklı, üst pencereler barok süslemelidir.\n\nXVIII. yüzyılda yapılmasına rağmen cephe anlayışında klasik üslup kullanılarak Sultan Selim Camii'nin cephesine benzetilmeye çalışılan önemli eserlerdendir. Yapı bugün Yusuf Ağa Yazma Eserler Kütüphanesi olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-yusuf-aga-library/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-yusuf-aga-library/exterior.jpg",
+      "alt": "Basamaklı kaide üzerinde kesme taştan kare planlı yapı: üstte kurşun kaplı kubbe, köşelerde kurşun külahlı silindirik kuleler, cephede iki sıra demir parmaklıklı kemerli pencere ve ortada merdivenle çıkılan ahşap kapı; solda arkada caminin kubbesi",
+      "description": "Kütüphanenin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-yusuf-aga-library/reading-room.jpg",
+      "alt": "İç mekân: taş duvarlarda üstte kemerli pencereler, altta camlı ahşap kitap dolapları, ortada çalışma masaları ve sandalyeler, sağda kitap rafları",
+      "description": "Kütüphanenin içi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-yusuf-aga-library/facade-windows.jpg",
+      "alt": "Kesme taş cephede iki sıra hâlinde demir parmaklıklı pencereler; pencerelerin üzerindeki kemerlerde açık ve koyu renkli taşlar dönüşümlü dizilmiş",
+      "description": "Cephedeki pencere düzeni",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "weight-tower",
+      "image": "/images/konya-karatay-yusuf-aga-library/exterior.jpg",
+      "x": 83,
+      "y": 18,
+      "title": "Ağırlık kulesi",
+      "text": "Yapının her köşesine silindirik ağırlık kuleleri yerleştirilmiş, kulelerin üzerinde kurşun kullanılmıştır.",
+      "sourceId": "inv-p290"
+    },
+    {
+      "id": "dome",
+      "image": "/images/konya-karatay-yusuf-aga-library/exterior.jpg",
+      "x": 50,
+      "y": 8,
+      "title": "Kasnak ve kubbe",
+      "text": "Beden duvarının üzerine bir kasnak, kasnağın üzerine de kubbe yerleştirilmiştir.",
+      "sourceId": "inv-p289"
+    },
+    {
+      "id": "colored-arches",
+      "image": "/images/konya-karatay-yusuf-aga-library/facade-windows.jpg",
+      "x": 51,
+      "y": 8,
+      "title": "Renkli taşlı kemerler",
+      "text": "Cephelerdeki kemerli pencerelerin kemerlerinde renkli taş kullanılmış, pencereler demir parmaklıklarla kaplanmıştır.",
+      "sourceId": "inv-p290"
+    }
+  ],
+  "test": [
+    {
+      "question": "İnşa kitâbesine göre Yusuf Ağa Kütüphanesi hangi yılda yaptırılmıştır?",
+      "options": [
+        "1796",
+        "1561",
+        "1846",
+        "1923"
+      ],
+      "correct": 0,
+      "description": "Şair Rıfat'ın yazdığı inşa kitâbesine göre eser H. 1210 / M. 1796'da yaptırılmıştır.",
+      "sourceId": "inv-p288"
+    },
+    {
+      "question": "Kütüphanenin iç mekân sıvaları hangi yıllarda kazınmıştır?",
+      "options": [
+        "1953-1955",
+        "1978-1979",
+        "2017-2019",
+        "1956-1957"
+      ],
+      "correct": 1,
+      "description": "Süslemeler zamanla bozulunca 1978-1979 yıllarında iç mekân sıvaları kazınmıştır.",
+      "sourceId": "inv-p289"
+    },
+    {
+      "question": "Kütüphanenin inşa kitâbesini kim yazmıştır?",
+      "options": [
+        "Mehmet Sadık",
+        "Eflâkî Dede",
+        "Şair Rıfat",
+        "Yusuf Ağa"
+      ],
+      "correct": 2,
+      "description": "Sultan Selim Camii'nin batı penceresinin üstündeki inşa kitâbesini Şair Rıfat yazmıştır.",
+      "sourceId": "inv-p288"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p288",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Yusuf Ağa (Abit Çelebi) Kütüphanesi\"",
+      "page": "288"
+    },
+    {
+      "id": "inv-p289",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Yusuf Ağa (Abit Çelebi) Kütüphanesi\"",
+      "page": "289"
+    },
+    {
+      "id": "inv-p290",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Yusuf Ağa (Abit Çelebi) Kütüphanesi\"",
+      "page": "290"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "konya-karatay-sari-yakup-mosque",
+  "name": "Sarı Yakup Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "İlk yapı XV. yüzyıl olarak değerlendirilir; ikinci evre 1863",
+  "endowment": "İlk bani olarak Sarı Yakup düşünülmektedir",
+  "summary": "Dedemoğlu Mahallesi’ndeki cami, ahşap köşk minaresi ve sonradan yapılan bağdâdi kubbesiyle dikkat çeker.",
+  "history": "Cami, Dedemoğlu Mahallesi, Han Sokak’tadır. Giriş kitabesi 1863 tarihini verir. Adını aldığı ve banisi olduğu düşünülen Sarı Yakup, Çelebi Sultan Mehmet dönemi âlimidir; Molla Fenâri’den ders almış, Bursa kadılığı ve müderrislik yapmış, Risale-i Menasıkü’l-Hac gibi eserler yazmıştır. Caminin kuzeyindeki kendi adıyla anılan kabristanda medfundur. Kitap, 1429’daki ölümünden hareketle ilk inşayı XV. yüzyıla, 1863 kitabesini ikinci evreye bağlar.\n\n1942’de düz toprak dam yerine bağdâdi kubbe yapılmış ve üzerine çatı oturtulmuştur. 1973, 1975 ve 1993’te ek ve onarımlar, 2016’da Vakıflar Bölge Müdürlüğü tamiri gerçekleşmiştir. Enine dikdörtgen planlı yapı içten bağdâdi kubbeli, dıştan kırma çatılıdır. Doğudaki son cemaat yeri 1975’te eklenmiştir; kuzey ucunda ahşap köşk tipi minare vardır. Alçı mihrap yarım daire planlıdır; yüzeyinde çiçek, nişinde perde-kandil motifleri bulunduğu belirtilir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-sari-yakup-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-sari-yakup-mosque/aerial.jpg",
+      "alt": "Ağaçlar yanında kiremit çatılı caminin ahşap köşk minaresiyle üstten görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-sari-yakup-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde açık renkli mihrap, ahşap minber ve geniş avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-sari-yakup-mosque/aerial.jpg",
+      "x": 58,
+      "y": 34,
+      "title": "Köşk tipi minare",
+      "text": "Son cemaat yerinin kuzey ucunda ahşap köşk tipi minare vardır.",
+      "sourceId": "inv-p247"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-sari-yakup-mosque/prayer-hall.jpg",
+      "x": 20,
+      "y": 57,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap alçı malzemeden, yarım daire planlıdır.",
+      "sourceId": "inv-p247"
+    }
+  ],
+  "test": [
+    {
+      "question": "Doğudaki son cemaat yeri hangi yıl eklenmiştir?",
+      "options": [
+        "1794",
+        "1841",
+        "2008",
+        "1975"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: 1975.",
+      "sourceId": "inv-p246"
+    },
+    {
+      "question": "Düz toprak dam 1942’de neyle değiştirilmiştir?",
+      "options": [
+        "Bağdâdi kubbe",
+        "Beşik tonoz",
+        "Cam örtü",
+        "Dokuz taş kubbe"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Bağdâdi kubbe.",
+      "sourceId": "inv-p246"
+    },
+    {
+      "question": "Sarı Yakup Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Karatay",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p245"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p245",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sarı Yakup Camii\"",
+      "page": "245"
+    },
+    {
+      "id": "inv-p246",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sarı Yakup Camii\"",
+      "page": "246"
+    },
+    {
+      "id": "inv-p247",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sarı Yakup Camii\"",
+      "page": "247"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

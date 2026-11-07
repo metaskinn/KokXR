@@ -1,0 +1,100 @@
+{
+  "id": "konya-karatay-saksaganlar-mosque",
+  "name": "Saksağanlar Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XIX. yüzyıl · 1805–1825 aralığı önerilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Küçük Kayacık Mahallesi’ndeki cami, taş ve kerpiç duvarlı, ahşap direkli üç sahınlı bir mahalle camisidir.",
+  "history": "Cami, Küçük Kayacık Mahallesi, Yeni Kayacık Sokak’tadır. Kesin inşa tarihi ve banisi bilinmez; bazı yayınlar 1805–1825 aralığını önerir. Derinlemesine dikdörtgen yapının iç örtüsü ahşap tavan, dış örtüsü kırma çatıdır. Subasmana kadar kaba yonu taş, yukarıda kerpiç kullanılmıştır. Doğuya müştemilat, kuzeye son cemaat yeri sonradan eklenmiştir.\n\nHarime kuzey kapısından girilir. Ortadaki iki sıra ahşap direk mekânı üç sahına ayırır. Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır; bordürlerinde geometrik süslemeler vardır. Güneybatıdaki ahşap minber de sade olup geometrik bezemelidir. Yapı, XIX. yüzyılda Konya çevresinde görülen ahşap direkli camiler arasında değerlendirilir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-saksaganlar-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-saksaganlar-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı, pembe sıvalı küçük caminin turkuaz kapılı cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-saksaganlar-mosque/prayer-hall.jpg",
+      "alt": "Açık renkli direkler arasında mihrap ve yeşil tonlarda minber görülen harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-saksaganlar-mosque/prayer-hall.jpg",
+      "x": 48,
+      "y": 54,
+      "title": "Ahşap direkler",
+      "text": "İki sıra ahşap direk harimi üç sahına ayırır.",
+      "sourceId": "inv-p259"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-saksaganlar-mosque/prayer-hall.jpg",
+      "x": 86,
+      "y": 57,
+      "title": "Ahşap minber",
+      "text": "Güneybatıdaki minber ahşap malzemeden, geometrik süslemeli ve sade biçimde yapılmıştır.",
+      "sourceId": "inv-p259"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi sokak üzerindedir?",
+      "options": [
+        "Han Sokak",
+        "Yeni Kayacık Sokak",
+        "Mescit Sokak",
+        "Adak Sokak"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Yeni Kayacık Sokak.",
+      "sourceId": "inv-p258"
+    },
+    {
+      "question": "Subasman üzerindeki duvarlarda hangi malzeme kullanılmıştır?",
+      "options": [
+        "Mermer",
+        "Cam",
+        "Kerpiç",
+        "Betonarme"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Kerpiç.",
+      "sourceId": "inv-p258"
+    },
+    {
+      "question": "Saksağanlar Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır",
+        "Karatay"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p258"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p258",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Saksağanlar Camii\"",
+      "page": "258"
+    },
+    {
+      "id": "inv-p259",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Saksağanlar Camii\"",
+      "page": "259"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

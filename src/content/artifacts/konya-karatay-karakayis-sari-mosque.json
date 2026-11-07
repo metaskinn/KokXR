@@ -1,0 +1,100 @@
+{
+  "id": "konya-karatay-karakayis-sari-mosque",
+  "name": "Karakayış Sarı Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · H. 1257 / M. 1841",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karakayış Caddesi’ndeki cami, ahşap minaresi ve üç sahınlı harimiyle mahalle camilerindendir.",
+  "history": "Cami, Karakayış Mahallesi, Karakayış Caddesi’ndedir. Giriş üzerindeki H. 1257 / M. 1841 tarihi inşa tarihine, mahfil taşıyıcısındaki H. 1327 / M. 1909-10 ve 25.5.1952 tarihleri onarımlara işaret eder. Yapı 2008’de Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nDerinlemesine dikdörtgen cami içten düz dam, dıştan kırma çatıyla örtülüdür. Doğu cephesinde altı sıralı taş merdivenle ulaşılan sundurma ve girişin üzerinde tek şerefeli, sivri külahlı ahşap minare bulunur. Harim mihraba dik iki sıra sütunla üç sahına ayrılır; ahşap mahfil kuzey ve doğu kesimleri kaplar. Son onarımlarda sonradan eklenmiş ahşap mihrap kaldırılarak altındaki alçı sıvalı özgün niş ortaya çıkarılmıştır. Kıble duvarındaki mihrap yarım daire planlı, yarım kubbe kavsaralıdır; güneybatıdaki sade minber sonradan eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-karakayis-sari-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-karakayis-sari-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı beyaz cami, merdivenli giriş ve çatının önünde ahşap köşk tipi minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-karakayis-sari-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direkli harimde açık renkli mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-karakayis-sari-mosque/exterior.jpg",
+      "x": 48,
+      "y": 23,
+      "title": "Ahşap minare",
+      "text": "Doğu cephesindeki giriş üzerinde tek şerefeli ve sivri külahlı ahşap minare vardır.",
+      "sourceId": "inv-p201"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-karakayis-sari-mosque/prayer-hall.jpg",
+      "x": 59,
+      "y": 49,
+      "title": "Özgün mihrap",
+      "text": "Son onarımda ahşap kaplama kaldırılınca alçı sıvalı özgün mihrap nişi ortaya çıkmıştır.",
+      "sourceId": "inv-p201"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapının girişinde hangi miladi tarih yazılıdır?",
+      "options": [
+        "1841",
+        "1510",
+        "1764",
+        "1947"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: 1841.",
+      "sourceId": "inv-p200"
+    },
+    {
+      "question": "Harimin kuzey ve doğu bölümünü ne kaplar?",
+      "options": [
+        "Taş revak",
+        "Ahşap mahfil",
+        "Çini şadırvan",
+        "Tuğla tonoz"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Ahşap mahfil.",
+      "sourceId": "inv-p201"
+    },
+    {
+      "question": "Karakayış Sarı Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Beyşehir",
+        "Karatay",
+        "Bozkır"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p200"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p200",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Karakayış Sarı Camii\"",
+      "page": "200"
+    },
+    {
+      "id": "inv-p201",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Karakayış Sarı Camii\"",
+      "page": "201"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

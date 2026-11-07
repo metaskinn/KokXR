@@ -1,0 +1,106 @@
+{
+  "id": "konya-aksehir-ortakoy-central-mosque",
+  "name": "Ortaköy Beldesi Merkez Camii",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "XIX. yüzyıl ortalarına tarihlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ortaköy merkezindeki cami, ahşap tavanlı üç sahınlı harimiyle XIX. yüzyılın çok destekli cami örneklerindendir.",
+  "history": "Cami, Akşehir Ortaköy Beldesi merkezindedir. İnşa ve bani kitabesi yoktur; mimari özellikleriyle XIX. yüzyıl ortalarına tarihlendirilir. Derinlemesine dikdörtgen planlı yapının örtüsü dört yöne eğimli kırma çatıdır; moloz taş ve kerpiç kullanılmıştır. İlk ahşap minarenin yıkıldığı söylenir. Kuzeydoğuya 1963’te yapılan minarenin büyük kısmının 2000 depreminde yıkıldığı kitapta belirtilir.\n\nKuzey kapısından girilen harim mihraba dik üç sahınlı ve düz ahşap tavanlıdır. Kuzeyde ahşap direkler üzerinde mahfil vardır. Ahşap kaplamalı mihrap yarım daire planlıdır; iki yanını ikişer sütunce sınırlar, üstü dilimli tepelikle biter. Güneybatıdaki sade minber ahşaptır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-ortakoy-central-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-ortakoy-central-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı beyaz cami ve önünde uzun taş minare, çevrede köy evleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-ortakoy-central-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direk ve kirişlerin sıralandığı kırmızı halılı harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-ortakoy-central-mosque/wooden-mihrab.jpg",
+      "alt": "Sütuncelerle çevrili kahverengi ahşap mihrap ve üzerinde dilimli tepelik",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-ortakoy-central-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 43,
+      "title": "Ahşap destekler",
+      "text": "Ahşap tavanlı harim mihraba dik üç sahına ayrılmıştır.",
+      "sourceId": "inv-p360"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-ortakoy-central-mosque/wooden-mihrab.jpg",
+      "x": 49,
+      "y": 46,
+      "title": "Ahşap mihrap",
+      "text": "Yarım daire planlı mihrap ahşap kaplamalıdır; yanlarda ikişer sütunceyle sınırlanır.",
+      "sourceId": "inv-p361"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harime hangi cepheden girilir?",
+      "options": [
+        "Doğu",
+        "Batı",
+        "Güney",
+        "Kuzey"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Kuzey.",
+      "sourceId": "inv-p360"
+    },
+    {
+      "question": "Yapıda hangi duvar malzemeleri kullanılmıştır?",
+      "options": [
+        "Moloz taş ve kerpiç",
+        "Yalnız mermer",
+        "Cam ve çelik",
+        "Yalnız tuğla"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Moloz taş ve kerpiç.",
+      "sourceId": "inv-p360"
+    },
+    {
+      "question": "Ortaköy Beldesi Merkez Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Akşehir.",
+      "sourceId": "inv-p360"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p360",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ortaköy Beldesi Merkez Camii\"",
+      "page": "360"
+    },
+    {
+      "id": "inv-p361",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ortaköy Beldesi Merkez Camii\"",
+      "page": "361"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

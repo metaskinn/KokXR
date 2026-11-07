@@ -1,0 +1,113 @@
+{
+  "id": "konya-aksehir-tacettin-dede-tomb",
+  "name": "Tacettin Dede Türbesi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Kapı kitâbesine göre H. 906 / M. 1500 civarı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kapı kitâbesine göre H. 906 / M. 1500'de vefat eden Berdaili Taç Ahmet bin Misafir için yapıldığı anlaşılan, kare planlı tek kubbeli türbe.",
+  "history": "Tacettin Dede Türbesi, Akşehir İlçesi, Kızılca Mahallesi, Topçu Sokak'tadır. Yapının bitişiğinde bir zaviyeye ait kalıntı olduğu belirtilse de bugün herhangi bir kalıntı bulunmamaktadır.\n\nKapının üzerindeki kitâbede, saygı gösterilen, Allah'ın tevfikiyle O'nun kurallarına uyan ve yol gösteren, milletin ve şeriatın tacı, hakikatin ve dinin koruyucusu Berdaili Taç Ahmet bin Misafir bin Mesud'un 906 yılı Rebiyülevvel ayının sonlarında vefat ettiği yazılıdır. Buna göre Berdaili Ahmet bin Misafir bin Mesut H. 906 / M. 1500'de ölmüştür; türbenin ölen kişinin üzerine yapıldığı düşünülürse türbe de bu tarihlerde inşa edilmiştir.\n\nTürbe kare planlıdır ve üzeri tek kubbeyle örtülüdür. Dış cephede kaba yonu taş, moloz taş, kesme taş ve devşirme malzeme kullanılmış; pencere kemerleri ve nişler tuğladan yapılmıştır. Kapı dışındaki cephelerin ortasında tuğla örgülü kemerli birer pencere vardır.\n\nTürbeye doğu cephedeki mermer bir kapıdan girilir; kapı kanadı ahşaptır. Kapının üzerinde bitkisel bezemeli dört kartuş içinde kitâbe yer alır. Mermer söveli, kaş kemerli kitâbenin üstteki panolarının ortasında \"Ali\" isminin farklı biçimlerde yazılmasıyla bir motif oluşturulmuş, alttaki panoların ortasına mühr-ü Süleyman motifi yerleştirilmiştir. Kemeri çevreleyen bölümde ve kemerin iki yanında bitkisel kompozisyonlar bulunur, kitâbeyi de bitkisel motifli bir bordür dolaşır. Doğu cepheden sandukanın bulunduğu mekâna girilir; iç mekân kubbe örtülüdür ve kubbeye geçişte pandantifler kullanılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-tacettin-dede-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-tacettin-dede-tomb/exterior.jpg",
+      "alt": "Kesme ve moloz taşlarla örülmüş kare gövdeli türbe; üstte kurşun kaplı tek kubbe, cephe ortasında tuğla örgülü sivri kemerli parmaklıklı bir pencere, önde demir korkuluklu merdiven",
+      "description": "Türbenin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-tacettin-dede-tomb/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kare gövdenin ortasında dilimli görünen kurşun kubbe, çevresinde otlarla kaplı mezarlık",
+      "description": "Kubbenin tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-tacettin-dede-tomb/interior.jpg",
+      "alt": "Beyaz duvarlı odada, kırmızı çiçek desenli halı üzerinde yeşil örtülü sanduka ve iki ahşap pencere",
+      "description": "Sandukanın bulunduğu iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "single-dome",
+      "image": "/images/konya-aksehir-tacettin-dede-tomb/exterior.jpg",
+      "x": 66,
+      "y": 26,
+      "title": "Tek kubbe",
+      "text": "Kare planlı türbenin üzeri tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p198"
+    },
+    {
+      "id": "brick-arched-window",
+      "image": "/images/konya-aksehir-tacettin-dede-tomb/exterior.jpg",
+      "x": 37,
+      "y": 65,
+      "title": "Tuğla kemerli pencere",
+      "text": "Kapı dışındaki cephelerin ortasında tuğla örgülü kemerli birer pencere bulunur; pencere kemerleri ve nişler tuğladandır.",
+      "sourceId": "inv-p198"
+    },
+    {
+      "id": "dome-from-above",
+      "image": "/images/konya-aksehir-tacettin-dede-tomb/top-view.jpg",
+      "x": 74,
+      "y": 47,
+      "title": "Kare plan",
+      "text": "Tepeden bakıldığında kubbenin kare planlı gövdenin üzerine oturduğu görülür.",
+      "sourceId": "inv-p198"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kapı kitâbesine göre türbede yatan kişi hangi yıl vefat etmiştir?",
+      "options": [
+        "H. 769 / M. 1367",
+        "H. 821 / M. 1418",
+        "H. 860 / M. 1456",
+        "H. 906 / M. 1500"
+      ],
+      "correct": 3,
+      "description": "Kitâbeye göre Berdaili Ahmet bin Misafir bin Mesut H. 906 / M. 1500'de vefat etmiştir.",
+      "sourceId": "inv-p198"
+    },
+    {
+      "question": "Kaş kemerli kitâbenin alt panolarının ortasında hangi motif yer alır?",
+      "options": [
+        "Mühr-ü Süleyman",
+        "Rumi palmet",
+        "Sekiz kollu yıldız",
+        "Hayat ağacı"
+      ],
+      "correct": 0,
+      "description": "Alttaki kitâbe panolarının ortasında mühr-ü Süleyman motifi bulunur; üsttekilerde \"Ali\" ismiyle oluşturulmuş bir motif vardır.",
+      "sourceId": "inv-p198"
+    },
+    {
+      "question": "Türbeye hangi cepheden girilir?",
+      "options": [
+        "Kuzey",
+        "Doğu",
+        "Batı",
+        "Güney"
+      ],
+      "correct": 1,
+      "description": "Türbeye doğu cephedeki mermer bir kapıdan girilir.",
+      "sourceId": "inv-p198"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p198",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Tacettin Dede Türbesi\"",
+      "page": "198"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

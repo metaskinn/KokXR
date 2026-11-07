@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-ishak-pasha-tomb",
+  "name": "İshak Paşa Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XVI. yüzyıl başları; vakfiyesi H. 915 / M. 1505 tarihli",
+  "endowment": "Vakfiyesine göre Emir İshak Bey için yaptırılmıştır",
+  "summary": "Şems Parkı içinde, Emir İshak Bey için yaptırılan, kesme taş gövdeli ve tuğla kubbeli sade türbe.",
+  "history": "İshak Paşa Türbesi, Şems Parkı'nın içinde, Şems Tebrizi Türbesi'nin kuzeydoğusundadır. Üzerinde kitâbe bulunmayan türbe XVI. yüzyıl başlarına tarihlendirilir; H. 915 / M. 1505 tarihli vakfiyesinden Emir İshak Bey için yaptırıldığı anlaşılmaktadır.\n\nKare planlı türbe, sekiz köşeli kasnağa oturan bir kubbeyle örtülüdür. Beden duvarlarında kesme taş, kasnak ve kubbede tuğla, giriş kapısında mermer kullanılmıştır. Oldukça sade cephelerin kuzey, güney ve doğu yönlerine birer dikdörtgen pencere açılmıştır; pencerelerin üzerindeki sivri kemerli alınlıklar niş şeklinde düzenlenmiş ve tuğladan yapılmıştır. Gövde, üstte basit bir silmeyle oluşturulan saçakla sonlanır.\n\nKuzey cephedeki giriş kapısı mermerden ve sadedir; basık kemerli açıklık üç farklı renkte mermerle oluşturulmuştur. Oldukça sade olan iç mekân, tromplarla geçilen bir kubbeyle örtülüdür. Taş döşeli zeminde Emir İshak Bey'e ait, üzerinde kitâbe bulunmayan sanduka yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-ishak-pasha-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-ishak-pasha-tomb/exterior.jpg",
+      "alt": "Kesme taş kare gövdeli, tuğla kubbeli küçük türbe; cephede tuğla sivri kemerli alınlığın altında parmaklıklı dikdörtgen pencere, çevrede ağaçlar",
+      "description": "Türbenin dış görünüşü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-ishak-pasha-tomb/interior.jpg",
+      "alt": "İç mekân: beyaz duvarlar, iki ahşap çerçeveli pencere, duvar lambaları ve önde yeşil örtülü, sarıklı sanduka",
+      "description": "Türbenin içi ve sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/konya-karatay-ishak-pasha-tomb/exterior.jpg",
+      "x": 50,
+      "y": 25,
+      "title": "Tuğla kubbe",
+      "text": "Türbe sekiz köşeli kasnağa oturan bir kubbeyle örtülüdür; kasnak ve kubbede tuğla kullanılmıştır.",
+      "sourceId": "inv-p155"
+    },
+    {
+      "id": "window-pediment",
+      "image": "/images/konya-karatay-ishak-pasha-tomb/exterior.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Pencere alınlığı",
+      "text": "Pencerelerin üzerindeki sivri kemer formlu alınlıklar niş şeklinde düzenlenmiş ve tuğladan yapılmıştır.",
+      "sourceId": "inv-p155"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/konya-karatay-ishak-pasha-tomb/interior.jpg",
+      "x": 45,
+      "y": 68,
+      "title": "Emir İshak Bey'in sandukası",
+      "text": "Taş döşeli zemin üzerinde Emir İshak Bey'e ait sanduka yer alır; üzerinde kitâbe yoktur.",
+      "sourceId": "inv-p155"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe, vakfiyesine göre kimin için yaptırılmıştır?",
+      "options": [
+        "Şems-i Tebrizi",
+        "Sadr Sultan",
+        "Emir İshak Bey",
+        "Karaarslan"
+      ],
+      "correct": 2,
+      "description": "Vakfiyesinden türbenin Emir İshak Bey için yaptırıldığı anlaşılmaktadır.",
+      "sourceId": "inv-p155"
+    },
+    {
+      "question": "Türbenin giriş açıklığı nasıl oluşturulmuştur?",
+      "options": [
+        "Tuğla ve çiniyle",
+        "Üç farklı renkte mermerle",
+        "Ahşap oymayla",
+        "Kaba yonu taşla"
+      ],
+      "correct": 1,
+      "description": "Giriş açıklığı basık kemerlidir ve üç farklı renkte mermerle oluşturulmuştur.",
+      "sourceId": "inv-p155"
+    },
+    {
+      "question": "İç mekânda kubbeye geçiş nasıl sağlanmıştır?",
+      "options": [
+        "Pandantiflerle",
+        "Türk üçgenleriyle",
+        "Mukarnaslarla",
+        "Tromplarla"
+      ],
+      "correct": 3,
+      "description": "Türbenin içi tromplarla geçilen bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p155"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p155",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"İshak Paşa Türbesi\"",
+      "page": "155"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

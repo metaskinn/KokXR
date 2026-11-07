@@ -1,0 +1,109 @@
+{
+  "id": "konya-seydisehir-seyit-harun-veli-tomb",
+  "name": "Seyit Harun Veli Türbesi",
+  "city": "Konya",
+  "district": "Seydişehir",
+  "period": "Kitâbeye göre Seydi Harun'un 23 Rebiülevvel 720 (Nisan 1320) tarihindeki ölümü üzerine, 1320'li yıllar",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Seydişehir'in kurucusu Seyyid Harun Veli'nin 1320'deki ölümünün ardından camisinin kuzey cephesine bitişik olarak yapılan türbe.",
+  "history": "Türbe, Seydişehir'de Seyitharun Mahallesi, 153096 Sokak üzerindedir ve Seyyid Harun Veli Camii'nin kuzey cephesinin batı köşesine bitişik olarak inşa edilmiştir.\n\nKapının üzerindeki inşa kitâbesinde mealen, bu kutlu türbenin, yoksulların efendisi, Allah'ın rahmetine kavuşmuş ve günahları bağışlanmış Seydi Harun'un 23 Rebiülevvel 720'de (Nisan 1320) ölümü üzerine inşa edildiği yazar. Buna göre türbe 1320'li yıllarda yaptırılmıştır. Türbenin nadide ahşap kapı kanatları yerinden alınarak Konya'daki Sahip Ata Vakıf Müzesi'ne taşınmıştır. Yapı 1970, 1980 ve 2006 yıllarında Vakıflar Genel Müdürlüğü tarafından onarılmıştır.\n\nSeyyid Harun Veli, XIII. yüzyılda Horasan'dan gelip Seydişehir'e yerleşen büyük velilerdendir ve Seydişehir'in kurucusudur. Kurduğu medresede âlimler ve veliler yetişmiştir; bir döneme damgasını vurmuş önemli âlim ve mutasavvıflardandır.\n\nTürbe dikdörtgen planlıdır; üzeri içten kubbe, dıştan çokgen külahla kapatılmıştır. Kare planlı gövdenin üst kısmında bir sıra silmeli taş bulunur. Malzeme olarak kesme taş kullanılmıştır; üst örtü çok yüksek değildir ve külah içe doğru kıvrılır. Türbeye kuzey cephedeki basık kemerli, çift kanatlı ahşap bir kapıdan girilir; kapının üzerinde tek satırlık, yatay, dikdörtgen bir kitâbe vardır. Batı ve doğu cephelerde pencereler bulunur; doğu cephedeki pencerede Bizans dönemine ait devşirme malzeme atkı taşı olarak kullanılmıştır.\n\nTürbenin içinde tuğladan yapılmış bir sanduka bulunur. Sandukanın şahidesi farklı biçimlerde kesilmiş firuze-mor renkli çini plakalarla kaplıdır; şahidenin kemerli kısmında alçı baskı tekniğiyle yapılmış rumi ve palmetlerden oluşan bir süsleme frizi görülür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-seydisehir-seyit-harun-veli-tomb/tiled-headstone.jpg",
+  "images": [
+    {
+      "file": "/images/konya-seydisehir-seyit-harun-veli-tomb/tiled-headstone.jpg",
+      "alt": "Yeşil, yazılı örtüyle kaplı sandukanın başında, firuze ve koyu renkli kesme çini parçalarıyla kaplı kemerli şahide ve önünde beyaz bir sarık",
+      "description": "Sandukanın çini kaplı şahidesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-seydisehir-seyit-harun-veli-tomb/entrance.jpg",
+      "alt": "Koyu renkli kesme taş duvarda, taş çerçeveli kemerli açıklık içinde oymalı çift kanatlı ahşap kapı; kapının üstünde yatay beyaz bir kitâbe ve önde taş basamaklar",
+      "description": "Türbenin giriş kapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-seydisehir-seyit-harun-veli-tomb/inscription.jpg",
+      "alt": "Koyu gri kesme taş duvara yerleştirilmiş, kabartma Arapça yazılı tek satırlık beyaz mermer kitâbe",
+      "description": "Kapı üzerindeki tek satırlık kitâbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "tiled-headstone",
+      "image": "/images/konya-seydisehir-seyit-harun-veli-tomb/tiled-headstone.jpg",
+      "x": 56,
+      "y": 25,
+      "title": "Çinili şahide",
+      "text": "Tuğla sandukanın şahidesi, farklı biçimlerde kesilmiş firuze-mor renkli çini plakalarla kaplanmıştır.",
+      "sourceId": "inv-p206"
+    },
+    {
+      "id": "door-inscription",
+      "image": "/images/konya-seydisehir-seyit-harun-veli-tomb/entrance.jpg",
+      "x": 51,
+      "y": 23,
+      "title": "Kapı kitâbesi",
+      "text": "Giriş kapısının üzerinde tek satırlık, yatay, dikdörtgen bir kitâbe yer alır.",
+      "sourceId": "inv-p206"
+    }
+  ],
+  "test": [
+    {
+      "question": "Seyyid Harun Veli Seydişehir'e nereden gelmiştir?",
+      "options": [
+        "Harran",
+        "Horasan",
+        "Şam",
+        "Tokat"
+      ],
+      "correct": 1,
+      "description": "Seyyid Harun Veli XIII. yüzyılda Horasan'dan gelip Seydişehir'e yerleşmiştir; Seydişehir'in kurucusudur.",
+      "sourceId": "inv-p206"
+    },
+    {
+      "question": "Türbenin nadide ahşap kapı kanatları bugün nerededir?",
+      "options": [
+        "Akşehir Müzesi",
+        "İstanbul Türk ve İslam Eserleri Müzesi",
+        "Konya'daki Sahip Ata Vakıf Müzesi",
+        "Hâlâ türbenin kapısında"
+      ],
+      "correct": 2,
+      "description": "Ahşap kapı kanatları yerinden alınarak Konya'daki Sahip Ata Vakıf Müzesi'ne nakledilmiştir.",
+      "sourceId": "inv-p205"
+    },
+    {
+      "question": "Sandukanın şahidesi neyle kaplanmıştır?",
+      "options": [
+        "Firuze-mor renkli çini plakalarla",
+        "Oymalı mermerle",
+        "Sırlı tuğlayla",
+        "Kalem işi boyalı ahşapla"
+      ],
+      "correct": 0,
+      "description": "Şahide, farklı biçimlerde kesilmiş firuze-mor renkli çini plakalarla kaplanmıştır.",
+      "sourceId": "inv-p206"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p205",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Seydişehir, \"Seyit Harun Veli Türbesi\"",
+      "page": "205"
+    },
+    {
+      "id": "inv-p206",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Seydişehir, \"Seyit Harun Veli Türbesi\"",
+      "page": "206"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

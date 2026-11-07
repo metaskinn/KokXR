@@ -1,0 +1,111 @@
+{
+  "id": "konya-cumra-karamanoglu-ibrahim-bey-mosque",
+  "name": "Karamanoğlu İbrahim Bey Camii",
+  "city": "Konya",
+  "district": "Çumra",
+  "period": "İlk bani Karamanoğlu İbrahim Bey olarak anılır; giriş kitabesi H. 1283 / M. 1866-67",
+  "endowment": "İlk bani olarak Karamanoğlu İbrahim Bey; 1866-67 yapımını Çumra halkı üstlenmiştir",
+  "summary": "İçeriçumra’daki cami, enine dikdörtgen planı ve taş mihrap-minberiyle Karamanoğlu mimarisi özellikleri taşır.",
+  "history": "Cami, İçeriçumra Köyü Minarealtı Mahallesi’nde, Konya yolu üzerindedir. Yapı üzerindeki Latin harfli levha M. 1252 tarihini verse de bu tarihe ait kitabe bulunmadığı kitapta belirtilir. Harim girişindeki kitabe, H. 1283 / M. 1866-67’de Çumra halkının usta Gümüşhaneli Hristo Ayad’a yaptırdığını bildirir. İlk bani Karamanoğlu İbrahim Bey olarak zikredilir; Karamanoğlu Vakıf Camii ve Paşa Camii adları da kullanılır. Küçük ilk yapı, eklemelerle bugünkü hâline gelmiştir.\n\nEnine dikdörtgen cami içten ahşap hatıllı, dıştan kırma çatılıdır. Kuzeyde üç bölümlü sivri kemerli son cemaat yeri, kuzeydoğu köşesinde minare vardır. Beden duvarları düzgün kesme taştır. Üç sahınlı harim mihraba paralel taş sütunlu ve sivri kemerlidir. Güneydeki taş mihrap hafif dışa çıkıntılı, dikdörtgen çerçeveli ve mukarnas dizili tepeliklidir. Güneybatıdaki sade taş minber Karamanoğlu Beyliği mimarisi özellikleri gösterir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-cumra-karamanoglu-ibrahim-bey-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-cumra-karamanoglu-ibrahim-bey-mosque/exterior.jpg",
+      "alt": "Geniş çatılı caminin üç kemerli camekânlı ön bölümü ve soldaki minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-cumra-karamanoglu-ibrahim-bey-mosque/prayer-hall.jpg",
+      "alt": "Taş sütunları birleştiren beyaz sivri kemerler, ahşap tavan ve kırmızı halılı harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-cumra-karamanoglu-ibrahim-bey-mosque/stone-mihrab.jpg",
+      "alt": "Kırmızımsı taşlardan yapılmış mukarnas kavsaralı mihrap nişi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-cumra-karamanoglu-ibrahim-bey-mosque/prayer-hall.jpg",
+      "x": 29,
+      "y": 20,
+      "title": "Sivri kemerli düzen",
+      "text": "Harim, mihraba paralel taş sütunlu ve sivri kemerli bir düzenlemeye sahiptir.",
+      "sourceId": "inv-p406"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-cumra-karamanoglu-ibrahim-bey-mosque/stone-mihrab.jpg",
+      "x": 54,
+      "y": 50,
+      "title": "Taş mihrap",
+      "text": "Taş mihrap dikdörtgen formda ve mukarnas dizili tepelikle sonlanır.",
+      "sourceId": "inv-p406"
+    }
+  ],
+  "test": [
+    {
+      "question": "1866-67 kitabesinde hangi usta anılır?",
+      "options": [
+        "Bağdatlı İsmail Efendi",
+        "Fertekli Nazif Usta",
+        "Tahir Usta",
+        "Gümüşhaneli Hristo Ayad"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Gümüşhaneli Hristo Ayad.",
+      "sourceId": "inv-p404"
+    },
+    {
+      "question": "Harimin planı nasıldır?",
+      "options": [
+        "Enine dikdörtgen ve üç sahınlı",
+        "Sekizgen ve tek mekânlı",
+        "Dairesel",
+        "Açık avlulu"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Enine dikdörtgen ve üç sahınlı.",
+      "sourceId": "inv-p406"
+    },
+    {
+      "question": "Karamanoğlu İbrahim Bey Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Çumra",
+        "Akşehir",
+        "Beyşehir"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Çumra.",
+      "sourceId": "inv-p404"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p404",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Çumra, \"Karamanoğlu İbrahim Bey Camii\"",
+      "page": "404"
+    },
+    {
+      "id": "inv-p405",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Çumra, \"Karamanoğlu İbrahim Bey Camii\"",
+      "page": "405"
+    },
+    {
+      "id": "inv-p406",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Çumra, \"Karamanoğlu İbrahim Bey Camii\"",
+      "page": "406"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

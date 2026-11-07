@@ -1,0 +1,99 @@
+{
+  "id": "konya-karatay-vakif-business-inn",
+  "name": "Vakıf İş Hanı (Vakıflar Bölge Müdürlüğü Hizmet Binası)",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Cumhuriyet dönemi · 1953-1955; İkinci Ulusalcı Mimarlık üslubu",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "1953-1955 yıllarında İkinci Ulusalcı Mimarlık üslubunda yapılan, bugün Vakıflar Bankası ile Konya'daki iki kamu kurumunun kullandığı dört katlı iş hanı.",
+  "history": "Kitaptaki adres kaydına göre han, Meram, Mevlâna Caddesi, Şems-i Tebrizi Mahallesi'nde, Hükümet Konağı'nın kuzeyindedir; kitapta Karatay başlığı altında yer alır. Bugünkü yapı 1953-1955 yılları arasında inşa edilmiştir; aynı yerde daha önce İrfaniye Medresesi'nin bulunduğu bilinmektedir.\n\nHan, 21.12.2009 tarih ve 3486 sayılı kararla \"Konya Vakıf İşhanı\" olarak tescil edilmiştir. İkinci Ulusalcı Mimarlık üslubu döneminde yapılan bina, bu dönemin bir örneği olarak görülür. Mimarı bilinmemektedir.\n\nKamusal ticari kullanım için yaptırılan han, Tarihi Buğday Pazarı köşesinde aynı adı taşıyan ikinci bir iş hanı yapıldığı için \"Birinci Vakıf İşhanı\" olarak da anılmıştır. Binanın zemin ve 1. katlarını Vakıflar Bankası, 2. katını Konya Kültür Varlıklarını Koruma Bölge Kurulu Müdürlüğü, 3. katını ise Konya Vakıflar Bölge Müdürlüğü hizmet binası olarak kullanmaktadır.\n\nBodrum katla birlikte dört katlı olan han, kuzey-güney doğrultusunda dikdörtgen planlıdır ve üzeri dört yöne eğimli Marsilya kiremitli çatıyla örtülüdür. Betonarme karkas olarak inşa edilen yapı, asli hâlinde koridorların çevresine dizilmiş odalardan oluşan \"U\" plandadır. Katlar arasında merdiven ve asansörlerle geçilir. Cephelerde pencereler ilk katlarda ikişerli, yan yana; son katta ise tekli sıra hâlinde düzenlenmiştir. Batı ve güney cephelerde zemin kattaki revak, yörede sık kullanılan Sille taşından basık kemerlerle tamamlanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-vakif-business-inn/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-vakif-business-inn/exterior.jpg",
+      "alt": "Köşeden görünüm: geniş saçaklı, dört yöne eğimli çatılı, açık renk cepheli çok katlı betonarme bina; zemin katta kemerli revak ve turuncu VakıfBank tabelası, üst katlarda ikişerli pencereler, en üst katta sık dizili küçük pencereler",
+      "description": "Binanın batı ve güney cepheleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/konya-karatay-vakif-business-inn/exterior.jpg",
+      "x": 50,
+      "y": 10,
+      "title": "Marsilya çatı",
+      "text": "Yapının üzeri dört yöne eğimli Marsilya çatıyla kaplıdır.",
+      "sourceId": "inv-p256"
+    },
+    {
+      "id": "windows",
+      "image": "/images/konya-karatay-vakif-business-inn/exterior.jpg",
+      "x": 52,
+      "y": 52,
+      "title": "Pencere düzeni",
+      "text": "Pencereler ilk katlarda ikişerli ve yan yana, son katta ise tekli sıra hâlinde düzenlenmiştir.",
+      "sourceId": "inv-p256"
+    },
+    {
+      "id": "portico",
+      "image": "/images/konya-karatay-vakif-business-inn/exterior.jpg",
+      "x": 45,
+      "y": 85,
+      "title": "Basık kemerli revak",
+      "text": "Batı ve güney cephelerde zemin kattaki revak, Sille taşından basık kemerlerle tamamlanmıştır.",
+      "sourceId": "inv-p256"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bugünkü Vakıf İş Hanı hangi yıllarda inşa edilmiştir?",
+      "options": [
+        "1923-1925",
+        "1938-1940",
+        "1970-1972",
+        "1953-1955"
+      ],
+      "correct": 3,
+      "description": "Günümüzdeki yapı 1953-1955 yılları arasında inşa edilmiştir.",
+      "sourceId": "inv-p256"
+    },
+    {
+      "question": "Binanın 3. katını hangi kurum kullanmaktadır?",
+      "options": [
+        "Vakıflar Bankası",
+        "Konya Valiliği",
+        "Konya Vakıflar Bölge Müdürlüğü",
+        "Konya Büyükşehir Belediyesi"
+      ],
+      "correct": 2,
+      "description": "Zemin ve 1. katları Vakıflar Bankası, 2. katı Koruma Bölge Kurulu Müdürlüğü, 3. katı Konya Vakıflar Bölge Müdürlüğü kullanır.",
+      "sourceId": "inv-p256"
+    },
+    {
+      "question": "Han neden \"Birinci Vakıf İşhanı\" olarak da anılmıştır?",
+      "options": [
+        "Tarihi Buğday Pazarı köşesinde aynı adlı ikinci bir iş hanı yapıldığı için",
+        "Konya’daki ilk betonarme yapı olduğu için",
+        "Vakıflar Bankası’nın ilk şubesi olduğu için",
+        "İrfaniye Medresesi’nin ilk binası olduğu için"
+      ],
+      "correct": 0,
+      "description": "Tarihi Buğday Pazarı köşesinde aynı adı taşıyan bir iş hanı daha yapıldığı için bu yapı \"Birinci Vakıf İşhanı\" olarak anılmıştır.",
+      "sourceId": "inv-p256"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p256",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Vakıf İş Hanı (Vakıflar Bölge Müdürlüğü Hizmet Binası)\"",
+      "page": "256"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

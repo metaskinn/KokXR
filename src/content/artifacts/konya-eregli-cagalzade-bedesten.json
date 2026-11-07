@@ -1,0 +1,97 @@
+{
+  "id": "konya-eregli-cagalzade-bedesten",
+  "name": "Cağalzade Bedesteni",
+  "city": "Konya",
+  "district": "Ereğli",
+  "period": "Kitâbesi yok · mimari özelliklerine göre XVI.-XV. yüzyıla tarihlendirilir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ereğli çarşısının içinde, yeni ticarethanelerle çevrili, beşik tonozlu ve üç kapılı dikdörtgen bedesten.",
+  "history": "Bedesten, Ereğli'de, çarşının içinde bulunur. Üzerinde kitâbe olmadığı için yapım tarihi ve bânisi hakkında bilgi yoktur; ancak mimari özelliklerinden hareketle XVI.-XV. yüzyıla tarihlendirilmektedir.\n\nBedesten Osmanlı döneminde birçok kez yenilenmiş, Vakıflar Genel Müdürlüğü tarafından da tamir edilmiştir. Çevresi yeni inşa edilen ticarethanelerle sarılmıştır.\n\nYapı doğu-batı yönünde uzanan dikdörtgen planlıdır ve üzeri beşik tonozla örtülüdür. İnşasında düzgün kesme taş ve kaba yonu taş kullanılmıştır. Bedestenin oval kemerli üç kapısı vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-eregli-cagalzade-bedesten/roof-from-above.jpg",
+  "images": [
+    {
+      "file": "/images/konya-eregli-cagalzade-bedesten/roof-from-above.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: ortada boydan boya uzanan, mavi metal kaplı kemerli uzun çatı ve üzerinde sıralı küçük havalandırma bacaları; üstte kiremit çatılı binalar, altta paslı sac çatılı dükkânlar ve sokak",
+      "description": "Bedestenin çatısı tepeden",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-eregli-cagalzade-bedesten/bazaar-view.jpg",
+      "alt": "Gün batımında çarşı ve şehir manzarası: ön planda gri ve kırmızı sac çatılar, aralarında uzun eğri bir çatı, arkada çok katlı apartmanlar ve dağlar",
+      "description": "Bedestenin çevresindeki çarşı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "vault",
+      "image": "/images/konya-eregli-cagalzade-bedesten/roof-from-above.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Beşik tonozlu örtü",
+      "text": "Doğu-batı yönünde uzanan dikdörtgen planlı yapının üzeri beşik tonozla örtülüdür.",
+      "sourceId": "inv-p277"
+    },
+    {
+      "id": "shops",
+      "image": "/images/konya-eregli-cagalzade-bedesten/roof-from-above.jpg",
+      "x": 50,
+      "y": 82,
+      "title": "Çevredeki ticarethaneler",
+      "text": "Cağalzade Bedesteni'nin çevresi yeni inşa edilen ticarethanelerle çevrilmiştir.",
+      "sourceId": "inv-p277"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cağalzade Bedesteni'nin kaç kapısı vardır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Altı"
+      ],
+      "correct": 1,
+      "description": "Dikdörtgen biçimli bedestenin oval kemerli üç kapısı bulunmaktadır.",
+      "sourceId": "inv-p277"
+    },
+    {
+      "question": "Bedestenin üzeri nasıl örtülmüştür?",
+      "options": [
+        "Tek büyük kubbeyle",
+        "Ahşap çatıyla",
+        "Dokuz küçük kubbeyle",
+        "Beşik tonozla"
+      ],
+      "correct": 3,
+      "description": "Doğu-batı yönünde uzanan dikdörtgen planlı yapının üzeri beşik tonozla örtülüdür.",
+      "sourceId": "inv-p277"
+    },
+    {
+      "question": "Bedesten Ereğli'de nerede bulunur?",
+      "options": [
+        "Çarşının içinde",
+        "Kalenin içinde",
+        "Hac yolu üzerindeki bir köyde",
+        "Ulu Cami avlusunda"
+      ],
+      "correct": 0,
+      "description": "Bedesten Ereğli'de, çarşı içinde bulunmaktadır.",
+      "sourceId": "inv-p277"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p277",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ereğli, \"Cağalzade Bedesteni\"",
+      "page": "277"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

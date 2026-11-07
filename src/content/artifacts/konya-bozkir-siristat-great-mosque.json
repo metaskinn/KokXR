@@ -1,0 +1,95 @@
+{
+  "id": "konya-bozkir-siristat-great-mosque",
+  "name": "Sırıstat (Büyük) Camii",
+  "city": "Konya",
+  "district": "Bozkır",
+  "period": "İnşa tarihi bilinmiyor; mihrap süslemelerinde 1872 tarihi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Çarşamba Suyu ve Taş Köprü yakınındaki Sırıstat Camii, ahşap direkli üç sahınlı harime sahiptir.",
+  "history": "Cami, Bozkır Çarşı İçi Mahallesi’nde, Çarşamba Suyu ve Taş Köprü yakınındadır. İnşa tarihi ve banisi bilinmez. Mihrap süslemelerinde 1872 tarihi bulunur; bunun ilk inşadan sonraki bir evreye ait olduğu düşünülmektedir.\n\nDikdörtgen planlı ve kırma çatılı yapının son cemaat yeri ile kuzeybatıda minaresi vardır. Duvarlar moloz taş, kapı ve pencere söveleri kesme taştır; mihrap, minber ve mahfilde ahşap kullanılmıştır. Son cemaat yerindeki yuvarlak kemerli kapıdan harime girilir. Ahşap direkler harimi mihraba dik üç sahına ayırır. Orta bölüm bağdâdi kubbeli, yan bölümler düz ahşap tavanlıdır. Kuzey mahfili doğu ve batıya uzanır; kıble duvarında mihrap ve minber bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-bozkir-siristat-great-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-bozkir-siristat-great-mosque/exterior.jpg",
+      "alt": "Dağ yamacı önünde kiremit çatılı taş cami, camekânlı giriş ve yanında uzun minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-bozkir-siristat-great-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde kırmızı-kahverengi ahşap direkler ve iki yanda üst mahfil",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-bozkir-siristat-great-mosque/prayer-hall.jpg",
+      "x": 22,
+      "y": 48,
+      "title": "Ahşap direkler",
+      "text": "Ahşap direkler harimi mihraba dik üç sahına ayırır.",
+      "sourceId": "inv-p392"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-bozkir-siristat-great-mosque/prayer-hall.jpg",
+      "x": 19,
+      "y": 22,
+      "title": "Mahfil",
+      "text": "Kuzeydeki mahfil doğu ve batı yönlerine uzanır.",
+      "sourceId": "inv-p392"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi suyun yakınındadır?",
+      "options": [
+        "Çarşamba Suyu",
+        "Meram Çayı",
+        "Kızılırmak",
+        "Göksu"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Çarşamba Suyu.",
+      "sourceId": "inv-p392"
+    },
+    {
+      "question": "Harimin yan bölümlerinin örtüsü nasıldır?",
+      "options": [
+        "Çapraz tonoz",
+        "Düz ahşap tavan",
+        "Cam kubbe",
+        "Açık avlu"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Düz ahşap tavan.",
+      "sourceId": "inv-p392"
+    },
+    {
+      "question": "Sırıstat (Büyük) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Bozkır",
+        "Beyşehir"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Bozkır.",
+      "sourceId": "inv-p392"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p392",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Bozkır, \"Sırıstat (Büyük) Camii\"",
+      "page": "392"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

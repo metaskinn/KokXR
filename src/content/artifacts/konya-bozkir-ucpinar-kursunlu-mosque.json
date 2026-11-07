@@ -1,0 +1,105 @@
+{
+  "id": "konya-bozkir-ucpinar-kursunlu-mosque",
+  "name": "Üçpınar Beldesi Kurşunlu Camii",
+  "city": "Konya",
+  "district": "Bozkır",
+  "period": "Kaynaklarda 1816 olarak belirtilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Üçpınar Hocaköy’deki Kurşunlu Camii, kurşun kaplı kubbesi ve zengin kalem işi bezemeleriyle tanınır.",
+  "history": "Cami, Üçpınar Kasabası Hocaköy Mahallesi’ndedir. İnşa ve bani kitabesi yoktur; kaynaklarda 1816’da yapıldığı belirtilir. Kuzeydoğu minaresi 1917 tarihlidir. 2006’da sonradan eklenen bölümler kaldırılmış, 2008–2009’da çevre düzenlemesi, 2014’te onarım yapılmıştır. İlk yapının ahşap ve düz toprak damlı olduğu, sonradan duvarlarının kalınlaştırılarak kubbeyle örtüldüğü anlatılır. Kubbenin kurşunla kaplanması Kurşunlu adını doğurmuştur.\n\nBugün kare planlı yapı sekizgen kasnağa oturan kubbeyle örtülüdür; kaba yonu taş ve ahşap kullanılmıştır. Minare kare kaideli, silindirik ve tek şerefelidir. Üç bölümlü son cemaat yerinden basık kemerli kapıyla harime geçilir. Kubbeye tromplarla ulaşılır; kubbe ve kasnak zengin kalem işleriyle bezelidir. Kuzeyde U biçimli ahşap mahfil bulunur. Kıble duvarındaki taş mihrap yarım daire nişli, bitkisel bezemeli bordürlüdür ve üç dilimli tepelikle biter; sağında minber vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-bozkir-ucpinar-kursunlu-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-bozkir-ucpinar-kursunlu-mosque/aerial.jpg",
+      "alt": "Kurşun kaplı büyük kubbesi, küçük revak kubbeleri ve taş minaresiyle caminin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-bozkir-ucpinar-kursunlu-mosque/prayer-hall.jpg",
+      "alt": "Yoğun mavi ve kırmızı kalem işleriyle bezeli kemerlerin altında açık renkli taş mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-bozkir-ucpinar-kursunlu-mosque/aerial.jpg",
+      "x": 44,
+      "y": 44,
+      "title": "Kurşun kubbe",
+      "text": "Kubbe kurşunla kaplanınca yapı Kurşunlu Camii adıyla anılmaya başlamıştır.",
+      "sourceId": "inv-p397"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-bozkir-ucpinar-kursunlu-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 49,
+      "title": "Taş mihrap",
+      "text": "Kıble duvarındaki taş mihrap yarım daire nişlidir ve üç dilimli tepelikle sonlanır.",
+      "sourceId": "inv-p398"
+    }
+  ],
+  "test": [
+    {
+      "question": "Minare hangi yıl yapılmıştır?",
+      "options": [
+        "1236",
+        "1917",
+        "1764",
+        "1947"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: 1917.",
+      "sourceId": "inv-p397"
+    },
+    {
+      "question": "Kubbe hangi biçimdeki kasnağa oturur?",
+      "options": [
+        "Üçgen",
+        "Dairesel",
+        "Sekizgen",
+        "Beşgen"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Sekizgen.",
+      "sourceId": "inv-p397"
+    },
+    {
+      "question": "Üçpınar Beldesi Kurşunlu Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Bozkır.",
+      "sourceId": "inv-p397"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p397",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Bozkır, \"Üçpınar Beldesi Kurşunlu Camii\"",
+      "page": "397"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Bozkır, \"Üçpınar Beldesi Kurşunlu Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Bozkır, \"Üçpınar Beldesi Kurşunlu Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

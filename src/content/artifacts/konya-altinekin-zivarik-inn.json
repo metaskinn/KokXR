@@ -1,0 +1,125 @@
+{
+  "id": "konya-altinekin-zivarik-inn",
+  "name": "Zıvarık Han",
+  "city": "Konya",
+  "district": "Altınekin",
+  "period": "Karamanoğulları dönemi · XV. yüzyılda yapıldığı kabul edilir (mimari özelliklerine göre XIV. yüzyıl ortası – XV. yüzyıl ortası)",
+  "endowment": "Esere ait vakfiye yoktur; Sultan Hatun'un 1446 tarihli vakfiyesinde Sıfaruk-Zıvarık köyünün yarısı vakıf olarak gösterilmiştir",
+  "summary": "Altınekin merkezinde, kaba yonu taş ve devşirme malzemeyle yapılmış, beş sahınlı, bugün restoran olarak kullanılan Karamanoğulları dönemi hanı.",
+  "history": "Han, Altınekin ilçesinin merkezindedir. Kitâbesi bulunmayan hanın kim tarafından ve ne zaman yaptırıldığı bilinmemektedir. Kurt Erdmann Zıvarık Han'ı taç kapısına bakarak XIII. yüzyıla tarihlemiştir; ancak kitaba göre mimari ve inşaat özellikleri bakımından XIV. yüzyıl ortası ile XV. yüzyıl ortası arasına tarihlemek daha uygundur.\n\nEsere ait bir vakfiye yoktur; buna karşılık Turgutoğullarından Yusuf Şah Bey'in kızı Sultan Hatun'un, Sıfaruk-Zıvarık köyünün yarısını vakıf olarak gösterdiği 1446 tarihli bir vakfiyesi bulunmaktadır. Bu vakfiyeden hareketle yapının XV. yüzyılda, Karamanoğulları devrinde inşa edildiği kabul edilir. 2000'li yıllarda oldukça harap durumda olan han, yenileme çalışmalarından sonra restoran olarak kullanılmaya başlanmıştır.\n\nHan, kuzey-güney doğrultusunda dikdörtgen planlıdır ve iki yöne eğimli bir çatıyla örtülüdür. Tamirattan önce toprakla örtülü olan damı bugün kurşunla kaplanmıştır. Cephe düzeni sadedir; iç mekân kuzey cephenin üst kısımlarındaki mazgal pencerelerle aydınlanır. İnşasında kaba yonu taş, moloz taş ve çok sayıda devşirme malzeme kullanılmıştır.\n\nGiriş, güneydoğu cephesinin ortasındaki, beden duvarından taşırılmış taç kapıdandır. İç mekân dört sıra ayakla beş sahına ayrılmıştır. Orta sahın yan sahınlardan daha yüksek ve geniş tutulmuş, üzeri beşik tonozla örtülmüştür; bu tonozu desteklemek için altı adet yarım daire takviye kemeri kullanılmıştır. Orta sahının iki yanında ona dik uzanan, her iki tarafta yedişer adet yan sahın vardır; bunlar da beşik tonozludur. Yan sahınlarla orta sahın arasındaki geçişler yarım daire kemerlerle sağlanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-altinekin-zivarik-inn/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-altinekin-zivarik-inn/exterior.jpg",
+      "alt": "Güneşli bir günde köşeden görünüm: kaba yonu taş ve moloz taşla örülmüş, alçak ve uzun dikdörtgen yapı; cephenin sağ tarafında duvardan taşan kemerli taç kapı ve ahşap kapı, üzerinde bir tabela",
+      "description": "Hanın dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-altinekin-zivarik-inn/crown-gate.jpg",
+      "alt": "Yakından taç kapı: kesme taş çerçeve içinde yuvarlak kemer, kemerin altında rozet kabartmalı taş blok, iki yanda geometrik kabartmalı taş levhalar ve ortada iki kanatlı ahşap kapı",
+      "description": "Taç kapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-altinekin-zivarik-inn/interior-arches.jpg",
+      "alt": "İç mekân: kaba taş örgülü tonozların altında arka arkaya sıralanan yarım daire kemerler, kemerleri taşıyan kesme taş ayaklar ve en arkada taş duvarlı bir bölme",
+      "description": "Sahınlar arasındaki kemerler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-altinekin-zivarik-inn/inscribed-wall-block.jpg",
+      "alt": "Moloz taş duvarın içine yerleştirilmiş, çerçeveli ve yüzeyinde silik harf dizileri seçilen dikdörtgen taş blok",
+      "description": "Duvardaki yazılı taş blok",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "crown-gate",
+      "image": "/images/konya-altinekin-zivarik-inn/exterior.jpg",
+      "x": 71,
+      "y": 52,
+      "title": "Taç kapı",
+      "text": "Giriş, güneydoğu cephesinin ortasında bulunan ve beden duvarından taşırılmış taç kapıdandır.",
+      "sourceId": "inv-p274"
+    },
+    {
+      "id": "walls",
+      "image": "/images/konya-altinekin-zivarik-inn/exterior.jpg",
+      "x": 30,
+      "y": 55,
+      "title": "Duvar malzemesi",
+      "text": "Hanın inşasında kaba yonu taş, moloz taş ve çok sayıda devşirme malzeme kullanılmıştır.",
+      "sourceId": "inv-p274"
+    },
+    {
+      "id": "arches",
+      "image": "/images/konya-altinekin-zivarik-inn/interior-arches.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Yarım daire kemerler",
+      "text": "Yan sahınlarla orta sahın arasındaki geçişler yarım daire kemerlerle sağlanmıştır.",
+      "sourceId": "inv-p274"
+    }
+  ],
+  "test": [
+    {
+      "question": "Zıvarık Han'ın iç mekânı kaç sahına ayrılmıştır?",
+      "options": [
+        "Üç",
+        "Dört",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 2,
+      "description": "İç mekân dört sıra ayakla beş sahına ayrılmıştır.",
+      "sourceId": "inv-p274"
+    },
+    {
+      "question": "Hanı taç kapısına bakarak XIII. yüzyıla tarihleyen araştırmacı kimdir?",
+      "options": [
+        "Kurt Erdmann",
+        "İbn Bîbî",
+        "Eflâkî Dede",
+        "Semavi Eyice"
+      ],
+      "correct": 0,
+      "description": "Kurt Erdmann hanı taç kapısından hareketle XIII. yüzyıla tarihlemiştir; kitaba göre XIV.-XV. yüzyıl ortalarına tarihlemek daha uygundur.",
+      "sourceId": "inv-p273"
+    },
+    {
+      "question": "Tamirattan önce toprakla örtülü olan damı bugün ne ile kaplıdır?",
+      "options": [
+        "Kiremit",
+        "Sac levha",
+        "Ahşap",
+        "Kurşun"
+      ],
+      "correct": 3,
+      "description": "Tamirat öncesinde toprakla örtülü olan dam, günümüzde kurşunla kaplanmıştır.",
+      "sourceId": "inv-p274"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p273",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Altınekin, \"Zıvarık Han\"",
+      "page": "273"
+    },
+    {
+      "id": "inv-p274",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Altınekin, \"Zıvarık Han\"",
+      "page": "274"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

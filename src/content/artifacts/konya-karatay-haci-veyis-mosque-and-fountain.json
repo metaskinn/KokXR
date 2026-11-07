@@ -1,0 +1,111 @@
+{
+  "id": "konya-karatay-haci-veyis-mosque-and-fountain",
+  "name": "Hacı Veyis Camii ve Çeşmesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · XIX. yüzyıl olarak düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Aslanlı Kışla Caddesi’ndeki ahşap direkli cami, avlusundaki sivri kemerli taş çeşmeyle birlikte anılır.",
+  "history": "Cami, Aslanlı Kışla Caddesi’nde, Mevlâna Dergâhı’nın güneydoğusundadır. İnşa tarihi ve banisi bilinmemekte; planı, malzemesi ve tekniğiyle XIX. yüzyıla tarihlendirilmektedir. 1949–1950’de Hacı Veyiszade Mustafa Efendi tarafından onarılmış, üst örtüsü kırma çatı olarak yenilenmiştir. 2011’de Konya Büyükşehir Belediyesi tarafından tamir edilmiştir. Kitap, Üçler Mezarlığı’na defnedileceklerin cenaze namazlarının burada kılındığını belirtir. Yapı, yaklaşık elli yıl ücret almadan imamlık yapan Hacı Veyis Efendi’nin adıyla tanınmıştır.\n\nKesme taş kullanılan cami, derinlemesine dikdörtgen planlı, dört bölümlü son cemaat yerli ve kuzeybatıda tek şerefeli minarelidir. Minarenin kaidesi taş, gövdesi tuğladır. Harim iki sıra ahşap sütunla üç sahına ayrılır; kuzeyindeki kadınlar mahfilini dört ahşap direk taşır. Mihrap yarım daire planlı ve yarım kubbe kavsaralıdır. Ahşap minber 2000’li yıllarda eklenmiştir. Avludaki tek cepheli sivri kemerli çeşmenin camiyle aynı dönemde, XIX. yüzyıl sonlarında yapıldığı düşünülür; nişinde yalak, lüle ve taslık bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-haci-veyis-mosque-and-fountain/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-haci-veyis-mosque-and-fountain/exterior.jpg",
+      "alt": "Kiremit çatılı beyaz cami ve taş-tuğla minaresinin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-haci-veyis-mosque-and-fountain/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde ahşap direkler, ahşap tavan, mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-haci-veyis-mosque-and-fountain/fountain.jpg",
+      "alt": "Ağaçlar önünde sivri kemer nişli taş çeşme ve önündeki yalak",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-haci-veyis-mosque-and-fountain/prayer-hall.jpg",
+      "x": 49,
+      "y": 47,
+      "title": "Ahşap direkler",
+      "text": "İki sıra ahşap sütun harimi üç sahına ayırır.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-haci-veyis-mosque-and-fountain/fountain.jpg",
+      "x": 49,
+      "y": 41,
+      "title": "Çeşme",
+      "text": "Cami avlusundaki kesme taş çeşme tek cepheli ve sivri kemerlidir.",
+      "sourceId": "inv-p189"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi cadde üzerindedir?",
+      "options": [
+        "Konya Caddesi",
+        "Müze Alanı Caddesi",
+        "Aslanlı Kışla Caddesi",
+        "Kerimler Caddesi"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Aslanlı Kışla Caddesi.",
+      "sourceId": "inv-p187"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Beş",
+        "Yedi",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Üç.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "question": "Hacı Veyis Camii ve Çeşmesi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p187"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p187",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hacı Veyis Camii ve Çeşmesi\"",
+      "page": "187"
+    },
+    {
+      "id": "inv-p188",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hacı Veyis Camii ve Çeşmesi\"",
+      "page": "188"
+    },
+    {
+      "id": "inv-p189",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hacı Veyis Camii ve Çeşmesi\"",
+      "page": "189"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

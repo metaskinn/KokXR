@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-arap-dede-tomb",
+  "name": "Arap Dede Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Yapım tarihi bilinmiyor; mimari özelliklerine göre XIX. yüzyılda yapılmış olabileceği düşünülür",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sedirler Sarnıç Camii'nin doğusunda, bakımını mahalle halkının üstlendiği tek mekânlı küçük türbe.",
+  "history": "Türbe, Karatay, Sedirler Mahallesi'nde, Sedirler Sarnıç Camii'nin doğusundadır. Yapım tarihine dair bilgi yoktur; mimari özellikleri göz önüne alındığında XIX. yüzyılda yapılmış olabileceği düşünülmektedir.\n\nTürbeyle ilgili farklı rivayetler anlatılır. Mahalle halkına göre çarşaflı, yüzü görülmeyen bir kadın Arap Kızı Mezarı olarak bilinen yerden Yediler Mezarlığı'na yürümüş, Arap Kızı Mezarı yapıldıktan sonra da ortadan kaybolmuştur. Halk arasında Arap Dede Türbesi olarak bilinen yapının onarım ve bakımı vatandaşlar tarafından sağlanmaktadır.\n\nTürbe kareye yakın dikdörtgen planlıdır ve tek mekândan oluşur. Çeşitli tamiratlar gören yapının cepheleri sıvalı ve boyalıdır. Giriş cephesinde tek kanatlı bir kapı, hemen sağında kareye yakın dikdörtgen bir pencere ve demir korkuluğu bulunur. Tavanı sonradan ahşap kaplama olarak yapılmıştır. Türbenin içinde bir sanduka vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-arap-dede-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-arap-dede-tomb/exterior.jpg",
+      "alt": "Beyaz sıvalı tek katlı küçük türbe, kiremit kaplı kırma çatı; cephede koyu renkli tek kanatlı kapı ve parmaklıklı pencere, arkada apartmanlar",
+      "description": "Türbenin giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-arap-dede-tomb/interior.jpg",
+      "alt": "Beyaz duvarlı dar iç mekân, koyu ahşap tavan, açık kanatlı pencere ve köşede yeşil örtülü, sarıklı sanduka",
+      "description": "Türbenin içi ve sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "door",
+      "image": "/images/konya-karatay-arap-dede-tomb/exterior.jpg",
+      "x": 22,
+      "y": 62,
+      "title": "Tek kanatlı kapı",
+      "text": "Yapının giriş cephesinde tek kanatlı bir kapı bulunmaktadır.",
+      "sourceId": "inv-p152"
+    },
+    {
+      "id": "window",
+      "image": "/images/konya-karatay-arap-dede-tomb/exterior.jpg",
+      "x": 52,
+      "y": 57,
+      "title": "Demir korkuluklu pencere",
+      "text": "Kapının hemen sağında kareye yakın dikdörtgen bir pencere ve demir korkuluğu bulunmaktadır.",
+      "sourceId": "inv-p152"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/konya-karatay-arap-dede-tomb/interior.jpg",
+      "x": 45,
+      "y": 75,
+      "title": "Sanduka",
+      "text": "Türbe içerisinde sanduka bulunmaktadır.",
+      "sourceId": "inv-p152"
+    }
+  ],
+  "test": [
+    {
+      "question": "Arap Dede Türbesi nasıl bir plana sahiptir?",
+      "options": [
+        "Sekizgen",
+        "Kareye yakın dikdörtgen, tek mekânlı",
+        "Haçvari",
+        "Yuvarlak"
+      ],
+      "correct": 1,
+      "description": "Türbe kareye yakın dikdörtgen planlıdır ve tek bir mekândan oluşmaktadır.",
+      "sourceId": "inv-p152"
+    },
+    {
+      "question": "Türbenin onarımı ve bakımı kim tarafından sağlanmaktadır?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Karatay Belediyesi",
+        "Vatandaşlar",
+        "İl Müftülüğü"
+      ],
+      "correct": 2,
+      "description": "Halk arasında Arap Dede Türbesi olarak bilinen yapının onarımı ve bakımı vatandaşlar tarafından sağlanmaktadır.",
+      "sourceId": "inv-p152"
+    },
+    {
+      "question": "Türbenin tavanı nasıldır?",
+      "options": [
+        "Sonradan yapılmış ahşap kaplama",
+        "Tuğla kubbe",
+        "Beşik tonoz",
+        "Taş külah"
+      ],
+      "correct": 0,
+      "description": "Türbenin tavanı sonradan ahşap kaplama olarak yapılmıştır.",
+      "sourceId": "inv-p152"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p152",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Arap Dede Türbesi\"",
+      "page": "152"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

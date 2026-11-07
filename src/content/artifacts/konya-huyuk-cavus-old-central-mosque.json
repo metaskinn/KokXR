@@ -1,0 +1,106 @@
+{
+  "id": "konya-huyuk-cavus-old-central-mosque",
+  "name": "Çavuş (Eski) Merkez Cami",
+  "city": "Konya",
+  "district": "Hüyük",
+  "period": "XVII. yüzyıla tarihlendirme; XIX. yüzyılda yeniden yapım",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Çavuş Köyü’ndeki eski cami, ahşap tavanı ve duvarlarındaki yoğun kalem işi süslemeleriyle dikkat çeker.",
+  "history": "Cami, Hüyük İlçesi Çavuş Köyü’ndedir. İlk inşa kitabesi yoktur; harimdeki kalem işlerinden hareketle XVII. yüzyıla tarihlendirilebilir. XIX. yüzyılda yeniden yapılmıştır. Minare kitabesi Hacı Mustafa’nın H. 1309 / M. 1891-92’de yaptırdığını bildirir. Vakıflar Genel Müdürlüğü 2007–2008’de yapıyı onarmıştır.\n\nDerinlemesine dikdörtgen yapı kırma çatılıdır. Duvarlar ahşap hatıllı moloz taştan örülmüştür. Doğuda kare kaideli, silindirik gövdeli ve tek şerefeli kesme taş minare vardır. Doğu kapısından girilen harim mihraba dik iki sahına ayrılır. Ahşap direklerin üzerindeki büyük yastıklar kirişleri taşır. Tavandaki kalem işleri rûmi, hatâyi ve bitkisel motifler içerir; duvarlarda hat yazıları ve süslemeler yoğunlaşır. Kuzeyde ahşap mahfil bulunur. Kıble duvarındaki ahşap mihrap yarım daire planlı ve dikdörtgen çerçevelidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-huyuk-cavus-old-central-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-huyuk-cavus-old-central-mosque/aerial.jpg",
+      "alt": "Köy evleri arasında uzun çatılı cami ve yanındaki beyaz taş minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-huyuk-cavus-old-central-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde ahşap direkler ve renkli bezemeli tavan ile duvarlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-huyuk-cavus-old-central-mosque/painted-ceiling.jpg",
+      "alt": "Ahşap direk üzerinde turuncu, mavi ve kırmızı motiflerle boyalı tavan kirişleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-huyuk-cavus-old-central-mosque/painted-ceiling.jpg",
+      "x": 51,
+      "y": 31,
+      "title": "Kalem işi tavan",
+      "text": "Ahşap tavanda rûmi, hatâyi ve bitkisel motiflerden oluşan kalem işleri bulunur.",
+      "sourceId": "inv-p437"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-huyuk-cavus-old-central-mosque/prayer-hall.jpg",
+      "x": 51,
+      "y": 49,
+      "title": "Ahşap direkler",
+      "text": "Direkler üzerindeki büyük ahşap yastıklar tavan kirişlerini taşır.",
+      "sourceId": "inv-p437"
+    }
+  ],
+  "test": [
+    {
+      "question": "Minareyi 1891-92’de kim yaptırmıştır?",
+      "options": [
+        "Hacı Recep",
+        "Hacı Mustafa",
+        "Sarı Yakup",
+        "Halil Bey"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Hacı Mustafa.",
+      "sourceId": "inv-p436"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "Üç",
+        "Beş",
+        "İki",
+        "Yedi"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: İki.",
+      "sourceId": "inv-p437"
+    },
+    {
+      "question": "Çavuş (Eski) Merkez Cami Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Hüyük"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Hüyük.",
+      "sourceId": "inv-p436"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p436",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Hüyük, \"Çavuş (Eski) Merkez Cami\"",
+      "page": "436"
+    },
+    {
+      "id": "inv-p437",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Hüyük, \"Çavuş (Eski) Merkez Cami\"",
+      "page": "437"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

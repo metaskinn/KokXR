@@ -1,0 +1,101 @@
+{
+  "id": "konya-ilgin-behlul-bey-mosque",
+  "name": "Behlül Bey Camii",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "XX. yüzyıl olarak değerlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Behlülbey Mahallesi’ndeki kırma çatılı caminin turkuaz ahşap mihrabı geometrik ve bitkisel bezemelidir.",
+  "history": "Cami, Ilgın Behlülbey Mahallesi’ndedir. Yapıya ait kitabe ve vakfiye bulunmaz. Plan tipi ve malzemesi, XX. yüzyılda yapılmış olduğunu düşündürür. Kerpiç malzemeli cami dıştan dikdörtgen planlı ve kırma çatılıdır.\n\nDerinlemesine dikdörtgen harimin kıble duvarının ortasında giriş eksenine yerleştirilen mihrap yarım daire planlıdır. Turkuaz renkli ahşap mihrap geometrik ve bitkisel süslemeler taşır. Sağında güneybatı köşede bulunan minber yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-behlul-bey-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-behlul-bey-mosque/exterior.jpg",
+      "alt": "Ağaçlar ve alçak taş duvar arkasında küçük kiremit çatılı caminin girişi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-behlul-bey-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı küçük harimde turkuaz çerçeveli mihrap, ahşap direk ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-behlul-bey-mosque/wooden-decoration.jpg",
+      "alt": "Turkuaz boyalı ahşap üzerinde kırmızı, sarı ve yeşil geometrik ve bitkisel bezeme",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-ilgin-behlul-bey-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 48,
+      "title": "Turkuaz mihrap",
+      "text": "Yarım daire planlı ahşap mihrap turkuaz renkte ve geometrik-bitkisel bezemelidir.",
+      "sourceId": "inv-p445"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-ilgin-behlul-bey-mosque/prayer-hall.jpg",
+      "x": 67,
+      "y": 51,
+      "title": "Yenilenen minber",
+      "text": "Mihrabın sağında, güneybatı köşede bulunan minber yenilenmiştir.",
+      "sourceId": "inv-p445"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin duvarlarında hangi malzeme kullanılmıştır?",
+      "options": [
+        "Yalnız mermer",
+        "Cam",
+        "Çelik",
+        "Kerpiç"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Kerpiç.",
+      "sourceId": "inv-p445"
+    },
+    {
+      "question": "Mihrap hangi renkle tanımlanmıştır?",
+      "options": [
+        "Turkuaz",
+        "Siyah",
+        "Mor",
+        "Turuncu"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Turkuaz.",
+      "sourceId": "inv-p445"
+    },
+    {
+      "question": "Behlül Bey Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Ilgın",
+        "Akşehir",
+        "Beyşehir"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Ilgın.",
+      "sourceId": "inv-p445"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p445",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Behlül Bey Camii\"",
+      "page": "445"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

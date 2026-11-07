@@ -1,0 +1,140 @@
+{
+  "id": "konya-selcuklu-ince-minareli-madrasa",
+  "name": "İnce Minareli Medrese (Sahip Ata Darülhadis)",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · 1261-62'de hizmete açıldığı kabul edilir (vakfiye H. 662 / M. 1264)",
+  "endowment": "Banisi Selçuklu Veziri Sahip Ata Fahreddîn Ali; Arapça vakfiyesi H. 662 / M. 1264 tarihli, 1265 ve 1280 zeyilleriyle genişletilmiş",
+  "summary": "Vezir Sahip Ata Fahreddîn Ali'nin hadis öğretimi için yaptırdığı, barok taçkapısı ve çinili minaresiyle tanınan darülhadis.",
+  "history": "Medrese, Selçuklu, Beyhekim Mahallesi, Alâeddin Bulvarı No. 15'tedir. Yalnız arkeolojik izleri kalan iç kale surunun yaklaşık 25 m batısındaki yapı, vakfiyesine göre \"Sultan Kapısı yolunda Odun Pazarı yakınında ve hendek hizasında\" yer alır. Zarif minaresi nedeniyle \"İnce Minareli Darülhadis\" veya \"İnce Minareli Camii\", H. 1293 / M. 1876 tarihli tamir kaydında \"Sahip Ata Dârü'l-Hadis\" olarak da anılır.\n\nİnşa kitâbesi bulunmayan medresenin, H. 662 / M. 1264 tarihli vakfiyesinden hareketle 1261-62'de hizmete açıldığı kabul edilir. Selçuklu Veziri Sahip Ata Fahreddîn Ali tarafından hadis ilminin öğretilmesine yönelik bir ihtisas medresesi olarak yaptırılmıştır. Vakfiyede mescit ve minaresiyle bir \"imaret\" olarak kurulduğu öğrenilir. Mimarı, taçkapıdaki iki madalyonda adı geçen Abdullah oğlu Kelûk'tur.\n\nYapı 26 Aralık 1706 depreminde ağır hasar görmüş; Ferit Paşa'nın valiliği sırasındaki tamirde (1900) ana eyvana payandalar vurulmuştur. 15 Şaban 1319 / 27 Kasım 1901'de üst üste düşen iki yıldırım, minareyi birinci şerefeden itibaren yıkmış ve mescit kubbesini çökertmiştir.\n\nGiriş cephesi düzgün kesme Kiçi Muhsine/Sille taşıyla kaplıdır; iç mekân 2-2,5 m'den sonra tamamen tuğladır. Avluyu örten 11 m çaplı kubbede dekoratif tuğla ve çini kullanılmıştır. Tek eyvanlı, kapalı avlulu medresenin kuzeybatı köşesine tek kubbeli mescit bitişiktir; kare kaide üzerinde dilimli silindirik gövdeli minare son cemaat yerinin güneydoğu köşesinde yükselir. Avlunun ortasında kare planlı bir havuz bulunur.\n\n\"Barok\" karakteriyle dikkat çeken taçkapının üst kısmı eksiktir. Bezemeye ortada düğüm yaparak çerçeveyi bölen iki sülüs yazı bordürü hâkimdir; bunlarda Fetih Suresi'nin 1-13. ve Yasin Suresi'nin 3-31. ayetleri geçer. Mevlâna'nın hocası Sadreddin Konevi'nin de ders verdiği bir darülhadis olan yapı, bugün Konya surlarına ait kitâbe ve figürlü parçalarla bölgedeki Orta Çağ yapılarından kalan taş ve ahşap eserlerin sergilendiği Taş ve Ahşap Eserler Müzesi'dir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-ince-minareli-madrasa/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-ince-minareli-madrasa/aerial-view.jpg",
+      "alt": "Havadan görünüm: önde kurşun kubbeli medrese ve kesik minare gövdesi, arkada yoğun yeşil ağaçlarla kaplı park ve Konya şehri",
+      "description": "Medrese ve çevresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-ince-minareli-madrasa/exterior.jpg",
+      "alt": "Medrese cephesi: solda oymalı taçkapı, ortada çini süslü tuğla minare gövdesi ve önünde budanmış yuvarlak ağaç, sağda kurşun kubbe ve pencereli cephe",
+      "description": "Giriş cephesi ve minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-ince-minareli-madrasa/portal.jpg",
+      "alt": "Taş taçkapı: yoğun bitkisel oymalar, düşey yazı bordürleri ve sivri kemerli ahşap kapı; üst kısmı düz bir saçakla kesilmiş",
+      "description": "Taçkapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-ince-minareli-madrasa/interior.jpg",
+      "alt": "İç mekân: tuğla duvarlar, üstte çinili kubbe ve geçişler, karşıda tonozlu eyvan, ortada korkulukla çevrili kare havuz",
+      "description": "Kubbeli avlu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/konya-selcuklu-ince-minareli-madrasa/exterior.jpg",
+      "x": 48,
+      "y": 25,
+      "title": "Minare",
+      "text": "Kare kaide üzerindeki dilimli silindirik gövdeli minare, 1901'de iki yıldırım sonucu birinci şerefeden itibaren yıkılmıştır.",
+      "sourceId": "inv-p103"
+    },
+    {
+      "id": "portal",
+      "image": "/images/konya-selcuklu-ince-minareli-madrasa/portal.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Yazı bordürleri",
+      "text": "Taçkapıda ortada düğüm yapan iki sülüs bordürde Fetih Suresi ve Yasin Suresi'nden ayetler yer alır.",
+      "sourceId": "inv-p104"
+    },
+    {
+      "id": "pool",
+      "image": "/images/konya-selcuklu-ince-minareli-madrasa/interior.jpg",
+      "x": 50,
+      "y": 82,
+      "title": "Havuz",
+      "text": "Çapraz tonozlu holle girilen avlunun ortasında kare planlı bir havuz bulunmaktadır.",
+      "sourceId": "inv-p103"
+    }
+  ],
+  "test": [
+    {
+      "question": "İnce Minareli Medrese'nin mimarı kimdir?",
+      "options": [
+        "Muhammed bin Havlan",
+        "Mimar Sinan",
+        "Abdullah oğlu Kelûk",
+        "Halepli Cemaleddin"
+      ],
+      "correct": 2,
+      "description": "Mimar, taçkapıdaki iki madalyonda adı geçen Abdullah oğlu Kelûk'tur.",
+      "sourceId": "inv-p102"
+    },
+    {
+      "question": "Minare 1901'de ne sonucu yıkılmıştır?",
+      "options": [
+        "Deprem",
+        "Üst üste iki yıldırım",
+        "Yangın",
+        "Sel"
+      ],
+      "correct": 1,
+      "description": "27 Kasım 1901'de isabet eden üst üste iki yıldırım minareyi birinci şerefeden itibaren yıkmıştır.",
+      "sourceId": "inv-p103"
+    },
+    {
+      "question": "Yapı bugün hangi müze olarak kullanılmaktadır?",
+      "options": [
+        "Taş ve Ahşap Eserler Müzesi",
+        "Çini Eserler Müzesi",
+        "Akşehir Arkeoloji Müzesi",
+        "Etnografya Müzesi"
+      ],
+      "correct": 0,
+      "description": "Yapı, Taş ve Ahşap Eserler Müzesi olarak hizmet vermektedir.",
+      "sourceId": "inv-p105"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p101",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"İnce Minareli Medrese (Sahip Ata Darülhadis)\"",
+      "page": "101"
+    },
+    {
+      "id": "inv-p102",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"İnce Minareli Medrese (Sahip Ata Darülhadis)\"",
+      "page": "102"
+    },
+    {
+      "id": "inv-p103",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"İnce Minareli Medrese (Sahip Ata Darülhadis)\"",
+      "page": "103"
+    },
+    {
+      "id": "inv-p104",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"İnce Minareli Medrese (Sahip Ata Darülhadis)\"",
+      "page": "104"
+    },
+    {
+      "id": "inv-p105",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"İnce Minareli Medrese (Sahip Ata Darülhadis)\"",
+      "page": "105"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

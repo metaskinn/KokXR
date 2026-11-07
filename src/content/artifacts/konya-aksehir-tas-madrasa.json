@@ -1,0 +1,109 @@
+{
+  "id": "konya-aksehir-tas-madrasa",
+  "name": "Taş (Halkalı - Sahip Ata) Medrese",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Anadolu Selçuklu · inşa kitâbesine göre H. 648 Muharrem / M. 1250 Nisan-Mayıs",
+  "endowment": "Emir-i Dad (Adliye Bakanı) Hüseyin oğlu Ali tarafından yaptırılmıştır; vakfiyesi bulunmamaktadır",
+  "summary": "1250'de Emir-i Dad Hüseyin oğlu Ali'nin yaptırdığı, açık avlulu ve dört eyvanlı, bugün Akşehir Arkeoloji Müzesi olan medrese.",
+  "history": "Medrese, Akşehir, Altunkalem Mahallesi, Dr. Aziz Perkûn Sokak No. 8'dedir. \"Halkalı\", \"Atabek Gazi\" veya \"Taş Medrese\" adlarıyla da bilinen yapı, taçkapısındaki üç satırlık Arapça inşa kitâbesine göre H. 648 Muharrem / M. 1250 Nisan-Mayıs'ta Emir-i Dad (Adliye Bakanı) Hüseyin oğlu Ali tarafından yaptırılmıştır.\n\nVakfiyesi bulunmayan medrese, XVI. yüzyıl Osmanlı belgelerinde hankâh, türbe, mescit, çeşme ve imaretten oluşan bir külliye içinde zikredilir; bugün mevcut olmayan hankâh, imaret ve çeşme medresenin tam karşısındaydı. Friedrich Sarre'nin 1895'te bütün hâlinde fotoğrafladığı taçkapı, 1910'da dönemin müftüsü Hacı Efendi'nin onarım girişimiyle numaralandırılarak söktürülmüş, fakat yeniden kurulamamıştır. Giriş cephesi ve taçkapının rekonstrüksiyonu ancak 2012-2016 restorasyonunda yapılmıştır.\n\nDoğu-batı doğrultusunda uzunlamasına dikdörtgen alana oturan medrese açık avlulu, dört eyvanlı ve tek katlıdır. Batıda giriş cephesinin kuzey köşesine bitişik mescit ve minare, güney köşesine eklenmiş bir darülkurra/darülhuffaz bulunur. Revak kemerlerini taşıyan sütun ve başlıklar devşirmedir; giriş ve ana eyvan cephelerinde yoğun mermer, türbenin üst örtüsünde, mescit mihrabında ve minare gövdesinde çini kullanılmıştır. Avlunun güney kanadı bilinmeyen bir tarihte değiştirilmiştir.\n\nOsmanlı belgelerine göre medrese 1522-1538 yılları arasında fıkıh, kelâm ve hadis okutulan elli akçeli harici medreseydi. XIX. yüzyıl ortalarına kadar eğitim sürmüş, ardından 1922'ye kadar yurt/yatakhane olarak kullanılmıştır. 1950'de İmaret Camii'nde toplanan eski eserlerin getirilmesiyle sergi alanına dönüşmüş ve 8 Haziran 1965'te \"Akşehir Arkeoloji Müzesi\" olarak açılmıştır. Kitap, yapıyı Sahip Ata Fahreddin Ali'nin Akşehir'deki medresesi olarak da anar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-tas-madrasa/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-tas-madrasa/courtyard.jpg",
+      "alt": "Açık avlu: iki yanda tuğla sivri kemerli revaklar ve kalın taş sütunlar, ortada küçük havuz, karşıda beyaz taş cepheli büyük eyvan",
+      "description": "Revaklı avlu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-tas-madrasa/aerial-view.jpg",
+      "alt": "Havadan görünüm: kesme taş cepheli medrese ve iki yanında kurşun kaplı kubbeler; arkada Akşehir'in evleri ve dağlar",
+      "description": "Medrese ve Akşehir",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-tas-madrasa/mosque-mihrab.jpg",
+      "alt": "Mescit iç mekânı: yeşil-firuze çinili mihrap nişi, sağında ahşap minber ve kapı, üstte kemerli pencere ve avize",
+      "description": "Mescit mihrabı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "columns",
+      "image": "/images/konya-aksehir-tas-madrasa/courtyard.jpg",
+      "x": 13,
+      "y": 50,
+      "title": "Devşirme sütunlar",
+      "text": "Revak kemerlerini destekleyen sütun ve sütun başlıkları devşirmedir.",
+      "sourceId": "inv-p109"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-aksehir-tas-madrasa/mosque-mihrab.jpg",
+      "x": 25,
+      "y": 50,
+      "title": "Çinili mihrap",
+      "text": "Mescit mihrabında ve minare gövdesinde çini kullanımı izlenmektedir.",
+      "sourceId": "inv-p109"
+    }
+  ],
+  "test": [
+    {
+      "question": "Taçkapıyı 1895'te bütün hâlinde fotoğraflayan kimdir?",
+      "options": [
+        "Yılmaz Önge",
+        "Friedrich Sarre",
+        "Müftü Hacı Efendi",
+        "Aziz Perkûn"
+      ],
+      "correct": 1,
+      "description": "Taçkapı 1895'te Friedrich Sarre tarafından bütün hâlinde fotoğraflanmıştır.",
+      "sourceId": "inv-p108"
+    },
+    {
+      "question": "Medrese 8 Haziran 1965'ten itibaren nasıl kullanılmıştır?",
+      "options": [
+        "Çini Eserler Müzesi",
+        "Taş ve Ahşap Eserler Müzesi",
+        "Kütüphane",
+        "Akşehir Arkeoloji Müzesi"
+      ],
+      "correct": 3,
+      "description": "Medrese 8 Haziran 1965'te \"Akşehir Arkeoloji Müzesi\" olarak kullanılmaya başlanmıştır.",
+      "sourceId": "inv-p109"
+    },
+    {
+      "question": "Medresenin plan tipi nedir?",
+      "options": [
+        "Açık avlulu, dört eyvanlı, tek katlı",
+        "Kapalı avlulu, tek eyvanlı",
+        "İki katlı, iki eyvanlı",
+        "Tek kubbeli kare mekân"
+      ],
+      "correct": 0,
+      "description": "Medrese açık avlulu, dört eyvanlı ve tek katlıdır.",
+      "sourceId": "inv-p109"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p108",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Taş (Halkalı - Sahip Ata) Medrese\"",
+      "page": "108"
+    },
+    {
+      "id": "inv-p109",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Taş (Halkalı - Sahip Ata) Medrese\"",
+      "page": "109"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

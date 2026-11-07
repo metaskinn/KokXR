@@ -1,0 +1,105 @@
+{
+  "id": "konya-celtik-ulu-central-mosque",
+  "name": "Ulu (Çarşı - Merkez) Camii",
+  "city": "Konya",
+  "district": "Çeltik",
+  "period": "İlk inşa bilinmiyor; H. 1230 / M. 1815 yenilemesi",
+  "endowment": "1815’te yenileyen Halil ve Ömer Beyler",
+  "summary": "Çeltik Ulu Camii, dokuz kubbeli harimiyle Osmanlı klasik döneminin çok kubbeli planını yansıtır.",
+  "history": "Cami, Çeltik Mevlâna Bulvarı’ndadır. İlk inşası bilinmez; mevcut kitabesi Ramazan 1230 / Ağustos 1815’te Halil ve Ömer Beyler tarafından yenilendiğini bildirir. Selçuklu Camisi adıyla da anılır. Cumhuriyet’in ilk yıllarında çevresindeki yapılar ve hazire kaldırılarak etrafı açılmıştır. Kitap uzun yıllar onarımda kaldığını belirtir.\n\nDikdörtgen yapının çok kubbeli örtüsü sekizgen kasnaklara oturur. Duvarlarda kaba yonu taş, kuzeybatıda son cemaat yerine bitişik minarede düzgün kesme taş kullanılmıştır. Minare kare kaideli, silindirik gövdeli ve tek şerefelidir. Giriş üzerindeki yenileme kitabesi mermer levhaya dört satır ve sekiz kartuş hâlinde Osmanlı Türkçesiyle işlenmiştir.\n\nÜç sahınlı harimin dokuz kubbesini sivri kemerlerle bağlı dört sütun taşır; geçişlerde üçgen tromplar vardır. Kıble duvarının ortasında silmelerle sınırlı, düz tepelikli taş mihrap, sağında onarımlar sonrasında eklenen sade ahşap minber bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-celtik-ulu-central-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-celtik-ulu-central-mosque/aerial.jpg",
+      "alt": "Çok kubbeli taş cami, önünde kemerli giriş cephesi ve sağda ince minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-celtik-ulu-central-mosque/arched-window.jpg",
+      "alt": "Taş duvar içinde kemerli ve ahşap doğramalı küçük pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-celtik-ulu-central-mosque/aerial.jpg",
+      "x": 38,
+      "y": 50,
+      "title": "Çok kubbeli örtü",
+      "text": "Caminin kubbeleri sekizgen kasnaklara oturmaktadır.",
+      "sourceId": "inv-p401"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-celtik-ulu-central-mosque/aerial.jpg",
+      "x": 62,
+      "y": 38,
+      "title": "Minare",
+      "text": "Kuzeybatıdaki taş minare kare kaideli, silindirik gövdeli ve tek şerefelidir.",
+      "sourceId": "inv-p401"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harimi kaç kubbe örter?",
+      "options": [
+        "Bir",
+        "Üç",
+        "Dokuz",
+        "Yedi"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Dokuz.",
+      "sourceId": "inv-p403"
+    },
+    {
+      "question": "1815 yenilemesini kimler yaptırmıştır?",
+      "options": [
+        "Hasan ve Hüseyin Paşalar",
+        "İshak ve Musa Beyler",
+        "İsmail ve Kemal Efendiler",
+        "Halil ve Ömer Beyler"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Halil ve Ömer Beyler.",
+      "sourceId": "inv-p400"
+    },
+    {
+      "question": "Ulu (Çarşı - Merkez) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Çeltik",
+        "Karatay",
+        "Akşehir",
+        "Beyşehir"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Çeltik.",
+      "sourceId": "inv-p400"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p400",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Çeltik, \"Ulu (Çarşı - Merkez) Camii\"",
+      "page": "400"
+    },
+    {
+      "id": "inv-p401",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Çeltik, \"Ulu (Çarşı - Merkez) Camii\"",
+      "page": "401"
+    },
+    {
+      "id": "inv-p403",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Çeltik, \"Ulu (Çarşı - Merkez) Camii\"",
+      "page": "403"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

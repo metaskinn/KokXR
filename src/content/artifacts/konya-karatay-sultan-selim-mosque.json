@@ -1,0 +1,115 @@
+{
+  "id": "konya-karatay-sultan-selim-mosque",
+  "name": "Sultan Selim (Selimiye) Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · XVI. yüzyıl",
+  "endowment": "Bani konusunda Kanuni Sultan Süleyman ve II. Selim’e ilişkin farklı görüşler vardır",
+  "summary": "Mevlâna Müzesi’nin batısındaki cami, merkezî kubbesi, yarım kubbesi ve iki minaresiyle bir selatin camisidir.",
+  "history": "Cami, Müze Alanı Caddesi’nde, Mevlâna Müzesi’nin batısındadır. Banisi ve mimarı hakkında farklı görüşler bulunur. Kanuni döneminin belgeleri yapımın bu dönemde olabileceğini düşündürür; başka bir görüş baninin Konya Sancak Beyliği yapan Şehzade II. Selim olduğunu söyler. Semavi Eyice yapıyı Yavuz Sultan Selim adına XVI. yüzyılın ilk yarısında yapılan, Fatih Camii’ndeki kubbe ve yarım kubbe düzenini yineleyen bir eser olarak ele alır. İbrahim Hakkı Konyalı ise inşaatın Kanuni’nin sağlığında başlayıp II. Selim tarafından tamamlandığını belirtir.\n\nCami, imaret, iki medrese, kütüphane ve muvakkithaneden oluşan manzumenin parçasıdır. Kesme taş duvarlı yapının kuzeyinde yedi bölümlü son cemaat yeri ve iki tek şerefeli minare bulunur. Harim bir merkezî kubbe, kıble yönünde yarım kubbe ve iki yanda üçer küçük kubbeyle örtülüdür. Mihrap ve minber beyaz mermerdendir; minberin külahının Mevlâna Türbesi’ne benzeyecek biçimde değiştirilmiş olabileceği belirtilir.\n\nBatı duvarındaki bir pencere 1794’te bitişik Yusuf Ağa Kütüphanesi’ne geçiş sağlayan kapıya dönüştürülmüştür. 2015’te zemin sağlamlaştırılmıştır. Batıdaki şadırvan, 2013–2016 meydan düzenlemesinde kuzeye taşınmış ve büyük ölçüde yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-sultan-selim-mosque/evening-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-sultan-selim-mosque/evening-exterior.jpg",
+      "alt": "Akşam ışığında aydınlatılmış revak, kubbeler ve iki minareli taş cami",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-sultan-selim-mosque/marble-minbar.jpg",
+      "alt": "Beyaz mermer basamaklı, geometrik delikli korkuluklu ve yeşil külahlı minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-sultan-selim-mosque/evening-exterior.jpg",
+      "x": 63,
+      "y": 31,
+      "title": "İki minare",
+      "text": "Caminin iki minaresi de tek şerefelidir.",
+      "sourceId": "inv-p180"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-sultan-selim-mosque/marble-minbar.jpg",
+      "x": 52,
+      "y": 67,
+      "title": "Mermer minber",
+      "text": "Minber beyaz mermerdendir; korkulukları ajur tekniğinde geometrik bezemelidir.",
+      "sourceId": "inv-p183"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kuzeydeki son cemaat yeri kaç bölümlüdür?",
+      "options": [
+        "Üç",
+        "Yedi",
+        "Beş",
+        "Dokuz"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Yedi.",
+      "sourceId": "inv-p176"
+    },
+    {
+      "question": "1794’te hangi yapıya geçiş için pencere kapıya çevrilmiştir?",
+      "options": [
+        "Matbah-ı Şerif",
+        "Sırçalı Medrese",
+        "Yusuf Ağa Kütüphanesi",
+        "Çelebi Konağı"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Yusuf Ağa Kütüphanesi.",
+      "sourceId": "inv-p176"
+    },
+    {
+      "question": "Sultan Selim (Selimiye) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır",
+        "Karatay"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p176"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p176",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sultan Selim (Selimiye) Camii\"",
+      "page": "176"
+    },
+    {
+      "id": "inv-p177",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sultan Selim (Selimiye) Camii\"",
+      "page": "177"
+    },
+    {
+      "id": "inv-p180",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sultan Selim (Selimiye) Camii\"",
+      "page": "180"
+    },
+    {
+      "id": "inv-p181",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sultan Selim (Selimiye) Camii\"",
+      "page": "181"
+    },
+    {
+      "id": "inv-p183",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sultan Selim (Selimiye) Camii\"",
+      "page": "183"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

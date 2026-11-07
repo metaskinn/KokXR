@@ -1,0 +1,135 @@
+{
+  "id": "konya-selcuklu-karatay-madrasa",
+  "name": "Karatay Medresesi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · taçkapı kitâbesine göre H. 649 / M. 1251",
+  "endowment": "Banisi Emir Celaleddin Karatay; vakfiyesi H. 651 / M. 1253-54 tarihli",
+  "summary": "Emir Celaleddin Karatay'ın 1251'de yaptırdığı, çini mozaikli kubbesiyle tanınan ve bugün Çini Eserler Müzesi olan kapalı avlulu medrese.",
+  "history": "Medrese, Selçuklu, Ankara Caddesi No. 1'de, Alâeddin Tepesi'nin kuzey eteğindedir. Bu çevre Selçuklu çağında iç kaleye ait Sultan Kapısı ve yakındaki diğer eğitim yapılarıyla önemli bir merkez-meydan oluşturuyordu. Karatay Medresesi, taçkapısındaki kitâbeye göre H. 649 / M. 1251'de inşa edilmiştir. Banisi Emir Celaleddin Karatay, medreseyi atabeyliği zamanında büyük kardeşi Emir Sipehsâlar Kemaleddin Rumtaş'a ait Kemaliye Medresesi'nin hemen karşısında yaptırmıştır.\n\nSanatçı kitâbesi bulunmamakla birlikte, inşasında Alâeddin Camii'nin de mimarı olan Muhammed bin Havlan el-Dımışkî'nin çalıştığı düşünülmektedir. Alâeddin Camii kuzey taçkapısındaki iki renkli mermer kullanımı, \"zengi düğümleri\" ve kapı sövelerinin süsleme kompozisyonu Karatay Medresesi taçkapısında da görülür.\n\nH. 651 / M. 1253-54 tarihli vakfiyede Celaleddin Karatay'ın \"binası yüksek, sahası geniş, zemini güzel, göze ferahlık, insana neşe verici, sanki cennetin köşklerinde bulunan bir medrese\" bina ettiği belirtilir. Müderris ve muidin Hanefî mezhebinden olması şart koşulmuş; öğrenciler için mezhep şartı aranmamış, haftada beş gün ders, Salı ve Cuma günleri tatil kurala bağlanmıştır.\n\nTaş ve tuğla karışık kâgir duvarlarda harç ve hatıl niteliğinde ahşap kullanılmıştır. Taçkapıda beyaz ve boz/gri mermerlerden oyma, kakma ve geçme teknikleriyle yapılan süsleme Suriye etkisindedir; iç dekorasyonda mozaik, ajur ve plaka kaplama olarak çini kullanılmıştır. Kapalı avlu, 12 m çapında yarım küre bir kubbeyle örtülüdür; köşelerden yelpaze biçimli pandantiflerle geçilen kubbenin ortasında aydınlık feneri vardır. Tek eyvanlı medresede taçkapı doğu cephenin güney köşesine çekilmiştir.\n\nXX. yüzyıl başında avlu, eyvan ve güneybatı köşedeki türbe dışındaki bölümler yıkılmış hâldeydi. Bugün karşılıklı dörder öğrenci odası, bölme duvarları kaldırılmış beşik tonozlu sergi salonlarıdır. Eyvanın güneyindeki oda Celaleddin Karatay'ın türbesidir ve balıksırtı istifli tuğla kubbeyle örtülüdür. Yapı 1955'ten bu yana \"Çini Eserler Müzesi\" olarak kullanılmakta; II. Kılıçarslan Köşkü, Kubadabad Sarayı ve Konya'daki bazı Selçuklu yapılarına ait çini, alçı ve cam eserler ile Kütahya ve Çanakkale seramikleri sergilenmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-karatay-madrasa/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-karatay-madrasa/aerial-view.jpg",
+      "alt": "Havadan görünüm: kurşun kaplı büyük kubbesi ve tepesinde fenerli medrese, önde iki renkli taş şeritli cephe ve köşedeki taçkapı; çevrede sonbahar ağaçları ve Konya şehri",
+      "description": "Medresenin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-karatay-madrasa/portal.jpg",
+      "alt": "Beyaz ve gri mermerden geometrik geçmeli, mukarnas kavsaralı taçkapı; yanlarda düğüm motifli panolar, arkada kurşun kubbe",
+      "description": "Taçkapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-karatay-madrasa/interior.jpg",
+      "alt": "Müze olarak kullanılan iç mekân: tuğla döşeli zemin, ortada korkulukla çevrili havuz, üstte firuze ve lacivert çinili kubbe eteği ve karşıda kemerli açıklık",
+      "description": "Kubbeli avlu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-karatay-madrasa/dome-lantern.jpg",
+      "alt": "Kubbe içi: firuze ve koyu renkli çini mozaikle örülmüş yıldız desenleri, sağ üstte ahşap tavanlı sekizgen aydınlık feneri",
+      "description": "Çinili kubbe ve aydınlık feneri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "portal",
+      "image": "/images/konya-selcuklu-karatay-madrasa/portal.jpg",
+      "x": 40,
+      "y": 62,
+      "title": "Taçkapı",
+      "text": "Taçkapıda beyaz ve boz/gri mermerlerden oyma, kakma ve geçme teknikleriyle oluşturulan süsleme Suriye etkisindedir.",
+      "sourceId": "inv-p89"
+    },
+    {
+      "id": "dome",
+      "image": "/images/konya-selcuklu-karatay-madrasa/aerial-view.jpg",
+      "x": 55,
+      "y": 40,
+      "title": "Avlu kubbesi",
+      "text": "Kapalı avlulu medrese, avlu duvarlarına oturtulan 12 m çapında yarım küre kubbeyle örtülüdür.",
+      "sourceId": "inv-p89"
+    },
+    {
+      "id": "lantern",
+      "image": "/images/konya-selcuklu-karatay-madrasa/dome-lantern.jpg",
+      "x": 66,
+      "y": 25,
+      "title": "Aydınlık feneri",
+      "text": "Köşelerden yelpaze biçimli pandantiflerle geçilen kubbenin ortasında aydınlık feneri vardır.",
+      "sourceId": "inv-p89"
+    }
+  ],
+  "test": [
+    {
+      "question": "Karatay Medresesi'nin banisi kimdir?",
+      "options": [
+        "Sahip Ata Fahreddîn Ali",
+        "Emir Celaleddin Karatay",
+        "Kemaleddin Rumtaş",
+        "II. Kılıçarslan"
+      ],
+      "correct": 1,
+      "description": "Medresenin banisi Emir Celaleddin Karatay'dır; medreseyi atabeyliği zamanında yaptırmıştır.",
+      "sourceId": "inv-p87"
+    },
+    {
+      "question": "Yapı 1955'ten bu yana hangi müze olarak kullanılmaktadır?",
+      "options": [
+        "Taş ve Ahşap Eserler Müzesi",
+        "Akşehir Arkeoloji Müzesi",
+        "Çini Eserler Müzesi",
+        "Etnografya Müzesi"
+      ],
+      "correct": 2,
+      "description": "Medrese 1955'ten günümüze \"Çini Eserler Müzesi\" olarak kullanılmaktadır.",
+      "sourceId": "inv-p90"
+    },
+    {
+      "question": "Vakfiyeye göre medresede hangi günler tatil yapılırdı?",
+      "options": [
+        "Yalnız Cuma",
+        "Perşembe ve Cuma",
+        "Cumartesi ve Pazar",
+        "Salı ve Cuma"
+      ],
+      "correct": 3,
+      "description": "Vakfiyede haftanın beş günü ders, iki gün (Salı ve Cuma) tatil yapılması kurala bağlanmıştır.",
+      "sourceId": "inv-p88"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p87",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Karatay Medresesi\"",
+      "page": "87"
+    },
+    {
+      "id": "inv-p88",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Karatay Medresesi\"",
+      "page": "88"
+    },
+    {
+      "id": "inv-p89",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Karatay Medresesi\"",
+      "page": "89"
+    },
+    {
+      "id": "inv-p90",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Karatay Medresesi\"",
+      "page": "90"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

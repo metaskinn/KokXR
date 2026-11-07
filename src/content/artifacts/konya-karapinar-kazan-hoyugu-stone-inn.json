@@ -1,0 +1,90 @@
+{
+  "id": "konya-karapinar-kazan-hoyugu-stone-inn",
+  "name": "Kazan Höyüğü Köyü Taş Han",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "Kitâbesi yok · Selçuklu dönemi hanlarından olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karapınar ile Ereğli arasında, Kazan Höyüğü Köyü'nde, ocaklık ve salon olmak üzere iki bölümden oluşan, Selçuklu dönemine ait olduğu düşünülen taş han.",
+  "history": "Yapı, Karapınar ile Ereğli arasında, Kazan Höyüğü Köyü'nde yer alır. Üzerinde kitâbe yoktur; Selçuklu dönemi hanlarından olduğu düşünülmektedir.\n\nHan, doğu-batı yönünde uzanan enlemesine dikdörtgen planlıdır ve iki bölümden oluşur. Kaba yonu ve düzgün kesme taştan inşa edilmiştir. Yapının küçük bölümü ocaklık olarak kullanılmaktadır; bu kısmın beden duvarları daha alçak tutulmuştur. Bitişiğindeki ana mekân ise daha yüksek ve geniştir.\n\nÜst örtüde ocaklık bölümü düz dam biçimindedir ve büyük ölçüde sağlamdır. Salon bölümü ise on bir sivri kemer üzerine oturan bir tonozla örtülüdür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-kazan-hoyugu-stone-inn/ruins-in-field.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-kazan-hoyugu-stone-inn/ruins-in-field.jpg",
+      "alt": "Mısır tarlalarının ortasında, kaba taşlarla örülmüş alçak dikdörtgen taş yapı; yan duvarında kemerli bir açıklık, üstü düz ve otlarla kaplı; arkada karayolu, elektrik direkleri ve dağlar",
+      "description": "Hanın tarlalar arasındaki görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "walls",
+      "image": "/images/konya-karapinar-kazan-hoyugu-stone-inn/ruins-in-field.jpg",
+      "x": 62,
+      "y": 68,
+      "title": "Taş duvarlar",
+      "text": "Han kaba yonu ve düzgün kesme taştan inşa edilmiştir.",
+      "sourceId": "inv-p285"
+    },
+    {
+      "id": "plan",
+      "image": "/images/konya-karapinar-kazan-hoyugu-stone-inn/ruins-in-field.jpg",
+      "x": 45,
+      "y": 57,
+      "title": "Enlemesine dikdörtgen plan",
+      "text": "Han, doğu-batı yönünde uzanan enlemesine dikdörtgen planlıdır ve iki bölümden oluşur.",
+      "sourceId": "inv-p285"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hanın salon bölümü kaç sivri kemer üzerine oturan tonozla örtülüdür?",
+      "options": [
+        "Beş",
+        "Yedi",
+        "Dokuz",
+        "On bir"
+      ],
+      "correct": 3,
+      "description": "Salon bölümü on bir sivri kemer üzerinde tonozla örtülüdür.",
+      "sourceId": "inv-p285"
+    },
+    {
+      "question": "Yapının küçük bölümü ne olarak kullanılmaktadır?",
+      "options": [
+        "Ocaklık",
+        "Mescit",
+        "Ahır",
+        "Hamam"
+      ],
+      "correct": 0,
+      "description": "Yapının küçük olan bölümü ocaklık olarak kullanılmaktadır; beden duvarları daha alçaktır.",
+      "sourceId": "inv-p285"
+    },
+    {
+      "question": "Kazan Höyüğü Köyü hangi iki yerleşim arasında yer alır?",
+      "options": [
+        "Konya ile Aksaray",
+        "Akşehir ile Ilgın",
+        "Karapınar ile Ereğli",
+        "Beyşehir ile Seydişehir"
+      ],
+      "correct": 2,
+      "description": "Yapı, Karapınar-Ereğli arasında, Kazan Höyüğü Köyü'nde yer almaktadır.",
+      "sourceId": "inv-p285"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p285",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Kazan Höyüğü Köyü Taş Han\"",
+      "page": "285"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

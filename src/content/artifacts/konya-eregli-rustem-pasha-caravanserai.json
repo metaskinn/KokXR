@@ -1,0 +1,118 @@
+{
+  "id": "konya-eregli-rustem-pasha-caravanserai",
+  "name": "Rüstem Paşa Kervansarayı",
+  "city": "Konya",
+  "district": "Ereğli",
+  "period": "Osmanlı · 1561; Veziriazam Rüstem Paşa'nın vefatından sonra vasiyeti üzerine yaptırılmıştır",
+  "endowment": "Veziriazam Rüstem Paşa'nın vasiyeti üzerine yaptırılmıştır",
+  "summary": "Veziriazam Rüstem Paşa'nın vasiyeti üzerine 1561'de hac yolu üzerindeki Ereğli'de yapılan, bugün millet kıraathanesi olarak kullanılan Osmanlı kervansarayı.",
+  "history": "Kervansaray Ereğli'dedir. Yapıya ait bir kitâbe yoktur; Veziriazam Rüstem Paşa'nın vasiyeti üzerine, onun vefatından sonra 1561 yılında yaptırılmıştır. Ereğli hac yolu güzergâhında bulunduğu için önemli bir uğrak noktasıdır. 2017-2019 yılları arasında restore edilen yapı bugün millet kıraathanesi olarak kullanılmaktadır.\n\nKervansaray doğu-batı doğrultusunda dikdörtgen planlıdır ve açık ve kapalı bölümlerden oluşur; iki bölümlü plan şeması kütleye de yansımıştır. Güney cephedeki tabhane odalarının, giriş eyvanının ve yanındaki küçük eyvanların bulunduğu kısım kademeli olarak yükseltilmiş; böylece hem cephe hareketlendirilmiş hem de giriş vurgulanmıştır.\n\nBeden duvarlarında düzgün kesme taş, tonozlarda tuğla kullanılmıştır. Hareketli bir cepheye sahip yapının kuzeybatı köşesi pahlanarak altı sıra mukarnas dizisiyle düzenlenmiştir. Tüm cepheleri çevreleyen koyu renkli taşlardan kuşaklar, biri tabhanenin saçak hizasında, diğeri tonozların alt hizasında binayı kuşatan iki silme hattıyla hafifletilmiştir.\n\nKervansarayın doğuda \"Bağdat Kapısı\", batıda \"Konya Kapısı\" olarak bilinen iki kapısı vardır; bu kapılardan açık avluya girilir. Avlunun kuzeyinde, hem misafirlerin konakladığı tabhane bölümüne hem de hayvanların barındığı ahır birimine geçişi sağlayan basık kemerli bir giriş eyvanı bulunur. Eyvanın iki yanında ikişer küçük eyvan ve üç tabhane odası yer alır; bunların üzeri beşik tonozla örtülüdür. Tabhane odalarında birer ocak nişi ve güney cepheye açılan küçük mazgal pencereler vardır.\n\nTabhane odalarının kuzeyine bitişik, ahır ve konaklama için kullanılan ana mekân dikdörtgen planlıdır; üzeri, dört ayağın birbirine ve duvarlara iki yönlü sivri kemerlerle bağlanmasıyla oluşturulmuş beşik tonozlarla örtülüdür. Yapı, bölgedeki önemli Osmanlı dönemi kervansaraylarından biridir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-eregli-rustem-pasha-caravanserai/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-eregli-rustem-pasha-caravanserai/aerial-view.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında, kesme taş duvarlı uzun dikdörtgen yapı; üzerinde yan yana kurşun kaplı beşik tonozlar, tonoz alınlıklarında tuğla örgü ve sıra sıra tuğla bacalar; arkada tuğla minare, şehir ve dağlar",
+      "description": "Kervansarayın çevresiyle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-eregli-rustem-pasha-caravanserai/vaults-and-chimneys.jpg",
+      "alt": "Yakın çekim: düzgün kesme taş beden duvarı üzerinde art arda yükselen kurşun kaplı tonozlar, tonozların tuğla örgülü kemerli alınlıkları ve tuğla bacalar",
+      "description": "Tonozlar ve bacalar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-eregli-rustem-pasha-caravanserai/interior-hall.jpg",
+      "alt": "Restore edilmiş iç mekân: kesme taş ayaklara oturan büyük kemerler, kemerler arasında ahşap gergi kirişleri ve avize; altta yeşil sandalyeli okuma masaları, yanlarda kitap rafları, arka duvarda iki ocak nişi",
+      "description": "Ana mekânın bugünkü kullanımı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "brick-vaults",
+      "image": "/images/konya-eregli-rustem-pasha-caravanserai/vaults-and-chimneys.jpg",
+      "x": 41,
+      "y": 43,
+      "title": "Tuğla tonozlar",
+      "text": "Kervansarayın beden duvarlarında düzgün kesme taş, tonozlarında ise tuğla malzeme kullanılmıştır.",
+      "sourceId": "inv-p279"
+    },
+    {
+      "id": "stone-walls",
+      "image": "/images/konya-eregli-rustem-pasha-caravanserai/vaults-and-chimneys.jpg",
+      "x": 80,
+      "y": 72,
+      "title": "Kesme taş beden duvarı",
+      "text": "Beden duvarları düzgün kesme taştan örülmüştür.",
+      "sourceId": "inv-p279"
+    },
+    {
+      "id": "arches",
+      "image": "/images/konya-eregli-rustem-pasha-caravanserai/interior-hall.jpg",
+      "x": 50,
+      "y": 12,
+      "title": "Ana mekânın kemerleri",
+      "text": "Ana mekânın beşik tonozları, dört ayağın birbirine ve duvarlara iki yönlü sivri kemerlerle bağlanmasıyla oluşturulmuştur.",
+      "sourceId": "inv-p279"
+    }
+  ],
+  "test": [
+    {
+      "question": "Rüstem Paşa Kervansarayı hangi yılda yaptırılmıştır?",
+      "options": [
+        "1520",
+        "1538",
+        "1600",
+        "1561"
+      ],
+      "correct": 3,
+      "description": "Kervansaray, Veziriazam Rüstem Paşa'nın vasiyeti üzerine vefatından sonra 1561'de yaptırılmıştır.",
+      "sourceId": "inv-p278"
+    },
+    {
+      "question": "Restore edilen kervansaray bugün ne olarak kullanılmaktadır?",
+      "options": [
+        "Müze",
+        "Millet kıraathanesi",
+        "Otel",
+        "Belediye binası"
+      ],
+      "correct": 1,
+      "description": "2017-2019 yılları arasında restore edilen yapı günümüzde millet kıraathanesi olarak kullanılmaktadır.",
+      "sourceId": "inv-p278"
+    },
+    {
+      "question": "Kervansarayın doğudaki kapısı hangi adla bilinir?",
+      "options": [
+        "Konya Kapısı",
+        "Şam Kapısı",
+        "Bağdat Kapısı",
+        "Hac Kapısı"
+      ],
+      "correct": 2,
+      "description": "Doğudaki kapı \"Bağdat Kapısı\", batıdaki ise \"Konya Kapısı\" olarak bilinmektedir.",
+      "sourceId": "inv-p279"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p278",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ereğli, \"Rüstem Paşa Kervansarayı\"",
+      "page": "278"
+    },
+    {
+      "id": "inv-p279",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ereğli, \"Rüstem Paşa Kervansarayı\"",
+      "page": "279"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

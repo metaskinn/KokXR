@@ -9,7 +9,6 @@ import ArtifactsPage from '../features/heritage/pages/ArtifactsPage'
 import ArtifactPage from '../features/heritage/pages/ArtifactPage'
 import NotFound from '../shared/ui/NotFound'
 import VaseWorkshop from '../features/workshops/vase/VaseWorkshop'
-import TileWorkshop from '../features/workshops/tile/TileWorkshop'
 import SwordWorkshop from '../features/workshops/sword/SwordWorkshop'
 import WorkshopsLayout from '../features/workshops/WorkshopsLayout'
 import PlacesPage, { PlacePage } from '../features/places/PlacesPage'
@@ -49,7 +48,6 @@ export default function App() {
           <Route index element={<Navigate to="vase" replace />} />
           <Route path="vase" element={<VaseWorkshop />} />
           <Route path="sword" element={<SwordWorkshop />} />
-          <Route path="tile" element={<TileWorkshop />} />
         </Route>
         <Route path="/artifact/:id" element={<ArtifactPage artifacts={artifacts} />} />
         <Route path="/admin" element={<AdminPage {...adminProps} />} />

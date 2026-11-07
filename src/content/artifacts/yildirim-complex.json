@@ -1,0 +1,413 @@
+{
+  "id": "yildirim-complex",
+  "name": "Yıldırım Külliyesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Erken Osmanlı · H. 793-797 / M. 1391-1395",
+  "endowment": "Yıldırım Bayezid evkafı",
+  "summary": "Şehrin doğusuna hâkim tepede kurulan; camisi, medresesi, türbesi ve Osmanlı'nın ilk hastanesi sayılan darüşşifasıyla bilinen külliye.",
+  "history": "Külliye, Sultan Yıldırım Bayezid tarafından H. 793-797 / M. 1391-1395 yılları arasında inşa ettirilmiştir. Bünyesinde cami, medrese, hamam, imaret, han, ahır, su kemerleri ve darüşşifa bulunuyordu; bunlardan cami, türbe, hamam, medrese ve darüşşifa günümüze ulaşmıştır. Caminin kitabesi yoktur; kesin inşa tarihi ve mimarı bilinmemektedir. H. Ramazan 802 / M. Mayıs 1400 tarihli vakfiye, tüm bu mülklerin gelirini zaviyeye, iki medreseye ve diğer bölümlere ayırır. Türbeyi kitabesine göre H. 809 / M. 1406'da oğlu Emir Süleyman yaptırmış, mimarı Ali bin Hüseyin'dir. Camide 1780'de yıldırım düşmesiyle minare ve revakın üç kemer ayağı ağır hasar görmüş; 2009-2010 projesiyle iki minare asıl yerlerine yeniden yapılmıştır. Külliye, 2014'te Bursa Tarihi Hanlar Bölgesi ve Cumalıkızık ile birlikte UNESCO Dünya Mirası Alanı olarak tescillenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-complex/mosque-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-complex/mosque-aerial.jpg",
+      "alt": "Yıldırım Bayezid Camii'nin havadan görünümü: iki büyük kubbe, kurşun çatı ve tuğla gövdeli iki minare",
+      "description": "Cami, havadan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-complex/portico.jpg",
+      "alt": "Son cemaat yerinin mermer cephesi, Bursa kemerleri ve ortada giriş kapısı",
+      "description": "Son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-complex/interior-space.jpg",
+      "alt": "Harim içi: turkuaz halı, halka avize, yükseltilmiş eyvan ve mihraplı bölüm",
+      "description": "Harim ve eyvan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-complex/mihrab.jpg",
+      "alt": "Mihrap, ahşap minber ve vaaz kürsüsü; duvarlarda hat levhaları",
+      "description": "Mihraplı bölüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-complex/tomb.jpg",
+      "alt": "Yıldırım Bayezid Türbesi: tuğla-taş almaşık duvarlar, üç kubbeli revak ve büyük kubbe",
+      "description": "Türbe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-complex/tomb-interior.jpg",
+      "alt": "Türbe içi: kırmızı halı, demir parmaklık içinde Yıldırım Bayezid'in sandukası",
+      "description": "Türbe içi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-complex/madrasa.jpg",
+      "alt": "Medrese avlusu: iki yanda tuğla-taş almaşık sivri kemerli revaklar, ortada havuz",
+      "description": "Medrese avlusu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-complex/hospital-aerial.jpg",
+      "alt": "Yıldırım Darüşşifası'nın havadan görünümü: dikdörtgen plan, revaklı avlu ve kubbeli salon",
+      "description": "Darüşşifa, havadan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/yildirim-complex/mosque-aerial.jpg",
+      "x": 42,
+      "y": 40,
+      "title": "Ardışık iki kubbe",
+      "text": "Simetrik planlı cami, kuzey-güney doğrultusunda art arda yerleştirilmiş iki büyük kubbeyle örtülüdür; orta mekâna doğu ve batıda daha küçük kubbeli iki eyvan bağlanır.",
+      "sourceId": "yk-s164"
+    },
+    {
+      "id": "bursa-arch",
+      "image": "/images/yildirim-complex/portico.jpg",
+      "x": 50,
+      "y": 18,
+      "title": "Bursa kemeri",
+      "text": "\"Bursa Kemeri\" olarak bilinen mimari formun ilk kez bu camide uygulandığı belirtilir. Son cemaat yeri 33,60 × 7,10 m ölçülerindedir ve beş birime ayrılır.",
+      "sourceId": "yk-s164-166"
+    },
+    {
+      "id": "iwan",
+      "image": "/images/yildirim-complex/interior-space.jpg",
+      "x": 18,
+      "y": 60,
+      "title": "Yükseltilmiş eyvan",
+      "text": "Harim ön mekânından iki basamaklı taş merdivenle çıkılan eyvanlar, Türk üçgenleriyle geçiş sağlanan sekizgen kasnaklı kubbelerle örtülüdür.",
+      "sourceId": "yk-s172"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/yildirim-complex/mihrab.jpg",
+      "x": 83,
+      "y": 75,
+      "title": "Minber",
+      "text": "Sade işçilikli ve sonradan eklendiği anlaşılan ahşap minber, oyma külahı ve yan kapı üzerindeki bezemeleriyle öne çıkar.",
+      "sourceId": "yk-s178"
+    },
+    {
+      "id": "porticoed-tomb",
+      "image": "/images/yildirim-complex/tomb.jpg",
+      "x": 40,
+      "y": 62,
+      "title": "İlk revaklı türbe",
+      "text": "Üç kubbeyle örtülü revaklı giriş alanıyla, Osmanlı'da inşa edilen ilk revaklı türbe örneği olduğu ifade edilir. Revak, ortada koyu bordo renkli iki sütunla taşınır.",
+      "sourceId": "yk-s204"
+    },
+    {
+      "id": "madrasa-courtyard",
+      "image": "/images/yildirim-complex/madrasa.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Medrese avlusu",
+      "text": "Revaklı alanlar, ortasında fıskiyeli sekizgen havuz bulunan 200 m²'lik avludan iki basamak yüksektedir.",
+      "sourceId": "yk-s186"
+    },
+    {
+      "id": "hospital",
+      "image": "/images/yildirim-complex/hospital-aerial.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "İlk Osmanlı hastanesi",
+      "text": "Osmanlıların ilk hastane yapısı olarak kabul edilir. 30 × 53 m ölçülerindeki yapıda, 420 m²'lik revaklı avlunun çevresinde yirmi oda sıralanır.",
+      "sourceId": "yk-s193-198"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mimarlık tarihinde \"Bursa Kemeri\" olarak bilinen formun ilk kez uygulandığı belirtilen yapı hangisidir?",
+      "options": [
+        "Yıldırım Camii",
+        "Ulu Cami",
+        "Orhan Camii",
+        "Yeşil Cami"
+      ],
+      "correct": 0,
+      "description": "Envantere göre \"Bursa Kemeri\" adıyla bilinen form ilk kez Yıldırım Camii'nde uygulanmıştır.",
+      "sourceId": "yk-s164"
+    },
+    {
+      "question": "Yıldırım Darüşşifası'nda görevli sayısı, sonradan eklenen kadrolarla kaça ulaşmıştır?",
+      "options": [
+        "9",
+        "15",
+        "20",
+        "27"
+      ],
+      "correct": 3,
+      "description": "İlk etapta üç tabip, iki şerbetçi, iki eczacı, bir aşçı ve bir ekmekçi varken cerrah, göz hekimi ve yardımcı personelle görevli sayısı 27'ye ulaşmıştır.",
+      "sourceId": "yk-s198"
+    },
+    {
+      "question": "Yıldırım Bayezid Türbesi'ni, giriş kapısındaki kitabeye göre kim inşa ettirmiştir?",
+      "options": [
+        "Çelebi Mehmed",
+        "Emir Süleyman",
+        "İsa Çelebi",
+        "II. Murad"
+      ],
+      "correct": 1,
+      "description": "Kitabeye göre türbe, Yıldırım Bayezid adına oğlu Emir Süleyman tarafından H. 809 / M. 1406'da inşa ettirilmiştir.",
+      "sourceId": "yk-s203"
+    }
+  ],
+  "timeLayer": [
+    {
+      "id": "construction",
+      "period": "H. 793-797 / M. 1391-1395",
+      "title": "Külliyenin inşası",
+      "text": "Sultan Yıldırım Bayezid, şehrin en doğusuna hâkim bir tepede külliyeyi inşa ettirir.",
+      "sourceId": "yk-s161"
+    },
+    {
+      "id": "deed",
+      "period": "H. Ramazan 802 / M. Mayıs 1400",
+      "title": "Vakfiye",
+      "text": "Nesih hatla yazılmış, 240 satırlık ve 6,5 metre uzunluğundaki vakfiye, Bursa Kadısı Molla Fenârî tarafından tasdik edilir.",
+      "sourceId": "yk-s164"
+    },
+    {
+      "id": "tomb",
+      "period": "H. 809 / M. 1406",
+      "title": "Türbe",
+      "text": "Yıldırım Bayezid adına türbeyi oğlu Emir Süleyman yaptırır; kitabeye göre yapı Ali bin Hüseyin'in eliyle tamamlanır.",
+      "sourceId": "yk-s203-204"
+    },
+    {
+      "id": "yildirim",
+      "period": "1780",
+      "title": "Yıldırım düşmesi",
+      "text": "Yıldırım düşmesi sonucu minare ile revakların üç kemer ayağı ağır hasar görür; minare yeniden inşa edilir, kemerler onarılır.",
+      "sourceId": "yk-s180"
+    },
+    {
+      "id": "minarets",
+      "period": "2009-2010",
+      "title": "İki minare",
+      "text": "Sonradan bitişik yapılmış minare yıkılır, özgün plan doğrultusunda iki minare asıl yerlerine yeniden yapılır.",
+      "sourceId": "yk-s180"
+    },
+    {
+      "id": "unesco",
+      "period": "2014",
+      "title": "Dünya Mirası",
+      "text": "Külliye, Bursa Tarihi Hanlar Bölgesi ve Cumalıkızık Köyü ile birlikte UNESCO Dünya Mirası Alanı olarak tescillenir.",
+      "sourceId": "yk-s180"
+    }
+  ],
+  "sources": [
+    {
+      "id": "yk-s161",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Külliyesi\"",
+      "page": "161"
+    },
+    {
+      "id": "yk-s164",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "164"
+    },
+    {
+      "id": "yk-s164-166",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "164, 166"
+    },
+    {
+      "id": "yk-s166-170",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "166, 170"
+    },
+    {
+      "id": "yk-s172",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "172"
+    },
+    {
+      "id": "yk-s176",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "176"
+    },
+    {
+      "id": "yk-s178",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "178"
+    },
+    {
+      "id": "yk-s180",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "180"
+    },
+    {
+      "id": "yk-s186",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Medresesi\"",
+      "page": "186"
+    },
+    {
+      "id": "yk-s193-198",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Darüşşifası\"",
+      "page": "193, 195, 198"
+    },
+    {
+      "id": "yk-s198",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Darüşşifası\"",
+      "page": "198"
+    },
+    {
+      "id": "yk-s203",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Türbesi\"",
+      "page": "203"
+    },
+    {
+      "id": "yk-s203-204",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Türbesi\"",
+      "page": "203, 204"
+    },
+    {
+      "id": "yk-s204",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yıldırım Bayezid Türbesi\"",
+      "page": "204"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "model": {
+    "model": "yildirim-complex",
+    "description": "Temsilî maket: cami, türbe, medrese ve darüşşifa envanterdeki plan ölçülerine göre kodla oluşturuldu; yükseklikler, duvar kalınlıkları, cephe ayrıntıları ve yerleşim fotoğraflardan oranlanmıştır. Darüşşifa gerçekte yaklaşık 300 m doğudadır, makete sığsın diye yakına alındı; medresenin alçak kotu ve hamam gösterilmemiştir. Mihrap duvarı ve iki levha arşiv fotoğraflarından alınmıştır. Yalnız caminin içi gezilebilir. Gerçek bir 3B tarama değildir.",
+    "infos": [
+      {
+        "text": "Cami, kuzey-güney doğrultusunda ardışık iki büyük kubbeyle örtülüdür; orta mekâna doğu ve batıda daha küçük kubbeli iki eyvan bağlanır.",
+        "sourceId": "yk-s164"
+      },
+      {
+        "text": "Tuğla gövdeli, iki bilezikli ve tek şerefeli iki minare, 2009-2010 projesiyle asıl yerlerine yeniden yapılmıştır.",
+        "sourceId": "yk-s180"
+      },
+      {
+        "text": "Üç kubbeli revaklı türbe, Osmanlı'da inşa edilen ilk revaklı türbe örneği olarak anılır. \"Parçala\" ile örtüleri kaldırıp içine bakabilirsin.",
+        "sourceId": "yk-s204"
+      },
+      {
+        "text": "Darüşşifa 30 × 53 m ölçülerindedir ve Osmanlıların ilk hastane yapısı kabul edilir; makette yaklaşık 300 m'lik gerçek uzaklığı kısaltılmıştır.",
+        "sourceId": "yk-s193-198"
+      }
+    ],
+    "interiorInfos": [
+      {
+        "id": "hall",
+        "title": "Harim orta mekânı",
+        "text": "12,20 × 12,20 m ölçülerindeki orta mekân, sekizgen kasnaklı bir kubbeyle örtülüdür. 1930'lu yıllara kadar burada olduğu belirtilen şadırvan günümüze ulaşmamıştır.",
+        "sourceId": "yk-s172",
+        "position": [
+          0,
+          6.2,
+          14.1
+        ],
+        "radius": 5.5
+      },
+      {
+        "id": "portico",
+        "title": "Son cemaat yeri",
+        "text": "33,60 × 7,10 m ölçülerindeki revak beş birime ayrılır. Ortadaki kubbe zeminden 14 m yüksekliğiyle diğerlerinden büyüktür.",
+        "sourceId": "yk-s166-170",
+        "position": [
+          0,
+          5.5,
+          -0.7
+        ],
+        "radius": 7
+      },
+      {
+        "id": "bursa-arch",
+        "title": "Bursa kemeri",
+        "text": "Revak ayakları Bursa kemerleriyle bağlanır; kemerlerin ortası beş sıralı stalaktitle, yanları silindirik yastıklarla desteklenir. Bu formun ilk kez bu camide uygulandığı belirtilir.",
+        "sourceId": "yk-s164-166",
+        "position": [
+          12.9,
+          6.6,
+          -3.2
+        ],
+        "radius": 5
+      },
+      {
+        "id": "iwan",
+        "title": "Doğu eyvanı",
+        "text": "8,50 × 6,75 m ölçülerindeki eyvana iki basamaklı taş merdivenle çıkılır. Kasnağında yuvarlak kemerli, alçı şebekeli ve revzenli üç pencere bulunur.",
+        "sourceId": "yk-s172",
+        "position": [
+          11.7,
+          5.6,
+          11.4
+        ],
+        "radius": 5
+      },
+      {
+        "id": "tabhane",
+        "title": "Tabhane odası",
+        "text": "Eyvanların güneyindeki iki tabhane odasına basık kemerli kapılardan girilir. Güney duvarlarında alçı süslemeli birer ocak ve boydan boya alçı raf ve hücreler yer alır.",
+        "sourceId": "yk-s172",
+        "position": [
+          10.8,
+          4.4,
+          19.2
+        ],
+        "radius": 3.8
+      },
+      {
+        "id": "mihrab",
+        "title": "Mihrap",
+        "text": "Mihrabın taç kısmı bezemeli, yedi sıra mukarnaslı kavsaraya sahiptir. Niş içinde altın yaldızlı mukarnas çerçeveli perde motifi dikkat çeker.",
+        "sourceId": "yk-s178",
+        "position": [
+          0,
+          7.2,
+          32.9
+        ],
+        "radius": 8
+      },
+      {
+        "id": "minbar",
+        "title": "Minber",
+        "text": "Sade işçilikli ve sonradan eklendiği anlaşılan ahşap minber, oyma külahı ve yan kapısındaki bezemeleriyle öne çıkar. Merdiveninden çıkabilirsin.",
+        "sourceId": "yk-s178",
+        "position": [
+          -4.75,
+          6.2,
+          30
+        ],
+        "radius": 4.5
+      },
+      {
+        "id": "mahfil",
+        "title": "Harim girişinin üstü",
+        "text": "Harim girişi üzerinde, bazı kaynaklarda \"hünkâr mahfili\" bazılarında \"çilehane\" denen, dar bir merdivenle çıkılan küçük bir mekân vardır. Maketteki ahşap mahfil fotoğrafa göre temsilîdir.",
+        "sourceId": "yk-s176",
+        "position": [
+          -4.1,
+          6.6,
+          9
+        ],
+        "radius": 3
+      }
+    ]
+  }
+}

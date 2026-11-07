@@ -1,0 +1,45 @@
+.vase-workshop { padding-top: 1.25rem; }
+.vase-workshop .artifact-title { margin-bottom: 1.5rem; }
+.vase-workshop .artifact-title h1 { margin: 0 0 0.35rem; font-size: 1.75rem; }
+.vase-workshop .vase-entrance { max-width: 46rem; }
+.vase-workshop .vase-model-note { font-size: .85rem; color: var(--secondary); }
+.vase-workshop .vase-model-note .label { margin-right: .4rem; }
+.vase-layout-of { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 1.5rem; align-items: start; }
+.vase-layout-of > section { min-width: 0; }
+.vase-layout-of h2 { font-size: 1.35rem; }
+.vase-scene-title { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.vase-scene-title h2 { margin: 0; }
+.vase-scene-title > span { font-size: .8rem; color: var(--secondary); white-space: nowrap; }
+.vase-scene { position: relative; height: clamp(460px, calc(100dvh - 320px), 640px); width: 100%; border-radius: var(--card-radius); overflow: hidden; background: #1f252b; touch-action: none; cursor: grab; }
+.vase-scene:active, .vase-scene.piece-dragging { cursor: grabbing; }
+.vase-scene:focus-visible { outline-color: #b47839; }
+.vase-scene canvas { display: block; width: 100%; height: 100%; }
+.vase-handle { position: absolute; z-index: 2; transform: translate(-50%, -50%); display: grid; place-items: center; width: 44px; height: 44px; min-height: 44px; padding: 0; border: 0; background: transparent; color: #fff; cursor: grab; touch-action: none; }
+.vase-handle > span { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--highlight); border: 1px solid #f0e1bc; box-shadow: 0 2px 8px #10241a55; font-size: .75rem; }
+.vase-handle:hover, .vase-handle[aria-pressed='true'] { background: transparent; }
+.vase-handle[aria-pressed='true'] > span { background: var(--text); }
+.vase-handle[hidden] { display: none; }
+.vase-controls { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+.vase-controls button { background: var(--surface); color: var(--text); border-color: var(--stroke); font-size: .8rem; padding: .7rem .85rem; }
+.vase-controls button:hover { background: var(--surface-gray); color: var(--text); }
+.vase-task { padding: 1.25rem 1.4rem 1.5rem; border-top: 5px solid var(--mustard); border-radius: var(--card-radius); background: var(--surface); box-shadow: var(--shadow); font-size: .95rem; }
+.vase-task > .top-title { font-size: .85rem; margin-bottom: .25rem; }
+.vase-steps { padding-left: 1.3rem; }
+.vase-steps li { margin-block: .6rem; padding-left: .3rem; }
+.vase-pieces { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; margin: 1rem 0; }
+.vase-pieces button { background: var(--surface); color: var(--text); border: 1px solid var(--control-stroke); }
+.vase-pieces button[aria-pressed='true'] { border-color: var(--highlight); box-shadow: inset 0 0 0 1px var(--highlight); background: var(--highlight-open); color: var(--highlight-dark); }
+.vase-task progress { width: 100%; height: 8px; accent-color: var(--highlight); margin-bottom: 1rem; }
+.vase-keyboard { border-top: 1px solid var(--stroke); margin-top: 1rem; font-size: .8rem; }
+.vase-keyboard summary { padding: .9rem 0; }
+.vase-message { margin: 1rem 0 0; padding: .8rem; border-left: 3px solid var(--highlight); border-radius: 0 6px 6px 0; background: var(--highlight-open); }
+.vase-message:empty { display: none; }
+.vase-vr { margin-top: 1rem; }
+.vase-vr button { width: 100%; min-height: 44px; }
+.vase-vr [role='alert'] { margin: .75rem 0 0; padding: .8rem; border-left: 3px solid #99622d; border-radius: 0 6px 6px 0; background: #fdeed5; }
+@media (max-width: 850px) {
+  .vase-layout-of { grid-template-columns: 1fr; }
+  .vase-scene { height: 460px; }
+  .vase-task { padding: 1.25rem; }
+  .vase-workshop .artifact-title { margin-bottom: 1.5rem; }
+}

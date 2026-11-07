@@ -1,118 +1,118 @@
-// Ulu Camii maketi tanıtım videosu: dışarıdan başlar, maketi ayırır, içeri girip gezer.
-// Gerçek fare ve klavye olaylarıyla oynar. İmleç ve altyazı yalnızca videoya eklenir.
-// Önce: npm run build && npm run preview -- --port 4173
-// Çalıştır: node scripts/ulu_video.mjs <cikti.webm>   (ekran kartı yoksa GPU=0 ile)
-// Videonun başındaki sayfa yükleme bölümü için atlanacak süre konsola yazılır (kirp=... sn).
+// Ulu Mosque model promo video: starts outside, takes the model apart, goes inside and tours it.
+// Plays with real mouse and keyboard events. The cursor and captions are added only to the video.
+// First: npm run build && npm run preview -- --port 4173
+// Run: node scripts/ulu_video.mjs <output.webm>   (with GPU=0 if there is no graphics card)
+// The time to trim for the page-loading part at the start of the video is printed to the console (crop=... s).
 import { chromium } from 'playwright'
 import { copyFileSync, mkdtempSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
-const cikti = process.argv[2] ?? 'test-sonuclari/kokxr-ulu-camii.webm'
+const output = process.argv[2] ?? 'test-results/kokxr-ulu-mosque.webm'
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:4173'
-const boyut = { width: 1280, height: 800 }
-const gecici = mkdtempSync(join(tmpdir(), 'kokxr-ulu-video-'))
-const tarayici = await chromium.launch({
+const size = { width: 1280, height: 800 }
+const temp = mkdtempSync(join(tmpdir(), 'kokxr-ulu-video-'))
+const browser = await chromium.launch({
   channel: 'chromium',
   args: process.env.GPU === '0'
     ? ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader']
     : ['--use-gl=angle', '--use-angle=gl-egl', '--ignore-gpu-blocklist', '--enable-gpu'],
 })
-const baglam = await tarayici.newContext({ viewport: boyut, recordVideo: { dir: gecici, size: boyut } })
-const kayitBasi = Date.now()
-const sayfa = await baglam.newPage()
-const hatalar = []
-sayfa.on('pageerror', (e) => hatalar.push(e.message))
-sayfa.on('console', (m) => { if (m.type() === 'error') hatalar.push(m.text()) })
+const context = await browser.newContext({ viewport: size, recordVideo: { dir: temp, size: size } })
+const recordStart = Date.now()
+const page = await context.newPage()
+const errors = []
+page.on('pageerror', (e) => errors.push(e.message))
+page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()) })
 
-const bekle = (ms) => sayfa.waitForTimeout(ms)
-const yazi = (m) => sayfa.evaluate((v) => {
-  const y = document.getElementById('demo-yazi')
+const wait = (ms) => page.waitForTimeout(ms)
+const writing = (m) => page.evaluate((v) => {
+  const y = document.getElementById('demo-writing')
   if (v) y.textContent = v
   y.style.opacity = v ? '1' : '0'
 }, m)
 
 let fx = 640, fy = 400
-async function imlecGit(x, y, ms = 450) {
-  const adim = Math.max(1, Math.round(ms / 16))
+async function moveCursor(x, y, ms = 450) {
+  const step = Math.max(1, Math.round(ms / 16))
   const x0 = fx, y0 = fy
-  for (let i = 1; i <= adim; i++) {
-    const t = i / adim, e = t * t * (3 - 2 * t)
+  for (let i = 1; i <= step; i++) {
+    const t = i / step, e = t * t * (3 - 2 * t)
     const ax = x0 + (x - x0) * e, ay = y0 + (y - y0) * e
-    await sayfa.mouse.move(ax, ay)
-    await sayfa.evaluate(([a, b]) => { document.getElementById('demo-imlec').style.translate = `${a}px ${b}px` }, [ax, ay])
-    await bekle(16)
+    await page.mouse.move(ax, ay)
+    await page.evaluate(([a, b]) => { document.getElementById('demo-cursor').style.translate = `${a}px ${b}px` }, [ax, ay])
+    await wait(16)
   }
   fx = x; fy = y
 }
-async function dugme(ad) {
-  const d = sayfa.getByRole('button', ad)
+async function button(options) {
+  const d = page.getByRole('button', options)
   const k = await d.boundingBox()
-  await imlecGit(k.x + k.width / 2, k.y + k.height / 2)
-  await bekle(120)
+  await moveCursor(k.x + k.width / 2, k.y + k.height / 2)
+  await wait(120)
   await d.click()
 }
 
-await sayfa.goto(`${url}/eser/ulu-camii?kalite=yuksek`)
-await sayfa.addStyleTag({ content: `
-  .maket-kutu { position: fixed !important; inset: 0; z-index: 9000; margin: 0 !important; border-radius: 0 !important; }
-  .maket-alan { height: 100vh !important; }
-  #demo-imlec { position: fixed; left: 0; top: 0; width: 26px; height: 26px; z-index: 9999; pointer-events: none; }
-  #demo-yazi { position: fixed; left: 50%; bottom: 78px; translate: -50% 0; z-index: 9998; pointer-events: none; max-width: 62%; padding: 10px 20px; border-radius: 10px; background: rgb(14 24 20 / .86); color: #f7f5ef; font: 600 19px system-ui, sans-serif; text-align: center; transition: opacity .35s; opacity: 0; }
+await page.goto(`${url}/artifact/ulu-mosque?quality=tall`)
+await page.addStyleTag({ content: `
+  .model-box { position: fixed !important; inset: 0; z-index: 9000; margin: 0 !important; border-radius: 0 !important; }
+  .model-area { height: 100vh !important; }
+  #demo-cursor { position: fixed; left: 0; top: 0; width: 26px; height: 26px; z-index: 9999; pointer-events: none; }
+  #demo-writing { position: fixed; left: 50%; bottom: 78px; translate: -50% 0; z-index: 9998; pointer-events: none; max-width: 62%; padding: 10px 20px; border-radius: 10px; background: rgb(14 24 20 / .86); color: #f7f5ef; font: 600 19px system-ui, sans-serif; text-align: center; transition: opacity .35s; opacity: 0; }
 ` })
-await sayfa.evaluate(() => {
+await page.evaluate(() => {
   const i = document.createElement('div')
-  i.id = 'demo-imlec'
+  i.id = 'demo-cursor'
   i.innerHTML = '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 2l16 12-7 1 4 7-3 1.5-4-7-5 5z" fill="#fff" stroke="#111" stroke-width="1.5"/></svg>'
   const y = document.createElement('div')
-  y.id = 'demo-yazi'
+  y.id = 'demo-writing'
   document.documentElement.append(i, y)
 })
-await sayfa.getByRole('button', { name: /maketini eline al/ }).click()
-await sayfa.getByRole('button', { name: 'İçeri gir' }).waitFor({ timeout: 60000 })
-// En dış konum: tekerlekle sonuna kadar uzaklaş, kare hızı ve dokular otursun.
-await sayfa.mouse.move(640, 400)
-for (let i = 0; i < 14; i++) { await sayfa.mouse.wheel(0, 600); await bekle(60) }
-await bekle(2200)
-const kirp = (Date.now() - kayitBasi) / 1000
+await page.getByRole('button', { name: /maketini eline al/ }).click()
+await page.getByRole('button', { name: 'İçeri gir' }).waitFor({ timeout: 60000 })
+// Farthest position: zoom all the way out with the wheel, let frame rate and textures settle.
+await page.mouse.move(640, 400)
+for (let i = 0; i < 14; i++) { await page.mouse.wheel(0, 600); await wait(60) }
+await wait(2200)
+const crop = (Date.now() - recordStart) / 1000
 
-// 1) Dışarıdan yaklaş
-await yazi('Bursa Ulu Camii · temsilî 3B maket, gerçek bir tarama değildir')
-for (let i = 0; i < 70; i++) { await sayfa.mouse.wheel(0, -34); await bekle(95) }
-await bekle(500)
-await yazi('Yirmi kubbe, iki minare, taç kapı')
-await bekle(1800)
+// 1) Approach from outside
+await writing('Bursa Ulu Camii · temsilî 3B maket, gerçek bir tarama değildir')
+for (let i = 0; i < 70; i++) { await page.mouse.wheel(0, -34); await wait(95) }
+await wait(500)
+await writing('Yirmi kubbe, iki minare, taç kapı')
+await wait(1800)
 
-// 2) Maketi ayır
-await yazi('Maketi ayır: çatı, kasnaklar ve kubbeler')
-await dugme({ name: /Parçala/ })
-await bekle(5200)
-await yazi('Altında payeler, kemerler ve şadırvan')
-await bekle(2000)
-await dugme({ name: /Birleştir/ })
-await bekle(2600)
+// 2) Take the model apart
+await writing('Maketi ayır: çatı, kasnaklar ve kubbeler')
+await button({ name: /Parçala/ })
+await wait(5200)
+await writing('Altında payeler, kemerler ve şadırvan')
+await wait(2000)
+await button({ name: /Birleştir/ })
+await wait(2600)
 
-// 3) İçeri gir ve klavyeyle yürü
-await yazi('İçeri gir: klavyeyle yürü, yapıya yaklaşınca bilgisi açılır')
-await dugme({ name: 'İçeri gir' })
-await bekle(1600)
-await sayfa.keyboard.down('w')
-await bekle(2100)
-await sayfa.keyboard.up('w')
-await yazi('Şadırvan: on altı köşeli havuz, üç çanaklı fıskiye')
-await bekle(1500)
-await sayfa.keyboard.down('ArrowRight')
-await bekle(700)
-await sayfa.keyboard.up('ArrowRight')
-await sayfa.keyboard.down('ArrowLeft')
-await bekle(1400)
-await sayfa.keyboard.up('ArrowLeft')
-await sayfa.keyboard.down('ArrowRight')
-await bekle(700)
-await sayfa.keyboard.up('ArrowRight')
+// 3) Go inside and walk with the keyboard
+await writing('İçeri gir: klavyeyle yürü, yapıya yaklaşınca bilgisi açılır')
+await button({ name: 'İçeri gir' })
+await wait(1600)
+await page.keyboard.down('w')
+await wait(2100)
+await page.keyboard.up('w')
+await writing('Şadırvan: on altı köşeli havuz, üç çanaklı fıskiye')
+await wait(1500)
+await page.keyboard.down('ArrowRight')
+await wait(700)
+await page.keyboard.up('ArrowRight')
+await page.keyboard.down('ArrowLeft')
+await wait(1400)
+await page.keyboard.up('ArrowLeft')
+await page.keyboard.down('ArrowRight')
+await wait(700)
+await page.keyboard.up('ArrowRight')
 
-// 4) Duraklar
-for (const [ad, metin, sure] of [
+// 4) Stops
+for (const [stop, text, duration] of [
   ['Doğu kapısı', 'Üç kapının ve mihrabın ekseni şadırvanda birleşir', 2400],
   ['Kâbe örtüsü', 'Kâbe kapısının örtüsü, görünümü temsilî', 2400],
   ['Levha', 'Levha ve paye yazıları arşiv fotoğraflarından', 2000],
@@ -120,18 +120,18 @@ for (const [ad, metin, sure] of [
   ['Minber', 'Minber: kündekâri, H. 802 / M. 1399-1400', 2400],
   ['Kubbe', 'Kubbelerin içi', 2400],
 ]) {
-  await yazi('')
-  await dugme({ name: ad, exact: true })
-  await bekle(1300)
-  await yazi(metin)
-  await bekle(sure)
+  await writing('')
+  await button({ name: stop, exact: true })
+  await wait(1300)
+  await writing(text)
+  await wait(duration)
 }
-await yazi('KökXR · Dokunamadığın tarihe dokun.')
-await bekle(2200)
+await writing('KökXR · Dokunamadığın tarihe dokun.')
+await wait(2200)
 
-const video = sayfa.video()
-await baglam.close()
-await tarayici.close()
-copyFileSync(await video.path(), cikti)
-rmSync(gecici, { recursive: true, force: true })
-console.log(`kirp=${kirp.toFixed(2)} hatalar=${JSON.stringify(hatalar)}`)
+const video = page.video()
+await context.close()
+await browser.close()
+copyFileSync(await video.path(), output)
+rmSync(temp, { recursive: true, force: true })
+console.log(`crop=${crop.toFixed(2)} errors=${JSON.stringify(errors)}`)

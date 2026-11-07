@@ -1,0 +1,379 @@
+{
+  "id": "yesil-complex",
+  "name": "Yeşil Çelebi Mehmed Külliyesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Erken Osmanlı · H. 817-822 / M. 1414-1419",
+  "endowment": "Sultan Çelebi Mehmed evkafı",
+  "summary": "Çelebi Sultan Mehmed'in yaptırdığı cami, türbe, medrese ve imaretten oluşan külliye. Osmanlı mimarisinde çok renkli sır altı tekniğinin ilk uygulandığı yapı topluluğudur.",
+  "history": "Külliyenin inşasına, cami taç kapısındaki kitabeye göre H. 817 / M. 1414'te başlandı; yapı H. 822 / M. 1419'da tamamlandı. Tezyinat, nakış ve boya işleri II. Murad döneminde 1424'e kadar sürdü. Tarihî kaynaklarda \"İmâret-i Sultân\" olarak geçen külliye, çinilerinin rengi nedeniyle halk arasında Yeşil Cami Külliyesi adıyla anıldı. Banisi Çelebi Mehmed, Fetret Devri'nden sonra Anadolu'daki siyasi birliği yeniden kurdu; 1421'de Edirne'de vefat etti, naaşı Bursa'ya getirilerek külliyedeki türbeye defnedildi. Planlama ve uygulamada görev alan Hacı İvaz Paşa'nın yanında nakkaş Ali bin İlyas Ali, çini ustası Mehmed el-Mecnûn ve Tebrizli ustaların adları kaynaklarda geçer. 1855 depreminde minare şerefesine kadar yıkıldı, çiniler ve kubbeler zarar gördü. Yapı, Ahmet Vefik Paşa'nın davetiyle gelen Léon Parvillée'nin, 1907-1908'de Mimar Asım Bey'in, 1945-1947'de Macit Kural ve Sedat Çetintaş'ın yönetiminde onarıldı. Külliye 2014'te UNESCO Dünya Mirası Alanı olarak tescillendi.",
+  "verification": "verified",
+  "coverImage": "/images/yesil-complex/domes.jpg",
+  "images": [
+    {
+      "file": "/images/yesil-complex/domes.jpg",
+      "alt": "Yeşil Camii'nin kurşun kaplı kubbeleri, pembe sıvalı kasnakları, fener kubbesi ve minaresi",
+      "description": "Kubbeler ve minare",
+      "sourceId": "yes-s102",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yesil-complex/outer-view.jpg",
+      "alt": "Yeşil Camii, akşam ışıklarında kuzeydoğudan kuşbakışı; önde tuğla minare, arkada Yeşil Türbe",
+      "description": "Kuzeydoğudan görünüm",
+      "sourceId": "yes-s83",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yesil-complex/from-above.jpg",
+      "alt": "Yeşil Camii'nin üstten görünümü: iki büyük kubbe, iki yan kubbe ve kuzey köşelerindeki minareler",
+      "description": "Üstten plan düzeni",
+      "sourceId": "yes-s85",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yesil-complex/fountain-mihrab.jpg",
+      "alt": "Orta mekândaki sekizgen fıskiyeli havuz, büyük halka avize ve geride çini kaplı mihrap",
+      "description": "Fıskiyeli orta mekân ve mihrap",
+      "sourceId": "yes-s90",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yesil-complex/mihrab-wall.jpg",
+      "alt": "Mihrap bölümünde lacivert altıgen çiniler, hat panoları ve ahşap minber",
+      "description": "Lacivert altıgen çiniler",
+      "sourceId": "yes-s92",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yesil-complex/yesil-tomb.jpg",
+      "alt": "Firuze çinilerle kaplı sekizgen Yeşil Türbe ve hafif sivri kurşun kubbesi",
+      "description": "Yeşil Türbe",
+      "sourceId": "yes-s136",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yesil-complex/madrasa.jpg",
+      "alt": "Yeşil Medresesi'nin tuğla ve taş almaşık duvarı, firuze alınlıklı sivri kemerli pencereleri",
+      "description": "Medrese",
+      "sourceId": "yes-s124",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yesil-complex/imaret.jpg",
+      "alt": "Yeşil İmareti'nin almaşık örgülü duvarları ve kiremit kaplı kırma çatısı",
+      "description": "İmaret",
+      "sourceId": "yes-s118",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/yesil-complex/from-above.jpg",
+      "x": 52,
+      "y": 50,
+      "title": "İki büyük kubbe",
+      "text": "Fıskiyeli orta harim, 13 m çapında ve 25 m yüksekliğinde bir kubbeyle örtülüdür; tepesinde aydınlatma feneri vardır. Mihrap bölümünün kubbesi de aynı ölçüdedir.",
+      "sourceId": "yes-s101"
+    },
+    {
+      "id": "side-dome",
+      "image": "/images/yesil-complex/from-above.jpg",
+      "x": 33,
+      "y": 49,
+      "title": "Yan eyvan kubbesi",
+      "text": "Orta mekânın iki yanındaki eyvanlar, sekizgen kasnağa oturan, 18 m yüksekliğinde ve 7 m çapında 24 dilimli kubbelerle örtülüdür.",
+      "sourceId": "yes-s103"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/yesil-complex/domes.jpg",
+      "x": 24,
+      "y": 50,
+      "title": "Sonradan eklenen minare",
+      "text": "İki minare tasarlanmış ancak biri yapılabilmiştir. Mevcut minare 1855 depreminden sonra yeniden inşa edildi; ikincisi 1869'da mahya kurulabilsin diye eklendi.",
+      "sourceId": "yes-s110"
+    },
+    {
+      "id": "jet",
+      "image": "/images/yesil-complex/fountain-mihrab.jpg",
+      "x": 50,
+      "y": 72,
+      "title": "Fıskiye",
+      "text": "Mermer fıskiye 2004'te yerinden sökülerek çalındı; aslına uygun olarak yeniden üretilen bir fıskiye yerine kondu.",
+      "sourceId": "yes-s103"
+    },
+    {
+      "id": "tile",
+      "image": "/images/yesil-complex/mihrab-wall.jpg",
+      "x": 16,
+      "y": 72,
+      "title": "Lacivert altıgen çini",
+      "text": "Mihrap bölümünde duvarlar yaklaşık 2 m yüksekliğe kadar lacivert altıgen karo çinilerle kaplanmış, üstüne ayet ve hadislerin yer aldığı yazı frizi eklenmiştir.",
+      "sourceId": "yes-s105"
+    },
+    {
+      "id": "tomb",
+      "image": "/images/yesil-complex/yesil-tomb.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Sekizgen türbe",
+      "text": "Her kenarı 8,20 m olan sekizgen gövde, kubbesiyle birlikte 25,5 m yüksekliğe ulaşır. Envanter, onu Osmanlı türbeleri arasında en yüksek örnek olarak verir.",
+      "sourceId": "yes-s138"
+    }
+  ],
+  "test": [
+    {
+      "question": "Külliyeye \"Yeşil\" adını veren özellik nedir?",
+      "options": [
+        "Çinilerinin rengi ve etkisi",
+        "Çevresindeki bahçeler",
+        "Mermerinin rengi",
+        "Banisinin lakabı"
+      ],
+      "correct": 0,
+      "description": "Kaynaklarda \"İmâret-i Sultân\" olarak geçse de çinilerinin rengi ve etkisi nedeniyle halk arasında Yeşil Cami Külliyesi diye anılmıştır.",
+      "sourceId": "yes-s83"
+    },
+    {
+      "question": "Yeşil Camii'nde Osmanlı mimarisinde ilk kez uygulandığı belirtilen unsur hangisidir?",
+      "options": [
+        "Çifte minare",
+        "Son cemaat yeri",
+        "Hünkâr mahfili",
+        "Kurşun örtü"
+      ],
+      "correct": 2,
+      "description": "Envanter, Osmanlı mimarisinde hünkâr mahfili uygulamasının ilk kez Yeşil Camii'nde hayata geçirildiğini belirtir.",
+      "sourceId": "yes-s98"
+    },
+    {
+      "question": "Yeşil Türbe'nin sekizgen gövdesinin bir kenarı kaç metredir?",
+      "options": [
+        "5,75 m",
+        "8,20 m",
+        "10,67 m",
+        "13,83 m"
+      ],
+      "correct": 1,
+      "description": "Her kenarı 8,20 m olan sekizgen gövde, kubbesiyle birlikte 25,5 m yüksekliğe ulaşır.",
+      "sourceId": "yes-s138"
+    }
+  ],
+  "sources": [
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "id": "yes-s83",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "83"
+    },
+    {
+      "id": "yes-s85",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "85-86"
+    },
+    {
+      "id": "yes-s88",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "88"
+    },
+    {
+      "id": "yes-s90",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "88-90"
+    },
+    {
+      "id": "yes-s92",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\" (fotoğraf)",
+      "page": "92-93"
+    },
+    {
+      "id": "yes-s96",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "96"
+    },
+    {
+      "id": "yes-s98",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "98"
+    },
+    {
+      "id": "yes-s101",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "101"
+    },
+    {
+      "id": "yes-s102",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\" (fotoğraf)",
+      "page": "102"
+    },
+    {
+      "id": "yes-s103",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "103"
+    },
+    {
+      "id": "yes-s105",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "105-106"
+    },
+    {
+      "id": "yes-s110",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "110"
+    },
+    {
+      "id": "yes-s116",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Çelebi Mehmed Külliyesi\"",
+      "page": "114-116"
+    },
+    {
+      "id": "yes-s118",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil İmareti\"",
+      "page": "118-120"
+    },
+    {
+      "id": "yes-s124",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil (Sultaniye) Medresesi\"",
+      "page": "123-127"
+    },
+    {
+      "id": "yes-s136",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Türbe\"",
+      "page": "136-137"
+    },
+    {
+      "id": "yes-s138",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Yeşil Türbe\"",
+      "page": "138"
+    }
+  ],
+  "model": {
+    "model": "yesil-complex",
+    "description": "Bu maket temsilîdir, gerçek bir 3B tarama değildir. Kubbe ölçüleri, kot farkları ve yapı boyutları envanterden; oranlar ve bezeme fotoğraflardan yorumlanmıştır. Yapıların birbirine uzaklığı kısaltılmış, yazılar çizilmemiştir.",
+    "infos": [
+      {
+        "text": "Cami, giriş holü, tonozlu odalar, iki büyük kubbeli harim ve iki yanındaki 75 cm yükseltilmiş eyvanlardan oluşur.",
+        "sourceId": "yes-s88"
+      },
+      {
+        "text": "Son cemaat yeri için cephede kemer üzengileri hazırlanmış, ancak bu bölüm tamamlanmamıştır.",
+        "sourceId": "yes-s88"
+      },
+      {
+        "text": "Yeşil Türbe caminin güneyinde, küçük bir tepe üzerindedir.",
+        "sourceId": "yes-s136"
+      },
+      {
+        "text": "Medrese caminin batısındadır; 36,00 × 38,50 m ölçülerinde, üç eyvanlı açık avlulu bir yapıdır.",
+        "sourceId": "yes-s124"
+      },
+      {
+        "text": "İmaretin 26 × 10 m'lik mutfağı ve 16,30 × 10 m'lik yemekhanesi kırma çatıyla örtülüdür; mutfak dışarıdan kiremit kaplı çift kubbesiyle dikkat çeker. Yapı caminin güneydoğusundadır.",
+        "sourceId": "yes-s118"
+      }
+    ],
+    "interiorInfos": [
+      {
+        "id": "entrance",
+        "title": "Taç kapı ve hol",
+        "text": "Taç kapı dışa taşmaz; holün iki yanındaki sahanlıklardan odalara ve üst kata geçilir. Taç kapının işçiliği için yaklaşık üç yıl çalışıldığı aktarılır.",
+        "sourceId": "yes-s90",
+        "position": [
+          0,
+          3,
+          -14
+        ],
+        "radius": 4
+      },
+      {
+        "id": "jet",
+        "title": "Fıskiyeli orta harim",
+        "text": "13 m çaplı kubbenin altındaki fıskiye 2004'te çalındı; bugünkü aslına uygun yeniden üretilmiştir. Kubbenin tepesinde aydınlatma feneri vardır.",
+        "sourceId": "yes-s103",
+        "position": [
+          0,
+          3,
+          -3.5
+        ],
+        "radius": 6
+      },
+      {
+        "id": "mihrab",
+        "title": "Mihrap",
+        "text": "Yaklaşık 6 m genişlik ve 10,67 m yüksekliktedir. Mihrabın sağındaki sütunçede \"amel-i üstâdân-ı Tebriz\" ibaresi okunur; çiniler Tebrizli ustaların eseridir.",
+        "sourceId": "yes-s105",
+        "position": [
+          0,
+          4,
+          15
+        ],
+        "radius": 7
+      },
+      {
+        "id": "iwan",
+        "title": "Yan eyvanlar",
+        "text": "Eyvanlar orta mekândan 75 cm yüksektir; duvarları yaklaşık 2 m yüksekliğe kadar sarı yaldızlı, açık mavi ve yeşil karo çiniyle kaplıdır.",
+        "sourceId": "yes-s103",
+        "position": [
+          11.4,
+          3,
+          -3.5
+        ],
+        "radius": 5
+      },
+      {
+        "id": "sultan",
+        "title": "Hünkâr mahfili",
+        "text": "Osmanlı mimarisinde ilk kez burada uygulandığı belirtilir. Çinileri sarı, lacivert, firuze ve beyaz renklerdedir; kemer üzengilerindeki küçük kitabeler ustayı Mehmed el-Mecnûn olarak verir.",
+        "sourceId": "yes-s98",
+        "position": [
+          0,
+          8,
+          -13
+        ],
+        "radius": 5
+      },
+      {
+        "id": "muezzin",
+        "title": "Müezzin mahfilleri",
+        "text": "Orta harim girişinin iki yanında, birer basamakla çıkılan, tamamen çini kaplı iki mekândır.",
+        "sourceId": "yes-s101",
+        "position": [
+          4.2,
+          3,
+          -11.2
+        ],
+        "radius": 3
+      },
+      {
+        "id": "tabhane",
+        "title": "Tabhane odaları",
+        "text": "Ocak ve ahşap kapaklı dolaplarla donatılmış, duvarları pencere seviyesine kadar açık mavi altıgen çiniyle kaplıdır. Doğudaki 32, batıdaki 24 dilimli kubbeyle örtülüdür.",
+        "sourceId": "yes-s105",
+        "position": [
+          11.8,
+          3,
+          4.8
+        ],
+        "radius": 4
+      },
+      {
+        "id": "corner",
+        "title": "Köşe odaları",
+        "text": "Kuzeybatı ve kuzeydoğudaki iki büyük oda koridorlarla sahanlığa bağlanır. Kullanım amaçları konusunda farklı görüşler vardır.",
+        "sourceId": "yes-s101",
+        "position": [
+          10.5,
+          3,
+          -13
+        ],
+        "radius": 5
+      }
+    ]
+  }
+}

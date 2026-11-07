@@ -1,12 +1,12 @@
 # KökXR plan ve durum
 
-Tek plan dosyası. İşe buradan başla, iş bitince işaretle. Ayrıntı gerekince: `DEVIR-QUEST.md` (VR), `docs/sunum-vaatleri.md`, `docs/sartname.md`.
+Tek plan dosyası. İşe buradan başla, iş bitince işaretle. Ayrıntı gerekince: `QUEST-HANDOFF.md` (VR), `docs/presentation-promises.md`, `docs/specification.md`.
 
 ## Güncel durum (7 Kasım 2026)
 
-Çalışma dalı `ulucami-gercekci`; önceki durum `DEVAM.md` 0. bölümde. Bu dosyanın altındaki "Yeni bilgisayarda başla" bölümü 4 Kasım tarihlidir.
+Çalışma dalı `ulucami-gercekci`; önceki durum `HANDOFF.md` 0. bölümde. Bu dosyanın altındaki "Yeni bilgisayarda başla" bölümü 4 Kasım tarihlidir.
 
-- [x] Mekanlar sekmesi: harita, şehir, yapı seçimi (`/vr`)
+- [x] Mekanlar sekmesi: harita, şehir, yapı seçimi (`/places`)
 - [x] Bursa'da 10 yapıya web maketi ve VR girişi (masaüstü testi geçti)
 - [x] Ulu Camii: gerçekçi halı ve mermer, ışık, minber, kürsü ve mahfile çıkma
 - [x] Dokunmatik ekranda yürüme kolu
@@ -42,7 +42,7 @@ npm run dev -- --host 127.0.0.1 --port 5173 --strictPort   # http://127.0.0.1:51
 |---|---|---|
 | `vaat-mokap` | Yolculuk, zaman katmanı, sunum ekranları, simülasyon betiği | Temiz, ana çalışma branch'i |
 | `wip/vr-tutma` | `vaat-mokap` + menü-kart düzeltmesi + durak baş yönü düzeltmesi | Her ikisi birleştirilmedi. Yalnız `test:hizli` geçti; menü-kart düzeltmesinin simülasyon sonucu bu oturumda doğrulanmadı |
-| `wip/vr-vazo` | `vaat-mokap` + `vazoXr.ts` (536 satır), `VR'da onar` düğmesi, alt yazı başlangıcı | Yarım. Ajan rapor veremeden durdu; hangi akışın bittiği bilinmiyor. Simülasyonda ve `tests/vazo.mjs` ile denenmedi |
+| `wip/vr-vazo` | `vaat-mokap` + `vazoXr.ts` (536 satır), `VR'da onar` düğmesi, alt yazı başlangıcı | Yarım. Ajan rapor veremeden durdu; hangi akışın bittiği bilinmiyor. Simülasyonda ve `tests/vase.mjs` ile denenmedi |
 
 Sıra:
 
@@ -57,12 +57,12 @@ Gerçek three.js WebXRManager'ı Meta'nın `iwer` paketiyle sürer. `iwer` geçi
 
 ```bash
 export XR_SIM=/gecici/bir/klasor
-bash tests/xr-sim/kur.sh
+bash tests/xr-sim/setup.sh
 node_modules/.bin/vite preview --outDir "$XR_SIM/dist" --host 127.0.0.1 --port 4174 --strictPort   # ayrı terminalde
 node tests/xr-sim/sim.mjs ana
 ```
 
-- Son sonuç, düzeltmelerden önceki kodda: 78 denetimden 76'sı geçti (`tests/xr-sim/son-sonuc.json`). Kalan 2'si: kart açıkken menüye ulaşılamaması, baş dönükken durak yönü. Düzeltmeleri `wip/vr-tutma`'da.
+- Son sonuç, düzeltmelerden önceki kodda: 78 denetimden 76'sı geçti (`tests/xr-sim/last-result.json`). Kalan 2'si: kart açıkken menüye ulaşılamaması, baş dönükken durak yönü. Düzeltmeleri `wip/vr-tutma`'da.
 - Betik depoya taşındı; `kur.sh` çalıştırıldı, ama taşındıktan sonra `sim.mjs` baştan sona çalıştırılmadı.
 - FPS, konfor ve gerçek kumanda eşlemesini kanıtlamaz. Yazılımsal çizimde bir tur uzun sürer.
 - Simülasyon ajanı son raporunu veremeden durduruldu; sonuçlar `son-sonuc.json` dosyasından okundu.
@@ -84,7 +84,7 @@ node tests/xr-sim/sim.mjs ana
 
 ## Ürün yapısı
 
-Üst menü: **Eserler (`/eserler`, `/` buraya yönlenir), Mekanlar (`/vr`), Atölyeler (`/atolye`: vazo, kılıç, çini), Yönetim.** Keşfet ana sayfası 2026-11-07'de kaldırıldı; eser sayfalarından Bilgini sına, Zaman katmanı, Sanal gezinti ve 360° tur bölümleri de çıkarıldı (veriler JSON'da duruyor). Yolculuk, öğretmen paneli, vizyon ve onay akışı sayfaları 2026-11-07'de kullanıcı isteğiyle kaldırıldı.
+Üst menü: **Eserler (`/artifacts`, `/` buraya yönlenir), Mekanlar (`/places`), Atölyeler (`/workshops`: vazo, kılıç, çini), Yönetim.** Keşfet ana sayfası 2026-11-07'de kaldırıldı; eser sayfalarından Bilgini sına, Zaman katmanı, Sanal gezinti ve 360° tur bölümleri de çıkarıldı (veriler JSON'da duruyor). Yolculuk, öğretmen paneli, vizyon ve onay akışı sayfaları 2026-11-07'de kullanıcı isteğiyle kaldırıldı.
 
 | Kullanıcı | Nereden girer |
 |---|---|
@@ -128,7 +128,7 @@ Doğrulama: simüle Quest betiği, sonra gerçek cihaz.
 - [ ] `tests/ui.mjs` odak denetimi bir kez kaldı, yeniden çalıştırınca geçti; aralıklı sorun mu izle
 - [ ] Bağımsız inceleme: etiket eksiği, uydurma içerik, kırık akış, erişilebilirlik
 - [ ] 1280 ve 360 px ekran görüntüleriyle son bakış
-- [ ] Yedek demo videosu (masaüstü), `dist/` kopyaları, `DEVAM.md` güncellemesi
+- [ ] Yedek demo videosu (masaüstü), `dist/` kopyaları, `HANDOFF.md` güncellemesi
 
 ### 5. Cuma 6 Kasım: gerçek cihaz (kullanıcıyla)
 
@@ -141,16 +141,16 @@ echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0666"' | sudo tee /etc/ude
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-- [ ] `adb reverse tcp:4173 tcp:4173`, Quest Browser'da `http://localhost:4173/vr`
-- [ ] VR'a giriş, FPS ölçümü (hedef 72); altındaysa `DEVIR-QUEST.md`'deki düşürme sırası
-- [ ] `docs/superpowers/plans/2026-11-04-ulu-camii-quest.md` Görev 6 kontrol listesi
+- [ ] `adb reverse tcp:4173 tcp:4173`, Quest Browser'da `http://localhost:4173/places`
+- [ ] VR'a giriş, FPS ölçümü (hedef 72); altındaysa `QUEST-HANDOFF.md`'deki düşürme sırası
+- [ ] `docs/superpowers/plans/2026-11-04-ulu-mosque-quest.md` Görev 6 kontrol listesi
 - [ ] Tutma, vazo onarımı, etiket okunurluğu, tek kumanda, konfor
 - [ ] Gerçek cihazda VR yedek videosu
 - [ ] Çalışmayan özelliği demodan çıkar, vizyon olarak anlat
 
 ### 6. Final 7–8 Kasım
 
-- [ ] `DEVAM.md`'deki final günü kontrol listesi
+- [ ] `HANDOFF.md`'deki final günü kontrol listesi
 - [ ] Sunumda çalışan özellik ile vizyon ayrımı
 - [ ] VR'ın hangi sorunu çözdüğü net anlatılıyor (şartname 5.2.2)
 
@@ -171,11 +171,11 @@ Süre yetmezse şu sırayla çıkar: AR → VR menüsünde zaman katmanı. VR'da
 | Doğrulanmış bilgi | Kaynaklı kartlar | Gerçek |
 | Öğretmen paneli | Ekran kaldırıldı (2026-11-07) | Yok, yalnız sunumda vizyon |
 | KökMobil, Dokunulabilir Müze | Ekran kaldırıldı (2026-11-07) | Yok, yalnız sunumda vizyon |
-| Dijital Miras Kütüphanesi | Ekran kaldırıldı (2026-11-07); eser listesi `/eserler` | Kısmen |
+| Dijital Miras Kütüphanesi | Ekran kaldırıldı (2026-11-07); eser listesi `/artifacts` | Kısmen |
 | Tarama, 1:1 dijital ikiz | Ekran kaldırıldı (2026-11-07); `Tarama verisi yok` | Yok, yalnız sunumda vizyon |
 | VR | WebXR | Gerçek, cuma denenecek |
 | AR | `immersive-ar`, süre kalırsa | Cihazda doğrulanacak |
-| Tek senaryo demo | Sayfa kaldırıldı (2026-11-07); `/vr` ve `/atolye` | Gerçek |
+| Tek senaryo demo | Sayfa kaldırıldı (2026-11-07); `/places` ve `/workshops` | Gerçek |
 
 ## Süre tahmini
 

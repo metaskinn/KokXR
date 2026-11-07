@@ -1,0 +1,468 @@
+{
+  "id": "hudavendigar-complex",
+  "name": "I. Murad Hudâvendigâr Külliyesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Erken Osmanlı · H. 767 / M. 1365-66 olarak öngörülür",
+  "endowment": "Sultan I. Murad Hudâvendigâr vakfı",
+  "summary": "Çekirge'de ovaya bakan külliye. Alt katı cami, üst katı medrese olan camisi, Osmanlı mimarisinde ilk ve tek örnek olarak anılır.",
+  "history": "Külliye, Bursa'nın batısında, kaplıcalarıyla ünlü Çekirge'de ovaya hâkim bir tepeye yapılmıştır; bu yüzden \"Kaplıca İmareti\" adıyla da anılır. Günümüze ulaşan inşa kitabesi yoktur; H. 767 / M. 1365-66'da yapıldığı öngörülür. Arapça vakfiyesi H. Cemaziyelahir 787 / M. Temmuz 1385 tarihlidir. Cami merkezli külliye; tabhaneler, medrese, imarethane, hamam, mektep, çeşme, türbe, çamaşırhane ve Kapan Hanı'ndan oluşur; sıbyan mektebi günümüze ulaşamamıştır. Medresenin caminin üst katında yer alması Osmanlı mimarisinde ilk ve tek örnektir. Yapı 1520, 1563, 1616 ve 1635'te onarılmış, 1855 depreminde kısmen hasar görmüş, II. Abdülhamid döneminde yenilenmiştir. 1957'de minaresine yıldırım düşmüş, 1960'ta genel onarım görmüş, 1975-1976, 1998 ve 2006'da Vakıflar Genel Müdürlüğü'nce restore edilmiştir. 2014'te Bursa'nın UNESCO Dünya Mirası alanına dahil olmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/hudavendigar-complex/facade.jpg",
+  "images": [
+    {
+      "file": "/images/hudavendigar-complex/facade.jpg",
+      "alt": "Caminin taş ve tuğla örgülü iki katlı cephesi; üst katta ikiz kemerli medrese revağı ve beyaz korkuluklar",
+      "description": "Kuzey ve doğu cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hudavendigar-complex/narthex.jpg",
+      "alt": "Son cemaat yerinin kalın ayaklı kemerleri, ahşap gergileri ve dışarıdaki ağaçlar",
+      "description": "Son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hudavendigar-complex/fountain-space.jpg",
+      "alt": "Mavi halılı kubbeli orta mekân, ortada altıgen mermer şadırvan, ileride mihraba açılan tonozlu harim",
+      "description": "Şadırvanlı mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hudavendigar-complex/hall.jpg",
+      "alt": "Şadırvanlı mekândan basamaklarla çıkılan tonozlu harim, ahşap korkuluklar ve karşıda mihrap",
+      "description": "Asıl ibadet mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hudavendigar-complex/mihrab.jpg",
+      "alt": "Altın yaldızlı mukarnas kavsaralı, kırmızı ve lacivert bezemeli mihrap",
+      "description": "Mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hudavendigar-complex/madrasa-corridor.jpg",
+      "alt": "Üst kattaki medresenin kırmızı halılı, ahşap kirişli uzun koridoru",
+      "description": "Medrese koridoru",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hudavendigar-complex/bath.jpg",
+      "alt": "Taş ve tuğla duvarlı, kurşun kaplı küçük kubbeli Cıkcık Hamamı",
+      "description": "Cıkcık Hamamı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/hudavendigar-complex/tomb-interior.jpg",
+      "alt": "Türbenin içinde pirinç parmaklıklı büyük sanduka, yanlarda yeşil örtülü sandukalar ve Korint başlıklı sütunlar",
+      "description": "Türbe içi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "two-storey",
+      "image": "/images/hudavendigar-complex/facade.jpg",
+      "x": 42,
+      "y": 36,
+      "title": "Alt kat cami, üst kat medrese",
+      "text": "Medresenin caminin üst katında yer alacak şekilde planlanması, Osmanlı mimarisinde görülen ilk ve tek örnektir.",
+      "sourceId": "hud-s80"
+    },
+    {
+      "id": "alternating",
+      "image": "/images/hudavendigar-complex/facade.jpg",
+      "x": 30,
+      "y": 66,
+      "title": "Taş ve tuğla örgü",
+      "text": "Yapı, kesme taş ve tuğlanın birlikte kullanıldığı almaşık düzenin en güzel örneklerinden biridir. Örgü üç sıra tuğla ve bir sıra kesme taştan oluşur.",
+      "sourceId": "hud-s82"
+    },
+    {
+      "id": "tension",
+      "image": "/images/hudavendigar-complex/narthex.jpg",
+      "x": 26,
+      "y": 25,
+      "title": "Ahşap gergiler",
+      "text": "Ön cephedeki kemerler iki kademelidir ve aralarında ahşap gergiler bulunur.",
+      "sourceId": "hud-s84"
+    },
+    {
+      "id": "fountain",
+      "image": "/images/hudavendigar-complex/fountain-space.jpg",
+      "x": 50,
+      "y": 66,
+      "title": "Altıgen şadırvan",
+      "text": "12.67 x 11.00 m ölçülerindeki harim ön mekânı, altıgen formlu ve fıskiyeli bir şadırvana sahiptir. Şadırvan 1904'te bir miktar büyütülmüştür.",
+      "sourceId": "hud-s88"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/hudavendigar-complex/mihrab.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Dokuz sıra mukarnas",
+      "text": "Mihrap nişi dokuz sıra mukarnasla şekillendirilmiş ve altın yaldızla süslenmiştir. Mihrap, 1904'teki onarımların ardından bugünkü görünümüne kavuşmuştur.",
+      "sourceId": "hud-s90"
+    },
+    {
+      "id": "corridor",
+      "image": "/images/hudavendigar-complex/madrasa-corridor.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "\"n\" planlı koridor",
+      "text": "Medrese katında harimi yukarıdan geçen, \"n\" planlı ve 3.50 m genişliğinde uzun bir koridor vardır. İki yanında altışar olmak üzere on iki oda sıralanır.",
+      "sourceId": "hud-s92"
+    },
+    {
+      "id": "bath",
+      "image": "/images/hudavendigar-complex/bath.jpg",
+      "x": 52,
+      "y": 22,
+      "title": "Cıkcık Hamamı",
+      "text": "Öğrencilerin, fakirlerin ve bekârların kullanımına ayrıldığı için \"Bekârlar Hamamı\" olarak da bilinir. 6 m çapında, ortası aydınlık fenerli bir kubbeyle örtülüdür.",
+      "sourceId": "hud-s100"
+    },
+    {
+      "id": "cenotaph",
+      "image": "/images/hudavendigar-complex/tomb-interior.jpg",
+      "x": 42,
+      "y": 62,
+      "title": "I. Murad'ın sandukası",
+      "text": "Türbenin tam ortasında, pirinç parmaklıklarla çevrili büyük sanduka I. Murad'a aittir.",
+      "sourceId": "hud-s105"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hudâvendigâr Camii'ni Osmanlı mimarisinde tek yapan düzen nedir?",
+      "options": [
+        "Dokuz kubbeli olması",
+        "Üst katında medrese bulunması",
+        "İki minareli olması",
+        "Avlusunun çinili olması"
+      ],
+      "correct": 1,
+      "description": "Alt kat cami, üst kat medrese olarak planlanmıştır. Bu düzen Osmanlı mimarisinde ilk ve tek örnektir.",
+      "sourceId": "hud-s80"
+    },
+    {
+      "question": "Cephedeki almaşık örgü hangi düzende örülmüştür?",
+      "options": [
+        "Üç sıra tuğla, bir sıra kesme taş",
+        "Yalnız mermer",
+        "Bir sıra tuğla, üç sıra moloz",
+        "Yalnız kesme taş"
+      ],
+      "correct": 0,
+      "description": "Yapının örgü sistemi üç sıra tuğla ve bir sıra kesme taştan oluşur.",
+      "sourceId": "hud-s82"
+    },
+    {
+      "question": "I. Murad'ın türbesi neden önemli bir ziyaretgâh olmuştur?",
+      "options": [
+        "İlk Osmanlı sultanı olduğu için",
+        "Türbe Bursa'nın en yüksek yapısı olduğu için",
+        "Savaşta cephede şehit düşen tek Osmanlı sultanı olduğu için",
+        "Sandukası altın kaplı olduğu için"
+      ],
+      "correct": 2,
+      "description": "Kitap, türbenin I. Murad'ın savaş ortamında cephede şehit düşen tek Osmanlı hükümdarı olması nedeniyle ziyaretgâh hâline geldiğini yazar.",
+      "sourceId": "hud-s106"
+    }
+  ],
+  "timeLayer": [
+    {
+      "id": "construction",
+      "period": "H. 767 / M. 1365-66",
+      "title": "Öngörülen yapım tarihi",
+      "text": "Günümüze ulaşan inşa kitabesi yoktur. H. 767 / M. 1365-66'da yapıldığı öngörülür; bu tarihin I. Murad'ın çocuklarının sünnet düğününe denk geldiği ifade edilir.",
+      "sourceId": "hud-s79"
+    },
+    {
+      "id": "deed",
+      "period": "Temmuz 1385",
+      "title": "Vakfiye",
+      "text": "Arapça vakfiye H. Cemaziyelahir 787 / M. Temmuz 1385 tarihlidir. Bir sureti H. 802 / M. 1400'de Yıldırım Bayezid döneminde çıkarılmıştır.",
+      "sourceId": "hud-s81"
+    },
+    {
+      "id": "kosova",
+      "period": "1389",
+      "title": "Kosova",
+      "text": "I. Murad 9 Ağustos 1389'da Kosova'da şehit edilmiş, naaşı oğlu Yıldırım Bayezid tarafından Bursa'ya getirilerek Çekirge'deki külliyeye defnedilmiştir.",
+      "sourceId": "hud-s81"
+    },
+    {
+      "id": "earthquake",
+      "period": "1855",
+      "title": "Büyük Bursa depremi",
+      "text": "Depremde külliye kısmen hasar görmüş, minare ayakta kalmış, türbe ise tamamen yıkılmıştır. Türbe 1863'te Sultan Abdülaziz tarafından eski temelleri üzerine yeniden yapılmıştır.",
+      "sourceId": "hud-earthquake"
+    },
+    {
+      "id": "repair-1904",
+      "period": "1904",
+      "title": "II. Abdülhamid onarımı",
+      "text": "Cümle kapısının üzerindeki kitabe, II. Abdülhamid döneminde caminin yeniden ihya edildiğini bildirir. Mihrap da bugünkü görünümüne bu onarımlardan sonra kavuşmuştur.",
+      "sourceId": "hud-s87"
+    },
+    {
+      "id": "unesco",
+      "period": "2014",
+      "title": "UNESCO Dünya Mirası",
+      "text": "Külliye, Bursa Tarihi Hanlar Bölgesi, Sultan Külliyeleri ve Cumalıkızık Köyü ile birlikte 2014'te UNESCO Dünya Miras Alanı ilan edilmiştir.",
+      "sourceId": "hud-s95"
+    }
+  ],
+  "sources": [
+    {
+      "id": "hud-s79",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "79"
+    },
+    {
+      "id": "hud-s80",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "80"
+    },
+    {
+      "id": "hud-s81",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "81"
+    },
+    {
+      "id": "hud-s82",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "82-83"
+    },
+    {
+      "id": "hud-s83",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "83"
+    },
+    {
+      "id": "hud-s84",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "84"
+    },
+    {
+      "id": "hud-s87",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "85, 87, 90"
+    },
+    {
+      "id": "hud-s88",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "87-88"
+    },
+    {
+      "id": "hud-s89",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "88-89"
+    },
+    {
+      "id": "hud-s90",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "90"
+    },
+    {
+      "id": "hud-s91",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "91"
+    },
+    {
+      "id": "hud-s92",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "92"
+    },
+    {
+      "id": "hud-s93",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "93, 95"
+    },
+    {
+      "id": "hud-s95",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "95"
+    },
+    {
+      "id": "hud-s97",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "97-99"
+    },
+    {
+      "id": "hud-s100",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "100"
+    },
+    {
+      "id": "hud-s103",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "103"
+    },
+    {
+      "id": "hud-s105",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "105"
+    },
+    {
+      "id": "hud-s106",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "106"
+    },
+    {
+      "id": "hud-earthquake",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"I. Murad Hudâvendigâr Külliyesi\"",
+      "page": "83, 95, 103"
+    },
+    {
+      "id": "dia-hud",
+      "text": "Semavi Eyice, \"Hudâvendigâr Külliyesi\", TDV İslâm Ansiklopedisi, c. 18, s. 290-295, islamansiklopedisi.org.tr/hudavendigar-kulliyesi"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "model": {
+    "model": "hudavendigar-complex",
+    "description": "Temsilî maket, gerçek bir 3B tarama değildir. Cami planı envanterdeki ölçülere ve yayımlanmış plan çizimine göre kodla kuruldu; yükseklikler, süslemeler ve çevredeki yapıların yerleşimi fotoğraflara bakılarak yorumlandı. Yazılı levhalar ve kitabeler taklit edilmedi.",
+    "infos": [
+      {
+        "text": "Alt katı cami, üst katı medrese olan yapı Osmanlı mimarisinde ilk ve tek örnektir. \"Parçala\" ile çatıyı ve medrese katını kaldırıp camiyi görebilirsin.",
+        "sourceId": "hud-s80"
+      },
+      {
+        "text": "Kuzey cephesinde 28.65 x 3.60 m ölçülerinde, altı destekli ve beş bölümlü, iki katlı revaklı avlu vardır: altı son cemaat yeri, üstü medresenin avlusudur.",
+        "sourceId": "hud-s84"
+      },
+      {
+        "text": "Tek minare kuzeydoğu köşesinde, beden duvarları üzerinde yaklaşık 34 m yüksekliğindedir. Taş kaideli, tuğla gövdelidir.",
+        "sourceId": "hud-s83"
+      },
+      {
+        "text": "Çevrede temsilî olarak batıda imaret, doğuda Cıkcık Hamamı, yolun karşısında türbe ve bahçede şadırvan yer alır. Türbe 17.60 x 17.60 m kare planlıdır.",
+        "sourceId": "hud-s105"
+      }
+    ],
+    "interiorInfos": [
+      {
+        "id": "narthex",
+        "title": "Son cemaat yeri",
+        "text": "Beş bölümlü revakın tamamı kubbe ile örtülüdür; üst kat nedeniyle bu kubbeler dışarıdan görünmez. Ön kemerler iki kademelidir, aralarında ahşap gergiler vardır.",
+        "sourceId": "hud-s83",
+        "position": [
+          0,
+          5,
+          -21.3
+        ],
+        "radius": 3
+      },
+      {
+        "id": "stairs",
+        "title": "38 basamak",
+        "text": "Giriş holünün sağ ve solundaki kapılardan, duvar kalınlığına yerleştirilmiş taş merdivenlerle medrese katına çıkılır. Merdivenler 38 basamaklıdır.",
+        "sourceId": "hud-s89",
+        "position": [
+          4.3,
+          3.6,
+          -12.2
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "fountain",
+        "title": "Kapalı avlu ve şadırvan",
+        "text": "Ortadaki mekân kapalı bir avlu gibi düşünülmüştür: altıgen, fıskiyeli şadırvanın üstünde 15 m yüksekliğinde, aydınlık fenerli büyük kubbe vardır.",
+        "sourceId": "hud-s88",
+        "position": [
+          0,
+          3.6,
+          -0.56
+        ],
+        "radius": 4.4
+      },
+      {
+        "id": "iwan-east",
+        "title": "Yan eyvan",
+        "text": "Harim ön mekânının iki yanında, birer basamakla çıkılan 5.29 x 7.49 m ölçülerinde, beşik tonozlu eyvanlar bulunur. Güney duvarlarında ortasında kandil sarkan perde motifi vardır.",
+        "sourceId": "hud-s88",
+        "position": [
+          9.6,
+          3.8,
+          -0.5
+        ],
+        "radius": 3.4
+      },
+      {
+        "id": "mahfil",
+        "title": "Müezzin mahfili",
+        "text": "Sağdaki eyvanda müezzin mahfili yer alır. Basamaklardan çıkabilirsin; mahfilin biçimi temsilîdir.",
+        "sourceId": "hud-s88",
+        "position": [
+          -9.6,
+          4.2,
+          -0.5
+        ],
+        "radius": 3.4
+      },
+      {
+        "id": "hall",
+        "title": "Asıl ibadet mekânı",
+        "text": "12.50 x 9.50 m ölçülerinde, dikdörtgen planlı ve tonoz örtülüdür. Üzerinde medrese bulunduğu için kubbe yerine beşik tonozla örtülmüştür.",
+        "sourceId": "hud-s87",
+        "position": [
+          1.6,
+          4.4,
+          10.5
+        ],
+        "radius": 3.6
+      },
+      {
+        "id": "mihrab",
+        "title": "Mihrap",
+        "text": "2.50 x 4.22 m ölçülerindeki niş dışa taşar ve dışarıdan beş cepheli görünür. Dokuz sıra mukarnaslı kavsarası altın yaldızla süslüdür; bugünkü görünümü 1904 onarımlarından sonradır.",
+        "sourceId": "hud-s90",
+        "position": [
+          1.4,
+          5,
+          16.6
+        ],
+        "radius": 3
+      },
+      {
+        "id": "minbar",
+        "title": "Ahşap minber",
+        "text": "Ahşap minber kabartma geometrik ve bitkisel motiflerle süslüdür. Alınlığında ışınsal motifli göbek vardır. Yürüyerek çıkabilirsin; biçimi temsilîdir.",
+        "sourceId": "hud-s91",
+        "position": [
+          -3.2,
+          5,
+          12
+        ],
+        "radius": 2.2
+      },
+      {
+        "id": "portico",
+        "title": "Medrese revağı",
+        "text": "Üst kat revağı medresenin avlusudur ve Bursa Ovası'na bakar. Büyük sivri kemerler, ortalarına konan mermer sütunlarla ikiz kemere ayrılır.",
+        "sourceId": "hud-s92",
+        "position": [
+          0,
+          11.8,
+          -20.2
+        ],
+        "radius": 3
+      }
+    ]
+  }
+}

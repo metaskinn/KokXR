@@ -27,29 +27,29 @@ Yalnız görevin gerektirdiği satırı oku.
 
 | Konu | Yer |
 |---|---|
-| Sunum vaatleri | `docs/sunum-vaatleri.md` |
-| Şartname, puanlama | `docs/sartname.md` (5. bölüm) |
+| Sunum vaatleri | `docs/presentation-promises.md` |
+| Şartname, puanlama | `docs/specification.md` (5. bölüm) |
 | **Plan ve durum (işe buradan başla)** | `PLAN.md` |
-| Quest durumu | `DEVIR-QUEST.md` |
-| Kurulum, mimari, veri modeli | `DEVAM.md` |
-| Sayfa ve rota | `src/App.tsx`, `src/pages/` |
-| Eser içeriği | `src/data/eserler/*.json`, tipler `src/types/eser.ts` |
-| Maket ve VR | `src/components/maket/` (`xr*.ts`: VR) |
-| Atölye ayrıntısı | `docs/kilic-atolyesi.md`, `docs/vazo-modeli.md` |
-| Tasarım | `docs/ui-tasarim.md` |
-| Eski raporlar | `docs/arsiv/` |
+| Quest durumu | `QUEST-HANDOFF.md` |
+| Kurulum, mimari, veri modeli | `HANDOFF.md` |
+| Sayfa ve rota | `src/app/App.tsx`, `src/features/*/` |
+| Eser içeriği | `src/content/artifacts/*.json`, tipler `src/domain/artifact.ts` |
+| Maket ve VR | `src/features/scale-models/` (`xr*.ts`: VR), `src/shared/xr/` |
+| Atölye ayrıntısı | `docs/sword-workshop.md`, `docs/vase-model.md` |
+| Tasarım | `docs/ui-design.md` |
+| Eski raporlar | `docs/archive/` |
 
 ## Verimli çalışma
 
 - Belgeyi baştan sona okuma: önce ara, sonra gereken aralığı oku.
-- `docs/arsiv/`, `docs/test-ekranlari/`, `public/`, `assets/`, `dist/`, `node_modules/` ve `package-lock.json`'ı gerekmedikçe açma.
-- Her küçük değişiklikte `npm run test:hizli`; arayüz veya sahne değiştiyse iş sonunda `npm run test:tarayici`. Tek test için: `node scripts/test-tarayici.mjs maket-ic` (önce build).
+- `docs/archive/`, `docs/test-screenshots/`, `public/`, `assets/`, `dist/`, `node_modules/` ve `package-lock.json`'ı gerekmedikçe açma.
+- Her küçük değişiklikte `npm run test:hizli`; arayüz veya sahne değiştiyse iş sonunda `npm run test:tarayici`. Tek test için: `node scripts/test-browser.mjs model-interior` (önce build).
 - Alt ajanı yalnız bağımsız işe aç. Dosya yolunu ver, içeriğini kopyalama; kısa rapor iste. Aynı dosyaya iki ajan dokunmasın.
-- Biten plan ve raporları `docs/arsiv/`'e taşı; `docs/` kökünde yalnız etkin belgeler kalsın.
+- Biten plan ve raporları `docs/archive/`'e taşı; `docs/` kökünde yalnız etkin belgeler kalsın.
 
 ## Token kuralları
 
-Her işte sırayla uygula; gerekçe `docs/token-tasarrufu.md`. Testler ve kaynak denetimi tasarruf için atlanmaz.
+Her işte sırayla uygula; gerekçe `docs/token-saving.md`. Testler ve kaynak denetimi tasarruf için atlanmaz.
 
 1. Hedefi daralt: önce `rg`, sonra yalnız gereken aralık.
 2. Konuşmada olanı yeniden okuma, kararı yeniden tartışma.

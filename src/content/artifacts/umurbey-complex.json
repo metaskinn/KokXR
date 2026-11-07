@@ -1,0 +1,339 @@
+{
+  "id": "umurbey-complex",
+  "name": "Umur Bey Külliyesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Erken Osmanlı · XV. yüzyıl; taş vakfiyeler H. 858 / M. 1454",
+  "endowment": "Umur Bey vakfı",
+  "summary": "Kara Timurtaş Paşa'nın oğlu Umur Bey'in yaptırdığı iki mekânlı cami, taş vakfiyeleri, çeşmesi, türbesi ve haziresiyle bir külliye.",
+  "history": "Yıldırım'da Umurbey Mahallesi'ndeki cami, Umur Bey tarafından bir külliye birimi olarak yaptırılmıştır. Umur Bey, Osman Gazi'nin silah arkadaşı Aykut Alp'in torunu ve Kara Timurtaş Paşa'nın oğludur; 1402 Ankara Savaşı'nda yaralanıp babasıyla esir düşmüş, Çelebi Mehmed döneminde Anadolu beylerbeyi olmuş, II. Murad döneminde vezirliğe yükselmiştir. Mezar taşına göre H. Zilkade 865 / M. Ağustos 1461'de vefat etmiştir. Cami, aralarında 2,20 m genişliğinde geçit bulunan iki kare mekândan ve kuzeyde beş gözlü son cemaat yerinden oluşur. 1855 depreminde doğu kubbesi yarılmış, yapı 1970'li yıllara kadar ahşap çatı ile örtülü kalmış, bu dönemdeki restorasyonla yeniden kubbeyle örtülmüştür. Son cemaat yerindeki taş vakfiyeler Anadolu'da nadir görülen bir uygulamadır.",
+  "verification": "verified",
+  "coverImage": "/images/umurbey-complex/northeast-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/umurbey-complex/northeast-aerial.jpg",
+      "alt": "Umur Bey Camii'nin kuzeydoğudan havadan görünümü: beş kemerli son cemaat yeri, kiremit örtülü iki kubbe, tuğla minare",
+      "description": "Kuzeydoğudan cami ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/umurbey-complex/roof-from-top.jpg",
+      "alt": "Yapının tepeden görünümü: yan yana iki kiremit kubbe, son cemaat yeri çatısı, türbe ve minare",
+      "description": "Tepeden plan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/umurbey-complex/mihrab-wall.jpg",
+      "alt": "Beyaz duvarlı ibadet alanında mihrap, iki yanındaki pencereler ve ahşap minber",
+      "description": "Mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/umurbey-complex/interior-space-mahfil.jpg",
+      "alt": "İbadet alanının içten görünümü: solda minber, sağda ahşap mahfil, kırmızı saf çizgili halı, üstte üçgen kırımlı geçiş",
+      "description": "İç mekân ve mahfil",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/umurbey-complex/tomb.jpg",
+      "alt": "Tuğla örgülü, dört ayak üzerinde açık kemerli Umur Bey Türbesi ve içindeki altın şahideli sanduka; önünde hazire",
+      "description": "Umur Bey Türbesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/umurbey-complex/stone-deed.jpg",
+      "alt": "Son cemaat yerindeki taş vakfiye: koyu zemin üzerine altın renkli, satır satır dizilmiş kabartma yazı",
+      "description": "Taş vakfiye",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/umurbey-complex/fountain-tap.jpg",
+      "alt": "Duvara gömülü, taş ve tuğla örgülü sivri kemerli çeşme; üstünde altın renkli kitabe",
+      "description": "Umur Bey Çeşmesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/umurbey-complex/minaret.jpg",
+      "alt": "Tuğla minarenin gövdesi, tuğla kirpi dizili şerefe altı, mermer korkuluk ve sivri külahı",
+      "description": "Minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "two-space",
+      "image": "/images/umurbey-complex/roof-from-top.jpg",
+      "x": 45,
+      "y": 40,
+      "title": "İki kare mekân",
+      "text": "Cami, biri büyük diğeri küçük iki kare planlı mekândan oluşur. Mekânlar 2,20 m genişliğindeki bir geçitle birbirine bağlanır; bu düzenleme yapıya özgün bir plan şeması kazandırır.",
+      "sourceId": "env-s320"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/umurbey-complex/northeast-aerial.jpg",
+      "x": 62,
+      "y": 70,
+      "title": "Son cemaat yeri",
+      "text": "Kuzey cephesinde, dört adet Korint başlıklı sütuna oturan beş gözlü bir son cemaat yeri bulunur.",
+      "sourceId": "env-s320"
+    },
+    {
+      "id": "alternating",
+      "image": "/images/umurbey-complex/northeast-aerial.jpg",
+      "x": 30,
+      "y": 70,
+      "title": "Almaşık örgü",
+      "text": "Duvarlar bir sıra kesme küfeki taşı ve üç sıra tuğla ile örülmüştür; taş sıralarının arasındaki düşey tuğlalar düzenli bir cephe etkisi verir.",
+      "sourceId": "env-s320"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/umurbey-complex/minaret.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Minare",
+      "text": "Kaide sekizgendir, pabuç kısmında sekiz niş açılmıştır. Tuğla silindirik gövdeye mermer Türk üçgenleriyle geçilir; şerefenin altı yedi kat tuğla dolgudur.",
+      "sourceId": "env-s321"
+    },
+    {
+      "id": "deed",
+      "image": "/images/umurbey-complex/stone-deed.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Taş vakfiyeler",
+      "text": "Son cemaat yerinin sağ ve sol duvarlarına, yerden yüksekçe yerleştirilmiştir. Anadolu Türk-İslam sanatında oldukça nadir bir uygulamadır. Batıdaki vakfiye 1,35 × 2,15 m boyutlarındadır.",
+      "sourceId": "env-s323"
+    },
+    {
+      "id": "tomb",
+      "image": "/images/umurbey-complex/tomb.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Umur Bey Türbesi",
+      "text": "4,60 × 4,60 m ölçülerindeki türbe dört ayağa oturan baldaken planlıdır. Tamamen tuğladan yapılmış, pandantifli kubbesi kiremitle kaplanmıştır.",
+      "sourceId": "env-s332"
+    },
+    {
+      "id": "fountainTap",
+      "image": "/images/umurbey-complex/fountain-tap.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Umur Bey Çeşmesi",
+      "text": "Caminin batı duvarına gömülü, kesme taş ve üç sıra tuğla ile örülmüş sivri kemerli çeşmedir. Kitabesi H. 931 / M. 1525 tarihlidir, yani Umur Bey'in vefatından 64 yıl sonra yapılmıştır; adı hayır sahibi olarak yazılmıştır.",
+      "sourceId": "env-s328"
+    }
+  ],
+  "test": [
+    {
+      "question": "Umur Bey Camii'nin iki mekânı birbirine nasıl bağlanır?",
+      "options": [
+        "2,20 m genişliğinde bir geçitle",
+        "Üstü açık bir avluyla",
+        "Ahşap bir köprüyle",
+        "Bağlantısı yoktur"
+      ],
+      "correct": 0,
+      "description": "Biri büyük diğeri küçük iki kare mekân, aralarındaki 2,20 m genişliğindeki geçitle bağlanır.",
+      "sourceId": "env-s320"
+    },
+    {
+      "question": "Son cemaat yerindeki taş vakfiyeleri öne çıkaran nedir?",
+      "options": [
+        "Anadolu'da oldukça nadir bir uygulama olmaları",
+        "Çini üzerine yazılmaları",
+        "Mihrabın içinde bulunmaları",
+        "Yalnız Arapça olmaları"
+      ],
+      "correct": 0,
+      "description": "Envantere göre taş vakfiyeler Anadolu Türk-İslam sanatında oldukça nadir rastlanan bir uygulamadır. Batıdaki vakfiye Osmanlı Türkçesiyle yazılmıştır.",
+      "sourceId": "env-s322"
+    },
+    {
+      "question": "Yapı, 1970'li yıllardaki restorasyona kadar nasıl örtülüydü?",
+      "options": [
+        "Ahşap çatı ve pasa tavanla",
+        "Kurşun kubbeyle",
+        "Düz toprak damla",
+        "Üstü açıktı"
+      ],
+      "correct": 0,
+      "description": "1855 depreminde doğu kubbesi yarılmış, cami 1970'li yıllara kadar ahşap çatı ve pasa tavanla örtülü kalmış, bu dönemdeki restorasyonla yeniden kubbeyle örtülmüştür.",
+      "sourceId": "env-s321"
+    }
+  ],
+  "sources": [
+    {
+      "id": "env-s318",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Umur Bey Camii ve Haziresi\"",
+      "page": "318"
+    },
+    {
+      "id": "env-s320",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Umur Bey Camii ve Haziresi\"",
+      "page": "320"
+    },
+    {
+      "id": "env-s321",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Umur Bey Camii ve Haziresi\"",
+      "page": "321"
+    },
+    {
+      "id": "env-s322",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Umur Bey Camii ve Haziresi\"",
+      "page": "322-323"
+    },
+    {
+      "id": "env-s323",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Umur Bey Camii ve Haziresi\"",
+      "page": "322-324"
+    },
+    {
+      "id": "env-s328",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Umur Bey Çeşmesi\"",
+      "page": "328"
+    },
+    {
+      "id": "env-s329",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Umur Bey Haziresi\"",
+      "page": "329"
+    },
+    {
+      "id": "env-s332",
+      "text": "Vakıf Eserleri Envanteri – Bursa, II. Cilt, Yıldırım, \"Umur Bey Türbesi\"",
+      "page": "332"
+    },
+    {
+      "id": "municipality",
+      "text": "Yıldırım Belediyesi, \"Umurbey Cami ve Türbesi\", yildirim.bel.tr/sayfa/umurbey-cami-ve-turbesi.html"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "model": {
+    "model": "umurbey-complex",
+    "description": "Bu, envanterdeki ölçüler ve arşiv fotoğraflarına bakılarak kodla oluşturulmuş temsilî bir makettir; gerçek bir 3B tarama değildir. İki mekânın, türbenin ve vakfiyenin ölçüleri kaynaklıdır; yükseklikler, mobilya, küçük mekânın içi ve hazire yerleşimi yorumdur. Taş vakfiyeler ve çeşme kitabesi gerçek fotoğraftır, duvardaki madalyonlar yazısız bırakılmıştır.",
+    "infos": [
+      {
+        "text": "Cami, 8,18 × 8,10 m ve 6,34 × 6,60 m boyutlarında, aralarında 2,20 m açıklık bulunan iki bölümden oluşur.",
+        "sourceId": "municipality"
+      },
+      {
+        "text": "Kuzeyde dört Korint başlıklı sütuna oturan beş gözlü son cemaat yeri vardır.",
+        "sourceId": "env-s320"
+      },
+      {
+        "text": "Hazire iki bölümdür: güney bahçede Umur Bey'in türbesi, kuzey tarafta diğer bölüm. Her iki alanda yaklaşık 80 mezar taşı bulunur.",
+        "sourceId": "env-s329"
+      }
+    ],
+    "interiorInfos": [
+      {
+        "id": "narthex",
+        "title": "Son cemaat yeri",
+        "text": "Kuzey cephesinde dört Korint başlıklı sütuna oturan beş gözlü son cemaat yeri bulunur. Doğu ve batı yanları duvarla kapalıdır.",
+        "sourceId": "municipality",
+        "position": [
+          -1,
+          4.6,
+          -6.8
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "deed",
+        "title": "Taş vakfiye",
+        "text": "Son cemaat yerinin sağ ve sol duvarlarında, yerden yüksekçe yerleştirilmiş taş vakfiyeler bulunur. Anadolu'da oldukça nadir bir uygulamadır. Metinde Umur Bey camiye ve başka yerlerdeki yapılarına bıraktığı vakıfları sayar.",
+        "sourceId": "env-s323",
+        "position": [
+          7.9,
+          4.6,
+          -5.1
+        ],
+        "radius": 3
+      },
+      {
+        "id": "interior-space",
+        "title": "Özgün unsur kalmadı",
+        "text": "Yapının iç kısmında günümüze ulaşabilmiş özgün mimari ya da sanatsal bir unsur bulunmamaktadır. Mihrap ve minberin görünümü bugünkü durumu yansıtır.",
+        "sourceId": "env-s320",
+        "position": [
+          -3.7,
+          3.4,
+          3.6
+        ],
+        "radius": 2.2
+      },
+      {
+        "id": "passage",
+        "title": "2,20 m'lik geçit",
+        "text": "İki kare mekân bu geçitle bağlanır. E. H. Ayverdi, küçük mekânın Umur Bey'in sağlığında eklendiğini düşünür; yazara göre iki kısım birlikte yapılsaydı böyle dar bir geçit bırakılmazdı.",
+        "sourceId": "municipality",
+        "position": [
+          0.9,
+          3,
+          1.4
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "cloak",
+        "title": "Kubbenin öyküsü",
+        "text": "1855 depreminde doğu kubbesi yarıldı. Cami 1970'li yıllara kadar ahşap çatı ve pasa tavanla örtülü kaldı, o dönemdeki restorasyonla yeniden kubbeyle örtüldü.",
+        "sourceId": "env-s321",
+        "position": [
+          4.6,
+          7,
+          1.4
+        ],
+        "radius": 3
+      },
+      {
+        "id": "fountainTap",
+        "title": "Umur Bey Çeşmesi",
+        "text": "Batı duvarına gömülü sivri kemerli çeşmenin kitabesi H. 931 / M. 1525 tarihlidir: Umur Bey'in vefatından 64 yıl sonra yapılmış, adı hayır sahibi olarak yazılmıştır.",
+        "sourceId": "env-s328",
+        "position": [
+          -8.9,
+          2.6,
+          2.15
+        ],
+        "radius": 3.4
+      },
+      {
+        "id": "tomb",
+        "title": "Umur Bey Türbesi",
+        "text": "Dört ayağa oturan baldaken planlı türbe 4,60 × 4,60 m'dir, tamamen tuğladan örülmüştür. Sandukanın kitabesine göre Umur Bey H. Zilkade 865 / M. Ağustos 1461'de vefat etmiştir.",
+        "sourceId": "env-s332",
+        "position": [
+          -3.7,
+          3,
+          12.45
+        ],
+        "radius": 5
+      },
+      {
+        "id": "graveyard",
+        "title": "Hazire",
+        "text": "Her iki hazire alanında, bir kısmı kırık veya yazısız, yaklaşık 80 mezar taşı bulunur. Güneydeki en eski taş Umur Bey'e aittir. Maketteki taşların yeri temsilîdir.",
+        "sourceId": "env-s329",
+        "position": [
+          6,
+          1.4,
+          11
+        ],
+        "radius": 3.5
+      }
+    ]
+  }
+}

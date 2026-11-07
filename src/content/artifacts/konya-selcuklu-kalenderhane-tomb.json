@@ -1,0 +1,125 @@
+{
+  "id": "konya-selcuklu-kalenderhane-tomb",
+  "name": "Kalenderhane (Kalender Baba) Türbesi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · XIII. yüzyıl (plan, malzeme ve örtü sistemine göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kalender Baba olarak bilinen Ebubekir Niksari'nin zaviyesine ait olduğu anlaşılan, sekizgen planlı ve kriptalı XIII. yüzyıl Selçuklu türbesi.",
+  "history": "Türbe, Selçuklu ilçesi, Feritpaşa Mahallesi, Ankara Caddesi'ndedir ve Çifte Kümbetler'in kuzeydoğusunda yer alır. Kitâbesi yoktur; plan, malzeme ve örtü sisteminden hareketle Anadolu Selçuklu döneminde, XIII. yüzyılda inşa edildiği anlaşılmaktadır.\n\nSon çevre düzenlemesi ve kazılar sırasında türbenin güneyinde yapı kalıntıları ve yol altında kalmış bir hamam kalıntısı ortaya çıkarılmıştır. Bu kalıntıların Kalenderhane Tekkesi'ne ait olduğu, türbenin de zaviyenin bir parçası olduğu anlaşılmaktadır.\n\nKalender Baba unvanıyla bilinen Ebubekir Niksari Tokatlı bir Kalenderî şeyhidir. Bir süre Şam'da bulunduktan sonra H. 602 / M. 1205-1206 yıllarında Konya'ya gelip yerleşmiş, etrafına birçok mürit toplayarak zaviyesini kurmuştur. Hz. Mevlâna ile aynı dönemde yaşamıştır.\n\nTürbe sekizgen planlıdır; üzeri içten kubbe, dıştan külahla örtülüdür ve kripta ile sanduka bölümünden oluşur. Taş ve tuğla ile yapılan türbeye giriş, güney cephede her iki kata altlı üstlü açılmış tek kanatlı kapılardan sağlanır. Cenazelik katı haçvari planlıdır ve ortasında basık bir kubbe vardır; son tadilatlar sırasında kriptada iskelet bulunmuştur.\n\nÜst kattaki sanduka bölümünün girişindeki kemer izlerinden, aynı hat üzerinde eyvanlı bir yapıya geçildiği anlaşılmaktadır. Kubbeye geçiş istiridye biçimli tromplarla sağlanmış; kubbe, birbiri üzerine oturan kemerlerle dekoratif bir görünüm kazanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-kalenderhane-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-kalenderhane-tomb/exterior.jpg",
+      "alt": "Ağaçlar ve apartmanlar arasında sekizgen gövdeli, tuğla külahlı türbe; önünde beyaz taştan kemerli bir giriş cephesi ve yanından geçen cadde",
+      "description": "Türbe ve çevresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-kalenderhane-tomb/south-facade.jpg",
+      "alt": "Önden görünüm: tuğla gövdeli, sivri külahlı türbenin beyaz taş giriş cephesi; üstte kemerli kapı, altta zemin seviyesinin altına inen ikinci bir kapı açıklığı ve iki yanda taş kalıntılar",
+      "description": "Giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-kalenderhane-tomb/interior.jpg",
+      "alt": "Taş ve tuğla duvarlı iç mekân; duvarlarda dar pencereler, ortada taş zemin üzerinde ahşap kaplamalı kırmızı-kahve sanduka",
+      "description": "Sanduka bölümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-kalenderhane-tomb/dome.jpg",
+      "alt": "Aşağıdan bakış: taş ve tuğla örgülü kubbe, köşelerde kubbeye geçişi sağlayan yapı elemanları ve yan duvarlarda dar pencere açıklıkları",
+      "description": "Kubbenin içten görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cone",
+      "image": "/images/konya-selcuklu-kalenderhane-tomb/exterior.jpg",
+      "x": 53,
+      "y": 25,
+      "title": "Külah",
+      "text": "Sekizgen planlı türbenin üzeri içten kubbe, dıştan külahla örtülüdür.",
+      "sourceId": "inv-p165"
+    },
+    {
+      "id": "two-doors",
+      "image": "/images/konya-selcuklu-kalenderhane-tomb/south-facade.jpg",
+      "x": 50,
+      "y": 72,
+      "title": "Altlı üstlü kapılar",
+      "text": "Türbeye giriş, güney cephede her iki kata altlı üstlü yapılmış tek kanatlı kapılardan sağlanır.",
+      "sourceId": "inv-p165"
+    },
+    {
+      "id": "dome",
+      "image": "/images/konya-selcuklu-kalenderhane-tomb/dome.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Kubbe",
+      "text": "Kubbeye geçiş istiridye biçimli tromplarla sağlanmış; kubbe birbiri üzerine oturan kemerlerle dekoratif bir görünüm kazanmıştır.",
+      "sourceId": "inv-p165"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kalender Baba unvanıyla bilinen şeyh kimdir?",
+      "options": [
+        "Seyyid Harun Veli",
+        "Ebubekir Niksari",
+        "Derviş Ulaş",
+        "Ebu İshak Kazerûni"
+      ],
+      "correct": 1,
+      "description": "Kalender Baba unvanıyla bilinen Ebubekir Niksari, Tokatlı bir Kalenderî şeyhidir.",
+      "sourceId": "inv-p163"
+    },
+    {
+      "question": "Kazılarda türbenin güneyinde ortaya çıkan kalıntıların neye ait olduğu anlaşılmıştır?",
+      "options": [
+        "Bir kervansaraya",
+        "Bir medreseye",
+        "Kalenderhane Tekkesi'ne",
+        "Bir saray köşküne"
+      ],
+      "correct": 2,
+      "description": "Yapı kalıntıları ve hamam kalıntısının Kalenderhane Tekkesi'ne ait olduğu, türbenin de zaviyenin parçası olduğu anlaşılmıştır.",
+      "sourceId": "inv-p163"
+    },
+    {
+      "question": "Türbenin cenazelik (kripta) katı nasıl bir plana sahiptir?",
+      "options": [
+        "Haçvari",
+        "Daire",
+        "Altıgen",
+        "Üçgen"
+      ],
+      "correct": 0,
+      "description": "Cenazelik katı haçvari planlıdır ve ortasında basık bir kubbe vardır.",
+      "sourceId": "inv-p165"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p163",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Kalenderhane (Kalender Baba) Türbesi\"",
+      "page": "163"
+    },
+    {
+      "id": "inv-p165",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Kalenderhane (Kalender Baba) Türbesi\"",
+      "page": "165"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

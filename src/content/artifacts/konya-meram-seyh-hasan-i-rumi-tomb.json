@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-seyh-hasan-i-rumi-tomb",
+  "name": "Şeyh Hasan-ı Rûmi Türbesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Mimari özelliklerine göre XIII. ve XIV. yüzyıl başları (kitâbesi yoktur)",
+  "endowment": "Kitapta belirtilmemiştir (banisi bilinmemektedir)",
+  "summary": "Osman Rûmi Camii’nin yanındaki avluda, Şeyh Osman Rûmi’nin kardeşi olduğu rivayet edilen Şeyh Hasan Rûmi’nin piramidal külahlı türbesi.",
+  "history": "Türbe Meram’da, Sahip Ata Külliyesi’nin kuzeyinde, Gülbahçe Sokak üzerindedir; Osman Rûmi Camii ve Türbesi’nin de bulunduğu geniş bir avlunun güneydoğu köşesinde yer alır. Yapım tarihi, banisi ve kimin için yaptırıldığı hakkında bilgi yoktur. Birçok onarım geçirip epeyce değişen türbe, mimari özelliklerine göre XIII. ve XIV. yüzyıl başlarına tarihlendirilebilir. Cenazeliğin üzerine Vakıflar Genel Müdürlüğü’nün izniyle kübik gövdeli, sekizgen kasnaklı bir üst kat inşa edilmiştir.\n\nHayatı hakkında fazla bilgi bulunmayan Şeyh Hasan Rûmi’nin Şeyh Osman Rûmi’nin kardeşi olduğu rivayet edilir.\n\nKitapta yapı kare planlı, içten kubbe, dıştan piramidal külahla örtülü olarak tanımlanır: altta cenazelik bölümü, üstte dikdörtgenden sekizgene dönüşen gövde ve onu örten külah vardır. Türbe taştan yapılmış, içten ve dıştan tamamen sıvanmıştır. Cenazelik bölümüne giriş Osman Rûmi Camii’nin giriş bölümünün yanından sağlanır; merdivenle inilen ve yarım daire kemerli bir açıklıktan geçilen bu bölümün üstü beşik tonozdur ve içinde Şeyh Hasan Rûmi’ye ait bir mezar bulunur. Sade tutulmuş beden duvarlarında doğu cephede yarım daire kemerli, dıştan madeni kafesle korunan bir pencere vardır; kurşun kaplı piramidal külah yapıyı örter.\n\nTürbeye caminin son cemaat yerinin doğusundaki üç basamaklı merdivenle çıkılır. İçi de sade olan türbenin doğu duvarında bir pencere, güney duvarında harime açılan bir kapı bulunur. Kitap bu bölümde, tamamen sıvalı duvarların üzerini tromplarla geçilen bir yıldız tonozun örttüğünü belirtir. Mermer döşeli zeminde Şeyh Hasan Rûmi’ye ait tek bir sanduka vardır; kaidesi mermerdir ve sanduka ahşapla kaplanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-seyh-hasan-i-rumi-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-seyh-hasan-i-rumi-tomb/exterior.jpg",
+      "alt": "Krem sıvalı cami cephesinin yanında, yeşil piramidal külahlı ve demir kafesli yuvarlak kemerli pencereli küçük sıvalı yapı",
+      "description": "Türbe ve bitişiğindeki cami",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-seyh-hasan-i-rumi-tomb/sarcophagus.jpg",
+      "alt": "Beyaz sıvalı iç mekânda taş kaide üzerinde yeşil örtülü tek sanduka",
+      "description": "Şeyh Hasan Rûmi’nin sandukası",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pyramidal-roof",
+      "image": "/images/konya-meram-seyh-hasan-i-rumi-tomb/exterior.jpg",
+      "x": 66,
+      "y": 32,
+      "title": "Piramidal külah",
+      "text": "Yapının üzeri kurşunla kaplı piramidal külahla örtülüdür.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "id": "caged-window",
+      "image": "/images/konya-meram-seyh-hasan-i-rumi-tomb/exterior.jpg",
+      "x": 55,
+      "y": 76,
+      "title": "Kafesli pencere",
+      "text": "Sade beden duvarındaki yarım daire kemerli pencere dıştan madeni bir kafesle korunur.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "id": "single-sarcophagus",
+      "image": "/images/konya-meram-seyh-hasan-i-rumi-tomb/sarcophagus.jpg",
+      "x": 50,
+      "y": 78,
+      "title": "Tek sanduka",
+      "text": "Mermer döşeli zeminde Şeyh Hasan Rûmi’ye ait tek bir sanduka vardır; kaidesi mermerdir.",
+      "sourceId": "inv-p144"
+    }
+  ],
+  "test": [
+    {
+      "question": "Rivayete göre Şeyh Hasan Rûmi kimin kardeşidir?",
+      "options": [
+        "Sadreddin Konevi",
+        "Şeyh Osman Rûmi",
+        "Ateşbaz Veli",
+        "Sahip Ata"
+      ],
+      "correct": 1,
+      "description": "Şeyh Hasan Rûmi’nin Şeyh Osman Rûmi’nin kardeşi olduğu rivayet edilir.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "question": "Cenazelik bölümüne giriş nereden sağlanır?",
+      "options": [
+        "Osman Rûmi Camii’nin giriş bölümünün yanından",
+        "Sahip Ata Külliyesi’nin avlusundan",
+        "Türbenin batı cephesinden",
+        "Mihrabın arkasından"
+      ],
+      "correct": 0,
+      "description": "Cenazelik bölümüne giriş Osman Rûmi Camii’nin giriş bölümünün yan kısmından sağlanır.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "question": "Cenazelik bölümünün üst örtüsü nedir?",
+      "options": [
+        "Kubbe",
+        "Yıldız tonoz",
+        "Beşik tonoz",
+        "Ahşap tavan"
+      ],
+      "correct": 2,
+      "description": "Cenazelik bölümünün üst örtüsü beşik tonozdur.",
+      "sourceId": "inv-p144"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p144",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Şeyh Hasan-ı Rûmi Türbesi\"",
+      "page": "144-145"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

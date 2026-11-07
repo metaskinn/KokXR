@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-inlice-inn",
+  "name": "İnlice Han",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "İnlice Kasabası yolu üzerinde, bugün yalnızca batı duvarı ayakta kalan, \"Yıkık Han\" olarak da bilinen moloz taş han kalıntısı.",
+  "history": "Han, Meram'da Mesudiye Mevkii'nde, İnlice Kasabası yolu üzerindedir. Bugün kalıntı hâlinde olan yapı \"Yıkık Han\" olarak da bilinir. Hanın inşa kitâbesi İnlice'deki Kokar Çeşmesi'nin üzerinde bulunmaktadır.\n\nHandan günümüze yalnızca batı duvarı ulaşabilmiştir. Temel seviyesindeki izlerden dikdörtgen planlı olduğu, mevcut duvarlardan da moloz taştan inşa edildiği anlaşılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-inlice-inn/ruined-walls.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-inlice-inn/ruined-walls.jpg",
+      "alt": "Otlu bir yamaçta, arkasında kayalık tepe bulunan, alçak ve parça parça kalmış moloz taş duvar kalıntıları",
+      "description": "Hanın duvar kalıntıları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-inlice-inn/landscape.jpg",
+      "alt": "Tepeler arasındaki vadiden geçen asfalt yol, sağda yamaçlar, ortada yeşil çayırlar ve dağınık ağaçlar",
+      "description": "Hanın bulunduğu vadi ve yol",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "rubble-wall",
+      "image": "/images/konya-meram-inlice-inn/ruined-walls.jpg",
+      "x": 35,
+      "y": 70,
+      "title": "Moloz taş duvar",
+      "text": "Handan günümüze batı duvarı ulaşabilmiştir; mevcut duvarlardan moloz taştan inşa edildiği anlaşılmaktadır.",
+      "sourceId": "inv-p254"
+    },
+    {
+      "id": "inlice-road",
+      "image": "/images/konya-meram-inlice-inn/landscape.jpg",
+      "x": 80,
+      "y": 25,
+      "title": "İnlice yolu",
+      "text": "Han, Meram'da Mesudiye Mevkii'nde, İnlice Kasabası yolu üzerindedir.",
+      "sourceId": "inv-p254"
+    }
+  ],
+  "test": [
+    {
+      "question": "Han halk arasında başka hangi adla bilinir?",
+      "options": [
+        "Dibidelik Han",
+        "Yıkık Han",
+        "Hanönü",
+        "Devler Hanı"
+      ],
+      "correct": 1,
+      "description": "Günümüzde kalıntı hâlinde olan han \"Yıkık Han\" olarak da bilinmektedir.",
+      "sourceId": "inv-p254"
+    },
+    {
+      "question": "Hanın inşa kitâbesi nerededir?",
+      "options": [
+        "Hanın taç kapısında",
+        "Konya Müzesi'nde",
+        "İnlice'deki Kokar Çeşmesi üzerinde",
+        "Bozağaç Camii'nde"
+      ],
+      "correct": 2,
+      "description": "Yapının inşa kitâbesi İnlice'deki Kokar Çeşmesi üzerinde bulunmaktadır.",
+      "sourceId": "inv-p254"
+    },
+    {
+      "question": "Handan günümüze hangi bölüm ulaşabilmiştir?",
+      "options": [
+        "Batı duvarı",
+        "Taç kapı",
+        "Kubbesi",
+        "Avlu revakları"
+      ],
+      "correct": 0,
+      "description": "Handan günümüze batı duvarı ulaşabilmiştir.",
+      "sourceId": "inv-p254"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p254",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"İnlice Han\"",
+      "page": "254"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

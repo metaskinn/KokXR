@@ -1,0 +1,99 @@
+{
+  "id": "konya-altinekin-zalmanda-inn",
+  "name": "Zalmanda Hanı",
+  "city": "Konya",
+  "district": "Altınekin",
+  "period": "1446 tarihli vakfiyeye dayanarak XV. yüzyılın ilk yarısı olabileceği düşünülür",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Altınekin Koçkaya Köyü yakınında, kitâbesi olmayan, sivri kemerli ayaklarla üç sahına bölünmüş, eyvan biçimli girişli taş han.",
+  "history": "Han, Altınekin ilçesine bağlı Koçkaya Köyü'nün yaklaşık 10 km güneyindedir. Yapının üzerinde kitâbe yoktur; kayıtlarda da adı geçmeyen hanın ne zaman ve kim tarafından yaptırıldığı bilinmemektedir. Turgutoğullarından Yusuf Şah Bey'in kızı Sultan Hatun'un M. 1446 tarihli vakfiyesinde Su-ulmandan'ın (Zulmanda veya Zalmanda) tamamının vakıf olarak gösterilmesi, yapının XV. yüzyılın ilk yarısında yapılmış olabileceğini düşündürmektedir.\n\nHan 2000'li yıllara kadar harap durumdaydı; Vakıflar Genel Müdürlüğü tarafından tamir edilmiştir. Restorasyondan sonra kiremit döşeli bir kırma çatıyla örtülmüştür.\n\nHan kuzey-güney doğrultusunda dikdörtgen planlıdır ve üzeri iki yöne eğimli çatıyla örtülüdür. Sade cepheli yapının beden duvarlarının alt kısmında düzgün kesme taş, üstte kaba yonu taş ve yer yer devşirme malzeme kullanılmıştır. Hana, güney cephenin ortasında eyvan biçiminde dışa taşan kapı açıklığından girilir. Taç kapı kemer ayakları, içe doğru seki biçiminde taşan kaide tarzındaki bir kısma oturur; kapı açıklığının iki yanında sütunceler vardır.\n\nMekân dörderli iki sıra destekle üç sahına bölünmüştür; ayaklar birbirine sivri kemerlerle bağlanır. Orta sahın diğerlerine göre daha yüksek ve geniştir. Batı duvarının ortasındaki bir mazgal pencere iç mekânı aydınlatır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-altinekin-zalmanda-inn/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-altinekin-zalmanda-inn/exterior.jpg",
+      "alt": "Kuru bozkırda tek başına duran, kiremit kaplı kırma çatılı taş han; solda yuvarlak kemerli, öne taşan giriş bölümü ve içinde ahşap kapı",
+      "description": "Hanın dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "iwan-entrance",
+      "image": "/images/konya-altinekin-zalmanda-inn/exterior.jpg",
+      "x": 31,
+      "y": 55,
+      "title": "Eyvan biçimli giriş",
+      "text": "Hana giriş, cephenin ortasında yer alan ve eyvan şeklinde dışa taşıntılı kapı açıklığından sağlanmaktadır.",
+      "sourceId": "inv-p271"
+    },
+    {
+      "id": "tiled-roof",
+      "image": "/images/konya-altinekin-zalmanda-inn/exterior.jpg",
+      "x": 52,
+      "y": 30,
+      "title": "Kiremit çatı",
+      "text": "Yapı restorasyon sonrası kiremit döşeli bir kırma çatı ile örtülmüştür.",
+      "sourceId": "inv-p271"
+    },
+    {
+      "id": "wall-masonry",
+      "image": "/images/konya-altinekin-zalmanda-inn/exterior.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Beden duvarları",
+      "text": "Beden duvarlarının alt kısmında düzgün kesme taş, üstte kaba yonu taş ve yer yer devşirme malzeme kullanılmıştır.",
+      "sourceId": "inv-p271"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hanın tarihlendirilmesinde hangi belgeye dayanılmaktadır?",
+      "options": [
+        "Taç kapıdaki kitâbeye",
+        "Sultan Hatun'un 1446 tarihli vakfiyesine",
+        "Altunapa vakfiyesine",
+        "Osmanlı tahrir defterine"
+      ],
+      "correct": 1,
+      "description": "Sultan Hatun'un M. 1446 tarihli vakfiyesinde Zalmanda'nın tamamının vakıf gösterilmesi, yapının XV. yüzyılın ilk yarısında yapılmış olabileceğini düşündürmektedir.",
+      "sourceId": "inv-p271"
+    },
+    {
+      "question": "Hanın iç mekânı nasıl bölünmüştür?",
+      "options": [
+        "Ahşap direklerle iki sahına",
+        "Tek kubbeli bir mekân olarak",
+        "Dörderli iki sıra destekle üç sahına",
+        "Avlu etrafında odalara"
+      ],
+      "correct": 2,
+      "description": "Mekân dörderli iki sıra destek ile üç sahına bölünmüştür; ayaklar birbirine sivri kemerlerle bağlıdır.",
+      "sourceId": "inv-p271"
+    },
+    {
+      "question": "İç mekânı aydınlatan açıklık nerededir?",
+      "options": [
+        "Batı duvarının ortasındaki mazgal pencere",
+        "Kubbedeki aydınlık feneri",
+        "Doğu cephedeki büyük pencereler",
+        "Çatıdaki tepe penceresi"
+      ],
+      "correct": 0,
+      "description": "Batı duvarının ortasındaki bir mazgal pencere iç kısmı aydınlatmaktadır.",
+      "sourceId": "inv-p271"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p271",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Altınekin, \"Zalmanda Hanı\"",
+      "page": "271"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

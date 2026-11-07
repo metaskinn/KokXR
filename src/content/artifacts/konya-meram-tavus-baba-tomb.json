@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-tavus-baba-tomb",
+  "name": "Tavus Baba Türbesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu · mevcut hâliyle XIII. yüzyıl olabileceği düşünülmektedir (kitâbesi yoktur)",
+  "endowment": "Kitapta belirtilmemiştir; kaynaklarda Tavus Hanım’ın türbenin banisi olarak kabul gördüğü belirtilir",
+  "summary": "Meram’da Tavus Baba tepesindeki, özgün hâlinden yalnız cenazelik katı kalmış eyvan tarzı türbe.",
+  "history": "Türbe Meram, Durunday Mahallesi, Tavusbaba Sokak’ta, Tavus Baba tepesinde, darü’l-hüffaz ve caminin batısındadır. İnşa tarihi, banisi, ustası ve türbede yatan kişi hakkında bilgi veren bir kitâbe ya da belge yoktur. Yapının bugünkü durumuna bakılarak mevcut hâliyle XIII. yüzyılda yapılmış olabileceği düşünülür.\n\nTavus Baba’nın kimliği kesin olarak bilinmez. İbrahim Hakkı Konyalı, Hatamu Dede Zaviyesi’nin Meram’da Tavus Baba Türbesi’nin yanında olduğunu ve Tavus Baba’nın bu zaviyenin şeyhlerinden biri olabileceğini tahmin eder; M. Mesut Koman ve Mehmet Önder’de de türbede yatan zatın Şeyh Tavus Mehmet olabileceği görüşü hâkimdir. Başka bir rivayete göre asıl adı Mehmet, memleketi Hindistan’dır; Anadolu Selçuklu Sultanı Rüknettin Süleyman ve I. Alâeddin Keykubat dönemlerinde yaşamış, Selçuklu sultanlarının ilim ve tasavvuf ehline gösterdiği hürmet üzerine Konya’ya yerleşmiştir. Eflâkî’nin eserinde bir Tavus Hanım’dan söz edilir. Türbeye ait yazılı belge olmadığından Tavus Baba’nın erkek mi kadın mı olduğu açıklığa kavuşmamıştır; kaynaklardan derlenen genel görüşe göre ise Mevlâna zamanında yaşamış bir hanımdır ve Tavus Hanım türbenin banisi olarak kabul görmüştür.\n\nTürbe birçok onarım geçirmiştir: 1905’te Abdülvahit Çelebi tarafından tamir ettirilmiş, 1958’de bir hayırseverin himayesinde onarılarak duvarları çimentoyla derzlenmiş, son olarak 1998’de Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir.\n\nTürbenin özgün hâlinden yalnız cenazelik katı günümüze gelmiş, üst kısmı tamamen yıkılmıştır. Dikdörtgen planlı cenazelik katı içte tuğla, dışta moloz taşla örülmüş, üstü çapraz tonozla örtülmüştür. Cenazelik katından yola çıkılarak eserin özgün hâlinin eyvan tarzında bir türbe olduğu anlaşılır. Batı duvarındaki pencere aşağı indirilerek bu bölüm dolaba dönüştürülmüştür. İçerideki sanduka orijinal değildir; harçla sıvanmış sade bir görünümdedir. Tavus Baba Konya’nın belleğinde ayrı bir yere sahiptir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-tavus-baba-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-tavus-baba-tomb/exterior.jpg",
+      "alt": "Taş duvarlı, kiremit saçaklı tek katlı küçük yapı; ortada koyu renkli kapı, yanında yazılı levhalar, solda demir parmaklıklı taş duvar",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-tavus-baba-tomb/interior.jpg",
+      "alt": "Beyaz sıvalı iç mekânda yeşil örtülü sanduka ve arkasındaki duvarda küçük pencere",
+      "description": "Türbenin içindeki sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "burial-floor",
+      "image": "/images/konya-meram-tavus-baba-tomb/exterior.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Cenazelik katı",
+      "text": "Türbenin özgün hâlinden yalnız cenazelik katı günümüze gelmiş, üst kısmı tamamen yıkılmıştır.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/konya-meram-tavus-baba-tomb/interior.jpg",
+      "x": 50,
+      "y": 80,
+      "title": "Sanduka",
+      "text": "Türbedeki sanduka orijinal değildir; harçla sıvanmış sade bir görünümdedir.",
+      "sourceId": "inv-p128"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbenin özgün hâlinden hangi bölümü günümüze gelmiştir?",
+      "options": [
+        "Kubbesi",
+        "Yalnız cenazelik katı",
+        "Taç kapısı",
+        "Minaresi"
+      ],
+      "correct": 1,
+      "description": "Özgün hâlinden yalnız cenazelik katı kalmış, üst kısmı tamamen yıkılmıştır.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "question": "Cenazelik katının üstü neyle örtülüdür?",
+      "options": [
+        "Çapraz tonozla",
+        "Kubbeyle",
+        "Ahşap tavanla",
+        "Piramidal külahla"
+      ],
+      "correct": 0,
+      "description": "Dikdörtgen planlı cenazelik katının üstü çapraz tonozla örtülüdür.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "question": "Türbe 1998’de hangi kurum tarafından restore edilmiştir?",
+      "options": [
+        "Konya Büyükşehir Belediyesi",
+        "Meram Belediyesi",
+        "Kültür Bakanlığı",
+        "Vakıflar Bölge Müdürlüğü"
+      ],
+      "correct": 3,
+      "description": "Türbe son olarak 1998’de Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir.",
+      "sourceId": "inv-p128"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p128",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Tavus Baba Türbesi\"",
+      "page": "128-129"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

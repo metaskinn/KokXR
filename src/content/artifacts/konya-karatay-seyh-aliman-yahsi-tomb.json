@@ -1,0 +1,118 @@
+{
+  "id": "konya-karatay-seyh-aliman-yahsi-tomb",
+  "name": "Şeyh Aliman (Alaman-İşgalaman) Yahşi Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Anadolu Selçuklu · zaviye kitâbesine göre H. 687 / M. 1288",
+  "endowment": "Kitâbeye göre Fakih Ahmet adına Şeyh Alaman yaptırmıştır",
+  "summary": "İlk olarak mescit olarak yapılıp sonradan türbeye dönüştürüldüğü düşünülen, kurşun kaplı kubbeli ve mermer mihraplı küçük Selçuklu yapısı.",
+  "history": "Türbe Karatay, Çelebi Mahallesi, Şeyh Ulema Recep Ağa Caddesi üzerinde, Şeyh Alaman (İşgalaman) Mezarlığı’nın kuzeydoğusundadır. Kendi kitâbesinde inşa tarihi yazmaz; ancak İnce Minareli Medrese Taş ve Ahşap Eserler Müzesi’ndeki Şeyh Alaman Zaviyesi kitâbesinde yapım tarihi H. 687 / M. 1288 olarak verilir. Türbenin bitişiğindeki ve sonradan yerine mektep açıldığı düşünülen zaviyeden hiçbir iz kalmamıştır. Konya Büyükşehir Belediyesi tarafından tamir edilen yapı daha önce mescit olarak kullanılmış, yakın zamanda yeniden türbeye dönüştürülmüştür.\n\nZaviye ve türbe kitâbesinde “Şeyhlerin Sultanı”, “Âlemlerin Kutbu” olarak anılan Fakih Ahmet ile onun önde gelen müritlerinden olduğu düşünülen Şeyh Alaman’ın kim oldukları belli değildir. Âlim, fazıl ve döneminin meşhur şeyhlerinden Şeyh Ulemâ’nın da Fakih Ahmet’in talebelerinden olduğu rivayet edilir.\n\nGiriş kapısı üzerindeki altı satırlık sülüs kitâbede Cin Suresi’nin 18. ayeti ve ardından şu ifade yer alır: “Mescitler şüphesiz Allah’ındır. Öyleyse oralarda Allah’a yalvarırken başkasını katmayın. Âlemlerin Kutbu Fakih Ahmet adına fakih kul, Tanrı’nın abdalı ve O’nun tevfikine muhtaç Şeyh Alaman (yaptırdı).” Kitâbeye göre yapı ilk dönemde mescit olarak yapılmış olmalı; içinde Ulvi Sultan Mescidi mihrabına benzer bir mihrap olduğu tahmin edilen mescit sonradan türbeye dönüştürülmüş olmalıdır.\n\nKare planlı yapı, köşelerdeki üçgenlerle geçilen bir kubbeyle örtülüdür; kubbe son tamiratta kurşunla kaplanmıştır. Ana malzeme moloz-kaba yonu taş ve tuğladır; kapı ve pencere çerçeveleri kesme taş ya da mermer bloklardandır. Cepheler üst örtüye yakın kısımda tuğla, diğer kısımlarda taş görünümlüdür. Doğu cephenin ortasındaki sivri kemerli kapıyla girilen yapı, kuzey ve güneyde ikişer, batıda bir dikdörtgen pencereyle aydınlanır. Devşirme malzemeden yapılmış giriş cephesi dekoratif özellikler taşır; kubbede altı köşeli yıldızdan gelişen çiniler kullanılmıştır ve iç duvarların eskiden mihrap seviyesine kadar çini kaplı olduğu düşünülür.\n\nTürbenin ortasında bir sanduka bulunur; ayak taşında sivri kemerli bir niş içinde kandil ve iki yanında şamdanlar işlenmiştir. Güney duvarda mermerden oyulmuş dikdörtgen bir mihrap vardır; sivri kemerli ana nişin içinde yarım daire kemerli ikinci bir niş yer alır ve bu nişte kandil ile şamdan motifleri dikkat çeker.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-seyh-aliman-yahsi-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-seyh-aliman-yahsi-tomb/exterior.jpg",
+      "alt": "Taş ve tuğla duvarlı kare yapı, üstünde kurşun kaplı kubbe; cephenin ortasında kemerli ahşap kapı, önde taş sekiler ve çevrede mezar taşları",
+      "description": "Türbenin giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-seyh-aliman-yahsi-tomb/cemetery-view.jpg",
+      "alt": "Ağaçlar arasında, önünde sıra sıra mezar taşları bulunan kubbeli taş ve tuğla yapı",
+      "description": "Türbe ve çevresindeki mezarlık",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-seyh-aliman-yahsi-tomb/interior.jpg",
+      "alt": "Moloz taş duvarlı iç mekân: önde yeşil örtülü sanduka, iki yan duvarda derin pencere açıklıkları",
+      "description": "Sandukalı iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "lead-dome",
+      "image": "/images/konya-karatay-seyh-aliman-yahsi-tomb/exterior.jpg",
+      "x": 50,
+      "y": 20,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Kare planlı yapının kubbesi son tamiratta kurşunla kaplanmıştır.",
+      "sourceId": "inv-p150"
+    },
+    {
+      "id": "entrance",
+      "image": "/images/konya-karatay-seyh-aliman-yahsi-tomb/exterior.jpg",
+      "x": 50,
+      "y": 72,
+      "title": "Giriş kapısı",
+      "text": "Yapıya doğu cephenin ortasında açılmış kapıdan girilir; giriş cephesi devşirme malzemeden yapılmıştır.",
+      "sourceId": "inv-p150"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/konya-karatay-seyh-aliman-yahsi-tomb/interior.jpg",
+      "x": 50,
+      "y": 80,
+      "title": "Sanduka",
+      "text": "Türbenin ortasında bir sanduka bulunur; ayak taşında kandil ve şamdan motifleri işlenmiştir.",
+      "sourceId": "inv-p150"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbenin yapım tarihi hangi kitâbeden öğrenilmektedir?",
+      "options": [
+        "Türbenin kendi kitâbesinden",
+        "Şeyh Alaman Zaviyesi kitâbesinden",
+        "Ulvi Sultan Mescidi kitâbesinden",
+        "Bir vakfiyeden"
+      ],
+      "correct": 1,
+      "description": "Türbenin kendi kitâbesinde tarih yoktur; Şeyh Alaman Zaviyesi kitâbesinde H. 687 / M. 1288 yazar.",
+      "sourceId": "inv-p149"
+    },
+    {
+      "question": "Kitâbeye göre yapı ilk olarak ne amaçla yapılmış olmalıdır?",
+      "options": [
+        "Medrese",
+        "Han",
+        "Çeşme",
+        "Mescit"
+      ],
+      "correct": 3,
+      "description": "Kitâbeye göre yapı ilk dönemde mescit olarak yapılmış, sonradan türbeye dönüştürülmüş olmalıdır.",
+      "sourceId": "inv-p150"
+    },
+    {
+      "question": "Giriş kapısı üzerindeki kitâbede hangi surenin 18. ayeti yazılıdır?",
+      "options": [
+        "Cin Suresi",
+        "Fatiha Suresi",
+        "Yasin Suresi",
+        "Mülk Suresi"
+      ],
+      "correct": 0,
+      "description": "Giriş kapısı üzerindeki altı satırlık sülüs kitâbede Cin Suresi’nin 18. ayeti yazılıdır.",
+      "sourceId": "inv-p150"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p149",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Şeyh Aliman (Alaman-İşgalaman) Yahşi Türbesi\"",
+      "page": "149"
+    },
+    {
+      "id": "inv-p150",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Şeyh Aliman (Alaman-İşgalaman) Yahşi Türbesi\"",
+      "page": "150-151"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

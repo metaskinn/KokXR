@@ -1,0 +1,90 @@
+{
+  "id": "konya-meram-deli-osman-inn",
+  "name": "Deli Osman Hanı",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Mimari özelliklerine göre XIX. yüzyıl sonu ya da XX. yüzyıl başı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Adını \"Cambaz Deli Osman Ağa\"dan alan, moloz taştan, tek mekânlı ve bugün restoran olarak kullanılan sade bir han.",
+  "history": "Han, Meram'da Seydişehir yolu üzerindeki Bozağaç Camii'nin yakınındadır. Yapının inşasına ait bir kitâbe yoktur; mimari özelliklerinden hareketle XIX. yüzyıl sonu ya da XX. yüzyıl başlarında yapıldığı düşünülmektedir.\n\nHana adını veren kişi \"Deli Osman\" lakabıyla anılan Osman Ağa'dır. Osman Ağa, H. 1257 / M. 1841'de Konya'nın Bâb-ı Aksaray Mahallesi'nde doğmuştur. Babası Seyit Mehmet Ağa, annesi halk arasında \"Rabiş Kadın\" diye bilinen Rabia Hanım'dır. Canlı hayvan alım satımı yaptığı için \"cambaz\" diye de anılan Osman Ağa'ya \"Deli\" lakabının verilmesini yeğeni Mehmet Ali Apalı şöyle anlatır: O zamanlar Konya merkezinde un değirmeni yoktu; un ihtiyacı Meram ve Dere'deki değirmenlerde buğday öğütülerek karşılanırdı. Bir gün Osman Ağa sıpası da olan eşeğine bir çuval buğday yükleyip değirmene doğru yola çıkar. Yolda anasını takip etmeyen sıpa sürekli zorluk çıkarınca sinirlenen Osman Ağa sıpayı tuttuğu gibi Meram Çayı'na atar. Bunu görenler \"Vay deli vay!\" der ve o günden sonra \"Cambaz Deli Osman Ağa\" diye anılmaya başlar.\n\nHan genel olarak kare planlıdır; giriş açıklığı güney cephenin doğu köşesindedir. Restorasyondan önce üzeri toprak damla örtülüydü. Moloz taşla inşa edilen yapının beden duvarlarında belirli aralıklarla ahşap hatıllar kullanılmıştır. Aydınlatma açıklığı bulunmayan sağır duvarlı hanın içi tek bir mekândan oluşur ve iki ahşap direk üzerindeki merteklere oturan ahşap kirişlerle düz dam şeklinde örtülüdür.\n\nHan, Vakıflar Genel Müdürlüğü tarafından 2007'de restore edilmiştir. Son hâliyle moloz taştan, araları ahşap hatıllı ve üzeri dört yöne eğimli kırma çatılıdır. Sade formdaki han bugün restoran olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-deli-osman-inn/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-deli-osman-inn/aerial-view.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında, kiremit kaplı kırma çatılı, taş duvarlı tek katlı yapı; sağında geniş bir yol ve arkada düz tarlalar",
+      "description": "Hanın havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-meram-deli-osman-inn/aerial-view.jpg",
+      "x": 45,
+      "y": 55,
+      "title": "Dört yöne eğimli kırma çatı",
+      "text": "Restorasyondan önce toprak damlı olan han, son hâliyle dört yöne eğimli kırma çatılıdır.",
+      "sourceId": "inv-p242"
+    },
+    {
+      "id": "rubble-walls",
+      "image": "/images/konya-meram-deli-osman-inn/aerial-view.jpg",
+      "x": 40,
+      "y": 72,
+      "title": "Moloz taş duvarlar",
+      "text": "Han moloz taşla inşa edilmiş, beden duvarlarında belirli aralıklarla ahşap hatıllar kullanılmıştır.",
+      "sourceId": "inv-p242"
+    }
+  ],
+  "test": [
+    {
+      "question": "Osman Ağa'ya \"cambaz\" denmesinin nedeni nedir?",
+      "options": [
+        "Ip üstünde yürüdüğü için",
+        "Canlı hayvan alım satımı yaptığı için",
+        "Değirmen işlettiği için",
+        "Han ustası olduğu için"
+      ],
+      "correct": 1,
+      "description": "Canlı hayvan alım satımı yapmasından dolayı Osman Ağa \"cambaz\" olarak da adlandırılmıştır.",
+      "sourceId": "inv-p242"
+    },
+    {
+      "question": "Han hangi yıl Vakıflar Genel Müdürlüğü tarafından restore edilmiştir?",
+      "options": [
+        "1985",
+        "1995",
+        "2007",
+        "2015"
+      ],
+      "correct": 2,
+      "description": "Han, Vakıflar Genel Müdürlüğü tarafından 2007 senesinde restore edilmiştir.",
+      "sourceId": "inv-p242"
+    },
+    {
+      "question": "Han bugün hangi amaçla kullanılmaktadır?",
+      "options": [
+        "Müze",
+        "Cami",
+        "Kütüphane",
+        "Restoran"
+      ],
+      "correct": 3,
+      "description": "Sade bir formda olan han günümüzde restoran olarak kullanılmaktadır.",
+      "sourceId": "inv-p242"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p242",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Deli Osman Hanı\"",
+      "page": "242"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

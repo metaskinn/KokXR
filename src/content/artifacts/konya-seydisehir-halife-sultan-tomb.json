@@ -1,0 +1,95 @@
+{
+  "id": "konya-seydisehir-halife-sultan-tomb",
+  "name": "Halife Sultan Türbesi",
+  "city": "Konya",
+  "district": "Seydişehir",
+  "period": "Beylikler dönemi · kitâbesine göre H. 768 / 10 Mayıs 1367",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Seyyid Harun Veli'nin kızı Halife Sultan için Seyyid Harun Camii'ne bitişik olarak 1367'de yapılan, kare planlı ve kubbeli türbe.",
+  "history": "Türbe, Seydişehir ilçesi, Seyitharun Mahallesi, 153096 Sokak'ta, Seyyid Harun Camii'nin kuzeydoğu köşesine bitişik olarak inşa edilen iki türbeden cami duvarına bitişik olanıdır.\n\nGiriş kapısı üzerindeki tek satırlık kitâbede \"Bu mübarek Türbe, … toprağı bol olsun. 10 Şevval 768 Cuma günü inşa edildi\" yazmaktadır. Bu kitâbeye göre türbe H. 768 / 10 Mayıs 1367'de inşa edilmiştir. Vakıflar Bölge Müdürlüğü tarafından 2006'da tamir edilmiştir.\n\nHalife Sultan, Seyyid Harun Veli'nin kızıdır. Seyyid Harun Veli 1320'de vefat etmiş; ardından yerine kızı Halife Sultan geçmiş ve kırk yılı aşkın bir süre babasını temsil etmiştir.\n\nTürbe kare planlıdır ve üzerini, doğrudan beden duvarlarına oturan bir kubbe örter. Kesme taş ve devşirme malzemeyle yapılmıştır. Girişi kuzey cephedeki, üzerinde mermer kitâbe bulunan basık kemerli tek kanatlı kapıdandır. Kubbeye üçgenlerle geçilir. İçeride üç sade, süslemesiz sanduka vardır; bazı kaynaklarda sandukalar üzerinde zamanla kaybolmuş yazılar bulunduğu belirtilir. Kitâbeye göre bunlardan biri Halife Sultan'a ait olmalıdır; diğer ikisinin kime ait olduğu tespit edilememiştir, Seyyid Harun Veli Zaviyesi'nde görev yapan kişilere ait olmaları muhtemeldir. Türbe, Seydişehir'de XIV. yüzyıl türbe mimarisini yansıtan önemli örneklerdendir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-seydisehir-halife-sultan-tomb/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-seydisehir-halife-sultan-tomb/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit çatılı cami ve yanında yüksek minare, caminin önünde kubbeli küçük yapılar; arkada şehir, ağaçlar ve dağlar",
+      "description": "Seyyid Harun Camii ve çevresindeki türbeler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "mosque",
+      "image": "/images/konya-seydisehir-halife-sultan-tomb/aerial-view.jpg",
+      "x": 42,
+      "y": 63,
+      "title": "Seyyid Harun Camii",
+      "text": "Halife Sultan Türbesi, Seyyid Harun Camii'nin kuzeydoğu köşesine bitişik olarak inşa edilmiştir.",
+      "sourceId": "inv-p203"
+    },
+    {
+      "id": "tombs",
+      "image": "/images/konya-seydisehir-halife-sultan-tomb/aerial-view.jpg",
+      "x": 44,
+      "y": 76,
+      "title": "Caminin yanındaki türbeler",
+      "text": "Caminin kuzeydoğu köşesine bitişik iki türbeden cami duvarına bitişik olanı Halife Sultan Türbesi'dir.",
+      "sourceId": "inv-p203"
+    }
+  ],
+  "test": [
+    {
+      "question": "Halife Sultan kimin kızıdır?",
+      "options": [
+        "Karamanoğlu İbrahim Bey'in",
+        "Seyyid Harun Veli'nin",
+        "II. Kılıçarslan'ın",
+        "Emir Şah Bey'in"
+      ],
+      "correct": 1,
+      "description": "Halife Sultan, Seyyid Harun Veli'nin kızıdır ve babasının vefatından sonra kırk yılı aşkın süre onu temsil etmiştir.",
+      "sourceId": "inv-p203"
+    },
+    {
+      "question": "Türbenin kitâbesine göre inşa tarihi nedir?",
+      "options": [
+        "H. 720 / 1320",
+        "H. 825 / 1422",
+        "H. 602 / 1205",
+        "H. 768 / 1367"
+      ],
+      "correct": 3,
+      "description": "Kitâbeye göre türbe 10 Şevval 768 Cuma günü, yani 10 Mayıs 1367'de inşa edilmiştir.",
+      "sourceId": "inv-p203"
+    },
+    {
+      "question": "Türbenin içinde kaç sanduka vardır?",
+      "options": [
+        "Üç",
+        "Bir",
+        "Beş",
+        "Sekiz"
+      ],
+      "correct": 0,
+      "description": "Türbe iç mekânında üç sade sanduka bulunmaktadır.",
+      "sourceId": "inv-p204"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p203",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Seydişehir, \"Halife Sultan Türbesi\"",
+      "page": "203"
+    },
+    {
+      "id": "inv-p204",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Seydişehir, \"Halife Sultan Türbesi\"",
+      "page": "204"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

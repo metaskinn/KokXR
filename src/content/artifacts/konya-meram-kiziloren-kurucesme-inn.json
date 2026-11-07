@@ -1,0 +1,125 @@
+{
+  "id": "konya-meram-kiziloren-kurucesme-inn",
+  "name": "Kızılören (Kuruçeşme) Hanı",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu · Kitâbeye göre H. 604 / M. 1207-08, I. Gıyâseddin Keyhüsrev'in ikinci saltanatı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Konya-Beyşehir yolu üzerinde, kitâbesine göre 1207-08'de inşa edilen, kapalı ve açık bölümlü karma tip klasik Selçuklu hanı.",
+  "history": "Han, Meram'da Kızılören Köyü sınırları içinde, Konya-Beyşehir yolunun 32. kilometresinde, yoldan 200 m içeridedir. Bazı kaynaklarda \"Hanönü\" olarak da geçer. Taç kapı kemerinin altındaki sekiz satırlık kitâbeden, I. Gıyâseddin Keyhüsrev'in ikinci saltanat yılında, H. 604 / M. 1207-08'de inşa edildiği anlaşılmaktadır.\n\nHan uzun yıllar harap kalmıştır. Kapalı bölümün güney sahını dışındaki sahınların tonoz örtüsü tamamen yıkılmış; açık avlunun kuzeyindeki birimler harabeye dönmüş, güneydeki bölümlerin örtü ve kemerleri de tamamen yıkılmıştır. Han 2008-2010 yılları arasında tamir edilmiştir.\n\nYapı, doğu-batı doğrultusunda derinlemesine dikdörtgen planlı, kapalı ve açık bölümden oluşan karma tip Selçuklu hanlarındandır. Düzgün kesme taştan inşa edilmiş, yer yer devşirme malzeme kullanılmıştır. Sade cepheli hana batı cephedeki taç kapıdan girilir. Taç kapı cephenin ortasında, beden duvarlarından yüksek tutulmuş anıtsal formdadır; sağır sivri kemer içinde basık kemerli kapı açıklığı vardır ve üstte düz bir tepelikle sonlanır.\n\nTaç kapıdan önce ön bölüme, oradan avluya geçilir. Ön bölümün iki yanında birer mekân bulunur. Güneydeki mekânın güney duvarındaki mihrap nişinden mescit olarak kullanıldığı anlaşılır; mescidin üzeri kuzey-güney, diğer mekânın üzeri doğu-batı yönünde beşik tonozla örtülüdür. Kuzeydeki mekânın görevli odası olduğu düşünülmektedir. Avlunun kuzey ve güneyinde yaklaşık kare kesitli dörder ayak kemerlerle birbirine bağlanmış, ayaklarla beden duvarları arasına ince bir duvar örülerek üzeri avluya doğru beşik tonozlu eyvan biçiminde mekânlar yapılmıştır.\n\nDerinlemesine dikdörtgen planlı kapalı bölüm, beşerli iki sıra ayakla üç sahına bölünmüştür. Daha geniş tutulan orta sahın, yolcuların yükleriyle kaldığı seki kısmıdır; iki yanındaki sahınlar hayvanlara ayrılmıştır. Taştan yem ve su tekneleri sekilerde ayakların arasına yerleştirilmiş, duvarlara kandil nişleri açılmıştır. Kapalı bölümün hemen solunda çatıya çıkan bir merdiven izi vardır.\n\nHan, Anadolu Selçukluları döneminde ve sonrasında önemli bir karayolu olan Konya-Beyşehir yolu üzerine inşa edilmiştir ve bu güzergâhla birlikte düşünüldüğünde oldukça önemli bir yapıdır. XIII. yüzyılın ilk yarısına ait olan han klasik Selçuklu hanları arasındadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-kiziloren-kurucesme-inn/west-facade.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-kiziloren-kurucesme-inn/west-facade.jpg",
+      "alt": "Havadan önden görünüm: kesme taştan, ortasında beden duvarlarından yüksek tutulmuş taç kapı bulunan dikdörtgen han; solunda kiremit çatılı küçük bir bina, arkada çam ağaçları ve ova",
+      "description": "Taç kapılı cephe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-kiziloren-kurucesme-inn/courtyard.jpg",
+      "alt": "Avlu: iki yanda sıra hâlinde sivri kemerli, tonozlu eyvanlar; karşıda kapı açıklığı olan yüksek taş cephe",
+      "description": "Eyvanlarla çevrili avlu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-kiziloren-kurucesme-inn/aerial-view.jpg",
+      "alt": "Havadan uzak görünüm: tepeler ve çam ağaçları arasında düz çatılı, taş duvarlı dikdörtgen han ve yanında küçük yapılar",
+      "description": "Hanın çevresiyle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-kiziloren-kurucesme-inn/arcade.jpg",
+      "alt": "Karanlık bir kemer açıklığından görülen, taş ayaklara oturan üç sivri kemerli sıra",
+      "description": "Kemerli bölüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "crown-gate",
+      "image": "/images/konya-meram-kiziloren-kurucesme-inn/west-facade.jpg",
+      "x": 55,
+      "y": 72,
+      "title": "Taç kapı",
+      "text": "Taç kapı cephenin ortasında, beden duvarlarından yüksek tutulmuş anıtsal formdadır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "id": "courtyard-iwans",
+      "image": "/images/konya-meram-kiziloren-kurucesme-inn/courtyard.jpg",
+      "x": 15,
+      "y": 65,
+      "title": "Avlu eyvanları",
+      "text": "Avlunun kuzey ve güneyinde ayaklar kemerlerle bağlanmış, üzeri beşik tonozlu eyvan biçiminde mekânlar yapılmıştır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "id": "cut-stone",
+      "image": "/images/konya-meram-kiziloren-kurucesme-inn/west-facade.jpg",
+      "x": 72,
+      "y": 78,
+      "title": "Düzgün kesme taş",
+      "text": "Yapı düzgün kesme taştan inşa edilmiş, yer yer devşirme malzeme kullanılmıştır.",
+      "sourceId": "inv-p246"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbeye göre han hangi yıllarda inşa edilmiştir?",
+      "options": [
+        "M. 1101-02",
+        "M. 1207-08",
+        "M. 1299-1300",
+        "M. 1446"
+      ],
+      "correct": 1,
+      "description": "Taç kapıdaki sekiz satırlık kitâbeye göre han H. 604 / M. 1207-08 senesinde inşa edilmiştir.",
+      "sourceId": "inv-p246"
+    },
+    {
+      "question": "Kapalı bölümde orta sahın ne için kullanılırdı?",
+      "options": [
+        "Hayvanlar için",
+        "Mescit olarak",
+        "Yolcuların yükleriyle kaldığı seki olarak",
+        "Ahır olarak"
+      ],
+      "correct": 2,
+      "description": "Daha geniş tutulan orta sahın yolcuların yükleriyle kaldıkları seki kısmıdır; yan sahınlar hayvanlara ayrılmıştır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "Ön bölümün güneyindeki mekânın mescit olduğu neden anlaşılmaktadır?",
+      "options": [
+        "Minaresinden",
+        "Güney duvarındaki mihrap nişinden",
+        "Kitâbesinden",
+        "Kubbesinden"
+      ],
+      "correct": 1,
+      "description": "Güneydeki mekânın güney duvarındaki mihrap nişinden mescit olarak kullanıldığı anlaşılmaktadır.",
+      "sourceId": "inv-p248"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p246",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Kızılören (Kuruçeşme) Hanı\"",
+      "page": "246"
+    },
+    {
+      "id": "inv-p248",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Kızılören (Kuruçeşme) Hanı\"",
+      "page": "248"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

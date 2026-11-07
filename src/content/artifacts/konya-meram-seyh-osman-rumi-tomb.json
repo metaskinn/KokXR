@@ -1,0 +1,90 @@
+{
+  "id": "konya-meram-seyh-osman-rumi-tomb",
+  "name": "Şeyh Osman Rûmi Türbesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu · üzerindeki levhaya göre XIII. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Mevlâna’nın Şam’daki medrese arkadaşı Şeyh Osman Rûmi’nin, batı cephesi eyvan gibi açık bırakılmış piramidal külahlı türbesi.",
+  "history": "Türbe Meram, Gülbahçe Sokak üzerinde, Sahip Ata Külliyesi’nin kuzeyinde, Şeyh Hasan Rûmi Türbesi’nin arkasındadır. Üzerindeki levhaya göre XIII. yüzyılda yaptırılmıştır; son onarımı 1998’de Vakıflar Genel Müdürlüğü tarafından yapılmıştır.\n\nSipehsalar’ın anlatımına göre Şeyh Osman Rûmi, Şam’da Hz. Mevlâna’nın medrese arkadaşlarından biridir; Hasan Rûmi de kardeşidir. Osman Rûmi’nin Sadreddin Konevi ve Hz. Mevlâna gibi Konya’ya sonradan yerleştiği düşünülür. Kaynaklarda Şeyh Osman ve Hasan Rûmi kardeşlerin Kalenderî şeyhi olduğundan söz edilir. Türbelerin bulunduğu alan önceden üç türbe, mescit ve zaviyeden oluşuyordu; türbelerden birinin kardeşi Hasan Rûmi’ye, üçüncüsünün ise diğer kardeşine ait olduğu belirtilir. Yapı özellikleriyle Mevlâna Türbesi ve Sahip Ata Türbesi’ne benzer. Türbenin çevresindeki zaviye bakımsızlıktan günümüze ulaşamamıştır.\n\nKare planlı yapı içten kubbe, dıştan piramidal külahla örtülüdür. Beden duvarları altta düzgün yonu taş, gövdenin sekizgene dönüştüğü kasnaktan itibaren tuğladır; giriş kapısı mermerdendir. Sade tutulmuş duvarlar arasında batı cephesi açık bırakılmış, yuvarlak kemerle geçilerek eyvan biçiminde düzenlenmiştir; bugün parmaklıklarla korunan türbe bu özelliğiyle değişik bir plan gösterir.\n\nGüneydeki girişten merdivenle inilerek beşik tonozlu cenazelik bölümüne ulaşılır; burada sekiz mezar vardır. Türbenin içine tek kanatlı ahşap bir kapıdan girilir. Tamamen sıvalı iç mekân, merkezden dışa doğru genişleyen çiçek motifleriyle bezeli bir tuğla kubbeyle örtülüdür; kubbeye geçişte Türk üçgenleri kullanılmıştır. Taş döşeli zeminde Şeyh Osman Rûmi ve yakınlarına ait olduğu düşünülen on sanduka görülür. Türbe, açık bırakılmış batı cephesi, yuvarlak kemerli geçişleri ve eyvan biçimindeki düzeniyle önemli bir yapıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-seyh-osman-rumi-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-seyh-osman-rumi-tomb/exterior.jpg",
+      "alt": "Kesme taş gövdeli, sekizgen kasnak üzerinde yeşil metal kaplı piramidal külahlı türbe; sağ yanda parmaklıklı yuvarlak kemerli açıklık, çevrede çam ağaçları",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pyramidal-roof",
+      "image": "/images/konya-meram-seyh-osman-rumi-tomb/exterior.jpg",
+      "x": 50,
+      "y": 12,
+      "title": "Piramidal külah",
+      "text": "Kare planlı yapı içten kubbe, dıştan piramidal külahla örtülüdür.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "id": "open-west-facade",
+      "image": "/images/konya-meram-seyh-osman-rumi-tomb/exterior.jpg",
+      "x": 70,
+      "y": 72,
+      "title": "Açık bırakılmış cephe",
+      "text": "Batı cephesi açık bırakılmış, yuvarlak kemerle eyvan biçiminde düzenlenmiştir; bugün parmaklıklarla korunur.",
+      "sourceId": "inv-p144"
+    }
+  ],
+  "test": [
+    {
+      "question": "Sipehsalar’a göre Şeyh Osman Rûmi, Mevlâna’nın nesidir?",
+      "options": [
+        "Aşçısı",
+        "Şam’daki medrese arkadaşı",
+        "Oğlu",
+        "Kâtibi"
+      ],
+      "correct": 1,
+      "description": "Sipehsalar’ın anlatımına göre Şeyh Osman Rûmi, Şam’da Hz. Mevlâna’nın medrese arkadaşlarından biridir.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "question": "Türbenin hangi cephesi açık bırakılarak eyvan biçiminde düzenlenmiştir?",
+      "options": [
+        "Kuzey",
+        "Güney",
+        "Doğu",
+        "Batı"
+      ],
+      "correct": 3,
+      "description": "Batı cephesi açık bırakılmış ve yuvarlak kemerle eyvan biçiminde düzenlenmiştir.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "question": "Türbe içindeki taş döşeli zeminde kaç sanduka görülür?",
+      "options": [
+        "On",
+        "Üç",
+        "Altı",
+        "Bir"
+      ],
+      "correct": 0,
+      "description": "Taş döşeli zeminde Şeyh Osman Rûmi ve yakınlarına ait olduğu düşünülen on sanduka görülür.",
+      "sourceId": "inv-p144"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p144",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Şeyh Osman Rûmi Türbesi\"",
+      "page": "144-145"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

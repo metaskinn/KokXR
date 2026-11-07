@@ -1,0 +1,118 @@
+{
+  "id": "konya-meram-atesbaz-veli-kumbet-and-zawiya",
+  "name": "Ateşbaz Veli Kümbeti ve Zaviyesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu · kitâbeye göre H. 685 / M. 1285; zaviye H. 1315 / M. 1897",
+  "endowment": "Kitapta belirtilmemiştir (zaviyeyi 1897’de Postnişin Abdülvahit Çelebi yeniden yaptırmıştır)",
+  "summary": "Mevlâna’nın aşçısı Ateşbaz Veli’nin dıştan sekizgen, içten kare planlı külahlı kümbeti ve yanındaki 1897 tarihli zaviye.",
+  "history": "Ateşbaz Veli Türbesi Meram, Ateşbaz Veli Mahallesi, Ateşbaz Sokak’tadır. Anadolu Selçuklu dönemi eserlerinden olan türbenin güney cephesindeki Arapça kitâbeye göre yapı İzzettin oğlu Yusuf Ateşbaz’a aittir ve H. 685 / M. 1285’te inşa edilmiştir. Türbe, bitişiğindeki türbedar yapısı ve çevresi Konya Büyükşehir Belediyesi tarafından restore edilmiştir.\n\nAsıl adı Yusuf bin İzzeddin olan Ateşbaz Veli’nin Horasan’dan geldiği tahmin edilir; Mevlevî dervişi ve Mevlâna’nın aşçısıdır. Rivayete göre mutfakta odun kalmadığını söylemek için Mevlâna’nın huzuruna gider; Mevlâna latife olarak “Kazanın altına ayaklarını sokarak kazanı kaynat!” deyince öyle yapar ve aşı ayak parmaklarından çıkan alevlerle pişirir. Kerametinin açığa çıkmasını istemeyen Mevlâna “Hay Ateşbaz, hay!” der; bundan sonra “Ateşbaz” unvanıyla anılır. Kitapta H. 684 / M. 1285’te vefat ettiği ve kendi türbesine defnedildiği belirtilir.\n\nAnadolu Selçuklu türbe mimarisinin özelliklerini yansıtan türbenin gövdesi dıştan sekizgen, içten kare planlıdır ve sekizgen gövdenin üzeri külahla örtülüdür. Moloz ve kesme taştan yapılmıştır. Cenazelik ve sanduka bölümüne girişler kuzey cephede altlı üstlü düzenlenmiştir. Beşik tonozlu cenazelik bölümünün üstündeki kata beşer basamaklı merdivenlerle çıkılır; buradaki basık kemerli kapıdan sandukalı bölüme geçilir. Tuğla kubbeyle örtülü iç mekân kıble duvarındaki bir pencereden ışık alır; ortada bir sanduka bulunur. Kitaba göre türbe çok nadir uygulanan bir plan tipindedir ve Anadolu’daki tek örnek olması bakımından önemlidir.\n\nZaviye, türbenin batısında yola bakar. Aynı yerde Çelebi Abdüssamet’in yaptırdığı zaviye zamanla harap olunca, H. 1315 / M. 1897’de Postnişin Abdülvahit Çelebi yeni bir zaviye yaptırmıştır. Taş temel üzerine kerpiç ve tuğlayla yapılan zaviye iki katlıdır ve kırma çatıyla örtülüdür. Avlu kapısı üzerindeki talik hatlı mermer kitâbede Mesnevihan Sıtkı Dede’nin 1315 tarihli bir kıtası yer alır. Zaviye asırlar boyunca türbeyi ziyarete gelenlerin misafir edildiği, sohbet ve sema-zikir meclislerinin yapıldığı bir mekân olarak hizmet etmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-atesbaz-veli-kumbet-and-zawiya/kumbet-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-atesbaz-veli-kumbet-and-zawiya/kumbet-exterior.jpg",
+      "alt": "Kesme taş gövdeli, gri metal kaplı sivri külahlı kümbet; önünde aşağı inen merdiven ve kemerli giriş, sağda beyaz badanalı kiremit çatılı yapı",
+      "description": "Kümbetin kuzey cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-atesbaz-veli-kumbet-and-zawiya/aerial.jpg",
+      "alt": "Tepeden görünüm: avlu içinde külahlı kümbet, çevresinde bahçe ve kiremit kırma çatılı yapılar",
+      "description": "Kümbet ve çevresinin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-atesbaz-veli-kumbet-and-zawiya/interior.jpg",
+      "alt": "İç mekân: kesme taş duvarlar, ortada hat yazılı bordo örtülü sanduka, arkada küçük pencere ve duvarlarda hat levhaları",
+      "description": "Sandukalı iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cone",
+      "image": "/images/konya-meram-atesbaz-veli-kumbet-and-zawiya/kumbet-exterior.jpg",
+      "x": 50,
+      "y": 22,
+      "title": "Külah",
+      "text": "Dıştan sekizgen olan gövdenin üzeri külahla örtülüdür.",
+      "sourceId": "inv-p126"
+    },
+    {
+      "id": "entrances",
+      "image": "/images/konya-meram-atesbaz-veli-kumbet-and-zawiya/kumbet-exterior.jpg",
+      "x": 50,
+      "y": 82,
+      "title": "Altlı üstlü girişler",
+      "text": "Cenazelik ve sanduka bölümüne girişler kuzey cephede altlı üstlü düzenlenmiştir.",
+      "sourceId": "inv-p126"
+    },
+    {
+      "id": "qibla-window",
+      "image": "/images/konya-meram-atesbaz-veli-kumbet-and-zawiya/interior.jpg",
+      "x": 50,
+      "y": 52,
+      "title": "Kıble penceresi ve sanduka",
+      "text": "Kubbeli iç mekân kıble duvarındaki bir pencereyle aydınlanır; ortada bir sanduka bulunur.",
+      "sourceId": "inv-p126"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ateşbaz Veli’nin Mevlâna’nın yanındaki görevi neydi?",
+      "options": [
+        "Kâtip",
+        "Hattat",
+        "Aşçı",
+        "Neyzen"
+      ],
+      "correct": 2,
+      "description": "Mevlevî dervişi olan Ateşbaz Veli Mevlâna’nın aşçısıdır.",
+      "sourceId": "inv-p124"
+    },
+    {
+      "question": "Türbenin gövdesi nasıl planlanmıştır?",
+      "options": [
+        "Dıştan sekizgen, içten kare",
+        "Dıştan ve içten kare",
+        "Dıştan on iki köşeli, içten daire",
+        "Dıştan dikdörtgen, içten sekizgen"
+      ],
+      "correct": 0,
+      "description": "Türbenin gövdesi dıştan sekizgen, içten kare planlıdır.",
+      "sourceId": "inv-p126"
+    },
+    {
+      "question": "Bugünkü zaviyeyi 1897’de kim yaptırmıştır?",
+      "options": [
+        "Çelebi Abdüssamet",
+        "Mesnevihan Sıtkı Dede",
+        "Yusuf bin İzzeddin",
+        "Postnişin Abdülvahit Çelebi"
+      ],
+      "correct": 3,
+      "description": "Eski zaviye harap olunca H. 1315 / M. 1897’de Postnişin Abdülvahit Çelebi yeni bir zaviye yaptırmıştır.",
+      "sourceId": "inv-p126"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p124",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Ateşbaz Veli Kümbeti ve Zaviyesi\"",
+      "page": "125"
+    },
+    {
+      "id": "inv-p126",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Ateşbaz Veli Kümbeti ve Zaviyesi\"",
+      "page": "126-127"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

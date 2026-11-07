@@ -1,0 +1,118 @@
+{
+  "id": "konya-beysehir-half-anonymous-tomb",
+  "name": "Yarım (Anonim) Türbe",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "Osmanlı · kitâbedeki ebced hesabına göre H. 969 / M. 1561",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Beyşehir Eşrefoğlu Camii'nin kuzeydoğu cephesinde, üst örtüsü günümüze ulaşmamış, kare planlı ve yapanı bilinmeyen türbe.",
+  "history": "Türbe, Beyşehir ilçesi, İçerişehir Mahallesi'nde, Eşrefoğlu Camii'nin kuzeydoğu cephesinde yer alır ve halk arasında \"Araplar Türbesi\" adıyla da anılır.\n\nGiriş kapısının üzerindeki iki satırlık celî sülüs kitâbedeki \"el-Emirü'l\" ifadesine göre, ebced hesabıyla H. 969 / M. 1561 yılında inşa ettirilmiştir. Ancak yapanı ve yaptıranı hakkında kesin bir bilgi yoktur.\n\nTürbe kare planlıdır ve kesme taştan yığma (kâgir) olarak inşa edilmiştir. Üst örtüsü günümüze ulaşmamıştır; yapının yarım bırakıldığı ya da kubbesinin yıkıldığı düşünülmektedir. Türbeye doğu cephenin kuzeyindeki basık kemerli bir kapıdan, üç basamaklı bir merdivenle çıkılarak girilir. Ortada taştan sade bir sanduka bulunur; sandukanın çevresinde farklı dönemlere ait mezar taşları yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-half-anonymous-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-half-anonymous-tomb/exterior.jpg",
+      "alt": "Kesme taş duvarlar önünde sivri taş külahlı bir türbe ve önünde daha alçak, saçaklı, kesme taş bir yapı; arkada mazgallı kale duvarı ve bulutlu gökyüzü",
+      "description": "Eşrefoğlu Camii çevresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-half-anonymous-tomb/interior.jpg",
+      "alt": "Moloz taş duvarlı iç mekân; üstte ahşap tavan, ortada taştan sade bir sanduka, duvar diplerinde dizilmiş eski mezar taşları ve sağda küçük bir pencere",
+      "description": "İç mekân: sanduka ve mezar taşları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-half-anonymous-tomb/inscription.jpg",
+      "alt": "Aşınmış açık renkli taş yüzeyde, ortada yazılı dikdörtgen bir kitâbe levhası, iki yanında yuvarlak kabartmalar ve altta kemer çizgisi",
+      "description": "Kapı üzerindeki kitâbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "sarcophagus",
+      "image": "/images/konya-beysehir-half-anonymous-tomb/interior.jpg",
+      "x": 50,
+      "y": 75,
+      "title": "Taş sanduka",
+      "text": "Türbenin ortasında taş malzemeden sade bir sanduka yer almaktadır.",
+      "sourceId": "inv-p201"
+    },
+    {
+      "id": "gravestones",
+      "image": "/images/konya-beysehir-half-anonymous-tomb/interior.jpg",
+      "x": 22,
+      "y": 52,
+      "title": "Mezar taşları",
+      "text": "Sandukanın etrafında farklı dönemlere ait mezar taşları bulunmaktadır.",
+      "sourceId": "inv-p201"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/konya-beysehir-half-anonymous-tomb/inscription.jpg",
+      "x": 50,
+      "y": 32,
+      "title": "Kitâbe",
+      "text": "Giriş kapısı üzerindeki iki satırlık celî sülüs kitâbeye göre türbe ebced hesabıyla H. 969 / M. 1561'de inşa ettirilmiştir.",
+      "sourceId": "inv-p200"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe halk arasında hangi adla da anılır?",
+      "options": [
+        "Kızlar Türbesi",
+        "Sultanlar Türbesi",
+        "Kalender Türbesi",
+        "Araplar Türbesi"
+      ],
+      "correct": 3,
+      "description": "Yarım (Anonim) Türbe, halk arasında \"Araplar Türbesi\" adıyla da anılır.",
+      "sourceId": "inv-p200"
+    },
+    {
+      "question": "Türbe hangi caminin kuzeydoğu cephesinde yer alır?",
+      "options": [
+        "Eşrefoğlu Camii",
+        "Alâeddin Camii",
+        "Ak Camii",
+        "Seyyid Harun Camii"
+      ],
+      "correct": 0,
+      "description": "Türbe, Beyşehir İçerişehir Mahallesi'nde Eşrefoğlu Camii'nin kuzeydoğu cephesindedir.",
+      "sourceId": "inv-p200"
+    },
+    {
+      "question": "Türbeye neden \"yarım\" denildiği kitaptaki bilgiye göre nasıl açıklanabilir?",
+      "options": [
+        "Yalnızca bir duvarı ayakta kaldığı için",
+        "Üst örtüsü günümüze ulaşmadığı için",
+        "Planı yarım daire olduğu için",
+        "Yarısı toprağa gömülü olduğu için"
+      ],
+      "correct": 1,
+      "description": "Üst örtüsü günümüze ulaşmayan yapının yarım bırakıldığı ya da kubbesinin yıkıldığı düşünülmektedir.",
+      "sourceId": "inv-p200"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p200",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Yarım (Anonim) Türbe\"",
+      "page": "200"
+    },
+    {
+      "id": "inv-p201",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Yarım (Anonim) Türbe\"",
+      "page": "201"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

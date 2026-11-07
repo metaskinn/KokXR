@@ -1,0 +1,90 @@
+{
+  "id": "konya-emirgazi-emirgazi-tomb",
+  "name": "Emirgazi (Emrullah Gazi) Türbesi",
+  "city": "Konya",
+  "district": "Emirgazi",
+  "period": "XIV. yüzyıl sonları – XV. yüzyıl başları (plan, örtü ve malzemeye göre tahmin)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "İlçeye adını veren Emir (Emrullah) Gazi'nin, Emirgazi Şehitliği içindeki tek katlı, daire planlı ve konik külahlı türbesi.",
+  "history": "Türbe, Emirgazi'de, 87036 Sokak'ta, Emirgazi Şehitliği içinde yer almaktadır. Emir (Emrullah) Gazi, ilçeye adını veren zattır.\n\nYapının kitâbesi bulunmadığı için kesin bir tarihlendirme yapılamamaktadır. Plan, üst örtü ve malzemesinden hareketle XIV. yüzyıl sonları ile XV. yüzyıl başlarında yapılmış olduğu düşünülmektedir. Türbe 2007'de Vakıflar Bölge Müdürlüğü tarafından tamir edilmiş, üst örtüsü bu tarihte kurşunla kaplanmıştır.\n\nTürbe tek katlı, daire planlıdır ve üzeri konik külahla örtülüdür. Moloz taştan yığma olarak inşa edilmiştir. Cepheler sadedir; türbeye doğu cephedeki tek kanatlı bir kapıdan girilir, girişin arka cephesinde de küçük kare bir pencere bulunur. Türbenin içinde ayak ve baş taşı olan bir mezar yer almaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-emirgazi-emirgazi-tomb/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-emirgazi-emirgazi-tomb/aerial-view.jpg",
+      "alt": "Havadan görünüm: ağaçlarla çevrili, otlarla kaplı alanda yeşil renkli yuvarlak çatılı küçük bir yapı; solda kıvrılan beton yürüyüş yolu ve direklerde Türk bayrakları",
+      "description": "Türbe ve şehitlik alanı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "tomb",
+      "image": "/images/konya-emirgazi-emirgazi-tomb/aerial-view.jpg",
+      "x": 77,
+      "y": 56,
+      "title": "Emirgazi Türbesi",
+      "text": "Tek katlı, daire planlı türbe moloz taştan yığma olarak inşa edilmiştir; içinde ayak ve baş taşı olan bir mezar vardır.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "id": "martyrs-cemetery",
+      "image": "/images/konya-emirgazi-emirgazi-tomb/aerial-view.jpg",
+      "x": 35,
+      "y": 72,
+      "title": "Emirgazi Şehitliği",
+      "text": "Türbe, Emirgazi'de 87036 Sokak'ta, Emirgazi Şehitliği içinde yer almaktadır.",
+      "sourceId": "inv-p186"
+    }
+  ],
+  "test": [
+    {
+      "question": "Emir (Emrullah) Gazi'yi önemli kılan özellik nedir?",
+      "options": [
+        "Konya'nın ilk kadısı olması",
+        "İlçeye adını veren zat olması",
+        "Bir medrese kurması",
+        "Bir hamam yaptırması"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre Emir (Emrullah) Gazi, ilçeye adını veren zattır.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "question": "Türbenin planı nasıldır?",
+      "options": [
+        "Daire planlı",
+        "Sekizgen planlı",
+        "Kare planlı",
+        "Haçvari planlı"
+      ],
+      "correct": 0,
+      "description": "Türbe tek katlı, daire planlıdır ve üzeri konik külahla örtülüdür.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "question": "2007 onarımında türbenin üst örtüsü neyle kaplanmıştır?",
+      "options": [
+        "Kiremitle",
+        "Çinkoyla",
+        "Ahşapla",
+        "Kurşunla"
+      ],
+      "correct": 3,
+      "description": "Türbe 2007'de Vakıflar Bölge Müdürlüğü tarafından tamir edilmiş, üst örtüsü kurşunla kaplanmıştır.",
+      "sourceId": "inv-p186"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p186",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Emirgazi, \"Emirgazi (Emrullah Gazi) Türbesi\"",
+      "page": "186"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "id": "iznik-ayasofya-mosque",
+  "name": "Ayasofya (Orhan) Camii",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Bizans dönemi kilisesi (inşa tarihi tartışmalı); H. 731 / M. 1331-32'de camiye dönüştürüldü",
+  "endowment": "Camiye dönüştürülmesini Orhan Gazi emretmiştir; vakıf kaydı kitapta belirtilmemiştir",
+  "summary": "325'te Birinci İznik Konsili'ne ev sahipliği yapan, Orhan Gazi'nin İznik'i fethinden sonra camiye dönüştürülen bazilika planlı yapı.",
+  "history": "İznik şehir merkezinde, Atatürk Caddesi ile Kılıçaslan Caddesi'nin kesiştiği köşede yer alan yapı, bugünkü yol kotunun yaklaşık 2,8 m altında kalır. Roma dönemine ait bir tapınak ya da gymnasion temelleri üzerine kurulduğu yönünde farklı görüşler vardır; mevcut kalıntılar tapınak ihtimalini daha güçlü kılar.\n\nKitabesi bulunmadığından inşa tarihi kesin değildir. Yapı üç dönemde değerlendirilir: V.-VI. yüzyıllardaki özgün inşa, 1065 depreminden sonraki kapsamlı müdahaleler ve 1331'deki Osmanlı fethini izleyen değişiklikler. Araştırmacılar özgün formun, sütunlarla ayrılmış üç nefli bazilikal planlı bir kilise olduğunda birleşir. Yapı, 325'te İmparator Konstantinos'un himayesinde toplanan ve 300'ü aşkın din adamının katıldığı Birinci İznik Konsili'ne, 787'de de ikonoklazmaya son veren Yedinci Konsil'e ev sahipliği yapmıştır.\n\n740 ve 1065 depremlerinde ağır zarar gören yapı yaklaşık 1,40 m yükseltilmiş, özgün sütunların yerine payeler eklenmiş, batı duvarı yeniden yapılmış ve pastoforion hücreleri eklenmiştir. Orhan Gazi, H. 731 / M. 1331-32'de İznik'i fethettikten hemen sonra, şehrin en büyük kilisesi olduğu için yapının camiye dönüştürülmesini emretmiştir. Evliya Çelebi, Kanûnî Sultan Süleyman'ın bir yangından sonra yapıyı Mimar Sinan'a onarttığını aktarır; bu onarımda üçlü kemer dizisi kaldırılmış, yapıya mihrap ve minare eklenmiştir.\n\nXIX. yüzyılda gezginler yapıyı harap ve yarı gömülü halde bulmuştur. 1935'te Alman Arkeoloji Enstitüsü'nün başlattığı çalışmalardan sonra farklı yıllarda müdahaleler yapılmıştır. Vakıflar Genel Müdürlüğü'nün 2006 tarihli projesiyle 2007'de başlayan restorasyon 2009'da tamamlanmış; yapı ahşap kırma çatıyla örtülmüş, minarenin eksik kısımları tamamlanmıştır. Yapı 2011'de cami olarak ibadete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-ayasofya-mosque/exterior-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-ayasofya-mosque/exterior-aerial.jpg",
+      "alt": "Ayasofya Camii'nin yüksekten görünümü: kesme taş ve tuğla duvarlar, kiremit örtülü kırma çatı, doğu ucunda turuncu kiremitli küçük kubbeler ve arkada minare",
+      "description": "Yapının genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-ayasofya-mosque/apse-exterior.jpg",
+      "alt": "Doğu cephesi: ortada çokgen apsis, iki yanında kiremit kaplı küçük kubbeli birimler, arkada kırma çatı",
+      "description": "Apsis ve doğu cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-ayasofya-mosque/west-side-minaret.jpg",
+      "alt": "Yapının havadan görünümü: önde beyaz taşlı açık alan ve kapılar, solda tuğla gövdeli minare, çevrede park ağaçları",
+      "description": "Minare ve çevresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-ayasofya-mosque/minaret.jpg",
+      "alt": "Tuğla örgülü çokgen gövdeli minare, şerefesi ve sivri külahı; önde kiremit çatı",
+      "description": "Minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-ayasofya-mosque/interior-high-arch.jpg",
+      "alt": "İç mekânda yüksek bir kemerin ardında pencereli duvar, ahşap minber ve hat levhaları; zeminde kırmızı halı",
+      "description": "Yan nefe açılan kemer",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-ayasofya-mosque/apse-interior.jpg",
+      "alt": "Apsisin içi: tuğla ve taş duvarlarda sıva izleri, üç kemerli pencere, zeminde camla korunan kalıntılar",
+      "description": "Apsis içi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-ayasofya-mosque/opus-sectile-floor.jpg",
+      "alt": "Renkli taş parçalarından daireler ve geometrik çerçevelerle oluşturulmuş mozaik zemin döşemesi",
+      "description": "Opus sectile mozaik döşeme",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-ayasofya-mosque/fresco-detail.jpg",
+      "alt": "Duvar yüzeyinde kesişen dairelerden oluşan sarı, pembe ve gri tonlu boya bezeme izleri",
+      "description": "Duvar bezemesi izleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "apse",
+      "image": "/images/iznik-ayasofya-mosque/apse-exterior.jpg",
+      "x": 49,
+      "y": 64,
+      "title": "Apsis",
+      "text": "Orta nefteki, içten yuvarlak, dıştan yedi cepheli apsisin yapının özgün planına ait olmadığı, muhtemelen daha geç bir müdahaleyle eklendiği bilinmektedir.",
+      "sourceId": "inv-p416"
+    },
+    {
+      "id": "pastophoria",
+      "image": "/images/iznik-ayasofya-mosque/apse-exterior.jpg",
+      "x": 19,
+      "y": 38,
+      "title": "Pastoforion odaları",
+      "text": "1065 depreminden sonra doğu uçtaki yan neflere eklenen odalar, altıgen kasnak üzerine oturan, kiremit kaplı birer kubbeyle örtülüdür. Kasnağın her cephesinde yuvarlak kemerli, tuğla örgülü pencereler bulunur.",
+      "sourceId": "inv-p413"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/iznik-ayasofya-mosque/minaret.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Minare",
+      "text": "Osmanlı döneminde eklenen tek şerefeli minare kuzeybatı köşededir. Gövdesi çokgen tuğla örgüyle yükselir; kurşun kaplı konik külahı yakın dönem restorasyonlarında yenilenmiştir. Kaidesinin Orhan Gazi dönemine, gövdesinin Mimar Sinan'ın onarımına ait olduğu yönünde görüşler vardır.",
+      "sourceId": "inv-p420"
+    },
+    {
+      "id": "opus-sectile",
+      "image": "/images/iznik-ayasofya-mosque/opus-sectile-floor.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Opus sectile döşeme",
+      "text": "Orta nefin batısındaki 3,70 × 3,70 m boyutlarındaki, opus sectile tekniğiyle işlenmiş mozaik döşemenin imparatorların taç giyme törenlerinde kullanıldığı düşünülmektedir.",
+      "sourceId": "inv-p416"
+    }
+  ],
+  "test": [
+    {
+      "question": "325 yılında bu yapıda hangi toplantı düzenlenmiştir?",
+      "options": [
+        "Yedinci Konsil",
+        "Ankara Savaşı barışı",
+        "Birinci İznik Konsili",
+        "Bursa'nın fethi kutlaması"
+      ],
+      "correct": 2,
+      "description": "Yapı, 325'te İmparator Konstantinos'un himayesinde düzenlenen ve 300'ü aşkın din adamının katıldığı Birinci İznik Konsili'ne ev sahipliği yapmıştır.",
+      "sourceId": "inv-p408"
+    },
+    {
+      "question": "Kanûnî Sultan Süleyman döneminde yangından zarar gören yapıyı kim onarmıştır?",
+      "options": [
+        "Mimar Sinan",
+        "Charles Texier",
+        "Hacı Özbek",
+        "Helmuth von Moltke"
+      ],
+      "correct": 0,
+      "description": "Büyük yangından sonra yapı Mimarbaşı Sinan'ın yönetiminde onarılmış; bu sırada mihrap ve minare eklenmiştir.",
+      "sourceId": "inv-p412"
+    },
+    {
+      "question": "Orta nefin batısındaki mozaik döşeme hangi teknikle işlenmiştir?",
+      "options": [
+        "Kalem işi",
+        "Vitray",
+        "Ahşap kündekâri",
+        "Opus sectile"
+      ],
+      "correct": 3,
+      "description": "3,70 × 3,70 m boyutlarındaki döşeme opus sectile tekniğiyle işlenmiştir.",
+      "sourceId": "inv-p416"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p407",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Ayasofya (Orhan) Camii\"",
+      "page": "407"
+    },
+    {
+      "id": "inv-p408",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Ayasofya (Orhan) Camii\"",
+      "page": "408"
+    },
+    {
+      "id": "inv-p411",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Ayasofya (Orhan) Camii\"",
+      "page": "411"
+    },
+    {
+      "id": "inv-p412",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Ayasofya (Orhan) Camii\"",
+      "page": "412"
+    },
+    {
+      "id": "inv-p413",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Ayasofya (Orhan) Camii\"",
+      "page": "413"
+    },
+    {
+      "id": "inv-p416",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Ayasofya (Orhan) Camii\"",
+      "page": "416"
+    },
+    {
+      "id": "inv-p420",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Ayasofya (Orhan) Camii\"",
+      "page": "420"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

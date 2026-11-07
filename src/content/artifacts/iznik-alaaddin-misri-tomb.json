@@ -1,0 +1,106 @@
+{
+  "id": "iznik-alaaddin-misri-tomb",
+  "name": "Alaaddin-i Mısri Türbesi",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Osmanlı · Alâaddin-i Mısrî'nin vefatı H. 799 / M. 1397",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Osmanlı'nın ilk müderrislerinden Alâaddin-i Mısrî'nin mezarının bulunduğu, duvarlarla çevrili üstü açık türbe alanı.",
+  "history": "Türbe, İznik'in Eşrefzâde Mahallesi'nde, Alaaddin Mısri Sokağı'ndadır.\n\nOsmanlı Devleti'nin ilk müderrislerinden olan Alâaddin-i Mısrî, eğitimini Acem diyarında tamamladıktan sonra Anadolu'ya gelmiş ve İznik'te Süleyman Paşa'nın yaptırdığı medreseye müderris olarak atanmıştır. Osmanlı'nın ilk şeyhülislamı kabul edilen Molla Fenârî onun talebeleri arasındadır. H. 799 / M. 1397'de vefat eden Alâaddin Efendi, bugün türbesi olarak kullanılan alana defnedilmiştir.\n\nDoğu-batı doğrultusunda dikdörtgen planlı türbe, duvarlarla çevrili bir alandadır. Bir dönem ahşap çatıyla örtülü olduğu rivayet edilse de bugün çatısı yoktur ve açık alan olarak korunmaktadır. İçinde biri kitabeli dört mezar vardır; mezarlardan birinin hemen yanında oldukça yaşlı bir servi ağacı dikkat çeker. Alâaddin Efendi'nin mezarı ve yola bakan cephe ferforje demir parmaklıklarla çevrilidir. Kuzey duvarı diğerlerinden alçaktır. Duvarlar 2008'de Vakıflar Bölge Müdürlüğü tarafından onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-alaaddin-misri-tomb/cypress-enclosure.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-alaaddin-misri-tomb/cypress-enclosure.jpg",
+      "alt": "Üstü açık türbe alanı: yaşlı bir servi ağacının altında ferforje parmaklıkla çevrili mezar, arkada taş-tuğla duvar, solda bilgi levhası",
+      "description": "Servi ağacı ve parmaklıklı mezar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-alaaddin-misri-tomb/inscribed-gravestone.jpg",
+      "alt": "Taş-tuğla duvar önünde, tepesinde yeşil sarık biçimli başlık bulunan, üzerinde Arapça harfli yazı satırları olan beyaz mermer mezar taşı",
+      "description": "Yazılı mezar taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cypress",
+      "image": "/images/iznik-alaaddin-misri-tomb/cypress-enclosure.jpg",
+      "x": 32,
+      "y": 17,
+      "title": "Yaşlı servi",
+      "text": "Türbedeki mezarlardan birinin hemen yanında oldukça yaşlı bir servi ağacı dikkat çeker.",
+      "sourceId": "inv-p468"
+    },
+    {
+      "id": "railing",
+      "image": "/images/iznik-alaaddin-misri-tomb/cypress-enclosure.jpg",
+      "x": 54,
+      "y": 64,
+      "title": "Ferforje parmaklık",
+      "text": "Alâaddin Efendi'nin mezarı ve yapının yola bakan cephesi ferforje demir parmaklıklarla çevrilmiştir.",
+      "sourceId": "inv-p468"
+    },
+    {
+      "id": "walls",
+      "image": "/images/iznik-alaaddin-misri-tomb/cypress-enclosure.jpg",
+      "x": 86,
+      "y": 49,
+      "title": "Çevre duvarları",
+      "text": "Türbe üstü açık, duvarlarla çevrili bir alandır. Kuzey duvarı diğerlerinden alçaktır; duvarlar 2008'de Vakıflar Bölge Müdürlüğü tarafından onarılmıştır.",
+      "sourceId": "inv-p468"
+    }
+  ],
+  "test": [
+    {
+      "question": "Alâaddin-i Mısrî İznik'te hangi medreseye müderris olarak atanmıştır?",
+      "options": [
+        "Süleyman Paşa'nın yaptırdığı medreseye",
+        "Orhan Gazi İmareti'ne",
+        "Hacı Özbek Camii'ne",
+        "Yeşil Camii'ne"
+      ],
+      "correct": 0,
+      "description": "Alâaddin-i Mısrî, İznik'te Süleyman Paşa tarafından yaptırılan medreseye müderris olarak atanmıştır.",
+      "sourceId": "inv-p468"
+    },
+    {
+      "question": "Osmanlı'nın ilk şeyhülislamı kabul edilen hangi âlim onun talebesidir?",
+      "options": [
+        "Şeyh Kutbüddin",
+        "Evliya Çelebi",
+        "Hacı Özbek",
+        "Molla Fenârî"
+      ],
+      "correct": 3,
+      "description": "Molla Fenârî, Alâaddin-i Mısrî'nin talebeleri arasındadır.",
+      "sourceId": "inv-p468"
+    },
+    {
+      "question": "Türbe alanında kaç mezar bulunmaktadır?",
+      "options": [
+        "İki",
+        "Dört",
+        "Bir",
+        "On iki"
+      ],
+      "correct": 1,
+      "description": "Türbe içinde, biri kitabeli olmak üzere dört mezar yer alır.",
+      "sourceId": "inv-p468"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p468",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Alaaddin-i Mısri Türbesi\"",
+      "page": "468"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

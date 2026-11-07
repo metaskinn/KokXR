@@ -1,0 +1,95 @@
+{
+  "id": "iznik-orhan-gazi-imaret-mosque",
+  "name": "Orhan Gazi (İmaret) Camii",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Erken Osmanlı · kitabesine göre H. 725 / M. 1325 veya H. 735 / M. 1335",
+  "endowment": "Orhan Gazi",
+  "summary": "Orhan Gazi'nin yaptırdığı, bugün zeytinlikler arasında yalnız temel izleri kalan zaviyeli/tabhaneli cami.",
+  "history": "Cami, İznik'in Yeni Mahalle'sinde, Rauf Denktaş Caddesi'nin doğusunda, İznik surlarının Yenişehir Kapısı'nın güneyinde, zeytin bahçeleri içinde yer alır. Yapıdan günümüze yalnızca plan şeması belirlenebilen temel izleri kalmıştır.\n\nYapı, Prof. Dr. Oktay Aslanapa'nın 1963-1964 yıllarındaki kazılarıyla ortaya çıkarılmıştır. Bugün İznik Türk İslam Eserleri Müzesi'nde sergilenen, bir köşesi kırık kitabesine göre cami Orhan Gazi tarafından H. 725 / M. 1325 veya H. 735 / M. 1335 yıllarında yaptırılmıştır. 2010-2011'de Uludağ Üniversitesi kazıları yürütmüş, kazılar belirli aralıklarla sürmektedir. Aynı dönemde yapıldığı kabul edilen Orhan Gazi Hamamı'nın kalıntısı caminin güneydoğusundadır.\n\nKazı bulgularına ve tarihî kaynaklara göre cami zaviyeli/tabhaneli plandadır ve Bilecik Orhan Gazi İmareti'ne benzer. Kuzeyde altı mermer direkle taşınan 24,70 × 3,00 m'lik revaklı son cemaat yeri, 10 × 8,30 m'lik harim ön mekânı, bunun iki yanında 6,18 × 12,35 m'lik tabhaneler ve iki basamakla çıkılan 7,45 × 9,85 m'lik asıl ibadet bölümü bulunur. Harimin altıgen çinilerle kaplı, mihrap çevresinin gösterişli alçı süslemeli olduğu anlaşılmaktadır. Örtüsünün kubbe mi kırma çatı mı olduğu tartışmalıdır; minarenin yeri kesin değildir.\n\nEvliya Çelebi yapının terk edilmiş hâlinden söz etmiş, bazı Batılı seyyahlar çini kaplamalarıyla İznik Yeşil Camii ile yarışabileceğini yazmıştır. Yapının yeniden ihyasına yönelik çalışmalar sürdürülmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-orhan-gazi-imaret-mosque/foundations-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-orhan-gazi-imaret-mosque/foundations-aerial.jpg",
+      "alt": "Zeytinliklerin ortasında, tepeden görülen dikdörtgen temel izleri: ortada bir mekân ve iki yanında bölmeler; üst kısımda yerde yatan beyaz taş parçaları",
+      "description": "Zeytinlikler arasındaki temel izleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "foundations",
+      "image": "/images/iznik-orhan-gazi-imaret-mosque/foundations-aerial.jpg",
+      "x": 50,
+      "y": 56,
+      "title": "Temel izleri",
+      "text": "Camiden günümüze yalnızca plan şeması belirlenebilen temel izleri kalmıştır. Yapı, Prof. Dr. Oktay Aslanapa'nın 1963-1964 kazılarıyla ortaya çıkarılmıştır.",
+      "sourceId": "inv-p445"
+    },
+    {
+      "id": "olive-groves",
+      "image": "/images/iznik-orhan-gazi-imaret-mosque/foundations-aerial.jpg",
+      "x": 14,
+      "y": 19,
+      "title": "Zeytin bahçeleri",
+      "text": "Cami, Yeni Mahalle'de, Rauf Denktaş Caddesi'nin doğusunda, zeytin bahçeleri içinde yer alır.",
+      "sourceId": "inv-p444"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin kalıntılarını 1963-1964 kazılarıyla kim ortaya çıkarmıştır?",
+      "options": [
+        "Prof. Dr. Oktay Aslanapa",
+        "Evliya Çelebi",
+        "Charles Texier",
+        "Mimar Sinan"
+      ],
+      "correct": 0,
+      "description": "Yapı, Prof. Dr. Oktay Aslanapa'nın 1963-1964 yıllarındaki kazıları sonucunda ortaya çıkarılmıştır.",
+      "sourceId": "inv-p445"
+    },
+    {
+      "question": "Cami hangi plan tipinde inşa edilmiştir?",
+      "options": [
+        "Bazilikal",
+        "Çok kubbeli Ulu Cami tipi",
+        "Zaviyeli/tabhaneli",
+        "Avlulu selatin camisi"
+      ],
+      "correct": 2,
+      "description": "Bulgular, caminin zaviyeli/tabhaneli plan tipinde olduğunu ve Bilecik Orhan Gazi İmareti'ne benzediğini gösterir.",
+      "sourceId": "inv-p445"
+    },
+    {
+      "question": "Bazı Batılı seyyahlar, çini kaplamaları bakımından bu camiyi hangi yapıyla karşılaştırmıştır?",
+      "options": [
+        "Bursa Ulu Camii",
+        "Ayasofya",
+        "İznik Yeşil Camii",
+        "Hacı Özbek Camii"
+      ],
+      "correct": 2,
+      "description": "Seyyahlar, yapının çini tezyinatıyla İznik Yeşil Camii ile yarışabileceğini belirtmiştir.",
+      "sourceId": "inv-p445"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p444",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Orhan Gazi (İmaret) Camii\"",
+      "page": "444"
+    },
+    {
+      "id": "inv-p445",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Orhan Gazi (İmaret) Camii\"",
+      "page": "445"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

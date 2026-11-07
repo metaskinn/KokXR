@@ -1,0 +1,175 @@
+{
+  "id": "iznik-nilufer-hatun-imaret",
+  "name": "Nilüfer Hatun İmareti",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Erken Osmanlı · İnşa kitabesine göre H. 790 / M. 1388",
+  "endowment": "I. Murad tarafından annesi Nilüfer Hatun adına yaptırılmıştır",
+  "summary": "I. Murad'ın annesi Nilüfer Hatun adına 1388'de yaptırdığı, Osmanlı'nın ilk dönem zaviyeli/tabhaneli yapılarından olan ve bugün müze olarak kullanılan imaret.",
+  "history": "İznik'te, Eşrefoğlu Mahallesi'nde, Yeşil Camii'nin batısında yer alır. Cümle kapısı üzerindeki kitabeye göre H. 790 / M. 1388 yılında I. Murad tarafından annesi Nilüfer Hatun adına yaptırılmıştır. XIV. yüzyıl Osmanlı mimarisinin özgün ve önemli örneklerinden biridir ve Osmanlı'nın ilk dönem zaviyeli/tabhaneli yapıları grubundandır.\n\nYapının merkezinde büyük bir kubbeyle örtülü, 10,2 × 10,2 m ölçülerinde kare planlı sofa yer alır. Sofanın batısında art arda sıralanmış iki kubbeli mekân, kuzey ve güneyinde tabhane odaları bulunur. Doğuda ise ortası kubbeli, yanları ayna tonozlu, beş sivri kemerli bir son cemaat mahalli vardır. Beden duvarları zeminden yaklaşık 50 cm yüksekliğe kadar blok mermerle, bu seviyeden sonra üç sıra tuğla ve bir sıra küfeki taşla örülmüştür. Duvar örgü tekniği, cephe süslemeleri ve payelerin biçimi, yapımda İznik'te yaşayan Bizanslı ustaların çalışmış olabileceğini düşündürür.\n\nYapının işlevi konusunda farklı görüşler vardır: bazı araştırmacılar yoksullara ve yolculara hizmet veren bir aşevi olabileceğini, bazıları ise dervişlerin konaklayabileceği çok işlevli bir zaviye yapısı olarak tasarlandığını savunur. Uzun süre harap kalan yapı, Yunan işgali sırasında ağır hasar görmüş; bir dönem imalathane, ahır ve depo olarak kullanılmış, 1950'ye kadar nakliyecilerin geçici barınağı olmuştur. 1955'teki kapsamlı restorasyondan sonra \"İznik Müzesi\" olarak ziyarete açılmış, bugün \"Türk İslam Eserleri Müzesi\" adıyla hizmet vermektedir.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-nilufer-hatun-imaret/aerial-portico.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-nilufer-hatun-imaret/aerial-portico.jpg",
+      "alt": "Nilüfer Hatun İmareti'nin havadan görünümü: kiremit kaplı kubbeler, aydınlık fenerli büyük kubbe, sağda sütunlu ve sivri kemerli revak, tuğla ve taş sıralı duvarlar",
+      "description": "Havadan genel görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-nilufer-hatun-imaret/portico-entrance.jpg",
+      "alt": "Revak altından ana mekânın girişi: mermer söveli, çift kanatlı ahşap kapı, iki yanında demir parmaklıklı ve sivri kemer alınlıklı birer pencere, mermer döşeli zemin",
+      "description": "Revak ve ana giriş",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-nilufer-hatun-imaret/top-view.jpg",
+      "alt": "İmaretin tepeden görünümü: ortada büyük kubbe, iki yanında birer kubbe, altta art arda iki kubbe; çevrede bahçe ve taş eserlerin dizildiği avlu",
+      "description": "Tepeden plan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-nilufer-hatun-imaret/domes.jpg",
+      "alt": "Kiremit kaplı kubbelerin yakından görünümü; ortada fenerli büyük kubbe, arkada dağlar",
+      "description": "Kubbeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-nilufer-hatun-imaret/museum-interior.jpg",
+      "alt": "Müze olarak kullanılan iç mekân: beyaz sıvalı kemerler altında ışıklı sergi vitrinleri ve altıgen tuğla döşeme",
+      "description": "Müze iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-nilufer-hatun-imaret/courtyard-stones.jpg",
+      "alt": "Avluda yerde duran yazıtlı mermer taşlar ve oymalı bir çeşme taşı; arkada revak sütunları",
+      "description": "Avludaki taş eserler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-nilufer-hatun-imaret/aerial-lake.jpg",
+      "alt": "İmaretin kuzeyden ağaçlar arasında havadan görünümü; arkada İznik evleri, göl ve dağlar",
+      "description": "İznik içindeki konumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "main-dome",
+      "image": "/images/iznik-nilufer-hatun-imaret/top-view.jpg",
+      "x": 56,
+      "y": 40,
+      "title": "Büyük kubbeli sofa",
+      "text": "Ana giriş, 10,2 × 10,2 m ölçülerindeki kare planlı sofaya açılır. Sofa, Türk üçgenleriyle geçilen onikigen kasnağa oturan kiremit kaplı bir kubbeyle örtülüdür; kubbe tepesinde bir aydınlık feneri vardır.",
+      "sourceId": "inv-p504"
+    },
+    {
+      "id": "hospice-rooms",
+      "image": "/images/iznik-nilufer-hatun-imaret/top-view.jpg",
+      "x": 37,
+      "y": 40,
+      "title": "Tabhane mekânları",
+      "text": "Büyük kubbeli sofanın sağında ve solunda 7,61 × 11,77 m ölçülerinde, içlerinde ocak nişleri bulunan tabhaneli mekânlar yer alır. Her biri on kenarlı kasnağa oturan kiremit kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p505"
+    },
+    {
+      "id": "entrance",
+      "image": "/images/iznik-nilufer-hatun-imaret/portico-entrance.jpg",
+      "x": 51,
+      "y": 48,
+      "title": "Ana giriş",
+      "text": "Ana mekâna giriş, iki kademeli kemer içine alınmış, mermer söveli ve Bursa kemerli bir kapıyla sağlanır. Kapının iki yanında mermer söveli, sivri kemer alınlıklı birer pencere vardır.",
+      "sourceId": "inv-p503"
+    },
+    {
+      "id": "portico",
+      "image": "/images/iznik-nilufer-hatun-imaret/aerial-portico.jpg",
+      "x": 77,
+      "y": 60,
+      "title": "Son cemaat mahalli",
+      "text": "Doğuda, ortası kubbeli ve yanları ayna tonozlu, beş sivri kemerli bir son cemaat mahalli yer alır. Revaklı alan 25 × 8 m ölçülerindedir; mukarnas başlıklı mermer sütunlar ve yığma payelerle bölümlere ayrılır.",
+      "sourceId": "inv-p502"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cümle kapısındaki kitabeye göre imaret hangi yılda yaptırılmıştır?",
+      "options": [
+        "H. 790 / M. 1388",
+        "H. 763 / M. 1361",
+        "H. 931 / M. 1525",
+        "M. 1955"
+      ],
+      "correct": 0,
+      "description": "Kitabeye göre imaret H. 790 / M. 1388 yılında I. Murad tarafından yaptırılmıştır.",
+      "sourceId": "inv-p501"
+    },
+    {
+      "question": "I. Murad imareti kimin adına yaptırmıştır?",
+      "options": [
+        "Annesi Nilüfer Hatun",
+        "Babası Orhan Gazi",
+        "Kendi adına",
+        "İznik halkı adına"
+      ],
+      "correct": 0,
+      "description": "Kitabede imaretin, I. Murad tarafından annesi Nilüfer Hatun adına yaptırıldığı yazar.",
+      "sourceId": "inv-p501"
+    },
+    {
+      "question": "1955'teki kapsamlı restorasyondan sonra yapı hangi işlevle ziyarete açılmıştır?",
+      "options": [
+        "Müze",
+        "Medrese",
+        "Hamam",
+        "Cami"
+      ],
+      "correct": 0,
+      "description": "1955'teki restorasyondan sonra \"İznik Müzesi\" olarak açılmış, bugün \"Türk İslam Eserleri Müzesi\" adıyla hizmet vermektedir.",
+      "sourceId": "inv-p506"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p501",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Nilüfer Hatun İmareti\"",
+      "page": "501"
+    },
+    {
+      "id": "inv-p502",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Nilüfer Hatun İmareti\"",
+      "page": "502"
+    },
+    {
+      "id": "inv-p503",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Nilüfer Hatun İmareti\"",
+      "page": "503"
+    },
+    {
+      "id": "inv-p504",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Nilüfer Hatun İmareti\"",
+      "page": "504"
+    },
+    {
+      "id": "inv-p505",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Nilüfer Hatun İmareti\"",
+      "page": "505"
+    },
+    {
+      "id": "inv-p506",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Nilüfer Hatun İmareti\"",
+      "page": "506"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

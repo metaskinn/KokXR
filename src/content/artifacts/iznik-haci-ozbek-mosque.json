@@ -1,0 +1,139 @@
+{
+  "id": "iznik-haci-ozbek-mosque",
+  "name": "Hacı Özbek Camii",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Erken Osmanlı · H. 734 / M. 1333-1334",
+  "endowment": "Hacı Özbek bin Muhammed",
+  "summary": "Kitabesiyle günümüze ulaşan, Osmanlı dönemine ait bilinen en erken tarihli cami.",
+  "history": "İznik'in Eşrefzâde Mahallesi'nde, Kılıçaslan Caddesi'nde, Hüseyin Oktay Sokak'ta bulunan cami halk arasında \"Çarşı Camii\" olarak da anılır. H. 734 / M. 1333-1334 yıllarında Hacı Özbek bin Muhammed tarafından yaptırılmıştır. Kitabesiyle günümüze ulaşan yapı, Osmanlı dönemine ait bilinen en erken tarihli camidir ve Batı Anadolu'da erken Osmanlı devrinde inşa edilen merkezi kubbeli cami tipinin ilk örneği kabul edilir.\n\nAslında batı cephesindeki giriş kapısının üzerinde olduğu anlaşılan kitabe, \"Bu mübarek mescidi, Allah Taala'nın rızasını gözeterek, ihlas ve samimiyetle Mehmed oğlu Hacı Özbek H. 734 / M. 1333 yılında inşa ettirmiştir\" anlamındadır.\n\n7,92 × 7,92 m ölçülerinde kare planlı yapı, Türk üçgenleriyle geçilen, on iki köşeli bir kasnağa oturan, kiremit örtülü bir kubbeyle örtülüdür. Özgün yapıda, iki devşirme Bizans mermer sütunuyla üç bölüme ayrılan tonozlu, revaklı bir son cemaat yeri vardı; bu bölüm 1940'lı yıllardaki yol genişletme çalışmaları sırasında yıkılmıştır. 2001'de Vakıflar Bölge Müdürlüğü'nün onarımında ahşap çatılı, kiremit örtülü eğimli bir son cemaat yeri yeniden yapılmış, batı cephedeki kapı pencereye dönüştürülmüş ve kitabe bu pencerenin içine yerleştirilmiştir.\n\nDuvarlarda Bursa ve İznik'in erken dönem yapılarında sık görülen taş-tuğla almaşık örgü kullanılmış, saçak altları testere dişi tuğla dizileriyle süslenmiştir. Yapının minaresi yoktur.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-haci-ozbek-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-haci-ozbek-mosque/exterior.jpg",
+      "alt": "Hacı Özbek Camii: taş ve tuğla almaşık örgülü duvarlar üzerinde kiremit örtülü kubbe, önde kiremit çatılı alçak bölüm ve kemerli pencereler",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-ozbek-mosque/narthex-side.jpg",
+      "alt": "Kiremit çatılı alçak bölümde açık kemerli giriş, pencereler ve kapı; arkada kasnaklı kubbe",
+      "description": "Son cemaat yeri tarafı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-ozbek-mosque/mihrab-interior.jpg",
+      "alt": "Beyaz badanalı iç mekân: ortada mermer mihrap, sağında ahşap minber, duvar diplerinde ahşap kaplama, zeminde mavi halı",
+      "description": "İç mekân ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-haci-ozbek-mosque/aerial-top.jpg",
+      "alt": "Caminin tepeden görünümü: kiremit kubbe ve çatılar, çevresindeki evler ve sokak",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/iznik-haci-ozbek-mosque/exterior.jpg",
+      "x": 62,
+      "y": 30,
+      "title": "Kubbe ve kasnak",
+      "text": "Yapı, Türk üçgenleriyle geçişi sağlanan, 4,00 m yüksekliğindeki on iki köşeli bir kasnağa oturan, kiremitle örtülü bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p434"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/iznik-haci-ozbek-mosque/exterior.jpg",
+      "x": 67,
+      "y": 63,
+      "title": "Almaşık duvar örgüsü",
+      "text": "Taş ve tuğlanın birlikte kullanıldığı almaşık örgüde taşların arasına dikey tuğlalar yerleştirilmiştir. Saçak altlarında testere dişi biçiminde tuğla diziler vardır.",
+      "sourceId": "inv-p435"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/iznik-haci-ozbek-mosque/narthex-side.jpg",
+      "x": 38,
+      "y": 59,
+      "title": "Son cemaat yeri",
+      "text": "Özgün revaklı son cemaat yeri 1940'larda yol genişletme sırasında yıkılmıştır. 2001'deki onarımda ahşap çatılı, kiremit örtülü eğimli bir son cemaat yeri yeniden yapılmıştır; yeni malzemesiyle harim duvarlarından kolayca ayırt edilir.",
+      "sourceId": "inv-p435"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/iznik-haci-ozbek-mosque/mihrab-interior.jpg",
+      "x": 49,
+      "y": 52,
+      "title": "Mihrap",
+      "text": "Mihrap gri ve beyaz dalgalı mermerdendir ve iki sarı silindirik sütunla çevrilidir. Üstünde vitray boyalı küçük bir aydınlık penceresi vardır.",
+      "sourceId": "inv-p435"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hacı Özbek Camii halk arasında hangi adla da anılır?",
+      "options": [
+        "Yeşil Camii",
+        "Çarşı Camii",
+        "İmaret Camii",
+        "Orhan Camii"
+      ],
+      "correct": 1,
+      "description": "Cami halk arasında \"Çarşı Camii\" olarak da anılır.",
+      "sourceId": "inv-p433"
+    },
+    {
+      "question": "Kitabesine göre cami hangi yılda yaptırılmıştır?",
+      "options": [
+        "H. 799 / M. 1397",
+        "H. 734 / M. 1333-1334",
+        "H. 821 / M. 1418",
+        "H. 731 / M. 1331"
+      ],
+      "correct": 1,
+      "description": "Cami H. 734 / M. 1333-1334'te Hacı Özbek bin Muhammed tarafından yaptırılmıştır.",
+      "sourceId": "inv-p433"
+    },
+    {
+      "question": "Caminin özgün son cemaat yerine ne olmuştur?",
+      "options": [
+        "Depremde gömülmüştür",
+        "Müzeye taşınmıştır",
+        "Hiç değişmeden korunmuştur",
+        "1940'larda yol genişletme sırasında yıkılmıştır"
+      ],
+      "correct": 3,
+      "description": "Revaklı son cemaat yeri 1940'lı yıllardaki yol genişletme çalışmalarında yıkılmış, 2001'de yeniden yapılmıştır.",
+      "sourceId": "inv-p435"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p433",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Hacı Özbek Camii\"",
+      "page": "433"
+    },
+    {
+      "id": "inv-p434",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Hacı Özbek Camii\"",
+      "page": "434"
+    },
+    {
+      "id": "inv-p435",
+      "text": "Vakıf Eserleri Envanteri – Bursa, İznik, \"Hacı Özbek Camii\"",
+      "page": "435"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

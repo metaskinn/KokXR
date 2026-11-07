@@ -59,8 +59,8 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 
 ### E. Performans ve kapanış
 - [x] **G16. perf:** Büyük parçalar listelenir; 3B/VR sayfaları tembel yüklenir (davranış değişmez, testler geçer); ilk açılış süresi önce/sonra günlüğe.
-- [ ] **G17. birleştirme:** Dallar `master`'a yerel birleşir; tam test (e2e 3 yapılandırma + tarayıcı testleri).
-- [ ] **G18. docs/sabah-brifingi.md:** 1 sayfa: ne bitti/bitmedi, 09.00 öncesi 5 adım (Supabase kurulumu, push kararı, Vercel'in `master`'a bağlanması, PWA/APK telefonda deneme, Quest şarjı) ve `gorev_dagilimi.md`'deki 4 kişinin ilk 2 saatlik işi. Sonra dur.
+- [x] **G17. birleştirme:** Dallar `master`'a yerel birleşir; tam test (e2e 3 yapılandırma + tarayıcı testleri).
+- [x] **G18. docs/sabah-brifingi.md:** 1 sayfa: ne bitti/bitmedi, 09.00 öncesi 5 adım (Supabase kurulumu, push kararı, Vercel'in `master`'a bağlanması, PWA/APK telefonda deneme, Quest şarjı) ve `gorev_dagilimi.md`'deki 4 kişinin ilk 2 saatlik işi. Sonra dur.
 
 ## Sabah sorulacaklar
 - Lisanslar: çini fotoğrafı (muradiye-cini.jpg) kaynağı, 360TR gömme izni, derinlik modeli lisansı, vazo/kılıç modeli lisansı ve arşiv fotoğraflarının kullanım izni docs/lisanslar.md'de 'doğrulanmadı'. Organizasyona/sahibine sorulmalı.
@@ -72,7 +72,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - Vakıf Katılım yayın adresleri (`src/data/vrEserler.ts`) doğru görünüyor (sayfadaki bağlantılarla aynı); bot istekleri 404 alıyor, tarayıcıda açılır.
 - APK: JDK 21 kurulu değil (makinede 17). Kurulumu sistem değişikliği olduğu için yapmadım. `brew install --cask temurin@21` sonrası `docs/apk.md` adımlarıyla APK derlenir.
 - Supabase tabloları henüz kurulu değil (REST `eserler` 404). `docs/supabase-kurulum.md` adımlarını yap; kurulana kadar yönetim giriş istemez, yerel kayıtla çalışır. Kurulduktan sonra giriş, kayıt, onay ve görsel yükleme gerçek sunucuda denenmeli.
-- `tests/kilic.mjs` 1280'de zaman aşımı (G1 notu): gerçek hata mı yavaşlık mı, G17'de master'da bakılacak.
+- `tests/kilic.mjs` 1280'de zaman aşımı: G17'de eski master'da (60d7787, FINAL_PLANI öncesi) aynı hata çıktı; yeni işlerden kaynaklanmıyor. Tıklanan öğe yazılımsal çizimde 'stable' olmuyor (animasyon). Gerçek cihazda/tarayıcıda elle denenmeli.
 
 ## Günlük
 - G1: Hata avı (tests/hata-avi.mjs, 24 rota + /olmayan-sayfa, 1280 ve 360) tek bulgu verdi: 360 px `/atolye/kilic` yatay taşma (`.kilic-sahne-isaret` 406 px). `src/pages/kilic.css` mobil bloğunda `overflow-x:clip` ile giderildi; hata avı artık temiz, `ui` geçti. Not: `tests/kilic.mjs` 1280'de 'Parçayı yerleştir' tıklamasında zaman aşımı veriyor; düzeltme yalnız mobil medya bloğunda olduğundan ilgisiz, önceden var olan/yazılımsal çizim yavaşlığı olarak izleniyor (G17'de master üzerinde tekrar denenecek). Konsol 404'ü yalnız `.env` doluyken Supabase tablosu olmadığından; testler boş değişkenle derleniyor.
@@ -91,3 +91,5 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G13 (docs/sunum): `docs/sunum-taslagi.md` şartname 5.4 sırasında 10 slayt; çalışan/vizyon tablosu; Şanlıurfa çıkarıldı; kılıç ek deneyim.
 - G14: `docs/juri-soru-cevap.md` 30 soru, her cevapta dosya yolu.
 - G16 (perf/yukleme): atölye, VR, Öğretmen, Vizyon, Kütüphane sayfaları tembel yüklenir (App.tsx tek Suspense). Ana paket 563,6 → 517,9 kB (gzip 167,1 → 152,6 kB); three ve maket zaten ayrıydı. Davranış değişmedi; `tests/vazo-xr-dugme.mjs` düğmenin etkinleşmesini bekleyecek şekilde düzeltildi (yarış koşulu). FPS ölçülmedi (yalnız gerçek cihazda).
+- G17: zincir `master`'a fast-forward birleştirildi (yerel, push yok). Sonuçlar: test:hizli geçti; test:tarayici (maket-xr-dugme, vazo-xr-dugme, maket-ic) geçti; tekil: pwa, galeri, ui, yolculuk, yonetim, harita, erisilebilirlik, hata-avi (42 rota) geçti; test:e2e (Chromium 1280, 360, Firefox 1280) çıkış 0; kilic KALDI (eski master'da da aynı, bkz. Sabah sorulacaklar).
+- G18: `docs/sabah-brifingi.md` yazıldı. Liste bitti.

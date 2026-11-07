@@ -327,3 +327,14 @@ legend { font-weight: 600; margin-bottom: 1rem; }
 .eser-filtre select, .eser-filtre button { min-height: 44px; font: inherit; padding: 0 .75rem; }
 .eser-filtre p { margin: 0; align-self: center; }
 @media (max-width: 600px) { .eser-filtre label, .eser-filtre button { flex: 1 1 100%; } }
+
+.erisilebilirlik-araci { display: flex; gap: .4rem; margin-left: auto; }
+.erisilebilirlik-araci button { min-height: 44px; min-width: 44px; padding: 0 .7rem; font-size: .85rem; }
+.erisilebilirlik-araci button[aria-pressed="true"] { background: #000; color: #fff; }
+.sesli-dinle { margin-bottom: 1rem; }
+html[data-kontrast="yuksek"] {
+  --zemin: #fff; --yuzey: #fff; --metin: #000; --ikincil: #1a1a1a; --yesil: #0b3320; --yesil-koyu: #000; --yesil-acik: #fff;
+  --bronz: #5a3200; --cizgi: #000; --kontrol-cizgi: #000; --odak: #b00000; color: #000; background: #fff;
+}
+html[data-kontrast="yuksek"] a { text-decoration: underline; }
+html[data-kontrast="yuksek"] button, html[data-kontrast="yuksek"] .dugme { border-color: #000; }

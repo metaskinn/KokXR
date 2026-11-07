@@ -1,3 +1,4 @@
+import SesliDinle from '../components/SesliDinle'
 import { Link, useParams } from 'react-router-dom'
 import type { Eser } from '../types/eser'
 import SanalGezinti from '../components/SanalGezinti'
@@ -35,7 +36,7 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
     {eser.tur360 && <Tur360 tur={eser.tur360} ad={eser.ad} />}
     {eser.tur && <SanalGezinti tur={eser.tur} kaynaklar={eser.kaynaklar} />}
     <section className="bolum" aria-labelledby="tarihce-basligi">
-      <h2 id="tarihce-basligi">Tarihçe</h2><p className="tarihce">{eser.tarihce}</p>
+      <h2 id="tarihce-basligi">Tarihçe</h2><SesliDinle metin={eser.tarihce} /><p className="tarihce">{eser.tarihce}</p>
       {eser.kaynaklar.filter((kaynak) => kaynak.id.endsWith('-tarihce')).map((kaynak) => <KaynakSatiri key={kaynak.id} kaynaklar={eser.kaynaklar} kaynakId={kaynak.id} />)}
     </section>
     <ZamanKatmani eser={eser} />

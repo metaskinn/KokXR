@@ -28,6 +28,7 @@ Yalnız görevin gerektirdiği satırı oku.
 | Konu | Yer |
 |---|---|
 | Sunum vaatleri | `docs/presentation-promises.md` |
+| Yönetim paneli planı | `docs/admin-panel-plan.md` |
 | Şartname, puanlama | `docs/specification.md` (5. bölüm) |
 | **Plan ve durum (işe buradan başla)** | `PLAN.md` |
 | Quest durumu | `QUEST-HANDOFF.md` |

@@ -195,7 +195,7 @@ await section('Vase workshop', async () => {
 
 await section('Admin', async () => {
   await writing('Yönetim ekranı: içerik ekleme ve düzenleme')
-  await click(page.getByRole('link', { name: 'Yönetim', exact: true })); await wait(1800)
+  await goToPage('/admin'); await wait(1200)
   await click(page.getByRole('link', { name: /Düzenle\s*: Bursa Ulu Camii/ })); await wait(1300)
   const summary = page.locator('#summary')
   await see(summary); await wait(600)
@@ -207,7 +207,7 @@ await section('Admin', async () => {
   const card = page.locator('.artifact-card', { hasText: 'Demo: yönetim' })
   await see(card); await wait(2800)
   await writing('')
-  await click(page.getByRole('link', { name: 'Yönetim', exact: true })); await wait(800)
+  await goToPage('/admin')
   await click(page.getByRole('button', { name: /Varsayılana döndür\s*: Bursa Ulu Camii/ })); await wait(800)
   await click(page.getByRole('link', { name: 'KökXR ana sayfa' })); await wait(1800)
   await writing('KökXR — Dokunamadığın tarihe dokun.')

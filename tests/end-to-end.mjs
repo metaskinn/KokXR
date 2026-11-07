@@ -58,13 +58,13 @@ await control('2 model: open, rotate, zoom, shatter, keyboard', async () => {
   condition(await p.getByText('Temsili maket').count(), 'illustrative label missing');
 });
 await control('6 admin: edit, home page, restore default', async () => {
-  await p.goto(URL); await p.getByRole('link', { name: 'Yönetim', exact: true }).click();
+  await p.goto(`${URL}/admin`);
   await p.getByRole('link', { name: /Düzenle\s*: Bursa Ulu Camii/ }).click();
   await p.locator('#summary').fill('TEST ÖZETİ — yönetim ekranından değiştirildi.');
   await p.getByRole('button', { name: 'Kaydet' }).click(); await p.waitForTimeout(500);
   await p.getByRole('link', { name: 'KökXR ana sayfa' }).click();
   condition(await p.getByText('TEST ÖZETİ').count(), 'change missing on artifacts page');
-  await p.getByRole('link', { name: 'Yönetim', exact: true }).click();
+  await p.goto(`${URL}/admin`);
   await p.getByRole('button', { name: /Varsayılana döndür\s*: Bursa Ulu Camii/ }).click();
   await p.getByRole('link', { name: 'KökXR ana sayfa' }).click();
   condition(!(await p.getByText('TEST ÖZETİ').count()), 'not restored to default');

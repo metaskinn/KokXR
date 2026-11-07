@@ -67,7 +67,6 @@ main { max-width: 1160px; padding: 0 1.5rem 4rem; margin: auto; }
 .site-header nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.85rem; font-size: 0.95rem; font-weight: 600; color: var(--secondary); text-decoration: none; border-radius: 999px; }
 .site-header nav a:hover { color: var(--text); background: var(--surface-gray); }
 .site-header nav a[aria-current='page'] { color: var(--highlight-dark); background: var(--highlight-open); font-weight: 700; }
-.site-header nav .admin-link { margin-left: 0.5rem; border: 1px solid var(--stroke); }
 .workshop-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 1.25rem 0 0; }
 .workshop-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.1rem; font-size: 0.95rem; font-weight: 700; color: var(--secondary); text-decoration: none; border: 1px solid var(--stroke); border-radius: 999px; background: var(--surface); }
 .workshop-nav a:hover { color: var(--text); border-color: var(--control-stroke); }
@@ -267,7 +266,6 @@ legend { font-weight: 600; margin-bottom: 1rem; }
   .site-header-inner { padding: 0.5rem 1rem; gap: 0.25rem; flex-wrap: wrap; }
   .site-header nav { gap: 0; }
   .site-header nav a { padding: 0 0.6rem; font-size: 0.875rem; }
-  .site-header nav .admin-link { margin-left: 0.25rem; }
   .workshop-nav a { padding: 0 0.75rem; font-size: 0.875rem; }
   .artifacts-section { padding-top: 1.5rem; }
   .site-footer { padding: 1.25rem 1rem; align-items: start; flex-direction: column; }

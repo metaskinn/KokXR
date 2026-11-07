@@ -84,12 +84,12 @@ node tests/xr-sim/sim.mjs ana
 
 ## Ürün yapısı
 
-Üst menü: **Eserler (`/artifacts`, `/` buraya yönlenir), Mekanlar (`/places`), Atölyeler (`/workshops`: vazo, kılıç, çini), Yönetim.** Keşfet ana sayfası 2026-11-07'de kaldırıldı; eser sayfalarından Bilgini sına, Zaman katmanı, Sanal gezinti ve 360° tur bölümleri de çıkarıldı (veriler JSON'da duruyor). Yolculuk, öğretmen paneli, vizyon ve onay akışı sayfaları 2026-11-07'de kullanıcı isteğiyle kaldırıldı.
+Üst menü: **Eserler (`/artifacts`, `/` buraya yönlenir), Mekanlar (`/places`), Atölyeler (`/workshops`: vazo, kılıç, çini).** Yönetim bağlantısı 2026-11-07'de üst menüden kaldırıldı; `/admin` adresle açılır. Keşfet ana sayfası 2026-11-07'de kaldırıldı; eser sayfalarından Bilgini sına, Zaman katmanı, Sanal gezinti ve 360° tur bölümleri de çıkarıldı (veriler JSON'da duruyor). Yolculuk, öğretmen paneli, vizyon ve onay akışı sayfaları 2026-11-07'de kullanıcı isteğiyle kaldırıldı.
 
 | Kullanıcı | Nereden girer |
 |---|---|
 | Öğrenci, jüri | Eserler, Mekanlar, Atölyeler |
-| Yönetici | Üst menü: Yönetim |
+| Yönetici | Doğrudan `/admin` adresi |
 
 Erişilebilirlik ölçütleri: adımlar kilitsiz, geri tuşu çalışır, adım değişince odak başlığa geçer, durum yalnız renkle anlatılmaz, hedefler en az 44 px, 320 px'te yatay taşma yok.
 

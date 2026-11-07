@@ -37,7 +37,7 @@ export default function App() {
 
   return <>
     <a className="skip" href="#main-content">Ana içeriğe geç</a>
-    <header className="site-header"><div className="site-header-inner"><Link className="brand" to="/" aria-label="KökXR ana sayfa">Kök<span className="brand-xr">XR</span></Link><nav aria-label="Ana gezinme"><NavLink to="/artifacts">Eserler</NavLink><NavLink to="/places">Mekanlar</NavLink><NavLink to="/workshops">Atölyeler</NavLink><NavLink className="admin-link" to="/admin">Yönetim</NavLink></nav></div></header>
+    <header className="site-header"><div className="site-header-inner"><Link className="brand" to="/" aria-label="KökXR ana sayfa">Kök<span className="brand-xr">XR</span></Link><nav aria-label="Ana gezinme"><NavLink to="/artifacts">Eserler</NavLink><NavLink to="/places">Mekanlar</NavLink><NavLink to="/workshops">Atölyeler</NavLink></nav></div></header>
     <main id="main-content" tabIndex={-1}>
       {content.warning && <p className="admin-note" role="alert">{content.warning}</p>}
       <Routes>

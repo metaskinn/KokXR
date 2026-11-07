@@ -70,7 +70,7 @@ export default function InventoryList({ artifacts }: { artifacts: Artifact[] }) 
         return <li key={e.id} data-model={model ? 'yes' : 'no'}>
           {model
             ? <Link to={`/places/${e.artifactId}`}><strong>{e.name}</strong><span>{meta}</span><em>3B maket var</em></Link>
-            : <div><strong>{e.name}</strong><span>{meta}</span><em>3B maket yok</em></div>}
+            : <Link to={`/places/yapi/${e.id}`}><strong>{e.name}</strong><span>{meta}</span><em>3B maket yok</em></Link>}
           {d && <details className="inventory-details">
             <summary>Bilgi</summary>
             <p>{d.summary}</p>

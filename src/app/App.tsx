@@ -12,6 +12,7 @@ import VaseWorkshop from '../features/workshops/vase/VaseWorkshop'
 import SwordWorkshop from '../features/workshops/sword/SwordWorkshop'
 import WorkshopsLayout from '../features/workshops/WorkshopsLayout'
 import PlacesPage, { PlacePage } from '../features/places/PlacesPage'
+import InventoryPage from '../features/places/InventoryPage'
 
 function AdminFormRoute(props: AdminProps) {
   const { id } = useParams()
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/" element={<Navigate to="/artifacts" replace />} />
         <Route path="/artifacts" element={<ArtifactsPage artifacts={artifacts} />} />
         <Route path="/places" element={<PlacesPage artifacts={artifacts} />} />
+        <Route path="/places/yapi/:id" element={<InventoryPage />} />
         <Route path="/places/:id" element={<PlacePage artifacts={artifacts} />} />
         <Route path="/workshops" element={<WorkshopsLayout />}>
           <Route index element={<Navigate to="vase" replace />} />

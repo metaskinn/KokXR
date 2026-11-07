@@ -16,13 +16,13 @@ try {
 
     await section.getByLabel('Yalnız 3B maketi olanlar').check()
     assert.equal(await count(), 10, 'model filter keeps exactly the buildings with a scale model')
-    assert.equal(await section.locator('.inventory-list a').count(), 10, 'each model building links to its page')
+    assert.equal(await section.locator('.inventory-list li[data-model="yes"] a').count(), 10, 'each model building links to its page')
     assert.equal(await section.locator('.inventory-list em', { hasText: '3B maket yok' }).count(), 0)
     await section.getByLabel('Yalnız 3B maketi olanlar').uncheck()
 
     await section.locator('select').first().selectOption('İznik')
     assert.equal(await count(), 19)
-    assert.equal(await section.locator('.inventory-list a').count(), 0, 'no model exists outside the Bursa city districts')
+    assert.equal(await section.locator('.inventory-list li[data-model="yes"] a').count(), 0, 'no model exists outside the Bursa city districts')
     await section.locator('select').first().selectOption('')
 
     await section.getByRole('searchbox').fill('iznik')
@@ -35,6 +35,15 @@ try {
     await section.getByRole('button', { name: /Daha fazla göster/ }).click()
     assert.equal(await section.locator('.inventory-list li').count(), 120)
 
+    if (width === 1280) {
+      await section.getByRole('searchbox').fill('davutpa')
+      await section.locator('.inventory-list a').first().click()
+      await page.getByRole('heading', { level: 1 }).waitFor()
+      assert.match(page.url(), /\/places\/yapi\//, 'non-model building opens its inventory page')
+      assert.ok((await page.locator('.inventory-page').innerText()).includes('3B maket: yok'))
+      await page.goBack()
+      await section.waitFor()
+    }
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1)
     assert.ok(!overflow, `${width}px: no horizontal overflow`)
     assert.deepEqual(errors, [], 'no console errors')

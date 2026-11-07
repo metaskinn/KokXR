@@ -1,0 +1,114 @@
+{
+  "id": "osmangazi-karabas-i-veli-sufi-lodge",
+  "name": "Karabaş-ı Velî Dergâhı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Mevcut semahane H. 1238 / M. 1822, II. Mahmud dönemi",
+  "endowment": "Kurucusu Halvetiyye mensubu Şeyh Yakub Çelebi",
+  "summary": "Maksem’de geniş bir bahçe içinde yer alan Karabaş-ı Velî Dergâhı, sekiz ahşap sütunun taşıdığı bezemeli ahşap kubbeli semahanesiyle öne çıkar.",
+  "history": "Karabaş-ı Velî Dergâhı, Osmangazi ilçesi Maksem Mahallesi, 5. Çardak Sokak’tadır. Kitapta eski kaynaklardaki “Veli Şemseddin” ve günümüzdeki “İbrahim Paşa Mahallesi” adlarıyla da anılan Maksem bölgesinde kurulduğu belirtilir. Kurucusu Halvetiyye tarikatından Şeyh Yakub Çelebi’dir; tapu kayıtlarında “Pir Ali Çelebi Dergâhı” adı da geçer. Karabaş Tecvidi’nin bu kurucuyla doğrudan bağlantısı bulunmadığı, eserin müellifinin 1498’de vefat eden Abdurrahman Karabaşî olduğu açıklanır.\n\nKitapta Yakub Çelebi’nin asıl adı Alâaddin Ali olarak verilir; uzun boyu nedeniyle “Atvel”, siyah Halveti tacı nedeniyle “Karabaş”, kerametlerine duyulan inanç nedeniyle “Velî” lakaplarıyla tanındığı anlatılır. Haziredeki mezar taşı bilgileri ise adını Piri Yakup Çelebi, vefatını H. 957 / M. 1550 olarak kaydeder. Mehmed Şemseddin Efendi, dinî ilimler ve özellikle kıraat alanında yetişen Yakup Çelebi’nin tasavvuf yolunu seçerek Bursa’da bir zaviye inşa ettiğini aktarır.\n\nGeniş bir bahçedeki tekke, semahaneyle aynı yapı tekniğinde ve dikdörtgen bir alan üzerinde kurulmuştur. Kuruluş dönemine ait özgün unsurlar korunamamıştır. Mevcut semahanenin kubbe kasnağındaki Fetih suresinin sonunda bulunan Mehmed Karamânî imzasından H. 1238 / M. 1822’de inşa edildiği anlaşılır. H. 1267 / M. 1851 kayıtlarında semahane, şeyh odaları, iki derviş odası, misafir odaları, sofa ve abdesthane sayılır.\n\nII. Mahmud döneminin ampir üslubundaki semahanenin 9,33 × 11,52 m ölçülerindeki ana duvarları ahşap dikme, payanda ve çatkılardan oluşur. İç mekâna küpeşte parmaklıklarla dairesel biçim verilmiştir; ahşap kubbe sekiz ahşap sütunla taşınır. Kubbe ve çevresindeki ahşap üzerine kalem işleri nitelikli bezemelerdir. Semahanenin doğusundaki hazirede dergâh şeyhleriyle Bursa’da resmî görevlerde bulunmuş kişiler ve eşlerinin kabirleri vardır.\n\n1925’te tekkeler kapatıldıktan sonra semahane bir süre idman yurdu, diğer bölümler konut olarak kullanılmıştır. Yangın geçiren tekke ve semahane, kültür merkezi işlevi için 2002–2005 arasında restore edilmiştir. Toplam 1.720 m² alanın 1.380 m²’si bahçe, 110 m²’si tekke binasıdır; dış bölümde toplam 230 m²’lik iki küçük birim bulunur. Kitap, dergâhta tasavvufî programlar ve eğitim faaliyetleri yürütüldüğünü belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-karabas-i-veli-sufi-lodge/garden-facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-karabas-i-veli-sufi-lodge/garden-facade.jpg",
+      "alt": "Ağaçlar ve çiçekli tarhlar arasındaki taş yolun arkasında sarı sıvalı, ahşap pencere çerçeveli ve kiremit çatılı yapı",
+      "description": "Bahçeden dergâhın görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-karabas-i-veli-sufi-lodge/semahane-interior.jpg",
+      "alt": "Desenli halılarla kaplı salonda ahşap sütunlar, yanlarda parmaklıklar ve üstte kafesli galeriler",
+      "description": "Semahanenin iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-karabas-i-veli-sufi-lodge/wooden-dome.jpg",
+      "alt": "Alttan bakışta yeşil zeminli bitkisel bezemeli kubbe, çevresinde yazı kuşağı ve ahşap taşıyıcılar",
+      "description": "Ahşap kubbe ve kalem işleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "wooden-dome",
+      "image": "/images/osmangazi-karabas-i-veli-sufi-lodge/wooden-dome.jpg",
+      "x": 50,
+      "y": 49,
+      "title": "Ahşap kubbe",
+      "text": "Semahanenin ahşap kubbesi sekiz ahşap sütunla desteklenir; kubbe ve çevresinde ahşap üzerine kalem işleri bulunur.",
+      "sourceId": "inv-p164"
+    },
+    {
+      "id": "balustrades",
+      "image": "/images/osmangazi-karabas-i-veli-sufi-lodge/semahane-interior.jpg",
+      "x": 20,
+      "y": 67,
+      "title": "Küpeşte parmaklıklar",
+      "text": "Semahanenin iç mekânına küpeşte parmaklıklarla dairesel bir form verilmiştir.",
+      "sourceId": "inv-p164"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mevcut semahane hangi üslupla inşa edilmiştir?",
+      "options": [
+        "Gotik",
+        "Ampir",
+        "Romanesk",
+        "Art nouveau"
+      ],
+      "correct": 1,
+      "description": "Kitap, semahaneyi II. Mahmud döneminin ampir üslubuyla tanımlar.",
+      "sourceId": "inv-p164"
+    },
+    {
+      "question": "Semahanenin ahşap kubbesini kaç ahşap sütun taşır?",
+      "options": [
+        "Dört",
+        "Altı",
+        "On iki",
+        "Sekiz"
+      ],
+      "correct": 3,
+      "description": "Ahşap kubbe sekiz ahşap sütunla desteklenir.",
+      "sourceId": "inv-p164"
+    },
+    {
+      "question": "2002–2005 restorasyonu hangi işlev için yapılmıştır?",
+      "options": [
+        "Kültür merkezi",
+        "Han",
+        "Hastane",
+        "Depo"
+      ],
+      "correct": 0,
+      "description": "Tekke ve semahane kültür merkezi olarak kullanılmak üzere restore edilmiştir.",
+      "sourceId": "inv-p164"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p163",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Karabaş-ı Velî Dergâhı\"",
+      "page": "163"
+    },
+    {
+      "id": "inv-p164",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Karabaş-ı Velî Dergâhı\"",
+      "page": "164"
+    },
+    {
+      "id": "inv-p166",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Karabaş-ı Velî Dergâhı\"",
+      "page": "166"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ Kaynaklar: `docs/sartname.md` (5. bölüm), `docs/kokkod_kazanma_plani.md`, bu g
 | Şartname maddesi | Durum | Boşluk → görev |
 |---|---|---|
 | 5.1.1 Çalışan mobil/masaüstü uygulama | PWA var, APK yok | G4, G5 |
-| 5.1.1 Birden fazla eser, tarihçe+görsel+kaynak | 10 eser, hepsi cami/külliye; yalnız Bursa | G6, G7 |
+| 5.1.1 Birden fazla eser, tarihçe+görsel+kaynak (kazanma planı: **en az 10 eser**) | Tam 10 eser var (sınırda), hepsi cami/külliye, yalnız Bursa | G6 (hedef en az 14: 10 + 3 yeni tür + 1 Konya/Hatay), G7 |
 | 5.1.1 İçerik ekle/düzenle | Yönetim var; bulut yolu gerçek Supabase'e karşı denenmedi | G3 |
 | 5.1.2 Yeni eser, **şehir ve içerik türü** eklenebilirlik | Şehir listesi kodda (`vrEserler.ts`); içerik türü sabit | G8 |
 | 5.1.3 Kaynak göster, doğrulanmamışı kesin sunma | Var (rozet, kaynak satırı) | G12 (kitap karşılaştırması) |
@@ -24,6 +24,11 @@ Kaynaklar: `docs/sartname.md` (5. bölüm), `docs/kokkod_kazanma_plani.md`, bu g
 | 5.1.5 Girdi doğrulama, test, README | Var; yönetim girişi bulutsuzken yok | G3, G11 |
 | 5.2.1–2 Problem uyumu, yenilik, veri kullanımı | VR güçlü; web/mobil akış ve harita zayıf | G2, G8 |
 | 5.4 Sunum + canlı demo + mimari + ölçek | Taslak yok | G13, G14 |
+
+## Şartname kontrol listesi (her madde bir göreve bağlı)
+- Çalışan uygulama (PWA/APK): G4 · birden fazla eser, en az 10: G6 · tarihçe/görsel/kaynak: G6, G12 · içerik ekle/düzenle: G3 · yeni eser/şehir/içerik türü: G8 · mimari ve veri modeli anlatımı: G13 · üçüncü taraf servislerin demoda çalışması (Supabase, 360tr gömme): G5 (çevrimdışı yedek, 360tr için yedek bağlantı) · açık kaynak lisansları: G11
+- Kaynak gösterme, doğrulanmamışı kesin sunmama: G12 · topluluk moderasyonu: G9 · erişilebilirlik (alt metin, kontrast, yazı boyutu, sesli anlatım, klavye, renk körlüğü): G10 · girdi doğrulama, kişisel veri: G3, G9 · test: G1, G9, G17 · okunabilir kod, README: G11, G17
+- Problem uyumu, yenilik, veri kullanımı: G13, G14 · takım çalışması, herkes teknik detaya hâkim: G18, `gorev_dagilimi.md` · sunum içeriği ve yalnız takım üyelerinin sunması: G13, G14
 
 ## Görevler
 
@@ -37,7 +42,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 ### B. Şartnamenin zorunlu açıkları
 - [ ] **G4. paket/capacitor (onaylı bağımlılık):** Capacitor ile Android APK (aynı kod). Quest/VR akışı APK'da denenmez; APK keşif, harita, erişilebilirlik içindir. Android SDK yoksa yalnız proje iskeleti ve derleme adımı belgelenir.
 - [ ] **G5. demo/yedek:** `npm run demo` (derle + önizle), PWA önbelleğini ısıtan sayfa listesi `docs/demo-senaryosu.md`'ye; internetsiz çalışma kontrolü.
-- [ ] **G6. veri/kategori:** En az 3 yeni türde eser (han, hamam/çeşme, türbe, eğitim yapısı). Metin yalnız envanter kitabından (Drive PDF veya .idml), her bilgiye cilt ve sayfa. Metin çıkarılamazsa eser eklenmez, `[!]`.
+- [ ] **G6. veri/kategori:** **Eser sayısı en az 10 şartı sağlanmış kalır ve güvenli payla 14'e çıkar.** En az 3 yeni türde eser (han, hamam/çeşme, türbe, eğitim yapısı). Metin yalnız envanter kitabından (Drive PDF veya .idml), her bilgiye cilt ve sayfa. Metin çıkarılamazsa eser eklenmez, `[!]`.
 - [ ] **G7. veri/yeni-sehir:** Konya veya Hatay envanterinden 1 eser (aynı kaynak kuralı). Demodaki "yeni şehir" adımı gerçek veriyle.
 - [ ] **G8. mimari/sehir-ve-tur:** Şehir ve içerik türü eser verisinden türer; şehir eklemek `vrEserler.ts` düzenlemeden olur. Eser sayfasında 3B olmayan eserler (han, türbe) eşit değerde görünür. Yeni şehir kod değişmeden gelir (README + test).
 - [ ] **G9. yonetim/katki (şartname 5.1.3):** Kullanıcı anısı/fotoğraf formu → `katkilar` (beklemede) → onay sayfasında onayla/reddet → yalnız onaylanan eser sayfasında "Topluluk katkısı, doğrulanmamış" etiketiyle. Kişisel veri toplanmaz (ad/telefon yok). Girdi doğrulama ve metin temizleme testli.

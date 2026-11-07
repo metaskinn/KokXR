@@ -1,0 +1,107 @@
+{
+  "id": "osmangazi-geyve-han",
+  "name": "Geyve Hanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Çelebi Sultan Mehmed dönemi; 1419’dan önce",
+  "endowment": "Hacı İvaz Paşa bin Ahi Bayezid; Çelebi Mehmed tarafından Yeşil Külliye’ye vakfedilmiştir.",
+  "summary": "Geyve Hanı, Hacı İvaz Paşa’nın yaptırıp Çelebi Mehmed’e hediye ettiği, Yeşil Külliye’ye gelir sağlayan iki katlı bir handır.",
+  "history": "Geyve Hanı, Demirkapı Çarşısı Süleyman Sokak’ta, Bedesten’in doğu kapısı çıkışında yer alır. Çelebi Sultan Mehmed’in baş mimarı ve komutanlarından Hacı İvaz Paşa bin Ahi Bayezid tarafından 1419’dan önce yaptırılmış ve Çelebi Mehmed’e hediye edilmiştir. Çelebi Mehmed yapıyı Lonca Hanı adıyla Yeşil Külliye’ye gelir sağlamak üzere vakfetmiştir. Hacı İvaz Paşa’nın ahi olması nedeniyle ilk yıllarda Lonca Hanı olarak anılmış; daha sonra Hacı İvaz Paşa Hanı ve Geyve Hanı adları da kullanılmıştır.\n\nKare planlı ve iki katlı hanın ortasında avlu ve şadırvan bulunur. Dış duvarlar moloz taş ve tuğla, iç mekândaki kemer, ayak ve kapılar tuğla işçiliğiyle yapılmıştır. Duvarlar iki sıra kirpi saçakla sonlanır. Kuzey, batı ve güney cephelerinde kapılar vardır. Alt katta 26, üst katta 30 oda bulunur; ahırlar günümüze ulaşmamıştır. Üst kata iki yöndeki merdivenlerle çıkılır. Doğu bölümünün zemin katında tek kubbeli bir mescit yer alır.\n\nOsmangazi Belediyesi’nin 2007 yılındaki kapsamlı onarımında hanın önündeki muhdes yapılar kaldırılmış, özgün cephe görünümü ortaya çıkarılmıştır. Kitap, hanın toptan tekstil ticareti yapan esnaf tarafından kullanıldığını belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-geyve-han/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-geyve-han/courtyard.jpg",
+      "alt": "İki katlı kemerli cephelerle çevrili taş döşeli avlu, ortada çokgen şadırvan ve çevresinde banklar",
+      "description": "Avlu ve şadırvan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-geyve-han/upper-arcade.jpg",
+      "alt": "Tuğla ayaklar üzerinde sivri kemerler ve beyaz sıvalı tonozların sıralandığı üst kat koridoru",
+      "description": "Üst kat revakları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-geyve-han/courtyard.jpg",
+      "x": 56,
+      "y": 75,
+      "title": "Şadırvan",
+      "text": "Hanın ortasındaki avluda bir şadırvan yer alır.",
+      "sourceId": "inv-p32"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-geyve-han/upper-arcade.jpg",
+      "x": 56,
+      "y": 36,
+      "title": "Sivri kemerler",
+      "text": "Sağlam ayaklara oturan sivri kemerler çapraz tonoz atkılıdır.",
+      "sourceId": "inv-p33"
+    }
+  ],
+  "test": [
+    {
+      "question": "Geyve Hanı’nı kim inşa ettirmiştir?",
+      "options": [
+        "Bayezid Paşa",
+        "Mahmud Paşa",
+        "Hacı İvaz Paşa bin Ahi Bayezid",
+        "Bâli Bey"
+      ],
+      "correct": 2,
+      "description": "Hacı İvaz Paşa bin Ahi Bayezid hanı inşa ettirmiş ve Çelebi Mehmed’e hediye etmiştir.",
+      "sourceId": "inv-p31"
+    },
+    {
+      "question": "Han hangi adla Yeşil Külliye’ye vakfedilmiştir?",
+      "options": [
+        "Lonca Hanı",
+        "Sultan Hanı",
+        "Pirinç Hanı",
+        "Saman Pazarı Hanı"
+      ],
+      "correct": 0,
+      "description": "Çelebi Mehmed yapıyı Lonca Hanı adıyla vakfetmiştir.",
+      "sourceId": "inv-p31"
+    },
+    {
+      "question": "2007 yılındaki kapsamlı onarımı hangi kurum yapmıştır?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Millî Emlak",
+        "Osmangazi Belediyesi"
+      ],
+      "correct": 3,
+      "description": "Han 2007 yılında Osmangazi Belediyesi tarafından kapsamlı biçimde onarılmıştır.",
+      "sourceId": "inv-p33"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p31",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Geyve Hanı\"",
+      "page": "31"
+    },
+    {
+      "id": "inv-p32",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Geyve Hanı\"",
+      "page": "32"
+    },
+    {
+      "id": "inv-p33",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Geyve Hanı\"",
+      "page": "33"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

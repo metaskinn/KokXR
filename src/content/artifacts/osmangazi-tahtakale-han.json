@@ -1,0 +1,102 @@
+{
+  "id": "osmangazi-tahtakale-han",
+  "name": "Tahtakale Hanı (Davutpaşa Hanı-Yoğurt Hanı)",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XV. yüzyılın ilk çeyreği",
+  "endowment": "Bayezid Paşa; Yeşil semtindeki cami ve medreseye gelir sağlamak için yaptırılmıştır.",
+  "summary": "Tahtakale Hanı, Bayezid Paşa’nın Yeşil semtindeki cami ve medreseye gelir sağlamak için yaptırdığı, korunmuş bölümleri dükkân olarak kullanılan handır.",
+  "history": "Tahtakale Mahallesi’ndeki han, XV. yüzyılın ilk çeyreğinde Bayezid Paşa tarafından Yeşil semtindeki cami ve medreseye gelir sağlamak için yaptırılmıştır. Kitap başlığında Davutpaşa Hanı ve Yoğurt Hanı adlarını kullanır; metinde Bayezid Paşa Hanı ve Yoğurt Hanı adları da belirtilir. Belgelerde alt katta 21, üst katta 25 oda bulunduğu kaydedilir. Korunabilmiş bölümler dükkân olarak kullanılmaktadır.\n\nÇelebi Mehmed dönemine kadar uzanan Tahtakale Çarşısı, bir zamanlar Köylü Pazarı’nın da kurulduğu eski ticaret alanlarındandır. Kitap, Tahtakale adının tahta’l-kal’a, yani kalenin altı ifadesinden türediğinin kabul edildiğini belirtir. Bu adın Bursa’da farklı yapılara da verildiğini kaydeder. Osmanlı öncesinde atların bağlandığı ve revir olarak kullanılan bu bölgede, şehrin kale dışına yayılmasıyla mahalle ve çarşı dokusu gelişmiştir.\n\nHan 1855 Bursa Depremi’nden sonra yeniden yapılmış, 1958 yangınında tamamen yanmıştır. Uzun süre harap kalan çarşı, Osmangazi Belediyesi’nin restorasyon çalışmasının 2018’de tamamlanmasıyla yeniden faaliyete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-tahtakale-han/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-tahtakale-han/exterior.jpg",
+      "alt": "Ağaçlar arasında kiremit çatılı ve krem renkli cepheli yapı; çevresinde tenteli dükkânlar ve açık hava masaları",
+      "description": "Tahtakale Hanı dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-tahtakale-han/shops.jpg",
+      "alt": "Ahşap tavanlı geçidin iki yanında camlı dükkân cepheleri, ortada masa ve sandalyeler",
+      "description": "Dükkânların bulunduğu iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-tahtakale-han/shops.jpg",
+      "x": 79,
+      "y": 41,
+      "title": "Dükkânlar",
+      "text": "Hanın korunabilmiş bölümleri dükkân olarak kullanılmaktadır.",
+      "sourceId": "inv-p50"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-tahtakale-han/exterior.jpg",
+      "x": 61,
+      "y": 44,
+      "title": "Yeniden açılan han",
+      "text": "Osmangazi Belediyesi’nin restorasyonu 2018 yılında tamamlanmış ve çarşı yeniden faaliyete açılmıştır.",
+      "sourceId": "inv-p51"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tahtakale Hanı hangi yapılara gelir sağlamak için yaptırılmıştır?",
+      "options": [
+        "İstanbul’daki Mahmutpaşa Külliyesi",
+        "Edirne’deki bedesten",
+        "Yeşil semtindeki cami ve medrese",
+        "Yenişehir’deki külliye"
+      ],
+      "correct": 2,
+      "description": "Kitap, hanın Yeşil semtindeki cami ve medreseye gelir sağlamak için yaptırıldığını belirtir.",
+      "sourceId": "inv-p50"
+    },
+    {
+      "question": "Tahtakale adı hangi anlama gelen ifadeden türetilir?",
+      "options": [
+        "Kalenin altı",
+        "İpek pazarı",
+        "Yeni han",
+        "At meydanı"
+      ],
+      "correct": 0,
+      "description": "Kitap, tahta’l-kal’a ifadesini kalenin altı olarak açıklar.",
+      "sourceId": "inv-p51"
+    },
+    {
+      "question": "Çarşının restorasyonu hangi yıl tamamlanmıştır?",
+      "options": [
+        "2007",
+        "2018",
+        "1965",
+        "1973"
+      ],
+      "correct": 1,
+      "description": "Osmangazi Belediyesi’nin restorasyon çalışması 2018’de tamamlanmıştır.",
+      "sourceId": "inv-p51"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p50",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Tahtakale Hanı (Davutpaşa Hanı-Yoğurt Hanı)\"",
+      "page": "50"
+    },
+    {
+      "id": "inv-p51",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Tahtakale Hanı (Davutpaşa Hanı-Yoğurt Hanı)\"",
+      "page": "51"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

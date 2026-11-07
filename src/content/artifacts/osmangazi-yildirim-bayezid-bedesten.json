@@ -1,0 +1,102 @@
+{
+  "id": "osmangazi-yildirim-bayezid-bedesten",
+  "name": "Yıldırım Bayezid Bedesteni",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XIV. yüzyıl; Yıldırım Bayezid dönemi",
+  "endowment": "Yıldırım Bayezid; vakfa gelir sağlamak amacıyla yaptırılmıştır.",
+  "summary": "Yıldırım Bayezid Bedesteni, Bursa çarşı dokusunun çekirdeğini oluşturan, on dört kubbeli tarihî ticaret yapısıdır.",
+  "history": "Kitap, Osmanlı İmparatorluğu’nun ilk bedesteni olarak tanımladığı yapının XIV. yüzyılda Yıldırım Bayezid tarafından yaptırıldığını belirtir. Büyük Cuma Camii yakınında vakfa gelir sağlamak için konumlandırılmış, çarşı dokusunun çekirdeğini oluşturmuştur. Emir Hanı ve Orhan Hamamı ile paralel bir eksende yer alır; planı İstanbul ve özellikle Edirne bedestenleriyle benzerlik gösterir.\n\nMerkez mekânın iç ölçüleri 15,00 × 56,50 m’dir. Altı ayağa oturan on dört kubbeyle örtülüdür. Doğu-batı yönünde sıralanmış 32 mahzen, önlerindeki ve taşıyıcı ayakların çevresindeki dükkânlarla birlikte ticaret alanını oluşturur. Bu birimler yuvarlak tonozlarla örtülüdür. Dört cephedeki kapıların her biri kubbeli bir girişe açılır. Çevredeki 68 dükkân ilk inşa evresine ait değildir. Merkezde fıskiyeli şadırvan bulunur.\n\nEvliya Çelebi’nin anlatımında dört cephesi kuyumcular çarşısıyla çevrili olan bedestenin çevresinde dokumacı, başlıkçı, iplikçi ve başka esnaf çarşıları yer alır. Yapıda taş ve tuğla birlikte kullanılmıştır. 1958 Kapalıçarşı Yangını’nda ağır hasar görmüş, 1960’ta özgün mimari özelliklerine bağlı kalınarak kapsamlı biçimde restore edilmiştir. Kitap, bedestenin Bursa Kapalıçarşısı’nın bir bölümü olarak özellikle kuyumcu atölyelerine ev sahipliği yaptığını belirtir. Güney kapısında kûfi hatla kelime-i tevhid, batı kapısında boyayla yazılmış Bedesten ibaresi vardır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-yildirim-bayezid-bedesten/top-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-yildirim-bayezid-bedesten/top-view.jpg",
+      "alt": "Dikdörtgen yapı üzerinde iki sıra halinde dizilmiş kurşun renkli kubbeler ve çevresinde çarşı çatıları",
+      "description": "Bedestenin kubbeleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-yildirim-bayezid-bedesten/jewelers.jpg",
+      "alt": "Beyaz sıvalı tonozlar ve tuğla kemerler altında aydınlatılmış kuyumcu vitrinleri ile taş döşeli koridor",
+      "description": "Kuyumcu dükkânları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-yildirim-bayezid-bedesten/top-view.jpg",
+      "x": 50,
+      "y": 44,
+      "title": "On dört kubbe",
+      "text": "Bedestenin üst örtüsü altı ayağa oturtulan on dört kubbeden oluşur.",
+      "sourceId": "inv-p56"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-yildirim-bayezid-bedesten/jewelers.jpg",
+      "x": 59,
+      "y": 61,
+      "title": "Kuyumcu atölyeleri",
+      "text": "Bedesten, Kapalıçarşı’nın bir bölümü olarak büyük oranda kuyumcu atölyelerine ev sahipliği yapmaktadır.",
+      "sourceId": "inv-p57"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bedesteni hangi padişah yaptırmıştır?",
+      "options": [
+        "II. Bayezid",
+        "Çelebi Mehmed",
+        "Yıldırım Bayezid",
+        "II. Murad"
+      ],
+      "correct": 2,
+      "description": "Kitap, yapının XIV. yüzyılda Yıldırım Bayezid tarafından yaptırıldığını belirtir.",
+      "sourceId": "inv-p56"
+    },
+    {
+      "question": "Bedestenin üst örtüsünde kaç kubbe vardır?",
+      "options": [
+        "On dört",
+        "Altı",
+        "Otuz iki",
+        "Altmış sekiz"
+      ],
+      "correct": 0,
+      "description": "Altı ayağa oturan üst örtü on dört kubbeden oluşur.",
+      "sourceId": "inv-p56"
+    },
+    {
+      "question": "1958 yangınından sonraki kapsamlı restorasyon hangi yılda yapılmıştır?",
+      "options": [
+        "2007",
+        "1960",
+        "1973",
+        "2018"
+      ],
+      "correct": 1,
+      "description": "Kitap kapsamlı restorasyonun 1960’ta yapıldığını belirtir.",
+      "sourceId": "inv-p57"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p56",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Yıldırım Bayezid Bedesteni\"",
+      "page": "56"
+    },
+    {
+      "id": "inv-p57",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Yıldırım Bayezid Bedesteni\"",
+      "page": "57"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

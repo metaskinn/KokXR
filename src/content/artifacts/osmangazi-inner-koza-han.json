@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-inner-koza-han",
+  "name": "İç Koza Hanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1490 tarihli istimlak kaydı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "İç Koza Hanı, Koza Han’ın doğusuna bitişik, eski ahır ve depolardan oluşan tek katlı bir ticaret alanıdır.",
+  "history": "İç Koza Hanı, Koza Han’ın doğu cephesine bitişik tek katlı ahır-depo yapısıdır. Belgeler, alanın inşası için 1490 yılı itibarıyla dört evin toplam 21.600 akçeye istimlak edildiğini kaydeder.\n\nDoğu duvarındaki 3,66 m genişliğinde açıklıktan ahır avlusuna geçilir. Kitabın İç Koza Hanı bölümünde avlu yaklaşık 28 × 30 m ölçülerinde dikdörtgen olarak tanımlanır. Çevresi beşik tonozlu kemerlerle kuşatılmıştır; doğudaki kemerlerin istimlak süreciyle ilgili nedenlerle sonradan örülerek kapatıldığı belirtilir. Kemerler farklı boyutlardaki on sekiz payeye oturur ve aralarında bölümlendirme yoktur. Ahır mekânının tamamını kırk beş paye taşır. Üç kapı Koza Han’a, Orhan Camii’ne ve çarşıya açılır.\n\nAhşap çatılı ve kiremit örtülü kemerler 1950’li yıllarda Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmış, yapı büyük ölçüde kâgir hale getirilmiştir. Kitap, kahvehane ve büfe olarak kullanılan bu alanı, Pirinç Hanı’nın ahır bölümüyle birlikte Osmanlı döneminden günümüze ulaşabilen nadir ahır yapılarından biri olarak tanımlar.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-inner-koza-han/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-inner-koza-han/courtyard.jpg",
+      "alt": "Taş döşeli avluda yuvarlak masalar, hasır sandalyeler ve kapalı şemsiyeler; arkada tek katlı kemerli cephe",
+      "description": "İç Koza avlusu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-inner-koza-han/arcade-detail.jpg",
+      "alt": "Avlunun arka bölümünde tuğla kemerli açıklıklar, önlerinde şemsiyeler ve masalar",
+      "description": "Aynı çekimden kemerli cephe ayrıntısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-inner-koza-han/courtyard.jpg",
+      "x": 73,
+      "y": 46,
+      "title": "Avlu kemerleri",
+      "text": "Avlunun çevresi kemerlerle kuşatılmıştır; bunlar farklı ebatlarda on sekiz payeye oturur.",
+      "sourceId": "inv-p41"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-inner-koza-han/courtyard.jpg",
+      "x": 46,
+      "y": 70,
+      "title": "Avlunun kullanımı",
+      "text": "Eski ahır-depo alanı kitapta kahvehane ve büfe işleviyle kullanılan bir yer olarak tanımlanır.",
+      "sourceId": "inv-p41"
+    }
+  ],
+  "test": [
+    {
+      "question": "İç Koza Hanı başlangıçta hangi işlevi taşıyordu?",
+      "options": [
+        "Medrese",
+        "Hamam",
+        "Ahır ve depo",
+        "Kütüphane"
+      ],
+      "correct": 2,
+      "description": "İç Koza Hanı tek katlı ahır-depo yapısından oluşur.",
+      "sourceId": "inv-p41"
+    },
+    {
+      "question": "1490 tarihli kayda göre alan için kaç ev istimlak edilmiştir?",
+      "options": [
+        "Dört",
+        "On sekiz",
+        "İki",
+        "Kırk beş"
+      ],
+      "correct": 0,
+      "description": "Dört ev toplam 21.600 akçe karşılığında istimlak edilmiştir.",
+      "sourceId": "inv-p41"
+    },
+    {
+      "question": "İç Koza Hanı hangi yapının doğu cephesine bitişiktir?",
+      "options": [
+        "Pirinç Hanı",
+        "Koza Hanı",
+        "Geyve Hanı",
+        "Bali Bey Hanı"
+      ],
+      "correct": 1,
+      "description": "Yapı Koza Han’ın doğu cephesine bitişiktir.",
+      "sourceId": "inv-p41"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p41",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İç Koza Hanı\"",
+      "page": "41"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

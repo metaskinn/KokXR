@@ -41,10 +41,10 @@ function panel(meter: number, canvasW: number, canvasH: number) {
 }
 
 /** Dark glass surface: rounded corners and a thin light edge. */
-function glassSurface(c: CanvasRenderingContext2D, x: number, y: number, g: number, h: number, r: number, edge: number) {
+function glassSurface(c: CanvasRenderingContext2D, x: number, y: number, g: number, h: number, r: number, edge: number, fill = GLASS_FLOOR) {
   c.beginPath()
   c.roundRect(x + edge / 2, y + edge / 2, g - edge, h - edge, r)
-  c.fillStyle = GLASS_FLOOR
+  c.fillStyle = fill
   c.fill()
   c.lineWidth = edge
   c.strokeStyle = GLASS_EDGE
@@ -162,10 +162,16 @@ export function infoPanel() {
 
     // The glass shrinks to fit content so short text leaves no empty space. The plane stays the same, top-aligned.
     const sourceTop = Math.min(BOTTOM, UPPER + lines.length * interval + BETWEEN + sources.length * sourceRange) - sources.length * sourceRange
-    glassSurface(c, 0, 0, G, Math.min(CARD_H, sourceTop + sources.length * sourceRange + 64), 56, 6)
+    // The info card is more see-through than the other panels so the artwork stays visible behind it; the corner cross shows it can be closed.
+    glassSurface(c, 0, 0, G, Math.min(CARD_H, sourceTop + sources.length * sourceRange + 64), 56, 6, 'rgba(18,30,26,0.76)')
     c.font = `700 ${TITLE}px ${FONT}`
     c.fillStyle = TEXT_COLOR
-    c.fillText(k.title, SIDE, TITLE_TOP, CONTENT_W) // Squeezes horizontally if it does not fit, never overflows
+    c.fillText(k.title, SIDE, TITLE_TOP, CONTENT_W - 80) // Squeezes horizontally if it does not fit, never overflows
+    c.textAlign = 'right'
+    c.font = `400 ${TITLE}px ${FONT}`
+    c.fillStyle = SECONDARY
+    c.fillText('×', G - 56, TITLE_TOP - 6)
+    c.textAlign = 'left'
     c.fillStyle = GOLD
     c.fillRect(SIDE, STROKE, 168, 6)
 

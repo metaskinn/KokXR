@@ -11,15 +11,17 @@ export const NARRATION: Record<string, string> = {
   calligraphy: '/sesler/hat.mp3',
   'kaaba-cover': '/sesler/kabe-ortusu.mp3',
 }
-export const NARRATION_RADIUS = 3.6 // metres on the floor plane
+export const NARRATION_RADIUS = 3.6 // metres on the floor plane, for spots that define no radius of their own
+const RADIUS_SHARE = 0.75 // share of a spot's own radius within which its recording plays
 const VOLUME = 0.95
 
 /** Id of the nearest spot with a recording within reach of the head, or null. */
-export function nearestNarrated(head: { x: number; z: number }, spots: { id: string; position: number[] }[]): string | null {
-  let nearest: string | null = null, best = NARRATION_RADIUS
-  for (const { id, position } of spots) {
+export function nearestNarrated(head: { x: number; z: number }, spots: { id: string; position: number[]; radius?: number }[]): string | null {
+  let nearest: string | null = null, best = Infinity
+  for (const { id, position, radius } of spots) {
     const d = Math.hypot(head.x - position[0], head.z - position[2])
-    if (NARRATION[id] && d <= best) { best = d; nearest = id }
+    const limit = radius ? radius * RADIUS_SHARE : NARRATION_RADIUS
+    if (NARRATION[id] && d <= limit && d < best) { best = d; nearest = id }
   }
   return nearest
 }
@@ -77,7 +79,7 @@ export function createNarration() {
       stopSource()
     },
     /** Call every frame with the head position and the labelled spots. */
-    update(head: { x: number; z: number }, spots: { id: string; position: number[] }[]) {
+    update(head: { x: number; z: number }, spots: { id: string; position: number[]; radius?: number }[]) {
       const nearest = nearestNarrated(head, spots)
       if (nearest === wanted) return
       wanted = nearest

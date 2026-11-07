@@ -22,7 +22,7 @@ export interface XrOption {
   refreshShadow: () => void;
   closeInfo: () => void;
   /** Titles standing in the interior scene that open the card when clicked. */
-  titles: { id: string; title: string; position: number[] }[];
+  titles: { id: string; title: string; position: number[]; radius?: number }[];
   /** Clicking the open card's title again closes the card. */
   selectInfo: (id: string) => void;
   /** The scene restores camera, near/far, size and React state. */

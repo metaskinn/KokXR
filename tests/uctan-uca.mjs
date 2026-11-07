@@ -133,7 +133,9 @@ await kontrol('6b yönetim: yeni eser ekle ve sil', async () => {
   sart(await p.locator('#dogrulama option[value="dogrulanmis"]').evaluate((o) => o.disabled), 'kaynaksız Kaynaklı bilgi seçilebiliyor');
   await p.getByRole('button', { name: 'Kaydet' }).click(); await p.waitForTimeout(700);
   const hata = await p.locator('.hata-ozeti').textContent().catch(() => null); sart(!hata, `kayıt hatası: ${hata}`);
-  await p.goto(URL); sart(await p.getByText('Deneme Eseri').count(), 'yeni eser ana sayfada yok');
+  await p.goto(URL); await p.waitForTimeout(300); sart(!(await p.getByText('Deneme Eseri').count()), 'onaysız eser yayında');
+  await p.goto(`${URL}/onay`); await p.getByRole('group', { name: /Deneme Eseri/ }).getByRole('button', { name: 'Onayla' }).click();
+  await p.goto(URL); sart(await p.getByText('Deneme Eseri').count(), 'onaylanan eser ana sayfada yok');
   await p.getByText('Deneme Eseri').first().click(); sart(await p.getByRole('heading', { name: 'Deneme Eseri' }).count(), 'eser sayfası açılmadı');
   await p.goto(`${URL}/yonetim`); await p.getByRole('button', { name: /Sil\s*: Deneme Eseri/ }).click();
   await p.goto(URL); sart(!(await p.getByText('Deneme Eseri').count()), 'silinmedi');

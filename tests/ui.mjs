@@ -27,10 +27,11 @@ try {
       }
     }
     await page.goto(url)
+    await page.locator('a.atlama').waitFor({ state: 'attached' })
     await page.keyboard.press('Tab')
     assert.match(await page.evaluate(() => document.activeElement.textContent), /Ana içeriğe geç/)
     await page.keyboard.press('Enter')
-    assert.equal(await page.evaluate(() => document.activeElement.id), 'ana-icerik')
+    await page.waitForFunction(() => document.activeElement.id === 'ana-icerik')
     await page.getByRole('link', { name: 'Keşfetmeye başla' }).click()
     const top = await page.locator('#eserler').evaluate((e) => e.getBoundingClientRect().top)
     assert.ok(top >= 0 && top < 100, `bölüme atlama: ${top}`)

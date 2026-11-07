@@ -73,7 +73,7 @@ for (const genislik of [1280, 360, 320]) {
     ['Ana gezinme', 'Öğretmen', 'Demo · örnek veri'],
     ['Diğer sayfalar', 'Kütüphane', null],
     ['Diğer sayfalar', 'Vizyon', 'Vizyon · henüz uygulanmadı'],
-    ['Diğer sayfalar', 'Onay akışı', 'Demo · örnek veri'],
+    ['Diğer sayfalar', 'Onay akışı', null],
   ]) {
     await sayfa.getByRole('navigation', { name: menu }).getByRole('link', { name: baglanti, exact: true }).click()
     await sayfa.waitForFunction(() => document.activeElement?.id === 'ana-icerik', null, { timeout: SURE })

@@ -1,0 +1,60 @@
+{
+  "sehir": "Bursa",
+  "ilce": "Osmangazi",
+  "yapiTuru": "Türbe",
+  "dogrulama": "dogrulanmis",
+  "kapakGorsel": "",
+  "gorseller": [],
+  "bilgiNoktalari": [],
+  "id": "osman-gazi-turbesi",
+  "ad": "Osman Gazi Türbesi",
+  "donem": "Bugünkü bina: 1863",
+  "vakif": "Sultan Abdülaziz (bugünkü yapıyı yaptıran)",
+  "ozet": "Hisariçi'nde Osmangazi Meydanı'nda, Osmanlı Devleti'nin kurucusu Osman Gazi'ye ait; bugünkü bina Sultan Abdülaziz'in 1863 yapımıdır.",
+  "tarihce": "Türbe, Hisariçi'ndeki Osmangazi Meydanı'nda, Osmanlı Devleti'nin kurucusu Osman Gazi'ye aittir. Erken Osmanlı kaynaklarında, Orhan Bey'in babasının vasiyetini yerine getirerek naaşını “Gümüşlü Kümbet” olarak bilinen yuvarlak planlı yapının içine defnettirdiği belirtilir. Bu yapı 1801'de yanmış, sonradan onarılmış; 1855 Bursa Depremi'nde ağır hasar görmüştür. Bugün ayakta olan türbe, Sultan Abdülaziz tarafından 1863'te yeniden yaptırılmıştır. Girişte, Şair Nevres Efendi'nin yazdığı ve Hattat Mevlevî Zeki Dede'nin talik hatla istinsah ettiği kitabe yer alır. Bugünkü bina dört bölümden oluşur.",
+  "test": [
+    {
+      "soru": "Bugün ayakta olan Osman Gazi Türbesi'ni 1863'te hangi padişah yeniden yaptırmıştır?",
+      "secenekler": [
+        "Sultan Abdülaziz",
+        "Sultan Abdülmecid",
+        "II. Mahmud",
+        "II. Abdülhamid"
+      ],
+      "dogru": 0,
+      "aciklama": "Envantere göre bugünkü türbe, Sultan Abdülaziz tarafından 1863 yılında yeniden yaptırılmıştır.",
+      "kaynakId": "og"
+    },
+    {
+      "soru": "Erken Osmanlı kaynaklarına göre Osman Gazi'nin naaşı hangi yapının içine defnedilmiştir?",
+      "secenekler": [
+        "Gümüşlü Kümbet",
+        "Yeşil Türbe",
+        "Muradiye Türbesi",
+        "Ulucami şadırvanı"
+      ],
+      "dogru": 0,
+      "aciklama": "Orhan Bey'in naaşı “Gümüşlü Kümbet” olarak bilinen yuvarlak planlı yapının içine defnettirdiği belirtilir.",
+      "kaynakId": "og"
+    },
+    {
+      "soru": "Türbenin 1855'te büyük ölçüde zarar görmesine hangi olay yol açmıştır?",
+      "secenekler": [
+        "Bursa Depremi",
+        "Yangın",
+        "Sel",
+        "Kuşatma"
+      ],
+      "dogru": 0,
+      "aciklama": "Envanter, türbenin 1855 Bursa Depremi sırasında ciddi biçimde hasar aldığını kaydeder.",
+      "kaynakId": "og"
+    }
+  ],
+  "kaynaklar": [
+    {
+      "id": "og",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Osman Gazi Türbesi\"",
+      "sayfa": "520–531"
+    }
+  ]
+}

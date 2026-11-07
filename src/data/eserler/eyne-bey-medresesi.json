@@ -1,0 +1,65 @@
+{
+  "sehir": "Bursa",
+  "ilce": "Osmangazi",
+  "yapiTuru": "Medrese",
+  "dogrulama": "dogrulanmis",
+  "kapakGorsel": "",
+  "gorseller": [],
+  "bilgiNoktalari": [],
+  "id": "eyne-bey-medresesi",
+  "ad": "Eyne Bey Subaşı Medresesi",
+  "donem": "Erken Osmanlı · 15. yüzyıl başı",
+  "vakif": "Subaşı Eyne Bey bin Feleküddin",
+  "ozet": "Tahtakale'de, 15. yüzyıl başında Subaşı Eyne Bey'in yaptırdığı; on iki öğrenci odalı, bugün Yazma Eserler Kütüphanesi olarak kullanılan medrese.",
+  "tarihce": "Medrese, Tahtakale Mahallesi İnebey Caddesi'ndedir; “Merdivenli Medrese”, “Büyük İnebey Medresesi” ve “Hüseyin Çelebi Medresesi” adlarıyla da anılır. Kitabesi günümüze ulaşmamıştır. Eyne Bey b. Feleküddin tarafından 15. yüzyıl başlarında yaptırılmıştır. H. 3 Şaban 804 / M. 8 Mart 1402 tarihli vakfiyeye göre müderrise günlük 10 dirhem, on iki odada kalan on iki öğrenciye günlük birer buçuk dirhem ödenecektir. Yapı H. 1085 / M. 1674'te Hüseyin Çelebi Paşa tarafından kapsamlı biçimde onarılmış ve bu sırada medreseye bir kütüphane kazandırılmıştır. Medrese günümüzde “Yazma Eserler Kütüphanesi” olarak kullanılmaktadır.",
+  "test": [
+    {
+      "soru": "Eyne Bey Subaşı Medresesi'ni 15. yüzyıl başlarında kim yaptırmıştır?",
+      "secenekler": [
+        "Subaşı Eyne Bey",
+        "Hüseyin Çelebi Paşa",
+        "Köprülü Fazıl Ahmed Paşa",
+        "Molla Fenârî"
+      ],
+      "dogru": 0,
+      "aciklama": "Envantere göre medrese, Eyne Bey b. Feleküddin tarafından 15. yüzyıl başlarında yaptırılmıştır.",
+      "kaynakId": "em"
+    },
+    {
+      "soru": "Vakfiyeye göre medresenin kaç odasında öğrenci kalacaktır?",
+      "secenekler": [
+        "6",
+        "9",
+        "12",
+        "24"
+      ],
+      "dogru": 2,
+      "aciklama": "Vakfiyede medresenin on iki odasında kalan öğrencilere günlük birer buçuk dirhem ödeneceği yazılıdır.",
+      "kaynakId": "em"
+    },
+    {
+      "soru": "H. 1085 / M. 1674 onarımı sırasında medreseye ne kazandırılmıştır?",
+      "secenekler": [
+        "Kütüphane",
+        "Kervansaray",
+        "Darüşşifa",
+        "Saat kulesi"
+      ],
+      "dogru": 0,
+      "aciklama": "Envanter, bu müdahale sırasında medreseye kıymetli bir kütüphane kazandırıldığını belirtir.",
+      "kaynakId": "em"
+    }
+  ],
+  "kaynaklar": [
+    {
+      "id": "em",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Eyne Bey Subaşı Medresesi\"",
+      "sayfa": "556–561"
+    },
+    {
+      "id": "eh",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Eyne Bey Hamamı\"",
+      "sayfa": "684–685"
+    }
+  ]
+}

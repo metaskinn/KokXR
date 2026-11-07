@@ -7,7 +7,7 @@ const kok = process.argv[2] ?? 'dist'
 for (const klasor of ['gorseller', 'derinlik']) rmSync(join(kok, klasor), { recursive: true, force: true })
 
 const IZINLI = join('restorasyon', 'muradiye-cini.jpg')
-const kalan = readdirSync(kok, { recursive: true }).filter((f) => /\.(jpe?g|png|webp|avif)$/i.test(String(f)) && f !== IZINLI)
+const kalan = readdirSync(kok, { recursive: true }).filter((f) => /\.(jpe?g|png|webp|avif)$/i.test(String(f)) && f !== IZINLI && !String(f).startsWith('ikonlar'))
 if (kalan.length) throw new Error(`Açık yayında fotoğraf kaldı: ${kalan.join(', ')}`)
 
 writeFileSync(join(kok, 'vercel.json'), JSON.stringify({

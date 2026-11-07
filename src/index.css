@@ -321,3 +321,33 @@ legend { font-weight: 600; margin-bottom: 1rem; }
   .fotograf-yakinlastirma button { padding: 0.6rem; font-size: 0.8rem; }
 }
 @media (max-width: 380px) { .galeri-gezinme button span { display: none; } }
+
+.eser-filtre { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: end; margin: 0 0 1.25rem; }
+.eser-filtre label { display: grid; gap: .25rem; font-weight: 600; }
+.eser-filtre select, .eser-filtre button { min-height: 44px; font: inherit; padding: 0 .75rem; }
+.eser-filtre p { margin: 0; align-self: center; }
+@media (max-width: 600px) { .eser-filtre label, .eser-filtre button { flex: 1 1 100%; } }
+
+.erisilebilirlik-araci { display: flex; gap: .4rem; margin-left: auto; }
+.erisilebilirlik-araci button { min-height: 44px; min-width: 44px; padding: 0 .7rem; font-size: .85rem; }
+.erisilebilirlik-araci button[aria-pressed="true"] { background: #000; color: #fff; }
+.sesli-dinle { margin-bottom: 1rem; }
+html[data-kontrast="yuksek"] {
+  --zemin: #fff; --yuzey: #fff; --metin: #000; --ikincil: #1a1a1a; --yesil: #0b3320; --yesil-koyu: #000; --yesil-acik: #fff;
+  --bronz: #5a3200; --cizgi: #000; --kontrol-cizgi: #000; --odak: #b00000; color: #000; background: #fff;
+}
+html[data-kontrast="yuksek"] a { text-decoration: underline; }
+html[data-kontrast="yuksek"] button, html[data-kontrast="yuksek"] .dugme { border-color: #000; }
+
+.nav-grup { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.1rem; margin-left: 0.5rem; padding-left: 0.75rem; border-left: 1px solid var(--cizgi); }
+.nav-grup-ad { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ikincil); margin-right: 0.25rem; }
+@media (max-width: 760px) { .nav-grup { margin-left: 0; padding-left: 0; border-left: 0; } .nav-grup-ad { display: none; } }
+
+.katki-listesi { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.katki-etiket { display: inline-block; margin: 0; padding: .15rem .6rem; border-radius: 999px; background: var(--yesil-acik); color: var(--yesil-koyu); font-size: .8rem; font-weight: 600; }
+
+.harita-alani { height: 420px; border: 1px solid var(--cizgi); border-radius: 12px; margin: 1rem 0 1.5rem; }
+.rota-listesi { padding-left: 1.25rem; display: grid; gap: .4rem; }
+.rota-listesi span { color: var(--ikincil); font-size: .9rem; }
+.eser-filtre button[aria-pressed="true"] { background: var(--yesil-koyu); }
+@media (max-width: 600px) { .harita-alani { height: 320px; } }

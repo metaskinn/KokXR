@@ -1,3 +1,6 @@
+import KatkiBolumu from '../components/KatkiBolumu'
+import type { Katki } from '../data/katki'
+import SesliDinle from '../components/SesliDinle'
 import { Link, useParams } from 'react-router-dom'
 import type { Eser } from '../types/eser'
 import SanalGezinti from '../components/SanalGezinti'
@@ -11,7 +14,7 @@ import KaynakSatiri, { kaynakMetni } from '../components/KaynakSatiri'
 import Bulunamadi from './Bulunamadi'
 import { ACIK_YAYIN } from '../data/acikYayin'
 
-export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; rozetKazan: (id: string) => boolean }) {
+export default function EserSayfasi({ eserler, rozetKazan, katkilar, katkiEkle }: { eserler: Eser[]; rozetKazan: (id: string) => boolean; katkilar: Katki[]; katkiEkle: (eserId: string, baslik: string, metin: string) => void }) {
   const { id } = useParams()
   const eser = eserler.find((item) => item.id === id)
   if (!eser) return <Bulunamadi />
@@ -35,7 +38,7 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
     {eser.tur360 && <Tur360 tur={eser.tur360} ad={eser.ad} />}
     {eser.tur && <SanalGezinti tur={eser.tur} kaynaklar={eser.kaynaklar} />}
     <section className="bolum" aria-labelledby="tarihce-basligi">
-      <h2 id="tarihce-basligi">Tarihçe</h2><p className="tarihce">{eser.tarihce}</p>
+      <h2 id="tarihce-basligi">Tarihçe</h2><SesliDinle metin={eser.tarihce} /><p className="tarihce">{eser.tarihce}</p>
       {eser.kaynaklar.filter((kaynak) => kaynak.id.endsWith('-tarihce')).map((kaynak) => <KaynakSatiri key={kaynak.id} kaynaklar={eser.kaynaklar} kaynakId={kaynak.id} />)}
     </section>
     <ZamanKatmani eser={eser} />
@@ -45,5 +48,6 @@ export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; 
       <h2 id="kaynaklar-basligi">Kaynaklar</h2>
       <ul className="kaynak-listesi">{eser.kaynaklar.map((kaynak) => <li key={kaynak.id}>{kaynakMetni(kaynak)}</li>)}</ul>
     </section>
+    <KatkiBolumu eserId={eser.id} katkilar={katkilar} ekle={katkiEkle} />
   </article>
 }

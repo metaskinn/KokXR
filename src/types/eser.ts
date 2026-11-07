@@ -92,6 +92,8 @@ export interface Eser {
   ad: string;
   sehir: string;
   ilce: string;
+  konum?: { enlem: number; boylam: number; kaynak: string }; // yalnız doğrulanmış koordinat; kaynak zorunlu
+  yapiTuru?: string;      // Cami, Külliye, Han, Hamam, Medrese, Türbe...; süzgeç ve listelerde kullanılır
   donem: string;
   vakif: string;
   ozet: string;

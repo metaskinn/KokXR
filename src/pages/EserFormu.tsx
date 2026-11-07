@@ -75,6 +75,7 @@ export default function EserFormu({ eser, eserler, ustKatman, kaydet }: YonetimP
       <p role="status">{mesaj}</p>{kayitHatasi && <p role="alert" className="alan-hatasi">{kayitHatasi}</p>}
       <fieldset className="form-bolumu"><legend>Eser bilgileri</legend>
         {(['ad', 'sehir', 'ilce', 'donem', 'vakif', 'ozet', 'tarihce'] as const).map((a, i) => metin(a, ['Ad', 'Şehir', 'İlçe', 'Dönem', 'Vakıf', 'Özet', 'Tarihçe'][i], taslak[a], v => guncelle({ [a]: v }), ['ozet', 'tarihce'].includes(a)))}
+        {metin('yapiTuru', 'Yapı türü (isteğe bağlı: Cami, Han, Hamam, Türbe...)', taslak.yapiTuru ?? '', v => guncelle({ yapiTuru: v }), false, false)}
         <p className="kimlik">Eser kimliği: <strong>{id || 'Addan otomatik üretilecek'}</strong>. Kaydedildikten sonra değişmez.</p>
         <label className="form-alani" htmlFor="dogrulama">Doğrulama durumu
           <select id="dogrulama" value={kaynakli ? taslak.dogrulama : 'temsili'} aria-describedby="dogrulama-yardim" onChange={e => guncelle({ dogrulama: e.target.value as Eser['dogrulama'] })}>

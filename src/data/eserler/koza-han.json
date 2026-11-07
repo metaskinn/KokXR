@@ -1,0 +1,60 @@
+{
+  "sehir": "Bursa",
+  "ilce": "Osmangazi",
+  "yapiTuru": "Han",
+  "dogrulama": "dogrulanmis",
+  "kapakGorsel": "",
+  "gorseller": [],
+  "bilgiNoktalari": [],
+  "id": "koza-han",
+  "ad": "Koza Han",
+  "donem": "Erken Osmanlı · M. 1489-1491",
+  "vakif": "II. Bayezid (İstanbul'daki külliyesine gelir sağlamak için)",
+  "ozet": "Bursa Çarşısı'nda Orhan Camii ile Ulucami arasında, II. Bayezid'in yaptırdığı han; bugün de ticaret yapılır, avlusu çay bahçesidir.",
+  "tarihce": "Koza Han, Çarşı ve Hanlar Bölgesi'nde Orhan Camii ile Ulucami arasında yer alır. Sultan II. Bayezid, İstanbul'daki külliyesine gelir sağlamak amacıyla hanı yaptırmıştır; inşaat 1489 yılı martında başlamış, 30 Eylül 1491'de tamamlanarak hizmete açılmıştır. Hanın mimarı Abdülûlâ bin Pulad Şah'tır. Tarih boyunca “Yeni Han”, “Beylik Han” ve “Eski Yeni Han” gibi adlarla anılmıştır. Han, bir avlu etrafında sıralanmış altlı üstlü odalardan ve doğu cephesine bitişik bir ahır bölümünden oluşur; avlunun ortasında köşk mescit denilen müstakil bir mescit bulunur. Ahşap üst kat revakı 1950'li yıllarda Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmıştır. Günümüzde üst katta ipek ticareti yapılır, avlu çay bahçesi olarak kullanılır.",
+  "test": [
+    {
+      "soru": "Koza Han'ı gelir sağlamak amacıyla yaptıran padişah kimdir?",
+      "secenekler": [
+        "II. Bayezid",
+        "Yıldırım Bayezid",
+        "I. Murad",
+        "II. Murad"
+      ],
+      "dogru": 0,
+      "aciklama": "Envantere göre han, Sultan II. Bayezid tarafından İstanbul'daki külliyesine gelir sağlamak amacıyla yaptırılmıştır.",
+      "kaynakId": "kh"
+    },
+    {
+      "soru": "Koza Han'ın avlusunun ortasında hangi yapı bulunur?",
+      "secenekler": [
+        "Köşk mescit",
+        "Hamam",
+        "Medrese",
+        "Sebil"
+      ],
+      "dogru": 0,
+      "aciklama": "Avlunun ortasında köşk mescit denilen müstakil bir mescit bulunduğu belirtilir.",
+      "kaynakId": "kh"
+    },
+    {
+      "soru": "Hanın ahşap üst kat revakını 1950'li yıllarda kim onarmıştır?",
+      "secenekler": [
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Bursa Belediyesi",
+        "Bursa Valiliği",
+        "Evkaf Nezareti"
+      ],
+      "dogru": 0,
+      "aciklama": "Envanter, revakın 1950'li yıllarda Bursa Eski Eserleri Sevenler Kurumu tarafından onarıldığını kaydeder.",
+      "kaynakId": "kh"
+    }
+  ],
+  "kaynaklar": [
+    {
+      "id": "kh",
+      "metin": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Koza Han\"",
+      "sayfa": "648–655"
+    }
+  ]
+}

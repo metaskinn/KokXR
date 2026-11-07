@@ -77,7 +77,8 @@ try {
       await p.mouse.up()
     }
     await waitStage(5); await snap('06-kusanma')
-    for (let i = 0; i < 7; i++) { await click(/· Parçayı yerleştir/); await p.waitForTimeout(250) }
+    // Düğme 3B nesneyi kare kare izler, Playwright 'stable' bulmaz; DOM tıklaması kullanılır.
+    for (let i = 0; i < 7; i++) { await p.getByRole('button', { name: /· Parçayı yerleştir/ }).dispatchEvent('click'); await p.waitForTimeout(250) }
     await waitStage(6); await snap('07-bitmis-kilic')
     assert(Number(await stage.getAttribute('data-takilan')) >= 9)
     await click('1. Ölçüler'); assert(await p.getByRole('dialog', { name: 'Ölçüler', exact: true }).isVisible()); await click('Parça notunu kapat')

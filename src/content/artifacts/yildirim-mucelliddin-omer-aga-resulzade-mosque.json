@@ -1,0 +1,107 @@
+{
+  "id": "yildirim-mucelliddin-omer-aga-resulzade-mosque",
+  "name": "Mücelliddin Ömer Ağa (Resulzade) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · 1500'den önce olduğu düşünülür; 1929'da yeniden inşa",
+  "endowment": "İlk banisinin Kadı Ali Çelebi olduğu düşünülmektedir; yeniden yaptıran Hacı Resul Mehmed Efendi",
+  "summary": "1929’da Hacı Resul Mehmed Efendi’nin yeniden yaptırdığı, kurşun kubbeli küçük cami.",
+  "history": "Hacı Seyfettin Mahallesi, 2. Sümbül Sokak No: 13'teki kitabesiz caminin 1500'den önce Kadı Ali Çelebi tarafından ahşap ve kırma çatılı olarak yaptırıldığı düşünülür. 1855 depreminde ağır hasar gören yapıyı 1929'da ipek tüccarı ve fabrikatör Hacı Resul Mehmed Efendi yeniden yaptırmıştır. Duvar ve kasnaklarda iki sıra tuğla ile bir sıra küfeki ve moloz taş almaşık örgüsü kullanılmıştır. Üç sivri kemerli son cemaat yerinin açıklıkları ahşap ve camla kapatılmıştır. 60 m² kare harimi altıgen kasnaklı kurşun kubbe örter. Minber ve kürsü ahşaptır; mihrap beyaz sıvalı ve altı sıra mukarnaslıdır. Kuzeybatıdaki minare altıgen kaideli, silindirik tuğla gövdeli ve kurşun külahlıdır. 1952'de onarılmış, 2008-2009'da Vakıflar Bölge Müdürlüğü kapsamlı restorasyon yapmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-mucelliddin-omer-aga-resulzade-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-mucelliddin-omer-aga-resulzade-mosque/exterior-view.jpg",
+      "alt": "Servi ağacının arkasında kemerli cami cephesi ve sağda tuğla minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-mucelliddin-omer-aga-resulzade-mosque/detail-view.jpg",
+      "alt": "Tuğla minare, bezemeli şerefe altı ve taş-tuğla cami duvarının yakın görünümü",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-mucelliddin-omer-aga-resulzade-mosque/exterior-view.jpg",
+      "x": 43,
+      "y": 65,
+      "title": "Son cemaat yeri",
+      "text": "Kuzeydeki son cemaat yeri üç sivri kemerli açıklığa sahiptir.",
+      "sourceId": "inv-p502"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-mucelliddin-omer-aga-resulzade-mosque/detail-view.jpg",
+      "x": 51,
+      "y": 47,
+      "title": "Minare gövdesi",
+      "text": "Minare silindirik tuğla gövdelidir.",
+      "sourceId": "inv-p503"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mücelliddin Ömer Ağa (Resulzade) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "Yıldırım",
+        "İznik"
+      ],
+      "correct": 2,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p501"
+    },
+    {
+      "question": "Camiyi 1929'da kim yeniden yaptırmıştır?",
+      "options": [
+        "Kadı Ali Çelebi",
+        "Hoca Ramazan",
+        "Raif Ağa",
+        "Hacı Resul Mehmed Efendi"
+      ],
+      "correct": 3,
+      "description": "Hacı Resul Mehmed Efendi.",
+      "sourceId": "inv-p502"
+    },
+    {
+      "question": "Kitaba göre son cemaat yeri hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Kuzeydeki son cemaat yeri üç sivri kemerli açıklığa sahiptir",
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 0,
+      "description": "Kuzeydeki son cemaat yeri üç sivri kemerli açıklığa sahiptir.",
+      "sourceId": "inv-p502"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p501",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Mücelliddin Ömer Ağa (Resulzade) Camii\"",
+      "page": "501"
+    },
+    {
+      "id": "inv-p502",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Mücelliddin Ömer Ağa (Resulzade) Camii\"",
+      "page": "502"
+    },
+    {
+      "id": "inv-p503",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Mücelliddin Ömer Ağa (Resulzade) Camii\"",
+      "page": "503"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

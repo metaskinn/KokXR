@@ -1,0 +1,97 @@
+{
+  "id": "yildirim-sible-mosque",
+  "name": "Şible Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · 1457",
+  "endowment": "Banisi Mevlânâ Bayezid Çelebi",
+  "summary": "Mevlânâ Bayezid Çelebi’nin 1457’de yaptırdığı, onarımlarla değişen mahalle camisi.",
+  "history": "Yeşil Mahallesi, Şible Sokak No: 2'deki cami 1457'de Şıblizâde Mahmud Çelebi'nin oğlu Mevlânâ Bayezid Çelebi tarafından yaptırılmıştır. Ahşap kırma çatı kiremitle kaplıdır. Yapı onarımlarla özgün mimari karakterini büyük ölçüde kaybetmiştir. Doğudaki özgün alçak minare yıkılarak kuzeyde yeniden yapılmıştır. Harim 9,85 × 8,25 m ölçülerindedir. Kitap sütunceli mihrabı beş sıra stalaktitli yaşmağıyla tarif eder. Harap haldeki yapı 1901'de kapsamlı onarılmış, ahşap minaresi kâgir olarak yeniden inşa edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-sible-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-sible-mosque/exterior-view.jpg",
+      "alt": "Yoğun yapılaşma arasında küçük kiremit çatılı cami ve açık renkli yüksek minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-sible-mosque/detail-view.jpg",
+      "alt": "Açık renk halılı harim, çinili mihrap duvarı ve sağda ahşap minber",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-sible-mosque/exterior-view.jpg",
+      "x": 43,
+      "y": 67,
+      "title": "Kiremit örtü",
+      "text": "Caminin ahşap kırma çatısı kiremit kaplıdır.",
+      "sourceId": "inv-p519"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-sible-mosque/exterior-view.jpg",
+      "x": 44,
+      "y": 37,
+      "title": "Yenilenen minare",
+      "text": "Ahşap minare 1901 onarımında kâgir olarak yeniden yapılmıştır.",
+      "sourceId": "inv-p519"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şible Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Yıldırım",
+        "Osmangazi",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 0,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p519"
+    },
+    {
+      "question": "Şible Camii hangi yılda yaptırılmıştır?",
+      "options": [
+        "1557",
+        "1457",
+        "1657",
+        "1757"
+      ],
+      "correct": 1,
+      "description": "1457.",
+      "sourceId": "inv-p519"
+    },
+    {
+      "question": "Kitaba göre kiremit örtü hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "Caminin ahşap kırma çatısı kiremit kaplıdır",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 2,
+      "description": "Caminin ahşap kırma çatısı kiremit kaplıdır.",
+      "sourceId": "inv-p519"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p519",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Şible Camii\"",
+      "page": "519"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

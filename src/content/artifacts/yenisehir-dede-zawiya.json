@@ -1,0 +1,139 @@
+{
+  "id": "yenisehir-dede-zawiya",
+  "name": "Postinpûş Camii (Seyyid Mehmet Dede Zaviyesi)",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Erken Osmanlı · Orhan Gazi dönemine tarihlendirilir (kroniklerde I. Murad)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Horasan erenlerinden Postinpûş Baba adına yapılmış, erken Osmanlı \"tabhaneli cami\" tipinin özgün örneklerinden bir zaviye.",
+  "history": "Yenişehir'in Yenigün Mahallesi'nde, Baba Sultan Parkı içinde yer alan yapı, kaynaklarda \"Baba Sultan Zaviyesi\", \"Seyyid Mehmed Dede Zaviyesi\" ve \"Postinpûş Baba Sultan İmareti\" gibi adlarla anılır. Zaviyenin güneyinde bir dönem küçük bir mescit ile türbe bulunduğu aktarılır, ancak bunların izleri günümüze ulaşmamıştır.\n\nOsmanlı kaynaklarında yapı, Horasan erenlerinden Seyyid Mehmed Hammârî (Postinpûş Baba) adına inşa ettirilen bir zaviye olarak tanımlanır. Kroniklerde genellikle Sultan I. Murad Hudâvendigâr tarafından yaptırıldığı belirtilir; Âşıkpaşazâde de Sultan Murad'ın Yenişehir'de Postinpûş Baba için bir zaviye yaptırdığını açıkça ifade eder. Buna karşılık Ekrem Hakkı Ayverdi ve Semavi Eyice yapıyı Orhan Gazi dönemine tarihlendirir; kitap bu değerlendirmeler doğrultusunda yapının Orhan Gazi dönemi mimari faaliyetleri kapsamında inşa edildiğinin kabul edilebileceğini belirtir.\n\nİlçenin kuzeybatısında hâkim bir tepe üzerine kurulan zaviye, büyük bir ibadet mekânı ile ona bitişik simetrik iki tabhane kanadından oluşur. Bu plan tipinde mihrabın giriş eksenindeki duvarda olması beklenirken, burada mihrap nişi eksenden sapmış olarak girişin solundaki doğu duvarındadır. Doğu cephesi dışındaki cephelerde bir sıra kesme taş ile üç sıra tuğladan oluşan almaşık örgü dikkati çeker; küfeki taşı ve yassı tuğlalarla balıksırtı, hasır örgüsü ve rozet gibi desenler oluşturulmuştur.\n\nYapının muhtemelen XIX. yüzyıl sonlarında bir depremle yıkılıp kullanılamaz hâle geldiği, 1905-1906'da yeniden ihya edildiği değerlendirilir. 1950'lerin başında harim bir süre su deposu olarak kullanılmış, 1965'te Vakıflar Genel Müdürlüğü restorasyona başlamıştır. Yapı yeniden cami işlevi kazanmış, çevresi park olarak düzenlenmiş; 2010'da çevresiyle birlikte kapsamlı bir onarımdan geçirilerek tekrar ibadete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-dede-zawiya/exterior-park.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-dede-zawiya/exterior-park.jpg",
+      "alt": "Parktaki taş ve tuğla almaşık örgülü yapı: cephede tuğla kör kemerler, üstte kiremit kubbe ve baca, önde geometrik desenli taş zemin ve ağaçlar",
+      "description": "Parktaki zaviyenin görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-dede-zawiya/prayer-hall.jpg",
+      "alt": "Beyaz badanalı kubbeli iç mekân: ortada sade kemerli mihrap nişi, solda ahşap vaaz kürsüsü, sağda ahşap minber, zeminde desenli halı",
+      "description": "Harim, mihrap ve kürsü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-dede-zawiya/roof-chimney.jpg",
+      "alt": "Kiremit kaplı kubbeler ve tuğla kasnak, yanında tuğla gövdeli, üstü kemerli açıklıklı baca, arkada sarı yapraklı ağaçlar",
+      "description": "Kubbeler ve baca",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-dede-zawiya/aerial-top.jpg",
+      "alt": "Yapının tepeden görünümü: ortada büyük kiremit kubbe, yanlarda daha küçük kubbeler, çevrede altıgen taş döşemeli park",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "masonry",
+      "image": "/images/yenisehir-dede-zawiya/exterior-park.jpg",
+      "x": 22,
+      "y": 45,
+      "title": "Almaşık duvar örgüsü",
+      "text": "Doğu cephesi dışındaki cephelerde bir sıra kesme taş ile üç sıra tuğladan oluşan almaşık örgü vardır. Küfeki taşı ve yassı tuğlalarla balıksırtı, hasır örgüsü ve rozet gibi geometrik desenler oluşturulmuştur.",
+      "sourceId": "inv-p707"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/yenisehir-dede-zawiya/prayer-hall.jpg",
+      "x": 49,
+      "y": 47,
+      "title": "Mihrap",
+      "text": "Harimde kenarları bordürle çerçevelenmiş oldukça sade bir mihrap vardır. Mihrap nişi giriş ekseninden sapmış olarak girişin solundaki doğu duvarında yer alır; kitap bunu özgün bir uygulama olarak değerlendirir.",
+      "sourceId": "inv-p706"
+    },
+    {
+      "id": "pulpit",
+      "image": "/images/yenisehir-dede-zawiya/prayer-hall.jpg",
+      "x": 17,
+      "y": 56,
+      "title": "Vaaz kürsüsü",
+      "text": "Sofanın güneydoğu köşesine ahşap bir vaaz kürsüsü yerleştirilmiştir.",
+      "sourceId": "inv-p706"
+    },
+    {
+      "id": "dome",
+      "image": "/images/yenisehir-dede-zawiya/aerial-top.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Kubbeli harim",
+      "text": "Giriş dehlizinin ucunda kare planlı, büyük bir kubbeyle örtülü harim yer alır. Yanlardaki dar koridorlardan kubbeli misafirhane birimlerine ulaşılır.",
+      "sourceId": "inv-p706"
+    }
+  ],
+  "test": [
+    {
+      "question": "Âşıkpaşazâde'ye göre Yenişehir'de Postinpûş Baba için zaviyeyi kim yaptırmıştır?",
+      "options": [
+        "Orhan Gazi",
+        "Sultan I. Murad",
+        "Yıldırım Bayezid",
+        "Çelebi Mehmed"
+      ],
+      "correct": 1,
+      "description": "Âşıkpaşazâde, Sultan Murad'ın Yenişehir'de Postinpûş Baba için bir zaviye yaptırdığını açıkça ifade eder; Ayverdi ve Eyice ise yapıyı Orhan Gazi dönemine tarihlendirir.",
+      "sourceId": "inv-p705"
+    },
+    {
+      "question": "Yapı, erken Osmanlı mimarisindeki hangi tipolojinin özgün örneklerindendir?",
+      "options": [
+        "Tabhaneli cami",
+        "Çok kubbeli ulu cami",
+        "Medrese",
+        "Kervansaray"
+      ],
+      "correct": 0,
+      "description": "Zaviye, erken Osmanlı mimarisinde yaygın olan \"tabhaneli cami\" tipinin özgün örneklerinden biridir.",
+      "sourceId": "inv-p706"
+    },
+    {
+      "question": "1950'li yılların başında harim kısmı ne olarak kullanılmıştır?",
+      "options": [
+        "Okul",
+        "Ambar",
+        "Su deposu",
+        "Müze"
+      ],
+      "correct": 2,
+      "description": "1950'lerin başında harim bir süre su deposu olarak kullanılmış, 1965'te restorasyona başlanmıştır.",
+      "sourceId": "inv-p707"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p705",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Postinpûş Camii (Seyyid Mehmet Dede Zaviyesi)\"",
+      "page": "391"
+    },
+    {
+      "id": "inv-p706",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Postinpûş Camii (Seyyid Mehmet Dede Zaviyesi)\"",
+      "page": "392"
+    },
+    {
+      "id": "inv-p707",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Postinpûş Camii (Seyyid Mehmet Dede Zaviyesi)\"",
+      "page": "393"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

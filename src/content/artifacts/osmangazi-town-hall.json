@@ -1,0 +1,128 @@
+{
+  "id": "osmangazi-town-hall",
+  "name": "Belediye Binası",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XIX. yüzyıl; kaynaklarda 1879 ve 1879–1880",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Bursa’nın tarihi belediye binası, ahşap çatkısı, kırmızı tuğla cepheleri ve geniş saçaklı çatısıyla tanımlanır.",
+  "history": "Belediye Binası, Orhanbey Mahallesi, 6. Uçak Sokak No: 3'tedir. Kitap, Bursa belediye teşkilatının H. 1284 / M. 1867'de kurulduğunu, o tarihte idari binasının bulunmadığını belirtir. İnşa ve onarımına ilişkin Osmanlı arşiv belgesine ulaşılamadığı, yerel kaynakların sınırlı bilgi verdiği aktarılır.\n\nKepecioğlu'na göre bina 1879'da yapılmış, 1902'de yarısından fazlası genişletilmiştir. Kazım Baykal, 1879 tarihini vererek mimar kalfasını Kütahyalı Şehbender olarak anar ve büyük salonun 1902'de yapıldığını belirtir. Kitap, bazı kaynaklarda inşanın H. 1297 / M. 1879–1880, genişlemenin ise H. 1320 / M. 1902–1903 olarak verildiğini de kaydeder. Yapı, Vali Ahmet Vefik Paşa ve Belediye Başkanı Hüseyin Hüsnü Efendi döneminde inşa edilmiştir. 1902'de eklenen büyük ve süslü salon, II. Abdülhamid'in doğum günü vesilesiyle açılmıştır.\n\nGeleneksel işçilikle yapılmış geniş saçaklı, ahşap çatkılı ve kırmızı tuğla duvarlı bina, İpekçilik Mektebi ile benzer üsluptadır. Kitapta yapı, Usûl-i Mimâri-i Osmâni'de savunulan Neo-Osmanlı görüşü ile geleneksel Osmanlı konak planlarını yansıtan bir örnek olarak tanımlanır.\n\n28 × 22 m boyutlarındaki yapı, yüksek bodrum üzerinde iki kattan oluşur. Doğu girişinin üstündeki çıkmalı salon sekiz sütunla, batı girişinin üstündeki çıkma dört sütunla taşınır. Batı girişine iki kollu yüksek merdivenle ulaşılır. Kesme taş bodrumda odalar, tuvaletler ve pencereler; zemin katta geniş hol çevresinde odalar vardır. Üst kata holün kuzey ve güneyindeki simetrik merdivenlerle çıkılır. Birinci kat 1902'de yeniden düzenlenmiştir; doğudaki dışa taşkın bölümün de bu yıl eklendiği belgelenmiştir.\n\nBasık kemerli pencereleri bulunan cephelerde tuğladan stilize servi, güneş kursu, gülbezek, geometrik desen ve Davut yıldızı bezemeleri görülür. Ahşap karkas araları kırmızı ateş tuğlasıyla doldurulmuştur. Geniş saçaklı ahşap çatının üzerinde sekizgen planlı, sekiz pencereli aydınlık feneri olan cihannüma yer alır. Kitapta binanın Bursa Büyükşehir Belediyesi Başkanlık makamı olarak kullanıldığı belirtilir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-town-hall/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-town-hall/exterior.jpg",
+      "alt": "Kırmızı tuğla dolgulu koyu ahşap çatkılı bina, geniş çatı saçakları, taş bodrum ve cephede Türk bayrakları",
+      "description": "Dış cephe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-town-hall/ceremonial-hall.jpg",
+      "alt": "Beyaz ve altın renkli süslemeli geniş salon; avizeler, mavi perdeler ve çevreye sıralanmış koltuklar",
+      "description": "Büyük salon",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-town-hall/entrance-hall.jpg",
+      "alt": "Ortada çiçekli masa, iki yanda kıvrımlı ahşap korkuluklu merdivenler ve sütunlar bulunan hol",
+      "description": "Hol ve merdivenler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "eaves",
+      "image": "/images/osmangazi-town-hall/exterior.jpg",
+      "x": 46,
+      "y": 13,
+      "title": "Geniş saçaklar",
+      "text": "Yapı geniş saçaklara ve kiremit kaplı çatıya sahiptir.",
+      "sourceId": "inv-p105"
+    },
+    {
+      "id": "stairs",
+      "image": "/images/osmangazi-town-hall/entrance-hall.jpg",
+      "x": 27,
+      "y": 43,
+      "title": "Simetrik merdivenler",
+      "text": "Holün kuzey ve güney aksındaki simetrik merdivenlerle üst kata ulaşılır.",
+      "sourceId": "inv-p105"
+    },
+    {
+      "id": "brick",
+      "image": "/images/osmangazi-town-hall/exterior.jpg",
+      "x": 48,
+      "y": 43,
+      "title": "Tuğla dolgu",
+      "text": "Cephelerde ahşap karkas arasına kırmızı ateş tuğlası yerleştirilmiştir.",
+      "sourceId": "inv-p106"
+    }
+  ],
+  "test": [
+    {
+      "question": "Belediye Binası hangi mahallededir?",
+      "options": [
+        "Nalbantoğlu",
+        "Kuruçeşme",
+        "Alacahırka",
+        "Orhanbey"
+      ],
+      "correct": 3,
+      "description": "Yapı Orhanbey Mahallesi’nde yer alır.",
+      "sourceId": "inv-p103"
+    },
+    {
+      "question": "Cephede ahşap karkas arasındaki dolgu malzemesi nedir?",
+      "options": [
+        "Mermer",
+        "Kırmızı ateş tuğlası",
+        "Cam",
+        "Kurşun"
+      ],
+      "correct": 1,
+      "description": "Ana dolgu malzemesi kırmızı ateş tuğlasıdır.",
+      "sourceId": "inv-p106"
+    },
+    {
+      "question": "Çatıdaki cihannümanın planı nasıldır?",
+      "options": [
+        "Sekizgen",
+        "Üçgen",
+        "Daire",
+        "Beşgen"
+      ],
+      "correct": 0,
+      "description": "Çatıda sekizgen planlı ve sekiz pencereli bir cihannüma vardır.",
+      "sourceId": "inv-p106"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p103",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Belediye Binası\"",
+      "page": "103"
+    },
+    {
+      "id": "inv-p104",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Belediye Binası\"",
+      "page": "104"
+    },
+    {
+      "id": "inv-p105",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Belediye Binası\"",
+      "page": "105"
+    },
+    {
+      "id": "inv-p106",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Belediye Binası\"",
+      "page": "106"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

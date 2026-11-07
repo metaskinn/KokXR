@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-mesut-makramavi-mosque-and-graveyard",
+  "name": "Mesut Makramavi Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · II. Murad dönemi; 1965'te yeniden inşa",
+  "endowment": "Banisi Hasırcıoğlu Mesud Makramavî",
+  "summary": "Mesud Makramavî’nin yaptırdığı, 1965’te betonarme olarak yenilenen mescit ve tarihî haziresi.",
+  "history": "Namazgâh Mahallesi, Havlucu Sokak No: 9'daki camiyi II. Murad döneminde Emîr Sultan'ın mensubu ve peşkircisi Hasırcıoğlu Mesud Makramavî yaptırmıştır. Makrame adı oyalı veya nakışlı mendil ya da peşkirle ilişkilendirilir. Ahşap çatılı mescit doğal afetlerle yıkılmış, 1965'te daha küçük boyutta betonarme olarak tamamen yenilenmiştir. Bu sırada minare doğudan batıya taşınmıştır. Dikdörtgen planlı, çatı örtülü yapının duvarları sıvanmış, dışı mozaikle kaplanmıştır; 1991'de tescil edilmiştir. Minarenin kare kaidesi, silindirik gövdesi ve sivri külahı sıvalıdır. Kıbledeki küçük hazirede kitap altı mezar taşı bulunduğunu, beşinin Hoca Mehmed ailesine ait olduğunu ve vefat tarihlerinin 1529'a işaret ettiğini belirtir; ayrıca tarihsiz Satı Hanım taşı ile yazısız başka bir taşı da anar.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-mesut-makramavi-mosque-and-graveyard/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-mesut-makramavi-mosque-and-graveyard/exterior-view.jpg",
+      "alt": "Apartmanlar arasındaki kiremit çatılı cami ve açık renkli tek şerefeli minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-mesut-makramavi-mosque-and-graveyard/detail-view.jpg",
+      "alt": "Ağaç ve bitkiler arasında farklı boylarda tarihî mezar taşları",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-mesut-makramavi-mosque-and-graveyard/exterior-view.jpg",
+      "x": 59,
+      "y": 58,
+      "title": "Minare",
+      "text": "Yeniden inşa sırasında minare doğudan batıya alınmıştır.",
+      "sourceId": "inv-p485"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-mesut-makramavi-mosque-and-graveyard/detail-view.jpg",
+      "x": 52,
+      "y": 62,
+      "title": "Hazire",
+      "text": "Kıble yönünde küçük, tarihî nitelik taşıyan bir hazire bulunmaktadır.",
+      "sourceId": "inv-p486"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mesut Makramavi Camii ve Haziresi Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "Yıldırım",
+        "İznik"
+      ],
+      "correct": 2,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p485"
+    },
+    {
+      "question": "1965 yenilemesinde minare nasıl değiştirilmiştir?",
+      "options": [
+        "Batıdan doğuya taşınmıştır",
+        "Tamamen kaldırılmıştır",
+        "İkinci şerefe eklenmiştir",
+        "Doğudan batıya taşınmıştır"
+      ],
+      "correct": 3,
+      "description": "Doğudan batıya taşınmıştır.",
+      "sourceId": "inv-p485"
+    },
+    {
+      "question": "Kitaba göre minare hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Yeniden inşa sırasında minare doğudan batıya alınmıştır",
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 0,
+      "description": "Yeniden inşa sırasında minare doğudan batıya alınmıştır.",
+      "sourceId": "inv-p485"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p485",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Mesut Makramavi Camii ve Haziresi\"",
+      "page": "485"
+    },
+    {
+      "id": "inv-p486",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Mesut Makramavi Camii ve Haziresi\"",
+      "page": "486"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

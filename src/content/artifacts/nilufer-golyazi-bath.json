@@ -1,0 +1,132 @@
+{
+  "id": "nilufer-golyazi-bath",
+  "name": "Gölyazı Hamamı",
+  "city": "Bursa",
+  "district": "Nilüfer",
+  "period": "Erken Osmanlı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Gölyazı'da sıcaklık ve soğukluk bölümlerinden oluşan, iki küçük kubbeli erken Osmanlı hamamı.",
+  "history": "Nilüfer ilçesi, Gölyazı Mahallesi, Cumhuriyet Caddesi'nde yer alır. Erken Osmanlı dönemine tarihlendirilen hamam dikdörtgen planlıdır ve iki küçük kubbeyle örtülüdür. Sıcaklık ve soğukluk bölümlerinden oluşan hamamın kubbeler dışında kalan üst örtüsü kirpi saçaklı kırma çatıyla kapatılmıştır. Halvet, su deposu ve külhan birimleri mevcuttur, ancak restorasyondan sonra bu bölümler özgün işlevlerini yitirmiştir.\n\nKubbeler beton malzemeyle inşa edilmiş ve dış yüzeyleri sıvanmıştır. İç mekân sıvalıdır, duvarlar moloz taştan örülmüştür.\n\nYapı 2007-2008 yılları arasında restorasyon geçirmiştir. Kısa bir süre önce, mimari işlevine aykırı biçimde \"hamam-kafe\" olarak kullanılmış, ancak bu kullanım sürdürülememiştir. Günümüzde yapı boş durumdadır.",
+  "verification": "verified",
+  "coverImage": "/images/nilufer-golyazi-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/nilufer-golyazi-bath/exterior.jpg",
+      "alt": "Moloz taş duvarlı, alçak, kiremit çatılı hamam yapısı; çatıda küçük kubbeler ve tuğla baca, çevrede evler",
+      "description": "Hamamın genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-bath/aerial-roof.jpg",
+      "alt": "Tepeden görünüm: kiremit kaplı kırma çatı arasında dilimli kiremit örtülü küçük kubbeler",
+      "description": "Tepeden çatı ve kubbeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-bath/domes-detail.jpg",
+      "alt": "Kiremit çatı üzerinde taş kasnaklı küçük kubbeler ve kiremit ışık delikleri",
+      "description": "Kubbeler yakından",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-bath/exterior-side.jpg",
+      "alt": "Moloz taş duvarlı yapının köşeden görünümü, kırmızı kapı ve çatıda tuğla baca",
+      "description": "Yan cephe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-bath/entrance-facade.jpg",
+      "alt": "Moloz taş cephede kırmızı çift kanatlı kapı, üstünde \"Kahve Altı\" yazılı tabela ve tuğla baca",
+      "description": "Giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/nilufer-golyazi-bath/aerial-roof.jpg",
+      "x": 50,
+      "y": 42,
+      "title": "İki küçük kubbe",
+      "text": "Dikdörtgen planlı hamam iki küçük kubbeyle örtülüdür; kubbeler dışında kalan üst örtü kirpi saçaklı kırma çatıyla kapatılmıştır.",
+      "sourceId": "inv-p638"
+    },
+    {
+      "id": "walls",
+      "image": "/images/nilufer-golyazi-bath/exterior-side.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Moloz taş duvarlar",
+      "text": "Duvarlar moloz taştan örülmüş, iç mekân sıvanmıştır.",
+      "sourceId": "inv-p639"
+    },
+    {
+      "id": "reuse",
+      "image": "/images/nilufer-golyazi-bath/entrance-facade.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Yeni kullanımlar",
+      "text": "2007-2008'deki restorasyondan sonra yapı bir süre \"hamam-kafe\" olarak kullanılmış, ancak bu kullanım sürdürülememiştir. Bugün yapı boştur.",
+      "sourceId": "inv-p639"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gölyazı Hamamı hangi döneme tarihlendirilir?",
+      "options": [
+        "Bizans",
+        "Erken Osmanlı",
+        "Geç Osmanlı",
+        "Cumhuriyet"
+      ],
+      "correct": 1,
+      "description": "Hamam erken Osmanlı dönemine tarihlendirilir.",
+      "sourceId": "inv-p638"
+    },
+    {
+      "question": "Hamam hangi bölümlerden oluşur?",
+      "options": [
+        "Sıcaklık ve soğukluk",
+        "Yalnız sıcaklık",
+        "Dört kubbeli soyunmalık",
+        "Çifte hamam bölümleri"
+      ],
+      "correct": 0,
+      "description": "Hamam sıcaklık ve soğukluk bölümlerinden oluşur.",
+      "sourceId": "inv-p638"
+    },
+    {
+      "question": "Restorasyondan sonra yapı bir süre ne olarak kullanılmıştır?",
+      "options": [
+        "Müze",
+        "Hamam-kafe",
+        "Kütüphane",
+        "Depo"
+      ],
+      "correct": 1,
+      "description": "Yapı mimari işlevine aykırı biçimde \"hamam-kafe\" olarak kullanılmış, bu kullanım sürdürülememiştir.",
+      "sourceId": "inv-p639"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p638",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Nilüfer, \"Gölyazı Hamamı\"",
+      "page": "326"
+    },
+    {
+      "id": "inv-p639",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Nilüfer, \"Gölyazı Hamamı\"",
+      "page": "327"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

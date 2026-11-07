@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-seker-hoca-tomb",
+  "name": "Mehmet Bin Seyit Ali (Şeker Hoca) Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Murad Hudâvendigâr ya da Yıldırım Bayezid dönemi; kitabede \"H. 878 / M. 1493\" yazılı",
+  "endowment": "Banisi Şeker Hoca",
+  "summary": "Nalbantoğlu'nda, Şeker Hoca'nın yaptırdığı, içi kubbeli, dışı kiremit çatılı ve tek sandukalı küçük türbe.",
+  "history": "Mehmet Bin Seyit Ali (Şeker Hoca) Türbesi, Osmangazi İlçesi, Nalbantoğlu Mahallesi, Cami Aralığı 2. Sokak'tadır. Türbe, Murad Hudâvendigâr ya da Yıldırım Bayezid döneminde yaşamış olan Şeker Hoca tarafından yaptırılmıştır. Hakkında ayrıntılı bilgi bulunmamakla birlikte, halk arasında hastalıklara şifa için şekerli bitkisel karışımlar hazırladığı ve bu yüzden \"Şeker Hoca\" diye anıldığı rivayet edilir.\n\nKitaba göre türbe 1930'lu yıllarda kâgir bir yapıyken bugün taş ve tuğla almaşık duvar tekniğiyle örülüdür. 2,86 × 3,22 m ölçülerindeki yapının içi kubbeyle, dışı kiremit çatıyla örtülüdür. Doğu cephesindeki pencere alınlığında yer alan kitabede \"Mehmet bin Seyyid Ali H. 878 / M. 1493\" ifadesi yazılıdır. Sivri kemer alınlıklı ve demir parmaklıklı pencereleri olan türbede bir sanduka bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-seker-hoca-tomb/top-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-seker-hoca-tomb/top-view.jpg",
+      "alt": "Tepeden görünüm: kare planlı küçük yapının ışınsal çizgili, yosunlu gri üst örtüsü; sağında çatısı çökmüş, kiremitleri dağılmış ahşap bir bina",
+      "description": "Türbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seker-hoca-tomb/interior.jpg",
+      "alt": "Yeşile boyanmış iç mekân: yeşil örtülü, baş tarafında sarık bulunan sanduka; üstte kubbe, sağda yeşil kepenkli kemerli pencere nişi",
+      "description": "Sanduka ve iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-seker-hoca-tomb/interior.jpg",
+      "x": 51,
+      "y": 71,
+      "title": "Sanduka",
+      "text": "Türbenin içinde tek bir sanduka bulunur.",
+      "sourceId": "inv-p222"
+    },
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-seker-hoca-tomb/interior.jpg",
+      "x": 50,
+      "y": 10,
+      "title": "İç kubbe",
+      "text": "2,86 × 3,22 m ölçülerindeki yapının içi kubbeyle örtülüdür.",
+      "sourceId": "inv-p222"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeker Hoca'nın bu adla anılmasının sebebi olarak ne rivayet edilir?",
+      "options": [
+        "Şekerci dükkânı işletmesi",
+        "Hastalıklara şifa için şekerli bitkisel karışımlar hazırlaması",
+        "Çocuklara şeker dağıtması",
+        "Şeker kamışı tarımı yapması"
+      ],
+      "correct": 1,
+      "description": "Halk arasında hastalıklara şifa amacıyla şekerli bitkisel karışımlar hazırladığı ve bu yüzden \"Şeker Hoca\" diye anıldığı rivayet edilir.",
+      "sourceId": "inv-p222"
+    },
+    {
+      "question": "Türbenin dışı neyle örtülüdür?",
+      "options": [
+        "Kurşun kubbeyle",
+        "Toprak damla",
+        "Ahşap tavanla",
+        "Kiremit çatıyla"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre yapının içi kubbeyle, dışı kiremit çatıyla örtülüdür.",
+      "sourceId": "inv-p222"
+    },
+    {
+      "question": "Türbenin kitabesi nerededir?",
+      "options": [
+        "Doğu cephesindeki pencere alınlığında",
+        "Giriş kapısının üstünde",
+        "Sandukanın üzerinde",
+        "Kubbe eteğinde"
+      ],
+      "correct": 0,
+      "description": "\"Mehmet bin Seyyid Ali\" yazılı kitabe, doğu cephesindeki pencere alınlığındadır.",
+      "sourceId": "inv-p222"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p222",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Mehmet Bin Seyit Ali (Şeker Hoca) Türbesi\"",
+      "page": "222"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

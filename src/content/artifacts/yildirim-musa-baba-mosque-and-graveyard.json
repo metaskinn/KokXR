@@ -1,0 +1,122 @@
+{
+  "id": "yildirim-musa-baba-mosque-and-graveyard",
+  "name": "Musa Baba Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · rivayete göre XVI. yüzyıl başları",
+  "endowment": "Şeyhülislam Abdülkadir Efendi ve Hançerli Fatma Sultan vakıfları",
+  "summary": "Abdal Mûsâ adına yaptırıldığı rivayet edilen, 1979’da yeniden ibadete açılan kubbeli cami ve haziresi.",
+  "history": "Musababa Mahallesi, Musababa Caddesi No: 74'teki kitabesiz caminin, rivayete göre XVI. yüzyıl başlarında Şeyhülislam Abdülkadir Efendi tarafından Abdal Mûsâ adına, eski zaviyenin yerinde yaptırıldığı anlatılır. Kitap Abdülkadir Efendi için “1583 yılında ise şeyhülislam olmuştur”, “ardından 1541 yılında emekli edilmiştir” ve “1548 yılında vefat etmiştir” ifadelerini birlikte verir. Abdülkadir Efendi ve Hançerli Fatma Sultan yapıyı yaşatmak için vakıflar kurmuştur. Hançerli Fatma Sultan vakfiyesi 1531 tarihlidir. Dikdörtgen yapının duvarları iki sıra tuğla ve bir sıra moloz taşla örülüdür. Üç bölümlü son cemaat yerinin ortası kubbe, yanları tonozla örtülüdür. 8,30 × 8,30 m harimi kurşun kaplı kubbe örter. Mihrap çini, minber ve kürsü ahşaptır. Doğuda küçük bir kuş evi vardır. Harap olup Yıkık Minare diye anılan yapı 13 Nisan 1979'da yeniden ibadete açılmıştır. 2017-2020 restorasyonunda sonradan eklenen bölümler kaldırılmıştır. Doğudaki hazirede Abdal Mûsâ'nın mezarı bulunur; hazire 2010'da düzenlenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-musa-baba-mosque-and-graveyard/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-musa-baba-mosque-and-graveyard/exterior-view.jpg",
+      "alt": "Ağaçlar içinde kurşun kubbeli cami, üç kemerli cephe ve yüksek tuğla minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-musa-baba-mosque-and-graveyard/detail-view.jpg",
+      "alt": "Mavi halılı harim; büyük mavi çinili mihrap, sağda ahşap minber ve sivri kemerli pencereler",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-musa-baba-mosque-and-graveyard/detail-view.jpg",
+      "x": 52,
+      "y": 51,
+      "title": "Çinili mihrap",
+      "text": "Mihrap tamamen çini kaplanmıştır.",
+      "sourceId": "inv-p498"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-musa-baba-mosque-and-graveyard/exterior-view.jpg",
+      "x": 30,
+      "y": 70,
+      "title": "Harim kubbesi",
+      "text": "Kare harim kurşun kaplı kubbeyle örtülüdür.",
+      "sourceId": "inv-p499"
+    }
+  ],
+  "test": [
+    {
+      "question": "Musa Baba Camii ve Haziresi Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Yıldırım",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 1,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p495"
+    },
+    {
+      "question": "Cami yeniden hangi tarihte ibadete açılmıştır?",
+      "options": [
+        "29 Ekim 1923",
+        "18 Ağustos 1531",
+        "13 Nisan 1979",
+        "1 Ocak 2000"
+      ],
+      "correct": 2,
+      "description": "13 Nisan 1979.",
+      "sourceId": "inv-p499"
+    },
+    {
+      "question": "Kitaba göre çinili mihrap hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir",
+        "Mihrap tamamen çini kaplanmıştır"
+      ],
+      "correct": 3,
+      "description": "Mihrap tamamen çini kaplanmıştır.",
+      "sourceId": "inv-p498"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p495",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Musa Baba Camii ve Haziresi\"",
+      "page": "495"
+    },
+    {
+      "id": "inv-p496",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Musa Baba Camii ve Haziresi\"",
+      "page": "496"
+    },
+    {
+      "id": "inv-p497",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Musa Baba Camii ve Haziresi\"",
+      "page": "497"
+    },
+    {
+      "id": "inv-p498",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Musa Baba Camii ve Haziresi\"",
+      "page": "498"
+    },
+    {
+      "id": "inv-p499",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Musa Baba Camii ve Haziresi\"",
+      "page": "499"
+    },
+    {
+      "id": "inv-p500",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Musa Baba Camii ve Haziresi\"",
+      "page": "500"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

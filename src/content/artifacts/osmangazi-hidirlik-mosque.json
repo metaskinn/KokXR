@@ -1,0 +1,104 @@
+{
+  "id": "osmangazi-hidirlik-mosque",
+  "name": "Hıdırlık (Nilüfer Hatun) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · inşa tarihi kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Rivayete göre Nilüfer Hatun'un yaptırdığı, sivri kemerli eyvan görünümlü son cemaat yerine sahip küçük kubbeli cami.",
+  "history": "Hıdırlık (Nilüfer Hatun) Camii, Osmangazi İlçesi, İvazpaşa Mahallesi, Dikyokuş Sokak No: 1'dedir. Rivayetlere göre Üftâde Hazretleri'nin şeyhi Hızır Dede burada medfun olduğu için bölgeye Hıdırlık Mahallesi adı verilmiş; cami ise kitapta Sultan I. Murad'ın kızı olarak anılan Nilüfer Hatun tarafından yaptırıldığı için onun adıyla anılmıştır.\n\nDikdörtgen planlı caminin ana mekânı 5,85 × 5,90 m, son cemaat yeri 2,05 × 5,90 m ölçülerindedir. Son cemaat yeri doğu cephesindedir ve sivri kemerli bir eyvan görünümündedir; doğu ve batı yönleri kapalı olan bu bölümden bir kapıyla ibadet mekânına geçilir.\n\nKubbeyle örtülü yapının doğu ve kuzey duvarlarında düz lentolu, dikdörtgen iki pencere vardır; ana mekân, kubbe kasnağındaki üç sivri kemerli pencereden giren ışıkla aydınlanır. Yenilenmiş mihrap, sivri kemerli, 0,43 m derinliğinde ve dört köşeli bir niştir. Duvarlar bir sıra taş ve bir sıra moloz taşla örülmüştür. Caminin içinde eskiye ait herhangi bir unsur kalmamıştır. Günümüzde ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hidirlik-mosque/narthex-facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hidirlik-mosque/narthex-facade.jpg",
+      "alt": "Yamaçtaki evler arasında taş ve tuğla duvarlı küçük cami: camekânla kapatılmış büyük sivri kemerli giriş, üstte kiremit kaplı kademeli çatılar, önde merdiven",
+      "description": "Sivri kemerli son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hidirlik-mosque/mihrab.jpg",
+      "alt": "İç mekân: beyaz duvarda sivri kemerli sade mihrap nişi, önünde seccade, üstte hat levhası ve iki yanda altıgen levhalar; en üstte sivri kemerli pencere",
+      "description": "Mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hidirlik-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: komşu evlerin çatıları arasında kiremit kaplı çok yüzlü çatı ve önündeki son cemaat yerinin çatısı",
+      "description": "Çatının tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-hidirlik-mosque/narthex-facade.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Son cemaat yeri",
+      "text": "Son cemaat yeri sivri kemerli bir eyvan görünümündedir; ibadet mekânına bu bölümden bir kapıyla geçilir.",
+      "sourceId": "inv-p339"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-hidirlik-mosque/mihrab.jpg",
+      "x": 50,
+      "y": 59,
+      "title": "Mihrap",
+      "text": "Yenilenmiş mihrap, sivri kemerli, 0,43 m derinliğinde ve dört köşeli bir niştir.",
+      "sourceId": "inv-p339"
+    }
+  ],
+  "test": [
+    {
+      "question": "Rivayete göre bölgeye neden Hıdırlık Mahallesi adı verilmiştir?",
+      "options": [
+        "Hıdırellez şenliklerinin burada yapılmasından",
+        "Mahallenin Hıdır adlı bir vakıf tarafından kurulmasından",
+        "Hızır Dede'nin burada medfun olmasından",
+        "Caminin Hıdır Bey tarafından yaptırılmasından"
+      ],
+      "correct": 2,
+      "description": "Rivayetlere göre Üftâde Hazretleri'nin şeyhi Hızır Dede burada medfun olduğu için bölgeye Hıdırlık Mahallesi adı verilmiştir.",
+      "sourceId": "inv-p339"
+    },
+    {
+      "question": "Caminin içinde eskiye ait unsurlardan ne kalmıştır?",
+      "options": [
+        "Özgün çini mihrap",
+        "Hiçbir unsur kalmamıştır",
+        "Ahşap minber",
+        "Kalem işi kubbe süslemeleri"
+      ],
+      "correct": 1,
+      "description": "Caminin içinde eskiye ait herhangi bir unsur kalmamıştır.",
+      "sourceId": "inv-p339"
+    },
+    {
+      "question": "Ana mekân hangi pencerelerden giren ışıkla aydınlanır?",
+      "options": [
+        "Mihrap duvarındaki vitraylardan",
+        "Son cemaat yerindeki camekândan",
+        "Batı duvarındaki iki pencereden",
+        "Kubbe kasnağındaki üç sivri kemerli pencereden"
+      ],
+      "correct": 3,
+      "description": "Ana mekân, kubbe kasnağında yer alan üç sivri kemerli pencereden giren ışıkla aydınlanır.",
+      "sourceId": "inv-p339"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p339",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hıdırlık (Nilüfer Hatun) Camii\"",
+      "page": "339"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

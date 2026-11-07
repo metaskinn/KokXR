@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-hanimlar-kizlar-tomb",
+  "name": "Hanımlar Kızlar Türbesi (Yılanlı Türbe)",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XVI. yüzyıl ortaları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Muradiye'de, arşiv belgelerine göre saray mensubu dört kadının defnedildiği, kare planlı ve tek kubbeli almaşık duvarlı türbe.",
+  "history": "Hanımlar Kızlar Türbesi, Osmangazi İlçesi, Muradiye Mahallesi, Kaplıca Caddesi üzerindedir. Halk arasında \"Üç Hanım Kızlar Türbesi\" adıyla anılan yapı, içinde kimlerin yattığı belirsiz olduğu için uzun süre müphem kalmıştır. Yakın dönem arşiv çalışmaları, türbeye saray mensubu dört kadının defnedildiğini ortaya koymuştur. İç mekânda üzerleri çimento sıvalı dört sanduka bulunduğundan, yapının \"Dört Hanım Kızlar Türbesi\" olarak anılması daha isabetli görünmektedir.\n\n12 Şubat 1929 tarihli ve \"Evkaf Müdüriyet-i Umumiyesi, Nukud-ı Mevkufe Müdüriyeti\" antetli bir belgede türbe, Çerkes Bitu Mustafa Paşa'nın hemşirelerinin medfun olduğu, Bursa Muradiye Külliyesi dahilindeki \"Akîle ve Bosfor Belkıs Hatunlar Türbesi, nam-ı diğer Saraylı Hanımlar Türbesi\" olarak anılır. Aynı belgenin devamında, Cedit Şehzade Mustafa'nın zevceleri Fatma Handan ve Begüm Nurcihan Hatun ile kalfaları Ferhunde ve Leyla Hatun'un medfun oldukları Bursa'daki Hanımlar Türbesi'nin himayesi için gerekli masrafın bin kuruş olarak tespit edildiği yazılıdır.\n\n4 Eylül 1953 tarihli, Vakıflar Genel Müdürlüğü Vakıf Paralar Müdürlüğü antetli bir belgede ise İdar nam-ı diğer Haydar kızı Akîle Hatun ile li-ebeveyn hemşiresi Belkıs Hatun'un medfun oldukları Saraylılar Türbesi'nin Bursa Muradiye Külliyesi dahilinde bulunduğu belirtilir. Kitaba göre bu belge türbenin konumunu ve içinde yatanların kimliğini açıkça ortaya koyar; bu nedenle yapıdan \"Akîle ve Belkıs Hanım Türbesi\" adıyla söz etmek daha yerinde olacaktır.\n\nKare planlı ve tek kubbeli türbe, bir sıra kesme küfeki taşı ile üç sıra tuğladan oluşan almaşık teknikle örülmüş, aralara yer yer düşey tuğlalar yerleştirilmiştir. Cepheler sivri kemerli büyük silmeler içine alınmış, bu alanlara mermer söveli ve sivri kemerli pencereler açılmıştır; silmelerin köşe aynaları altıgen tuğlalarla hareketlendirilmiştir. Kitapta yapının yedi altlık ve üç üstlük olmak üzere on pencereyle aydınlandığı, iç mekânda ise altta yedi, üstte dört pencere bulunduğu belirtilir.\n\nAlmaşık duvar tekniği nedeniyle başlangıçta XIV. ya da XV. yüzyıla tarihlendirilen türbenin, sonradan ortaya çıkan belgeler doğrultusunda XVI. yüzyıl ortalarında inşa edildiği anlaşılmıştır. Uzun yıllar harap kalan yapı 2014'te kapsamlı bir onarım geçirmiş; sandukalar ve üzerlerindeki puşideler de bu restorasyonda yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hanimlar-kizlar-tomb/facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hanimlar-kizlar-tomb/facade.jpg",
+      "alt": "Ağaçlar arasında kare planlı, kubbeli türbe: bir sıra taş ve birkaç sıra tuğlayla örülmüş duvar, büyük sivri kemerli silme içinde iki demir parmaklıklı pencere ve üstte delikli bir pencere; önde iki mezar taşı",
+      "description": "Türbenin cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hanimlar-kizlar-tomb/sarcophagi.jpg",
+      "alt": "İç mekân: kırmızı halı üzerinde yeşil ve kırmızı örtülü dört sanduka, beyaz duvarlarda alt sırada pencereler, kubbe eteğinde kemerli üst pencereler ve ortada asılı avize",
+      "description": "Sandukaların bulunduğu iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hanimlar-kizlar-tomb/gravestones.jpg",
+      "alt": "Türbenin almaşık duvarı önünde yazılı ve kabartmalı eski mezar taşları; birinin tepesinde sarık biçimli başlık",
+      "description": "Türbe önündeki mezar taşları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "alternating-masonry",
+      "image": "/images/osmangazi-hanimlar-kizlar-tomb/facade.jpg",
+      "x": 25,
+      "y": 54,
+      "title": "Almaşık duvar",
+      "text": "Türbe, bir sıra kesme küfeki taşı ile üç sıra tuğladan oluşan almaşık teknikle örülmüştür.",
+      "sourceId": "inv-p217"
+    },
+    {
+      "id": "facade-molding",
+      "image": "/images/osmangazi-hanimlar-kizlar-tomb/facade.jpg",
+      "x": 48,
+      "y": 33,
+      "title": "Sivri kemerli silme",
+      "text": "Cepheler sivri kemerli büyük silmeler içine alınmış, bu alanlara mermer söveli ve sivri kemerli pencereler açılmıştır.",
+      "sourceId": "inv-p217"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/osmangazi-hanimlar-kizlar-tomb/sarcophagi.jpg",
+      "x": 43,
+      "y": 69,
+      "title": "Dört sanduka",
+      "text": "İç mekânda dört sanduka bulunur; sandukalar ve üzerlerindeki puşideler 2014 restorasyonunda yenilenmiştir.",
+      "sourceId": "inv-p217"
+    }
+  ],
+  "test": [
+    {
+      "question": "Halk arasında \"Üç Hanım Kızlar\" diye bilinen türbede kaç sanduka bulunur?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Altı"
+      ],
+      "correct": 2,
+      "description": "İç mekânda dört sanduka bulunduğu için kitap, yapıya \"Dört Hanım Kızlar Türbesi\" denmesinin daha isabetli olduğunu belirtir.",
+      "sourceId": "inv-p216"
+    },
+    {
+      "question": "Türbenin duvarları hangi teknikle örülmüştür?",
+      "options": [
+        "Bir sıra kesme küfeki taşı ile üç sıra tuğladan almaşık teknik",
+        "Yalnızca moloz taşla",
+        "Ahşap karkas ve kerpiçle",
+        "Yalnızca mermer bloklarla"
+      ],
+      "correct": 0,
+      "description": "Duvarlar bir sıra kesme küfeki taşı ile üç sıra tuğladan oluşan almaşık teknikle örülmüş, aralara düşey tuğlalar konmuştur.",
+      "sourceId": "inv-p217"
+    },
+    {
+      "question": "Uzun yıllar harap kalan türbe hangi yıl kapsamlı bir onarım geçirmiştir?",
+      "options": [
+        "1929",
+        "1953",
+        "1985",
+        "2014"
+      ],
+      "correct": 3,
+      "description": "Türbe 2014'te kapsamlı bir onarım geçirmiş, sandukalar ve puşideler de yenilenmiştir.",
+      "sourceId": "inv-p217"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p216",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Hanımlar Kızlar Türbesi (Yılanlı Türbe)\"",
+      "page": "216"
+    },
+    {
+      "id": "inv-p217",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Hanımlar Kızlar Türbesi (Yılanlı Türbe)\"",
+      "page": "217"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

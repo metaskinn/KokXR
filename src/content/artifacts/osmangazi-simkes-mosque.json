@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-simkes-mosque",
+  "name": "Simkeş (Sırmakeş) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Tahminen XV. yüzyılın sonları",
+  "endowment": "Kitapta belirtilmemiştir (dönemin tüccarları tarafından yaptırıldığı tahmin edilir)",
+  "summary": "Koza Hanı gibi Simkeş adıyla anılan, XV. yüzyıl sonlarında dönemin tüccarlarınca yapıldığı tahmin edilen tek kubbeli, minaresiz cami.",
+  "history": "Simkeş (Sırmakeş) Camii, Osmangazi İlçesi, Orhan Mahallesi, Gümüşçeken Caddesi, Simkeş Çıkmazı No: 1'dedir. Koza Hanı'na \"Simkeş\" veya \"Sırmakeş\" denildiği gibi bu cami de aynı adla anılır; mahallenin eski adı da Simkeş Mahallesi'ydi.\n\nCaminin XV. yüzyılın sonlarında dönemin tüccarları tarafından inşa edildiği tahmin edilmektedir. Bir dönem özel mülkiyete geçmiş ve ambar olarak kullanılmıştır.\n\nSon cemaat yeriyle birlikte dikdörtgen planlı cami, 7,00 × 7,35 m ölçülerinde tek kubbeli bir ana ibadet mekânı ile 2,55 × 6,68 m ölçülerinde bir son cemaat mahallinden oluşur. Kalkan duvarlı cephesi ve son cemaat mahalli yeniden inşa edilmiş, üzeri tonozla örtülmüştür; yan sahınlar geniş, orta sahınlar dar ve tahfif kemerlidir.\n\nBeden duvarları tamamen moloz taşla örülmüş, son cemaat yeri cephesi ile kasnak kesme küfeki taşıyla işlenmiştir. Harim duvarları da kasnak da kirpi saçaklıdır. Cami doğu ve batı duvarlarında üçer, kasnakta üç olmak üzere toplam dokuz pencereyle aydınlanır. Kemerleri taşıyan ayaklar ve kuzeydeki kalkan duvarı iki sıra kirpi saçaklıdır. Ana mekândan kubbeye geçiş içeride üçgenlerle sağlanır. Güney duvarındaki iki pencere değiştirilerek dolaba dönüştürülmüştür.\n\nCaminin mihrabı 0,50 m derinliğinde, dikdörtgen çerçeveli, sivri kemerli ve sadedir. Minber ve kadınlar mahfili günümüz ahşap işçiliğinin nadide örneklerindendir. Sağlam ve ibadete açık olan caminin minaresi yoktur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-simkes-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-simkes-mosque/exterior.jpg",
+      "alt": "Meydanda moloz taş duvarlı, kurşun kaplı tek kubbeli küçük kare cami; duvarlarda demir parmaklıklı kemerli pencereler, arkada eski konaklar ve bir otel binası",
+      "description": "Caminin dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-simkes-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: turkuaz halılı harim, beyaz duvarlar, ortada sivri kemerli sade mihrap nişi, iki yanında ahşap dolap kapakları ve sağda mavi örtülü ahşap minber",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-simkes-mosque/exterior.jpg",
+      "x": 48,
+      "y": 27,
+      "title": "Tek kubbe",
+      "text": "7,00 × 7,35 m ölçülerindeki ana ibadet mekânı tek kubbeyle örtülüdür; içeride kubbeye geçiş üçgenlerle sağlanır.",
+      "sourceId": "inv-p417"
+    },
+    {
+      "id": "rubble-walls",
+      "image": "/images/osmangazi-simkes-mosque/exterior.jpg",
+      "x": 35,
+      "y": 72,
+      "title": "Moloz taş duvarlar",
+      "text": "Caminin beden duvarları tamamen moloz taşla örülmüştür.",
+      "sourceId": "inv-p417"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-simkes-mosque/prayer-hall.jpg",
+      "x": 44,
+      "y": 40,
+      "title": "Mihrap",
+      "text": "Caminin mihrabı 0,50 m derinliğinde, dikdörtgen çerçeveli, sivri kemerli ve sadedir.",
+      "sourceId": "inv-p417"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami bir dönem ne olarak kullanılmıştır?",
+      "options": [
+        "Okul",
+        "Ambar",
+        "Han",
+        "Hamam"
+      ],
+      "correct": 1,
+      "description": "Cami bir dönem özel mülkiyete geçmiş ve ambar olarak kullanılmıştır.",
+      "sourceId": "inv-p417"
+    },
+    {
+      "question": "Simkeş Camii toplam kaç pencereyle aydınlatılmıştır?",
+      "options": [
+        "Altı",
+        "On iki",
+        "Dokuz",
+        "On sekiz"
+      ],
+      "correct": 2,
+      "description": "Cami doğu ve batı duvarlarında üçer, kasnakta üç olmak üzere toplam dokuz pencereyle aydınlatılmıştır.",
+      "sourceId": "inv-p417"
+    },
+    {
+      "question": "Simkeş Camii'nin minaresi hakkında kitap ne söyler?",
+      "options": [
+        "Kuzeybatı köşesindedir",
+        "Tuğla gövdelidir",
+        "1855 depreminde yıkılmıştır",
+        "Caminin minaresi yoktur"
+      ],
+      "correct": 3,
+      "description": "Sağlam ve ibadete açık olan caminin minaresi bulunmamaktadır.",
+      "sourceId": "inv-p417"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p417",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Simkeş (Sırmakeş) Camii\"",
+      "page": "417"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

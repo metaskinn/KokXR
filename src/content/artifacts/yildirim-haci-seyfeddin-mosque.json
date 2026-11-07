@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-haci-seyfeddin-mosque",
+  "name": "Hacı Seyfeddin Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Fâtih dönemi",
+  "endowment": "Banisi hayırsever Hacı Seyfeddin",
+  "summary": "İki gözlü son cemaat yeri ve kubbeli harimiyle Fâtih döneminden kalan cami.",
+  "history": "İncirli Caddesi No: 80'deki camiyi Hacı Seyfeddin yaptırmış; banisinin 1487'de vefatından sonra Mevlânâ Hayreddin onartmıştır. Kare harim 6,72 × 6,72 m ölçülerindedir ve kubbeye Türk üçgenleriyle geçilir. Son cemaat revakı 4,73 m derinliğindedir. Harim duvarları moloz taş, revak ise üç sıra tuğla ve bir sıra kesme küfeki taşıyla örülmüştür. İki gözlü, iki büyük sivri kemerli son cemaat yeri aynalı tonozla örtülüdür; kalkan duvarlarında iki sıra kirpi saçak vardır. Mihrapta beş sıralı mukarnas görülür. Ahşap minber ve mermer kürsü yakın dönemde yenilenmiştir. Batıdaki minarenin onikigen moloz taş kaidesi ve silindirik tuğla gövdesi vardır. 1962'de kapsamlı onarılan cami ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-haci-seyfeddin-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-haci-seyfeddin-mosque/exterior-view.jpg",
+      "alt": "Tepeden görünümde kurşun kaplı kubbe, örtülü giriş bölümü ve minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-haci-seyfeddin-mosque/detail-view.jpg",
+      "alt": "İki kemerli tuğla-taş cephe, camla kapalı açıklıklar, minare ve büyük ağaç",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-haci-seyfeddin-mosque/exterior-view.jpg",
+      "x": 52,
+      "y": 59,
+      "title": "Kubbe",
+      "text": "Harim kubbesine geçiş Türk üçgenleriyle sağlanmıştır.",
+      "sourceId": "inv-p474"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-haci-seyfeddin-mosque/detail-view.jpg",
+      "x": 42,
+      "y": 57,
+      "title": "İki gözlü revak",
+      "text": "Son cemaat yeri iki büyük sivri kemerden oluşan iki gözlü bir düzene sahiptir.",
+      "sourceId": "inv-p474"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hacı Seyfeddin Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Yıldırım",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 1,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p474"
+    },
+    {
+      "question": "Cami 1487'de banisinin vefatından sonra kim tarafından tamir ettirilmiştir?",
+      "options": [
+        "Hoca Ramazan",
+        "Hacı Emin",
+        "Mevlânâ Hayreddin",
+        "Osman Efendi"
+      ],
+      "correct": 2,
+      "description": "Mevlânâ Hayreddin.",
+      "sourceId": "inv-p474"
+    },
+    {
+      "question": "Kitaba göre kubbe hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir",
+        "Harim kubbesine geçiş Türk üçgenleriyle sağlanmıştır"
+      ],
+      "correct": 3,
+      "description": "Harim kubbesine geçiş Türk üçgenleriyle sağlanmıştır.",
+      "sourceId": "inv-p474"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p474",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Seyfeddin Camii\"",
+      "page": "474"
+    },
+    {
+      "id": "inv-p475",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Seyfeddin Camii\"",
+      "page": "475"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

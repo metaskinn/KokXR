@@ -1,0 +1,158 @@
+{
+  "id": "iznik-suleyman-pasa-madrasa",
+  "name": "Süleyman Paşa Medresesi",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Erken Osmanlı · 1360 öncesi (tahmini)",
+  "endowment": "Süleyman Paşa tarafından yaptırılmıştır; Orhan Gazi'nin H. 763 / M. 1361-62 tarihli vakfiyesinde anılır",
+  "summary": "Orhan Gazi'nin büyük oğlu Süleyman Paşa'nın yaptırdığı, açık avlulu ve U planlı, bir dershane ile on bir öğrenci hücresinden oluşan medrese.",
+  "history": "İznik'te, Maltepe Caddesi ile Hüseyin Oktay Sokak'ın kesişiminde yer alır. Medreseyi, Osmanlı Devleti'nin ikinci sultanı Orhan Gazi'nin büyük oğlu ve Gelibolu fatihi Süleyman Paşa yaptırmıştır. 1316'da doğan Süleyman Paşa, 1337-1338'de Kocaeli ve çevresinde sancakbeyi olmuş, Gelibolu'nun fethiyle Osmanlı'nın Rumeli'de kalıcı hâle gelmesini sağlamıştır. 1359-1360'ta bir av sırasında atının tökezlemesi sonucu ölmüş, Bolayır'daki türbesine gömülmüştür. Medresenin inşa ya da tamir kitabesi yoktur; yapının 1360'tan önce inşa edildiği tahmin edilir.\n\nSüleyman Paşa'nın vefatından sonra babası Orhan Gazi'nin H. 763 / M. 1361-62 tarihli vakfiyesinde bu medreseden de söz edilir. Arşiv kayıtlarına göre yapı 1890'lı yıllara kadar medrese işlevini sürdürmüştür. XVII. yüzyılda İznik'e gelen Evliya Çelebi, medresede dârülhadis ve dârülkurrâ bulunduğunu yazar; ancak bu yapılar günümüze ulaşmamıştır.\n\nAçık avlulu, U planlı ve müstakil medrese bir dershane ile on bir öğrenci hücresinden oluşur. Kare planlı dershane tromp geçişli bir kubbeyle, hücreler pandantif geçişli kubbelerle örtülüdür. Her hücrede dikdörtgen bir ocak nişi vardır. Medrese XIX. yüzyılda onarılmış, 1968 ve 2023'te Vakıflar Genel Müdürlüğünce esaslı tamirlerden geçmiştir. Bugün çini üretim ve satış çarşısı olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-suleyman-pasa-madrasa/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-suleyman-pasa-madrasa/aerial.jpg",
+      "alt": "Medresenin havadan görünümü: kiremit kaplı çok sayıda kubbe, aralarında piramidal külahlı taş bacalar, taş ve tuğla örgülü dış duvarlar",
+      "description": "Havadan genel görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-suleyman-pasa-madrasa/courtyard-top.jpg",
+      "alt": "Avlunun tepeden görünümü: kare ızgara döşemeli avlu, üç yanında kubbeli revak ve hücreler, bir yanda yeşillik ve bahçe duvarı",
+      "description": "Avlu, tepeden",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-suleyman-pasa-madrasa/courtyard.jpg",
+      "alt": "Avluya revak altından bakış: sütunlara oturan sivri kemerler, kemerler üzerinde asma, avluda masalar",
+      "description": "Avlu ve revak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-suleyman-pasa-madrasa/arcade.jpg",
+      "alt": "Revakın içi: tuğla sivri kemerlerin oturduğu taş sütun, ahşap gergiler, beyaz sıvalı kubbeler ve altında masalar",
+      "description": "Revak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-suleyman-pasa-madrasa/street-facade.jpg",
+      "alt": "Medresenin sokaktan dış cephesi: moloz taş ve tuğla örgülü duvar, parmaklıklı alt pencereler, yuvarlak üst pencere ve kubbe sırası",
+      "description": "Sokak cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-suleyman-pasa-madrasa/tile-shop.jpg",
+      "alt": "Bir hücrenin içi: duvar boyunca raflarda mavi-beyaz çini tabaklar ve vazolar",
+      "description": "Çini satış dükkânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "chimney",
+      "image": "/images/iznik-suleyman-pasa-madrasa/aerial.jpg",
+      "x": 48,
+      "y": 37,
+      "title": "Ocak bacaları",
+      "text": "Her hücrenin üzerinde piramidal külahlı birer ocak bacası görülür. Bacalar kesme taştandır; hücrelerin içinde dikdörtgen ocak nişleri bulunur.",
+      "sourceId": "inv-p485"
+    },
+    {
+      "id": "domes",
+      "image": "/images/iznik-suleyman-pasa-madrasa/aerial.jpg",
+      "x": 57,
+      "y": 46,
+      "title": "Kubbeler",
+      "text": "Öğrenci hücrelerinin ve dershanenin kubbeleri sekizgen kasnaklar üzerinde yükselir. Kubbeler oluklu kiremitle kaplıdır.",
+      "sourceId": "inv-p485"
+    },
+    {
+      "id": "courtyard",
+      "image": "/images/iznik-suleyman-pasa-madrasa/courtyard-top.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Açık avlu ve U plan",
+      "text": "Avlu kuzey, batı ve güney yönlerinden dershane ve on bir öğrenci hücresiyle, doğudan ise bir bahçe duvarıyla çevrilidir.",
+      "sourceId": "inv-p483"
+    },
+    {
+      "id": "arcade-column",
+      "image": "/images/iznik-suleyman-pasa-madrasa/arcade.jpg",
+      "x": 49,
+      "y": 55,
+      "title": "Revak",
+      "text": "Sütunlar ve sivri kemerlerle sekiz eş boyutlu kare bölüme ayrılan revak pandantifli kubbelerle örtülüdür. Kaidesiz granit sütunlarda yüzeysel mukarnaslı başlıklar görülür.",
+      "sourceId": "inv-p485"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medreseyi kim yaptırmıştır?",
+      "options": [
+        "Orhan Gazi'nin büyük oğlu Süleyman Paşa",
+        "I. Murad",
+        "Hacı Hamza Bey",
+        "Evliya Çelebi"
+      ],
+      "correct": 0,
+      "description": "Medrese, Orhan Gazi'nin büyük oğlu ve Gelibolu fatihi Süleyman Paşa tarafından yaptırılmıştır.",
+      "sourceId": "inv-p481"
+    },
+    {
+      "question": "Medrese kaç öğrenci hücresinden oluşur?",
+      "options": [
+        "On bir",
+        "Sekiz",
+        "Altı",
+        "On dört"
+      ],
+      "correct": 0,
+      "description": "Açık avlulu, U planlı medrese bir dershane ile on bir öğrenci hücresinden oluşur.",
+      "sourceId": "inv-p483"
+    },
+    {
+      "question": "Medrese bugün hangi amaçla kullanılmaktadır?",
+      "options": [
+        "Çini üretim ve satış çarşısı",
+        "Müze",
+        "Hamam",
+        "Kütüphane"
+      ],
+      "correct": 0,
+      "description": "Medrese, 1968 ve 2023'teki esaslı tamirlerden sonra bugün çini üretim ve satış çarşısı olarak kullanılmaktadır.",
+      "sourceId": "inv-p485"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p481",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Süleyman Paşa Medresesi\"",
+      "page": "91"
+    },
+    {
+      "id": "inv-p482",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Süleyman Paşa Medresesi\"",
+      "page": "92"
+    },
+    {
+      "id": "inv-p483",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Süleyman Paşa Medresesi\"",
+      "page": "93"
+    },
+    {
+      "id": "inv-p485",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Süleyman Paşa Medresesi\"",
+      "page": "95"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

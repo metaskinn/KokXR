@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-eyne-bey-bath",
+  "name": "Eyne Bey Hamamı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 3 Şaban 804 / M. 8 Mart 1402 tarihli vakfiyede kayıtlı",
+  "endowment": "Subaşı İne Bey bin Feleküddin; Eyne Bey Medresesi’ne gelir sağlayan hamam",
+  "summary": "Eyne Bey Medresesi’nin batısındaki tek hamam, vakfiye kaydına göre medrese müderrisi ve öğrencileri için gelir sağlamıştır.",
+  "history": "Hamam, Tahtakale Mahallesi, İnebey Caddesi, İnebey Sokak No: 7’dedir. Eyne Bey Subaşı Medresesi’nin batısına bitişik olduğundan “Medrese Hamamı” da denir. Envanter, bazı yayınlardaki Ahmet Çavuş’a atfı doğru bulmaz; Bursa Kadısı Molla Fenârî’nin tasdik ettiği H. 3 Şaban 804 / M. 8 Mart 1402 tarihli vakfiyeye dayanarak banisini Subaşı İne Bey bin Feleküddin olarak belirtir. Vakfiye, hamam gelirinden müderrise günlük 10 dirhem, medresenin on iki odasında kalan öğrencilere ise birer buçuk dirhem ödenmesini öngörür.\n\nTek hamam planındaki yapının duvarları küfeki taşı, moloz taş ve tuğladandır. Ahşap karkas özellikli 10,00 × 12,00 m ölçülerindeki soğukluğa kuzeydeki çift kanatlı ahşap kapıdan girilir. Bu bölüm kırma çatılı ve alaturka kiremit örtülüdür. Kuzeyde yedi, batıda dört ahşap çerçeveli pencere bulunur. Ahşap tavanlı ve mermer döşeli mekânda soyunmalıklar giriş aksının iki yanındadır; üst katın büyük ölçüde kurutmalık olarak kullanıldığı anlaşılmaktadır.\n\nGüneydeki kapı, 5,70 × 4,00 m ölçülerinde dikdörtgen ılıklığa açılır. Üstü altıgen baklava dilimli kasnağa oturan kubbeyle örtülüdür; doğusunda 2,03 × 2,43 m ölçülerinde halvet yer alır. 6,31 × 6,17 m ölçülerindeki sıcaklığın ortasında göbek taşı, yanlarında özgün kurnalar bulunur. Bu bölüm baklava motifli geçiş kuşağı ve sekizgen kasnak üzerindeki kubbeyle örtülüdür. Kuzeydoğuda bir halvet, güneyde külhan vardır.\n\nMedreseyi nemden korumak amacıyla iki yapı arasında 75 cm boşluk bırakılmasının, kitapta H. 1093 / M. 1683 olarak verilen onarımda gerçekleştiği anlaşılmaktadır. Uzun süre özel mülkiyette işletilen hamam, bitişikteki Yazma Eserler Kütüphanesi’nin eserlerinin zarar görmesi nedeniyle 2017’de Bursa Valiliğince kamulaştırılmıştır. Kitap, 2022–2023 restorasyonundan sonra hamamın kütüphane ile birlikte kullanılması için çalışmalar yürütüldüğünü aktarır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-eyne-bey-bath/street-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-eyne-bey-bath/street-exterior.jpg",
+      "alt": "Sokak köşesinde açık sarı sıvalı iki katlı yapı, koyu ahşap çerçeveli pencereler ve kırmızı kiremitli kırma çatı",
+      "description": "Sokak köşesinde açık sarı sıvalı iki katlı yapı, koyu ahşap çerçeveli pencereler ve kırmızı kiremitli kırma çatı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-eyne-bey-bath/timber-gallery.jpg",
+      "alt": "Ahşap tavan ve dikmeler altında üst kat galerisi, ahşap korkuluk, pencereler ve kapı",
+      "description": "Ahşap tavan ve dikmeler altında üst kat galerisi, ahşap korkuluk, pencereler ve kapı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-eyne-bey-bath/bathing-room.jpg",
+      "alt": "Açık renk sıvalı iç mekânda sivri kemerler, duvar önünde iki taş kurna ve mermer döşeme",
+      "description": "Açık renk sıvalı iç mekânda sivri kemerler, duvar önünde iki taş kurna ve mermer döşeme",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-eyne-bey-bath/street-exterior.jpg",
+      "x": 54,
+      "y": 40,
+      "title": "Kiremitli kırma çatı",
+      "text": "Ahşap karkas özellikli soğukluk bölümü kırma çatılı ve alaturka kiremit örtülüdür.",
+      "sourceId": "inv-p124"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-eyne-bey-bath/timber-gallery.jpg",
+      "x": 47,
+      "y": 20,
+      "title": "Ahşap tavan",
+      "text": "Soğukluğun iç mekânı ahşap tavanla örtülüdür; üst katın kurutmalık olarak kullanıldığı anlaşılmaktadır.",
+      "sourceId": "inv-p124"
+    },
+    {
+      "id": "point-3",
+      "image": "/images/osmangazi-eyne-bey-bath/bathing-room.jpg",
+      "x": 78,
+      "y": 72,
+      "title": "Kurnalar",
+      "text": "Sıcaklığın yanlarına yerleştirilen kurnaların özgün biçimlerini koruduğu belirtilir.",
+      "sourceId": "inv-p125"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam hangi medresenin yanındadır?",
+      "options": [
+        "Lala Şahin Paşa",
+        "Gökdere",
+        "Eyne Bey Subaşı",
+        "Şair Ahmet Paşa"
+      ],
+      "correct": 2,
+      "description": "Hamam Eyne Bey Subaşı Medresesi’nin batısında yer alır.",
+      "sourceId": "inv-p124"
+    },
+    {
+      "question": "Vakfiye hamam gelirinden kime günlük 10 dirhem ayrıldığını belirtir?",
+      "options": [
+        "Müderrise",
+        "Mimara",
+        "Kadının kâtibine",
+        "Çarşı bekçisine"
+      ],
+      "correct": 0,
+      "description": "Vakfiyede müderrise 10 dirhem günlük maaş ayrılmıştır.",
+      "sourceId": "inv-p124"
+    },
+    {
+      "question": "Hamam 2017’de hangi kurum tarafından kamulaştırılmıştır?",
+      "options": [
+        "Osmangazi Belediyesi",
+        "Bursa Valiliği",
+        "Arkeoloji Müzesi",
+        "Bursa Ticaret Odası"
+      ],
+      "correct": 1,
+      "description": "Envantere göre kamulaştırmayı Bursa Valiliği yapmıştır.",
+      "sourceId": "inv-p125"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p124",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Eyne Bey Hamamı\"",
+      "page": "124"
+    },
+    {
+      "id": "inv-p125",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Eyne Bey Hamamı\"",
+      "page": "125"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "id": "iznik-koimesis-church",
+  "name": "Koimesis Tes Theotokos Hyakinthos Manastır Kilisesi",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Bizans · 750 civarı ya da VIII. yüzyıl başı (kabul edilen tarih; kesin tarih bilinmiyor)",
+  "endowment": "Piskopos Hyakinthos tarafından inşa ettirildiği kabul edilir; vakıf bilgisi kitapta belirtilmemiştir",
+  "summary": "Hyakinthos Manastırı'na ait, üç nefli ve kubbeli bazilika planlı, bugün harabe hâlindeki Bizans kilisesi.",
+  "history": "İznik'te, Yeni Mahalle, Yalçın Sokak'ta yer alır. Hz. Meryem'in ölümü anlamına gelen \"Koimesis\" adını taşıyan kilisenin tam adı \"Tes Theotokos Hyakinthos\"tur ve Hyakinthos Manastırı'na aittir. Piskopos Hyakinthos tarafından 750 civarında ya da VIII. yüzyılın başlarında inşa ettirildiği kabul edilir; ancak kesin inşa tarihi bilinmemektedir. Bu tahmin, apsis ve bema bölümlerindeki erken dönem figürlü mozaik parçalarına dayanır.\n\nKilise üç nefli ve kubbeli bir bazilika planına sahiptir: batıda yanları merdiven kuleleriyle sınırlanan bir narteks, ortada üç nefli naos, doğuda bema, apsis ve pastoforion mekânları bulunur. Apsis yarım kubbesinde altın zemin üzerine, kucağında İsa'yı taşıyan büyük bir Meryem mozaiği vardı. Apsis ve bema tonozundaki figürlü mozaikler İkonoklazma döneminde tahrip edilmiş, 843'te bu dönemin sona ermesiyle Naukratios tarafından yeniden yaptırılmıştır. Bizans kaynaklarına göre manastır XIII. yüzyılda İznik İmparatorluğu döneminde önem kazanmış; ilk İznik İmparatoru I. Theodoros Laskaris 1222'de ölünce buraya, karısı Anna'nın yanına gömülmüştür.\n\nSeyyahların verdiği bilgilere göre kubbe 1740-1779 arasında çökmüş, 1807'de Piskopos Daniel tarafından yeniden yaptırılmış, 1833-1834'te tüm kilise onarılarak fresklerle bezenmiştir. Kilise ilk kez 1898'de belgelenmiş, 1922'de Türk-Yunan Savaşı sırasında büyük ölçüde yıkılmıştır. 1955'te moloz ve topraktan arındırılarak gün yüzüne çıkarılmış, sağlam kalan bazı mozaikler 1950'lerde İznik Nilüfer Hatun Müzesi tarafından koruma altına alınmıştır. Narteks duvarlarının bugün yalnızca 1 m yüksekliğindeki kısmı ayaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-koimesis-church/ruins.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-koimesis-church/ruins.jpg",
+      "alt": "Kilise kalıntıları: otlarla kaplı alanda tuğla örgülü, yıkık duvar ve paye parçaları; arkada apartmanlar",
+      "description": "Kalıntılar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-koimesis-church/brick-pier-column.jpg",
+      "alt": "Tuğla örgülü yıkık bir paye ve önünde yere devrilmiş mermer sütun gövdesi",
+      "description": "Paye ve devrik sütun",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-koimesis-church/column-drum.jpg",
+      "alt": "Toprak zeminde yatan mermer sütun parçası ve çevresindeki taş blokların tepeden görünümü",
+      "description": "Sütun parçası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-koimesis-church/aerial.jpg",
+      "alt": "Kilise kalıntılarının bulunduğu, alçak duvarla çevrili alanın havadan görünümü; ortada tuğla paye kalıntıları ve dağınık taş parçaları, çevrede evler",
+      "description": "Harabe alanı, havadan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ruin-site",
+      "image": "/images/iznik-koimesis-church/aerial.jpg",
+      "x": 55,
+      "y": 50,
+      "title": "Bugünkü durum",
+      "text": "Kilise 1922'de Türk-Yunan Savaşı sırasında büyük ölçüde yıkılmıştır. Bugün harabe hâlindedir ve çocuklar tarafından oyun alanı olarak kullanılmaktadır.",
+      "sourceId": "inv-p497"
+    },
+    {
+      "id": "excavation",
+      "image": "/images/iznik-koimesis-church/ruins.jpg",
+      "x": 62,
+      "y": 52,
+      "title": "Gün yüzüne çıkarılış",
+      "text": "Yapı 1955'te moloz ve topraktan arındırılarak gün yüzüne çıkarılmıştır. Narteks duvarlarının bugün yalnızca 1 m yüksekliğindeki kısmı ayaktadır.",
+      "sourceId": "inv-p496"
+    }
+  ],
+  "test": [
+    {
+      "question": "\"Koimesis\" adı ne anlama gelir?",
+      "options": [
+        "Hz. Meryem'in ölümü",
+        "Kutsal ışık",
+        "Yeni kilise",
+        "Büyük manastır"
+      ],
+      "correct": 0,
+      "description": "Kilisenin adı olan \"Koimesis\", Hz. Meryem'in ölümü anlamına gelir.",
+      "sourceId": "inv-p495"
+    },
+    {
+      "question": "1222'de ölünce bu kiliseye, karısı Anna'nın yanına gömülen kimdir?",
+      "options": [
+        "İlk İznik İmparatoru I. Theodoros Laskaris",
+        "Piskopos Hyakinthos",
+        "Piskopos Daniel",
+        "Naukratios"
+      ],
+      "correct": 0,
+      "description": "Bizans kaynaklarına göre ilk İznik İmparatoru I. Theodoros, 1222'de ölünce buraya, karısı Anna'nın yanına gömülmüştür.",
+      "sourceId": "inv-p496"
+    },
+    {
+      "question": "İkonoklazma döneminde tahrip edilen apsis ve bema mozaikleri ne zaman yeniden yaptırılmıştır?",
+      "options": [
+        "843'te, Naukratios tarafından",
+        "1065 depreminden sonra",
+        "1807'de, Piskopos Daniel tarafından",
+        "1955'te"
+      ],
+      "correct": 0,
+      "description": "İkonoklazma döneminin 843'te sona ermesiyle mozaikler Naukratios tarafından yeniden yaptırılmıştır.",
+      "sourceId": "inv-p497"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p495",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Koimesis Tes Theotokos Hyakinthos Manastırı Kilisesi\"",
+      "page": "105"
+    },
+    {
+      "id": "inv-p496",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Koimesis Tes Theotokos Hyakinthos Manastırı Kilisesi\"",
+      "page": "106"
+    },
+    {
+      "id": "inv-p497",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Koimesis Tes Theotokos Hyakinthos Manastırı Kilisesi\"",
+      "page": "107"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

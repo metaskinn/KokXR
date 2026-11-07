@@ -1,0 +1,109 @@
+{
+  "id": "osmangazi-imaret-i-isa-bey-mosque",
+  "name": "İmaret-i İsa Bey Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Vakfiyesi H. 846 / M. 1442 tarihli; bu tarihten az önce inşa edildiği düşünülür",
+  "endowment": "Banisi Yahşi Bey oğlu Bayezid Paşa oğlu İsa Bey; hizmet binalarının giderleri için evler, dükkânlar, bağlar ve bahçeler vakfedilmiştir",
+  "summary": "Yahşi Bey oğlu Bayezid Paşa oğlu İsa Bey'in yaptırdığı küçük bir külliyeden günümüze ulaşan, Bursa'nın en küçük camileri arasındaki tek kubbeli cami.",
+  "history": "Cami, Osmangazi ilçesi, Alâaddin Bey Mahallesi, Hastayurdu Caddesi No: 2'dedir. Yapı; cami, medrese ve aşevinden oluşan küçük bir külliyenin parçasıdır. \"İmaret-i İsa Bey Mescidi\" olarak da anılan camiyi Yahşi Bey oğlu Bayezid Paşa oğlu İsa Bey inşa ettirmiştir. İsa Bey, hizmet binalarının giderlerini karşılamak için evler, dükkânlar, bağlar ve bahçeler gibi gelir getiren mülkler vakfetmiştir.\n\nVakfiyesi H. 846 / M. 1442 tarihli olan caminin bu tarihten az bir süre önce inşa edildiği düşünülmektedir.\n\nBursa camileri arasında en küçük yapılardandır. İçten içe 6,40 × 6,40 m ölçülerindeki kare planlı yapının üzeri, Türk üçgenlerine oturan kurşun kaplı bir kubbeyle örtülüdür. Duvarlar iki sıra tuğla ve bir sıra moloz taşla örülmüştür. Mihrabın kavsarası dört sıra mukarnaslıdır.\n\nSekizgen kasnakta üç, beden duvarlarında on iki pencere bulunur. Alt sıradaki pencereler demir parmaklıklı ve sivri kemerli alınlıklıdır. Mihrabın iki yanındaki pencereler sonradan kapatılarak dolaba dönüştürülmüştür.\n\nSon cemaat yerinin caddeye bakan bölümü, yol genişletme çalışmaları sırasında çapraz biçimde kesilmiş ve üçgen bir form almıştır. Zamanla medrese ve imaret ortadan kalkmış, yalnızca cami günümüze ulaşmıştır. Cami bugün bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-imaret-i-isa-bey-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-imaret-i-isa-bey-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: ağaçların arasında, virajlı bir yolun kenarında kurşun kubbeli küçük cami ve yanında tuğla gövdeli minare; arkada Bursa'nın yamaçlara yayılan yapıları ve dağlar",
+      "description": "Caminin çevresiyle havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-imaret-i-isa-bey-mosque/dome-and-minaret.jpg",
+      "alt": "Yüksekten görünüm: ağaçların arasından yükselen tuğla minare ve yanında kurşun kaplı kubbe; arka planda geniş Bursa şehir manzarası",
+      "description": "Kubbe ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-imaret-i-isa-bey-mosque/mihrab.jpg",
+      "alt": "İç mekân: beyaz duvarlı harimde mukarnaslı kavsarası yaldızlı mihrap, sağında ahşap minber ve mavi desenli pencereler; zeminde mavi halı",
+      "description": "Mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-imaret-i-isa-bey-mosque/dome-and-minaret.jpg",
+      "x": 55,
+      "y": 72,
+      "title": "Kurşun kaplı kubbe",
+      "text": "İçten 6,40 × 6,40 m ölçülerindeki kare planlı yapı, Türk üçgenlerine oturan kurşun kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p348"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-imaret-i-isa-bey-mosque/mihrab.jpg",
+      "x": 26,
+      "y": 30,
+      "title": "Mihrap kavsarası",
+      "text": "Mihrabın kavsarası dört sıra mukarnaslıdır.",
+      "sourceId": "inv-p348"
+    }
+  ],
+  "test": [
+    {
+      "question": "İmaret-i İsa Bey Camii'nin parçası olduğu küçük külliyede camiden başka hangi yapılar vardı?",
+      "options": [
+        "Hamam ve han",
+        "Medrese ve aşevi",
+        "Türbe ve kütüphane",
+        "Bedesten ve çarşı"
+      ],
+      "correct": 1,
+      "description": "Yapı; cami, medrese ve aşevinden oluşan küçük bir külliyenin parçasıdır. Medrese ve imaret zamanla ortadan kalkmıştır.",
+      "sourceId": "inv-p347"
+    },
+    {
+      "question": "Caminin kubbesi neye oturur?",
+      "options": [
+        "Türk üçgenlerine",
+        "Tromplara",
+        "Dört büyük ayağa",
+        "Pandantiflere"
+      ],
+      "correct": 0,
+      "description": "Kare planlı yapının üzeri, Türk üçgenlerine oturan kurşun kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p348"
+    },
+    {
+      "question": "Mihrabın iki yanındaki pencerelere sonradan ne olmuştur?",
+      "options": [
+        "Genişletilmiştir",
+        "Vitray camla süslenmiştir",
+        "Kapatılarak dolaba dönüştürülmüştür",
+        "Kapıya çevrilmiştir"
+      ],
+      "correct": 2,
+      "description": "Mihrabın iki yanındaki pencereler sonradan kapatılarak dolap hâline getirilmiştir.",
+      "sourceId": "inv-p348"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p347",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"İmaret-i İsa Bey Camii\"",
+      "page": "347"
+    },
+    {
+      "id": "inv-p348",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"İmaret-i İsa Bey Camii\"",
+      "page": "348"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-seyh-konevi-mosque",
+  "name": "Şeyh Konevi Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 957 / M. 1550 (kapı kitabesine göre)",
+  "endowment": "Banisi Konyalı Hacı Sinan",
+  "summary": "Konyalı Hacı Sinan'ın yaptırdığı, kapı kitabesine göre 1550'de tamamlanan, kare planlı ve tuğla minareli cami.",
+  "history": "Şeyh Konevi Camii, Osmangazi İlçesi, İvazpaşa Mahallesi, 1. Konyalı Sokak No: 14'tedir.\n\nPınarbaşı kabristanının doğusundaki cami, iki sıra moloz taş ve yer yer iki ya da üç sıra tuğlayla örülmüş almaşık duvar tekniğiyle inşa edilmiştir. Kitapta kubbeli ve kurşun kaplı olduğu belirtilir. Son cemaat yeri sade, ahşap çatılı ve yarı açıktır; kubbenin iç tarafına sonradan yeni bir tavan eklenmiştir.\n\nKonyalı Hacı Sinan tarafından yaptırıldığı için \"Konevi\" adı verilen caminin kapısı üzerinde, sivri kemer içinde sülüs hatla mermere yazılmış bir kitabe vardır. Kitabede \"Vakti geçmeden namaz için acele ediniz, ölüm gelmeden de tevbe etmekte acele ediniz\" anlamındaki hadisin ardından bir beyit yer alır; beyitteki tarih H. 957 / M. 1550'dir. Beyit mealen, yapının tamamlanma tarihinin güzel ve sevinç dolu bir tarih olduğunu, buranın halkın ve seçkinlerin ibadet yeri olduğunun gökten gelen manevi bir sesle ifade edildiğini söyler.\n\nKitabenin alınlığında sonraki onarım kayıtları da bulunur: batı cephesinde onarıma gayret eden mütevelli Kutbî'nin, doğu cephesinde ise onarım işini üstlenen Hacı Ağa Hüseyin'in adı H. 1273 (M. 1856) tarihiyle yazılıdır. Orta kısımda \"Allah güzeldir, güzeli sever\" anlamındaki hadis yer alır. Caminin ön kısmındaki yeni kitabede yapım tarihi 1550 olarak belirtilmiştir.\n\n7,00 × 7,00 m ölçülerinde kare planlı caminin girişinde 3,40 m derinliğinde bir son cemaat yeri vardır. Ön cephesi sıvalıdır; yapıya sonradan yapılan eklerle tarihî dokusu kısmen bozulmuştur. Kuzey hariç her cephede ikişer alt ve ikişer üst pencere açılmıştır. Alttaki pencereler söveli, sivri kemerli ve tuğla dolgu alınlıklıdır; üsttekiler sivri kemerli sağır pencerelerdir. Kıble duvarındaki alt sıra pencereler kapatılarak dolap hâline getirilmiştir. Mihrap Kütahya çinileriyle kaplıdır; yeni yapılan minber ahşaptır.\n\nCaminin doğusundaki minare tuğla gövdeli, tek şerefeli ve sivri külahlıdır; minareye asıl ibadet mekânının doğusundaki bir kapıdan çıkılır. Taş ve tuğlayla yapılmış sekizgen kaideli, silindirik tuğla gövdeli minarenin şerefe altında beş sıra kirpi saçak dizisi vardır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-seyh-konevi-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-seyh-konevi-mosque/exterior.jpg",
+      "alt": "Avludan görünüm: beyaz sıvalı, kemerli pencereli iki katlı yapı ve yanında kiremit çatılı, kemerli pencereli ön bölüm; arkada tuğla gövdeli minare, önde zeytin ağacı ve taş döşeli avlu",
+      "description": "Caminin sıvalı ön cephesi ve minaresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seyh-konevi-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: sarı boyalı duvarlar, düz beyaz tavan, sağda ahşap direklere oturan mahfil, solda minber ve kırmızı saflı halı",
+      "description": "Sonradan eklenen tavanıyla harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seyh-konevi-mosque/entrance-door.jpg",
+      "alt": "Mermer çerçeveli, yuvarlak kemerli çift kanatlı beyaz-yeşil kapı; üstünde siyah Arap harfleriyle yazılmış kitabe şeridi",
+      "description": "Kitabeli giriş kapısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-seyh-konevi-mosque/exterior.jpg",
+      "x": 57,
+      "y": 12,
+      "title": "Minare",
+      "text": "Caminin doğusundaki minare tuğla gövdeli, tek şerefeli ve sivri külahlıdır.",
+      "sourceId": "inv-p434"
+    },
+    {
+      "id": "later-ceiling",
+      "image": "/images/osmangazi-seyh-konevi-mosque/prayer-hall.jpg",
+      "x": 45,
+      "y": 8,
+      "title": "Sonradan eklenen tavan",
+      "text": "Kubbenin iç tarafına sonradan yeni bir tavan eklenmiştir.",
+      "sourceId": "inv-p433"
+    },
+    {
+      "id": "door-inscription",
+      "image": "/images/osmangazi-seyh-konevi-mosque/entrance-door.jpg",
+      "x": 50,
+      "y": 4,
+      "title": "Kapı kitabesi",
+      "text": "Kapı üzerindeki mermer kitabede bir hadis ve H. 957 / M. 1550 tarihli bir beyit yer alır.",
+      "sourceId": "inv-p433"
+    }
+  ],
+  "test": [
+    {
+      "question": "Camiye neden \"Konevi\" adı verilmiştir?",
+      "options": [
+        "Konya'dan getirilen taşlarla yapıldığı için",
+        "Konyalı Hacı Sinan tarafından yaptırıldığı için",
+        "Mevlevî dergâhına bağlı olduğu için",
+        "Konyalı Sokak'ta bulunduğu için"
+      ],
+      "correct": 1,
+      "description": "Cami, Konyalı Hacı Sinan tarafından yaptırıldığı için \"Konevi\" adını almıştır.",
+      "sourceId": "inv-p433"
+    },
+    {
+      "question": "Kapı kitabesindeki beyite göre yapı hangi yıl tamamlanmıştır?",
+      "options": [
+        "M. 1439",
+        "M. 1498",
+        "M. 1856",
+        "M. 1550"
+      ],
+      "correct": 3,
+      "description": "Kitabedeki beyit H. 957 / M. 1550 tarihini verir; ön kısımdaki yeni kitabede de yapım tarihi 1550 olarak belirtilmiştir.",
+      "sourceId": "inv-p433"
+    },
+    {
+      "question": "Caminin mihrabı neyle kaplanmıştır?",
+      "options": [
+        "Kütahya çinileriyle",
+        "İznik çinileriyle",
+        "Mermer kakmayla",
+        "Ahşap oymayla"
+      ],
+      "correct": 0,
+      "description": "Mihrap Kütahya çinileriyle kaplanmıştır.",
+      "sourceId": "inv-p434"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p433",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şeyh Konevi Camii\"",
+      "page": "433"
+    },
+    {
+      "id": "inv-p434",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şeyh Konevi Camii\"",
+      "page": "434"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

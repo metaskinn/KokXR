@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-abdal-mehmet-mosque",
+  "name": "Abdal Mehmet Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad dönemi; türbedeki tarih H. Cemaziyelevvel 854 / M. Temmuz 1450",
+  "endowment": "Banisi hayırsever Başçı İbrahim",
+  "summary": "Sultan II. Murad döneminde Başçı İbrahim'in Abdal Mehmed adına yaptırdığı, yan yana iki kubbeli ve üç kubbeli son cemaat yerine sahip cami.",
+  "history": "Abdal Mehmed Camii, Osmangazi İlçesi, Tuzpazarı (Demirtaşpaşa) Mahallesi, Tahal Caddesi No: 28'dedir. Cami, Sultan II. Murad döneminde Başçı İbrahim adlı bir hayırsever tarafından Abdal Mehmed adına yaptırılmıştır. Caminin inşa kitabesi yoktur; ancak türbede yer alan H. Cemaziyelevvel 854 / M. Temmuz 1450 tarihi, yapının bu dönemde inşa edildiğini gösterir.\n\n5,36 m derinliğinde ve 17,47 m genişliğindeki son cemaat yeri, iki yan duvar ile ortadaki iki yığma ayağın birbirine bağladığı üç sivri kemerle üç bölüme ayrılır ve üç küçük kubbeyle örtülüdür. Ayaklar ve cepheler iki sıra tuğla ve bir sıra kesme taşla örülmüş, aralarda dikey ikişer tuğla kullanılmıştır.\n\nDikdörtgen planlı ve yan yana iki kubbe üzerine inşa edilen cami, kapıdan mihraba 8,19 m, doğudan batıya 15,34 m ölçülerindedir. Doğu-batı yönündeki ana mekân, ortadaki sivri kemerle iki bölüme ayrılır; iki kubbe de kurşun kaplıdır. Mevcut iki kapının üstüne birer pencere açılmış, doğudaki kapının üst kısmına müezzin mahfili yerleştirilmiştir.\n\nDar ve küçük çerçeveli mihrap, büyük sivri kemerin güneyindeki ayağa inşa edilmiştir; çerçevesinde geometrik motifli kalem işleri ile Âyetü'l-Kürsî yazılıdır. Duvarlarda levhalar hâlinde Âl-i İmrân Suresi'nin 37. ayeti ve ta'lik hatla Esmâ-i şerif yer alır. Minber ve ahşap kürsü oldukça sade işçiliklidir. Batı duvarına bitişik minareye son cemaat yerinden çıkılır.\n\nPek çok kez tamir gören cami, 1955'te Bursa Eski Eserleri Sevenler Kurumu tarafından esaslı biçimde onarılmış, en son 2013'te yeniden tamir edilmiştir. Cami ve türbe bugün sağlam ve bakımlıdır; zaviyeden ise herhangi bir eser kalmamıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-abdal-mehmet-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-abdal-mehmet-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kurşun kaplı iki büyük ve üç küçük kubbeli taş cami, yanında yüksek minare ve önünde büyük bir ağaç; arkada Bursa'nın yamaçlara yayılan evleri",
+      "description": "Caminin çevresiyle havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-abdal-mehmet-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: yan yana iki büyük kurşun kubbe, önlerinde sıralanmış üç küçük kubbe ve sol yanda minarenin külahı",
+      "description": "Kubbelerin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-abdal-mehmet-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi halılı harim, ortada çini kaplı mihrap, sağda ahşap minber; üstte iki kubbeli bölümü ayıran kemer ve yuvarlak hat levhaları",
+      "description": "Mihrap duvarı ve harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "narthex-domes",
+      "image": "/images/osmangazi-abdal-mehmet-mosque/top-view.jpg",
+      "x": 51,
+      "y": 40,
+      "title": "Son cemaat yeri kubbeleri",
+      "text": "Üç sivri kemerle üç bölüme ayrılan son cemaat yeri, üç küçük kubbeyle örtülüdür.",
+      "sourceId": "inv-p226"
+    },
+    {
+      "id": "main-domes",
+      "image": "/images/osmangazi-abdal-mehmet-mosque/top-view.jpg",
+      "x": 43,
+      "y": 60,
+      "title": "Yan yana iki kubbe",
+      "text": "Dikdörtgen planlı cami yan yana iki kubbe üzerine inşa edilmiştir; iki kubbe de kurşun kaplıdır.",
+      "sourceId": "inv-p226"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-abdal-mehmet-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Mihrap, ana mekânı ikiye bölen büyük sivri kemerin güneyindeki ayağa inşa edilmiştir.",
+      "sourceId": "inv-p226"
+    }
+  ],
+  "test": [
+    {
+      "question": "Abdal Mehmed Camii'ni kim yaptırmıştır?",
+      "options": [
+        "Sultan II. Murad",
+        "Hayırsever Başçı İbrahim",
+        "Reyhan Paşa",
+        "Abdal Mehmed'in kendisi"
+      ],
+      "correct": 1,
+      "description": "Cami, Sultan II. Murad döneminde Başçı İbrahim adlı bir hayırsever tarafından Abdal Mehmed adına yaptırılmıştır.",
+      "sourceId": "inv-p226"
+    },
+    {
+      "question": "Son cemaat yerinin üzeri nasıl örtülmüştür?",
+      "options": [
+        "Ahşap çatı ve kiremitle",
+        "Tek büyük kubbeyle",
+        "Beşik tonozla",
+        "Üç küçük kubbeyle"
+      ],
+      "correct": 3,
+      "description": "Üç sivri kemerle üç bölüme ayrılan son cemaat yerinin üzeri üç küçük kubbeyle örtülüdür.",
+      "sourceId": "inv-p226"
+    },
+    {
+      "question": "Cami 1955 yılında hangi kurum tarafından esaslı biçimde onarılmıştır?",
+      "options": [
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Bursa Büyükşehir Belediyesi",
+        "Vakıflar Bölge Müdürlüğü",
+        "Kültür Bakanlığı"
+      ],
+      "correct": 0,
+      "description": "Cami 1955'te Bursa Eski Eserleri Sevenler Kurumu tarafından esaslı biçimde onarılmış, en son 2013'te tamir edilmiştir.",
+      "sourceId": "inv-p226"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p226",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Abdal Mehmet Camii\"",
+      "page": "230-231"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

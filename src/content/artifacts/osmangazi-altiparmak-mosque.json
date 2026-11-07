@@ -1,0 +1,120 @@
+{
+  "id": "osmangazi-altiparmak-mosque",
+  "name": "Altıparmak Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 919 / M. 1513",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Altıparmak lakabıyla tanınan Hoca Mehmed Muhyiddin Efendi'nin 1513'te yaptırdığı, tek kubbeli harimi ve 16. yüzyıl mezar taşlarının bulunduğu haziresiyle bir Osmanlı camisi.",
+  "history": "Cami, Osmangazi ilçesi, Yahşibey Mahallesi, Bozkurt Caddesi, Çıkıntı Sokak, No: 5'tedir.\n\nFatih devrinde yaşamış ve Altıparmak lakabıyla tanınan Abdullah oğlu Hoca Mehmed Muhyiddin Efendi tarafından H. 919 / M. 1513 yılında inşa ettirilmiştir.\n\nKare planlı ve tek kubbeyle örtülü harim, önündeki üç kubbeli son cemaat yeriyle birlikte dikdörtgen bir plan oluşturur. 7.50 × 7.65 m iç ölçülerindeki harime mermer söveli, Bursa kemerli bir kapıdan girilir. Kubbe dıştan sekizgen bir kasnağa, içten Türk üçgenlerinden oluşan bir kuşağa oturur; kasnakta sivri kemerli üç pencere vardır.\n\nSon cemaat yeri, ortası dar ve yüksek olmak üzere üç bölümdür; orta bölüm yarım daire kesitli, yan bölümler aynalı tonozlarla örtülüdür. Bu bölüm yüksek bir kalkan duvarı eklenerek yeniden düzenlenmiştir. Cephede Bursa kemerinin altında bir kemer daha vardır; iki kemer arasındaki boşluk üçgen tuğla ve altıgen taşlarla doldurulmuştur. Kemer üzengisi hizasından başlayan iki sıra kirpi saçak dışa çıkıntılı bir çerçeve oluşturur. Kalkan duvarın tam ortasındaki sivri kemerli niş petek motifleriyle süslenmiştir. Mihrap, köşelerdeki silindirik gövdeli iki sütunçeyle desteklenen yedi sıra mukarnaslı bir tasarımdır.\n\nYapı 1855 depreminde ağır hasar görmüştür: son cemaat yeri kubbeleri ve minare küp kısmına kadar yıkılmış, harim kubbesi çatlamış, takviye edildikten sonra dıştan kurşunla kaplanmıştır. Son cemaat yeri yanlarda duvarlara, önde ahşap direklere oturan bir çatıyla örtülmüştür. Son cemaat yerinin batısındaki bir kapıdan çıkılan minare, kaideden yukarısı yıkıldığı için 1967'de yeniden inşa edilmiştir. Bitişiğinde bir muallimhane ve bir tabhane bulunduğu bilinse de bu yapılar günümüze ulaşmamıştır. Cami bugün bakımlıdır ve ibadete açıktır.\n\nCaminin doğusundaki hazire demir parmaklıklı bir duvarla çevrilidir. Başlangıçta oldukça geniş olan ve 15. yüzyılın sonlarından itibaren tarihli mezar taşları bulunan alanın bir bölümü yol yapımı sırasında ortadan kalkmış, ayrı kalan parsellere evler yapıldığından büyük ölçüde küçülmüştür. Yakın zamanda düzenlenen hazirede, büyük bölümü 16. yüzyıla tarihlenen yaklaşık 25 mezar taşı vardır. Burada medfun olanlardan bazıları Hacı Mustafa bin Turgut, Ramazan Çelebi bin Sinan, Mustafa Çelebi bin Hasan, Hacı Mehmed bin Ömer, Ömer Çelebi bin Cafer, Abdülkadir Efendi el-Kanden, Şerife İhsan ve Mehmed Ağa'dır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-altiparmak-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-altiparmak-mosque/aerial-view.jpg",
+      "alt": "Yukarıdan bakış: apartmanlar ve ağaçlar arasında, kurşun kaplı kubbeli taş-tuğla cami ve önünde yükselen ince, sivri külahlı minare",
+      "description": "Cami ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-altiparmak-mosque/gable-wall-detail.jpg",
+      "alt": "Kesme taş ve tuğla sıralı cephe detayı: üstte tuğla örgülü sivri kemerli niş, altta tuğla-taş kemer içinde altıgen taş ve üçgen tuğla dolgu",
+      "description": "Kalkan duvarı ve kemer dolgusu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-altiparmak-mosque/prayer-hall.jpg",
+      "alt": "Harimin içi: açık yeşil boyalı ahşap direkler arasından görünen yeşil çerçeveli mihrap, sağda minber, mavi halı",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-altiparmak-mosque/graveyard.jpg",
+      "alt": "Ağaçların altında, alçak taş bordürle çevrili hazirede dikili mezar taşları; ortada başlıklı, yazılı uzun bir mezar taşı",
+      "description": "Hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-altiparmak-mosque/aerial-view.jpg",
+      "x": 46,
+      "y": 35,
+      "title": "Minare",
+      "text": "Minare 1855 depreminde küp kısmına kadar yıkılmış, kaideden yukarısı 1967'de yeniden inşa edilmiştir. Son cemaat yerinin batısındaki bir kapıdan çıkılır.",
+      "sourceId": "inv-p258"
+    },
+    {
+      "id": "niche",
+      "image": "/images/osmangazi-altiparmak-mosque/gable-wall-detail.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Petek motifli niş",
+      "text": "Kalkan duvarın tam ortasında yer alan sivri kemerli niş petek motifleriyle süslenmiştir.",
+      "sourceId": "inv-p258"
+    },
+    {
+      "id": "arch-infill",
+      "image": "/images/osmangazi-altiparmak-mosque/gable-wall-detail.jpg",
+      "x": 50,
+      "y": 83,
+      "title": "Kemerler arası dolgu",
+      "text": "Cephede Bursa kemerinin altında bir kemer daha vardır; iki kemer arasındaki boşluk üçgen tuğla ve altıgen taşlarla doldurulmuştur.",
+      "sourceId": "inv-p258"
+    }
+  ],
+  "test": [
+    {
+      "question": "Altıparmak Camii hangi yılda inşa ettirilmiştir?",
+      "options": [
+        "M. 1455",
+        "M. 1513",
+        "M. 1855",
+        "M. 1967"
+      ],
+      "correct": 1,
+      "description": "Cami, H. 919 / M. 1513 yılında Hoca Mehmed Muhyiddin Efendi tarafından inşa ettirilmiştir.",
+      "sourceId": "inv-p258"
+    },
+    {
+      "question": "Yapının minaresi hangi yılda yeniden inşa edilmiştir?",
+      "options": [
+        "1855",
+        "1913",
+        "1958",
+        "1967"
+      ],
+      "correct": 3,
+      "description": "1855 depreminde yıkılan minarenin kaideden yukarısı 1967'de yeniden inşa edilmiştir.",
+      "sourceId": "inv-p258"
+    },
+    {
+      "question": "Caminin haziresinde yaklaşık kaç mezar taşı bulunmaktadır?",
+      "options": [
+        "25",
+        "5",
+        "100",
+        "12"
+      ],
+      "correct": 0,
+      "description": "Yakın zamanda düzenlenen hazirede, büyük bölümü 16. yüzyıla tarihlenen yaklaşık 25 mezar taşı vardır.",
+      "sourceId": "inv-p258"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p258",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Altıparmak Camii ve Haziresi\"",
+      "page": "262"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

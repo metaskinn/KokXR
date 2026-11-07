@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-sivasiler-mosque",
+  "name": "Sivasiler (Tahtalı) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Kitabesi yok; mimari tarzı XV. yüzyıla ait olabileceği izlenimini vermektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kitabesi bulunmayan, mimari tarzıyla XV. yüzyıla ait olabileceği düşünülen, ahşap son cemaat yerli ve kırma çatılı küçük bir cami.",
+  "history": "Sivasiler (Tahtalı) Camii, Osmangazi İlçesi, İbrahim Paşa Mahallesi, Çinkolu Sokak No: 11'dedir. Caminin hangi tarihte ve kim tarafından yaptırıldığını gösteren bir kitabesi yoktur; inşa tarihini belirlemeye yarayacak bir belgeye de rastlanmamıştır. Yapının mimari tarzı XV. yüzyıla ait olabileceği izlenimini vermektedir.\n\nBeden duvarları moloz taş örgülü olan yapının güneydoğu köşesi ustaca pahlanmıştır. Harim içten 6,75 × 6,75 m ölçülerindedir. Batı cephesinde üç altlık ve iki üstlük, kıble tarafında bir, doğuda iki ve son cemaat yerinde iki olmak üzere toplam on pencereyle aydınlatılır. Harimin üstlük pencere kemerleri tuğla örgülüdür.\n\nKırma ahşap çatılı ve alaturka kiremit kaplı caminin son cemaat yeri, duvarlarla içeri alındığı için dıştan dikdörtgen bir görünüm verir. Son cemaat yerindeki ahşap işlemeli çıtakârî tavan, ahşap pencere korkulukları ve tek sıra cemaatin namaz kılabileceği derinlikteki ahşap kadınlar mahfili dikkat çekicidir. Tavanı taşıyan ahşap direkler ve aralarındaki ahşap korkuluklar, Bursa'da son dönemde yeniden ayağa kaldırılan Kiremitçi, Tavukçu Reis, Hoca Hasan ve Nakkaş Ali mescitleriyle aynı tarzda yenilenmiştir.\n\nMinarenin çatıya kadar yükselen kaidesi moloz taştandır; kısa ve silindirik gövdesinin üzerine ahşap korkuluklu, ahşap çatılı ve alaturka kiremit kaplı basit bir şerefe yapılmıştır. Son yıllarda esaslı bir restorasyon geçiren cami bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sivasiler-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sivasiler-mosque/exterior.jpg",
+      "alt": "Köşeden görünüm: önü dikey ahşap kaplamalı ve ahşap parmaklıklı son cemaat yeri, yanında moloz taş örgülü yan duvar, üstte kiremit kaplı kırma çatı; önünde iki bank",
+      "description": "Caminin ahşap son cemaat yeri ve moloz taş beden duvarları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sivasiler-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavanlı harim, ortada altın renkli mukarnaslı mihrap, iki yanında ahşap kapaklı dolaplar, sağda ahşap minber, üstte petek desenli pencereler ve turkuaz halı",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-sivasiler-mosque/exterior.jpg",
+      "x": 27,
+      "y": 58,
+      "title": "Son cemaat yeri",
+      "text": "Duvarlarla içeri alınmış son cemaat yeri dıştan dikdörtgen görünür; ahşap direkleri ve korkulukları yenilenmiştir.",
+      "sourceId": "inv-p418"
+    },
+    {
+      "id": "rubble-walls",
+      "image": "/images/osmangazi-sivasiler-mosque/exterior.jpg",
+      "x": 62,
+      "y": 58,
+      "title": "Moloz taş duvarlar",
+      "text": "Yapının beden duvarları moloz taş örgülüdür.",
+      "sourceId": "inv-p418"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-sivasiler-mosque/exterior.jpg",
+      "x": 45,
+      "y": 27,
+      "title": "Kırma ahşap çatı",
+      "text": "Cami kırma ahşap çatılıdır ve alaturka kiremitle kaplıdır.",
+      "sourceId": "inv-p418"
+    }
+  ],
+  "test": [
+    {
+      "question": "Sivasiler Camii'nin harimi içten hangi ölçülerdedir?",
+      "options": [
+        "8,20 × 8,20 m",
+        "6,75 × 6,75 m",
+        "5,70 × 5,70 m",
+        "9,80 × 10,25 m"
+      ],
+      "correct": 1,
+      "description": "Harim içten içe 6,75 × 6,75 m ölçülerindedir.",
+      "sourceId": "inv-p418"
+    },
+    {
+      "question": "Harim toplam kaç pencereyle aydınlatılır?",
+      "options": [
+        "Dört",
+        "Altı",
+        "Sekiz",
+        "On"
+      ],
+      "correct": 3,
+      "description": "Batıda üç altlık ve iki üstlük, kıblede bir, doğuda iki ve son cemaat yerinde iki olmak üzere toplam on pencere vardır.",
+      "sourceId": "inv-p418"
+    },
+    {
+      "question": "Caminin inşa tarihi neden kesin olarak bilinmiyor?",
+      "options": [
+        "Kitabesi ve tarih belirten bir belgesi bulunmadığı için",
+        "Yangında arşivi yandığı için",
+        "Kitabesi okunamadığı için",
+        "Vakfiyesi kaybolduğu için"
+      ],
+      "correct": 0,
+      "description": "Caminin kitabesi yoktur ve inşa tarihini gösteren bir belgeye rastlanmamıştır; mimari tarzı XV. yüzyıla ait olabileceğini düşündürür.",
+      "sourceId": "inv-p418"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p418",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Sivasiler (Tahtalı) Camii\"",
+      "page": "418"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

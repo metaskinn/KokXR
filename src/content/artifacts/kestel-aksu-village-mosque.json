@@ -1,0 +1,153 @@
+{
+  "id": "kestel-aksu-village-mosque",
+  "name": "Aksu Köyü Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Kestel",
+  "period": "XIV. yüzyıl sonu – XV. yüzyıl başı (tahmini)",
+  "endowment": "Kesin bilinmiyor; halk arasında Hacı Murad banisi kabul edilir",
+  "summary": "Aksu köyünün iskân süreciyle bağlantılı olarak inşa edildiği düşünülen, kırma çatılı, iki katlı ahşap son cemaat yerli köy camii ve haziresi.",
+  "history": "Cami, Kestel'in Aksu Mahallesi'nde yer alır. İnşa tarihine ve banisine dair kesin bir bilgi yoktur; yapıda bu konuda açıklayıcı bir kitabe de bulunmaz.\n\nKöyün kuruluşuna dair rivayetlere göre bölge ilk olarak \"Çiçek Dede\" adlı bir kişi tarafından mesken tutulmuştur. 1487 tarihli tahrir defterlerinde Aksu Köyü, XIV. yüzyılda \"derbentçilik\" hizmeti karşılığında Sâmit Dede'ye tahsis edilmiş bir yerleşim olarak geçer. Köy halkı, civardaki kervansarayı onarmaları ve yolları açık tutarak güvenliği sağlamaları şartıyla vergiden muaf tutulmuş; çevrede çadırlarda konaklayan yörük ailelerin bir kısmı da köye yerleştirilmiştir. Bu kayıtlara göre caminin de bu iskân süreciyle bağlantılı olarak XIV. yüzyıl sonlarında ya da XV. yüzyıl başlarında inşa edilmiş olabileceği değerlendirilmektedir.\n\nYapı yatay dikdörtgen planlı, kırma çatılı ve kiremit örtülüdür; moloz taş örgülü duvarları sıvalıdır. Kuzey ve batı cephelerinde iki girişi vardır. Kuzeydeki kapı, ahşap konstrüksiyonlu ve altlı üstlü iki kattan oluşan son cemaat mahallinin içinde kalır. Güney cephede mihrap, sağ ön bölümde minber, sol ön köşede vaaz kürsüsü bulunur; mihrabın üst kısmında çok renkli geometrik süslemeler görülür. Batı cephesindeki minare, cami ile birlikte 2013 yılında tamamen yenilenmiştir. Bahçedeki şadırvan zamanla özgün niteliğini yitirmiştir.\n\nCaminin bahçesindeki hazirede bir dönem çeşitli mezar taşları bulunuyordu; bugün yalnızca H. 998 / M. 1590'da vefat eden Hacı Murad'a ait mezar taşı korunmuştur. Halk arasındaki rivayete göre caminin banisi kabul edilen Hacı Murad'ın mezarı taşınmak istendiğinde dönemin muhtarı geceleri rüyasında rahatsız edilmiş ve mezarın yerinden alınmasından vazgeçilmiştir. Baş ve ayak taşlarındaki yazı mealen şöyledir: \"Merhum ve mağfiret olunmuş Hacı Murâd ibn Pîrî, Hicrî 998 yılının Zilhicce ayının sonlarında vefat etmiştir. M. Ekim 1590\".",
+  "verification": "verified",
+  "coverImage": "/images/kestel-aksu-village-mosque/aerial-village.jpg",
+  "images": [
+    {
+      "file": "/images/kestel-aksu-village-mosque/aerial-village.jpg",
+      "alt": "Kiremit kaplı kırma çatılı cami, önünde ağaçlar; arkada köyün kiremit çatılı evleri",
+      "description": "Köy içinde caminin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-mosque/minaret-street.jpg",
+      "alt": "Sıvalı cami duvarının köşesinde yükselen ince, uzun minare; solda servi ağaçları, önde taşlı sokak",
+      "description": "Minare ve sokak cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-mosque/prayer-hall.jpg",
+      "alt": "Ahşap tavanlı, beyaz duvarlı ibadet mekânı: ortada mihrap, sağda ahşap minber, zeminde kırmızı halı",
+      "description": "Harim, mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-mosque/aerial-top.jpg",
+      "alt": "Tepeden görünüm: caminin kiremit kırma çatısı, bahçedeki kubbeli şadırvan ve çevredeki evler",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-mosque/graveyard.jpg",
+      "alt": "Ağaçların altında, alçak taş duvarla çevrili hazire alanında mezar taşları",
+      "description": "Hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-mosque/garden-gate.jpg",
+      "alt": "Demir bahçe kapısı ve taş duvar; arkada kubbeli şadırvan ve minare",
+      "description": "Bahçe girişi ve şadırvan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/kestel-aksu-village-mosque/aerial-village.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Kırma çatı",
+      "text": "Yapı yatay dikdörtgen planlı, kırma çatılı ve kiremit örtülüdür. Duvarlar moloz taş örgülüdür ve sıvayla kaplanmıştır.",
+      "sourceId": "inv-p546"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/kestel-aksu-village-mosque/minaret-street.jpg",
+      "x": 56,
+      "y": 40,
+      "title": "Minare",
+      "text": "Batı cephesinde yer alan minare, cami ile birlikte 2013 yılında tamamen yenilenmiştir.",
+      "sourceId": "inv-p546"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/kestel-aksu-village-mosque/prayer-hall.jpg",
+      "x": 46,
+      "y": 40,
+      "title": "Mihrap ve minber",
+      "text": "Güney cephede mihrap, sağ ön bölümde minber, sol ön köşede vaaz kürsüsü yer alır. Mihrabın üst kısmında çok renkli geometrik süslemeler görülür.",
+      "sourceId": "inv-p546"
+    },
+    {
+      "id": "tombstone",
+      "image": "/images/kestel-aksu-village-mosque/graveyard.jpg",
+      "x": 25,
+      "y": 72,
+      "title": "Hazire",
+      "text": "Bir dönem çeşitli mezar taşlarının bulunduğu hazirede bugün yalnızca H. 998 / M. 1590'da vefat eden Hacı Murad'ın mezar taşı korunmuştur.",
+      "sourceId": "inv-p548"
+    }
+  ],
+  "test": [
+    {
+      "question": "1487 tarihli tahrir defterlerine göre Aksu Köyü, Sâmit Dede'ye hangi hizmet karşılığında tahsis edilmişti?",
+      "options": [
+        "Köprücülük",
+        "Derbentçilik",
+        "Madencilik",
+        "Posta hizmeti"
+      ],
+      "correct": 1,
+      "description": "Aksu Köyü, XIV. yüzyılda \"derbentçilik\" hizmeti karşılığında Sâmit Dede'ye tahsis edilmiş bir yerleşim olarak kayıtlıdır.",
+      "sourceId": "inv-p545"
+    },
+    {
+      "question": "Caminin minaresi hangi yıl cami ile birlikte tamamen yenilenmiştir?",
+      "options": [
+        "1958",
+        "1987",
+        "2013",
+        "2001"
+      ],
+      "correct": 2,
+      "description": "Batı cephesindeki minare, cami ile birlikte 2013 yılında tamamen yenilenmiştir.",
+      "sourceId": "inv-p546"
+    },
+    {
+      "question": "Hazirede günümüze ulaşan tek mezar taşı kime aittir?",
+      "options": [
+        "Çiçek Dede",
+        "Sâmit Dede",
+        "Pîrî Bey",
+        "Hacı Murad"
+      ],
+      "correct": 3,
+      "description": "Hazirede yalnızca H. 998 / M. 1590'da vefat eden Hacı Murad'ın mezar taşı korunmuştur.",
+      "sourceId": "inv-p548"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p545",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Kestel, \"Aksu Köyü Camii\"",
+      "page": "233"
+    },
+    {
+      "id": "inv-p546",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Kestel, \"Aksu Köyü Camii\"",
+      "page": "234"
+    },
+    {
+      "id": "inv-p548",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Kestel, \"Aksu Camii Haziresi\"",
+      "page": "236"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

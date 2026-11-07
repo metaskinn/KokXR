@@ -1,0 +1,137 @@
+{
+  "id": "nilufer-ozluce-church-mosque",
+  "name": "Özlüce Kilisesi Camii",
+  "city": "Bursa",
+  "district": "Nilüfer",
+  "period": "Geç Osmanlı · kilise izni 1899; 1924'te camiye dönüştürüldü",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "1899'da izni alınan bir Rum kilisesi olarak yapılıp 1924 mübadelesinden sonra camiye dönüştürülen, revaklı taş ve tuğla yapı.",
+  "history": "Nilüfer, Özlüce Mahallesi, Çiçek Caddesi, No: 73 adresindedir. \"İnesi\" adıyla bilinen eski bir Rum köyü olan yerleşim, 1924 nüfus mübadelesiyle büyük ölçüde boşalmış, ardından \"Langaza\" ve \"Sarıbaşoğlu\" bölgelerinden gelen mübadillerin yerleştirilmesiyle yeniden canlanmıştır.\n\nKitabesi olmayan yapının kesin inşa tarihi bilinmez. Osmanlı arşivlerindeki belgelere göre, \"Aya Yorgi\" adıyla anılan küçük kilisenin ihtiyaca cevap verememesi üzerine Rum Patrikhanesi 5 Eylül 1899'da hemen yanına yeni bir kilise yapmak için izin istemiş, talep 14 Eylül 1315 / 26 Eylül 1899'da onaylanmıştır. İnşaatın 1900'lü yılların başlarına kadar sürdüğü düşünülmektedir.\n\n1924'te mübadillerin yerleştirilmesiyle camiye dönüştürülen yapıda doğudaki apsis hafif bir duvarla ayrılmış, güney duvardaki bir pencere mihraba dönüştürülmüş, tonozun alt seviyesinden başlayan bir ahşap tavan yapılmış, kuzeybatı köşeye minare eklenmiş ve 1975'te bir şadırvan inşa edilmiştir.\n\nDoğu-batı doğrultusunda uzanan yapı, içten üç nefli, dıştan yarım daire apsislidir. Beden duvarlarında kesme taş, moloz taş ve tuğla kullanılmış, dış yüzeyler sıvasız bırakılmıştır. Batı cephesinde tuğla örgülü altı direğin taşıdığı, yuvarlak kemerlerle beş bölüme ayrılan revaklı bir bölüm, kuzey ve güney cephelerde de dörder direkli revaklar vardır. İçeride kemerli açıklıkların üzerinde \"U\" planlı bir galeri katı uzanır.\n\n1980'de köy merkezine yeni cami yapılınca ibadete kapatılan yapı, \"İnesi Köyü Camisi\" adıyla 1992'ye kadar kullanılmıştır. 2008-2009 restorasyonundan sonra 2013'e kadar \"Kültür Evi\" olarak hizmet vermiş, Vakıflar Genel Müdürlüğü'nün açtığı mülkiyet davasıyla bu işlev sona ermiştir. 2019'daki kısmi çökme nedeniyle 2023 itibarıyla yeniden restorasyon sürecine alınmış olup çalışmalardan sonra yeniden cami olarak kullanılacağı belirtilmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/nilufer-ozluce-church-mosque/west-facade-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/nilufer-ozluce-church-mosque/west-facade-aerial.jpg",
+      "alt": "Havadan görünüm: üçgen alınlıklı cephe, altta tuğla direkli kemerli revak, kiremit çatı ve arkada beyaz minare; çevrede iskele ve inşaat malzemesi",
+      "description": "Revaklı cephe ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-ozluce-church-mosque/exterior-arcade.jpg",
+      "alt": "Taş ve tuğla almaşık duvarlı yapının yan cephesinde kemerli revak ve iskele; arkada beyaz minare",
+      "description": "Restorasyon sırasında yan cephe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-ozluce-church-mosque/aerial-top.jpg",
+      "alt": "Tepeden görünüm: uzun dikdörtgen kiremit çatı, bir ucunda yarım daire biçimli apsis çatısı, çevrede ağaçlar",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-ozluce-church-mosque/gable-detail.jpg",
+      "alt": "Taş ve tuğla sıralarından örülmüş alınlıkta yuvarlak pencere, altta tuğla kemerli pencereler",
+      "description": "Alınlık ve pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-ozluce-church-mosque/blind-arch-detail.jpg",
+      "alt": "Moloz taş ve tuğla sıralarıyla örülmüş duvarda tuğla ile kapatılmış yuvarlak kemerli açıklık",
+      "description": "Duvar örgüsü ve kapatılmış açıklık",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "arcade",
+      "image": "/images/nilufer-ozluce-church-mosque/west-facade-aerial.jpg",
+      "x": 50,
+      "y": 80,
+      "title": "Revaklı bölüm",
+      "text": "Batı cephesinde kare planlı, tuğla örgülü altı direk revaklı bölümü taşır; bu alan yuvarlak kemerlerle beş bölüme ayrılır.",
+      "sourceId": "inv-p637"
+    },
+    {
+      "id": "apse",
+      "image": "/images/nilufer-ozluce-church-mosque/aerial-top.jpg",
+      "x": 52,
+      "y": 25,
+      "title": "Apsis",
+      "text": "Yapı doğu ucunda dıştan yarım daire apsisle tanımlanır. Camiye dönüştürülünce apsis hafif bir duvarla ayrılıp farklı bir mekân olarak kullanılmıştır.",
+      "sourceId": "inv-p637"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/nilufer-ozluce-church-mosque/gable-detail.jpg",
+      "x": 50,
+      "y": 72,
+      "title": "Taş ve tuğla duvarlar",
+      "text": "Beden duvarlarında kesme taş, moloz taş ve tuğla kullanılmış, dış yüzeyler sıvasız bırakılmıştır. Tüm pencere açıklıkları yuvarlak tuğla kemerlerle çevrilidir.",
+      "sourceId": "inv-p637"
+    }
+  ],
+  "test": [
+    {
+      "question": "Özlüce'nin eski adı nedir?",
+      "options": [
+        "Langaza",
+        "İnesi",
+        "Görele",
+        "Pazarköy"
+      ],
+      "correct": 1,
+      "description": "Yerleşim \"İnesi\" adıyla bilinen eski bir Rum köyüdür.",
+      "sourceId": "inv-p635"
+    },
+    {
+      "question": "Yapı hangi yılda camiye dönüştürülmüştür?",
+      "options": [
+        "1899",
+        "1924",
+        "1975",
+        "1992"
+      ],
+      "correct": 1,
+      "description": "Yapı 1924'te mübadillerin yerleştirilmesiyle camiye dönüştürülmüştür.",
+      "sourceId": "inv-p636"
+    },
+    {
+      "question": "Camiye dönüştürülürken mihrap nasıl oluşturulmuştur?",
+      "options": [
+        "Apsis mihraba çevrilmiştir",
+        "Yeni bir duvar örülmüştür",
+        "Güney duvardaki bir pencere kapatılarak",
+        "Batı kapısı mihraba çevrilmiştir"
+      ],
+      "correct": 2,
+      "description": "Güney duvarındaki bir pencere kapatılarak mihrap haline getirilmiştir.",
+      "sourceId": "inv-p636"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p635",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Nilüfer, \"Özlüce Kilisesi Camii\"",
+      "page": "323"
+    },
+    {
+      "id": "inv-p636",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Nilüfer, \"Özlüce Kilisesi Camii\"",
+      "page": "324"
+    },
+    {
+      "id": "inv-p637",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Nilüfer, \"Özlüce Kilisesi Camii\"",
+      "page": "325"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

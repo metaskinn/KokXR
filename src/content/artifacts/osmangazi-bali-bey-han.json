@@ -1,0 +1,112 @@
+{
+  "id": "osmangazi-bali-bey-han",
+  "name": "Bali Bey Hanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Bâli Bey (v. 1493)",
+  "endowment": "Bâli Bey; Yenişehir’deki külliyesine gelir sağlamak amacıyla yaptırılmıştır.",
+  "summary": "Bali Bey Hanı, Hisar’a çıkan eğimli arazide Bâli Bey tarafından Yenişehir’deki külliyesine gelir sağlamak için yaptırılmış bir ticaret yapısıdır.",
+  "history": "Bali Bey Hanı, Osmangazi Mahallesi Osmangazi Caddesi No: 1’dedir. Hamza Bey’in torunu, Mehmed Bey’in oğlu Bâli Bey (v. 1493) tarafından Yenişehir’de yaptırdığı külliyeye gelir sağlamak amacıyla inşa ettirilmiştir. Bâli Bey dedesinin vakıflarının mütevelliliğini de üstlenmiştir. 19 Nisan 1546 tarihli belge, Balıkpazarı semtindeki hanın söz konusu caminin vakfı olduğunu kaydeder.\n\nHisar’a çıkan yol üzerinde eğimli araziye kurulmuş han, kitapta üç katlı ve Osmanlı döneminin ilk çok katlı hanlarından biri olarak tanımlanır. Arşiv belgelerinde toplam 64 oda bulunduğu belirtilir. 1847’de Bursa’ya gelen Xavier Hommaire de Hell’in yanındaki ressama çizdirdiği gravürde yıkılmış revaklar ve toprakla dolmuş avlu görülür. Kitap, gravürdeki revak kemerlerinin ayrıntılarından yapının aslında dört katlı olabileceği yönünde değerlendirmeler yapıldığını da aktarır.\n\n1629’da kurşunların satılması üzerine çatının bazı bölümleri kiremitle kaplanmış, 1634’te çatı ve kapılar kapsamlı biçimde onarılmıştır. XVIII. yüzyılda harap olan yapı için 1748’de tamirat izni verilmiş, 1749’da onarım yapılmıştır. 1793 tarihli sicil, dükkânları ve sundurma denilen odalarıyla hanın yıkılmaya yüz tuttuğunu kaydeder. 23 Ağustos 1799’a kadar Rum cemaatine mensup hastaların başvurması için kiralanan sekiz oda sağlık hizmetine ayrılmıştır.\n\n1855 depreminden sonra birçok bölümü toprak altında kalmıştır. Ayaktaki kısımlar 1950’lerde sığınak, 1970’lerde kahvehane olarak kullanılmıştır. Bursa Belediyesi’nin 1984-1985 çevre düzenleme ve kazıları kemerleri ortaya çıkarmıştır. 2006-2008 arasında Vakıflar Genel Müdürlüğü ile Bursa Büyükşehir Belediyesi iş birliğinde yapısal unsurlar açığa çıkarılarak restorasyon başlatılmıştır. Kitaba göre 2009’da tamamlanan çalışmaların ardından han, geleneksel kültürel değerlerin yaşatıldığı ve üretildiği işlevle ziyarete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-bali-bey-han/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-bali-bey-han/courtyard.jpg",
+      "alt": "Yamaç üzerinde kat kat yükselen taş kemerli cephelerin çevrelediği avlu, aşağıda yeşil tenteler ve küçük havuz",
+      "description": "Avlu ve katlı cepheler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-bali-bey-han/arcade.jpg",
+      "alt": "Tuğla tonozlu taş koridor boyunca ahşap dükkân kapıları, bitkiler ve sergilenen resimler",
+      "description": "Revaklar ve dükkânlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-bali-bey-han/courtyard.jpg",
+      "x": 50,
+      "y": 36,
+      "title": "Çok katlı yapı",
+      "text": "Eğimli arazi üzerine kurulu han kitapta Osmanlı döneminin ilk çok katlı hanlarından biri olarak tanımlanır.",
+      "sourceId": "inv-p59"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-bali-bey-han/arcade.jpg",
+      "x": 47,
+      "y": 42,
+      "title": "Revaklar",
+      "text": "Kitap, 1847 tarihli gravürde revakların kısmen ya da tamamen yıkılmış olduğunun görüldüğünü aktarır.",
+      "sourceId": "inv-p59"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bali Bey Hanı hangi yerdeki külliyeye gelir sağlamak için yapılmıştır?",
+      "options": [
+        "İstanbul",
+        "Edirne",
+        "Yenişehir",
+        "Ankara"
+      ],
+      "correct": 2,
+      "description": "Bâli Bey hanı Yenişehir’deki külliyesine gelir sağlamak için yaptırmıştır.",
+      "sourceId": "inv-p58"
+    },
+    {
+      "question": "Hanın banisi Bâli Bey kimin torunudur?",
+      "options": [
+        "Hamza Bey",
+        "Mahmud Paşa",
+        "Hacı İvaz Paşa",
+        "Bayezid Paşa"
+      ],
+      "correct": 0,
+      "description": "Bâli Bey, Hamza Bey’in oğlu Mehmed Bey’in oğludur.",
+      "sourceId": "inv-p58"
+    },
+    {
+      "question": "Kitaba göre hanın restorasyon sonrası ziyarete açılması hangi yıldadır?",
+      "options": [
+        "1985",
+        "1973",
+        "1960",
+        "2009"
+      ],
+      "correct": 3,
+      "description": "Kitap, çalışmaların 2009’da tamamlanarak hanın ziyarete açıldığını belirtir.",
+      "sourceId": "inv-p61"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p58",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bali Bey Hanı\"",
+      "page": "58"
+    },
+    {
+      "id": "inv-p59",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bali Bey Hanı\"",
+      "page": "59"
+    },
+    {
+      "id": "inv-p60",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bali Bey Hanı\"",
+      "page": "60"
+    },
+    {
+      "id": "inv-p61",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bali Bey Hanı\"",
+      "page": "61"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

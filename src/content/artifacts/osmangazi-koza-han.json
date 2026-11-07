@@ -1,0 +1,112 @@
+{
+  "id": "osmangazi-koza-han",
+  "name": "Koza Hanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Bayezid; Mart 1489–30 Eylül 1491",
+  "endowment": "Sultan II. Bayezid; İstanbul’daki külliyesine gelir sağlamak için yaptırılmıştır.",
+  "summary": "Koza Hanı, II. Bayezid’in İstanbul’daki külliyesine gelir sağlamak için yaptırdığı, avlusunda köşk mescit bulunan tarihî ticaret yapısıdır.",
+  "history": "Koza Hanı, Çarşı ve Hanlar Bölgesi’nde Orhan Camii ile Ulucami arasında yer alır. Yeni Han, Beylik Han, Hân-ı Cedîd-i Âmire, Hân-ı Cedîd-i Evvel, Simkeş Han, Sırmakeş Han, Beylik Kârbansaray ve Eski Yeni Han adlarıyla da anılmıştır. Sultan II. Bayezid tarafından İstanbul’daki külliyesine gelir sağlamak için yaptırılmıştır. İnşaat Mart 1489’da başlamış, 30 Eylül 1491’de tamamlanarak hizmete açılmıştır. Mimarı Abdülûlâ bin Pulad Şah, bina emini Şücâ bin Karaca’dır.\n\nHan, bir avlu etrafında sıralanan altlı üstlü odalar ile doğusuna bitişik tek katlı ahır-depo bölümünden oluşur. Doğu duvarındaki 3,66 m genişliğinde geçiş ikinci avluya ulaşır. Kitap bu ahır avlusunu yaklaşık 22 × 30 m olarak tanımlar; avluyu on sekiz payeye oturan kemerler çevreler, ahır mekânını toplam kırk beş paye taşır. Ahırdan Koza Hanı’na, Orhan Camii’ne ve çarşıya üç ayrı kapıyla çıkılır. Ana avlunun ortasında bağımsız köşk mescit bulunur. Arşiv belgesinde anılan, cemaat için sonradan eklenmiş ikinci ahşap mescit günümüze ulaşmamıştır.\n\n1630 tarihli belgede suyollarının onarımı ve artık mevcut olmayan altı üst kat tuvaleti kaydedilmiştir. Ahşap üst kat revakı ve ahırlar 1950’li yıllarda Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmıştır. Kitap, üst katta ipek ticareti yapan işletmelerin, alt katta çeşitli ürünler satan esnafın bulunduğunu; ana avlunun çay bahçesi, eski ahır bölümünün ise kahvehane ve büfe olarak kullanıldığını belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-koza-han/pavilion-masjid.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-koza-han/pavilion-masjid.jpg",
+      "alt": "Ağaçlarla çevrili avluda merdivenle çıkılan, kemerler üzerinde yükselen kubbeli küçük mescit ve çevrede masalar",
+      "description": "Avludaki köşk mescit",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-koza-han/upper-arcade.jpg",
+      "alt": "Tuğla kemerler ve beyaz sıvalı tonozlar altında uzanan koridor, solda vitrinlerde asılı renkli kumaşlar",
+      "description": "Üst kat ticaret mekânları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-koza-han/pavilion-masjid.jpg",
+      "x": 51,
+      "y": 52,
+      "title": "Köşk mescit",
+      "text": "Hanın avlusunun ortasında müstakil bir köşk mescit bulunur.",
+      "sourceId": "inv-p18"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-koza-han/upper-arcade.jpg",
+      "x": 20,
+      "y": 58,
+      "title": "İpek ticareti",
+      "text": "Kitap, üst katta ipek ticareti yapan işletmeler bulunduğunu belirtir.",
+      "sourceId": "inv-p21"
+    }
+  ],
+  "test": [
+    {
+      "question": "Koza Hanı’nı hangi padişah yaptırmıştır?",
+      "options": [
+        "Çelebi Mehmed",
+        "Fâtih Sultan Mehmed",
+        "II. Murad",
+        "II. Bayezid"
+      ],
+      "correct": 3,
+      "description": "Koza Hanı II. Bayezid tarafından İstanbul’daki külliyesine gelir sağlamak için yaptırılmıştır.",
+      "sourceId": "inv-p15"
+    },
+    {
+      "question": "Hanın avlusunun ortasında hangi yapı bulunur?",
+      "options": [
+        "Hamam",
+        "Köşk mescit",
+        "Medrese",
+        "Saat kulesi"
+      ],
+      "correct": 1,
+      "description": "Ana avlunun ortasında müstakil köşk mescit yer alır.",
+      "sourceId": "inv-p18"
+    },
+    {
+      "question": "Koza Hanı hangi tarihte hizmete açılmıştır?",
+      "options": [
+        "30 Eylül 1491",
+        "29 Ekim 1508",
+        "6 Nisan 1326",
+        "19 Nisan 1546"
+      ],
+      "correct": 0,
+      "description": "İnşaat 30 Eylül 1491’de tamamlanarak hizmete açılmıştır.",
+      "sourceId": "inv-p15"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p15",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Koza Hanı\"",
+      "page": "15"
+    },
+    {
+      "id": "inv-p16",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Koza Hanı\"",
+      "page": "16"
+    },
+    {
+      "id": "inv-p18",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Koza Hanı\"",
+      "page": "18"
+    },
+    {
+      "id": "inv-p21",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Koza Hanı\"",
+      "page": "21"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

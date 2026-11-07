@@ -1,0 +1,192 @@
+{
+  "id": "iznik-yesil-mosque",
+  "name": "Yeşil (İmaret – Çandarlı Halil Paşa) Camii",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Osmanlı, Sultan I. Murad dönemi · H. 780 / M. 1378-79'da başlandı, H. 794 / M. 1392'de tamamlandı",
+  "endowment": "Çandarlı Halil Hayreddin Paşa yaptırmaya başlamış, oğlu Ali Paşa tamamlamıştır; kitapta Halil Paşa bin İbrahim Paşa'nın H. 841 / M. 1436-37 tarihli vakfiyesi ve M. 1498 tarihli sureti de anılır.",
+  "summary": "Sultan I. Murad döneminde Çandarlı Halil Hayreddin Paşa'nın başlattığı, adını sırlı tuğla ve çinilerle bezeli minaresinden alan İznik camisi.",
+  "history": "İznik'te Yeşil Cami Mahallesi'ndeki caminin iki kitabesi vardır: biri ana giriş kapısı üzerinde üç satırlık, diğeri son cemaat yeri giriş kapısı lentosu üzerinde tek satırlıktır. Kitabelere göre yapıya Sultan I. Murad döneminde Çandarlı Halil Hayreddin Paşa tarafından H. 780 / M. 1378-79'da başlanmış, Hayreddin Paşa'nın vefatının ardından H. 794 / M. 1392'de oğlu Ali Paşa tarafından tamamlanmıştır. Kitabelerden mimarının \"Musa oğlu Hacı\" olduğu anlaşılır.\n\nÇandarlı Halil Hayreddin Paşa, Sivrihisar'a bağlı Çendere köyünde doğmuş; Bilecik, İznik ve Bursa kadılıklarından sonra I. Murad devrinde kazaskerlik görevini yürütmüş, ardından vezir olmuştur. İlmiye sınıfından gelip paşa unvanını alan ilk vezirdir. H. 789 / M. 1387'de vefat etmiş, oğlu Ali Paşa tarafından Lefke Kapısı yakınındaki türbesine defnedilmiştir.\n\nHalil Paşa bin İbrahim Paşa'nın H. 841 / M. 1436-37 tarihli vakfiyesinin aslı kaybolunca oğlu İbrahim Paşa, Zilhicce H. 903 / M. 1498'de yeni bir suretini hazırlatmıştır. Bu vakfiyeyle Bursa, İznik, Yalova, Beypazarı, Gelibolu, Babaeski, Edirne, Akhisar ve Bolu çevresinde dükkânlar, değirmenler, evler, köyler, bağlar, hamamlar ve kervansaray vakfedilmiştir.\n\nDikdörtgen planlı, 15 × 27 m ölçülerindeki cami harim ve son cemaat mahallinden oluşur; beden duvarları açık sarıya yakın kesme blok mermerle kaplıdır. Evliya Çelebi, Seyahatnâme'sinde yapıdan \"Yeşil Camii diye şöhret bulmuş bir cami-i zîbâ\" diye söz eder. Depremler ve bakımsızlık nedeniyle XIX. yüzyıl sonunda harap hâle gelen cami, Yunan işgali sırasında da zarar görmüştür. 1956, 1960, 1961 ve 1965'te onarılmış; son olarak 2015-2016'da Bursa Büyükşehir Belediyesi ile Vakıflar Genel Müdürlüğü iş birliğinde çevresiyle birlikte restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-yesil-mosque/north-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-yesil-mosque/north-aerial.jpg",
+      "alt": "Yeşil Camii'nin kuzeyden havadan görünümü: önde kemerli son cemaat yeri, arkasında kurşun kaplı küçük ve büyük kubbeler, sağda çinili minare",
+      "description": "Kuzeyden havadan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yesil-mosque/roof-from-top.jpg",
+      "alt": "Caminin tepeden görünümü: dikdörtgen planlı yapı, güneyde büyük dilimli kubbe, kuzeybatı köşede minarenin yuvarlak ucu",
+      "description": "Tepeden plan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yesil-mosque/narthex-facade.jpg",
+      "alt": "Son cemaat yerinin cephesi: üç sivri kemer, ortada mukarnaslı taç kapı, yan kemerlerde oyma mermer korkuluklar",
+      "description": "Son cemaat yeri cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yesil-mosque/marble-railing.jpg",
+      "alt": "Geometrik geçmeli oyma desenli mermer korkuluk levhası ve bezemeli çerçevesi",
+      "description": "Mermer korkuluk",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yesil-mosque/prayer-hall-mihrab.jpg",
+      "alt": "Harimin içten görünümü: karşıda mermer mihrap, sağda ahşap minber, alt kısımda damarlı mermer kaplı duvarlar, turkuaz halı ve avize",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yesil-mosque/prayer-hall-column.jpg",
+      "alt": "Harimdeki iri gövdeli sütun, mukarnaslı başlığı ve gövdesindeki metal kelepçeler; üstte sivri kemerler",
+      "description": "Harim sütunu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yesil-mosque/minaret.jpg",
+      "alt": "Minarenin gövdesi: zikzak ve geometrik desenli renkli tuğla ve çini bezeme, çini kaplı şerefe altı ve sivri külah",
+      "description": "Minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yesil-mosque/minaret-balcony-tiles.jpg",
+      "alt": "Minarenin şerefe altındaki turkuaz çini kaplı mukarnas bezemeleri ve geometrik desenli gövde",
+      "description": "Şerefe altı çini bezemesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "portal",
+      "image": "/images/iznik-yesil-mosque/narthex-facade.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Taç kapı ve kitabe",
+      "text": "Son cemaat mahalline kuzeydeki 4 × 2,5 m ölçülerinde, mermer lentolu ve mukarnas çerçeveli taç kapıdan geçilir. Giriş kapısı lentosunun üzerinde caminin ikinci inşasına dair tek satırlık bir kitabe bulunur.",
+      "sourceId": "inv-p458"
+    },
+    {
+      "id": "main-dome",
+      "image": "/images/iznik-yesil-mosque/roof-from-top.jpg",
+      "x": 53,
+      "y": 66,
+      "title": "Mihrap bölümünün kubbesi",
+      "text": "11 × 11 m ölçülerindeki mihrap bölümü, üçgen kuşaklarla kasnağa geçilen, 11 m çapında ve 17,85 m iç yüksekliğe sahip kurşun kaplı bir kubbeyle örtülüdür. Kubbe göbeğinde kalem işi bezemeler vardır.",
+      "sourceId": "inv-p461"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/iznik-yesil-mosque/prayer-hall-mihrab.jpg",
+      "x": 50,
+      "y": 57,
+      "title": "Mermer mihrap",
+      "text": "Selçuklu üslubunu yansıtan mermer mihrap 3 × 6,7 m ölçülerindedir. Nişinin kavsarası altı sıra mukarnasla bezenmiş, üstüne üç dilimli palmet motifli mermer bir taç yerleştirilmiştir.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/iznik-yesil-mosque/minaret.jpg",
+      "x": 50,
+      "y": 73,
+      "title": "Çinili minare",
+      "text": "Onikigen mermer kaide üzerinde yükselen silindirik gövde, renkli taş ve çiniyle oluşturulmuş geometrik desenler ve sırlı tuğla üzerine firuze çinilerle bezelidir. Tek şerefesinin altında çini kaplı mukarnaslar vardır; çinilerin önemli bir bölümü restorasyonlarda yenilenmiştir.",
+      "sourceId": "inv-p466"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabelere göre caminin inşası hangi yıl tamamlanmıştır?",
+      "options": [
+        "H. 794 / M. 1392",
+        "H. 780 / M. 1378-79",
+        "H. 841 / M. 1436-37",
+        "H. 903 / M. 1498"
+      ],
+      "correct": 0,
+      "description": "İnşaata H. 780 / M. 1378-79'da başlanmış, Hayreddin Paşa'nın vefatından sonra oğlu Ali Paşa yapıyı H. 794 / M. 1392'de tamamlamıştır.",
+      "sourceId": "inv-p453"
+    },
+    {
+      "question": "Cami \"Yeşil\" adını nereden alır?",
+      "options": [
+        "Sırlı tuğla ve çinilerle bezeli minaresinden",
+        "Yeşil boyalı kubbesinden",
+        "Avlusundaki bahçeden",
+        "Yeşil mermer duvarlarından"
+      ],
+      "correct": 0,
+      "description": "Cami, adını sırlı tuğla ve çinilerle bezenmiş minaresinden alır; beden duvarları ise açık sarıya yakın kesme mermerle kaplıdır.",
+      "sourceId": "inv-p458"
+    },
+    {
+      "question": "Kitabeye göre caminin mimarı kimdir?",
+      "options": [
+        "Musa oğlu Hacı",
+        "Ali Paşa",
+        "Yakup Efendi",
+        "Molla Hüsrev"
+      ],
+      "correct": 0,
+      "description": "Son cemaat yeri kapısındaki kitabe \"Mimar: Musa oğlu Hacı\" ifadesiyle biter.",
+      "sourceId": "inv-p459"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p453",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yeşil (İmaret-Çandarlı Halil Paşa) Camii\"",
+      "page": "63"
+    },
+    {
+      "id": "inv-p454",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yeşil (İmaret-Çandarlı Halil Paşa) Camii\"",
+      "page": "64"
+    },
+    {
+      "id": "inv-p455",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yeşil (İmaret-Çandarlı Halil Paşa) Camii\"",
+      "page": "65"
+    },
+    {
+      "id": "inv-p458",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yeşil (İmaret-Çandarlı Halil Paşa) Camii\"",
+      "page": "68"
+    },
+    {
+      "id": "inv-p459",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yeşil (İmaret-Çandarlı Halil Paşa) Camii\"",
+      "page": "69"
+    },
+    {
+      "id": "inv-p461",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yeşil (İmaret-Çandarlı Halil Paşa) Camii\"",
+      "page": "71"
+    },
+    {
+      "id": "inv-p463",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yeşil (İmaret-Çandarlı Halil Paşa) Camii\"",
+      "page": "73"
+    },
+    {
+      "id": "inv-p466",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yeşil (İmaret-Çandarlı Halil Paşa) Camii\"",
+      "page": "76"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

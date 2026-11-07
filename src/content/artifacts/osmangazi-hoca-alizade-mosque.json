@@ -1,0 +1,135 @@
+{
+  "id": "osmangazi-hoca-alizade-mosque",
+  "name": "Hoca Alizâde Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad dönemi, H. 843 / M. 1439",
+  "endowment": "Banisi Hacı Ömer oğlu Hoca Ali",
+  "summary": "Sultan II. Murad döneminde zengin bir tüccar olan Hoca Ali'nin H. 843 / M. 1439'da yaptırdığı, geniş haziresiyle birlikte günümüze ulaşan tek kubbeli cami.",
+  "history": "Hoca Alizâde Camii, Osmangazi İlçesi, Hocaalizâde Mahallesi, Kocaali Sokak No: 1/1'dedir. Sultan II. Murad devrinde yaşamış Hoca Ali tarafından yaptırılmış, ancak Hoca Alizâde adıyla anılmıştır. Döneminde oldukça zengin sayılan Hoca Ali, aynı mahallede caminin yanı sıra bir mektep de yaptırmıştır; oğullarından Hacı Ömer Çelebi ve Mahmud Çelebi de kendisi gibi tüccardı. Kapının üzerindeki kitabe, caminin II. Murad devrinde Hacı Ömer oğlu Hoca Ali tarafından H. 843 / M. 1439'da yaptırıldığını açıkça belirtir.\n\nKare plana yakın asıl ibadet mekânı 8,69 × 8,97 m'dir ve son cemaat revakıyla birlikte dikdörtgen bir plan oluşturur. Duvarlar iki sıra tuğla ve bir sıra kesme taşla örülmüştür. Kalkan duvarlı revakın iki yanı kapatılmış, cephesi camekânla örtülmüştür; revak yanlarındaki pencereler sonradan kapatılmış, revak direkleri yerine yuvarlak kemerli bir duvar çekilmiştir.\n\nCaminin diğer bölümleri neredeyse hiç bozulmadan günümüze ulaşmıştır. Göbekli kubbe, zengin Türk üçgenli bir kuşağa oturur ve üçgenlerin çevresine kontürler çekilmiştir. Sekizgen kasnak iki sıra kirpi saçakla tamamlanır. Yapı altta sekiz, üstte yedi pencereyle aydınlanır. Mihrap özgünlüğünü kaybetmiş, yarım kubbe formunda kalmış ve yağlı boyayla boyanmıştır. Kubbe eteği, silmeler ve pencere iç kemerleri Barok süslemelidir. Doğu ve batı duvarlarında daire içinde kırmızı sülüs hatla besmele ve Fâtiha suresi yazılıdır. Ahşap minber 19. yüzyıl özellikleri gösterir.\n\nMinare Bursa'ya özgü estetik ayrıntılar taşır: sekizgen kaidesinin üst kısmında sekiz sivri kemerli kitabe vardır, küp bölümünde bir dilim mermer, bir dilim tuğla kullanılarak özgün bir düzen oluşturulmuştur. Şerefe altı beş sıra stalaktitli, külahı yenilenmiştir. Cami sağlam durumdadır ve ibadete açıktır.\n\nOldukça geniş hazire caminin bahçesindedir. Caminin güneyindeki bölümde, başta Hoca Ali'nin çocuklarına ait mezarlar olmak üzere yakın zamana kadar defnedilen pek çok kişinin mezar taşı bulunur. Hoca Ali'nin mezar taşı ise bu hazirede yoktur ve tarihî kaynaklarda buraya defnedildiğine dair bir kayıt bulunmamaktadır. Hazirede kabri bulunanlar arasında Hoca Ali'nin oğulları Hoca Ahmed Çelebi ve Hoca Ömer, Hoca Abdullah bin Keyvan, Abdullah Çelebi bin Ahi, Seyyid Mehmed Bey, Nessâh Remzi Efendizâde ve Seyyid Ahmed Zekî Efendi vardır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hoca-alizade-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hoca-alizade-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında kurşun kubbeli, tuğla ve taş örgülü cami, önünde kemerli son cemaat revakı ve yanında ince minare; arkada apartmanlar ve yeşil tepeler",
+      "description": "Caminin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hoca-alizade-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: seccade desenli kırmızı halı, karşıda boyalı mihrap, sağda ahşap minber, yan duvarlarda yuvarlak hat levhaları ve vitray pencereler, kubbe eteğinde süslemeler",
+      "description": "Harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hoca-alizade-mosque/minaret.jpg",
+      "alt": "Minarenin üst bölümü: tuğla ve taş örgülü gövde, şerefe altındaki stalaktit dizileri, beyaz taş şerefe ve sivri külah; arkada dağlar",
+      "description": "Minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hoca-alizade-mosque/graveyard.jpg",
+      "alt": "Caminin taş ve tuğla duvarı önünde, çimenler arasında sıralanmış eski mezar taşları ve mezar sınırları",
+      "description": "Hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-hoca-alizade-mosque/aerial-view.jpg",
+      "x": 45,
+      "y": 55,
+      "title": "Kubbe",
+      "text": "Göbekli kubbe zengin Türk üçgenli bir kuşağa oturur; sekizgen kasnak iki sıra kirpi saçakla tamamlanır.",
+      "sourceId": "inv-p342"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-hoca-alizade-mosque/minaret.jpg",
+      "x": 48,
+      "y": 73,
+      "title": "Şerefe altı",
+      "text": "Minarenin şerefe altı beş sıra stalaktitlidir ve külahı yenilenmiştir.",
+      "sourceId": "inv-p342"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-hoca-alizade-mosque/graveyard.jpg",
+      "x": 45,
+      "y": 56,
+      "title": "Hazire",
+      "text": "Caminin güneyindeki bölümde başta Hoca Ali'nin çocuklarına ait mezarlar olmak üzere pek çok kişinin mezar taşı yer alır.",
+      "sourceId": "inv-p343"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kapı üzerindeki kitabeye göre cami hangi yılda yaptırılmıştır?",
+      "options": [
+        "H. 803 / M. 1400",
+        "H. 871 / M. 1466",
+        "H. 843 / M. 1439",
+        "H. 947 / M. 1540"
+      ],
+      "correct": 2,
+      "description": "Kitabe, caminin Sultan II. Murad devrinde Hacı Ömer oğlu Hoca Ali tarafından H. 843 / M. 1439'da yaptırıldığını belirtir.",
+      "sourceId": "inv-p341"
+    },
+    {
+      "question": "Doğu ve batı duvarlarında daire içinde kırmızı sülüs hatla ne yazılıdır?",
+      "options": [
+        "Besmele ve Fâtiha suresi",
+        "Âyetü'l-Kürsî",
+        "Esmâ-i Hüsnâ",
+        "Caminin vakfiyesi"
+      ],
+      "correct": 0,
+      "description": "Doğu ve batı duvarlarında daire içinde kırmızı sülüs hatla besmele ve Fâtiha suresi yazılıdır.",
+      "sourceId": "inv-p342"
+    },
+    {
+      "question": "Camiyi yaptıran Hoca Ali'nin mezarı hakkında kitap ne söyler?",
+      "options": [
+        "Haziredeki en büyük mezardır",
+        "Caminin içindeki bir türbededir",
+        "İznik'e defnedilmiştir",
+        "Hazirede mezar taşı yoktur ve buraya defnedildiğine dair kayıt bulunmaz"
+      ],
+      "correct": 3,
+      "description": "Hoca Ali'nin mezar taşı hazirede bulunmaz; tarihî kaynaklarda da buraya defnedildiğine dair bir kayda rastlanmaz.",
+      "sourceId": "inv-p343"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p340",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hoca Alizâde Camii ve Haziresi\"",
+      "page": "340"
+    },
+    {
+      "id": "inv-p341",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hoca Alizâde Camii ve Haziresi\"",
+      "page": "341"
+    },
+    {
+      "id": "inv-p342",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hoca Alizâde Camii ve Haziresi\"",
+      "page": "342"
+    },
+    {
+      "id": "inv-p343",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hoca Alizâde Camii ve Haziresi\"",
+      "page": "343"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

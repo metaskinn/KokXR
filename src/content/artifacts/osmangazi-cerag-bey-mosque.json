@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-cerag-bey-mosque",
+  "name": "Çerağ (Çırağ) Bey Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · II. Murad devri; banisinin vefat tarihi olan 1429'dan önce",
+  "endowment": "Şerefüddin Şeyh Çerağ Bey",
+  "summary": "Hacı İvaz Paşa'nın kardeşi Şerefüddin Şeyh Çerağ Bey'in 1429'dan önce Hisar içinde yaptırdığı, aslen kubbeli iken sonradan ahşap çatıyla örtülen erken Osmanlı camisi.",
+  "history": "Çerağ (Çırağ) Bey Camii, Osmangazi ilçesi, Hisar içi, Mollagürani Mahallesi, Çerağ Bey Sokağı'ndadır. Cami, II. Murad devrinde Karamanoğlu kuşatmasında Bursa'yı savunan ve Yeşil Külliye'nin de mimarı olan Hacı İvaz Paşa'nın kardeşi Şerefüddin Şeyh Çerağ Bey tarafından yaptırılmıştır. Çerağ Bey 1429'da vefat ettiğine göre caminin bu tarihten önce inşa edildiği kabul edilmektedir.\n\n7,00 × 6,45 m iç ölçülerinde, kareye yakın dikdörtgen planlı, 26,75 m²'lik son cemaat yeri ve avlusu olan tipik bir erken Osmanlı camisidir. Aslen kubbeli iken sonradan ahşap çatıyla örtülmüştür. Kesme köfeki taşı ve tuğla örgülü, horasan harçlı beden duvarları dönem özelliklerini yansıtır. Doğu beden duvarındaki minare kesme taş ve tuğlayla almaşık teknikte yapılmıştır. Yapının güneydoğu köşesi pahlanarak üç sıra tuğla stalaktitle hafifletilmiştir. Doğu duvarında dikdörtgen çerçeveli, demir şebekeli iki pencere ve üstte sivri kemerli bir pencere vardır. Mihrap kavsarası beş sıra stalaktitlidir.\n\nHarime avluya bakan kuzey cepheden girilir. Avlu duvarı bir sıra kesme taş ve iki sıra harman tuğlayla almaşık örülmüştür. Avluda Çerağ Bey'e ait olduğu belirtilen mermer kaplı bir mezar bulunur. Son yıllardaki kapsamlı onarımda mihrap ve minber ile yalnızca şerefe altına kadarki kısmı kalmış olan minare tamamen yenilenmiş ve özgün boyutuna getirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-cerag-bey-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-cerag-bey-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı alçak cami; taş ve tuğla örgülü duvarlar, yanında tuğla ve taş bantlı yüksek minare, arkada Bursa'nın yamaçlara yayılan evleri",
+      "description": "Caminin ve minarenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cerag-bey-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kiremitle örtülü kırma çatı, solunda minarenin şerefesi, önünde ağaçlı avlu",
+      "description": "Çatının tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-cerag-bey-mosque/exterior.jpg",
+      "x": 55,
+      "y": 60,
+      "title": "Almaşık örgülü minare",
+      "text": "Minare kesme taş ve tuğlayla almaşık teknikte yapılmıştır; yalnızca şerefe altına kadarki kısmı kalmışken son onarımda özgün boyutuna getirilmiştir.",
+      "sourceId": "inv-p291"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-cerag-bey-mosque/exterior.jpg",
+      "x": 25,
+      "y": 75,
+      "title": "Beden duvarları",
+      "text": "Kesme köfeki taşı ve tuğla örgülü, horasan harçlı beden duvarları dönem özelliklerini yansıtır.",
+      "sourceId": "inv-p291"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-cerag-bey-mosque/top-view.jpg",
+      "x": 60,
+      "y": 45,
+      "title": "Ahşap çatı",
+      "text": "Aslen kubbeli olan cami sonradan ahşap çatıyla örtülmüştür.",
+      "sourceId": "inv-p291"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çerağ Bey kimin kardeşidir?",
+      "options": [
+        "Çandarlı İbrahim Paşa",
+        "Hacı İvaz Paşa",
+        "Çakır Ağa",
+        "Davut Paşa"
+      ],
+      "correct": 1,
+      "description": "Cami, Yeşil Külliye'nin de mimarı olan Hacı İvaz Paşa'nın kardeşi Şerefüddin Şeyh Çerağ Bey tarafından yaptırılmıştır.",
+      "sourceId": "inv-p291"
+    },
+    {
+      "question": "Caminin 1429'dan önce yapıldığı neden kabul edilir?",
+      "options": [
+        "Kitabesinde bu tarih yazdığı için",
+        "Vakfiyesi bu tarihli olduğu için",
+        "Çerağ Bey 1429'da vefat ettiği için",
+        "Hacı İvaz Paşa o yıl doğduğu için"
+      ],
+      "correct": 2,
+      "description": "Çerağ Bey'in vefatı 1429 olduğuna göre caminin bu tarihten önce inşa edildiği kabul edilmektedir.",
+      "sourceId": "inv-p291"
+    },
+    {
+      "question": "Aslen kubbeli olan cami sonradan neyle örtülmüştür?",
+      "options": [
+        "Ahşap çatı",
+        "Beşik tonoz",
+        "Çapraz tonoz",
+        "Kurşun kaplı iki kubbe"
+      ],
+      "correct": 0,
+      "description": "Aslında kubbeli olan cami sonradan ahşap çatı ile örtülmüştür.",
+      "sourceId": "inv-p291"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p291",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Çerağ (Çırağ) Bey Camii\"",
+      "page": "291"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

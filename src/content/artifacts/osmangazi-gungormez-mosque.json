@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-gungormez-mosque",
+  "name": "Güngörmez Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 970-971 / M. 1562-1563'ten önce",
+  "endowment": "Banisi Abdullah Efendi",
+  "summary": "Abdullah Efendi'nin mescit olarak yaptırdığı, doğu ve batı cepheleri kapalı olduğu için güneş almadığından Güngörmez adını alan tek kubbeli cami.",
+  "history": "Kitapta caminin adresi Osmangazi ilçesi, Şehreküstü Mahallesi, Cemal Nadir Caddesi No: 94 olarak verilir; aynı sayfada cami Tahtakale Mahallesi'nde, Atatürk Caddesi üzerinde, Ulucami'nin tam karşısında diye de tanımlanır. Cami, H. 970-971 / M. 1562-1563'ten önce Abdullah Efendi tarafından mescit olarak yaptırılmıştır.\n\nUzun süre harap hâlde kalan, şahsa ait olup depo olarak kullanılan yapı, 1965'te Bursa Eski Eserleri Sevenler Kurumu tarafından ibadete açılmış, 1978'de Vakıflar Genel Müdürlüğü tarafından kamulaştırılmıştır. Pek çok kez onarıldığı için asıl şeklinin oldukça bozulduğu bilinir.\n\nTek kubbeli, mütevazı bir yapıdır; beden duvarları moloz taştandır. Kıble duvarı Tahtakale Hanı'nın kuzeyine bitişiktir. Doğu ve batı cepheleri de kapalı olduğundan güneş alamaz; bu yüzden halk arasında Güngörmez adını almıştır. Dıştan sekizgen kasnaklı kubbeye içeriden Türk üçgenleriyle geçilir; kubbe çatı üzerinde bir yükseltiyle öne çıkarılmıştır. Çatı ve kubbe eteklerinde iki sıra kirpi saçak vardır. Son restorasyonda aslıyla ilgisi olmayan ahşap bir son cemaat yeri bulunan camiye, 2023'te Vakıflar Bölge Müdürlüğü restorasyonuyla üç gözlü, sivri kemerli bir son cemaat yeri eklenmiştir; bu bölüm Bursa camilerinin genel özelliği olan üç sıra tuğla ve bir sıra taşla örülmüştür.\n\nÖnünde anıtsal tarihî bir çınar, dış duvarının bitiminde bir çeşme ve bahçesinde hazire bulunur. Avluda daha önce yer aldığı bilinen mezarlar 1965 onarımında cami ibadete açılırken kaldırılmış, yerine Bursa Din Görevlileri Lokali yapılmıştır.\n\nGüngörmez Camii Haziresi: Caminin kuzeyinde ve batısındaki hazire alanında, kuzeydeki mezar taşı eskiden kalmadır ve H. 970 / M. 1563'te vefat eden caminin banisi Abdullah Efendi'ye aittir. Caminin son onarımında batıdaki Bursa Din Görevlileri Lokali yıktırılmış ve yerine hazire düzenlenmiştir. Burada medfun olanlardan bazıları için mezar taşları yazılıp dikilmiştir; bunlar arasında Sinan Bey bin Mehmed Bey, Zeyneb bint-i Ahmed bin Yusuf ve Mahmud Çelebi bin Ahmed de vardır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-gungormez-mosque/front-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-gungormez-mosque/front-view.jpg",
+      "alt": "Caminin önü: solda kalın gövdeli yaşlı bir çınar, ortada taş-tuğla örgülü, sivri kemerli açıklıkları olan son cemaat yeri ve önünde demir parmaklık",
+      "description": "Son cemaat yeri ve çınar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gungormez-mosque/prayer-hall.jpg",
+      "alt": "Harimin içi: turkuaz halı, renkli çini çerçeveli mihrap, sağda yeşil-altın bezemeli minber; duvarlarda yuvarlak hat levhaları ve mavi kalem işi bordür",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gungormez-mosque/graveyard.jpg",
+      "alt": "Caminin yanındaki hazire: taş-tuğla duvar önünde sıra sıra beyaz mermer sandukalar ve dikili mezar taşları",
+      "description": "Cami haziresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "plane-tree",
+      "image": "/images/osmangazi-gungormez-mosque/front-view.jpg",
+      "x": 22,
+      "y": 59,
+      "title": "Anıtsal çınar",
+      "text": "Caminin önünde anıtsal, tarihî bir çınar bulunur.",
+      "sourceId": "inv-p317"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-gungormez-mosque/front-view.jpg",
+      "x": 59,
+      "y": 65,
+      "title": "Son cemaat yeri",
+      "text": "2023'te Vakıflar Bölge Müdürlüğü restorasyonuyla üç sıra tuğla ve bir sıra taşla örülmüş, üç gözlü sivri kemerli son cemaat yeri eklenmiştir.",
+      "sourceId": "inv-p317"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-gungormez-mosque/graveyard.jpg",
+      "x": 37,
+      "y": 75,
+      "title": "Hazire",
+      "text": "Son onarımda Bursa Din Görevlileri Lokali yıktırılmış, yerine hazire düzenlenerek bazı medfunlar için mezar taşları dikilmiştir.",
+      "sourceId": "inv-p318"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami halk arasında neden Güngörmez adını almıştır?",
+      "options": [
+        "Hanın gölgesinde kaldığı için",
+        "Penceresi olmadığı için",
+        "Yalnızca gece açık olduğu için",
+        "Doğu ve batı cepheleri de kapalı olduğundan güneş alamadığı için"
+      ],
+      "correct": 3,
+      "description": "Kıble duvarı Tahtakale Hanı'na bitişik, doğu ve batı cepheleri de kapalı olduğundan güneş alamaz; bu yüzden Güngörmez adını almıştır.",
+      "sourceId": "inv-p317"
+    },
+    {
+      "question": "2023 restorasyonunda camiye ne eklenmiştir?",
+      "options": [
+        "Minare",
+        "Üç gözlü, sivri kemerli son cemaat yeri",
+        "Ahşap kadınlar mahfili",
+        "Şadırvan"
+      ],
+      "correct": 1,
+      "description": "2023'te Vakıflar Bölge Müdürlüğü restorasyonuyla üç gözlü, sivri kemerli bir son cemaat yeri eklenmiştir.",
+      "sourceId": "inv-p317"
+    },
+    {
+      "question": "Depo olarak kullanılan yapı 1965'te kim tarafından ibadete açılmıştır?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Osmangazi Belediyesi",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Bursa Din Görevlileri Lokali"
+      ],
+      "correct": 2,
+      "description": "Yapı 1965'te Bursa Eski Eserleri Sevenler Kurumu tarafından ibadete açılmış, 1978'de Vakıflar Genel Müdürlüğü tarafından kamulaştırılmıştır.",
+      "sourceId": "inv-p317"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p316",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Güngörmez Camii ve Haziresi\"",
+      "page": "316"
+    },
+    {
+      "id": "inv-p317",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Güngörmez Camii ve Haziresi\"",
+      "page": "317"
+    },
+    {
+      "id": "inv-p318",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Güngörmez Camii ve Haziresi\"",
+      "page": "318"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

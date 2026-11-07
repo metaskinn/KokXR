@@ -1,0 +1,120 @@
+{
+  "id": "yenisehir-murat-pasa-mosque",
+  "name": "Murat Paşa (Kumluk) Camii",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Rivayete göre ilk yapı 1295 · 1600 tadilatı · bugünkü biçimi 1973",
+  "endowment": "Kitapta belirtilmemiştir (rivayete göre ilk yapı Osman Bey'in talimatıyla; 1600'de Kuyucu Murat Paşa tadilatı)",
+  "summary": "Rivayete göre Osman Bey'in obasını kurduğu Kumluk'ta yapılan, 1600'de Kuyucu Murat Paşa'nın onarımıyla adını alan cami.",
+  "history": "Yenişehir'in Kurtuluş Mahallesi'nde, Bilecik Caddesi No: 1'de bulunan caminin ilk yapısı, kaynaklardaki rivayetlere göre 1295'te inşa edilmiştir. Anlatıya göre Osman Bey obasını \"Kumluk\" denen bu bölgeye kurmuş ve kendi talimatıyla içi kerpiç ve ahşap, dışı taş kaplama duvarlarla çevrili bir cami yaptırmıştır. Yapıya \"Kumluk Camii\" adı verilmiştir. Sözlü kaynaklarda, Osmanlı Devleti'nde ilk hutbenin bu camide okunduğuna dair bilgiler de yer alır.\n\n1600'de Sadrazam Kuyucu Murat Paşa tarafından kapsamlı bir tadilattan geçirilen yapı, bu tarihten itibaren \"Murat Paşa Camii\" olarak anılmıştır. Bugünkü biçimini 1973'teki tamiratta kazanmıştır.\n\nDikdörtgen planlı cami 15 × 10 m ölçülerindedir. Geniş beden duvarlarının iç yüzü kerpiç, dış yüzü moloz taşla örülmüş; üstü kiremit kaplı kırma çatıyla örtülmüştür. Güneybatı köşesinde beş sıralı mukarnaslı pah vardır. Kuzeydeki son cemaat mahalli dört yanı duvarla örülerek kapatılmıştır. Harimin tavanı ahşap kaplıdır. Mihrap, tacı ve nişiyle birlikte tamamen çini kaplıdır; çevresinde Âyetü'l-kürsî yazılıdır. Kuzeybatı köşedeki tuğla minare taş kaideye oturur, tek şerefesi stalaktitli ve testere dişi tuğla bezemelidir, sivri külahı kurşun kaplıdır; batı yönündeki küçük kitabede \"Minareci B. Ali İmir 1976\" yazar. Caminin batı köşesinde tarihî bir çınar ağacı, güneyinde Şehzade Süleyman Paşa'nın makam türbesi bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-murat-pasa-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-murat-pasa-mosque/exterior.jpg",
+      "alt": "Caminin dışı: moloz taş duvarlar, kiremit kırma çatı, köşede tuğla gövdeli tek şerefeli minare, yanında yapraklarını dökmüş büyük çınar ve çevrede apartmanlar",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-murat-pasa-mosque/prayer-hall.jpg",
+      "alt": "Harim: ahşap kaplı tavan, karşıda çini kaplı mihrap, yanında minber, renkli camlı üst pencereler ve ahşap lambri",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/yenisehir-murat-pasa-mosque/exterior.jpg",
+      "x": 37,
+      "y": 30,
+      "title": "Tuğla minare",
+      "text": "Kuzeybatı köşedeki silindirik gövdeli tuğla minare taş kaideye oturur; tek şerefesi stalaktitli ve testere dişi tuğla bezemelidir, sivri külahı kurşunla kaplanmıştır.",
+      "sourceId": "inv-p696"
+    },
+    {
+      "id": "walls",
+      "image": "/images/yenisehir-murat-pasa-mosque/exterior.jpg",
+      "x": 40,
+      "y": 80,
+      "title": "Beden duvarları",
+      "text": "Geniş beden duvarlarının iç yüzeyleri kerpiç, dış yüzeyleri moloz taşla örülmüştür. Kuzey dışındaki cephelerde taşların arası beyaz beton harçla derzlenmiştir.",
+      "sourceId": "inv-p696"
+    },
+    {
+      "id": "plane-tree",
+      "image": "/images/yenisehir-murat-pasa-mosque/exterior.jpg",
+      "x": 21,
+      "y": 42,
+      "title": "Tarihî çınar",
+      "text": "Caminin batı köşesinde tarihî bir çınar ağacı yer almaktadır.",
+      "sourceId": "inv-p696"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/yenisehir-murat-pasa-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Çini mihrap",
+      "text": "Mihrap, tacı ve nişi dahil tamamen çini kaplıdır. Çevresinde Âyetü'l-kürsî, alınlığında \"Öyleyse yüzünü Mescid-i Harâm'a döndür\" ayeti yer alır.",
+      "sourceId": "inv-p696"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin ilk adı neydi?",
+      "options": [
+        "Kumluk Camii",
+        "Çarşı Camii",
+        "Kurşunlu Camii",
+        "Çınarlı Camii"
+      ],
+      "correct": 0,
+      "description": "Rivayete göre Osman Bey'in obasını kurduğu Kumluk'ta yapılan caminin adı \"Kumluk Camii\" idi.",
+      "sourceId": "inv-p696"
+    },
+    {
+      "question": "Cami hangi tarihten sonra \"Murat Paşa Camii\" olarak anılmaya başlamıştır?",
+      "options": [
+        "1295",
+        "1973",
+        "1600",
+        "1855"
+      ],
+      "correct": 2,
+      "description": "1600'de Sadrazam Kuyucu Murat Paşa'nın kapsamlı tadilatından sonra bu adla anılmıştır.",
+      "sourceId": "inv-p696"
+    },
+    {
+      "question": "Caminin güney yönünde kimin makam türbesi bulunur?",
+      "options": [
+        "Osman Bey'in",
+        "Kuyucu Murat Paşa'nın",
+        "Orhan Bey'in",
+        "Şehzade Süleyman Paşa'nın"
+      ],
+      "correct": 3,
+      "description": "Caminin güney yönünde Şehzade Süleyman Paşa'nın makam türbesi yer almaktadır.",
+      "sourceId": "inv-p696"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p695",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Murat Paşa (Kumluk) Camii\"",
+      "page": "381"
+    },
+    {
+      "id": "inv-p696",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Murat Paşa (Kumluk) Camii\"",
+      "page": "382"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-alanyeri-masjid",
+  "name": "Alanyeri Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Fatih Sultan Mehmed dönemi olduğu düşünülmektedir",
+  "endowment": "Vakıf kayıtlarına göre Akçeli Bekir Vakfı'ndan intikal etmiştir",
+  "summary": "Tuzpazarı'nda evlerin arasında kalan, \"Tekke Mescit\" adıyla da anılan, kiremit çatılı ve ayrı duran minareli küçük mescit.",
+  "history": "Alanyeri Mescidi, Osmangazi'nin Tuzpazarı Mahallesi'nde, Tekkeciler Çıkmazı'ndadır. Fatih Sultan Mehmed döneminde yapıldığı düşünülen mescit \"Tekke Mescit\" adıyla da anılır. Banisi bilinmemektedir; vakıf kayıtlarına göre yapının Akçeli Bekir Vakfı'ndan intikal ettiği anlaşılır.\n\nSon cemaat yeri olmayan mescidin güneybatı kısmı evlerin arasında kalmıştır. Ahşap çatısının üstü kiremitle örtülüdür; moloz taşla örülen beden duvarları iki sıra kirpi saçakla tamamlanır. Mescide batıya açılan bir kapıdan girilir. Ahşap tavanlı ana mekân altlı üstlü on altı pencereyle aydınlanır; pencerelerde demir parmaklıklar vardır. Kitapta mihrabın sade bir niş olduğu belirtilir.\n\nMinare ana yapıdan ayrı olarak mescidin güneybatısında yer alır; moloz taş ve tuğladan örülen kaidesi orijinaldir.\n\nYapı zaman içinde çeşitli onarımlar görmüş, bugün ibadete açık olarak korunmaktadır. Bir zamanlar haziresi olduğu bilinir; kayıtlara göre buraya Muallim Ali Efendi, Acem Abdülgani Efendi ve Süleyman Baba gibi kişiler defnedilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-alanyeri-masjid/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-alanyeri-masjid/aerial-view.jpg",
+      "alt": "Yukarıdan bakış: evlerin arasında kiremit kaplı kırma çatılı küçük mescit, önünde küçük avlu ve ahşap kapı, sağında ayrı duran taş-tuğla minare kaidesi ve üzerinde ahşap korkuluklu şerefe",
+      "description": "Mescit ve ayrı duran minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-alanyeri-masjid/prayer-hall.jpg",
+      "alt": "İbadet mekânı: ahşap kaplama tavan, solda çinilerle kaplı mihrap ve ahşap minber, sağda ince direklere oturan mahfil, altlı üstlü pencereler, mavi halı",
+      "description": "Ahşap tavanlı ana mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-alanyeri-masjid/aerial-view.jpg",
+      "x": 48,
+      "y": 45,
+      "title": "Kiremit çatı",
+      "text": "Ahşap çatılı mescidin üzeri kiremitle kaplanmıştır. Son cemaat yeri yoktur; güneybatı kısmı evlerin arasında kalmıştır.",
+      "sourceId": "inv-p249"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-alanyeri-masjid/aerial-view.jpg",
+      "x": 66,
+      "y": 50,
+      "title": "Ayrı duran minare",
+      "text": "Minare ana yapıdan ayrı olarak mescidin güneybatısındadır. Moloz taş ve tuğladan örülen kaidesi orijinaldir.",
+      "sourceId": "inv-p249"
+    },
+    {
+      "id": "ceiling",
+      "image": "/images/osmangazi-alanyeri-masjid/prayer-hall.jpg",
+      "x": 45,
+      "y": 8,
+      "title": "Ahşap tavan",
+      "text": "Ahşap tavanlı ana mekân, altlı üstlü on altı pencereyle aydınlatılır.",
+      "sourceId": "inv-p249"
+    }
+  ],
+  "test": [
+    {
+      "question": "Alanyeri Mescidi hangi adla da anılmaktadır?",
+      "options": [
+        "Veled-i Harîrî Camii",
+        "Çapraz Camii",
+        "Arap Dede Camii",
+        "Tekke Mescit"
+      ],
+      "correct": 3,
+      "description": "Fatih Sultan Mehmed döneminde yapıldığı düşünülen mescit \"Tekke Mescit\" adıyla da anılır.",
+      "sourceId": "inv-p249"
+    },
+    {
+      "question": "Vakıf kayıtlarına göre yapı hangi vakıftan intikal etmiştir?",
+      "options": [
+        "Akçeli Bekir Vakfı",
+        "Ali Paşa Vakfı",
+        "Alâeddin Bey Vakfı",
+        "Hoca Yakub Vakfı"
+      ],
+      "correct": 0,
+      "description": "Banisi bilinmeyen mescidin, vakıf kayıtlarına göre Akçeli Bekir Vakfı'ndan intikal ettiği anlaşılmaktadır.",
+      "sourceId": "inv-p249"
+    },
+    {
+      "question": "Ana mekân kaç pencereyle aydınlatılmaktadır?",
+      "options": [
+        "Sekiz",
+        "On altı",
+        "Dört",
+        "Yirmi dört"
+      ],
+      "correct": 1,
+      "description": "Ahşap tavanlı ana mekân, altlı üstlü on altı pencereyle aydınlatılır.",
+      "sourceId": "inv-p249"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p249",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Alanyeri Mescidi\"",
+      "page": "253"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "nilufer-golyazi-mosque",
+  "name": "Gölyazı Camii",
+  "city": "Bursa",
+  "district": "Nilüfer",
+  "period": "Kitabesi yok · 2007-2008'de restore edildi",
+  "endowment": "Kitapta belirtilmemiştir (bilgiler Vakıflar Genel Müdürlüğü arşivindeki vakıf kayıtlarındadır)",
+  "summary": "Gölyazı'nın tarihî yerleşiminin en yüksek noktasında, halk arasında \"eski cami\" diye anılan sade bir taşra camisi.",
+  "history": "Nilüfer ilçesi, Gölyazı Mahallesi, Cami Sokak'ta yer alan cami, tarihî yerleşim bölgesinin en yüksek noktasındadır. Mahallede ikinci bir cami inşa edilince halk arasında \"eski cami\" olarak anılmaya başlanmıştır. Kitabesi olmayan camiye ilişkin bilgiler Vakıflar Genel Müdürlüğü arşivlerindeki vakıf kayıtlarında yer alır.\n\nDoğu-batı yönünde uzanan, kareye yakın dikdörtgen planlı yapı, kirpi saçaklı, kiremit örtülü ahşap kırma çatıyla örtülüdür. Moloz taş ve iki sıra tuğla ile örülen duvarlarıyla Bursa Hisar içindeki erken Osmanlı dönemi camilerini hatırlatır. Kuzeydeki kapıdan sonradan eklenen, iki katlı, üç gözlü, düz tavanlı son cemaat mahalline, bunun güney duvarındaki ikinci kapıdan harime geçilir.\n\nHarime girişin üstünde, dört ahşap ayakla taşınan ve son cemaat yerinden başlayan ahşap merdivenlerle çıkılan bir mahfil vardır. Doğu yöndeki minare cami içine alınmıştır; sıvalı kaidesine iki basamakla çıkılan minarenin son cemaat mahalliyle birlikte sonradan eklendiği anlaşılır. Tuğla örgülü, sade minarenin tek şerefesi stalaktit dolgularla süslüdür.\n\nİç mekân sadedir. Yeşile boyanmış mihrabın mukarnaslı kısmının dişleri sarı yaldızla renklendirilmiş, dışı üzerine sarı ayetler yazılmış siyah bir kuşakla çevrilmiştir. Mihrabın iki yanında yeşil zemin üzerine sarı yaldızla ism-i celâl ve ism-i nebî, diğer duvarlarda aynı üslupta dört halifenin isimleri yer alır. Düz ahşap tavan, kırma çatının iç yansımasıdır. Yapı 2007-2008 yıllarında Vakıflar Bursa Bölge Müdürlüğü tarafından restore edilerek yeniden ibadete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/nilufer-golyazi-mosque/aerial-lake.jpg",
+  "images": [
+    {
+      "file": "/images/nilufer-golyazi-mosque/aerial-lake.jpg",
+      "alt": "Kiremit çatılı evler arasında taş duvarlı, kiremit kırma çatılı cami ve tuğla minaresi; arkada göl ve selviler",
+      "description": "Göl kıyısındaki yerleşimde cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-mosque/interior-mihrab.jpg",
+      "alt": "Beyaz sıvalı iç mekân: ortada yeşil mihrap, sağda ahşap minber, duvarlarda yeşil zeminli yaldızlı yazı levhaları, kareli ahşap tavan ve avize",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-mosque/interior-minaret-base.jpg",
+      "alt": "İç mekânda beyaz sıvalı kütle ve basamakları, solda ahşap mahfil, duvarlarda yeşil yazı levhaları",
+      "description": "Cami içine alınmış minare kaidesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-mosque/minaret.jpg",
+      "alt": "Tuğla örgülü silindirik minare gövdesi, şerefe altında tuğla dolgu süsleme ve sivri külah; arkada göl",
+      "description": "Tuğla minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/nilufer-golyazi-mosque/gallery-view.jpg",
+      "alt": "Ahşap mahfilden harimin görünümü: ahşap ayaklar, korkuluk, halı ve karşıda mihrap",
+      "description": "Mahfilden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/nilufer-golyazi-mosque/aerial-lake.jpg",
+      "x": 46,
+      "y": 60,
+      "title": "Kirpi saçaklı kırma çatı",
+      "text": "Kareye yakın dikdörtgen planlı cami, kirpi saçaklı ve kiremit örtülü ahşap kırma çatıyla örtülüdür; duvarları moloz taş ve iki sıra tuğla ile örülmüştür.",
+      "sourceId": "inv-p633"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/nilufer-golyazi-mosque/minaret.jpg",
+      "x": 50,
+      "y": 57,
+      "title": "Tuğla minare",
+      "text": "Ahşap çatının üzerinden yükselen minare tuğla örgü tekniğiyle yapılmış sade bir görünüme sahiptir. Tek şerefesi stalaktit dolgularla süslenmiştir.",
+      "sourceId": "inv-p633"
+    },
+    {
+      "id": "minaret-base",
+      "image": "/images/nilufer-golyazi-mosque/interior-minaret-base.jpg",
+      "x": 35,
+      "y": 45,
+      "title": "Cami içindeki minare kaidesi",
+      "text": "Doğu yöndeki minare cami içine alınmıştır. Sıvalı kaidesine iki basamakla çıkılır ve son cemaat mahalliyle birlikte sonradan eklendiği anlaşılır.",
+      "sourceId": "inv-p633"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/nilufer-golyazi-mosque/interior-mihrab.jpg",
+      "x": 50,
+      "y": 52,
+      "title": "Yeşil mihrap",
+      "text": "Mihrap yeşile boyanmış, mukarnaslı kısmının dişleri sarı yaldızla renklendirilmiştir. İki yanında ism-i celâl ve ism-i nebî yazılıdır.",
+      "sourceId": "inv-p634"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gölyazı Camii halk arasında nasıl anılır?",
+      "options": [
+        "Çarşı Camii",
+        "Eski cami",
+        "Göl Camii",
+        "Hisar Camii"
+      ],
+      "correct": 1,
+      "description": "Mahallede ikinci bir cami yapılınca yapı \"eski cami\" olarak anılmaya başlanmıştır.",
+      "sourceId": "inv-p632"
+    },
+    {
+      "question": "Caminin minaresi nerededir?",
+      "options": [
+        "Cami içine alınmıştır",
+        "Avlunun dışında, ayrı durur",
+        "Son cemaat yerinin üstündedir",
+        "Minaresi yoktur"
+      ],
+      "correct": 0,
+      "description": "Doğu yöndeki minare cami içine alınmış şekilde düzenlenmiştir.",
+      "sourceId": "inv-p633"
+    },
+    {
+      "question": "Cami hangi yıllarda restore edilerek yeniden ibadete açılmıştır?",
+      "options": [
+        "1980-1982",
+        "1995-1996",
+        "2007-2008",
+        "2019-2023"
+      ],
+      "correct": 2,
+      "description": "Yapı 2007-2008 yıllarında Vakıflar Bursa Bölge Müdürlüğü tarafından restore edilmiştir.",
+      "sourceId": "inv-p634"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p632",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Nilüfer, \"Gölyazı Camii\"",
+      "page": "320"
+    },
+    {
+      "id": "inv-p633",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Nilüfer, \"Gölyazı Camii\"",
+      "page": "321"
+    },
+    {
+      "id": "inv-p634",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Nilüfer, \"Gölyazı Camii\"",
+      "page": "322"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-provincial-culture-and-tourism-mansion",
+  "name": "İl Kültür ve Turizm Müdürlüğü Konağı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Muhtemelen XIX. yüzyılın son çeyreği",
+  "endowment": "Yapının bulunduğu alan Baldırzade Vakfı mülkiyetindeydi",
+  "summary": "Sarı Konak olarak bilinen yapı, Bursa surlarıyla çevrili avlusu ve geleneksel konut düzeniyle tanımlanır.",
+  "history": "Konak Kuruçeşme Mahallesi, Osmangazi Caddesi No: 18'de, Saltanat Kapısı'nın karşısında ve Okçubaba Türbesi'nin kuzeyindedir. Halk arasında “Sarı Konak” denir. İnşa tarihi ve amacı kesin bilinmez. 1862 tarihli Suphi Bey haritasında yer almaması nedeniyle XIX. yüzyılın son çeyreğinde yapıldığı düşünülmektedir.\n\nUzun süre konut olarak kullanılan yapı yıpranmış; bulunduğu alanın Baldırzade Vakfı'na ait olması nedeniyle 1980'li yıllardan sonra takas yoluyla Vakıflar Genel Müdürlüğü'ne devredilmiştir. Kapsamlı bakım ve onarımdan sonra İl Kültür ve Turizm Müdürlüğü ile Rölöve ve Anıtlar Müdürlüğü tarafından kullanılmaya başlanmıştır.\n\nYüksek taş duvarlı geniş avlunun güney ve doğu sınırlarını Bursa surları oluşturur. Kitap, 1855 depreminden sonraki düzenlemelerde surların bir bölümünün açıldığını ve konağın köşe duvarlarında surlara ait kesme taş izlerinin korunduğunu anlatır. Konak kısmi bodrum, zemin, birinci ve çatı katından oluşur. Duvarlar zemin kotuna kadar kesme ve moloz taş, üstte bağdadi teknikle yapılmıştır. Kırma çatı kiremit kaplıdır; üst katın kuzeybatı köşesinde çıkma bulunur.\n\nGüneyde Okçubaba Türbesi'ne bakan yuvarlak kemerli çift kanatlı ahşap kapı özgün girişti; kitapta artık kullanılmadığı belirtilir. Avluya aynı yönde sur duvarında açılan bahçe kapısından geçilir. Kayrak taş döşeli avludan batıdaki birkaç basamaklı çift kanatlı ahşap kapıyla konağa girilir.\n\nÖzgün planda giriş holünden ulaşılan geniş dikdörtgen taşlık kapalı sofa işlevi görür. Ortasında oval mermer fıskiyeli havuz vardır. Pınarbaşı çarşaf suyuyla beslenen bu havuzlar, “habiye-i mâ” adlı sistemin parçasıdır. Taşlık çevresinde çeşitli odalar yer alır. Kuzey köşedeki ahşap merdiven üst kattaki sofa ve odalara çıkar. Yanındaki dar merdivenle ulaşılan çatı katında iki oda ve zemini kurşun kaplı, tarihi çarşı ile Ulucami manzaralı teras bulunur. Eski fotoğraflarda terasta yuvarlak kemerli pencereli başka bir oda görülmektedir.\n\nKuzey ve batı cephelerinde on birer, güneyde yedi, doğuda çatı katı dahil yirmi bir dikdörtgen ahşap pencere vardır. Tavanlar ve zeminler ahşaptır. Peyzaj düzenlemeli avluda eskiden mutfak olan tek katlı yapı, küçük odunluk, köşeleri pahlı dikdörtgen mermer havuz ve yetişkin ağaçlar bulunur; yardımcı yapılar farklı işlevlerle kullanılmaktadır. Batı duvarında küçük bir kapı daha vardır. Onarımlar özgün biçimi değiştirmiştir; kitap, yakın dönemde kapsamlı restorasyondan geçen konağın İl Kültür ve Turizm Müdürlüğü işlevini sürdürdüğünü belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-provincial-culture-and-tourism-mansion/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-provincial-culture-and-tourism-mansion/aerial-view.jpg",
+      "alt": "Yüksek taş duvarların gerisinde sarı cepheli, kahverengi ahşap çerçeveli ve kiremit çatılı konak; çevresinde ağaçlar",
+      "description": "Konak ve surlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-provincial-culture-and-tourism-mansion/upper-hall.jpg",
+      "alt": "Ahşap döşemeli ve ahşap tavanlı boş sofa; yanlarda kahverengi kapılar, sağda merdiven açıklığı",
+      "description": "Ahşap sofa",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-provincial-culture-and-tourism-mansion/courtyard.jpg",
+      "alt": "Kayrak taş döşeli avluda köşeleri kırık beyaz mermer havuz; arkada sarı konak, masalar ve ağaçlar",
+      "description": "Avlu ve havuz",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pool",
+      "image": "/images/osmangazi-provincial-culture-and-tourism-mansion/courtyard.jpg",
+      "x": 62,
+      "y": 80,
+      "title": "Avlu havuzu",
+      "text": "Avluda köşeleri pahlı dikdörtgen planlı mermer bir havuz bulunmaktadır.",
+      "sourceId": "inv-p118"
+    },
+    {
+      "id": "wood",
+      "image": "/images/osmangazi-provincial-culture-and-tourism-mansion/upper-hall.jpg",
+      "x": 50,
+      "y": 79,
+      "title": "Ahşap döşemeler",
+      "text": "Konağın tavan ve zemin döşemeleri bütünüyle ahşaptır.",
+      "sourceId": "inv-p118"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-provincial-culture-and-tourism-mansion/aerial-view.jpg",
+      "x": 46,
+      "y": 29,
+      "title": "Kiremitli kırma çatı",
+      "text": "Konağın kırma çatısı kiremit ile kaplanmıştır.",
+      "sourceId": "inv-p117"
+    }
+  ],
+  "test": [
+    {
+      "question": "Konak halk arasında hangi adla bilinir?",
+      "options": [
+        "Sarı Konak",
+        "Dullar Evi",
+        "Halkevi",
+        "İpekçilik Mektebi"
+      ],
+      "correct": 0,
+      "description": "Konak halk arasında Sarı Konak adıyla anılır.",
+      "sourceId": "inv-p116"
+    },
+    {
+      "question": "Konağın bulunduğu alan hangi vakfa aitti?",
+      "options": [
+        "Dullar Evi Vakfı",
+        "Baldırzade Vakfı",
+        "Orhan Gazi Vakfı",
+        "Hacı Saffet Bey Vakfı"
+      ],
+      "correct": 1,
+      "description": "Kitap alanın Baldırzade Vakfı mülkiyetinde olduğunu belirtir.",
+      "sourceId": "inv-p117"
+    },
+    {
+      "question": "Taşlıktaki oval havuzları besleyen su sistemi nasıl adlandırılır?",
+      "options": [
+        "Cihannüma",
+        "Revak",
+        "Habiye-i mâ",
+        "Bağdadi"
+      ],
+      "correct": 2,
+      "description": "Pınarbaşı çarşaf suyuyla beslenen havuzlar habiye-i mâ sisteminin parçasıdır.",
+      "sourceId": "inv-p118"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p116",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İl Kültür ve Turizm Müdürlüğü Konağı\"",
+      "page": "116"
+    },
+    {
+      "id": "inv-p117",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İl Kültür ve Turizm Müdürlüğü Konağı\"",
+      "page": "117"
+    },
+    {
+      "id": "inv-p118",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İl Kültür ve Turizm Müdürlüğü Konağı\"",
+      "page": "118"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

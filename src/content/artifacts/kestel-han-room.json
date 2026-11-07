@@ -1,0 +1,97 @@
+{
+  "id": "kestel-han-room",
+  "name": "Han Odası",
+  "city": "Bursa",
+  "district": "Kestel",
+  "period": "Osmanlı · II. Bayezid dönemi, H. 904 / M. 1498",
+  "endowment": "İstanbullu tüccar Mehmed oğlu Hoca Dursun",
+  "summary": "Aksu'da, kitabesine göre 1498'de İstanbullu tüccar Hoca Dursun'un yaptırdığı handan bugün ayakta kalan kemerli giriş kapısı ve duvarlar.",
+  "history": "Yapı, Kestel'in Aksu Mahallesi'nde yer alır. Sultan II. Bayezid döneminde, H. 904 / M. 1498'de İstanbullu tüccar Mehmed oğlu Hoca Dursun tarafından inşa ettirilmiştir. Kaynaklarda \"Beylik Han\", bazı arşiv belgelerinde \"Kurşunlu Han\" olarak geçer; halk arasında \"Deveci Hanı\" olarak da anıldığı rivayet edilir.\n\nKemerli giriş kapısı üzerindeki inşa kitabesi mealen şöyledir: \"Yapanın adı hayırla anılsın diye bu saadetli bina inşa edilmiştir. Bu hayır eserinin sahibi, Konstantiniyye (İstanbul) beldesinin seçkin tüccarlarından Mehmed oğlu Hoca Dursun'dur. Yapı, H. Muharrem 904 / M. Eylül 1498 tarihinde tamamlanmıştır.\"\n\n1660'taki Celâli Hasan isyanı sırasında han ve karşısındaki dükkânlar kısmen yanmış ve yıkılmış; yapı hayırsever Sufi Hacı Mehmed tarafından tamir edilerek yeniden ihya edilmiştir. H. 1167 / M. 1753 tarihli B97 numaralı Bursa kadı sicilinde hanın pek çok bölümünün onarıldığı ve bunun için üç yük ve 76.970 akçe harcandığı kayıtlıdır. Şeyhülislam Karaçelebizâde Hüsameddin Efendi, Aksu Köyü'ndeki büyük ve küçük hanları Kozluören Köyü'nde yaptırdığı camiye vakfetmiştir.\n\nYapının ilk inşa özelliklerine dair ayrıntılı bilgi yoktur. Bugün kemerli giriş kapısı ile bazı duvarları ayaktadır; temellerinin izleri geniş bir alana yayılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/kestel-han-room/gate-front.jpg",
+  "images": [
+    {
+      "file": "/images/kestel-han-room/gate-front.jpg",
+      "alt": "Moloz taş duvar içinde kemerli giriş açıklığı; kemerin içinden arkadaki ev görünüyor, önde toprak yol ve otlar",
+      "description": "Kemerli giriş kapısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-han-room/arch-and-wall.jpg",
+      "alt": "Solda taş kemerli açıklık, sağda yüksek moloz taş ve tuğla duvar kalıntısı; önde iri taşlar",
+      "description": "Kemer ve ayakta kalan duvar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "gate",
+      "image": "/images/kestel-han-room/gate-front.jpg",
+      "x": 50,
+      "y": 25,
+      "title": "Kemerli giriş ve kitabe",
+      "text": "Kemerli giriş kapısı üzerindeki inşa kitabesi, yapının H. 904 / M. 1498'de İstanbullu tüccar Mehmed oğlu Hoca Dursun tarafından yaptırıldığını açıkça belirtir.",
+      "sourceId": "inv-p563"
+    },
+    {
+      "id": "walls",
+      "image": "/images/kestel-han-room/arch-and-wall.jpg",
+      "x": 70,
+      "y": 45,
+      "title": "Ayakta kalan duvarlar",
+      "text": "Yapının ilk inşa özelliklerine dair ayrıntılı bilgi yoktur; bugün kemerli giriş kapısı ile bazı duvarları ayakta kalmış, temel izleri geniş bir alana yayılmıştır.",
+      "sourceId": "inv-p563"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabesine göre hanı kim yaptırmıştır?",
+      "options": [
+        "Vanî Mehmed Efendi",
+        "Sufi Hacı Mehmed",
+        "Karaçelebizâde Hüsameddin Efendi",
+        "Mehmed oğlu Hoca Dursun"
+      ],
+      "correct": 3,
+      "description": "Han, H. 904 / M. 1498'de İstanbullu tüccar Mehmed oğlu Hoca Dursun tarafından inşa ettirilmiştir.",
+      "sourceId": "inv-p563"
+    },
+    {
+      "question": "Yapının halk arasında hangi adla da anıldığı rivayet edilir?",
+      "options": [
+        "Deveci Hanı",
+        "Koza Hanı",
+        "Pirinç Hanı",
+        "Emir Hanı"
+      ],
+      "correct": 0,
+      "description": "Kaynaklarda \"Beylik Han\", bazı belgelerde \"Kurşunlu Han\" olarak geçen yapının halk arasında \"Deveci Hanı\" olarak anıldığı rivayet edilir.",
+      "sourceId": "inv-p563"
+    },
+    {
+      "question": "1660'taki Celâli Hasan isyanında hana ne olmuştur?",
+      "options": [
+        "Hiç zarar görmemiştir",
+        "Kısmen yanmış ve yıkılmıştır",
+        "Camiye dönüştürülmüştür",
+        "Satılmıştır"
+      ],
+      "correct": 1,
+      "description": "Han ve karşısındaki dükkânlar kısmen yanmış ve yıkılmış, Sufi Hacı Mehmed tarafından tamir edilmiştir.",
+      "sourceId": "inv-p563"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p563",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Kestel, \"Han Odası\"",
+      "page": "251"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

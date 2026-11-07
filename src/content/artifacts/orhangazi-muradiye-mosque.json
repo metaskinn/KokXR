@@ -1,0 +1,125 @@
+{
+  "id": "orhangazi-muradiye-mosque",
+  "name": "Muradiye Camii",
+  "city": "Bursa",
+  "district": "Orhangazi",
+  "period": "Osmanlı · kitabesi yok, kesin tarihi bilinmiyor",
+  "endowment": "Kitapta belirtilmemiştir (mülkiyeti Vakıflar Genel Müdürlüğü'ne aittir)",
+  "summary": "Halk arasında \"Çarşı Camii\" de denen, 1921'de üst örtüsü yıkılıp beden duvarları korunarak yeniden açılan, Orhangazi'nin en eski camilerinden biri.",
+  "history": "Orhangazi ilçesi, Muradiye Mahallesi, Turist Yolu Caddesi No: 101 A'dadır. Yerel halk arasında \"Çarşı Camii\" olarak da anılan yapı, ilçenin en eski ibadet yapılarından biri kabul edilir. İnşa kitabesi yoktur. 1812 tarihli bazı belgelerde Sultan IV. Murad'ın Bursa seyahati sırasında yaptırıldığı ileri sürülse de bu görüş tarihsel bağlam açısından zayıf bulunmaktadır.\n\nEski adı \"Pazarköy\" olan Orhangazi, 1921'de Yunan işgali sırasında büyük yıkıma uğramış, Muradiye Camii de ağır hasar görmüştür. Caminin özellikle üst örtüsü tamamen yıkılmış, ancak yangın sonrası yapılan müdahalelerle beden duvarları korunarak yapı yeniden ibadete açılmıştır. Bugün hâlâ özgün niteliklerini taşıyan bu duvarlar, yapının tarihî karakterine dair önemli ipuçları barındırır.\n\nMülkiyeti Vakıflar Genel Müdürlüğü'ne ait olan caminin toplam müştemilatı 520 m², iç kullanım alanı 282 m²'dir. Dikdörtgen planlı yapı, moloz taş örgülü beden duvarları ve üzerini örten çatıyla sade bir mimariye sahiptir; kuzeydoğu köşesine sonradan bir eklenti yapılmıştır. En dikkat çekici özelliği, pencerelerinin benzer yapılara oranla daha yüksekte konumlanmasıdır. Özgün minaresi yakın geçmişte yıkılmış ve yerine yeni bir minare yapılmıştır. İç ve dış duvarları sıvalı olan yapı bugün düzenli olarak ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/orhangazi-muradiye-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/orhangazi-muradiye-mosque/aerial.jpg",
+      "alt": "Havadan görünüm: apartmanlar arasında sıvalı duvarlı, kiremit çatılı cami ve yanında ince uzun minare; arkada dağlar",
+      "description": "Kent içindeki cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/orhangazi-muradiye-mosque/interior-mihrab.jpg",
+      "alt": "Ahşap tavanlı iç mekân: ortada mihrap, sağda minber, yüksek kemerli pencereler ve duvarlarda yuvarlak hat levhaları",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/orhangazi-muradiye-mosque/minbar.jpg",
+      "alt": "Çini kaplı minber ve iki yanında yüksek kemerli pencereler, üstte yuvarlak hat levhaları",
+      "description": "Minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/orhangazi-muradiye-mosque/gallery.jpg",
+      "alt": "Girişin üstünde ahşap mahfil, ortada ahşap giriş kapısı ve avize",
+      "description": "Mahfil ve giriş",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "walls",
+      "image": "/images/orhangazi-muradiye-mosque/aerial.jpg",
+      "x": 48,
+      "y": 67,
+      "title": "Korunan beden duvarları",
+      "text": "1921'de üst örtü tamamen yıkılmış, yangın sonrası müdahalelerle beden duvarları korunarak yapı yeniden ibadete açılmıştır. Duvarlar hâlâ özgün niteliklerini taşır.",
+      "sourceId": "inv-p653"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/orhangazi-muradiye-mosque/aerial.jpg",
+      "x": 61,
+      "y": 45,
+      "title": "Yeni minare",
+      "text": "Caminin özgün minaresi yakın geçmişte yıkılmış ve yerine yeni bir minare yapılmıştır.",
+      "sourceId": "inv-p653"
+    },
+    {
+      "id": "windows",
+      "image": "/images/orhangazi-muradiye-mosque/interior-mihrab.jpg",
+      "x": 28,
+      "y": 40,
+      "title": "Yüksek pencereler",
+      "text": "Caminin en dikkat çekici özelliği, pencerelerinin benzer yapılara oranla daha yüksekte konumlanmasıdır.",
+      "sourceId": "inv-p653"
+    }
+  ],
+  "test": [
+    {
+      "question": "Muradiye Camii halk arasında hangi adla da anılır?",
+      "options": [
+        "Çarşı Camii",
+        "Eski Cami",
+        "Orhan Camii",
+        "Yeşil Camii"
+      ],
+      "correct": 0,
+      "description": "Cami yerel halk arasında \"Çarşı Camii\" olarak da anılır.",
+      "sourceId": "inv-p652"
+    },
+    {
+      "question": "Orhangazi'nin eski adı nedir?",
+      "options": [
+        "Gürle",
+        "Pazarköy",
+        "İnesi",
+        "Görele"
+      ],
+      "correct": 1,
+      "description": "Eski adı \"Pazarköy\" olan Orhangazi 1921'de büyük yıkıma uğramıştır.",
+      "sourceId": "inv-p653"
+    },
+    {
+      "question": "Caminin en dikkat çekici mimari özelliği nedir?",
+      "options": [
+        "Çift minaresi",
+        "Kurşun kaplı kubbesi",
+        "Pencerelerinin daha yüksekte konumlanması",
+        "Çinili cephesi"
+      ],
+      "correct": 2,
+      "description": "Pencereleri benzer yapılara oranla daha yükseğe yerleştirilmiştir.",
+      "sourceId": "inv-p653"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p652",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Orhangazi, \"Muradiye Camii\"",
+      "page": "340"
+    },
+    {
+      "id": "inv-p653",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Orhangazi, \"Muradiye Camii\"",
+      "page": "341"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

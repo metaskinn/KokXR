@@ -1,0 +1,119 @@
+{
+  "id": "yildirim-molla-yegan-madrasa",
+  "name": "Molla Yegan Medresesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Yıldırım Bayezid dönemi; Molla Yegân tarafından yeniden inşa",
+  "endowment": "Kara Eyne Bey; Molla Yegân’ın kitap ve gelir getirici arazi vakıfları",
+  "summary": "Kara Eyne Bey’in yaptırdığı, Molla Yegân’ın yeniden inşa ettirdiği medrese günümüzde çocuk üniversitesi olarak kullanılmaktadır.",
+  "history": "Yıldırım Mahallesi, Yıldırım Caddesi No: 9’dadır. Yıldırım Bayezid dönemi ümerasından Kara Eyne Bey tarafından yaptırılmış, tarihî ve coğrafi yakınlığı nedeniyle Yıldırım Külliyesi ile birlikte anılmıştır. Kara Eyne Bey’in burada ders verdiği aktarılır. Harap olan yapı, daha önce burada ders vermiş olan Molla Yegân tarafından yeniden yaptırılmıştır.\n\nAsıl adı Mehmed olan, Aydın doğumlu ve Akçakoyunlu Türkmen ailesinden gelen Molla Yegân, Molla Fenârî’den ders almış; müderrislik ve Bursa kadılığı yapmıştır. H. 845 / M. 1441’de çıktığı hac yolculuğundan dönerken Mısır’dan getirdiği Molla Gürânî’yi padişaha takdim etmiştir. Sultan II. Murad, Gürânî’yi Şehzade Mehmed’in hocası olarak görevlendirmiştir. Molla Yegân’ın muhtemelen vakfiyesinin düzenlendiği H. 865 / M. 1461 civarında vefat ederek medrese haziresine defnedildiği, ancak mezar yerinin günümüze ulaşmadığı belirtilir.\n\nMolla Yegân, 2900 ciltlik kütüphanesini medrese yanındaki mescide, gelir getirici arazileri de vakfına bağlamıştır. Yapı başlangıçta yirmili, sonra ellili medreseler arasında yer almış ve XX. yüzyıl başlarına kadar eğitim vermiştir. Kaynaklarda on iki hücre ile bir dershaneden söz edilir; bitişik kâgir mescidin 1723’te onarıldığı belirtilir. Doğu ve batıdaki karşılıklı iki blok ayakta kalmış, eski derslik ve şadırvan kazılarda bulunamamıştır.\n\nUzun süre metruk kalan yapı 2006-2009’da Yıldırım Belediyesi tarafından restore edilmiştir. Hücreler beşik tonozlu ve kiremit çatılı düzenlenmiş, dış duvarlarda üç sıra tuğla ve bir sıra moloz taşla almaşık örgü uygulanmıştır. Kuzeye eyvan/dershane, kuzeybatıya bodrum otoparkı ve üst kotlara sosyal birimler eklenmiştir. Avluya camla çevrili Molla Yegân Çocuk Üniversitesi (Bilim Merkezi) yapılmıştır. Kitap, günümüzde karşılıklı beşer odanın çocuk üniversitesince kullanıldığını belirtir; bu sayı tarihî on iki hücre kaydından ayrıdır. Hazirede Molla Yegân ailesinden birçok âlimin medfun olduğu, taşlarının günümüze ulaşmadığı aktarılır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-molla-yegan-madrasa/science-center-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-molla-yegan-madrasa/science-center-exterior.jpg",
+      "alt": "Taş ve tuğla duvarlı eski yapıların arasında Molla Yegân yazılı cam cepheli giriş ve döşeli avlu",
+      "description": "Taş ve tuğla duvarlı eski yapıların arasında Molla Yegân yazılı cam cepheli giriş ve döşeli avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-molla-yegan-madrasa/science-center-interior.jpg",
+      "alt": "Cam tavan altında gezegen modelleri ve ortada küresel bir düzenek bulunan bilim merkezi salonu",
+      "description": "Cam tavan altında gezegen modelleri ve ortada küresel bir düzenek bulunan bilim merkezi salonu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-molla-yegan-madrasa/madrasa-overhead.jpg",
+      "alt": "Tepeden görünümde uzun cam örtünün iki yanında birbirine paralel iki yapı kanadı ve çevrede sokaklar",
+      "description": "Tepeden görünümde uzun cam örtünün iki yanında birbirine paralel iki yapı kanadı ve çevrede sokaklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-molla-yegan-madrasa/science-center-exterior.jpg",
+      "x": 61,
+      "y": 50,
+      "title": "Camlı avlu yapısı",
+      "text": "Medrese avlusuna camla çevrili Molla Yegân Çocuk Üniversitesi, yani Bilim Merkezi inşa edilmiştir.",
+      "sourceId": "inv-p549"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-molla-yegan-madrasa/madrasa-overhead.jpg",
+      "x": 27,
+      "y": 45,
+      "title": "Karşılıklı bloklar",
+      "text": "Medresenin doğu-batı yönünde karşılıklı yer alan iki blok kısmı ayakta kalmıştır.",
+      "sourceId": "inv-p547"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medresenin ilk banisi kimdir?",
+      "options": [
+        "Hacı Şevki Efendi",
+        "Kara Eyne Bey",
+        "Çoban Bey",
+        "Pir Emir Mehmed"
+      ],
+      "correct": 1,
+      "description": "Kara Eyne Bey.",
+      "sourceId": "inv-p546"
+    },
+    {
+      "question": "Molla Yegân kaç ciltlik kütüphanesini vakfetmiştir?",
+      "options": [
+        "140",
+        "500",
+        "1200",
+        "2900"
+      ],
+      "correct": 3,
+      "description": "2900.",
+      "sourceId": "inv-p547"
+    },
+    {
+      "question": "Avluya hangi işlevde camlı yapı yapılmıştır?",
+      "options": [
+        "Çocuk Üniversitesi (Bilim Merkezi)",
+        "Tütün deposu",
+        "Çarşılı köprü",
+        "Askerî gazino"
+      ],
+      "correct": 0,
+      "description": "Çocuk Üniversitesi (Bilim Merkezi).",
+      "sourceId": "inv-p549"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p546",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Yegan Medresesi\"",
+      "page": "546"
+    },
+    {
+      "id": "inv-p547",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Yegan Medresesi\"",
+      "page": "547"
+    },
+    {
+      "id": "inv-p548",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Yegan Medresesi\"",
+      "page": "548"
+    },
+    {
+      "id": "inv-p549",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Yegan Medresesi\"",
+      "page": "549"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

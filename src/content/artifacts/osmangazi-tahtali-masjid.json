@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-tahtali-masjid",
+  "name": "Tahtalı (Hatipzade) Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Kitabesi bulunmadığından inşa tarihi kesin olarak bilinmemektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Halk arasında Hatipzade ya da İkinci Tahtalı Mescit diye bilinen, moloz taştan yapılmış, kiremit kaplı ahşap çatılı küçük mescit.",
+  "history": "Tahtalı Mescidi, Osmangazi İlçesi, Alaaddin Mahallesi, 1. Zindankapı Sokağı No: 25/1'dedir. Halk arasında \"Hatipzade Mescidi\" ve \"İkinci Tahtalı Mescit\" olarak da bilinir.\n\nMescidin kitabesi bulunmadığından inşa tarihi ve banisi hakkında kesin bilgi yoktur. Moloz taştan inşa edilmiş, sonradan üzeri sıvanmıştır. Aslen minaresiz ve minbersiz olan yapıya önce ahşap, ardından kiremit kaplı ahşap çatıyı delerek yükselen kesme taştan bir minare eklenmiştir.\n\n7,05 × 7,80 m boyutlarındaki yapının son cemaat yeri 2,45 m derinliğindedir. Basit mihrap nişi üç sıra stalaktitlidir. Mescidin küçük bir avlusu vardır. 2018'de kapsamlı bir onarım geçirmiş ve duvarları sıvanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-tahtali-masjid/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-tahtali-masjid/aerial-view.jpg",
+      "alt": "Yukarıdan görünüm: kiremit kaplı kırma çatılı küçük mescit, önünde camekânlı son cemaat yeri ve taş kaideli minare; arkada yamaçlara yayılmış evler",
+      "description": "Mescidin çatısı, son cemaat yeri ve minaresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-tahtali-masjid/courtyard.jpg",
+      "alt": "Sokaktan görünüm: alçak taş duvar ve demir parmaklıkla çevrili küçük avlu, arkada kiremit çatılı mescit ve sivri külahlı minare",
+      "description": "Mescidin küçük avlusu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-tahtali-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavanlı harim, ortada kahverengi kavsaralı mihrap ve önünde avize, iki yanda ahşap kapılar, sağda ahşap minber ve mavi halı",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-tahtali-masjid/aerial-view.jpg",
+      "x": 45,
+      "y": 55,
+      "title": "Kiremit kaplı ahşap çatı",
+      "text": "Mescidin çatısı kiremit kaplı ahşap çatıdır.",
+      "sourceId": "inv-p438"
+    },
+    {
+      "id": "courtyard",
+      "image": "/images/osmangazi-tahtali-masjid/courtyard.jpg",
+      "x": 42,
+      "y": 72,
+      "title": "Avlu",
+      "text": "Mescidin küçük bir avlusu vardır.",
+      "sourceId": "inv-p438"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-tahtali-masjid/prayer-hall.jpg",
+      "x": 50,
+      "y": 35,
+      "title": "Mihrap",
+      "text": "Basit mihrap nişi üç sıra stalaktitlidir.",
+      "sourceId": "inv-p438"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tahtalı Mescidi halk arasında başka hangi adla bilinir?",
+      "options": [
+        "Okçular Mescidi",
+        "Dibekli Mescit",
+        "Nalıncılar Mescidi",
+        "Hatipzade Mescidi"
+      ],
+      "correct": 3,
+      "description": "Mescit halk arasında \"Hatipzade Mescidi\" ve \"İkinci Tahtalı Mescit\" olarak da bilinir.",
+      "sourceId": "inv-p438"
+    },
+    {
+      "question": "Mescidin özgün hâlinde ne yoktu?",
+      "options": [
+        "Mihrap",
+        "Minare ve minber",
+        "Son cemaat yeri",
+        "Avlu"
+      ],
+      "correct": 1,
+      "description": "Aslen minaresiz ve minbersiz olan yapıya önce ahşap, ardından kesme taştan bir minare eklenmiştir.",
+      "sourceId": "inv-p438"
+    },
+    {
+      "question": "Mescit en son hangi yıl kapsamlı bir onarım geçirmiştir?",
+      "options": [
+        "2018",
+        "1950",
+        "2012",
+        "2017"
+      ],
+      "correct": 0,
+      "description": "Mescit 2018'de kapsamlı bir onarım geçirmiş ve duvarları sıvanmıştır.",
+      "sourceId": "inv-p438"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p438",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Tahtalı (Hatipzade) Mescidi\"",
+      "page": "438"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

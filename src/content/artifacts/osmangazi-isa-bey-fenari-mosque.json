@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-isa-bey-fenari-mosque",
+  "name": "İsa Bey Fenârî (Güdük Minare) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Bayezid devri",
+  "endowment": "Banisi Molla Fenârî'nin torunlarından İsa Bey; vakfı kitapta belirtilmemiştir",
+  "summary": "Sur içinde, Kaplıca Kapısı yakınında, Molla Fenârî'nin torunlarından İsa Bey'in II. Bayezid devrinde yaptırdığı, kısa minaresi nedeniyle \"Güdük Minare\" adıyla bilinen cami.",
+  "history": "Cami, Osmangazi ilçesi, Alaaddin Paşa Mahallesi, 1. Uzun Sokak No: 10'dadır. Sur içinde, Kaplıca Kapısı yakınlarında yer alan cami, Sultan II. Bayezid devri yapısıdır ve Molla Fenârî'nin torunlarından İsa Bey tarafından inşa ettirilmiştir.\n\nHer kenarı 8,15 m olan kare planlı caminin üzeri, sekizgen kasnaklı, kirpi saçaklı ve Türk üçgenlerine oturan kurşun kaplı bir kubbeyle örtülüdür. Harim ve kubbe kasnağı bir sıra kesme taş ve üç sıra tuğlayla örülmüştür. Avluyu çevreleyen ihata duvarı moloz taştandır ve üzeri alaturka kiremitle kaplıdır. Her cephede ikişer alt pencere vardır.\n\nMinare, alışılmışın dışında avlunun kuzeydoğu köşesindedir ve beş sıra kirpi saçaklıdır. Kısa boyu nedeniyle \"Güdük Minare\" olarak adlandırılmıştır. Minarenin dibindeki çeşme kesme taş ve tuğladan örülmüştür; sivri kemeri, geniş aynası ve kirpi saçağıyla tipik bir Bursa çeşmesidir.\n\n60 cm derinliğindeki mihrap nişi, stalaktitleri bozularak sivri kemerli hâle dönüştürülmüştür. Üç gözlü son cemaat yeri 3,95 m derinliğindedir; yanları kapalıdır ve masif görüntüsünü gizlemek için büyük sağır kemerler açılmıştır.\n\n1855 depreminde son cemaat yerinin sütunları, kemerleri ve üst örtüsü tamamen yıkılmıştır. Vali Mahmud Celâleddin Paşa zamanında, 1891'de basit tarzda, kiremit örtülü ahşap çatılı olarak onarılmıştır; bu tamirin izleri duvarlarda hâlâ bellidir. Cami bugün bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-isa-bey-fenari-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-isa-bey-fenari-mosque/aerial-view.jpg",
+      "alt": "Yüksekten görünüm: kurşun kubbeli, almaşık duvarlı küçük cami; önünde üç kemerli son cemaat yeri, solda avlu köşesinde kısa tuğla minare; arkada apartmanlar ve yeşil yamaçlar",
+      "description": "Cami, avlu ve kısa minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-isa-bey-fenari-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: dilimli kurşun kubbe, önünde kiremit örtülü son cemaat yeri, avlunun köşesinde minare külahı ve çevredeki kiremit çatılar",
+      "description": "Caminin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-isa-bey-fenari-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı halılı harim, karşıda mihrap, sağda ahşap minber, solda vaaz kürsüsü; kubbe eteğinde Türk üçgenleri ve duvarlarda hat levhaları",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-isa-bey-fenari-mosque/aerial-view.jpg",
+      "x": 16,
+      "y": 61,
+      "title": "Güdük Minare",
+      "text": "Minare, alışılmışın dışında avlunun kuzeydoğu köşesindedir; kısa boyu nedeniyle \"Güdük Minare\" olarak adlandırılmıştır.",
+      "sourceId": "inv-p351"
+    },
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-isa-bey-fenari-mosque/aerial-view.jpg",
+      "x": 47,
+      "y": 44,
+      "title": "Kubbe",
+      "text": "Kare planlı caminin üzeri sekizgen kasnaklı, kirpi saçaklı ve Türk üçgenlerine oturan kurşun kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p351"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-isa-bey-fenari-mosque/aerial-view.jpg",
+      "x": 41,
+      "y": 69,
+      "title": "Son cemaat yeri",
+      "text": "Üç gözlü son cemaat yerinin sütun, kemer ve üst örtüsü 1855 depreminde yıkılmış, 1891'de kiremit örtülü ahşap çatılı olarak onarılmıştır.",
+      "sourceId": "inv-p351"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin minaresine neden \"Güdük Minare\" denmiştir?",
+      "options": [
+        "Tuğladan yapıldığı için",
+        "Şerefesi olmadığı için",
+        "Avlunun köşesinde durduğu için",
+        "Kısa boyu nedeniyle"
+      ],
+      "correct": 3,
+      "description": "Avlunun kuzeydoğu köşesindeki minare, kısa boyu nedeniyle \"Güdük Minare\" olarak adlandırılmıştır.",
+      "sourceId": "inv-p351"
+    },
+    {
+      "question": "Camiyi kim inşa ettirmiştir?",
+      "options": [
+        "Molla Fenârî'nin torunlarından İsa Bey",
+        "Sultan II. Bayezid",
+        "Vali Mahmud Celâleddin Paşa",
+        "Yahşi Bey"
+      ],
+      "correct": 0,
+      "description": "Sultan II. Bayezid devri yapısı olan cami, Molla Fenârî'nin torunlarından İsa Bey tarafından inşa ettirilmiştir.",
+      "sourceId": "inv-p350"
+    },
+    {
+      "question": "1855 depreminde caminin hangi bölümü tamamen yıkılmıştır?",
+      "options": [
+        "Minare",
+        "Kubbe",
+        "Son cemaat yerinin sütunları, kemerleri ve üst örtüsü",
+        "Avlu duvarı"
+      ],
+      "correct": 2,
+      "description": "1855 depreminde son cemaat yerinin sütunları, kemerleri ve üst örtüsü tamamen yıkılmış; 1891'de ahşap çatılı olarak onarılmıştır.",
+      "sourceId": "inv-p351"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p350",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"İsa Bey Fenârî (Güdük Minare) Camii\"",
+      "page": "350"
+    },
+    {
+      "id": "inv-p351",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"İsa Bey Fenârî (Güdük Minare) Camii\"",
+      "page": "351"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

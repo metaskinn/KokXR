@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-arap-mehmet-mosque",
+  "name": "Arap Mehmet Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1490'dan önce",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Arap Mehmed'in 1490'dan önce yaptırdığı, 18 pencereyle aydınlanan kare planlı ve kurşun kaplı kubbeli bir cami.",
+  "history": "Cami, Osmangazi ilçesi, Tahtakale Mahallesi, İnebey Caddesi, 10. Ara Sokak, No: 7'dedir. 1490 yılından önce Arap Mehmed tarafından yaptırılmıştır.\n\nKare planlı yapının iç ölçüleri 8.65 × 8.65 metredir. Kuzeyinde 3.90 m derinliğinde, ortası kubbeli, yanları tonozla örtülü üç gözlü bir son cemaat yeri vardır.\n\nDört cephenin her birinde dıştan demir parmaklıklı, mermer söveli ve tuğla örgülü çift merkezli kemerler içine alınmış ikişer alt pencere bulunur; bunlar içeriden yuvarlak kemerlidir. Üst sıradaki pencereler sivri kemerli ve alçı şebekelidir. Harim toplam 18 pencereyle aydınlanır.\n\nDuvarlar iki sıra tuğla ve iki sıra moloz taşla örülmüştür; bazı bölümlerde aralara tek dikey tuğlalar yerleştirilmiştir. Kubbe kurşun kaplıdır ve iki sıra kirpi saçakla sonlanır.\n\nHarim giriş kapısının üzerinde sulu boyayla H. 1275 / M. 1858 tarihi yazılıdır. Bu tarih muhtemelen yapının 1855 depreminde büyük hasar görüp sonrasında onarıldığını gösterir. Cami bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-arap-mehmet-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-arap-mehmet-mosque/exterior-view.jpg",
+      "alt": "Kiremit çatılı evler arasında, kurşun kaplı kubbeli, taş ve tuğla duvarlı cami; arkasında tuğla gövdeli minare, uzakta yamaçtaki şehir",
+      "description": "Caminin dış görünüşü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-arap-mehmet-mosque/prayer-hall.jpg",
+      "alt": "Beyaz duvarlı harim: ortada mihrap, sağda sarı boyalı ahşap minber, üstte renkli camlı sivri kemerli pencereler ve kristal avize",
+      "description": "Harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-arap-mehmet-mosque/dome-from-above.jpg",
+      "alt": "Kuşbakışı: dilimli kurşun kaplı kubbe, yanında yuvarlak minare şerefesi ve çevredeki sokaklar",
+      "description": "Kubbe ve minare, yukarıdan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-arap-mehmet-mosque/exterior-view.jpg",
+      "x": 44,
+      "y": 50,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Kubbe kurşun kaplıdır ve iki sıra kirpi saçakla sonlanır.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-arap-mehmet-mosque/exterior-view.jpg",
+      "x": 60,
+      "y": 82,
+      "title": "Duvar örgüsü",
+      "text": "Duvarlar iki sıra tuğla ve iki sıra moloz taşla örülmüş, bazı bölümlerde aralara tek dikey tuğlalar yerleştirilmiştir.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "id": "upper-windows",
+      "image": "/images/osmangazi-arap-mehmet-mosque/prayer-hall.jpg",
+      "x": 64,
+      "y": 23,
+      "title": "Üst sıra pencereler",
+      "text": "Üst sıradaki pencereler sivri kemerli ve alçı şebekelidir. Harim toplam 18 pencereyle aydınlanır.",
+      "sourceId": "inv-p261"
+    }
+  ],
+  "test": [
+    {
+      "question": "Arap Mehmet Camii'nin harimi toplam kaç pencereyle aydınlanır?",
+      "options": [
+        "8",
+        "12",
+        "18",
+        "24"
+      ],
+      "correct": 2,
+      "description": "Alt ve üst sıradaki pencerelerle harim toplam 18 pencereyle aydınlanır.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "question": "Caminin harim planı nasıldır?",
+      "options": [
+        "Dikdörtgen",
+        "Sekizgen",
+        "Kare",
+        "Haç biçimli"
+      ],
+      "correct": 2,
+      "description": "Yapı kare planlıdır; iç ölçüleri 8.65 × 8.65 metredir.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "question": "Caminin kubbesi neyle kaplıdır?",
+      "options": [
+        "Kurşun",
+        "Kiremit",
+        "Çini",
+        "Bakır"
+      ],
+      "correct": 0,
+      "description": "Kubbe kurşun kaplıdır ve iki sıra kirpi saçakla sonlanır.",
+      "sourceId": "inv-p261"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p261",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Arap Mehmet Camii\"",
+      "page": "265"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

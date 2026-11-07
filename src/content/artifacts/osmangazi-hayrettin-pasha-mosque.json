@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-hayrettin-pasha-mosque",
+  "name": "Hayrettin Paşa Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan I. Murad dönemi; H. 1280 / M. 1863'te yeniden inşa edildi",
+  "endowment": "Banisi Çandarlı Kara Halil (Hayreddin) Paşa; 1863'te mütevellisi Salih Efendi yeniden inşa ettirmiştir",
+  "summary": "Sultan I. Murad döneminde Çandarlı Kara Halil (Hayreddin) Paşa'nın yaptırdığı, bugün yalnızca tuğla minaresi özgün hâliyle ayakta olan cami.",
+  "history": "Hayrettin Paşa Camii, Osmangazi İlçesi, Alacamescit Mahallesi, Çandarlı Sokak No: 3'tedir. Cami, Sultan I. Murad döneminde Çandarlı Kara Halil (Hayreddin) Paşa tarafından yaptırılmıştır.\n\nHalil Paşa, vezirliğinden önce \"Kara\" ve \"Karaca\" lakaplarıyla, vezirliği sırasında \"Hayreddin\" unvanıyla anılmıştır. Karaman'a bağlı Sivrihisar kazasının Çendere köyünde doğmuştur; babasının adı Ali'dir. İznik Medresesi müderrislerinden Tâceddin Kürdî'nin kızıyla evlenerek Şeyh Edebâli'nin bacanağı olmuş ve Osman Gazi ile akrabalık bağı kurmuştur. Anadolu Ahi teşkilatına bağlılığı sayesinde hızla yükselmiş; önce Bilecik'e, İznik'in fethinden sonra İznik'e, ardından Bursa'ya kadı olmuştur. I. Murad döneminde kazaskerliğe yükselmiş, sonra vezir tayin edilerek Hayreddin lakabını almıştır. H. 789 / M. 1387'de vefat eden Paşa'nın naaşı, büyük oğlu Ali Paşa tarafından İznik'te Lefke Kapısı dışındaki türbeye defnedilmiştir. İznik'te Yeşil Camii, yanında Dârülhadis adlı medrese ve imaret ile Serez'de Kurşunlu Camii'ni yaptırmıştır.\n\nBursa'nın Tuz Pazarı semtinde yaptırdığı cami, ahşap çatılıyken yıkılmış ve H. 1280 / M. 1863'te mütevellisi Salih Efendi tarafından yeniden inşa edilmiştir. Sonraki müdahalelerle tamamen yenilenip betonarme hâle getirilmiştir; bugün yalnızca minaresi özgün yapısını korumaktadır.\n\nMinarenin kare kaidesi üç sıra tuğla, bir sıra kesme taş ve aralarda tek tuğla düzeniyle örülmüştür. Kaide üzerinde yükselen gövde, tuğlaların çeşitli dizilimleriyle süslenmiştir. Şerefe altı altı sıra tuğla stalaktitlidir ve bu hâliyle Yarhisar ve Yenişehir minarelerine benzer.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hayrettin-pasha-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hayrettin-pasha-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: dar sokaklar ve eski çatılar arasında beyaz badanalı, büyük kubbeli ve çok sayıda küçük kubbeli cami ile yanındaki tuğla minare; arkada Uludağ yamaçları",
+      "description": "Caminin çarşı dokusu içindeki görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hayrettin-pasha-mosque/minaret-aerial.jpg",
+      "alt": "Havadan görünüm: tuğla örgülü yüksek minare, şerefe altındaki tuğla stalaktitler ve arkasındaki kurşun kubbeli cami; çevrede çok katlı binalar",
+      "description": "Özgün minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hayrettin-pasha-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi halılı harim, çini kaplı mihrap ve minber, iki yanda korkuluklu mahfiller, üstte kubbe kasnağındaki pencere dizisi",
+      "description": "Yenilenmiş harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "muqarnas",
+      "image": "/images/osmangazi-hayrettin-pasha-mosque/minaret-aerial.jpg",
+      "x": 47,
+      "y": 31,
+      "title": "Şerefe altı",
+      "text": "Şerefe altı altı sıra tuğla stalaktitlidir; bu hâliyle Yarhisar ve Yenişehir minarelerine benzer.",
+      "sourceId": "inv-p338"
+    },
+    {
+      "id": "shaft",
+      "image": "/images/osmangazi-hayrettin-pasha-mosque/minaret-aerial.jpg",
+      "x": 47,
+      "y": 55,
+      "title": "Minare gövdesi",
+      "text": "Kare kaide üzerinde yükselen gövde, tuğlaların çeşitli dizilimleriyle süslenmiştir; minare yapının özgün hâlini koruyan tek bölümüdür.",
+      "sourceId": "inv-p338"
+    },
+    {
+      "id": "rebuilt",
+      "image": "/images/osmangazi-hayrettin-pasha-mosque/aerial-view.jpg",
+      "x": 48,
+      "y": 56,
+      "title": "Yenilenmiş cami",
+      "text": "Ahşap çatılıyken yıkılan cami 1863'te yeniden inşa edilmiş, sonraki müdahalelerle tamamen yenilenip betonarme hâle getirilmiştir.",
+      "sourceId": "inv-p338"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin hangi bölümü özgün yapısını koruyarak günümüze ulaşmıştır?",
+      "options": [
+        "Son cemaat yeri",
+        "Minaresi",
+        "Mihrabı",
+        "Ahşap çatısı"
+      ],
+      "correct": 1,
+      "description": "Cami sonraki müdahalelerle tamamen yenilenip betonarme hâle getirilmiştir; yalnızca minaresi özgün yapısını korumaktadır.",
+      "sourceId": "inv-p338"
+    },
+    {
+      "question": "Minarenin tuğla stalaktitli şerefe altı hangi minarelere benzer?",
+      "options": [
+        "Ulu Cami ve Yeşil Cami",
+        "Orhan Gazi ve Muradiye",
+        "İznik ve Bilecik",
+        "Yarhisar ve Yenişehir"
+      ],
+      "correct": 3,
+      "description": "Altı sıra tuğla stalaktitli şerefe altıyla minare, Yarhisar ve Yenişehir minarelerine benzer.",
+      "sourceId": "inv-p338"
+    },
+    {
+      "question": "Halil Paşa vezirliği sırasında hangi unvanla anılmıştır?",
+      "options": [
+        "Hayreddin",
+        "Kara",
+        "Karaca",
+        "Çandarlı"
+      ],
+      "correct": 0,
+      "description": "Halil Paşa vezirliğinden önce Kara ve Karaca lakaplarıyla, vezirliği sırasında Hayreddin unvanıyla anılmıştır.",
+      "sourceId": "inv-p337"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p337",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hayrettin Paşa Camii\"",
+      "page": "337"
+    },
+    {
+      "id": "inv-p338",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hayrettin Paşa Camii\"",
+      "page": "338"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "osmangazi-abdal-mehmet-tomb",
+  "name": "Abdal Mehmet Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · kapı kitabesine göre H. Cemaziyelevvel 854 / M. Haziran-Temmuz 1450",
+  "endowment": "Kapı kitabesine göre Sultan II. Murad tarafından yaptırılmıştır",
+  "summary": "Giriş kapısı üzerindeki kitabeye göre 1450'de Sultan II. Murad'ın yaptırdığı, sekizgen kasnaklı ve kurşun kaplı kubbeli tek sandukalı türbe.",
+  "history": "Abdal Mehmed Türbesi, Osmangazi ilçesi, Tuzpazarı-Demirtaşpaşa Mahallesi, Tahal Caddesi No: 28'dedir. Giriş kapısı üzerindeki Arapça kitabeden, yapının Sultan II. Murad tarafından H. Cemaziyelevvel 854 / M. Haziran-Temmuz 1450'de inşa ettirildiği anlaşılır. Bursa kemeri üzerine yerleştirilmiş kitabede \"Emera hâzâ'l-binâi Sultân Murâd bin Mehmed Hân halledâ'llâhu sultânehû ve ebbede memleketehû fî evâhir-i Cemâziye'l-ûlâ li-seneti erba'a ve hamsîne ve semâne mi'e\" yazar; meali \"Bu binanın yapılmasını Mehmed Han oğlu Sultan Murad, H. 854 / M. 1450 tarihinde emretti.\" şeklindedir.\n\nTürbeye giriş, Bursa kemerinin altındaki sivri kemerli ve beşik tonozlu kapalı bir eyvandan sağlanır. Sekizgen kasnak üzerine oturan türbe 5,85 × 6,20 m ölçülerindedir; üstü kubbeyle örtülmüş, dış yüzeyi kurşunla kaplanmıştır.\n\nDuvarlarda üç sıra tuğla, bir sıra kesme taş ve aralara yerleştirilen dikey tek tuğladan oluşan karma bir örgü uygulanmıştır. Yapı iki sıralı kirpi saçakla sonlanır. Bursa kemeri ve aynalıktaki tuğlalar dikkat çekici bir incelikle işlenmiştir.\n\nİç mekânda kubbenin sekizgen kasnağa aktarımı, üçer püsküllü ve üç sıra stalaktitli köşe tromplarıyla sağlanır. Pencereler iki sıra hâlindedir: üst bölümde üç, alt bölümde beş pencere vardır. Türbede yalnızca Abdal Mehmed'e ait tek bir sanduka bulunur.\n\nYapı en son 2018'de Vakıflar Bölge Müdürlüğü tarafından kısmen restore edilmiştir ve bugün ziyarete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-abdal-mehmet-tomb/facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-abdal-mehmet-tomb/facade.jpg",
+      "alt": "Tuğla ve kesme taş karma örgülü türbe cephesi: ortada iki kanatlı ahşap kapı, üstünde tuğla kemer ve aynalık, en üstte beyaz mermer kitabe ve dişli saçak; önünde kafe masaları ve şemsiyeler",
+      "description": "Bursa kemerli giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-abdal-mehmet-tomb/inscription.jpg",
+      "alt": "Tuğla çerçeve içinde, yatay dikdörtgen beyaz mermer levha üzerinde kabartma Arapça yazı; çevresinde tuğla ve taş örgü, altta tuğladan kemer",
+      "description": "Giriş üzerindeki Arapça kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-abdal-mehmet-tomb/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: dilimli kurşun kaplı kubbe ve önündeki kurşun örtülü giriş bölümü; çevresinde kiremit çatılı evler ve sık ağaçlar",
+      "description": "Kurşun kaplı kubbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-abdal-mehmet-tomb/interior.jpg",
+      "alt": "İç mekân: ortada yeşil örtülü, sarıklı tek sanduka ve çevresinde beyaz korkuluk; köşelerde kabartmalı tromplar, üstte renkli camlı kemerli pencereler, altta yeşil çini kaplı duvarlar ve mavi halı",
+      "description": "Abdal Mehmed'in sandukası ve iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "inscription",
+      "image": "/images/osmangazi-abdal-mehmet-tomb/facade.jpg",
+      "x": 52,
+      "y": 22,
+      "title": "Kitabe",
+      "text": "Bursa kemeri üzerine yerleştirilen Arapça kitabe, yapının H. 854 / M. 1450'de Sultan II. Murad tarafından yaptırıldığını bildirir.",
+      "sourceId": "inv-p206"
+    },
+    {
+      "id": "bursa-arch",
+      "image": "/images/osmangazi-abdal-mehmet-tomb/facade.jpg",
+      "x": 52,
+      "y": 33,
+      "title": "Bursa kemeri",
+      "text": "Giriş, Bursa kemerinin altındaki sivri kemerli ve beşik tonozlu kapalı bir eyvandan sağlanır; kemer ve aynalıktaki tuğlalar incelikle işlenmiştir.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/osmangazi-abdal-mehmet-tomb/interior.jpg",
+      "x": 52,
+      "y": 55,
+      "title": "Sanduka",
+      "text": "Türbede yalnızca Abdal Mehmed'e ait tek bir sanduka bulunur.",
+      "sourceId": "inv-p207"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabeye göre Abdal Mehmed Türbesi'ni kim yaptırmıştır?",
+      "options": [
+        "Orhan Gazi",
+        "Sultan II. Murad",
+        "Yıldırım Bayezid",
+        "Fâtih Sultan Mehmed"
+      ],
+      "correct": 1,
+      "description": "Giriş kapısı üzerindeki Arapça kitabeden, yapının Sultan II. Murad tarafından H. 854 / M. 1450'de inşa ettirildiği anlaşılır.",
+      "sourceId": "inv-p206"
+    },
+    {
+      "question": "Türbenin iç mekânında üst bölümde ve alt bölümde kaçar pencere vardır?",
+      "options": [
+        "Üstte iki, altta dört",
+        "Üstte dört, altta dört",
+        "Üstte bir, altta altı",
+        "Üstte üç, altta beş"
+      ],
+      "correct": 3,
+      "description": "Pencereler iki sıra hâlindedir: üst bölümde üç, alt bölümde beş pencere bulunur.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "question": "Türbe en son hangi yıl kısmen restore edilmiştir?",
+      "options": [
+        "2018",
+        "1955",
+        "2006",
+        "2013"
+      ],
+      "correct": 0,
+      "description": "Yapı en son 2018'de Vakıflar Bölge Müdürlüğü tarafından kısmen restore edilmiştir.",
+      "sourceId": "inv-p207"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p206",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Abdal Mehmed Türbesi\"",
+      "page": "206"
+    },
+    {
+      "id": "inv-p207",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Abdal Mehmed Türbesi\"",
+      "page": "207"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

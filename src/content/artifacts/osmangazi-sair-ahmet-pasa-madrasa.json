@@ -1,0 +1,120 @@
+{
+  "id": "osmangazi-sair-ahmet-pasa-madrasa",
+  "name": "Şair Ahmet Paşa (Geyikli) Medresesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı",
+  "endowment": "Şair Ahmed Paşa",
+  "summary": "Şair kimliğiyle tanınan Ahmed Paşa'nın yaptırdığı, dershane cephesi Bursa Ovası manzarasına açık bırakılmış, bugün Uluumay Halk Kıyafetleri ve El Sanatları Müzesi olarak kullanılan medrese.",
+  "history": "Medrese, Osmangazi ilçesi Muradiye Mahallesi'nde, Beşikçiler Caddesi No: 2'dedir. Banisi, şair kimliğiyle de tanınan Ahmed Paşa'dır.\n\nPlan şeması on bir öğrenci hücresi, bir açık dershane ve cümle kapısı işlevi gören bir eyvandan oluşur. Dershanede bir mihrap nişi vardır, önünde revak yoktur. Yapının kuzey duvarı hizasında, dershaneye karşılık gelen bölümde hücre ya da revak yapılmamıştır; bu kısım açık bırakılarak öğrencilere dershane cephesinden Bursa Ovası'nın manzarasını seyretme imkânı sağlanmıştır. Revaklar hücrelerden daha yüksek tutulmuş, her odaya birer ocak yeri ve duvar nişi yerleştirilmiştir. Revaklar ve hücreler aynalı tonozla örtülüdür. Cephelerde bir sıra kesme küfeki taşı ve iki sıra tuğla kullanılmış, örgünün daha düzenli görünmesi için tuğla aralarına dikey tuğlalar yerleştirilmiştir.\n\nÇeşitli onarımlar geçiren yapı 1950'li yıllarda harap durumdaydı; uzun bir restorasyonla yeniden ayağa kaldırıldı ve revaklar baştan inşa edildi. Revak gergileri ahşap görünümlü ama betondan yapılmış, kirpi saçakla tamamlanmıştır. 1967'deki onarımda tamamen yıkılmış revak ayakları, kemerler ve kubbeler yeniden yapılmış, üst örtü kurşun taklidi bir şapla kapatılmıştır; ancak yaşmak ya da kavsara gibi yapıya özgü öğeler yeniden yapılmamıştır.\n\n1986'daki son kapsamlı onarımdan sonra Millî Eğitim Bakanlığı'na devredilen medrese Halk Eğitimi Merkezi olarak kullanılmıştır. 1999'daki basit onarımın ardından Uluumay Halk Kıyafetleri ve El Sanatları Müzesi olarak kullanılmaya başlanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sair-ahmet-pasa-madrasa/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sair-ahmet-pasa-madrasa/aerial-view.jpg",
+      "alt": "Yüksekten görünüm: kurşun renkli çatıları, bacaları ve ortada büyük bir kubbesi olan taş-tuğla medrese; sağda ayrı kubbeli kare bir yapı, arkada ağaçlar ve şehir",
+      "description": "Medreseye yukarıdan bakış",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sair-ahmet-pasa-madrasa/courtyard-view.jpg",
+      "alt": "Taş döşeli avlu: iki yanda camla kapatılmış kemerli taş-tuğla bölümler ve bacalar, ortada büyük bir çınar, karşıda demir parmaklık ve ağaçlar arasından açılan manzara",
+      "description": "Manzaraya açık avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sair-ahmet-pasa-madrasa/arcade-courtyard.jpg",
+      "alt": "Taş döşeli avlu: solda camla kapatılmış kemerli revaklar, ortada sekizgen mermer havuz ve ağaçlar, önde büyük toprak küpler, sağda masalar",
+      "description": "Revaklı avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sair-ahmet-pasa-madrasa/museum-display.jpg",
+      "alt": "Müze vitrininde, pullu başlık, yeşil yemeni ve kırmızı boncuklu kolye takılmış bir manken başı; yanında beyaz tüylü ve altın renkli süslemeli bir başlık",
+      "description": "Müzeden bir vitrin",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "chimneys",
+      "image": "/images/osmangazi-sair-ahmet-pasa-madrasa/aerial-view.jpg",
+      "x": 23,
+      "y": 48,
+      "title": "Ocak bacaları",
+      "text": "Her odaya birer ocak yeri ve duvar nişi yerleştirilmiştir.",
+      "sourceId": "inv-p583"
+    },
+    {
+      "id": "open-view",
+      "image": "/images/osmangazi-sair-ahmet-pasa-madrasa/courtyard-view.jpg",
+      "x": 54,
+      "y": 52,
+      "title": "Ovaya açık bölüm",
+      "text": "Kuzey duvarı hizasında dershaneye karşılık gelen bölümde hücre ya da revak yapılmamış; böylece öğrencilere Bursa Ovası'nın manzarasını seyretme imkânı sağlanmıştır.",
+      "sourceId": "inv-p583"
+    },
+    {
+      "id": "facade",
+      "image": "/images/osmangazi-sair-ahmet-pasa-madrasa/courtyard-view.jpg",
+      "x": 30,
+      "y": 50,
+      "title": "Cephe örgüsü",
+      "text": "Cephelerde bir sıra kesme küfeki taşı ve iki sıra tuğla kullanılmış, tuğla aralarına dikey tuğlalar yerleştirilmiştir.",
+      "sourceId": "inv-p583"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medresenin plan şemasında kaç öğrenci hücresi vardır?",
+      "options": [
+        "Yedi",
+        "On bir",
+        "Dört",
+        "On beş"
+      ],
+      "correct": 1,
+      "description": "Plan şeması on bir öğrenci hücresi, bir açık dershane ve cümle kapısı işlevi gören bir eyvandan oluşur.",
+      "sourceId": "inv-p583"
+    },
+    {
+      "question": "Dershaneye karşılık gelen kuzey bölümü neden açık bırakılmıştır?",
+      "options": [
+        "Öğrenciler Bursa Ovası'nın manzarasını seyredebilsin diye",
+        "Avluya araba girebilsin diye",
+        "Yangına karşı önlem olarak",
+        "Çeşme yapılacağı için"
+      ],
+      "correct": 0,
+      "description": "Bu kısım açık bırakılarak öğrencilere dershane cephesinden Bursa Ovası'nın manzarasını seyretme imkânı sağlanmıştır.",
+      "sourceId": "inv-p583"
+    },
+    {
+      "question": "Yapı 1999'daki onarımdan sonra nasıl kullanılmaya başlanmıştır?",
+      "options": [
+        "Çocuk Kütüphanesi",
+        "Halk Eğitimi Merkezi",
+        "Uluumay Halk Kıyafetleri ve El Sanatları Müzesi",
+        "Sıbyan mektebi"
+      ],
+      "correct": 2,
+      "description": "1986'dan sonra Halk Eğitimi Merkezi olan yapı, 1999'daki basit onarımın ardından Uluumay Halk Kıyafetleri ve El Sanatları Müzesi olmuştur.",
+      "sourceId": "inv-p583"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p583",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Şair Ahmet Paşa (Geyikli) Medresesi\"",
+      "page": "93"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

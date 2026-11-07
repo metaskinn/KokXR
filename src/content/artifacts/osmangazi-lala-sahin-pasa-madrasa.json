@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-lala-sahin-pasa-madrasa",
+  "name": "Lalaşahinpaşa Medresesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Vakıf kayıtlarına göre H. 740–750 / M. 1340–1350",
+  "endowment": "Lala Şâhin Paşa",
+  "summary": "Rumeli Beylerbeyi Lala Şâhin Paşa'nın yaptırdığı, Bursa'da günümüze ulaşan en eski tarihli medrese binası.",
+  "history": "Medrese, Osmangazi ilçesinde, Hisariçi Ortapazar Caddesi No. 5'tedir ve Bursa'da günümüze ulaşan en eski tarihli medrese binasıdır.\n\nYapıyı, Rumeli Beylerbeyliği görevinde bulunan Lala Şâhin Paşa yaptırmıştır. Kitabesi günümüze ulaşmamıştır; vakıf kayıtlarına dayanarak H. 740–750 / M. 1340–1350 yılları arasında inşa edildiği anlaşılmaktadır. Geçmişte \"Arabiyye\" ve \"Mercâniyye\" adlarıyla da anılmıştır. Orhan Gazi'nin İznik kuşatması sırasında Bizans kuvvetleriyle yapılan savaşta üstünlük sağlayan Lala Şâhin Paşa, elde ettiği ganimetlerle Bursa'da bu medreseyi ve ona bağlı bir mescidi, Mustafakemalpaşa'da ise bir cami, medrese, zaviye ve köprü yaptırmıştır. Fidan Hanı'nın doğusunda bulunan ve 1900'de Bıçakçılar Çarşısı'nda çıkan yangında harap olan Demir Han da vakfının eserleri arasındadır.\n\nBir bahçe içindeki medrese, plan şemasıyla Selçuklu medreselerini andırır; kubbeli medrese tipolojisine girmekle birlikte asimetrik düzenlenmiştir. Farklı boyutlarda yedi oda, bir dershane ve ortada bir iç avlu vardır. Odalar tonozla örtülüdür; dershane eyvanını örten tonoz bir sıra kesme taş ve üç sıra tuğlayla örülmüştür. Üst örtü alaturka kiremitle kaplıdır ve sicil kayıtlarından bu uygulamanın yapıyla yaşıt olduğu anlaşılmaktadır. Yer yer devşirme Bizans malzemesi kullanılmıştır. Ortadaki kare planlı havuz dikkat çekicidir. Geniş dikdörtgen iç mekân, Bizans dönemine ait sütun başlıkları üzerine oturan iki mermer sütunun taşıdığı bir kemerle ikiye ayrılır. Kuzeydeki giriş sahanlığı kubbeyle örtülüdür. İç avlu işlevi gören alanın güney duvarındaki mihrap nişi, eyvanın mescit olarak da kullanıldığını gösterir. Duvarlar bir sıra taş ve üç sıra tuğlayla karma teknikte örülmüştür.\n\nMedrese 1555, 1787, 1818 ve 1844'te kapsamlı onarımlar geçirmiştir. Uzun süre harap kalan yapı, 1968'de Bursa Eski Eserleri Sevenler Kurumu tarafından özgün karakterine uygun biçimde restore edilmiştir. 2010'daki son onarımdan sonra Bursa Büyükşehir Belediyesi tarafından Çocuk Kütüphanesi olarak işlevlendirilmiş ve bugün de bu amaçla kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-lala-sahin-pasa-madrasa/exterior-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-lala-sahin-pasa-madrasa/exterior-aerial.jpg",
+      "alt": "Yüksekten görünüm: kiremit kaplı çatıları ve küçük bir kubbesi olan taş-tuğla duvarlı medrese, bir cephesinde iskele ve mavi örtü; solda kale kapısı, arkada dağlar",
+      "description": "Medresenin dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-lala-sahin-pasa-madrasa/arched-hall.jpg",
+      "alt": "Çocuk kütüphanesi olarak kullanılan iç mekân: iki taş sütunun taşıdığı tuğla kemer, tavanda yuvarlak açıklık, iki yanda tuğla kemerli oda kapıları, önde masalar ve renkli sandalyeler",
+      "description": "Sütunlu kemerle bölünen iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-lala-sahin-pasa-madrasa/marble-columns.jpg",
+      "alt": "İç mekânın iki yanında oymalı başlıklı sütunlar, ortada basamaklarla yükselen bölümde kitap rafları ve kemerli niş, önde renkli sandalyeli masalar",
+      "description": "Sütunlar ve kütüphane bölümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof-tiles",
+      "image": "/images/osmangazi-lala-sahin-pasa-madrasa/exterior-aerial.jpg",
+      "x": 60,
+      "y": 45,
+      "title": "Alaturka kiremit",
+      "text": "Üst örtü alaturka kiremitle kaplıdır; sicil kayıtlarından bu uygulamanın yapıyla yaşıt olduğu anlaşılmaktadır.",
+      "sourceId": "inv-p576"
+    },
+    {
+      "id": "mixed-wall",
+      "image": "/images/osmangazi-lala-sahin-pasa-madrasa/exterior-aerial.jpg",
+      "x": 60,
+      "y": 64,
+      "title": "Karma duvar örgüsü",
+      "text": "Yapının duvarları bir sıra taş ve üç sıra tuğla ile karma teknikte örülmüştür.",
+      "sourceId": "inv-p576"
+    },
+    {
+      "id": "columns",
+      "image": "/images/osmangazi-lala-sahin-pasa-madrasa/arched-hall.jpg",
+      "x": 29,
+      "y": 32,
+      "title": "Mermer sütunlar ve kemer",
+      "text": "Geniş dikdörtgen iç mekân, Bizans dönemine ait sütun başlıklarının üzerine oturan iki mermer sütunun taşıdığı bir kemerle ikiye ayrılır.",
+      "sourceId": "inv-p576"
+    }
+  ],
+  "test": [
+    {
+      "question": "Lalaşahinpaşa Medresesi'nin Bursa'daki özelliği nedir?",
+      "options": [
+        "Bursa'nın en büyük medresesidir",
+        "Günümüze ulaşan en eski tarihli medrese binasıdır",
+        "Bursa'nın ilk camisidir",
+        "Kitabesi en iyi korunmuş medresedir"
+      ],
+      "correct": 1,
+      "description": "Yapı, Bursa'da günümüze ulaşan en eski tarihli medrese binasıdır; kitabesi ise günümüze ulaşmamıştır.",
+      "sourceId": "inv-p576"
+    },
+    {
+      "question": "Medrese geçmişte hangi adlarla da anılmıştır?",
+      "options": [
+        "Yeşiliye ve Muradiye",
+        "Sultaniye ve Orhaniye",
+        "Kanberler ve Geyikli",
+        "Arabiyye ve Mercâniyye"
+      ],
+      "correct": 3,
+      "description": "Medrese geçmişte \"Arabiyye\" ve \"Mercâniyye\" adlarıyla da anılmıştır.",
+      "sourceId": "inv-p576"
+    },
+    {
+      "question": "Yapı 2010'daki son onarımdan sonra nasıl kullanılmaktadır?",
+      "options": [
+        "Çocuk Kütüphanesi",
+        "Halk Eğitimi Merkezi",
+        "Müze",
+        "Mescit"
+      ],
+      "correct": 0,
+      "description": "Bursa Büyükşehir Belediyesi yapıyı Çocuk Kütüphanesi olarak işlevlendirmiştir ve bugün de bu amaçla kullanılmaktadır.",
+      "sourceId": "inv-p576"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p576",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Lalaşahinpaşa Medresesi\"",
+      "page": "86"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

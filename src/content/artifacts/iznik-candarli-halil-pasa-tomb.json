@@ -1,0 +1,134 @@
+{
+  "id": "iznik-candarli-halil-pasa-tomb",
+  "name": "Çandarlı Halil Paşa Türbesi",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Osmanlı · Halil Paşa Temmuz 1453'te buraya defnedildi; yapım tarihi kitapta verilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir; türbe İbrahim oğlu Halil Paşa ve ailesine aittir.",
+  "summary": "Üst örtüsü yıkılmış, içinde İbrahim oğlu Halil Paşa ve ailesine ait on iki lahdin bulunduğu dikdörtgen planlı türbe.",
+  "history": "Türbe, İznik'te Beyler Mahallesi, Kılıçaslan Caddesi'nde yer alır. Kuzey-güney doğrultusunda dikdörtgen planlı yapının üst örtüsü tamamen yıkılmıştır; üzerinin ahşap çatıyla örtülü olduğu düşünülmektedir. Batı cephesi kesme taşla, diğer cepheler moloz taş ve kerpiçle inşa edilmiştir.\n\nEski plan ve çizimlere göre doğu ve batı duvarlarında ikişer, kuzey duvarında bir, girişin bulunduğu güney cephesinde iki pencere vardır; ancak güney cephesi tamamen yola gitmiş ve günümüze ulaşmamıştır.\n\nTürbede büyük kısmı tahrip olmuş on iki lahit bulunur. Batıdaki kitabeli mezar taşı İbrahim oğlu Halil Paşa'ya aittir. Türbedeki altı kitabenin üçü Halil Paşa'nın oğulları Yusuf Çelebi, Süleyman Çelebi ve II. İbrahim Paşa'ya, diğerleri İbrahim Çelebi ile 1566'da vefat etmiş kızları Nefise, Sitti ve Hatice'ye aittir. Kazaskerlik ve baş vezirlik görevlerinde bulunan Halil Paşa, İstanbul kuşatmasına taraftar olmamış, Temmuz 1453'te katledilmiş ve İznik'teki türbesine gömülmüştür.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-candarli-halil-pasa-tomb/front-view.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-candarli-halil-pasa-tomb/front-view.jpg",
+      "alt": "Üst örtüsü olmayan türbenin dıştan görünümü: sıvalı yüksek duvarlar, küçük kemerli pencereler, önde demir parmaklıklı kapı ve tuğla döşeli zemin",
+      "description": "Dıştan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-candarli-halil-pasa-tomb/sarcophagi-from-top.jpg",
+      "alt": "Çatısız türbenin tepeden görünümü: dikdörtgen duvarların içinde sıralanmış mermer lahitler ve üzerlerinde bitkiler",
+      "description": "Tepeden lahitler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-candarli-halil-pasa-tomb/interior-graves.jpg",
+      "alt": "Türbenin içi: sıvalı duvarlarda pencereler, önde mermer çerçeveli mezarlar, şahideler ve yüksek bir lahit",
+      "description": "Türbe içi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-candarli-halil-pasa-tomb/inscribed-gravestone.jpg",
+      "alt": "Sivri kemerli tepeliği bitkisel motifli, gövdesi satırlar hâlinde kabartma yazılı mermer mezar taşı",
+      "description": "Kitabeli mezar taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/iznik-candarli-halil-pasa-tomb/front-view.jpg",
+      "x": 50,
+      "y": 22,
+      "title": "Yıkılmış üst örtü",
+      "text": "Yapının üst örtüsü tamamen yıkılmıştır; üzerinin ahşap çatıyla örtülü olduğu düşünülmektedir. Batı cephesi kesme taşla, diğer cepheler moloz taş ve kerpiçle inşa edilmiştir.",
+      "sourceId": "inv-p469"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/iznik-candarli-halil-pasa-tomb/sarcophagi-from-top.jpg",
+      "x": 46,
+      "y": 44,
+      "title": "On iki lahit",
+      "text": "Türbede büyük kısmı tahrip olmuş on iki lahit yer alır. Batıdaki kitabeli mezar taşı İbrahim oğlu Halil Paşa'ya aittir.",
+      "sourceId": "inv-p469"
+    },
+    {
+      "id": "inscriptions",
+      "image": "/images/iznik-candarli-halil-pasa-tomb/inscribed-gravestone.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Kitabeler",
+      "text": "Türbedeki altı kitabenin üçü Halil Paşa'nın oğulları Yusuf Çelebi, Süleyman Çelebi ve II. İbrahim Paşa'ya, diğerleri İbrahim Çelebi ile 1566'da vefat etmiş kızları Nefise, Sitti ve Hatice'ye aittir.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "id": "windows",
+      "image": "/images/iznik-candarli-halil-pasa-tomb/interior-graves.jpg",
+      "x": 29,
+      "y": 50,
+      "title": "Pencereler",
+      "text": "Eski plan ve çizimlere göre doğu ve batı duvarlarında ikişer, kuzey duvarında bir, girişin bulunduğu güney cephesinde iki pencere vardır. Güney cephesi yola gitmiş ve günümüze ulaşmamıştır.",
+      "sourceId": "inv-p469"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbede kaç lahit bulunmaktadır?",
+      "options": [
+        "On iki",
+        "Altı",
+        "Üç",
+        "Dört"
+      ],
+      "correct": 0,
+      "description": "Türbede büyük kısmı tahrip olmuş on iki lahit yer alır.",
+      "sourceId": "inv-p469"
+    },
+    {
+      "question": "Türbenin hangi cephesi kesme taşla inşa edilmiştir?",
+      "options": [
+        "Batı cephesi",
+        "Güney cephesi",
+        "Doğu cephesi",
+        "Kuzey cephesi"
+      ],
+      "correct": 0,
+      "description": "Batı cephesi kesme taşla, diğer cepheler moloz taş ve kerpiçle inşa edilmiştir.",
+      "sourceId": "inv-p469"
+    },
+    {
+      "question": "Kitaba göre Halil Paşa ne zaman katledilmiştir?",
+      "options": [
+        "Temmuz 1453",
+        "1566",
+        "1389",
+        "1418"
+      ],
+      "correct": 0,
+      "description": "İstanbul kuşatmasına taraftar olmayan Halil Paşa, Temmuz 1453'te katledilmiş ve İznik'teki türbesine gömülmüştür.",
+      "sourceId": "inv-p470"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p469",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Çandarlı Halil Paşa Türbesi\"",
+      "page": "79"
+    },
+    {
+      "id": "inv-p470",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Çandarlı Halil Paşa Türbesi\"",
+      "page": "80"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

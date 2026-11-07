@@ -1,0 +1,107 @@
+{
+  "id": "yildirim-ibn-i-bezzaz-mosque-and-graveyard",
+  "name": "İbn-i Bezzaz Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Çelebi Mehmed dönemi, XV. yüzyıl başları",
+  "endowment": "Banisi İbn Bezzâz unvanlı Hâfızüddin Efendi",
+  "summary": "Çelebi Mehmed döneminde İbn Bezzâz’ın yaptırdığı, deprem ve onarımlarla değişen cami ve doğusundaki hazire.",
+  "history": "Hoca Taşkın Mahallesi, İncirli Caddesi No: 58'deki camiyi Çelebi Mehmed döneminde İbn Bezzâz unvanlı Hâfızüddin Efendi yaptırmıştır. Bezzâziye fetva mecmuasının sahibi olan bani 1423-1424'te vefat etmiştir. Tarihi bilinmeyen bir depremde minarenin üst kısmı yapıya düşmüş, harim kubbesi, mihrap duvarının büyük bölümü ve son cemaat yerinin örtüsü yıkılmıştır. Mahalle sakinleri yıkılan bölümleri onarmış, çöken kubbe ve tonozların yerine ahşap çatı yapmıştır. 1986'da Vakıflar Genel Müdürlüğü ile Eski Eserleri Sevenler Kurumu onarmıştır. Harim 7,89 × 7,94 m, son cemaat yeri 3,40 × 7,89 m ölçülerindedir. Girişte mermer söveli basık kemer ve üstünde sekiz mermer dendan motifi bulunur. Batıdaki minare ongen kaideli ve silindirik gövdelidir. Doğudaki hazirede üç mezar taşı vardır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-ibn-i-bezzaz-mosque-and-graveyard/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-ibn-i-bezzaz-mosque-and-graveyard/exterior-view.jpg",
+      "alt": "Üç kemerli taş-tuğla cami cephesi, demir parmaklıklı açıklıklar ve minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-ibn-i-bezzaz-mosque-and-graveyard/detail-view.jpg",
+      "alt": "Sarı desenli halılı harim; solda mukarnaslı mihrap, ahşap minber ve sağda üst kat mahfili",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-ibn-i-bezzaz-mosque-and-graveyard/exterior-view.jpg",
+      "x": 63,
+      "y": 32,
+      "title": "Minare",
+      "text": "Batı cephesine bitişik minare silindirik gövdelidir.",
+      "sourceId": "inv-p482"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-ibn-i-bezzaz-mosque-and-graveyard/exterior-view.jpg",
+      "x": 49,
+      "y": 67,
+      "title": "Giriş",
+      "text": "Orta bölmede mermer söveler üzerine basık kemerli giriş yer alır.",
+      "sourceId": "inv-p482"
+    }
+  ],
+  "test": [
+    {
+      "question": "İbn-i Bezzaz Camii ve Haziresi Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Yıldırım",
+        "Osmangazi",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 0,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p481"
+    },
+    {
+      "question": "İbn Bezzâz'ın fetva mecmuasının adı nedir?",
+      "options": [
+        "Dürer",
+        "Bezzâziye",
+        "Gürer",
+        "Şakâik"
+      ],
+      "correct": 1,
+      "description": "Bezzâziye.",
+      "sourceId": "inv-p481"
+    },
+    {
+      "question": "Kitaba göre minare hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "Batı cephesine bitişik minare silindirik gövdelidir",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 2,
+      "description": "Batı cephesine bitişik minare silindirik gövdelidir.",
+      "sourceId": "inv-p482"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p481",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"İbn-i Bezzaz Camii ve Haziresi\"",
+      "page": "481"
+    },
+    {
+      "id": "inv-p482",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"İbn-i Bezzaz Camii ve Haziresi\"",
+      "page": "482"
+    },
+    {
+      "id": "inv-p483",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"İbn-i Bezzaz Camii ve Haziresi\"",
+      "page": "483"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

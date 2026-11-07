@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-asik-yunus-kara-abdurrezzak-tomb",
+  "name": "Âşık Yunus (Kara Abdürrezzak) Türbesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Âşık Yunus için H. 843 / M. 1439 vefat kaydı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karamazak’ta Âşık Yunus, Yunus Emre ve Kara Abdürrezzak adlarıyla anılan üç kabrin bulunduğu ziyaret alanıdır.",
+  "history": "Karamazak Mahallesi, Karamazak Sokak No: 12’deki alan, kitapta Bursalı Âşık Yunus’un H. 843 / M. 1439’da vefat ederek defnedildiği yer olarak tanıtılır. Kübrevî dervişi olan Âşık Yunus’un şiirlerinde Emîr Sultan’ı övdüğü belirtilir. Aynı yerde Yunus Emre’ye ait olduğuna inanılan bir makam ve Kara Abdürrezzak’ın kabri de bulunur. Buna karşılık kitapta aktarılan Halim Baki Kunter anlatısı, Yunus Emre ve Âşık Yunus mezarlarını birer makam olarak niteler; vaktiyle burada yalnız Kara Abdürrezzak’ın mezarının bulunduğunu söyler.\n\nKunter’in aktardığı anlatıya göre Niyâzî-i Mısrî’nin işareti üzerine Yedekçizâde Ali Efendi burada kitabeli bir türbe, iki mezar taşı ve sanduka yaptırmıştır. Cemile Sultan’ın Meşrutiyet’ten birkaç yıl önce türbeyi ziyaret ederek on beş sarı lira harcayıp tamir ettirdiği aktarılır. Aynı anlatıda H. 1200 / M. 1786’ya kadar yalnız türbe olarak kullanılan yerin yanına Hacı Esad Efendi’nin zaviye yaptırdığı ve Sâdî ayinlerinin başladığı belirtilir.\n\nKitap, eskiden ahşap türbe olan Kara Abdürrezzak Kabri’nin artık açık bir mezar halinde olduğunu ve alanda Merkad-i Âşık Yunus, Merkad-i Yunus Emre ile Merkad-i Kara Abdürrezzak adlarını taşıyan üç kabir ve mezar taşları bulunduğunu kaydeder. Bir kitabede H. 1143 / M. 1730’da Ali Efendi’nin himmetiyle tamir yapıldığı yazılıdır. Eski yapının camisi ve XVI. yüzyıl çinileriyle kaplı türbe tabanı olduğu, ayrıca Yeşil Cami kapıcısı Ali Efendi’nin 1801’de yaptırdığı çeşmenin kitabesinin bulunduğu aktarılır. Yanındaki mescit zamanla konuta dönüştürülmüş; 2022’de Yıldırım Belediyesi çevredeki apartmanları istimlâk ederek alanı görünür hale getirmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-asik-yunus-kara-abdurrezzak-tomb/grave-enclosure.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-asik-yunus-kara-abdurrezzak-tomb/grave-enclosure.jpg",
+      "alt": "Apartmanlar arasındaki döşeli alanda, siyah metal kafesle çevrili, bitkilerle kaplı kabir alanı",
+      "description": "Apartmanlar arasındaki döşeli alanda, siyah metal kafesle çevrili, bitkilerle kaplı kabir alanı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-asik-yunus-kara-abdurrezzak-tomb/overhead-graves.jpg",
+      "alt": "Tepeden görünümde kare bir çevreleme, ışınsal metal çubuklar ve içlerinde yeşilliklerle çevrili açık renkli mezar taşları",
+      "description": "Tepeden görünümde kare bir çevreleme, ışınsal metal çubuklar ve içlerinde yeşilliklerle çevrili açık renkli mezar taşları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-asik-yunus-kara-abdurrezzak-tomb/overhead-graves.jpg",
+      "x": 48,
+      "y": 34,
+      "title": "Mezar taşları",
+      "text": "Kitap, alanda üç kabre ait mezar taşları bulunduğunu belirtir.",
+      "sourceId": "inv-p534"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-asik-yunus-kara-abdurrezzak-tomb/grave-enclosure.jpg",
+      "x": 50,
+      "y": 68,
+      "title": "Açık kabir alanı",
+      "text": "Eskiden ahşap türbe olan yer, kitapta günümüzde açık mezar halinde tanımlanır.",
+      "sourceId": "inv-p534"
+    }
+  ],
+  "test": [
+    {
+      "question": "Alanda kaç kabir bulunduğu belirtilir?",
+      "options": [
+        "Bir",
+        "Üç",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 1,
+      "description": "Üç.",
+      "sourceId": "inv-p534"
+    },
+    {
+      "question": "Çevredeki apartmanların istimlâki hangi yıl yapılmıştır?",
+      "options": [
+        "1997",
+        "2007",
+        "2015",
+        "2022"
+      ],
+      "correct": 3,
+      "description": "2022.",
+      "sourceId": "inv-p534"
+    },
+    {
+      "question": "Âşık Yunus şiirlerinde kimi övmüştür?",
+      "options": [
+        "Emîr Sultan",
+        "Molla Yegân",
+        "Hacı Şevki Efendi",
+        "Çoban Bey"
+      ],
+      "correct": 0,
+      "description": "Emîr Sultan.",
+      "sourceId": "inv-p533"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p533",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Âşık Yunus (Kara Abdürrezzak) Türbesi\"",
+      "page": "533"
+    },
+    {
+      "id": "inv-p534",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Âşık Yunus (Kara Abdürrezzak) Türbesi\"",
+      "page": "534"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

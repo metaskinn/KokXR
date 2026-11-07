@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-izzeddin-bey-mosque",
+  "name": "İzzeddin Bey (Pınarbaşı) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitaba göre Badırga köyünün yarısı bu mescidin vakfıdır",
+  "summary": "Uludağ'dan gelen Pınarbaşı suyunun ilk taksim yerinin yanında bulunduğu için Pınarbaşı Camii olarak da anılan, ahşap kırma çatılı cami.",
+  "history": "Cami, Osmangazi ilçesi, Pınarbaşı Mahallesi, Alacahırka Caddesi No: 2'dedir.\n\nKitaba göre caminin banisi İzzeddin Bey, meşhur Niğbolu kahramanı Doğan Bey'in kardeşidir. Kitapta ayrıca I. Murad'ın kızı olarak anılan Nilüfer Hatun'un Pınarbaşı'ndaki vakıf arazisine bu camiyi inşa ettirdiği ve icâre-i zemin denilen yer kirası karşılığında Hıdırlık mevkiindeki Nilüfer Hatun Mescidi imamı ile müezzininin yevmiyelerini vermeye kefil olduğu belirtilir.\n\nCaminin beden duvarları moloz taşla örülmüş, sonradan sıvanarak düzgün duvar hâline getirilmiştir. Ahşap kırma çatısı kiremitle kaplıdır. Ahşap olan minaresi 1960'ta yıkılmış, yerine Çekirge Hüdâvendigâr Camii minaresinin bir benzeri yapılmıştır.\n\nHacı İzzet Bey, mescidin yakınına bir de zaviye yaptırmıştır. Badırga köyünün yarısı bu mescidin vakfıdır.\n\nCaminin yanında, kaynağı Uludağ'da olan Pınarbaşı suyunun ilk taksim yeri bulunduğundan yapı Pınarbaşı Camii olarak da anılır. Cami bugün bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-izzeddin-bey-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-izzeddin-bey-mosque/aerial-view.jpg",
+      "alt": "Yüksekten görünüm: virajlı bir yolun kenarında sarı sıvalı, kiremit kırma çatılı cami ve yanında taş-tuğla gövdeli minare; solda yüksek çam ağaçları, arkada yamaca dizilmiş apartmanlar",
+      "description": "Cami, minare ve çevresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-izzeddin-bey-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: dört yöne eğimli kiremit kırma çatı, yol tarafında minarenin dairesel şerefesi ve külahı; çevrede virajlı yol ve ağaçlar",
+      "description": "Kırma çatının tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-izzeddin-bey-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi halılı, açık yeşil duvarlı harim; ahşap tavan, sivri ve yuvarlak kemerli pencereler, ortada mihrap, sağda ahşap minber ve büyük bir avize",
+      "description": "Harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-izzeddin-bey-mosque/aerial-view.jpg",
+      "x": 60,
+      "y": 58,
+      "title": "Ahşap kırma çatı",
+      "text": "Caminin ahşap kırma çatısının üzeri kiremitle kaplanmıştır.",
+      "sourceId": "inv-p358"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-izzeddin-bey-mosque/aerial-view.jpg",
+      "x": 70,
+      "y": 72,
+      "title": "Sıvalı beden duvarları",
+      "text": "Beden duvarları moloz taşla örülmüş, sonradan sıvanarak düzgün duvar hâline getirilmiştir.",
+      "sourceId": "inv-p358"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-izzeddin-bey-mosque/aerial-view.jpg",
+      "x": 77,
+      "y": 40,
+      "title": "Minare",
+      "text": "Ahşap olan eski minare 1960'ta yıkılmış, yerine Çekirge Hüdâvendigâr Camii minaresinin bir benzeri yapılmıştır.",
+      "sourceId": "inv-p358"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapıya neden Pınarbaşı Camii de denir?",
+      "options": [
+        "Pınarbaşı suyunun ilk taksim yeri yanında olduğu için",
+        "Bir pınarın üzerine yapıldığı için",
+        "Banisinin adı Pınar olduğu için",
+        "Avlusunda büyük bir şadırvan bulunduğu için"
+      ],
+      "correct": 0,
+      "description": "Kaynağı Uludağ'da olan Pınarbaşı suyunun ilk taksim yeri caminin yanında bulunduğundan yapı Pınarbaşı Camii olarak da anılır.",
+      "sourceId": "inv-p358"
+    },
+    {
+      "question": "Ahşap olan minareye 1960'ta ne olmuştur?",
+      "options": [
+        "Onarılarak kurşunla kaplanmıştır",
+        "Yıkılıp yerine Çekirge Hüdâvendigâr Camii minaresinin bir benzeri yapılmıştır",
+        "Depremde yıkılmış ve yeniden yapılmamıştır",
+        "Başka bir camiye taşınmıştır"
+      ],
+      "correct": 1,
+      "description": "Ahşap olan minare 1960'ta yıkılmış, yerine Çekirge Hüdâvendigâr Camii minaresinin bir benzeri inşa edilmiştir.",
+      "sourceId": "inv-p358"
+    },
+    {
+      "question": "Caminin çatısı nasıldır?",
+      "options": [
+        "Kurşun kaplı tek kubbe",
+        "Beşik tonoz",
+        "Düz beton çatı",
+        "Kiremit kaplı ahşap kırma çatı"
+      ],
+      "correct": 3,
+      "description": "Caminin ahşap kırma çatısının üzeri kiremitle kaplanmıştır.",
+      "sourceId": "inv-p358"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p358",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"İzzeddin Bey (Pınarbaşı) Camii\"",
+      "page": "358"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

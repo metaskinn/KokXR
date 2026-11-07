@@ -1,0 +1,113 @@
+{
+  "id": "karacabey-haci-cemali-mosque",
+  "name": "Hacı Cemali (Nasrullah) Camii",
+  "city": "Bursa",
+  "district": "Karacabey",
+  "period": "Cumhuriyet dönemi · 1950; 2011'de tescillendi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hacı Cemali Yenişar'ın 1950'de yaptırdığı, ilçenin ilk iki şerefeli minaresine sahip cami.",
+  "history": "Karacabey'in Abdullah Paşa Mahallesi'nde, Panayır Caddesi üzerinde yer alır. Cami, Hacı Cemali Yenişar tarafından 1950 yılında inşa ettirilmiştir. Resmî kayıtlarda \"Nasrullah Camii\" adıyla geçse de halk arasında \"Hacı Cemali Ağa Camii\" veya \"İki Çanaklı Camii\" olarak bilinir. Yapı 2011 yılında tescillenerek koruma altına alınmıştır.\n\nDikdörtgen planlı cami 9,75 × 14,10 m ölçülerindedir; son cemaat mahfili 3,80 × 9,75 m olarak tespit edilmiştir. Camiye bitişik olarak inşa edilen minare, ilçede iki şerefeli olarak tasarlanan ilk minare örneğidir.\n\nHarimin tavanı ahşap malzemeyle döşenmiştir. Çatının altında 5 m genişliğinde ve 2 m derinliğinde gizli bir kubbe bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/karacabey-haci-cemali-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/karacabey-haci-cemali-mosque/exterior.jpg",
+      "alt": "Hacı Cemali Camii: açık pembe sıvalı duvar, yuvarlak kemerli iki büyük pencere, kahverengi saçak ve arkada yükselen iki şerefeli minare; önde tuğla bahçe duvarı ve demir kapı",
+      "description": "Caminin sokaktan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-haci-cemali-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavan ve avize, yeşil çerçeveli kemerli pencereler, ortada yeşil mihrap nişi, sağda beyaz minber, solda ahşap kürsü, zeminde kırmızı halı",
+      "description": "Harim ve ahşap tavan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-haci-cemali-mosque/aerial-view.jpg",
+      "alt": "Caminin yukarıdan görünümü: kiremit örtülü kırma çatı, yanında yükselen iki şerefeli minare ve çevresindeki apartmanlar",
+      "description": "Havadan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/karacabey-haci-cemali-mosque/exterior.jpg",
+      "x": 43,
+      "y": 29,
+      "title": "İki şerefeli minare",
+      "text": "Camiye bitişik olarak inşa edilen minare, ilçede iki şerefeli olarak tasarlanan ilk minare örneği olması bakımından dikkat çekicidir.",
+      "sourceId": "inv-p512"
+    },
+    {
+      "id": "ceiling",
+      "image": "/images/karacabey-haci-cemali-mosque/prayer-hall.jpg",
+      "x": 22,
+      "y": 8,
+      "title": "Ahşap tavan",
+      "text": "Harim kısmının tavanı ahşap malzeme ile döşenmiştir.",
+      "sourceId": "inv-p512"
+    },
+    {
+      "id": "hidden-dome",
+      "image": "/images/karacabey-haci-cemali-mosque/aerial-view.jpg",
+      "x": 47,
+      "y": 75,
+      "title": "Çatı altındaki gizli kubbe",
+      "text": "Kiremit çatının altında, 5 m genişliğinde ve 2 m derinliğinde gizli bir kubbe bulunmaktadır.",
+      "sourceId": "inv-p512"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami halk arasında hangi adla da bilinir?",
+      "options": [
+        "Çarşı Camii",
+        "İki Çanaklı Camii",
+        "Yeşil Camii",
+        "Kurşunlu Camii"
+      ],
+      "correct": 1,
+      "description": "Resmî kayıtlarda \"Nasrullah Camii\" olarak geçen yapı, halk arasında \"Hacı Cemali Ağa Camii\" veya \"İki Çanaklı Camii\" olarak bilinir.",
+      "sourceId": "inv-p512"
+    },
+    {
+      "question": "Cami hangi yılda inşa ettirilmiştir?",
+      "options": [
+        "1904",
+        "1962",
+        "1950",
+        "2011"
+      ],
+      "correct": 2,
+      "description": "Cami 1950'de Hacı Cemali Yenişar tarafından inşa ettirilmiş, 2011'de tescillenmiştir.",
+      "sourceId": "inv-p512"
+    },
+    {
+      "question": "Caminin minaresi ilçede neyin ilk örneğidir?",
+      "options": [
+        "Tamamen taştan yapılan minarenin",
+        "İki şerefeli olarak tasarlanan minarenin",
+        "Kurşun külahlı minarenin",
+        "Çift gövdeli minarenin"
+      ],
+      "correct": 1,
+      "description": "Camiye bitişik minare, ilçede iki şerefeli olarak tasarlanan ilk minare örneğidir.",
+      "sourceId": "inv-p512"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p512",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Hacı Cemali (Nasrullah) Camii\"",
+      "page": "200"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

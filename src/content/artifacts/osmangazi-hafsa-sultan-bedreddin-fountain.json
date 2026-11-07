@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-hafsa-sultan-bedreddin-fountain",
+  "name": "Hafsa Sultan (Bedreddin) Çeşmesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XV. yüzyıla tarihlenebileceği değerlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hafsa Sultan Camii avlu duvarındaki sivri kemerli çeşme, envanterde mimari uyumuna dayanılarak XV. yüzyıla tarihlenmektedir.",
+  "history": "Çeşme, Kayhan Mahallesi, Azık Sokak No: 2’de, Hafsa Sultan (Bedreddin) Camii’nin avlu duvarındadır. Çeşmeye ait kitabe günümüze ulaşmamıştır. Cami için bilgi veren bazı kaynakların çeşmeden söz etmediği belirtilir. Envanter, caminin II. Murat döneminde Hafsa Sultan tarafından H. 847 / M. 1443’te yaptırılmasını ve iki yapı arasındaki mimari uyumu dikkate alarak çeşmenin XV. yüzyıla tarihlenebileceğini değerlendirir; çeşmenin kesin inşa tarihi verilmez.\n\nCaminin güneybatısındaki tek cepheli yapı 3,85 × 3,60 m ölçülerinde ve 75 cm derinliğindedir. Sivri kemerli cephede bir sıra küfeki taşı ve üç sıra tuğladan almaşık örgü kullanılmıştır. Kemer, tamamen tuğla örülü 67 cm genişliğindeki ayaklara oturur; silmeyle çevrelenir ve üstte iki sıra kirpi saçakla sonlanır. Nişte de üç sıra tuğla ve bir sıra taş örgüsü vardır. Kitap, mermer tekneyi 47 × 67 cm ölçülerinde ve 75 cm derinliğinde verir. Çeşmenin akar durumda olduğu aktarılır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hafsa-sultan-bedreddin-fountain/pointed-arch-fountain.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hafsa-sultan-bedreddin-fountain/pointed-arch-fountain.jpg",
+      "alt": "Tuğla ve taş sıralı sivri kemerli çeşme; kemerin altında açık renk dikdörtgen levha, küçük ayna taşı ve tekne, arkada kubbeli cami",
+      "description": "Tuğla ve taş sıralı sivri kemerli çeşme; kemerin altında açık renk dikdörtgen levha, küçük ayna taşı ve tekne, arkada kubbeli cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hafsa-sultan-bedreddin-fountain/mosque-top-view.jpg",
+      "alt": "Tepeden görünümde kurşun renkli büyük cami kubbesi, küçük yuvarlak örtü, ağaçlar ve çevredeki sokaklar",
+      "description": "Tepeden görünümde kurşun renkli büyük cami kubbesi, küçük yuvarlak örtü, ağaçlar ve çevredeki sokaklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-hafsa-sultan-bedreddin-fountain/pointed-arch-fountain.jpg",
+      "x": 48,
+      "y": 40,
+      "title": "Sivri kemer",
+      "text": "Çeşme nişi, iki yandaki yığma ayaklara oturan sivri kemerle örtülüdür.",
+      "sourceId": "inv-p127"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-hafsa-sultan-bedreddin-fountain/pointed-arch-fountain.jpg",
+      "x": 51,
+      "y": 29,
+      "title": "Almaşık örgü ve saçak",
+      "text": "Cephede bir sıra küfeki taşı ve üç sıra tuğla kullanılmış; üst bölüm iki sıra kirpi saçakla bitirilmiştir.",
+      "sourceId": "inv-p127"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşme hangi caminin avlu duvarındadır?",
+      "options": [
+        "Mecidiye",
+        "Hafsa Sultan (Bedreddin)",
+        "Alaaddin Bey",
+        "Şehadet"
+      ],
+      "correct": 1,
+      "description": "Çeşme Hafsa Sultan (Bedreddin) Camii’nin avlu duvarındadır.",
+      "sourceId": "inv-p127"
+    },
+    {
+      "question": "Cephede taş sırasına kaç sıra tuğla eşlik eder?",
+      "options": [
+        "Bir",
+        "İki",
+        "Üç",
+        "Beş"
+      ],
+      "correct": 2,
+      "description": "Cephe bir sıra küfeki taşı ve üç sıra tuğlayla örülmüştür.",
+      "sourceId": "inv-p127"
+    },
+    {
+      "question": "Çeşmeye ait kitabenin durumu nedir?",
+      "options": [
+        "Günümüze ulaşmamıştır",
+        "Müzede sergilenir",
+        "Dört dilde yazılıdır",
+        "Ahşap üzerindedir"
+      ],
+      "correct": 0,
+      "description": "Envanter çeşmeye ait herhangi bir kitabenin günümüze ulaşmadığını belirtir.",
+      "sourceId": "inv-p127"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p127",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Hafsa Sultan (Bedreddin) Çeşmesi\"",
+      "page": "127"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

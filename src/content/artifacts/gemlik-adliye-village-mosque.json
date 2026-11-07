@@ -1,0 +1,134 @@
+{
+  "id": "gemlik-adliye-village-mosque",
+  "name": "Adliye Köyü Camii",
+  "city": "Bursa",
+  "district": "Gemlik",
+  "period": "Cümle kapısında 1890 tarihi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Mihrabı, minberi ve vaaz kürsüsü baştan sona Kütahya çinileriyle kaplı, kırma çatılı köy camii.",
+  "history": "Gemlik ilçesi, Adliye Mahallesi, Kenar Sokak'ta yer alır. Daha önce köy statüsünde olan, günümüzde mahalleye dönüşen Adliye yerleşimindeki cami, dikdörtgen planlı, yığma duvarlı, kırma çatılı ve kiremit örtülü ahşap bir yapıdır. İç mekânın tavanı düz ahşapla kaplıdır.\n\nCami doğu ve batı cephelerinde üçer, kuzey cephesinde iki altlık ve iki üstlük olmak üzere toplam dört pencereyle aydınlanır. Tüm pencere açıklıkları yuvarlak kemerli ve plastik doğramalıdır. Harim içine alınmış son cemaat yeri iki yandaki maksurelerle sınırlanır; üstünde kadınlar mahfili bulunur.\n\nİç mekânda dikkat çeken mihrap, minber ve vaaz kürsüsü tamamen Kütahya çinileriyle kaplanmıştır. Minare tek şerefelidir ve bosajlı kesme taştan yapılmıştır. Cümle kapısının üzerinde 1890 tarihi yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/gemlik-adliye-village-mosque/aerial-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/gemlik-adliye-village-mosque/aerial-minaret.jpg",
+      "alt": "Adliye Köyü Camii: ağaçlar arasında kiremit kırma çatılı beyaz badanalı yapı, yanında yüksek taş minare, arkada ormanlık tepeler",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-adliye-village-mosque/interior-mihrab.jpg",
+      "alt": "Beyaz ve yeşil duvarlı iç mekân: ortada çini kaplı mihrap, sağında çini kaplı minber, yanlarda yuvarlak kemerli pencereler, tavanda avize",
+      "description": "İç mekân, çinili mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-adliye-village-mosque/aerial-top.jpg",
+      "alt": "Tepeden görünüm: kiremit kırma çatılı cami ve yanında minarenin şerefesi, çevresinde evler, ağaçlar ve yollar",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-adliye-village-mosque/aerial-wide.jpg",
+      "alt": "Havadan uzak görünüm: kiremit çatılı cami, yanında yüksek minare ve büyük bir ağaç, arkada ova",
+      "description": "Yerleşim içindeki konumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/gemlik-adliye-village-mosque/aerial-minaret.jpg",
+      "x": 52,
+      "y": 45,
+      "title": "Minare",
+      "text": "Minare tek şerefelidir ve bosajlı kesme taş malzemeyle inşa edilmiştir.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "id": "tiles",
+      "image": "/images/gemlik-adliye-village-mosque/interior-mihrab.jpg",
+      "x": 50,
+      "y": 44,
+      "title": "Çinili mihrap ve minber",
+      "text": "Mihrap, minber ve vaaz kürsüsü, iç mekânda dikkat çekecek şekilde tamamen Kütahya çinileriyle kaplanmıştır.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "id": "windows",
+      "image": "/images/gemlik-adliye-village-mosque/interior-mihrab.jpg",
+      "x": 7,
+      "y": 48,
+      "title": "Yuvarlak kemerli pencereler",
+      "text": "Cami doğu ve batı cephelerinde üçer, kuzey cephesinde dört pencereyle aydınlanır. Tüm pencere açıklıkları yuvarlak kemerli ve plastik doğramalıdır.",
+      "sourceId": "inv-p325"
+    },
+    {
+      "id": "roof",
+      "image": "/images/gemlik-adliye-village-mosque/aerial-top.jpg",
+      "x": 49,
+      "y": 50,
+      "title": "Kırma çatı",
+      "text": "Dikdörtgen planlı, yığma duvarlı yapı kırma çatılıdır; çatı örtüsü kiremitle kaplıdır. İç mekânın tavanı düz ahşapla kaplanmıştır.",
+      "sourceId": "inv-p325"
+    }
+  ],
+  "test": [
+    {
+      "question": "Adliye Köyü Camii'nin mihrap, minber ve vaaz kürsüsü neyle kaplanmıştır?",
+      "options": [
+        "Mermer",
+        "Kütahya çinileri",
+        "Ahşap oyma",
+        "Kalem işi"
+      ],
+      "correct": 1,
+      "description": "Mihrap, minber ve vaaz kürsüsü tamamen Kütahya çinileriyle kaplanmıştır.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "question": "Caminin cümle kapısı üzerinde hangi tarih yer alır?",
+      "options": [
+        "1924",
+        "1958",
+        "1890",
+        "1999"
+      ],
+      "correct": 2,
+      "description": "Cümle kapısının üzerinde 1890 tarihi yer almaktadır.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "question": "Caminin minaresi hangi malzemeyle inşa edilmiştir?",
+      "options": [
+        "Bosajlı kesme taş",
+        "Tuğla",
+        "Ahşap",
+        "Beton"
+      ],
+      "correct": 0,
+      "description": "Tek şerefeli minare bosajlı kesme taş malzemeyle inşa edilmiştir.",
+      "sourceId": "inv-p326"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p325",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Gemlik, \"Adliye Köyü Camii\"",
+      "page": "123"
+    },
+    {
+      "id": "inv-p326",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Gemlik, \"Adliye Köyü Camii\"",
+      "page": "124"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

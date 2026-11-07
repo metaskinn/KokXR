@@ -1,0 +1,182 @@
+{
+  "id": "karacabey-imaret-mosque",
+  "name": "İmaret (Kurşunlu-Mihalıç) Camii",
+  "city": "Bursa",
+  "district": "Karacabey",
+  "period": "Osmanlı · H. 861 / M. 1456-57 (kitabe)",
+  "endowment": "Abdullah oğlu Dayı Karaca Bey",
+  "summary": "Osmanlı vezirlerinden Karaca Bey'in yaptırdığı, son cemaat yerinde banisinin türbesini barındıran cami.",
+  "history": "Karacabey'in Selimiye Mahallesi'nde, 17. Sokak No: 9'da, kasabanın kuzey tarafında yer alır. Cami, Osmanlı vezirlerinden Abdullah oğlu Karaca Bey tarafından 1456 yılından önce inşa ettirilmiştir. Karaca Bey, II. Murad döneminde Varna Muharebesi'ndeki kahramanlığıyla öne çıkmış ve zaferin kazanılmasında etkili olmuştur.\n\nHarimin kuzey cephesindeki kapı kemeri üzerindeki kitabeye göre imaretin yapılmasını H. 861 / M. 1456-57 tarihinde, Murad Han oğlu Sultan Mehmed'in saltanatı günlerinde Abdullah oğlu Dayı Karaca Bey emretmiştir. Karaca Bey 1456 yılı temmuzunun ikinci yarısında Belgrad Kalesi seferinde şehit düşmüş; cenazesi Mihaliç'e (bugünkü Karacabey) getirilerek caminin son cemaat yerindeki türbesine defnedilmiştir. Caminin çevresinde Karaca Bey'e ait bir medrese, türbe ve su kuyuları, yakınında ise eşi Bülbül Hatun'a ait bir türbe bulunur.\n\nKaraca Bey Mihaliç'te cami, imaret ve medrese ile bunların ihtiyacını karşılayacak bir su yolu yaptırmış, hayır eserlerinin devamı için çeşitli vakıflar kurmuştur. Bursa'da \"Gelincik Çarşısı\" olarak da bilinen Karaca Bey Hanı ile çevresindeki çarşılar, boyahaneler ve dükkânlar; İnegöl ve Manyas'taki değirmenler ve köyler de vakıflarına aittir.\n\nDuvarlar iki sıra tuğla ve bir sıra taşla almaşık örülmüştür. Yapı; kubbeli giriş mekânı, ona sivri kemerli bir açıklıkla bağlanan kubbeli ibadet mekânı ve iki yanda, önlerinde birer dehliz bulunan kubbeli yan kanatlardan oluşur. Minare tamamen taştandır. 1853 depreminde büyük zarar gören, Yunan işgali döneminde de tahribata uğrayan ve uzun süre kullanılamayan yapı, 1971-72'de Vakıflar Genel Müdürlüğü tarafından kapsamlı bir onarımdan geçirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/karacabey-imaret-mosque/exterior-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/karacabey-imaret-mosque/exterior-aerial.jpg",
+      "alt": "İmaret Camii'nin havadan görünümü: kurşun kaplı kubbeler, taş minare, kemerli son cemaat yeri ve önde ağaçlar arasında kubbeli bir yapı",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-imaret-mosque/aerial-top.jpg",
+      "alt": "Caminin tepeden görünümü: ortada büyük kubbeler ve yanlarda küçük kubbelerden oluşan örtü, çevresinde ağaçlar ve sokaklar",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-imaret-mosque/narthex-front.jpg",
+      "alt": "Taş döşeli yolun sonunda beş kemerli son cemaat yeri; ortada çizgili taş örgülü kapı ve ahşap kanatlar",
+      "description": "Son cemaat yeri ve giriş",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-imaret-mosque/door-inscription.jpg",
+      "alt": "Kapı üstündeki mermer çerçeve içinde üç satırlık kabartma Arapça kitabe",
+      "description": "Harim kapısı üzerindeki kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-imaret-mosque/karaca-bey-tomb.jpg",
+      "alt": "Son cemaat yerinde yeşil demir parmaklıkla çevrili, mermer kaide üzerinde bir mezar",
+      "description": "Son cemaat yerindeki mezar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-imaret-mosque/prayer-hall.jpg",
+      "alt": "Beyaz duvarlı iç mekân: ortada mihrap, sağında ahşap minber, üstte sivri kemerli renkli camlı pencereler, zeminde turkuaz halı",
+      "description": "İbadet mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-imaret-mosque/dome-drum.jpg",
+      "alt": "Kurşun kaplı kubbe, üzerinde pencereli sekizgen fener; yanda sıvalı duvarda yuvarlak delikli şebekeli pencereler",
+      "description": "Kubbe ve kasnak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-imaret-mosque/masonry-wall.jpg",
+      "alt": "Tuğla sıraları arasına taş yerleştirilmiş almaşık duvar, sivri kemerli şebekeli üst pencereler ve dikdörtgen alt pencereler",
+      "description": "Almaşık duvar örgüsü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "inscription",
+      "image": "/images/karacabey-imaret-mosque/door-inscription.jpg",
+      "x": 50,
+      "y": 48,
+      "title": "Kapı kitabesi",
+      "text": "Harimin kuzey cephesindeki kapı kemeri üzerindeki kitabeye göre imaretin yapılmasını H. 861 / M. 1456-57'de, Sultan Mehmed'in saltanatı günlerinde Abdullah oğlu Dayı Karaca Bey emretmiştir.",
+      "sourceId": "inv-p514"
+    },
+    {
+      "id": "tomb",
+      "image": "/images/karacabey-imaret-mosque/karaca-bey-tomb.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Karaca Bey'in türbesi",
+      "text": "1456'da Belgrad Kalesi seferinde şehit düşen Karaca Bey, caminin son cemaat yerindeki türbesine defnedilmiştir. Mezar taşındaki kitabe kabrin ona ait olduğunu bildirir.",
+      "sourceId": "inv-p515"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/karacabey-imaret-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "İbadet mekânı ve mihrap",
+      "text": "Kare planlı ibadet mekânı pandantiflerle geçilen bir kubbeyle örtülüdür. Güney duvarının ekseninde beş cepheli mihrap, doğu ve batı duvarlarında ikişer pencere bulunur.",
+      "sourceId": "inv-p517"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/karacabey-imaret-mosque/masonry-wall.jpg",
+      "x": 35,
+      "y": 40,
+      "title": "Pencereler",
+      "text": "Tüm mekânlar aynı hizada ikişer alt ve üst pencereyle dışa açılır. Alt pencereler dikdörtgen ve mermer çerçeveli, üst pencereler sivri kemerli ve alçı şebekelidir.",
+      "sourceId": "inv-p518"
+    }
+  ],
+  "test": [
+    {
+      "question": "Karaca Bey, II. Murad döneminde hangi savaştaki kahramanlığıyla öne çıkmıştır?",
+      "options": [
+        "Kosova Savaşı",
+        "Varna Muharebesi",
+        "Ankara Savaşı",
+        "Mohaç Muharebesi"
+      ],
+      "correct": 1,
+      "description": "Karaca Bey, II. Murad döneminde Varna Muharebesi'ndeki kahramanlığıyla öne çıkmış ve zaferde etkili olmuştur.",
+      "sourceId": "inv-p513"
+    },
+    {
+      "question": "Karaca Bey'in türbesi caminin neresindedir?",
+      "options": [
+        "Minarenin dibinde",
+        "Mihrabın önünde",
+        "Son cemaat yerinde",
+        "Avlunun dışında"
+      ],
+      "correct": 2,
+      "description": "Belgrad Kalesi seferinde şehit düşen Karaca Bey, caminin son cemaat yerindeki türbesine defnedilmiştir.",
+      "sourceId": "inv-p515"
+    },
+    {
+      "question": "Cami hangi yıllarda Vakıflar Genel Müdürlüğü tarafından kapsamlı bir onarımdan geçirilmiştir?",
+      "options": [
+        "1853",
+        "1910'lu yıllarda",
+        "1971-72",
+        "2005"
+      ],
+      "correct": 2,
+      "description": "1853 depreminde zarar gören ve uzun süre kullanılamayan yapı, 1971-72'de kapsamlı bir onarımdan geçirilmiştir.",
+      "sourceId": "inv-p518"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p513",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"İmaret (Kurşunlu-Mihalıç) Camii\"",
+      "page": "201"
+    },
+    {
+      "id": "inv-p514",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"İmaret (Kurşunlu-Mihalıç) Camii\"",
+      "page": "202"
+    },
+    {
+      "id": "inv-p515",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"İmaret (Kurşunlu-Mihalıç) Camii\"",
+      "page": "203"
+    },
+    {
+      "id": "inv-p516",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"İmaret (Kurşunlu-Mihalıç) Camii\"",
+      "page": "204"
+    },
+    {
+      "id": "inv-p517",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"İmaret (Kurşunlu-Mihalıç) Camii\"",
+      "page": "205"
+    },
+    {
+      "id": "inv-p518",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"İmaret (Kurşunlu-Mihalıç) Camii\"",
+      "page": "206"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

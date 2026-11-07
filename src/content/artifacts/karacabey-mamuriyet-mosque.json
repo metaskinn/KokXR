@@ -1,0 +1,125 @@
+{
+  "id": "karacabey-mamuriyet-mosque",
+  "name": "Mamuriyet Camii",
+  "city": "Bursa",
+  "district": "Karacabey",
+  "period": "M. 1959",
+  "endowment": "Mamuriyet Mahallesi halkı",
+  "summary": "1959'da Mamuriyet Mahallesi halkının ortak emeğiyle yapılan, iki katlı, kırma çatılı mahalle camisi.",
+  "history": "Karacabey'in Mamuriyet Mahallesi'nde, 7. Sokak No: 17'de, Karacabey Boğazı'na giden yolun yaklaşık 20 m içinde yer alır. Cami 1959 yılında Mamuriyet Mahallesi halkı tarafından inşa edilmiştir.\n\nBeden duvarları yığma tuğladan örülmüş, üzeri kırma çatıyla kapatılmıştır. 8 × 10 m ölçülerinde, dikdörtgen planlı ve iki katlıdır; iç ve dış yüzeyleri sıvalıdır. İç mekân kısa kenarlarda alt ve üst sırada ikişer, uzun kenarlarda üçer pencereyle aydınlanır. Üst kattaki pencereler küçük ve vitray boyalı, alt kattakiler daha büyük ve yuvarlak kemerlidir.\n\nMinare yığma tuğladan silindirik gövdeli ve tek şerefelidir; gövdesi beyaz, külahı yeşile boyanmıştır. Külah, Bursa camilerinde sık görülen sivri Türk külahı değil, Arap etkili yuvarlak külah biçimindedir. Şerefenin alt bölümündeki saç örgüsü biçimli süsleme minarenin çevresini tamamen dolanır.\n\nCaminin cemaat kapasitesi yaklaşık 125 kişidir. Girişe küçük bir avludan ulaşılır; giriş kapısının yanındaki günümüz yapımı mermer kitabede caminin adı ve yapım yılı yazılıdır. Mahalle halkının ortak emeğiyle yapılan cami, kırsal kesimde dayanışma ruhunun ve ortak değerlerin yaşatılmasını temsil eder ve mahalle sakinleri için önemli bir buluşma mekânıdır.",
+  "verification": "verified",
+  "coverImage": "/images/karacabey-mamuriyet-mosque/exterior-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/karacabey-mamuriyet-mosque/exterior-aerial.jpg",
+      "alt": "Mamuriyet Camii'nin havadan görünümü: kiremit örtülü kırma çatı, açık yeşil sıvalı duvarlar, kemerli pencereler ve beyaz gövdeli, yeşil külahlı minare",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-mamuriyet-mosque/entrance-courtyard.jpg",
+      "alt": "Sokaktan görünüm: demir kapılı giriş ve üstünde cami adını taşıyan kemer, arkada iki katlı cami ve beyaz minare, sağda büyük bir ağaç",
+      "description": "Giriş ve avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-mamuriyet-mosque/mihrab.jpg",
+      "alt": "İç mekânda mihrap duvarı: ortada nişli mihrap, iki yanında yuvarlak kemerli alt pencereler, üstte renkli camlı küçük pencereler",
+      "description": "Mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-mamuriyet-mosque/aerial-top.jpg",
+      "alt": "Caminin tepeden görünümü: kiremit kırma çatı, yanında yeşil külahlı minare ve çevredeki ağaçlar",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/karacabey-mamuriyet-mosque/exterior-aerial.jpg",
+      "x": 65,
+      "y": 35,
+      "title": "Minare",
+      "text": "Yığma tuğladan silindirik gövdeli, tek şerefeli minarenin gövdesi beyaz, külahı yeşildir. Külah sivri Türk külahı değil, Arap etkili yuvarlak külah biçimindedir.",
+      "sourceId": "inv-p527"
+    },
+    {
+      "id": "walls",
+      "image": "/images/karacabey-mamuriyet-mosque/exterior-aerial.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Duvarlar ve çatı",
+      "text": "Beden duvarları yığma tuğladan örülmüş, üzeri kırma çatıyla kapatılmıştır. 8 × 10 m ölçülerindeki iki katlı yapının iç ve dış yüzeyleri sıvalıdır.",
+      "sourceId": "inv-p526"
+    },
+    {
+      "id": "windows",
+      "image": "/images/karacabey-mamuriyet-mosque/mihrab.jpg",
+      "x": 88,
+      "y": 15,
+      "title": "Pencereler",
+      "text": "Üst kattaki pencereler küçük ebatlı ve vitray boyalı, alt kattakiler daha büyük ve yuvarlak kemerlidir.",
+      "sourceId": "inv-p527"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mamuriyet Camii hangi yıl inşa edilmiştir?",
+      "options": [
+        "1856",
+        "1923",
+        "1959",
+        "1985"
+      ],
+      "correct": 2,
+      "description": "Cami 1959 yılında Mamuriyet Mahallesi halkı tarafından inşa edilmiştir.",
+      "sourceId": "inv-p526"
+    },
+    {
+      "question": "Minarenin külahı hangi biçimdedir?",
+      "options": [
+        "Sivri Türk külahı",
+        "Arap etkili yuvarlak külah",
+        "Kesik koni",
+        "Piramit"
+      ],
+      "correct": 1,
+      "description": "Külah, Bursa camilerinde sık görülen sivri Türk külahı değil, Arap etkili yuvarlak külah biçimindedir.",
+      "sourceId": "inv-p527"
+    },
+    {
+      "question": "Caminin toplam cemaat kapasitesi yaklaşık kaç kişidir?",
+      "options": [
+        "50",
+        "125",
+        "300",
+        "500"
+      ],
+      "correct": 1,
+      "description": "Caminin toplam cemaat kapasitesi yaklaşık 125 kişi ile sınırlıdır.",
+      "sourceId": "inv-p527"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p526",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Mamuriyet Cami\"",
+      "page": "214"
+    },
+    {
+      "id": "inv-p527",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Mamuriyet Cami\"",
+      "page": "215"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

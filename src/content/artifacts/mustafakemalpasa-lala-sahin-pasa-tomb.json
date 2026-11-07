@@ -1,0 +1,146 @@
+{
+  "id": "mustafakemalpasa-lala-sahin-pasa-tomb",
+  "name": "Lala Şahin Paşa Kümbeti",
+  "city": "Bursa",
+  "district": "Mustafakemalpaşa",
+  "period": "İnşa tarihi kesin bilinmiyor",
+  "endowment": "Kesin bilinmiyor; külliyeyle birlikte ya da Lala Şahin Paşa'nın mütevelli evlatlarınca yaptırıldığı düşünülür",
+  "summary": "Lala Şahin Paşa Külliyesi'nden günümüze ulaşan tek yapı; piramidal külahı nedeniyle \"kümbet\" diye anılan, Bizans etkili taş-tuğla türbe.",
+  "history": "Kümbet, Mustafakemalpaşa'nın Lala Şahin Mahallesi'nde, Hamam Sokak'tadır. Lala Şahin Paşa Külliyesi'nden günümüze ulaşan tek yapıdır; farklı dönemlerdeki tamiratlar nedeniyle özgünlüğünü büyük ölçüde yitirmiştir. İnşa tarihi kesin bilinmez; külliyedeki diğer yapılarla birlikte ya da Lala Şahin Paşa'nın vefatından sonra mütevelli olan evlatlarınca yaptırıldığı düşünülür. Türbeye ait bir kitabe ulaşmamıştır.\n\nÜst örtüsü piramidal külah biçiminde olduğu için kaynaklarda \"kümbet\" olarak anılır ve bilinen beş Osmanlı kümbetinden biri kabul edilir. İçten 4,50 × 4,70 m ölçülerindedir. Köşelerdeki takozlu pandantiflere oturan sekizgen kasnak piramidal külaha geçişi sağlar. İç mekân tamamen sıvalıdır; Lala Şahin Paşa'nın lahdi başı batıda olacak biçimde doğuya uzanır. Girişte bir eyvan bulunduğu, sağ taraftaki kesme taş kemer izinden anlaşılır.\n\nYapıda çalıştığı düşünülen gayrimüslim sanatkârların Bizans mimarisine özgü bazı öğeleri uyguladığı görülür: kapı dört dişli ve kaval silmeli, paye ve söveler 45 derecelik gönye kesimlidir. Kapının iki yanındaki pencereler dairesel tuğla kemerli ve demir parmaklıklıdır; alt tablalarında nesih karakterli yazılar ve Fâtır suresinden ayetler vardır.\n\nYenilenen kuzeybatı duvarında sonradan açıldığı anlaşılan iki pencere bulunur; lahdin başucundaki niyaz penceresi daha büyük ve geniştir. Duvarlar üstte kirpi saçakla sonlanır. Özgünlüğünü büyük ölçüde koruyan güneydoğu duvarında bir sıra taş ve üç sıra tuğladan oluşan klasik erken Osmanlı duvar örgüsü, pahlı kenarlarında yaprak motifleri taşıyan dışa taşkın mermer yastıklar, tuğladan rozet, kum saati biçimli geçmelerden zincirli şerit ve takozlu friz kuşağı görülür.",
+  "verification": "verified",
+  "coverImage": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/exterior-front.jpg",
+  "images": [
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/exterior-front.jpg",
+      "alt": "Taş ve tuğla sıralı duvarlı, sivri piramidal külahlı türbe; önde yeşil kapı ve iki yanında parmaklıklı pencereler, solda tuğla kemerli bir duvar kalıntısı",
+      "description": "Kümbetin giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/entrance.jpg",
+      "alt": "Yakın çekim: yeşil çift kanatlı kapı, üstünde bitkisel kabartmalı beyaz mermer alınlık, iki yanda tuğla kemerli, yeşil demir parmaklıklı pencereler ve altlarında yazılı taş tablalar",
+      "description": "Kapı ve yan pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/interior-sarcophagus.jpg",
+      "alt": "Beyaz sıvalı iç mekânda yeşil örtülü tek sanduka, tavandan sarkan avize, arkada ahşap kepenkli iki pencere",
+      "description": "İç mekân ve lahit",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/exterior-conical-roof.jpg",
+      "alt": "Bir sıra taş ve tuğla sıralarıyla örülmüş kare gövde üzerinde kurşun kaplı sivri piramidal külah, çevrede çam ve servi ağaçları",
+      "description": "Piramidal külah ve almaşık duvarlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/marble-cushion.jpg",
+      "alt": "Taş ve tuğla duvar köşesinden dışa taşan, pahlı kenarında kabartma yaprak motifleri bulunan mermer yastık",
+      "description": "Yaprak motifli mermer yastık",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/exterior-conical-roof.jpg",
+      "x": 52,
+      "y": 22,
+      "title": "Piramidal külah",
+      "text": "Üst örtüsü piramidal külah biçiminde olduğu için \"kümbet\" diye anılan yapı, bilinen beş Osmanlı kümbetinden biridir. Sekizgen kasnak, köşelerdeki takozlu pandantiflere oturur.",
+      "sourceId": "inv-p621"
+    },
+    {
+      "id": "door",
+      "image": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/entrance.jpg",
+      "x": 51,
+      "y": 65,
+      "title": "Bizans etkili kapı",
+      "text": "Kapı dört dişli ve kaval silmeli biçimlendirilmiş; paye ve söveler Bizans mimarisinde sık görülen 45 derecelik gönye kesimiyle hazırlanmıştır.",
+      "sourceId": "inv-p621"
+    },
+    {
+      "id": "windows",
+      "image": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/entrance.jpg",
+      "x": 17,
+      "y": 71,
+      "title": "Pencere alt tablaları",
+      "text": "Kapının iki yanındaki pencerelerin alt tablalarında nesih karakterli girift yazılar ve Fâtır suresinden bazı ayetler bulunur.",
+      "sourceId": "inv-p621"
+    },
+    {
+      "id": "cushion",
+      "image": "/images/mustafakemalpasa-lala-sahin-pasa-tomb/marble-cushion.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Mermer yastıklar",
+      "text": "Güneydoğu cephesinde, giriş kapısının başlığında olduğu gibi pahlı kenarlarında yaprak motifleri taşıyan dışa taşkın mermer yastıklar dikkat çeker.",
+      "sourceId": "inv-p622"
+    }
+  ],
+  "test": [
+    {
+      "question": "Lala Şahin Paşa Kümbeti, bilinen kaç Osmanlı kümbetinden biri kabul edilir?",
+      "options": [
+        "Üç",
+        "Beş",
+        "Yedi",
+        "On"
+      ],
+      "correct": 1,
+      "description": "Piramidal külahı nedeniyle \"kümbet\" diye anılan yapı, bilinen beş Osmanlı kümbetinden biri kabul edilir.",
+      "sourceId": "inv-p621"
+    },
+    {
+      "question": "Kapı payeleri ve sövelerindeki 45 derecelik gönye kesimi hangi mimariye özgüdür?",
+      "options": [
+        "Selçuklu",
+        "Bizans",
+        "Gotik",
+        "Barok"
+      ],
+      "correct": 1,
+      "description": "Paye ve söveler Bizans mimarisinde sıkça rastlanan 45 derecelik gönye kesimiyle hazırlanmıştır.",
+      "sourceId": "inv-p621"
+    },
+    {
+      "question": "Özgünlüğünü koruyan güneydoğu duvarında hangi örgü sistemi görülür?",
+      "options": [
+        "Yalnız kesme taş",
+        "Bir sıra taş, üç sıra tuğla",
+        "Moloz taş ve sıva",
+        "Ahşap karkas"
+      ],
+      "correct": 1,
+      "description": "Güneydoğu cephesinde bir sıra taş ve üç sıra tuğladan oluşan klasik erken Osmanlı duvar örgü sistemi görülür.",
+      "sourceId": "inv-p622"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p620",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Lala Şahin Paşa Kümbeti\"",
+      "page": "308"
+    },
+    {
+      "id": "inv-p621",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Lala Şahin Paşa Kümbeti\"",
+      "page": "309"
+    },
+    {
+      "id": "inv-p622",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Lala Şahin Paşa Kümbeti\"",
+      "page": "310"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

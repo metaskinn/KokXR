@@ -1,0 +1,112 @@
+{
+  "id": "osmangazi-silk-han",
+  "name": "İpek Hanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Kitapta Çelebi Mehmed tarafından 1425 yılında yaptırıldığı belirtilir.",
+  "endowment": "Çelebi Mehmed; Yeşil Külliye’ye gelir sağlamak üzere vakfedilmiştir.",
+  "summary": "İpek Hanı, Yeşil Külliye’ye gelir sağlamak amacıyla yaptırılan, açık avlu çevresinde iki katlı revakları bulunan bir handır.",
+  "history": "İpek Hanı, Şehreküstü Mahallesi Ulucami Caddesi No: 77’dedir. Kitap, yapının 1425 yılında Çelebi Mehmed tarafından Yeşil Külliye ile eş zamanlı olarak, külliyeye gelir sağlamak amacıyla yaptırılıp vakfedildiğini belirtir. Mimarı Hacı İvaz Paşa’dır. Eski İpek Hanı, Yeni İpek Hanı, Sultan Hanı, Arabacılar Hanı ve Faytoncular Hanı adlarıyla da anılmıştır. İpek Hanı adı, burada bir dönem yoğun biçimde yapılan ipek ticaretini yansıtır.\n\nHan kervanların konaklaması ve yerli tacirlerin iş yeri olarak kullanması için tasarlanmıştır. Açık avlunun dört yanında iki katlı galeriler bulunur. Özgün yapıdan yalnızca batı bölümü ayaktadır. Ana kapı doğudadır; restorasyonda yapılan bugünkü kapı özgün değildir. Güneydoğudaki ikinci kapı yan sokaktan üst kata doğrudan geçiş verir. Zemin katta 39, üst katta 42 oda vardır. Batı bölümünde alt kat revakları çapraz tonoz, üst kat revakları kubbe, odalar beşik tonozla örtülüdür. Beden duvarları kaba yontma taş ve tuğlayla örülmüş; üst kat revak ayakları ve kemerleri tamamen tuğladan yapılmıştır.\n\nBilinen ilk onarım 1556’dadır; on altı oda, çatı ve saçaklar yenilenmiştir. 1632’de ocaklar, kapı kemeri ve merdivenler onarılmış, dengesi bozulan avlu mescidi kaldıraçla düzeltilmiştir. 1737, 1742 ve 1775’te de mescit, şadırvan ve başka bölümlerde tamiratlar yapılmıştır. Bir dönem oto tamirhanelerinin kullandığı han, 1958 yangınında tamamen harap olmuş; 1972-1973 yıllarında kapsamlı restorasyon geçirmiştir. Kitap, yapının dükkânlarla aktif kullanıldığını, ancak bütünlüğünün korunması için kapsamlı bir restorasyonla yeniden ele alınması gerektiğini belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-silk-han/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-silk-han/courtyard.jpg",
+      "alt": "Taş döşeli avluda şadırvan, ağaçlar ve banklar; çevrede iki kat boyunca uzanan tuğla kemerli revaklar",
+      "description": "Avlu ve iki katlı revaklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-silk-han/vaulted-arcade.jpg",
+      "alt": "Tuğla ayaklar ve kemerlerle taşınan tonozlu koridorun iki kolu, avluya açılan kemerlerden düşen güneş ışığı",
+      "description": "Tonozlu revak ayrıntısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-silk-han/courtyard.jpg",
+      "x": 63,
+      "y": 27,
+      "title": "İki katlı revaklar",
+      "text": "Han, avlu etrafına yerleştirilmiş iki katlı revaklarla çevrilidir.",
+      "sourceId": "inv-p36"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-silk-han/vaulted-arcade.jpg",
+      "x": 55,
+      "y": 58,
+      "title": "Tuğla ayaklar",
+      "text": "Üst kattaki revak ayakları ve kemerler tamamen tuğladan inşa edilmiştir.",
+      "sourceId": "inv-p38"
+    }
+  ],
+  "test": [
+    {
+      "question": "İpek Hanı’nın mimarı kimdir?",
+      "options": [
+        "Yâkub Şah bin Sultan Şah",
+        "Hacı İvaz Paşa",
+        "Abdülûlâ bin Pulad Şah",
+        "Ali bin Abdullah"
+      ],
+      "correct": 1,
+      "description": "Kitap, İpek Hanı’nın mimarını Hacı İvaz Paşa olarak belirtir.",
+      "sourceId": "inv-p35"
+    },
+    {
+      "question": "Hanın hangi bölümü özgün mimari özelliklerini korumuştur?",
+      "options": [
+        "Doğu bölümü",
+        "Güney bölümü",
+        "Kuzey bölümü",
+        "Batı bölümü"
+      ],
+      "correct": 3,
+      "description": "Özgün yapıdan yalnızca batı bölümü günümüze ulaşmıştır.",
+      "sourceId": "inv-p38"
+    },
+    {
+      "question": "1958 yangınından sonra kapsamlı restorasyon hangi yıllarda yapılmıştır?",
+      "options": [
+        "1972-1973",
+        "2006-2008",
+        "1984-1985",
+        "1632-1633"
+      ],
+      "correct": 0,
+      "description": "Han 1972-1973 yıllarında kapsamlı restorasyondan geçirilmiştir.",
+      "sourceId": "inv-p39"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p35",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İpek Hanı\"",
+      "page": "35"
+    },
+    {
+      "id": "inv-p36",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İpek Hanı\"",
+      "page": "36"
+    },
+    {
+      "id": "inv-p38",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İpek Hanı\"",
+      "page": "38"
+    },
+    {
+      "id": "inv-p39",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İpek Hanı\"",
+      "page": "39"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

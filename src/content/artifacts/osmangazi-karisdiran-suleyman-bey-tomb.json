@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-karisdiran-suleyman-bey-tomb",
+  "name": "Karışdıran (Karşıduran) Süleyman Bey Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Fâtih Sultan Mehmed döneminde defterdarlık yapan Süleyman Bey'e ait; inşa tarihi kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Muradiye Külliyesi'nin ihata duvarının batısında, Fâtih döneminin defterdarı Süleyman Bey'e ait, kriptalı ve kubbeli kare türbe.",
+  "history": "Karışdıran (Karşıduran) Süleyman Bey Türbesi, Osmangazi İlçesi, Muradiye Mahallesi, Kaplıca Caddesi üzerindedir ve Muradiye Külliyesi'ni çevreleyen ihata duvarının batı kesiminde yer alır. Türbe, Bursa ve İstanbul subaşılığı yapmış, Fâtih Sultan Mehmed döneminde defterdarlık görevinde bulunmuş Süleyman Bey'e aittir.\n\nKare planlı türbe 6,14 × 6,20 m ölçülerindedir ve yaklaşık 38 m²'lik bir alan kaplar; üzeri kubbeyle örtülüdür. Çift sıra kirpi saçakla sonlanan yapı, bir sıra kesme kalkerli küfeki taşı ile iki sıra tuğlanın arasına dikey tuğlaların yerleştirildiği düzgün bir duvar örgüsüyle inşa edilmiştir. Alt kısımdaki kriptalık ya da mumyalık katı yapının yüksekliğini artırmış, bu yüzden girişe merdivenle çıkılır.\n\nKuzey cephesi dışındaki yüzeylerde, sivri kemerli büyük silmeler içine sivri kemer alınlıklı ve mermer söveli pencereler yerleştirilmiştir. Türbe, üç cephesindeki üçer altlık ve üçer üstlük pencereyle ışık alır. Yapı 1949 ve 2010 yıllarında onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-karisdiran-suleyman-bey-tomb/facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-karisdiran-suleyman-bey-tomb/facade.jpg",
+      "alt": "Taş ve tuğla sıralarıyla örülmüş kare türbe: büyük sivri kemerli silme içinde iki dikdörtgen pencere ve üstte delikli pencere, tepede kurşun kubbe; sağda girişe çıkan taş merdiven, alt kısımda kemerli küçük bir açıklık",
+      "description": "Türbenin cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-karisdiran-suleyman-bey-tomb/interior.jpg",
+      "alt": "Beyaz iç mekân: ortada yeşil örtülü ahşap sanduka, duvarlarda ahşap kanatlı alt pencereler ve kemerli üst pencereler",
+      "description": "Sanduka ve pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "facade-molding",
+      "image": "/images/osmangazi-karisdiran-suleyman-bey-tomb/facade.jpg",
+      "x": 49,
+      "y": 32,
+      "title": "Sivri kemerli silme",
+      "text": "Kuzey dışındaki cephelerde sivri kemerli büyük silmeler içine mermer söveli pencereler yerleştirilmiştir.",
+      "sourceId": "inv-p221"
+    },
+    {
+      "id": "stairs",
+      "image": "/images/osmangazi-karisdiran-suleyman-bey-tomb/facade.jpg",
+      "x": 64,
+      "y": 84,
+      "title": "Giriş merdiveni",
+      "text": "Alttaki kriptalık ya da mumyalık katı yapının yüksekliğini artırdığından girişe merdivenle ulaşılır.",
+      "sourceId": "inv-p221"
+    },
+    {
+      "id": "windows",
+      "image": "/images/osmangazi-karisdiran-suleyman-bey-tomb/interior.jpg",
+      "x": 30,
+      "y": 26,
+      "title": "Altlık ve üstlük pencereler",
+      "text": "Türbe, üç cephesindeki üçer altlık ve üçer üstlük pencereyle doğal ışık alır.",
+      "sourceId": "inv-p221"
+    }
+  ],
+  "test": [
+    {
+      "question": "Süleyman Bey, Fâtih Sultan Mehmed döneminde hangi görevde bulunmuştur?",
+      "options": [
+        "Kadılık",
+        "Defterdarlık",
+        "Sadrazamlık",
+        "Kaptan-ı deryalık"
+      ],
+      "correct": 1,
+      "description": "Süleyman Bey, Bursa ve İstanbul subaşılığı yapmış, Fâtih döneminde defterdarlık görevinde bulunmuştur.",
+      "sourceId": "inv-p221"
+    },
+    {
+      "question": "Türbenin girişine neden merdivenle ulaşılır?",
+      "options": [
+        "Yapı bir tepenin üzerine kurulduğu için",
+        "Sonradan çevresine dolgu yapıldığı için",
+        "Altında kriptalık ya da mumyalık katı bulunduğu için",
+        "Su baskınlarına karşı yükseltildiği için"
+      ],
+      "correct": 2,
+      "description": "Alt kısımdaki kriptalık ya da mumyalık katı yapının yüksekliğini artırmış, girişe merdivenle ulaşılmasını gerekli kılmıştır.",
+      "sourceId": "inv-p221"
+    },
+    {
+      "question": "Türbe Muradiye Külliyesi'ne göre nerededir?",
+      "options": [
+        "İhata duvarının batı kesiminde",
+        "Caminin mihrap duvarına bitişik",
+        "Medresenin avlusunda",
+        "Külliyenin dışında, nehir kıyısında"
+      ],
+      "correct": 0,
+      "description": "Türbe, Muradiye Külliyesi'ni çevreleyen ihata duvarının batı kesiminde yer alır.",
+      "sourceId": "inv-p221"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p221",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Karışdıran (Karşıduran) Süleyman Bey Türbesi\"",
+      "page": "221"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

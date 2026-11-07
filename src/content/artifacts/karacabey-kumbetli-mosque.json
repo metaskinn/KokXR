@@ -1,0 +1,165 @@
+{
+  "id": "karacabey-kumbetli-mosque",
+  "name": "Kümbetli (Dünbekli-Tümbekli) Camii",
+  "city": "Bursa",
+  "district": "Karacabey",
+  "period": "XIV-XV. yüzyıl (tahmini)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kitabesi olmayan, erken Osmanlı dönemi tek kubbeli cami tiplerinden biri sayılan, devşirme malzemenin yaygın kullanıldığı cami.",
+  "history": "Karacabey'in Hamidiye Mahallesi'nde, Hasan Ünaldı Sokağı ile 27. Sokak'ın kesişiminde, No: 17'de yer alır. Halk arasında \"Tümbekli Camii\" ya da \"Dümbekli Camii\" olarak anılır. Yapının kitabesi yoktur; kim tarafından ve ne zaman yaptırıldığı kesin olarak bilinmemekle birlikte XIV-XV. yüzyıllar arasında yapıldığı düşünülmektedir. Bulunduğu yerde önce bir havra yapıldığı, sonra bunun kiliseye dönüştürüldüğü ve Osmanlı döneminde aynı alana cami inşa edildiği yönünde çeşitli görüşler vardır.\n\nYapıya dair ilk izlenimleri Andreas David Mordtmann aktarmış, bu gözlemler Frederick William Hasluck'un 1910'da yayımlanan Cyzicus adlı eserinde değerlendirilmiştir. Prof. Dr. Yıldız Ötüken de 1984'te yapı üzerine araştırma ve etüt çalışmaları yapmıştır.\n\nCami, yaklaşık 700 m²'lik hafif eğimli bir arazide, yüksek taş duvarlarla çevrili bir avlu içindedir. Kare planlı, kubbeli bir harim, batısında son cemaat mahalli, kuzeyinde ek mekân ve minareden oluşur. Beden duvarları tuğla, kaba yonu taş ve moloz taşın almaşık kullanımıyla örülmüştür; her cephede farklı örgü teknikleri görülür ve devşirme malzeme yaygındır. Kubbe kasnağı tamamen tuğladandır.\n\nBatı cephesine bitişik minare, kare kaide üzerinde yükselen silindirik tuğla gövdelidir. Özgün minarenin bir depremde yıkıldığı, bugünkünün XVIII. ya da XIX. yüzyılda yapıldığı düşünülmektedir. Cami, 2005'te tamamlanan restorasyonun ardından yeniden ibadete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/karacabey-kumbetli-mosque/exterior-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/karacabey-kumbetli-mosque/exterior-aerial.jpg",
+      "alt": "Kümbetli Camii'nin havadan görünümü: kiremit örtülü kubbe, tuğla gövdeli minare ve iki sokağın köşesinde taş duvarlı avlu",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-kumbetli-mosque/dome-minaret.jpg",
+      "alt": "Selviler arasında kiremit kubbe, taş ve tuğla örgülü duvar ve tuğla gövdeli minare",
+      "description": "Kubbe ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-kumbetli-mosque/aerial-minaret.jpg",
+      "alt": "Yukarıdan bakışta tuğla minare ve kiremit kubbe, arkada Karacabey'in evleri ve ovası",
+      "description": "Minare ve çevresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-kumbetli-mosque/aerial-top.jpg",
+      "alt": "Caminin tepeden görünümü: kiremit kubbe ve çatılar, çevresindeki evler ve sokaklar",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-kumbetli-mosque/prayer-hall.jpg",
+      "alt": "Beyaz duvarlı harim: ortada mermer mihrap, sağında ahşap minber, solda pencereler, üstte büyük avize ve turkuaz halı",
+      "description": "Harim, mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-kumbetli-mosque/annex-door.jpg",
+      "alt": "Kabartmalı taş lento ve sövelerle çevrili kapı açıklığı; içeride halı kaplı merdiven",
+      "description": "Ek mekâna geçiş kapısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-kumbetli-mosque/spolia-detail.jpg",
+      "alt": "Sıra sıra yumurta, kıvrık dal ve yaprak motifleri işlenmiş eski bir taş bezemenin yakın görünümü",
+      "description": "Taş bezeme ayrıntısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/karacabey-kumbetli-mosque/exterior-aerial.jpg",
+      "x": 55,
+      "y": 50,
+      "title": "Kubbe",
+      "text": "7,47 × 7,47 m ölçülerindeki kare harim, Türk üçgenleriyle sekizgene geçilen bir kasnağa oturan kubbeyle örtülüdür. Kubbenin dış yüzeyi kiremitle kaplanmıştır.",
+      "sourceId": "inv-p523"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/karacabey-kumbetli-mosque/exterior-aerial.jpg",
+      "x": 37,
+      "y": 30,
+      "title": "Minare",
+      "text": "Batı cephesine bitişik minare, kare kaide üzerinde silindirik tuğla gövdeli ve tek şerefelidir. Özgün minarenin depremde yıkıldığı, bugünkünün XVIII. ya da XIX. yüzyılda yapıldığı düşünülmektedir.",
+      "sourceId": "inv-p524"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/karacabey-kumbetli-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 55,
+      "title": "Mihrap ve minber",
+      "text": "Tamamen mermerden, dışa taşkın ve yarım daire formlu mihrabın alınlığında Âl-i İmrân suresinin 37. ayeti yazılıdır. Minber ahşaptan ve sadedir.",
+      "sourceId": "inv-p523"
+    },
+    {
+      "id": "annex-door",
+      "image": "/images/karacabey-kumbetli-mosque/annex-door.jpg",
+      "x": 50,
+      "y": 35,
+      "title": "Ek mekânın kapısı",
+      "text": "Harimin kuzeyindeki ek mekâna, lentosu ve söveleri Roma Dönemi'ne tarihlenen düşey dikdörtgen bir açıklıktan geçilir.",
+      "sourceId": "inv-p524"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kümbetli Camii'nin ne zaman yapıldığı düşünülmektedir?",
+      "options": [
+        "XII. yüzyılda",
+        "XIV-XV. yüzyıllar arasında",
+        "XVII. yüzyılda",
+        "XIX. yüzyılda"
+      ],
+      "correct": 1,
+      "description": "Kitabesi olmayan yapının XIV-XV. yüzyıllar arasında yapıldığı düşünülmektedir.",
+      "sourceId": "inv-p521"
+    },
+    {
+      "question": "Kubbe kasnağı hangi malzemeyle yapılmıştır?",
+      "options": [
+        "Tamamen tuğladan",
+        "Mermerden",
+        "Ahşaptan",
+        "Kesme taştan"
+      ],
+      "correct": 0,
+      "description": "Beden duvarlarında tuğla, kaba yonu taş ve moloz taş almaşık kullanılmış; kubbe kasnağı ise tamamen tuğladan yapılmıştır.",
+      "sourceId": "inv-p522"
+    },
+    {
+      "question": "Cami hangi yıl tamamlanan restorasyonun ardından yeniden ibadete açılmıştır?",
+      "options": [
+        "1910",
+        "1984",
+        "2005",
+        "1971"
+      ],
+      "correct": 2,
+      "description": "Cami 2005'te tamamlanan restorasyon çalışmalarının ardından yeniden ibadete açılmıştır.",
+      "sourceId": "inv-p524"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p521",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Kümbetli (Dünbekli-Tümbekli) Camii\"",
+      "page": "209"
+    },
+    {
+      "id": "inv-p522",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Kümbetli (Dünbekli-Tümbekli) Camii\"",
+      "page": "210"
+    },
+    {
+      "id": "inv-p523",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Kümbetli (Dünbekli-Tümbekli) Camii\"",
+      "page": "211"
+    },
+    {
+      "id": "inv-p524",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Kümbetli (Dünbekli-Tümbekli) Camii\"",
+      "page": "212"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

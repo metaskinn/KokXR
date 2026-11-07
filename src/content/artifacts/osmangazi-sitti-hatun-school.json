@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-sitti-hatun-school",
+  "name": "Sitti Hatun (Kanberler) Mektebi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1459",
+  "endowment": "Sitti Hatun",
+  "summary": "Zağanos Paşa'nın eşi Sitti Hatun'un 1459'da cami ve çeşmeyle birlikte yaptırdığı, yan yana iki kubbeli bölümden oluşan sıbyan mektebi.",
+  "history": "Mektep, Osmangazi ilçesi Ebuishak Mahallesi'nde, Sıdıka Hatun Caddesi üzerindeki Kanberler Parkı içindedir.\n\nSitti Hatun, Kara Timurtaş Paşa'nın oğlu Oruç Bey'in kızı ve Fâtih Sultan Mehmed'in vezirlerinden Zağanos Paşa'nın eşidir. Kanberler Mahallesi'nde bir cami, bir mektep ve bir çeşme yaptırmıştır. 16. yüzyılın ilk çeyreğine ait kaynaklarda mektebin öğretmenine günlük 4 akçe maaş verildiği kaydedilir.\n\n1459'da cami ve çeşmeyle birlikte inşa edilen mektep, yan yana iki kubbeli bölümden oluşur. Beden duvarları iki sıra tuğla ve iki sıra kaba yonu taşla örülmüştür; duvarların üstündeki iki sıralı kirpi saçak kurşunla kaplıdır. Çifte kubbeler de kurşun kaplıdır; sekizgen kasnakları üç sıra tuğla ve bir sıra kesme küfeki taşıyla örülmüş, iki sıra kirpi saçakla sonlandırılmıştır. Doğu bölümünde bir ocak ve üzerinde tuğla bir baca vardır. Batı bölümü eyvan biçimindedir; cephesi sivri kemerli açıklık içine alınmış Bursa kemeriyle belirginleşir, köşelerdeki tuğla süslemeler de dikkat çeker. Plan şeması, klasik sıbyan mekteplerinde olduğu gibi yazlık ve kışlık kullanım düşünülerek tasarlandığını gösterir.\n\nKuruluşundan beri çeşitli onarımlar geçiren mektep, 1845'te kapsamlı bir müdahale görmüştür. 1956 ve 1962'de Bursa Eski Eserleri Sevenler Kurumu tarafından özgün özelliklerine uygun biçimde restore edilmiş, bu sırada duvarla çevrilerek bir avlu içine alınmıştır. Kanberler Mahallesi, Osmangazi Belediyesi'nin \"Kızyakup Kent Parkı Kentsel Tasarım ve Mimari Projesi\" kapsamında ele alınmış ve çevresi çağdaş bir kent parkına dönüştürülmüştür.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sitti-hatun-school/school-and-mosque.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sitti-hatun-school/school-and-mosque.jpg",
+      "alt": "Kurşun kaplı yan yana iki kubbesi olan taş-tuğla mektep binası, sağ arkada tek kubbeli ve tuğla minareli cami, önde taş döşeli meydan ve servi ağaçları, uzakta dağlar",
+      "description": "Mektep ve Sitti Hatun Camii",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sitti-hatun-school/fireplace-room.jpg",
+      "alt": "Beyaz duvarlı iç mekân: köşede sivri külahlı beyaz ocak, duvar boyunca koyu renk oturma minderleri, yerde pembe-turkuaz halı, sivri kemerli pencereler ve renkli camlı üst pencere",
+      "description": "Ocaklı iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sitti-hatun-school/aerial-domes.jpg",
+      "alt": "Tam tepeden görünüm: sağda yan yana iki kurşun kubbeli mektep, solda tek büyük kurşun kubbeli cami ve minare, aralarında taş döşeli avlu ve park yolları",
+      "description": "Tepeden çifte kubbeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "double-domes",
+      "image": "/images/osmangazi-sitti-hatun-school/school-and-mosque.jpg",
+      "x": 29,
+      "y": 46,
+      "title": "Çifte kubbe",
+      "text": "Mektep yan yana iki kubbeli bölümden oluşur. Kubbeler kurşunla kaplıdır; sekizgen kasnakları üç sıra tuğla ve bir sıra kesme küfeki taşıyla örülmüştür.",
+      "sourceId": "inv-p579"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-sitti-hatun-school/school-and-mosque.jpg",
+      "x": 22,
+      "y": 70,
+      "title": "Beden duvarları",
+      "text": "Beden duvarları iki sıra tuğla ve iki sıra kaba yonu taşla örülmüştür; üstteki iki sıralı kirpi saçak kurşunla kaplıdır.",
+      "sourceId": "inv-p579"
+    },
+    {
+      "id": "fireplace",
+      "image": "/images/osmangazi-sitti-hatun-school/fireplace-room.jpg",
+      "x": 67,
+      "y": 45,
+      "title": "Ocak",
+      "text": "Doğu bölümünde bir ocak ve üzerinde tuğladan bir baca vardır. Plan, klasik sıbyan mekteplerinde olduğu gibi yazlık ve kışlık kullanım düşünülerek tasarlanmıştır.",
+      "sourceId": "inv-p579"
+    }
+  ],
+  "test": [
+    {
+      "question": "Sitti Hatun kimin eşidir?",
+      "options": [
+        "Lala Şâhin Paşa'nın",
+        "Kara Timurtaş Paşa'nın",
+        "Zağanos Paşa'nın",
+        "Oruç Bey'in"
+      ],
+      "correct": 2,
+      "description": "Sitti Hatun, Oruç Bey'in kızı ve Fâtih Sultan Mehmed'in vezirlerinden Zağanos Paşa'nın eşidir.",
+      "sourceId": "inv-p579"
+    },
+    {
+      "question": "16. yüzyılın ilk çeyreğine ait kaynaklara göre mektebin öğretmenine ne kadar maaş verilirdi?",
+      "options": [
+        "Günlük 4 akçe",
+        "Günlük 20 akçe",
+        "Aylık 1 altın",
+        "Haftalık 10 akçe"
+      ],
+      "correct": 0,
+      "description": "Kaynaklarda mektebin öğretmenine günlük 4 akçe maaş verildiği kaydedilir.",
+      "sourceId": "inv-p579"
+    },
+    {
+      "question": "Mektebin batı bölümü hangi biçimde tasarlanmıştır?",
+      "options": [
+        "Kapalı kubbeli oda",
+        "Açık avlu",
+        "Revaklı hücre",
+        "Eyvan"
+      ],
+      "correct": 3,
+      "description": "Batı bölümü eyvan biçimindedir; cephesi sivri kemerli açıklık içine alınmış Bursa kemeriyle belirginleşir.",
+      "sourceId": "inv-p579"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p579",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Sitti Hatun (Kanberler) Mektebi\"",
+      "page": "89"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

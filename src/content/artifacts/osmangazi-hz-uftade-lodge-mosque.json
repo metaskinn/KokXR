@@ -1,0 +1,130 @@
+{
+  "id": "osmangazi-hz-uftade-lodge-mosque",
+  "name": "Hz. Üftâde Tekke Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 974 / M. 1566 (Hu Çeşmesi kitabesi)",
+  "endowment": "Üftâde Hazretleri'nin kendi bütçesiyle yaptırdığı tekke",
+  "summary": "Üftâde Dergâhı'nın tevhidhanesi olarak yapılan ve minber eklenerek camiye dönüştürülen, Uludağ yamacındaki küçük tekke mescidi.",
+  "history": "Hz. Üftâde Tekke Camii, Osmangazi İlçesi, Molla Fenari Mahallesi, Derman Caddesi No: 28'deki Üftade Tekkesi'nin bünyesindedir. Üftâde Hazretleri'nin kendi bütçesiyle yaptırdığı tekkenin Hu Çeşmesi'ndeki ayna taşına işlenmiş H. 974 / M. 1566 tarihi, yapının Üftade Dergâhı'nın tevhidhanesi olarak inşa edildiğini gösterir.\n\nUludağ'ın güney yamaçlarında, Bursa'ya hâkim eğimli ve dik bir arazide kurulan tekkedeki cami bugün de ibadete açıktır. 6,88 × 6,56 m ölçülerinde, kareye yakın dikdörtgen planlı tekke mescidi, minber eklenerek camiye dönüştürülmüştür.\n\nEğimli arazi taş duvarlarla yükseltilerek zeminden kot farkı sağlanmış; yapı küfeki taşı ve tuğlayla inşa edilmiştir. Duvar kalınlığı 70 cm'dir. Girişin solundaki, içeriden kepenkli ve dışarıdan taş kasa içinde demir parmaklıklarla korunan üç pencere mekânı aydınlatır; üstlerinde vitraylı üç pencere daha vardır. Üst pencere dizisi mihrabın üzerinde sağlı sollu ikişer pencereyle devam eder.\n\nSon onarımda yenilenen iki renkli ahşap tavan, kalem işi geçme çokgen yıldızlarla süslüdür; ortadaki tavan göbeği kare formlu, çok renkli on iki köşeli bir yıldızdan başlayarak açılır. İzlerinden II. Mahmud dönemine ait olduğu anlaşılan 9,80 × 9,70 m ölçülerindeki semahane, çatıları birleştirilerek mescidin son cemaat yeri olarak düzenlenmiştir.\n\nAsıl ibadet mekânının giriş kapısı yenilenmiştir; mihrabın karşısındaki kitabeli ahşap kasa ve pervaz ise özgün niteliklerini korur. Kapı üzerindeki kitabede sülüs hatla kelime-i tevhid yazılıdır. Mihrap, mavi ve tonlarıyla süslenmiş, bitkisel motifli dairesel bir nişten oluşur. Minareye caminin doğusundaki müezzin mahfilinden ahşap bir merdivenle çıkılır; kısa minarenin gövdesi tuğladan örülmüş, şerefesi altı sıra mukarnasla bezenmiştir.\n\n2009–2014 arasındaki son restorasyonda ahşap kısımlar sökülerek ayrı bir atölyede özgün yapısı bozulmadan bakımdan geçirilmiştir. Caminin düzgün kesme taştan duvar örgüsü ise hatalı bir uygulamayla sıvanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hz-uftade-lodge-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hz-uftade-lodge-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: yamaçta kiremit çatılı tekke yapıları, küçük minareli beyaz cami ve önündeki avlu; arkada Bursa'ya yayılan evler",
+      "description": "Tekkenin Uludağ yamacındaki konumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hz-uftade-lodge-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi desenli çerçeveli mihrap nişi, sağda ahşap minber, solda ahşap kürsü; vitraylı pencereler ve koyu zeminli yıldız desenli tavan",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hz-uftade-lodge-mosque/ceiling.jpg",
+      "alt": "Tavanın aşağıdan görünümü: koyu ve açık renkli geçme yıldız desenleri, ortada renkli kare göbek ve önünde sarkan dövme metal avize",
+      "description": "Kalem işi ahşap tavan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hz-uftade-lodge-mosque/entrance-door.jpg",
+      "alt": "Beyaz duvarda yaldız süslemeli çift kanatlı ahşap kapı; üstünde koyu zemin üzerine altın renkli yazılı kitabe kuşağı",
+      "description": "Kitabeli ahşap kapı kasası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-hz-uftade-lodge-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Mihrap, mavi ve tonlarıyla süslenmiş, bitkisel motifli dairesel bir nişten oluşur.",
+      "sourceId": "inv-p457"
+    },
+    {
+      "id": "ceiling",
+      "image": "/images/osmangazi-hz-uftade-lodge-mosque/ceiling.jpg",
+      "x": 13,
+      "y": 17,
+      "title": "Geçme yıldızlı tavan",
+      "text": "Son onarımda yenilenen ahşap tavan, iki renkli kalem işi geçme çokgen yıldızlarla süslenmiştir.",
+      "sourceId": "inv-p456"
+    },
+    {
+      "id": "door-inscription",
+      "image": "/images/osmangazi-hz-uftade-lodge-mosque/entrance-door.jpg",
+      "x": 51,
+      "y": 18,
+      "title": "Kelime-i tevhid kitabesi",
+      "text": "Özgün niteliklerini koruyan ahşap kasanın üzerindeki kitabede sülüs hatla kelime-i tevhid yazılıdır.",
+      "sourceId": "inv-p457"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tekke mescidinin yapım tarihini gösteren H. 974 / M. 1566 tarihi nerede yer alır?",
+      "options": [
+        "Minare kaidesinde",
+        "Hu Çeşmesi'nin ayna taşında",
+        "Mihrap nişinde",
+        "Tavan göbeğinde"
+      ],
+      "correct": 1,
+      "description": "Tekkenin Hu Çeşmesi'nin ayna taşına işlenmiş kitabedeki H. 974 / M. 1566 tarihi, yapının tevhidhane olarak inşa edildiğini gösterir.",
+      "sourceId": "inv-p455"
+    },
+    {
+      "question": "Tekke mescidi ne eklenerek camiye dönüştürülmüştür?",
+      "options": [
+        "Minare",
+        "Kubbe",
+        "Şadırvan",
+        "Minber"
+      ],
+      "correct": 3,
+      "description": "6,88 × 6,56 m ölçülerindeki tekke mescidi, minber eklenerek camiye dönüştürülmüştür.",
+      "sourceId": "inv-p455"
+    },
+    {
+      "question": "II. Mahmud dönemine ait semahane bugün hangi işlevle kullanılır?",
+      "options": [
+        "Son cemaat yeri",
+        "Kütüphane",
+        "Türbe",
+        "Medrese"
+      ],
+      "correct": 0,
+      "description": "9,80 × 9,70 m ölçülerindeki semahane, çatıları birleştirilerek son cemaat yeri olarak düzenlenmiştir.",
+      "sourceId": "inv-p456"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p455",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hz. Üftâde Tekke Camii\"",
+      "page": "455"
+    },
+    {
+      "id": "inv-p456",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hz. Üftâde Tekke Camii\"",
+      "page": "456"
+    },
+    {
+      "id": "inv-p457",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hz. Üftâde Tekke Camii\"",
+      "page": "457"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

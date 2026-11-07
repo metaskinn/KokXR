@@ -1,0 +1,148 @@
+{
+  "id": "iznik-kirgizlar-tomb",
+  "name": "Kırgızlar Türbesi",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Erken Osmanlı döneminin etkilerini taşır; inşa kitabesi günümüze ulaşmamıştır",
+  "endowment": "Kitapta belirtilmemiştir; inşa kitabesi günümüze ulaşmamıştır",
+  "summary": "İznik surlarının Yenişehir Kapısı çıkışında, tonozlu giriş eyvanı ve yüksek kasnaklı kubbeli mekândan oluşan kitabesiz mezar anıtı.",
+  "history": "Türbe İznik'in Selçuk Mahallesi'nde, surların Yenişehir Kapısı çıkışındadır. Erken Osmanlı döneminin etkilerini taşıyan yapı, Selçuklu üslubu ile natüralist süsleme anlayışının birlikte görüldüğü özgün bir mezar anıtıdır. Aynı eksen üzerinde tonoz örtülü bir giriş eyvanı ve arkasında yüksek kasnağa oturan kubbeli bir mekândan oluşur; ana yapı taş ve tuğla ile inşa edilmiştir.\n\nTürbenin inşa kitabesi günümüze ulaşmamıştır. Ancak yalnız bir eyvanına çok sayıda kişinin defnedilmiş olması, burada yatan kişinin dönemi için önemli bir şahsiyet olduğunu düşündürür. Kubbeli bölümde yedi büyük ve bir çocuk lahdi olmak üzere sekiz sanduka vardır; hepsi sıvalı ve kitabesizdir.\n\nKubbeli mekânın üst pencere kenarlarında ve kubbe yüzeyinde kalem işi süslemeler bulunur. Doğu ve güney pencereleri kıvrık dallar ve rumilerle, kuzey penceresi ise kıvrık dallar, hatayiler ve çiçeklerle çevrili, bir yılanın dolandığı sütun üzerinde meyve dolu bir vazo sahnesiyle süslenmiştir; kubbede yıldız biçimli bir rozet vardır. Ali Sâim Ülgen, yapının Türklerin İznik'i fethinden sonra bir Türk nezaretinde Bizanslı ustalara yaptırılmış olabileceğini ileri sürer.\n\nYapı 2006-2007 yıllarında kapsamlı bir restorasyondan geçmiştir. Bu kapsamda doğu cephesine bir \"Kırgız askeri\" heykeli yerleştirilmiş, iç mekândaki lahitler yeniden düzenlenmiş ve türbe girişi aslına uygun biçimde yeniden ele alınmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-kirgizlar-tomb/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-kirgizlar-tomb/aerial-view.jpg",
+      "alt": "Servi ağaçları arasında taş ve tuğla örgülü türbe: önde kiremit çatılı giriş eyvanı, arkada kasnak üzerinde kiremit kaplı kubbe; geride zeytinlikler ve dağlar",
+      "description": "Havadan türbe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-kirgizlar-tomb/distant-view.jpg",
+      "alt": "Uzaktan görünüm: yol kenarında duvarla çevrili bahçe içinde kubbeli türbe, çevresinde zeytinlikler ve geride yerleşim ile dağlar",
+      "description": "Türbe ve çevresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-kirgizlar-tomb/entrance-iwan.jpg",
+      "alt": "Tonozlu giriş eyvanı: iki yanda yeşil örtülü, desenli kilimli sandukalar, ortada kırmızı halı, ileride ferforje kapı",
+      "description": "Giriş eyvanı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-kirgizlar-tomb/domed-chamber.jpg",
+      "alt": "Kubbeli mekânın içi: yeşil örtülü sandukalar, ortada kırmızı halı, arkadaki nişte kırmızı bayrak; üstte kalem işi bezemeli pencere",
+      "description": "Kubbeli mekân ve sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-kirgizlar-tomb/kyrgyz-soldier-statue.jpg",
+      "alt": "Taş-tuğla kaide üzerinde kollarını kavuşturmuş, yaylı ve kalkanlı bronz renkli asker heykeli; arkada türbenin taş ve tuğla duvarı",
+      "description": "Kırgız askeri heykeli",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-kirgizlar-tomb/top-view.jpg",
+      "alt": "Türbenin tam tepeden görünümü: dilimli kiremit kubbe, önündeki dikdörtgen kiremit çatı ve çevredeki servi ağaçları",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/iznik-kirgizlar-tomb/aerial-view.jpg",
+      "x": 57,
+      "y": 45,
+      "title": "Kubbeli mekân",
+      "text": "Yapının arka bölümü yüksek bir kasnak üzerine oturtulmuş kubbeli bir mekândır. Ana yapı taş ve tuğla ile inşa edilmiştir.",
+      "sourceId": "inv-p474"
+    },
+    {
+      "id": "iwan",
+      "image": "/images/iznik-kirgizlar-tomb/entrance-iwan.jpg",
+      "x": 50,
+      "y": 20,
+      "title": "Tonozlu giriş eyvanı",
+      "text": "Kubbeli mekânla aynı eksen üzerinde tonoz örtülü bir giriş eyvanı bulunur. Yalnız bir eyvanına çok sayıda kişinin defnedilmiş olması, burada yatan kişinin dönemi için önemli bir şahsiyet olduğunu düşündürür.",
+      "sourceId": "inv-p474"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/iznik-kirgizlar-tomb/domed-chamber.jpg",
+      "x": 25,
+      "y": 75,
+      "title": "Kitabesiz sandukalar",
+      "text": "Kubbeli bölümde yedi büyük ve bir çocuk lahdi olmak üzere sekiz sanduka vardır; hepsi sıvalı ve kitabesizdir.",
+      "sourceId": "inv-p474"
+    },
+    {
+      "id": "painted-window",
+      "image": "/images/iznik-kirgizlar-tomb/domed-chamber.jpg",
+      "x": 48,
+      "y": 13,
+      "title": "Kalem işi süslemeler",
+      "text": "Üst pencere kenarlarında ve kubbe yüzeyinde kalem işi süslemeler vardır. Doğu ve güney pencereleri kıvrık dallar ve rumilerle, kuzey penceresi yılan dolanmış bir sütun üzerinde meyve dolu vazo sahnesiyle süslenmiştir.",
+      "sourceId": "inv-p476"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kubbeli bölümde kaç sanduka bulunmaktadır?",
+      "options": [
+        "Sekiz",
+        "Beş",
+        "On dört",
+        "Üç"
+      ],
+      "correct": 0,
+      "description": "Kubbeli bölümde yedi büyük ve bir çocuk lahdi olmak üzere sekiz sanduka vardır; hepsi sıvalı ve kitabesizdir.",
+      "sourceId": "inv-p474"
+    },
+    {
+      "question": "2006-2007 restorasyonunda türbenin doğu cephesine ne yerleştirilmiştir?",
+      "options": [
+        "Bir \"Kırgız askeri\" heykeli",
+        "Bir inşa kitabesi",
+        "Bir çeşme",
+        "Çini bir pano"
+      ],
+      "correct": 0,
+      "description": "Restorasyon kapsamında doğu cephesine bir \"Kırgız askeri\" heykeli yerleştirilmiş, lahitler yeniden düzenlenmiş ve giriş aslına uygun biçimde ele alınmıştır.",
+      "sourceId": "inv-p476"
+    },
+    {
+      "question": "Kubbe yüzeyinde hangi motif bulunmaktadır?",
+      "options": [
+        "Yıldız biçimli bir rozet",
+        "Esmâ-i hüsnâ yazısı",
+        "Mukarnas",
+        "Çini kaplama"
+      ],
+      "correct": 0,
+      "description": "Kubbeli mekânın kubbesinde kalem işi yıldız biçimli bir rozet motifi bulunmaktadır.",
+      "sourceId": "inv-p476"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p474",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Kırgızlar Türbesi\"",
+      "page": "84"
+    },
+    {
+      "id": "inv-p476",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Kırgızlar Türbesi\"",
+      "page": "86"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

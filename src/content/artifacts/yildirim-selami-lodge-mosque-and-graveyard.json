@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-selami-lodge-mosque-and-graveyard",
+  "name": "Selami Dergâhı Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 1090 / M. 1679",
+  "endowment": "Banisi Celvetiyye şeyhi Selâmi Ali Efendi",
+  "summary": "Selâmi Ali Efendi’nin 1679’da kurduğu, tevhidhanesi 2020’de yeniden yapılan dergâh camisi.",
+  "history": "Namazgâh Mahallesi, Türe Sokak'taki dergâhı Celvetiyye şeyhi Selâmi Ali Efendi 1679'da yaptırmıştır. Selâmi Ali Efendi Bursa'dan sonra İstanbul'daki Aziz Mahmud Hüdâyî Dergâhı'nda görev yapmış; 1692'de vefat ederek Kısıklı'daki dergâhına defnedilmiştir. Bursa dergâhında son postnişin Hacı Hakkı Efendi'ye kadar 11 şeyh hizmet vermiştir. Kitap dergâhın “1925 yılına dek üç asırdan fazla” faaliyet gösterdiğini belirtir. Günümüze yalnız tevhidhane kısmı ulaşmış, Vakıflar Genel Müdürlüğü mülkiyetindeki yapı bir dönem konut olarak kiralanmıştır. Kitap minare kaidesini hem sekizgen, iki sıra tuğla-bir sıra moloz taş örgülü olarak hem de restorasyon anlatımında moloz taş kaide olarak tanımlar. 2020 restorasyonuyla tevhidhane yeniden yapılmış, hazire düzenlenmiş ve yapı ibadethane olarak açılmıştır. Minare silindirik tuğla gövdeli ve kurşun konik külahlıdır. Bahçedeki bir bina Aile Sağlığı Merkezi olarak kullanılır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-selami-lodge-mosque-and-graveyard/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-selami-lodge-mosque-and-graveyard/exterior-view.jpg",
+      "alt": "İki katlı beyaz cephe, kiremit çatı, sağda tuğla minare ve önde geniş merdiven",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-selami-lodge-mosque-and-graveyard/detail-view.jpg",
+      "alt": "Mavi halılı ve ahşap tavanlı harim; ahşap çerçeveli mihrap, minber ve kemerli pencereler",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-selami-lodge-mosque-and-graveyard/exterior-view.jpg",
+      "x": 62,
+      "y": 39,
+      "title": "Tuğla minare",
+      "text": "Restorasyon anlatımında minare silindirik tuğla gövdeli olarak tarif edilir.",
+      "sourceId": "inv-p513"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-selami-lodge-mosque-and-graveyard/exterior-view.jpg",
+      "x": 62,
+      "y": 17,
+      "title": "Kurşun külah",
+      "text": "Minare kurşun kaplı konik külahla sonlanmaktadır.",
+      "sourceId": "inv-p513"
+    }
+  ],
+  "test": [
+    {
+      "question": "Selami Dergâhı Camii ve Haziresi Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Yıldırım",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 1,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p512"
+    },
+    {
+      "question": "Dergâh hangi tasavvuf geleneğiyle ilişkilidir?",
+      "options": [
+        "Mevleviyye",
+        "Zeyniyye",
+        "Celvetiyye",
+        "Kadiriyye"
+      ],
+      "correct": 2,
+      "description": "Celvetiyye.",
+      "sourceId": "inv-p512"
+    },
+    {
+      "question": "Kitaba göre tuğla minare hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir",
+        "Restorasyon anlatımında minare silindirik tuğla gövdeli olarak tarif edilir"
+      ],
+      "correct": 3,
+      "description": "Restorasyon anlatımında minare silindirik tuğla gövdeli olarak tarif edilir.",
+      "sourceId": "inv-p513"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p512",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Selami Dergâhı Camii ve Haziresi\"",
+      "page": "512"
+    },
+    {
+      "id": "inv-p513",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Selami Dergâhı Camii ve Haziresi\"",
+      "page": "513"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

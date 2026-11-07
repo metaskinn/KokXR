@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-yer-kapi-mosque",
+  "name": "Yer Kapı (Kara Ali Paşa - Bab-ı Zemin) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XIV. yüzyıl (vakıf kayıtlarına göre Kara Ali Bey'e bağlanır)",
+  "endowment": "Vakıf kayıtlarına göre Kara Timurtaş Paşa'nın babası Kara Ali Bey'e bağlanır",
+  "summary": "Hisar içinde, kale kapılarından Yer Kapı'nın yakınında bulunan, Kara Ali Bey'e bağlanan kurşun kaplı tek kubbeli cami.",
+  "history": "Yer Kapı (Kara Ali Paşa - Bab-ı Zemin) Camii, Osmangazi İlçesi, Kavaklı Mahallesi, Yerkapı Caddesi No: 1'dedir. Hisar içindeki cami, kale kapılarından \"Yer Kapı\" (Bab-ı Zemin) yakınında bulunduğu için bu adla anılır. Vakıf kayıtlarına göre, XIV. yüzyılda Osman Gazi ve Orhan Gazi dönemlerinde yaşamış ünlü emirlerden Kara Timurtaş Paşa'nın babası Kara Ali Bey tarafından yaptırıldığına dair görüşler vardır; bu yüzden \"Kara Ali Camii\" olarak da bilinir.\n\nBeden duvarları üç sıra moloz taş ve bir sıra tuğlayla almaşık teknikte örülmüştür; kubbe kasnakları, kalkan duvarlar ve beden duvarlarının çatı hizaları kirpi saçakla sonlanır. Kirpi saçakların altındaki tuğla bezemeler dikkat çeker.\n\nCaminin doğusunda 5 m derinliğinde, ahşap tavanlı ve kalkan duvarlarla çevrili son cemaat mahalli bulunur. Yuvarlak kemerli dört ahşap açıklıkla sonlanan bu bölüme en doğudaki kemerin altından girilir. Mekân içinde hanımlar için ayrılmış bir bölüm de vardır.\n\n8,00 × 8,00 m iç ölçülerindeki kare planlı harim, Türk üçgenleriyle geçilen sekizgen kasnağa oturan kurşun kaplı bir kubbeyle örtülüdür. Kubbe ve duvarlar beyaz sıvalıdır. Batı duvarında sivri kemerli alınlıklı iki dikdörtgen alt pencere, mihrabın sağ ve solunda nefeslik işlevli, alçı şebekeli iki küçük pencere bulunur. Doğu duvarında son cemaat mahalline açılan daha geniş bir pencere vardır; kuzey duvarındaki alt pencere sağırlaştırılarak dolap yapılmıştır. Kasnaktaki geniş üstlük pencereler sivri kemerli ve alçı şebekelidir.\n\nKitaba göre mihrap ve kürsü ahşap malzemedendir. Dikdörtgen çerçeve içinde altı sıra mukarnasla süslenen mihrap nişi bezemesiz ve beyaz sıvalıdır.\n\nKuzeydoğu köşedeki minareye son cemaat mahallinden geçilerek ulaşılır. Minare üç sıra tuğla ve bir sıra küfeki taşla örülmüş kaide üzerindedir; silindirik gövdesi tuğladandır, şerefe altı sekiz sıra tuğla dizisiyle bezenmiştir ve sivri konik külahı kurşun kaplıdır.\n\n1855'teki büyük depremde kubbesi çöken cami, bir süre ahşap kırma çatılı ve kiremit örtülü olarak onarılmış ve depo olarak kullanılmıştır. Sonraki onarımlarla yeniden mescit olarak kullanılmaya başlanmıştır. 1967'de Bursa Eski Eserleri Sevenler Kurumu, 2015-2016'da Vakıflar Müdürlüğü tarafından kapsamlı biçimde restore edilerek bugünkü görünümüne kavuşmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-yer-kapi-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-yer-kapi-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: moloz taş ve tuğla duvarlı, sekizgen kasnak üzerinde kurşun kaplı kubbeli cami; önünde yeşil tenteli son cemaat yeri, sağında tuğla gövdeli minare; arkada apartmanlar ve yamaçlar",
+      "description": "Caminin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-yer-kapi-mosque/view-toward-citadel.jpg",
+      "alt": "Yüksekten görünüm: önde kurşun kubbeli cami ve tuğla minaresi, sağ arkada kale surları ve burç, uzakta Bursa ovası ve dağlar",
+      "description": "Hisar içindeki konumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-yer-kapi-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı halılı harim, beyaz sıvalı duvarlar, ortada mukarnaslı beyaz mihrap nişi, sağda ahşap minber, mihrabın iki yanında küçük pencereler",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-yer-kapi-mosque/aerial-view.jpg",
+      "x": 46,
+      "y": 53,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Kare planlı harim, Türk üçgenleriyle geçilen sekizgen kasnağa oturan kurşun kaplı kubbeyle örtülüdür.",
+      "sourceId": "inv-p479"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-yer-kapi-mosque/aerial-view.jpg",
+      "x": 68,
+      "y": 45,
+      "title": "Minare",
+      "text": "Silindirik gövdesi tuğladan olan minarenin şerefe altı sekiz sıra tuğla dizisiyle bezenmiş, külahı kurşun kaplıdır.",
+      "sourceId": "inv-p479"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-yer-kapi-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 47,
+      "title": "Mukarnaslı mihrap",
+      "text": "Dikdörtgen çerçeve içinde altı sıra mukarnasla süslenen mihrap nişi bezemesiz ve beyaz sıvalıdır.",
+      "sourceId": "inv-p479"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami adını nereden almıştır?",
+      "options": [
+        "Kale kapılarından Yer Kapı'ya (Bab-ı Zemin) yakınlığından",
+        "Bir yeraltı çeşmesinden",
+        "Banisinin lakabından",
+        "Zemin katında bulunmasından"
+      ],
+      "correct": 0,
+      "description": "Hisar içindeki cami, kale kapılarından Yer Kapı'nın (Bab-ı Zemin) yakınında olduğu için bu adla anılır.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "question": "1855 depreminde kubbesi çöken cami bir süre ne olarak kullanılmıştır?",
+      "options": [
+        "Okul",
+        "Depo",
+        "Han",
+        "Hamam"
+      ],
+      "correct": 1,
+      "description": "Kubbesi çöken cami bir süre ahşap kırma çatılı ve kiremit örtülü olarak onarılıp depo olarak kullanılmıştır.",
+      "sourceId": "inv-p480"
+    },
+    {
+      "question": "Mihrap nişi kaç sıra mukarnasla süslenmiştir?",
+      "options": [
+        "Üç",
+        "Dört",
+        "Sekiz",
+        "Altı"
+      ],
+      "correct": 3,
+      "description": "Mihrap nişi dikdörtgen çerçeve içinde altı sıra mukarnasla süslenmiştir.",
+      "sourceId": "inv-p479"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p478",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Yer Kapı (Kara Ali Paşa - Bab-ı Zemin) Camii\"",
+      "page": "478"
+    },
+    {
+      "id": "inv-p479",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Yer Kapı (Kara Ali Paşa - Bab-ı Zemin) Camii\"",
+      "page": "479"
+    },
+    {
+      "id": "inv-p480",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Yer Kapı (Kara Ali Paşa - Bab-ı Zemin) Camii\"",
+      "page": "480"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

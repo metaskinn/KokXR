@@ -1,0 +1,111 @@
+{
+  "id": "yenisehir-haci-hasan-mosque",
+  "name": "Hacı Hasan Camii",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "XVI. yüzyıl · 1565",
+  "endowment": "Ayşe Hatun (Nişancı Mehmet Paşa'nın annesi)",
+  "summary": "Ayşe Hatun'un 1565'te babası Hıdır Bey adına yaptırdığı, kubbesiz ama tavanındaki dairesel basıklıkla kubbe etkisi veren cami.",
+  "history": "Yenişehir'in Hıdırbali Mahallesi'nde, Ali Haydar Sokak No: 15'te bulunan cami, 1565 yılında Nişancı Mehmet Paşa'nın annesi Ayşe Hatun tarafından babası Hıdır Bey adına yaptırılmıştır. Ayşe Hatun'un Hisar İçi Pınarbaşı Mahallesi'nde bir mektep daha yaptırdığı bilinmektedir.\n\nYapı 1989'da tescillenmiştir. Aslen kerpiç ve ahşapla inşa edilen cami, Hacı Hasan Ağa'nın öncülüğünde ve halkın katkılarıyla eski şekli korunarak yenilenmiş, günümüzde ise betonarme malzemeyle onarılmıştır. Kırma çatılı ve kiremit örtülü yapının her iki cephesindeki üçer pencere doğal aydınlatma sağlar.\n\n140 m² iç hacimli caminin cemaat kapasitesi yaklaşık 200 kişidir. İç tavan ahşap kaplıdır. Yapıda kubbe bulunmamakla birlikte tavanda bırakılan dairesel bir basıklıkla kubbe etkisi verilmiş; dairenin dışındaki yüzey üçgen ve dikdörtgen biçimli ahşap çıtalarla süslenmiştir. Caminin kaideli, yivli gövdeli, tek şerefeli bir minaresi ve bahçesinde bir şadırvanı vardır. 2021'de Yenişehir Belediyesi çevre düzenlemesi yapmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-haci-hasan-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-haci-hasan-mosque/exterior.jpg",
+      "alt": "Caminin dışı: beyaz sıvalı duvarlar, kiremit kırma çatı, beyaz ince minare, önde servi ve büyük çınar ağacı, çevrede apartmanlar",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-haci-hasan-mosque/prayer-hall.jpg",
+      "alt": "Harim: tavanda dairesel basıklık ve ahşap çıtalar, karşıda mihrap, sağda minber, ahşap lambri ve yuvarlak kemerli pencereler",
+      "description": "Harim ve tavan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ceiling",
+      "image": "/images/yenisehir-haci-hasan-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 7,
+      "title": "Kubbe etkili tavan",
+      "text": "Yapıda kubbe yoktur; tavanda bırakılan dairesel bir basıklıkla kubbe etkisi verilmiştir. Dairenin dışındaki yüzey üçgen ve dikdörtgen biçimli ahşap çıtalarla süslenmiştir.",
+      "sourceId": "inv-p694"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/yenisehir-haci-hasan-mosque/exterior.jpg",
+      "x": 54,
+      "y": 30,
+      "title": "Minare",
+      "text": "Caminin kaideli, yivli gövdeli ve tek şerefeli bir minaresi vardır.",
+      "sourceId": "inv-p694"
+    },
+    {
+      "id": "roof",
+      "image": "/images/yenisehir-haci-hasan-mosque/exterior.jpg",
+      "x": 67,
+      "y": 43,
+      "title": "Kırma çatı",
+      "text": "Kırma çatılı ve kiremitle örtülü yapının her iki cephesindeki üçer pencere doğal aydınlatma sağlar.",
+      "sourceId": "inv-p693"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ayşe Hatun camiyi kimin adına yaptırmıştır?",
+      "options": [
+        "Oğlu Nişancı Mehmet Paşa",
+        "Babası Hıdır Bey",
+        "Eşi Hasan Ağa",
+        "Kardeşi Ali Haydar"
+      ],
+      "correct": 1,
+      "description": "Cami 1565'te Ayşe Hatun tarafından babası Hıdır Bey adına yaptırılmıştır.",
+      "sourceId": "inv-p693"
+    },
+    {
+      "question": "Cami aslen hangi malzemelerle yapılmıştı?",
+      "options": [
+        "Kesme taş ve mermer",
+        "Tuğla ve kurşun",
+        "Kerpiç ve ahşap",
+        "Betonarme"
+      ],
+      "correct": 2,
+      "description": "Aslen kerpiç ve ahşapla yapılan cami günümüzde betonarme malzemeyle onarılmıştır.",
+      "sourceId": "inv-p693"
+    },
+    {
+      "question": "Kubbesi olmayan camide kubbe etkisi nasıl verilmiştir?",
+      "options": [
+        "Tavandaki dairesel bir basıklıkla",
+        "Çatıya fener eklenerek",
+        "Kubbe resmi boyanarak",
+        "Çift kat pencereyle"
+      ],
+      "correct": 0,
+      "description": "Tavanda bırakılan dairesel bir basıklıkla kubbe etkisi verilmiştir.",
+      "sourceId": "inv-p694"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p693",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Hacı Hasan Camii\"",
+      "page": "379"
+    },
+    {
+      "id": "inv-p694",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Hacı Hasan Camii\"",
+      "page": "380"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

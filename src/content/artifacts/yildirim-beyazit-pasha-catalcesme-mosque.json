@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-beyazit-pasha-catalcesme-mosque",
+  "name": "Beyazıt Paşa (Çatalçeşme) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Çelebi Mehmed dönemi",
+  "endowment": "Bayezid Paşa; külliyeye vakfedilen Yoğurt Hanı (Davutpaşa Hanı)",
+  "summary": "Çelebi Mehmed devrinde Bayezid Paşa’nın yaptırdığı, 1976’da yeniden inşa edilen cami.",
+  "history": "Hocataşkın Mahallesi, 3. Dere Sokak'taki camiyi, Çelebi Mehmed devri devlet adamı Yahşi Bey'in oğlu Bayezid Paşa yaptırmıştır. Bayezid Paşa camiyle birlikte medrese ve inşası yarım kalan türbe de yaptırmış, külliyeye Tahtakale'deki Yoğurt Hanı'nı vakfetmiştir. Türbe yıkılmış, medrese ise harap olmuştur. Medrese duvarları üzerindeki evler 2012'de başlayan kamulaştırmayla alınmış ve medrese yeniden inşa edilmiştir. Cami kiremit örtülü, ahşap tavanlı ve dikdörtgen planlı olarak anlatılır; harim 7,75 × 7,75 m, son cemaat yeri 3,80 m derinliğindedir. Özgün minarenin yerine tuğla minare yapılmıştır. 1855 depreminde zarar gören cami 1892 ve 1952'de onarılmıştır. Kitaba göre 1976'da yıkılıp yeniden yapılması sırasında özgün mimari niteliklerini bütünüyle yitirmiştir. İbadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-beyazit-pasha-catalcesme-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-beyazit-pasha-catalcesme-mosque/exterior-view.jpg",
+      "alt": "Yeşil sıvalı cami, kiremit çatı ve tuğla minare; çevrede ağaçlar ve yapılar",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-beyazit-pasha-catalcesme-mosque/detail-view.jpg",
+      "alt": "Turkuaz halılı harimde mavi çinili mihrap, iki yanda pencereler ve sağda minber",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-beyazit-pasha-catalcesme-mosque/exterior-view.jpg",
+      "x": 43,
+      "y": 56,
+      "title": "Tuğla minare",
+      "text": "Yıkılan özgün minarenin yerine tuğladan yeni minare yapılmıştır.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-beyazit-pasha-catalcesme-mosque/exterior-view.jpg",
+      "x": 42,
+      "y": 72,
+      "title": "Kiremit örtü",
+      "text": "Kitap caminin üst örtüsünü kiremit kaplı olarak tanımlar.",
+      "sourceId": "inv-p470"
+    }
+  ],
+  "test": [
+    {
+      "question": "Beyazıt Paşa (Çatalçeşme) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "Yıldırım",
+        "İznik"
+      ],
+      "correct": 2,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p469"
+    },
+    {
+      "question": "Külliyeye hangi yapı vakfedilmiştir?",
+      "options": [
+        "Koza Han",
+        "İpek Han",
+        "Geyve Han",
+        "Yoğurt Hanı"
+      ],
+      "correct": 3,
+      "description": "Yoğurt Hanı.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "question": "Kitaba göre tuğla minare hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Yıkılan özgün minarenin yerine tuğladan yeni minare yapılmıştır",
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 0,
+      "description": "Yıkılan özgün minarenin yerine tuğladan yeni minare yapılmıştır.",
+      "sourceId": "inv-p470"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p469",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Beyazıt Paşa (Çatalçeşme) Camii\"",
+      "page": "469"
+    },
+    {
+      "id": "inv-p470",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Beyazıt Paşa (Çatalçeşme) Camii\"",
+      "page": "470"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

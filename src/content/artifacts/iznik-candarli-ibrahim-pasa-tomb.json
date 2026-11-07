@@ -1,0 +1,118 @@
+{
+  "id": "iznik-candarli-ibrahim-pasa-tomb",
+  "name": "Çandarlı İbrahim Paşa Türbesi",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "İnşa tarihi kitapta belirtilmemiştir; İbrahim Paşa'nın kitabedeki ölüm tarihi H. 832 / M. 1429",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Çandarlı ailesinden vezir İbrahim Paşa'nın ve aile üyelerinin sandukalarının bulunduğu, İznik'in doğusunda dikdörtgen planlı türbe.",
+  "history": "Türbe İznik'in Yeşilcami Mahallesi'nde, kasabanın doğusunda, Lefke Kapısı istikametinde yolun sol tarafındadır. Kuzey-güney yönünde dikdörtgen planlı yapının ahşap örtü sistemi 1949'da tamamen yıkılmıştır. İlk inşa evresinde kesme taş kullanıldığı, sonraki onarımlarda moloz taş ve kerpicin tercih edildiği anlaşılır; duvar kalınlıkları sonraki müdahaleler nedeniyle farklılık gösterir ve yapı genel olarak özgünlüğünü büyük ölçüde yitirmiştir.\n\nTürbedeki beş sanduka, Çandarlı Halil Hayrettin Paşa'nın oğlu Sadrazam İbrahim Paşa'ya, torunu Hayreddin Paşa'ya, kızları Fatma ve Saide Hatunlara ve Çandarlı Ali Paşa'ya aittir. Kitabeli mezarların en büyüğü İbrahim Paşa'nındır; mermer sandukanın baş taşı 48 × 136 cm, ayak taşı 41 × 127 cm ölçülerindedir ve kitabede ölüm tarihi H. 832 / M. 1429 olarak yazılıdır.\n\nİbrahim Paşa Bursa'da kadılık, 1415'te kazaskerlik, 1421'de vezirlik yapmış önemli bir devlet adamıdır; 1429'da vefat ederek bu türbeye defnedilmiştir. Başlangıçta alçak bir duvarla çevrili ve üst örtüsü tamamen yıkılmış olan mezarlık alanı, sonraki müdahalelerle çevre duvarları örülerek korunmuş ve üzerine ahşap bir çatı eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-candarli-ibrahim-pasa-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-candarli-ibrahim-pasa-tomb/exterior.jpg",
+      "alt": "Kesme taş duvarlı, kiremit kırma çatılı dikdörtgen türbe; cephede demir parmaklıklı iki pencere ve önünde 'Çandarlı İbrahim Paşa Türbesi' tabelası",
+      "description": "Türbenin dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-candarli-ibrahim-pasa-tomb/sarcophagi.jpg",
+      "alt": "Ahşap tavanlı, beyaz duvarlı iç mekânda baş ve ayak taşlı mermer sandukalar; tuğla döşeme zemin",
+      "description": "Türbedeki sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-candarli-ibrahim-pasa-tomb/roof-from-top.jpg",
+      "alt": "Türbenin tepeden görünümü: kiremit kaplı kırma çatı, bir yanında yol, diğer yanında ağaçlar",
+      "description": "Tepeden çatı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "walls",
+      "image": "/images/iznik-candarli-ibrahim-pasa-tomb/exterior.jpg",
+      "x": 30,
+      "y": 65,
+      "title": "Duvar malzemesi",
+      "text": "İlk inşa evresinde kesme taş kullanıldığı, sonraki onarımlarda ise moloz taş ve kerpicin tercih edildiği anlaşılmaktadır. Duvar kalınlıkları sonraki müdahaleler nedeniyle farklıdır.",
+      "sourceId": "inv-p472"
+    },
+    {
+      "id": "roof",
+      "image": "/images/iznik-candarli-ibrahim-pasa-tomb/exterior.jpg",
+      "x": 45,
+      "y": 45,
+      "title": "Çatı",
+      "text": "Yapının ahşap örtü sistemi 1949'da tamamen yıkılmıştır. Üst örtüsü yıkılmış mezarlık alanı daha sonra çevre duvarları örülerek korunmuş ve üzerine ahşap bir çatı eklenmiştir.",
+      "sourceId": "inv-p473"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/iznik-candarli-ibrahim-pasa-tomb/sarcophagi.jpg",
+      "x": 45,
+      "y": 60,
+      "title": "Sandukalar",
+      "text": "Türbedeki beş sanduka İbrahim Paşa'ya, torunu Hayreddin Paşa'ya, kızları Fatma ve Saide Hatunlara ve Çandarlı Ali Paşa'ya aittir. En büyüğü İbrahim Paşa'nın mermer sandukasıdır; kitabesinde ölüm tarihi H. 832 / M. 1429 yazılıdır.",
+      "sourceId": "inv-p473"
+    }
+  ],
+  "test": [
+    {
+      "question": "İbrahim Paşa'nın sanduka kitabesindeki ölüm tarihi nedir?",
+      "options": [
+        "H. 832 / M. 1429",
+        "1415",
+        "1421",
+        "H. 846 / M. 1442"
+      ],
+      "correct": 0,
+      "description": "Mermer sandukanın kitabesinde ölüm tarihi H. 832 / M. 1429 olarak belirtilmektedir.",
+      "sourceId": "inv-p473"
+    },
+    {
+      "question": "Türbenin ahşap örtü sistemi hangi yılda tamamen yıkılmıştır?",
+      "options": [
+        "1949",
+        "1967",
+        "1855",
+        "2008"
+      ],
+      "correct": 0,
+      "description": "Kuzey-güney yönünde dikdörtgen planlı yapının ahşap örtü sistemi 1949'da tamamen yıkılmıştır.",
+      "sourceId": "inv-p472"
+    },
+    {
+      "question": "Türbede kaç sanduka bulunmaktadır?",
+      "options": [
+        "Beş",
+        "Üç",
+        "Sekiz",
+        "On dört"
+      ],
+      "correct": 0,
+      "description": "Beş sanduka İbrahim Paşa, torunu Hayreddin Paşa, kızları Fatma ve Saide Hatunlar ile Çandarlı Ali Paşa'ya aittir.",
+      "sourceId": "inv-p473"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p472",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Çandarlı İbrahim Paşa Türbesi\"",
+      "page": "82"
+    },
+    {
+      "id": "inv-p473",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Çandarlı İbrahim Paşa Türbesi\"",
+      "page": "83"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "osmangazi-fidan-han",
+  "name": "Fidan Hanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Fâtih Sultan Mehmed dönemi",
+  "endowment": "Mahmud Paşa; İstanbul’daki Mahmutpaşa Külliyesi’ne gelir sağlamak üzere vakfedilmiştir.",
+  "summary": "Uzun Çarşı’da yer alan Fidan Hanı, revaklı iki katı ve mescitli avlusuyla Mahmutpaşa Külliyesi’ne gelir sağlamak üzere vakfedilmiş bir ticaret yapısıdır.",
+  "history": "Fidan Hanı, Bursa Çarşısı ve Hanlar Bölgesi’nde Uzun Çarşı’da bulunur. Fidan satışı nedeniyle bugünkü adını almış; bölgedeki saman satışı nedeniyle Saman Pazarı Hanı, vakıf ilişkisi nedeniyle Mahmud Paşa Hanı olarak da anılmıştır. Fâtih Sultan Mehmed’in sadrazamı Mahmud Paşa, hanı ve çevresindeki dükkânları, İstanbul’da 1463 yılında inşa ettirdiği Mahmutpaşa Külliyesi’nin giderleri için vakfetmiştir.\n\nKareye yakın dikdörtgen planlı yapı iki katlıdır. Duvarlarında iki sıra tuğla ve bir sıra küfeki taşı kullanılmıştır. Geniş avlusu revaklarla çevrilidir; avluda anıt niteliğinde ağaçlar ve on iki köşeli şadırvan üzerinde yükselen bir mescit bulunur. Birinci avlunun alt katında 48, üst katında 50 oda vardır. Başlangıçtaki ikinci avlunun ahır, seyis odası ve mahzen işlevleri taşıdığı tahmin edilmektedir; bu bölümdeki eski yapıların yerini modern dükkânlar almıştır.\n\nSivri kemerli revakların alt katı tonoz, üst katı kubbe örtülüdür. Han 1561, 1603, 1656 ve 1760 yıllarında onarılmıştır. 1855 depremi ve 1958 Çarşı Yangını’nda ağır hasar görmüş, 1965 yılında Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmıştır. Kitap, handa 105 dükkân bulunduğunu, tekstil esnafının faaliyet gösterdiğini ve avluda çay bahçeleri ile lokantaların yer aldığını belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-fidan-han/top-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-fidan-han/top-view.jpg",
+      "alt": "Kiremit çatılarla çevrili dikdörtgen avlu, avluda büyük ağaçlar ve ortada küçük çokgen çatılı yapı",
+      "description": "Hanın tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-fidan-han/upper-arcade.jpg",
+      "alt": "Taş ve tuğla örgülü sivri kemerler, tonozlu revak, korkuluk önünde masa ve sandalyeler",
+      "description": "Üst kat revakları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-fidan-han/top-view.jpg",
+      "x": 50,
+      "y": 49,
+      "title": "Avludaki mescit",
+      "text": "Avlunun ortasında on iki köşeli bir şadırvan üzerinde yükselen mescit yer alır.",
+      "sourceId": "inv-p26"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-fidan-han/upper-arcade.jpg",
+      "x": 57,
+      "y": 43,
+      "title": "Sivri kemerli revaklar",
+      "text": "Hanın revakları sivri kemerlerle çevrilidir.",
+      "sourceId": "inv-p27"
+    }
+  ],
+  "test": [
+    {
+      "question": "Fidan Hanı hangi külliyeye gelir sağlamak için vakfedilmiştir?",
+      "options": [
+        "Yeşil Külliye",
+        "Mahmutpaşa Külliyesi",
+        "Muradiye Külliyesi",
+        "Yıldırım Külliyesi"
+      ],
+      "correct": 1,
+      "description": "Han, Mahmud Paşa’nın İstanbul’daki Mahmutpaşa Külliyesi’ne gelir sağlamak üzere vakfedilmiştir.",
+      "sourceId": "inv-p25"
+    },
+    {
+      "question": "Hanın bugünkü adı hangi satıştan kaynaklanır?",
+      "options": [
+        "Fidan",
+        "Pirinç",
+        "İpek kozası",
+        "Kürk"
+      ],
+      "correct": 0,
+      "description": "Kitap, hanın adını burada yapılan fidan satışına bağlar.",
+      "sourceId": "inv-p25"
+    },
+    {
+      "question": "Han 1965 yılında hangi kurum tarafından onarılmıştır?",
+      "options": [
+        "Osmangazi Belediyesi",
+        "Millî Emlak",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Celal Bayar Vakfı"
+      ],
+      "correct": 2,
+      "description": "1965 onarımı Bursa Eski Eserleri Sevenler Kurumu tarafından yapılmıştır.",
+      "sourceId": "inv-p27"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p25",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Fidan Hanı\"",
+      "page": "25"
+    },
+    {
+      "id": "inv-p26",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Fidan Hanı\"",
+      "page": "26"
+    },
+    {
+      "id": "inv-p27",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Fidan Hanı\"",
+      "page": "27"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

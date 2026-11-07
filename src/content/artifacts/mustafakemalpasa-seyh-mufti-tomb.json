@@ -1,0 +1,106 @@
+{
+  "id": "mustafakemalpasa-seyh-mufti-tomb",
+  "name": "Şeyh Müftü Türbesi",
+  "city": "Bursa",
+  "district": "Mustafakemalpaşa",
+  "period": "Tarihi kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh Müftü Camii avlusunda, caminin ilk banisi Abdülkerim el-Kâdiri'nin yattığı altıgen planlı mütevazı türbe.",
+  "history": "Türbe, Mustafakemalpaşa'nın Şeyhmüftü Mahallesi'nde, Şeyh Müftü Camii'nin avlusundadır. Bu mütevazı türbede, günümüzde mevcut olmayan cami ve medresenin banisi, Şeyh Müftü lakabıyla anılan Abdülkerim el-Kâdiri yatmaktadır.\n\nŞeyh Müftü Camii'nin kuzeybatı köşesine bitişik yapılan türbe altıgen planlıdır ve kurşun kaplı basık piramidal bir çatıyla örtülüdür. Sıvalı duvarları, ortasında kilit taşı bulunan yuvarlak kemerli pencereleri ve köşelerinin kesme taşla belirtilmesi, türbenin cami ile aynı anda elden geçtiğini göstermektedir.",
+  "verification": "verified",
+  "coverImage": "/images/mustafakemalpasa-seyh-mufti-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-tomb/exterior.jpg",
+      "alt": "Taş duvarlı caminin köşesine bitişik, yeşil sıvalı, köşeleri beyaz kesme taşlı, basık çatılı küçük türbe; kemerli pencere ve yanında yazılı levha",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-tomb/interior.jpg",
+      "alt": "Beyaz duvarlı iç mekânda yeşil örtülü, üzerleri yazılı sandukalar; arkada kemerli iki pencere, üstte koyu renk ahşap tavan",
+      "description": "İç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/mustafakemalpasa-seyh-mufti-tomb/exterior.jpg",
+      "x": 42,
+      "y": 13,
+      "title": "Basık piramidal çatı",
+      "text": "Altıgen planlı türbe, kurşun kaplı basık piramidal bir çatıyla örtülmüştür.",
+      "sourceId": "inv-p623"
+    },
+    {
+      "id": "window",
+      "image": "/images/mustafakemalpasa-seyh-mufti-tomb/exterior.jpg",
+      "x": 38,
+      "y": 35,
+      "title": "Kilit taşlı pencere",
+      "text": "Sıvalı duvarlar, ortasında kilit taşı bulunan yuvarlak kemerli pencereler ve kesme taşla belirtilmiş köşeler, türbenin cami ile aynı anda elden geçtiğini gösterir.",
+      "sourceId": "inv-p623"
+    },
+    {
+      "id": "corner",
+      "image": "/images/mustafakemalpasa-seyh-mufti-tomb/exterior.jpg",
+      "x": 56,
+      "y": 49,
+      "title": "Kesme taş köşeler",
+      "text": "Duvarların köşeleri kesme taşla belirtilmiştir.",
+      "sourceId": "inv-p623"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Müftü Türbesi'nde kim yatmaktadır?",
+      "options": [
+        "Naib Şefik Bey",
+        "Abdülkerim el-Kâdiri",
+        "Lala Şahin Paşa",
+        "Hamza Bey"
+      ],
+      "correct": 1,
+      "description": "Türbede, Şeyh Müftü lakabıyla anılan Abdülkerim el-Kâdiri yatmaktadır.",
+      "sourceId": "inv-p623"
+    },
+    {
+      "question": "Türbe hangi plan biçimindedir?",
+      "options": [
+        "Kare",
+        "Sekizgen",
+        "Altıgen",
+        "Dikdörtgen"
+      ],
+      "correct": 2,
+      "description": "Şeyh Müftü Camii'nin kuzeybatı köşesine bitişik türbe altıgen formdadır.",
+      "sourceId": "inv-p623"
+    },
+    {
+      "question": "Türbe, Şeyh Müftü Camii'nin hangi köşesine bitişiktir?",
+      "options": [
+        "Kuzeydoğu",
+        "Güneydoğu",
+        "Güneybatı",
+        "Kuzeybatı"
+      ],
+      "correct": 3,
+      "description": "Türbe, Şeyh Müftü Camii'nin kuzeybatı köşesine bitişik olarak inşa edilmiştir.",
+      "sourceId": "inv-p623"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p623",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Şeyh Müftü Türbesi\"",
+      "page": "311"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

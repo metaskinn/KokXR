@@ -1,0 +1,97 @@
+{
+  "id": "kestel-old-bath",
+  "name": "Eski (Vani Mehmed Şifa) Hamamı",
+  "city": "Bursa",
+  "district": "Kestel",
+  "period": "Osmanlı · 1673'ten önce",
+  "endowment": "Vanî Mehmed Efendi",
+  "summary": "Vanî Mehmed Efendi'nin 1673'ten önce yaptırdığı, halk arasında \"Şifa Hamamı\" ya da \"Eski Hamam\" diye anılan kurşun kubbeli hamam.",
+  "history": "Hamam, Kestel'in Vanimehmet Mahallesi'nde, Cuma Caddesi No: 24'te yer alır. Halk arasında \"Şifa Hamamı\" veya \"Eski Hamam\" olarak anılan yapı, IV. Mehmed devrinin tanınmış mutasavvıflarından Vanî Mehmed Efendi tarafından 1673 yılından önce inşa ettirilmiştir.\n\nKuzey-güney doğrultusunda dikdörtgen planlı yapı; ahşap kırma çatılı ve kiremit örtülü soğukluk ile kubbeli ılıklık, sıcaklık ve halvet mekânlarından oluşur. Kuzeydeki ahşap kapıdan girilen soğukluğun doğu ve güney cepheleri sonradan yapılan bir apartman nedeniyle kapanmıştır. Ilıklık, kare planlı kasnağa oturan kurşun kaplı bir kubbeyle örtülüdür ve fil gözü açıklıklarıyla aydınlanır. Yapının güneyindeki sıcaklık, sekizgen kasnaklı kurşun kaplı kubbesinde konik bir aydınlatma feneri taşır. Sıcaklığın doğu ve batısındaki iki halvet hücresi ile en batıdaki külhan da kurşun kaplı kubbelerle örtülüdür.\n\nMoloz taş ve tuğla beden duvarları 2015 restorasyonunda bazalt taş ve iki sıra tuğla ile kaplanmıştır. Yakın zamana kadar işlevini sürdüren hamam 1980'li yıllarda kadınlar hamamı olarak kullanılmış, 2015'teki kapsamlı restorasyonun ardından kısa bir süre yeniden hizmet vermiş, ancak bugün kullanıma kapalıdır.",
+  "verification": "verified",
+  "coverImage": "/images/kestel-old-bath/exterior-domes.jpg",
+  "images": [
+    {
+      "file": "/images/kestel-old-bath/exterior-domes.jpg",
+      "alt": "Kaldırım kenarında, taş ve tuğla sıralı duvarlar üzerinde kurşun kaplı kubbeler; arkada apartmanlar",
+      "description": "Hamamın dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-old-bath/interior-basins.jpg",
+      "alt": "Mermer kaplı duvarlar ve sekiler, iki mermer kurna, üstte kemerli tonoz; dipte sivri kemerli kapı",
+      "description": "Mermer kurnalı iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/kestel-old-bath/exterior-domes.jpg",
+      "x": 49,
+      "y": 41,
+      "title": "Kurşun kaplı kubbeler",
+      "text": "Ilıklık, sıcaklık, halvet hücreleri ve külhan kurşun kaplı kubbelerle örtülüdür; mekânlar fil gözü açıklıklarıyla aydınlatılır.",
+      "sourceId": "inv-p567"
+    },
+    {
+      "id": "walls",
+      "image": "/images/kestel-old-bath/exterior-domes.jpg",
+      "x": 50,
+      "y": 70,
+      "title": "Beden duvarları",
+      "text": "Moloz taş ve tuğladan inşa edilen beden duvarları, 2015 restorasyonunda bazalt taş ve iki sıra tuğla ile kaplanmıştır.",
+      "sourceId": "inv-p567"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam halk arasında hangi adla da anılır?",
+      "options": [
+        "Şifa Hamamı",
+        "Çifte Hamam",
+        "Sultan Hamamı",
+        "Yeni Hamam"
+      ],
+      "correct": 0,
+      "description": "Yapı halk arasında \"Şifa Hamamı\" veya \"Eski Hamam\" olarak anılır.",
+      "sourceId": "inv-p567"
+    },
+    {
+      "question": "Hamam 1980'li yıllarda nasıl kullanılmıştır?",
+      "options": [
+        "Depo olarak",
+        "Kadınlar hamamı olarak",
+        "Müze olarak",
+        "Okul olarak"
+      ],
+      "correct": 1,
+      "description": "Hamam 1980'li yıllarda kadınlar hamamı olarak kullanılmıştır.",
+      "sourceId": "inv-p567"
+    },
+    {
+      "question": "2015 restorasyonunda beden duvarları neyle kaplanmıştır?",
+      "options": [
+        "Mermer levhalarla",
+        "Kiremitle",
+        "Bazalt taş ve iki sıra tuğla ile",
+        "Ahşap kaplamayla"
+      ],
+      "correct": 2,
+      "description": "Moloz taş ve tuğla duvarlar 2015'te bazalt taş ve iki sıra tuğla ile kaplanmıştır.",
+      "sourceId": "inv-p567"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p567",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Kestel, \"Eski (Vani Mehmed Şifa) Hamamı\"",
+      "page": "255"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

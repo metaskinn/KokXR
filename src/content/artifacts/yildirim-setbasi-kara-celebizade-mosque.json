@@ -1,0 +1,107 @@
+{
+  "id": "yildirim-setbasi-kara-celebizade-mosque",
+  "name": "Setbaşı (Kara Çelebizade) Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 1003 / M. 1594 olarak anılır; XIX. yüzyıl onarımları",
+  "endowment": "Vakfiye kaydına göre Hüsameddin Efendi'nin oğlu Mehmed Efendi",
+  "summary": "Banisi konusunda farklı kayıtlar bulunan, yangın ve deprem sonrası onarımlarla biçimlenen Setbaşı camisi.",
+  "history": "Kurdoğlu Mahallesi, Atatürk Caddesi No: 1'deki caminin 1594'te Kara Çelebizâde Hüsameddin Efendi tarafından yaptırıldığına dair yaygın kanaat vardır. Ancak kitap, vakfiyenin baninin oğlu Mehmed Efendi olduğunu belirttiğini aktarır. Arşivlerde Mehmed Efendi Camii, tescil ve belediye kayıtlarında Hüsameddin Efendi Camii adları kullanılır. İnşa kitabesi yoktur. Dikdörtgen harim 8,80 × 14,15 m, son cemaat yeri 3,30 m derinliğindedir. Ahşap tavanın ortasında geometrik bezemeli kare göbek vardır. Mihrap beş köşelidir. Kuzeydoğudaki minare kare kaideli, silindirik gövdeli ve sivri kurşun külahlıdır. 1654'te onarılmış, 1855 depreminde ve 1863 Setbaşı yangınında zarar görüp yeniden onarılmıştır. Bu onarımlarla XIX. yüzyıl Osmanlı üslubunu yansıtır. Ön avluda iki anıtsal çınar ve şadırvan vardır; cemaat kapasitesi 200 kişidir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-setbasi-kara-celebizade-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-setbasi-kara-celebizade-mosque/exterior-view.jpg",
+      "alt": "Yol ayrımında kiremit kırma çatılı açık renkli cami, tuğla minare ve ağaçlar",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-setbasi-kara-celebizade-mosque/detail-view.jpg",
+      "alt": "Kırmızı halılı harim, yeşil ahşap tavan, avize, ortada mihrap ve sağda minber",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-setbasi-kara-celebizade-mosque/detail-view.jpg",
+      "x": 46,
+      "y": 15,
+      "title": "Ahşap tavan",
+      "text": "Tavanın merkezinde geometrik motifli kare çerçeveli göbek bulunur.",
+      "sourceId": "inv-p518"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-setbasi-kara-celebizade-mosque/exterior-view.jpg",
+      "x": 38,
+      "y": 53,
+      "title": "Kiremit çatı",
+      "text": "Ahşap kırma çatının üzeri kiremitle kaplıdır.",
+      "sourceId": "inv-p518"
+    }
+  ],
+  "test": [
+    {
+      "question": "Setbaşı (Kara Çelebizade) Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "İznik",
+        "Yıldırım"
+      ],
+      "correct": 3,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p516"
+    },
+    {
+      "question": "Cami hangi büyük yangında zarar görmüştür?",
+      "options": [
+        "1863 Setbaşı yangını",
+        "1922 İzmir yangını",
+        "1660 İstanbul yangını",
+        "1917 Selanik yangını"
+      ],
+      "correct": 0,
+      "description": "1863 Setbaşı yangını.",
+      "sourceId": "inv-p518"
+    },
+    {
+      "question": "Kitaba göre ahşap tavan hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Tavanın merkezinde geometrik motifli kare çerçeveli göbek bulunur",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 1,
+      "description": "Tavanın merkezinde geometrik motifli kare çerçeveli göbek bulunur.",
+      "sourceId": "inv-p518"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p516",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Setbaşı (Kara Çelebizade) Camii\"",
+      "page": "516"
+    },
+    {
+      "id": "inv-p517",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Setbaşı (Kara Çelebizade) Camii\"",
+      "page": "517"
+    },
+    {
+      "id": "inv-p518",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Setbaşı (Kara Çelebizade) Camii\"",
+      "page": "518"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-seker-hoca-mosque",
+  "name": "Şeker Hoca Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Kitabesi yok; Çelebi Sultan Mehmed devrinde inşa edildiği düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Çelebi Sultan Mehmed devrinde yapıldığı düşünülen, kare planlı ve kasnaksız tek kubbeli küçük cami.",
+  "history": "Şeker Hoca Camii, Osmangazi İlçesi, Nalbantoğlu Mahallesi, Şeker Hoca Caddesi, Cami Aralığı 2. Sokak No: 1'dedir.\n\nCaminin kitabesi olmadığı için inşa tarihi kesin olarak bilinmemektedir. Tarih kayıtlarına ve basit inşa biçimine bakılarak Çelebi Sultan Mehmed devrinde yapıldığı düşünülmektedir.\n\nKare planlı caminin iç mekânı 8,20 × 8,20 m ölçülerindedir ve üzeri tek kubbeyle örtülüdür. Kubbe kasnaksızdır ve kurşun kaplıdır. Bursa kemerli bir kapıyla girilen harim, beden duvarlarının her birinde ikişer olmak üzere toplam sekiz sivri kemerli pencereyle aydınlatılır.\n\nSon cemaat yerinin doğu ve batı yanları kapalıdır; üstü ahşap çatıyla örtülüdür. Cephesi üç kemerli ahşap parmaklıklarla örtülü iken bir onarım sırasında camekânla kapatılmıştır. Duvarları moloz taşla, minare ve pencere kemerleri tuğlayla işlenmiştir; duvar kalınlığı 91 cm'dir.\n\nAynı adı taşıyan mahallede kâgir bir türbe de bulunur. Türbenin niyaz penceresinin üstündeki bir taşta, Seyyid Ali'nin oğlu Mehmed'in hicrî 878 yılı Zilhicce ayının başlarında (M. 1473) vefat ettiği yazılıdır. Cami bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-seker-hoca-mosque/narthex.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-seker-hoca-mosque/narthex.jpg",
+      "alt": "Önden görünüm: ahşap saçaklı çatı altında üç büyük kemerli camekânla kapatılmış son cemaat yeri, önünde yeşil tente ve taş döşeli avlu",
+      "description": "Camekânla kapatılmış üç kemerli son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seker-hoca-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: beyaz kubbeden sarkan kristal avize, yeşil çinili mihrap, sağda oymalı ahşap minber, yan duvarlarda sivri kemerli nişler ve kırmızı halı",
+      "description": "Tek kubbeli harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "glazed-narthex",
+      "image": "/images/osmangazi-seker-hoca-mosque/narthex.jpg",
+      "x": 55,
+      "y": 38,
+      "title": "Son cemaat yeri",
+      "text": "Cephesi üç kemerli ahşap parmaklıklarla örtülü olan son cemaat yeri, bir onarım sırasında camekânla kapatılmıştır.",
+      "sourceId": "inv-p428"
+    },
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-seker-hoca-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 8,
+      "title": "Tek kubbe",
+      "text": "8,20 × 8,20 m ölçülerindeki kare planlı harimin üzeri kasnaksız, kurşun kaplı tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p428"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeker Hoca Camii'nin hangi devirde yapıldığı düşünülmektedir?",
+      "options": [
+        "Orhan Gazi devri",
+        "Çelebi Sultan Mehmed devri",
+        "Fâtih Sultan Mehmed devri",
+        "II. Bayezid devri"
+      ],
+      "correct": 1,
+      "description": "Kitabesi olmayan caminin, tarih kayıtları ve basit inşa biçimine bakılarak Çelebi Sultan Mehmed devrinde yapıldığı düşünülmektedir.",
+      "sourceId": "inv-p428"
+    },
+    {
+      "question": "Harim kaç sivri kemerli pencereyle aydınlatılır?",
+      "options": [
+        "Dört",
+        "On",
+        "Sekiz",
+        "Altı"
+      ],
+      "correct": 2,
+      "description": "Beden duvarlarının her birinde ikişer olmak üzere toplam sekiz sivri kemerli pencere vardır.",
+      "sourceId": "inv-p428"
+    },
+    {
+      "question": "Caminin duvar kalınlığı ne kadardır?",
+      "options": [
+        "91 cm",
+        "60 cm",
+        "1,20 m",
+        "45 cm"
+      ],
+      "correct": 0,
+      "description": "Duvarlar moloz taşla örülmüştür ve duvar kalınlığı 91 cm'dir.",
+      "sourceId": "inv-p428"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p428",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şeker Hoca Camii\"",
+      "page": "428"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

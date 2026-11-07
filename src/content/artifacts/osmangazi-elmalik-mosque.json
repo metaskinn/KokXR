@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-elmalik-mosque",
+  "name": "Elmalık Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1573 tarihli Tahrir Defteri'nden önce",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Uzun süre kiralık ev olarak kullanıldıktan sonra yeniden ibadete açılan, kırma ahşap çatılı ve ahşap direkli son cemaat yerine sahip cami.",
+  "history": "Cami, Osmangazi ilçesi, Tuzpazarı Mahallesi, Elmalık Caddesi No: 8'dedir. 1573 tarihli Tahrir Defteri'nde mahalle olarak geçmesi, yapının bu tarihten önce var olduğunu gösterir. Satılan birçok cami gibi bu yapı da uzun süre kiralık ev olarak kullanılmış, son yıllarda ihya edilerek yeniden ibadethane hâline getirilmiştir.\n\nDikdörtgen hacimli yapının üstü kırma ahşap çatılı olup kiremitle örtülüdür. Duvarlarda moloz taş ve düzensiz tuğla sıraları kullanılmıştır. Yanları kapalı, Bursa kemerli iki ahşap direkle taşınan ve ahşap saçaklı bir son cemaat yeri vardır. Çift kanatlı ahşap kapıdan girilen harim, her cephede ikişer olmak üzere toplam sekiz pencereyle aydınlanır.\n\nMinare kesme taş kaide üzerine oturur; Türk üçgenli küp bölümünün üzerinde tuğladan silindirik gövdeyle yükselir. Kaide üzerinde ve şerefe altında birer bilezik, şerefe altında tuğla dolgular vardır. Petek tuğladan örülmüş, külah kurşunla kaplanmıştır. Cami, son yıllarda yeniden cami olarak ihya edilen Hoca Yunus, Tavukçu Reis ve Zağferanlık mescitleriyle aynı tarzda ve aynı malzemeyle yapılmış ibadethaneler arasındadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-elmalik-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-elmalik-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit kaplı kırma çatılı küçük cami, önünde ahşap direkli son cemaat yeri, solunda taş kaideli tuğla gövdeli minare; çevrede apartmanlar",
+      "description": "Caminin çevresiyle görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-elmalik-mosque/prayer-hall.jpg",
+      "alt": "Harimin içi: mavi halı, ahşap tavan, beyaz duvarlarda ahşap çerçeveli pencereler, ortada sade mihrap, sağda ahşap minber ve yuvarlak hat levhaları",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-elmalik-mosque/aerial-view.jpg",
+      "x": 37,
+      "y": 40,
+      "title": "Minare",
+      "text": "Minare kesme taş kaide üzerinde tuğladan silindirik gövdeyle yükselir; külahı kurşun kaplıdır.",
+      "sourceId": "inv-p306"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-elmalik-mosque/aerial-view.jpg",
+      "x": 58,
+      "y": 77,
+      "title": "Son cemaat yeri",
+      "text": "Son cemaat yeri, Bursa kemerli iki ahşap direkle taşınır ve ahşap saçaklıdır.",
+      "sourceId": "inv-p306"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-elmalik-mosque/aerial-view.jpg",
+      "x": 59,
+      "y": 56,
+      "title": "Kırma çatı",
+      "text": "Dikdörtgen hacimli yapının üstü kırma ahşap çatılıdır ve kiremitle örtülüdür.",
+      "sourceId": "inv-p306"
+    }
+  ],
+  "test": [
+    {
+      "question": "Elmalık Camii uzun süre ne olarak kullanılmıştır?",
+      "options": [
+        "Depo",
+        "Okul",
+        "Kiralık ev",
+        "Han odası"
+      ],
+      "correct": 2,
+      "description": "Satılan birçok cami gibi bu yapı da uzun süre kiralık ev olarak kullanılmış, son yıllarda yeniden ibadete açılmıştır.",
+      "sourceId": "inv-p306"
+    },
+    {
+      "question": "Harim toplam kaç pencereyle aydınlanır?",
+      "options": [
+        "Dört",
+        "Sekiz",
+        "On iki",
+        "On altı"
+      ],
+      "correct": 1,
+      "description": "Harim, her cephede ikişer olmak üzere toplam sekiz pencereyle aydınlanır.",
+      "sourceId": "inv-p306"
+    },
+    {
+      "question": "Yapının üstü nasıl örtülmüştür?",
+      "options": [
+        "Kiremit kaplı kırma ahşap çatıyla",
+        "Kurşun kaplı kubbeyle",
+        "Beşik tonozla",
+        "Düz toprak damla"
+      ],
+      "correct": 0,
+      "description": "Dikdörtgen hacimli yapının üstü kırma ahşap çatılı olup kiremitle örtülüdür.",
+      "sourceId": "inv-p306"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p306",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Elmalık Camii\"",
+      "page": "306"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

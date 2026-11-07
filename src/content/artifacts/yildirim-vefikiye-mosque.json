@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-vefikiye-mosque",
+  "name": "Vefikiye Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · 1900",
+  "endowment": "Banisi Raif Ağa",
+  "summary": "Raif Ağa’nın 1900’de yaptırdığı, adını Ahmet Vefik Paşa’dan alan cami.",
+  "history": "Mollaarap Mahallesi, Balabancık Caddesi No: 63'teki cami, 1877-1878 Osmanlı-Rus Savaşı sonrasında Kırım muhacirlerinin yerleştirilmesi üzerine Raif Ağa tarafından 1900'de yaptırılmıştır. Adını iskân sürecinde etkili olan Bursa Valisi Ahmet Vefik Paşa'dan alır. Dikdörtgen yapının duvarları betonarme, çatısı ahşap ve kiremit kaplıdır. Altı yuvarlak kemerli penceresi vardır. Son cemaat yeri sonradan eklenmiştir. Mihrap, minber ve kürsü Kütahya çinileriyle bezelidir; iç duvarlar 1,50 m yüksekliğe kadar çini kaplıdır. Minare sekizgen betonarme kaideli ve silindirik tuğla gövdelidir. 1956'da Bursa Eski Eserleri Sevenler Kurumu onarmıştır. 1997'de çini kaplamalar yenilenmiş, 2021'de Vakıflar Bölge Müdürlüğü çevre düzenlemesi ve onarım yapmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-vefikiye-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-vefikiye-mosque/exterior-view.jpg",
+      "alt": "Yol köşesinde kiremit çatılı cami, tuğla minare, büyük ağaç ve arka planda apartmanlar",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-vefikiye-mosque/detail-view.jpg",
+      "alt": "Kırmızı halılı harim; mavi çinili mihrap, minber, kürsü ve duvarların altındaki çini kuşak",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-vefikiye-mosque/detail-view.jpg",
+      "x": 51,
+      "y": 51,
+      "title": "Çinili mihrap",
+      "text": "Mihrap dört sıralı mukarnasla taçlandırılmış ve Kütahya çinileriyle bezenmiştir.",
+      "sourceId": "inv-p523"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-vefikiye-mosque/detail-view.jpg",
+      "x": 69,
+      "y": 52,
+      "title": "Çinili minber",
+      "text": "Minber 1997 yenilemesinde çini kaplanmıştır.",
+      "sourceId": "inv-p523"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vefikiye Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "Yıldırım",
+        "İznik"
+      ],
+      "correct": 2,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p522"
+    },
+    {
+      "question": "Vefikiye Camii adını kimden alır?",
+      "options": [
+        "Raif Ağa",
+        "Sultan II. Murad",
+        "Hoca Ramazan",
+        "Ahmet Vefik Paşa"
+      ],
+      "correct": 3,
+      "description": "Ahmet Vefik Paşa.",
+      "sourceId": "inv-p522"
+    },
+    {
+      "question": "Kitaba göre çinili mihrap hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Mihrap dört sıralı mukarnasla taçlandırılmış ve Kütahya çinileriyle bezenmiştir",
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 0,
+      "description": "Mihrap dört sıralı mukarnasla taçlandırılmış ve Kütahya çinileriyle bezenmiştir.",
+      "sourceId": "inv-p523"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p522",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Vefikiye Camii\"",
+      "page": "522"
+    },
+    {
+      "id": "inv-p523",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Vefikiye Camii\"",
+      "page": "523"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

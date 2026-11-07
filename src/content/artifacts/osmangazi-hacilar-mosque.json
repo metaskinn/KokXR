@@ -1,0 +1,128 @@
+{
+  "id": "osmangazi-hacilar-mosque",
+  "name": "Hacılar Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 871 / M. 1466 (kitabenin ebced çözümüne göre H. 872 / M. 1467)",
+  "endowment": "Banisi Bakkal Hacı Sinan",
+  "summary": "Tüccar Hacı Sinan'ın yaptırdığı, Selçuklu nesih hatlı kitabesi, ahşap mahfili ve özenli tuğla süslemeleriyle dikkat çeken tek kubbeli cami.",
+  "history": "Hacılar Camii, Osmangazi İlçesi, Hocaalizâde Mahallesi, Kültür Sokak No: 16-18'dedir. Kitapta caminin H. 871 / M. 1466'da Bakkal Hacı Sinan tarafından yaptırıldığı belirtilir; Hacı Sinan'ın Bursa'da iki mescidi daha vardır.\n\nMehmed Şemseddin Ulusoy'un aktardığı rivayete göre Anadolu'dan hacca gitmek için yola çıkan bir grup hacı adayı Bursa'ya gelmiş, çeşitli sebeplerle o yıl hacca gidememiş ve ellerindeki parayla bu mescidi yaptırmıştır; yapının adı buradan gelir. Daha güvenilir kabul edilen diğer rivayete göre ise burada daha önce bulunan bir mescit harap olmuş, Hacı Sinan adlı bir tüccar binayı yeniden yaptırıp üzerine kitabe koymuştur.\n\nSon cemaat yerinin orta bölmesinde, niş içindeki 60 × 90 cm ölçülerindeki Arapça kitabe Selçuklu nesih hattı üslubundadır. Kitabenin şairi Cemâlî'dir; mealinde inşanın 873'te bittiği söylenir, ifadeler ebced hesabıyla çözüldüğünde ise banisinin Hacı Sinan olduğu ve yapının H. 872 / M. 1467'de inşa edildiği anlaşılır.\n\nKare planlı harim, üç bölümlü son cemaat yeriyle birlikte dikdörtgen bir alan oluşturur. Son cemaat revakının ayakları iki sıra tuğla ve bir sıra moloz taşla, kemerlerin üstü kesme taşla örülmüştür; derzlerde kuş gagası ve kare içinde yıldız motifli kuşaklar vardır. Kalkan duvarındaki üç sivri kemerli nişten ikisinde tuğlayla dalga motifi işlenmiş, ortadakine kitabe yerleştirilmiştir. Medhal gözü daha dar, yüksek ve kubbeli; yan gözler daha geniş ve tonozludur. Hacılar Camii, benzerleri arasında süslemesi en özenli yapılardan biridir.\n\nCümle kapısının yanları beş, üstü dokuz sıra stalaktitlidir. İçten 8,90 × 8,95 m olan yapı dıştan sekizgen kasnaklıdır; kubbeye geçiş Türk üçgenleriyle sağlanır. Cami altta sekiz, üstte altı ve kasnakta üç pencereyle aydınlanır. İnce ve uzun mihrap, alçıdan altı sıra mukarnaslı kavsaraya sahiptir. Günümüze ulaşan en dikkat çekici bölümlerden biri ahşap mahfildir: tavanı yeşil ve kırmızıyla boyanmış, doğu ve batı maksurelerin tavanlarına çıtakâri tekniğiyle geometrik motifler işlenmiştir.\n\nSon cemaat yerinden çıkılan minare batı taraftadır; sekizgen kaidesinin üç kenarı duvara gömülüdür, tuğla örgülü silindirik gövdeye geçiş Türk üçgenleriyle sağlanır, şerefe altı kirpi saçaklı, külahı kurşun kaplıdır. Bir rapordan caminin 1855 depreminde hafif hasar aldığı, yalnızca minare şerefesinin epey hasarlı olduğu anlaşılmaktadır. Cami 1860'ta onarılmış, 1953'te Bursa Eski Eserleri Sevenler Kurumu tarafından aslına uygun restore edilerek yeniden ibadete açılmış, 2011'de Vakıflar Genel Müdürlüğü kapsamlı bir tamirat daha yapmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hacilar-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hacilar-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında kurşun kubbeli, tuğla ve taş örgülü küçük cami, sivri kemerli son cemaat yeri ve yanında yükselen tuğla minare; arkada yamaçlara yayılan Bursa evleri",
+      "description": "Caminin çevresiyle havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hacilar-mosque/prayer-hall-gallery.jpg",
+      "alt": "İç mekân: kırmızı halılı harim, önde ahşap mahfilin direkleri ve korkulukları, üstte kırmızı zeminli ahşap tavan, karşıda ince uzun mukarnaslı mihrap",
+      "description": "Ahşap mahfil ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hacilar-mosque/minaret.jpg",
+      "alt": "Tuğla örgülü silindirik minare, şerefesi ve sivri kurşun külahı; altında kurşun kaplı kubbe, arkada yamaçtaki evler",
+      "description": "Minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-hacilar-mosque/minaret.jpg",
+      "x": 49,
+      "y": 52,
+      "title": "Minare",
+      "text": "Son cemaat yerinden çıkılan minarenin tuğla örgülü silindirik gövdesine geçiş Türk üçgenleriyle sağlanır; şerefe altı kirpi saçaklı, külahı kurşun kaplıdır.",
+      "sourceId": "inv-p329"
+    },
+    {
+      "id": "gallery",
+      "image": "/images/osmangazi-hacilar-mosque/prayer-hall-gallery.jpg",
+      "x": 41,
+      "y": 15,
+      "title": "Ahşap mahfil",
+      "text": "Günümüze ulaşan en dikkat çekici bölümlerden biri ahşap mahfildir; tavanı yeşil ve kırmızı renklerle boyanmıştır.",
+      "sourceId": "inv-p329"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-hacilar-mosque/prayer-hall-gallery.jpg",
+      "x": 84,
+      "y": 43,
+      "title": "Mihrap",
+      "text": "Dikdörtgen çerçeve içindeki ince ve uzun mihrap, alçıdan yapılmış altı sıra mukarnaslı kavsaraya sahiptir.",
+      "sourceId": "inv-p329"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mehmed Şemseddin Ulusoy'un aktardığı rivayete göre caminin adı nereden gelir?",
+      "options": [
+        "Caminin hacıların konakladığı bir hana bitişik olmasından",
+        "Hacca gidemeyen hacı adaylarının mescidi yaptırmasından",
+        "Banisinin hac dönüşü camiyi yaptırmasından",
+        "Mahallede hac kafilelerinin toplanmasından"
+      ],
+      "correct": 1,
+      "description": "Rivayete göre hacca gidemeyen bir grup hacı adayı ellerindeki parayla bu mescidi yaptırmış, yapıya bu yüzden Hacılar Camii denmiştir.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "question": "Mahfilin doğu ve batı maksure tavanlarındaki geometrik motifler hangi teknikle işlenmiştir?",
+      "options": [
+        "Kalem işi",
+        "Sedef kakma",
+        "Malakâri",
+        "Çıtakâri"
+      ],
+      "correct": 3,
+      "description": "Doğu ve batı maksurelerin tavanlarında çıtakâri tekniğiyle çeşitli geometrik motifler işlenmiştir.",
+      "sourceId": "inv-p329"
+    },
+    {
+      "question": "Cami 1953'te hangi kurum tarafından aslına uygun restore edilmiştir?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Bursa Belediyesi",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Türk Tarih Kurumu"
+      ],
+      "correct": 2,
+      "description": "Cami 1953'te Bursa Eski Eserleri Sevenler Kurumu tarafından restore edilerek yeniden ibadete açılmıştır.",
+      "sourceId": "inv-p329"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p326",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacılar Camii\"",
+      "page": "326"
+    },
+    {
+      "id": "inv-p327",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacılar Camii\"",
+      "page": "327"
+    },
+    {
+      "id": "inv-p328",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacılar Camii\"",
+      "page": "328"
+    },
+    {
+      "id": "inv-p329",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacılar Camii\"",
+      "page": "329"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

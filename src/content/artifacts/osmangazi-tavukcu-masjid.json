@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-tavukcu-masjid",
+  "name": "Tavukçu Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 15. yüzyılın ilk yarısı (tahmini)",
+  "endowment": "Bazergânzade Mehmet Vakfı adına kayıtlı",
+  "summary": "Uzun yıllar dükkân ve ev olarak kullanıldıktan sonra 2011'de kamulaştırılıp restore edilen ve 2014'te yeniden ibadete açılan 15. yüzyıl mescidi.",
+  "history": "Tavukçu Mescidi, Osmangazi İlçesi, Şehreküstü Mahallesi, Tavukçu Sokak No: 9/A'dadır. Kesin inşa tarihi bilinmemekle birlikte 15. yüzyılın ilk yarısında yapıldığı düşünülmektedir. Bazergânzade Mehmet Vakfı adına kayıtlı olan yapı, 1938'de müzayedeye çıkarılmış ve açık artırmayla İsmail Hakkı adlı bir vatandaşa konut olarak kullanılmak üzere satılmıştır. Yıllar boyunca alt katı dükkân, üst katı ev olarak kullanılmıştır.\n\nYığma duvarlı, kirpi saçaklı ve ahşap çatılı bir yapıdır. 1938'den 2011'e kadar tapu kayıtlarında ev olarak görünen yapı, çarşının uzantısı olan mahallenin dükkânları arasında kalmış, zamanla ayakkabıcılar tarafından depo ve dükkân olarak kullanılmış ve bu süreçte harap hâle gelmiştir.\n\nMescit, Vakıflar Bölge Müdürlüğü ile Bursa Valiliği arasında 2011'de yapılan protokol kapsamında kamulaştırılmış; bürokratik işlemlerin ardından park ve yolda kalan bölümler de cami alanına dâhil edilerek restore edilmiş ve 2014'te ibadete açılmıştır.\n\nMoloz taş ve tuğla örgülü beden duvarları, söveli ve tuğla kemerli pencereleri ve camekân içine alınmış son cemaat yeriyle mimari yapısı büyük ölçüde değişmiştir. Son yıllarda ihya edilen Tatarlar, Sivasiler, Zağferanlık ve Kiremitçi camileri gibi yapılarla benzer bir tarzda yeniden inşa edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-tavukcu-masjid/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-tavukcu-masjid/aerial-view.jpg",
+      "alt": "Havadan görünüm: dükkânlar ve evlerle çevrili, kiremit kırma çatılı taş ve tuğla mescit; yanında tuğla gövdeli, beyaz şerefeli minare ve sol yanda camekânlı bölüm",
+      "description": "Mescidin çarşı dokusu içindeki görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-tavukcu-masjid/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kiremit kaplı kırma çatı, yanında minarenin külahı ve yeşil saçaklı avlu",
+      "description": "Çatının tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-tavukcu-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: turkuaz halılı harim, ahşap kaplı mihrap, sağda ahşap minber, ahşap tavan ve beyaz duvarlarda hat levhaları",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-tavukcu-masjid/aerial-view.jpg",
+      "x": 36,
+      "y": 76,
+      "title": "Camekânlı son cemaat yeri",
+      "text": "Restorasyonda son cemaat yeri camekân içine alınmıştır.",
+      "sourceId": "inv-p439"
+    },
+    {
+      "id": "walls-windows",
+      "image": "/images/osmangazi-tavukcu-masjid/aerial-view.jpg",
+      "x": 58,
+      "y": 73,
+      "title": "Beden duvarları ve pencereler",
+      "text": "Beden duvarları moloz taş ve tuğla örgülüdür; pencereler söveli ve tuğla kemerlidir.",
+      "sourceId": "inv-p439"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-tavukcu-masjid/aerial-view.jpg",
+      "x": 28,
+      "y": 58,
+      "title": "Kirpi saçaklı çatı",
+      "text": "Yığma duvarlı yapı kirpi saçaklı ve ahşap çatılıdır.",
+      "sourceId": "inv-p439"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tavukçu Mescidi 1938 yılında hangi yolla bir vatandaşa satılmıştır?",
+      "options": [
+        "Açık artırma (müzayede) ile",
+        "Kamulaştırma ile",
+        "Bağış yoluyla",
+        "Takas yoluyla"
+      ],
+      "correct": 0,
+      "description": "Yapı 1938'de müzayedeye çıkarılmış ve açık artırmayla İsmail Hakkı adlı bir vatandaşa konut olarak satılmıştır.",
+      "sourceId": "inv-p439"
+    },
+    {
+      "question": "Mescit 1938–2011 arasında tapuda nasıl görünüyordu?",
+      "options": [
+        "Okul",
+        "Han",
+        "Ev",
+        "Hamam"
+      ],
+      "correct": 2,
+      "description": "Yapı 1938'den 2011'e kadar tapu kayıtlarında ev olarak görünmüş; alt katı dükkân, üst katı ev olarak kullanılmıştır.",
+      "sourceId": "inv-p439"
+    },
+    {
+      "question": "Restore edilen mescit hangi yıl ibadete açılmıştır?",
+      "options": [
+        "2009",
+        "2011",
+        "2019",
+        "2014"
+      ],
+      "correct": 3,
+      "description": "2011'de kamulaştırılıp restore edilen mescit 2014'te ibadete açılmıştır.",
+      "sourceId": "inv-p439"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p439",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Tavukçu Mescidi\"",
+      "page": "439"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

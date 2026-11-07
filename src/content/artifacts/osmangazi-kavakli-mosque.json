@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-kavakli-mosque",
+  "name": "Kavaklı Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · I. Murad Hudâvendigâr dönemi, 1370",
+  "endowment": "Banisi Bursa kadısı Koca Nâib; Hisar kapısı içindeki iki vakıf dükkânı günümüze ulaşmamıştır",
+  "summary": "1370'te Bursa kadısı Koca Nâib'in yaptırdığı, adını Geyikli Baba'nın önüne diktiği ağaçtan alan tek kubbeli cami.",
+  "history": "Kavaklı Camii, Osmangazi İlçesi, Kavaklı Mahallesi, Kavaklı Caddesi No: 19'dadır. Kayıtlardaki \"Kavaklı Mahallesi'nde Merhum Koca Efendi'nin bina ve ihya buyurdukları mescit\" ibaresinden, caminin 1370 yılında I. Murad Hudâvendigâr devrinin Bursa kadısı Koca Nâib tarafından yaptırıldığı anlaşılır. Yapı, Geyikli Baba'nın caminin önüne diktiği ağaca telmihle Kavaklı adıyla anılır.\n\nKoca Nâib, Yıldırım Bayezid'in eşi Devlet Hatun'un dünür başıdır. 1329'da kazasker olmuş, Muradiye'de de bir cami yaptırıp vakıflar kurmuştur. 1372'de vefat eden Koca Nâib'in Pınarbaşı Meydanı'nda, Mevlevîhane'nin karşısında bulunan türbesi bugün yerinde değildir.\n\nCaminin duvarları yerden üç metre yüksekliğe kadar moloz taş ve tuğlayla, daha yukarıda bir sıra kesme taş ve bir sıra tuğlayla örülmüş, en üstte tuğla sırası üçe çıkarılmıştır. Kuzeybatı köşede beden duvarının üzerinden yükselen mütevazı minare tuğladan silindirik gövdeli, çift bilezikli ve şerefe altı mukarnas dolguludur; külahı kurşun kaplıdır. Çatı üstünden yükselen bu üsluptaki minarelerin nadir örneklerindendir.\n\nCaminin son cemaat yeriyle birlikte dıştan uzunluğu 15 m, genişliği 10,5 m'dir. Türk üçgenleri üzerine oturan 8,85 × 8,85 m'lik harim kubbesi kurşun kaplıdır. Alışılmışın dışında caminin batısında yer alan beş gözlü, sivri kemerli son cemaat yeri revakı ahşap çatılı ve kiremit örtülüdür; kapısı da kuzeyden değil batıdaki yan cepheden açılmıştır. Yapı, doğu ve batı duvarlarındaki demir parmaklıklı, sivri kemerli dört pencere ile kasnaktaki üç sivri kemerli pencereden ışık alır; kuzeydeki altlık pencereler kapatılmıştır.\n\nÇeşitli dönemlerde tamir gören cami, 1598'de yandıktan sonra yeniden inşa edilmiştir. Önceleri ahşap olan minaresi 1890'da tuğla olarak yenilenmiştir. Uzun süre kapalı kalan cami, 1970'li yıllarda mahalle halkının desteğiyle bakımdan geçirilerek ibadete açılmıştır. 1989 onarımlarında kubbe içi tezyinatı Mimar M. Semih İrteş tarafından 14. yüzyıl dinî mimari üslubuna uygun olarak yenilenmiş, mihrap ve duvarlar Kütahya çinileriyle kaplanmıştır. Ahşap minber oldukça sadedir.\n\nÇini kaplı mihrapta lacivert zemin üzerine beyaz celi sülüsle Bakara Suresi'nin 149. ayeti yazılıdır; mihrabı üç taraftan dolanan yazı kuşağında Âyetü'l-Kürsî yer alır. Kubbe eteğindeki kuşakta kûfî hatla esmâ-i hüsnâ sıralanmış, üzerinde kalem işi yarım şemseli salbek motifleri, Türk üçgenlerinin içinde de rozetler ve yarım şemseler işlenmiştir. Hisar kapısı içinde camiye ait iki vakıf dükkânı, diğer vakıf dükkânları gibi kaybolmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-kavakli-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-kavakli-mosque/exterior.jpg",
+      "alt": "Dış görünüm: kiremit çatılı, sivri kemerli revaklı tuğla cami; çatının üstünden yükselen kırmızı tuğla minare ve arkada kurşun kubbe, sağda büyük bir ağaç",
+      "description": "Caminin son cemaat yeri, minaresi ve önündeki ağaç",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-kavakli-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi çinilerle kaplı mihrap duvarı, ortada çini mihrap ve büyük avize, sağda ahşap minber; kubbe eteğinde madalyon biçimli süslemeler",
+      "description": "Çini kaplı mihrap duvarı ve harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-kavakli-mosque/dome-interior.jpg",
+      "alt": "Kubbenin içten görünümü: ortada avize, çevresinde dilimler hâlinde kalem işi motifler ve kubbe eteğinde yazı kuşağı; yanlarda renkli camlı pencereler",
+      "description": "Kalem işi süslemeli kubbe içi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-kavakli-mosque/exterior.jpg",
+      "x": 21,
+      "y": 28,
+      "title": "Çatı üstünden yükselen minare",
+      "text": "Kuzeybatı köşede beden duvarının üzerinden yükselen minare tuğladan silindirik gövdelidir, külahı kurşun kaplıdır; önceleri ahşap olan minare 1890'da tuğla olarak yenilenmiştir.",
+      "sourceId": "inv-p374"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-kavakli-mosque/exterior.jpg",
+      "x": 32,
+      "y": 66,
+      "title": "Son cemaat yeri revakı",
+      "text": "Sivri kemerli son cemaat yeri revakı alışılmışın dışında ahşap çatılıdır ve üstü kiremitle örtülüdür.",
+      "sourceId": "inv-p374"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-kavakli-mosque/prayer-hall.jpg",
+      "x": 51,
+      "y": 58,
+      "title": "Çini kaplı mihrap",
+      "text": "1989 onarımında mihrap ve duvarlar Kütahya çinileriyle kaplanmıştır; mihrapta lacivert zemin üzerine beyaz celi sülüsle Bakara Suresi'nin 149. ayeti yazılıdır.",
+      "sourceId": "inv-p375"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami, Kavaklı adını neye telmihle almıştır?",
+      "options": [
+        "Mahallede bulunan bir kavak ormanına",
+        "Banisinin lakabına",
+        "Geyikli Baba'nın caminin önüne diktiği ağaca",
+        "Yakındaki bir çeşmenin adına"
+      ],
+      "correct": 2,
+      "description": "Yapı, Geyikli Baba'nın caminin önüne diktiği ağaca telmihle Kavaklı adıyla anılır.",
+      "sourceId": "inv-p373"
+    },
+    {
+      "question": "Önceleri ahşap olan minare hangi yıl tuğla olarak yenilenmiştir?",
+      "options": [
+        "1890",
+        "1598",
+        "1970",
+        "1989"
+      ],
+      "correct": 0,
+      "description": "1598'de yanıp yeniden inşa edilen caminin önceleri ahşap olan minaresi 1890'da tuğla olarak yenilenmiştir.",
+      "sourceId": "inv-p375"
+    },
+    {
+      "question": "1989 onarımlarında mihrap ve duvarlar hangi çinilerle kaplanmıştır?",
+      "options": [
+        "İznik çinileri",
+        "Bursa çinileri",
+        "Çanakkale çinileri",
+        "Kütahya çinileri"
+      ],
+      "correct": 3,
+      "description": "1989 onarımlarında kubbe içi tezyinatı yenilenmiş, mihrap ve duvarlar Kütahya çinileriyle kaplanmıştır.",
+      "sourceId": "inv-p375"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p373",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kavaklı Camii\"",
+      "page": "373"
+    },
+    {
+      "id": "inv-p374",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kavaklı Camii\"",
+      "page": "374"
+    },
+    {
+      "id": "inv-p375",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kavaklı Camii\"",
+      "page": "375"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

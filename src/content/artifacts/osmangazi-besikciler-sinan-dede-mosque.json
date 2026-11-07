@@ -1,0 +1,130 @@
+{
+  "id": "osmangazi-besikciler-sinan-dede-mosque",
+  "name": "Beşikçiler (Sinan Dede) Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1455",
+  "endowment": "Sadrazam Amasyalı İshak Paşa'nın kethüdası Sufi Hacı Sinan",
+  "summary": "Sufi Hacı Sinan'ın 1455'te yaptırdığı, yanları açık revaklı ve tek kubbeli, Sufi tacı biçimli minare külahıyla dikkat çeken mescit ve haziresi.",
+  "history": "Beşikçiler (Sinan Dede) Camii ve Haziresi, Osmangazi ilçesi, Muradiye Mahallesi, Beşikçiler Caddesi, No: 23'tedir. Cami, Sadrazam Amasyalı İshak Paşa'nın kethüdası Sufi Hacı Sinan tarafından 1455 yılında yaptırılmıştır.\n\nYapının inşa tarzı benzerlerinden farklıdır: son cemaat yeri revakının yanlarının açık bırakılması ve cephede kubbe seviyesine kadar yükselen kalkan duvarın bulunmaması, onu Bursa tipi cami formundan ayırır. Yan kat kornişinde alçalıp yükselme yapılmadığı için kasnak sağır kalmıştır. Revakın üstü uzunlamasına tek tonozla örtülmüş, bu bölümün ve revakın saçak silmeleri iç içe geçmiş bir görünüm kazanmıştır.\n\nRevaklı ve tek kubbeli bir mescit olan cami içte 5,80 × 6,35 m, dışta 7,50 × 8,07 m ölçülerindedir; duvar kalınlığı 85 cm'dir. Son cemaat yeri revakı 4,10 × 8,07 m'dir. Kubbe duvarlara Türk üçgenleriyle oturur. Üç gözlü revak beşik tonozlarla örtülüdür; ayakları bir sıra kesme taş ve üç sıra tuğladan, duvarlar moloz taştan örülmüştür. Sekiz altlık ve altı üstlük pencere harimi aydınlatır. Mihrap yeniden inşa edilirken özgün biçiminden uzaklaşılmıştır ve içeride özgün sanat unsuru kalmamıştır.\n\nYapının en dikkat çeken ögesi minaresidir. Mescit 1951'de harap durumdayken bile minarenin Sufi tacı biçimindeki külahı hiç bozulmadan günümüze ulaşmıştır. Tuğladan çokgen gövdeli minare, bilezikleri, şerefe altındaki altı sıra tuğla stalaktit ve külahıyla dengeli bir görünüm sergiler; şerefe korkulukları sonradan yenilenmiştir.\n\nCaminin bahçesindeki hazirede bugün yalnızca üç mezar taşı vardır; taşı günümüze ulaşanlar arasında Mehmed, İbrahim Bey ve Ali Çelebi bin İsmail Bey yer alır. Beşikçiler Mezarlığı 1930'lu yıllarda park yapılmak üzere kaldırılmış, taşların bir kısmı civardaki hazirelere taşınmış, büyük bölümü yok edilmiştir. Mezarı ve taşı kaybolanlar arasında caminin banisi Sufi Sinan Efendi (Paşa), cami imamı Muhyiddin Efendi ve Halvetî Şeyhi Kebapçızâde Şeyh Bostan Efendi bulunur. Cami bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-besikciler-sinan-dede-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-besikciler-sinan-dede-mosque/exterior.jpg",
+      "alt": "Köşe başında kesme taş ve tuğla örgülü, kurşun kubbeli küçük cami; yanında külahlı ince tuğla minare, arkada apartmanlar ve yeşil yamaçlar",
+      "description": "Caminin ve minarenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-besikciler-sinan-dede-mosque/portico.jpg",
+      "alt": "Beyaz badanalı kalın ayaklar ve sivri kemerlerle açılan revak; kemerler arasından bahçedeki ağaçlar ve demir korkuluk görülüyor",
+      "description": "Son cemaat yeri revakı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-besikciler-sinan-dede-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı küçük harim; yaldızlı mihrap, ahşap çerçeveli pencereler, duvarlarda hat levhaları ve tavandan sarkan avize",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-besikciler-sinan-dede-mosque/graveyard.jpg",
+      "alt": "Ağaçlar arasında, tuğla-taş örgülü revakın yanında yatay bir mezar sandukası ile iki sütun biçimli mezar taşı",
+      "description": "Cami haziresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-besikciler-sinan-dede-mosque/exterior.jpg",
+      "x": 37,
+      "y": 25,
+      "title": "Sufi tacı biçimli külah",
+      "text": "1951'de mescit harapken bile minarenin Sufi tacı biçimindeki külahı hiç bozulmadan günümüze ulaşmıştır.",
+      "sourceId": "inv-p284"
+    },
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-besikciler-sinan-dede-mosque/exterior.jpg",
+      "x": 37,
+      "y": 51,
+      "title": "Tek kubbe",
+      "text": "Revaklı ve tek kubbeli mescidin kubbesi duvarlara Türk üçgenleriyle oturtulmuştur.",
+      "sourceId": "inv-p284"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-besikciler-sinan-dede-mosque/graveyard.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Hazire",
+      "text": "Hazirede bugün yalnızca üç mezar taşı bulunur; Beşikçiler Mezarlığı 1930'lu yıllarda park yapılmak üzere kaldırılmıştır.",
+      "sourceId": "inv-p285"
+    }
+  ],
+  "test": [
+    {
+      "question": "Beşikçiler Camii'ni kim yaptırmıştır?",
+      "options": [
+        "Sufi Hacı Sinan",
+        "Amasyalı İshak Paşa",
+        "Çakır Ağa",
+        "Hacı İvaz Paşa"
+      ],
+      "correct": 0,
+      "description": "Cami, Sadrazam Amasyalı İshak Paşa'nın kethüdası Sufi Hacı Sinan tarafından 1455 yılında yaptırılmıştır.",
+      "sourceId": "inv-p283"
+    },
+    {
+      "question": "Minarenin külahı hangi biçimdedir?",
+      "options": [
+        "Kurşun kaplı konik",
+        "Sufi tacı",
+        "Soğan kubbe",
+        "Piramit"
+      ],
+      "correct": 1,
+      "description": "1951'de mescit harapken bile minarenin Sufi tacı biçimindeki külahı bozulmadan günümüze ulaşmıştır.",
+      "sourceId": "inv-p284"
+    },
+    {
+      "question": "Beşikçiler Mezarlığı 1930'lu yıllarda neden kaldırılmıştır?",
+      "options": [
+        "Yol genişletmek için",
+        "Okul yapmak için",
+        "Park yapmak için",
+        "Çarşı kurmak için"
+      ],
+      "correct": 2,
+      "description": "Beşikçiler Mezarlığı 1930'lu yıllarda park yapılmak amacıyla kaldırılmış, taşların büyük bölümü yok edilmiştir.",
+      "sourceId": "inv-p285"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p283",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Beşikçiler (Sinan Dede) Camii ve Haziresi\"",
+      "page": "283"
+    },
+    {
+      "id": "inv-p284",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Beşikçiler (Sinan Dede) Camii ve Haziresi\"",
+      "page": "284"
+    },
+    {
+      "id": "inv-p285",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Beşikçiler (Sinan Dede) Camii ve Haziresi\"",
+      "page": "285"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

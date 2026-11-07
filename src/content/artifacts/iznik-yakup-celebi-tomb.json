@@ -1,0 +1,106 @@
+{
+  "id": "iznik-yakup-celebi-tomb",
+  "name": "Yakup Çelebi Türbesi",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Osmanlı · Yakup Çelebi H. 791 / M. 1389'da vefat etti; 1963'te özgün açık formuna döndürüldü",
+  "endowment": "Yakup Çelebi adına inşa edilmiştir; vakfı kitapta belirtilmemiştir.",
+  "summary": "Yakub Bey Camii'nin bahçesinde, Yakup Çelebi adına yapılmış, baldaken planlı ve kubbeli açık makam türbesi.",
+  "history": "Türbe, İznik'te Yeni Mahalle, Yakup Sokak'taki caminin bahçesindedir. Caminin önünde, Yakup Çelebi adına inşa edilmiş, baldaken planlı ve kubbeli bir açık türbedir. H. 791 / M. 1389'da vefat eden Yakup Çelebi Bursa'da babasının türbesine defnedildiğinden, İznik'teki bu yapı makam türbesi olarak kalmış ya da bu maksatla inşa edilmiştir.\n\nBu tip açık türbe formu Bursa'daki erken dönem mezar yapılarında da görülür; özellikle Muradiye Türbeleri arasındaki Ebe Hatun Türbesi ile Umur Bey Türbesi benzer tipolojidedir.\n\n6,50 × 6,50 m ölçülerindeki türbe, L biçimli dört köşe paye üzerine oturan sivri kemerli açıklıklardan oluşur. Ayak ve kemerlerde bir sıra kesme taş ile üç sıra tuğla almaşık biçimde kullanılmış, kirpi saçaklar tuğladan örülmüştür. Zamanla kemer açıklıkları örülerek kapatılmış ve duvarlara dikdörtgen pencereler açılmış; 1963'teki onarımda bu duvarlar kaldırılarak yapı yeniden özgün açık formuna kavuşturulmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-yakup-celebi-tomb/front-view.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-yakup-celebi-tomb/front-view.jpg",
+      "alt": "Açık türbenin önden görünümü: kesme taş ve tuğla sıralı köşe payeleri, geniş sivri kemerli açıklık, tuğla kirpi saçak ve kiremit kaplı kubbe; içeride yeşil örtülü sanduka",
+      "description": "Önden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-yakup-celebi-tomb/interior-cenotaph.jpg",
+      "alt": "Türbenin içinden görünüm: taş platform üzerinde yeşil örtülü sanduka, üstte almaşık örgülü sivri kemerler, arkada caminin pencereli duvarı",
+      "description": "Türbe içi ve sanduka",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "arches",
+      "image": "/images/iznik-yakup-celebi-tomb/front-view.jpg",
+      "x": 50,
+      "y": 53,
+      "title": "Sivri kemerli açıklıklar",
+      "text": "6,50 × 6,50 m ölçülerindeki türbe, L biçimli dört köşe paye üzerine oturan sivri kemerli açıklıklardan oluşur. Ayak ve kemerlerde bir sıra kesme taş ile üç sıra tuğla almaşık kullanılmıştır.",
+      "sourceId": "inv-p479"
+    },
+    {
+      "id": "eaves",
+      "image": "/images/iznik-yakup-celebi-tomb/front-view.jpg",
+      "x": 50,
+      "y": 26,
+      "title": "Tuğla kirpi saçak",
+      "text": "Yapı, tuğladan örülmüş kirpi saçaklarla süslenmiştir.",
+      "sourceId": "inv-p479"
+    },
+    {
+      "id": "cenotaph",
+      "image": "/images/iznik-yakup-celebi-tomb/interior-cenotaph.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Makam türbesi",
+      "text": "H. 791 / M. 1389'da vefat eden Yakup Çelebi Bursa'da babasının türbesine defnedildiğinden, bu yapı makam türbesi olarak kalmış ya da bu maksatla inşa edilmiştir.",
+      "sourceId": "inv-p479"
+    }
+  ],
+  "test": [
+    {
+      "question": "İznik'teki bu yapı neden makam türbesi olarak kabul edilir?",
+      "options": [
+        "Yakup Çelebi Bursa'da babasının türbesine defnedildiği için",
+        "Türbe hiç tamamlanmadığı için",
+        "Yapı sonradan camiye çevrildiği için",
+        "Yakup Çelebi İstanbul'a defnedildiği için"
+      ],
+      "correct": 0,
+      "description": "H. 791 / M. 1389'da vefat eden Yakup Çelebi Bursa'da babasının türbesine defnedildiğinden bu yapı makam türbesi olarak kalmış ya da bu maksatla inşa edilmiştir.",
+      "sourceId": "inv-p479"
+    },
+    {
+      "question": "1963'teki onarımda türbede ne yapılmıştır?",
+      "options": [
+        "Kemerleri kapatan duvarlar kaldırılıp yapı açık formuna kavuşturuldu",
+        "Kubbe kurşunla kaplandı",
+        "Kemerler örülerek kapatıldı",
+        "Yapıya minare eklendi"
+      ],
+      "correct": 0,
+      "description": "Zamanla örülen kemer açıklıkları 1963 onarımında kaldırılmış, yapı yeniden özgün açık formuna kavuşturulmuştur.",
+      "sourceId": "inv-p479"
+    },
+    {
+      "question": "Bursa'daki hangi türbeler bu yapıyla benzer tipolojidedir?",
+      "options": [
+        "Ebe Hatun Türbesi ile Umur Bey Türbesi",
+        "Yeşil Türbe ile Emir Sultan Türbesi",
+        "Osman Gazi ile Orhan Gazi türbeleri",
+        "Çandarlı Halil Paşa Türbesi ile Şeyh Kutbüddin Türbesi"
+      ],
+      "correct": 0,
+      "description": "Açık türbe formu Bursa'nın erken dönem mezar yapılarında da görülür; Muradiye Türbeleri arasındaki Ebe Hatun Türbesi ile Umur Bey Türbesi benzer tipolojidedir.",
+      "sourceId": "inv-p479"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p479",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Yakup Çelebi Türbesi\"",
+      "page": "89"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

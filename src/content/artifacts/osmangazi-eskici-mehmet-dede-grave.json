@@ -1,0 +1,81 @@
+{
+  "id": "osmangazi-eskici-mehmet-dede-grave",
+  "name": "Eskici Mehmet Dede Mezarı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Eskici Mehmed Dede H. 988 / M. 1580'de vefat etmiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hazret-i Üftâde'nin müritlerinden, Amasyalı Eskici Mehmed Dede'nin \"Kubbeli Kümbet\" olarak da anılan yapının doğusundaki hazirede bulunan kabri.",
+  "history": "Eskici Mehmed Dede'nin kabri, Osmangazi ilçesi, Tahtakale Mahallesi, Veziri Caddesi No: 43'tedir. Kabir, \"Kubbeli Kümbet\" olarak da adlandırılan ve bir zaviye olduğu düşünülen tarihi yapının doğusundaki hazirededir.\n\nAslen Amasyalı olduğu bilinen Mehmed Dede, H. 988 / M. 1580'de vefat etmiş ve buraya defnedilmiştir. Kabir taşında şu ifade yer alır: \"Hazret-i Üftâde müritlerinden, Hüdâyî Mahmud Dede'yi irşat eden Eskici Mehmed Dede H. 988.\"\n\nZaman zaman bedestende ticaretle uğraşmış, bazen de eskicilik yapmıştır. Ancak çoğunlukla dünyevi işlerden elini eteğini çekerek münzevi bir hayatı tercih ettiği rivayet edilir. Kerametlerine dair pek çok menkıbe anlatılır; bunlardan Üftâde Hazretleri ile arasında geçen ve sonrasında Aziz Mahmud Hüdâyî'nin irşadına vesile olduğu ifade edilen menkıbe, halk arasında en çok bilinenidir.\n\n2006'da Osmangazi Belediyesi hazireyi ve yanındaki kubbeli tarihi yapıyı restore ederek düzenlemiştir. Bu çalışmalar kapsamında, güneyde daha önce var olan ancak yıkılan sivil mimari örneği yapı yeniden inşa edilerek \"Eskici Mehmed Dede Aş Evi\" adıyla hizmete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-eskici-mehmet-dede-grave/grave.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-eskici-mehmet-dede-grave/grave.jpg",
+      "alt": "Beyaz mermer kaplı alçak kaide üzerinde sivri uçlu yeşil demir parmaklıkla çevrili kabir; parmaklıkta sarı zemin üzerine \"Eskici Mehmed Dede Hazretleri\" yazılı levha; solda kalın ağaç gövdesi ve taş-tuğla duvar, arkada eski evler",
+      "description": "Eskici Mehmed Dede'nin kabri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "grave",
+      "image": "/images/osmangazi-eskici-mehmet-dede-grave/grave.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Kabir",
+      "text": "Eskici Mehmed Dede'nin kabri, \"Kubbeli Kümbet\" olarak da adlandırılan tarihi yapının doğusundaki hazirede yer alır.",
+      "sourceId": "inv-p212"
+    }
+  ],
+  "test": [
+    {
+      "question": "Eskici Mehmed Dede aslen nerelidir?",
+      "options": [
+        "Bursalı",
+        "Amasyalı",
+        "Konyalı",
+        "Bağdatlı"
+      ],
+      "correct": 1,
+      "description": "Aslen Amasyalı olduğu bilinen Mehmed Dede, H. 988 / M. 1580'de vefat etmiş ve buraya defnedilmiştir.",
+      "sourceId": "inv-p212"
+    },
+    {
+      "question": "Kabir taşına göre Eskici Mehmed Dede kimin müritlerindendir?",
+      "options": [
+        "Hacı Bayrâm-ı Velî",
+        "Emir Sultan",
+        "Akşemseddin",
+        "Hazret-i Üftâde"
+      ],
+      "correct": 3,
+      "description": "Kabir taşında \"Hazret-i Üftâde müritlerinden, Hüdâyî Mahmud Dede'yi irşat eden Eskici Mehmed Dede H. 988\" yazar.",
+      "sourceId": "inv-p212"
+    },
+    {
+      "question": "2006'daki düzenleme kapsamında yeniden inşa edilen yapı hangi adla hizmete açılmıştır?",
+      "options": [
+        "Eskici Mehmed Dede Aş Evi",
+        "Üftâde Kültür Evi",
+        "Tahtakale Zaviyesi",
+        "Kubbeli Kümbet Müzesi"
+      ],
+      "correct": 0,
+      "description": "Güneyde daha önce var olan ancak yıkılan sivil mimari örneği yapı yeniden inşa edilerek \"Eskici Mehmed Dede Aş Evi\" adıyla açılmıştır.",
+      "sourceId": "inv-p212"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p212",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Eskici Mehmed Dede Mezarı\"",
+      "page": "212"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

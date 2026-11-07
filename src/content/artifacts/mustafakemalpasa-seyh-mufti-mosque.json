@@ -1,0 +1,170 @@
+{
+  "id": "mustafakemalpasa-seyh-mufti-mosque",
+  "name": "Şeyh Müftü Camii",
+  "city": "Bursa",
+  "district": "Mustafakemalpaşa",
+  "period": "Geç Osmanlı · H. 1312 / M. 1895-96 (yeniden inşa)",
+  "endowment": "İlk yapı: Abdülkerim Kâdiri (Şeyh Müftü); yeniden inşa: Naib Şefik Bey'in desteği ve halkın katkısı",
+  "summary": "Ahşap kubbesi, pandantiflerdeki dört halife adı ve ahşap son cemaat yeriyle dikkat çeken, 1895-96'da yeniden yapılmış geç Osmanlı camisi.",
+  "history": "Cami, Mustafakemalpaşa'nın Şeyhmüftü Mahallesi'ndedir. Yerinde daha önce \"Şeyh Müftü\" olarak tanınan Abdülkerim Kâdiri'nin yaptırdığı bir yapı bulunuyordu. Bugünkü cami, Naib Şefik Bey'in gayreti ve desteğiyle H. 1312 / M. 1895-96'da yeniden inşa edilmiş; kitabesi de aynı tarihte yerleştirilmiştir.\n\nNaif bir sülüs hatla yazılan kitabe Nisâ suresinin 103. ayetinin bir bölümüyle başlar ve caminin Naib Şefik Bey'in aracılığı, yardımı ve gayretli halkın harcadığı mal ve emekle yapıldığını anlatır. Bu ifadeler caminin yalnız resmî idarenin değil, halkın da doğrudan katkısıyla yeniden yapıldığını gösterir. Minaredeki ikinci kitabe de aynı tarihi taşır.\n\nKare planlı caminin beden duvarları moloz taştır; her cephesinde II. Abdülhamid dönemi üslubunu yansıtan Gotik tarzda pencereler vardır. Ahşap kubbe sekizgen, yüksek bir kasnağa oturur ve ortada mermer kaideler üzerindeki dört ahşap direkle taşınır; yan sahınlar düz tavanlıdır. Pandantiflerde \"cihâryâr-i güzîn\" denilen dört halifenin adları sülüs hatla işlenmiş, çevreleri kalem işiyle bezenmiştir. Kubbe, çatı ve son cemaat yeri kurşunla kaplıdır. Mihrap mermer, minber ve kürsü ahşaptır; kasnaktaki sekiz pencere iç mekâna bol ışık verir.\n\nAhşap direklerle taşınan geniş son cemaat yeri ahşap konstrüksiyonla yapılmıştır. Minare, kare kaide üzerinde yükselen, tamamen kesme taştan silindirik bir gövdeye sahiptir; şerefesi ve kurşun külahıyla dönemin özgün bir örneğidir.",
+  "verification": "verified",
+  "coverImage": "/images/mustafakemalpasa-seyh-mufti-mosque/aerial-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-mosque/aerial-minaret.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında kurşun kaplı kubbeli ve çatılı cami, önünde ince uzun kesme taş minare, arkada şehir ve nehir",
+      "description": "Cami ve minarenin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-mosque/aerial-top.jpg",
+      "alt": "Tam tepeden çekim: dikdörtgen kurşun çatının ortasında dilimli kurşun kubbe, çevresinde ağaçlar ve yol",
+      "description": "Caminin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı geniş harim: ortada ahşap direkler ve kemerler, üstte kubbe kasnağı, karşıda mermer mihrap ve ahşap minber, yanlarda sivri kemerli büyük pencereler",
+      "description": "Harim, mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-mosque/prayer-hall-upper.jpg",
+      "alt": "Üst kattan harime bakış: önde ahşap korkuluk, ahşap direklerin taşıdığı kubbe kasnağı, karşıda mihrap ve minber",
+      "description": "Harimin üst kattan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-mosque/dome-pendentives.jpg",
+      "alt": "Aşağıdan kubbeye bakış: pencereli kasnak ve açık renkli kubbe, köşelerde yuvarlak hat levhalı, kalem işi bezemeli pandantifler, yanlarda oval ahşap tavan göbekleri",
+      "description": "Ahşap kubbe ve pandantifler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-mosque/drum-vertical.jpg",
+      "alt": "Dikey çekim: sekizgen kasnakta açılmış pencereler ve ortadaki halka korkuluk boyunca görünen kırmızı halılı zemin",
+      "description": "Kasnak ve pencereleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-seyh-mufti-mosque/narthex-exterior.jpg",
+      "alt": "Taş duvarlı caminin önünde ahşap direkli, camlı geniş son cemaat yeri; arkada kurşun kubbe ve kesme taş minare",
+      "description": "Ahşap son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pendentives",
+      "image": "/images/mustafakemalpasa-seyh-mufti-mosque/dome-pendentives.jpg",
+      "x": 74,
+      "y": 12,
+      "title": "Pandantifler ve dört halife",
+      "text": "Kubbeye geçişi sağlayan pandantiflerde \"cihâryâr-i güzîn\" olarak anılan dört halifenin isimleri sülüs hatla ahşap yüzeye işlenmiş, etrafları kalem işiyle bezenmiştir.",
+      "sourceId": "inv-p616"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/mustafakemalpasa-seyh-mufti-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 48,
+      "title": "Ahşap direkler ve mihrap",
+      "text": "Kubbe ortada mermer kaideler üzerine oturan dört ahşap direkle taşınır. Mihrap mermerden, minber ve kürsü ahşaptan yapılmıştır.",
+      "sourceId": "inv-p616"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/mustafakemalpasa-seyh-mufti-mosque/narthex-exterior.jpg",
+      "x": 57,
+      "y": 71,
+      "title": "Son cemaat yeri",
+      "text": "Ahşap direklerle taşınan geniş son cemaat mahalli ahşap konstrüksiyonla inşa edilmiştir ve camiye özgü bir karakter kazandırır.",
+      "sourceId": "inv-p617"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/mustafakemalpasa-seyh-mufti-mosque/aerial-minaret.jpg",
+      "x": 35,
+      "y": 51,
+      "title": "Minare",
+      "text": "Kare kaide üzerinde yükselen minare tamamen kesme taştan silindirik bir gövdeye sahiptir; şerefesi, altındaki dolgular ve kurşun külahıyla dönemin özgün bir örneğidir.",
+      "sourceId": "inv-p617"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Müftü Camii hangi tarihte yeniden inşa edilmiştir?",
+      "options": [
+        "H. 734 / M. 1333",
+        "H. 1238 / M. 1823",
+        "H. 1312 / M. 1895-96",
+        "1980'lerde"
+      ],
+      "correct": 2,
+      "description": "Cami Naib Şefik Bey'in gayreti ve desteğiyle H. 1312 / M. 1895-96'da yeniden inşa edilmiştir.",
+      "sourceId": "inv-p613"
+    },
+    {
+      "question": "Kubbe pandantiflerinde ne yazılıdır?",
+      "options": [
+        "Sultan II. Abdülhamid'in tuğrası",
+        "Dört halifenin isimleri",
+        "Nisâ suresinin 103. ayeti",
+        "Banisinin adı"
+      ],
+      "correct": 1,
+      "description": "Pandantiflerde \"cihâryâr-i güzîn\" olarak anılan dört halifenin isimleri sülüs hatla işlenmiştir.",
+      "sourceId": "inv-p616"
+    },
+    {
+      "question": "Caminin minaresi hangi malzemeden yapılmıştır?",
+      "options": [
+        "Tamamen tuğladan",
+        "Ahşaptan",
+        "Tamamen kesme taştan",
+        "Moloz taş ve tuğladan"
+      ],
+      "correct": 2,
+      "description": "Minare, kare kaide üzerinde yükselen tamamen kesme taştan silindirik bir gövdeye sahiptir.",
+      "sourceId": "inv-p617"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p613",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Şeyh Müftü Camii\"",
+      "page": "301"
+    },
+    {
+      "id": "inv-p614",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Şeyh Müftü Camii\"",
+      "page": "302"
+    },
+    {
+      "id": "inv-p615",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Şeyh Müftü Camii\"",
+      "page": "303"
+    },
+    {
+      "id": "inv-p616",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Şeyh Müftü Camii\"",
+      "page": "304"
+    },
+    {
+      "id": "inv-p617",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Şeyh Müftü Camii\"",
+      "page": "305"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-seyh-hamit-mosque",
+  "name": "Şeyh Hamit (Somuncu Baba-Ayazma) Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · inşa tarihi kitapta belirtilmemiştir (Somuncu Baba 1412'de vefat etmiştir)",
+  "endowment": "Banisi Hacı Sevindik; cami Somuncu Baba (Hamîdüddin Aksarâyî) adına yaptırılmıştır",
+  "summary": "Hacı Sevindik'in Somuncu Baba adıyla bilinen Hamîdüddin Aksarâyî adına yaptırdığı, tek kubbeli ve tuğla minareli küçük cami ile haziresi.",
+  "history": "Şeyh Hamit Camii, Osmangazi İlçesi, Mollafenâri Mahallesi, 3. Hamam veya Dar Sokak No: 29A'dadır.\n\nCami, Bursa Ulucami'nin açılışında ilk hutbeyi okuyan ve Somuncu Baba adıyla bilinen Hamîdüddin Aksarâyî adına Hacı Sevindik tarafından yaptırılmıştır. Hacı Bayrâm-ı Velî'nin de mürşidi olan Somuncu Baba, 1412'de Aksaray'da vefat etmiş ve orada defnedilmiştir. Somuncu Baba'nın dergâhı, çilehanesi ve fırını caminin batı tarafındadır.\n\nDikdörtgen planlı caminin ana ibadet mekânı 5,70 × 5,70 m ölçülerinde kare planlıdır ve üzeri tek kubbeyle örtülüdür. Kuzeyde 3,00 × 5,70 m ölçülerinde bir son cemaat yeri vardır; duvarları iki sıra tuğla ve düzgün moloz taşla örülmüştür. Doğu, batı ve kuzey duvarlarındaki sivri kemerli ikişer alt sıra pencere ile doğu ve batıdaki üst sıra pencereler iç mekânı aydınlatır. Kubbe kasnağı basık ve sağırdır, dıştan kirpi saçaklıdır; kubbe kurşunla kaplıdır. Beden duvarları düzgün moloz taş ve iki sıra tuğlayla örülmüştür.\n\nDoğu taraftaki minare sekizgen kaidelidir ve tuğla-taş almaşık tekniğiyle yapılmıştır; silindirik gövdesi tuğladan, sivri külahı kurşun kaplıdır. Caminin yakın zamanda çevre düzenlemesi yapılmış, tamamen restore edilerek bakımlı hâle getirilmiştir; ibadete açıktır.\n\nCami bahçesinde zamanla bir hazire oluştuğu bilinmektedir. Sonradan düzenlenen hazirede yalnızca iki kabir vardır. Bunlardan birinin ayak tarafındaki dikili taşta özensiz biçimde \"Allah\" ve \"Muhammed\" yazıları yer alır; diğerinin ayak tarafına kırık bir kitabe parçası yerleştirilmiştir. Hazireden kalan kırık mezar taşı parçaları cami duvarına asılı olarak sergilenmektedir. Ancak hazirede kimlerin gömülü olduğu tespit edilememiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-seyh-hamit-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-seyh-hamit-mosque/exterior.jpg",
+      "alt": "Yukarıdan görünüm: taş ve tuğla örgülü küçük cami, kurşun kaplı kubbesi ve önünde yükselen tuğla gövdeli, sivri külahlı minare; arkada yamaçtaki evler ve ağaçlar",
+      "description": "Caminin minaresi ve kubbesiyle genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seyh-hamit-mosque/graveyard.jpg",
+      "alt": "Taş ve tuğla almaşık duvarlı caminin önünde demir parmaklıkla çevrili alçak duvarlı hazire, içinde mezarlar; solda ahşap saçaklı son cemaat yeri",
+      "description": "Cami önündeki hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seyh-hamit-mosque/gravestone-fragments.jpg",
+      "alt": "Taş ve tuğla örgülü duvardaki bir rafta dizilmiş, Arap harfli yazılar taşıyan kırık mermer mezar taşı ve sarık parçaları",
+      "description": "Cami duvarında sergilenen kırık mezar taşı parçaları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-seyh-hamit-mosque/exterior.jpg",
+      "x": 35,
+      "y": 42,
+      "title": "Minare",
+      "text": "Sekizgen kaideli minarenin silindirik gövdesi tuğladan yapılmış, sivri külahı kurşunla kaplanmıştır.",
+      "sourceId": "inv-p432"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-seyh-hamit-mosque/graveyard.jpg",
+      "x": 45,
+      "y": 58,
+      "title": "Hazire",
+      "text": "Cami bahçesinde oluşan ve sonradan düzenlenen hazirede yalnızca iki kabir bulunur; burada kimlerin gömülü olduğu tespit edilememiştir.",
+      "sourceId": "inv-p432"
+    },
+    {
+      "id": "fragments",
+      "image": "/images/osmangazi-seyh-hamit-mosque/gravestone-fragments.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Kırık mezar taşları",
+      "text": "Hazireden kalan kırık mezar taşı parçaları cami duvarına asılı olarak sergilenmektedir.",
+      "sourceId": "inv-p432"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami kimin adına yaptırılmıştır?",
+      "options": [
+        "Hacı Bayrâm-ı Velî",
+        "Emir Sultan",
+        "Somuncu Baba (Hamîdüddin Aksarâyî)",
+        "Molla Fenârî"
+      ],
+      "correct": 2,
+      "description": "Cami, Ulucami'nin açılışında ilk hutbeyi okuyan Somuncu Baba (Hamîdüddin Aksarâyî) adına Hacı Sevindik tarafından yaptırılmıştır.",
+      "sourceId": "inv-p431"
+    },
+    {
+      "question": "Somuncu Baba'nın dergâhı, çilehanesi ve fırını caminin hangi tarafındadır?",
+      "options": [
+        "Doğu",
+        "Batı",
+        "Kuzey",
+        "Güney"
+      ],
+      "correct": 1,
+      "description": "Somuncu Baba'nın dergâhı, çilehanesi ve fırını caminin batı tarafındadır.",
+      "sourceId": "inv-p431"
+    },
+    {
+      "question": "Hazirede kaç kabir bulunmaktadır?",
+      "options": [
+        "İki",
+        "Beş",
+        "On",
+        "Hiç yok"
+      ],
+      "correct": 0,
+      "description": "Sonradan düzenlenen hazirede yalnızca iki kabir vardır.",
+      "sourceId": "inv-p432"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p431",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şeyh Hamit (Somuncu Baba-Ayazma) Camii ve Haziresi\"",
+      "page": "431"
+    },
+    {
+      "id": "inv-p432",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şeyh Hamit (Somuncu Baba-Ayazma) Camii ve Haziresi\"",
+      "page": "432"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

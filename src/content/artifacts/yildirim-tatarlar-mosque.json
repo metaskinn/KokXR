@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-tatarlar-mosque",
+  "name": "Tatarlar Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · 1855'ten önce mevcut; inşa tarihi belirsiz",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "1855’ten önce mevcut olduğu kaydedilen, 2018’de taş duvar dokusu açığa çıkarılan cami.",
+  "history": "Selimzade Mahallesi, Selimzade Caddesi No: 14'teki cami, Tatarlar Mahallesi diye de anılan bölgededir. Kitap yapıyı sıvalı kâgir duvarlı, ahşap çatılı ve alaturka kiremit örtülü olarak tanımlar. Yüksek pencereleri tuğla kemerli ve sövelidir. Daha önce harimle bütünleştirilen son cemaat yeri, 2018 müdahalesinde duvarları kaldırılarak ahşap direkli açık bölüm olarak düzenlenmiştir. Bu müdahalede sıvalar sökülmüş, moloz taş duvar dokusu açığa çıkarılmıştır. Mihrap Kütahya çinileriyle kaplıdır. Kare kaideli kısa minare silindirik tuğla gövdeli ve camekânlı külahlıdır. Bazı kaynaklar XX. yüzyıl başını önerse de kitap, 1855 depreminde zarar görmediğini bildiren raporların daha önce mevcut olduğunu gösterdiğini belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-tatarlar-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-tatarlar-mosque/exterior-view.jpg",
+      "alt": "Taş ve tuğla duvarlı, yüksek kemerli pencereli küçük cami ve çatıdan yükselen kısa minare",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-tatarlar-mosque/detail-view.jpg",
+      "alt": "Ahşap tavanlı, kırmızı halılı harimde mavi çinili mihrap ve ahşap minber",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-tatarlar-mosque/detail-view.jpg",
+      "x": 50,
+      "y": 53,
+      "title": "Kütahya çinili mihrap",
+      "text": "Caminin mihrabı Kütahya çinileriyle kaplanmıştır.",
+      "sourceId": "inv-p521"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-tatarlar-mosque/exterior-view.jpg",
+      "x": 57,
+      "y": 54,
+      "title": "Yüksek pencereler",
+      "text": "Cephelerde tuğla kemerli ve tuğla söveli yüksek pencereler bulunur.",
+      "sourceId": "inv-p520"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tatarlar Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Yıldırım",
+        "Nilüfer",
+        "İznik"
+      ],
+      "correct": 1,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p520"
+    },
+    {
+      "question": "2018 müdahalesinde hangi işlem yapılmıştır?",
+      "options": [
+        "İkinci minare eklenmiştir",
+        "Kubbe kaldırılmıştır",
+        "Sıvalar kaldırılıp duvar dokusu açılmıştır",
+        "Hazire otoparka çevrilmiştir"
+      ],
+      "correct": 2,
+      "description": "Sıvalar kaldırılıp duvar dokusu açılmıştır.",
+      "sourceId": "inv-p521"
+    },
+    {
+      "question": "Kitaba göre kütahya çinili mihrap hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir",
+        "Caminin mihrabı Kütahya çinileriyle kaplanmıştır"
+      ],
+      "correct": 3,
+      "description": "Caminin mihrabı Kütahya çinileriyle kaplanmıştır.",
+      "sourceId": "inv-p521"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p520",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Tatarlar Camii\"",
+      "page": "520"
+    },
+    {
+      "id": "inv-p521",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Tatarlar Camii\"",
+      "page": "521"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

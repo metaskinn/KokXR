@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-acemler-mosque",
+  "name": "Acemler Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 15. yüzyıl",
+  "endowment": "Banisi Reyhan Paşa",
+  "summary": "Sultan II. Murad'ın harem ağalarından Reyhan Paşa'nın 15. yüzyılda yaptırdığı, ahşap çatılı ve kiremit örtülü dikdörtgen planlı cami.",
+  "history": "Acemler Camii, Reyhan Mahallesi, Haşim İşcan Caddesi, Cami Çıkmazı No: 2'dedir. Cami, Sultan II. Murad'ın harem ağalarından Reyhan Paşa tarafından 15. yüzyılda yaptırılmıştır. Acemlerin Muharrem ayinlerini yaptıkları hanenin aynı mahallede bulunması ve bu camide bir araya gelmeleri nedeniyle halk arasında \"Acemler Camii\" adıyla anılmıştır.\n\nReyhan Paşa Bursa'da bir han ve hamam yaptırmış, caminin yanına bir imaret kurdurmuş; Yenişehir'de de bir zaviye ve bir imaret daha yaptırarak hayır faaliyetlerini sürdürmüştür. Vefatından sonra Yenişehir'deki türbesine defnedilmiştir. Türbe zamanla yıkılmış olsa da zarif mezar taşı günümüze ulaşmıştır.\n\nCami 6,35 × 9,30 m iç ölçülerinde, dikdörtgen planlıdır; ahşap çatısı kiremitle kaplanmıştır. Beden duvarları 85 cm kalınlığında, son cemaat yeri 4,25 m derinliğindedir. Kuzeydoğu köşede, cami bünyesinde inşa edilen tuğla minare silindirik bir gövdeye sahiptir. Acemler Camii, Vakıflar Bölge Müdürlüğü tarafından koruma altına alınmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-acemler-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-acemler-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit çatılı, beyaz badanalı küçük cami ve köşesinde silindirik gövdeli beyaz minare; çevresinde kiremit çatılı evler, arkada yamaçlara yayılmış şehir",
+      "description": "Caminin çevresiyle havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-acemler-mosque/roof-top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: dikdörtgen kiremit çatı, sağ üst köşede minarenin dairesel külahı, çevrede komşu evlerin kiremit çatıları",
+      "description": "Kiremit çatının tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-acemler-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavanlı dikdörtgen harim, iki yanda yuvarlak kemerli pencereler, karşıda mihrap ve ahşap minber, yerde kırmızı halı ve ortada büyük avize",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "tiled-roof",
+      "image": "/images/osmangazi-acemler-mosque/aerial-view.jpg",
+      "x": 59,
+      "y": 62,
+      "title": "Kiremit örtülü çatı",
+      "text": "Dikdörtgen planlı caminin ahşap çatısı kiremitle kaplanmıştır.",
+      "sourceId": "inv-p232"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-acemler-mosque/aerial-view.jpg",
+      "x": 44,
+      "y": 50,
+      "title": "Minare",
+      "text": "Cami bünyesinde inşa edilen minarenin gövdesi silindiriktir.",
+      "sourceId": "inv-p232"
+    },
+    {
+      "id": "prayer-hall",
+      "image": "/images/osmangazi-acemler-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Dikdörtgen harim",
+      "text": "Cami 6,35 × 9,30 m iç ölçülerinde, dikdörtgen planlıdır; beden duvarları 85 cm kalınlığındadır.",
+      "sourceId": "inv-p232"
+    }
+  ],
+  "test": [
+    {
+      "question": "Acemler Camii'ni kim yaptırmıştır?",
+      "options": [
+        "Fenârî Ahmed Paşa",
+        "Yahşi Bey",
+        "Reyhan Paşa",
+        "Acem Reis"
+      ],
+      "correct": 2,
+      "description": "Cami, Sultan II. Murad'ın harem ağalarından Reyhan Paşa tarafından 15. yüzyılda yaptırılmıştır.",
+      "sourceId": "inv-p232"
+    },
+    {
+      "question": "Cami neden \"Acemler Camii\" adıyla anılmıştır?",
+      "options": [
+        "Acemlerin Muharrem ayinlerini yaptıkları hane aynı mahallede olduğu ve bu camide toplandıkları için",
+        "Banisi Tebriz'den geldiği için",
+        "Acem ustaları tarafından inşa edildiği için",
+        "Acem tüccarlarının hanına bitişik olduğu için"
+      ],
+      "correct": 0,
+      "description": "Acemlerin Muharrem ayinlerini icra ettikleri hanenin aynı mahallede bulunması ve bu camide bir araya gelmeleri nedeniyle bu adla anılmıştır.",
+      "sourceId": "inv-p232"
+    },
+    {
+      "question": "Reyhan Paşa vefatından sonra nereye defnedilmiştir?",
+      "options": [
+        "Caminin haziresine",
+        "Muradiye Külliyesi'ne",
+        "İznik'teki türbesine",
+        "Yenişehir'deki türbesine"
+      ],
+      "correct": 3,
+      "description": "Reyhan Paşa Yenişehir'deki türbesine defnedilmiştir; türbe yıkılmış, zarif mezar taşı günümüze ulaşmıştır.",
+      "sourceId": "inv-p232"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p232",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Acemler Camii\"",
+      "page": "236"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

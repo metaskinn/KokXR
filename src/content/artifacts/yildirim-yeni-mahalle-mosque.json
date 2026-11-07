@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-yeni-mahalle-mosque",
+  "name": "Yeni Mahalle Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 1316 / M. 1898",
+  "endowment": "Banileri Kırım muhacirleri",
+  "summary": "Kırım muhacirlerinin 1898’de yaptırdığı, 1979’da yenilenen kiremit çatılı cami.",
+  "history": "Yeni Mahalle, Özer Sokak No: 6'daki cami, Ahmet Vefik Paşa döneminde bölgeye yerleştirilen Kırım muhacirleri tarafından 1898'de yaptırılmıştır. Alanın önceden mezarlık olduğu rivayet edilir. 1979 yenilemesiyle bugünkü görünümünü almıştır. 15 × 10 m dikdörtgen yapı kiremit kaplı kırma çatıyla örtülüdür. Kuzeyde yedi basamaklı merdivenle giriş sahanlığına ulaşılır. 120 m² harim düz beton tavanlı ve beyaz sıvalıdır. Giriş yanlarındaki maksureler üzerinde kadınlar mahfili vardır. Mihrabın beş sıra mukarnası, perde ve madalyon süslemesi bulunur. Çerçevesinde Âyetü'l-Kürsî, alınlığında Bakara suresi 149. ayet yazılıdır. Minber ve kürsü ahşaptır. Kuzeybatıdaki kısa, tek şerefeli minare ile cami tamamen beyaz sıvalıdır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-yeni-mahalle-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-yeni-mahalle-mosque/exterior-view.jpg",
+      "alt": "Tepeden görünümde kırmızı kiremit çatı, sol üstte kısa minare ve bitişik yapılar",
+      "description": "Yapının görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yeni-mahalle-mosque/detail-view.jpg",
+      "alt": "Mihrap alınlığındaki altın renkli yazılar, mavi zemin ve renkli çiçek bezemelerinin yakın görünümü",
+      "description": "Yapıdan ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-yeni-mahalle-mosque/exterior-view.jpg",
+      "x": 46,
+      "y": 46,
+      "title": "Kırma çatı",
+      "text": "Dikdörtgen yapı kiremit kaplı kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p524"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-yeni-mahalle-mosque/detail-view.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Mihrap alınlığı",
+      "text": "Mihrap alınlığında Bakara suresinin 149. ayeti bulunur.",
+      "sourceId": "inv-p524"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yeni Mahalle Camii Bursa'nın hangi ilçesindedir?",
+      "options": [
+        "Osmangazi",
+        "Nilüfer",
+        "İznik",
+        "Yıldırım"
+      ],
+      "correct": 3,
+      "description": "Yıldırım.",
+      "sourceId": "inv-p524"
+    },
+    {
+      "question": "Yeni Mahalle Camii kimler tarafından yaptırılmıştır?",
+      "options": [
+        "Kırım muhacirleri",
+        "Bursa kadıları",
+        "Horasan şeyhleri",
+        "Saray mimarları"
+      ],
+      "correct": 0,
+      "description": "Kırım muhacirleri.",
+      "sourceId": "inv-p524"
+    },
+    {
+      "question": "Kitaba göre kırma çatı hakkında hangi bilgi doğrudur?",
+      "options": [
+        "Tamamen cam malzemeden yapılmıştır",
+        "Dikdörtgen yapı kiremit kaplı kırma çatıyla örtülüdür",
+        "Kitapta bu unsurdan söz edilmez",
+        "2025 yılında ilk kez eklenmiştir"
+      ],
+      "correct": 1,
+      "description": "Dikdörtgen yapı kiremit kaplı kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p524"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p524",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeni Mahalle Camii\"",
+      "page": "524"
+    },
+    {
+      "id": "inv-p525",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeni Mahalle Camii\"",
+      "page": "525"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

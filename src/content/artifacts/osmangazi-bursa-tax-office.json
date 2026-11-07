@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-bursa-tax-office",
+  "name": "Bursa Vergi Dairesi Binası",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Bursa Vergi Dairesi Binası, Nalbantoğlu Mahallesi’nde taştan kâgir teknikle inşa edilmiş sade bir yapıdır.",
+  "history": "Yapı, Osmangazi ilçesi Nalbantoğlu Mahallesi'nde, Cumhuriyet Meydanı ile Setbaşı Köprüsü'nü bağlayan Atatürk Caddesi'nin sol tarafında, 2. Sarı Sokak'tadır. Kitapta girişin arka sokaktan sağlandığı, giriş kapısına birkaç basamaklı merdivenle ulaşıldığı belirtilir.\n\nMimari açıdan sade görünümlü bina tamamen taştan, kâgir yapı tekniğiyle inşa edilmiştir. Kitapta tesciline ilişkin bilgiye rastlanmadığı ve yapının Bursa Vergi Dairesi olarak kullanıldığı belirtilir; inşa tarihi verilmez.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-bursa-tax-office/stone-facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-bursa-tax-office/stone-facade.jpg",
+      "alt": "Açık renkli taş kaplı yuvarlatılmış köşe cephesi, koyu çerçeveli pencereler ve alt bölümünde sütunlar bulunan bina",
+      "description": "Taş cephe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-bursa-tax-office/aerial-view.jpg",
+      "alt": "Sık yapılaşmış sokaklar arasında kırmızı kiremit çatılı, açık renkli taş cepheli köşe binasının havadan görünümü",
+      "description": "Havadan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "masonry",
+      "image": "/images/osmangazi-bursa-tax-office/stone-facade.jpg",
+      "x": 64,
+      "y": 43,
+      "title": "Taş duvarlar",
+      "text": "Bina tamamen taştan, kâgir yapı tekniğiyle inşa edilmiştir.",
+      "sourceId": "inv-p108"
+    },
+    {
+      "id": "plain-facade",
+      "image": "/images/osmangazi-bursa-tax-office/aerial-view.jpg",
+      "x": 41,
+      "y": 64,
+      "title": "Sade mimari",
+      "text": "Kitap, yapının mimari açıdan sade bir görünüme sahip olduğunu belirtir.",
+      "sourceId": "inv-p108"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapı hangi mahallededir?",
+      "options": [
+        "Orhanbey",
+        "Hocaalizade",
+        "Nalbantoğlu",
+        "Kuruçeşme"
+      ],
+      "correct": 2,
+      "description": "Yapı Nalbantoğlu Mahallesi sınırları içindedir.",
+      "sourceId": "inv-p108"
+    },
+    {
+      "question": "Kitaba göre bina hangi malzemeden inşa edilmiştir?",
+      "options": [
+        "Taş",
+        "Ahşap",
+        "Çelik",
+        "Kerpiç"
+      ],
+      "correct": 0,
+      "description": "Bina tamamen taştan, kâgir teknikle yapılmıştır.",
+      "sourceId": "inv-p108"
+    },
+    {
+      "question": "Kitap yapının kullanımını nasıl belirtir?",
+      "options": [
+        "Tiyatro",
+        "Müze",
+        "Okul",
+        "Bursa Vergi Dairesi"
+      ],
+      "correct": 3,
+      "description": "Kitapta binanın Bursa Vergi Dairesi olarak kullanıldığı belirtilir.",
+      "sourceId": "inv-p108"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p108",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Bursa Vergi Dairesi Binası\"",
+      "page": "108"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

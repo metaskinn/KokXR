@@ -1,0 +1,146 @@
+{
+  "id": "kestel-aksu-village-bath",
+  "name": "Aksu Köyü Hamamı",
+  "city": "Bursa",
+  "district": "Kestel",
+  "period": "Kesin bilinmiyor · muhtarlık tabelasına göre 1460",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "2013'teki restorasyonun ardından köy müzesi olarak kullanılan, ahşap tavanlı soyunmalık ve kubbeli bölümlerden oluşan köy hamamı.",
+  "history": "Hamam, Kestel'in Aksu Mahallesi'nde yer alır. Ne zaman ve kim tarafından yaptırıldığı kesin olarak bilinmemekle birlikte, muhtarlığın yerleştirdiği bir tabelada yapım tarihi 1460 olarak belirtilmektedir.\n\nKuzey-güney doğrultusunda dikdörtgen planlı yapıda kuzeyde soyunmalık, güneyde ılıklık, doğu ve batıda temizlik mekânları, sıcaklık bölümü, halvet hücreleri ve su deposu bulunur. Ahşap tavanlı soyunmalığın dört tarafı ahşap bir sekiyle çevrilidir; tavan bu sekilere oturan ahşap direklerle taşınır. Taş levha döşeli zeminin ortasında bir havuz vardır. Tekne tonozlu ılıklıktan temizlik mekânlarına ve sıcaklığa geçilir. Sıcaklık iki sivri kemerle ortada kare, yanlarda eş boyutlu dikdörtgen bölümlere ayrılmıştır. Ilıklık ve sıcaklığın döşemeleri mermerdir; temizlik mekânlarında ve sıcaklığın yan kısımlarında birer kurna bulunur. Bölümleri bağlayan kapılar yuvarlak kemerlidir; ılıklık ve sıcaklığın örtülerinde aydınlık açıklıkları yer alır.\n\n2013'te restore edilen yapı, bugün köyün tarihi ve kültürel mirasını yansıtan objelerin sergilendiği bir köy müzesi olarak hizmet vermektedir.",
+  "verification": "verified",
+  "coverImage": "/images/kestel-aksu-village-bath/aerial-domes.jpg",
+  "images": [
+    {
+      "file": "/images/kestel-aksu-village-bath/aerial-domes.jpg",
+      "alt": "Havadan görünüm: kiremit çatılı hamam yapısı ve üzerindeki aydınlık fenerli küçük kubbeler; arkada cami ve minaresi",
+      "description": "Hamamın havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-bath/changing-room-museum.jpg",
+      "alt": "Ahşap tavanlı ve ahşap direkli mekânda sergilenen eski eşyalar, fotoğraflar ve giysiler",
+      "description": "Soyunmalık ve müze sergisi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-bath/basin.jpg",
+      "alt": "Mermer kaplı duvar önünde taş kurna ve musluklar; yanında sergilenen yeşil elbise, nalın ve tas",
+      "description": "Kurna",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-bath/exterior-street.jpg",
+      "alt": "Arnavut kaldırımlı sokakta kiremit çatılı, beyaz sıvalı tek katlı yapı; arkada minare",
+      "description": "Sokaktan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/kestel-aksu-village-bath/museum-display.jpg",
+      "alt": "Ahşap tavanlı köşede sergilenen eski radyolar, bakır kaplar, kilimler ve köy hayatına ait fotoğraflar",
+      "description": "Köy müzesi sergisi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/kestel-aksu-village-bath/aerial-domes.jpg",
+      "x": 50,
+      "y": 57,
+      "title": "Kubbeler ve aydınlık açıklıkları",
+      "text": "Ilıklık ve sıcaklık bölümlerinin örtü sistemlerinde aydınlık açıklıkları yer almaktadır.",
+      "sourceId": "inv-p566"
+    },
+    {
+      "id": "changing-room",
+      "image": "/images/kestel-aksu-village-bath/changing-room-museum.jpg",
+      "x": 27,
+      "y": 45,
+      "title": "Soyunmalık",
+      "text": "Soyunma mekânı dört tarafı ahşap bir sekiyle çevrilidir; ahşap tavan bu sekiler üzerine oturan ahşap direklerle taşınır. Zeminin ortasında bir havuz bulunur.",
+      "sourceId": "inv-p565"
+    },
+    {
+      "id": "basin",
+      "image": "/images/kestel-aksu-village-bath/basin.jpg",
+      "x": 51,
+      "y": 74,
+      "title": "Kurna",
+      "text": "Ilıklık ve sıcaklık bölümlerinin döşemeleri mermerdir. Temizlik mekânlarında ve sıcaklık bölümünün yan kısımlarında birer kurna bulunur.",
+      "sourceId": "inv-p565"
+    },
+    {
+      "id": "museum",
+      "image": "/images/kestel-aksu-village-bath/museum-display.jpg",
+      "x": 50,
+      "y": 70,
+      "title": "Köy müzesi",
+      "text": "2013 yılında restore edilen yapı, bugün köyün tarihi ve kültürel mirasını yansıtan objelerin sergilendiği bir köy müzesidir.",
+      "sourceId": "inv-p566"
+    }
+  ],
+  "test": [
+    {
+      "question": "Aksu Köyü Hamamı bugün hangi amaçla kullanılmaktadır?",
+      "options": [
+        "Kadınlar hamamı",
+        "Köy müzesi",
+        "Kütüphane",
+        "Cami"
+      ],
+      "correct": 1,
+      "description": "2013'te restore edilen yapı bugün köy müzesi olarak hizmet vermektedir.",
+      "sourceId": "inv-p566"
+    },
+    {
+      "question": "Muhtarlığın tabelasında hamamın yapım tarihi olarak hangi yıl yazılıdır?",
+      "options": [
+        "1498",
+        "1673",
+        "1460",
+        "1590"
+      ],
+      "correct": 2,
+      "description": "Muhtarlığın yerleştirdiği tabelada yapım tarihi 1460 olarak belirtilir; kesin tarih bilinmemektedir.",
+      "sourceId": "inv-p564"
+    },
+    {
+      "question": "Soyunma mekânının zemininin ortasında ne bulunur?",
+      "options": [
+        "Bir havuz",
+        "Bir ocak",
+        "Bir kuyu",
+        "Bir sütun"
+      ],
+      "correct": 0,
+      "description": "Taş levhalarla kaplı zeminin ortasında bir havuz bulunmaktadır.",
+      "sourceId": "inv-p565"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p564",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Kestel, \"Aksu Köyü Hamamı\"",
+      "page": "252"
+    },
+    {
+      "id": "inv-p565",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Kestel, \"Aksu Köyü Hamamı\"",
+      "page": "253"
+    },
+    {
+      "id": "inv-p566",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Kestel, \"Aksu Köyü Hamamı\"",
+      "page": "254"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

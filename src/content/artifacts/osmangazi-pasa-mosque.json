@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-pasa-mosque",
+  "name": "Paşa Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Geç dönem; M. 1901 ya da 1905-1907 (kesin değil)",
+  "endowment": "Kitapta kesin olarak belirtilmemiştir (bir görüşe göre bölge halkı, diğerine göre Kırım'dan gelen muhacirler)",
+  "summary": "Kitabesi olmayan, 20. yüzyıl başında bölge halkı ya da Kırımlı muhacirlerce yapıldığı düşünülen ahşap çatılı mahalle camisi.",
+  "history": "Paşa Camii, Osmangazi İlçesi, Alacahırka Mahallesi, Orhaneli Caddesi No: 39'dadır.\n\nKitabesi bulunmayan caminin kimin tarafından yaptırıldığı kesin olarak bilinmemektedir. Bir görüşe göre H. 1323-1325 / M. 1905-1907 yıllarında bölge halkı tarafından inşa edilmiş, diğer bir görüşe göre ise H. 1319 / M. 1901'de Ahmet Vefik Paşa döneminde Kırım'dan göç ederek bu civara yerleşen muhacirler tarafından yaptırılmıştır.\n\nMeyilli bir arazide bulunduğu için yol kotundan yüksekte kalan giriş kapısına on basamaklı bir merdivenle çıkılır; merdivenlerin altında abdestlik ve helalar yer alır. Birçok kez onarılan cami özgün yapısını büyük ölçüde yitirmiştir.\n\n10,00 × 14,00 m ölçülerindeki dikdörtgen planlı yapının üzeri ahşap kırma çatı ve kiremitle örtülüdür. Duvarla çevrili kapalı bir son cemaat mahalli vardır; kare planlı harim yaklaşık 100 m²'lik bir alanı kaplar. Cami içten ve dıştan tamamen beton sıvalıdır. Kuzeybatı köşesindeki küçük, silindirik minarenin tek şerefesinin altı stalaktitlidir; konik sivri külahı betondan yapılan minare tamamen sıvalıdır.\n\nAhşap tavanlı harim altta sekiz, üstte beş dikdörtgen pencereyle aydınlanır. Minberi ahşaptır, mihrap nişi dilimli beyaz mermerle kaplanmıştır. Hanımlar mahfili kuzey girişinin üzerindedir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-pasa-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-pasa-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: yamaçtaki kiremit çatılı evlerin arasında yükselen beyaz sıvalı, ince silindirik minare ve önündeki kiremit kaplı cami çatısı",
+      "description": "Cami ve minaresi havadan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-pasa-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kiremit kaplı kırma çatı ve bir köşesinde minarenin şerefesi ile külahı; yanında merdivenli dar bir geçit ve bahçe",
+      "description": "Çatının tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-pasa-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi halılı geniş harim, sade beyaz mermer mihrap, sağda ahşap minber, iki yanda dikdörtgen pencereler ve kare panelli tavan",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-pasa-mosque/aerial-view.jpg",
+      "x": 52,
+      "y": 44,
+      "title": "Minare",
+      "text": "Küçük ebatlı, silindirik minarenin tek şerefesi vardır; konik sivri külahı betondan yapılan minare tamamen sıvalıdır.",
+      "sourceId": "inv-p408"
+    },
+    {
+      "id": "hipped-roof",
+      "image": "/images/osmangazi-pasa-mosque/top-view.jpg",
+      "x": 51,
+      "y": 52,
+      "title": "Kırma çatı",
+      "text": "10,00 × 14,00 m ölçülerindeki dikdörtgen planlı yapının üzeri ahşap kırma çatı ve kiremitle örtülüdür.",
+      "sourceId": "inv-p408"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-pasa-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Minberi ahşap olan caminin mihrap nişi dilimli beyaz mermerle kaplanmıştır.",
+      "sourceId": "inv-p408"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin giriş kapısına nasıl ulaşılır?",
+      "options": [
+        "Avludaki rampadan",
+        "On basamaklı bir merdivenle",
+        "Son cemaat yerindeki yan kapıdan",
+        "Minare kapısından"
+      ],
+      "correct": 1,
+      "description": "Meyilli arazide yol kotundan yüksekte kalan giriş kapısına on basamaklı bir merdivenle ulaşılır.",
+      "sourceId": "inv-p408"
+    },
+    {
+      "question": "Merdivenlerin altındaki bölümde ne bulunur?",
+      "options": [
+        "Abdestlik ve helalar",
+        "Bir sıbyan mektebi",
+        "Hazire",
+        "Müezzin odası"
+      ],
+      "correct": 0,
+      "description": "Merdivenlerin altındaki bölümde abdestlik ve helalar yer almaktadır.",
+      "sourceId": "inv-p408"
+    },
+    {
+      "question": "Paşa Camii'nin minaresi caminin hangi köşesindedir?",
+      "options": [
+        "Güneydoğu",
+        "Kuzeydoğu",
+        "Güneybatı",
+        "Kuzeybatı"
+      ],
+      "correct": 3,
+      "description": "Küçük ebatlı, silindirik minare caminin kuzeybatı köşesinde bulunmaktadır.",
+      "sourceId": "inv-p408"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p408",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Paşa Camii\"",
+      "page": "408"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

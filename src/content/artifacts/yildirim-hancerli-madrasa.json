@@ -1,0 +1,107 @@
+{
+  "id": "yildirim-hancerli-madrasa",
+  "name": "Hançerli Medresesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · vakfiye H. 938 / M. 1531; inşa H. 939 / M. 1532’den önce",
+  "endowment": "Hançerli Fatma Sultan; İstanbul, Kayseri ve Mudanya’da gelir getirici gayrimenkuller vakfetmiştir",
+  "summary": "Hançerli Fatma Sultan’ın külliyesindeki medrese, temelleri üzerinde yeniden yapılarak kültür merkezine dönüştürülmüştür.",
+  "history": "Davutkadı Mahallesi, Musababa Caddesi No: 2’dedir. Sultan II. Bayezid’in torunu, Şehzade Mahmud’un kızı Hançerli Fatma Sultan tarafından yaptırılmıştır. Hanzâde ve Hançerli unvanlarıyla da anılan Fatma Sultan, Çandarlı Mehmed Bey’le evlenmiş; kitapta H. 939 / M. 1533’te vefat edip Eyüp’teki türbesine defnedildiği belirtilmiştir.\n\nH. 938 / M. 1531 tarihli vakfiyeye göre külliye hamam, medrese, sıbyan mektebi ve türbeden oluşur. Zamanla yalnız hamam özgün haliyle kalmış, medrese temellerine bağlı olarak yeniden yapılmış, mektep yok olmuş ve türbeden izler kalmıştır. Medrese on dört öğrenci odası ve bir dershaneden oluşur. Kitapta inşanın H. 939 / M. 1532’den önce tamamlandığı, müderrisin günlük kırk akçesi nedeniyle kırklı medreseler arasında değerlendirildiği belirtilir. Kitabın iki ayrı yerde H. 939 için verdiği farklı miladi karşılıklar burada değiştirilmemiştir.\n\nVakıf idaresindeki ihmaller, yangınlar ve depremler sonrasında medrese tamamen yıkılmış, alan bir dönem kütüphane olarak kullanılmıştır. Bursa Büyükşehir Belediyesi alanı onarım karşılığında devralmış; Bursa Müze Müdürlüğü denetimindeki kazılarla temeller ve plan belirlenmiştir. Onaylı projelerle yapılan rekonstrüksiyon 2017’de tamamlanmıştır.\n\nYıldırım Belediyesi Hançerli Medresesi Kültür Merkezi olarak kullanılan yapıda dershane sergi salonuna, öğrenci hücreleri idari birimlere dönüştürülmüştür. Orta avlu çelik konstrüksiyon ve camla kapatılarak etkinlik alanı haline getirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-hancerli-madrasa/madrasa-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-hancerli-madrasa/madrasa-exterior.jpg",
+      "alt": "Taş ve tuğla cepheli, küçük kubbelerle çevrili büyük bir kubbesi ve kavisli cam avlu örtüsü olan yapı",
+      "description": "Taş ve tuğla cepheli, küçük kubbelerle çevrili büyük bir kubbesi ve kavisli cam avlu örtüsü olan yapı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-hancerli-madrasa/covered-courtyard.jpg",
+      "alt": "Tuğla kemerlerin çevrelediği avlu, üstünde çelik taşıyıcılı mavi cam örtü ve ortasında basamaklı zemin",
+      "description": "Tuğla kemerlerin çevrelediği avlu, üstünde çelik taşıyıcılı mavi cam örtü ve ortasında basamaklı zemin",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-hancerli-madrasa/covered-courtyard.jpg",
+      "x": 52,
+      "y": 20,
+      "title": "Camla kapatılan avlu",
+      "text": "Orta avlu çelik konstrüksiyon ve camla kapatılarak kültürel etkinliklere ayrılmıştır.",
+      "sourceId": "inv-p545"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-hancerli-madrasa/madrasa-exterior.jpg",
+      "x": 27,
+      "y": 57,
+      "title": "Talebe hücreleri",
+      "text": "Medresenin talebe hücreleri yeniden işlevlendirmede idari birimlere dönüştürülmüştür.",
+      "sourceId": "inv-p545"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medreseyi kim yaptırmıştır?",
+      "options": [
+        "Cemile Sultan",
+        "Hançerli Fatma Sultan",
+        "Sâdıka Hatun",
+        "Hatice Hatun"
+      ],
+      "correct": 1,
+      "description": "Hançerli Fatma Sultan.",
+      "sourceId": "inv-p543"
+    },
+    {
+      "question": "Vakfiyeye göre medresede kaç öğrenci odası vardır?",
+      "options": [
+        "Altı",
+        "Sekiz",
+        "Yirmi",
+        "On dört"
+      ],
+      "correct": 3,
+      "description": "On dört.",
+      "sourceId": "inv-p544"
+    },
+    {
+      "question": "Rekonstrüksiyon hangi yıl tamamlanmıştır?",
+      "options": [
+        "2017",
+        "1964",
+        "1997",
+        "2007"
+      ],
+      "correct": 0,
+      "description": "2017.",
+      "sourceId": "inv-p545"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p543",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hançerli Medresesi\"",
+      "page": "543"
+    },
+    {
+      "id": "inv-p544",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hançerli Medresesi\"",
+      "page": "544"
+    },
+    {
+      "id": "inv-p545",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hançerli Medresesi\"",
+      "page": "545"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

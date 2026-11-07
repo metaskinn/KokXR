@@ -1,0 +1,132 @@
+{
+  "id": "iznik-seyh-kutbuddin-tomb",
+  "name": "Şeyh Kutbüddin Türbesi",
+  "city": "Bursa",
+  "district": "İznik",
+  "period": "Erken Osmanlı · Şeyh Kutbüddin İznikî'nin vefatı 8 Zilkade 821 / 7 Aralık 1418",
+  "endowment": "Kitabesi yoktur; bitişiğindeki caminin XV. yüzyılda Çandarlı İbrahim Paşa tarafından yaptırıldığı kabul edilir",
+  "summary": "Şeyh Kutbüddin Camii'nin kuzeybatı köşesine bitişik, tek kubbeli, kare planlı türbe.",
+  "history": "Niğde doğumlu olduğu ve sonradan İznik'e göç ettiği anlaşılan Şeyh Kutbüddin İznikî, şeri ilimlerdeki bilgisi ve tasavvuf yolundaki yüksek dereceleriyle tanınmıştır. Evliya Çelebi'ye göre İznik'te bir âsitanesi (zaviyesi) vardı. 8 Zilkade 821 / 7 Aralık 1418'de İznik'te vefat etmiş ve kendi zaviyesine defnedilmiştir.\n\nCami ve türbesine ait günümüze ulaşan bir kitabe yoktur; yapının Sultan II. Bayezid'in vezirlerinden Çandarlı İbrahim Paşa tarafından XV. yüzyılda yaptırıldığı kabul edilir. Kare planlı cami, kuzeybatısındaki bitişik kare planlı türbe ve türbenin kuzeydoğusundaki minareyle bir bütün oluşturur.\n\nCaminin kuzeybatı köşesine bitişik, tek kubbeyle örtülü kare planlı türbe, yapının daha özgün unsurlarından biri olarak günümüze ulaşmıştır. Moloz taş temeller üzerinde yükselen duvarları bir sıra kesme taş ve üç sıra tuğladan oluşur; bu teknik erken Osmanlı mimarisine özgüdür. Duvarlar alaturka kiremit örtülü kirpi saçakla son bulur. Türbedeki iki sandukadan biri Şeyh Kutbüddin'e, diğeri oğlu Mehmed Muhyiddin'e aittir.",
+  "verification": "verified",
+  "coverImage": "/images/iznik-seyh-kutbuddin-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/iznik-seyh-kutbuddin-tomb/exterior.jpg",
+      "alt": "Önde kesme taş ve tuğla sıralarıyla örülmüş, kiremit kubbeli kare türbe; arkada caminin büyük kubbesi, solda tuğla minare gövdesi",
+      "description": "Türbe ve arkasındaki cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-seyh-kutbuddin-tomb/dome-aerial.jpg",
+      "alt": "Tepeden görünüm: kiremitlerin merkezden ışınsal dizildiği kubbe, altında kiremit çatılar ve yanında taş döşeli yol",
+      "description": "Kubbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/iznik-seyh-kutbuddin-tomb/sarcophagi.jpg",
+      "alt": "Türbenin içi: yeşil örtülü, başlıklı iki sanduka; yeşil çizgili beyaz kubbe, avize ve iki yanda pencereler",
+      "description": "İki sanduka",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/iznik-seyh-kutbuddin-tomb/exterior.jpg",
+      "x": 48,
+      "y": 31,
+      "title": "Tek kubbe",
+      "text": "Caminin kuzeybatı köşesine bitişik kare planlı türbe tek kubbeyle örtülüdür ve yapının daha özgün unsurlarından biri olarak günümüze ulaşmıştır.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "id": "eaves",
+      "image": "/images/iznik-seyh-kutbuddin-tomb/exterior.jpg",
+      "x": 57,
+      "y": 43,
+      "title": "Kirpi saçak",
+      "text": "Duvarlar alaturka kiremit örtülü kirpi saçakla sonlandırılmıştır.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/iznik-seyh-kutbuddin-tomb/exterior.jpg",
+      "x": 46,
+      "y": 60,
+      "title": "Taş ve tuğla örgü",
+      "text": "Moloz taş temeller üzerinde yükselen duvarlar bir sıra kesme taş ile üç sıra tuğladan oluşur. Bu teknik erken Osmanlı mimarisine özgüdür.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/iznik-seyh-kutbuddin-tomb/sarcophagi.jpg",
+      "x": 46,
+      "y": 60,
+      "title": "İki sanduka",
+      "text": "Türbedeki iki sandukadan biri Şeyh Kutbüddin'e, diğeri oğlu Mehmed Muhyiddin'e aittir.",
+      "sourceId": "inv-p478"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbedeki iki sanduka kimlere aittir?",
+      "options": [
+        "Orhan Gazi ve oğlu",
+        "Şeyh Kutbüddin ve oğlu Mehmed Muhyiddin",
+        "Alâaddin-i Mısrî ve Molla Fenârî",
+        "Çandarlı İbrahim Paşa ve babası"
+      ],
+      "correct": 1,
+      "description": "Sandukalardan biri Şeyh Kutbüddin'e, diğeri oğlu Mehmed Muhyiddin'e aittir.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "question": "Türbenin duvarları nasıl örülmüştür?",
+      "options": [
+        "Yalnız mermer bloklarla",
+        "Ahşap karkas ve kerpiçle",
+        "Yalnız moloz taşla",
+        "Bir sıra kesme taş ve üç sıra tuğla"
+      ],
+      "correct": 3,
+      "description": "Duvarlar bir sıra kesme taş ile üç sıra tuğla dizisinden oluşur; bu erken Osmanlı mimarisine özgü bir tekniktir.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "question": "Şeyh Kutbüddin İznikî hangi tarihte vefat etmiştir?",
+      "options": [
+        "8 Zilkade 821 / 7 Aralık 1418",
+        "H. 734 / M. 1333",
+        "H. 799 / M. 1397",
+        "H. 731 / M. 1331"
+      ],
+      "correct": 0,
+      "description": "Şeyh Kutbüddin İznikî 8 Zilkade 821 / 7 Aralık 1418'de İznik'te vefat etmiş ve kendi zaviyesine defnedilmiştir.",
+      "sourceId": "inv-p446"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p446",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Şeyh Kutbüddin Camii\"",
+      "page": "56"
+    },
+    {
+      "id": "inv-p448",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Şeyh Kutbüddin Camii\"",
+      "page": "58"
+    },
+    {
+      "id": "inv-p478",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İznik, \"Şeyh Kutbüddin Türbesi\"",
+      "page": "88"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-azeb-bey-mosque",
+  "name": "Azeb Bey Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 860 / M. 1456",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Abdullah oğlu Azeb Bey'in 1456'da yaptırdığı, erken Osmanlı mimarisinin özelliklerini yansıtan tek kubbeli, kare planlı cami.",
+  "history": "Cami, Osmangazi ilçesi, Kocanaib Mahallesi'nde, 10. Okul Sokak ile Soğukçeşme Sokak'ın kesişimi, No: 17'dedir. Abdullah oğlu Azeb Bey tarafından H. 860 / M. 1456'da inşa ettirilmiştir. Banisine ait türbe yapının hemen yanındadır.\n\nErken Osmanlı mimarisinin karakteristik özelliklerini yansıtan cami, Bursa'daki benzerleri gibi tek kubbeli, kare planlı, kalkan duvarlı ve üç gözlü son cemaat yerine sahip bir yapıdır. Minare formu da Bursa camilerine özgüdür ve bu mimari geleneğin önemli bir halkasıdır.\n\nBeden duvarları üç sıra tuğla ve bir sıra kesme taş örgüyle yapılmıştır. Kalkan duvarında bir sıra tuğla ve bir sıra kesme taş dizilimi görülür, aralara düşey tuğlalar yerleştirilmiştir. Düşey tuğlalar genellikle Orhan Gazi devrine ait moloz taş örgüdeki düzensizlikleri gizlemek için kullanılırdı; burada işçilik oldukça temiz olduğu hâlde bu unsurun korunması, geleneğin yaşatılmak istendiğini düşündürür.\n\nCaminin alt bölümünde sekiz, üst bölümünde on bir olmak üzere toplam on dokuz pencere vardır; mihrap duvarında da bir pencere açılmıştır. Kubbeye geçiş, yerden yüksekliği 5.15 m olan Türk üçgenleriyle sağlanmıştır. Üç gözlü son cemaat yeri tonoz örtülüdür ve oldukça derin bir revak düzenine sahiptir. Minarenin kaidesi moloz taş ve tuğladan, silindirik gövdesi tamamen tuğladandır.\n\nSülüs hattıyla yazılmış Arapça kitabesine göre, hayır ve hasenat sahibi, emirlerin ve ileri gelenlerin övüncü, orduların ve askerlerin komutanı Azeb Bey bin Abdullah bu mübarek mescidin yapılmasını H. 860 yılı Rebiülevvel ayının sonlarında (M. 1456) emretmiştir.\n\nMihrabı, minberi ve duvarları çinilerle kaplanan yapının iç mekânında günümüze ulaşan orijinal bir unsur yoktur. Minarenin yıkılması ve caminin ibadete kapatılmasının ardından 1955'te Bursa Eski Eserleri Sevenler Kurumu restorasyon yapmıştır. Geçtiğimiz yıllarda yeniden onarılan cami bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-azeb-bey-mosque/minaret-and-dome.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-azeb-bey-mosque/minaret-and-dome.jpg",
+      "alt": "Kiremit çatılı evler arasında yükselen, tuğla gövdeli, kurşun külahlı minare; yanında kurşun kaplı kubbe ve önde üç kemerli pencereli tuğla cephe, sağda büyük bir ağaç",
+      "description": "Minare ve kubbe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-azeb-bey-mosque/tiled-mihrab.jpg",
+      "alt": "Mavi-beyaz çinilerle kaplı iç mekân: solda çinili mihrap, yanında çinili minber, duvarlarda kemerli pencereler ve kırmızı halı",
+      "description": "Çinili mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-azeb-bey-mosque/city-view.jpg",
+      "alt": "Ağaçlar arasında kurşun kaplı iki kubbe ve aralarında yükselen tuğla minare; arkada Bursa ovası ve şehir",
+      "description": "Şehirle birlikte görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-azeb-bey-mosque/minaret-and-dome.jpg",
+      "x": 52,
+      "y": 32,
+      "title": "Tuğla minare",
+      "text": "Minarenin kaidesi moloz taş ve tuğladan, silindirik gövdesi tamamen tuğladandır. Minare formu Bursa camilerine özgüdür.",
+      "sourceId": "inv-p267"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-azeb-bey-mosque/tiled-mihrab.jpg",
+      "x": 20,
+      "y": 45,
+      "title": "Çinili mihrap",
+      "text": "Mihrap, minber ve duvarlar çinilerle kaplıdır; iç mekânda günümüze ulaşan orijinal bir unsur yoktur.",
+      "sourceId": "inv-p267"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/osmangazi-azeb-bey-mosque/tiled-mihrab.jpg",
+      "x": 52,
+      "y": 50,
+      "title": "Çinili minber",
+      "text": "Minber de mihrap ve duvarlar gibi çinilerle kaplanmıştır.",
+      "sourceId": "inv-p267"
+    }
+  ],
+  "test": [
+    {
+      "question": "Azeb Bey Camii hangi yılda inşa ettirilmiştir?",
+      "options": [
+        "M. 1396",
+        "M. 1513",
+        "M. 1456",
+        "M. 1955"
+      ],
+      "correct": 2,
+      "description": "Cami, Abdullah oğlu Azeb Bey tarafından H. 860 / M. 1456'da inşa ettirilmiştir.",
+      "sourceId": "inv-p267"
+    },
+    {
+      "question": "Azeb Bey Camii'nde kubbeye geçiş hangi unsurla sağlanmıştır?",
+      "options": [
+        "Pandantiflerle",
+        "Türk üçgenleriyle",
+        "Tromplarla",
+        "Mukarnaslı kuşakla"
+      ],
+      "correct": 1,
+      "description": "Kubbeye geçiş, yerden yüksekliği 5.15 m olan Türk üçgenleriyle sağlanmıştır.",
+      "sourceId": "inv-p267"
+    },
+    {
+      "question": "Minarenin silindirik gövdesi hangi malzemeyle örülmüştür?",
+      "options": [
+        "Kesme taş",
+        "Tamamen tuğla",
+        "Moloz taş",
+        "Mermer"
+      ],
+      "correct": 1,
+      "description": "Minarenin kaidesi moloz taş ve tuğladan, silindirik gövdesi tamamen tuğladandır.",
+      "sourceId": "inv-p267"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p267",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Azeb Bey Camii\"",
+      "page": "271"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "mustafakemalpasa-selimiye-mosque",
+  "name": "Selimiye Camii Minaresi",
+  "city": "Bursa",
+  "district": "Mustafakemalpaşa",
+  "period": "Minarenin yapım tarihi bilinmiyor",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Yeniden yapılmış Selimiye Camii'nin yanında, ne zaman yapıldığı bilinmeyen eski camiden kalan minare.",
+  "history": "Cami, Mustafakemalpaşa'nın Selimiye Mahallesi'nde, Selimiye Camii Sokağı'ndadır.\n\nSelimiye Camii günümüzde yeniden inşa edilmiştir. Ancak ne zaman yapıldığı bilinmeyen eski camiden kalan minare hâlen ayaktadır. Caminin duvarında yer alan deprem taşı da günümüze ulaşmıştır.\n\nEnvanterde yapıya ilişkin başka bilgi (yapım tarihi, banisi, vakfı) yer almamaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/mustafakemalpasa-selimiye-mosque/minaret.jpg",
+  "images": [
+    {
+      "file": "/images/mustafakemalpasa-selimiye-mosque/minaret.jpg",
+      "alt": "Kiremit çatılı, sıvalı cami yapısının köşesinde yükselen kesme taş gövdeli, tek şerefeli, sivri külahlı minare; arkada şehir ve dağlar",
+      "description": "Minare ve yeniden yapılmış cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mustafakemalpasa-selimiye-mosque/wall-stone.jpg",
+      "alt": "Taş ve tuğla duvardaki dar bir nişe yerleştirilmiş, üzeri kabartma yazılı silindir biçimli beyaz mermer taş",
+      "description": "Duvardaki yazılı mermer taş",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/mustafakemalpasa-selimiye-mosque/minaret.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Eski camiden kalan minare",
+      "text": "Ne zaman yapıldığı bilinmeyen eski camiden kalan minare hâlen ayaktadır.",
+      "sourceId": "inv-p612"
+    },
+    {
+      "id": "mosque",
+      "image": "/images/mustafakemalpasa-selimiye-mosque/minaret.jpg",
+      "x": 20,
+      "y": 60,
+      "title": "Yeniden yapılan cami",
+      "text": "Selimiye Camii günümüzde yeniden inşa edilmiştir.",
+      "sourceId": "inv-p612"
+    }
+  ],
+  "test": [
+    {
+      "question": "Selimiye Camii hangi mahallededir?",
+      "options": [
+        "Atariye Mahallesi",
+        "Selimiye Mahallesi",
+        "Lala Şahin Mahallesi",
+        "Şeyhmüftü Mahallesi"
+      ],
+      "correct": 1,
+      "description": "Cami, Mustafakemalpaşa'nın Selimiye Mahallesi'nde, Selimiye Camii Sokağı'ndadır.",
+      "sourceId": "inv-p612"
+    },
+    {
+      "question": "Eski Selimiye Camii'nden günümüze ne kalmıştır?",
+      "options": [
+        "Yalnız kitabesi",
+        "Minaresi ve deprem taşı",
+        "Kubbesi",
+        "Son cemaat yeri"
+      ],
+      "correct": 1,
+      "description": "Eski camiden kalan minare ayaktadır; caminin duvarındaki deprem taşı da günümüze ulaşmıştır.",
+      "sourceId": "inv-p612"
+    },
+    {
+      "question": "Minarenin yapım tarihi hakkında envanter ne söyler?",
+      "options": [
+        "1906'da yapılmıştır",
+        "1823'te yenilenmiştir",
+        "Ne zaman yapıldığı bilinmemektedir",
+        "1980'lerde yapılmıştır"
+      ],
+      "correct": 2,
+      "description": "Envanter, minarenin ne zaman yapıldığının bilinmediğini belirtir.",
+      "sourceId": "inv-p612"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p612",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mustafakemalpaşa, \"Selimiye Camii Minaresi\"",
+      "page": "300"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

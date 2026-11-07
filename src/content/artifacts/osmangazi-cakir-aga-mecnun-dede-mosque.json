@@ -1,0 +1,130 @@
+{
+  "id": "osmangazi-cakir-aga-mecnun-dede-mosque",
+  "name": "Çakır Ağa (Mecnun Dede) Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 15. yüzyıl (Fâtih Sultan Mehmed devri devlet adamı Subaşı Çakır Ağa); bir rivayete göre 1440",
+  "endowment": "Subaşı Çakır Ağa (Mecnun Dede adına); diğer rivayete göre Mecnun Dede",
+  "summary": "Subaşı Çakır Ağa'nın 15. yüzyılda Mecnun Dede adına yaptırdığı, kalkan duvarlı ve tek kubbeli tipik bir Bursa camisi ile haziresi.",
+  "history": "Çakır Ağa (Mecnun Dede) Camii, Osmangazi ilçesi, Tahtakale Mahallesi, Kurşunlu Sokak'tadır. \"Çakır Ağa Mescidi\" olarak da bilinen cami, Fâtih Sultan Mehmed devri devlet adamlarından Subaşı Çakır Ağa tarafından Mecnun Dede adına 15. yüzyılda yaptırılmıştır.\n\nKalkan duvarlarıyla tipik bir Bursa camisi olan yapı tek kubbeyle örtülüdür. 7,38 × 7,60 m iç ölçülerindeki kare planlı harim, 2,90 m derinliğindeki tonoz örtülü son cemaat yeriyle dikdörtgen bir alana oturur. Duvarlar üç sıra tuğla ve bir sıra kesme taşla örülmüştür. Kitap, son cemaat yerinin eskiden üç kubbeyle örtülü olduğunu, araştırmalar sonucunda örtü sisteminin değiştirildiğini belirtir; bugün kubbeye geçişte kullanılan aslan göğsü izleri hâlâ belirgindir. Son cemaat yerinin orta bölümü yanlardan daha geniştir.\n\nKubbe kasnağında sivri kemerli üç pencere vardır. Kirpi saçaklı kalkan duvarla yükseltilen giriş cephesi Bursa kemerlidir ve üstünde sivri kemerli bir silme bulunur. Batıdaki minareye son cemaat yerine açılan bir kapıdan çıkılır; tuğla ve taş örgülü sekizgen kaideden silindirik tuğla gövdeye Türk üçgenleriyle geçilir, sivri külahı kurşun kaplıdır. Cami 1970'te Bursa Eski Eserleri Sevenler Kurumu tarafından esaslı bir onarım geçirmiştir; bakımlıdır ve ibadete açıktır.\n\nCaminin inşası hakkında iki rivayet vardır: birine göre 1440'ta Çakır Ağa tarafından Mecnun Dede adına, diğerine göre Mecnun Dede tarafından bir zaviyeyle birlikte yaptırılmıştır. Asıl adı Mehmed olan Mecnun Dede, Yeşil Cami mahfilindeki çinileri yapan sanatkârdır. Hazirede Mecnun Dede ile kardeşi Lokman Dede'nin kabirlerinin bulunduğu rivayet edilse de bugün bu mezarlara rastlanmamaktadır; yalnızca Bayezid oğlu Hacı Nasuh'a ait baş ve ayak taşları günümüze ulaşmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-cakir-aga-mecnun-dede-mosque/entrance-facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-cakir-aga-mecnun-dede-mosque/entrance-facade.jpg",
+      "alt": "Tuğla ve kesme taş almaşık örgülü cephe; üstte kurşun kubbe, sağda külahlı tuğla minare, önde kiremit saçaklı ve camla kapatılmış son cemaat yeri",
+      "description": "Giriş cephesi, kubbe ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cakir-aga-mecnun-dede-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: ortada kurşun kaplı tek kubbe, solunda minarenin şerefesi ve çevresinde kiremit ile sac çatılı yapılar",
+      "description": "Kubbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cakir-aga-mecnun-dede-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harim; yaldızlı mihrap, sağda ahşap minber, köşelerde kubbeye geçiş öğeleri ve pencereler",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cakir-aga-mecnun-dede-mosque/gravestones.jpg",
+      "alt": "Cami duvarının ve büyük pencerenin önünde, gül dalları arasında iki beyaz mermer mezar taşı",
+      "description": "Hazirede günümüze ulaşan mezar taşları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-cakir-aga-mecnun-dede-mosque/entrance-facade.jpg",
+      "x": 77,
+      "y": 20,
+      "title": "Minare",
+      "text": "Batıdaki minarenin silindirik tuğla gövdesi sivri, kurşun kaplı bir külahla sonlanır.",
+      "sourceId": "inv-p287"
+    },
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-cakir-aga-mecnun-dede-mosque/entrance-facade.jpg",
+      "x": 50,
+      "y": 42,
+      "title": "Tek kubbe",
+      "text": "Kalkan duvarlarıyla tipik bir Bursa camisi olan yapı tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p286"
+    },
+    {
+      "id": "nasuh-stones",
+      "image": "/images/osmangazi-cakir-aga-mecnun-dede-mosque/gravestones.jpg",
+      "x": 25,
+      "y": 52,
+      "title": "Hacı Nasuh'un mezar taşları",
+      "text": "Hazirede yalnızca Bayezid oğlu Hacı Nasuh'a ait baş ve ayak taşları günümüze ulaşmıştır.",
+      "sourceId": "inv-p288"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mecnun Dede'nin asıl adı nedir?",
+      "options": [
+        "Ahmed",
+        "Lokman",
+        "Mehmed",
+        "Nasuh"
+      ],
+      "correct": 2,
+      "description": "Asıl adı Mehmed olan Mecnun Dede, Yeşil Cami mahfilindeki çinileri yapan sanatkârdır.",
+      "sourceId": "inv-p288"
+    },
+    {
+      "question": "Mecnun Dede hangi esere yaptığı işle tanınır?",
+      "options": [
+        "Ulu Cami'nin minberi",
+        "Yeşil Cami mahfilindeki çiniler",
+        "Muradiye'nin kalem işleri",
+        "Koza Han'ın kapısı"
+      ],
+      "correct": 1,
+      "description": "Mecnun Dede, Yeşil Cami mahfilindeki çinileri yapan sanatkârdır.",
+      "sourceId": "inv-p288"
+    },
+    {
+      "question": "Cami 1970'te hangi kurum tarafından esaslı bir onarım geçirmiştir?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Bursa Büyükşehir Belediyesi",
+        "Kültür Bakanlığı",
+        "Bursa Eski Eserleri Sevenler Kurumu"
+      ],
+      "correct": 3,
+      "description": "Cami 1970 yılında Bursa Eski Eserleri Sevenler Kurumu tarafından esaslı bir onarım geçirmiştir.",
+      "sourceId": "inv-p287"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p286",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Çakır Ağa (Mecnun Dede) Camii ve Haziresi\"",
+      "page": "286"
+    },
+    {
+      "id": "inv-p287",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Çakır Ağa (Mecnun Dede) Camii ve Haziresi\"",
+      "page": "287"
+    },
+    {
+      "id": "inv-p288",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Çakır Ağa (Mecnun Dede) Camii ve Haziresi\"",
+      "page": "288"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

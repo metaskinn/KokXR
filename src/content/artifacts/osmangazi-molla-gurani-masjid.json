@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-molla-gurani-masjid",
+  "name": "Molla Gürani (Yeşil-Güranlı) Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 1002 / M. 1594",
+  "endowment": "Erzincan'ın Güran Köyü'nden göç ederek Bursa'ya yerleşen hayırsever Hüseyin",
+  "summary": "Güran Köyü'nden gelen Hüseyin adlı hayırseverin 1594'te türbesiyle birlikte yaptırdığı, konut görünümlü küçük mahalle mescidi.",
+  "history": "Molla Gürani Mescidi, Osmangazi İlçesi, Mollagürânî Mahallesi'nde, Güranlı Sokak ile II. Tahtalı Sokak'ın kesiştiği noktadadır. Sur içinde, Fetih Kapısı'nın ilerisindeki yapı Yeşil Mescit veya Güranlı Mescidi olarak da bilinir.\n\nMescit, türbe ile birlikte, Erzincan'ın Güran Köyü'nden göç ederek Bursa'ya yerleşen Hüseyin adlı bir hayırsever tarafından H. 1002 / M. 1594'te yaptırılmıştır; Hüseyin de vefatından sonra bu türbeye defnedilmiştir. Cumhuriyet döneminde \"Güranlı\" olarak anılan mahalle, 1950'lerden itibaren yeniden \"Mollagürânî\" adını almıştır; ancak mahalle adının Osmanlı şeyhülislamlarından Molla Gürânî ile bir bağlantısı yoktur.\n\nCaminin avlusu, son cemaat yeri ve kitabesi günümüze ulaşmamıştır; minaresi de yoktur. Yapı, renginden ötürü halk arasında \"Yeşil Mescit\" olarak tanınır. Kitapta kuzey duvarı türbeye bitişik mescidin moloz taşla inşa edildiği belirtilir; aynı metinde yapı, ahşap direkler arasına kerpiç dolgu tekniğiyle inşa edilmiş basit bir mahalle mescidi olarak da tanımlanır. Üzeri kırma çatıyla örtülüdür, dış cephesi sıvalıdır ve mimari formuyla bir konutu andırır.\n\nİç mekân ahşap tavanlıdır ve tamamen beyaza boyanmıştır. Sonradan eklenen ahşap bir minberi vardır; mihrabı sadedir.\n\nBelirgin bir mimari özelliği olmayan yapı, 1965'te Hacı Mahmut Efendi tarafından kereste deposu olarak kullanılmıştır. Daha sonra Bursalı Resulzâde'nin maddi desteğiyle yeniden ibadete açılması planlanmış, ancak bu girişim sonuçsuz kalmıştır. Mahalle sakinlerinin girişimleriyle 1978'de Vakıflar Genel Müdürlüğü tarafından kamulaştırılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-molla-gurani-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-molla-gurani-masjid/exterior.jpg",
+      "alt": "Sarıya boyalı, kiremit kaplı kırma çatılı tek katlı yapı; önünde camlı bir eklenti, yeşil demir parmaklıklı bahçe kapısı ve büyük bir çınar ağacı",
+      "description": "Mescidin sokaktan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-molla-gurani-masjid/aerial-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: dar sokakların kesiştiği köşede kiremit kaplı kırma çatılı küçük yapı ve çevresindeki evlerin çatıları",
+      "description": "Mescidin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/osmangazi-molla-gurani-masjid/exterior.jpg",
+      "x": 27,
+      "y": 30,
+      "title": "Kırma çatı",
+      "text": "Basit bir mahalle mescidi olan yapının üzeri kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p400"
+    },
+    {
+      "id": "plastered-facade",
+      "image": "/images/osmangazi-molla-gurani-masjid/exterior.jpg",
+      "x": 31,
+      "y": 47,
+      "title": "Sıvalı dış cephe",
+      "text": "Mescidin dış cephesi sıvalıdır; mimari formu itibarıyla bir konut yapısını andırır.",
+      "sourceId": "inv-p400"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidi kim yaptırmıştır?",
+      "options": [
+        "Şeyhülislam Molla Gürânî",
+        "Erzincan'ın Güran Köyü'nden gelen hayırsever Hüseyin",
+        "Hacı Mahmut Efendi",
+        "Bursalı Resulzâde"
+      ],
+      "correct": 1,
+      "description": "Mescit, türbe ile birlikte, Güran Köyü'nden göç ederek Bursa'ya yerleşen Hüseyin adlı bir hayırsever tarafından yaptırılmıştır.",
+      "sourceId": "inv-p400"
+    },
+    {
+      "question": "Mahallenin Mollagürânî adının şeyhülislam Molla Gürânî ile ilişkisi nedir?",
+      "options": [
+        "Mahalle onun vakfıdır",
+        "Mescidi o yaptırmıştır",
+        "Herhangi bir bağlantısı yoktur",
+        "Orada doğmuştur"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre mahalle isminin Osmanlı şeyhülislamlarından Molla Gürânî ile herhangi bir bağlantısı bulunmamaktadır.",
+      "sourceId": "inv-p400"
+    },
+    {
+      "question": "Yapı 1965'te ne amaçla kullanılmıştır?",
+      "options": [
+        "Okul",
+        "Kütüphane",
+        "Kereste deposu",
+        "Tekke"
+      ],
+      "correct": 2,
+      "description": "Yapı 1965'te Hacı Mahmut Efendi tarafından kereste deposu olarak kullanılmıştır.",
+      "sourceId": "inv-p400"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p400",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Molla Gürani (Yeşil-Güranlı) Mescidi\"",
+      "page": "400"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

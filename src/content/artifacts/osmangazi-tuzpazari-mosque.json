@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-tuzpazari-mosque",
+  "name": "Tuzpazarı Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Fâtih Sultan Mehmed dönemi; 1479",
+  "endowment": "Banisi kesin bilinmiyor; kaynaklara göre Fâtih devri ricalinden Kara Ali Bey",
+  "summary": "Fâtih devri ricalinden Kara Ali Bey'in 1479'da yaptırdığı bildirilen, Tuz Pazarı'nın içinde kalmış tek kubbeli cami.",
+  "history": "Tuzpazarı Camii, Osmangazi İlçesi, Orhanbey Mahallesi, Tuzpazarı Caddesi No: 53'tedir. Yaptıran kişinin adı kesin olarak bilinmemekle birlikte, Şemseddin Ulusoy, Kâmil Kepecioğlu ve Kâzım Baykal'ın bildirdiklerine göre cami 1479'da Fâtih Sultan Mehmed devri ricalinden Kara Ali Bey adlı bir kişi tarafından inşa ettirilmiştir.\n\nTuz Pazarı'nın içinde kalmış ve zarafeti gölgelenmiş bir yapıdır. Dıştan dışa 11 × 16,25 m ölçülerindeki yapının cepheleri iki sıra tuğla ve iki sıra moloz taşla örülmüş; kemerlerde kesme küfeki taşı, kemer ayaklarında düzgün taş ve tuğla kullanılmıştır.\n\n2,30 m yüksekliğindeki Türk üçgenlerine oturan, yaklaşık 9 m çapındaki kubbe yapıya ferah bir görünüm kazandırır ve kurşunla kaplıdır. Son cemaat yeri iki sıra kirpi saçaklı ve kalkan duvarlıdır; orta bölümü yedi sıra stalaktitli, on iki dilimli bir kubbeyle, yan bölümleri tonozlarla örtülüdür. Üzeri kurşun kaplı son cemaat yeri tamamen kapanmış, doğu duvarından asimetrik biçimde bir kapı açılmıştır.\n\nDengeli ölçülerdeki altı sıra stalaktitli mihrap sonradan estetikten uzak biçimde boyanmıştır; yine de sülüs hatla özenle yazılmış \"Öyleyse yüzünü Mescid-i Harâm'a çevir\" mealindeki mihrap ayeti ile çevresindeki kuşakta Âyetü'l-Kürsî okunabilmektedir.\n\nMinare, doğu duvarında harim ile son cemaat yerinin birleştiği noktada, yarısı beden duvarına gömülü olarak tasarlanmıştır. Türk üçgenli pabuç kısmı ve yirmi dört dilimli kaval silmeler hâlinde düzenlenmiş tuğladan yivli silindirik gövdesi vardır. Üç sıra kirpi saçakla dolgulu şerefe altı, mermer korkulukları ve miğfer külahıyla Bursa'daki birkaç caminin minaresine benzese de en zarif örneklerinden biri olarak dikkat çeker.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-tuzpazari-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-tuzpazari-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: pazar tenteleri ve binalar arasında kurşun kaplı kubbeli taş-tuğla cami, yanında yivli tuğla gövdeli minare; arkada gün batımında Bursa",
+      "description": "Caminin Tuz Pazarı içindeki görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-tuzpazari-mosque/north-facade.jpg",
+      "alt": "Kuzey cephe: tuğla ve taş örgülü, büyük kemerli camekân pencereli kapalı son cemaat yeri, ahşap kapı ve önünde mermer bir çeşme",
+      "description": "Kapalı son cemaat yeri cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-tuzpazari-mosque/mihrab.jpg",
+      "alt": "Mihrap: renkli boyalı geniş çerçeve içinde yazı kuşakları, ortada beyaz stalaktitli niş; iki yanda pencereler ve önde mavi halı",
+      "description": "Boyanmış mihrap ve yazı kuşakları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-tuzpazari-mosque/aerial-view.jpg",
+      "x": 49,
+      "y": 53,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Türk üçgenlerine oturan yaklaşık 9 m çapındaki kubbe kurşunla kaplıdır.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-tuzpazari-mosque/aerial-view.jpg",
+      "x": 62,
+      "y": 31,
+      "title": "Yivli tuğla minare",
+      "text": "Minarenin gövdesi yirmi dört dilimli kaval silmeler hâlinde düzenlenmiş tuğladan yivli silindir biçimindedir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-tuzpazari-mosque/mihrab.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Stalaktitli mihrap",
+      "text": "Altı sıra stalaktitli mihrap sonradan boyanmıştır; çevresinde sülüs hatla mihrap ayeti ve Âyetü'l-Kürsî okunur.",
+      "sourceId": "inv-p441"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kaynaklara göre Tuzpazarı Camii'ni 1479'da kim yaptırmıştır?",
+      "options": [
+        "Hacı Mahmud Çelebi",
+        "Fâtih devri ricalinden Kara Ali Bey",
+        "Rızâ Paşa",
+        "Seyyid Çelebi"
+      ],
+      "correct": 1,
+      "description": "Ulusoy, Kepecioğlu ve Baykal'ın bildirdiğine göre cami 1479'da Kara Ali Bey tarafından yaptırılmıştır.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "question": "Caminin kubbesinin çapı yaklaşık kaç metredir?",
+      "options": [
+        "5 m",
+        "15 m",
+        "9 m",
+        "20 m"
+      ],
+      "correct": 2,
+      "description": "Türk üçgenlerine oturan kubbenin çapı yaklaşık 9 m'dir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Minarenin tuğla gövdesi kaç dilimli kaval silmeler hâlinde düzenlenmiştir?",
+      "options": [
+        "Yirmi dört",
+        "On iki",
+        "Sekiz",
+        "Otuz iki"
+      ],
+      "correct": 0,
+      "description": "Minare, yirmi dört dilimli kaval silmeler hâlinde düzenlenmiş tuğladan yivli silindirik gövdeye sahiptir.",
+      "sourceId": "inv-p441"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p440",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Tuzpazarı Camii\"",
+      "page": "440"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Tuzpazarı Camii\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

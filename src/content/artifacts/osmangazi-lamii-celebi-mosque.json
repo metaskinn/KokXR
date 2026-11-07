@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-lamii-celebi-mosque",
+  "name": "Lâmiî Çelebi Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1528",
+  "endowment": "Banisi Şair Lâmiî Çelebi; 1960'ta sahibesi tarafından ibadethane olarak kullanılmak şartıyla yeniden vakıflara bağışlanmıştır",
+  "summary": "Şair Lâmiî Çelebi'nin 1528'de Çekirge'de yaptırdığı, kiremit kaplı kırma çatılı küçük mescit.",
+  "history": "Lâmiî Çelebi Camii, Osmangazi İlçesi, Çekirge Mahallesi, Çekirge Meydanı'ndadır. Bursa'nın kültür, sanat ve edebiyat tarihinde önemli yeri olan Şair Lâmiî Çelebi ve dedesi Nakkaş Ali, şehrin önemli şahsiyetlerindendir. Nakkaş Ali, Bursa Yeşil Külliyesi'nin kalem işi nakışlarının ustasıdır. Kitapta Fâtih Sultan Mehmed dönemi şair ve yazarlarından biri olarak anılan Lâmiî Çelebi, edebiyat dünyasında önemli eserler vermiş ve geniş bir külliyat ortaya koymuştur. \"Lâmiî\" mahlasıdır; künyesi \"Mahmud Çelebi bin Osman bin Nakkaş Ali bin İlyas Ali\" olarak geçer. Dinî konularda da derin bilgisi olan Lâmiî, dedesi gibi bir mescit yaptırarak imar faaliyetlerine katkıda bulunmuştur.\n\n1528'de Çekirge Mahallesi'nde yaptırılan mescit bugün ibadete açıktır. 4,00 × 7,50 m'lik son cemaat yeriyle birlikte 7,50 × 9,60 m ölçülerinde, dikdörtgen planlı kâgir bir yapıdır. Duvarları tuğla ve moloz taşla örülmüş, dıştan sıvanmıştır. Caminin bahçesi satılmıştır. Kiremit kaplı kırma çatılı ve ahşap tavanlı caminin iki penceresi, batıdaki bitişik konutlar nedeniyle örülerek kapatılmıştır; aydınlatma kuzey, güney ve doğudaki ikişer pencereyle sağlanır. İç mekân küçük olsa da sonradan eklenen ahşap minber ve vaaz kürsüsüyle zenginleştirilmiştir. Mihrap beş yuvarlak mukarnasla süslenmiştir.\n\nUzun süre mesken ve spor kulübü binası gibi farklı amaçlarla kullanılan mescit, 1960'ta sahibesi tarafından ibadethane olarak kullanılmak şartıyla yeniden vakıflara bağışlanmıştır. 1962'de Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmış, minaresi eklenerek ibadete açılmıştır. Bugün bakımlı durumdaki mescit Çekirge halkına hizmet vermektedir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-lamii-celebi-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-lamii-celebi-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit kaplı kırma çatılı, beyaz sıvalı küçük cami ve köşesinde ince taş minare; arkasında çok katlı apartmanlar ve dükkânlar",
+      "description": "Caminin Çekirge'deki konumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-lamii-celebi-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavanlı küçük harim, ortada mukarnaslı beyaz mihrap, sağda yeşil örtülü ahşap minber, solda basamaklı ahşap vaaz kürsüsü; mavi halı ve ahşap kepenkli pencereler",
+      "description": "Ahşap tavanlı harim, mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-lamii-celebi-mosque/aerial-view.jpg",
+      "x": 45,
+      "y": 63,
+      "title": "Kiremit kaplı kırma çatı",
+      "text": "Dıştan sıvanmış dikdörtgen planlı kâgir yapı, kiremit kaplı kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p390"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-lamii-celebi-mosque/aerial-view.jpg",
+      "x": 46,
+      "y": 30,
+      "title": "Minare",
+      "text": "Mescit 1962'de Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmış, minaresi eklenerek ibadete açılmıştır.",
+      "sourceId": "inv-p390"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-lamii-celebi-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 40,
+      "title": "Mukarnaslı mihrap",
+      "text": "Mihrap beş yuvarlak mukarnasla süslenmiştir; iç mekân sonradan eklenen ahşap minber ve vaaz kürsüsüyle zenginleştirilmiştir.",
+      "sourceId": "inv-p390"
+    }
+  ],
+  "test": [
+    {
+      "question": "Lâmiî Çelebi'nin dedesi Nakkaş Ali hangi yapının kalem işi nakışlarının ustasıdır?",
+      "options": [
+        "Ulu Cami",
+        "Muradiye Külliyesi",
+        "Yeşil Külliye",
+        "Emir Sultan Camii"
+      ],
+      "correct": 2,
+      "description": "Nakkaş Ali, Bursa Yeşil Külliyesi'nin kalem işi nakışlarının ustasıdır.",
+      "sourceId": "inv-p390"
+    },
+    {
+      "question": "1962 onarımında camiye ne eklenmiştir?",
+      "options": [
+        "Son cemaat yeri",
+        "Minare",
+        "Kubbe",
+        "Şadırvan"
+      ],
+      "correct": 1,
+      "description": "Mescit 1962'de Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmış ve minaresi eklenerek ibadete açılmıştır.",
+      "sourceId": "inv-p390"
+    },
+    {
+      "question": "\"Lâmiî\" mahlaslı şairin künyesindeki adı nedir?",
+      "options": [
+        "İlyas Ali",
+        "Osman Çelebi",
+        "Nakkaş Ali",
+        "Mahmud Çelebi"
+      ],
+      "correct": 3,
+      "description": "Lâmiî mahlasıdır; şairin künyesi \"Mahmud Çelebi bin Osman bin Nakkaş Ali bin İlyas Ali\" olarak geçer.",
+      "sourceId": "inv-p390"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p390",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Lâmiî Çelebi Camii\"",
+      "page": "390"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

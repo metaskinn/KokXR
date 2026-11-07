@@ -1,0 +1,118 @@
+{
+  "id": "mudanya-omer-bey-mosque",
+  "name": "Ömer Bey Camii",
+  "city": "Bursa",
+  "district": "Mudanya",
+  "period": "Osmanlı · Rivayete göre 1715",
+  "endowment": "Rivayete göre Ömer Bey (banisi kesin olarak bilinmiyor)",
+  "summary": "Rivayete göre 1715'te Ömer Bey adlı bir kişinin yaptırdığı, caddeye bakan revaklı son cemaat mahalli ve tuğla minaresiyle tanınan kare planlı cami.",
+  "history": "Mudanya'nın Ömerbey Mahallesi'nde, Halitpaşa Caddesi No: 72'de yer alır. Banisi ve inşa tarihi kesin olarak bilinmemekle birlikte, 1715'te Ömer Bey adlı bir kişi tarafından yaptırıldığı rivayet edilir. Halk arasında \"Ömer Çavuş\" veya \"Ömer Bey Camii\" olarak anılır.\n\nKare planlı caminin üzeri kiremit kaplı kırma çatıyla örtülüdür. Moloz taş ve tuğlayla inşa edilen beden duvarları sıvanarak beyaza boyanmıştır. Doğu cephesinde, caddeye bakan revaklı son cemaat mahalli yedi adet üç dilimli kemerli açıklıkla sonlanır ve yaklaşık 28 m²'lik bir alanı kaplar.\n\nYaklaşık 122 m²'lik harim ahşap tavanla örtülüdür. Pencereler dikdörtgen formlu, ahşap çerçeveli ve demir şebekelidir. Mermer yuvarlak kemerle çevrili mihrap nişi beyaz sıvalı ve sadedir; ahşap minber ve kürsü süslemesizdir. Harimin kuzeyinde ahşap bir kadınlar mahfili bulunur.\n\nKuzeydoğu köşesindeki minare caminin en özgün öğesidir. Kesme taştan çokgen kaide üzerine oturan gövdesi tuğlayla silindirik olarak örülmüştür; tek şerefesinin altında dört sıra tuğla testere dişli bezeme ve mermer bilezik vardır, sivri külahı kurşun kaplıdır.\n\n1970, 1972 ve 1977'de onarım gören cami, 1999 depreminde ağır hasar alınca kapsamlı bir restorasyona girmiştir. Son olarak Vakıflar Genel Müdürlüğü'nün 2018'de başlatıp 2022'de tamamladığı kapsamlı restorasyon yapılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/mudanya-omer-bey-mosque/exterior-portico.jpg",
+  "images": [
+    {
+      "file": "/images/mudanya-omer-bey-mosque/exterior-portico.jpg",
+      "alt": "Beyaz sıvalı, kiremit kırma çatılı cami; cadde tarafında kemerli açıklıklı revak ve arkasında tuğla minare",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-omer-bey-mosque/minaret.jpg",
+      "alt": "Tuğla gövdeli, tek şerefeli, kurşun kaplı sivri külahlı minare; arkada deniz ve dağlar",
+      "description": "Minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-omer-bey-mosque/prayer-hall.jpg",
+      "alt": "Ahşap tavanlı harim: ortada sade, beyaz sıvalı mihrap nişi, iki yanında pencereler, sağda ahşap minber",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "portico",
+      "image": "/images/mudanya-omer-bey-mosque/exterior-portico.jpg",
+      "x": 57,
+      "y": 69,
+      "title": "Revaklı son cemaat mahalli",
+      "text": "Doğu cephesinde caddeye bakan revaklı son cemaat mahalli yedi adet üç dilimli kemerli açıklıkla sonlanır ve yaklaşık 28 m²'lik bir alanı kaplar.",
+      "sourceId": "inv-p594"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/mudanya-omer-bey-mosque/minaret.jpg",
+      "x": 50,
+      "y": 52,
+      "title": "Minare",
+      "text": "Caminin en özgün öğesi olan minarenin tuğla gövdesi kesme taştan çokgen kaideye oturur. Şerefe altında dört sıra tuğla testere dişli bezeme ve mermer bilezik vardır; sivri külahı kurşun kaplıdır.",
+      "sourceId": "inv-p595"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/mudanya-omer-bey-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Mermerden yuvarlak kemerle çevrili mihrap nişi beyaz sıvalı ve sadedir. Minber ve kürsü ahşaptan yapılmış olup süslemesizdir.",
+      "sourceId": "inv-p595"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ömer Bey Camii halk arasında hangi adla da anılır?",
+      "options": [
+        "Ömer Çavuş",
+        "Eski Cami",
+        "Hal Camii",
+        "Tekke-i Atik"
+      ],
+      "correct": 0,
+      "description": "Cami halk arasında \"Ömer Çavuş\" veya \"Ömer Bey Camii\" olarak anılır.",
+      "sourceId": "inv-p594"
+    },
+    {
+      "question": "Kitaba göre caminin en özgün öğesi hangisidir?",
+      "options": [
+        "Mihrabı",
+        "Minaresi",
+        "Kadınlar mahfili",
+        "Ahşap tavanı"
+      ],
+      "correct": 1,
+      "description": "Kuzeydoğu köşesindeki minare caminin en özgün öğesidir.",
+      "sourceId": "inv-p595"
+    },
+    {
+      "question": "Caminin son kapsamlı restorasyonu hangi yıllar arasında yapılmıştır?",
+      "options": [
+        "1970-1972",
+        "1999-2003",
+        "2010-2011",
+        "2018-2022"
+      ],
+      "correct": 3,
+      "description": "Vakıflar Genel Müdürlüğü'nün 2018'de başlattığı kapsamlı restorasyon 2022'de tamamlanmıştır.",
+      "sourceId": "inv-p595"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p594",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mudanya, \"Ömer Bey Camii\"",
+      "page": "282"
+    },
+    {
+      "id": "inv-p595",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mudanya, \"Ömer Bey Camii\"",
+      "page": "283"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

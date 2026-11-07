@@ -1,0 +1,118 @@
+{
+  "id": "mudanya-new-mosque",
+  "name": "Yeni Camii",
+  "city": "Bursa",
+  "district": "Mudanya",
+  "period": "1958",
+  "endowment": "Girit göçmeni mahalle sakinlerinin katkılarıyla yaptırılmıştır",
+  "summary": "1958'de Girit göçmeni mahalle sakinlerinin katkılarıyla inşa edilen, kare planlı ve kiremit kaplı kırma çatılı cami.",
+  "history": "Mudanya'nın Halitpaşa Mahallesi'nde, Fevzi Paşa Caddesi No: 19'da yer alır. 1958'de Girit göçmeni mahalle sakinlerinin katkılarıyla inşa edilmiştir. Yaklaşık 126 m²'lik ibadet alanına sahip yapı kare planlıdır; üzeri kırma çatıyla örtülmüş ve kiremitle kaplanmıştır. Sonraki yıllarda doğu cephesine yapılan eklemeyle harim genişletilmiştir.\n\nDört basamakla çıkılan son cemaat mahalli bir ara sahanlık biçimindedir. Ahşap çift kanatlı kapıdan girilen harim, özgün bölüm ile doğuda sonradan eklenen ve kot farkıyla yaklaşık 1 m daha yüksekte kalan bölümden oluşur. Kadınlar mahfili harimin kuzeyinde, müezzin mahfili kuzeybatı köşesindedir. Ahşap tavanlı harim, pencerelerle iki sıra hâlinde aydınlatılır. Doğudaki ek bölüm yapı gönyesine tam oturmadığı için düzenli bir dikdörtgen plan göstermez; bu bölüme harimin doğu alt pencereleri iptal edilerek geçilir.\n\nMihrap nişi sekiz sıra mukarnasla sonlanır, alt bölümü koyu renk fayansla kaplıdır ve çevresi Ayetü'l-kürsîden alınan ayetlerle bezenmiştir. Minber ve kürsü ahşaptır. Kuzeybatı köşesindeki minare silindirik gövdeli, tek şerefeli ve beyaz sıvalıdır; şerefe altında iki sıra testere dişli tuğla bezeme vardır, sivri külahı beton sıvayla kapatılmıştır.\n\nDış cephesi mozaik malzemeyle yenilenen cami, bu müdahale sonrasında mimari ve sanatsal özgünlüğünü büyük ölçüde kaybetmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/mudanya-new-mosque/minaret.jpg",
+  "images": [
+    {
+      "file": "/images/mudanya-new-mosque/minaret.jpg",
+      "alt": "Beyaz sıvalı, tek şerefeli, yeşil sivri külahlı minare; çevresinde kiremit çatılı evler, arkada deniz ve dağlar",
+      "description": "Minare ve çevresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-new-mosque/aerial-view.jpg",
+      "alt": "Kiremit çatılı evlerle dolu Mudanya mahallesi ve ortada yükselen beyaz minare, arkada yeşil tepeler",
+      "description": "Havadan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/mudanya-new-mosque/prayer-hall.jpg",
+      "alt": "Ahşap tavanlı harim: koyu fayanslı mihrap, sağda ahşap minber, iki sıra pencereler, kırmızı halı ve avize",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/mudanya-new-mosque/minaret.jpg",
+      "x": 40,
+      "y": 46,
+      "title": "Minare",
+      "text": "Kuzeybatı köşesindeki minare silindirik gövdeli ve tek şerefelidir; gövdesi beyaz sıvalıdır. Şerefe altında iki sıra testere dişli tuğla bezeme vardır, sivri külahı beton sıvayla kapatılmıştır.",
+      "sourceId": "inv-p597"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/mudanya-new-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Mihrap nişi sekiz sıra mukarnasla sonlanır; alt bölümü koyu renk fayansla kaplıdır ve çevresi Ayetü'l-kürsîden alınan ayetlerle bezenmiştir. Minber ve kürsü ahşaptır.",
+      "sourceId": "inv-p597"
+    },
+    {
+      "id": "ceiling",
+      "image": "/images/mudanya-new-mosque/prayer-hall.jpg",
+      "x": 30,
+      "y": 7,
+      "title": "Ahşap tavan ve pencereler",
+      "text": "Ahşap tavanla örtülü harim; mihrap duvarında altlı üstlü dört, doğu ve batı duvarlarında altlı üstlü üçer, kuzeyde beş pencereyle aydınlanır.",
+      "sourceId": "inv-p597"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yeni Camii hangi yıl inşa edilmiştir?",
+      "options": [
+        "1898",
+        "1958",
+        "1975",
+        "1922"
+      ],
+      "correct": 1,
+      "description": "Cami 1958'de Girit göçmeni mahalle sakinlerinin katkılarıyla inşa edilmiştir.",
+      "sourceId": "inv-p596"
+    },
+    {
+      "question": "Caminin yapımına kimler katkıda bulunmuştur?",
+      "options": [
+        "Girit göçmeni mahalle sakinleri",
+        "Mudanya Belediyesi",
+        "Rus tüccarlar",
+        "Vakıflar Genel Müdürlüğü"
+      ],
+      "correct": 0,
+      "description": "Yapı, Girit göçmeni mahalle sakinlerinin katkılarıyla inşa edilmiştir.",
+      "sourceId": "inv-p596"
+    },
+    {
+      "question": "Caminin özgünlüğünü büyük ölçüde kaybetmesine yol açan müdahale nedir?",
+      "options": [
+        "Minarenin yıkılması",
+        "Yangın",
+        "Dış cephenin mozaik malzemeyle yenilenmesi",
+        "Kubbe eklenmesi"
+      ],
+      "correct": 2,
+      "description": "Dış cephe mozaik malzemeyle yenilenmiş, cami bu müdahale sonrasında özgünlüğünü büyük ölçüde kaybetmiştir.",
+      "sourceId": "inv-p597"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p596",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mudanya, \"Yeni Camii\"",
+      "page": "284"
+    },
+    {
+      "id": "inv-p597",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Mudanya, \"Yeni Camii\"",
+      "page": "285"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

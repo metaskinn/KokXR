@@ -1,0 +1,102 @@
+{
+  "id": "gemlik-kucukkumla-old-mosque",
+  "name": "Küçükkumla Eski (Hacı Muhyi) Camii",
+  "city": "Bursa",
+  "district": "Gemlik",
+  "period": "Kitapta tarih belirtilmemiştir · 1999 depreminde minaresi dışında yıkıldı",
+  "endowment": "İlk banisi Muhyiddin Efendi, ikinci inşa ettireni Memi Reis (arşiv kayıtlarına göre)",
+  "summary": "1999 depreminde minaresi dışında tamamen yıkılan; bugün yalnız minaresi ayakta duran cami.",
+  "history": "Gemlik, Küçük Kumla, Şükrü Alemdar Mahallesi'nde yer alır. 1999 depremi sırasında minaresi hariç tamamen yıkılan caminin arsası bugün hâlâ boştur. Arşiv kayıtlarına göre yapının ilk banisi \"Muhyiddin Efendi\", ikinci inşa ettireni ise \"Memi Reis\" olarak bilinmektedir.\n\nEski belgelerden edinilen bilgilere göre yapı, doğu-batı doğrultusunda uzanan, dikdörtgen planlı, harimi düz tavanla örtülü ve kuzeyde son cemaat mahalli ile birlikte tasarlanmış bir camidir. Doğu duvarındaki bir duvar payesi, yapının ilk inşa evresinde doğuya doğru genişletildiğini gösterir. Harimin güney duvarında iki ayrı inşa evresi tespit edilmiştir. Yarım yuvarlak mihrap nişi dört basamaklı bir kavsarayla örtülüdür; köşelerde sütunçeler yer alır ve bütün kompozisyon dikdörtgen bir çerçeve içine alınmıştır.\n\nHarimi kuşatan pencerelerin tümü yuvarlak kemerlidir. Saçak altındaki üç sıra testere dişi friz kısmen günümüze ulaşmış, bazı bölümleri beton sıvayla kapatılmıştır. Harim ve modern son cemaat yeri kırma çatıyla örtülüdür. Batı cephenin orta aksında eski minareye ait kalıntılar tespit edilmiştir. Doğu cephe bütünüyle ikinci inşa dönemine aittir; kuzeydoğu köşede kare kaideli, pahlanmış pabuçlu, silindirik gövdeli ve tek şerefeli yeni minare yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/gemlik-kucukkumla-old-mosque/minaret.jpg",
+  "images": [
+    {
+      "file": "/images/gemlik-kucukkumla-old-mosque/minaret.jpg",
+      "alt": "Küçükkumla Eski Camii'nin minaresi: kesme taş kaideli, silindirik gövdeli, tek şerefeli, sivri külahlı minare; çevresinde evler ve ağaçlı tepeler",
+      "description": "Ayakta kalan minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gemlik-kucukkumla-old-mosque/minaret-wide.jpg",
+      "alt": "Evlerin arasında yükselen tek şerefeli, sivri külahlı taş minare; arkada kazılmış bir yamaç ve yeşil tepeler",
+      "description": "Minare ve çevresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "earthquake",
+      "image": "/images/gemlik-kucukkumla-old-mosque/minaret.jpg",
+      "x": 51,
+      "y": 57,
+      "title": "Depremden kalan minare",
+      "text": "1999 depremi sırasında cami minaresi hariç tamamen yıkılmıştır; caminin arsası bugün hâlâ boştur.",
+      "sourceId": "inv-p329"
+    },
+    {
+      "id": "new-minaret",
+      "image": "/images/gemlik-kucukkumla-old-mosque/minaret-wide.jpg",
+      "x": 57,
+      "y": 46,
+      "title": "Yeni minare",
+      "text": "Kuzeydoğu köşede kare kaideli, pahlanmış pabuçlu, silindirik gövdeli ve tek şerefeli yeni minare yer alır. Minare yapının ikinci inşa dönemine aittir.",
+      "sourceId": "inv-p330"
+    }
+  ],
+  "test": [
+    {
+      "question": "1999 depreminde camiden ayakta kalan bölüm hangisidir?",
+      "options": [
+        "Son cemaat yeri",
+        "Mihrap",
+        "Minare",
+        "Güney duvarı"
+      ],
+      "correct": 2,
+      "description": "Cami 1999 depremi sırasında minaresi hariç tamamen yıkılmıştır.",
+      "sourceId": "inv-p329"
+    },
+    {
+      "question": "Arşiv kayıtlarına göre caminin ilk banisi kimdir?",
+      "options": [
+        "Memi Reis",
+        "Muhyiddin Efendi",
+        "Yakub Bey",
+        "Ali Orhan"
+      ],
+      "correct": 1,
+      "description": "Arşiv kayıtlarına göre ilk banisi Muhyiddin Efendi, ikinci inşa ettireni Memi Reis'tir.",
+      "sourceId": "inv-p329"
+    },
+    {
+      "question": "Eski belgelere göre caminin mihrap nişi neyle örtülüydü?",
+      "options": [
+        "Dört basamaklı bir kavsara",
+        "Mukarnaslı bir kubbe",
+        "Ahşap bir saçak",
+        "Çini pano"
+      ],
+      "correct": 0,
+      "description": "Yarım yuvarlak mihrap nişi dört basamaklı bir kavsarayla örtülmekte, köşelerde sütunçeler yer almaktadır.",
+      "sourceId": "inv-p330"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p329",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Gemlik, \"Küçükkumla Eski (Hacı Muhyi) Camii\"",
+      "page": "127"
+    },
+    {
+      "id": "inv-p330",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Gemlik, \"Küçükkumla Eski (Hacı Muhyi) Camii\"",
+      "page": "128"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

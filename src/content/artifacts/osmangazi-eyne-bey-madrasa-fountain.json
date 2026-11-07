@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-eyne-bey-madrasa-fountain",
+  "name": "Eyne Bey Medresesi Çeşmesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Eyne Bey Medresesi’nin doğu beden duvarındaki kitabesiz çeşmenin, envantere göre özgün yapısı kaybolmuş ve suyu kesilmiştir.",
+  "history": "Çeşme, Tahtakale Mahallesi, İnebey Caddesi, İnebey Sokak No: 7’de, Eyne Bey Medresesi’nin doğu cephesindeki beden duvarındadır. Envanterde yuvarlak kemerli bir duvar nişi olarak tarif edilir. Kitabesi bulunmayan çeşmenin özgün yapısını tamamen kaybettiği ve suyunun akmadığı belirtilir. Kitap çeşme için bir yapım tarihi veya bani adı vermez.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-eyne-bey-madrasa-fountain/fountain-detail.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-eyne-bey-madrasa-fountain/fountain-detail.jpg",
+      "alt": "Taş ve tuğla duvarda sivri üst çerçeveli küçük çeşme, koyu niş, kabartmalı açık renk mermer ayna taşı ve önünde taş tekne",
+      "description": "Taş ve tuğla duvarda sivri üst çerçeveli küçük çeşme, koyu niş, kabartmalı açık renk mermer ayna taşı ve önünde taş tekne",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-eyne-bey-madrasa-fountain/madrasa-exterior.jpg",
+      "alt": "Sokak kenarında taş ve tuğla cepheli medrese, merdivenli kapısı ve cephenin sol alt tarafındaki küçük çeşme",
+      "description": "Sokak kenarında taş ve tuğla cepheli medrese, merdivenli kapısı ve cephenin sol alt tarafındaki küçük çeşme",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-eyne-bey-madrasa-fountain/fountain-detail.jpg",
+      "x": 50,
+      "y": 59,
+      "title": "Kitabesiz çeşme",
+      "text": "Envanter, medrese duvarındaki çeşmenin kitabesiz olduğunu ve suyunun akmadığını belirtir.",
+      "sourceId": "inv-p126"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-eyne-bey-madrasa-fountain/madrasa-exterior.jpg",
+      "x": 25,
+      "y": 66,
+      "title": "Medresenin beden duvarı",
+      "text": "Çeşme Eyne Bey Medresesi’nin doğu cephesi beden duvarında yer alır.",
+      "sourceId": "inv-p126"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşme medresenin hangi cephesindedir?",
+      "options": [
+        "Batı",
+        "Kuzey",
+        "Güney",
+        "Doğu"
+      ],
+      "correct": 3,
+      "description": "Çeşme doğu cephesinin beden duvarındadır.",
+      "sourceId": "inv-p126"
+    },
+    {
+      "question": "Envanter çeşmenin suyu hakkında ne söyler?",
+      "options": [
+        "Akmaz",
+        "Sıcak akar",
+        "Yalnız yazın akar",
+        "Külhana gider"
+      ],
+      "correct": 0,
+      "description": "Kitapta çeşmenin suyunun akmadığı belirtilir.",
+      "sourceId": "inv-p126"
+    },
+    {
+      "question": "Çeşmenin kitabesi var mıdır?",
+      "options": [
+        "İki kitabelidir",
+        "Kitabesi yoktur",
+        "Yalnız tamir kitabesi vardır",
+        "Dört dilli kitabesi vardır"
+      ],
+      "correct": 1,
+      "description": "Envanter yapıyı kitabesiz çeşme olarak tanımlar.",
+      "sourceId": "inv-p126"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p126",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Eyne Bey Medresesi Çeşmesi\"",
+      "page": "126"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

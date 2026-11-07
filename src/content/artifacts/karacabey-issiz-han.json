@@ -1,0 +1,141 @@
+{
+  "id": "karacabey-issiz-han",
+  "name": "Issız (Susuz) Han",
+  "city": "Bursa",
+  "district": "Karacabey",
+  "period": "Osmanlı · 1394; vakfiye sureti H. 804 / M. 1402",
+  "endowment": "İne Bey vakfı",
+  "summary": "Uluabat Gölü kıyısında, eski Bursa-Balıkesir kervan yolu üzerinde İne Bey'in 1394'te yaptırdığı han.",
+  "history": "Karacabey sınırları içinde, Uluabat Gölü kıyısında, \"Çingen Çeşme\" olarak bilinen mevkinin yakınlarındadır ve eski Bursa-Balıkesir kervan yolu üzerinde konumlanır.\n\nKaynaklarda kervansaray ya da han olarak da anılan yapı, Yıldırım Bayezid'in vezirlerinden Feleküddin'in oğlu İne Bey tarafından 1394 yılında inşa ettirilmiştir. İne Bey, I. Murad devrinde Balıkesir Subaşılığı görevinde bulunmuş, ardından Karasi Sancak Beyliği yapmıştır. Karamanoğulları ile yapılan bir muharebede I. Murad'ın oğlu komutasındaki sağ kola memur edilmiş ve önemli başarılar göstermiştir.\n\nH. 804 / M. 1402 tarihli vakfiyesinin bir sureti Vakıflar Genel Müdürlüğü Arşivi'nde kayıtlıdır. Kaynaklara göre İne Bey, Kosova Meydan Muharebesi'nde Gazi Evranos ile birlikte savaşmış; Ankara Savaşı'ndan sonra Sadrazam Ali Paşa ve Yeniçeri Ağası Hasan Ağa ile birlikte Şehzade Süleyman Çelebi'yi Rumeli'ye geçirmiştir. Fetret Devri'nde Mehmed ve İsa Çelebi arasında barış sağlanmasını istemiş, ancak İsa Çelebi bu teklifi reddetmiştir.\n\nİne Bey Balıkesir'de bir mescit, bir zaviye ve bir imaret, Bursa'da bir medrese ve bir hamam yaptırmış; Ankara, Bergama ve Balıkesir'deki hamam, köy ve arazileri vakfına bağlamıştır. Tophisar nahiyesinde Karasu üzerindeki Muhak Değirmeni ile Uluabat kenarında yaptırdığı bu kervansarayı da vakfına dahil etmiştir. Vakfiyesine göre türbesi Bursa'daki medresesinin bahçesindedir.\n\nYapı, restore edildikten sonra bir dönem turistik tesis olarak kiraya verilmiş ve uzun süre işletilmiştir. Günümüzde bakımlı durumdadır.",
+  "verification": "verified",
+  "coverImage": "/images/karacabey-issiz-han/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/karacabey-issiz-han/aerial-view.jpg",
+      "alt": "Issız Han'ın havadan görünümü: kiremit örtülü uzun dikdörtgen yapı, taş ve tuğla örgülü duvarlar, kısa kenarda kemerli giriş bölümü; çevresinde tarlalar ve uzakta tepeler",
+      "description": "Hanın genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-issiz-han/aerial-top.jpg",
+      "alt": "Hanın tepeden görünümü: iki yöne eğimli uzun kiremit çatı, üzerinde iki baca, bir uçta daha küçük giriş bölümü çatısı ve yanındaki toprak yol",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-issiz-han/interior-hall.jpg",
+      "alt": "Hanın içi: taş ayaklar ve tuğla kemerler, ortada sivri kemerli ocak, ahşap kirişler; masa ve sandalyelerle düzenlenmiş mekân",
+      "description": "İç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-issiz-han/entrance-portico.jpg",
+      "alt": "Giriş bölümünde taş ve tuğla örgülü iki büyük kemer arasından dışarıya bakış; altında masa ve sandalyeler",
+      "description": "Giriş kemerleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/karacabey-issiz-han/entrance-facade.jpg",
+      "alt": "Hanın giriş cephesi: kesme taş duvarlar ortasında büyük tuğla kemerli giriş, kemerin içinde \"Issız Han Otel 1394\" yazılı levha ve kapı; önde taş duvar ve demir parmaklık",
+      "description": "Giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "caravan-route",
+      "image": "/images/karacabey-issiz-han/aerial-view.jpg",
+      "x": 40,
+      "y": 48,
+      "title": "Kervan yolu üzerinde",
+      "text": "Han, Uluabat Gölü kıyısında, \"Çingen Çeşme\" olarak bilinen mevkinin yakınında, eski Bursa-Balıkesir kervan yolu üzerinde konumlanır.",
+      "sourceId": "inv-p535"
+    },
+    {
+      "id": "builder",
+      "image": "/images/karacabey-issiz-han/entrance-facade.jpg",
+      "x": 43,
+      "y": 37,
+      "title": "Banisi İne Bey",
+      "text": "Kaynaklarda kervansaray ya da han olarak da anılan yapı, Yıldırım Bayezid'in vezirlerinden Feleküddin'in oğlu İne Bey tarafından 1394 yılında inşa ettirilmiştir.",
+      "sourceId": "inv-p535"
+    },
+    {
+      "id": "endowment",
+      "image": "/images/karacabey-issiz-han/aerial-top.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Vakfa bağlanması",
+      "text": "İne Bey, Uluabat kenarında yaptırdığı bu kervansarayı vakfına dahil etmiştir. H. 804 / M. 1402 tarihli vakfiyesinin bir sureti Vakıflar Genel Müdürlüğü Arşivi'nde kayıtlıdır.",
+      "sourceId": "inv-p536"
+    },
+    {
+      "id": "later-use",
+      "image": "/images/karacabey-issiz-han/interior-hall.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Turistik tesis",
+      "text": "Yapı, restore edildikten sonra bir dönem turistik tesis olarak kiraya verilmiş ve uzun süre işletilmiştir.",
+      "sourceId": "inv-p536"
+    }
+  ],
+  "test": [
+    {
+      "question": "Issız Han'ı kim inşa ettirmiştir?",
+      "options": [
+        "Gazi Evranos",
+        "Karaca Bey",
+        "İne Bey",
+        "Hasan Ağa"
+      ],
+      "correct": 2,
+      "description": "Yapı, Yıldırım Bayezid'in vezirlerinden Feleküddin'in oğlu İne Bey tarafından 1394'te inşa ettirilmiştir.",
+      "sourceId": "inv-p535"
+    },
+    {
+      "question": "Han hangi gölün kıyısında yer alır?",
+      "options": [
+        "Uluabat Gölü",
+        "İznik Gölü",
+        "Manyas Gölü",
+        "Eğirdir Gölü"
+      ],
+      "correct": 0,
+      "description": "Han, Uluabat Gölü kıyısında, eski Bursa-Balıkesir kervan yolu üzerindedir.",
+      "sourceId": "inv-p535"
+    },
+    {
+      "question": "İne Bey'in vakfiyesinin sureti hangi tarihlidir?",
+      "options": [
+        "M. 1394",
+        "H. 804 / M. 1402",
+        "H. 897 / M. 1491",
+        "M. 1453"
+      ],
+      "correct": 1,
+      "description": "H. 804 / M. 1402 tarihli vakfiyesinin bir sureti Vakıflar Genel Müdürlüğü Arşivi'nde kayıtlıdır.",
+      "sourceId": "inv-p536"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p535",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Issız (Susuz) Han\"",
+      "page": "223"
+    },
+    {
+      "id": "inv-p536",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Karacabey, \"Issız (Susuz) Han\"",
+      "page": "224"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

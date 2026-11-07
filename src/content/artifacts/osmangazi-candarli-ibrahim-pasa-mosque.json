@@ -1,0 +1,111 @@
+{
+  "id": "osmangazi-candarli-ibrahim-pasa-mosque",
+  "name": "Çandarlı İbrahim Paşa (Mahkeme - Hoca Muslihuddin) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Çelebi Sultan Mehmed dönemi; Nisan 1615'te minber eklenerek camiye dönüştürülmüştür",
+  "endowment": "Çandarlı İbrahim Paşa; sonradan Hoca Muslihuddin'in ilave vakıfları",
+  "summary": "Çelebi Sultan Mehmed döneminde Çandarlı İbrahim Paşa'nın yaptırdığı, kurşun kubbeli harimi ve ahşap cepheli kırma çatılı son cemaat yeriyle tanınan cami.",
+  "history": "Osmangazi ilçesi, İbrahim Paşa Mahallesi'nde, İbrahim Paşa Sokağı ile Kız Lisesi Sokağı'nın kesiştiği köşedeki cami, Çelebi Sultan Mehmed döneminde Çandarlı İbrahim Paşa tarafından yaptırılmıştır. Hoca Muslihuddin adlı bir hayırseverin ilave vakıflarından sonra halk arasında \"Hoca Muslihuddin Camii\" olarak da anılmaya başlanmıştır; bir diğer adı Mahkeme Camii'dir.\n\nBaşlangıçta mahalle mescidi olarak inşa edilen yapı, Nisan 1615'te minber eklenerek camiye dönüştürülmüştür. Kareye yakın dikdörtgen planlı caminin iç ölçüleri 7,67 × 8,10 m, son cemaat yerininki 4,45 × 7,94 m'dir. Beden duvarlarından kubbeye Türk üçgenleriyle geçilir. Sekizgen kasnaklı, kurşun kaplı kubbeyle örtülü harim, daha alçakta kalan kırma çatılı son cemaat yeriyle bütünleşir. Alaturka kiremitle örtülü son cemaat yerinin cephesi ahşap kaplamalıdır ve bu özelliğiyle diğer Bursa camilerinden ayrılır.\n\nHarimi dört duvardaki pencereler aydınlatır. Alt pencereler söveli, geçme demir parmaklıklı ve sivri kemer alınlıklıdır; üst sıra ve kasnak pencereleri sivri kemerli ve alçı şebekelidir. Son cemaat yerinin batıdaki penceresi kapatılmıştır; doğudaki pencerenin sivri kemeri iki sıra tuğla ve bir sıra taşla örülmüş, tuğla zencirek motifiyle çerçevelenmiştir ve üstünde tuğla süslemeli sivri kemerli bir niş vardır. İç duvarlar sonradan yapılan sıvalar nedeniyle özgün yapısını kaybetmiştir. Kitap, mukarnaslı mihrabın inşa edildiği dönemin özelliklerini büyük ölçüde koruduğunu belirtir.\n\nCaminin doğu duvarında, harim ile son cemaat yerinin birleştiği noktadaki minarenin kesme taş ve tuğla örgülü sekizgen kaidesi neredeyse kubbe eteğine kadar yükselir. Kaideden tuğla örgülü silindirik gövdeye mermerden kesilmiş Türk üçgenleriyle geçilir. Şerefesi düz mermer korkulukludur, petek kısmı sivri külahla sonlanır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-candarli-ibrahim-pasa-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-candarli-ibrahim-pasa-mosque/exterior.jpg",
+      "alt": "Ağaçların arasından görünen kurşun kubbeli küçük cami; önünde kiremitli kırma çatılı, ahşap cepheli son cemaat yeri, yanında sivri külahlı tuğla minare, arkada dağlar",
+      "description": "Caminin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-candarli-ibrahim-pasa-mosque/prayer-hall.jpg",
+      "alt": "Desenli halılı harim; koyu renkli yüksek mihrap, sağda yeşil kapılı ahşap minber, sivri kemerli pencereler ve kubbe geçişleri",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-candarli-ibrahim-pasa-mosque/exterior.jpg",
+      "x": 43,
+      "y": 30,
+      "title": "Minare",
+      "text": "Kesme taş ve tuğla örgülü sekizgen kaide neredeyse kubbe eteğine kadar yükselir; tuğla gövde sivri külahla sonlanır.",
+      "sourceId": "inv-p290"
+    },
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-candarli-ibrahim-pasa-mosque/exterior.jpg",
+      "x": 54,
+      "y": 55,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Harim, sekizgen kasnak üzerine oturan kurşun kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p290"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-candarli-ibrahim-pasa-mosque/exterior.jpg",
+      "x": 53,
+      "y": 78,
+      "title": "Ahşap cepheli son cemaat yeri",
+      "text": "Alaturka kiremitle örtülü kırma çatılı son cemaat yerinin cephesi ahşap kaplamalıdır; bu özellik onu diğer Bursa camilerinden ayırır.",
+      "sourceId": "inv-p290"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi padişahın döneminde yaptırılmıştır?",
+      "options": [
+        "Orhan Gazi",
+        "Çelebi Sultan Mehmed",
+        "Fâtih Sultan Mehmed",
+        "II. Bayezid"
+      ],
+      "correct": 1,
+      "description": "Cami, Çelebi Sultan Mehmed döneminde Çandarlı İbrahim Paşa tarafından yaptırılmıştır.",
+      "sourceId": "inv-p289"
+    },
+    {
+      "question": "Mahalle mescidi olarak yapılan yapı hangi eklemeyle camiye dönüştürülmüştür?",
+      "options": [
+        "Minare",
+        "Şadırvan",
+        "Son cemaat yeri",
+        "Minber"
+      ],
+      "correct": 3,
+      "description": "Başlangıçta mahalle mescidi olan yapı, Nisan 1615'te minber eklenerek camiye dönüştürülmüştür.",
+      "sourceId": "inv-p290"
+    },
+    {
+      "question": "Son cemaat yerini diğer Bursa camilerinden ayıran özellik nedir?",
+      "options": [
+        "Ahşap kaplı cephesi",
+        "Beş kubbesi",
+        "Çini kaplı duvarları",
+        "Mermer sütunları"
+      ],
+      "correct": 0,
+      "description": "Alaturka kiremitle örtülü son cemaat yerinin cephesi ahşap kaplamalıdır ve bu özelliğiyle diğer Bursa camilerinden ayrılır.",
+      "sourceId": "inv-p290"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p289",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Çandarlı İbrahim Paşa (Mahkeme - Hoca Muslihuddin) Camii\"",
+      "page": "289"
+    },
+    {
+      "id": "inv-p290",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Çandarlı İbrahim Paşa (Mahkeme - Hoca Muslihuddin) Camii\"",
+      "page": "290"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

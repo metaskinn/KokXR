@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-hocaalizade-fountain",
+  "name": "Hocaalizade Çeşmesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 1261 / M. 1845",
+  "endowment": "Hudâvendigâr Eyaleti Müşiri unvanlı paşanın eşinin hayratı",
+  "summary": "Hocaalizade Camii’nin kuzeydoğu köşesindeki 1845 tarihli çeşme, mermer aynasındaki perde ve çiçekli vazo motifleriyle tanımlanır.",
+  "history": "Çeşme, Selçukhatun / Hocaalizade Mahallesi, Koca Ali Sokak’ta, caminin kuzeydoğu köşesindedir. Envanter, camiyi Hoca Ali adlı kişinin yaptırdığını; haziredeki baninin mezar taşının yanlış okunmasının “Hoca Alizade Camii” adının yaygınlaşmasına neden olduğunu belirtir.\n\nKitapta çeşmenin ayakta, bakımlı ve işler durumda olduğu aktarılır. Hafif dışa kavisli su teknesi, ayna taşı ve oturma setleri özgün niteliklerini büyük ölçüde korurken çerçevenin daha yakın tarihte yenilendiği anlaşılmaktadır. İki plaster arasındaki mermer kitabe celi sülüs hatlıdır; H. 1261 / M. 1845 tarihini taşır ve çeşmeyi Hudâvendigâr Eyaleti Müşiri unvanlı paşanın eşinin hayratı olarak tanımlar. Çeşme caminin inşasından sonra yaptırılmıştır.\n\nKitabenin iki yanında talik hatla “maşallah” ve “barekallah” ibareleri vardır. Kaideli ayna taşında, üstü sarkıtmalı iki kanatlı kabartma perde motifi bulunur. Ortalarından rozetlerle sıkılan perdelerin kıvrımları gerçekçi biçimde işlenmiş; aralarına çiçekli bir vazo tasviri yerleştirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hocaalizade-fountain/marble-fountain.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hocaalizade-fountain/marble-fountain.jpg",
+      "alt": "Açık renk dikdörtgen çerçeve içinde mermer kitabe, kabartmalı ayna taşı ve dışa kavisli teknesi bulunan sokak çeşmesi",
+      "description": "Açık renk dikdörtgen çerçeve içinde mermer kitabe, kabartmalı ayna taşı ve dışa kavisli teknesi bulunan sokak çeşmesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hocaalizade-fountain/mosque-surroundings.jpg",
+      "alt": "Havadan görünümde kurşun renkli kubbeli taş ve tuğla cami, minaresi, önündeki yol ve uzakta şehir",
+      "description": "Havadan görünümde kurşun renkli kubbeli taş ve tuğla cami, minaresi, önündeki yol ve uzakta şehir",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-hocaalizade-fountain/marble-fountain.jpg",
+      "x": 50,
+      "y": 27,
+      "title": "1845 tarihli kitabe",
+      "text": "Celi sülüs kitabe H. 1261 / M. 1845 tarihlidir; çeşmeyi paşanın eşinin hayratı olarak tanımlar.",
+      "sourceId": "inv-p130"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-hocaalizade-fountain/marble-fountain.jpg",
+      "x": 51,
+      "y": 53,
+      "title": "Mermer ayna taşı",
+      "text": "Envanter ayna taşında iki kanatlı perde ve aralarında çiçekli vazo kabartması bulunduğunu belirtir.",
+      "sourceId": "inv-p130"
+    },
+    {
+      "id": "point-3",
+      "image": "/images/osmangazi-hocaalizade-fountain/marble-fountain.jpg",
+      "x": 51,
+      "y": 78,
+      "title": "Su teknesi",
+      "text": "Hafif dışa kavisli su teknesinin özgün niteliklerini büyük ölçüde koruduğu belirtilir.",
+      "sourceId": "inv-p130"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabede hangi tarih yer alır?",
+      "options": [
+        "1402",
+        "1443",
+        "1845",
+        "1985"
+      ],
+      "correct": 2,
+      "description": "Envanter kitabe tarihini H. 1261 / M. 1845 olarak verir.",
+      "sourceId": "inv-p130"
+    },
+    {
+      "question": "Çeşmeyi hayır amacıyla kim yaptırmıştır?",
+      "options": [
+        "Hudâvendigâr Eyaleti Müşiri unvanlı paşanın eşi",
+        "Hoca Ali’nin oğlu",
+        "Mimar Korhan Durusoy",
+        "Mevlânâ Nasuh Efendi"
+      ],
+      "correct": 0,
+      "description": "Kitabe ve envanter çeşmenin paşanın eşi tarafından yaptırıldığını belirtir.",
+      "sourceId": "inv-p130"
+    },
+    {
+      "question": "Ayna taşındaki perdelerin arasında hangi motif vardır?",
+      "options": [
+        "Gemi",
+        "Çiçekli vazo",
+        "Ördek",
+        "Saat"
+      ],
+      "correct": 1,
+      "description": "İki perde arasında vazo ve içinden çıkan çiçekler tasvir edilmiştir.",
+      "sourceId": "inv-p130"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p130",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Hocaalizade Çeşmesi\"",
+      "page": "130"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

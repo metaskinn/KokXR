@@ -1,0 +1,146 @@
+{
+  "id": "yenisehir-orhan-gazi-bath",
+  "name": "Orhan Gazi Hamamı",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Erken Osmanlı · Orhan Gazi dönemine ait olabileceği görüşü",
+  "endowment": "Orhan Gazi Camii Vakfı (1890 tarihli vakıf kaydına göre)",
+  "summary": "Nilüfer Hatun'un memleketi Yarhisar Köyü'nde, dere yatağının üzerinde duran, kubbeleri Türk üçgenleriyle geçilen küçük bir hamam.",
+  "history": "Hamam, Yenişehir'e bağlı Yarhisar Köyü'ndedir. Yarhisar, Orhan Gazi'nin eşi, Sultan I. Murad ile Süleyman Paşa'nın annesi olan ve hayırseverliğiyle tanınan Nilüfer Hatun'un (Holifera) memleketidir. Şelaleden akan suyun oluşturduğu derenin iki yakasına kurulan köyde cami üst yakada, hamam ise derenin doğusunda, dere yatağının üzerindedir.\n\nYarhisar, fetihten sonra Osmanlı idari yapısında uzun süre kaza merkezi olmuş ve bu özelliğini XVIII. yüzyıla kadar korumuştur. 1478 ve 1521 tarihli tahrir defterlerinde \"Cami-i Şerif\", \"Çavuş\", \"Muhtesib\" ve \"Süle Paşa\" adlı dört mahalleden oluşan bir kaza merkezi olarak kaydedilmiştir.\n\nHamamın Orhan Gazi Camii Vakfı'na ait olduğu ve bu nedenle Orhan Gazi döneminde yapılmış olabileceği görüşü 1890 tarihli bir vakıf kaydına dayanır. Başka bir görüşe göre yapı, Sultan I. Murad'ın aynı kasabada yaptırdığı bir camiye vakfedilmiştir; ancak bu iddiayı destekleyen somut bir iz bulunmamaktadır. Hamamın güneyinde hazire olabilecek bazı mezar taşlarına rastlanmıştır.\n\nYaklaşık 13 × 14 m'lik kareye yakın bir alana oturan yapı soğukluk, ılıklık, sıcaklık, halvet, külhan ve odunluk bölümlerinden oluşur. Duvarları moloz taş ve tuğlayla almaşık örülmüştür. Ilıklık, sıcaklık ve halvet basit tuğla kubbelerle örtülü ve kiremit kaplıdır; kubbe geçişlerinde Türk üçgenleri kullanılmıştır. Kubbelerdeki fil gözleriyle aydınlanan iç mekân alçı lale, palmet ve ok ucu motifleriyle bezenmiştir. 2007-2009 yıllarında Vakıflar Genel Müdürlüğü tarafından restore edilen hamam bugün işlevsizdir, ancak varlığını sürdürmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-orhan-gazi-bath/exterior-entrance.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-orhan-gazi-bath/exterior-entrance.jpg",
+      "alt": "Ağaçlar arasında moloz taş ve tuğla örgülü küçük hamam: cephede tuğla sivri kemerli kapı, üstte kiremit kaplı kubbeler ve tuğla bacalar, önde tanıtım levhası",
+      "description": "Hamamın giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-bath/exterior-side.jpg",
+      "alt": "Çimenlik alanda taş duvarlı hamamın yandan görünümü, üstte kiremit örtüler ve bacalar, çevrede sonbahar ağaçları",
+      "description": "Yandan görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-bath/roof-domes.jpg",
+      "alt": "Kiremit kaplı kubbeler, taş kasnaklar ve tuğla baca, arkada ormanlık tepe",
+      "description": "Kubbeler ve çatı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-bath/aerial-top.jpg",
+      "alt": "Hamamın tepeden görünümü: kiremit kaplı kubbeler ve tonoz, çevrede ağaçlar ve köy yolu",
+      "description": "Tepeden görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-orhan-gazi-bath/interior.jpg",
+      "alt": "Beyaz sıvalı iç mekân: üstte kubbe geçişindeki üçgen yüzeyler, altta mermer kaplı duvarlar ve sivri kemerli nişler içinde ahşap kapılar, mermer zemin",
+      "description": "Hamamın iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "entrance",
+      "image": "/images/yenisehir-orhan-gazi-bath/exterior-entrance.jpg",
+      "x": 45,
+      "y": 64,
+      "title": "Giriş kapısı",
+      "text": "Güney cephesindeki tuğla örgülü sivri kemerli kapıdan girilerek kare planlı soğukluk bölümüne ulaşılır.",
+      "sourceId": "inv-p714"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/yenisehir-orhan-gazi-bath/exterior-entrance.jpg",
+      "x": 62,
+      "y": 40,
+      "title": "Almaşık duvar ve kirpi saçak",
+      "text": "Beden duvarları moloz taş ve tuğlayla almaşık düzende örülmüştür; dış cephelerde iki sıra tuğlayla testere dişi kirpi saçak yapılmıştır.",
+      "sourceId": "inv-p714"
+    },
+    {
+      "id": "domes",
+      "image": "/images/yenisehir-orhan-gazi-bath/roof-domes.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Kiremit kaplı kubbeler",
+      "text": "Ilıklık, sıcaklık ve halvet bölümleri basit tuğla örgülü kubbelerle örtülmüş ve üzerleri kiremitle kaplanmıştır. Külhan tonoz örtülüdür.",
+      "sourceId": "inv-p716"
+    },
+    {
+      "id": "transition",
+      "image": "/images/yenisehir-orhan-gazi-bath/interior.jpg",
+      "x": 50,
+      "y": 12,
+      "title": "Kubbe geçişleri",
+      "text": "Hamamda kubbe geçişlerinde Türk üçgenleri kullanılmıştır. İç mekân kubbelerdeki fil gözleriyle aydınlanır.",
+      "sourceId": "inv-p716"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yarhisar kimin memleketidir?",
+      "options": [
+        "Nilüfer Hatun",
+        "Mal Hatun",
+        "Gülbahar Hatun",
+        "Hüma Hatun"
+      ],
+      "correct": 0,
+      "description": "Yarhisar, Orhan Gazi'nin eşi ve Sultan I. Murad ile Süleyman Paşa'nın annesi Nilüfer Hatun'un memleketidir.",
+      "sourceId": "inv-p713"
+    },
+    {
+      "question": "1478 ve 1521 tarihli tahrir defterlerinde Yarhisar kaç mahalleden oluşan bir kaza merkezidir?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Altı"
+      ],
+      "correct": 2,
+      "description": "Defterlerde Cami-i Şerif, Çavuş, Muhtesib ve Süle Paşa adlı dört mahalleden oluşan bir kaza merkezi olarak kaydedilmiştir.",
+      "sourceId": "inv-p714"
+    },
+    {
+      "question": "Hamam hangi yıllarda Vakıflar Genel Müdürlüğü tarafından restore edilmiştir?",
+      "options": [
+        "1965-1967",
+        "2007-2009",
+        "2018-2020",
+        "2024"
+      ],
+      "correct": 1,
+      "description": "Hamam 2007-2009 yıllarında Vakıflar Genel Müdürlüğü tarafından restore edilmiştir; bugün işlevsizdir.",
+      "sourceId": "inv-p716"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p713",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Orhan Gazi Hamamı\"",
+      "page": "399"
+    },
+    {
+      "id": "inv-p714",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Orhan Gazi Hamamı\"",
+      "page": "400"
+    },
+    {
+      "id": "inv-p716",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Orhan Gazi Hamamı\"",
+      "page": "402"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

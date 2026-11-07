@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-mecidiye-mosque-fountain",
+  "name": "Mecidiye Camii Çeşmesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 1323–1325 / M. 1905–1907; camiyle eş zamanlı olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Mecidiye Camii avlu duvarındaki mermer çeşmenin camiyle birlikte yapıldığı ve 1985 onarımında yenilendiği düşünülmektedir.",
+  "history": "Çeşme, İvazpaşa Mahallesi, İvazpaşa Caddesi, Eski Yol Sokak’ta, Pınarbaşı Mezarlığı’nın üst kısmındaki Mecidiye Camii’nin avlu duvarındadır. Kırım muhacirleri için yapılan caminin inşa tarihi H. 1323–1325 / M. 1905–1907 olarak verilir. Çeşmenin de camiyle aynı zamanda inşa edildiği düşünülmektedir.\n\nYapının özgün hali hakkında bilgi bulunmadığı belirtilir. Envanter, taş duvarların arasındaki mevcut çeşmeyi mermer malzemeli ve beş köşeli yalaklı olarak tarif eder. Üzerinde Latin harfleriyle “Mecidiye Çeşmesi” başlığı ve su içecek tas ile kalp kırmama konulu bir beyit bulunur. 1985’teki büyük onarım sırasında camiyle birlikte çeşmenin de yenilendiği anlaşılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-mecidiye-mosque-fountain/marble-fountain.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-mecidiye-mosque-fountain/marble-fountain.jpg",
+      "alt": "Sarı sıvalı taş duvar önünde kabartmalı mermer ayna taşı, açık renk çıkıntılı tekne ve iki yanda taş ayaklar",
+      "description": "Sarı sıvalı taş duvar önünde kabartmalı mermer ayna taşı, açık renk çıkıntılı tekne ve iki yanda taş ayaklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-mecidiye-mosque-fountain/mosque-top-view.jpg",
+      "alt": "Tepeden görünümde bitişik evler arasında uzun çatılı cami, minare külahı ve dar sokaklar",
+      "description": "Tepeden görünümde bitişik evler arasında uzun çatılı cami, minare külahı ve dar sokaklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-mecidiye-mosque-fountain/marble-fountain.jpg",
+      "x": 50,
+      "y": 34,
+      "title": "Mermer çeşme",
+      "text": "Kitapta mevcut çeşmenin mermer malzemeden yapıldığı belirtilir.",
+      "sourceId": "inv-p131"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-mecidiye-mosque-fountain/marble-fountain.jpg",
+      "x": 77,
+      "y": 14,
+      "title": "Taş duvar içindeki konum",
+      "text": "Envanter mevcut mermer çeşmenin taş duvarların arasında yer aldığını belirtir.",
+      "sourceId": "inv-p131"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşme hangi caminin avlu duvarındadır?",
+      "options": [
+        "Hocaalizade",
+        "Beşikçiler",
+        "Alaaddin Bey",
+        "Mecidiye"
+      ],
+      "correct": 3,
+      "description": "Çeşme Mecidiye Camii’nin avlu duvarındadır.",
+      "sourceId": "inv-p131"
+    },
+    {
+      "question": "Mevcut çeşmenin malzemesi nedir?",
+      "options": [
+        "Mermer",
+        "Ahşap",
+        "Dökme demir",
+        "Pişmiş toprak"
+      ],
+      "correct": 0,
+      "description": "Envanter çeşmenin mermerden yapıldığını belirtir.",
+      "sourceId": "inv-p131"
+    },
+    {
+      "question": "Çeşmenin hangi onarımda yenilendiği anlaşılmaktadır?",
+      "options": [
+        "1955",
+        "1985",
+        "1490",
+        "1620"
+      ],
+      "correct": 1,
+      "description": "Kitap, camiyle birlikte 1985 büyük onarımında yenilendiğini aktarır.",
+      "sourceId": "inv-p131"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p131",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Mecidiye Camii Çeşmesi\"",
+      "page": "131"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

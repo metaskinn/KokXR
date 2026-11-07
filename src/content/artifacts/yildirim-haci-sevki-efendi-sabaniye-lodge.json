@@ -1,0 +1,112 @@
+{
+  "id": "yildirim-haci-sevki-efendi-sabaniye-lodge",
+  "name": "Hacı Şevki Efendi (Şabaniye) Tekkesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · kuruluş H. 1268 / M. 1852; vakfiye H. 1268 / M. 1851 olarak aktarılır",
+  "endowment": "Hacı Şevki Efendi; Es-Seyyid Eş-Şeyh el-Hâc Hâfız Mehmed Şevki Efendi ibn Osman Efendi adına vakfiye",
+  "summary": "Namazgâh Yokuşu’nda bir evden dergâha dönüştürülen Şabaniye Tekkesi, yıkıldıktan sonra yeniden inşa edilmiştir.",
+  "history": "Kurtoğlu Mahallesi, Namazgâh Caddesi No: 25’tedir. Şâbâniyye mensubu Hacı Şevki Efendi, Kuşadalı Seyyid İbrahim Efendi’den ders almış ve onun izniyle Bursa’ya gelmiştir. Namazgâh Yokuşu’nda satın aldığı eve H. 1268 / M. 1852’de ekler yaparak dergâh kurmuştur. Burada Farsça dersleri vermiş, Yeşil Cami’de imamlık da yapmıştır. H. 1275 / M. 1858’de vefat ederek Emir Sultan Mezarlığı’na defnedilmiştir.\n\nKitap, Vakıflar İdaresi’nin 1588 numaralı defterinin ilk sayfasındaki vakfiyeyi H. 1268 / M. 1851 olarak verir; kuruluş anlatısında aynı hicri yılın miladi karşılığı 1852’dir. Vakfiye, dinî ve tasavvufi eğitim yanında her cuma gecesi Halveti zikrini öngörür. Mezar taşı kitabesindeki Safvet Efendi manzumesi, Farsça derslerini ve Kuşadalı’dan aldığı irşadı anar.\n\nHacı Şevki Efendi’den sonra damadı Kütahyalı İbrahim Efendi, hattat Mehmed Şevki Efendi, Şeyh Süleyman Bâkî Efendi ve oğulları dergâhta görev yapmıştır. Tekkelerin 1925’te kapatılmasından sonra konut olarak kullanılan yapı, bakımsızlık nedeniyle 1997’de yıkılmıştır. 2006’da başlayan rekonstrüksiyon projesinin uygulaması 2007-2010 arasında yapılmış; 2011’den 2019’a kadar Geleneksel Sanatlar Merkezi olarak hizmet vermiştir. Kitap, sonraki tahsislerde beklenen işlevin sağlanamadığını ve yapının yıprandığını belirtir.\n\nAhşap karkaslı, kiremit örtülü kırma çatılı kompleks; ortak avluya bakan selamlık, semahane-tevhidhane ve harem bölümlerinden oluşur. Giriş Namazgâh Caddesi’ndeki çift kanatlı ahşap kapıdandır. Tevhidhane-semahane ve batıdaki harem iki katlıdır. Kitap, yeniden yapılan düzenlemelerle eski özgün ayrıntıların kaybolduğunu, girişin iki yanındaki çeşmelerin yok olduğunu ve yol kenarında kimliği bilinmeyen Zeynî taşlı tek bir mezar kaldığını kaydeder.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-haci-sevki-efendi-sabaniye-lodge/courtyard-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-haci-sevki-efendi-sabaniye-lodge/courtyard-aerial.jpg",
+      "alt": "Apartmanlar arasında sarı duvarlı, koyu ahşap çerçeveli, kiremit çatılı yapılar ve iç avlu",
+      "description": "Apartmanlar arasında sarı duvarlı, koyu ahşap çerçeveli, kiremit çatılı yapılar ve iç avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-haci-sevki-efendi-sabaniye-lodge/courtyard-facade.jpg",
+      "alt": "Taş döşeli avluya bakan sarı cepheli, iki katlı, ahşap çerçeveli kapı ve pencereleri olan yapı",
+      "description": "Taş döşeli avluya bakan sarı cepheli, iki katlı, ahşap çerçeveli kapı ve pencereleri olan yapı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-haci-sevki-efendi-sabaniye-lodge/courtyard-aerial.jpg",
+      "x": 45,
+      "y": 59,
+      "title": "Kiremit örtülü çatılar",
+      "text": "Tekke kompleksi kırma çatılı ve kiremit örtülüdür.",
+      "sourceId": "inv-p554"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-haci-sevki-efendi-sabaniye-lodge/courtyard-facade.jpg",
+      "x": 43,
+      "y": 85,
+      "title": "Ortak avlu",
+      "text": "Selamlık, semahane-tevhidhane ve harem bölümleri aynı avluya bakar.",
+      "sourceId": "inv-p554"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hacı Şevki Efendi dergâhta hangi dili öğretmiştir?",
+      "options": [
+        "Latince",
+        "Farsça",
+        "Fransızca",
+        "İtalyanca"
+      ],
+      "correct": 1,
+      "description": "Farsça.",
+      "sourceId": "inv-p551"
+    },
+    {
+      "question": "Yapı bakımsızlık nedeniyle hangi yıl yıkılmıştır?",
+      "options": [
+        "1949",
+        "1964",
+        "2017",
+        "1997"
+      ],
+      "correct": 3,
+      "description": "1997.",
+      "sourceId": "inv-p552"
+    },
+    {
+      "question": "Kompleksin çatı örtüsü hangi malzemedendir?",
+      "options": [
+        "Kiremit",
+        "Cam",
+        "Bakır",
+        "Beton levha"
+      ],
+      "correct": 0,
+      "description": "Kiremit.",
+      "sourceId": "inv-p554"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p551",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Şevki Efendi (Şabaniye) Tekkesi\"",
+      "page": "551"
+    },
+    {
+      "id": "inv-p552",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Şevki Efendi (Şabaniye) Tekkesi\"",
+      "page": "552"
+    },
+    {
+      "id": "inv-p554",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Şevki Efendi (Şabaniye) Tekkesi\"",
+      "page": "554"
+    },
+    {
+      "id": "inv-p555",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Şevki Efendi (Şabaniye) Tekkesi\"",
+      "page": "555"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "osmangazi-rice-han",
+  "name": "Pirinç Hanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Bayezid; Mayıs 1507–Temmuz 1508",
+  "endowment": "Sultan II. Bayezid; İstanbul’daki camisine vakıf geliri sağlamak için yaptırılmıştır.",
+  "summary": "Pirinç Hanı, II. Bayezid tarafından İstanbul’daki camisine gelir sağlamak amacıyla yaptırılan, iki katlı ve revaklı bir handır.",
+  "history": "Pirinç Hanı, Cumhuriyet Caddesi üzerindeki Bilecik Sokak No: 31’dedir. II. Bayezid tarafından İstanbul’daki camisine vakıf geliri sağlamak için yaptırılmıştır. Koza Hanı’ndan sonra inşa edildiği için Hân-ı Cedîd-i Sânî olarak anılmış, XVII. yüzyıl başlarından itibaren Pirinç Hanı adıyla tanınmıştır. Kitap, geçmişte varlığı ileri sürülen sıvalı kitabenin son büyük onarımda izine rastlanmadığını belirtir. Mimarı Yâkub Şah bin Sultan Şah, yardımcısı Ali bin Abdullah’tır. İnşaat Mayıs 1507’de başlamış ve Temmuz 1508’de tamamlanmıştır.\n\nYaklaşık 70 × 75 m ölçülerindeki han iki katlıdır. Duvarları yontma moloz taş ve üç sıra tuğla, taç kapısı kesme taş ve üç sıra tuğlayla örülmüştür. Kesme taş ayaklar üzerinde sivri kemerli revaklar uzanır; alt kat revakları çapraz tonoz, üst kat revakları kubbeyle örtülüdür. Kitap alt kat için otuz odadan, iç avluya açılan otuz dört oda kapısından ve dış bağlantılı dört dükkânın eklenmesiyle otuz sekize ulaşan oda sayısından söz eder. Üst katta ocaklı kırk sekiz oda vardır. Batı cephesindeki boydan boya beşik tonozlu bölüm ahır olarak kullanılmıştır. Cumhuriyet Caddesi açılırken kuzeydoğu köşedeki toplam altı oda yıkılmıştır.\n\nDoğudaki taç kapı sivri kemerli büyük bir eyvan biçimindedir. 1642 tarihli belgede mescit ve altındaki dört dükkân anılır; bunlar günümüze ulaşmamıştır. Kitap avludaki on altıgen şadırvanın izlerinin seçilebildiğini belirtir. 1970’li yılların sonlarına kadar deri, ayakkabı ve ipek işleyen atölyeler faaliyet göstermiştir. Mülkiyetin Millî Emlak, Celal Bayar Vakfı ve özel şahıslara ait olduğu kaydedilir.\n\n1519’da taç kapı önündeki Saraçlar Çarşısı yangından sonra onarılmıştır. XVII. yüzyılda suyolları, mescit, helalar, şadırvanlar ve yapı elemanları çeşitli onarımlar görmüştür. Kurşun örtünün XVII. yüzyılda kiremite çevrildiği yönündeki görüşün belgesine ulaşılamadığı belirtilir. Kitapta 31 Ocak 1855 olarak tarihlenen büyük depremde batı ve kuzey revaklarıyla dükkânlar yıkılmıştır. 1980’lerde başlayan restorasyon yaklaşık yirmi yıl sürmüş; batıya yeni giriş açılmış, mescit ve şadırvan yeniden yapılmamıştır. Kitap, üst kat dükkânlarının genellikle boş olduğunu, alt katın kahvehane olarak işletildiğini belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-rice-han/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-rice-han/courtyard.jpg",
+      "alt": "Taş döşeli geniş avlu, karşıda iki katlı sivri kemerli revaklar ve alt katta yeşil tente",
+      "description": "Avlunun genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-rice-han/upper-arcade.jpg",
+      "alt": "Kesme taş ayaklarla taşınan sivri kemerler, tonozlu koridor ve avluya bakan taş korkuluklar",
+      "description": "Üst kat revakları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/osmangazi-rice-han/upper-arcade.jpg",
+      "x": 43,
+      "y": 48,
+      "title": "Kesme taş ayaklar",
+      "text": "Üst kat revakları kesme taş ayaklar üzerine oturan sivri kemerlerle taşınır.",
+      "sourceId": "inv-p44"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/osmangazi-rice-han/courtyard.jpg",
+      "x": 44,
+      "y": 36,
+      "title": "İki katlı han",
+      "text": "Yaklaşık 70 × 75 m ölçülerindeki han iki katlı olarak inşa edilmiştir.",
+      "sourceId": "inv-p44"
+    }
+  ],
+  "test": [
+    {
+      "question": "Pirinç Hanı’nın mimarı kimdir?",
+      "options": [
+        "Hacı İvaz Paşa",
+        "Yâkub Şah bin Sultan Şah",
+        "Mahmud Paşa",
+        "Şücâ bin Karaca"
+      ],
+      "correct": 1,
+      "description": "Arşiv belgelerine göre mimar Yâkub Şah bin Sultan Şah’tır.",
+      "sourceId": "inv-p43"
+    },
+    {
+      "question": "Hân-ı Cedîd-i Sânî adı hangi nedenle verilmiştir?",
+      "options": [
+        "Tek katlı olduğu için",
+        "Yalnızca pirinç satıldığı için",
+        "Koza Hanı’ndan sonra yapıldığı için",
+        "İçinde medrese olduğu için"
+      ],
+      "correct": 2,
+      "description": "Koza Hanı Hân-ı Cedîd-i Evvel olarak anıldığı için daha sonra yapılan hana Hân-ı Cedîd-i Sânî denmiştir.",
+      "sourceId": "inv-p43"
+    },
+    {
+      "question": "Hanın batı cephesindeki beşik tonozlu bölümün işlevi neydi?",
+      "options": [
+        "Ahır",
+        "Kütüphane",
+        "Mektep",
+        "Türbe"
+      ],
+      "correct": 0,
+      "description": "Batı cephesinin boydan boya beşik tonozlu olması bu bölümün ahır olarak kullanıldığını gösterir.",
+      "sourceId": "inv-p44"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p43",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Pirinç Hanı\"",
+      "page": "43"
+    },
+    {
+      "id": "inv-p44",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Pirinç Hanı\"",
+      "page": "44"
+    },
+    {
+      "id": "inv-p45",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Pirinç Hanı\"",
+      "page": "45"
+    },
+    {
+      "id": "inv-p48",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Pirinç Hanı\"",
+      "page": "48"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

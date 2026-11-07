@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-irgandi-bridge",
+  "name": "Irgandı Köprüsü",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 846 / M. 1442",
+  "endowment": "Tüccar Hoca Muslihittin bin Ali Irgandı tarafından yaptırılmıştır",
+  "summary": "Gökdere üzerinde iki yakayı birleştiren Irgandı, dükkânlarıyla tanınan tarihî çarşılı köprüdür.",
+  "history": "Kurdoğlu Mahallesi, Gökdere Bulvarı No: 14’teki köprü, kaynaklara göre H. 846 / M. 1442’de Tüccar Hoca Muslihittin bin Ali Irgandı tarafından yaptırılmıştır. Gökdere üzerinde Osmangazi ile Yıldırım arasında, Setbaşı Köprüsü’nün kuzeyinde ve Boyacıkulluğu Köprüsü’nün güneyindedir. Kitap onu Türkiye’deki tek çarşılı köprü olarak niteler; Ponte Vecchio, Ponte Rialto ve Osma köprüleriyle benzerlik kurar.\n\nGökdere vadisini 16 m açıklığında ve 11 m genişliğinde bir kemerle geçer. Kitapta iki yanda on altışardan toplam otuz iki dükkân, bir mescit ve ayaklarda iki depo bulunduğu belirtilir; depoların muhtemelen ahır olduğu düşünülür. İki ucunda kapıları olan yapı başlangıçta arasta olarak düzenlenmiştir. Kemer içindeki odaların muhafızlar, binekler ve tüccarların konaklaması için kullanıldığı değerlendirmesi kesin bilgi olarak değil, ihtimal olarak aktarılır.\n\n1922’de çekilen işgal kuvvetlerinin bombalamasıyla ağır hasar gören köprü yaklaşık yirmi yedi yıl harabe kalmıştır. 1949’daki belediye onarımında ana tonoz betonarme yapılmış, yanlara taş kemer eklenmiş ve mazgallar doldurularak özgün ölçüler değişmiştir. 1989’da özgün yapıya uygun restorasyon için bilimsel çalışmalar başlamış, onarım 2004’te tamamlanmıştır. Günümüzde el sanatı ürünlerinin sergilendiği ve satıldığı bir sanat köprüsü olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-irgandi-bridge/bridge-over-gokdere.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-irgandi-bridge/bridge-over-gokdere.jpg",
+      "alt": "Gökdere üzerindeki geniş taş kemer ve üstünde sarı cepheli, sıralı pencereleri olan çarşı yapısı",
+      "description": "Gökdere üzerindeki geniş taş kemer ve üstünde sarı cepheli, sıralı pencereleri olan çarşı yapısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-irgandi-bridge/bridge-overhead.jpg",
+      "alt": "Tepeden bakışta dereyi geçen, uzun kiremit çatılı köprü yapısı ve iki yandaki yeşil alanlar",
+      "description": "Tepeden bakışta dereyi geçen, uzun kiremit çatılı köprü yapısı ve iki yandaki yeşil alanlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-irgandi-bridge/bridge-over-gokdere.jpg",
+      "x": 49,
+      "y": 63,
+      "title": "Köprü kemeri",
+      "text": "Köprü Gökdere vadisinin iki yakasını bir kemerle birbirine bağlar.",
+      "sourceId": "inv-p559"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-irgandi-bridge/bridge-over-gokdere.jpg",
+      "x": 49,
+      "y": 37,
+      "title": "Çarşılı köprü",
+      "text": "Kitapta iki yanda on altışardan otuz iki dükkân bulunduğu belirtilir.",
+      "sourceId": "inv-p562"
+    }
+  ],
+  "test": [
+    {
+      "question": "Köprü hangi akarsu üzerindedir?",
+      "options": [
+        "Nilüfer Çayı",
+        "Gökdere",
+        "Sakarya",
+        "Kocasu"
+      ],
+      "correct": 1,
+      "description": "Gökdere.",
+      "sourceId": "inv-p559"
+    },
+    {
+      "question": "Köprüyü kim yaptırmıştır?",
+      "options": [
+        "Kara Eyne Bey",
+        "Hançerli Fatma Sultan",
+        "Hacı Şevki Efendi",
+        "Hoca Muslihittin bin Ali Irgandı"
+      ],
+      "correct": 3,
+      "description": "Hoca Muslihittin bin Ali Irgandı.",
+      "sourceId": "inv-p559"
+    },
+    {
+      "question": "Son anlatılan restorasyon hangi yıl tamamlanmıştır?",
+      "options": [
+        "2004",
+        "1855",
+        "1922",
+        "1964"
+      ],
+      "correct": 0,
+      "description": "2004.",
+      "sourceId": "inv-p562"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p559",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Irgandı Köprüsü\"",
+      "page": "559"
+    },
+    {
+      "id": "inv-p562",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Irgandı Köprüsü\"",
+      "page": "562"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

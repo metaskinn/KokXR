@@ -1,0 +1,130 @@
+{
+  "id": "osmangazi-daye-hatun-mosque",
+  "name": "Daye Hatun (Daye Kadın - Taya Kadın) Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1421 (Çelebi Sultan Mehmed dönemi); kitabeye göre H. 1062 / M. 1651-52'de onarılmıştır",
+  "endowment": "Çelebi Sultan Mehmed'in süt annesi Dâye Hatun",
+  "summary": "Çelebi Sultan Mehmed'in süt annesi Dâye Hatun'un yaptırdığı, ahşap çatılı ve kiremit örtülü, adını mahalleye de veren cami ve haziresi.",
+  "history": "Daye Hatun Camii, Osmangazi ilçesi, Taya Kadın Mahallesi, 11. Fırın Sokak, No: 1'dedir. Bursa'nın kuruluş ve gelişme dönemlerinde mahalleler, oradaki dinî yapıların ya da onları yaptıranların adlarıyla anılmıştır. Haşim İşcan Caddesi'ne yakın Dâye Hatun Mahallesi'ndeki cami, Çelebi Sultan Mehmed'in süt annesi tarafından yaptırılmıştır. Süt annelere \"dâye\" denildiği için cami bu adla anılmış, zamanla mahalleye de adını vermiştir; bu ad zamanla \"Taya Kadın\" biçimine dönüşmüştür.\n\nKüçük bir meydandaki bina, ihata duvarı, küçük bir kabristan niteliğindeki haziresi ve çeşmesiyle bir mahalle camisinin bütün özelliklerini yansıtır. Dikdörtgen planlı cami içten 10,45 × 14,75 m ölçülerindedir; ahşap çatılıdır ve Alaturka kiremitle örtülüdür. Son cemaat yeri mahfili daha da derinleştirilmiştir. Minberi oldukça eski ve kayda değer bir işçiliktir. Minaresi sade olmakla birlikte, Bursa minareleri gibi şerefe altı tuğla süslemelidir ve oranları ölçülüdür.\n\nKüçük ta'lik hatla yazılmış 25 × 110 cm'lik kitabe zamanla tahrip olmuş ve okunaklılığını büyük ölçüde yitirmiştir. Son beyitten şairinin Nisârî olduğu anlaşılır; ebced hesabıyla caminin H. 1062 / M. 1651-52'de onarıldığı görülür.\n\nHazire, caminin güney ve batı taraflarındaki bahçededir. Kitaba göre cami ve haziresi 1421'de Dâye Hatun tarafından yaptırılmıştır; Dâye Hatun, Yeşil Türbe'de Çelebi Mehmed'in ayak ucunda medfundur. Geniş hazirede başta Açıkbaş Mahmud olmak üzere Hisar'daki Nakşibendî-i Atîk Dergâhı şeyhlerinin ve camiye hizmet etmiş bazı kişilerin kabirleri bulunur. En erken tarihli kabir taşı 1534, en geç tarihlisi 1904 yılına aittir. Burada medfun olanlar arasında Seyyid İsmail Ağa, Mehmed bin Abdülkerim, Nakşibendî Açıkbaş Şeyh Mahmud Efendi, Nakşibendî-i Atîk Dergâhı Şeyhi Seyyid Mustafa Efendi ve cami imamlarından Hacı Ahmed Efendi vardır. Hazirede mezar taşı olmayan kabirler de bulunmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-daye-hatun-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-daye-hatun-mosque/exterior.jpg",
+      "alt": "Kiremit kaplı geniş kırma çatılı cami, önünde ahşap çerçeveli camlı son cemaat yeri, solda şerefeli ve külahlı minare, arkada selviler ve dağlar",
+      "description": "Caminin ve minarenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-daye-hatun-mosque/mosque-and-graveyard.jpg",
+      "alt": "Beyaz sıvalı, kiremit çatılı cami; önünde demir korkuluklu ağaçlı hazire, sağda tuğla gövdeli minare ve taş döşeli meydan",
+      "description": "Cami ve haziresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-daye-hatun-mosque/prayer-hall.jpg",
+      "alt": "Uzun harim; kırmızı-mavi çizgili halı, ahşap tavan, solda mihrap ve ahşap minber, sağda ahşap korkuluklu mahfil",
+      "description": "Harim, minber ve mahfil",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-daye-hatun-mosque/graveyard.jpg",
+      "alt": "Renkli eski evlerin önünde, bitkilerle dolu mermer sanduka ve çevresinde yükselen başlıklı mezar taşları",
+      "description": "Hazireden bir görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-daye-hatun-mosque/exterior.jpg",
+      "x": 27,
+      "y": 30,
+      "title": "Minare",
+      "text": "Sade minarenin şerefesi, Bursa minarelerinde olduğu gibi tuğla süslemelidir ve oranları ölçülüdür.",
+      "sourceId": "inv-p299"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/osmangazi-daye-hatun-mosque/prayer-hall.jpg",
+      "x": 34,
+      "y": 49,
+      "title": "Minber",
+      "text": "Caminin minberi oldukça eski ve kayda değer bir işçiliktir.",
+      "sourceId": "inv-p299"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-daye-hatun-mosque/graveyard.jpg",
+      "x": 40,
+      "y": 70,
+      "title": "Hazire",
+      "text": "Hazirenin en erken tarihli kabir taşı 1534, en geç tarihlisi 1904 yılına aittir.",
+      "sourceId": "inv-p300"
+    }
+  ],
+  "test": [
+    {
+      "question": "\"Dâye\" kelimesi ne anlama gelir?",
+      "options": [
+        "Süt anne",
+        "Hayırsever kadın",
+        "Mahalle bekçisi",
+        "Kadın hattat"
+      ],
+      "correct": 0,
+      "description": "Süt annelere \"dâye\" adı verildiği için cami bu adla anılmış, zamanla mahalleye de adını vermiştir.",
+      "sourceId": "inv-p299"
+    },
+    {
+      "question": "Dâye Hatun nerede medfundur?",
+      "options": [
+        "Caminin haziresinde",
+        "Muradiye Külliyesi'nde",
+        "Yeşil Türbe'de, Çelebi Mehmed'in ayak ucunda",
+        "Emir Sultan haziresinde"
+      ],
+      "correct": 2,
+      "description": "Dâye Hatun, Yeşil Türbe'de Çelebi Mehmed'in ayak ucunda medfundur.",
+      "sourceId": "inv-p300"
+    },
+    {
+      "question": "Hazirede en erken tarihli kabir taşı hangi yıla aittir?",
+      "options": [
+        "1421",
+        "1534",
+        "1652",
+        "1904"
+      ],
+      "correct": 1,
+      "description": "Hazirenin en erken tarihli kabir taşı 1534, en geç tarihlisi 1904 yılına aittir.",
+      "sourceId": "inv-p300"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p298",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Daye Hatun (Daye Kadın - Taya Kadın) Camii ve Haziresi\"",
+      "page": "298"
+    },
+    {
+      "id": "inv-p299",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Daye Hatun (Daye Kadın - Taya Kadın) Camii ve Haziresi\"",
+      "page": "299"
+    },
+    {
+      "id": "inv-p300",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Daye Hatun (Daye Kadın - Taya Kadın) Camii ve Haziresi\"",
+      "page": "300"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

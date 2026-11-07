@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-aynali-mosque",
+  "name": "Aynalı (Hoca Tabib-Hoca Tayyip-Çapraz) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · II. Murad dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Yıldırım Darüşşifası müderrisi Hoca Tabip Hüsnü Efendi'nin yaptırdığı, sonradan eklenen ikinci kubbeyle Bursa'nın kendine özgü camileri arasına giren yapı.",
+  "history": "Cami, Osmangazi ilçesi, Kayhan Mahallesi'nde, Ünlü Cadde ile 2. Sarı Sokak'ın kesişimindedir. \"Hoca Tabib Camii\", \"Hoca Tayyib Camii\" veya \"Çapraz Camii\" adlarıyla da anılır. II. Murad döneminde Yıldırım Darüşşifası'nda müderrislik yapan Hoca Tabip Hüsnü Efendi tarafından inşa edilmiştir.\n\nTaç kapıdan girilince, iç ölçüleri 6.96 × 7 m olan harimin ilk bölümüne ulaşılır. Bu kısım, içte Türk üçgenli bir kuşağa oturan, dıştan sekizgen kasnaklı bir kubbeyle örtülüdür. Yüksekçe bir sivri kemerin altından mihrap önü mekânına geçilir. 8.20 × 8.20 m ölçülerindeki bu ikinci bölümde kubbe dıştan on altıgen kasnağa, içten Türk üçgenli bir kuşağa oturur; alt sırada dört pencere vardır.\n\nMihrap önü mekânının duvar kalınlığı 91 cm, giriş bölümününki 110 cm'dir; iki bölümün duvar örgüsü ve işçiliği farklıdır. Doğu ve batıdaki kemerlerin kesilerek farklı eğimli iki köşe oluşturulmuş olması, yapının aslında tek kubbe ve son cemaat yerinden ibaret olduğunu gösterir. Cami büyütülmek istenince son cemaat yeri kaldırılmış ve kubbeli ikinci bir mekân eklenmiştir. Böylece ortaya çıkan dikdörtgen planlı yapı, Bursa'daki kendine özgü camiler arasındadır.\n\nKuzeydeki giriş bölümü moloz taş ve aralara serpiştirilmiş tuğlayla, ikinci bölüm moloz taş ve üç sıra tuğlayla örülmüştür. Kuzeybatıdaki minareye birinci bölümden açılan bir kapıyla çıkılır. Altıgen kaidesi kesme taş ve üç sıra tuğladandır; silindirik gövdeye geçiş tuğla örgülü üçgenlerle sağlanır. Şerefe altında beş sıra kirpi saçak bulunan minarenin camiden sonra yapıldığı anlaşılmaktadır. Başlangıçta mescit olarak yapılan yapı, 17. yüzyılda minber eklenerek camiye dönüştürülmüştür.\n\nŞerefe altındaki daire biçimli ayna dizisi nedeniyle \"Aynalı Cami\" adıyla anılan yapı, 1958'de Bursa Eski Eserleri Sevenler Kurumu tarafından onarılarak yeniden ibadete açılmıştır. Cami bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-aynali-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-aynali-mosque/exterior-view.jpg",
+      "alt": "Moloz taş ve tuğla duvarlı, kiremit örtülü iki kubbeli cami; sağda taş-tuğla kaideli, tuğla gövdeli, sivri külahlı minare ve önünde giriş kapısı",
+      "description": "Caminin dış görünüşü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-aynali-mosque/prayer-hall.jpg",
+      "alt": "Beyaz duvarlı harim: üstte kubbeye geçişteki üçgen kuşak, ortada mihrap, sağda ahşap minber, kırmızı halı ve avize",
+      "description": "Harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-aynali-mosque/domes-from-above.jpg",
+      "alt": "Kuşbakışı: arka arkaya iki kiremit örtülü kubbe, köşede minare şerefesi ve çevresindeki avlu ile binalar",
+      "description": "İki kubbe, yukarıdan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-aynali-mosque/exterior-view.jpg",
+      "x": 72,
+      "y": 40,
+      "title": "Minare",
+      "text": "Kuzeybatıdaki minare camiden sonra yapılmıştır. Altıgen kaidesi kesme taş ve üç sıra tuğladandır; şerefe altında beş sıra kirpi saçak vardır. Caminin adı şerefe altındaki daire biçimli ayna dizisinden gelir.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "id": "domes",
+      "image": "/images/osmangazi-aynali-mosque/exterior-view.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "İki kubbeli plan",
+      "text": "Yapı aslında tek kubbe ve son cemaat yerinden ibaretti; cami büyütülürken son cemaat yeri kaldırılıp kubbeli ikinci bir mekân eklenmiştir.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "id": "triangles",
+      "image": "/images/osmangazi-aynali-mosque/prayer-hall.jpg",
+      "x": 47,
+      "y": 9,
+      "title": "Türk üçgenli kuşak",
+      "text": "Her iki bölümün kubbesi de içten Türk üçgenli bir kuşağa oturur.",
+      "sourceId": "inv-p264"
+    }
+  ],
+  "test": [
+    {
+      "question": "Aynalı Cami adını nereden alır?",
+      "options": [
+        "Mihraptaki çinilerden",
+        "Şerefe altındaki daire biçimli ayna dizisinden",
+        "Kubbedeki pencerelerden",
+        "Taç kapıdaki kitabeden"
+      ],
+      "correct": 1,
+      "description": "Yapı, şerefe altındaki daire biçimli ayna dizisi nedeniyle \"Aynalı Cami\" adıyla anılır.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "question": "Başlangıçta mescit olan yapı hangi yüzyılda camiye dönüştürülmüştür?",
+      "options": [
+        "15. yüzyıl",
+        "16. yüzyıl",
+        "18. yüzyıl",
+        "17. yüzyıl"
+      ],
+      "correct": 3,
+      "description": "Yapı 17. yüzyılda minber eklenerek camiye dönüştürülmüştür.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "question": "Cami 1958'de hangi kurum tarafından onarılmıştır?",
+      "options": [
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Vakıflar Genel Müdürlüğü",
+        "Bursa Belediyesi",
+        "Yıldırım Darüşşifası"
+      ],
+      "correct": 0,
+      "description": "Cami 1958'de Bursa Eski Eserleri Sevenler Kurumu tarafından onarılarak yeniden ibadete açılmıştır.",
+      "sourceId": "inv-p264"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p264",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Aynalı (Hoca Tabib-Hoca Tayyip-Çapraz) Camii\"",
+      "page": "268"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

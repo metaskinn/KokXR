@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-selimiye-mosque",
+  "name": "Selimiye Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 1310 / M. 1892",
+  "endowment": "Tırnovalı Abdullah oğlu Hacı Ahmed",
+  "summary": "Tırnovalı Hacı Ahmed'in 1892'de bir mektep ve su ile birlikte yaptırdığı, yalnızca minaresi özgün özelliklerini koruyan cami.",
+  "history": "Selimiye Camii, Osmangazi İlçesi, Selimiye Mahallesi, Değirmen Caddesi No: 53/1'dedir.\n\nCami, Tırnovalı Abdullah oğlu Hacı Ahmed tarafından H. 1310 / M. 1892'de inşa edilmiştir. Harim kapısının üzerindeki, mermer üzerine nesih hatla yazılmış dörtlük manzum kitabenin anlamı şöyledir: \"Tırnovalı Hacı Ahmed bin Abdullah, hayırseverliğiyle Hicrî 1310 yılında bu Allah'ın evini (mescidi) inşa etti. Hayır güzelliklerine bir yenisini eklemek üzere, bir ilim mektebi de kurarak, tatlı suyla birlikte ihya etti.\" Caminin önündeki şadırvan ve mektepten mektep yıkılmış, şadırvan doğu bahçesine taşınmıştır.\n\nKuzey-güney doğrultusunda dikdörtgen plan üzerine inşa edilen cami toplam 220 m²'lik bir alanı kaplar. Sonradan kuzeye geniş bir mekân eklenmiş ve bu bölüme asma kat yapılmıştır. İç ve dış mimarisinde kayda değer bir süsleme bulunmayan caminin yalnızca minaresi inşa edildiği dönemin özgün özelliklerini korumaktadır. Ahşap merdivenle çıkılan minare asıl ibadet mekânının kuzeybatısındadır; sıvalı sekizgen kaidesi üzerinde silindirik tuğla gövde yükselir. Şerefe altında beş sıra kirpi saçak dizilidir, petek üstü kurşun kaplı, külahı sivridir.\n\nSon cemaat mahalli, doğu ve batıda birer, kuzeyde ortadaki küçük olmak üzere toplam üç kemerle desteklenir; açık eyvan biçimindeki bu alan tamamen dışa açıktır. Cami taş ve tuğladan inşa edilmiş, ahşap çatısı Marsilya kiremidiyle kaplanmıştır. Son restorasyonda duvarlar sıvanmış ve çevre düzenlenmiştir. 2015'te Bursa Büyükşehir Belediyesi tarafından aslına uygun biçimde restore edilen cami ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-selimiye-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-selimiye-mosque/exterior.jpg",
+      "alt": "Ağaçlıklı bir avluda beyaz sıvalı, kiremit kaplı kırma çatılı dikdörtgen cami; ön cephede kemerli büyük camlı açıklıklar",
+      "description": "Caminin avludan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-selimiye-mosque/minaret.jpg",
+      "alt": "Ağaçların arasından yükselen tuğla gövdeli minare: siyah demir korkuluklu şerefe, kurşun kaplı petek ve sivri külah",
+      "description": "Minarenin üst kısmı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-selimiye-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavanlı harim, beyaz duvarlar, ortada sade mihrap, sağda ahşap minber ve kırmızı halının ortasında büyük mavi bir göbek deseni",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-selimiye-mosque/exterior.jpg",
+      "x": 47,
+      "y": 31,
+      "title": "Kiremit kaplı çatı",
+      "text": "Taş ve tuğladan inşa edilen caminin ahşap çatısı Marsilya kiremidiyle kaplanmıştır.",
+      "sourceId": "inv-p416"
+    },
+    {
+      "id": "balcony",
+      "image": "/images/osmangazi-selimiye-mosque/minaret.jpg",
+      "x": 50,
+      "y": 65,
+      "title": "Şerefe",
+      "text": "Minarenin şerefe altında beş sıra kirpi saçak dizilidir; petek üstü kurşun kaplı, külahı sivridir.",
+      "sourceId": "inv-p416"
+    },
+    {
+      "id": "brick-shaft",
+      "image": "/images/osmangazi-selimiye-mosque/minaret.jpg",
+      "x": 50,
+      "y": 83,
+      "title": "Tuğla gövde",
+      "text": "Yalnızca minare inşa edildiği dönemin özgün özelliklerini korur; sıvalı sekizgen kaidesi üzerinde silindirik tuğla gövde yükselir.",
+      "sourceId": "inv-p416"
+    }
+  ],
+  "test": [
+    {
+      "question": "Selimiye Camii'ni kim yaptırmıştır?",
+      "options": [
+        "Ahmet Vefik Paşa",
+        "Rusçuklu Mustafa Efendi",
+        "Tırnovalı Abdullah oğlu Hacı Ahmed",
+        "Bursa Büyükşehir Belediyesi"
+      ],
+      "correct": 2,
+      "description": "Cami, Tırnovalı Abdullah oğlu Hacı Ahmed tarafından H. 1310 / M. 1892'de inşa edilmiştir.",
+      "sourceId": "inv-p415"
+    },
+    {
+      "question": "Caminin önündeki şadırvana ne olmuştur?",
+      "options": [
+        "Doğu bahçesine taşınmıştır",
+        "Yıkılmıştır",
+        "Müzeye götürülmüştür",
+        "Son cemaat yerine katılmıştır"
+      ],
+      "correct": 0,
+      "description": "Caminin önündeki şadırvan ve mektepten mektep yıkılmış, şadırvan ise doğu bahçesine taşınmıştır.",
+      "sourceId": "inv-p415"
+    },
+    {
+      "question": "Caminin hangi bölümü inşa edildiği dönemin özgün özelliklerini korumaktadır?",
+      "options": [
+        "Mihrabı",
+        "Son cemaat yeri",
+        "Asma katı",
+        "Yalnızca minaresi"
+      ],
+      "correct": 3,
+      "description": "İç ve dış mimarisinde kayda değer süsleme bulunmayan caminin yalnızca minaresi özgün özelliklerini korumaktadır.",
+      "sourceId": "inv-p416"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p415",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Selimiye Camii\"",
+      "page": "415"
+    },
+    {
+      "id": "inv-p416",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Selimiye Camii\"",
+      "page": "416"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

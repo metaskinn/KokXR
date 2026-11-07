@@ -63,3 +63,9 @@ export async function gorselYukle(eserId: string, dosya: File, alt: string, kred
   if (kayit.error) throw new Error('Görsel kaydı oluşturulamadı.')
   return sb().storage.from('gorseller').getPublicUrl(yol).data.publicUrl
 }
+
+// Tablolar kurulu ve erişilebilir mi? Değilse yönetim yerel kayıtla çalışır, giriş zorunlu tutulmaz.
+export async function bulutHazir(): Promise<boolean> {
+  if (!bulutVar) return false
+  try { return !(await sb().from('eserler').select('id').limit(1)).error } catch { return false }
+}

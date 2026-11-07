@@ -6,20 +6,20 @@ import { bulutVar, cikisYap, eserKaydet, girisYap, gorselYukle, oturumEposta } f
 
 const VARSAYILAN_KREDI = 'Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi'
 
-interface Props { eserler: Eser[]; ustKatman: UstKatman; kaydet: (veri: UstKatman) => void }
+interface Props { eserler: Eser[]; ustKatman: UstKatman; kaydet: (veri: UstKatman) => void; girisDegisti?: (eposta: string) => void }
 
-export default function BulutPaneli({ eserler, ustKatman, kaydet }: Props) {
+export default function BulutPaneli({ eserler, ustKatman, kaydet, girisDegisti }: Props) {
   const [eposta, setEposta] = useState('')
   const [giris, setGiris] = useState('')
   const [mesaj, setMesaj] = useState('')
   const [hata, setHata] = useState('')
-  useEffect(() => { void oturumEposta().then(setGiris) }, [])
+  useEffect(() => { void oturumEposta().then((e) => { setGiris(e); girisDegisti?.(e) }) }, [girisDegisti])
   if (!bulutVar) return <p className="yonetim-notu">Bulut bağlantısı kapalı: değişiklikler yalnızca bu tarayıcıda saklanır.</p>
 
   async function oturumAc(olay: FormEvent<HTMLFormElement>) {
     olay.preventDefault()
     const form = new FormData(olay.currentTarget)
-    try { await girisYap(String(form.get('eposta')), String(form.get('sifre'))); setGiris(await oturumEposta()); setHata('') }
+    try { await girisYap(String(form.get('eposta')), String(form.get('sifre'))); const e = await oturumEposta(); setGiris(e); girisDegisti?.(e); setHata('') }
     catch (e) { setHata((e as Error).message) }
   }
   async function yukle(olay: FormEvent<HTMLFormElement>) {
@@ -48,7 +48,7 @@ export default function BulutPaneli({ eserler, ustKatman, kaydet }: Props) {
       <button type="submit">Giriş yap</button>
     </form> : <>
       <p>Giriş yapıldı: {giris}. Kaydedilen eserler onay için bekletilir.</p>
-      <button type="button" onClick={() => { void cikisYap().then(() => setGiris('')) }}>Çıkış yap</button>
+      <button type="button" onClick={() => { void cikisYap().then(() => { setGiris(''); girisDegisti?.('') }) }}>Çıkış yap</button>
       <form onSubmit={yukle}>
         <h3>Görsel yükle</h3>
         <div className="form-alani"><label htmlFor="g-eser">Eser</label>

@@ -22,6 +22,7 @@ import Kutuphane from './pages/Kutuphane'
 import OnayAkisi from './pages/OnayAkisi'
 import VrEserler, { VrEser } from './pages/VrEserler'
 import Simge from './components/Simge'
+import YonetimKapisi from './components/YonetimKapisi'
 import ErisilebilirlikAraci from './components/ErisilebilirlikAraci'
 
 const rozetAnahtari = 'kokxr-rozetler'
@@ -99,9 +100,9 @@ export default function App() {
         <Route path="/atolye/vazo" element={<VazoAtolyesi />} />
         <Route path="/atolye/cini" element={<CiniAtolyesi />} />
         <Route path="/eser/:id" element={<EserSayfasi eserler={eserler} rozetKazan={rozetKazan} />} />
-        <Route path="/yonetim" element={<Yonetim {...yonetimProps} />} />
-        <Route path="/yonetim/yeni" element={<YonetimFormRotasi {...yonetimProps} />} />
-        <Route path="/yonetim/eser/:id" element={<YonetimFormRotasi {...yonetimProps} />} />
+        <Route path="/yonetim" element={<YonetimKapisi {...yonetimProps}><Yonetim {...yonetimProps} /></YonetimKapisi>} />
+        <Route path="/yonetim/yeni" element={<YonetimKapisi {...yonetimProps}><YonetimFormRotasi {...yonetimProps} /></YonetimKapisi>} />
+        <Route path="/yonetim/eser/:id" element={<YonetimKapisi {...yonetimProps}><YonetimFormRotasi {...yonetimProps} /></YonetimKapisi>} />
         <Route path="*" element={<Bulunamadi />} />
       </Routes>
     </main>

@@ -37,7 +37,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 ### A. Zemin (önce)
 - [x] **G1. demo/hata-avi:** `tests/hata-avi.mjs` (yazıldı, çalıştırılmadı) ile tüm rotalar 1280/360 pikselde taranır; yalnız demoyu bozan hata düzeltilir. Bilinen: 360 pikselde `/atolye/kilic` yatay taşma.
 - [x] **G2. arayuz/menu:** Menü yeniden düzeni (VR'a dokunmadan): öne **Keşfet, Harita, Yolculuk**; **Deneyimler** grubu altına VR Eserler, Vazo/Kılıç/Çini atölyeleri, Öğretmen; **Yönetim** ve vizyon sayfaları en arkaya. Mokap/vizyon etiketleri tutarlı ve dürüst olacak. Ana sayfa "VR'a gir"i ikincil çağrı yapar.
-- [ ] **G3. yonetim/bulut-saglamlastir:** Supabase kurulumu sonrası gerçek denemeler (giriş, eser kaydı, görsel yükleme, onay). Yönetim ekranı bulut açıkken giriş ister; `docs/supabase-kurulum.md` (5 dakikalık adımlar). Kurulum sabaha kalırsa yalnız belge ve yerel yedek yolu.
+- [x] **G3. yonetim/bulut-saglamlastir:** Supabase kurulumu sonrası gerçek denemeler (giriş, eser kaydı, görsel yükleme, onay). Yönetim ekranı bulut açıkken giriş ister; `docs/supabase-kurulum.md` (5 dakikalık adımlar). Kurulum sabaha kalırsa yalnız belge ve yerel yedek yolu.
 
 ### B. Şartnamenin zorunlu açıkları
 - [ ] **G4. paket/capacitor (onaylı bağımlılık):** Capacitor ile Android APK (aynı kod). Quest/VR akışı APK'da denenmez; APK keşif, harita, erişilebilirlik içindir. Android SDK yoksa yalnız proje iskeleti ve derleme adımı belgelenir.
@@ -63,8 +63,10 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [ ] **G18. docs/sabah-brifingi.md:** 1 sayfa: ne bitti/bitmedi, 09.00 öncesi 5 adım (Supabase kurulumu, push kararı, Vercel'in `master`'a bağlanması, PWA/APK telefonda deneme, Quest şarjı) ve `gorev_dagilimi.md`'deki 4 kişinin ilk 2 saatlik işi. Sonra dur.
 
 ## Sabah sorulacaklar
+- Supabase tabloları henüz kurulu değil (REST `eserler` 404). `docs/supabase-kurulum.md` adımlarını yap; kurulana kadar yönetim giriş istemez, yerel kayıtla çalışır. Kurulduktan sonra giriş, kayıt, onay ve görsel yükleme gerçek sunucuda denenmeli.
 - `tests/kilic.mjs` 1280'de zaman aşımı (G1 notu): gerçek hata mı yavaşlık mı, G17'de master'da bakılacak.
 
 ## Günlük
 - G1: Hata avı (tests/hata-avi.mjs, 24 rota + /olmayan-sayfa, 1280 ve 360) tek bulgu verdi: 360 px `/atolye/kilic` yatay taşma (`.kilic-sahne-isaret` 406 px). `src/pages/kilic.css` mobil bloğunda `overflow-x:clip` ile giderildi; hata avı artık temiz, `ui` geçti. Not: `tests/kilic.mjs` 1280'de 'Parçayı yerleştir' tıklamasında zaman aşımı veriyor; düzeltme yalnız mobil medya bloğunda olduğundan ilgisiz, önceden var olan/yazılımsal çizim yavaşlığı olarak izleniyor (G17'de master üzerinde tekrar denenecek). Konsol 404'ü yalnız `.env` doluyken Supabase tablosu olmadığından; testler boş değişkenle derleniyor.
 - G2 (arayuz/menu): Menü sırası Keşfet, Yolculuk, [Deneyimler: VR Eserler, Vazo, Kılıç, Çini, Öğretmen], Yönetim. VR koduna dokunulmadı. Etiketler kontrol edildi: Öğretmen 'Demo · örnek veri', Vizyon 'henüz uygulanmadı', Kütüphane/Onay gerçek veri (etiketsiz). 'Harita' bağlantısı G15'te eklenecek. ui, yolculuk, hata-avi (33 rota) geçti.
+- G3 (yonetim/bulut-saglamlastir): `YonetimKapisi` bulut hazırsa giriş ister, hazır değilse yerel moda düşer; `bulutHazir()` eklendi; docs/supabase-kurulum.md yazıldı. Gerçek sunucu denemesi tablolar kurulmadığı için yapılamadı.

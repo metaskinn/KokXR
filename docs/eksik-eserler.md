@@ -4,7 +4,7 @@ Tarih: 7 Kasım 2026. Kaynak: Vakıf Katılım'ın yayımladığı altı kitabı
 
 Sayfa numaraları yayımlanan kitabın sayfalarıdır.
 
-## 1. Hiç sayfası olmayan eserler (36)
+## 1. Hiç sayfası olmayan eserler (35)
 
 ### Bursa — Cilt 1, Osmangazi (12)
 
@@ -30,7 +30,7 @@ I. Murad Hüdavendigâr Külliyesi:
 
 - Devlet Hatun Türbesi — s. 408 (Yeşil Külliyesi bölümünde; Yeşil sayfası anlatmıyor)
 
-### Konya — Cilt 1 (18)
+### Konya — Cilt 1 (17)
 
 Meram:
 
@@ -84,7 +84,7 @@ Kadınhanı:
 
 Kitabın 76 maddesinin hepsinin sayfası var.
 
-## 2. Kendi sayfası olmayıp bir külliye sayfasının içinde anlatılan yapılar (52)
+## 2. Kendi sayfası olmayıp bir külliye sayfasının içinde anlatılan yapılar (60)
 
 Kitapta ayrı madde olan ama sitede yalnızca külliye sayfasının içinde yer alan parçalar. Külliyeleri tek sayfa olarak bırakma kararı daha önce verildi; bu liste ayrı sayfa istenirse diye tutuldu.
 

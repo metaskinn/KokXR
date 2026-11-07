@@ -1,16 +1,16 @@
 # Eklenen yapılar ve eserler
 
-Sitedeki tüm eser sayfaları: **612**. Şehir ve ilçeye göre gruplandı; her satırda eserin adı, sayfa kimliği ve kitaptaki ilk kaynak sayfası var. Eksik bir eser fark edersen ilgili ilçenin altında arayabilirsin.
+Sitedeki tüm eser sayfaları: **706**. Şehir ve ilçeye göre gruplandı; her satırda eserin adı, sayfa kimliği ve kitaptaki ilk kaynak sayfası var. Eksik bir eser fark edersen ilgili ilçenin altında arayabilirsin.
 
 Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri ve yayımlanan "Bursa Vakıf Eserleri Kitabı" (3 cilt); Hatay ve Konya için vakifkatilim.com.tr "Yayınlarımız" sayfasındaki yayımlanmış kitaplar. "(maket)" işareti 3D maketi olan sayfaları gösterir.
 
 | Şehir | Eser |
 |---|---|
-| Bursa | 294 |
+| Bursa | 351 |
 | Hatay | 76 |
-| Konya | 242 |
+| Konya | 279 |
 
-## Bursa (294)
+## Bursa (351)
 
 ### Gemlik (3)
 
@@ -22,13 +22,15 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 
 - Orta Camii — `gursu-central-mosque` — Cilt 3, s. 133
 
-### İnegöl (14)
+### İnegöl (17)
 
 - Burhaniye Camii — `inegol-burhaniye-mosque` — Cilt 3, s. 154
 - Hamidiye (Altınbaş) Camii — `inegol-hamidiye-altinbas-mosque` — Cilt 3, s. 155
 - Hançerli Fatma Sultan (Yıldırım-Yukarı İmaret) Camii — `inegol-hancerli-fatma-sultan-mosque` — Cilt 3, s. 162
 - Hürriyet (Sarı) Camii — `inegol-hurriyet-sari-mosque` — Cilt 3, s. 167
+- İshak Paşa Camii — `inegol-ishak-pasha-mosque` — Cilt 3, s. 141
 - İshak Paşa Külliyesi — `inegol-ishak-pasha-complex` — Cilt 3, s. 141
+- İshak Paşa Medresesi — `inegol-ishak-pasha-madrasa` — Cilt 3, s. 144
 - Karacaahmet Kervansarayı — `inegol-karacaahmet-caravanserai` — Cilt 3, s. 191
 - Kasım Efendi (Yenice) Camii — `inegol-kasim-efendi-mosque` — Cilt 3, s. 170
 - Kemalpaşa (Boşnak) Camii — `inegol-kemalpasa-bosnak-mosque` — Cilt 3, s. 172
@@ -36,6 +38,7 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Osmaniye (Çamaşırlık) Camii — `inegol-osmaniye-camasirlik-mosque` — Cilt 3, s. 175
 - Şehitler Köyü Çeşmesi ve Hamamı — `inegol-sehitler-village-fountain-bath` — Cilt 3, s. 196
 - Sungur Paşa Köyü Türbesi — `inegol-sungur-pasha-village-tomb` — Cilt 3, s. 190
+- Tâcunnisâ Sultan ve İshak Paşa Türbesi, İshak Paşa Mezarlığı — `inegol-tacunnisa-sultan-ishak-pasha-tomb` — Cilt 3, s. 148
 - Tahtaköprü Hamidiye Camii — `inegol-tahtakopru-hamidiye-mosque` — Cilt 3, s. 178
 - Yıldırım Bayezid (Cuma) Camii — `inegol-yildirim-bayezid-cuma-mosque` — Cilt 3, s. 183
 
@@ -124,7 +127,7 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Muradiye Camii — `orhangazi-muradiye-mosque` — Cilt 3, s. 340
 - Orhan Gazi Camii-Gürle — `orhangazi-gurle-orhan-gazi-mosque` — Cilt 3, s. 342
 
-### Osmangazi (159)
+### Osmangazi (192)
 
 - Abdal Mehmet Camii — `osmangazi-abdal-mehmet-mosque` — Cilt 1, s. 230-231
 - Abdal Mehmet Türbesi — `osmangazi-abdal-mehmet-tomb` — Cilt 2, s. 206
@@ -158,14 +161,21 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Bursa Vergi Dairesi Binası — `osmangazi-bursa-tax-office` — Cilt 2, s. 108
 - Çakır Ağa (Mecnun Dede) Camii ve Haziresi — `osmangazi-cakir-aga-mecnun-dede-mosque` — Cilt 1, s. 286
 - Çandarlı İbrahim Paşa (Mahkeme - Hoca Muslihuddin) Camii — `osmangazi-candarli-ibrahim-pasa-mosque` — Cilt 1, s. 289
+- Cariyeler (Saraylılar) Türbesi — `osmangazi-cariyeler-saraylilar-tomb` — Cilt 1, s. 142
+- Cem Sultan Türbesi — `osmangazi-cem-sultan-tomb` — Cilt 1, s. 145
 - Çerağ (Çırağ) Bey Camii — `osmangazi-cerag-bey-mosque` — Cilt 1, s. 291
+- Cıkcık (Girçık-Bekârlar) Hamamı — `osmangazi-cikcik-bath` — Cilt 1, s. 104
 - Darülkurra (Haraççıoğlu) Haziresi — `osmangazi-darulkurra-haraccioglu-graveyard` — Cilt 1, s. 293
 - Davutpaşa (Batpazarı) Camii — `osmangazi-davutpasa-batpazari-mosque` — Cilt 1, s. 296
 - Daye Hatun (Daye Kadın - Taya Kadın) Camii ve Haziresi — `osmangazi-daye-hatun-mosque` — Cilt 1, s. 298
+- Demirtaş (Timurtaş) Camii Haziresi — `osmangazi-timurtas-mosque-graveyard` — Cilt 1, s. 222
+- Demirtaş (Timurtaş) Camii ve Şadırvanı — `osmangazi-timurtas-mosque` — Cilt 1, s. 219-220
 - Duhteri Şeref (Fışkırık) Camii — `osmangazi-duhteri-seref-mosque` — Cilt 1, s. 301
+- Ebe Hatun Türbesi — `osmangazi-ebe-hatun-tomb` — Cilt 1, s. 150
 - Ebu İshak Kazeruni (Kamberler) Camii (Zaviye) — `osmangazi-ebu-ishak-kazeruni-mosque` — Cilt 1, s. 303
 - Ebû İshak Türbesi — `osmangazi-ebu-ishak-tomb` — Cilt 2, s. 211
 - Elmalık Camii — `osmangazi-elmalik-mosque` — Cilt 1, s. 306
+- Emir Hanı — `osmangazi-emir-han` — Cilt 1, s. 214-217
 - Ertuğrul Bey Camii ve Kabri — `osmangazi-ertugrul-bey-mosque` — Cilt 1, s. 307
 - Eskici Mehmet Dede Mezarı — `osmangazi-eskici-mehmet-dede-grave` — Cilt 2, s. 212
 - Eyne Bey Hamamı — `osmangazi-eyne-bey-bath` — Cilt 2, s. 124
@@ -178,12 +188,17 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Geyve Hanı Mescidi — `osmangazi-geyve-han-masjid` — Cilt 1, s. 314
 - Gökdere Medresesi — `osmangazi-gokdere-madrasa` — Cilt 2, s. 73
 - Gülçiçek Hatun Türbesi — `osmangazi-gulcicek-hatun-tomb` — Cilt 2, s. 214
+- Gülruh Hatun Türbesi — `osmangazi-gulruh-hatun-tomb` — Cilt 1, s. 152
+- Gülşah Hatun Türbesi — `osmangazi-gulsah-hatun-tomb` — Cilt 1, s. 154
 - Güngörmez Camii ve Haziresi — `osmangazi-gungormez-mosque` — Cilt 1, s. 316
 - Hacı Ali Sevinç Camii — `osmangazi-haci-ali-sevinc-mosque` — Cilt 1, s. 319
 - Hacı İvaz Paşa Camii — `osmangazi-haci-ivaz-pasha-mosque` — Cilt 1, s. 322
 - Hacılar Camii — `osmangazi-hacilar-mosque` — Cilt 1, s. 326
 - Hafsa Sultan (Bedreddin) Camii ve Haziresi — `osmangazi-hafsa-sultan-mosque` — Cilt 1, s. 330
 - Hafsa Sultan (Bedreddin) Çeşmesi — `osmangazi-hafsa-sultan-bedreddin-fountain` — Cilt 2, s. 127
+- Hamza Bey Ailesi Türbesi — `osmangazi-hamza-bey-family-tomb` — Cilt 1, s. 186
+- Hamza Bey Camii — `osmangazi-hamza-bey-mosque` — Cilt 1, s. 177-183
+- Hamza Bey Türbesi — `osmangazi-hamza-bey-tomb` — Cilt 1, s. 184
 - Hamzabey Külliyesi (maket) — `hamzabey-complex` — Cilt 1, s. 177
 - Hanımlar Kızlar Türbesi (Yılanlı Türbe) — `osmangazi-hanimlar-kizlar-tomb` — Cilt 2, s. 216
 - Haraççıoğlu (Dârülkurrâ) Mektebi — `osmangazi-haraccioglu-darulkurra-school` — Cilt 2, s. 80
@@ -197,11 +212,17 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Hoca İlyas Ortaokulu — `osmangazi-hoca-ilyas-middle-school` — Cilt 2, s. 84
 - Hocaalizade Çeşmesi — `osmangazi-hocaalizade-fountain` — Cilt 2, s. 130
 - Horhor Hamamı — `osmangazi-horhor-bath` — Cilt 2, s. 128
+- Hüma Hatun (Hatuniye) Türbesi — `osmangazi-huma-hatun-tomb` — Cilt 1, s. 156
 - Hz. Üftâde Camii — `osmangazi-hz-uftade-mosque` — Cilt 1, s. 447
 - Hz. Üftâde Tekke Camii — `osmangazi-hz-uftade-lodge-mosque` — Cilt 1, s. 455
 - Hz. Üftâde Tekkesi — `osmangazi-hz-uftade-sufi-lodge` — Cilt 2, s. 195
 - Hz. Üftâde Türbesi — `osmangazi-hz-uftade-tomb` — Cilt 2, s. 259
+- I. Murad Hudâvendigâr Camii — `osmangazi-hudavendigar-mosque` — Cilt 1, s. 83
+- I. Murad Hudâvendigâr İmareti — `osmangazi-hudavendigar-imaret` — Cilt 1, s. 101
 - I. Murad Hudâvendigâr Külliyesi (maket) — `hudavendigar-complex` — Cilt 1, s. 83
+- I. Murad Hudâvendigâr Medresesi — `osmangazi-hudavendigar-madrasa` — Cilt 1, s. 96
+- I. Murad Hudâvendigâr Türbesi — `osmangazi-hudavendigar-tomb` — Cilt 1, s. 107
+- II. Murad (Muradiye) İmareti — `osmangazi-muradiye-imaret` — Cilt 1, s. 128
 - II. Murad (Muradiye) Külliyesi (maket) — `muradiye-complex` — Cilt 1, s. 115
 - İbrahim Paşa (Hatice Hatun) Hamamı — `osmangazi-ibrahim-pasha-hatice-hatun-bath` — Cilt 2, s. 133
 - İç Koza Hanı — `osmangazi-inner-koza-han` — Cilt 2, s. 41
@@ -213,6 +234,7 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - İzzeddin Bey (Pınarbaşı) Camii — `osmangazi-izzeddin-bey-mosque` — Cilt 1, s. 358
 - Kademeri (Çukur) Camii ve Haziresi — `osmangazi-kademeri-mosque` — Cilt 1, s. 359
 - Kanberler (Sitti Hatun) Camii — `osmangazi-kanberler-mosque` — Cilt 1, s. 361
+- Kara Mustafa Paşa Türbesi — `osmangazi-kara-mustafa-pasha-tomb` — Cilt 1, s. 188-189
 - Karabaş-ı Velî Dergâhı — `osmangazi-karabas-i-veli-sufi-lodge` — Cilt 2, s. 163
 - Karakâdî Camii ve Haziresi — `osmangazi-karakadi-mosque` — Cilt 1, s. 369
 - Karaşeyh Camii — `osmangazi-karaseyh-mosque` — Cilt 1, s. 366
@@ -234,12 +256,19 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Molla Fenârî Camii ve Haziresi — `osmangazi-molla-fenari-mosque` — Cilt 1, s. 396
 - Molla Gürani (Yeşil Güranlı) Türbesi — `osmangazi-molla-gurani-tomb` — Cilt 2, s. 223
 - Molla Gürani (Yeşil-Güranlı) Mescidi — `osmangazi-molla-gurani-masjid` — Cilt 1, s. 400
+- Mükrime Hatun Türbesi — `osmangazi-mukrime-hatun-tomb` — Cilt 1, s. 159
+- Muradiye Camii — `osmangazi-muradiye-mosque` — Cilt 1, s. 115
+- Muradiye Çeşmesi (Sıbyan Mektebi Çeşmesi) — `osmangazi-muradiye-fountain` — Cilt 1, s. 127
+- Muradiye Hamamı — `osmangazi-muradiye-bath` — Cilt 1, s. 130
+- Muradiye Medresesi — `osmangazi-muradiye-madrasa` — Cilt 1, s. 124
 - Nakkaş Ali Mescidi ve Haziresi — `osmangazi-nakkas-ali-masjid` — Cilt 1, s. 401
 - Nalbantoğlu Camii — `osmangazi-nalbantoglu-mosque` — Cilt 1, s. 405
 - Nasuh Paşa Hamamı — `osmangazi-nasuh-pasha-bath` — Cilt 2, s. 143
 - Nûmâniye Dergâhı — `osmangazi-numaniye-sufi-lodge` — Cilt 2, s. 171
 - Okçu Baba Türbesi — `osmangazi-okcu-baba-tomb` — Cilt 2, s. 224
 - Ördekli Hamam (Eski Yeni Hamam) — `osmangazi-ordekli-old-new-bath` — Cilt 2, s. 151
+- Orhan Bey Camii — `osmangazi-orhan-bey-mosque` — Cilt 1, s. 191-204
+- Orhan Bey Hamamı (Aynalı Çarşı) — `osmangazi-orhan-bey-bath` — Cilt 1, s. 207-212
 - Orhan Bey Külliyesi (maket) — `orhan-bey-complex` — s. 191
 - Orhan Gazi Türbesi — `osmangazi-orhan-gazi-tomb` — Cilt 2, s. 229
 - Osman Gazi Türbesi — `osmangazi-osman-gazi-tomb` — Cilt 2, s. 235
@@ -252,6 +281,10 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Şehabettin Paşa Camii — `osmangazi-sehabettin-pasa-mosque` — Cilt 1, s. 419
 - Şehadet (Kale-Saray) Camii — `osmangazi-sehadet-mosque` — Cilt 1, s. 421
 - Şehreküstü (Pars Bey) Camii — `osmangazi-sehrekustu-mosque` — Cilt 1, s. 425
+- Şehzade Ahmet Türbesi — `osmangazi-sehzade-ahmet-tomb` — Cilt 1, s. 162
+- Şehzade Alâaddin Ali Türbesi — `osmangazi-sehzade-alaaddin-ali-tomb` — Cilt 1, s. 140
+- Şehzade Mahmut Türbesi — `osmangazi-sehzade-mahmut-tomb` — Cilt 1, s. 164
+- Şehzade Mustafa Türbesi — `osmangazi-sehzade-mustafa-tomb` — Cilt 1, s. 167
 - Şeker Hoca Camii — `osmangazi-seker-hoca-mosque` — Cilt 1, s. 428
 - Selçuk Hatun Camii — `osmangazi-selcuk-hatun-mosque` — Cilt 1, s. 412
 - Selimiye Camii — `osmangazi-selimiye-mosque` — Cilt 1, s. 415
@@ -262,11 +295,14 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Şeyh Paşa (Dibekli) Camii — `osmangazi-seyh-pasa-mosque` — Cilt 1, s. 435
 - Seyyid Usûl Tekkesi ve Haziresi — `osmangazi-seyyid-usul-sufi-lodge-and-graveyard` — Cilt 2, s. 185
 - Simkeş (Sırmakeş) Camii — `osmangazi-simkes-mosque` — Cilt 1, s. 417
+- Şirin Hatun Türbesi — `osmangazi-sirin-hatun-tomb` — Cilt 1, s. 170
 - Sitti Hatun (Kanberler) Mektebi — `osmangazi-sitti-hatun-school` — Cilt 2, s. 89
 - Sivasiler (Tahtalı) Camii — `osmangazi-sivasiler-mosque` — Cilt 1, s. 418
+- Sultan II. Murad Türbesi — `osmangazi-murad-ii-tomb` — Cilt 1, s. 134
 - Tahtakale Hanı (Davutpaşa Hanı-Yoğurt Hanı) — `osmangazi-tahtakale-han` — Cilt 2, s. 50
 - Tahtalı (Hatipzade) Mescidi — `osmangazi-tahtali-masjid` — Cilt 1, s. 438
 - Tavukçu Mescidi — `osmangazi-tavukcu-masjid` — Cilt 1, s. 439
+- Timurtaş Paşa Hamamı — `osmangazi-timurtas-pasha-bath` — Cilt 1, s. 224-226
 - Timurtaş Paşa Külliyesi (maket) — `timurtas-pasa-complex` — Cilt 1, s. 219
 - Tuzpazarı Camii — `osmangazi-tuzpazari-mosque` — Cilt 1, s. 440
 - Üç Kozlar (Kuzular) Türbe ve Haziresi — `osmangazi-uc-kozlar-tomb-and-graveyard` — Cilt 2, s. 253
@@ -286,22 +322,26 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Yıldırım Bayezid Bedesteni — `osmangazi-yildirim-bayezid-bedesten` — Cilt 2, s. 56
 - Zağferanlık Mescidi — `osmangazi-zagferanlik-masjid` — Cilt 1, s. 486
 
-### Yenişehir (12)
+### Yenişehir (16)
 
 - Bali Bey (Çarşı) Camii — `yenisehir-bali-bey-mosque` — Cilt 3, s. 370
 - Çarşı (Çifte-Belediye) Hamamı — `yenisehir-carsi-bath` — Cilt 3, s. 396
 - Çınarlı (Karabaçak-Voyvoda) Camii — `yenisehir-cinarli-mosque` — Cilt 3, s. 372
 - Ethem Paşa Camii — `yenisehir-ethem-pasa-mosque` — Cilt 3, s. 375
 - Hacı Hasan Camii — `yenisehir-haci-hasan-mosque` — Cilt 3, s. 379
+- Kurşunlu Camii — `yenisehir-kursunlu-mosque` — Cilt 3, s. 353
 - Murat Paşa (Kumluk) Camii — `yenisehir-murat-pasa-mosque` — Cilt 3, s. 381
 - Orhan Gazi Camii (Ulucami) — `yenisehir-orhan-gazi-mosque` — Cilt 3, s. 385
 - Orhan Gazi Hamamı — `yenisehir-orhan-gazi-bath` — Cilt 3, s. 399
 - Postinpûş Camii (Seyyid Mehmet Dede Zaviyesi) — `yenisehir-dede-zawiya` — Cilt 3, s. 391
 - Şemakizade Hacı Hüseyin Efendi Camii — `yenisehir-semakizade-mosque` — Cilt 3, s. 394
 - Sinan Paşa Külliyesi — `yenisehir-sinan-pasa-complex` — Cilt 3, s. 353
+- Sinan Paşa Külliyesi'nde Arasta — `yenisehir-sinan-pasa-arasta` — Cilt 3, s. 367
+- Sinan Paşa Külliyesi'nde İmaret — `yenisehir-sinan-pasa-imaret` — Cilt 3, s. 364
+- Sinan Paşa Külliyesi'nde Medrese — `yenisehir-sinan-pasa-madrasa` — Cilt 3, s. 361
 - Yarhisar Köyü Çeşmesi — `yenisehir-yarhisar-fountain` — Cilt 3, s. 403
 
-### Yıldırım (44)
+### Yıldırım (61)
 
 - Abdüllatif Kudsi Türbesi — `yildirim-abdullatif-kudsi-tomb` — Cilt 2, s. 527
 - Açık (Umur Bey) Namazgâh — `yildirim-umur-bey-open-air-prayer-area` — Cilt 2, s. 466
@@ -309,8 +349,13 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Babadağ Camii — `yildirim-babadag-mosque` — Cilt 2, s. 468
 - Beyazıt Paşa (Çatalçeşme) Camii — `yildirim-beyazit-pasha-catalcesme-mosque` — Cilt 2, s. 469
 - Çoban Bey Türbesi — `yildirim-coban-bey-tomb` — Cilt 2, s. 536
+- Darüssaade Ağası Beşir Ağa Çeşmesi — `yildirim-darussaade-agasi-besir-aga-fountain` — Cilt 2, s. 312-313
 - Davut Kadı (Eski-Ortayol) Camii — `yildirim-davut-kadi-mosque` — Cilt 2, s. 471
+- Devlet Hatun Türbesi — `yildirim-devlet-hatun-tomb` — Cilt 2, s. 408
+- Emir Sultan Camii — `yildirim-emir-sultan-mosque` — Cilt 2, s. 273-279
+- Emir Sultan Hamamı — `yildirim-emir-sultan-bath` — Cilt 2, s. 296-297
 - Emir Sultan Külliyesi (maket) — `emir-sultan` — Cilt 2, s. 273
+- Emir Sultan Türbesi — `yildirim-emir-sultan-tomb` — Cilt 2, s. 298-300
 - Hacı Hüsamettin Türbesi — `yildirim-haci-husamettin-tomb` — Cilt 2, s. 537
 - Hacı Sevindik Camii — `yildirim-haci-sevindik-mosque` — Cilt 2, s. 473
 - Hacı Şevki Efendi (Şabaniye) Tekkesi — `yildirim-haci-sevki-efendi-sabaniye-lodge` — Cilt 2, s. 551
@@ -340,11 +385,23 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Şible Camii — `yildirim-sible-mosque` — Cilt 2, s. 519
 - Sofu Mehmet Mezarı — `yildirim-sofu-mehmet-grave` — Cilt 2, s. 541
 - Tatarlar Camii — `yildirim-tatarlar-mosque` — Cilt 2, s. 520
+- Umur Bey Camii ve Haziresi — `yildirim-umur-bey-mosque-and-graveyard` — Cilt 2, s. 317
+- Umur Bey Çeşmesi — `yildirim-umur-bey-fountain` — Cilt 2, s. 326
+- Umur Bey Haziresi — `yildirim-umur-bey-graveyard` — Cilt 2, s. 327-329
 - Umur Bey Külliyesi (maket) — `umurbey-complex` — s. 318
+- Umur Bey Türbesi — `yildirim-umur-bey-tomb` — Cilt 2, s. 331-332
 - Vefikiye Camii — `yildirim-vefikiye-mosque` — Cilt 2, s. 522
 - Yeni Mahalle Camii — `yildirim-yeni-mahalle-mosque` — Cilt 2, s. 524
+- Yeşil (Sultaniye) Medresesi — `yildirim-yesil-madrasa` — Cilt 2, s. 377
+- Yeşil Camii — `yildirim-yesil-mosque` — Cilt 2, s. 337
 - Yeşil Çelebi Mehmed Külliyesi (maket) — `yesil-complex` — Cilt 2, s. 337
+- Yeşil İmareti — `yildirim-yesil-imaret` — Cilt 2, s. 373
+- Yeşil Türbe — `yildirim-yesil-tomb` — Cilt 2, s. 391
+- Yıldırım Bayezid Camii — `yildirim-yildirim-bayezid-mosque` — Cilt 2, s. 415
+- Yıldırım Bayezid Türbesi — `yildirim-yildirim-bayezid-tomb` — Cilt 2, s. 457
+- Yıldırım Darüşşifası — `yildirim-yildirim-hospital` — Cilt 2, s. 447
 - Yıldırım Külliyesi (maket) — `yildirim-complex` — Cilt 2, s. 415
+- Yıldırım Medresesi — `yildirim-yildirim-madrasa` — Cilt 2, s. 439
 - Zeyniler (Hacı Halife) Camii — `yildirim-zeyniler-haci-halife-mosque` — Cilt 2, s. 526
 - Âşık Yunus (Kara Abdürrezzak) Türbesi — `yildirim-asik-yunus-kara-abdurrezzak-tomb` — Cilt 2, s. 533
 
@@ -465,11 +522,15 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Rum Ortodoks Kilisesi — `hatay-yayladagi-greek-orthodox-church` — s. 450
 - Şenköy Ahmet Kusayri Camii — `hatay-yayladagi-senkoy-ahmet-kusayri-mosque` — s. 329
 
-## Konya (242)
+## Konya (279)
 
 ### Ahırlı (1)
 
 - Kuruçay Eski Camii — `konya-ahirli-kurucay-old-mosque` — Cilt 1, s. 319
+
+### Akören (1)
+
+- Avdan Beldesi Büyük (Eski) Camii — `konya-akoren-avdan-old-grand-mosque` — Cilt 1, s. 320
 
 ### Akşehir (24)
 
@@ -505,16 +566,22 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Zalmanda Hanı — `konya-altinekin-zalmanda-inn` — Cilt 2, s. 271
 - Zıvarık Han — `konya-altinekin-zivarik-inn` — Cilt 2, s. 273
 
-### Beyşehir (9)
+### Beyşehir (15)
 
 - Bayındır Köyü Camii — `konya-beysehir-bayindir-village-mosque` — Cilt 1, s. 379
 - Cuma (Orta) Camii — `konya-beysehir-cuma-middle-mosque` — Cilt 1, s. 382
 - Demirli Mescit — `konya-beysehir-demirli-masjid` — Cilt 1, s. 383
 - Emen Eski Camii — `konya-beysehir-emen-old-mosque` — Cilt 1, s. 384
+- Eşrefoğlu Bedesteni — `konya-beysehir-esrefoglu-bedesten` — Cilt 2, s. 30
+- Eşrefoğlu Süleyman Bey Camii — `konya-beysehir-esrefoglu-suleyman-bey-mosque` — Cilt 2, s. 13
+- Eşrefoğlu Süleyman Bey Hamamı — `konya-beysehir-esrefoglu-suleyman-bey-bath` — Cilt 2, s. 13
 - Eşrefoğlu Süleyman Bey Külliyesi — `konya-beysehir-esrefoglu-suleyman-bey-complex` — Cilt 2, s. 12
+- Eşrefoğlu Süleyman Bey Türbesi — `konya-beysehir-esrefoglu-suleyman-bey-tomb` — Cilt 2, s. 13
 - Gedik Ahmet Paşa Camii — `konya-beysehir-gedik-ahmet-pasha-mosque` — Cilt 1, s. 385
 - Hamidiye Camii — `konya-beysehir-hamidiye-mosque` — Cilt 1, s. 386
+- Hızır Ali Paşa (Bayafşar) Camii — `konya-beysehir-hizir-ali-pasha-bayafsar-mosque` — Cilt 1, s. 387
 - İsmail Ağa Medresesi (Taş Medrese) — `konya-beysehir-ismail-aga-madrasa` — Cilt 2, s. 113
+- Lütfullah Çarşı Camii Minaresi — `konya-beysehir-lutfullah-carsi-mosque-minaret` — Cilt 1, s. 389
 - Yarım (Anonim) Türbe — `konya-beysehir-half-anonymous-tomb` — Cilt 2, s. 200
 
 ### Bozkır (4)
@@ -551,12 +618,13 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 
 - Emirgazi (Emrullah Gazi) Türbesi — `konya-emirgazi-emirgazi-tomb` — Cilt 2, s. 186
 
-### Ereğli (7)
+### Ereğli (8)
 
 - Ağalar (Boyacı Ali) Mescidi — `konya-eregli-agalar-boyaci-ali-masjid` — Cilt 1, s. 426
 - Büyükdede (Taşkilise) Camii — `konya-eregli-buyukdede-taskilise-mosque` — Cilt 1, s. 427
 - Cağalzade Bedesteni — `konya-eregli-cagalzade-bedesten` — Cilt 2, s. 277
 - Kutören Eski Camii — `konya-eregli-kutoren-old-mosque` — Cilt 1, s. 430
+- Rüstem Paşa (Şifa) Hamamı — `konya-eregli-rustem-pasha-sifa-bath` — Cilt 2, s. 223
 - Rüstem Paşa Kervansarayı — `konya-eregli-rustem-pasha-caravanserai` — Cilt 2, s. 278
 - Ulu (Kıble) Camii — `konya-eregli-grand-kible-mosque` — Cilt 1, s. 431
 - Zengen Beldesi Eski Camii — `konya-eregli-zengen-old-mosque` — Cilt 1, s. 432
@@ -566,17 +634,24 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Çavuş (Eski) Merkez Cami — `konya-huyuk-cavus-old-central-mosque` — Cilt 1, s. 436
 - Çukurkent Köyü Camii — `konya-huyuk-cukurkent-village-mosque` — Cilt 1, s. 438
 
-### Ilgın (7)
+### Ilgın (14)
 
 - Behlül Bey Camii — `konya-ilgin-behlul-bey-mosque` — Cilt 1, s. 445
 - Beykonak Dediği Sultan Mescit ve Tekkesi — `konya-ilgin-beykonak-dedigi-sultan-masjid-tekke` — Cilt 1, s. 440
 - Fazıl Camii — `konya-ilgin-fazil-mosque` — Cilt 1, s. 446
 - İbrahim Paşa Camii (Argıthanı) — `konya-ilgin-ibrahim-pasha-argithani-mosque` — Cilt 1, s. 447
+- Lala Mustafa Paşa (Kurşunlu) Camii — `konya-ilgin-lala-mustafa-pasha-mosque` — Cilt 2, s. 53
 - Lala Mustafa Paşa Külliyesi — `konya-ilgin-lala-mustafa-pasha-complex` — Cilt 2, s. 53
+- Lala Mustafa Paşa Külliyesi Arastası — `konya-ilgin-lala-mustafa-pasha-bazaar` — Cilt 2, s. 53
+- Lala Mustafa Paşa Külliyesi İmareti — `konya-ilgin-lala-mustafa-pasha-imaret` — Cilt 2, s. 53
+- Lala Mustafa Paşa Külliyesi Kervansarayı — `konya-ilgin-lala-mustafa-pasha-caravanserai` — Cilt 2, s. 53
+- Lala Mustafa Paşa Külliyesi Medresesi (Sıbyan Mektebi) — `konya-ilgin-lala-mustafa-pasha-primary-school` — Cilt 2, s. 53
+- Lala Mustafa Paşa Külliyesi Tabhanesi — `konya-ilgin-lala-mustafa-pasha-tabhane` — Cilt 2, s. 53
 - Pir Hüseyin (Ulu - Çukur) Camii — `konya-ilgin-pir-huseyin-ulu-cukur-mosque` — Cilt 1, s. 448
 - Şıhcarullah (Zincirli) Camii — `konya-ilgin-sihcarullah-zincirli-mosque` — Cilt 1, s. 450
+- Yukarı Çiğil Beldesi Merkez (Camii Kebir) Camii — `konya-ilgin-yukari-cigil-central-mosque` — Cilt 1, s. 451
 
-### Kadınhanı (6)
+### Kadınhanı (7)
 
 - Çavundur Camii — `konya-kadinhani-cavundur-mosque` — Cilt 1, s. 454
 - Hacı Mehmetli Camii — `konya-kadinhani-haci-mehmetli-mosque` — Cilt 1, s. 456
@@ -584,17 +659,23 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Kabacalı Camii — `konya-kadinhani-kabacali-mosque` — Cilt 1, s. 460
 - Karamanlı Hacı Mustafa Camii — `konya-kadinhani-karamanli-haci-mustafa-mosque` — Cilt 1, s. 461
 - Pınarbaşı Camii — `konya-kadinhani-pinarbasi-mosque` — Cilt 1, s. 462
+- Râziye (Hatun) Sultan Kervansarayı — `konya-kadinhani-raziye-sultan-caravanserai` — Cilt 2, s. 282
 
-### Karapınar (6)
+### Karapınar (11)
 
 - Çetmi Camii — `konya-karapinar-cetmi-mosque` — Cilt 1, s. 463
+- Karapınar Sultan II. Selim Camii — `konya-karapinar-sultan-selim-ii-mosque` — Cilt 2, s. 36
 - Karapınar Sultan II. Selim Külliyesi — `konya-karapinar-sultan-selim-ii-complex` — Cilt 2, s. 33
+- Karapınar Sultan II. Selim Külliyesi Arastası — `konya-karapinar-sultan-selim-ii-arasta` — Cilt 2, s. 36
+- Karapınar Sultan II. Selim Külliyesi Çeşmesi — `konya-karapinar-sultan-selim-ii-fountain` — Cilt 2, s. 36
+- Karapınar Sultan II. Selim Külliyesi Hamamı — `konya-karapinar-sultan-selim-ii-bath` — Cilt 2, s. 36
 - Karapınar Sultan II. Selim Külliyesi Hanı — `konya-karapinar-sultan-selim-ii-complex-inn` — Cilt 2, s. 36
+- Karapınar Sultan II. Selim Külliyesi İmareti — `konya-karapinar-sultan-selim-ii-imaret` — Cilt 2, s. 36
 - Kazan Höyüğü Köyü Taş Han — `konya-karapinar-kazan-hoyugu-stone-inn` — Cilt 2, s. 285
 - Reşadiye Camii — `konya-karapinar-resadiye-mosque` — Cilt 1, s. 464
 - Yağmapınar Mescidi — `konya-karapinar-yagmapinar-masjid` — Cilt 1, s. 465
 
-### Karatay (65)
+### Karatay (73)
 
 - Alemdar Camii — `konya-karatay-alemdar-mosque` — Cilt 1, s. 257
 - Ali Efendi Darülhuffazı (Muallimhâne) — `konya-karatay-ali-efendi-darulhuffaz` — Cilt 2, s. 94
@@ -606,10 +687,12 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Bağevliya Camii Çeşmesi — `konya-karatay-bagevliya-mosque-fountain` — Cilt 2, s. 235
 - Burhan Dede Camii — `konya-karatay-burhan-dede-mosque` — Cilt 1, s. 198
 - Burhaneddin Fakih Dede Türbesi — `konya-karatay-burhaneddin-fakih-dede-tomb` — Cilt 2, s. 158
+- Çataloğlu Camii — `konya-karatay-cataloglu-mosque` — Cilt 1, s. 271
 - Çavuşoğlu Camii — `konya-karatay-cavusoglu-mosque` — Cilt 1, s. 274
 - Çayır Camii — `konya-karatay-cayir-mosque` — Cilt 1, s. 268
 - Cimilli (Sarı) Mescidi — `konya-karatay-cimilli-sari-masjid` — Cilt 1, s. 238
 - Cıvıloğlu Camii — `konya-karatay-civiloglu-mosque` — Cilt 1, s. 196
+- Çukur Camii — `konya-karatay-cukur-mosque` — Cilt 1, s. 204
 - Diğin Camii — `konya-karatay-digin-mosque` — Cilt 1, s. 265
 - Dolap Battal Mescidi — `konya-karatay-dolap-battal-masjid` — Cilt 1, s. 185
 - Dolap Mektep Mescidi — `konya-karatay-dolap-mektep-masjid` — Cilt 1, s. 260
@@ -624,6 +707,7 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Hanedan Camii — `konya-karatay-hanedan-mosque` — Cilt 1, s. 267
 - Hatuniye (Güdük Minare - Akıncılar Mahmut) Mescidi — `konya-karatay-hatuniye-masjid` — Cilt 1, s. 219
 - İç Karaaslan (Necmettin Karaarslan) Kümbeti — `konya-karatay-ic-karaaslan-kumbet` — Cilt 2, s. 156
+- İçkaraarslan Mescidi — `konya-karatay-ickaraarslan-masjid` — Cilt 1, s. 241
 - İğdeli Sultan Camii — `konya-karatay-igdeli-sultan-mosque` — Cilt 1, s. 199
 - İshak Paşa Türbesi — `konya-karatay-ishak-pasha-tomb` — Cilt 2, s. 155
 - Kadı İzzettin (Karpuzoğlu) Camii — `konya-karatay-kadi-izzettin-karpuzoglu-mosque` — Cilt 1, s. 216
@@ -640,7 +724,9 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Müftü Abdullah Mescidi — `konya-karatay-mufti-abdullah-masjid` — Cilt 1, s. 210
 - Murat Paşa Kızı Fatma Hatun Türbesi — `konya-karatay-murat-pasha-daughter-fatma-hatun-tomb` — Cilt 1, s. 55
 - Namık Paşa Camii — `konya-karatay-namik-pasha-mosque` — Cilt 1, s. 275
+- Nuriye Camii — `konya-karatay-nuriye-mosque` — Cilt 1, s. 184
 - Obruk Köyü Camii — `konya-karatay-obruk-village-mosque` — Cilt 1, s. 195
+- Ovaloğlu (Çelik Mehmet Paşa) Camii — `konya-karatay-ovaloglu-celik-mehmet-pasha-mosque` — Cilt 1, s. 212
 - Pisili (Pir Esat) Mescit ve Türbesi — `konya-karatay-pisili-pir-esat-masjid-tomb` — Cilt 1, s. 251
 - Polatlar (Hacı Cemal-Hatip) Camii — `konya-karatay-polatlar-mosque` — Cilt 1, s. 261
 - Saksağanlar Camii — `konya-karatay-saksaganlar-mosque` — Cilt 1, s. 258
@@ -651,8 +737,11 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Seyfettin Kara Sungur Kümbeti — `konya-karatay-seyfettin-kara-sungur-kumbet` — Cilt 2, s. 153
 - Şeyh Aliman (Alaman-İşgalaman) Yahşi Türbesi — `konya-karatay-seyh-aliman-yahsi-tomb` — Cilt 2, s. 149
 - Şeyh Ulema Recep Ağa Camii — `konya-karatay-seyh-ulema-recep-aga-mosque` — Cilt 1, s. 263
+- Şeyh Ulema Yusuf Ağa Camii — `konya-karatay-seyh-ulema-yusuf-aga-mosque` — Cilt 1, s. 279
+- Sırçalı (Demirci Hacı) Mescidi — `konya-karatay-sircali-demirci-haci-masjid` — Cilt 1, s. 234
 - Sitte-i Banu Mescidi — `konya-karatay-sitte-i-banu-masjid` — Cilt 1, s. 218
 - Sultan Selim (Selimiye) Camii — `konya-karatay-sultan-selim-mosque` — Cilt 1, s. 176
+- Sütçü Camii — `konya-karatay-sutcu-mosque` — Cilt 1, s. 270
 - Tahtalı Mescidi — `konya-karatay-tahtali-masjid` — Cilt 1, s. 202
 - Tolluoğlu Camii — `konya-karatay-tolluoglu-mosque` — Cilt 1, s. 278
 - Topraklık Hasan Efendi Camii — `konya-karatay-topraklik-hasan-efendi-mosque` — Cilt 1, s. 273
@@ -662,9 +751,10 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Yusuf Ağa (Abit Çelebi) Kütüphanesi — `konya-karatay-yusuf-aga-library` — Cilt 2, s. 288
 - Zenburi Mescidi — `konya-karatay-zenburi-masjid` — Cilt 1, s. 239
 
-### Meram (63)
+### Meram (68)
 
 - Abdülaziz Camii — `konya-meram-abdulaziz-mosque` — Cilt 1, s. 109
+- Abdulmümin (Yediler-Megaribe) Mescidi ve Mezarı — `konya-meram-abdulmumin-masjid-and-tomb` — Cilt 1, s. 118
 - Aksinne Kümbetli (Günbentli) Mescidi — `konya-meram-aksinne-kumbetli-gunbentli-masjid` — Cilt 1, s. 149
 - Akyokuş (Hoca Cihan) Hanı — `konya-meram-akyokus-hoca-cihan-inn` — Cilt 2, s. 244
 - Anber Reis (Feridiye) Camii — `konya-meram-anber-reis-feridiye-mosque` — Cilt 1, s. 85
@@ -710,21 +800,25 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Saatçi Camii — `konya-meram-saatci-mosque` — Cilt 1, s. 108
 - Sadr (Sedir) Sultan Türbesi — `konya-meram-sadr-sultan-tomb` — Cilt 2, s. 148
 - Sadreddin Konevi Camii — `konya-meram-sadreddin-konevi-mosque` — Cilt 1, s. 98
+- Sahip Ata (Larende) Camii — `konya-meram-sahip-ata-mosque` — Cilt 1, s. 123
 - Sahip Ata (Sultan) Hamamı — `konya-meram-sahip-ata-sultan-bath` — Cilt 2, s. 212
 - Sahip Ata Hanikahı ve Türbesi — `konya-meram-sahip-ata-khanqah-and-tomb` — Cilt 2, s. 134
 - Salih Paşa (Dedemoğlu) Camii — `konya-meram-salih-pasha-dedemoglu-mosque` — Cilt 1, s. 148
 - Şeyh Ebul Vefa Camii — `konya-meram-seyh-ebul-vefa-mosque` — Cilt 1, s. 88
 - Şeyh Hasan-ı Rûmi Türbesi — `konya-meram-seyh-hasan-i-rumi-tomb` — Cilt 2, s. 144-145
+- Şeyh Osman Rûmi Camii — `konya-meram-seyh-osman-rumi-mosque` — Cilt 1, s. 140
 - Şeyh Osman Rûmi Türbesi — `konya-meram-seyh-osman-rumi-tomb` — Cilt 2, s. 144-145
 - Sırçalı Medrese — `konya-meram-sircali-madrasa` — Cilt 2, s. 75
 - Şükran Mescidi — `konya-meram-sukran-masjid` — Cilt 1, s. 78
 - Şükran Mescidi Zemin Kat Dükkân ve Mağaza — `konya-meram-sukran-masjid-shops` — Cilt 2, s. 255
+- Tahir Paşa (Tursunoğlu / Dursun Fakih) Camii — `konya-meram-tahir-pasha-mosque` — Cilt 1, s. 111
 - Tahir ile Zühre (Dön Baba-Pir Ahi Sultan) Mescit ve Türbesi — `konya-meram-tahir-ile-zuhre-masjid-and-tomb` — Cilt 1, s. 113
 - Tahtatepen Ubeyt (Hacı Adil) Camii — `konya-meram-tahtatepen-ubeyt-haci-adil-mosque` — Cilt 1, s. 157
 - Tarhana Mescidi — `konya-meram-tarhana-masjid` — Cilt 1, s. 145
 - Tavus Baba Türbesi — `konya-meram-tavus-baba-tomb` — Cilt 2, s. 128-129
 - Tellioğlu (Sungurbey) Camii — `konya-meram-tellioglu-sungurbey-mosque` — Cilt 1, s. 122
 - Turgutoğlu Türbesi — `konya-meram-turgutoglu-tomb` — Cilt 2, s. 131
+- Veznedar Hüseyin Efendi (Asri) Camii — `konya-meram-veznedar-huseyin-efendi-mosque` — Cilt 1, s. 146
 - Yolcuoğlu (Gazioğlu) Camii — `konya-meram-yolcuoglu-gazioglu-mosque` — Cilt 1, s. 153
 - Yukarı Camii ve Haziresi (Sağlık Beldesi) — `konya-meram-saglik-yukari-mosque-graveyard` — Cilt 1, s. 94
 
@@ -733,12 +827,14 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Küçük Alioğlu Camii — `konya-sarayonu-kucuk-alioglu-mosque` — Cilt 1, s. 467
 - Pir Hüseyin Bey (Yukarı) Camii — `konya-sarayonu-pir-huseyin-bey-upper-mosque` — Cilt 1, s. 468
 
-### Selçuklu (22)
+### Selçuklu (25)
 
 - Ak (Şazi Bey) Camii — `konya-selcuklu-ak-sazi-bey-mosque` — Cilt 1, s. 294
 - Ali Gav (Zaviyesi) Mahmudiye Medresesi — `konya-selcuklu-ali-gav-mahmudiye-madrasa` — Cilt 2, s. 96
 - Beşare Bey Mescidi — `konya-selcuklu-besare-bey-masjid` — Cilt 1, s. 291
 - Beyhekim Mescit ve Türbesi — `konya-selcuklu-beyhekim-masjid-and-tomb` — Cilt 1, s. 300
+- Birinci İzzettin Keykavus (Yarım-Anonim) Kümbeti — `konya-selcuklu-izzettin-keykavus-i-half-anonymous-kumbet` — Cilt 2, s. 182
+- Dokuzun (Derbent-Şadiye-İğdişleri) Hanı — `konya-selcuklu-dokuzun-inn` — Cilt 2, s. 260
 - Elikesik Han — `konya-selcuklu-elikesik-inn` — Cilt 2, s. 258
 - Emir Ebu İshak Kazerûni Tekkesi (Türbesi) — `konya-selcuklu-emir-ebu-ishak-kazeruni-lodge` — Cilt 2, s. 160
 - Horozlu (Rûzbe) Han — `konya-selcuklu-horozlu-inn` — Cilt 2, s. 268
@@ -754,6 +850,7 @@ Kaynaklar: Bursa için Vakıf Katılım'ın paylaştığı envanter klasörleri 
 - Süt Tekkesi (Ferhuniye Mescidi) ve Keykavus Kızı Türbesi — `konya-selcuklu-sut-lodge-and-keykavus-daughter-tomb` — Cilt 2, s. 162
 - Tacül Vezir Kümbeti — `konya-selcuklu-tacul-vezir-kumbet` — Cilt 2, s. 184
 - Tatköy Merkez Camii — `konya-selcuklu-tatkoy-central-mosque` — Cilt 1, s. 298
+- Ulaş Baba Kümbeti — `konya-selcuklu-ulas-baba-kumbet` — Cilt 2, s. 166
 - Zahide Hatun Camii (Başarakavak) — `konya-selcuklu-zahide-hatun-mosque` — Cilt 1, s. 297
 - Zazadin (Sadeddin Köpek) Hanı — `konya-selcuklu-zazadin-inn` — Cilt 2, s. 262
 - Zevle Sultan Mescidi — `konya-selcuklu-zevle-sultan-masjid` — Cilt 1, s. 296

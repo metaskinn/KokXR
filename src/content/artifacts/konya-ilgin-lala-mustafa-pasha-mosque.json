@@ -1,0 +1,123 @@
+{
+  "id": "konya-ilgin-lala-mustafa-pasha-mosque",
+  "name": "Lala Mustafa Paşa (Kurşunlu) Camii",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Osmanlı · külliye H. 984 / M. 1576",
+  "endowment": "Kıbrıs Fâtihi Lala Mustafa Paşa",
+  "summary": "Ilgın'daki Lala Mustafa Paşa Külliyesi'nin merkezinde yer alan, tek kubbeli, tek minareli ve üç bölümlü son cemaat yerine sahip Kurşunlu Camii.",
+  "history": "Ilgın şehir merkezindeki Lala Mustafa Paşa Külliyesi, Sultan Murad zamanında Kıbrıs Fâtihi Lala Mustafa Paşa tarafından H. 984 / M. 1576'da yaptırılmıştır. Kurşunlu Camii bu külliyenin merkezindeki yapıdır.\n\nCami üç bölümlü bir son cemaat yerine sahiptir ve tek minarelidir; harim kare planlıdır. Son cemaat yerini örten kubbeleri mermer sütunlar taşır; sütun başlıkları mukarnaslı ve eşkenar dörtgen şeklindedir. Düzgün kesme taşla örülen beden duvarları dıştan iki kademelidir. Son cemaat yerinin önündeki şadırvanın kurşun kaplı olduğu ve sonraki zamanlarda yenilendiği, kurnalarından birindeki hayat ağacı motifinden anlaşılmaktadır.\n\nCami avlusunun güneybatısında dikdörtgen planlı, beşik tonozlu sıbyan mektebi; batıda iki bölümlü kubbeli imaret ve kubbeli mutfak; kuzeyde odunluk ve fırın; doğuda ise kubbeli ve tonozlu tophâne, samanlık ve depo yer alır.\n\nCaminin kuzeybatısındaki minare kare planlı, prizmal kaideli ve silindirik gövdelidir. Dıştan silmelerle sınırlanan taç kapı dikdörtgen görünüşlüdür; eyvan biçimindeki kapı sivri kemerle sonlanır, köşelerde kum saati biçiminde bitişler vardır. Asıl kapı açıklığı basık kemerli iki mermerle süslenmiştir.\n\nKare planlı harimin üzerini tek kubbe örter. Kıble duvarının ortasında mihrap, mihrabın sağında minber, güneydoğuda vaaz kürsüsü ve giriş bölümünde mahfil bulunur. Beden duvarlarında ve kubbede bitkisel, geometrik ve yazılı bezemeler görülür. Giriş eksenindeki mihrap iki yandan sütuncelerle sınırlanmıştır; kum saati şeklindeki yarım ongen planlı mihrap nişi sekiz sıra mukarnasla sonuçlanır ve en üstte üçgen biçimli yekpare bir taç yer alır. Ahşap minber, ajur tekniğiyle yapılmış geometrik bir kompozisyona sahiptir; Bursa kemerli köşk kısmı yüksek kasnaklı ve külahlıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-lala-mustafa-pasha-mosque/prayer-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: turkuaz halılı harim, ortada mihrap, sağında yüksek ahşap minber; duvarlarda kalem işleri, sivri kemerli pencereler ve sarkan avize halkası",
+      "description": "Harim, mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-mosque/mihrab.jpg",
+      "alt": "Mermer mihrabın yakın görünümü: mukarnaslı niş, çevresinde kırmızı-lacivert kalem işi bordür ve tepede üçgen biçimli oymalı taç; önde asılı kandiller",
+      "description": "Mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-mosque/painted-tympanum.jpg",
+      "alt": "Kırmızı-beyaz tuğla kemer altında, kapı üzerindeki alınlıkta soluk renkli bitkisel kalem işi bezeme",
+      "description": "Kalem işi bezemeli alınlık",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "mihrab",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-mosque/prayer-hall.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Mihrap",
+      "text": "Mihrap kıble duvarının ortasında, giriş ekseni üzerindedir ve iki yandan sütuncelerle sınırlanmıştır.",
+      "sourceId": "inv-p58"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-mosque/prayer-hall.jpg",
+      "x": 68,
+      "y": 55,
+      "title": "Minber",
+      "text": "Mihrabın sağındaki ahşap minber ajur tekniğiyle geometrik bir kompozisyona sahiptir; köşk kısmı yüksek kasnaklı ve külahlıdır.",
+      "sourceId": "inv-p58"
+    },
+    {
+      "id": "mihrab-crown",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-mosque/mihrab.jpg",
+      "x": 50,
+      "y": 8,
+      "title": "Üçgen taç",
+      "text": "Sekiz sıra mukarnasla sonuçlanan mihrap nişinin en üstünde üçgen biçimli yekpare bir taç yer alır.",
+      "sourceId": "inv-p58"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin harimi nasıl örtülmüştür?",
+      "options": [
+        "Yan yana iki kubbeyle",
+        "Tek kubbeyle",
+        "Beşik tonozla",
+        "Ahşap çatıyla"
+      ],
+      "correct": 1,
+      "description": "Kare planlı harimin üzerini tek kubbe örter.",
+      "sourceId": "inv-p58"
+    },
+    {
+      "question": "Mihrap nişi kaç sıra mukarnasla sonuçlanır?",
+      "options": [
+        "Üç",
+        "Beş",
+        "Sekiz",
+        "On iki"
+      ],
+      "correct": 2,
+      "description": "Kum saati şeklindeki mihrap nişi sekiz sıra mukarnasla sonuçlanır.",
+      "sourceId": "inv-p58"
+    },
+    {
+      "question": "Şadırvanın sonraki zamanlarda yenilendiğini ne gösterir?",
+      "options": [
+        "Bir kitâbe",
+        "Arşiv belgeleri",
+        "Kubbesindeki çiniler",
+        "Kurnalarından birindeki hayat ağacı motifi"
+      ],
+      "correct": 3,
+      "description": "Şadırvanın sonradan yenilendiğini kurnalarından birindeki hayat ağacı motifi gösterir.",
+      "sourceId": "inv-p57"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p53",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Lala Mustafa Paşa Külliyesi\"",
+      "page": "53"
+    },
+    {
+      "id": "inv-p57",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Lala Mustafa Paşa Camii\"",
+      "page": "57"
+    },
+    {
+      "id": "inv-p58",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Lala Mustafa Paşa Camii\"",
+      "page": "58"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

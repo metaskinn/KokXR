@@ -1,0 +1,125 @@
+{
+  "id": "konya-karapinar-sultan-selim-ii-mosque",
+  "name": "Karapınar Sultan II. Selim Camii",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "Osmanlı · İnşa kitâbesi H. 971 / M. 1563; onarım kitâbesi H. 1263 / M. 1847",
+  "endowment": "Külliyenin banileri Şehzade Sultan II. Selim ve Kanûni Sultan Süleyman",
+  "summary": "Karapınar Sultan II. Selim Külliyesi'nin güney ucunda, iki şerefeli minaresi ve pandantif geçişli kubbesiyle klasik dönemin taşradaki selâtin camilerinden biri.",
+  "history": "Cami, Şehzade II. Selim'in Karapınar'da yaptırdığı; cami, sıbyan mektebi, imaret, tabhane, arasta, iki han, çeşme, hamam ve iki yel değirmeninden oluşan menzil külliyesinin bir parçasıdır. Geometrik tasarımlı külliyede kuzey-güney ekseninin güney ucunu oluşturur. Etrafının geniş bir bahçe ve iç avluyla çevrilmesi, ana kubbe ve minareler caminin dikey yönde vurgulanmasını sağlar.\n\nGiriş kapısı üzerinde caminin (külliyenin) inşasına ve onarımına ilişkin iki kitâbe vardır. Biri inşa tarihi olarak H. 971 / M. 1563'ü verir; bu tarih caminin ve külliyenin tamamlanma tarihidir. Onarımla ilgili ikinci kitâbe H. 1263 / M. 1847 tarihlidir ve Sultan Abdülmecid dönemine aittir.\n\nCami; ibadet mekânı, son cemaat yeri, iki minare, bahçe ve kuzeyde ortak kullanılan şadırvanlı iç avludan oluşur. Beş bölümlü son cemaat yerinin üzeri pandantif geçişli kubbeyle örtülüdür. Kuzeybatı ve kuzeydoğuya yerleştirilmiş birer şerefeli minareler caminin selâtin (sultan) camisi olduğunu vurgular.\n\nHarime, son cemaat yerinin eksenine açılan taç kapıdan girilir. İki ayrı renkli taşın birlikte örüldüğü giriş kapısının üstünde istiridye nişi, onun üzerinde de iki farklı içerikte kitâbe bulunur. İçeride güney duvarın merkezinde mihrap, yanında minber ve mahfil yer alır. Çeşitli seviyelere açılan pencerelerle aydınlanan caminin pandantiflerinde ve kubbesinde kalem işi bezemeler görülür.\n\nKare planlı harim pandantif geçişli bir kubbeyle örtülüdür. Mermer mihrap ve minber klasik dönem özellikleri taşır; çokgen mihrap nişi mukarnas kavsaralıdır. Mihrapta kalem işi motifler, mihrap kapısı ve korkuluklarında süsleme unsurları görülür. Cami, klasik dönem Osmanlı mimarisinin taşradaki selâtin camisi örneklerindendir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-sultan-selim-ii-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kurşun kubbeli kesme taş cami, iki ince şerefeli minare, önde küçük kubbeli revak; çevrede apartmanlar ve tepeler",
+      "description": "Caminin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-mosque/portal-niche.jpg",
+      "alt": "Giriş kapısı üstünde yelpaze biçimli istiridye nişi, üstünde yazılı kitâbe panoları, altta iki renkli taşlı kemer",
+      "description": "Taç kapıdaki istiridye nişi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi halılı harim, ortada mihrap, sağında beyaz minber, büyük avize, kalem işli kemerler ve çini çerçeveli pencereler",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-mosque/dome-interior.jpg",
+      "alt": "Aşağıdan kubbe içi: merkezden yayılan kalem işi bezemeler, büyük çember avize ve iki yanda yuvarlak hat levhaları",
+      "description": "Kubbedeki kalem işi bezemeler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minarets",
+      "image": "/images/konya-karapinar-sultan-selim-ii-mosque/aerial-view.jpg",
+      "x": 43,
+      "y": 32,
+      "title": "İki şerefeli minare",
+      "text": "Kuzeybatı ve kuzeydoğuya yerleştirilmiş birer şerefeli minareler caminin selâtin camisi olduğunu vurgular.",
+      "sourceId": "inv-p40"
+    },
+    {
+      "id": "oyster-niche",
+      "image": "/images/konya-karapinar-sultan-selim-ii-mosque/portal-niche.jpg",
+      "x": 50,
+      "y": 42,
+      "title": "İstiridye nişi",
+      "text": "İki ayrı renkli taşın birlikte örüldüğü giriş kapısının üstünde istiridye nişi, onun üzerinde iki farklı içerikte kitâbe bulunur.",
+      "sourceId": "inv-p40"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-karapinar-sultan-selim-ii-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Mermer mihrap",
+      "text": "Mermer mihrap ve minber klasik dönem özellikleri taşır; çokgen mihrap nişi mukarnas kavsaralıdır.",
+      "sourceId": "inv-p40"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin H. 1263 / M. 1847 tarihli onarım kitâbesi hangi padişahın dönemine aittir?",
+      "options": [
+        "Sultan II. Mahmud",
+        "Sultan Abdülaziz",
+        "Sultan Abdülmecid",
+        "Sultan III. Selim"
+      ],
+      "correct": 2,
+      "description": "Onarımla ilgili ikinci kitâbe H. 1263 / M. 1847 tarihlidir ve Sultan Abdülmecid dönemine aittir.",
+      "sourceId": "inv-p40"
+    },
+    {
+      "question": "Kuzeybatı ve kuzeydoğudaki iki minare caminin neyini vurgular?",
+      "options": [
+        "Selâtin (sultan) camisi olduğunu",
+        "Bir medreseye bağlı olduğunu",
+        "Sonradan genişletildiğini",
+        "Bir türbe camisi olduğunu"
+      ],
+      "correct": 0,
+      "description": "Birer şerefeli iki minare caminin selâtin (sultan) camisi olduğunu vurgular.",
+      "sourceId": "inv-p40"
+    },
+    {
+      "question": "Caminin harim mekânı nasıl bir plana sahiptir?",
+      "options": [
+        "Dikdörtgen, ahşap tavanlı",
+        "Sekizgen, konik külahlı",
+        "Yan yana iki kubbeli",
+        "Kare planlı, pandantif geçişli kubbeyle örtülü"
+      ],
+      "correct": 3,
+      "description": "Harim mekânı kare planlıdır ve üzeri pandantif geçişli kubbeyle örtülmüştür.",
+      "sourceId": "inv-p40"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p36",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Camii\"",
+      "page": "36"
+    },
+    {
+      "id": "inv-p40",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Camii\"",
+      "page": "40"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

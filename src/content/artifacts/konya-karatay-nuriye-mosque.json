@@ -1,0 +1,113 @@
+{
+  "id": "konya-karatay-nuriye-mosque",
+  "name": "Nuriye Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Cumhuriyet dönemi · bilgi levhasına göre 1925",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Bilgi levhasına göre 1925'te yapılmış, ahşap köşk tipi minaresi olan, XX. yüzyıl Konya mahalle mescitlerinin güzel bir örneği sayılan cami.",
+  "history": "Cami, Konya, Karatay, Tercüman Mahallesi, Sultan Veled Caddesi üzerindedir. Üzerindeki bilgi levhasına göre 1925'te inşa edilmiştir. Derinlemesine dikdörtgen planlı caminin üzeri dört yöne eğimli kırma çatıdır. Kuzey cephesinde ahşaptan yapılmış, yapıya bitişik köşk tipi bir minaresi vardır.\n\nHarime kuzeybatıdaki giriş açıklığından girilir; harim doğu, batı ve kıble duvarlarına açılan pencerelerle aydınlanır. Kıble duvarındaki mihrap yarım daire planlıdır. Caminin taban ve tavan kaplaması ahşaptır; ahşap mihrap ve minber yağlı boyayla boyanmıştır. Kuzeydeki kadınlar mahfili iki ahşap direkle taşınır ve orijinal ahşap korkuluklara sahiptir.\n\nKitaba göre Karatay Nuriye Camii, XX. yüzyılda Konya'da inşa edilmiş mahalle mescitlerinin güzel bir örneğidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-nuriye-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-nuriye-mosque/exterior.jpg",
+      "alt": "Köşedeki tek katlı cami: beyaz desenli cephe, sıra pencereler ve kiremit çatı; arkasında yükselen ahşap köşk tipi minare",
+      "description": "Caminin dış görünümü ve köşk tipi minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-nuriye-mosque/minbar.jpg",
+      "alt": "Beyaz ve kahverengiye boyanmış ahşap minber; korkuluklu merdiveni ve yeşil külahlı tepesi, yanında kristal avize",
+      "description": "Boyalı ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-nuriye-mosque/womens-gallery.jpg",
+      "alt": "İki ahşap direğin taşıdığı, beyaz ahşap korkuluklu kadınlar mahfili; altta ahşap kaplamalı giriş bölümü ve kırmızı halı",
+      "description": "Kadınlar mahfili",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/konya-karatay-nuriye-mosque/exterior.jpg",
+      "x": 51,
+      "y": 25,
+      "title": "Köşk tipi minare",
+      "text": "Caminin kuzey cephesinde ahşaptan yapılmış, yapıya bitişik köşk tipi bir minare vardır.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/konya-karatay-nuriye-mosque/minbar.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Minber",
+      "text": "Malzemesi ahşap olan mihrap ve minber yağlı boyayla boyanmıştır.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "id": "gallery",
+      "image": "/images/konya-karatay-nuriye-mosque/womens-gallery.jpg",
+      "x": 50,
+      "y": 32,
+      "title": "Kadınlar mahfili",
+      "text": "Kuzeydeki kadınlar mahfili iki ahşap direkle taşınır ve orijinal ahşap korkuluklara sahiptir.",
+      "sourceId": "inv-p184"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bilgi levhasına göre Nuriye Camii hangi yıl inşa edilmiştir?",
+      "options": [
+        "1888",
+        "1940",
+        "1925",
+        "1972"
+      ],
+      "correct": 2,
+      "description": "Üzerindeki bilgi levhasına göre cami 1925'te inşa edilmiştir.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "question": "Caminin minaresi nasıldır?",
+      "options": [
+        "Tuğladan, iki şerefeli",
+        "Ahşaptan, yapıya bitişik köşk tipi",
+        "Kesme taştan, sekizgen gövdeli",
+        "Betonarme, silindirik gövdeli"
+      ],
+      "correct": 1,
+      "description": "Caminin kuzey cephesinde ahşaptan yapılmış, yapıya bitişik köşk tipi bir minaresi vardır.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "question": "Kadınlar mahfilini ne taşımaktadır?",
+      "options": [
+        "İki ahşap direk",
+        "Dört mermer sütun",
+        "Taş konsollar",
+        "Sivri kemerli taş ayaklar"
+      ],
+      "correct": 0,
+      "description": "Kuzeydeki kadınlar mahfili iki ahşap direkle taşınır ve orijinal ahşap korkuluklara sahiptir.",
+      "sourceId": "inv-p184"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p184",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Nuriye Camii\"",
+      "page": "184"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

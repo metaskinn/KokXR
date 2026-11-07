@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-sutcu-mosque",
+  "name": "Sütçü Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Cumhuriyet · plan ve mimari özelliklerine göre erken Cumhuriyet dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kerpiçten yığma teknikle yapılmış, kırma çatılı, harim, son cemaat yeri ve mahfilden oluşan erken Cumhuriyet dönemi mahalle camii.",
+  "history": "Cami, Karatay, Sütçü Mahallesi, Sütçü Sokak üzerindedir. İnşa tarihi ve bânisi hakkında bilgi bulunmayan yapının, plan ve mimari özelliklerinden hareketle Cumhuriyet'in erken dönemlerinde inşa edildiği düşünülmektedir.\n\nDıştan enlemesine dikdörtgen planlı cami dört yöne eğimli kırma çatıyla örtülüdür ve harim, son cemaat yeri ile mahfil bölümlerinden oluşur. Yapı kerpiç malzemeyle yığma teknikte inşa edilmiştir. Giriş doğu cephedeki son cemaat yerindendir; bu bölümün kıble duvarında yarım daire planlı bir mihrap nişi bulunur.\n\nHarime kuzeydeki kapıdan geçilir. Kareye yakın dikdörtgen planlı harimin üzeri ahşap tavanlıdır; kuzeyde ahşap mahfil, kıble duvarında mihrap ve minber yer alır. Kıble duvarının ortasındaki yarım daire planlı mihrap yanlardan hafif taşıntılı sütuncelerle sınırlandırılmıştır. Sade düzenlemeli minber yapıya sonradan eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-sutcu-mosque/facade.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-sutcu-mosque/facade.jpg",
+      "alt": "Kiremit kırma çatılı, açık renk sıvalı tek katlı cami cephesi; yeşil şebekeli pencereler, mavi kapılar ve önde iki bank",
+      "description": "Caminin cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-sutcu-mosque/mihrab.jpg",
+      "alt": "İç mekân: yanlarında ince sütunceler bulunan sade mihrap nişi, iki yanında kitap rafları ve yeşil boyalı lambri",
+      "description": "Mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-karatay-sutcu-mosque/facade.jpg",
+      "x": 50,
+      "y": 14,
+      "title": "Kırma çatı",
+      "text": "Dıştan enlemesine dikdörtgen planlı cami dört yöne eğimli kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p270"
+    },
+    {
+      "id": "mihrab-niche",
+      "image": "/images/konya-karatay-sutcu-mosque/mihrab.jpg",
+      "x": 47,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Yarım daire planlı mihrap yanlardan hafif taşıntılı sütuncelerle sınırlandırılmıştır.",
+      "sourceId": "inv-p270"
+    }
+  ],
+  "test": [
+    {
+      "question": "Sütçü Camii hangi malzemeyle inşa edilmiştir?",
+      "options": [
+        "Kesme taş",
+        "Tuğla",
+        "Kerpiç",
+        "Betonarme"
+      ],
+      "correct": 2,
+      "description": "Cami kerpiç malzemeden yığma teknikte yapılmıştır.",
+      "sourceId": "inv-p270"
+    },
+    {
+      "question": "Caminin girişi hangi cephedeki son cemaat yerinden sağlanır?",
+      "options": [
+        "Doğu",
+        "Batı",
+        "Güney",
+        "Kuzey"
+      ],
+      "correct": 0,
+      "description": "İçeriye giriş doğu cephedeki son cemaat yerinden sağlanır.",
+      "sourceId": "inv-p270"
+    },
+    {
+      "question": "Kitaba göre cami hangi döneme tarihlendirilmektedir?",
+      "options": [
+        "XIII. yüzyıl Selçuklu dönemi",
+        "XVI. yüzyıl Osmanlı dönemi",
+        "XVIII. yüzyıl",
+        "Cumhuriyet'in erken dönemleri"
+      ],
+      "correct": 3,
+      "description": "Plan ve mimari özelliklerinden hareketle Cumhuriyet'in erken dönemlerinde inşa edildiği düşünülmektedir.",
+      "sourceId": "inv-p270"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p270",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sütçü Camii\"",
+      "page": "270"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

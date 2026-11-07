@@ -1,0 +1,130 @@
+{
+  "id": "konya-selcuklu-ulas-baba-kumbet",
+  "name": "Ulaş Baba Kümbeti",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · plan, malzeme ve örtü sistemine göre XIII. yüzyılın sonu – XIV. yüzyılın başı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Selçuklu döneminde yaşamış Kalenderî şeyhi Derviş Ulaş'a (Ulaş Baba) ait olduğu düşünülen, içten kubbe dıştan külahla örtülü iki katlı kümbet.",
+  "history": "Türbe, Konya'nın Selçuklu ilçesinde, Ferhuniye Mahallesi, Parsana Caddesi üzerinde yer alır. Yapının kitâbesi yoktur; plan, malzeme ve örtü sisteminden hareketle XIII. yüzyılın sonu ile XIV. yüzyılın başına tarihlendirilir. Türbe 1951'de Eski Eserleri Sevenler Derneği tarafından onarılmış, 1993'te Selçuklu Belediyesi tarafından çevre düzenlemesi ve temizlik çalışmaları yapılmıştır.\n\nOsmanlı belgelerinde \"Ulaş Baba\" olarak geçen Derviş Ulaş, Selçuklu döneminde yaşamış bir Kalenderî şeyhidir.\n\nTürbe kare planlıdır; üzeri içten kubbe, dıştan külahla örtülüdür. Kare planlı cenazelik bölümü toprak altında kalmıştır. İ. Hakkı Konyalı, cenazelik kısmına on bir basamaklı bir merdivenle inildiğini, burada bir tabut bulunduğunu, dört duvarında mazgal pencereler olduğunu ve üzerinin kubbeyle örtülü olduğunu belirtir.\n\nBeden duvarlarında kesme taş, yer yer kırmızımsı renkli Sille taşı ve beyaz Gödene taşı, üst örtüde ise tuğla kullanılmıştır. Cephelerin üst bölümlerinde dikdörtgen mazgal pencereler, kuzey, güney ve batı cephelerin alt bölümlerinde ise etrafı mermerle vurgulanmış büyük dikdörtgen pencereler vardır.\n\nÜst kat girişi doğudadır ve bu bölüme iki yönlü, cephesi profilli üçer basamaklı merdivenlerle çıkılır. Dışa taşıntılı giriş kısmı beyaz mermerden bir tabla içine alınmıştır. Sivri kemerli kapının kemeri oyuktur ve kavak silmelerle çerçevelenmiştir; kapı üzeri yarım nar motifiyle süslenmiştir. Kapı ve pencere söveleri ile merdivenler beyaz mermerdendir.\n\nSekizgen gövdeli ikinci katın üzerini Türk üçgeniyle geçilen bir kubbe örter. Kubbe, sarı ve kırmızımtırak tuğlaların dikey ve çapraz hatlarla dizilmesiyle elde edilen zikzaklı örgülerle süslenmiştir; sekiz kollu yıldız biçimindeki bu zikzak daireler eteklerden kubbe merkezine doğru iç içe sıralanır. Ahşap sanduka, yapıya adını veren Ulaş Baba'ya ait olmalıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-ulas-baba-kumbet/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-ulas-baba-kumbet/exterior.jpg",
+      "alt": "Arkasında cam cepheli yüksek bir bina bulunan, kesme taş sekizgen gövdeli ve sivri piramidal külahlı küçük türbe; önünde demir parmaklık",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-ulas-baba-kumbet/entrance-door.jpg",
+      "alt": "Beyaz mermer giriş cephesinde sivri kemerli, silmelerle çerçevelenmiş ahşap kapı ve üstünde kabartma bezeme",
+      "description": "Üst kat giriş kapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-ulas-baba-kumbet/interior-cenotaph.jpg",
+      "alt": "İç mekân: kırmızı halı üzerinde ahşap parmaklıkla çevrili, yeşil örtülü sanduka; arkada sivri kemerli pencere ve duvarda levhalar",
+      "description": "Türbe içi ve sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-ulas-baba-kumbet/brick-dome.jpg",
+      "alt": "Aşağıdan bakışla kubbe içi: sarı ve kırmızımtırak tuğlaların merkeze doğru iç içe zikzaklı halkalar oluşturduğu örgü",
+      "description": "Tuğla örgülü kubbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cone",
+      "image": "/images/konya-selcuklu-ulas-baba-kumbet/exterior.jpg",
+      "x": 62,
+      "y": 35,
+      "title": "Külah",
+      "text": "Kare planlı türbenin üzeri içten kubbe, dıştan külahla örtülüdür.",
+      "sourceId": "inv-p167"
+    },
+    {
+      "id": "door",
+      "image": "/images/konya-selcuklu-ulas-baba-kumbet/entrance-door.jpg",
+      "x": 50,
+      "y": 80,
+      "title": "Sivri kemerli kapı",
+      "text": "Kapının kemeri oyuktur ve kavak silmelerle çerçevelenmiştir; söveleri beyaz mermerdendir.",
+      "sourceId": "inv-p169"
+    },
+    {
+      "id": "dome-pattern",
+      "image": "/images/konya-selcuklu-ulas-baba-kumbet/brick-dome.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Zikzaklı tuğla örgü",
+      "text": "Sarı ve kırmızımtırak tuğlalarla oluşturulan sekiz kollu yıldız biçimli zikzak daireler, eteklerden kubbe merkezine doğru iç içe sıralanır.",
+      "sourceId": "inv-p169"
+    }
+  ],
+  "test": [
+    {
+      "question": "Osmanlı belgelerinde \"Ulaş Baba\" olarak geçen Derviş Ulaş kimdir?",
+      "options": [
+        "Bir Osmanlı veziri",
+        "Selçuklu döneminde yaşamış bir Kalenderî şeyhi",
+        "Karamanoğlu beyi",
+        "Bir Selçuklu sultanı"
+      ],
+      "correct": 1,
+      "description": "Derviş Ulaş, Selçuklu döneminde yaşamış bir Kalenderî şeyhidir.",
+      "sourceId": "inv-p167"
+    },
+    {
+      "question": "Türbenin beden duvarlarında hangi taşlar kullanılmıştır?",
+      "options": [
+        "Mermer ve granit",
+        "Yalnızca tuğla",
+        "Bazalt ve andezit",
+        "Kesme taş, Sille taşı ve Gödene taşı"
+      ],
+      "correct": 3,
+      "description": "Beden duvarlarında kesme taş, yer yer kırmızımsı Sille taşı ve beyaz Gödene taşı, üst örtüde tuğla kullanılmıştır.",
+      "sourceId": "inv-p167"
+    },
+    {
+      "question": "Türbe 1951 yılında hangi kurum tarafından onarılmıştır?",
+      "options": [
+        "Eski Eserleri Sevenler Derneği",
+        "Selçuklu Belediyesi",
+        "Vakıflar Genel Müdürlüğü",
+        "Konya Müzesi"
+      ],
+      "correct": 0,
+      "description": "Türbe 1951'de Eski Eserleri Sevenler Derneği tarafından onarılmış, 1993'te Selçuklu Belediyesi çevre düzenlemesi yapmıştır.",
+      "sourceId": "inv-p166"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p166",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Ulaş Baba Kümbeti\"",
+      "page": "166"
+    },
+    {
+      "id": "inv-p167",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Ulaş Baba Kümbeti\"",
+      "page": "167"
+    },
+    {
+      "id": "inv-p169",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Ulaş Baba Kümbeti\"",
+      "page": "169"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

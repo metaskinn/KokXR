@@ -1,0 +1,106 @@
+{
+  "id": "konya-akoren-avdan-old-grand-mosque",
+  "name": "Avdan Beldesi Büyük (Eski) Camii",
+  "city": "Konya",
+  "district": "Akören",
+  "period": "Malzeme ve teknik özelliklerine göre XIX-XX. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Moloz taştan yığma teknikle yapılmış, renkli taşlarla bezeli minaresi ve ahşap direkli harimiyle Avdan'ın eski büyük camii.",
+  "history": "Cami, Akören, Avdan Mahallesi'ndedir. İlk inşası ve bânisi hakkında kitâbe bulunmayan yapı, malzeme türü ve teknik özelliklerinden hareketle XIX-XX. yüzyıla tarihlendirilebilir. 2017'de Vakıflar Genel Müdürlüğü tarafından onarılmıştır.\n\nDikdörtgen planlı cami dört yöne eğimli kırma çatılıdır ve moloz taştan yığma teknikte yapılmıştır. Doğu cephenin kuzey köşesindeki minare düzgün kesme taştan, kare kaideli ve silindirik gövdelidir; gövdesinde renkli taşlarla geometrik düzenlemeler yapılmıştır.\n\nBatıdaki son cemaat yeri ahşap direklerle üç bölüme ayrılmış, güney duvarına bir mihrabiye yerleştirilmiştir; harime buradan geçilir. Harim kuzey-güney doğrultusundaki ahşap direklerle mihraba dik üç sahına ayrılmıştır; kuzeyde ahşap mahfil katı bulunur. Kıble duvarındaki mihrap dikdörtgen formlu ve yarım daire planlıdır; sağındaki ahşap minber sade görünümlüdür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-akoren-avdan-old-grand-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-akoren-avdan-old-grand-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: köy evleri ve ağaçlar arasında kırma çatılı cami ve yanında açık renkli, ince gövdeli yüksek minare",
+      "description": "Caminin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-akoren-avdan-old-grand-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: iki yanda boyalı ahşap direkler ve kemerli kirişler, ortada süslü mihrap, mavi halı ve pencereler",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/konya-akoren-avdan-old-grand-mosque/aerial-view.jpg",
+      "x": 33,
+      "y": 40,
+      "title": "Minare",
+      "text": "Kesme taştan, kare kaideli, silindirik gövdeli minarede renkli taşlarla geometrik düzenlemeler yapılmıştır.",
+      "sourceId": "inv-p320"
+    },
+    {
+      "id": "wooden-pillars",
+      "image": "/images/konya-akoren-avdan-old-grand-mosque/prayer-hall.jpg",
+      "x": 12,
+      "y": 60,
+      "title": "Ahşap direkler",
+      "text": "Harim kuzey-güney doğrultusundaki ahşap direklerle mihraba dik üç sahına ayrılmıştır.",
+      "sourceId": "inv-p320"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-akoren-avdan-old-grand-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Kıble duvarındaki mihrap dikdörtgen formlu ve yarım daire planlıdır.",
+      "sourceId": "inv-p320"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi malzemeden yapılmıştır?",
+      "options": [
+        "Kerpiç",
+        "Moloz taş",
+        "Tuğla",
+        "Ahşap"
+      ],
+      "correct": 1,
+      "description": "Yapı yığma teknikte, moloz taştan yapılmıştır.",
+      "sourceId": "inv-p320"
+    },
+    {
+      "question": "Minare gövdesindeki geometrik düzenlemeler nasıl yapılmıştır?",
+      "options": [
+        "Renkli taşlar kullanılarak",
+        "Çini kaplamayla",
+        "Kalem işiyle",
+        "Tuğla örgüyle"
+      ],
+      "correct": 0,
+      "description": "Minare gövdesinde renkli taşlar kullanılarak geometrik düzenlemeler yapılmıştır.",
+      "sourceId": "inv-p320"
+    },
+    {
+      "question": "Cami hangi yıl Vakıflar Genel Müdürlüğü tarafından onarılmıştır?",
+      "options": [
+        "1990",
+        "2003",
+        "2010",
+        "2017"
+      ],
+      "correct": 3,
+      "description": "Cami 2017 senesinde Vakıflar Genel Müdürlüğü tarafından onarım görmüştür.",
+      "sourceId": "inv-p320"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p320",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akören, \"Avdan Beldesi Büyük (Eski) Camii\"",
+      "page": "320"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

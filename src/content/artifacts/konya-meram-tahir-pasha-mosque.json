@@ -1,0 +1,118 @@
+{
+  "id": "konya-meram-tahir-pasha-mosque",
+  "name": "Tahir Paşa (Tursunoğlu / Dursun Fakih) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Kitaba göre muhtemelen XIV. yüzyıl sonu; H. 1306 / M. 1888–1889'da Tahir Paşa ve Ali Bey tarafından onarılmış",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Dursun Fakih'in yaşadığı dönem ve inşa tekniği nedeniyle XIV. yüzyıl sonlarına tarihlenen, 1888–1889 onarımında Tahir Paşa adını alan tek kubbeli, üç gözlü son cemaat yerli cami.",
+  "history": "Cami, Meram, Sahibiata Mahallesi, Mimar Muzaffer Caddesi No. 39'dadır. Banisini ve yapım zamanını bildiren bir kitâbesi yoktur; ancak Dursun Fakih'in yaşadığı dönem ve caminin inşa tekniği göz önüne alındığında XIV. yüzyıl sonlarına tarihlendirilmesi muhtemeldir.\n\nKonyalı Dursun Fakih, Osmanlı Devleti'nin ilk kadısıdır; devletin bağımsızlık alameti sayılan ilk hutbeyi okuyan şair, ilim ve hukuk adamıdır. Şeyh Edebali'nin akrabası ve damadı, Osman Gazi'nin ise bacanağıdır. Söğüt'te Şeyh Edebali'den tefsir, hadis ve fıkıh dersleri almış, Osman Gazi'nin yanında imam olarak savaşlara katılmıştır. Şeyh Edebali'nin vefatından sonra fetva ve tedris işleriyle görevlendirilmiş; Müneccimbaşı bu görevinden dolayı onun Osmanlı Devleti'nin ilk şeyhülislamı olduğunu yazar. Dursun Fakih 1326'da vefat etmiştir; kabri Bilecik'te Şeyh Edebali Zâviyesi içindeki türbededir.\n\nKare planlı cami; tek kubbeli harim, üç gözlü son cemaat yeri, tek şerefeli minare ve 2013 onarımında kısmen ortaya çıkarılmış sekizgen planlı bir şadırvandan oluşur. Beden duvarlarında altta moloz ve kesme taş, üstte tuğla; son cemaat yerinde ise tamamen taş kullanılmıştır. Son cemaat yeri doğu cephede dışarıya taşıntı yapar ve dört devşirme sütun üzerine oturan üç kubbeyle örtülüdür. Harime güney duvarındaki düz lentolu kapıyla geçilir.\n\nMinare güneybatı köşededir. Kare kaidenin köşeleri üçgen pahlarla sekizgen gövdeye geçer; gövdenin alt ve üst kısmında birer kaval silme vardır. Şerefe altı oldukça sadedir; kısa tutulan petek sivri bir külahla örtülmüştür.\n\nKare planlı harim, doğu ve batı duvarlarındaki iki katlı birer pencere ile kuzey ve güneyde altta iki, üstte bir pencereyle aydınlanır. Alt kat pencereleri düz lentolu, üst kattakiler sivri kemerlidir. Üst örtü iç içe düzenlenmiş ikişer tromp üzerine oturur. Kıble duvarının ortasındaki yarım daire formlu mihrap orijinal değildir ve mermerle kaplanmıştır. Caminin kuzeyindeki şadırvan taştan ve sekizgen planlıdır.\n\nCami, H. 1306 / M. 1888–1889'da Mecidiyezadelerden Tahir Paşa ve kardeşi Ali Bey tarafından onarılmıştır. Giriş kapısı üzerindeki 0,50 x 0,50 m ölçülerindeki kitâbe üç satır hâlinde celî ta'lik hatla ve Osmanlı Türkçesiyle yazılmıştır; kitâbede caminin zamanla harap olduğu için Allah rızası için 1306 yılında yenilenerek tamir edildiği belirtilir. Bu onarım sırasında minare ve son cemaat yeri eklenmiş, caminin adı da \"Tahir Paşa\" olarak değiştirilmiştir. Yapı 2013'te yeniden esaslı bir tamir görmüştür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-tahir-pasha-mosque/narthex-front.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-tahir-pasha-mosque/narthex-front.jpg",
+      "alt": "Önünde sekizgen taş şadırvan bulunan, dört sütun üzerinde üç sivri kemerli son cemaat yeri; arkada kurşun kubbeler ve sağda büyük bir ağaç",
+      "description": "Son cemaat yeri ve önündeki şadırvan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-tahir-pasha-mosque/narthex-side.jpg",
+      "alt": "Ağaçların gölgesinde, sütunlara oturan sivri kemerli son cemaat yerinin yandan görünümü; arkada taş ve tuğla duvarlı yapı",
+      "description": "Son cemaat yerinin yandan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-tahir-pasha-mosque/minaret.jpg",
+      "alt": "Mavi gökyüzü önünde tuğla örgülü sekizgen minare gövdesi, taş korkuluklu şerefe ve üstte kısa petek; sağda ağaç dalları",
+      "description": "Minarenin şerefe ve petek bölümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "narthex",
+      "image": "/images/konya-meram-tahir-pasha-mosque/narthex-front.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Son cemaat yeri",
+      "text": "Doğu cephede dışarıya taşıntı yapan son cemaat yeri, dört devşirme sütun üzerine oturan üç kubbeyle örtülüdür.",
+      "sourceId": "inv-p112"
+    },
+    {
+      "id": "fountain",
+      "image": "/images/konya-meram-tahir-pasha-mosque/narthex-front.jpg",
+      "x": 47,
+      "y": 90,
+      "title": "Şadırvan",
+      "text": "Taştan yapılmış sekizgen planlı şadırvan, 2013 onarımı sırasında kısmen ortaya çıkarılmıştır.",
+      "sourceId": "inv-p112"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/konya-meram-tahir-pasha-mosque/minaret.jpg",
+      "x": 65,
+      "y": 62,
+      "title": "Minare",
+      "text": "Güneybatı köşedeki minarenin sekizgen gövdesinin alt ve üst kısmında birer kaval silme vardır; şerefe altı sade, peteği kısa tutulmuştur.",
+      "sourceId": "inv-p112"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin \"Tahir Paşa\" adını alması hangi olaya bağlıdır?",
+      "options": [
+        "Dursun Fakih'in camide ilk hutbeyi okumasına",
+        "H. 1306 / M. 1888–1889'daki onarıma",
+        "Caminin Sahibiata Mahallesi'nde bulunmasına",
+        "2013 yılındaki esaslı tamire"
+      ],
+      "correct": 1,
+      "description": "Mecidiyezadelerden Tahir Paşa ve kardeşi Ali Bey'in 1306 onarımında minare ile son cemaat yeri eklenmiş, caminin adı da \"Tahir Paşa\" olarak değiştirilmiştir.",
+      "sourceId": "inv-p112"
+    },
+    {
+      "question": "Son cemaat yerinin üzeri nasıl örtülmüştür?",
+      "options": [
+        "Ahşap tavan ve kırma çatıyla",
+        "Tek büyük kubbeyle",
+        "Dört devşirme sütuna oturan üç kubbeyle",
+        "Beşik tonozla"
+      ],
+      "correct": 2,
+      "description": "Son cemaat yeri dört devşirme sütun üzerine oturan üç kubbeyle örtülmüştür.",
+      "sourceId": "inv-p112"
+    },
+    {
+      "question": "Kitaba göre Dursun Fakih'in kabri nerededir?",
+      "options": [
+        "Bilecik'te Şeyh Edebali Zâviyesi içindeki türbede",
+        "Konya'da caminin avlusunda",
+        "Söğüt'te Osman Gazi Türbesi'nde",
+        "Bursa'da Muradiye'de"
+      ],
+      "correct": 0,
+      "description": "Dursun Fakih 1326'da vefat etmiştir; kabri Bilecik'te Şeyh Edebali Zâviyesi içindeki türbededir.",
+      "sourceId": "inv-p111"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p111",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Tahir Paşa (Tursunoğlu / Dursun Fakih) Camii\"",
+      "page": "111"
+    },
+    {
+      "id": "inv-p112",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Tahir Paşa (Tursunoğlu / Dursun Fakih) Camii\"",
+      "page": "112"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "konya-karapinar-sultan-selim-ii-imaret",
+  "name": "Karapınar Sultan II. Selim Külliyesi İmareti",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "Osmanlı · Külliye H. 971 / M. 1563'te tamamlanmıştır",
+  "endowment": "Külliyenin banileri Şehzade Sultan II. Selim ve Kanûni Sultan Süleyman",
+  "summary": "Cami avlusunun kuzeyinde avluyu \"U\" biçiminde kısmen çeviren, bugüne büyük mekân kayıplarıyla ulaşmış imaret.",
+  "history": "İmaret, Şehzade II. Selim'in Karapınar'da yaptırdığı; cami, sıbyan mektebi, imaret, tabhane, arasta, iki han, çeşme, hamam ve iki yel değirmeninden oluşan menzil külliyesinin bir parçasıdır. Cami avlusunun kuzeyinde, avluyu \"U\" şeklinde kısmen çevreler. Bugüne büyük mekân kayıplarıyla ulaşan imaret, aslında fırın, mutfak, kiler, yemekhane, ambar ve odun deposu bölümleriyle külliyede önemli bir sosyal işleve sahipti.\n\nArşiv bilgisine göre imaretin vakfın giderleri arasında ikinci sırada yer alması tesadüf değildir. Kayıtlardan, imaretin yalnızca kendi bünyesine hizmet etmediği; gelip geçene ve yardıma muhtaç insanlara yer sağladığı ve halka da hizmet verdiği anlaşılır.\n\nİmaretin yeri, cami ile ortak kullanılan iç avlunun kuzeyi ve kuzeybatısıdır. Bugüne ancak üzeri kubbelerle örtülü bazı eyvanları ulaşabilmiştir. Kazıyla ortaya çıkarılan mutfak, batı yönünde birbiriyle bağlantılı iki mekândan oluşur.\n\nTabhaneyi (misafirhaneyi) oluşturan mekânlar düzgün sıralı moloz taştan yapılmış, üst örtüleri tuğladır. Doğu ve batı köşelerde birbirine bağlı üçerli kubbeli odalar, köşelerde beşik tonozlu iki oda bulunur; bu odaya bitişik odalar ocaklıdır. Odaların iç duvarları ve kubbeleri haraptır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-sultan-selim-ii-imaret/domes.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-imaret/domes.jpg",
+      "alt": "Ağaçların arkasından yükselen, kurşun kaplı üç kubbe ve moloz taş duvarlar; iki yanda minare uçları görünüyor",
+      "description": "İmaretin kubbeleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-imaret/hearth.jpg",
+      "alt": "Beyaz sıvalı duvarda, üstü piramit biçimli davlumbazla sonlanan sivri kemerli bir ocak",
+      "description": "Odadaki ocak",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-imaret/brick-vault.jpg",
+      "alt": "İç mekânda tuğla örgülü sivri kemer ve tonoz; altında ahşap sıralar ve kitap rafları",
+      "description": "Tuğla örgülü kemer ve örtü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/konya-karapinar-sultan-selim-ii-imaret/domes.jpg",
+      "x": 45,
+      "y": 40,
+      "title": "Kubbeli eyvanlar",
+      "text": "İmaretin bugüne yalnızca üzeri kubbelerle örtülü bazı eyvanları ulaşabilmiştir.",
+      "sourceId": "inv-p42"
+    },
+    {
+      "id": "hearth",
+      "image": "/images/konya-karapinar-sultan-selim-ii-imaret/hearth.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Ocaklı oda",
+      "text": "Köşelerdeki beşik tonozlu odalara bitişik odalar ocaklıdır.",
+      "sourceId": "inv-p42"
+    }
+  ],
+  "test": [
+    {
+      "question": "İmaret cami avlusunu hangi biçimde kısmen çevreler?",
+      "options": [
+        "\"U\" şeklinde",
+        "\"L\" şeklinde",
+        "Kare biçiminde",
+        "Daire biçiminde"
+      ],
+      "correct": 0,
+      "description": "İmaret, cami avlusunun kuzeyinde \"U\" şeklinde kısmen avluyu çevreler.",
+      "sourceId": "inv-p42"
+    },
+    {
+      "question": "Arşiv bilgisine göre imaret vakfın giderleri arasında kaçıncı sıradadır?",
+      "options": [
+        "Birinci",
+        "Üçüncü",
+        "Sonuncu",
+        "İkinci"
+      ],
+      "correct": 3,
+      "description": "Arşiv bilgisine göre imaretin vakfın giderleri arasında ikinci sırada yer alması tesadüfi değildir.",
+      "sourceId": "inv-p42"
+    },
+    {
+      "question": "Kazıyla ortaya çıkarılan mutfak nasıldır?",
+      "options": [
+        "Avlunun ortasında tek bir mekân",
+        "Batı yönünde birbiriyle bağlantılı iki mekân",
+        "Caminin güneyinde kubbeli bir salon",
+        "Doğuda üç odalı bir yapı"
+      ],
+      "correct": 1,
+      "description": "Kazı çalışmasıyla ortaya çıkarılan mutfak, batı yönde birbiriyle ilişkili iki mekân şeklindedir.",
+      "sourceId": "inv-p42"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p36",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesinde İmaret\"",
+      "page": "36"
+    },
+    {
+      "id": "inv-p42",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesinde İmaret\"",
+      "page": "42"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

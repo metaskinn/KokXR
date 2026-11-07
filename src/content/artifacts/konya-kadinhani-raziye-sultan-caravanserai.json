@@ -1,0 +1,111 @@
+{
+  "id": "konya-kadinhani-raziye-sultan-caravanserai",
+  "name": "Râziye (Hatun) Sultan Kervansarayı",
+  "city": "Konya",
+  "district": "Kadınhanı",
+  "period": "Anadolu Selçuklu · kitâbeye göre H. 620 / M. 1223-24",
+  "endowment": "Banisi Danişmendoğullarından Muzafferüddin Mahmut Bey'in kızı Râziye Hatun",
+  "summary": "Kadınhanı'na adını veren, 1223-24'te Mahmut kızı Râziye Hatun'un yaptırdığı ve Konya'da hanım sultanların yaptırdığı tek han olan Selçuklu kervansarayı.",
+  "history": "Kervansaray Kadınhanı ilçe merkezindedir ve Kadınhanı Râziye (Hatun) Sultan Kervansarayı olarak da bilinir. Taç kapı üzerindeki kitâbeye göre H. 620 / M. 1223-24'te Mahmut kızı Râziye Hatun tarafından yaptırılmıştır. Mimarı hakkında bilgi yoktur. Banisi Râziye Hatun, Danişmendoğullarından Muzafferüddin Mahmut Bey'in kızıdır ve muhtemelen I. İzzeddin Keykavus'un hanımıdır.\n\n1987'de Vakıflar Genel Müdürlüğü tarafından restorasyon çalışmaları yapılan handa bugün de kapsamlı çalışmalar sürmektedir.\n\nRâziye Sultan Hanı, doğu-batı doğrultusunda, kapalı ve açık kısımlardan oluşan karma tipte bir Selçuklu hanıdır; ancak avlu kısmı günümüze ulaşmamıştır. Günümüze gelen kapalı kısım doğu-batı yönünde uzanan derinlemesine dikdörtgen planlıdır ve üzeri beşik tonozla örtülüdür.\n\nYapımında düzgün kesme taş ve çok sayıda devşirme malzeme kullanılmıştır; beden duvarlarında Roma dönemine ait mezar stelleri, lahit kapakları, sütun parçaları ve figürlü mermer taşlar yer alır. Kervansaraya doğu cephedeki taç kapıdan girilir. Taç kapı, Selçuklu kervansaraylarında gelenek olduğu üzere beden duvarlarından daha yüksek ve dışa taşıntılıdır; dikdörtgen formlu bir eyvan içinde yuvarlak kemerli kapı açıklığı, alınlıkta ise dikey dikdörtgen kitâbe bulunur.\n\nİç mekân beşerli iki sıra ayakla üç sahına ayrılmıştır; orta sahın yüksek ve geniş tutulmuş, klasik Selçuklu plan tipindedir. Sahınları oluşturan ayaklar devşirme malzemedendir, sahınların üst örtüleri sivri tonozdur. Batı beden duvarında üç mazgal pencere vardır. Yerleşim yerine adını veren kervansaray, Konya'da hanım sultanların inşa ettirdiği tek handır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-kadinhani-raziye-sultan-caravanserai/crown-gate.jpg",
+  "images": [
+    {
+      "file": "/images/konya-kadinhani-raziye-sultan-caravanserai/crown-gate.jpg",
+      "alt": "Kesme taş ve yer yer koyu renkli taşlarla örülü duvar ortasında, duvardan yüksek ve dışa taşkın taç kapı; içinde yuvarlak kemerli derin kapı açıklığı",
+      "description": "Doğu cephedeki taç kapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-kadinhani-raziye-sultan-caravanserai/aerial-view.jpg",
+      "alt": "Havadan görünüm: kasaba içinde, tonozlu çatısı olan uzun dikdörtgen taş yapı ve ön cephesinde yuvarlak kemerli taç kapı; arkada evler ve uzakta tepeler",
+      "description": "Kervansarayın çevresiyle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "crown-gate",
+      "image": "/images/konya-kadinhani-raziye-sultan-caravanserai/crown-gate.jpg",
+      "x": 58,
+      "y": 55,
+      "title": "Taç kapı",
+      "text": "Taç kapı, Selçuklu kervansaraylarında gelenek olduğu üzere beden duvarlarından daha yüksek ve dışa taşıntılıdır.",
+      "sourceId": "inv-p283"
+    },
+    {
+      "id": "spolia-wall",
+      "image": "/images/konya-kadinhani-raziye-sultan-caravanserai/crown-gate.jpg",
+      "x": 20,
+      "y": 62,
+      "title": "Kesme taş ve devşirme malzeme",
+      "text": "Yapıda düzgün kesme taş ve çok sayıda devşirme malzeme kullanılmıştır.",
+      "sourceId": "inv-p283"
+    },
+    {
+      "id": "barrel-vault",
+      "image": "/images/konya-kadinhani-raziye-sultan-caravanserai/aerial-view.jpg",
+      "x": 50,
+      "y": 63,
+      "title": "Kapalı kısım",
+      "text": "Günümüze gelen kapalı kısım derinlemesine dikdörtgen planlıdır ve üzeri beşik tonozla örtülüdür.",
+      "sourceId": "inv-p283"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbeye göre kervansaray hangi tarihte yaptırılmıştır?",
+      "options": [
+        "H. 607 / M. 1210",
+        "H. 633 / M. 1235-36",
+        "H. 620 / M. 1223-24",
+        "H. 984 / M. 1576"
+      ],
+      "correct": 2,
+      "description": "Taç kapı üzerindeki kitâbeye göre H. 620 / M. 1223-24'te Mahmut kızı Râziye Hatun tarafından yaptırılmıştır.",
+      "sourceId": "inv-p282"
+    },
+    {
+      "question": "Banisi Râziye Hatun hangi aileden gelir?",
+      "options": [
+        "Danişmendoğulları",
+        "Karamanoğulları",
+        "Eşrefoğulları",
+        "Osmanoğulları"
+      ],
+      "correct": 0,
+      "description": "Râziye Hatun, Danişmendoğullarından Muzafferüddin Mahmut Bey'in kızıdır.",
+      "sourceId": "inv-p282"
+    },
+    {
+      "question": "Beden duvarlarında hangi döneme ait devşirme malzemeler kullanılmıştır?",
+      "options": [
+        "Osmanlı",
+        "Bizans sonrası",
+        "Hitit",
+        "Roma"
+      ],
+      "correct": 3,
+      "description": "Beden duvarlarında Roma dönemine ait mezar stelleri, lahit kapakları, sütun parçaları ve figürlü mermer taşlar kullanılmıştır.",
+      "sourceId": "inv-p283"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p282",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Kadınhanı, \"Râziye (Hatun) Sultan Kervansarayı\"",
+      "page": "282"
+    },
+    {
+      "id": "inv-p283",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Kadınhanı, \"Râziye (Hatun) Sultan Kervansarayı\"",
+      "page": "283"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

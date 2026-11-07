@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-ickaraarslan-masjid",
+  "name": "İçkaraarslan Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Anadolu Selçuklu · XIII. yüzyıl başlarına tarihlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir; kitaba göre Ziyaeddin Karaaslan tarafından yaptırılmış olma ihtimali yüksektir",
+  "summary": "Sekizgen kasnaklı kurşun kubbesi, balıksırtı tuğla örgüsü ve çini mihrabıyla Konya'daki Selçuklu mescitlerinin güzel bir örneği.",
+  "history": "Mescit, Karatay, Babasultan Mahallesi, Apalılar Sokak üzerindedir. İnşa tarihi ve bânisi hakkında kitâbe ya da bilgi yoktur; ancak 1990'daki restorasyon sırasında \"Alâeddin Keykubat\" adının geçtiği çini bir kitâbe bulunmuştur. Batı duvarının güneye doğru devam etmesi ve güney tarafta bir mezar bulunması, burada bir zaviye de olduğunu gösterir. Bu verilere dayanarak mescit XIII. yüzyıl başlarına tarihlendirilir.\n\nMescidin Ziyaeddin Karaaslan tarafından yaptırılmış olma ihtimali yüksektir. Ziyaeddin Karaaslan'ın Alâeddin Keykubat zamanında, H. 630 / M. 1233'te \"sultanın vekili\" sıfatıyla diğer divan üyeleriyle birlikte Erzurum, Ahlat, Adilcevaz ve Van bölgesine gönderildiği ifade edilmektedir. Mescit 1990 ve 2010'dan sonra Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nKare planlı, tuğladan yapılmış mescit, kubbeyle örtülü harim ile harimin güneyine sonradan eklenmiş türbeden oluşur. Dıştan kurşunla kaplı kubbe yüksek, sekizgen bir kasnağa oturur; cepheler sade tutulmuştur. Harime batı cephenin kuzey köşesinden girilir. Kubbeye geçiş tromplarla sağlanır; içteki trompların üzerinde küçük dekoratif tromplar görülür. Kubbe içinde tuğlaların farklı yönlerde dizilmesiyle oluşan balıksırtı motif vardır.\n\nKıble duvarının ortasındaki yarım dikdörtgen mihrap mavi ve beyaz çinilerle kaplıdır. Mihrap alınlığında Selçuklu sülüsüyle \"Lâ ilâhe illallahu vahdehu lâ şerîke leh Muhammedu'r-Rasûlullah\" yazılıdır. Mihrap tepeliği, çini levhalarda zemin kazınarak elde edilmiş üç yapraklı büyük palmetler içinde küçük palmetlerden oluşan motiflerle tamamlanır; mihrabın tahrip olan bölümleri son yıllarda tamamlanmıştır. Güney cephede doğu-batı doğrultusunda, dikdörtgen planlı, üzeri açık bir türbe vardır; türbede kime ait olduğu bilinmeyen bir sanduka bulunur. Mescit, Konya'daki Selçuklu mescitlerinin güzel bir örneğidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-ickaraarslan-masjid/exterior-with-dome.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-ickaraarslan-masjid/exterior-with-dome.jpg",
+      "alt": "Taş ve tuğla duvarlı küçük yapı, üstünde sekizgen kasnağa oturan kurşun kaplı kubbe; çevresinde eski evler ve önde taş döşeli alan",
+      "description": "Mescidin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-ickaraarslan-masjid/dome-herringbone-brickwork.jpg",
+      "alt": "Kubbe iç yüzeyinde tuğlaların zikzak biçimde dizilmesiyle oluşmuş, merkeze doğru dönen balıksırtı örgü",
+      "description": "Kubbe içindeki balıksırtı motif",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "lead-dome",
+      "image": "/images/konya-karatay-ickaraarslan-masjid/exterior-with-dome.jpg",
+      "x": 42,
+      "y": 30,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Dıştan kurşunla kaplı kubbe yüksek, sekizgen bir kasnağa oturur.",
+      "sourceId": "inv-p241"
+    },
+    {
+      "id": "herringbone",
+      "image": "/images/konya-karatay-ickaraarslan-masjid/dome-herringbone-brickwork.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Balıksırtı motif",
+      "text": "Kubbe içinde tuğlaların farklı yönlerde dizilmesiyle oluşan balıksırtı motif görülür.",
+      "sourceId": "inv-p241"
+    }
+  ],
+  "test": [
+    {
+      "question": "1990 restorasyonu sırasında hangi adın geçtiği çini bir kitâbe bulunmuştur?",
+      "options": [
+        "Gıyaseddin Keyhüsrev",
+        "Alâeddin Keykubat",
+        "Karamanoğlu İbrahim Bey",
+        "Sahip Ata"
+      ],
+      "correct": 1,
+      "description": "1990'daki restorasyonda \"Alâeddin Keykubat\" adının geçtiği çini bir kitâbe bulunmuştur.",
+      "sourceId": "inv-p241"
+    },
+    {
+      "question": "Mescidin güneyinde sonradan eklenmiş hangi yapı vardır?",
+      "options": [
+        "Bir medrese",
+        "Bir çeşme",
+        "Üzeri açık bir türbe",
+        "Bir minare"
+      ],
+      "correct": 2,
+      "description": "Güney cephede doğu-batı doğrultusunda, dikdörtgen planlı, üzeri açık bir türbe vardır.",
+      "sourceId": "inv-p241"
+    },
+    {
+      "question": "Harimde kubbeye geçiş hangi elemanlarla sağlanmıştır?",
+      "options": [
+        "Tromplarla",
+        "Türk üçgenleriyle",
+        "Pandantiflerle",
+        "Ahşap kirişlerle"
+      ],
+      "correct": 0,
+      "description": "Kubbeye geçişler tromplarla sağlanmış, içteki trompların üzerinde küçük dekoratif tromplar yer almıştır.",
+      "sourceId": "inv-p241"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p241",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"İçkaraarslan Mescidi\"",
+      "page": "241"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

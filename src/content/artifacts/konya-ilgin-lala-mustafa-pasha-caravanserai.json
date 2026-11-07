@@ -1,0 +1,114 @@
+{
+  "id": "konya-ilgin-lala-mustafa-pasha-caravanserai",
+  "name": "Lala Mustafa Paşa Külliyesi Kervansarayı",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Osmanlı · ocak konsolundaki kitâbeye göre H. 992 / M. 1584",
+  "endowment": "Kıbrıs Fâtihi Lala Mustafa Paşa (külliyenin banisi)",
+  "summary": "Ilgın'daki Lala Mustafa Paşa Külliyesi'nin doğusunda yer alan, kuzeyde büyük, güneyde küçük iki handan oluşan beş sahınlı kervansaray.",
+  "history": "Ilgın şehir merkezindeki Lala Mustafa Paşa Külliyesi, Sultan Murad zamanında Kıbrıs Fâtihi Lala Mustafa Paşa tarafından H. 984 / M. 1576'da yaptırılmıştır. Kervansaray bu külliyenin doğu kısmında yer alır.\n\nYapının ocak konsolundaki kitâbeye göre H. 992 / M. 1584 tarihinde yaptırıldığı anlaşılmaktadır. Ana koridorun solunda, ikinci kata çıkan merdivenin önündeki konsol üzerinde taşa işlenmiş H. 992 / M. 1548 tarihi yer alır; bu tarih muhtemelen kervansarayın tamamlanma senesidir. (Kitapta aynı hicri yıl için iki farklı miladi karşılık verilmiştir.)\n\nTabhane odalarına ve bitişik hana giriş cami avlusundan ve doğudaki büyük kapıdan sağlanır. Hanın ana girişi doğu cephesinin ortasındadır; caminin avlusuna açılan çapraz tonozlu, eyvan biçimli batı kapısıyla külliyeye bağlanır.\n\nTaç kapıdan girilen iki hanın planı düzgün olmayan bir dikdörtgendir. Girişten sonraki orta koridordan kuzeydeki büyük hana ve güneydeki küçük hana geçilir. Han beş sahınlıdır: orta bölümde bir, kuzey ve güney bölümlerde ikişer sahın bulunur. Orta sahından cami avlusuna geçiş vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-lala-mustafa-pasha-caravanserai/aerial-vaults.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-caravanserai/aerial-vaults.jpg",
+      "alt": "Havadan görünüm: yan yana uzanan, kurşun kaplı uzun beşik tonozlu çatılar ve aralarında sıra sıra taş bacalar; arkada Ilgın'ın evleri ve ağaçlar",
+      "description": "Kervansarayın tonozlu çatıları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-caravanserai/interior-hall.jpg",
+      "alt": "İç mekân: tuğla tonozlar altında sivri kemerlerle ayrılmış geniş salon; zeminde sıra sıra dizilmiş sandalyeler",
+      "description": "Han içinde kemerli salon",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-caravanserai/interior-doorway.jpg",
+      "alt": "Taş duvarda tuğla kemerli geniş bir geçitten içerideki tonozlu mekâna bakış; iki yanda sehpalar üzerinde çerçeveli yazılar",
+      "description": "Han içinden bir geçit",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "naves",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-caravanserai/aerial-vaults.jpg",
+      "x": 45,
+      "y": 72,
+      "title": "Sahınlar",
+      "text": "Han beş sahınlıdır: orta bölümde bir, kuzey ve güney bölümlerde ikişer sahın bulunur.",
+      "sourceId": "inv-p61"
+    },
+    {
+      "id": "arches",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-caravanserai/interior-hall.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "İç mekân",
+      "text": "Taç kapıdan girilen iki hanın planı düzgün olmayan bir dikdörtgendir; orta koridordan kuzeydeki büyük ve güneydeki küçük hana geçilir.",
+      "sourceId": "inv-p61"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kervansaray kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "Beş",
+        "İki",
+        "Yedi"
+      ],
+      "correct": 1,
+      "description": "Han beş sahınlıdır; orta bölümde bir, kuzey ve güney bölümlerde ikişer sahın vardır.",
+      "sourceId": "inv-p61"
+    },
+    {
+      "question": "Kervansaray külliyenin hangi kısmında yer alır?",
+      "options": [
+        "Batı",
+        "Kuzey",
+        "Doğu",
+        "Güney"
+      ],
+      "correct": 2,
+      "description": "Kervansaray, Lala Mustafa Paşa Külliyesi'nin doğu kısmında yer alır.",
+      "sourceId": "inv-p60"
+    },
+    {
+      "question": "Hanın ana girişi nerededir?",
+      "options": [
+        "Doğu cephesinin ortasında",
+        "Kuzey cephesinde",
+        "Cami avlusunun içinde",
+        "Güney cephesinin köşesinde"
+      ],
+      "correct": 0,
+      "description": "Hanın ana girişi doğu cephesinin ortasındadır; batı kapısı cami avlusuna açılır.",
+      "sourceId": "inv-p60"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p53",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Lala Mustafa Paşa Külliyesi\"",
+      "page": "53"
+    },
+    {
+      "id": "inv-p60",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Kervansaray\"",
+      "page": "60"
+    },
+    {
+      "id": "inv-p61",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Kervansaray\"",
+      "page": "61"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "konya-karapinar-sultan-selim-ii-bath",
+  "name": "Karapınar Sultan II. Selim Külliyesi Hamamı",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "Osmanlı · Külliye H. 971 / M. 1563'te tamamlanmıştır",
+  "endowment": "Külliyenin banileri Şehzade Sultan II. Selim ve Kanûni Sultan Süleyman",
+  "summary": "Külliyenin doğusunda, camiden sonra özgünlüğünü en iyi koruyan yapı olan; bugün sergi yeri ve etnografik müze deposu olarak kullanılan tek üniteli hamam.",
+  "history": "Hamam, Şehzade II. Selim'in Karapınar'da yaptırdığı; cami, sıbyan mektebi, imaret, tabhane, arasta, iki han, çeşme, hamam ve iki yel değirmeninden oluşan menzil külliyesinin bir parçasıdır. Külliyenin doğusunda yer alan hamam, camiden sonra özgünlüğünü koruyan yapıdır. Külliyenin ve yerleşimin temizlik ihtiyacını karşılamak için inşa edilmiştir.\n\nTek üniteli hamam olarak tasarlanan yapı, külliyenin kısmen dışında, doğu-batı ekseninin doğu ucundadır ve doğu-batı doğrultusunda dikdörtgen planlıdır. Hamamın en büyük mekânı olan soyunmalığın üzeri fenerli bir kubbeyle örtülüdür.\n\nHamama batı tarafından girilir. Soyunmalıktan sonra üçlü düzenlemeli ılıklık bölümüne geçilir; traşlık ve hela da bu bölümdedir. Sıcaklık bölümü merkezi kubbeli, enine sıcaklıklı, çift halvetli plan grubuna girer. Doğu uçta su deposu ve külhan bulunur.\n\nUzun süre işlevini sürdüren hamam, bugün onarılmış olarak sergi yeri ve etnografik müze deposu olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-sultan-selim-ii-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-bath/exterior.jpg",
+      "alt": "Koyu renkli moloz taş duvarlı, kurşun kaplı büyük kubbeli yapı; önünde ağaç, demir parmaklık ve sokak",
+      "description": "Hamamın dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-bath/dressing-hall.jpg",
+      "alt": "Kubbeli büyük iç mekân: tuğla kubbede yıldız biçimli demir çerçeve, ortada sekizgen mermer havuz, duvar boyunca sergi vitrinleri",
+      "description": "Hamamın bugün sergi alanı olarak kullanılan kubbeli mekânı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-bath/marble-room.jpg",
+      "alt": "Beyaz sıvalı tonozlar altında mermer kaplı oda; ortada mermer seki, iki yanda kemerli kapılar",
+      "description": "Hamamın mermer kaplı bölümlerinden biri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "lantern-dome",
+      "image": "/images/konya-karapinar-sultan-selim-ii-bath/exterior.jpg",
+      "x": 55,
+      "y": 22,
+      "title": "Fenerli kubbe",
+      "text": "Hamamın en büyük mekânı olan soyunmalığın üzeri fenerli bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p44"
+    },
+    {
+      "id": "exhibition",
+      "image": "/images/konya-karapinar-sultan-selim-ii-bath/dressing-hall.jpg",
+      "x": 85,
+      "y": 45,
+      "title": "Sergi yeri",
+      "text": "Uzun süre işlevini sürdüren hamam bugün onarılmış olarak sergi yeri ve etnografik müze deposu olarak kullanılmaktadır.",
+      "sourceId": "inv-p44"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam nasıl bir hamam olarak tasarlanmıştır?",
+      "options": [
+        "Çifte üniteli",
+        "Tek üniteli",
+        "Yalnızca kadınlara ayrılmış",
+        "Açık hava hamamı"
+      ],
+      "correct": 1,
+      "description": "Yapı, tek üniteli hamam olarak tasarlanmıştır.",
+      "sourceId": "inv-p44"
+    },
+    {
+      "question": "Hamama hangi taraftan girilir?",
+      "options": [
+        "Batı",
+        "Doğu",
+        "Kuzey",
+        "Güney"
+      ],
+      "correct": 0,
+      "description": "Hamama batı tarafından girilir; doğu uçta su deposu ve külhan bulunur.",
+      "sourceId": "inv-p44"
+    },
+    {
+      "question": "Hamam bugün ne olarak kullanılmaktadır?",
+      "options": [
+        "Kütüphane",
+        "Yeniden hamam",
+        "Belediye binası",
+        "Sergi yeri ve etnografik müze deposu"
+      ],
+      "correct": 3,
+      "description": "Uzun süre işlevini sürdüren hamam, bugün onarılmış sergi yeri ve etnografik müze deposu olarak değerlendirilmektedir.",
+      "sourceId": "inv-p44"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p36",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesi Hamamı\"",
+      "page": "36"
+    },
+    {
+      "id": "inv-p44",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesi Hamamı\"",
+      "page": "44"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

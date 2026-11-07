@@ -1,0 +1,118 @@
+{
+  "id": "konya-karatay-ovaloglu-celik-mehmet-pasha-mosque",
+  "name": "Ovaloğlu (Çelik Mehmet Paşa) Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · kitâbesine göre H. 1178 / M. 1764",
+  "endowment": "Kitâbeye göre Konya Valisi Çelik Muhammed Paşa tarafından yaptırılmıştır",
+  "summary": "Konya Valisi Çelik Muhammed Paşa'nın 1764'te yaptırdığı, mihrabı Kütahya çinileriyle süslü enlemesine dikdörtgen planlı mahalle camii.",
+  "history": "Cami, Karatay, Ovaloğlu Mahallesi, Çelik Paşa Sokak üzerindedir. Minare kaidesindeki dikdörtgen mermer üzerine dört satır hâlinde, celî ta'lik hatla oyma-kabartma tekniğinde işlenmiş kitâbeye göre H. 1178 / M. 1764 yılında Konya Valisi Çelik Muhammed Paşa tarafından yaptırılmıştır.\n\nİ. Hakkı Konyalı'ya göre cami, aynı yerde bulunan külliyenin bir bölümüdür; külliyenin diğer yapıları günümüze ulaşamamıştır. Bânisi Çelik (Polat) Muhammed Paşa, aslen Burdurlu Polat Mehmet Paşa'nın oğludur ve babasının lakabı olan Farsça \"pûlâd\" (polat) kelimesinin Türkçe karşılığı \"çelik\" lakabıyla anılır. Paşa, 1744'ten vefat ettiği 1765'e kadar pek çok yerde valilik yapmış; Konya valiliği sırasında ikinci kez Adana'ya tayin edilmiş, ancak Adana'ya hareket etmeden Temmuz 1765'te Konya'da vefat etmiştir. Cami farklı dönemlerde onarılmış, 2003 ve 2014'ten sonra tadilat görmüştür.\n\nEnlemesine dikdörtgen planlı cami avlu, harim ve minareden oluşur; sonradan eklenmiş bir şadırvanı ve müştemilatı vardır. Kuzeydoğu köşedeki minare kare kaideli, silindirik gövdeli ve tek şerefelidir; minareye harimin kuzey cephesinden açılmış basık kemerli bir kapıdan girilir ve kitâbe minarenin doğu cephesinde, kaide üzerindedir. Dış cepheler sıvalıdır; güney ve doğu cephede ikişer, kuzey ve batı cephede birer dikey dikdörtgen, düz lentolu pencere vardır.\n\nHarimde kuzey ve doğu bölümlerde ahşap direkler üzerinde mahfil, kıble duvarında mihrap ve mihrabın batısında minber bulunur. Alttan çakmalı tavanda çıtalar mihrap yönünde çakılmış, ortada iç içe karelerden oluşan geniş bir tavan göbeği yapılmıştır. Giriş ekseninde, kıble duvarının ortasındaki yarım daire planlı mihrap dikdörtgen çerçeveli ters \"U\" biçimindedir. Mihrabın dış bordürü firuze renkli çinilerle; iç bordürü ve dört sıra mukarnaslı kavsarası mavi-beyaz, bitkisel bezemeli, kare Kütahya çinileriyle süslenmiştir. Mihrabın sağındaki ahşap minber sonradan eklenmiştir, özgün değildir; taç kapı, süpürgelik, aynalık, geçit, köşk ve külah bölümlerinden oluşur.\n\nCami, Konya merkezi ve çevresinde görülen mahalle camileriyle benzer özellikler gösterir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-ovaloglu-celik-mehmet-pasha-mosque/exterior-with-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-ovaloglu-celik-mehmet-pasha-mosque/exterior-with-minaret.jpg",
+      "alt": "Apartmanlar arasında, kiremit kırma çatılı, beyaz badanalı iki katlı görünümlü cami ve arkasında taş kaideli, silindirik gövdeli, tek şerefeli minare",
+      "description": "Caminin dış görünümü ve minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-ovaloglu-celik-mehmet-pasha-mosque/aerial-top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kiremit kaplı kırma çatı, yanında minarenin külahı ve avluda sekizgen çatılı küçük bir yapı",
+      "description": "Caminin tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-ovaloglu-celik-mehmet-pasha-mosque/mihrab-and-minbar.jpg",
+      "alt": "İç mekân: mavi-beyaz çinilerle kaplı, firuze çerçeveli mihrap, sağında ahşap minber; üstte ahşap tavan ve renkli camlı pencereler",
+      "description": "Mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/konya-karatay-ovaloglu-celik-mehmet-pasha-mosque/exterior-with-minaret.jpg",
+      "x": 65,
+      "y": 32,
+      "title": "Minare",
+      "text": "Kuzeydoğu köşedeki minare kare kaideli, silindirik gövdeli ve tek şerefelidir; kitâbe kaidenin doğu cephesindedir.",
+      "sourceId": "inv-p213"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-karatay-ovaloglu-celik-mehmet-pasha-mosque/mihrab-and-minbar.jpg",
+      "x": 40,
+      "y": 62,
+      "title": "Çinili mihrap",
+      "text": "Dış bordürü firuze çinilerle, iç bordürü ve mukarnaslı kavsarası mavi-beyaz Kütahya çinileriyle süslüdür.",
+      "sourceId": "inv-p213"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/konya-karatay-ovaloglu-celik-mehmet-pasha-mosque/mihrab-and-minbar.jpg",
+      "x": 78,
+      "y": 58,
+      "title": "Minber",
+      "text": "Mihrabın sağındaki ahşap minber sonradan eklenmiştir, özgün değildir.",
+      "sourceId": "inv-p213"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbesine göre caminin yapım tarihi nedir?",
+      "options": [
+        "H. 1078 / M. 1667",
+        "H. 1178 / M. 1764",
+        "H. 1278 / M. 1861",
+        "H. 978 / M. 1570"
+      ],
+      "correct": 1,
+      "description": "Minare kaidesindeki kitâbeye göre cami H. 1178 / M. 1764 yılında yaptırılmıştır.",
+      "sourceId": "inv-p212"
+    },
+    {
+      "question": "Bâni Muhammed Paşa'nın \"Çelik\" lakabı nereden gelir?",
+      "options": [
+        "Demirci esnafından olmasından",
+        "Doğduğu köyün adından",
+        "Babasının lakabı olan Farsça \"pûlâd\" kelimesinin Türkçe karşılığından",
+        "Savaştaki cesaretinden"
+      ],
+      "correct": 2,
+      "description": "Paşa, babasının lakabı olan Farsça \"pûlâd\" (polat) kelimesinin Türkçe karşılığı olan \"çelik\" lakabıyla anılır.",
+      "sourceId": "inv-p212"
+    },
+    {
+      "question": "Mihrabın iç bordürü ve kavsarası hangi çinilerle süslenmiştir?",
+      "options": [
+        "Kırmızı İznik çinileri",
+        "Sırsız tuğlalar",
+        "Mozaik firuze Selçuklu çinileri",
+        "Mavi-beyaz, bitkisel bezemeli Kütahya çinileri"
+      ],
+      "correct": 3,
+      "description": "İç bordür ve dört sıra mukarnaslı kavsara mavi ve beyaz renkli, bitkisel bezemeli, kare formlu Kütahya işi çinilerle süslenmiştir.",
+      "sourceId": "inv-p213"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p212",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Ovaloğlu (Çelik Mehmet Paşa) Camii\"",
+      "page": "212"
+    },
+    {
+      "id": "inv-p213",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Ovaloğlu (Çelik Mehmet Paşa) Camii\"",
+      "page": "213"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

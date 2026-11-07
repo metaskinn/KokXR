@@ -1,0 +1,126 @@
+{
+  "id": "inegol-ishak-pasha-madrasa",
+  "inventoryId": "inegol-ishak-pasa-medresesi",
+  "name": "İshak Paşa Medresesi",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · Sultan II. Bayezid dönemi; kitabeye göre H. 887 / M. 1482-83",
+  "endowment": "İshak Paşa; medreseye ait vakfiyeler H. 891-892 / M. 1486-87 tarihlidir",
+  "summary": "İshak Paşa Külliyesi'nde caminin kuzeyinde yer alan, U planlı ve açık avlulu, on iki hücreli medrese.",
+  "history": "İshak Paşa Medresesi, İnegöl'de Cuma Camii Mahallesi, Ankara Caddesi No: 13'teki caminin kuzeyinde yer alır ve İshak Paşa Külliyesi'nin bir parçasıdır.\n\nDershane bölümünün giriş kapısı üzerinde, üç satır hâlinde yazılmış orijinal bir mermer kitabe bulunur. Kitabeye göre bu şerefli medresenin yapılmasını, Sultan Bayezid bin Muhammed Han'ın saltanatı sırasında Osmanlı Devleti mirlivalarının büyüklerinden İshak Paşa emretmiş; inşaatın tamamlanıp açılışı \"makâmu't-tedâris\" tarihinde, H. 887 / M. 1482-83'te gerçekleşmiştir. Kitabe, yapının Sultan II. Bayezid dönemi inşa faaliyetleri kapsamında yapıldığını gösterir; bu bilgiler medreseye ait H. 891-892 / M. 1486-87 tarihli vakfiyelerle örtüşür.\n\nMedrese U planlı ve açık avlulu bir düzene sahiptir. Kuzeydoğu, kuzeybatı, güneydoğu ve güneybatı köşelerindeki dört hücre ikişer pencereyle dışa açılır; diğer hücrelerin ikişer penceresi avluya bakar. Köşe hücreleri üçgen kuşaklı geçişli, diğer hücreler pandantifli geçişli birer kubbeyle örtülüdür.\n\nDershanenin kuzey duvarında eksene simetrik iki pencere, doğu ve batı cephelerinde altta birer, üstte ikişer pencere, güney cephesinde ise altta iki pencere vardır. Giriş kapısı güney duvarın tam ortasındadır; doğu ve batıdaki birer kapı yan hücrelerle bağlantıyı sağlar. Dershane, üçgen geçiş kuşağına oturan bir kubbeyle örtülüdür. Medrese, dershanenin iki yanındaki altışar hücreyle birlikte toplam on iki hücreden oluşur.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-ishak-pasha-madrasa/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-ishak-pasha-madrasa/courtyard.jpg",
+      "alt": "Ağaçlı ve taş döşeli avlu; karşıda sivri kemerli revak dizisi ve ortada, revakın gerisinde yükselen kubbeli kütlenin altında ahşap kapı",
+      "description": "Avlu ve dershane cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-ishak-pasha-madrasa/classroom-interior.jpg",
+      "alt": "Beyaz badanalı yüksek iç mekân; üstte kubbeye geçişi sağlayan üçgen dilimli kuşak, duvarda iki sıra pencere, ahşap döşeme ve avize",
+      "description": "Dershanenin iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-ishak-pasha-madrasa/inscription.jpg",
+      "alt": "Yeşil zemin üzerinde altın renkli Arapça harflerle yazılmış, üç satırlık kitabe",
+      "description": "Dershane kapısı üzerindeki üç satırlık kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-ishak-pasha-madrasa/portico.jpg",
+      "alt": "Avluya bakan hücre kapıları ve pencereleriyle uzanan, kemerli ve tonozlu revak; zeminde altıgen tuğla döşeme",
+      "description": "Hücrelerin önündeki revak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "classroom-door",
+      "image": "/images/inegol-ishak-pasha-madrasa/courtyard.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Dershane girişi",
+      "text": "Dershanenin giriş kapısı güney duvarın tam ortasında yer alır.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "id": "triangular-band",
+      "image": "/images/inegol-ishak-pasha-madrasa/classroom-interior.jpg",
+      "x": 50,
+      "y": 10,
+      "title": "Üçgen geçiş kuşağı",
+      "text": "Dershane, üçgen geçiş kuşağı üzerine oturan bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/inegol-ishak-pasha-madrasa/inscription.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Mermer kitabe",
+      "text": "Üç satırlık orijinal kitabe, medresenin H. 887 / M. 1482-83'te inşa ettirildiğini belgeler.",
+      "sourceId": "inv-p144"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medresenin kitabesine göre yapı hangi padişahın döneminde inşa edilmiştir?",
+      "options": [
+        "Fatih Sultan Mehmed",
+        "Sultan II. Murad",
+        "Sultan II. Bayezid",
+        "Yavuz Sultan Selim"
+      ],
+      "correct": 2,
+      "description": "Kitabe, medresenin Sultan II. Bayezid dönemi inşa faaliyetleri kapsamında yapıldığını belirtir.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "question": "İshak Paşa Medresesi nasıl bir plana sahiptir?",
+      "options": [
+        "U planlı ve açık avlulu",
+        "Kapalı avlulu ve kare planlı",
+        "Tek eyvanlı",
+        "L planlı"
+      ],
+      "correct": 0,
+      "description": "Medrese U planlı ve açık avlulu bir düzene sahiptir.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "question": "Medrese toplam kaç hücreden oluşur?",
+      "options": [
+        "Sekiz",
+        "On",
+        "On altı",
+        "On iki"
+      ],
+      "correct": 3,
+      "description": "Medrese, dershanenin iki yanındaki altışar hücreyle birlikte toplam on iki hücreden oluşur.",
+      "sourceId": "inv-p147"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p144",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Medresesi\"",
+      "page": "144"
+    },
+    {
+      "id": "inv-p147",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Medresesi\"",
+      "page": "147"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

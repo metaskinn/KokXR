@@ -1,0 +1,146 @@
+{
+  "id": "hatay-antakya-meydan-mosque-complex",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Meydan Camii ve Külliyesi",
+  "period": "İlk inşa belirsiz; 16. yüzyıla tarihleme önerisi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Meydan Camii Külliyesi, üç sahınlı harimi, medrese odaları, muvakkithanesi ve şadırvanıyla tanıtılır.",
+  "history": "Kesin yapım tarihi bilinmeyen külliye, yakınındaki aynı adlı hamamın 1527 Osmanlı sayımında geçmesi nedeniyle 16. yüzyıla tarihlenmek istenir. Kesin olarak bilinen onarım 1878 tarihlidir. Cami, medrese odaları, muvakkithane ve şadırvan avlu çevresinde taş malzemeyle yapılmıştır. Doğudaki beşik tonozlu eyvan biçimli girişin üstünde yuvarlak gövdeli, şemsiye külahlı minare vardır. Minare kapısına avlu duvarı boyunca merdivenli rampayla ulaşılır; kapının önündeki sahanlık konsollarla taşınır.\n\nCaminin kuzeyini ve doğusunu L biçiminde çevreleyen avlunun güneydoğusunda iki medrese odası ve derslik, kuzeyinde beş oda bulunur. Kitap muvakkithanenin konumunu bir yerde kuzeybatı, başka yerde doğu kapısı ve minare yanı olarak tarif eder. Bu konum ifadeleri kesinleştirilmemiştir.\n\nGüneybatıdaki caminin kiremitli son cemaat yeri ahşap direklerle taşınır; mihrabiyesi yoktur. Beyaz kesme taşlı, doğu-batı yönlü dikdörtgen harim, iki sıra halinde üçer kısa sütunun taşıdığı dörder kemer gözüyle kıbleye paralel üç sahına ayrılır. Yükseltilmiş kemerler kırma çatıyı taşır. Girişin üstündeki ahşap müezzin mahfiline doğudaki taş merdivenle çıkılır. Alt ve üst sıralardaki çok sayıda pencere ışık ve hava sağlar. Mihrap onarımlarla özgün biçimini kaybetmiştir; ahşap minber de yenidir.\n\nMedrese odaları düz ahşap tavanlı, derslik çapraz tonozludur; dışta kiremitli kırma çatı vardır. Daha önce kuzeydoğuda dört odanın daha bulunduğu bilinir. Benzer medreselerden hareketle 19. yüzyıl yapımı olabileceği düşünülür; 1903’te faal olduğu, 1878 ve 1985’te onarıldığı belirtilir. Muvakkithane kare planlı küçük odadır; kitap minareli kapıyla birlikte 1884 dolaylarında yapılmış olabileceğini söyler. On altı köşeli mermer su teknesi ve ahşap sütunceleri bulunan şadırvan, kitabesine göre adı belirtilmeyen bir hayırsever tarafından 1906’da yaptırılmış, 1985’te onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-meydan-mosque-complex/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-meydan-mosque-complex/book-view-1.jpg",
+      "alt": "Ağaçlı avluda taş cami ve ahşap direkli sundurma",
+      "description": "Meydan Camii ve Külliyesi — kitaptaki görünüm 1 (s. 122–123)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-meydan-mosque-complex/book-view-2.jpg",
+      "alt": "Avluda çokgen hazneli örtülü şadırvan ve arkasında taş cephe",
+      "description": "Meydan Camii ve Külliyesi — kitaptaki görünüm 2 (s. 124–125)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-meydan-mosque-complex/book-view-3.jpg",
+      "alt": "Yüksek taş kemerli geçidin içinden görünen kapı ve avlu",
+      "description": "Meydan Camii ve Külliyesi — kitaptaki görünüm 3 (s. 126–127)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-meydan-mosque-complex/book-view-4.jpg",
+      "alt": "Kırmızı halılı harimde sütunlara oturan kemerler, ahşap tavan ve mihrap",
+      "description": "Meydan Camii ve Külliyesi — kitaptaki görünüm 4 (s. 128–129)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-meydan-mosque-complex/book-view-2.jpg",
+      "x": 40,
+      "y": 61,
+      "title": "Şadırvan",
+      "text": "Şadırvan on altı köşeli su teknesi ve ahşap sütuncelerle tanıtılır.",
+      "sourceId": "inv-p137"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-meydan-mosque-complex/book-view-4.jpg",
+      "x": 46,
+      "y": 37,
+      "title": "Harim kemerleri",
+      "text": "Sütunların taşıdığı kemer sıraları harimi üç sahına ayırır.",
+      "sourceId": "inv-p128"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin harimi kaç sahına ayrılır?",
+      "options": [
+        "İki",
+        "Dört",
+        "Beş",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Üç.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "question": "Şadırvanın kitabesi hangi yılı verir?",
+      "options": [
+        "1906",
+        "1574",
+        "1842",
+        "1929"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: 1906.",
+      "sourceId": "inv-p137"
+    },
+    {
+      "question": "Şadırvanın su teknesi kaç köşelidir?",
+      "options": [
+        "On iki",
+        "On altı",
+        "Sekiz",
+        "On"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: On altı.",
+      "sourceId": "inv-p137"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p125",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Meydan Camii ve Külliyesi\"",
+      "page": "125"
+    },
+    {
+      "id": "inv-p127",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Meydan Camii ve Külliyesi\"",
+      "page": "127"
+    },
+    {
+      "id": "inv-p128",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Meydan Camii ve Külliyesi\"",
+      "page": "128"
+    },
+    {
+      "id": "inv-p131",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Meydan Camii ve Külliyesi\"",
+      "page": "131"
+    },
+    {
+      "id": "inv-p133",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Meydan Camii ve Külliyesi\"",
+      "page": "133"
+    },
+    {
+      "id": "inv-p135",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Meydan Camii ve Külliyesi\"",
+      "page": "135"
+    },
+    {
+      "id": "inv-p137",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Meydan Camii ve Külliyesi\"",
+      "page": "137"
+    },
+    {
+      "id": "inv-p190",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Meydan Camii ve Külliyesi\"",
+      "page": "190"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

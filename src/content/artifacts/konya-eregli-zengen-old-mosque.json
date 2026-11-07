@@ -1,0 +1,116 @@
+{
+  "id": "konya-eregli-zengen-old-mosque",
+  "name": "Zengen Beldesi Eski Camii",
+  "city": "Konya",
+  "district": "Ereğli",
+  "period": "XIX. yüzyıl sonları – XX. yüzyıl başları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Zengen’deki eski cami, taş çardak minaresi ve yenilenen kalem işleriyle ahşap destekli yapı geleneğini yansıtır.",
+  "history": "Cami, Zengen Köyü Mustafa Kemal Paşa Mahallesi’ndedir. İnşa kitabesi yoktur; mimari özellikleriyle XIX. yüzyıl sonları ve XX. yüzyıl başlarına tarihlendirilir. Kaynaklar XX. yüzyıl başında Niğde Fertekli Nafi Usta’nın yaptığını belirtir. Harim nakışlarını 1945’te Çanakkale Bigalı Tahir Usta yapmıştır. Kullanılamaz duruma gelen yapı 2007’de Vakıflar Genel Müdürlüğü tarafından onarılmış, nakışları yenilenerek ibadete açılmıştır.\n\nDerinlemesine dikdörtgen yapı son cemaat yeri ve harimden oluşur. Kesme taş, moloz taş ve ahşap kullanılmıştır. Kuzeybatıda dört sütunun taşıdığı, konik külahla biten çardak tipi minare vardır. Kuzeyde üç bölümlü son cemaat yerinden düz lentolu kapıyla harime girilir. Mihraba paralel iki sırada dört sütun harimi üç sahına ayırır. Kuzeyde ahşap direkler üzerinde mahfil bulunur. Yarım daire planlı mihrabın sağındaki minber sonradan eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-eregli-zengen-old-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-eregli-zengen-old-mosque/exterior.jpg",
+      "alt": "Ağaçlar arkasında kiremit çatılı cami ve dört sütunlu küçük taş minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-eregli-zengen-old-mosque/prayer-hall.jpg",
+      "alt": "Taş görünümlü sütun ve beyaz kemerler arasında kalem işi bezeli mihrap duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-eregli-zengen-old-mosque/pavilion-minaret.jpg",
+      "alt": "Taş sütunların üzerinde küçük konik külahı olan açık çardak minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-eregli-zengen-old-mosque/pavilion-minaret.jpg",
+      "x": 48,
+      "y": 41,
+      "title": "Çardak minare",
+      "text": "Kuzeybatıdaki minare dört sütun üzerinde konik külahla sonlanır.",
+      "sourceId": "inv-p432"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-eregli-zengen-old-mosque/prayer-hall.jpg",
+      "x": 51,
+      "y": 51,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p434"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harim nakışlarını 1945’te kim yapmıştır?",
+      "options": [
+        "Çanakkale Bigalı Tahir Usta",
+        "Müslim Gökçek",
+        "Kemal Güler",
+        "Semih İrteş"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Çanakkale Bigalı Tahir Usta.",
+      "sourceId": "inv-p432"
+    },
+    {
+      "question": "Yapı 2007 onarımı sonrasında hangi işleve açılmıştır?",
+      "options": [
+        "Hastaneye",
+        "İbadete",
+        "Kütüphaneye",
+        "Depoya"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: İbadete.",
+      "sourceId": "inv-p432"
+    },
+    {
+      "question": "Zengen Beldesi Eski Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Ereğli",
+        "Beyşehir"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Ereğli.",
+      "sourceId": "inv-p432"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p432",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Zengen Beldesi Eski Camii\"",
+      "page": "432"
+    },
+    {
+      "id": "inv-p433",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Zengen Beldesi Eski Camii\"",
+      "page": "433"
+    },
+    {
+      "id": "inv-p434",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Zengen Beldesi Eski Camii\"",
+      "page": "434"
+    },
+    {
+      "id": "inv-p435",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Zengen Beldesi Eski Camii\"",
+      "page": "435"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

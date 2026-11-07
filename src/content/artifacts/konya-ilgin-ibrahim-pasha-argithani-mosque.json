@@ -1,0 +1,97 @@
+{
+  "id": "konya-ilgin-ibrahim-pasha-argithani-mosque",
+  "name": "İbrahim Paşa Camii (Argıthanı)",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "H. 1133 / M. 1720; XIX. yüzyılda yenilenmiş",
+  "endowment": "Nevşehirli İbrahim Paşa Vakfı",
+  "summary": "Nevşehirli İbrahim Paşa, Ilgın'a bağlı Argıthan Kasabası'nda H. 1133 / M. 1720'de cami, mektep, medrese, on altı ocaklı han, on dört dükkânlı çarşı, altı çeşme ve kuyudan oluşan külliye yaptırmıştır.",
+  "history": "Nevşehirli İbrahim Paşa, Ilgın'a bağlı Argıthan Kasabası'nda H. 1133 / M. 1720'de cami, mektep, medrese, on altı ocaklı han, on dört dükkânlı çarşı, altı çeşme ve kuyudan oluşan külliye yaptırmıştır. Külliyeden yalnızca XIX. yüzyılda yenilenen cami günümüze ulaşmıştır. Kitap, Vakıflar Genel Müdürlüğü arşivinde Vezîr-i Azam Nevşehirli İbrahim Paşa Vakfı'na ait 1133 tarihli vakfiye bulunduğunu belirtir.\n\nKareye yakın dikdörtgen planlı caminin düz dam örtüsü sonradan kırma çatıyla kapatılmıştır. İç mekân üç sıra ahşap ayakla desteklenir. Yapı kitapta ibadete açık olarak tanımlanır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-ibrahim-pasha-argithani-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-ibrahim-pasha-argithani-mosque/exterior.jpg",
+      "alt": "Ağaçların arkasında açık renk cepheli cami ve öndeki sütunlu giriş",
+      "description": "Ağaçların arkasında açık renk cepheli cami ve öndeki sütunlu giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-ibrahim-pasha-argithani-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde mavi sütunlar ve beyaz tavan",
+      "description": "Kırmızı halılı harimde mavi sütunlar ve beyaz tavan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-ilgin-ibrahim-pasha-argithani-mosque/prayer-hall.jpg",
+      "x": 29,
+      "y": 54,
+      "title": "Ahşap ayaklar",
+      "text": "İç mekân üç sıra ahşap ayakla desteklenir.",
+      "sourceId": "inv-p447"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-ilgin-ibrahim-pasha-argithani-mosque/exterior.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Yenilenen cami",
+      "text": "Külliyeden günümüze yalnızca XIX. yüzyılda yenilenen cami ulaşmıştır.",
+      "sourceId": "inv-p447"
+    }
+  ],
+  "test": [
+    {
+      "question": "İbrahim Paşa Camii (Argıthanı) hangi ilçededir?",
+      "options": [
+        "Ilgın",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "İbrahim Paşa Camii (Argıthanı), Konya'nın Ilgın ilçesindedir.",
+      "sourceId": "inv-p447"
+    },
+    {
+      "question": "İç mekânı destekleyen ahşap ayaklar kaç sıra halindedir?",
+      "options": [
+        "Bir",
+        "Üç",
+        "İki",
+        "Dört"
+      ],
+      "correct": 1,
+      "description": "Üç.",
+      "sourceId": "inv-p447"
+    },
+    {
+      "question": "Külliyeden günümüze hangi yapı ulaşmıştır?",
+      "options": [
+        "On altı ocaklı han",
+        "Medrese",
+        "On dört dükkânlı çarşı",
+        "Cami"
+      ],
+      "correct": 3,
+      "description": "Cami.",
+      "sourceId": "inv-p447"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p447",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"İbrahim Paşa Camii (Argıthanı)\"",
+      "page": "447"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

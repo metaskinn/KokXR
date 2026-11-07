@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-sukran-masjid-shops",
+  "name": "Şükran Mescidi Zemin Kat Dükkân ve Mağaza",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şükran Mescidi'nin alt katında yer alan ve bugün yastık, yorgan, battaniye gibi ürünlerin satıldığı üç dükkân.",
+  "history": "Dükkân ve mağaza, Meram'da Şükran Mahallesi'nde, Hotuz Sokak'ta, Şükran Mescidi'nin alt katındadır. Halk arasındaki rivayete göre mahalle adını Şükran Mescidi'nden almıştır. Mescidin de bu adı, çarşıya çok uzaklardan gelenlerin işlerine gitmeden önce burada iki rekât şükür namazı kılmalarından aldığı rivayet edilir. Mescidin alt katındaki dükkânlar bugün hâlâ kullanılmaktadır.\n\nAlt katta ikisine doğu cephesinden, birine güney cephesinden girilen toplam üç dükkân vardır. Doğu cephesindeki dükkânlar dikdörtgen planlıdır ve yol kotunun zamanla yükselmesi sonucu kaldırımdan 1,5 m kadar aşağıda kalmıştır. Dükkânların üzeri mertekle örtülü, duvarları tuğladır. Her iki dükkânda güney-kuzey doğrultusunda atılmış iki sıra ana taşıyıcı ahşap mertek, üstteki mertekleri taşır.\n\nGüneydoğu köşedeki dükkânın güney cephesinde kare formlu bir pencere vardır. Güney cephesinden girilen dükkân da aynı teknikle, \"L\" biçiminde yapılmıştır. Alt kottaki dükkânların tamamında dikdörtgen kapı boşluklarına sonradan (muhdes) demir kapılar takılmıştır. Güneydeki dükkânın güney duvarında, diğer dükkânlarda bulunmayan dikdörtgen bir pencere açılmıştır; içinde muhdes demir pencere bulunan bu açıklık kaldırım kotunun üzerindedir.\n\nGünümüzde dükkânlarda yastık, yorgan, battaniye gibi ürünler satılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-sukran-masjid-shops/shop-front.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-sukran-masjid-shops/shop-front.jpg",
+      "alt": "Sokak seviyesinde taş cephe: solda kemerli bir taş niş, ortada içi mallarla dolu dikdörtgen bir dükkân kapısı, sağda üst üste yığılmış büyük beyaz çuvallar",
+      "description": "Dükkân önü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-sukran-masjid-shops/shop-interior.jpg",
+      "alt": "Dar dükkân içi: raflarda katlanmış renkli kumaşlar ve battaniyeler, tavana yakın yığılmış yorganlar, sağda mavi çerçeveli cam kapı",
+      "description": "Dükkânın içi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "door-opening",
+      "image": "/images/konya-meram-sukran-masjid-shops/shop-front.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Dikdörtgen kapı boşluğu",
+      "text": "Alt kottaki dükkânların tamamına, dikdörtgen formlu kapı boşluklarının içine sonradan demir kapılar takılmıştır.",
+      "sourceId": "inv-p255"
+    },
+    {
+      "id": "bedding",
+      "image": "/images/konya-meram-sukran-masjid-shops/shop-interior.jpg",
+      "x": 15,
+      "y": 40,
+      "title": "Satılan ürünler",
+      "text": "Günümüzde dükkânlarda yastık, yorgan, battaniye vb. ürünler satılmaktadır.",
+      "sourceId": "inv-p255"
+    }
+  ],
+  "test": [
+    {
+      "question": "Rivayete göre mescit \"Şükran\" adını neden almıştır?",
+      "options": [
+        "Banisinin adı Şükran olduğu için",
+        "Çarşıya uzaktan gelenler işe başlamadan burada iki rekât şükür namazı kıldığı için",
+        "Bir zafer anısına yapıldığı için",
+        "Mahallenin adını taşıdığı için"
+      ],
+      "correct": 1,
+      "description": "Mescidin, çarşıya uzaktan gelenlerin işlerine gitmeden önce iki rekât şükür namazı kılmalarından dolayı bu adı aldığı rivayet edilir.",
+      "sourceId": "inv-p255"
+    },
+    {
+      "question": "Mescidin alt katında toplam kaç dükkân vardır?",
+      "options": [
+        "İki",
+        "Dört",
+        "Beş",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Alt katta ikisi doğu cephesinden, biri güney cephesinden girilen toplam üç dükkân bulunmaktadır.",
+      "sourceId": "inv-p255"
+    },
+    {
+      "question": "Doğu cephesindeki dükkânlar neden kaldırımdan aşağıda kalmıştır?",
+      "options": [
+        "Yol kotu zamanla yükseldiği için",
+        "Bodrum olarak yapıldıkları için",
+        "Deprem sonrası çöktükleri için",
+        "Sel baskınları nedeniyle"
+      ],
+      "correct": 0,
+      "description": "Doğu cephesindeki dükkânlar yol kotunun zamanla yükselmesi sonucu kaldırımdan 1,5 m kadar aşağıda kalmıştır.",
+      "sourceId": "inv-p255"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p255",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Şükran Mescidi Zemin Kat Dükkân ve Mağaza\"",
+      "page": "255"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

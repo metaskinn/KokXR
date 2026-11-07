@@ -1,0 +1,100 @@
+{
+  "id": "konya-kadinhani-haci-mehmetli-mosque",
+  "name": "Hacı Mehmetli Camii",
+  "city": "Konya",
+  "district": "Kadınhanı",
+  "period": "Osmanlı · kitapta H. 932 / M. 1516",
+  "endowment": "Banisi Kemal oğlu İsmail Fakih; Hacı Mehmetli Yaylası ve Gölyeri tarlaları vakfı",
+  "summary": "Doğanlar Mahallesi’ndeki Hacı Mehmetli Camii, yazlık bölümü ve ahşap direkli harimiyle Topbaşların Camii adıyla da anılır.",
+  "history": "Cami, Doğanlar Mahallesi, Şirin Sokak’tadır. Yazlık bölümün inşa kitabesi kitapta H. 932 / M. 1516 olarak aktarılır ve banisi Kemal oğlu İsmail Fakih olarak verilir. Hacı Mehmetli Yaylası civarında 3 dönüm 1 evlek, Gölyeri üzerinde 18 dönüm 1 evlek tarla caminin vakfıdır; XX. yüzyıla kadar gelir getirmiştir. Mütevellisi Mehmet Efendi’dir.\n\nTopbaşzade Ahmet Hamdi’nin üstlendiği tamir ve Topbaşlar ailesinin 1940’larda ihtiyaçlarını karşılaması nedeniyle Topbaşların Camii adı da kullanılmıştır. Önceden çardak olan bölüm 1961’de yazlık mekâna çevrilmiş ve minare eklenmiştir. 1980 onarımında mevcut mihrap, minber ve vaaz kürsüsü yapılmış, özgün mihrap yazlık bölüme taşınmıştır. Girişteki tamir kitabesi 2006’da Ahmet Küçükkınalı’nın onarımını bildirir.\n\nDikdörtgen kerpiç yığma yapının duvarları sıvalı, çatısı dört yöne eğimli ve kiremitlidir. Kuzeydoğudaki ahşap kapı ayakkabılığa, buradan yazlık bölüme açılır. Ahşap direkler harimi mihraba dik üç sahına ayırır; kuzeyde kadınlar mahfili vardır. Harimdeki ahşap mihrap yarım daire planlı, yuvarlak kemerli ve dikdörtgen çerçevelidir. Güneybatıda ahşap minber, güneydoğuda çok kollu yıldızlarla bezeli vaaz kürsüsü bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-kadinhani-haci-mehmetli-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-kadinhani-haci-mehmetli-mosque/aerial.jpg",
+      "alt": "Ağaçlar arasında geniş çatılı cami ve tek minaresi, arka planda ilçe yerleşimi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-kadinhani-haci-mehmetli-mosque/prayer-hall.jpg",
+      "alt": "Mavi boyalı ahşap tavan ve direklerin altında mihrap ve beyaz minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-kadinhani-haci-mehmetli-mosque/prayer-hall.jpg",
+      "x": 40,
+      "y": 48,
+      "title": "Ahşap direkler",
+      "text": "Harim ahşap direklerle mihraba dik üç sahına ayrılmıştır.",
+      "sourceId": "inv-p457"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-kadinhani-haci-mehmetli-mosque/prayer-hall.jpg",
+      "x": 58,
+      "y": 56,
+      "title": "Ahşap mihrap",
+      "text": "Harimdeki özgün olmayan ahşap mihrap 1980 onarımında eklenmiştir.",
+      "sourceId": "inv-p457"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi başka adla da anılmıştır?",
+      "options": [
+        "Cıncıklı Mescit",
+        "Yüksek Camii",
+        "Topbaşların Camii",
+        "Çukur Camii"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Topbaşların Camii.",
+      "sourceId": "inv-p456"
+    },
+    {
+      "question": "Özgün mihrap hangi bölüme taşınmıştır?",
+      "options": [
+        "Minareye",
+        "Şadırvana",
+        "Dış avlu duvarına",
+        "Yazlık bölüme"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Yazlık bölüme.",
+      "sourceId": "inv-p457"
+    },
+    {
+      "question": "Hacı Mehmetli Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Kadınhanı",
+        "Karatay",
+        "Akşehir",
+        "Beyşehir"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Kadınhanı.",
+      "sourceId": "inv-p456"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p456",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"Hacı Mehmetli Camii\"",
+      "page": "456"
+    },
+    {
+      "id": "inv-p457",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"Hacı Mehmetli Camii\"",
+      "page": "457"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

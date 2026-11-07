@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-asmali-hatip-sultan-masjid",
+  "name": "Asmalı Hatip Sultan Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Geç Osmanlı · giriş kapısı üzerindeki bilgilere göre 1821",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "1821’de yapılan, 1952’de tuğla minare eklenen, ahşap direklerle üç sahına ayrılmış geç Osmanlı mahalle mescidi.",
+  "history": "Mescit, Karatay, Civar Mahallesi, Şehit Nazım Bey Caddesi üzerindedir. Giriş kapısı üzerindeki bilgilere göre 1821’de yaptırılmıştır. Kuzeybatı köşesindeki tek şerefeli tuğla minare 1952’de Mümtaz Koru tarafından Usta Ali Yapıcı’ya inşa ettirilmiştir.\n\nMescit derinlemesine dikdörtgen planlı ve kırma çatılıdır; yapımında taş, kerpiç ve tuğla kullanılmıştır. Minare kare kaideli, silindirik gövdeli ve tek şerefelidir. Şerefe altı mukarnas sırasıyla, korkuluklar ise ajur tekniğinde çok kollu yıldızlarla süslenmiştir.\n\nCephe düzeni sadedir: güneyde iki, doğu ve batıda üçer, kuzeyde ise altta iki, üstte üç pencere vardır. Harime kuzey cephenin doğu tarafındaki kapıdan girilir. Derinlemesine dikdörtgen planlı harim üç sahına ayrılmış, orta sahın diğerlerinden geniş tutulmuştur. Harimin kuzeyinde iki ahşap direğin taşıdığı mahfil, kıble duvarında mihrap ve minber bulunur. Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır. Asmalı Hatip Sultan Mescidi, Konya’nın geç Osmanlı dönemi mahalle mescitlerindendir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-asmali-hatip-sultan-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-asmali-hatip-sultan-masjid/exterior.jpg",
+      "alt": "Köşe başında kiremit çatılı, beyaz sıvalı mescit; yanında yüksek tuğla minare ve önde yeşillikli bahçe duvarı",
+      "description": "Mescit ve tuğla minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-asmali-hatip-sultan-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap kaplı tavan, ortada sivri kemerli beyaz mihrap nişi, sağda ahşap minber, yeşil halı",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "tugla-minare",
+      "image": "/images/konya-karatay-asmali-hatip-sultan-masjid/exterior.jpg",
+      "x": 66,
+      "y": 35,
+      "title": "Tuğla minare",
+      "text": "Kuzeybatı köşesindeki kare kaideli, silindirik gövdeli, tek şerefeli tuğla minare 1952’de yapılmıştır.",
+      "sourceId": "inv-p249"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-asmali-hatip-sultan-masjid/prayer-hall.jpg",
+      "x": 52,
+      "y": 52,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+      "sourceId": "inv-p249"
+    }
+  ],
+  "test": [
+    {
+      "question": "Giriş kapısı üzerindeki bilgilere göre mescit hangi yıl yapılmıştır?",
+      "options": [
+        "1952",
+        "1863",
+        "1821",
+        "1909"
+      ],
+      "correct": 2,
+      "description": "Giriş kapısı üzerindeki bilgilere göre mescit 1821’de yaptırılmıştır.",
+      "sourceId": "inv-p249"
+    },
+    {
+      "question": "Tuğla minare hangi yıl inşa ettirilmiştir?",
+      "options": [
+        "1952",
+        "1821",
+        "1990",
+        "1942"
+      ],
+      "correct": 0,
+      "description": "Minare 1952’de Mümtaz Koru tarafından Usta Ali Yapıcı’ya inşa ettirilmiştir.",
+      "sourceId": "inv-p249"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Dört",
+        "Beş",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Harim üç sahına ayrılmış, orta sahın daha geniş tutulmuştur.",
+      "sourceId": "inv-p249"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p249",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Asmalı Hatip Sultan Mescidi\"",
+      "page": "249"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "inegol-ishak-pasha-mosque",
+  "inventoryId": "inegol-ishak-pasa-camii",
+  "name": "İshak Paşa Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · Cami ve külliyenin diğer yapıları H. 873 / M. 1468-69'da tamamlanmış; giriş kitabesi H. 1294 / M. 1877 tamirine aittir",
+  "endowment": "İshak Paşa; vakfiyeleri H. 891-892 / M. 1486-1487 tarihlidir",
+  "summary": "İnegöl çarşı merkezindeki İshak Paşa Külliyesi'nin, dönemin geleneğine uygun olarak zaviyeli cami tipinde inşa edilmiş camisi.",
+  "history": "İshak Paşa Camii, İnegöl'de Cuma Camii Mahallesi, Ankara Caddesi No: 13'tedir. Cami, İnegöl çarşı merkezinde yer alan ve cami, medrese ile türbeden oluşan İshak Paşa Külliyesi'nin bir parçasıdır.\n\nİshak Paşa'nın camiyi ve külliyeye ait diğer yapıları vefatından önce, H. 873 / M. 1468-69 yılında tamamladığı anlaşılmaktadır. H. 891-892 / M. 1486-1487 tarihli vakfiyelerin kopyaları Vakıflar Genel Müdürlüğü Arşivi'nde bulunur. Bu belgeler, İshak Paşa'nın İnegöl'de cami dışında imaret, zaviye, medrese, han, türbe ve ahırları içeren kapsamlı bir külliye yaptırdığını gösterir. İnegöl'deki türbesinde bulunan mezar kitabesinden, İshak Paşa'nın H. 4 Safer 892 / M. 10 Şubat 1487'de vefat ettiği anlaşılmaktadır.\n\nCami, dönemin mimari geleneği içinde \"zaviyeli cami\" tipinde inşa edilmiştir. Yapının kuzey cephesindeki giriş kapısında yer alan kitabe, H. 1294 / M. 1877'de yapılan bir tamirata aittir. Minarenin kaide ve pabuç kısmı özgün hâlini korur; üst bölümü ise daha sonraki bir onarım sırasında yeniden inşa edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-ishak-pasha-mosque/north-facade.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-ishak-pasha-mosque/north-facade.jpg",
+      "alt": "Tuğla ve taş almaşık örgülü, büyük kemerli açıklıkları camekânla kapatılmış uzun cephe; cephede büyük bir Türk bayrağı asılı, sağda tuğla gövdeli minarenin taş kaidesi görülüyor",
+      "description": "Caminin cephesi ve minare kaidesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-ishak-pasha-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı halılı harim, iki yanda büyük kemerler, ortadaki kemerin üzerinde lacivert zeminli yazı kuşağı; ileride mihrap, minber ve avize",
+      "description": "Harim ve mihraba doğru görünüm",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret-base",
+      "image": "/images/inegol-ishak-pasha-mosque/north-facade.jpg",
+      "x": 75,
+      "y": 55,
+      "title": "Minare kaidesi",
+      "text": "Minarenin kaide ve pabuç kısmı özgün hâlini korur; üst bölümü sonraki bir onarımda yeniden inşa edilmiştir.",
+      "sourceId": "inv-p142"
+    },
+    {
+      "id": "zawiya-type",
+      "image": "/images/inegol-ishak-pasha-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Zaviyeli cami",
+      "text": "Cami, dönemin mimari geleneği içinde \"zaviyeli cami\" tipinde inşa edilmiştir.",
+      "sourceId": "inv-p142"
+    }
+  ],
+  "test": [
+    {
+      "question": "İshak Paşa Camii hangi cami tipinde inşa edilmiştir?",
+      "options": [
+        "Tek kubbeli selatin camii",
+        "Zaviyeli cami",
+        "Çok ayaklı Ulu Cami",
+        "Avlulu revaklı cami"
+      ],
+      "correct": 1,
+      "description": "Cami, dönemin mimari geleneği içinde \"zaviyeli cami\" tipinde inşa edilmiştir.",
+      "sourceId": "inv-p142"
+    },
+    {
+      "question": "Kuzey cephedeki giriş kapısında bulunan kitabe neye aittir?",
+      "options": [
+        "Caminin ilk inşasına",
+        "İshak Paşa'nın vefatına",
+        "Medresenin açılışına",
+        "H. 1294 / M. 1877'de yapılan bir tamirata"
+      ],
+      "correct": 3,
+      "description": "Kuzey cephedeki giriş kapısında yer alan kitabe, H. 1294 / M. 1877'de gerçekleştirilen bir tamirata aittir.",
+      "sourceId": "inv-p142"
+    },
+    {
+      "question": "Minarenin hangi kısmı özgün hâlini korumaktadır?",
+      "options": [
+        "Kaide ve pabuç kısmı",
+        "Şerefe ve külah",
+        "Yalnızca külahı",
+        "Minarenin tamamı"
+      ],
+      "correct": 0,
+      "description": "Minarenin kaide ve pabuç kısmı özgündür; üst bölümü daha sonraki bir onarımda yeniden inşa edilmiştir.",
+      "sourceId": "inv-p142"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p141",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Camii\"",
+      "page": "141"
+    },
+    {
+      "id": "inv-p142",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Camii\"",
+      "page": "142"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

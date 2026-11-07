@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-tellioglu-sungurbey-mosque",
+  "name": "Tellioğlu (Sungurbey) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Günümüzdeki yapı XX. yüzyıl eseri",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hacı Fettah Mezarlığı yakınındaki kırma çatılı küçük mescit, giriş kapısı üzerindeki ahşap minaresiyle tanınır.",
+  "history": "Mescit, Meram, Sungur Mahallesi, Telli Mescit Sokak üzerinde, Hacı Fettah Mezarlığı’nın kuzeydoğusundadır. İnşa tarihi ve banisi bilinmez; bugünkü yapı XX. yüzyıl eseridir. Vakıflar Bölge Müdürlüğü tarafından yakın zamanda tamir edilmiştir.\n\nDikdörtgen planlı mescit kırma çatıyla örtülüdür. Giriş kapısının üzerinde küçük, ahşap bir minaresi vardır. Harim dikdörtgen planlıdır; mihrap ve minber sade tutulmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-tellioglu-sungurbey-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-tellioglu-sungurbey-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı, beyaz badanalı alçak yapı ve çatının sol ucunda küçük sivri külahlı minare",
+      "description": "Kiremit çatılı, beyaz badanalı alçak yapı ve çatının sol ucunda küçük sivri külahlı minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-tellioglu-sungurbey-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde sade mihrap, kırmızı perdeli pencereler ve sağda minber",
+      "description": "Turkuaz halılı harimde sade mihrap, kırmızı perdeli pencereler ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-tellioglu-sungurbey-mosque/exterior.jpg",
+      "x": 26,
+      "y": 22,
+      "title": "Ahşap minare",
+      "text": "Giriş kapısının üzerinde küçük, ahşap bir minare bulunur.",
+      "sourceId": "inv-p122"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-tellioglu-sungurbey-mosque/prayer-hall.jpg",
+      "x": 48,
+      "y": 50,
+      "title": "Sade mihrap",
+      "text": "Mihrap ve minber sade tutulmuştur.",
+      "sourceId": "inv-p122"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi mezarlığın kuzeydoğusundadır?",
+      "options": [
+        "Üçler Mezarlığı",
+        "Musalla Mezarlığı",
+        "Hacı Fettah Mezarlığı",
+        "Şeyh Sadreddin Mezarlığı"
+      ],
+      "correct": 2,
+      "description": "Mescit Hacı Fettah Mezarlığı’nın kuzeydoğusundadır.",
+      "sourceId": "inv-p122"
+    },
+    {
+      "question": "Mescidin üst örtüsü nedir?",
+      "options": [
+        "Kırma çatı",
+        "Kubbe",
+        "Tonoz",
+        "Düz dam"
+      ],
+      "correct": 0,
+      "description": "Mescit kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p122"
+    },
+    {
+      "question": "Minare nerededir?",
+      "options": [
+        "Avlu köşesinde",
+        "Kıble duvarının yanında",
+        "Bağımsız bir kaidede",
+        "Giriş kapısının üzerinde"
+      ],
+      "correct": 3,
+      "description": "Küçük ahşap minare giriş kapısının üzerindedir.",
+      "sourceId": "inv-p122"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p122",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Tellioğlu (Sungurbey) Camii\"",
+      "page": "122"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "hatay-iskenderun-syriac-catholic-church",
+  "name": "Süryani Katolik Kilisesi",
+  "district": "İskenderun",
+  "period": "20. yüzyılın ilk çeyreği olduğu düşünülmektedir",
+  "endowment": "Süryani Katolik Kilisesi Vakfı adına kayıtlıdır",
+  "summary": "Süryani Katolik Kilisesi, İskenderun’un tarihî çarşısında yer alan, bir dönem sinema olarak kullanılmış taş bir kilisedir.",
+  "history": "İskenderun kent merkezindeki tarihî çarşıda bulunan kilise, Süryani Katolik Kilisesi Vakfı adına kayıtlıdır. Hafif eğimli arazide doğu ve batısı arasında belirgin kot farkı vardır. Dikdörtgen planlı yapı, kitapta geç dönem taşra kiliselerinde görülen “alınlı” tarzın örneği olarak tanımlanır.\n\nYapı hakkındaki tarihî kaynaklar sınırlıdır. Ana malzeme taştır; kemer, kapı ve pencere söveleri, köşe bağları ve doğu cephesindeki çan kulesinde düzgün yonu taş kullanılmıştır. Çatının mertek ve aşıkları ahşaptır. Binalarla çevrili avlunun giriş cephesinin iki yanındaki mekânların kiliseye ait olduğu düşünülür. Bunların bir kısmı artık bulunmayan narteksin üzerinde, bir kısmı avlu boşluğundadır.\n\nKilisenin 20. yüzyılın ilk çeyreğinde, Fransız işgali sırasında yapıldığı düşünülmektedir. Apsisi yıkılıp sahneye dönüştürülmüş; yapı uzun süre sinema salonu olarak kullanılmıştır. 1973’te Vakıflar Genel Müdürlüğü’ne devredilmiş, 2009’da Hatay Vakıflar Bölge Müdürlüğü tarafından restore edilerek yeniden kilise olarak hizmete açılmıştır. Kitap bu yapıyı Tanzimat ve Islahat sonrasında kilise yapılarının artışı bağlamında da ele alır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-iskenderun-syriac-catholic-church/stone-front.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-iskenderun-syriac-catholic-church/stone-front.jpg",
+      "alt": "Binalar arasındaki taş kilisenin üçgen alınlıklı cephesi, kemerli kapısı, dar pencereleri ve taş avlusu",
+      "description": "Binalar arasındaki taş kilisenin üçgen alınlıklı cephesi, kemerli kapısı, dar pencereleri ve taş avlusu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-iskenderun-syriac-catholic-church/interior.jpg",
+      "alt": "Ahşap tonoz görünümlü tavan altında uzun kilise iç mekânı, sıra sıra ahşap banklar ve kemerli pencereler",
+      "description": "Ahşap tonoz görünümlü tavan altında uzun kilise iç mekânı, sıra sıra ahşap banklar ve kemerli pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-iskenderun-syriac-catholic-church/stone-front.jpg",
+      "x": 49,
+      "y": 33,
+      "title": "Alınlı cephe",
+      "text": "Kitap dikdörtgen planlı kiliseyi geç dönem taşra kiliselerinde görülen “alınlı” tarzda tanımlar.",
+      "sourceId": "inv-p444"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-iskenderun-syriac-catholic-church/stone-front.jpg",
+      "x": 49,
+      "y": 70,
+      "title": "Taş kapı söveleri",
+      "text": "Kapı ve pencere sövelerinde düzgün yonu taşı kullanılmıştır.",
+      "sourceId": "inv-p444"
+    }
+  ],
+  "test": [
+    {
+      "question": "Süryani Katolik Kilisesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "İskenderun",
+        "Antakya",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe İskenderun olarak verilmiştir.",
+      "sourceId": "inv-p454"
+    },
+    {
+      "question": "Yapı bir dönem hangi işlevde kullanılmıştır?",
+      "options": [
+        "Değirmen",
+        "Sinema salonu",
+        "Hamam",
+        "Ahır"
+      ],
+      "correct": 1,
+      "description": "Apsisi sahneye çevrilen yapı uzun yıllar sinema salonu olmuştur.",
+      "sourceId": "inv-p445"
+    },
+    {
+      "question": "Kilisenin restorasyonu hangi yıl yapılmıştır?",
+      "options": [
+        "1798",
+        "1873",
+        "2009",
+        "1936"
+      ],
+      "correct": 2,
+      "description": "Hatay Vakıflar Bölge Müdürlüğü yapıyı 2009’da restore etmiştir.",
+      "sourceId": "inv-p445"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p444",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Süryani Katolik Kilisesi\"",
+      "page": "444"
+    },
+    {
+      "id": "inv-p445",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Süryani Katolik Kilisesi\"",
+      "page": "445"
+    },
+    {
+      "id": "inv-p454",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Süryani Katolik Kilisesi\"",
+      "page": "454"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "konya-karatay-polatlar-mosque",
+  "name": "Polatlar (Hacı Cemal-Hatip) Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Geç Osmanlı · Vakıf Temettuat kayıtlarına göre 25 Cemaziyelahir 1228 / 25 Haziran 1813",
+  "endowment": "Hacı Abdurrahman tarafından inşa ettirilmiştir (Vakıf Temettuat kayıtları)",
+  "summary": "1813’te Hacı Abdurrahman’ın yaptırdığı; beş bölümlü son cemaat yeri, köşk tipi ahşap minaresi ve ahşap direkli üç sahınlı harimiyle geç Osmanlı mahalle camisi.",
+  "history": "Cami, Karatay, Sedir Mahallesi’ndedir. Vakıf Temettuat kayıtlarına göre 25 Cemaziyelahir 1228 / 25 Haziran 1813’te Hacı Abdurrahman tarafından inşa ettirilmiştir. 1870’te Hacı Cemil Vakfı, 2015’te Vakıflar Bölge Müdürlüğü tarafından onarılmıştır.\n\nCami derinlemesine dikdörtgen planlıdır; üç sahınlı harim, kuzeyde son cemaat yeri ve ahşap minareden oluşur. Kuzeybatısında caddeye bakan bir çeşme vardır. Kuzey cephenin batı köşesindeki minare, son cemaat yerinin batı duvarına bitişik, yivli gövdeli ve köşk tipi şerefelidir. Doğu ve batı cephelerde altta ve üstte ikişer, kuzey ve güney cephelerde altta iki, üstte üçer dikdörtgen pencere bulunur. Kuzeydeki son cemaat yeri, dördü bağımsız ikisi duvara bitişik altı sütunla beş bölüme ayrılmıştır.\n\nHarime kuzey duvarının ortasındaki kapıdan ulaşılır. Harim, iki sıra üçer ahşap direkle mihraba dik uzanan üç sahına ayrılmıştır; geleneksel tarzda orta sahın daha yüksek ve geniş tutulmuştur. Ahşap direkler birbirine ve beden duvarlarına bağdadi tekniğinde yapılmış yuvarlak kemerlerle bağlanır. Kemer karınları mavi-beyaz kalem işi örgü motifleriyle, kemerler arasındaki boşluklar daire biçimli göbeklerle hareketlendirilmiştir.\n\nKıble duvarının ortasındaki mihrap dikdörtgen formda, yarım yuvarlak nişli ve basık kemerlidir; üzerinde bitkisel ve çok kollu yıldız motifleri bulunur. Mihrabın güneybatısındaki minber de benzer düzendedir. Cami, Konya ve çevresinde sık görülen geç dönem Osmanlı mahalle mescitlerinin güzel bir örneğidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-polatlar-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-polatlar-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı cami; önünde ahşap direkli son cemaat yeri, sağda yivli gövdeli, köşk şerefeli ahşap minare",
+      "description": "Cami, son cemaat yeri ve minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-polatlar-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap direkler ve aralarında mavi-beyaz bezemeli kemerler, ahşap tavan, ortada uzakta mihrap",
+      "description": "Ahşap direkli harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-polatlar-mosque/pillar.jpg",
+      "alt": "Yakın çekim: kahverengi ahşap direğin yaprak bezemeli yeşil başlıklı kaidesi, kırmızı halı",
+      "description": "Ahşap direk kaidesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kosk-tipi-minare",
+      "image": "/images/konya-karatay-polatlar-mosque/exterior.jpg",
+      "x": 73,
+      "y": 30,
+      "title": "Köşk tipi minare",
+      "text": "Minare son cemaat yerinin batı duvarına bitişik, yivli gövdeli ve köşk tipi şerefelidir.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "id": "son-cemaat-yeri",
+      "image": "/images/konya-karatay-polatlar-mosque/exterior.jpg",
+      "x": 40,
+      "y": 72,
+      "title": "Son cemaat yeri",
+      "text": "Kuzeydeki son cemaat yeri, altı sütunla beş bölüme ayrılmıştır.",
+      "sourceId": "inv-p262"
+    },
+    {
+      "id": "ahsap-direkler",
+      "image": "/images/konya-karatay-polatlar-mosque/prayer-hall.jpg",
+      "x": 30,
+      "y": 55,
+      "title": "Ahşap direkler",
+      "text": "Harim iki sıra üçer ahşap direkle mihraba dik uzanan üç sahına ayrılmıştır.",
+      "sourceId": "inv-p262"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakıf Temettuat kayıtlarına göre camiyi kim inşa ettirmiştir?",
+      "options": [
+        "Hacı Cemil",
+        "Hacı Abdurrahman",
+        "Namık Paşa",
+        "Hacı İvaz"
+      ],
+      "correct": 1,
+      "description": "Kayıtlara göre cami 1813’te Hacı Abdurrahman tarafından inşa ettirilmiştir.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "question": "Son cemaat yeri kaç bölümlüdür?",
+      "options": [
+        "Üç",
+        "Dört",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 2,
+      "description": "Son cemaat yeri altı sütunla beş bölüme ayrılmıştır.",
+      "sourceId": "inv-p262"
+    },
+    {
+      "question": "Kemer karınları hangi renkte kalem işiyle süslenmiştir?",
+      "options": [
+        "Mavi-beyaz",
+        "Kırmızı-siyah",
+        "Yeşil-sarı",
+        "Altın yaldız"
+      ],
+      "correct": 0,
+      "description": "Kemer karınları mavi-beyaz renkte kalem işi örgü motifleriyle süslenmiştir.",
+      "sourceId": "inv-p262"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p261",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Polatlar (Hacı Cemal-Hatip) Camii\"",
+      "page": "261"
+    },
+    {
+      "id": "inv-p262",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Polatlar (Hacı Cemal-Hatip) Camii\"",
+      "page": "262"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

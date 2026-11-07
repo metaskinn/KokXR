@@ -1,0 +1,107 @@
+{
+  "id": "osmangazi-sehzade-ahmet-tomb",
+  "inventoryId": "osmangazi-sehzade-ahmet-turbesi",
+  "name": "Şehzade Ahmet Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 919 / M. 1513 tarihli fermanla",
+  "endowment": "Yavuz Sultan Selim'in fermanıyla yapılmıştır; bina emini Bedreddin Mahmud Bey",
+  "summary": "II. Murad Külliyesi'nde, Muradiye Camii ile II. Murad Türbesi arasında, Yavuz Sultan Selim'in fermanıyla yapılan sekizgen planlı türbe.",
+  "history": "Şehzade Ahmet Türbesi, Osmangazi İlçesi, Muradiye Mahallesi, Sedat Sokak No: 1/3'te, II. Murad Külliyesi türbeleri arasında yer alır.\n\nYavuz Sultan Selim'in H. 919 / M. 1513 tarihli fermanıyla inşa edilen türbenin mimarı Alâaddin, bina emini Bedreddin Mahmud Bey'dir; kâtipleri Ali, Yusuf, Muhiddin ve Mehmed Efendi'dir.\n\nMuradiye Camii ile II. Murad Türbesi arasındaki yapı sekizgen planlıdır. Duvarları bir sıra kesme taş ve iki sıra tuğlayla örülmüştür. Her cephede üçer pencere vardır; pencere kemerleri tuğla çerçeveyle belirginleştirilmiştir. Girişte Bursa kemerli, mermer bir saçak bulunur. Kündekâri tekniğiyle işlenmiş kapısı sanat değeriyle dikkat çeker.\n\nTürbede Şehzade Ahmet, annesi Bülbül Hatun, kardeşi Şehinşah, Şehinşah'ın oğlu Mehmed ve Yavuz Sultan Selim'in kardeşi Şehzade Korkut medfundur. 2014 restorasyonunda temel yalıtımı yapılmış, kubbenin kurşun örtüsü yenilenmiş, çini ve kalem işleri ihya edilerek türbe özgün dokusuna kavuşturulmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sehzade-ahmet-tomb/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sehzade-ahmet-tomb/aerial-view.jpg",
+      "alt": "Yüksekten çekilmiş fotoğraf: ağaçlar arasında, önünde mermer sütunlu küçük bir giriş saçağı bulunan, taş ve tuğla örgülü sekizgen türbe ve kurşun kubbesi; sağda başka kubbeli türbeler",
+      "description": "Sekizgen türbe ve giriş saçağı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sehzade-ahmet-tomb/interior.jpg",
+      "alt": "İç mekân: önde 'Şehzade Ahmet' tabelalı, başlıklı beyaz mermer sandukalar; duvarlar lacivert ve firuze altıgen çinilerle kaplı, üstte kırmızı zeminli yazı levhaları ve pencereli kemerler",
+      "description": "Mermer sandukalar ve çini kaplı duvarlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "marble-canopy",
+      "image": "/images/osmangazi-sehzade-ahmet-tomb/aerial-view.jpg",
+      "x": 41,
+      "y": 70,
+      "title": "Mermer giriş saçağı",
+      "text": "Türbenin girişinde Bursa kemerli, mermerden bir saçak yer alır.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "id": "octagonal-body",
+      "image": "/images/osmangazi-sehzade-ahmet-tomb/aerial-view.jpg",
+      "x": 53,
+      "y": 57,
+      "title": "Sekizgen gövde",
+      "text": "Sekizgen planlı yapının duvarları bir sıra kesme taş ve iki sıra tuğlayla örülmüştür; her cephede üçer pencere vardır.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "id": "ahmet-sarcophagus",
+      "image": "/images/osmangazi-sehzade-ahmet-tomb/interior.jpg",
+      "x": 36,
+      "y": 81,
+      "title": "Şehzade Ahmet'in sandukası",
+      "text": "Türbede Şehzade Ahmet, annesi Bülbül Hatun, kardeşi Şehinşah, Şehinşah'ın oğlu Mehmed ve Şehzade Korkut medfundur.",
+      "sourceId": "inv-p162"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe kimin fermanıyla inşa edilmiştir?",
+      "options": [
+        "II. Bayezid",
+        "Kanuni Sultan Süleyman",
+        "Yavuz Sultan Selim",
+        "II. Selim"
+      ],
+      "correct": 2,
+      "description": "Türbe, Yavuz Sultan Selim'in H. 919 / M. 1513 tarihli fermanıyla inşa edilmiştir.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "question": "Türbenin mimarı kimdir?",
+      "options": [
+        "Alâaddin",
+        "Mimar Sinan",
+        "Yakup Şah bin Sultan Şah",
+        "Mehmed Çavuş"
+      ],
+      "correct": 0,
+      "description": "Türbenin mimarı Alâaddin, bina emini Bedreddin Mahmud Bey'dir.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "question": "Türbenin planı nasıldır?",
+      "options": [
+        "Kare",
+        "Altıgen",
+        "Dikdörtgen",
+        "Sekizgen"
+      ],
+      "correct": 3,
+      "description": "Muradiye Camii ile II. Murad Türbesi arasındaki yapı sekizgen planlıdır.",
+      "sourceId": "inv-p162"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p162",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehzade Ahmet Türbesi\"",
+      "page": "162"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "konya-bozkir-hisarlik-asarlik-mosque",
+  "name": "Hisarlık Beldesi Asarlık Camii",
+  "city": "Konya",
+  "district": "Bozkır",
+  "period": "İnşa tarihi bilinmiyor; yazılı tarihler 1842-43, 1865-66 ve 1866-67",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hisarlık’taki eski mezarlık içinde bulunan cami, mihrap, minber ve mahfilindeki yoğun boyalı bezemeleriyle dikkat çeker.",
+  "history": "Cami, Bozkır Hisarlık Mahallesi’nde eski mezarlıktadır. İnşa kitabesi yoktur. Minare kapısında 1866–67, kaidesinde 1842–43; harim girişinin sağında 1865–66 tarihi ile Bağdatlı İsmail Efendi adı kalem işi olarak yazılmıştır. 1985’e kadar ibadete açıkken yakınında yeni cami yapılınca terk edilmiş; Vakıflar Genel Müdürlüğünün onarımı 2007’de tamamlanmıştır.\n\nDikdörtgen planlı yapının kaba yonu taş duvarları, kırma çatısı ve kuzeybatıda tek şerefeli silindirik minaresi vardır. Dört bağımsız ahşap direk son cemaat yerini beş bölüme ayırır. Düz ahşap tavanlı harimin orta kesimini dört kare ahşap direk taşır; kuzeyinde U biçimli mahfil yer alır. Kapı, pencere, mahfil, mihrap ve minberde yoğun kalem işleri vardır. Mahfil tavanında altı kollu yıldızlar, bitkisel motifler ve kandiller işlenmiştir. Mihrap üç bordürlü ahşap çerçeve ve üç dilimli tepelikle çevrilidir. Güneybatıdaki minberin aynalık ve korkulukları ajur tekniğinde geometrik motiflidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-bozkir-hisarlik-asarlik-mosque/cemetery-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-bozkir-hisarlik-asarlik-mosque/cemetery-exterior.jpg",
+      "alt": "Mezar taşları ve ağaçlar arasında kiremit çatılı cami ve arkasındaki minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-bozkir-hisarlik-asarlik-mosque/decorated-interior.jpg",
+      "alt": "Renkli kalem işleriyle kaplı duvarlar, çerçeveli mihrap ve yeşil ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-bozkir-hisarlik-asarlik-mosque/decorated-interior.jpg",
+      "x": 26,
+      "y": 49,
+      "title": "Mihrap çerçevesi",
+      "text": "Ahşap çerçeveli mihrap üç sıra bordür ve üç dilimli tepelikle sonlanır.",
+      "sourceId": "inv-p391"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-bozkir-hisarlik-asarlik-mosque/decorated-interior.jpg",
+      "x": 58,
+      "y": 62,
+      "title": "Ajurlu minber",
+      "text": "Minberin aynalık ve korkuluklarında ajur tekniğinde geometrik düzenlemeler vardır.",
+      "sourceId": "inv-p391"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakıflar onarımı hangi yıl tamamlanmıştır?",
+      "options": [
+        "1947",
+        "1963",
+        "1896",
+        "2007"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: 2007.",
+      "sourceId": "inv-p390"
+    },
+    {
+      "question": "Cami nerede yer almaktadır?",
+      "options": [
+        "Eski mezarlık içinde",
+        "Kale içinde",
+        "Bir medresenin çatısında",
+        "Han avlusunda"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Eski mezarlık içinde.",
+      "sourceId": "inv-p390"
+    },
+    {
+      "question": "Hisarlık Beldesi Asarlık Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Bozkır",
+        "Akşehir",
+        "Beyşehir"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Bozkır.",
+      "sourceId": "inv-p390"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p390",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Bozkır, \"Hisarlık Beldesi Asarlık Camii\"",
+      "page": "390"
+    },
+    {
+      "id": "inv-p391",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Bozkır, \"Hisarlık Beldesi Asarlık Camii\"",
+      "page": "391"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

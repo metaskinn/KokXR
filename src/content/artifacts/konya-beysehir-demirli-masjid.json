@@ -1,0 +1,97 @@
+{
+  "id": "konya-beysehir-demirli-masjid",
+  "name": "Demirli Mescit",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "H. 714 / M. 1314-15",
+  "endowment": "Kürt oğlu Şerafeddin Subaşı Emir Ahmet Bey",
+  "summary": "Beyşehir İçerişehir Mahallesi Demirli Sokak'taki mescidin girişinde celî sülüs hatlı iki satır kitabe vardır.",
+  "history": "Beyşehir İçerişehir Mahallesi Demirli Sokak'taki mescidin girişinde celî sülüs hatlı iki satır kitabe vardır. Kitabeye göre yapı H. 714 / M. 1314-15'te Kürt oğlu Şerafeddin Subaşı Emir Ahmet Bey tarafından medrese olarak yaptırılmıştır. Vakıf kayıtlarında mescit ve medrese sözcüklerinin birlikte kullanılması da bu görüşü destekler.\n\n1933'te ibadete kapanınca harap olmuş, çinileri yağmalanmış ve bir kısmı yurt dışına kaçırılmıştır. Kitap, çini kitabeli bir parçanın Şehzadebaşı'ndaki Türk İnşaat ve Sanat Eserleri Müzesi'nde sergilendiğini bildirir. 1950'lerde Vakıflar Bölge Müdürlüğünce onarılan yapı kitapta ibadete açık olarak tanımlanır. Kareye yakın dikdörtgen planlı, kaba yonu taş yapının içi ahşap kirişli, dışı kırma çatılıdır. Batıdaki kapıdan girilir. Harimde tek ahşap direk, yarım daire planlı mihrap ve sonradan eklenen basit ahşap minber bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-demirli-masjid/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-demirli-masjid/aerial-view.jpg",
+      "alt": "Kiremit çatılı taş mescidin çevredeki evlerle havadan görünümü",
+      "description": "Kiremit çatılı taş mescidin çevredeki evlerle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-demirli-masjid/prayer-hall.jpg",
+      "alt": "Ortada ahşap direk, kıble duvarında mihrap ve sağda ahşap minber",
+      "description": "Ortada ahşap direk, kıble duvarında mihrap ve sağda ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-beysehir-demirli-masjid/prayer-hall.jpg",
+      "x": 70,
+      "y": 60,
+      "title": "Ahşap direk",
+      "text": "Harimin merkezinde tek ahşap direk bulunur.",
+      "sourceId": "inv-p383"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-beysehir-demirli-masjid/prayer-hall.jpg",
+      "x": 36,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p383"
+    }
+  ],
+  "test": [
+    {
+      "question": "Demirli Mescit hangi ilçededir?",
+      "options": [
+        "Beyşehir",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Demirli Mescit, Konya'nın Beyşehir ilçesindedir.",
+      "sourceId": "inv-p383"
+    },
+    {
+      "question": "Mescide hangi cepheden girilir?",
+      "options": [
+        "Doğu",
+        "Batı",
+        "Kuzey",
+        "Güney"
+      ],
+      "correct": 1,
+      "description": "Batı.",
+      "sourceId": "inv-p383"
+    },
+    {
+      "question": "Yapı başlangıçta hangi amaçla yaptırılmıştır?",
+      "options": [
+        "Han",
+        "Hamam",
+        "Kütüphane",
+        "Medrese"
+      ],
+      "correct": 3,
+      "description": "Medrese.",
+      "sourceId": "inv-p383"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p383",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Demirli Mescit\"",
+      "page": "383"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

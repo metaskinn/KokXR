@@ -1,0 +1,111 @@
+{
+  "id": "konya-selcuklu-izzettin-keykavus-i-half-anonymous-kumbet",
+  "name": "Birinci İzzettin Keykavus (Yarım-Anonim) Kümbeti",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · XIII. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Alâeddin Camii avlusunda, Selçuklu Sultanı I. İzzeddin Keykavus için yapılan ama sultan Sivas'a defnedildiği için yarım kalan mermer kümbet.",
+  "history": "Türbe, Alâeddin Tepesi'nde, Alâeddin Camii avlusunda yer alan iki türbeden yapımı yarım bırakılmış olanıdır. Selçuklu Sultanı I. İzzeddin Keykavus'a ait olan türbe, sultanın Sivas'ta hastalanarak vefat etmesi ve vasiyeti üzerine aynı yerdeki şifahanesine defnedilmesi üzerine tamamlanmamıştır. XIII. yüzyıl Anadolu Selçuklu eseridir.\n\nTürbe bugün altta bir kripta ile üstte kare bir kaideye oturan sekizgen prizmatik bir gövdeden oluşur. Orijinal örtüsü günümüze ulaşmamıştır. Dış cephede muntazam kesilmiş mermer kullanılmıştır. Kripta bölümüne kuzeydeki bir kapıdan merdivenlerle inilir; haçvari planlı cenazelik bölümünün üzeri çapraz tonozla örtülüdür.\n\nÜst kata iki yandaki merdivenlerle çıkılır. Giriş kemerli bir niş içine alınmıştır; nişin etrafı profilli lento ve sövelerle çerçevelenmiş, köşe sütunceleriyle bezenmiş ve diş şeklinde dilimlenmiştir.\n\nTürbe dıştan sekizgen, içten onikigen planlıdır. Kenarlardan birinde giriş kapısı, ikisinde pencere, diğerlerinde ise oyularak elde edilmiş sağır nişler bulunur. Kıble yönündeki tamamlanmış mihrap yarım daire planlıdır; köşeleri sütunceli, kavsarası mukarnas dolguludur. Mihrap nişinin içine yarım silindirik bir niş daha oyulmuş, nişlerin etrafını dolaşan geometrik zincir örgüsü bütün mihrap çerçevesine dolanmıştır.\n\nKitap, tamamlanamadan yarım bırakılan bu türbeyi, dünyadaki işlerin de tamamlanamayacağına, yarım kalacağına güzel bir örnek olarak niteler.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-izzettin-keykavus-i-half-anonymous-kumbet/entrance-facade.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-izzettin-keykavus-i-half-anonymous-kumbet/entrance-facade.jpg",
+      "alt": "Beyaz-gri mermer kaplı sekizgen türbenin giriş cephesi: dilimli kemerli niş içinde ahşap kapı, önünde iki yandan çıkılan korkuluklu merdiven; üstte sonradan yapılmış saçaklı çatı",
+      "description": "Türbenin giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-izzettin-keykavus-i-half-anonymous-kumbet/interior.jpg",
+      "alt": "İç mekân: düz kesme taş duvarlarda oyma sağır nişler, ortada asılı avize, zeminde mavi halı ve köşede bir bayrak",
+      "description": "Türbenin içi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "entrance-niche",
+      "image": "/images/konya-selcuklu-izzettin-keykavus-i-half-anonymous-kumbet/entrance-facade.jpg",
+      "x": 50,
+      "y": 52,
+      "title": "Kemerli giriş nişi",
+      "text": "Giriş kemerli bir niş içine alınmış; nişin etrafı profilli lento ve sövelerle çerçevelenip diş şeklinde dilimlenmiştir.",
+      "sourceId": "inv-p183"
+    },
+    {
+      "id": "marble-facade",
+      "image": "/images/konya-selcuklu-izzettin-keykavus-i-half-anonymous-kumbet/entrance-facade.jpg",
+      "x": 25,
+      "y": 50,
+      "title": "Mermer cephe",
+      "text": "Yapının dış cephesinde muntazam kesilmiş mermer kullanılmıştır.",
+      "sourceId": "inv-p183"
+    },
+    {
+      "id": "stairs",
+      "image": "/images/konya-selcuklu-izzettin-keykavus-i-half-anonymous-kumbet/entrance-facade.jpg",
+      "x": 62,
+      "y": 88,
+      "title": "İki yanlı merdiven",
+      "text": "Türbenin üst katına iki yanda bulunan merdivenlerle çıkılır.",
+      "sourceId": "inv-p183"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe neden yarım kalmıştır?",
+      "options": [
+        "Deprem nedeniyle yıkıldığı için",
+        "Para yetmediği için",
+        "Sultan Sivas'ta vefat edip vasiyeti üzerine şifahanesine defnedildiği için",
+        "Moğol istilası nedeniyle"
+      ],
+      "correct": 2,
+      "description": "I. İzzeddin Keykavus Sivas'ta hastalanarak vefat etmiş ve vasiyeti üzerine aynı yerdeki şifahanesine defnedilince türbe tamamlanmamıştır.",
+      "sourceId": "inv-p182"
+    },
+    {
+      "question": "Türbe dıştan ve içten hangi plandadır?",
+      "options": [
+        "Dıştan sekizgen, içten onikigen",
+        "Dıştan kare, içten sekizgen",
+        "Dıştan ongen, içten daire",
+        "Dıştan altıgen, içten kare"
+      ],
+      "correct": 0,
+      "description": "Türbe dıştan sekizgen, içten onikigen planlıdır.",
+      "sourceId": "inv-p183"
+    },
+    {
+      "question": "Kripta bölümündeki cenazeliğin üst örtüsü nedir?",
+      "options": [
+        "Kubbe",
+        "Beşik tonoz",
+        "Ahşap tavan",
+        "Çapraz tonoz"
+      ],
+      "correct": 3,
+      "description": "Haçvari planlı cenazelik bölümünün üzeri çapraz tonozla örtülüdür.",
+      "sourceId": "inv-p183"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p182",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"I. İzzettin Keykavus (Yarım-Anonim) Kümbeti\"",
+      "page": "182"
+    },
+    {
+      "id": "inv-p183",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"I. İzzettin Keykavus (Yarım-Anonim) Kümbeti\"",
+      "page": "183"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

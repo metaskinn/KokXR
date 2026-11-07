@@ -1,0 +1,118 @@
+{
+  "id": "konya-karatay-burhaneddin-fakih-dede-tomb",
+  "name": "Burhaneddin Fakih Dede Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Karamanoğlu dönemi · H. 860 / M. 1456",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karamanoğlu döneminde H. 860 / M. 1456'da yapılan, kare planlı, içten kubbe dıştan piramidal külahla örtülü taş türbe.",
+  "history": "Burhaneddin Fakih Dede Türbesi, Karatay İlçesi, Akçeşme Mahallesi, Pir Esat Caddesi üzerinde, Pir Esad Türbesi'nin kuzeyindedir. Türbe H. 860 / M. 1456 yılında, Karamanoğlu döneminde yapılmış; 1923'te onarım geçirmiştir.\n\nKitâbe, kuzeydeki giriş kapısının üzerinde, sivri kemer içindedir. Osmanlı Türkçesiyle, celî sülüs yazıyla hafif kabartma olarak işlenen kitâbede, burasının millet ve dinin burhanı, İsa oğlu Fakih Paşa'nın türbesi olduğu ve onun 860 yılı Rebiyülevvel ayının ortalarına rastlayan bir pazartesi günü ahirete yöneldiği yazar.\n\nTürbe kare planlıdır; üzeri içten kubbe, dıştan külahla örtülüdür. Gövde taştan; piramidal külah, giriş kapısının üzerindeki alınlığın kemeri ve pencere kemerleri tuğladan; kapı üzerindeki kitâbe ile dikdörtgen pencerelerin söve ve lentoları mermerdendir. Pencerelerde devşirme malzeme de kullanılmıştır. Pencerelerin tuğla örgülü sivri kemer alınlıkları boşaltılarak bu bölüme ikinci bir pencere yerleştirilmiş; bazı pencerelerde çini süslemeler görülür.\n\nYapıya kuzeydeki mermer söveli kapıdan girilir. Kapının üzerindeki tuğla sivri kemerin içinde mermer kitâbe, kemerin köşeliklerinde ise firuze ve siyah renkli çiniler ile bitkisel bezeme yer alır.\n\nİçerisi kare planlı ve kubbe örtülüdür. Türbede Burhanettin Fakih'e ait mezar sandukası bulunur; sandukanın baş şahidesine dört satır hâlinde celî sülüs yazıyla \"Ya Allah ya Muhammed. Müminler ölmez bir dünyadan diğerine nakledilirler\" hadisi işlenmiştir. Kaynaklarda türbenin bir cenazelik katı olduğu belirtilse de kitabın hazırlanması sırasındaki incelemelerde bunu doğrulayan bir ize rastlanmamıştır. Yapı, Karamanoğlu dönemi türbe mimarisini yansıtan önemli bir eserdir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-burhaneddin-fakih-dede-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-burhaneddin-fakih-dede-tomb/exterior.jpg",
+      "alt": "Kesme taş gövdeli kare planlı türbe; üstte tuğla örgülü piramidal külah, önde mermer söveli ahşap kapı ve kapı üstünde tuğla sivri kemer içinde kitâbe",
+      "description": "Türbenin giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-burhaneddin-fakih-dede-tomb/inscription.jpg",
+      "alt": "Tuğla sivri kemer içinde kabartma yazılı mermer kitâbe; kemerin iki yanındaki köşeliklerde yer yer dökülmüş firuze ve siyah çiniler",
+      "description": "Giriş kapısı üzerindeki kitâbe ve çinili köşelikler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-burhaneddin-fakih-dede-tomb/interior.jpg",
+      "alt": "Sarı sıvalı iç mekânda yeşil örtülü sanduka, arkada sivri kemerli pencere nişleri ve bir Türk bayrağı",
+      "description": "Türbenin iç mekânı ve sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pyramidal-cone",
+      "image": "/images/konya-karatay-burhaneddin-fakih-dede-tomb/exterior.jpg",
+      "x": 50,
+      "y": 18,
+      "title": "Piramidal külah",
+      "text": "Türbenin gövdesi taş, piramidal külahı ise tuğladır; içten kubbe ile örtülüdür.",
+      "sourceId": "inv-p159"
+    },
+    {
+      "id": "tile-spandrels",
+      "image": "/images/konya-karatay-burhaneddin-fakih-dede-tomb/inscription.jpg",
+      "x": 12,
+      "y": 15,
+      "title": "Çinili köşelikler",
+      "text": "Kapı üzerindeki tuğla sivri kemerin köşeliklerinde firuze ve siyah renkli çiniler ile bitkisel bezeme görülür.",
+      "sourceId": "inv-p159"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/konya-karatay-burhaneddin-fakih-dede-tomb/inscription.jpg",
+      "x": 52,
+      "y": 55,
+      "title": "Kitâbe",
+      "text": "Celî sülüs yazıyla hafif kabartma işlenen kitâbe, türbenin İsa oğlu Fakih Paşa'ya ait olduğunu ve onun 860 yılında vefat ettiğini bildirir.",
+      "sourceId": "inv-p158"
+    }
+  ],
+  "test": [
+    {
+      "question": "Burhaneddin Fakih Dede Türbesi hangi dönemde yapılmıştır?",
+      "options": [
+        "Osmanlı",
+        "Karamanoğlu",
+        "Anadolu Selçuklu",
+        "Eşrefoğlu"
+      ],
+      "correct": 1,
+      "description": "Türbe H. 860 / M. 1456 yılında Karamanoğlu döneminde yapılmıştır.",
+      "sourceId": "inv-p158"
+    },
+    {
+      "question": "Kapı üzerindeki sivri kemerin köşeliklerinde hangi renklerde çiniler vardır?",
+      "options": [
+        "Lacivert ve beyaz",
+        "Yeşil ve sarı",
+        "Kırmızı ve beyaz",
+        "Firuze ve siyah"
+      ],
+      "correct": 3,
+      "description": "Sivri kemerin köşeliklerinde firuze ve siyah renkli çiniler ile bitkisel bezeme görülür.",
+      "sourceId": "inv-p159"
+    },
+    {
+      "question": "Türbenin piramidal külahı hangi malzemeden yapılmıştır?",
+      "options": [
+        "Tuğla",
+        "Mermer",
+        "Ahşap",
+        "Kesme taş"
+      ],
+      "correct": 0,
+      "description": "Gövde taştan, piramidal külah ise tuğladan yapılmıştır.",
+      "sourceId": "inv-p159"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p158",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Burhaneddin Fakih Dede Türbesi\"",
+      "page": "158"
+    },
+    {
+      "id": "inv-p159",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Burhaneddin Fakih Dede Türbesi\"",
+      "page": "159"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

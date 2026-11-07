@@ -1,0 +1,104 @@
+{
+  "id": "konya-karatay-seyh-ulema-recep-aga-mosque",
+  "name": "Şeyh Ulema Recep Ağa Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Plan ve mimari özelliklerine göre XX. yüzyıl başları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kerpiç ve taştan, enine dikdörtgen planlı ve dört yöne eğimli kırma çatılı, XX. yüzyıl başına tarihlenen Karatay camisi.",
+  "history": "Cami, Karatay, Şeyh Ulemâ Recep Ağa Caddesi üzerindedir. Banisi ve inşa tarihine dair bir kitâbe yoktur; plan ve mimari özelliklerinden hareketle XX. yüzyılın başlarına tarihlendirilebilir.\n\nCami enine dikdörtgen planlıdır ve dört yöne eğimli kırma çatıyla örtülüdür; yapımında kerpiç ve taş kullanılmıştır. Harime kuzey cephenin ortasındaki kapıdan girilir. Harim enine dikdörtgen planlı ve üç sahınlıdır. Ahşap mahfil kuzey duvarına bitişiktir. Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-seyh-ulema-recep-aga-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-seyh-ulema-recep-aga-mosque/exterior.jpg",
+      "alt": "Sokaktan görünüm: kiremit kırma çatılı beyaz cami, önünde demir parmaklıklı bahçe duvarı ve ağaç, sağ arkada ahşap şerefeli minare",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-seyh-ulema-recep-aga-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: turkuaz boyalı ahşap tavan, büyük kristal avize, mavi-yeşil çinili kıble duvarında mihrap ve sağda minber, kırmızı halı",
+      "description": "Harim ve kıble duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-seyh-ulema-recep-aga-mosque/ceiling-medallion.jpg",
+      "alt": "Turkuaz ahşap tavanın ortasında, kenarı yazı kuşaklı, renkli bezemeli büyük daire biçimli tavan göbeği",
+      "description": "Tavan göbeği",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kirma-cati",
+      "image": "/images/konya-karatay-seyh-ulema-recep-aga-mosque/exterior.jpg",
+      "x": 40,
+      "y": 30,
+      "title": "Kırma çatı",
+      "text": "Cami dört yöne eğimli kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p263"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-seyh-ulema-recep-aga-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+      "sourceId": "inv-p263"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin yapımında hangi malzemeler kullanılmıştır?",
+      "options": [
+        "Tuğla ve mermer",
+        "Betonarme",
+        "Kerpiç ve taş",
+        "Yalnızca ahşap"
+      ],
+      "correct": 2,
+      "description": "Yapıda malzeme olarak kerpiç ve taş kullanılmıştır.",
+      "sourceId": "inv-p263"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "İki",
+        "Beş",
+        "Tek mekân"
+      ],
+      "correct": 0,
+      "description": "Harim enine dikdörtgen planlı ve üç sahınlıdır.",
+      "sourceId": "inv-p263"
+    },
+    {
+      "question": "Ahşap mahfil hangi duvara bitişiktir?",
+      "options": [
+        "Kıble duvarına",
+        "Doğu duvarına",
+        "Batı duvarına",
+        "Kuzey duvarına"
+      ],
+      "correct": 3,
+      "description": "Ahşap mahfil kuzey duvarına bitişiktir.",
+      "sourceId": "inv-p263"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p263",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Şeyh Ulema Recep Ağa Camii\"",
+      "page": "263"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

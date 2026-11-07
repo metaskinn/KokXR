@@ -1,0 +1,89 @@
+{
+  "id": "konya-karatay-selahaddin-kececiler-mosque",
+  "name": "Selahaddin (Keçeciler) Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · H. 1323 / M. 1905-06",
+  "endowment": "İlk bani Hacı Hüseyin Keçeci; mevcut yapı mahalleli tarafından yaptırılmıştır",
+  "summary": "Keçeciler’deki cami, 1905-06 tarihli kitabesi ve sade ahşap iç mekânıyla tanınır.",
+  "history": "Cami, Keçeciler Mahallesi, Keçeciler Caddesi’ndedir. Tarihi kaynaklarda ilk olarak Hacı Hüseyin Keçeci’nin yaptırdığı, harap olmasının ardından Marangoz Mehmet Emin ile kardeşi Hafız Ali’nin (Sarıkulak) yeniden inşa ettirdiği belirtilir. Mevcut üç satırlık mermer kitabede, harap yapı yerine mahallelinin H. 1323 / M. 1905-06’da yeni tarzda cami yaptırdığı yazılıdır; hattat imzası “Harrerehû Hâlid” şeklindedir. 2018–2021 arasında Vakıflar Bölge Müdürlüğü tarafından onarılmıştır.\n\nKare planlı cami iki yöne eğimli kırma çatıyla örtülüdür. Alt bölümde moloz taş, üst bölümde kerpiç kullanılmıştır. Batıdaki sonradan eklenen sundurmanın üzerinde sac malzemeden köşk tipi minare bulunur. Sade harimin kuzeyinde bir ahşap ayağın taşıdığı kadınlar mahfili, kıble duvarında ahşap mihrap ve minber vardır. Tavan ahşap çıtalıdır; minberin korkuluk ve aynalığında süslemeler görülür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-selahaddin-kececiler-mosque/wooden-interior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-selahaddin-kececiler-mosque/wooden-interior.jpg",
+      "alt": "Turkuaz halılı harimde ahşap mihrap, sağda ahşap minber ve önde kalın ahşap direk",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-selahaddin-kececiler-mosque/wooden-interior.jpg",
+      "x": 42,
+      "y": 48,
+      "title": "Ahşap mihrap",
+      "text": "Mihrap, silmelerle çevrili dikdörtgen çerçeve içinde yarım daire niş olarak düzenlenmiştir.",
+      "sourceId": "inv-p191"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-selahaddin-kececiler-mosque/wooden-interior.jpg",
+      "x": 68,
+      "y": 46,
+      "title": "Minber",
+      "text": "Sade ahşap minberin korkuluk ve aynalık bölümlerinde süslemeler vardır.",
+      "sourceId": "inv-p191"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabedeki hattat imzası hangisidir?",
+      "options": [
+        "Amelü Osman",
+        "Tahir Usta",
+        "Reşit Efendi",
+        "Harrerehû Hâlid"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Harrerehû Hâlid.",
+      "sourceId": "inv-p191"
+    },
+    {
+      "question": "Harimin kuzeyindeki mahfili ne taşır?",
+      "options": [
+        "Bir ahşap ayak",
+        "Dört taş sütun",
+        "İki mermer paye",
+        "Tuğla kemer dizisi"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Bir ahşap ayak.",
+      "sourceId": "inv-p191"
+    },
+    {
+      "question": "Selahaddin (Keçeciler) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Karatay",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p191"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p191",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Selahaddin (Keçeciler) Camii\"",
+      "page": "191"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

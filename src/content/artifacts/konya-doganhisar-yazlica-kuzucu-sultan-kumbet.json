@@ -1,0 +1,97 @@
+{
+  "id": "konya-doganhisar-yazlica-kuzucu-sultan-kumbet",
+  "name": "Yazlıca Köyü Kuzucu Sultan Kümbeti",
+  "city": "Konya",
+  "district": "Doğanhisar",
+  "period": "XIV. yüzyıl (plan ve örtü sistemine göre); inşa tarihi bilinmiyor",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Selçuklu çağında Horasan'dan gelen Kuzucu Sultan'ın Yazlıca Köyü'ndeki, XIV. yüzyıla tarihlenen sekizgen planlı kümbeti.",
+  "history": "Kümbet, Doğanhisar'a bağlı Yazlıca Köyü'ndedir. İnşa tarihi, banisi ve ustası bilinmemektedir. Kuzucu Sultan, Selçuklu çağında irşat için Horasan'dan bölgeye gelmiştir. Burada, Ilgın'daki Dediği Sultan'da olduğu gibi tekke ve mescitten oluşan bir dergâh kurmuş olmalıdır; ölümünden sonra buraya yapılan türbeye defnedilmiştir.\n\nZamanla yıkılan mescit sonradan ihtiyaca göre büyütülerek yenilenmiştir. Cami ve türbenin inşa tarihiyle ilgili bilgi yoktur; ancak türbe, XIV. yüzyılda Anadolu'da yapılan türbelerle aynı plan ve örtü sistemine sahip olduğundan bu yüzyılda yapıldığı anlaşılmaktadır. Dergâh olarak yapıldığı tahmin edilen yapılardan günümüze yalnızca yenilenen mescit ve Kuzucu Baba'nın türbesi ulaşmıştır.\n\nTürbe sekizgen planlıdır; üzeri içten kubbe, dıştan külahla örtülüdür. Girişi caminin harim mekânının güneybatı köşesinden sağlanır. Zemindeki kare planlı kriptada Kuzucu Baba'nın mezarı yer alır. Türbenin birinci katı sekizgen planlıdır ve güney tarafında bir mihrap nişi vardır. Beden duvarlarında taş, üst kısımla külahta tuğla kullanılmış ve yapı sıvanmıştır. Bugün külahın üzerinde bir leylek yuvası bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-doganhisar-yazlica-kuzucu-sultan-kumbet/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-doganhisar-yazlica-kuzucu-sultan-kumbet/exterior.jpg",
+      "alt": "Mavi gökyüzü önünde, sıvalı taş gövdenin üstünde tuğla külah ve külahın tepesinde büyük bir leylek yuvası; sağda caminin taş minaresi",
+      "description": "Kümbetin külahı ve yanındaki caminin minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-doganhisar-yazlica-kuzucu-sultan-kumbet/interior.jpg",
+      "alt": "Yıpranmış sıvalı duvarlı iç mekân; duvarda küçük sivri kemerli bir niş, yerde renkli halılar ve kilim",
+      "description": "Kümbetin iç mekânı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "stork-nest",
+      "image": "/images/konya-doganhisar-yazlica-kuzucu-sultan-kumbet/exterior.jpg",
+      "x": 40,
+      "y": 30,
+      "title": "Leylek yuvası",
+      "text": "Bugün türbenin külahının üzerinde bir leylek yuvası bulunmaktadır.",
+      "sourceId": "inv-p202"
+    },
+    {
+      "id": "brick-cone",
+      "image": "/images/konya-doganhisar-yazlica-kuzucu-sultan-kumbet/exterior.jpg",
+      "x": 33,
+      "y": 72,
+      "title": "Tuğla külah",
+      "text": "Beden duvarlarında taş, üst kısımla külahta tuğla kullanılmış ve yapı sıvanmıştır.",
+      "sourceId": "inv-p202"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kuzucu Sultan bölgeye nereden gelmiştir?",
+      "options": [
+        "Harran",
+        "Şam",
+        "Horasan",
+        "Bağdat"
+      ],
+      "correct": 2,
+      "description": "Kuzucu Sultan, Selçuklu çağında irşat için Horasan'dan bölgeye gelmiştir.",
+      "sourceId": "inv-p202"
+    },
+    {
+      "question": "Bugün türbenin külahının üzerinde ne bulunur?",
+      "options": [
+        "Leylek yuvası",
+        "Alem",
+        "Güneş saati",
+        "Çini kuşak"
+      ],
+      "correct": 0,
+      "description": "Günümüzde külahın üzerinde bir leylek yuvası bulunmaktadır.",
+      "sourceId": "inv-p202"
+    },
+    {
+      "question": "Türbe hangi yüzyıla tarihlenir?",
+      "options": [
+        "XII. yüzyıl",
+        "XIII. yüzyıl",
+        "XV. yüzyıl",
+        "XIV. yüzyıl"
+      ],
+      "correct": 3,
+      "description": "XIV. yüzyılda Anadolu'da yapılan türbelerle aynı plan ve örtü sistemine sahip olduğundan türbenin XIV. yüzyılda yapıldığı anlaşılır.",
+      "sourceId": "inv-p202"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p202",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Doğanhisar, \"Yazlıca Köyü Kuzucu Sultan Kümbeti\"",
+      "page": "202"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

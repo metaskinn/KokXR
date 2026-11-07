@@ -1,0 +1,97 @@
+{
+  "id": "konya-beysehir-lutfullah-carsi-mosque-minaret",
+  "name": "Lütfullah Çarşı Camii Minaresi",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "Osmanlı · cami 1823'te yapılmış, minare sonradan eklenmiştir",
+  "endowment": "Kitapta belirtilmemiştir; cami Beyşehir Sancağı Mütesellimi Hacı Lütfullah Ağa'nın, minare Celeboğlu'nun yaptırdığı yapılardır",
+  "summary": "Beyşehir çarşısında, 1823'te yapılan Lütfullah Çarşı Camii'nin yanına Celeboğlu tarafından sonradan eklenen tek şerefeli minare.",
+  "history": "Minare, Beyşehir, Evsât Mahallesi'nde, çarşı içinde, günümüzde yenilenmiş olan Çarşı Camisi'nin kuzeydoğusundadır. 1823'te Beyşehir Sancağı Mütesellimi Hacı Lütfullah Ağa tarafından yaptırılan caminin yanına Celeboğlu tarafından sonradan inşa ettirilmiştir.\n\nMinare kare kaideli, silindirik gövdeli ve tek şerefelidir. Şerefe altlığına beş sıra testere dişi sırası eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-lutfullah-carsi-mosque-minaret/minaret.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-lutfullah-carsi-mosque-minaret/minaret.jpg",
+      "alt": "Yukarıdan bakış: taş kaide üzerinde yükselen ince silindirik gövdeli minare, tek şerefe ve sivri külah; arkada şehir ve göl",
+      "description": "Minarenin genel görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-lutfullah-carsi-mosque-minaret/minaret-base-door.jpg",
+      "alt": "Taş örgülü minare kaidesi, üzerinde küçük ahşap kapı, kapıya çıkan demir korkuluklu merdiven ve \"Vakıflar\" tabelası",
+      "description": "Minare kaidesi ve kapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "balcony",
+      "image": "/images/konya-beysehir-lutfullah-carsi-mosque-minaret/minaret.jpg",
+      "x": 50,
+      "y": 37,
+      "title": "Şerefe",
+      "text": "Tek şerefeli minarenin şerefe altlığına beş sıra testere dişi sırası eklenmiştir.",
+      "sourceId": "inv-p389"
+    },
+    {
+      "id": "square-base",
+      "image": "/images/konya-beysehir-lutfullah-carsi-mosque-minaret/minaret.jpg",
+      "x": 48,
+      "y": 88,
+      "title": "Kare kaide",
+      "text": "Minare kare kaide üzerinde yükselen silindirik gövdelidir.",
+      "sourceId": "inv-p389"
+    }
+  ],
+  "test": [
+    {
+      "question": "Lütfullah Çarşı Camii'ni 1823'te kim yaptırmıştır?",
+      "options": [
+        "Celeboğlu",
+        "Hacı Lütfullah Ağa",
+        "Eşrefoğlu Süleyman Bey",
+        "Hızır Ali Paşa"
+      ],
+      "correct": 1,
+      "description": "Cami 1823'te Beyşehir Sancağı Mütesellimi Hacı Lütfullah Ağa tarafından yaptırılmıştır.",
+      "sourceId": "inv-p389"
+    },
+    {
+      "question": "Minare caminin yanına kim tarafından inşa ettirilmiştir?",
+      "options": [
+        "Hacı Lütfullah Ağa",
+        "Vakıflar Bölge Müdürlüğü",
+        "Celeboğlu",
+        "Çarşı esnafı"
+      ],
+      "correct": 2,
+      "description": "Minare caminin yanına Celeboğlu tarafından sonradan inşa ettirilmiştir.",
+      "sourceId": "inv-p389"
+    },
+    {
+      "question": "Şerefe altlığına kaç sıra testere dişi eklenmiştir?",
+      "options": [
+        "Beş",
+        "İki",
+        "Üç",
+        "Yedi"
+      ],
+      "correct": 0,
+      "description": "Şerefe altlığında beş sıra testere dişi sırası eklenmiştir.",
+      "sourceId": "inv-p389"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p389",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Lütfullah Çarşı Camii Minaresi\"",
+      "page": "389"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

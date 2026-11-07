@@ -1,0 +1,116 @@
+{
+  "id": "konya-selcuklu-elikesik-inn",
+  "name": "Elikesik Han",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · Benzer hanlara göre XIII. yüzyılın ilk yarısı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Konya-Derbent yolunda, Başara Vadisi'nde yer alan, mermer ayaklarla üç sahına bölünen ve 2007'de aslına uygun yeniden ayağa kaldırılan Selçuklu hanı.",
+  "history": "Han, Konya-Derbent yolunda, Aladağlar arasındaki Başara Vadisi yolu üzerinde, Kalburcu/Güney Köyü içindedir. Yapının üzerinde kitâbe yoktur. Kaynaklarda hanın kapalı mekânının avludan önce inşa edildiği belirtilir. Konya ve çevresindeki üç sahınlı ve avlulu hanlarla mimari benzerlikleri göz önüne alınarak XIII. yüzyılın ilk yarısında inşa edildiği düşünülmektedir.\n\nHan, Vakıflar Genel Müdürlüğü tarafından 2007'de tamir edilmiştir. Büyük bölümü yenilenen yapı, kazılarda ulaşılan temel kalıntıları üzerinde aslına uygun planda yeniden ayağa kaldırılmıştır.\n\nİlk inşasından sonra eklemeler yapılan ve zamanla kullanılamaz hâle gelen yapının avlusunun doğu ve güney bölümlerinin işlevleri tam olarak anlaşılamamıştır. Doğudaki mekânın duvarındaki mihrap izlerinden burasının mescit olarak kullanıldığı söylenebilir; güneydeki bölümün de mescitle bağlantılı bir birim olduğu düşünülmektedir. Ahmet Çaycı makalesinde, Konya Şer'iyye sicillerine dayanarak yapının han / zaviye olduğunu belirtir.\n\nHan, güney-kuzey doğrultusunda derinlemesine dikdörtgen planlı olup kapalı mekân ve avludan oluşur. İnşasında düzgün kesme taş kullanılmış, dış duvarlarda devşirme malzeme de görülür. Kapalı bölüme taç kapıdan geçilir. Bu bölüm kare formlu üçerli iki sıra ayakla üç sahına bölünmüştür; orta sahın daha geniştir ve ayaklar mermerdendir. Elikesik Han; Altınapa, Horozlu ve Kuruçeşme hanlarıyla çağdaştır ve benzer mimari özellikler gösterir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-elikesik-inn/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-elikesik-inn/exterior.jpg",
+      "alt": "Yeşil vadide yol kenarında, kesme taştan, kiremit çatılı han; önde yuvarlak kemerli bir kapı ve alçak bahçe duvarı, arkada ağaçlı tepeler",
+      "description": "Hanın dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-elikesik-inn/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kuzey-güney doğrultusunda uzanan, kiremit kaplı derin dikdörtgen çatı ve alt kısmında üstü açık küçük bir bölüm",
+      "description": "Hanın planını gösteren tepeden görünüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-elikesik-inn/interior-arches.jpg",
+      "alt": "İç mekân: kesme taştan büyük sivri kemer ve iki yanında daha küçük kemer açıklıkları; tavanda moloz taş tonoz ve asılı bir avize",
+      "description": "Kemerli iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-elikesik-inn/interior-vault.jpg",
+      "alt": "Yarı karanlık iç mekân: taş tonozlu sahın boyunca uzanan kemerler ve solda ışık alan bir kemer ayağı",
+      "description": "Tonozlu sahın",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "deep-rectangular-plan",
+      "image": "/images/konya-selcuklu-elikesik-inn/top-view.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Derinlemesine dikdörtgen plan",
+      "text": "Han güney-kuzey doğrultulu derinlemesine dikdörtgen planda, kapalı mekân ve avlu bölümlerinden oluşmaktadır.",
+      "sourceId": "inv-p259"
+    },
+    {
+      "id": "cut-stone-walls",
+      "image": "/images/konya-selcuklu-elikesik-inn/exterior.jpg",
+      "x": 28,
+      "y": 60,
+      "title": "Kesme taş duvarlar",
+      "text": "Yapının inşasında düzgün kesme taş kullanılmış, dış duvarlarda devşirme malzeme de görülmektedir.",
+      "sourceId": "inv-p259"
+    }
+  ],
+  "test": [
+    {
+      "question": "Han hangi yıl Vakıflar Genel Müdürlüğü tarafından tamir edilmiştir?",
+      "options": [
+        "1956",
+        "1985",
+        "2007",
+        "2018"
+      ],
+      "correct": 2,
+      "description": "Han, Vakıflar Genel Müdürlüğü tarafından 2007 senesinde tamir edilmiştir.",
+      "sourceId": "inv-p258"
+    },
+    {
+      "question": "Kapalı bölümü üç sahına ayıran ayaklar hangi malzemedendir?",
+      "options": [
+        "Mermer",
+        "Ahşap",
+        "Tuğla",
+        "Tüf taşı"
+      ],
+      "correct": 0,
+      "description": "Mekânı üç sahına bölen ayaklar mermer malzemedendir.",
+      "sourceId": "inv-p259"
+    },
+    {
+      "question": "Ahmet Çaycı, Şer'iyye sicillerine dayanarak yapının ne olduğunu belirtir?",
+      "options": [
+        "Medrese",
+        "Han / zaviye",
+        "Hamam",
+        "Bedesten"
+      ],
+      "correct": 1,
+      "description": "Ahmet Çaycı makalesinde Konya Şer'iyye sicillerinden hareketle yapının han / zaviye olduğunu belirtmektedir.",
+      "sourceId": "inv-p259"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p258",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Elikesik Han\"",
+      "page": "258"
+    },
+    {
+      "id": "inv-p259",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Elikesik Han\"",
+      "page": "259"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

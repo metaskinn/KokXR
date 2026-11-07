@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-sarnic-mosque",
+  "name": "Sarnıç Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XIX. yüzyıl sonlarına tarihlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sedirler Caddesi’ndeki Sarnıç Camii, dört serbest direkli ahşap tavanı ve köşesindeki mukarnaslı pahıyla tanımlanır.",
+  "history": "Cami, Karatay, Sarnıç Mahallesi, Sedirler Caddesi’ndedir. Yapım tarihi ve banisi bilinmez; XIX. yüzyıl sonlarına doğru yapıldığı düşünülür. 1947’de geniş onarım görmüş; bu onarıma ait Latin harfli kitâbe güney cepheye konmuştur. Vakıflar Bölge Müdürlüğü 2007’de onarmıştır.\n\nKesme taşla yığma yapılan cami kareye yakın planlı, kırma çatılı ve sade cephelidir. Doğusu komşu konuta bitişiktir. Kuzeyde giriş kapısı bulunur. Kuzey ile batı cephelerinin birleştiği köşenin üstü beş sıra mukarnasla pahlanmıştır. Harimin ahşap tavanını dört serbest direk taşır. Kuzeyde sade ahşap mahfil, kıble duvarında ahşap mihrap vardır. Ahşap minber yakın zamanda eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-sarnic-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-sarnic-mosque/exterior.jpg",
+      "alt": "Sarı sıvalı caminin kiremit çatısı, ahşap kapısı ve sağ köşede basamaklı mukarnas dizisi",
+      "description": "Sarı sıvalı caminin kiremit çatısı, ahşap kapısı ve sağ köşede basamaklı mukarnas dizisi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-sarnic-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde ahşap tavanı taşıyan direkler, karşıda ahşap mihrap ve sağda minber",
+      "description": "Mavi halılı harimde ahşap tavanı taşıyan direkler, karşıda ahşap mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-sarnic-mosque/exterior.jpg",
+      "x": 81,
+      "y": 47,
+      "title": "Mukarnaslı köşe",
+      "text": "Kuzey ve batı cephenin kesişimi üstte beş sıra mukarnasla pahlanmıştır.",
+      "sourceId": "inv-p206"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-sarnic-mosque/prayer-hall.jpg",
+      "x": 29,
+      "y": 53,
+      "title": "Ahşap tavanın direkleri",
+      "text": "Harimin ahşap tavanı dört serbest direk tarafından taşınır.",
+      "sourceId": "inv-p206"
+    }
+  ],
+  "test": [
+    {
+      "question": "1947 onarımının kitâbesi hangi cephededir?",
+      "options": [
+        "Güney",
+        "Kuzey",
+        "Doğu",
+        "Batı"
+      ],
+      "correct": 0,
+      "description": "Latin harfli onarım kitâbesi güney cephededir.",
+      "sourceId": "inv-p206"
+    },
+    {
+      "question": "Ahşap tavanı kaç serbest direk taşır?",
+      "options": [
+        "İki",
+        "Altı",
+        "Dört",
+        "Sekiz"
+      ],
+      "correct": 2,
+      "description": "Harim dört serbest direğin taşıdığı ahşap tavana sahiptir.",
+      "sourceId": "inv-p206"
+    },
+    {
+      "question": "Vakıflar Bölge Müdürlüğü hangi yıl onarım yapmıştır?",
+      "options": [
+        "1869",
+        "2007",
+        "1923",
+        "1955"
+      ],
+      "correct": 1,
+      "description": "Kitap 2007’deki Vakıflar Bölge Müdürlüğü onarımını belirtir.",
+      "sourceId": "inv-p206"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p206",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sarnıç Camii\"",
+      "page": "206"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

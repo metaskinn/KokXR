@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-yolcuoglu-gazioglu-mosque",
+  "name": "Yolcuoğlu (Gazioğlu) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XX. yüzyılın ilk yarısına tarihlendirilebilir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hacı Fettah Mezarlığı’nın batısındaki cami, ahşap mahfili ve sonradan kırma çatıyla örtülen harimiyle tanımlanır.",
+  "history": "Cami, Meram, Fahrunnisa Mahallesi, Baruthane Caddesi No. 65’te, Hacı Fettah Mezarlığı’nın batısındadır. Kitâbesi veya vakfiyesi yoktur. Tanıtım levhasında 1929, bitişik çeşmede H. 1342 / M. 1923-24 tarihleri bulunur. Kitap bu veriler ve mimari özelliklerden hareketle yapıyı XX. yüzyılın ilk yarısına tarihlendirir; mülkiyetinin Vakıflar Genel Müdürlüğü’nde olduğunu ve ibadete açık bulunduğunu belirtir.\n\nÖnceleri düz toprak damlı yapı sonradan kırma çatıyla örtülmüştür. Taşırılmış saçakların altı ahşap çıtalarla kaplıdır. Kareye yakın dikdörtgen harim dikdörtgen pencerelerle aydınlanır; duvarları ve ahşap sütunları sonradan lambriyle kaplanmıştır. Kuzeyde sade korkuluklu ahşap kadınlar mahfili, alt bölümde camekânla çevrili imam odası bulunur. Kıble duvarının ortasındaki yarım daire planlı mihrabın yedi bölümlü soyut bitkisel süslemeleri vardır. Sağdaki sade minber ahşaptır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-yolcuoglu-gazioglu-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-yolcuoglu-gazioglu-mosque/exterior.jpg",
+      "alt": "Kiremit kırma çatılı açık renkli cephenin önünde iki pencere ve iki bank",
+      "description": "Kiremit kırma çatılı açık renkli cephenin önünde iki pencere ve iki bank",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-yolcuoglu-gazioglu-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde lambri kaplı direkler, açık renkli mihrap ve sağda ahşap minber",
+      "description": "Kırmızı halılı harimde lambri kaplı direkler, açık renkli mihrap ve sağda ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-yolcuoglu-gazioglu-mosque/exterior.jpg",
+      "x": 50,
+      "y": 24,
+      "title": "Kırma çatı",
+      "text": "Düz toprak damlı cami sonradan kırma çatıyla örtülmüştür.",
+      "sourceId": "inv-p153"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-yolcuoglu-gazioglu-mosque/prayer-hall.jpg",
+      "x": 63,
+      "y": 49,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p153"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi mezarlığın batısındadır?",
+      "options": [
+        "Üçler Mezarlığı",
+        "Araplar Mezarlığı",
+        "Musalla Mezarlığı",
+        "Hacı Fettah Mezarlığı"
+      ],
+      "correct": 3,
+      "description": "Yapı Hacı Fettah Mezarlığı’nın batısındadır.",
+      "sourceId": "inv-p153"
+    },
+    {
+      "question": "Kadınlar mahfili hangi malzemedendir?",
+      "options": [
+        "Çelik",
+        "Ahşap",
+        "Mermer",
+        "Cam"
+      ],
+      "correct": 1,
+      "description": "Kuzeydeki kadınlar mahfili ahşaptır.",
+      "sourceId": "inv-p153"
+    },
+    {
+      "question": "Yapı kitapta hangi zaman aralığına tarihlendirilir?",
+      "options": [
+        "XX. yüzyılın ilk yarısı",
+        "XIII. yüzyıl",
+        "XV. yüzyıl",
+        "XVII. yüzyıl"
+      ],
+      "correct": 0,
+      "description": "Mimari özellikler ve levhalardaki verilerle XX. yüzyılın ilk yarısına tarihlendirilebilir.",
+      "sourceId": "inv-p153"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p153",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Yolcuoğlu (Gazioğlu) Camii\"",
+      "page": "153"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

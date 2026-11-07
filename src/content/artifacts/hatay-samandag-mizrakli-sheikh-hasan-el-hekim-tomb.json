@@ -1,0 +1,95 @@
+{
+  "id": "hatay-samandag-mizrakli-sheikh-hasan-el-hekim-tomb",
+  "name": "Mızraklı Şeyh Hasan El-Hekim Türbesi",
+  "district": "Samandağ",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Mızraklı Şeyh Hasan El-Hekim Türbesi, Samandağ’da yüksekçe bir tepede, kubbeli kare yapı ve çevresindeki hizmet mekânlarıyla yer alır.",
+  "history": "Yapı Samandağ’a bağlı Mızraklı Köyü’nün Ziyara Mevkii’nde yüksekçe bir tepede bulunur. Kare planlı türbenin geniş saçakları üzerinde yuvarlak kubbe yer alır. Her cephede bir pencere vardır.\n\nDöşeme karo mozaik, duvarların bir bölümü seramik kaplıdır. Ortadaki mermer sandukada herhangi bir kayıt yoktur. Yanında küçük bir hazire bulunur. Yakınındaki iki katlı yapı ibadet ve toplantı için kullanılır; ayrıca kesim ve pişirme yerleri, su deposu ve odunluk vardır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-samandag-mizrakli-sheikh-hasan-el-hekim-tomb/hilltop-tomb.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-samandag-mizrakli-sheikh-hasan-el-hekim-tomb/hilltop-tomb.jpg",
+      "alt": "Ağaçların arasındaki beyaz kubbeli küçük yapının iki cephesi, pencereleri ve sağda yeşil sundurma",
+      "description": "Ağaçların arasındaki beyaz kubbeli küçük yapının iki cephesi, pencereleri ve sağda yeşil sundurma",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-samandag-mizrakli-sheikh-hasan-el-hekim-tomb/hilltop-tomb.jpg",
+      "x": 52,
+      "y": 32,
+      "title": "Yuvarlak kubbe",
+      "text": "Geniş saçaklı kare türbe yuvarlak kubbe ile örtülüdür.",
+      "sourceId": "inv-p439"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-samandag-mizrakli-sheikh-hasan-el-hekim-tomb/hilltop-tomb.jpg",
+      "x": 55,
+      "y": 55,
+      "title": "Cephe pencereleri",
+      "text": "Türbenin her cephesinde birer pencere bulunur.",
+      "sourceId": "inv-p439"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mızraklı Şeyh Hasan El-Hekim Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "Arsuz",
+        "Samandağ"
+      ],
+      "correct": 3,
+      "description": "Türkçe adres listesinde ilçe Samandağ olarak verilmiştir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Türbe hangi mevkidedir?",
+      "options": [
+        "Ziyara Mevkii",
+        "Uzun Çarşı",
+        "Darbısak Kalesi",
+        "Kurtuluş Caddesi"
+      ],
+      "correct": 0,
+      "description": "Yapı Mızraklı Köyü Ziyara Mevkii’nde yer alır.",
+      "sourceId": "inv-p439"
+    },
+    {
+      "question": "Döşeme hangi malzemeyle kaplıdır?",
+      "options": [
+        "Cam",
+        "Karo mozaik",
+        "Çelik",
+        "Toprak"
+      ],
+      "correct": 1,
+      "description": "Kitap döşemeyi karo mozaik olarak tarif eder.",
+      "sourceId": "inv-p439"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p439",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Mızraklı Şeyh Hasan El-Hekim Türbesi\"",
+      "page": "439"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Mızraklı Şeyh Hasan El-Hekim Türbesi\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

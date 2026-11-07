@@ -1,0 +1,95 @@
+{
+  "id": "konya-ilgin-lala-mustafa-pasha-imaret",
+  "name": "Lala Mustafa Paşa Külliyesi İmareti",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Osmanlı · külliye H. 984 / M. 1576",
+  "endowment": "Kıbrıs Fâtihi Lala Mustafa Paşa (külliyenin banisi)",
+  "summary": "Lala Mustafa Paşa Külliyesi avlusunun batısında, mutfak ve ambar birimlerinden oluşan kubbeli imaret.",
+  "history": "Ilgın şehir merkezindeki Lala Mustafa Paşa Külliyesi, Sultan Murad zamanında Kıbrıs Fâtihi Lala Mustafa Paşa tarafından H. 984 / M. 1576'da yaptırılmıştır. İmaret bu külliyenin avlusunun batısında, kuzey-güney yönlü dikdörtgen bir alanda yer alır.\n\nYapı genel olarak \"L\" planlı külliyeye bitişik iki ayrı bölümden oluşur; kuzeyden çarşıya bitişiktir. Kuzey-güney doğrultulu yapının içindeki kare planlı ve kubbeli üç birimden güneydeki ikisi mutfak, diğeri ambardır. Doğu-batı yönündeki dikdörtgen birim, ortadan bir kemerle ayrılmış yan yana iki kubbeyle örtülüdür.\n\nMekânın üzeri kasnaklara oturan kubbelerle kapatılmıştır. İmarete her iki kubbeli mekânın batı cephesinin ortasına açılan birer kapıyla girilir; asıl giriş güney cephededir. Bu iki kubbeli mekân ile çarşı arasındaki kubbeli kare birimin avluya açılan ayrı bir kapısı vardır; bu dikdörtgen kapının alınlığı diğerleri gibi sivri kemerlidir. Avluya açılan sivri kemer alınlıklı dikdörtgen pencere ile batı cephedeki pencere içeriyi aydınlatır. Bu bölümün üstü, diğerlerinden daha yüksek olan ve aydınlık feneri bulunmayan, sekizgen kasnağa oturan dilimli bir kubbeyle örtülüdür. Kuzeyinde diğer mekânlar gibi ocak ve bacası bulunan bu bölümün, vakfiyede bahsedilen mutfak olduğu düşünülebilir.\n\nİmarette yapı malzemesi olarak moloz taş ve tuğla kullanılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-lala-mustafa-pasha-imaret/interior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-imaret/interior.jpg",
+      "alt": "İç mekân: moloz taş duvarlar ve tuğla kemerler altında, duvar boyunca minderli oturma sedirleri, ortada halı, duvarlarda Türk bayrakları ve asılı avize",
+      "description": "İmaretin içi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "rubble-stone",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-imaret/interior.jpg",
+      "x": 22,
+      "y": 35,
+      "title": "Moloz taş duvar",
+      "text": "İmarette yapı malzemesi olarak moloz taş ve tuğla kullanılmıştır.",
+      "sourceId": "inv-p63"
+    },
+    {
+      "id": "brick-arch",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-imaret/interior.jpg",
+      "x": 88,
+      "y": 35,
+      "title": "Tuğla kemer",
+      "text": "Moloz taşla birlikte tuğla da imaretin yapı malzemeleri arasındadır.",
+      "sourceId": "inv-p63"
+    }
+  ],
+  "test": [
+    {
+      "question": "İmaret külliye avlusunun hangi yönündedir?",
+      "options": [
+        "Doğusunda",
+        "Kuzeyinde",
+        "Güneyinde",
+        "Batısında"
+      ],
+      "correct": 3,
+      "description": "İmaret, Lala Mustafa Paşa Külliyesi avlusunun batısında yer alır.",
+      "sourceId": "inv-p63"
+    },
+    {
+      "question": "Güneydeki kare planlı, kubbeli üç birim ne amaçla kullanılır?",
+      "options": [
+        "İkisi mutfak, biri ambar",
+        "Üçü de yemekhane",
+        "İkisi oda, biri ahır",
+        "Biri fırın, ikisi depo"
+      ],
+      "correct": 0,
+      "description": "Güneydeki üç birimden ikisi mutfak, diğeri ambardır.",
+      "sourceId": "inv-p63"
+    },
+    {
+      "question": "İmarette hangi yapı malzemeleri kullanılmıştır?",
+      "options": [
+        "Mermer ve ahşap",
+        "Kerpiç ve ahşap",
+        "Moloz taş ve tuğla",
+        "Yalnızca kesme taş"
+      ],
+      "correct": 2,
+      "description": "İmarette yapı malzemesi olarak moloz taş ve tuğla kullanılmıştır.",
+      "sourceId": "inv-p63"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p53",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Lala Mustafa Paşa Külliyesi\"",
+      "page": "53"
+    },
+    {
+      "id": "inv-p63",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"İmaret\"",
+      "page": "63"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

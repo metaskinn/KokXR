@@ -1,0 +1,116 @@
+{
+  "id": "konya-beysehir-esrefoglu-suleyman-bey-tomb",
+  "name": "Eşrefoğlu Süleyman Bey Türbesi",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "Eşrefoğulları dönemi · Giriş kitâbesine göre H. 701 / M. 1301",
+  "endowment": "Banisi Seyfettin Süleyman Bey",
+  "summary": "Seyfettin Süleyman Bey'in vefatından bir yıl önce, 1301'de Eşrefoğlu Camii'nin doğu duvarına bitişik olarak yaptırdığı, mozaik çinili kubbesiyle bilinen iki katlı türbe.",
+  "history": "Türbe, camii, türbe, bedesten ve hamamdan oluşan Eşrefoğlu Süleyman Bey Külliyesi'nin bir parçasıdır ve Eşrefoğlu Camii'nin doğu duvarına bitişiktir. Giriş kapısı üzerindeki kitâbeye göre Seyfettin Süleyman Bey tarafından, vefatından bir yıl önce, H. 701 / M. 1301'de yaptırılmıştır ve Selçuklu geleneğini sürdürür.\n\nİki katlı türbenin alt katı, asıl kabrin bulunduğu kare planlı cenazeliktir (mumyalık). İkinci kat sekizgen gövde üzerinde içten kubbe, dıştan konik külahla örtülüdür. Batı cephesi camiye bitişik olan yapının giriş açıklığı bu taraftadır. Dış cephesi tamamen sade olan türbenin iç kısmı, dış cephelere göre daha iyi korunmuştur.\n\nTürbenin içi düzgün kesme taşla kaplıdır ve duvarlar yarım silindirik nişlerle hareketlendirilmiştir. Kubbe içindeki zengin çiniler ve sandukalar önemlidir. Kubbedeki tuğla örgülerle oluşturulmuş süslemelerin yarısından fazlası dökülmüş ya da tahrip olmuştur; 1965'te Vakıflar Genel Müdürlüğünün yaptığı restorasyonda dökülen yerler alçıyla kapatılarak aslına uygun biçimde tamamlanmıştır. Mozaik tekniğiyle yapılan bu uygulama Karatay Medresesi'nin kubbesine benzer; kubbe, Konya'daki Karatay Medresesi kubbesinden sonra günümüze ulaşabilmiş tek çinili ve en başarılı kubbe örneğidir.\n\nTürbenin ortasında birbirine bitişik üç sanduka bulunur; tuğlayla örülü, çamur sıvalıdır ve üzerleri yeşil bir örtüyle kaplıdır. Vakıflar Genel Müdürlüğünün düzenlemesinden sonra soldaki sandukanın Süleyman Bey'e, ortadakinin hanımına, sağdakinin de oğlu Mübarizüddin Mehmet Bey'e ait olduğu tespit edilmiştir. Sandukaların aslında çinilerle kaplı olduğuna dair kayıtlar da vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-esrefoglu-suleyman-bey-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-esrefoglu-suleyman-bey-tomb/exterior.jpg",
+      "alt": "Kesme taştan sekizgen gövdeli, konik taş külahlı türbe; solda moloz taş cami duvarı ve arkada bir başka külah, sağda alçak taş bir yapı",
+      "description": "Türbenin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-esrefoglu-suleyman-bey-tomb/sarcophagi.jpg",
+      "alt": "Kesme taş duvarlı iç mekânda yan yana duran, yeşil örtülü üç sanduka",
+      "description": "Türbedeki üç sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "conical-roof",
+      "image": "/images/konya-beysehir-esrefoglu-suleyman-bey-tomb/exterior.jpg",
+      "x": 40,
+      "y": 28,
+      "title": "Konik külah",
+      "text": "Türbenin ikinci katı sekizgen gövde üzerinde içten kubbe, dıştan konik külahla örtülüdür.",
+      "sourceId": "inv-p26"
+    },
+    {
+      "id": "plain-facade",
+      "image": "/images/konya-beysehir-esrefoglu-suleyman-bey-tomb/exterior.jpg",
+      "x": 40,
+      "y": 68,
+      "title": "Sade dış cephe",
+      "text": "Dış cephesi tamamen sade olan türbenin iç kısmı dış cephelere göre daha iyi korunmuştur.",
+      "sourceId": "inv-p26"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/konya-beysehir-esrefoglu-suleyman-bey-tomb/sarcophagi.jpg",
+      "x": 52,
+      "y": 72,
+      "title": "Üç sanduka",
+      "text": "Tuğla örülü, çamur sıvalı, yeşil örtülü üç sandukadan soldaki Süleyman Bey'e, ortadaki hanımına, sağdaki oğlu Mübarizüddin Mehmet Bey'e aittir.",
+      "sourceId": "inv-p27"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe hangi tarihte yaptırılmıştır?",
+      "options": [
+        "H. 696 / M. 1296-97",
+        "H. 701 / M. 1301",
+        "H. 699 / M. 1299-1300",
+        "H. 958 / M. 1551"
+      ],
+      "correct": 1,
+      "description": "Giriş kitâbesine göre türbe, Seyfettin Süleyman Bey tarafından vefatından bir yıl önce H. 701 / M. 1301'de yaptırılmıştır.",
+      "sourceId": "inv-p26"
+    },
+    {
+      "question": "Türbenin ortasındaki üç sandukadan ortadaki kime aittir?",
+      "options": [
+        "Süleyman Bey'in hanımına",
+        "Eşref Bey'e",
+        "Mübarizüddin Mehmet Bey'e",
+        "Süleyman Bey'e"
+      ],
+      "correct": 0,
+      "description": "Soldaki sanduka Süleyman Bey'e, ortadaki hanımına, sağdaki oğlu Mübarizüddin Mehmet Bey'e aittir.",
+      "sourceId": "inv-p27"
+    },
+    {
+      "question": "Türbenin mozaik çinili kubbesi hangi yapının kubbesine benzer?",
+      "options": [
+        "Alaeddin Camii",
+        "Sırçalı Medrese",
+        "İnce Minareli Medrese",
+        "Karatay Medresesi"
+      ],
+      "correct": 3,
+      "description": "Mozaik tekniğiyle yapılan uygulama Karatay Medresesi'nin kubbesiyle benzer düzenlemededir.",
+      "sourceId": "inv-p27"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p13",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Beyşehir Eşrefoğlu Süleyman Bey Türbesi\"",
+      "page": "13"
+    },
+    {
+      "id": "inv-p26",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Beyşehir Eşrefoğlu Süleyman Bey Türbesi\"",
+      "page": "26"
+    },
+    {
+      "id": "inv-p27",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Beyşehir Eşrefoğlu Süleyman Bey Türbesi\"",
+      "page": "27"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

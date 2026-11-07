@@ -1,0 +1,111 @@
+{
+  "id": "konya-meram-akyokus-hoca-cihan-inn",
+  "name": "Akyokuş (Hoca Cihan) Hanı",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu · Altunapa vakfiyesine göre XII. yüzyıl",
+  "endowment": "Altunapa vakfiyesine göre Tebrizli tacir Hacı Bahtiyar b. Abdullah yaptırmıştır; Osmanlı döneminde 20 Ağustos 1701 tarihli Hacı İbrahim vakfiyesiyle hana vakıflar tahsis edilmiştir",
+  "summary": "Konya-Beyşehir yolu üzerinde, iki sıra ayakla üç sahına ayrılan, erken dönem Selçuklu hanlarına örnek gösterilen ve bugün restoran olan han.",
+  "history": "Han, Meram'da Yunus Emre Mahallesi'nde, Konya-Beyşehir yolu üzerindedir ve \"Dibidelik Han\" olarak da bilinir. Yapının inşasına ait bir kitâbe yoktur.\n\nSelçuklu kayıtlarında Hoca Cihan Hanı hakkında Altun-Aba (Altınapa Hanı) vakfiyesi dışında bilgiye rastlanmamıştır. Osmanlı dönemindeki en eski kayıt 20 Ağustos 1701 tarihli Hacı İbrahim vakfiyesidir; vakfiyeden hana zengin vakıflar tahsis edildiği ve bunların hanın bakım ve onarımına harcanması şartı konduğu anlaşılır. Yapıyı XIII. yüzyıl sonu ile XIV. yüzyıl başına tarihlendirenler de vardır; ancak M. 1201-1202'de tescil ettirilen Altunapa Hanı vakfiyesinde \"Konya ile Gorgorum arasındaki yolda, Tebrizli Tacir Hacı Bahtiyar b. Abdullah adlı birisinin bu kervansarayı yaptırdığı\" kaydı bulunur. Kitaba göre bu vakfiyeye dayanarak han XII. yüzyılda inşa edilmiştir.\n\n1940'lı yıllara kadar kullanılan yapı 2009-2010'da tamir edilerek restoran olarak kullanılmaya başlanmış, bugün de restorandır.\n\nHoca Cihan Hanı doğu-batı doğrultusunda, derinlemesine dikdörtgen planlı ve iki yöne eğimli kırma çatılı tek bir bölümden oluşur. Yalnızca kapalı bölümü olan han moloz taştan yapılmıştır. Beden duvarları tamamen sağırdır; doğu ve batı cephelere giriş açıklıkları eklenmiştir. İç mekân, birbirine yuvarlak kemerlerle bağlanan beşerli iki sıra ayakla üç sahına ayrılır. Sade görünümlü mekânda kemer karınlarında düzgün kesme taş kullanılmıştır. Yapının üzeri ahşap kirişlerle düz dam şeklinde örtülüdür. Han, mimari özellikleriyle Anadolu'daki erken dönem Selçuklu hanlarından bir örnektir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-akyokus-hoca-cihan-inn/interior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-akyokus-hoca-cihan-inn/interior.jpg",
+      "alt": "İç mekân: yuvarlak kemerlerle birbirine bağlanan taş ayaklar arasında masalar, sandalyeler ve avizeler; ortada kırmızı halı",
+      "description": "Restoran olarak kullanılan iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-akyokus-hoca-cihan-inn/aerial-view.jpg",
+      "alt": "Havadan görünüm: gri çatılı, taş duvarlı dikdörtgen yapı; yanında kiremit çatılı küçük bir ek bina ve çevresinde otopark",
+      "description": "Hanın havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "round-arches",
+      "image": "/images/konya-meram-akyokus-hoca-cihan-inn/interior.jpg",
+      "x": 78,
+      "y": 55,
+      "title": "Yuvarlak kemerli ayaklar",
+      "text": "İç mekân, birbirine yuvarlak kemerle bağlı beşerli iki sıra ayakla üç sahına ayrılmıştır.",
+      "sourceId": "inv-p245"
+    },
+    {
+      "id": "cut-stone-arches",
+      "image": "/images/konya-meram-akyokus-hoca-cihan-inn/interior.jpg",
+      "x": 50,
+      "y": 12,
+      "title": "Kesme taş kemerler",
+      "text": "Sade görünümlü mekânda kemer karınlarında düzgün kesme taş kullanılmıştır.",
+      "sourceId": "inv-p245"
+    },
+    {
+      "id": "restaurant",
+      "image": "/images/konya-meram-akyokus-hoca-cihan-inn/interior.jpg",
+      "x": 30,
+      "y": 80,
+      "title": "Restoran",
+      "text": "Yapı 2009-2010'da tamir edilmiş ve restoran olarak kullanılmaya başlanmıştır.",
+      "sourceId": "inv-p245"
+    }
+  ],
+  "test": [
+    {
+      "question": "Han başka hangi adla da bilinmektedir?",
+      "options": [
+        "Yıkık Han",
+        "Dibidelik Han",
+        "Hanönü",
+        "Yazı Önü"
+      ],
+      "correct": 1,
+      "description": "Yapı \"Dibidelik Han\" olarak da bilinmektedir.",
+      "sourceId": "inv-p244"
+    },
+    {
+      "question": "Hanın iç mekânı nasıl bölünmüştür?",
+      "options": [
+        "Beşerli iki sıra ayakla üç sahına",
+        "Tek bir kubbeli mekân olarak",
+        "Dört eyvanlı avlu olarak",
+        "İki katlı odalar hâlinde"
+      ],
+      "correct": 0,
+      "description": "İç mekân, birbirine yuvarlak kemerle bağlı beşerli iki sıra ayakla üç sahına ayrılmıştır.",
+      "sourceId": "inv-p245"
+    },
+    {
+      "question": "Osmanlı dönemine ait en eski kayıt hangi vakfiyedir?",
+      "options": [
+        "Sultan Hatun vakfiyesi",
+        "Altunapa vakfiyesi",
+        "Hacı İbrahim vakfiyesi (1701)",
+        "Emir Kandemir vakfiyesi"
+      ],
+      "correct": 2,
+      "description": "Osmanlı dönemindeki en eski kayıt 20 Ağustos 1701 tarihli Hacı İbrahim vakfiyesidir.",
+      "sourceId": "inv-p244"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p244",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Akyokuş (Hoca Cihan) Hanı\"",
+      "page": "244"
+    },
+    {
+      "id": "inv-p245",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Akyokuş (Hoca Cihan) Hanı\"",
+      "page": "245"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

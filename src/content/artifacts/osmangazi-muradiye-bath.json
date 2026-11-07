@@ -1,0 +1,119 @@
+{
+  "id": "osmangazi-muradiye-bath",
+  "inventoryId": "osmangazi-muradiye-hamami",
+  "name": "Muradiye Hamamı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad; 1426",
+  "endowment": "Banisi Sultan II. Murad",
+  "summary": "Muradiye Külliyesi'nin parçası olarak 1426'da II. Murad'ın yaptırdığı, sade planlı, almaşık duvarlı hamam.",
+  "history": "Muradiye Hamamı, Osmangazi ilçesi, Muradiye Mahallesi, Kaplıca Caddesi üzerinde, medresenin batısındadır. Muradiye Külliyesi'nin bir parçası olarak 1426'da Sultan II. Murad tarafından inşa ettirilmiştir. Oldukça sade bir plana sahip yapı; soğukluk, sıcaklık, iki halvet odası ve külhandan oluşur. Beden duvarları üç ya da bazı kısımlarda iki sıra tuğla ve üç sıra moloz taşla almaşık teknikte örülmüştür.\n\nSoğukluğun kuzey cephesindeki taç kapı yol kotundan yukarıda kaldığı için bu bölüme sekiz basamaklı bir merdivenle çıkılır. Yaklaşık 10 × 10 m ölçülerindeki soğukluk, sekizgen kasnağa oturan sivri tromplu bir kubbeyle örtülüdür; kubbenin ortasında aydınlık feneri vardır. Soğukluğun güneyindeki kapıdan ılıklık bölümüne geçilir; bu bölümün iki yanında kubbeli eyvanlar bulunur ve ılıklıktan halvetlere bağlantı sağlanır. Soğuklukta altı sivri kemerli pencere bulunur; alt kattaki sivri kemerli pencereler tuğladandır, üst pencerelerde bu özelliğin olmaması sonradan eklendiklerini düşündürür. Kemerler ve kasnaklar kesme taştandır; hamam bölümünün kubbeleri kiremit kaplıdır ve metal profilli cam aydınlık fenerleriyle donatılmıştır.\n\nHamam 1523, 1623, 1634, 1742, 1930, 1980 ve 2008-2010 yıllarında onarılmıştır. 1930'larda harap olan yapı onarılarak 1986'ya kadar dökümhane olarak kullanılmış, Bursa Eski Eserleri Sevenler Kurumu'nun desteğiyle restore edilerek asıl işlevine döndürülmüştür. Zamanla yeniden bakımsız kalan yapı, 2011'deki restorasyonun ardından engelli rehabilitasyon merkezi olarak düzenlenmiş; 2020'de Sosyal Yardımlaşma Vakfı tarafından giyim mağazasına dönüştürülmüştür.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-muradiye-bath/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-muradiye-bath/aerial-view.jpg",
+      "alt": "Havadan görünüm: tuğla ve taş örgülü hamam; sekizgen kasnak üzerinde kiremit kaplı kubbe ve tepesinde küçük fener, arkada Muradiye'nin kurşun kubbeleri ve ağaçlar",
+      "description": "Hamamın havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-muradiye-bath/north-portal.jpg",
+      "alt": "Yol köşesindeki tuğla-taş almaşık örgülü hamam; sivri kemerli giriş kapısına çıkan taş merdiven, üstte sekizgen kasnaklı kubbe ve fener",
+      "description": "Taç kapı ve merdiven",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-muradiye-bath/interior.jpg",
+      "alt": "Giyim mağazası olarak düzenlenmiş iç mekân: raflarda katlanmış ve askıda giysiler, üstte kubbe ve ahşap galeri",
+      "description": "Giyim mağazası olarak kullanılan iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "lantern",
+      "image": "/images/osmangazi-muradiye-bath/aerial-view.jpg",
+      "x": 38,
+      "y": 16,
+      "title": "Aydınlık feneri",
+      "text": "Soğukluğu örten, sekizgen kasnağa oturan kubbenin ortasında bir aydınlık feneri bulunur.",
+      "sourceId": "inv-p130"
+    },
+    {
+      "id": "portal",
+      "image": "/images/osmangazi-muradiye-bath/north-portal.jpg",
+      "x": 38,
+      "y": 75,
+      "title": "Taç kapı",
+      "text": "Soğukluğun taç kapısı yol kotundan yukarıda kaldığı için sekiz basamaklı bir merdivenle ulaşılır.",
+      "sourceId": "inv-p130"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-muradiye-bath/north-portal.jpg",
+      "x": 70,
+      "y": 62,
+      "title": "Almaşık duvarlar",
+      "text": "Beden duvarları tuğla ve moloz taş dizileriyle almaşık örgü tekniğiyle inşa edilmiştir.",
+      "sourceId": "inv-p130"
+    }
+  ],
+  "test": [
+    {
+      "question": "Soğukluk bölümünün taç kapısına kaç basamaklı merdivenle çıkılır?",
+      "options": [
+        "Üç",
+        "Beş",
+        "Sekiz",
+        "On iki"
+      ],
+      "correct": 2,
+      "description": "Taç kapı yol kotundan yukarıda kaldığı için bu bölüme sekiz basamaklı bir merdivenle ulaşılır.",
+      "sourceId": "inv-p130"
+    },
+    {
+      "question": "Hamam 1930'larda onarıldıktan sonra 1986'ya kadar ne olarak kullanılmıştır?",
+      "options": [
+        "Dökümhane",
+        "Okul",
+        "Hastane",
+        "Depo"
+      ],
+      "correct": 0,
+      "description": "1930'lu yıllarda onarılan yapı 1986 yılına kadar dökümhane olarak kullanılmıştır.",
+      "sourceId": "inv-p131"
+    },
+    {
+      "question": "Hamam 2020'de neye dönüştürülmüştür?",
+      "options": [
+        "Müzeye",
+        "Giyim mağazasına",
+        "Kütüphaneye",
+        "Restorana"
+      ],
+      "correct": 1,
+      "description": "2020'de Sosyal Yardımlaşma Vakfı tarafından giyim mağazasına dönüştürülmüştür.",
+      "sourceId": "inv-p131"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p130",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Muradiye Hamamı\"",
+      "page": "130"
+    },
+    {
+      "id": "inv-p131",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Muradiye Hamamı\"",
+      "page": "131"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "konya-selcuklu-emir-ebu-ishak-kazeruni-lodge",
+  "name": "Emir Ebu İshak Kazerûni Tekkesi (Türbesi)",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Karamanoğlu Mehmet Bey dönemi · kitâbeye göre H. 821 / M. 1418",
+  "endowment": "Kitapta belirtilmemiştir; zaviye Ebu İshak İbrahim Kazerûnî adına yaptırılmıştır",
+  "summary": "Karamanoğlu Mehmet Bey döneminde Ebu İshak İbrahim Kazerûnî adına yaptırılan, zaviye ve türbe olarak günümüze ulaşan dikdörtgen planlı yapı.",
+  "history": "Türbe, Selçuklu İlçesi, İhsaniye Mahallesi, Ertuğrul Sokak üzerindedir. Ebu İshak Kazerûni, Çin, Hindistan, İran ve Anadolu'da İslamiyet'in yayılmasında önemli katkıları olan alim bir zattır. İbrahim Hakkı Konyalı, onun Konya, Erzurum, Bursa, Edirne ve Malazgirt gibi birçok yerde hânikahlar olmak üzere vakıf eserleri yaptırdığını belirtir.\n\nZaviye, Karamanoğlu Mehmet Bey döneminde Ebu İshak İbrahim Kazerûnî adına yaptırılmıştır; iki satırlık kitâbesinde yapım tarihi H. 821 / M. 1418 olarak verilir. Türbede Kazerûnî tarikatının halifelerinden, Karamanoğlu devri şeyhlerinden Şeyh Hacı Hasan medfundur. Konya Büyükşehir Belediyesi tarafından onarılan türbe ziyarete açılmıştır.\n\nYapı kuzey-güney doğrultusunda dikdörtgen planlıdır; moloz taştan yapılmış ve çamur sıvalıdır. İlk dönemlerde düz damla örtülüyken bugün çatıyla kapatılmıştır. Cepheler oldukça sadedir: kuzey cephede giriş, girişin iki yanında birer pencere ve üstte kitâbe bulunur; doğu cephede demir parmaklıklı büyük bir pencere daha vardır.\n\nUzun dikdörtgen mekân ahşap düz damla örtülüdür ve eskiden zikir yeri olarak kullanılmıştır. Bu mekânın doğu duvarındaki iki kapıdan güneydeki türbeye açılır; türbenin içinde bir sanduka vardır. Diğer kapıdan şeyh evi olarak kullanılmış hol bölümüne geçilir; bu ev, geleneksel Konya evlerinde olduğu gibi bir hol ve iki odadan oluşur. Karamanoğlu döneminde yapılan eser, zaviye ve türbe olma özelliğiyle günümüze ulaşan önemli yapılardandır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-emir-ebu-ishak-kazeruni-lodge/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-emir-ebu-ishak-kazeruni-lodge/exterior.jpg",
+      "alt": "Ağaçlar arasında beyaz sıvalı, uzun dikdörtgen tek katlı yapı; kırma çatı, parmaklıklı pencereler ve önünde bilgi tabelası",
+      "description": "Yapının dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-emir-ebu-ishak-kazeruni-lodge/tomb-interior.jpg",
+      "alt": "Kırmızı halı döşeli beyaz duvarlı odada yeşil örtülü ahşap sanduka, önünde açık bir kitap rahlesi; duvarlarda hat levhaları ve çerçeveli fotoğraflar",
+      "description": "Türbe bölümündeki sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/konya-selcuklu-emir-ebu-ishak-kazeruni-lodge/exterior.jpg",
+      "x": 60,
+      "y": 15,
+      "title": "Çatı örtüsü",
+      "text": "Moloz taştan yapılıp çamur sıvanan yapı ilk dönemlerde düz damla örtülüydü; bugün çatıyla kapatılmıştır.",
+      "sourceId": "inv-p160"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/konya-selcuklu-emir-ebu-ishak-kazeruni-lodge/tomb-interior.jpg",
+      "x": 37,
+      "y": 70,
+      "title": "Sanduka",
+      "text": "Zikir mekânının doğu duvarındaki güney kapıdan türbeye geçilir; türbenin içinde bir sanduka bulunur.",
+      "sourceId": "inv-p161"
+    }
+  ],
+  "test": [
+    {
+      "question": "Zaviyenin kitâbesinde verilen yapım tarihi nedir?",
+      "options": [
+        "H. 700 / M. 1300",
+        "H. 860 / M. 1456",
+        "H. 821 / M. 1418",
+        "H. 906 / M. 1500"
+      ],
+      "correct": 2,
+      "description": "İki satırlık kitâbede yapım tarihi H. 821 / M. 1418 olarak belirtilir.",
+      "sourceId": "inv-p160"
+    },
+    {
+      "question": "Yapının uzun dikdörtgen mekânı eskiden ne amaçla kullanılmıştır?",
+      "options": [
+        "Zikir yeri",
+        "Medrese dershanesi",
+        "Aşevi",
+        "Hamam"
+      ],
+      "correct": 0,
+      "description": "Ahşap düz damlı uzun dikdörtgen mekân eskiden zikir yapılan yer olarak kullanılmıştır.",
+      "sourceId": "inv-p161"
+    },
+    {
+      "question": "Şeyh evi olarak kullanılan bölüm nasıl bir plana sahiptir?",
+      "options": [
+        "Dört eyvanlı avlu",
+        "Tek büyük kubbeli salon",
+        "İki katlı revaklı yapı",
+        "Bir hol ve iki oda"
+      ],
+      "correct": 3,
+      "description": "Şeyh evi, geleneksel Konya evlerinde olduğu gibi bir hol ve iki odadan oluşur.",
+      "sourceId": "inv-p161"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p160",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Emir Ebu İshak Kazerûni Tekkesi (Türbesi)\"",
+      "page": "160"
+    },
+    {
+      "id": "inv-p161",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Emir Ebu İshak Kazerûni Tekkesi (Türbesi)\"",
+      "page": "161"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

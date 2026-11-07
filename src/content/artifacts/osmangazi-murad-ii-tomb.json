@@ -1,0 +1,136 @@
+{
+  "id": "osmangazi-murad-ii-tomb",
+  "inventoryId": "osmangazi-sultan-ii-murad-turbesi",
+  "name": "Sultan II. Murad Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad'ın vefatı (H. 855 / M. 1451) sonrası",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Muradiye türbeleri arasında en görkemlisi; II. Murad'ın vasiyetiyle sandukasız, naaşı doğrudan toprağa defnedilmiş sade türbe ve önündeki zarif ahşap saçak.",
+  "history": "Sultan II. Murad Türbesi, Osmangazi ilçesi, Muradiye Mahallesi, Kaplıca Caddesi No: 62'deki Muradiye Külliyesi içindedir. Külliyenin türbeler topluluğunun en görkemli yapısı olan türbe, caminin güneybatısında, türbelerin bulunduğu bahçenin girişinin tam karşısında yer alır; temeli cami zemininden biraz yüksektedir. Osmanlı padişah mezarları arasında en sade türbe olarak yapılmıştır ve Bursa'da sanduka veya lahit kullanılmayan tek padişah mezarıdır.\n\n\"Ebu'l-vakf\" olarak anılan ve vakıf eserlerine büyük önem veren Sultan II. Murad 1451'de Edirne'de vefat etmiş, cenazesi Bursa'ya getirilerek bu mütevazı türbeye defnedilmiştir. Sultan, vasiyetnamesinde türbesinin nasıl olması gerektiğini açıklamıştır: Peygamber'in sünnetine uygun tasarlanmasını istediği türbeye \"kripta\" denilen yeraltı mezar odası yapılmamış, naaşı doğrudan toprağa defnedilmiştir. Türbeye kendisinden başka kimse defnedilmemiştir.\n\nKapı üzerindeki 0.52 × 1.68 m ölçülerindeki üç satırlık celi sülüs kitabe, zarif ama girift bir istife sahiptir. Kitabede Sultan Murad'ın Hicrî 855 yılı Muharrem ayının ilk çarşamba günü (3 Şubat 1451) kuşluk vakti ebedî âleme göçtüğü yazılıdır.\n\nTürbe, bir sıra kesme taş ile iki sıra tuğlanın almaşık kullanıldığı duvar örgüsüyle Bursa mimarisinin karakteristik üslubunu yansıtır. Kuzey cephesindeki taç kapı dikkat çekici bir saçakla örtülüdür: ahşap zemin üzerine yerleştirilen tuval bezine klasik üslupta bezemeler işlenmiş, çıtakâri işçiliğiyle on iki kollu yıldızlardan oluşan geometrik bir düzen kurulmuştur. Saçağın merkezinde mukarnas dolgulu çökertmeler, sarkıtlar ve kabaralar bulunur; içten ve dıştan ahşap mukarnaslı bir friz saçağı çevreler, dışta ise Edirnekâri üslupta süslenmiş ikinci bir ahşap saçak vardır.\n\nKare planlı yapı 13.45 × 13.45 m ile 6.90 × 6.90 m ölçülerinde iç içe iki kareden oluşur. Orta bölüm, dört sütun ve dört paye üzerine oturan sivri kemerlerin taşıdığı tromplu kubbeyle örtülüdür; çevresini beşik tonozlu bir sofa dolanır. Sütunların kaide ve başlıkları Bizans dönemine ait devşirme malzemedir. Plan özellikleriyle Sultan Osman, Orhan ve I. Murad türbelerine benzer.\n\n1855 Büyük Bursa Depremi'nde ciddi hasar görmeyen yapı bazı basit onarımlar geçirmiştir. 2014'teki son restorasyonda türbe içinde çeşitli dönemlere ait kalem işleri ortaya çıkarılmış; yıllar önce önündeki çınar ağacının devrilmesiyle kırılan saçak tamamen elden geçirilmiş, sıva derzleri Horasan harcıyla yenilenmiş ve kubbe kurşunları değiştirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-murad-ii-tomb/portal-canopy.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-murad-ii-tomb/portal-canopy.jpg",
+      "alt": "Tuğla-taş almaşık örgülü türbenin girişi: mermer çerçeveli sivri kemerli kapının önünde, alt yüzü renkli geometrik bezemeli geniş ahşap saçak; solda başka bir kubbeli türbe",
+      "description": "Taç kapı ve ahşap saçak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-murad-ii-tomb/interior.jpg",
+      "alt": "Türbe içi: ortada yeşil parmaklıklarla çevrili, sandukasız mezar alanı; iki yanda kırmızı kaplı payeler ve mermer sütunlar, üstte kemerler ve kubbeler",
+      "description": "Sandukasız mezar alanı ve sütunlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-murad-ii-tomb/inscription.jpg",
+      "alt": "Mermer çerçeve içinde altın sarısı zemin üzerine üç satır halinde yazılmış iç içe geçmiş siyah sülüs yazı",
+      "description": "Kapı üzerindeki üç satırlık kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-murad-ii-tomb/canopy-detail.jpg",
+      "alt": "Ahşap saçağın alt yüzü: koyu zemin üzerinde altın çizgilerle yıldız ağları, sırayla dizilmiş altın rozetler ve altta dikey bezemeli panolar",
+      "description": "Saçağın geometrik bezemesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "canopy",
+      "image": "/images/osmangazi-murad-ii-tomb/portal-canopy.jpg",
+      "x": 55,
+      "y": 20,
+      "title": "Ahşap saçak",
+      "text": "Kuzey cephesindeki taç kapı dikkat çekici bir ahşap saçakla örtülüdür; 2014'te tamamen elden geçirilmiştir.",
+      "sourceId": "inv-p137"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/osmangazi-murad-ii-tomb/inscription.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Celi sülüs kitabe",
+      "text": "Kapı üzerindeki 0.52 × 1.68 m ölçülerindeki üç satırlık kitabe celi sülüs hatla yazılmıştır.",
+      "sourceId": "inv-p135"
+    },
+    {
+      "id": "star-pattern",
+      "image": "/images/osmangazi-murad-ii-tomb/canopy-detail.jpg",
+      "x": 30,
+      "y": 30,
+      "title": "On iki kollu yıldızlar",
+      "text": "Çıtakâri işçiliğiyle on iki kollu yıldız formlarından oluşan geometrik bir düzen oluşturulmuştur.",
+      "sourceId": "inv-p137"
+    }
+  ],
+  "test": [
+    {
+      "question": "II. Murad Türbesi'ni Bursa'daki diğer padişah mezarlarından ayıran özellik nedir?",
+      "options": [
+        "En yüksek kubbeye sahip olması",
+        "Sanduka veya lahit kullanılmayan tek padişah mezarı olması",
+        "Çini kaplı tek türbe olması",
+        "Şehir surlarının dışında olması"
+      ],
+      "correct": 1,
+      "description": "Yapı, Bursa'da sanduka veya lahit kullanılmayan tek padişah mezarı olma özelliğiyle dikkat çeker.",
+      "sourceId": "inv-p134"
+    },
+    {
+      "question": "II. Murad hangi şehirde vefat etmiştir?",
+      "options": [
+        "Bursa",
+        "İstanbul",
+        "Edirne",
+        "Manisa"
+      ],
+      "correct": 2,
+      "description": "Sultan II. Murad 1451'de Edirne'de vefat etmiş, cenazesi Bursa'ya getirilmiştir.",
+      "sourceId": "inv-p135"
+    },
+    {
+      "question": "Taç kapı saçağının bezemesinde hangi geometrik form kullanılmıştır?",
+      "options": [
+        "On iki kollu yıldız",
+        "Altıgen petek",
+        "Sekiz köşeli kare",
+        "Daire dilimleri"
+      ],
+      "correct": 0,
+      "description": "Çıtakâri işçiliği ile on iki kollu yıldız formlarından oluşan geometrik bir düzen oluşturulmuştur.",
+      "sourceId": "inv-p137"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p134",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Sultan II. Murad Türbesi\"",
+      "page": "134"
+    },
+    {
+      "id": "inv-p135",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Sultan II. Murad Türbesi\"",
+      "page": "135"
+    },
+    {
+      "id": "inv-p137",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Sultan II. Murad Türbesi\"",
+      "page": "137"
+    },
+    {
+      "id": "inv-p138",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Sultan II. Murad Türbesi\"",
+      "page": "138"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

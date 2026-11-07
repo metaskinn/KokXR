@@ -1,0 +1,127 @@
+{
+  "id": "hatay-antakya-nakip-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Nakip Camii",
+  "period": "1762–1872 arasında farklı dönemler",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Nakip Camii manzumesi, iki sahınlı caminin yanında medrese ve kütüphane yapıları içerir.",
+  "history": "İki yanı sivil yapılarla çevrili manzumenin 1762–1872 arasında farklı zamanlarda oluştuğu belirtilir. Minare, üç kenarlı avlu ve medrese hücrelerinin bulunduğu kuzeybatı kesimi Kırk Asırlık Türk Yurdu Caddesi’ne bakar. Eğimli arazi dıştan iki kat izlenimi verir; avlu kot farkı altı basamaktır. Son cemaat yeri olmayan dikdörtgen harim, ortadaki devşirme Korent başlıklı sütun ile yanlardaki gömme ayakların taşıdığı iki sivri kemerle kıbleye paralel iki sahına ayrılır. Ahşap kirişli kiremit örtü kemerlere basar. Toplam on dokuz alt pencere vardır. Dairesel mihrap nişinde yaprak biçimli yüzeysel mukarnaslar, sade ahşap minber bulunur. Avlunun kuzeyindeki minare harimden uzaktadır; yuvarlak gövdeli ve ahşap şemsiye külahlıdır.\n\nDoğu kanadında iki medrese hücresi ve çapraz tonozlu abdest alanı bulunur. Üstteki bağdadi duvarlı imam lojmanına aradaki merdivenle ulaşılır. Kuzeyde minareye geçiş veren eyvanın yazlık derslik için elverişli olduğu belirtilir. Medresenin tarihi yazılı kaynakla belirlenemez; minareyle farklı dönemlerde yapılmış olabilir. Batıda eski kütüphane yapısı bulunur; kitap bunun amaç dışı kullanıldığını ve Antakya’nın bilinen, ulaşmış tek kütüphanesi olduğunu belirtir. Bazı araştırmacılar üsluba dayanarak manzumeyi 1872 sonrası tarihler.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-nakip-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-nakip-mosque/book-view-1.jpg",
+      "alt": "Taş binanın pencereli cephesi, kiremit çatı ve sağda kısmen görünen minare",
+      "description": "Nakip Camii — kitaptaki görünüm 1 (s. 288–289)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-nakip-mosque/book-view-2.jpg",
+      "alt": "Ağaçlar arasında iki katlı cephe ve arkasında örtülü şerefeli minare",
+      "description": "Nakip Camii — kitaptaki görünüm 2 (s. 290–291)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-nakip-mosque/book-view-2.jpg",
+      "x": 47,
+      "y": 25,
+      "title": "Minare",
+      "text": "Yuvarlak minare ahşap şemsiye külahlıdır.",
+      "sourceId": "inv-p294"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-nakip-mosque/book-view-2.jpg",
+      "x": 77,
+      "y": 54,
+      "title": "Üst kat",
+      "text": "Medrese üzerindeki bağdadi duvarlı kat imam lojmanı olarak tanıtılır.",
+      "sourceId": "inv-p296"
+    }
+  ],
+  "test": [
+    {
+      "question": "Manzumede cami ve medrese yanında hangi yapı vardır?",
+      "options": [
+        "Darphane",
+        "Tersane",
+        "Kütüphane",
+        "Kale"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Kütüphane.",
+      "sourceId": "inv-p297"
+    },
+    {
+      "question": "Ortadaki sütunun başlığı hangi tiptedir?",
+      "options": [
+        "Dor",
+        "İyon",
+        "Lotus",
+        "Korent"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Korent.",
+      "sourceId": "inv-p292"
+    },
+    {
+      "question": "Caminin son cemaat yeri var mıdır?",
+      "options": [
+        "Yoktur",
+        "Üç kubbelidir",
+        "İki katlıdır",
+        "Sekiz eyvanlıdır"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Yoktur.",
+      "sourceId": "inv-p292"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p291",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nakip Camii\"",
+      "page": "291"
+    },
+    {
+      "id": "inv-p292",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nakip Camii\"",
+      "page": "292"
+    },
+    {
+      "id": "inv-p293",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nakip Camii\"",
+      "page": "293"
+    },
+    {
+      "id": "inv-p294",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nakip Camii\"",
+      "page": "294"
+    },
+    {
+      "id": "inv-p296",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nakip Camii\"",
+      "page": "296"
+    },
+    {
+      "id": "inv-p297",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nakip Camii\"",
+      "page": "297"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nakip Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

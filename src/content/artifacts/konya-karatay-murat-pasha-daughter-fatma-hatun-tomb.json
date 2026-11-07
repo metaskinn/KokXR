@@ -1,0 +1,125 @@
+{
+  "id": "konya-karatay-murat-pasha-daughter-fatma-hatun-tomb",
+  "name": "Murat Paşa Kızı Fatma Hatun Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · H. 993 / M. 1585 (kitâbedeki tarih: 994 / M. 1585-86)",
+  "endowment": "Banisi Karaman Beylerbeyi Kuyucu Murat Paşa",
+  "summary": "Karaman Beylerbeyi Kuyucu Murat Paşa'nın kızı Fatma Hatun için Mevlâna Müzesi avlusunda yaptırdığı sekiz köşeli türbe.",
+  "history": "Karaman Beylerbeyi Kuyucu Murat Paşa, Mevlâna Müzesi avlusunda tilavet odasının güney tarafında bulunan bu türbeyi kızı Fatma Hatun için H. 993 / M. 1585 tarihinde yaptırmıştır.\n\nTürbe kapısının üzerindeki manzum kitâbede şu satırlar yer alır: \"Mîr-i mîran Murat Paşa'nın Kıldıbir duhteri hayfâ rıhlet / Murg-ı ruhı olup uçmağa revan Rahmet-i Hakk'a bulubdır vuslet / Ey Neccâmî göricek türbesini Tab'ıma geldi o dem bir hâlet / Düşdi irüb feyz-i Hudâ târîhi Oldı merhûma makâm-ı Cennet 994 (M. 1585/86)\". Kitapta verilen anlamına göre: Beylerbeyi Murat Paşa'nın yazık ki bir kızı ölmüş, ruh kuşu cennete uçmuş ve Hakk'ın rahmetine kavuşmuştur; türbeyi görünce şaire bir hâl gelmiş ve tarih düşürmüştür.\n\nTürbe, zeminden 35 cm yüksekliğindeki sekizgen bir oturtmalık üzerinde, sekiz köşeli ve her köşesinde 3/4 daire kesitli köşe sütunlu olarak yapılmıştır. Türbeye mermer söveli, dikdörtgen beyaz Gödene taşı silmeli, stilize bitkisel motiflerle süslenmiş siyah-beyaz mermer yuvarlak kemerli kapıdan girilir.\n\nİçeriyi süsleyen XIX. yüzyıla ait kalem işleri oldukça zariftir. Türbenin ortasındaki kurşuni renkli, mukarnaslı mermer mezar sandukasının baş taşına servi motifi işlenmiş, oyalı bir taç motifiyle tarak motifi yerleştirilmiştir. Türbenin üç dikdörtgen penceresi ve üç tepe penceresi vardır; pencereler demir şebekeyle çevrilidir.\n\nKurşun kaplı basık kubbeye on altıgen kasnak ve pandantiflerle geçilir. Pandantiflerdeki madalyonlarda \"Allah, Muhammed, Ebubekir, Ömer, Osman, Ali, Hasan, Hüseyin\" yazılıdır. Türbe bir dönem Ferit Uğur Kütüphanesi olarak kullanılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-murat-pasha-daughter-fatma-hatun-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-murat-pasha-daughter-fatma-hatun-tomb/exterior.jpg",
+      "alt": "Açık mavi gökyüzü altında kesme taştan sekiz köşeli türbe; kurşun kaplı basık kubbe, köşelerde ince sütunlar, sivri kemerli üst pencere, yuvarlak tepe pencereleri ve demir şebekeli dikdörtgen alt pencereler",
+      "description": "Türbenin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-murat-pasha-daughter-fatma-hatun-tomb/door-inscription.jpg",
+      "alt": "Kapı kemerinin üzerinde, mavi zemin üzerine altın yaldızlı celî yazı ve bitkisel süslemelerle işlenmiş uzun dikdörtgen kitâbe levhası",
+      "description": "Kapı üzerindeki kitâbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-murat-pasha-daughter-fatma-hatun-tomb/interior.jpg",
+      "alt": "Turkuaz boyalı ahşap pencere çerçeveleriyle çevrili türbe içi; ortada gri mermer sanduka ve iki ucunda baş ve ayak taşları, zemin koyu ahşap",
+      "description": "Türbenin içi ve mermer sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-murat-pasha-daughter-fatma-hatun-tomb/headstone.jpg",
+      "alt": "Yakın plan: üstü kırmızı ve siyah işlemeli taç biçiminde başlıkla biten, gövdesi kabartma motiflerle süslü mermer baş taşı",
+      "description": "Sandukanın baş taşı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/konya-karatay-murat-pasha-daughter-fatma-hatun-tomb/exterior.jpg",
+      "x": 50,
+      "y": 16,
+      "title": "Basık kubbe",
+      "text": "Kurşun kaplı basık kubbeye on altıgen kasnak ve pandantiflerle geçilir.",
+      "sourceId": "inv-p56"
+    },
+    {
+      "id": "grilled-window",
+      "image": "/images/konya-karatay-murat-pasha-daughter-fatma-hatun-tomb/exterior.jpg",
+      "x": 80,
+      "y": 73,
+      "title": "Şebekeli pencere",
+      "text": "Türbenin üç dikdörtgen penceresi ve üç tepe penceresi vardır; pencereler demir şebekeyle çevrilidir.",
+      "sourceId": "inv-p56"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/konya-karatay-murat-pasha-daughter-fatma-hatun-tomb/interior.jpg",
+      "x": 45,
+      "y": 75,
+      "title": "Mermer sanduka",
+      "text": "Türbenin ortasında kurşuni renkli, mukarnaslı mermer mezar sandukası bulunur.",
+      "sourceId": "inv-p56"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbeyi kim yaptırmıştır?",
+      "options": [
+        "Sultan II. Abdülhamit",
+        "Karaman Beylerbeyi Kuyucu Murat Paşa",
+        "Konya Valisi Ferit Paşa",
+        "Mustafa Paşa"
+      ],
+      "correct": 1,
+      "description": "Türbeyi Karaman Beylerbeyi Kuyucu Murat Paşa, kızı Fatma Hatun için yaptırmıştır.",
+      "sourceId": "inv-p55"
+    },
+    {
+      "question": "Türbe hangi plan şemasına sahiptir?",
+      "options": [
+        "Kare",
+        "Dikdörtgen",
+        "Daire",
+        "Sekiz köşeli"
+      ],
+      "correct": 3,
+      "description": "Türbe, 35 cm yüksekliğindeki sekizgen oturtmalık üzerinde sekiz köşeli olarak yapılmıştır.",
+      "sourceId": "inv-p56"
+    },
+    {
+      "question": "Türbe bir dönem hangi amaçla kullanılmıştır?",
+      "options": [
+        "Ferit Uğur Kütüphanesi olarak",
+        "Müze deposu olarak",
+        "Mektep olarak",
+        "Lojman olarak"
+      ],
+      "correct": 0,
+      "description": "Türbe bir dönem Ferit Uğur Kütüphanesi olarak kullanılmıştır.",
+      "sourceId": "inv-p56"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p55",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Murat Paşa Kızı Fatma Hatun Türbesi\"",
+      "page": "55"
+    },
+    {
+      "id": "inv-p56",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Murat Paşa Kızı Fatma Hatun Türbesi\"",
+      "page": "56"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

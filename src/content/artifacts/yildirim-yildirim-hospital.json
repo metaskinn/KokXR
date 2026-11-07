@@ -1,0 +1,146 @@
+{
+  "id": "yildirim-yildirim-hospital",
+  "inventoryId": "yildirim-yildirim-darussifasi",
+  "name": "Yıldırım Darüşşifası",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Yıldırım Bayezid dönemi; genel kanaate göre H. 802 / M. 1400'den önce (farklı görüşler de vardır)",
+  "endowment": "Yıldırım Bayezid'in H. 802 / M. 1400 tarihli vakfiyesi; hastalar için vakıf gelirlerinden günde 260 dirhem ayrılmıştır",
+  "summary": "Osmanlıların ilk hastane yapısı kabul edilen, revaklı avlu çevresinde odaları ve kubbeli salonu olan Yıldırım Külliyesi darüşşifası.",
+  "history": "Yıldırım Darüşşifası, Yıldırım ilçesi Sinandede Mahallesi, Baruthane Caddesi No: 92'dedir. Vakfiye tarihine dayanarak külliyenin diğer yapılarıyla birlikte H. 802 / M. 1400'den önce yapıldığı genel kanaattir; ancak farklı tarihler öneren görüşler de bulunur. Cami ve medresenin yer aldığı yüksek duvarların dışında, külliyenin yaklaşık 300 m doğusunda, güneye doğru eğimli bir arazidedir. Osmanlıların ilk hastane yapısı kabul edilir. İlk başhekime dair iki rivayet vardır: biri İran'da yetişmiş Tabib Hoca Hüsnü Efendi'yi, diğeri Memlûk Sultanı Berkuk'un tabibi Şemseddin Sagîr'i işaret eder. Vakfiyede yapı \"darüşşifa\" ve \"mâristân\" diye anılır.\n\nDarüşşifa yalnızca tedavi yeri değil, usta-çırak ilişkisiyle hekim ve sağlık personeli yetiştiren bir kurumdu. Vakfiyeye göre hastaların yeme içme ve temel ihtiyaçları için günde 260 dirhem, bakım ve onarım için günde 20 dirhem ayrılmıştır.\n\nKlasik Selçuklu darüşşifaları geleneğini yansıtan yapı, 30 × 53 m ölçüsünde dikdörtgen planlıdır ve moloz taştan yapılmıştır; köşelerde, kubbe kasnaklarında ve revaklarda kesme taş ile tuğla birlikte kullanılmıştır. Kuzeydeki girişin iki yanında hastaların dinlenmesi için peykeler vardır. Ortasında fıskiyeli bir şadırvan bulunan 420 m²'lik revaklı avlunun çevresinde 3,30 × 3,60 m ölçüsünde yirmi oda sıralanır; her odada bir ocak ve dışa açılan bir pencere bulunur. Güney cephesinin ortasındaki 9,40 × 7,67 m ölçüsündeki kubbeli salonun muayene ve tedaviye ayrıldığı, buradaki mihrap nedeniyle mescit olarak da kullanıldığı düşünülür. Arazinin eğimi yüzünden odaların zemin kotları farklıdır.\n\nBaşlangıçta üç tabip, iki şerbetçi, iki eczacı, bir aşçı ve bir ekmekçi görev yapıyordu; sonra cerrah ve kehhâl (göz hekimi) gibi görevlilerle kadro 27 kişiye ulaştı. Cerrahi müdahalelerden önce hastaların rızası mahkemeden onaylı \"rıza senedi\" ile alınırdı. Kayıtlar, akıl ve sinir hastalıklarının da burada tedavi edildiğini gösterir.\n\nEkrem Hakkı Ayverdi'ye göre 1755'ten sonra arşivde darüşşifaya dair kayıt bulunmaması, yapının işlevini yavaş yavaş yitirdiğini düşündürür. 1855 depreminden sonra onarılmayan yapının sağlam bölümleri askerî idarece barut deposu olarak kullanılmış; bu yüzden halk arasında \"Baruthane\" diye anılmış, caddesi de bu adı almıştır. Sedat Çetintaş 1944-1947 arasındaki araştırma ve kazılarla plan ve restitüsyon projesini yayımlamıştır. Yapı 1991'de Vakıflar Genel Müdürlüğü'nün başlattığı restorasyonla ayağa kaldırılmış, 2001'den itibaren göz hastanesi olarak hizmet vermiştir; bugün boştur ve yeni işlev çalışmaları sürmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-yildirim-hospital/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-yildirim-hospital/aerial-view.jpg",
+      "alt": "Havadan görünüm: apartmanlar arasında, taş duvarlı ve uzun çatılı dikdörtgen yapı, ortada kemerli avlu cephesi, solda küçük kubbeli bölüm; arkada Bursa ve dağlar",
+      "description": "Darüşşifanın çevresiyle havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yildirim-hospital/from-above.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: dikdörtgen yapının ortasında ağaçlı avlu ve sekizgen şadırvan, sağ uçta sekizgen kasnaklı kubbe",
+      "description": "Darüşşifanın tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yildirim-hospital/courtyard.jpg",
+      "alt": "Avlunun ortasında sekizgen taş şadırvan, çevresinde çalılar; iki yanda tuğla bantlı yuvarlak kemerli revaklar",
+      "description": "Şadırvanlı avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yildirim-hospital/wall-window.jpg",
+      "alt": "Moloz taş ve tuğla örgülü duvar; tuğla kemerli alınlık altında taş söveli, demir parmaklıklı dar pencere ve üstte büyük tuğla-taş kemer",
+      "description": "Dış duvar ve pencere",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domed-hall",
+      "image": "/images/yildirim-yildirim-hospital/from-above.jpg",
+      "x": 83,
+      "y": 45,
+      "title": "Kubbeli salon",
+      "text": "Güney cephesinin ortasındaki 9,40 × 7,67 m ölçüsündeki salon kubbeyle örtülüdür; muayene ve tedavi için ayrıldığı ifade edilir.",
+      "sourceId": "inv-p452"
+    },
+    {
+      "id": "fountain",
+      "image": "/images/yildirim-yildirim-hospital/courtyard.jpg",
+      "x": 52,
+      "y": 58,
+      "title": "Şadırvan",
+      "text": "20 odanın sıralandığı 420 m²'lik revaklı avlunun ortasında fıskiyeli bir şadırvan yer alır.",
+      "sourceId": "inv-p452"
+    },
+    {
+      "id": "window",
+      "image": "/images/yildirim-yildirim-hospital/wall-window.jpg",
+      "x": 55,
+      "y": 55,
+      "title": "Sivri kemerli pencere",
+      "text": "Küfeki söveli pencerelerin üst bölümleri sivri kemerli ve alınlıklıdır; bu kemerler küfeki taşı ve tuğladan örülmüştür.",
+      "sourceId": "inv-p452"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yıldırım Darüşşifası hangi özelliğiyle mimarlık tarihinde ayrıcalıklıdır?",
+      "options": [
+        "Bursa'nın ilk camisidir",
+        "Osmanlıların ilk hastane yapısı kabul edilir",
+        "Osmanlı'nın ilk medresesidir",
+        "İlk kervansaraydır"
+      ],
+      "correct": 1,
+      "description": "\"Bursa Yıldırım Darüşşifası\" Osmanlıların ilk hastane yapısı olarak kabul edilir.",
+      "sourceId": "inv-p447"
+    },
+    {
+      "question": "Yapıya ve caddesine \"Baruthane\" adı neden verilmiştir?",
+      "options": [
+        "Sağlam bölümleri barut deposu olarak kullanıldığı için",
+        "Yakınında bir barut fabrikası kurulduğu için",
+        "Patlamada yıkıldığı için",
+        "Banisinin lakabı olduğu için"
+      ],
+      "correct": 0,
+      "description": "Uzun yıllar sağlam bölümleri askerî idare tarafından barut deposu olarak kullanılan yapı halk arasında \"Baruthane\" diye anılmış, caddesi de bu adı almıştır.",
+      "sourceId": "inv-p454"
+    },
+    {
+      "question": "Restorasyondan sonra 2001'den itibaren yapı hangi işlevle kullanılmıştır?",
+      "options": [
+        "Verem dispanseri",
+        "Müze",
+        "Aşevi",
+        "Göz hastanesi"
+      ],
+      "correct": 3,
+      "description": "1991'de başlayan restorasyonun ardından yapı 2001'den itibaren göz hastanesi olarak hizmet vermiştir; bugün boştur.",
+      "sourceId": "inv-p454"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p447",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Darüşşifası\"",
+      "page": "447"
+    },
+    {
+      "id": "inv-p448",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Darüşşifası\"",
+      "page": "448"
+    },
+    {
+      "id": "inv-p449",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Darüşşifası\"",
+      "page": "449"
+    },
+    {
+      "id": "inv-p452",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Darüşşifası\"",
+      "page": "452"
+    },
+    {
+      "id": "inv-p453",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Darüşşifası\"",
+      "page": "453"
+    },
+    {
+      "id": "inv-p454",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Darüşşifası\"",
+      "page": "454"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

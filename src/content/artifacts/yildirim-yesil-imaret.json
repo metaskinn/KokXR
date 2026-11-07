@@ -1,0 +1,103 @@
+{
+  "id": "yildirim-yesil-imaret",
+  "inventoryId": "yildirim-yesil-imareti",
+  "name": "Yeşil İmareti",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Sultan Çelebi Mehmed dönemi, H. 817-822 / M. 1414-1419",
+  "endowment": "Sultan Çelebi Mehmed'in külliye için vakfettiği taşınmazların gelirleri",
+  "summary": "Yeşil Külliyesi'nde, her gün iki öğün yemeğin ayrım gözetmeksizin dağıtılması öngörülen ve bugün yine aşevi olarak kullanılan imaret.",
+  "history": "Yeşil İmareti, Sultan Çelebi Mehmed'in yaptırdığı Çelebi Mehmed Külliyesi'nin bir parçası olarak caminin güneydoğusunda yer alır ve H. 817-822 / M. 1414-1419 yılları arasında inşa edilmiştir. Vakfiyeye göre külliye için vakfedilen taşınmazların gelirleri zaviye, medrese ve müsakkafatın bakım ve onarımına harcanacak; imaret yıkılır ve yeniden yapılamazsa bu gelirler doğrudan fakirlere dağıtılacaktır.\n\nYapı art arda iki bölümden oluşur: 26,00 × 10,00 m ölçüsündeki ilk bölüm yemeklerin hazırlandığı mutfak, 16,30 × 10,00 m ölçüsündeki ikinci bölüm yemeklerin ikram edildiği mekândır. Her iki bölüm kiremit kaplı kırma çatıyla örtülüdür. Kuzeydoğudaki matbah kısmına sivri kemerli dört açıklıktan girilir; bu bölüm dışarıdan kiremit kaplı çift kubbesiyle dikkat çeker. Girişin sağında, sivri tuğla kemerli bir niş içinde mermer yalaklı bir çeşme vardır; çeşmenin özgün aynası ve kitabesi günümüze ulaşmamıştır. Moloz taş ve tuğladan almaşık sistemle örülen beden duvarları beş yuvarlak kemerli pencereyle aydınlanır. İmarethanede yedi fırın bulunur.\n\nVakfiyeye göre imarette her gün iki öğün yemek pişirilecek, her gün 16 vukıyye et ile yeterli pirinç ve ekmek temin edilecek ve yemekler zengin fakir ayrımı yapılmadan herkese sunulacaktı. Cuma ve bayram gecelerinde ve Ramazan'da yemeklere tatlı ve meyve eklenmesi şart koşulmuştur. Kaynaklarda Çelebi Mehmed'in cuma günleri bizzat yemek dağıttığına dair rivayetler vardır. 1631'de mahsul yetersizliği yüzünden imaret işleyemez hâle gelmiş, Gazanfer oğlu Osman Ağa'dan ödünç zahire alınarak yeniden hizmete açılmıştır.\n\nYapı 1580'den 1879'a kadar pek çok kez onarılmıştır. XX. yüzyıl başlarına kadar çalışan imaret, 1930'da Evkaf Müdürlüğü tarafından özel şahıslara satılmış; yerine apartman yapılması ise türbenin silüetini kapatacağı gerekçesiyle uygun bulunmamıştır. 1957'ye gelindiğinde yalnızca yan duvarları ve kubbelerinin bir kısmı ayaktaydı. Yeniden Vakıflar Genel Müdürlüğü'ne geçen yapı 1975-1977'de ve 2000-2002'de onarılmış, uzun süre kafeterya olarak kiralanmıştır. 2010-2011'de Bursa Büyükşehir Belediyesi ve Vakıflar Genel Müdürlüğü iş birliğiyle yeniden onarılarak aşevi olarak hizmete girmiş; bugün de bir vakıf tarafından aynı işlevle kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-yesil-imaret/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-yesil-imaret/exterior.jpg",
+      "alt": "Kiremit kaplı kırma çatılı, taş ve tuğla sıralarıyla örülmüş alçak yapı; kapı üstünde metal saçak ve \"Yeşil İmareti Aşevi\" yazılı tabela",
+      "description": "İmaretin dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yesil-imaret/dining-hall.jpg",
+      "alt": "Ahşap çatı makaslarının altında uzun sıralar hâlinde ahşap masalar ve sandalyeler; yanlarda taş ve tuğla örgülü duvarlar ve tuğla kemerler",
+      "description": "İmaretin bugün yemek salonu olarak kullanılan iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/yildirim-yesil-imaret/exterior.jpg",
+      "x": 55,
+      "y": 33,
+      "title": "Kiremitli kırma çatı",
+      "text": "İmaretin her iki bölümü de kırma çatıyla örtülmüş ve kiremitle kaplanmıştır.",
+      "sourceId": "inv-p373"
+    },
+    {
+      "id": "alternating-wall",
+      "image": "/images/yildirim-yesil-imaret/exterior.jpg",
+      "x": 82,
+      "y": 62,
+      "title": "Almaşık duvar",
+      "text": "Beden duvarları moloz taş ve tuğladan almaşık sistemle inşa edilmiştir.",
+      "sourceId": "inv-p374"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakfiyeye göre imarette günde kaç öğün yemek pişirilecekti?",
+      "options": [
+        "Bir",
+        "İki",
+        "Üç",
+        "Yalnızca cuma günleri bir"
+      ],
+      "correct": 1,
+      "description": "İmarette günlük iki öğün yemek pişirilmesi ve yemeklerin zengin fakir ayrımı yapılmadan herkese sunulması öngörülmüştür.",
+      "sourceId": "inv-p374"
+    },
+    {
+      "question": "Yeşil İmareti 1930 yılında ne olmuştur?",
+      "options": [
+        "Müzeye dönüştürülmüştür",
+        "Yıkılıp yerine apartman yapılmıştır",
+        "Evkaf Müdürlüğü tarafından özel şahıslara satılmıştır",
+        "Depremde yıkılmıştır"
+      ],
+      "correct": 2,
+      "description": "Yapı 1930'da Evkaf Müdürlüğü tarafından özel şahıslara satılmış; yıkılıp yerine apartman yapılması ise uygun bulunmamıştır.",
+      "sourceId": "inv-p374"
+    },
+    {
+      "question": "Yapı bugün hangi işlevle kullanılmaktadır?",
+      "options": [
+        "Kafeterya",
+        "Medrese",
+        "Kütüphane",
+        "Aşevi"
+      ],
+      "correct": 3,
+      "description": "2010-2011 onarımından sonra aşevi olarak hizmete giren yapı, bugün de bir vakıf tarafından aynı işlevle kullanılmaktadır.",
+      "sourceId": "inv-p374"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p373",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeşil İmareti\"",
+      "page": "373"
+    },
+    {
+      "id": "inv-p374",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeşil İmareti\"",
+      "page": "374"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

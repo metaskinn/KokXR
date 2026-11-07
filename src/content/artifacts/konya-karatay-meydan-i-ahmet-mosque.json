@@ -1,0 +1,111 @@
+{
+  "id": "konya-karatay-meydan-i-ahmet-mosque",
+  "name": "Meydan-ı Ahmet Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · vakfiye kayıtlarına göre H. 993 / M. 1585; bugünkü yapı 2003",
+  "endowment": "Vakfiye kayıtlarına göre \"Meydâni\" lakaplı Alioğlu Ahmet Bey",
+  "summary": "Yerinde 1585'te Meydâni lakaplı Alioğlu Ahmet Bey'in yaptırdığı caminin bulunduğu, bugünkü betonarme binası 2003'te yapılan cami.",
+  "history": "Meydan-ı Ahmet Camii, Karatay, Çifte Merdiven Mahallesi, Doktor Abdullah Selim Sokak üzerindedir.\n\nVakfiye kayıtlarına göre bugünkü yapının yerinde, \"Meydâni\" lakaplı Alioğlu Ahmet Bey tarafından H. 993 / M. 1585'te yaptırılmış, kare planlı, ahşap kirişli ve toprak damla örtülü bir cami bulunuyordu. Mahalle halkı 1954'te harimin batı cephesine son cemaat yeri, imam odası ve kömürlük ekletmiştir. Cami zamanla ihtiyacı karşılayamaz hâle gelince 2003'te bugünkü betonarme yapı inşa edilmiştir.\n\nMevcut yapı enlemesine dikdörtgen planlıdır ve dört yöne eğimli kırma çatıyla örtülüdür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-meydan-i-ahmet-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-meydan-i-ahmet-mosque/exterior.jpg",
+      "alt": "İki katlı, beyaz sıvalı yapı; gri kaplamalı kırma çatı, yan cephede üstü örtülü dış merdiven ve önünde bank",
+      "description": "Caminin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-meydan-i-ahmet-mosque/aerial-roof.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: dört yöne eğimli gri kırma çatı, çevresinde ağaçlar ve sağda kiremit çatılı komşu bina",
+      "description": "Kırma çatının tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-meydan-i-ahmet-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harim; solda mihrap, ortada minber, sağda ahşap ve camlı bölümler ile üstte mahfil",
+      "description": "Harimin iç görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-meydan-i-ahmet-mosque/mihrab.jpg",
+      "alt": "Mukarnaslı kavsaralı mihrap nişi ve üstünde iki yanda mavi-beyaz süslemeli yuvarlak tabak",
+      "description": "Mihrap nişi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-karatay-meydan-i-ahmet-mosque/aerial-roof.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Dört yöne eğimli kırma çatı",
+      "text": "Mevcut yapı dört yöne eğimli kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p215"
+    },
+    {
+      "id": "roof-exterior",
+      "image": "/images/konya-karatay-meydan-i-ahmet-mosque/exterior.jpg",
+      "x": 55,
+      "y": 28,
+      "title": "Betonarme yapı",
+      "text": "Cami ihtiyacı karşılayamayınca bugünkü betonarme yapı 2003'te inşa edilmiştir.",
+      "sourceId": "inv-p215"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakfiye kayıtlarına göre ilk camiyi kim yaptırmıştır?",
+      "options": [
+        "Yusuf oğlu Mahmut",
+        "\"Meydâni\" lakaplı Alioğlu Ahmet Bey",
+        "Kadı İzzeddin",
+        "Çelik Muhammed Paşa"
+      ],
+      "correct": 1,
+      "description": "Vakfiye kayıtlarına göre ilk cami H. 993 / M. 1585'te \"Meydâni\" lakaplı Alioğlu Ahmet Bey tarafından yaptırılmıştır.",
+      "sourceId": "inv-p215"
+    },
+    {
+      "question": "Mahalle halkı 1954'te harimin batısına neler ekletmiştir?",
+      "options": [
+        "Minare ve şadırvan",
+        "Türbe ve medrese",
+        "Son cemaat yeri, imam odası ve kömürlük",
+        "Kadınlar mahfili"
+      ],
+      "correct": 2,
+      "description": "1954'te harimin batı cephesine son cemaat yeri, imam odası ve kömürlük ilave edilmiştir.",
+      "sourceId": "inv-p215"
+    },
+    {
+      "question": "Bugünkü betonarme yapı hangi yılda inşa edilmiştir?",
+      "options": [
+        "1954",
+        "1925",
+        "1943",
+        "2003"
+      ],
+      "correct": 3,
+      "description": "Cami ihtiyacı karşılayamaz hâle gelince 2003'te bugünkü betonarme yapı yapılmıştır.",
+      "sourceId": "inv-p215"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p215",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Meydan-ı Ahmet Camii\"",
+      "page": "215"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

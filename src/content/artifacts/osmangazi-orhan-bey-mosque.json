@@ -1,0 +1,120 @@
+{
+  "id": "osmangazi-orhan-bey-mosque",
+  "name": "Orhan Bey Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 740 / M. 1339-40; H. 820 / M. 1417'de yeniden inşa edildi",
+  "endowment": "Orhan Gazi'nin H. Cemaziyelahir 761 / M. Nisan 1360 tarihli vakfiyesiyle köyler, Eski Bedesten, dükkânlar ve Bıçakçılar Hamamı Orhan Gazi İmareti'ne vakfedilmiştir",
+  "summary": "Orhan Bey Külliyesi'nin bir parçası olarak 1339-40'ta inşa edilen, Osmanlı'nın ilk dönem tabhaneli/zaviyeli camilerinden biri.",
+  "history": "Orhan Bey Camii, Osmangazi İlçesi, Nalbantoğlu Mahallesi, Belediye Caddesi No: 7'de, Ulucami'nin doğusunda, tarihi belediye binasının batısındadır. Osman Bey'in oğlu Orhan Bey tarafından yaptırılan Orhan Bey Külliyesi bünyesinde H. 740 / M. 1339-40'ta inşa edilmiştir. Osmanlı'nın ilk külliyelerinden olan bu yapı topluluğundan günümüze yalnızca Orhan Camii, Emir Hanı ve Orhan Hamamı ulaşmış; imaret ve mektep zamanla yok olmuştur.\n\nOrhan Gazi 1326'da devletin başına geçmiş, aynı yıl fethettiği Bursa'yı başkent yapmış ve sur dışında yaptırdığı bu külliyeyle şehri büyütmüştür. 1413'teki 31 günlük Karamanoğlu Mehmed Bey kuşatmasında yakılarak zarar gören cami, Sultan Çelebi Mehmed'in işaretiyle Vezir Bayezid Paşa tarafından H. 820 / M. 1417'de yeniden yaptırılmıştır; bu bilgi cümle kapısı üzerindeki beş satırlık onarım kitabesinde yazılıdır.\n\nSimetrik planlı cami, ibadet ve tekke işlevlerini bir arada barındıran erken Osmanlı tabhaneli/zaviyeli camilerinin karakteristik bir örneğidir. 25.80 × 6.30 m ölçülerindeki beş gözlü son cemaat mahalli tamamen kubbelerle örtülüdür. Ana mekân ardışık iki kare bölümden oluşur; doğu ve batısında dikdörtgen planlı tabhaneler bulunur. Beden duvarları moloz taş ile aralarına yerleştirilmiş tuğlalardan örülmüş, doğu cephede baklava, batı cephede dama motifli tuğla-taş süslemeler yapılmıştır. Giriş sahanlığının batısındaki oda 1863'te Ahmed Vefik Paşa tarafından Orhan Kütüphanesi'ne dönüştürülmüş; 1969'a kadar süren bu kütüphane bugünkü İnebey Yazma Eserler Kütüphanesi'nin temelini oluşturmuştur.\n\nTabhanelerin ara duvarları 1 Eylül 1905'te II. Abdülhamid'in emriyle kaldırılarak camiye katılmıştır. Mihraplı asıl ibadet mekânının alçı işçiliğiyle yapılmış mihrabı, kendisinden sonraki Bursa selatin camilerine örnek olmuştur; yaldızlı, yedi katlı mukarnas kavsarası rûmî-palmet motifleri ve lotus çiçekleriyle süslüdür. Mihrabın iki yanında tarihi şamdanlar durur. Kuzeydoğu köşesindeki çokgen gövdeli tuğla minarenin tek şerefesinin altı iki sıra stalaktitle süslüdür.\n\nCami 1576, 1619, 1628-29, 1732 ve 1773'te onarılmış, 1801 yangınından sonra 1812'de, 1855 depreminden sonra da Fransız mimar Léon Parvillée'nin koordinasyonunda restore edilmiştir. 2020-2023 restorasyonunda avludaki şadırvan ahşap çatısı ve bezemeli kubbesiyle özgün haline kavuşturulmuştur. Caminin içinde bulunduğu Hanlar Bölgesi 2014'te UNESCO Dünya Mirası Alanı'na alınmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-orhan-bey-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-orhan-bey-mosque/aerial-view.jpg",
+      "alt": "Yüksekten çekilmiş fotoğraf: kurşun kubbeli taş-tuğla cami, solunda ince tuğla minare, önünde avludaki şadırvan; arkada şehir ve dağlar",
+      "description": "Cami ve avlusunun yüksekten görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/osmangazi-orhan-bey-mosque/exterior.jpg",
+      "alt": "Taş döşeli meydandan cami: tuğla-taş almaşık duvarlar, sivri kemerli pencereler, önde büyük bir çınar ağacı ve sağda tarihi bir bina",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/osmangazi-orhan-bey-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: yeşil halılı harim, karşıda yaldızlı mihrap ve avize, sağda minber; kubbe geçişlerinde kırmızı-mavi bezemeler",
+      "description": "Asıl ibadet mekânı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/osmangazi-orhan-bey-mosque/mihrab.jpg",
+      "alt": "Yakın plan mihrap: altın yaldızlı mukarnas kavsara, geometrik desenli çerçeve ve iki yanında uzun pirinç şamdanlar",
+      "description": "Alçı işçiliği mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-orhan-bey-mosque/aerial-view.jpg",
+      "x": 32,
+      "y": 25,
+      "title": "Minare",
+      "text": "Kuzeydoğu köşesindeki çokgen gövdeli minare zarif tuğla işçiliğiyle dikkat çeker; tek şerefesinin altı iki sıra stalaktitle süslüdür.",
+      "sourceId": "inv-p191"
+    },
+    {
+      "id": "fountain",
+      "image": "/images/osmangazi-orhan-bey-mosque/aerial-view.jpg",
+      "x": 50,
+      "y": 70,
+      "title": "Şadırvan",
+      "text": "Avludaki şadırvan 2020-2023 restorasyonunda ahşap çatısı ve bezemeli kubbesiyle özgün haline kavuşturulmuştur.",
+      "sourceId": "inv-p191"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-orhan-bey-mosque/mihrab.jpg",
+      "x": 50,
+      "y": 48,
+      "title": "Mukarnas kavsara",
+      "text": "Yaldızlı, yedi katlı mukarnas kavsaranın etrafı rûmî-palmet motifleri ve lotus çiçekleriyle süslenmiştir.",
+      "sourceId": "inv-p191"
+    }
+  ],
+  "test": [
+    {
+      "question": "Orhan Bey Camii hangi yıl inşa edilmiştir?",
+      "options": [
+        "1326",
+        "H. 740 / M. 1339-40",
+        "1360",
+        "1417"
+      ],
+      "correct": 1,
+      "description": "Cami, Orhan Bey Külliyesi bünyesinde H. 740 / M. 1339-40 yılında inşa edilmiştir.",
+      "sourceId": "inv-p191"
+    },
+    {
+      "question": "1413 kuşatmasında zarar gören camiyi 1417'de kim yeniden yaptırmıştır?",
+      "options": [
+        "Ahmed Vefik Paşa",
+        "Sultan II. Abdülhamid",
+        "Vezir Bayezid Paşa",
+        "Léon Parvillée"
+      ],
+      "correct": 2,
+      "description": "Onarım kitabesine göre Vezir Bayezid Paşa, Sultan Çelebi Mehmed'in işaretiyle yapıyı 1417'de yeniden inşa ettirmiştir.",
+      "sourceId": "inv-p191"
+    },
+    {
+      "question": "Caminin batıdaki odası 1863'te neye dönüştürülmüştür?",
+      "options": [
+        "Orhan Kütüphanesi",
+        "İmam odası",
+        "Kadınlar mahfili",
+        "Müze"
+      ],
+      "correct": 0,
+      "description": "Batıdaki oda 1863'te Ahmed Vefik Paşa tarafından Orhan Kütüphanesi'ne dönüştürülmüştür.",
+      "sourceId": "inv-p191"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p191",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Orhan Bey Camii\"",
+      "page": "191-204"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

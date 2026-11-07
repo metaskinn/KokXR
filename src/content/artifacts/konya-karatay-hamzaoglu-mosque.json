@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-hamzaoglu-mosque",
+  "name": "Hamzaoğlu Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Cumhuriyet dönemi · mimari özelliklerine göre XX. yüzyıl ortaları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Batı cephesinde ahşap çardak minaresi bulunan, taş temelli ve kerpiç duvarlı Cumhuriyet dönemi camisi.",
+  "history": "Cami, Karatay, Doğuş Mahallesi, Rüstem Şirvani Sokak’tadır. Mimari özellikleri itibarıyla XX. yüzyılın ortalarında yapılmış olan cami, Cumhuriyet dönemi eserlerindendir.\n\nTemelde taş, diğer bölümlerde kerpiç kullanılarak yığma (kâgir) olarak inşa edilen caminin üst örtüsü kırma çatıdır. Batı cephesinde harime girişi sağlayan kapı ve ahşap çardak minaresi bulunur. Cepheler sıvalıdır ve pencerelidir. Harim kareye yakın dikdörtgen planlıdır. Mihrap, minber ve vaaz kürsüsü oldukça sadedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-hamzaoglu-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-hamzaoglu-mosque/exterior.jpg",
+      "alt": "Ağaçların arasında beyaz sıvalı, alt kısmı koyu boyalı, kiremit çatılı küçük cami ve çatıdan yükselen koyu renkli çardak minare",
+      "description": "Cami ve çardak minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-hamzaoglu-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: yeşil çerçeveli sivri kemerli mihrap, sağında ahşap minber ve vaaz kürsüsü, ahşap tavan ve avize",
+      "description": "Mihrap, minber ve vaaz kürsüsü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ahsap-cardak-minare",
+      "image": "/images/konya-karatay-hamzaoglu-mosque/exterior.jpg",
+      "x": 66,
+      "y": 43,
+      "title": "Ahşap çardak minare",
+      "text": "Batı cephesinde harime girişi sağlayan kapı ve ahşap çardak minaresi bulunur.",
+      "sourceId": "inv-p266"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-hamzaoglu-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 50,
+      "title": "Mihrap",
+      "text": "Caminin mihrap, minber ve vaaz kürsüsü oldukça sadedir.",
+      "sourceId": "inv-p266"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamzaoğlu Camii hangi döneme aittir?",
+      "options": [
+        "Selçuklu",
+        "Karamanoğulları",
+        "Cumhuriyet",
+        "Erken Osmanlı"
+      ],
+      "correct": 2,
+      "description": "Mimari özellikleri itibarıyla XX. yüzyılın ortalarında yapılmış olan cami Cumhuriyet dönemi eserlerindendir.",
+      "sourceId": "inv-p266"
+    },
+    {
+      "question": "Caminin minaresi nasıldır?",
+      "options": [
+        "Ahşap çardak minare",
+        "Tuğla, iki şerefeli",
+        "Betonarme",
+        "Minaresi yoktur"
+      ],
+      "correct": 0,
+      "description": "Batı cephesinde ahşap çardak minaresi bulunur.",
+      "sourceId": "inv-p266"
+    },
+    {
+      "question": "Caminin temelinde hangi malzeme kullanılmıştır?",
+      "options": [
+        "Kerpiç",
+        "Betonarme",
+        "Tuğla",
+        "Taş"
+      ],
+      "correct": 3,
+      "description": "Cami temelde taş, diğer bölümlerde kerpiç kullanılarak yığma olarak inşa edilmiştir.",
+      "sourceId": "inv-p266"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p266",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hamzaoğlu Camii\"",
+      "page": "266"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

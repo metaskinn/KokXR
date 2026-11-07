@@ -1,0 +1,109 @@
+{
+  "id": "konya-karapinar-sultan-selim-ii-fountain",
+  "name": "Karapınar Sultan II. Selim Külliyesi Çeşmesi",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "Osmanlı · Kitâbesine göre H. 977 / M. 1569",
+  "endowment": "Külliyenin banileri Şehzade Sultan II. Selim ve Kanûni Sultan Süleyman",
+  "summary": "Külliyenin kuzey-güney ekseninin kuzey ucunda, \"Çarşı Çeşmesi\" olarak da bilinen, sivri kemerli ve düz saçaklı tek yüzlü sokak çeşmesi.",
+  "history": "Çeşme, Şehzade II. Selim'in Karapınar'da yaptırdığı; cami, sıbyan mektebi, imaret, tabhane, arasta, iki han, çeşme, hamam ve iki yel değirmeninden oluşan menzil külliyesinin bir parçasıdır. Külliyenin kuzey-güney ekseninin kuzey ucunda bulunur ve \"Çarşı Çeşmesi\" olarak da tanınır.\n\nÇeşmenin üzerinde H. 977 / M. 1569 tarihini veren bir kitâbe vardır. Bu tarih, aynı zamanda Karapınar'daki su yollarının ve diğer dört çeşmenin de tamamlanma yılıdır.\n\nTek yüzlü çeşme, sivri kemerli ve düz saçaklı bir sokak çeşmesidir. Genel olarak iyi durumdadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-sultan-selim-ii-fountain/fountain.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-fountain/fountain.jpg",
+      "alt": "Kesme taştan tek yüzlü çeşme: iki renkli taşlı sivri kemerli niş, içinde iki musluklu ayna taşı, üstte kabartma yazılı kitâbe ve düz saçak",
+      "description": "Çeşmenin önden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-fountain/inscription.jpg",
+      "alt": "Sivri kemerin üstünde, taşa kabartma yazılmış uzun kitâbe panosu",
+      "description": "Çeşmenin kitâbesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-fountain/spouts.jpg",
+      "alt": "Mermer ayna taşında iki pirinç musluk ve zincirle asılı bir maşrapa",
+      "description": "Çeşmenin muslukları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pointed-arch",
+      "image": "/images/konya-karapinar-sultan-selim-ii-fountain/fountain.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Sivri kemer",
+      "text": "Tek yüzlü çeşme, sivri kemerli ve düz saçaklı bir sokak çeşmesidir.",
+      "sourceId": "inv-p46"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/konya-karapinar-sultan-selim-ii-fountain/inscription.jpg",
+      "x": 50,
+      "y": 22,
+      "title": "Kitâbe",
+      "text": "Çeşmenin üzerindeki kitâbe H. 977 / M. 1569 tarihini verir.",
+      "sourceId": "inv-p46"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşme hangi adla da tanınır?",
+      "options": [
+        "Sultan Çeşmesi",
+        "Han Çeşmesi",
+        "Çarşı Çeşmesi",
+        "Avlu Çeşmesi"
+      ],
+      "correct": 2,
+      "description": "Külliyenin kuzey-güney ekseninin kuzey ucundaki çeşme \"Çarşı Çeşmesi\" olarak da tanınır.",
+      "sourceId": "inv-p46"
+    },
+    {
+      "question": "Çeşmenin kitâbesi hangi tarihi verir?",
+      "options": [
+        "H. 977 / M. 1569",
+        "H. 971 / M. 1563",
+        "H. 967 / M. 1560",
+        "H. 1263 / M. 1847"
+      ],
+      "correct": 0,
+      "description": "Çeşme üzerindeki kitâbe H. 977 / M. 1569 tarihini verir.",
+      "sourceId": "inv-p46"
+    },
+    {
+      "question": "Kitâbedeki tarih başka neyin tamamlanma yılıdır?",
+      "options": [
+        "Külliyenin camisinin",
+        "Karapınar'daki su yollarının ve diğer dört çeşmenin",
+        "Külliyenin hamamının",
+        "Arastanın onarımının"
+      ],
+      "correct": 1,
+      "description": "H. 977 / M. 1569, aynı zamanda Karapınar'daki su yollarının ve diğer dört çeşmenin tamamlanma yılıdır.",
+      "sourceId": "inv-p46"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p36",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesi Çeşmesi\"",
+      "page": "36"
+    },
+    {
+      "id": "inv-p46",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesi Çeşmesi\"",
+      "page": "46"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

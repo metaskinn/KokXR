@@ -1,0 +1,111 @@
+{
+  "id": "konya-karatay-ic-karaaslan-kumbet",
+  "name": "İç Karaaslan (Necmettin Karaarslan) Kümbeti",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Anadolu Selçuklu · XIII. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir; kitâbeye göre türbe İbrahim oğlu Karaarslan'ındır",
+  "summary": "Selçuklu devlet adamı Necmeddin Karaarslan'ın, en özgün Selçuklu sandukalarından birini barındıran sekizgen kümbeti.",
+  "history": "Kümbet, Karatay, Şems Tebrizi Mahallesi, Yeşilgözler Sokak üzerindedir. Giriş kapısı üzerindeki iki satırlık celî sülüs kitâbede \"Bu türbe sait, şehit, dinin yıldızı, İslam'ın direği, İbrahim oğlu Karaarslan'ındır. Allah onun kabrini nurlu kılsın\" yazar; kitâbede inşa tarihi yoktur. Ziyaeddin Karaarslan adıyla da anılan Necmeddin Karaarslan, I. İzzettin Keykavus (1211-1222) ve I. Alaaddin Keykubat dönemlerinde hizmet etmiş önemli bir devlet adamıdır.\n\nXIII. yüzyılda yapılan türbe, mimari özellikleriyle tipik bir Selçuklu türbesidir. 1951'de Konya ve Mülhakatı Eski Eserleri Sevenler Derneği tarafından tamir edilmiş, 1980'lerde bitişiğindeki evin istimlakiyle etrafı açılmıştır.\n\nSekizgen planlı türbe içten kubbe, dıştan külahla örtülüdür. Gövdede muntazam yonu taş, saçak ve külahta tuğla kullanılmıştır. Kripta ve türbe girişleri aynı cephededir; kripta kapısının iki yanından yedişer basamakla ana kapıya çıkılır. Kapı açıklığında bir niş ve üzerinde sivri kemerle oluşturulmuş dekoratif bir düzen vardır.\n\nKubbeli iç mekânda, dikdörtgen prizma bir kaide üzerinde semerdam çatılı, çini mozaikli bir sanduka bulunur. Kaidedeki çiniler mavi zemin üzerine kabartma ve kalıplama tekniğiyle rozet motifleriyle oluşturulmuştur; motiflerin üzerinde zencirekli bir bordür, onun üzerinde de Ayet-el Kürsi yer alır. Çinilerin zamanla döküldüğü görülür. Çini sanduka, günümüze ulaşmış en özgün Anadolu Selçuklu sandukalarından biridir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-ic-karaaslan-kumbet/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-ic-karaaslan-kumbet/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit çatılı sıkışık evler ve apartmanlar arasında, açık bir alanın kenarında beyaz konik külahlı kümbet",
+      "description": "Kümbet ve çevresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-ic-karaaslan-kumbet/sarcophagus.jpg",
+      "alt": "Koyu taş duvar önünde semerdam biçimli çini sanduka: üstte beyaz Arapça yazılı mavi bordür, altta mavi zemin üzerinde sıra sıra rozet motifleri ve zencirek çerçeve",
+      "description": "Çini mozaikli sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cone",
+      "image": "/images/konya-karatay-ic-karaaslan-kumbet/aerial-view.jpg",
+      "x": 62,
+      "y": 52,
+      "title": "Külah",
+      "text": "Sekizgen planlı türbe içten kubbe, dıştan külah ile örtülüdür; saçak ve külahta tuğla kullanılmıştır.",
+      "sourceId": "inv-p157"
+    },
+    {
+      "id": "inscription-band",
+      "image": "/images/konya-karatay-ic-karaaslan-kumbet/sarcophagus.jpg",
+      "x": 60,
+      "y": 37,
+      "title": "Ayet-el Kürsi bordürü",
+      "text": "Sandukadaki zencirekli bordürün üzerinde Ayet-el Kürsi yer almaktadır.",
+      "sourceId": "inv-p157"
+    },
+    {
+      "id": "rosettes",
+      "image": "/images/konya-karatay-ic-karaaslan-kumbet/sarcophagus.jpg",
+      "x": 40,
+      "y": 70,
+      "title": "Rozet motifli çiniler",
+      "text": "Kaide üzerindeki çiniler mavi zemin üzerine kabartma ve kalıplama tekniğiyle rozet motifleriyle oluşturulmuştur.",
+      "sourceId": "inv-p157"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe nasıl bir plana sahiptir?",
+      "options": [
+        "Kare",
+        "Sekizgen",
+        "Dikdörtgen",
+        "Yuvarlak"
+      ],
+      "correct": 1,
+      "description": "Türbe sekizgen planlıdır ve üzeri içten kubbe, dıştan külahla örtülüdür.",
+      "sourceId": "inv-p157"
+    },
+    {
+      "question": "Türbe 1951'de kim tarafından tamir edilmiştir?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Karatay Belediyesi",
+        "Konya ve Mülhakatı Eski Eserleri Sevenler Derneği",
+        "Mahalle halkı"
+      ],
+      "correct": 2,
+      "description": "Karaaslan Türbesi 1951'de Konya ve Mülhakatı Eski Eserleri Sevenler Derneği tarafından tamir edilmiştir.",
+      "sourceId": "inv-p156"
+    },
+    {
+      "question": "Kripta kapısının iki yanından ana kapıya kaçar basamakla çıkılır?",
+      "options": [
+        "Üçer",
+        "Beşer",
+        "Onar",
+        "Yedişer"
+      ],
+      "correct": 3,
+      "description": "Kripta kapısının iki yanından yedişer basamak ile ana kapıya çıkılmaktadır.",
+      "sourceId": "inv-p157"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p156",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"İç Karaaslan (Necmettin Karaarslan) Kümbeti\"",
+      "page": "156"
+    },
+    {
+      "id": "inv-p157",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"İç Karaaslan (Necmettin Karaarslan) Kümbeti\"",
+      "page": "157"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

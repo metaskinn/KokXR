@@ -1,0 +1,90 @@
+{
+  "id": "konya-selcuklu-tacul-vezir-kumbet",
+  "name": "Tacül Vezir Kümbeti",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · XIII. yüzyıl; külliyenin medresesi H. 637 / M. 1239",
+  "endowment": "Tacül Vezir (Taceddin Ahmet) türbeyi medrese ile aynı zamanda inşa ettirmiştir",
+  "summary": "Vezir Taceddin Ahmet'in XIII. yüzyılda medresesiyle birlikte yaptırdığı, cenazelik katlı, piramidal külahlı Selçuklu türbesi.",
+  "history": "Tacül Vezir Türbesi, Selçuklu İlçesi, Ferhuniye Mahallesi, Sultanşah Caddesi üzerindedir. Tacül Vezir Külliyesi'nde medrese, zaviye, mescit ve türbe yer alır; türbe külliyenin bir parçası olarak inşa edilmiştir. Konya Vakıflar Müdürlüğündeki Defter-i Hakani kayıtlarında medrese bölümünün H. 637 / M. 1239'da inşa edildiği yazar. Plan, üst örtü ve malzemesine göre XIII. yüzyılda yapılmış klasik bir Anadolu Selçuklu türbesidir.\n\nTacül Vezir, Anadolu Selçuklu döneminde Alâeddin Keykubat ve II. Gıyasettin Keyhüsrev zamanında vezirlik yapmış önemli devlet adamlarındandır. Asıl adı Taceddin Ahmet olan Tacül Vezir, türbeyi medrese ile aynı zamanda inşa ettirmiştir. Medrese zamanla harap olmuş ve XX. yüzyılın başlarında tamamen yıkılmıştır; bugün türbenin bitişiğinde medreseye ait izler bulunur. Türbe halk arasında \"Hacı Veziri\" olarak anılır.\n\nTürbe plan bakımından diğer Selçuklu türbeleriyle aynı özelliklere sahiptir: alt kat cenazeliktir, üzerinde sekizgen bir gövde yükselir; dıştan piramidal külah, içten kubbe ile örtülüdür. Temellerde taş, diğer bölümlerde tuğla kullanılmıştır. Özellikle giriş cephesinde malzeme farkı göze çarpar; kapı ve lentolardaki farklılığın nedeni Bizans dönemine ait devşirme malzemelerin kullanılmasıdır. Kapının solundaki pencere eyvana açılır.\n\nTürbede dört mezar vardır. Mezar taşlarından birinin Tacül Vezir'in 1337'de vefat eden torunu Celalüddin Kasım Bey'e, bir diğerinin ise başka bir torunu Kasım Bey ve kardeşi Şeyh Sureti'ye ait olduğu bilinir. Tacül Vezir'e ait olduğu düşünülen mezar taşında vefat tarihi yoktur. Eser, Konya'daki Anadolu Selçuklu külliyeleri içinde medrese ve türbenin bitişik yapıldığı bir örnek olarak önemli bir yere sahiptir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-tacul-vezir-kumbet/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-tacul-vezir-kumbet/exterior.jpg",
+      "alt": "Ağaç dalları arasından görünen tuğla gövdeli türbe; solda taş örgülü, kemerli giriş bölümü, önde çimenlik üzerinde dikili mermer sütun parçaları ve demir parmaklık",
+      "description": "Türbenin giriş cephesi ve çevresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "spolia-entrance",
+      "image": "/images/konya-selcuklu-tacul-vezir-kumbet/exterior.jpg",
+      "x": 20,
+      "y": 55,
+      "title": "Devşirme malzemeli giriş",
+      "text": "Giriş cephesinde malzeme farkı göze çarpar; kapı ve lentolarda Bizans dönemine ait devşirme malzeme kullanılmıştır.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "id": "brick-body",
+      "image": "/images/konya-selcuklu-tacul-vezir-kumbet/exterior.jpg",
+      "x": 45,
+      "y": 35,
+      "title": "Tuğla gövde",
+      "text": "Türbenin temellerinde taş, diğer bölümlerinde tuğla kullanılmıştır.",
+      "sourceId": "inv-p184"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tacül Vezir'in asıl adı nedir?",
+      "options": [
+        "Taceddin Ahmet",
+        "Celalüddin Kasım",
+        "Necmeddin Karaarslan",
+        "Şeyh Sureti"
+      ],
+      "correct": 0,
+      "description": "Asıl adı Taceddin Ahmet olan Tacül Vezir, türbeyi medrese ile aynı zamanda inşa ettirmiştir.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "question": "Türbe halk arasında hangi adla anılır?",
+      "options": [
+        "Kesikbaş",
+        "Çifte Kümbet",
+        "Yarım Türbe",
+        "Hacı Veziri"
+      ],
+      "correct": 3,
+      "description": "Türbe halk arasında \"Hacı Veziri\" olarak adlandırılmaktadır.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "question": "Giriş cephesinde kapı ve lentolardaki malzeme farkının nedeni nedir?",
+      "options": [
+        "Osmanlı onarımında eklenen mermerler",
+        "Bizans dönemine ait devşirme malzeme",
+        "Kırmızı Sille taşı kullanılması",
+        "Çini kaplamanın dökülmesi"
+      ],
+      "correct": 1,
+      "description": "Kapı ve lentolardaki farklılık, Bizans dönemine ait devşirme malzemelerin kullanılmasından kaynaklanır.",
+      "sourceId": "inv-p184"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p184",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Tacül Vezir Kümbeti\"",
+      "page": "184"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "konya-eregli-agalar-boyaci-ali-masjid",
+  "name": "Ağalar (Boyacı Ali) Mescidi",
+  "city": "Konya",
+  "district": "Ereğli",
+  "period": "H. 958 / M. 1551",
+  "endowment": "Aksaraylı Ali oğlu Hasan",
+  "summary": "Ereğli Boyacı Ali Mahallesi İstasyon Caddesi üzerindeki mescidin Latin harfli kitabesine göre yapı H. 958 / M. 1551'de Kanuni Sultan Süleyman döneminde Aksaraylı Ali oğlu Hasan tarafından yaptırılmıştır.",
+  "history": "Ereğli Boyacı Ali Mahallesi İstasyon Caddesi üzerindeki mescidin Latin harfli kitabesine göre yapı H. 958 / M. 1551'de Kanuni Sultan Süleyman döneminde Aksaraylı Ali oğlu Hasan tarafından yaptırılmıştır. 1950'ye kadar Hacı Hasan Efendi Medresesi'nin bir bölümü olarak kullanılmıştır. Medrese yıkılınca mescit ayakta kalmıştır.\n\nBitişik tabhane odasıyla birlikte iki birimli, enine dikdörtgen planlıdır. Kare birimler kasnak üzerine oturan kubbelerle örtülüdür. Batıdaki tabhanenin kıble duvarında ocak ve iki yanında dolap biçimli açıklıklar bulunur. Doğudaki mescide tabhanedeki açıklıktan geçilir. Kıble duvarında mihrap, üzerinde ve solunda pencereler vardır. 2012 onarımında tabhane mescitle birleştirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-eregli-agalar-boyaci-ali-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-eregli-agalar-boyaci-ali-masjid/exterior.jpg",
+      "alt": "Kesme taş duvarlı mescit ve önündeki ahşap destekli giriş sundurması",
+      "description": "Kesme taş duvarlı mescit ve önündeki ahşap destekli giriş sundurması",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-eregli-agalar-boyaci-ali-masjid/mihrab.jpg",
+      "alt": "Beyaz duvarda yeşil ve bitkisel motiflerle süslü mihrap",
+      "description": "Beyaz duvarda yeşil ve bitkisel motiflerle süslü mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-eregli-agalar-boyaci-ali-masjid/mihrab.jpg",
+      "x": 50,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Mescidin kıble duvarında mihrap bulunur.",
+      "sourceId": "inv-p426"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-eregli-agalar-boyaci-ali-masjid/mihrab.jpg",
+      "x": 50,
+      "y": 9,
+      "title": "Üst pencere",
+      "text": "Kitap mihrap üzerinde bir pencere bulunduğunu belirtir.",
+      "sourceId": "inv-p426"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ağalar (Boyacı Ali) Mescidi hangi ilçededir?",
+      "options": [
+        "Ereğli",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Ağalar (Boyacı Ali) Mescidi, Konya'nın Ereğli ilçesindedir.",
+      "sourceId": "inv-p426"
+    },
+    {
+      "question": "İki kare birimin üzeri nasıl örtülüdür?",
+      "options": [
+        "Kırma çatı ile",
+        "Kubbe ile",
+        "Açık bırakılmıştır",
+        "Düz toprak dam ile"
+      ],
+      "correct": 1,
+      "description": "Kubbe ile.",
+      "sourceId": "inv-p426"
+    },
+    {
+      "question": "Tabhane odası mescitle hangi yıl birleştirilmiştir?",
+      "options": [
+        "1853",
+        "1956",
+        "1720",
+        "2012"
+      ],
+      "correct": 3,
+      "description": "2012.",
+      "sourceId": "inv-p426"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p426",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Ağalar (Boyacı Ali) Mescidi\"",
+      "page": "426"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

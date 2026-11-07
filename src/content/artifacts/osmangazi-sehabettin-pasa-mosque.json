@@ -91,7 +91,7 @@
       ],
       "correct": 0,
       "description": "Kitabede banisinin Karamânî Mehmed'in oğlu Mehmed Çelebi olduğu yazılıdır; Şehabettin Paşa'nın camiyle doğrudan bağlantısı tespit edilememiştir.",
-      "sourceId": "inv-p419"
+      "sourceId": "inv-p419-420"
     },
     {
       "question": "Asıl ibadet mekânının üzeri nasıl örtülüdür?",
@@ -111,6 +111,11 @@
       "id": "inv-p419",
       "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehabettin Paşa Camii\"",
       "page": "419"
+    },
+    {
+      "id": "inv-p419-420",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehabettin Paşa Camii\"",
+      "page": "419-420"
     },
     {
       "id": "inv-p420",

@@ -1,0 +1,121 @@
+{
+  "id": "hatay-reyhanli-yenisehir-mosque",
+  "name": "Yenişehir Camii",
+  "district": "Reyhanlı",
+  "period": "Osmanlı · H.1317 / M.1899",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Yenişehir Camii, beyaz kalker taşından yapılmış, kıbleye paralel iki sahınlı harimi ve ahşap direkli son cemaat yeri bulunan bir Reyhanlı camisidir.",
+  "history": "Kitap, Yenişehir Camii’ni 19. yüzyıldaki iskân hareketlerinin doğurduğu ihtiyaçlarla ilişkilendirir. Osmanlı Devleti, 1863’ten itibaren Fırka-i İslâhiye adlı askerî kuvvet aracılığıyla Toros ve Amanos yaylalarındaki konar göçer Türkmen topluluklarını zorunlu iskâna tabi tutmuştur. 1877–1878 Osmanlı-Rus Savaşı sonrasında gelen Rumeli ve Kafkas muhacirlerinin de yerleştirilmesi, bölgede ibadet, eğitim ve ticaret yapıları ihtiyacını artırmıştır. Reyhanlı bu gelişmelerden etkilenen yerler arasındadır.\n\nH.1317 / M.1899 tarihli cami düz bir alanda, beyaz kalker taşıyla yapılmıştır. Kıbleye paralel dikdörtgen harimin kuzeyinde uzanan son cemaat yeri, dört ahşap direğin oluşturduğu beş açıklığa sahiptir. Bu bölümün öne eğimli kiremit çatısı harimden daha alçaktır. Güney duvarında iki kapı ve iki pencere, doğu ve batıda birer pencere bulunur. Harime açılan basık kemerli kapının kitabesi altı satırlıdır ve 1317/1899 tarihini taşır.\n\nGüneydoğu köşedeki minarenin silindirik gövdesi ince bir frizle kuşatılmıştır; şerefesi şemsiye biçimli külahla örtülüdür. İki sahınlı harimin içi düz tavanla, dışı kiremit kaplı dört yönlü kırma çatıyla örtülür. Mihrap, yuvarlak kemerli sade bir niştir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-reyhanli-yenisehir-mosque/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-reyhanli-yenisehir-mosque/courtyard.jpg",
+      "alt": "Geniş avlu içinde kiremit çatılı taş cami, direkli sundurma, geride kısa minare ve ağaçlar",
+      "description": "Geniş avlu içinde kiremit çatılı taş cami, direkli sundurma, geride kısa minare ve ağaçlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-reyhanli-yenisehir-mosque/narthex.jpg",
+      "alt": "Taş duvar boyunca uzanan kırmızı halılı son cemaat yeri, açık ahşap çatı kirişleri ve direkler",
+      "description": "Taş duvar boyunca uzanan kırmızı halılı son cemaat yeri, açık ahşap çatı kirişleri ve direkler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-reyhanli-yenisehir-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı iç mekânda ahşap tavan, sağda yükseltilmiş ahşap bölüm ve solda minber",
+      "description": "Kırmızı halılı iç mekânda ahşap tavan, sağda yükseltilmiş ahşap bölüm ve solda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-reyhanli-yenisehir-mosque/mihrab.jpg",
+      "alt": "Taş kemerli sade mihrap nişi, yanında ahşap kürsü ve minber",
+      "description": "Taş kemerli sade mihrap nişi, yanında ahşap kürsü ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-reyhanli-yenisehir-mosque/narthex.jpg",
+      "x": 22,
+      "y": 48,
+      "title": "Ahşap direkler",
+      "text": "Son cemaat yeri dört ahşap direk üzerinde beş göz olarak düzenlenmiştir.",
+      "sourceId": "inv-p370"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-reyhanli-yenisehir-mosque/mihrab.jpg",
+      "x": 55,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Mihrap yuvarlak kemerli sade bir nişten oluşur.",
+      "sourceId": "inv-p372"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yenişehir Camii kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Reyhanlı",
+        "Antakya",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe Reyhanlı olarak verilmiştir.",
+      "sourceId": "inv-p399"
+    },
+    {
+      "question": "Yapının kitabesinde hangi tarih bulunur?",
+      "options": [
+        "1453",
+        "1317 / 1899",
+        "1601",
+        "1923"
+      ],
+      "correct": 1,
+      "description": "Harime açılan kapının altı satırlı kitabesinde 1317/1899 tarihi vardır.",
+      "sourceId": "inv-p370"
+    },
+    {
+      "question": "Caminin ana yapı malzemesi nedir?",
+      "options": [
+        "Kerpiç",
+        "Tuğla",
+        "Beyaz kalker taşı",
+        "Çelik"
+      ],
+      "correct": 2,
+      "description": "Cami tamamen beyaz kalker taşından yapılmıştır.",
+      "sourceId": "inv-p370"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p370",
+      "text": "Hatay Vakıf Eserleri, Reyhanlı, \"Yenişehir Camii\"",
+      "page": "370"
+    },
+    {
+      "id": "inv-p372",
+      "text": "Hatay Vakıf Eserleri, Reyhanlı, \"Yenişehir Camii\"",
+      "page": "372"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Reyhanlı, \"Yenişehir Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

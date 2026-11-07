@@ -1,0 +1,113 @@
+{
+  "id": "konya-selcuklu-kesikbas-kumbet",
+  "name": "Kesikbaş Kümbeti",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · XIII. yüzyıl (plan, malzeme ve örtü sistemine göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kitâbesi olmayan, plan ve malzemesine göre XIII. yüzyıla tarihlenen, sekizgen planlı ve piramidal külahlı tuğla Selçuklu kümbeti.",
+  "history": "Kesikbaş Kümbeti, Selçuklu İlçesi, Feritpaşa Mahallesi, Ankara Caddesi üzerindedir. Kitâbesi bulunmayan kümbetin plan, malzeme ve örtü sisteminden XIII. yüzyılda yapılmış bir Anadolu Selçuklu eseri olduğu anlaşılır. Yapı günümüze gelene kadar birçok onarım geçirmiş; çevre düzenlemesi 2000 yılından itibaren Selçuklu Belediyesi tarafından yenilenmiştir.\n\nTürbenin banisi, mimarı ya da içinde kimin yattığı bilinmemektedir. İ. Hakkı Konyalı, idam edilenlere \"Kesikbaş\" lakabı takıldığından, türbenin adından hareketle idam edilmiş birine ait olabileceği görüşündedir. Türbe, Kalenderbaba Türbesi ile birlikte \"Çifte Kümbetler\" olarak bilinir.\n\nGenel olarak tuğladan yapılan yapıda yer yer taş da kullanılmış; kripta taştan yapılmıştır. Türbe sekizgen planlıdır; üzeri içten kubbe, dıştan piramidal külahla örtülüdür. Cepheler tuğla örgü görünümündedir; sekizgen cephelerin üst bölümlerindeki küçük dikdörtgen mazgal pencereler iç mekânı aydınlatır.\n\nTürbeye kuzey cepheden girilir. Kriptanın girişi zamanla bozulmuş, bu bölümün üst örtüsü çapraz tonozla kapatılmıştır. Cenazelik yandan üç mazgal pencereyle aydınlatılır; sekizgen gövdeli ikinci katın üzerini kubbe örter.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-kesikbas-kumbet/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-kesikbas-kumbet/exterior.jpg",
+      "alt": "Yuvarlak taş bir set ortasında, tuğla örgülü sekizgen gövdeli kümbet; gövdenin üst kısmında küçük dikdörtgen pencereler ve üstte sivri piramidal külah",
+      "description": "Kümbetin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-kesikbas-kumbet/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: sekiz yüzlü piramidal külah ve çevresindeki dairesel taş set",
+      "description": "Külahın tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-kesikbas-kumbet/interior.jpg",
+      "alt": "Alt kısmı taş, üst kısmı tuğla duvarlı loş iç mekânda ahşap kaplamalı bir sanduka ve duvarda küçük bir pencere",
+      "description": "Kümbetin iç mekânı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pyramidal-cone",
+      "image": "/images/konya-selcuklu-kesikbas-kumbet/exterior.jpg",
+      "x": 50,
+      "y": 25,
+      "title": "Piramidal külah",
+      "text": "Sekizgen planlı türbenin üzeri içten kubbe, dıştan piramidal külahla örtülüdür.",
+      "sourceId": "inv-p173"
+    },
+    {
+      "id": "loophole-windows",
+      "image": "/images/konya-selcuklu-kesikbas-kumbet/exterior.jpg",
+      "x": 48,
+      "y": 58,
+      "title": "Mazgal pencereler",
+      "text": "Sekizgen cephelerin üst bölümlerindeki küçük dikdörtgen mazgal pencereler iç mekânı aydınlatır.",
+      "sourceId": "inv-p173"
+    },
+    {
+      "id": "octagonal-cone-top",
+      "image": "/images/konya-selcuklu-kesikbas-kumbet/top-view.jpg",
+      "x": 53,
+      "y": 48,
+      "title": "Sekizgen plan",
+      "text": "Tepeden bakıldığında külahın sekiz yüzü, türbenin sekizgen planını gösterir.",
+      "sourceId": "inv-p173"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kesikbaş Kümbeti hangi türbeyle birlikte \"Çifte Kümbetler\" olarak bilinir?",
+      "options": [
+        "Tacül Vezir Türbesi",
+        "Kalenderbaba Türbesi",
+        "Ulaş Baba Kümbeti",
+        "Karaarslan Türbesi"
+      ],
+      "correct": 1,
+      "description": "Türbe, Kalenderbaba Türbesi ile birlikte \"Çifte Kümbetler\" olarak bilinir.",
+      "sourceId": "inv-p173"
+    },
+    {
+      "question": "İ. Hakkı Konyalı'ya göre türbenin adı neye işaret ediyor olabilir?",
+      "options": [
+        "Yapının yarım kalmasına",
+        "Mimarının adına",
+        "İdam edilmiş birine ait olmasına",
+        "Külahının kırılmasına"
+      ],
+      "correct": 2,
+      "description": "Konyalı, idam edilenlere \"Kesikbaş\" lakabı takıldığından türbenin idam edilmiş birine ait olabileceği görüşündedir.",
+      "sourceId": "inv-p173"
+    },
+    {
+      "question": "Türbenin kripta bölümü hangi malzemeden yapılmıştır?",
+      "options": [
+        "Tuğla",
+        "Mermer",
+        "Ahşap",
+        "Taş"
+      ],
+      "correct": 3,
+      "description": "Yapı genel olarak tuğladandır; kripta ise taştan yapılmıştır.",
+      "sourceId": "inv-p173"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p173",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Kesikbaş Kümbeti\"",
+      "page": "173"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

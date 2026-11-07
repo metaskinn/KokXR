@@ -1,0 +1,130 @@
+{
+  "id": "konya-eregli-rustem-pasha-sifa-bath",
+  "name": "Rüstem Paşa (Şifa) Hamamı",
+  "city": "Konya",
+  "district": "Ereğli",
+  "period": "Karamanoğulları · bazı araştırmacılara göre XV. yüzyıl; kitâbesi yok",
+  "endowment": "Karamanoğlu Mehmet Bey tarafından Ulu Camii'ye vakfedilmiştir",
+  "summary": "Ereğli'de, Konya hamamları arasında \"yıldızvari sıcaklıklı\" plan tipinde inşa edilmiş tek örnek olan ve hâlâ kullanılan hamam.",
+  "history": "Hamam, Ereğli'de, Selçuklu Mahallesi, Hamam Sokak üzerindedir. Yapının kitâbesi yoktur. II. Bayezid adına Karaman vakıflarını tespit eden vakıf defterlerinde İbrahim Bey'in vakıfları sayılırken \"Eski Hamam\" adlı bir yapı kaydedilmiştir. Arşiv belgelerinde ayrıca \"Hamam-ı Köhne\", \"Hamam-ı Nev\" ve \"Hamam-ı Atik\" adlı hamamlar da geçer; ancak \"Eski Hamam\" olarak anılanın bunlardan hangisi olduğu şüphelidir. Hamam, Karamanoğlu Mehmet Bey tarafından Ulu Camii'ye vakfedilmiştir; bazı araştırmacılar bu bilgiden hareketle hamamın XV. yüzyılda Karamanoğulları zamanında yapıldığını kabul eder.\n\nKuzeydoğu-güneybatı doğrultusunda planlanan hamam \"yıldızvari sıcaklıklı\" tiptedir; Konya hamamları içinde bu tipolojide inşa edilmiş tek örnektir. İnşa malzemesi moloz ve kesme taştır; yapıyı cepheden profilli bir saçak çevreler.\n\nHamama kuzeybatı cephesindeki kapıdan girilir; soyunmalığa basık kemerli, tek kanatlı bir kapıyla geçilir. Soyunmalığı örten kubbe dıştan sekizgen bir kasnağa oturur, kubbeye geçiş tromplarla sağlanır; ortada bir şadırvan bulunur.\n\nKuzeybatı-güneydoğu yönünde inşa edilen ılıklık, yanlarda sivri tonozlu iki ve ortada kubbeli bir bölümden oluşan üç bölümlü bir örtü sistemine sahiptir; orta kubbeye geçişte prizmatik üçgenler kullanılmıştır. Ilıklığın orta bölümünde, dilimli kemerli niş içine alınmış tam kemerli bir kapı sıcaklığın güneybatı eyvanına açılır.\n\nYıldızvari düzenlenmiş sıcaklığın çevresinde toplam sekiz eyvan bulunur. Kuzeybatı ve güneydoğudaki eyvanların orta kısımları kubbeyle, yanları sivri tonozla örtülüdür; derinliği daha az olan diğer altı eyvan sivri tonozludur. Eyvanların oluşturduğu ortadaki sekizgen bölümün üzerini bir kubbe örter; ışıklıkların sayısı kubbe eteğine doğru artar. Sıcaklığın ortasında sekizgen bir göbek taşı vardır ve güneybatıdaki eyvandan su deposuna bir buhar penceresi açılır. Kareye yakın dörtgen planlı halvetler kubbeyle örtülüdür ve kubbeye geçiş pandantiflerle sağlanır.\n\nGüneybatıdaki su deposu ve külhan bölümü sivri tonozla örtülüdür; tonozun üzerinde belli aralıklarla açılmış üç aydınlatma gözü vardır. Hamam bugün hâlâ kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-eregli-rustem-pasha-sifa-bath/top-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-eregli-rustem-pasha-sifa-bath/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: solda fenerli büyük sekizgen kiremit kubbe, sağda çok sayıda küçük ışık deliği olan büyük kubbe ve çevresinde daha küçük kubbeler; beyaz düz dam",
+      "description": "Hamamın kubbelerinin tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-eregli-rustem-pasha-sifa-bath/exterior.jpg",
+      "alt": "Moloz taş örgülü yüksek duvar, arkasında fenerli kiremit kaplı kubbe ve solda tuğla minare; önde demir korkuluk",
+      "description": "Hamamın dış duvarı ve kubbesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-eregli-rustem-pasha-sifa-bath/dome.jpg",
+      "alt": "Kiremit kaplı, üstünde camlı küçük fener bulunan kubbe; altında hamamın adını taşıyan tabela ve ağaçlar",
+      "description": "Fenerli kubbe ve hamam tabelası",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-eregli-rustem-pasha-sifa-bath/interior.jpg",
+      "alt": "Ahşap kaplı duvarlar önünde turuncu deri koltuklar ve ortada yuvarlak masa bulunan bir oturma salonu; üst katta ahşap korkuluklu galeri",
+      "description": "Hamamın içinden bir görünüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "calidarium-dome",
+      "image": "/images/konya-eregli-rustem-pasha-sifa-bath/top-view.jpg",
+      "x": 66,
+      "y": 58,
+      "title": "Sıcaklık kubbesi ve ışıklıklar",
+      "text": "Eyvanların oluşturduğu sekizgen bölümün üzeri kubbeyle örtülüdür; ışıklıkların sayısı kubbe eteğine doğru artar.",
+      "sourceId": "inv-p225"
+    },
+    {
+      "id": "apodyterium-dome",
+      "image": "/images/konya-eregli-rustem-pasha-sifa-bath/top-view.jpg",
+      "x": 20,
+      "y": 40,
+      "title": "Soyunmalık kubbesi",
+      "text": "Soyunmalığın üst örtüsünü oluşturan kubbe dıştan sekizgen bir kasnağa oturur.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "id": "walls",
+      "image": "/images/konya-eregli-rustem-pasha-sifa-bath/exterior.jpg",
+      "x": 45,
+      "y": 60,
+      "title": "Moloz ve kesme taş",
+      "text": "Hamamın inşa malzemesi moloz ve kesme taştır.",
+      "sourceId": "inv-p224"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamamın plan tipi nedir?",
+      "options": [
+        "Tek eyvanlı",
+        "Yıldızvari sıcaklıklı",
+        "Çifte hamam, haçvari",
+        "Kare sıcaklıklı"
+      ],
+      "correct": 1,
+      "description": "Hamam \"yıldızvari sıcaklıklı\" tipte inşa edilmiştir; Konya hamamları içinde bu tipolojideki tek örnektir.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "question": "Hamam kim tarafından Ulu Camii'ye vakfedilmiştir?",
+      "options": [
+        "Rüstem Paşa",
+        "II. Bayezid",
+        "İbrahim Bey",
+        "Karamanoğlu Mehmet Bey"
+      ],
+      "correct": 3,
+      "description": "Hamam, Karamanoğlu Mehmet Bey tarafından Ulu Camii'ye vakfedilmiştir.",
+      "sourceId": "inv-p223"
+    },
+    {
+      "question": "Yıldızvari sıcaklığın çevresinde kaç eyvan vardır?",
+      "options": [
+        "Sekiz",
+        "Dört",
+        "Altı",
+        "İki"
+      ],
+      "correct": 0,
+      "description": "Sıcaklığın etrafı toplam sekiz eyvanla çevrilidir.",
+      "sourceId": "inv-p224"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p223",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ereğli, \"Rüstem Paşa (Şifa) Hamamı\"",
+      "page": "223"
+    },
+    {
+      "id": "inv-p224",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ereğli, \"Rüstem Paşa (Şifa) Hamamı\"",
+      "page": "224"
+    },
+    {
+      "id": "inv-p225",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ereğli, \"Rüstem Paşa (Şifa) Hamamı\"",
+      "page": "225"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

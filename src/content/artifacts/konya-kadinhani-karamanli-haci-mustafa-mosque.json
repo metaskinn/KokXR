@@ -1,0 +1,97 @@
+{
+  "id": "konya-kadinhani-karamanli-haci-mustafa-mosque",
+  "name": "Karamanlı Hacı Mustafa Camii",
+  "city": "Konya",
+  "district": "Kadınhanı",
+  "period": "1768",
+  "endowment": "Hacı Mustafa Vakfı; banileri Çavuş Oğulları",
+  "summary": "Kadınhanı Güngören Mahallesi Konya Caddesi'ndeki cami 1768'de Saideli Nahiyesi Bozulus Türkmenleri Karamanlı Aşireti ağalarından Çavuş Oğulları tarafından yaptırılmıştır.",
+  "history": "Kadınhanı Güngören Mahallesi Konya Caddesi'ndeki cami 1768'de Saideli Nahiyesi Bozulus Türkmenleri Karamanlı Aşireti ağalarından Çavuş Oğulları tarafından yaptırılmıştır. Vakıflar Genel Müdürlüğüne bağlı Hacı Mustafa Vakfı'na aittir. H. 1297 / M. 1880, 1961 ve 2014'te onarılmıştır.\n\nDikdörtgen planlı cami harim ve son cemaat yerinden oluşur. Kuzey-güney yönündeki kâgir yapının temeli taş, duvarları kerpiçtir; dört yöne eğimli kırma çatısı kiremit kaplıdır. Üç sahınlı harimde kuzey ve güney duvarlarına bitişik ahşap direkler Bursa kemerleriyle bağlanır. Kuzeydeki kadınlar mahfili dört ahşap direkle taşınır; batı köşesinin altında imam odası vardır. Kıble duvarındaki mihrap dikdörtgen çerçeveli, yarım daire planlı, yarım kubbeli ve yuvarlak kemerlidir. Üç bordüründe rozetler, iri yapraklar ve S kıvrımlı dallar bulunur. Mihrap kemeri üzerinde mihrap ayeti ve H. 1286 / M. 1869 tarihi vardır. Güneybatıdaki minber ahşaptır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-kadinhani-karamanli-haci-mustafa-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-kadinhani-karamanli-haci-mustafa-mosque/aerial-view.jpg",
+      "alt": "Yeşil cepheli kırma çatılı cami ve yüksek minaresinin havadan görünümü",
+      "description": "Yeşil cepheli kırma çatılı cami ve yüksek minaresinin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-kadinhani-karamanli-haci-mustafa-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı, turkuaz tavanlı harimde ahşap direkler ve yeşil mihrap",
+      "description": "Kırmızı halılı, turkuaz tavanlı harimde ahşap direkler ve yeşil mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-kadinhani-karamanli-haci-mustafa-mosque/prayer-hall.jpg",
+      "x": 48,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Mihrabı bitkisel motifli üç bordür çevreler.",
+      "sourceId": "inv-p461"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-kadinhani-karamanli-haci-mustafa-mosque/prayer-hall.jpg",
+      "x": 20,
+      "y": 55,
+      "title": "Ahşap direkler",
+      "text": "Harim ahşap direklerle üç sahına ayrılır.",
+      "sourceId": "inv-p461"
+    }
+  ],
+  "test": [
+    {
+      "question": "Karamanlı Hacı Mustafa Camii hangi ilçededir?",
+      "options": [
+        "Kadınhanı",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Karamanlı Hacı Mustafa Camii, Konya'nın Kadınhanı ilçesindedir.",
+      "sourceId": "inv-p461"
+    },
+    {
+      "question": "Ahşap direkleri hangi kemerler bağlar?",
+      "options": [
+        "Sivri kemerler",
+        "Bursa kemerleri",
+        "At nalı kemerler",
+        "Beş dilimli kemerler"
+      ],
+      "correct": 1,
+      "description": "Bursa kemerleri.",
+      "sourceId": "inv-p461"
+    },
+    {
+      "question": "Yapı hangi vakfa aittir?",
+      "options": [
+        "Hacı İbrahim Vakfı",
+        "Nevşehirli İbrahim Paşa Vakfı",
+        "Kitapta bir vakıf adı verilmez",
+        "Hacı Mustafa Vakfı"
+      ],
+      "correct": 3,
+      "description": "Hacı Mustafa Vakfı.",
+      "sourceId": "inv-p461"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p461",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"Karamanlı Hacı Mustafa Camii\"",
+      "page": "461"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

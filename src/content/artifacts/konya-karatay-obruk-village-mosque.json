@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-obruk-village-mosque",
+  "name": "Obruk Köyü Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XIX. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Obruk Gölü ve Han’ın kuzeybatısındaki cami, Emin Usta’ya bağlanan ahşap işçiliği ve üç sahınlı harimiyle tanımlanır.",
+  "history": "Cami, Karatay, Obruk Köyü merkezinde, Obruk Gölü ve Han’ın kuzeybatısındadır. İnşa tarihi veya banisini veren kitâbesi yoktur. Kitap, tavan göbeği süslemesinden hareketle Dülgerli Köyü’nden Emin Usta tarafından XIX. yüzyılda yapıldığının anlaşıldığını belirtir.\n\nTaşla yığma tekniğinde yapılmış, duvarları sıvalı, ahşap direkli cami derinlemesine dikdörtgen planlı ve dört yöne eğimli kırma çatılıdır. Harime kuzey cephenin ortasındaki kapıdan girilir. Ahşap sütunlar harimi üç sahına ayırır. İç örtüsü ahşap kaplamalı düz damdır. Kuzeydeki ahşap mahfil iki ahşap direğe oturur. Kıble duvarındaki yarım daire planlı, yarım kubbe kavsaralı ahşap mihrabın bordürleri ajur tekniğinde geometrik ve bitkisel motiflerle süslüdür. Sağdaki sade minber ahşaptır. Kuzeybatıdaki bodur minare kare prizmal kaideli, silindirik gövdeli ve tek şerefelidir. Kitap caminin ibadete açık olduğunu belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-obruk-village-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-obruk-village-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı uzun cephe ve sağ köşede kısa, tek şerefeli taş minare",
+      "description": "Kiremit çatılı uzun cephe ve sağ köşede kısa, tek şerefeli taş minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-obruk-village-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde koyu ahşap direkler, bezemeli ahşap tavan ve solda minber",
+      "description": "Mavi halılı harimde koyu ahşap direkler, bezemeli ahşap tavan ve solda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-obruk-village-mosque/exterior.jpg",
+      "x": 82,
+      "y": 44,
+      "title": "Bodur minare",
+      "text": "Kuzeybatıdaki minare kare prizmal kaideli, silindirik gövdeli ve tek şerefelidir.",
+      "sourceId": "inv-p195"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-obruk-village-mosque/prayer-hall.jpg",
+      "x": 56,
+      "y": 57,
+      "title": "Ahşap direkler",
+      "text": "Ahşap sütunlar harimi üç sahına ayırır.",
+      "sourceId": "inv-p195"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitap yapıyı hangi ustaya bağlar?",
+      "options": [
+        "Canbazzade Nasuh Bey",
+        "Dülgerli Köyü’nden Emin Usta",
+        "Kadı İzzeddin",
+        "Hacı Veyis Efendi"
+      ],
+      "correct": 1,
+      "description": "Tavan göbeği süslemesinden hareketle Emin Usta tarafından yapıldığı belirtilir.",
+      "sourceId": "inv-p195"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "Bir",
+        "İki",
+        "Beş",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Ahşap sütunlar harimi üç sahına ayırır.",
+      "sourceId": "inv-p195"
+    },
+    {
+      "question": "Minare kaç şerefelidir?",
+      "options": [
+        "İki",
+        "Üç",
+        "Tek",
+        "Dört"
+      ],
+      "correct": 2,
+      "description": "Bodur minare tek şerefelidir.",
+      "sourceId": "inv-p195"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p195",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Obruk Köyü Camii\"",
+      "page": "195"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

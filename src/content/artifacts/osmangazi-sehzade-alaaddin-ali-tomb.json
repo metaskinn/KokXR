@@ -1,0 +1,103 @@
+{
+  "id": "osmangazi-sehzade-alaaddin-ali-tomb",
+  "inventoryId": "osmangazi-sehzade-alaaddin-ali-turbesi",
+  "name": "Şehzade Alâaddin Ali Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Şehzade Alâaddin H. 846 / M. 1442'de vefat etmiş; türbe, babası II. Murad'ın vefatından sonra inşa edilmiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "II. Murad Külliyesi'nde, Sultan II. Murad Türbesi'nin doğu duvarına bitişik, II. Murad'ın oğulları ve kızının yattığı kareye yakın planlı türbe.",
+  "history": "Şehzade Alâaddin Ali Türbesi, Osmangazi İlçesi, Muradiye Mahallesi'nde, II. Murad Külliyesi bünyesinde yer alır. Şehzade Alâaddin Ali, Sultan II. Murad'ın oğludur ve H. 846 / M. 1442'de babasından önce vefat etmiştir. Türbesi, külliyedeki diğer hanedan mensuplarına ait türbelerle birlikte inşa edilerek günümüze ulaşmıştır.\n\nSultan II. Murad Türbesi'nin doğu duvarına bitişik olan türbeye, sonradan kapıya dönüştürülen bir pencereden girilir. Doğudaki pencerenin kapıya çevrilmesiyle yanına 7,25 × 7,80 m ölçülerinde, kareye yakın planlı bu türbe inşa edilmiştir. Burada II. Murad'ın oğulları Şehzade Alâaddin, Şehzade Ahmed, Şehzade Orhan ve kızı Şehzade Hatun defnedilmiştir. Şehzade Alâaddin babasından önce vefat etmesine rağmen türbesi, babasının vefatından sonra yapılmıştır.\n\nII. Murad ve Şehzade Alâaddin türbeleri iki sıra tuğla ve bir sıra kesme taşla örülmüş, kasnak kısmında tuğla sırası üçe çıkarılmıştır. Türbenin üstü sekizgen kasnağa oturan bir kubbeyle örtülü, tabanı altıgen tuğlalarla döşelidir.\n\nİki türbe farklı dönemlerde çeşitli onarımlar geçirmiştir: ilk büyük tamirat 1742'de yapılmış, kurşun örtü 1781 ve 1844'te, kalem işi süslemeler 1790'da yenilenmiştir. Osmanlı Arşivleri'ndeki 1850 tarihli bir belgede, II. Murad'ın cami, medrese ve türbesinin kurşun örtülerinin harap olduğu, genel onarım için 25.600 kuruşluk bütçe ayrıldığı belirtilir. 2014'teki geniş kapsamlı restorasyonda II. Murad ve Şehzade Alâaddin türbeleri yeniden elden geçirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sehzade-alaaddin-ali-tomb/sarcophagi.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sehzade-alaaddin-ali-tomb/sarcophagi.jpg",
+      "alt": "İç mekân: altıgen tuğla döşeli zemin üzerinde kırmızı örtülü ve sırma işlemeli iki sanduka; öndeki sandukanın önünde 'Şehzade Alâaddin' yazılı tabela, arkada kemerli ahşap pencereler",
+      "description": "Şehzade Alâaddin'in sandukası ve altıgen tuğla zemin",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sehzade-alaaddin-ali-tomb/interior-column.jpg",
+      "alt": "İç mekân: beyaz duvarlı türbede kırmızı ve siyah örtülü sandukalar, ortada kırmızımsı mermer bir sütun ve sol duvarda demir parmaklıklı bir açıklık",
+      "description": "Türbenin iç mekânı ve sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "alaaddin-sarcophagus",
+      "image": "/images/osmangazi-sehzade-alaaddin-ali-tomb/sarcophagi.jpg",
+      "x": 55,
+      "y": 70,
+      "title": "Şehzade Alâaddin'in sandukası",
+      "text": "Türbede II. Murad'ın oğulları Şehzade Alâaddin, Şehzade Ahmed, Şehzade Orhan ve kızı Şehzade Hatun defnedilmiştir.",
+      "sourceId": "inv-p140"
+    },
+    {
+      "id": "hexagonal-floor",
+      "image": "/images/osmangazi-sehzade-alaaddin-ali-tomb/sarcophagi.jpg",
+      "x": 15,
+      "y": 84,
+      "title": "Altıgen tuğla zemin",
+      "text": "Türbenin tabanı altıgen tuğlalarla döşenmiştir.",
+      "sourceId": "inv-p141"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şehzade Alâaddin Ali kimin oğludur?",
+      "options": [
+        "Orhan Gazi",
+        "Sultan II. Murad",
+        "Fâtih Sultan Mehmed",
+        "II. Bayezid"
+      ],
+      "correct": 1,
+      "description": "Şehzade Alâaddin Ali, Sultan II. Murad'ın oğludur ve H. 846 / M. 1442'de babasından önce vefat etmiştir.",
+      "sourceId": "inv-p140"
+    },
+    {
+      "question": "Türbenin tabanı neyle döşenmiştir?",
+      "options": [
+        "Mermer levhalarla",
+        "Ahşap tahtalarla",
+        "Çini kaplamayla",
+        "Altıgen tuğlalarla"
+      ],
+      "correct": 3,
+      "description": "Türbenin üstü sekizgen kasnağa oturan bir kubbeyle örtülü, tabanı altıgen tuğlalarla döşelidir.",
+      "sourceId": "inv-p141"
+    },
+    {
+      "question": "Türbeye nereden girilir?",
+      "options": [
+        "Sonradan kapıya dönüştürülen bir pencereden",
+        "Mermer revaklı bir taç kapıdan",
+        "Avludaki merdivenli bir girişten",
+        "Caminin son cemaat yerinden"
+      ],
+      "correct": 0,
+      "description": "II. Murad Türbesi'nin doğu duvarına bitişik türbeye, sonradan kapıya dönüştürülen bir pencereden girilir.",
+      "sourceId": "inv-p140"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p140",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehzade Alâaddin Ali Türbesi\"",
+      "page": "140"
+    },
+    {
+      "id": "inv-p141",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehzade Alâaddin Ali Türbesi\"",
+      "page": "141"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

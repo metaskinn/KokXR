@@ -1,0 +1,131 @@
+{
+  "id": "osmangazi-muradiye-madrasa",
+  "inventoryId": "osmangazi-muradiye-medresesi",
+  "name": "Muradiye Medresesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Erken Osmanlı Dönemi; II. Murad Külliyesi'nin parçası",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Muradiye Külliyesi'nin batı ucunda, revaklı iç avlulu, tek eyvanlı ve on altı hücreli Erken Osmanlı medresesi; bugün Muradiye El Yazmaları Müzesi.",
+  "history": "Muradiye Medresesi, Osmangazi ilçesi, Muradiye Mahallesi, Prof. Dr. Halil İnalcık Sokak'ta, II. Murad (Muradiye) Külliyesi'nin batı ucunda yer alır. 17 × 17 m ölçülerinde revaklı iç avlusu olan, tek eyvanlı ve on altı hücreli bir Erken Osmanlı Dönemi medresesidir. Beden duvarları erken dönem Bursa yapılarında olduğu gibi üç sıra tuğla ve bir sıra taşla almaşık düzende örülmüş, saçaklar üç sıra kirpi dizisiyle sonlanmıştır.\n\nKuzey cephesindeki taç kapı, sivri kemerli bir eyvan biçiminde tasarlanmış, Türk üçgenli ve mukarnaslı tromplu kubbeyle örtülmüştür; kapı yüzeyi tuğla dizilerinin oluşturduğu geometrik motiflerle süslüdür. Avluya girişte devşirme iki Korint başlıklı sütun dikkat çeker, revakın diğer bölümleri tuğla payelerle taşınır. Avlunun ortasında mermerden sekizgen bir havuz bulunur. Açık avlu son restorasyonda çelik konstrüksiyonlu cam örtüyle kapatılmıştır. Öğrenci hücrelerinin önünde doğu ve batıda kubbeli, kuzeyde tonoz örtülü revaklar uzanır. Tonoz örtülü, dikdörtgen planlı odaların her birinde pencere, niş ve ocak vardır; güney köşelerdeki daha geniş hücrelerin müderris ve muid odaları olduğu düşünülür.\n\nDershane olarak kullanılan ana eyvana taş basamaklı bir merdivenle ulaşılır. Giriş eyvanı gibi kubbeli ve tromplu olan dershanenin duvarları pencere kemer üzengi seviyesine kadar çini panolarla süslenmiş, zemini tuğla döşenmiştir.\n\nMedrese 1623, 1781 ve 1844'te onarılmıştır. 1855 depreminde dershane duvarları çatlamış, sıvalar dökülmüş, ocak bacaları yıkılmıştır. 1940'lardaki onarımdan sonra 1951'de Sağlık Bakanlığı'na devredilmiş ve Verem Savaş Dispanseri olarak kullanılmıştır. 2005-2010 arasında Bursa sağlık tarihine ait objelerin sergilendiği bir müze olmuştur. 2014-2016 arasında külliyenin diğer yapılarıyla birlikte kapsamlı biçimde restore edilmiş; bu sırada ahşap kaplamalar sökülmüş, çinilerin alt kısımlarının eksik olduğu görülmüş, bu bölümler tamamlanmadan yalnızca sıvanmıştır. Restorasyonun ardından Bursa Büyükşehir Belediyesi'ne bağlı Muradiye El Yazmaları Müzesi olarak ziyarete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-muradiye-madrasa/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-muradiye-madrasa/aerial-view.jpg",
+      "alt": "Havadan görünüm: tuğla ve taş örgülü dikdörtgen yapı, ortasında cam örtülü avlu, çevresinde sıra sıra küçük kurşun kubbeler ve tuğla bacalar; önde büyük çınar ağacı",
+      "description": "Medresenin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-muradiye-madrasa/courtyard.jpg",
+      "alt": "Cam ve çelik örtülü avlu; ortada mermer havuz, iki yanda tuğla kemerli revaklar, karşıda sivri kemerli büyük eyvan",
+      "description": "Cam örtülü avlu ve eyvan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-muradiye-madrasa/portico.jpg",
+      "alt": "Tuğla kemerli revak altında uzanan, kiremit renkli zeminli koridor; beyaz duvarlarda hat levhaları ve sivri kemerli kapılar, önde cam vitrin",
+      "description": "Revak altındaki hücre kapıları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-muradiye-madrasa/tiled-hall.jpg",
+      "alt": "Kubbeli ve mukarnaslı tromplu oda; duvarlarda mavi-turkuaz çini kuşağı, ortasında camlı sergi masası, altıgen tuğla zemin",
+      "description": "Çini kuşaklı kubbeli mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "octagonal-pool",
+      "image": "/images/osmangazi-muradiye-madrasa/courtyard.jpg",
+      "x": 50,
+      "y": 73,
+      "title": "Sekizgen havuz",
+      "text": "Avlunun ortasında mermerden sekizgen bir havuz yer alır.",
+      "sourceId": "inv-p125"
+    },
+    {
+      "id": "glass-roof",
+      "image": "/images/osmangazi-muradiye-madrasa/courtyard.jpg",
+      "x": 50,
+      "y": 8,
+      "title": "Cam örtü",
+      "text": "Açık avlulu medresenin üstü son restorasyonda çelik konstrüksiyonlu cam örtüyle kapatılmıştır.",
+      "sourceId": "inv-p125"
+    },
+    {
+      "id": "iwan",
+      "image": "/images/osmangazi-muradiye-madrasa/courtyard.jpg",
+      "x": 50,
+      "y": 48,
+      "title": "Dershane eyvanı",
+      "text": "Dershane olarak kullanılan ana eyvana taş basamaklı bir merdivenle ulaşılır.",
+      "sourceId": "inv-p126"
+    }
+  ],
+  "test": [
+    {
+      "question": "Muradiye Medresesi kaç hücrelidir?",
+      "options": [
+        "On iki",
+        "Sekiz",
+        "Yirmi",
+        "On altı"
+      ],
+      "correct": 3,
+      "description": "Medrese, revaklı iç avlusuyla tek eyvanlı ve on altı hücreli bir Erken Osmanlı medresesidir.",
+      "sourceId": "inv-p124"
+    },
+    {
+      "question": "Medrese 1951'de Sağlık Bakanlığı'na devredildikten sonra ne olarak kullanılmıştır?",
+      "options": [
+        "Verem Savaş Dispanseri",
+        "Hastane",
+        "Kütüphane",
+        "Okul"
+      ],
+      "correct": 0,
+      "description": "1951'de Sağlık Bakanlığı'na devredilmiş ve Verem Savaş Dispanseri olarak kullanılmasına karar verilmiştir.",
+      "sourceId": "inv-p126"
+    },
+    {
+      "question": "Restorasyondan sonra medrese hangi müze olarak ziyarete açılmıştır?",
+      "options": [
+        "Bursa Kent Müzesi",
+        "Muradiye El Yazmaları Müzesi",
+        "Türk İslam Eserleri Müzesi",
+        "Arkeoloji Müzesi"
+      ],
+      "correct": 1,
+      "description": "Çalışmaların ardından Bursa Büyükşehir Belediyesi'ne bağlı Muradiye El Yazmaları Müzesi olarak açılmıştır.",
+      "sourceId": "inv-p126"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p124",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Muradiye Medresesi\"",
+      "page": "124"
+    },
+    {
+      "id": "inv-p125",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Muradiye Medresesi\"",
+      "page": "125"
+    },
+    {
+      "id": "inv-p126",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Muradiye Medresesi\"",
+      "page": "126"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

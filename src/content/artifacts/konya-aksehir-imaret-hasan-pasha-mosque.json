@@ -1,0 +1,121 @@
+{
+  "id": "konya-aksehir-imaret-hasan-pasha-mosque",
+  "name": "İmaret (Hasan Paşa) Camii",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Osmanlı · H. 916 / M. 1510",
+  "endowment": "Banisi Rumeli Beylerbeyi Abdülhayoğlu Hasan Paşa; imaret ve mektep vakfiyesi",
+  "summary": "Kileci Mahallesi’ndeki Hasan Paşa Camii, tek kubbeli harimi ve Evliya Çelebi’nin yazısını taşıyan sütun bileziğiyle tanınır.",
+  "history": "Cami, Kileci Mahallesi, İmaret Sokak’tadır. Taç kapıdaki on satırlık Arapça celî sülüs kitabeye göre 1510’da Rumeli Beylerbeyi Abdülhayoğlu Hasan Paşa tarafından yaptırılmıştır. Vakfiyede imaret ve mektep de bulunur; bunlar günümüze gelmemiştir. Mihrap üzerindeki Reşit Efendi imzalı kitabe 1833–34’te Ahmet Ağa’nın onarımını bildirir. İbrahim Hakkı Konyalı, 1895–96’da son cemaat yeri kubbelerinin yıkılıp Müftü Selim Efendi ve halkın yardımıyla Konyalı Ali Usta’ya yaptırıldığını belirtir. Aynı onarımda avluya barok üsluplu, onikigen ve çift çanaklı şadırvan eklenmiştir. 2015’te de Vakıflar Bölge Müdürlüğü tamiri gerçekleşmiştir.\n\nDört sütunlu üç bölümlü son cemaat yerinin ortası çapraz tonozlu, yanları kubbelidir. Girişin solundaki ilk sütunun tunç bileziğinde ziyaretçi yazıları arasında Evliya Çelebi’nin yazısı da vardır. Basık kemerli taç kapının çevresi kaval silmelidir; ahşap kanatlarında namaz ve tövbeye çağıran hadisler yazılıdır. Kuzeydoğudaki minare kare kaideli, çokgen gövdelidir. Kare harimi on altı dilimli tromplara oturan tek kubbe örter. Kubbe ve son cemaat yeri 1949’da Müslim Gökçek’in kalem işleriyle süslenmiştir. Mermer mihrap yarım beşgen planlı ve mukarnas kavsaralıdır; sağındaki mermer minber sadedir. Kuzeydeki kadınlar mahfili 1895–96’da eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-imaret-hasan-pasha-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-imaret-hasan-pasha-mosque/aerial.jpg",
+      "alt": "Ağaçlarla çevrili tek büyük kubbeli cami, yanında minare ve arka planda dağ yamacındaki şehir",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-imaret-hasan-pasha-mosque/entrance.jpg",
+      "alt": "Mermer çerçeveli kemerli taç kapıda kırmızı ahşap kanatlar ve üstte yazılı pano",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-imaret-hasan-pasha-mosque/mihrab-minbar.jpg",
+      "alt": "Mermer mihrap yanında açık renkli minber, mavi örtü ve pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-imaret-hasan-pasha-mosque/entrance.jpg",
+      "x": 49,
+      "y": 54,
+      "title": "Taç kapı",
+      "text": "Taç kapının ahşap kanatlarında namaza ve tövbeye çağıran hadisler yazılıdır.",
+      "sourceId": "inv-p337"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-imaret-hasan-pasha-mosque/mihrab-minbar.jpg",
+      "x": 21,
+      "y": 47,
+      "title": "Mermer mihrap",
+      "text": "Mihrap yarım beşgen planlı ve mukarnas kavsaralıdır.",
+      "sourceId": "inv-p338"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin banisi kimdir?",
+      "options": [
+        "Abdülhayoğlu Hasan Paşa",
+        "Emir İshak Bey",
+        "Ambardar Kerim Ağa",
+        "Sarı Yakup"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Abdülhayoğlu Hasan Paşa.",
+      "sourceId": "inv-p335"
+    },
+    {
+      "question": "Sütun bileziğinde hangi seyyahın yazısı vardır?",
+      "options": [
+        "İbn Battuta",
+        "Evliya Çelebi",
+        "Marco Polo",
+        "Kâtip Çelebi"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Evliya Çelebi.",
+      "sourceId": "inv-p336"
+    },
+    {
+      "question": "İmaret (Hasan Paşa) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Beyşehir",
+        "Akşehir",
+        "Bozkır"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Akşehir.",
+      "sourceId": "inv-p335"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p335",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İmaret (Hasan Paşa) Camii\"",
+      "page": "335"
+    },
+    {
+      "id": "inv-p336",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İmaret (Hasan Paşa) Camii\"",
+      "page": "336"
+    },
+    {
+      "id": "inv-p337",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İmaret (Hasan Paşa) Camii\"",
+      "page": "337"
+    },
+    {
+      "id": "inv-p338",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İmaret (Hasan Paşa) Camii\"",
+      "page": "338"
+    },
+    {
+      "id": "inv-p339",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İmaret (Hasan Paşa) Camii\"",
+      "page": "339"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

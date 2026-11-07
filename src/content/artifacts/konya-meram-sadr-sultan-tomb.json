@@ -1,0 +1,104 @@
+{
+  "id": "konya-meram-sadr-sultan-tomb",
+  "name": "Sadr (Sedir) Sultan Türbesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XIV. yüzyıl (Kâtip Çelebi'ye göre Sadr Sultan'ın vefatı H. 794 / M. 1391-92)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hekim ve şair Sadr Sultan'ın (Ebubekir Bin Zeki El Konevi) yattığı, günümüze ulaşmamış bir zaviyeden kalan kare planlı türbe.",
+  "history": "Türbe, kitabın adres bilgisine göre Meram, Köprübaşı Mahallesi, Sedirler Caddesi üzerindedir; kitapta Karatay başlığı altında yer alır. Kâtip Çelebi, Sadr Sultan'ın vefat tarihini H. 794 / M. 1391-92 olarak verir; bu bilgiler ışığında yapının XIV. yüzyılda inşa edildiği anlaşılmaktadır. Türbe, günümüze ulaşmamış bir zaviyenin parçasıdır. Zamanla harap hâle gelen yapının onarımı Karatay Belediyesi tarafından yapılmıştır.\n\nSadr Sultan'ın asıl adı Ebubekir Bin Zeki El Konevi'dir. Dönemin âlimlerinden, şair ve aynı zamanda hekim bir zattır. Yanında Sadr-ı Hâkim-i Tirmizi ve Zeyneddin Sadaka yatmaktadır.\n\nKare planlı türbe eskiden düz toprak damla örtülüyken bugün kırma çatıyla örtülüdür; zemin katı aşağıda kalmıştır. Cepheler sarıya boyanmış, ana giriş cephesi ise belirli bir seviyeye kadar kesme taş ve kaba yonu taşla örülmüştür. Bu cephede dikdörtgen, sivri kemerli bir niş ve yanında yuvarlak bir pencere bulunur. Türbede iki mezar taşı vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-sadr-sultan-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-sadr-sultan-tomb/exterior.jpg",
+      "alt": "Sarıya boyalı, kiremit kaplı kırma çatılı küçük kare türbe; önde otlar, çalılar ve eğik duran eski mezar taşları, arkada ağaçlar",
+      "description": "Türbenin dış görünüşü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-sadr-sultan-tomb/interior.jpg",
+      "alt": "İç mekân: ahşap kirişli tavan, ahşap direk, açık renkli sıvalı duvarlarda küçük pencereler ve zeminde yeşil örtülü iki sanduka",
+      "description": "Türbenin içi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-sadr-sultan-tomb/roof.jpg",
+      "alt": "Tepeden görünüm: ağaçların arasında kiremit kaplı dört yöne eğimli kırma çatı",
+      "description": "Kırma çatı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/konya-meram-sadr-sultan-tomb/roof.jpg",
+      "x": 50,
+      "y": 35,
+      "title": "Kırma çatı",
+      "text": "Kare planlı türbe eskiden düz toprak örtülüyken günümüzde kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "id": "facade",
+      "image": "/images/konya-meram-sadr-sultan-tomb/exterior.jpg",
+      "x": 40,
+      "y": 55,
+      "title": "Sarı boyalı cephe",
+      "text": "Türbe cephesi sarıya boyanmıştır.",
+      "sourceId": "inv-p148"
+    }
+  ],
+  "test": [
+    {
+      "question": "Sadr Sultan'ın asıl adı nedir?",
+      "options": [
+        "Ebubekir Bin Zeki El Konevi",
+        "Zeyneddin Sadaka",
+        "Sadr-ı Hâkim-i Tirmizi",
+        "Fakih Ahmet"
+      ],
+      "correct": 0,
+      "description": "Sadır Sultan'ın esas adı Ebubekir Bin Zeki El Konevi'dir.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "question": "Sadr Sultan şair olmasının yanı sıra hangi mesleği icra etmiştir?",
+      "options": [
+        "Mimar",
+        "Hekim",
+        "Hattat",
+        "Kadı"
+      ],
+      "correct": 1,
+      "description": "Sadr Sultan dönemin âlimlerinden, şair ve aynı zamanda hekim bir zattır.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "question": "Türbe günümüzde nasıl bir örtüye sahiptir?",
+      "options": [
+        "Düz toprak dam",
+        "Kubbe",
+        "Kırma çatı",
+        "Konik külah"
+      ],
+      "correct": 2,
+      "description": "Eskiden düz toprak örtülü olan türbe günümüzde kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p148"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p148",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Sadr (Sedir) Sultan Türbesi\"",
+      "page": "148"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

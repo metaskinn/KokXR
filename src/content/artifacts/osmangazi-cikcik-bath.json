@@ -1,0 +1,107 @@
+{
+  "id": "osmangazi-cikcik-bath",
+  "inventoryId": "osmangazi-cikcik-gircik-bekarlar-hamami",
+  "name": "Cıkcık (Girçık-Bekârlar) Hamamı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · I. Murad Hudâvendigâr dönemi; külliye ile birlikte inşa edilmiştir",
+  "endowment": "Banisi Sultan I. Murad Hudâvendigâr",
+  "summary": "I. Murad Hudâvendigâr'ın külliyesiyle birlikte yaptırdığı, medrese öğrencileri, fakir halk ve bekârlar için ayrılmış, ortası şadırvanlı küçük kubbeli hamam.",
+  "history": "Cıkcık Hamamı, I. Murad Hudâvendigâr Külliyesi'nin bir parçasıdır. Murad Hudâvendigâr'ın külliye ile birlikte inşa ettirdiği bu küçük hamam, cami ve medresenin hemen doğu yanında yer alan, küçük kubbeli bir yapıdır. Medresedeki öğrencilerin, fakir halkın ve bekârların kullanımına ayrıldığı için halk arasında \"Bekârlar Hamamı\" ve \"Girçık Hamamı\" olarak bilinir.\n\nHamamda soyunmalık, ılıklık, sıcaklık ve göbek taşı gibi geleneksel hamam birimleri bulunmaz; yapı yalnızca hızlıca yıkanmaya elverişli, \"halvet\" olarak adlandırılabilecek küçük mekânlardan oluşur. Kare planlı yapının içinde, yine kare biçimli ve ortasında şadırvan bulunan bir sofa yer alır. Bu mekân, 6 m çapında, ortasında aydınlık feneri bulunan bir kubbeyle örtülüdür; kubbeye geçişte Türk üçgenleri kullanılmıştır.\n\nCami ile birlikte inşa edilen yapı özgün hüviyetini korumuştur. Uzun süre harap durumda kalan hamam, 2012'de Bursa Büyükşehir Belediyesi tarafından restore edilerek yeniden işlev kazanmıştır. Restorasyon kapsamında sahanlığa bir şadırvan eklenmiş, yapılan kazılarda kaybolan sıcak su kaynağı bulunarak hamama bağlanmıştır. Hamam bugün de ücretsiz hizmet vermektedir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-cikcik-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-cikcik-bath/exterior.jpg",
+      "alt": "Kesme taş ve tuğla örgülü, kare gövdeli küçük yapı; üstte kurşun kaplı kubbe ve tepesinde küçük fener, önde aşağı inen taş merdiven",
+      "description": "Hamamın dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cikcik-bath/interior.jpg",
+      "alt": "Beyaz iç mekân: ortada mermer şadırvan ve çevresinde taş oturaklar, duvarlar boyunca sıralanan kemerli ahşap kapılar, tavanda üçgen kıvrımlar",
+      "description": "Şadırvanlı sofa ve halvet kapıları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-cikcik-bath/exterior.jpg",
+      "x": 48,
+      "y": 25,
+      "title": "Kubbe",
+      "text": "Kare planlı yapının sofası, 6 m çapında ve ortasında aydınlık feneri bulunan bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p104"
+    },
+    {
+      "id": "fountain",
+      "image": "/images/osmangazi-cikcik-bath/interior.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Şadırvanlı sofa",
+      "text": "Kare biçimli sofanın ortasında bir şadırvan bulunur.",
+      "sourceId": "inv-p104"
+    },
+    {
+      "id": "turkish-triangles",
+      "image": "/images/osmangazi-cikcik-bath/interior.jpg",
+      "x": 50,
+      "y": 5,
+      "title": "Türk üçgenleri",
+      "text": "Kubbeye geçiş elemanı olarak Türk üçgenleri kullanılmıştır.",
+      "sourceId": "inv-p104"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam halk arasında neden \"Bekârlar Hamamı\" olarak bilinir?",
+      "options": [
+        "Yalnızca hamam ustalarına ayrıldığı için",
+        "Medrese öğrencileri, fakir halk ve bekârların kullanımına ayrıldığı için",
+        "Bir bekâr tüccar tarafından yaptırıldığı için",
+        "Sadece düğün öncesinde kullanıldığı için"
+      ],
+      "correct": 1,
+      "description": "Medresedeki öğrencilerin, fakir halkın ve bekârların kullanımına ayrıldığı için \"Bekârlar Hamamı\" ve \"Girçık Hamamı\" adlarıyla anılır.",
+      "sourceId": "inv-p104"
+    },
+    {
+      "question": "Hamamın iç düzeni hakkında hangisi doğrudur?",
+      "options": [
+        "Soyunmalık, ılıklık ve sıcaklık bölümleri vardır",
+        "Göbek taşlı büyük bir sıcaklığı vardır",
+        "İki ayrı kadınlar ve erkekler bölümü vardır",
+        "Yalnızca halvet denebilecek küçük mekânlardan oluşur"
+      ],
+      "correct": 3,
+      "description": "Geleneksel hamam birimleri yoktur; yapı yalnızca hızlı yıkanmaya elverişli küçük halvet mekânlarından oluşur.",
+      "sourceId": "inv-p104"
+    },
+    {
+      "question": "Uzun süre harap kalan hamamı 2012'de hangi kurum restore etmiştir?",
+      "options": [
+        "Bursa Büyükşehir Belediyesi",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Vakıflar Genel Müdürlüğü",
+        "Sağlık Bakanlığı"
+      ],
+      "correct": 0,
+      "description": "Hamam 2012'de Bursa Büyükşehir Belediyesi tarafından restore edilerek yeniden işlev kazanmıştır.",
+      "sourceId": "inv-p104"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p104",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Cıkcık (Girçık- Bekârlar) Hamamı\"",
+      "page": "104"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

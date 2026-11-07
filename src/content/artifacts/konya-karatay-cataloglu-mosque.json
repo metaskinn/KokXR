@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-cataloglu-mosque",
+  "name": "Çataloğlu Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · giriş kapısı üzerindeki tarih H. 1181 / M. 1767-68",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Giriş kapısında H. 1181 / M. 1767-68 tarihi bulunan, ahşap direklerle üç sahına ayrılmış taş cami.",
+  "history": "Cami, Karatay, Hacı Cemil Mahallesi, Hacı Hasan Başı Caddesi üzerindedir. Yapının ilk inşa tarihi ya da bânisi hakkında kitâbe yoktur; ancak giriş kapısı üzerinde Türkçe olarak H. 1181 / M. 1767-68 tarihi yazılıdır. Yapı 1930'lu yıllara kadar Pir Mehmet Ağa adıyla anılmış, bir dönem \"Hacı Cemil Camii\" olarak da adlandırılmıştır. Vakıflar Bölge Müdürlüğü tarafından yakın zamanda onarılmıştır.\n\nDerinlemesine dikdörtgen planlı cami içten ahşap kirişlerle, dıştan dört yöne eğimli kırma çatıyla örtülüdür; yapı malzemesi taştır. Harime, kuzey cephedeki son cemaat bölümünde yer alan basık kemerli bir açıklıktan geçilir. Harim, mihraba dik uzanan ve her birinde üçer ahşap direk bulunan iki sıra direkle üç sahına bölünmüştür.\n\nMihrap ve minber kıble duvarındadır. Ahşaptan yapılmış yarım daire planlı mihrap yanlardan düz silmelerle sınırlanmış, yüzeyinde perde ve kandil motifleri işlenmiştir. Mihrabın güneybatısındaki ahşap minberin aynalık ve korkuluğu süslemelidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-cataloglu-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-cataloglu-mosque/exterior.jpg",
+      "alt": "Sıvalı, açık renkli, kahverengi saçaklı kırma çatılı uzun dikdörtgen taş yapı; alt kısmında taş subasman, köşede küçük kapı",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-cataloglu-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap kirişli tavan, iki kalın direk arasında yeşil-kırmızı boyalı mihrap, üstünde avize ve iki yanda pencereler",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "wooden-pillars",
+      "image": "/images/konya-karatay-cataloglu-mosque/prayer-hall.jpg",
+      "x": 23,
+      "y": 50,
+      "title": "Ahşap direkler",
+      "text": "Harim, mihraba dik uzanan üçer ahşap direkten oluşan iki sıra direkle üç sahına bölünmüştür.",
+      "sourceId": "inv-p271"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-karatay-cataloglu-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Ahşap mihrap",
+      "text": "Ahşap mihrabın yüzeyinde perde ve kandil motifleri görülür.",
+      "sourceId": "inv-p271"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin giriş kapısı üzerinde hangi tarih yazılıdır?",
+      "options": [
+        "H. 1081 / M. 1670",
+        "H. 1181 / M. 1767-68",
+        "H. 1281 / M. 1864",
+        "H. 1381 / M. 1961"
+      ],
+      "correct": 1,
+      "description": "Giriş kapısı üzerinde Türkçe olarak H. 1181 / M. 1767-68 tarihi yer alır.",
+      "sourceId": "inv-p271"
+    },
+    {
+      "question": "Yapı 1930'lu yıllara kadar hangi adla anılmıştır?",
+      "options": [
+        "Hacı Hasan Camii",
+        "Çatal Mescit",
+        "Sütçü Camii",
+        "Pir Mehmet Ağa"
+      ],
+      "correct": 3,
+      "description": "Yapı 1930'lu yıllara kadar Pir Mehmet Ağa adıyla anılmıştır.",
+      "sourceId": "inv-p271"
+    },
+    {
+      "question": "Harim kaç sahına bölünmüştür?",
+      "options": [
+        "Üç",
+        "İki",
+        "Dört",
+        "Beş"
+      ],
+      "correct": 0,
+      "description": "Harim, mihraba dik uzanan iki sıra ahşap direkle üç sahına bölünmüştür.",
+      "sourceId": "inv-p271"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p271",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Çataloğlu Camii\"",
+      "page": "271"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "osmangazi-hudavendigar-madrasa",
+  "inventoryId": "osmangazi-i-murad-hudavendigar-medresesi",
+  "name": "I. Murad Hudâvendigâr Medresesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · I. Murad dönemi; caminin üst katı olarak cami ile birlikte inşa edilmiştir",
+  "endowment": "Banisi Sultan I. Murad Hudâvendigâr",
+  "summary": "I. Murad Hudâvendigâr Camii'nin üst katında yer alan, Bursa Ovası'na bakan ikiz sivri kemerli revaklı avlusu ve on iki hücresiyle benzersiz medrese.",
+  "history": "I. Murad Hudâvendigâr Medresesi, I. Murad Hudâvendigâr Külliyesi'nin bir parçasıdır ve caminin üst katında yer alır. Taş bir silmeyle ayrılan medrese katına, cami giriş holünden iki yana açılan ve duvar kalınlığı içine ustalıkla yerleştirilmiş taş merdivenlerle çıkılır. Merdivenlerden alt giriş koridorunun üzerindeki tonozlu bir sahanlığa, oradan da son cemaat yerinin üzerindeki beş bölümlü revaklı sahanlığa geçilir. Bu revakın iki yandaki bölümleri aynalı tonozla, diğer bölümleri kubbelerle örtülüdür; mermer sütunlarla ikiye bölünen açıklıklar ikiz sivri kemerlerle biçimlendirilmiştir.\n\nKuzeye bakan ve Bursa Ovası'nın seyredilebildiği büyük sivri kemerli revaklı medrese avlusu, bu yönüyle farklı bir mimari özellik taşır; doğu ve batı cephelerindeki büyük sivri kemerler de mermer sütunlarla ikiye ayrılmıştır. Medrese katında, harim mekânının üzerinden geçen \"n\" planlı ve 3.50 m genişliğinde uzun bir koridor bulunur. Koridorun iki yanında, birer pencereyle aydınlatılan altışar hücre olmak üzere toplam on iki oda sıralanır. Merdivenlerin iki yanında, tonoz örtülü hollere açılan ve öğrenci odalarından daha geniş olan odaların müderris odaları olabileceği düşünülmektedir. Koridor, harimin çevresinde 80 cm genişliğindeki dar dehlizlerle sürerek büyük mihrap nişinin içindeki küçük kubbeli mekânda son bulur; buradaki bir açıklıktan harim görülebilir. Talebe odaları iç mekândan bakıldığında görünmez.\n\nCephelerde alt kattaki kemer sistemi üst katta da sürdürülmüş, beden duvarları kesme taş ve tuğlanın birlikte kullanıldığı karma teknikle örülmüştür. Büyük kemerlerin ortasına konulan mermer sütunlar, kemerleri iki ayrı sivri kemere ayırarak cepheye hareket kazandırır.\n\nMedresede Molla Gürânî, Zenbilli Ali Efendi ve Tâcîzâde Câfer Çelebi gibi müderrisler görev yapmıştır. Yapının inşasında yabancı ustaların, hatta Türk olmayan mimarların görev almış olabileceği düşünülmektedir. Cami ve medrese yapısı 1520, 1563, 1616 ve 1635 yıllarında onarılmış, 1855 depreminde kısmen hasar gören külliye binaları II. Abdülhamid döneminde onarımdan geçmiştir. 1957'de minaresine yıldırım düşen yapı 1960'ta Bursa Eski Eserleri Sevenler Kurumu tarafından genel onarıma alınmış; 1975-1976, 1998 ve 2006 yıllarında Vakıflar Genel Müdürlüğü tarafından restore edilmiştir. I. Murad Hudâvendigâr Külliyesi 2014'te UNESCO Dünya Miras Alanı olarak ilan edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hudavendigar-madrasa/twin-arches.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hudavendigar-madrasa/twin-arches.jpg",
+      "alt": "Tuğla ve taş almaşık örgülü cephede büyük sivri kemer; içinde ortadaki ince mermer sütunla ikiye ayrılmış iki sivri kemer, önünde beyaz korkuluk, kemer üstünde tuğladan yıldız desenli dolgu",
+      "description": "Üst kattaki ikiz sivri kemerli revak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hudavendigar-madrasa/corridor.jpg",
+      "alt": "Kırmızı halı döşeli, beyaz duvarlı uzun koridor; tavanda ahşap kirişler, duvarlarda aplikler, solda ve ileride kapılar",
+      "description": "Medrese katındaki koridor",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hudavendigar-madrasa/corridor-doors.jpg",
+      "alt": "Kırmızı halılı koridorun köşesi; beyaz duvarda iki küçük ahşap kapı ve sağda mermer söveli çift kanatlı ahşap kapı, tavanda ahşap kirişler",
+      "description": "Koridora açılan oda kapıları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "twin-arches",
+      "image": "/images/osmangazi-hudavendigar-madrasa/twin-arches.jpg",
+      "x": 40,
+      "y": 52,
+      "title": "İkiz sivri kemerler",
+      "text": "Büyük kemerlerin ortasına konulan mermer sütunlar, kemerleri iki ayrı sivri kemere ayırarak hareketlilik kazandırmıştır.",
+      "sourceId": "inv-p97"
+    },
+    {
+      "id": "marble-column",
+      "image": "/images/osmangazi-hudavendigar-madrasa/twin-arches.jpg",
+      "x": 48,
+      "y": 72,
+      "title": "Mermer sütun",
+      "text": "Revaklı sahanlıktaki açıklıklar mermer sütunlarla ikiye bölünmüştür.",
+      "sourceId": "inv-p96"
+    },
+    {
+      "id": "corridor",
+      "image": "/images/osmangazi-hudavendigar-madrasa/corridor.jpg",
+      "x": 72,
+      "y": 60,
+      "title": "Koridor",
+      "text": "Medrese katında harimin üzerinden geçen, \"n\" planlı ve 3.50 m genişliğinde uzun bir koridor yer alır.",
+      "sourceId": "inv-p96"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medrese, külliye içinde nerede yer alır?",
+      "options": [
+        "Caminin bahçesinde ayrı bir binada",
+        "Türbenin yanında",
+        "İmaretin üst katında",
+        "Caminin üst katında"
+      ],
+      "correct": 3,
+      "description": "Medrese katına, cami giriş holünden iki tarafa açılan taş merdivenlerle çıkılır; medrese caminin üst katındadır.",
+      "sourceId": "inv-p96"
+    },
+    {
+      "question": "Medrese katındaki koridorun iki yanında toplam kaç oda sıralanır?",
+      "options": [
+        "On iki",
+        "Sekiz",
+        "On altı",
+        "Yirmi"
+      ],
+      "correct": 0,
+      "description": "Koridorun her iki yanında altışar hücre olmak üzere toplam on iki oda bulunur.",
+      "sourceId": "inv-p96"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi bu medresede görev yapmış müderrislerden biridir?",
+      "options": [
+        "Evliya Çelebi",
+        "Molla Gürânî",
+        "Ahmet Vefik Paşa",
+        "Molla Fenârî"
+      ],
+      "correct": 1,
+      "description": "Medresede Molla Gürânî, Zenbilli Ali Efendi ve Tâcîzâde Câfer Çelebi gibi müderrisler görev yapmıştır.",
+      "sourceId": "inv-p97"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p96",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"I. Murad Hudâvendigâr Medresesi\"",
+      "page": "96"
+    },
+    {
+      "id": "inv-p97",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"I. Murad Hudâvendigâr Medresesi\"",
+      "page": "97"
+    },
+    {
+      "id": "inv-p99",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"I. Murad Hudâvendigâr Medresesi\"",
+      "page": "99"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

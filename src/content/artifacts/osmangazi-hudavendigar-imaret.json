@@ -1,0 +1,124 @@
+{
+  "id": "osmangazi-hudavendigar-imaret",
+  "inventoryId": "osmangazi-i-murad-hudavendigar-imareti",
+  "name": "I. Murad Hudâvendigâr İmareti",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 768-787 / M. 1367-1385 arasında yapıldığı kabul edilmektedir; H. 1324 / M. 1906'da yeniden inşa edilmiştir",
+  "endowment": "Banisi Sultan I. Murad Hudâvendigâr; vakfiyesi H. Cemaziyelahir 787 / M. Temmuz 1385 tarihlidir",
+  "summary": "I. Murad Hudâvendigâr Camii'nin batısında yer alan, II. Abdülhamid döneminde 1906'da yeniden inşa edilmiş, \"L\" biçimli tek katlı aşevi.",
+  "history": "I. Murad Hudâvendigâr İmareti, Osmangazi ilçesi, Hudâvendigâr Mahallesi, Çekirge Caddesi üzerindeki I. Murad Hudâvendigâr Camii'nin batısında yer alan tek katlı aşevi binasıdır. Cami, tabhaneler, medrese, hamam, imaret, han ve türbeden oluşan külliyenin bir parçasıdır ve 2014'te UNESCO Dünya Mirası Listesi'ne alınan alanın içindedir.\n\nYapım tarihi kesin olarak bilinmemekle birlikte, külliyenin Sırp Sındığı Zaferi'nden sonra inşa edildiği bilindiğinden H. 768-787 / M. 1367-1385 tarihleri arasında yapıldığı kabul edilir. Kaynaklara göre vakfiyesi H. Cemaziyelahir 787 / M. Temmuz 1385'te düzenlenmiş, H. Şevval 802 / M. Nisan 1400'de Yıldırım Bayezid'in emriyle yeniden yazılmıştır.\n\nİmaretin camiye bakan doğu duvarındaki nesih hatlı kitabe, harap durumdaki yapının Sultan II. Abdülhamid tarafından \"Cennetmekân Gazi Hudâvendigâr Hazretleri'nin hayır eserlerinden biri\" olarak 12 Receb 1324 / 1 Eylül 1906 tarihinde yeniden inşa ettirildiğini bildirir.\n\n\"L\" biçimindeki yapının 40 m'lik uzun kenarı, güney-kuzey doğrultusunda camiye paralel uzanır. Beden duvarları moloz taşla örülmüş, az miktarda tuğla kullanılmıştır. Bugünkü girişi kuzeydeki kemerli büyük kapıdan sağlanır ve geniş bir avluya açılır. Avluya açılan iki kapıdan biri ana binaya, diğeri bugün çayhane olarak kullanılan aşhane bölümüne geçişi sağlar. Doğu beden duvarında kesme taş söveli beş pencere, avluya bakan batı cephede beş dikdörtgen pencere ve güney uçta dikdörtgen bir kapı açıklığı bulunur. Kuzey cephesindeki pencerenin yapının ilk hâlinden günümüze ulaştığı tahmin edilmektedir. Üst örtü kiremit kaplı ahşap çatıdır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hudavendigar-imaret/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hudavendigar-imaret/courtyard.jpg",
+      "alt": "Taş döşeli avlu; moloz taş ve tuğla örgülü alçak duvarlarda taş söveli dikdörtgen pencereler ve ahşap kapılar, üstte geniş ahşap saçak ve iki tuğla baca",
+      "description": "Avlu ve avluya açılan kapılar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hudavendigar-imaret/courtyard-gate.jpg",
+      "alt": "Gül fidanlı avlu; sağda taş söveli pencereli moloz taş duvar ve ahşap saçak, solda bayrak direkleri ve demir parmaklıklı avlu kapısı",
+      "description": "Avlu ve giriş kapısı yönü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hudavendigar-imaret/interior.jpg",
+      "alt": "Moloz taş duvarlı geniş salon; ahşap çatı makası ve kirişler altında çini desenli masalar ve ahşap sandalyeler",
+      "description": "İç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "courtyard",
+      "image": "/images/osmangazi-hudavendigar-imaret/courtyard.jpg",
+      "x": 50,
+      "y": 85,
+      "title": "Avlu",
+      "text": "Kuzeydeki kemerli büyük kapıdan girilen geniş avluya iki kapı açılır: biri ana binaya, diğeri bugün çayhane olan aşhane bölümüne.",
+      "sourceId": "inv-p103"
+    },
+    {
+      "id": "rubble-wall",
+      "image": "/images/osmangazi-hudavendigar-imaret/courtyard.jpg",
+      "x": 30,
+      "y": 58,
+      "title": "Moloz taş duvarlar",
+      "text": "Beden duvarları moloz taş ile örülmüş, az miktarda tuğla kullanılmıştır.",
+      "sourceId": "inv-p103"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-hudavendigar-imaret/courtyard.jpg",
+      "x": 80,
+      "y": 12,
+      "title": "Kiremit kaplı ahşap çatı",
+      "text": "Yapının üst örtüsünde kiremit kaplı ahşap çatı kullanılmıştır.",
+      "sourceId": "inv-p103"
+    }
+  ],
+  "test": [
+    {
+      "question": "İmaret, I. Murad Hudâvendigâr Camii'ne göre hangi yönde yer alır?",
+      "options": [
+        "Doğusunda",
+        "Kuzeyinde",
+        "Batısında",
+        "Güneyinde"
+      ],
+      "correct": 2,
+      "description": "İmaret, I. Murad Hudâvendigâr Camii'nin batısında yer alan tek katlı aşevi binasıdır.",
+      "sourceId": "inv-p101"
+    },
+    {
+      "question": "Doğu duvarındaki kitabeye göre harap durumdaki imaret hangi yıl yeniden inşa edilmiştir?",
+      "options": [
+        "1855",
+        "1906",
+        "1385",
+        "1960"
+      ],
+      "correct": 1,
+      "description": "Kitabe, yapının H. 1324 / M. 1906 tarihinde II. Abdülhamid tarafından yeniden inşa edildiğini belirtir.",
+      "sourceId": "inv-p102"
+    },
+    {
+      "question": "Yapının planı nasıldır?",
+      "options": [
+        "\"L\" biçimli",
+        "Kare planlı ve kubbeli",
+        "Sekizgen",
+        "Haç planlı"
+      ],
+      "correct": 0,
+      "description": "\"L\" biçimindeki yapının 40 m'lik uzun kenarı camiye paralel uzanır.",
+      "sourceId": "inv-p103"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p101",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"I. Murad Hudâvendigâr İmareti\"",
+      "page": "101"
+    },
+    {
+      "id": "inv-p102",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"I. Murad Hudâvendigâr İmareti\"",
+      "page": "102"
+    },
+    {
+      "id": "inv-p103",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"I. Murad Hudâvendigâr İmareti\"",
+      "page": "103"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

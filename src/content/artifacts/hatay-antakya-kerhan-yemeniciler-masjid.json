@@ -1,0 +1,117 @@
+{
+  "id": "hatay-antakya-kerhan-yemeniciler-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Kerhan (Yemeniciler) Mescidi",
+  "period": "1936’dan daha eski olmadığı düşünülür",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kerhan Mescidi, iş yerleri arasındaki üst katta bulunan yamuk planlı küçük bir ibadet yapısıdır.",
+  "history": "Başlıkta Kerhan (Yemeniciler) olarak geçen ad, kitapta iş yeri ve atölye anlamındaki Farsça Kârhane kelimesiyle açıklanır. Çevresi ve alt katı iş yeridir; küçük avlu kapısına merdivenle çıkılır. Yazılı bir kaynak bulunmadığı, yöre halkının en az elli yıldır ibadete açık olduğunu söylediği aktarılır; malzeme ve mimariye göre 1936’dan daha eski olmadığı düşünülür. Bu göreli süre kesin inşa yılı kabul edilmemiştir. Doğusu ve batısı iş yerleriyle çevrili mescit yamuk planlı, kırma çatılı ve kısa basit minarelidir; ev veya iş yerinden dönüştürülmüş olabilir. 2006’da onarılmıştır. Kuzeydeki girişin iki yanında birer, doğu ve batıda birer pencere vardır. Güney duvarında mihrap, güneydoğu köşesinde minber bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-kerhan-yemeniciler-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-kerhan-yemeniciler-masjid/book-view-1.jpg",
+      "alt": "Açık avluda iki kapılı küçük yapı, ağaç ve metal gölgelik",
+      "description": "Kerhan (Yemeniciler) Mescidi — kitaptaki görünüm 1 (s. 258–259)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-kerhan-yemeniciler-masjid/book-view-2.jpg",
+      "alt": "Desenli halılı odada ortadaki taşıyıcı ayak, ahşap tavan ve pencereler",
+      "description": "Kerhan (Yemeniciler) Mescidi — kitaptaki görünüm 2 (s. 260–261)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-kerhan-yemeniciler-masjid/book-view-2.jpg",
+      "x": 48,
+      "y": 8,
+      "title": "Kırma çatı",
+      "text": "Yapı kırma çatıyla örtülü olarak tanımlanır.",
+      "sourceId": "inv-p262"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-kerhan-yemeniciler-masjid/book-view-2.jpg",
+      "x": 20,
+      "y": 60,
+      "title": "Kuzey penceresi",
+      "text": "Kuzeyde girişin iki yanında birer pencere vardır.",
+      "sourceId": "inv-p262"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin alt katı ne amaçla kullanılır?",
+      "options": [
+        "Hamam",
+        "İş yeri",
+        "Türbe",
+        "Ahır"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: İş yeri.",
+      "sourceId": "inv-p260"
+    },
+    {
+      "question": "Yapı hangi yıl onarılmıştır?",
+      "options": [
+        "1842",
+        "1909",
+        "2006",
+        "1947"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: 2006.",
+      "sourceId": "inv-p262"
+    },
+    {
+      "question": "Mescidin planı nasıldır?",
+      "options": [
+        "Dairesel",
+        "Sekizgen",
+        "Haç biçimli",
+        "Yamuk"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Yamuk.",
+      "sourceId": "inv-p262"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p260",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kerhan (Yemeniciler) Mescidi\"",
+      "page": "260"
+    },
+    {
+      "id": "inv-p261",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kerhan (Yemeniciler) Mescidi\"",
+      "page": "261"
+    },
+    {
+      "id": "inv-p262",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kerhan (Yemeniciler) Mescidi\"",
+      "page": "262"
+    },
+    {
+      "id": "inv-p263",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kerhan (Yemeniciler) Mescidi\"",
+      "page": "263"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kerhan (Yemeniciler) Mescidi\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

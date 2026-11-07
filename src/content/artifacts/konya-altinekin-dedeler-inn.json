@@ -1,0 +1,120 @@
+{
+  "id": "konya-altinekin-dedeler-inn",
+  "name": "Dedeler Hanı",
+  "city": "Konya",
+  "district": "Altınekin",
+  "period": "Osmanlı · Giriş üstündeki taşa göre H. 1285 / M. 1868-69",
+  "endowment": "Banisi veya ustası bilinmemektedir",
+  "summary": "Altınekin Dedeler Kasabası'nın merkezinde, giriş üstündeki \"Maşallah H. 1285\" yazısına göre 1868-69'da yapılmış, ahşap direklerle üç sahına ayrılan han.",
+  "history": "Han, Altınekin'de Dedeler Kasabası'nın merkezindedir. Banisi ve ustası bilinmemektedir. Giriş açıklığının üstündeki bir taşta yer alan \"Maşallah H. 1285\" yazısından M. 1868-69'da yapıldığı anlaşılır. Harap durumdaki yapı 2000'li yıllarda tamir edilmiştir.\n\nHana kuzey cephesindeki düz atkı kemerli kapı açıklığından girilir. İç kısım doğu-batı doğrultusunda iki sıra ahşap direkle üç sahına ayrılmıştır. İç mekânın güneybatı köşesinde bir ocak, hemen karşısında da bir dolap bulunur. Hanın üst örtüsü kurşunla kaplanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-altinekin-dedeler-inn/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-altinekin-dedeler-inn/exterior.jpg",
+      "alt": "Düz bir alanda, moloz taş duvarlı, gri kurşun kaplı kırma çatılı tek katlı yapı; ortada ahşap kapı, arkada kasaba evleri",
+      "description": "Hanın dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-altinekin-dedeler-inn/interior.jpg",
+      "alt": "İç mekân: taş duvarlar, kırmızı ahşap direkler ve tavanı taşıyan kalın ahşap kirişler",
+      "description": "Ahşap direkli iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-altinekin-dedeler-inn/date-stone.jpg",
+      "alt": "Moloz taş duvara gömülü, üzerinde Arap harfleriyle kazınmış yazı bulunan düzgün kesilmiş taş levha",
+      "description": "Giriş üstündeki yazılı taş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-altinekin-dedeler-inn/door-knocker.jpg",
+      "alt": "Eski, boyası dökülmüş ahşap kapı üzerinde dövme demirden halka biçimli kapı tokmağı",
+      "description": "Kapı tokmağı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "date-inscription",
+      "image": "/images/konya-altinekin-dedeler-inn/date-stone.jpg",
+      "x": 55,
+      "y": 40,
+      "title": "\"Maşallah H. 1285\" yazısı",
+      "text": "Giriş açıklığının üstündeki taşta yer alan \"Maşallah H. 1285\" yazısından hanın M. 1868-69'da yapıldığı anlaşılmaktadır.",
+      "sourceId": "inv-p270"
+    },
+    {
+      "id": "wooden-posts",
+      "image": "/images/konya-altinekin-dedeler-inn/interior.jpg",
+      "x": 25,
+      "y": 60,
+      "title": "Ahşap direkler",
+      "text": "İç kısım doğu-batı doğrultusunda iki sıra ahşap direkle üç sahına ayrılmıştır.",
+      "sourceId": "inv-p270"
+    },
+    {
+      "id": "lead-roof",
+      "image": "/images/konya-altinekin-dedeler-inn/exterior.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Kurşun kaplı örtü",
+      "text": "Hanın üst örtüsü kurşunla kaplanmıştır.",
+      "sourceId": "inv-p270"
+    }
+  ],
+  "test": [
+    {
+      "question": "Giriş üstündeki yazıya göre han hangi yıllarda yapılmıştır?",
+      "options": [
+        "M. 1206-07",
+        "M. 1446",
+        "M. 1868-69",
+        "M. 1953-55"
+      ],
+      "correct": 2,
+      "description": "Giriş açıklığı üstündeki taşta yer alan \"Maşallah H. 1285\" yazısından M. 1868-69'da yapıldığı anlaşılmaktadır.",
+      "sourceId": "inv-p270"
+    },
+    {
+      "question": "Hanın iç kısmı nasıl bölünmüştür?",
+      "options": [
+        "İki sıra ahşap direkle üç sahına",
+        "Taş ayaklarla beş sahına",
+        "Kemerli duvarla iki odaya",
+        "Hiç bölünmemiştir"
+      ],
+      "correct": 0,
+      "description": "İç kısım doğu-batı doğrultusunda iki sıra ahşap direkle üç sahına ayrılmıştır.",
+      "sourceId": "inv-p270"
+    },
+    {
+      "question": "İç mekânın güneybatı köşesinde ne bulunur?",
+      "options": [
+        "Mihrap",
+        "Çeşme",
+        "Merdiven",
+        "Ocak"
+      ],
+      "correct": 3,
+      "description": "İç mekânın güneybatı köşesinde ocak, hemen karşısında da bir dolap yer almaktadır.",
+      "sourceId": "inv-p270"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p270",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Altınekin, \"Dedeler Hanı\"",
+      "page": "270"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

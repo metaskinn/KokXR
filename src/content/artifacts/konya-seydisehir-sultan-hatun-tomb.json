@@ -1,0 +1,118 @@
+{
+  "id": "konya-seydisehir-sultan-hatun-tomb",
+  "name": "Sultan Hatun Türbesi",
+  "city": "Konya",
+  "district": "Seydişehir",
+  "period": "Turgutoğulları Beyliği · en eski mezar taşına göre 1422 civarı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Turgutoğullarından Sultan Hatun ile Rüstem Bey adına yaptırılan, Seyyid Harun Veli Camii'nin kuzeyindeki kare planlı, baldaken biçimli türbe.",
+  "history": "Türbe, Seydişehir, Seyitharun Mahallesi, 153096 Sokak üzerinde, Seyyid Harun Veli Camii'nin kuzeyinde yer almaktadır.\n\nTürbenin inşa kitâbesi yoktur, ancak içinde mezar taşı kitâbeleri bulunur. Bunların en eskisi 1422 tarihlidir ve türbenin bu tarihlerde yapılmış olması gerektiği düşünülür. Türbenin 1982 ve 1988'de onarıldığı bilinmektedir; 2006'da Vakıflar Bölge Müdürlüğü tarafından yeniden tamir edilmiştir. Türbe, Turgutoğullarından Emir Şah Bey'in kızı Sultan Hatun ile Halil Bey oğlu Rüstem Bey adına yaptırılmıştır.\n\nKare planlı ve baldaken biçimli yapı içte kubbe, dışta piramidal külahla örtülüdür. Kesme taştan yapılmış; kubbe kasnağı ve külahta tuğla kullanılmıştır. Cephelere sivri kemerli nişler açılmış ve bu nişlerin içine pencereler yerleştirilmiştir. Giriş, doğu cephedeki kemer içindeki tek kanatlı bir kapıdandır. Kübik gövdeden kubbeye geçiş pandantiflerle sağlanmıştır.\n\nTürbede beş mezar vardır: Turgutoğlu Emir Bey'in kızı Sultan Hatun, Halil Bey'in oğlu Rüstem Bey, Rüstem Bey'in oğlu Ali Bey, Rüstem Bey'in kızı Dürrühant Hatun ve akrabalığı şüpheli olan, 1590'da vefat etmiş Mustafa oğlu Yusuf. En güneydeki mezar taşı Sultan Hatun'a aittir ve kitâbesi 8 Şaban 825 / 28 Temmuz 1422 tarihlidir; bu mezar beyaz mermerden, yanları burmalı sütuncelerle ve farklı motiflerle işlenmiştir. Diğer dört mezar Selçuklu dönemi tarzında, sanduka biçimindedir. Ali Bey'in sandukası Rebiülevvel 843 / Eylül-Ekim 1439, Dürrühant Hatun'unki Muharrem 832 / Ekim-Kasım 1428 tarihlidir; küçük sandukalardan ikincisinde H. 999 / M. 1590-91 tarihi ve \"Yusuf bin Mustafa\" adı okunur. Kaynaklarda burada yatanların tamamının Turgutoğulları Beyliği'ne bağlı olduğu belirtilir. Türbe, plan özellikleri bakımından farklı örneklerden biridir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-seydisehir-sultan-hatun-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-seydisehir-sultan-hatun-tomb/exterior.jpg",
+      "alt": "Kesme taş ve koyu taş bantlı kare gövdeli türbe; üstte tuğla kasnak ve mavi-gri metal kaplı piramidal külah, cephede sivri kemerli niş içinde demir parmaklıklı pencere ve küçük bir üst pencere; arkada kubbeli yapı ve kiremit çatı",
+      "description": "Türbenin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-seydisehir-sultan-hatun-tomb/interior.jpg",
+      "alt": "Taş duvarlı iç mekân; tavandan sarkan avize, yeşil ve pembe kenarlı, üzerinde yazılar bulunan örtülerle kaplı sandukalar",
+      "description": "İç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-seydisehir-sultan-hatun-tomb/sarcophagi.jpg",
+      "alt": "Taş döşeli zeminde yan yana uzanan, yüzeyleri yazı ve süslemelerle işlenmiş gri taş sandukalar; arkada ahşap çerçeveli pencereler",
+      "description": "Taş sandukalar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pyramidal-cone",
+      "image": "/images/konya-seydisehir-sultan-hatun-tomb/exterior.jpg",
+      "x": 58,
+      "y": 22,
+      "title": "Piramidal külah",
+      "text": "Türbe içte kubbe, dışta piramidal külahla örtülüdür; kubbe kasnağı ve külah tuğladandır.",
+      "sourceId": "inv-p208"
+    },
+    {
+      "id": "niche-window",
+      "image": "/images/konya-seydisehir-sultan-hatun-tomb/exterior.jpg",
+      "x": 53,
+      "y": 78,
+      "title": "Sivri kemerli niş",
+      "text": "Cephelere sivri kemerli nişler açılmış, bu nişlerin içine pencereler yerleştirilmiştir.",
+      "sourceId": "inv-p209"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/konya-seydisehir-sultan-hatun-tomb/sarcophagi.jpg",
+      "x": 45,
+      "y": 68,
+      "title": "Sanduka biçimli mezarlar",
+      "text": "Sultan Hatun'unki dışındaki dört mezar Selçuklu dönemi tarzında, sanduka biçimindedir.",
+      "sourceId": "inv-p209"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbede kaç mezar bulunmaktadır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 2,
+      "description": "Türbede Sultan Hatun, Rüstem Bey, Ali Bey, Dürrühant Hatun ve Mustafa oğlu Yusuf'a ait beş mezar vardır.",
+      "sourceId": "inv-p209"
+    },
+    {
+      "question": "Kaynaklara göre türbede yatanların tamamı hangi beyliğe bağlıdır?",
+      "options": [
+        "Karamanoğulları",
+        "Eşrefoğulları",
+        "Germiyanoğulları",
+        "Turgutoğulları"
+      ],
+      "correct": 3,
+      "description": "Kaynaklarda türbede medfun kişilerin tamamının Turgutoğulları Beyliği'ne bağlı olduğu belirtilir.",
+      "sourceId": "inv-p209"
+    },
+    {
+      "question": "Kübik gövdeden kubbeye geçiş nasıl sağlanmıştır?",
+      "options": [
+        "Pandantiflerle",
+        "Mukarnaslarla",
+        "Tromplarla",
+        "Ahşap kirişlerle"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre kübik gövdeden kubbeye geçiş pandantiflerle sağlanmıştır.",
+      "sourceId": "inv-p209"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p208",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Seydişehir, \"Sultan Hatun Türbesi\"",
+      "page": "208"
+    },
+    {
+      "id": "inv-p209",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Seydişehir, \"Sultan Hatun Türbesi\"",
+      "page": "209"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "yildirim-yildirim-madrasa",
+  "inventoryId": "yildirim-yildirim-medresesi",
+  "name": "Yıldırım Medresesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Sultan Yıldırım Bayezid dönemi, H. 793-797 / M. 1391-1395",
+  "endowment": "Sultan Yıldırım Bayezid; H. Ramazan 802 / M. Mayıs 1400 tarihli vakfiyeye göre gelirler zaviye, iki medrese ve diğer yapılara ayrılmıştır",
+  "summary": "Yıldırım Bayezid Külliyesi'nde, revaklı avlu çevresinde düzenlenmiş, sonraları uzun yıllar verem dispanseri olarak kullanılmış medrese.",
+  "history": "Yıldırım Medresesi, Yıldırım ilçesi Yıldırım Mahallesi, Amaç Sokak No: 2'dedir. Caminin kuzeydoğusunda, yaklaşık 80 m aşağı kottaki bir düzlükte yer alır ve külliye bünyesinde Sultan Yıldırım Bayezid Han tarafından H. 793-797 / M. 1391-1395 yılları arasında yaptırılmıştır. H. Ramazan 802 / M. Mayıs 1400 tarihli vakfiyeye göre duvarla çevrili külliyede iki medrese bulunuyordu ve gelirler zaviye, her iki medrese ve diğer yapıların onarım ve işletme giderlerine ayrılacaktı.\n\nMedrese, sivri kemerli yüksek bir kapıdan girilen dikdörtgen bir iç avlu etrafında düzenlenmiştir; avlunun üç cephesini revaklar çevreler, arkalarında talebe ve müderris hücreleri yer alır. Girişin karşısında, batıda dört basamakla çıkılan dershane bulunur. Ön cephe tamamen kesme beyaz kireç taşıyla, diğer cepheler bir sıra küfeki taşı ile iki-üç sıra tuğlanın almaşık örgüsüyle yapılmıştır; kuzey duvarları yamacın eğimi nedeniyle payandalarla desteklenmiştir. Plan şeması Selçuklu medrese mimarisinin izlerini taşır.\n\nTaç kapıdan kubbeli bir eyvana, oradan revaklı alana ve avluya geçilir; eyvanın iki yanındaki odalar müderrislere ayrılmıştır. Medresede mihrap yoktur. Revaklar, ortasında fıskiyeli sekizgen bir havuz bulunan 200 m²'lik avludan iki basamak yüksektedir ve tuğla beşik tonozlarla örtülüdür. Kitaba göre yapı toplam yirmi odadan oluşur; talebe odalarında niş ve ocak bulunur. İçten 8,65 × 8,86 m ölçüsündeki kare planlı dershane, on üç sıra mukarnaslı pandantiflerle geçilen sekizgen kasnağa oturan kurşun kaplı bir kubbeyle örtülüdür. Odaları örten beşik tonoz ilk yapıldığında kurşun kaplıyken sonra kiremitle kaplanmış, son restorasyonda yeniden kurşuna dönülmüştür.\n\nSon yüzyıllarda buradaki müderrislere \"Reîsü'l-Müderrisîn\" unvanı verildiği belirtilir. Molla Gürânî, Ebüssuûd Efendi ve Hoca Sâdeddin Efendi gibi âlimlerin burada ders verdiği bilinir. Son müderris Begavizâde Hasan Sadık Efendi H. 1350 / M. 1931'de vefat etmiştir. Medrese 1618'den 1849'a kadar pek çok kez onarılmış; 1855 depreminde yalnızca güneydeki bazı hücre kubbeleri yıkılmıştır.\n\nYunan işgali sırasında işgal askerlerinin burada konakladığı belirtilir. 1924'te medreselerin kapatılmasından sonra harap kalan yapı, 1947-1948'de Albert Gabriel'in görüşleri alınarak Saim Ülgen denetiminde Sıhhiye Vekâleti tarafından onarılmış ve 1953'te Verem Savaş Dispanseri olarak açılmıştır. Bu işlevi 2016'ya kadar sürdüren yapı, 2021-2023'te Vakıflar Genel Müdürlüğü tarafından restore edilip güçlendirilmiş; Yıldırım Belediyesi'ne devredilmiştir ve yeni bir işlev kazandırılması için çalışmalar sürmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-yildirim-madrasa/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-yildirim-madrasa/courtyard.jpg",
+      "alt": "Uzun avlunun iki yanında tuğla ve taş almaşık örgülü sivri kemerli revaklar, ortada küçük beyaz havuz, karşıda kubbeli yapı ve ahşap kapı",
+      "description": "Revaklı avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yildirim-madrasa/portico.jpg",
+      "alt": "Revak altından görünüm: tuğla bantlı sivri kemerler ve yükseltilmiş taş zemin, karşıda kemerli revaklar ve arkada bir minare",
+      "description": "Revaktan avluya bakış",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yildirim-madrasa/portico-piers.jpg",
+      "alt": "Taş ve tuğla örgülü kalın revak ayakları, yükseltilmiş revak zemini ve avluya inen basamaklar",
+      "description": "Revak ayakları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pool",
+      "image": "/images/yildirim-yildirim-madrasa/courtyard.jpg",
+      "x": 50,
+      "y": 74,
+      "title": "Fıskiyeli havuz",
+      "text": "Revaklı alanlar, ortasında fıskiyeli sekizgen bir havuzun yer aldığı 200 m²'lik avludan iki basamak daha yüksektedir.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "id": "raised-portico",
+      "image": "/images/yildirim-yildirim-madrasa/portico-piers.jpg",
+      "x": 60,
+      "y": 55,
+      "title": "Yükseltilmiş revak",
+      "text": "Sivri kemerli revakların ayakları avludan yükseltilmiş zemine oturtulmuştur; revaklar tuğla beşik tonozla örtülüdür.",
+      "sourceId": "inv-p440"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yıldırım Medresesi 1953'te hangi işlevle hizmete açılmıştır?",
+      "options": [
+        "Müze",
+        "Verem Savaş Dispanseri",
+        "Kütüphane",
+        "Aşevi"
+      ],
+      "correct": 1,
+      "description": "1947-1948 restorasyonundan sonra yapı 1953'te Verem Savaş Dispanseri olarak açılmış ve bu işlevi 2016'ya kadar sürdürmüştür.",
+      "sourceId": "inv-p444"
+    },
+    {
+      "question": "Son yüzyıllarda bu medresenin müderrislerine hangi unvan verilmiştir?",
+      "options": [
+        "Şeyhülislam",
+        "Kadıasker",
+        "Baştabip",
+        "Reîsü'l-Müderrisîn"
+      ],
+      "correct": 3,
+      "description": "Yıldırım Medresesi'nde son yüzyıllarda görev yapan müderrislere \"Reîsü'l-Müderrisîn\" unvanı verildiği belirtilir.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "question": "Medrese avlusunun ortasında ne bulunur?",
+      "options": [
+        "Fıskiyeli sekizgen bir havuz",
+        "Bir mihrap",
+        "Bir minare",
+        "Bir türbe"
+      ],
+      "correct": 0,
+      "description": "Revaklı alanlar, ortasında fıskiyeli sekizgen bir havuzun yer aldığı 200 m²'lik avludan iki basamak yüksektedir; medresede mihrap yoktur.",
+      "sourceId": "inv-p440"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p439",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Medresesi\"",
+      "page": "439"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Medresesi\"",
+      "page": "440"
+    },
+    {
+      "id": "inv-p444",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Medresesi\"",
+      "page": "444"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

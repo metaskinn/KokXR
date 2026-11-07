@@ -1,0 +1,88 @@
+{
+  "id": "konya-meram-seyh-osman-rumi-mosque",
+  "name": "Şeyh Osman Rûmi Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Cumhuriyet dönemi · 1972",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh Hasan Rûmi Türbesi'nin de bulunduğu geniş bir avluda yer alan, 1972'de yapılmış cami.",
+  "history": "Cami, Meram, Sahip Ata Mahallesi, Yavuz Selim Caddesi üzerindedir. Şeyh Hasan Rûmi Türbesi'nin de içinde bulunduğu geniş bir avlunun içinde yer alır ve 1972'de yapılmıştır.\n\nŞeyh Osman Rûmi'nin doğum yeri ve yılı bilinmemektedir; Hasan Rûmi onun kardeşidir. Kitaba göre Mevlâna, Şam'daki Berraniye Medresesi'nde Şems-i Tebrizî, Sadreddin-i Konevi ve Sadreddin-i Hamevi gibi âlimlerle bir arada bulunmuştur; Şeyh Osman Rûmi de bu isimlerden biridir. Ebubekir Niksari'nin bu dönemde Şeyh Osman Rûmi'ye intisap ettiği rivayet edilir. Şeyh Osman Rûmi, caminin yanındaki türbede gömülüdür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-seyh-osman-rumi-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-seyh-osman-rumi-mosque/exterior.jpg",
+      "alt": "Kiremit kırma çatılı, kemerli pencereli açık renk sıvalı cami; sağında yeşil çatılı küçük bir yapı, arkada ağaçlar ve apartmanlar",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-seyh-osman-rumi-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: solda gri mermer görünümlü mihrap, yanında minber, sivri kemerli renkli camlı pencereler ve sağ üstte yuvarlak mahfil; turkuaz halı",
+      "description": "Mihrap duvarı ve harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "mosque",
+      "image": "/images/konya-meram-seyh-osman-rumi-mosque/exterior.jpg",
+      "x": 28,
+      "y": 55,
+      "title": "1972 yapımı cami",
+      "text": "Şeyh Osman Rûmi Camii, Şeyh Hasan Rûmi Türbesi'nin de bulunduğu geniş bir avlu içinde, 1972'de yapılmıştır.",
+      "sourceId": "inv-p140"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Osman Rûmi Camii hangi yıl yapılmıştır?",
+      "options": [
+        "1940",
+        "1972",
+        "1925",
+        "1888"
+      ],
+      "correct": 1,
+      "description": "Cami 1972 senesinde yapılmıştır.",
+      "sourceId": "inv-p140"
+    },
+    {
+      "question": "Hasan Rûmi, Şeyh Osman Rûmi'nin nesidir?",
+      "options": [
+        "Kardeşi",
+        "Oğlu",
+        "Hocası",
+        "Müridi"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre Hasan Rûmi, Osman Rûmi'nin kardeşidir.",
+      "sourceId": "inv-p140"
+    },
+    {
+      "question": "Rivayete göre hangi zat Şeyh Osman Rûmi'ye intisap etmiştir?",
+      "options": [
+        "Sadreddin-i Konevi",
+        "Şems-i Tebrizî",
+        "Ebubekir Niksari",
+        "Sadreddin-i Hamevi"
+      ],
+      "correct": 2,
+      "description": "Ebubekir Niksari'nin bu dönemde Şeyh Osman Rûmi'ye intisap ettiği rivayet edilmektedir.",
+      "sourceId": "inv-p140"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p140",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Şeyh Osman Rûmi Camii\"",
+      "page": "140"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

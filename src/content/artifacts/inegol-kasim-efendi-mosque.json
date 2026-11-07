@@ -1,0 +1,102 @@
+{
+  "id": "inegol-kasim-efendi-mosque",
+  "name": "Kasım Efendi (Yenice) Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · Modern levhada H. 927 / M. 1521; kapsamlı yenileme 1955",
+  "endowment": "Banisi Kasım Efendi",
+  "summary": "Kasım Efendi (Yenice) Camii, 1955’te yenilenmiş ve içinde Kasım Efendi ile Hacı Hasan Efendi’nin kabirlerini barındıran bir yapıdır.",
+  "history": "Cami, Cuma Mahallesi, Sarraflar Çarşısı’nda Kasım Efendi Caddesi üzerindedir. Günümüzdeki görünümünü 1955’teki kapsamlı yenilemeyle kazanmıştır. İçerideki modern bir levhada yapım tarihi H. 927 / M. 1521 olarak verilir.\n\nBanisi Kasım Efendi’nin doğum tarihi kesin bilinmez. Kitapta Fâtih Sultan Mehmed devrinden Kanûnî Sultan Süleyman devrine uzanan dönemde yaşadığı, Abdülkâdir-i Geylânî’nin torunlarından olduğu ve Antakya’dan Bursa’ya, ardından İnegöl’e geldiği anlatılır. Vakıfların işleyişini denetlediği için “noktacı” unvanıyla tanınmış, H. 942 / M. 1535’te vefat etmiştir. Cevâhirü’l-Ahbâr adlı eseri 32 bölüm ve 675 sayfadan oluşur.\n\nCami içindeki diğer kabir, “Cırğıt Hoca” olarak tanınan Hacı Hasan Efendi’ye aittir. İshakpaşa Medresesi mezunu olan Hacı Hasan Efendi, 1908’den 1924’teki Tevhid-i Tedrisat Kanunu’na kadar burada halk mektebinde eğitim vermiştir. Yapı başlangıçta dergâh ve eğitim mekânı olarak da kullanılmıştır. Kasım Efendi’nin bahçedeki kabri, cami genişletilince içeri dahil edilmiştir. İki sandukalı bölüm ahşap kubbeli ve sınırlandırılmıştır. Bugünkü cami dikdörtgen planlı, betonarme ve tek minarelidir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-kasim-efendi-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-kasim-efendi-mosque/aerial-view.jpg",
+      "alt": "Kiremit çatılı beyaz cami, sivri kemerli pencereler ve ortada yükselen tek minare",
+      "description": "Kiremit çatılı beyaz cami, sivri kemerli pencereler ve ortada yükselen tek minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-kasim-efendi-mosque/mihrab.jpg",
+      "alt": "Mavi halılı iç mekânda kahverengi basamaklı nişli mihrap ve iki yanında beyaz çerçeveli pencereler",
+      "description": "Mavi halılı iç mekânda kahverengi basamaklı nişli mihrap ve iki yanında beyaz çerçeveli pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-kasim-efendi-mosque/aerial-view.jpg",
+      "x": 55,
+      "y": 39,
+      "title": "Tek minare",
+      "text": "Bugünkü betonarme camide tek minare bulunur.",
+      "sourceId": "inv-p171"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-kasim-efendi-mosque/aerial-view.jpg",
+      "x": 35,
+      "y": 65,
+      "title": "Dikdörtgen planlı cami",
+      "text": "Cami günümüzde dikdörtgen planlı ve betonarme bir yapı olarak tanımlanır.",
+      "sourceId": "inv-p171"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami günümüzdeki görünümünü hangi yenilemede kazanmıştır?",
+      "options": [
+        "1955",
+        "1895",
+        "1982",
+        "2017"
+      ],
+      "correct": 0,
+      "description": "Cami 1955’te kapsamlı biçimde yenilenmiştir.",
+      "sourceId": "inv-p170"
+    },
+    {
+      "question": "Kasım Efendi hangi unvanla tanınmıştır?",
+      "options": [
+        "Altınbaş",
+        "Mirliva",
+        "Noktacı",
+        "Cırğıt"
+      ],
+      "correct": 2,
+      "description": "Vakıfların işleyişini denetleyen Kasım Efendi, noktacı unvanıyla tanınmıştır.",
+      "sourceId": "inv-p171"
+    },
+    {
+      "question": "Kasım Efendi’nin yanında kimin kabri vardır?",
+      "options": [
+        "Karaca Bey",
+        "Hacı Hasan Efendi",
+        "İbrahim Kırcalı",
+        "İshak Paşa"
+      ],
+      "correct": 1,
+      "description": "Cırğıt Hoca lakaplı Hacı Hasan Efendi, vefatının ardından Kasım Efendi’nin yanına defnedilmiştir.",
+      "sourceId": "inv-p171"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p170",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Kasım Efendi (Yenice) Camii\"",
+      "page": "170"
+    },
+    {
+      "id": "inv-p171",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Kasım Efendi (Yenice) Camii\"",
+      "page": "171"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

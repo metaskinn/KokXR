@@ -1,0 +1,114 @@
+{
+  "id": "konya-beysehir-esrefoglu-suleyman-bey-bath",
+  "name": "Eşrefoğlu Süleyman Bey Hamamı",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "Eşrefoğulları dönemi · İnşa tarihi kesin bilinmiyor; camiden önce hizmete açıldığı düşünülüyor",
+  "endowment": "Süleyman Bey'in vakfiyesinde \"Hamam-ı Kebir\" olarak anılan hamam olduğu düşünülmektedir",
+  "summary": "Eşrefoğlu Camii'nin kuzeybatısında, eski kale kapısıyla cami arasında yer alan, 2006-2007 restorasyonuyla yeniden ayağa kaldırılan çifte hamam.",
+  "history": "Hamam, camii, türbe, bedesten ve hamamdan oluşan Eşrefoğlu Süleyman Bey Külliyesi'nin bir parçasıdır; külliye içinde eski kale kapısıyla cami arasında, bedestenin hemen batısında yer alır. Eşrefoğlu Süleyman Bey Camii'nin kuzeybatısındaki yapının inşa tarihi kesin olarak bilinmemektedir. Ancak çevrede başka bir hamama rastlanmadığından, Süleyman Bey'in vakfiyesinde \"Hamam-ı Kebir\" (Büyük Hamam) diye anılan hamamın bu yapı olduğu ve camiden önce hizmete açıldığı düşünülmektedir.\n\n2006-2007'deki son restorasyona kadar zeminden 2 m kadar toprağa gömülü ve harap durumdaydı; 1960'lara kadar samanlık olarak kullanılmış, son yıllarda çöplüğe dönmüştü. Restorasyonla ayağa kaldırılan yapı bugün kullanılmaktadır.\n\nSelçuklu dönemi hamam tipolojisine uygun olarak inşa edilen yapı, çifte üniteli hamamlar grubuna girer. Doğu-batı yönünde dikdörtgen planlıdır; giriş, soyunmalık, soğukluk, sıcaklık, halvet odaları ve külhan bölümlerinden oluşur. Hamamın doğusundaki soyunmalığın üst örtüsü köşelerde sağır sivri kemerli tromplara oturur; duvarlarda kalıp baskı tekniğiyle işlenmiş palmet ve rûmi motifleri vardır.\n\nSıcaklık bölümü merkezde bir kubbe ile dört köşede sivri tonozlu eyvanlar ve halvet odalarından oluşur. Kubbe köşelerde pandantiflere, yanlarda eyvan kemerlerine oturur; aydınlatma için kubbeye dört adet üçlü göz açılmıştır. Eyvan ve halvetlerde sıva üzerine işlenmiş bordürler hamamın en önemli süslemesiydi: kubbe kasnağının altındaki kuşakta tepeleri lale biçiminde sonlanan palmet ve rûmiler, onun altındaki şeritte lale, yıldız, ibrik ve atlı süvari motifleri bulunuyordu. Bu süslemeler restorasyon çalışmaları sırasında yok olmuştur.\n\nHamam, Selçuklu geleneğinde ve sonrasında Osmanlılarda kullanılan \"haçvari dört eyvanlı ve köşe halvetli\" plan tipinin Selçuklulardaki son, Beyliklerdeki ilk uygulamasıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-esrefoglu-suleyman-bey-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-esrefoglu-suleyman-bey-bath/exterior.jpg",
+      "alt": "Moloz taş duvarlı, kiremit kırma çatılı alçak yapı; önünde çam ağacı ve yaya yolu",
+      "description": "Hamamın dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-esrefoglu-suleyman-bey-bath/roof-from-above.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: solda kiremitli kırma çatı, ortada kiremit kaplı büyüklü küçüklü kubbeler, dikdörtgen bir yapı",
+      "description": "Hamamın tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-esrefoglu-suleyman-bey-bath/interior.jpg",
+      "alt": "İç mekân: ortada sekizgen mermer havuz, çevresinde kanepeler ve sedirler, ahşap kaplı duvarlar ve ahşap direkler",
+      "description": "Hamamın bugünkü iç mekânından bir görünüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "restored-building",
+      "image": "/images/konya-beysehir-esrefoglu-suleyman-bey-bath/exterior.jpg",
+      "x": 45,
+      "y": 45,
+      "title": "Restorasyonla ayağa kalkan yapı",
+      "text": "2006-2007 restorasyonuna kadar 2 m kadar toprağa gömülü ve harap olan hamam, restorasyondan sonra bugün kullanılmaktadır.",
+      "sourceId": "inv-p28"
+    },
+    {
+      "id": "domes",
+      "image": "/images/konya-beysehir-esrefoglu-suleyman-bey-bath/roof-from-above.jpg",
+      "x": 45,
+      "y": 45,
+      "title": "Kubbeli bölümler",
+      "text": "Çifte üniteli hamamın sıcaklık bölümü, merkezde bir kubbe ile köşelerde sivri tonozlu eyvanlar ve halvet odalarından oluşur.",
+      "sourceId": "inv-p28"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam 1960'lara kadar ne olarak kullanılmıştır?",
+      "options": [
+        "Medrese",
+        "Samanlık",
+        "Kervansaray",
+        "Cephanelik"
+      ],
+      "correct": 1,
+      "description": "Harap durumdaki hamamın 1960'lara kadar samanlık olarak kullanıldığı, son yıllarda da çöplüğe döndüğü bilinmektedir.",
+      "sourceId": "inv-p28"
+    },
+    {
+      "question": "Süleyman Bey'in vakfiyesinde bu hamam olduğu düşünülen yapı hangi adla anılır?",
+      "options": [
+        "Çifte Hamam",
+        "Sultan Hamamı",
+        "Hamam-ı Kebir",
+        "Kale Hamamı"
+      ],
+      "correct": 2,
+      "description": "Vakfiyede \"Hamam-ı Kebir\" (Büyük Hamam) diye anılan hamamın, çevrede başka hamam olmadığından bu yapı olduğu düşünülmektedir.",
+      "sourceId": "inv-p28"
+    },
+    {
+      "question": "Hamam hangi plan tipinin Selçuklulardaki son, Beyliklerdeki ilk uygulamasıdır?",
+      "options": [
+        "Tek kubbeli",
+        "Enine sıcaklıklı",
+        "Yıldızvari",
+        "Haçvari dört eyvanlı ve köşe halvetli"
+      ],
+      "correct": 3,
+      "description": "Hamam, \"haçvari dört eyvanlı ve köşe halvetli\" plan tipinin Selçuklularda son, Beyliklerde ilk uygulamasıdır.",
+      "sourceId": "inv-p29"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p13",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Beyşehir Eşrefoğlu Süleyman Bey Hamamı\"",
+      "page": "13"
+    },
+    {
+      "id": "inv-p28",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Beyşehir Eşrefoğlu Süleyman Bey Hamamı\"",
+      "page": "28"
+    },
+    {
+      "id": "inv-p29",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Beyşehir Eşrefoğlu Süleyman Bey Hamamı\"",
+      "page": "29"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

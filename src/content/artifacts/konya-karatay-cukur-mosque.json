@@ -1,0 +1,113 @@
+{
+  "id": "konya-karatay-cukur-mosque",
+  "name": "Çukur Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Mimari özelliklerine göre XX. yüzyıla tarihlendirilebilir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Yunusoğlu Mahallesi’ndeki Çukur Camii, kare planlı, kırma çatılı ve ahşap düz tavanlı küçük bir mahalle camisidir.",
+  "history": "Cami, Karatay, Yunusoğlu Mahallesi, Mengüç Caddesi’nde, Üçler Mezarlığı’nın güneyinde ve Akçeşme İlkokulu’nun karşısındadır. Kitaba göre yapının vakfiyesinde, Çukur Camii’nin bulunduğu yerde daha önce Emir İshak Bey’in yaptırdığı bir cami olduğu belirtilir. Emir İshak (Paşa) Bey, Osmanlı döneminde Konya’da yöneticilik yapmış bir şahsiyettir; türbesi Şems-i Tebrîzî Türbesi’nin yanındadır. Kitap yapıyı burada mescit olarak da anar ve mimari özelliklerinden hareketle XX. yüzyıla tarihlendirir. Yapı 2013 yılında Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nCami kare planlıdır ve üzeri dört yöne eğimli kırma çatıyla örtülüdür. Kuzey bölümüne sonradan camekânlı bir son cemaat yeri eklenmiştir. Harime kuzey cephedeki kapıdan girilir. Kare planlı harimin üzeri içten ahşap düz tavanlıdır; kuzey bölümünde ahşap direklerin taşıdığı bir mahfil yer alır. Kıble duvarının ortasındaki mihrap yarım beşgen planlıdır ve düz silmelerle sınırlanmış dikdörtgen bir çerçeve içindedir. Mihrabın sağında, güneybatı yönündeki sade ahşap minber sonradan eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-cukur-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-cukur-mosque/exterior.jpg",
+      "alt": "Ağaçlar arasında kiremit kırma çatılı, beyaz badanalı tek katlı yapı; arkada apartmanlar",
+      "description": "Ağaçlar arasında kiremit kırma çatılı, beyaz badanalı tek katlı yapı; arkada apartmanlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-cukur-mosque/interior-mihrab-minbar.jpg",
+      "alt": "Ahşap tavanlı harimde beyaz duvardaki kemerli mihrap, sağında ahşap minber ve kırmızı halı",
+      "description": "Ahşap tavanlı harimde beyaz duvardaki kemerli mihrap, sağında ahşap minber ve kırmızı halı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-cukur-mosque/roof-aerial.jpg",
+      "alt": "Yukarıdan bakışta dört yöne eğimli kiremit kırma çatı ve çevresindeki ağaçlar",
+      "description": "Yukarıdan bakışta dört yöne eğimli kiremit kırma çatı ve çevresindeki ağaçlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-cukur-mosque/roof-aerial.jpg",
+      "x": 46,
+      "y": 45,
+      "title": "Kırma çatı",
+      "text": "Kare planlı caminin üzeri dört yöne eğimli kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p204"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-cukur-mosque/interior-mihrab-minbar.jpg",
+      "x": 44,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım beşgen planlıdır ve düz silmelerle sınırlanmış dikdörtgen formdadır.",
+      "sourceId": "inv-p204"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-karatay-cukur-mosque/interior-mihrab-minbar.jpg",
+      "x": 81,
+      "y": 50,
+      "title": "Ahşap minber",
+      "text": "Mihrabın sağındaki sade ahşap minber sonradan eklenmiştir.",
+      "sourceId": "inv-p204"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakfiyesine göre caminin yerinde daha önce kimin yaptırdığı bir cami vardı?",
+      "options": [
+        "Şems-i Tebrîzî",
+        "Emir İshak Bey",
+        "Sultan Alâeddin",
+        "Lala Mustafa Paşa"
+      ],
+      "correct": 1,
+      "description": "Vakfiyeye göre aynı yerde daha önce Emir İshak Bey’in yaptırdığı bir cami bulunuyordu.",
+      "sourceId": "inv-p204"
+    },
+    {
+      "question": "Yapı hangi yıl Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir?",
+      "options": [
+        "1985",
+        "1999",
+        "2005",
+        "2013"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre yapı 2013’te Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.",
+      "sourceId": "inv-p204"
+    },
+    {
+      "question": "Caminin mihrabı nasıl bir plana sahiptir?",
+      "options": [
+        "Yarım beşgen",
+        "Yarım daire",
+        "Kare",
+        "Sekizgen"
+      ],
+      "correct": 0,
+      "description": "Kıble duvarının ortasındaki mihrap yarım beşgen planlıdır.",
+      "sourceId": "inv-p204"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p204",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Çukur Camii\"",
+      "page": "204"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

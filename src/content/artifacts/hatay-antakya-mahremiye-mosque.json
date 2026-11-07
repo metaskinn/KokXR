@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-mahremiye-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Mahremiye Camii",
+  "period": "1720’den beri; 16. yüzyıla tarihleme görüşü de vardır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Uzun Çarşı’daki Mahremiye Camii, kapı üstü minaresi ve taş bezemeli iki sahınlı harimiyle anlatılır.",
+  "history": "Uzun Çarşı’da eğimli arazideki cami 1720’den beri bilinmekle birlikte bazı görüşlerce 16. yüzyıla tarihlenir. 1872 depreminde ağır hasar almış, sonradan onarılmıştır. Beşik tonozlu dehlizin sonundaki on bir basamakla avluya çıkılır; sokak girişindeki sivri kemerde yüzeysel mukarnaslar vardır. Doğudaki oda eski medresenin izi sayılır; aynı tarafta sade sekizgen şadırvan bulunur. Batıdaki minare sokak kapısının üstündedir; kısa yuvarlak gövdesi ahşap direkli örtülü şerefeyle biter. Kiremitli sundurma biçimindeki son cemaat yerinde istiridye biçiminde yivlenmiş mihrabiye vardır. Harim kapısında siyah taşlı yarım daire bezemeler ve düğümlü silme görülür. Beyaz kesme taşlı dikdörtgen harim, iki sütunun taşıdığı üç kemerle kıbleye paralel iki sahına ayrılır. Batıda dört, güneyde beş, kuzeyde altı pencere ile mihrapta küçük pencere bulunur. Mihrap kavsarası yüzeysel mukarnaslıdır; iki yanında düşey ekseninde dönebilen ve kitapta “deprem terazisi” denilen sütunceler yer alır. Taş minber ve kuzeyde ahşap müezzin mahfili vardır. Kitabın yapıların durumuna ilişkin ifadeleri yayın anlatımıdır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-mahremiye-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-mahremiye-mosque/book-view-1.jpg",
+      "alt": "Taş döşeli avluda ağaç, kiremit çatılı odalar ve sağda banklar",
+      "description": "Mahremiye Camii — kitaptaki görünüm 1 (s. 278–279)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-mahremiye-mosque/book-view-2.jpg",
+      "alt": "Kırmızı halılı harimde taş sütunlar, kemerler ve sağda taş minber",
+      "description": "Mahremiye Camii — kitaptaki görünüm 2 (s. 280–281)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-mahremiye-mosque/book-view-2.jpg",
+      "x": 56,
+      "y": 50,
+      "title": "Taş sütun",
+      "text": "İki sütun üzerindeki üç kemer harimi iki sahına ayırır.",
+      "sourceId": "inv-p283"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-mahremiye-mosque/book-view-2.jpg",
+      "x": 70,
+      "y": 67,
+      "title": "Taş minber",
+      "text": "Harimde zarif taş minber bulunur.",
+      "sourceId": "inv-p283"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi çarşıdadır?",
+      "options": [
+        "Uzun Çarşı",
+        "Mısır Çarşısı",
+        "Kapalıçarşı",
+        "Sahaflar Çarşısı"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Uzun Çarşı.",
+      "sourceId": "inv-p282"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "İki",
+        "Dört",
+        "Tek"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p283"
+    },
+    {
+      "question": "Mihrabın yanındaki dönebilen sütuncelere kitap ne ad verir?",
+      "options": [
+        "Fil gözü",
+        "Dua kubbesi",
+        "Deprem terazisi",
+        "Külhan"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Deprem terazisi.",
+      "sourceId": "inv-p283"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p282",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Mahremiye Camii\"",
+      "page": "282"
+    },
+    {
+      "id": "inv-p283",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Mahremiye Camii\"",
+      "page": "283"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Mahremiye Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

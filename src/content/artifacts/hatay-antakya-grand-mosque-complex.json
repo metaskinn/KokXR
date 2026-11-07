@@ -1,0 +1,171 @@
+{
+  "id": "hatay-antakya-grand-mosque-complex",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Ulu Camii ve Külliyesi",
+  "period": "Memlük · 13. yüzyılın ikinci yarısına tarihleme",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Antakya Ulu Camii Külliyesi, iki sahınlı camisiyle birlikte medrese, yazlık mescit ve hizmet yapılarını barındırır.",
+  "history": "Çarşıların yakınındaki Antakya Ulu Camii Külliyesi farklı dönemlerde yapılmış cami, medrese, yazlık mescit, şadırvan, iki türbe, çeşme, imaret ve vakıf dükkânlarından oluşur. Doğudan batıya genişleyen avlunun doğusunda ve kuzeyinde medrese odaları, güneyinde cami, batı kesiminde şadırvan ve yazlık mescit vardır. Güneydeki ikinci avluya cami ile yazlık mescit arasından geçilir. Minare doğu tarafta medrese odaları arasındadır.\n\nKesin inşa tarihi bilinmez. Minare kaidesinin satrançlı kufi kitabesi kitapta H. 670 (M. 1271) olarak okunur ve Baybars dönemine bağlanır; bu nedenle yapı 13. yüzyılın ikinci yarısına tarihlenir. Kitap 1705 ve 1791’de minare, 1835’te batı kapısı, 1849’da cami ve yazlık bölüm, 1876’da cami onarımlarını bildirir. Külliye 1986 ve 2002’de Vakıflar Genel Müdürlüğünce restore edilmiştir.\n\nBeyaz kalker taşından uzun dikdörtgen harime kuzeyden üç kapıyla girilir. Payandalarla desteklenen iki sahınlı yapının batı bölümünde her sahında beş ayağın taşıdığı altı kemer gözü ve çapraz tonozlar vardır. Daha alçak doğu bölümünün tonozları gömme ayaklara oturur. Plan ve mihrap farklılıkları doğudaki bölümün sonradan eklendiğini düşündürür; kitap bunu Osmanlı döneminde farklı mezhepler için düzenleme olasılığıyla açıklar. Batıda iki sıralı pencereler, sivri kemerli mihrap, kandil konsolları ve taş minber bulunur. Kuzeydeki müezzin mahfili ahşaptır. Minare kare kaideli, yirmi iki kenarlı gövdeli, mukarnas geçişli şerefeli ve kurşun kaplı konik külahlıdır.\n\nMedresede doğuda iki, kuzeyde yedi oda ile caminin kuzey duvarına bitişen iki hücre anlatılır. Batıdaki yazlık mescit kıbleye paralel iki sahınlıdır; güneyinde üç pencere ve mihrap nişi vardır. On iki kenarlı taş şadırvanın ahşap sütunları dilimli kemerleri ve dışı sac kaplı külahı taşır. Güneydeki kare planlı taş türbelerden Şeyh Hüseyin Efendi Türbesi çapraz tonoz ve kiremitli kırma çatıyla, Şeyh Abdurrahman Efendi Türbesi sonradan yapılmış betonarme düz damla örtülüdür. İkincisi camiye hacet penceresiyle bağlanır. Doğuda kitabesiz sivri kemerli çeşme, güneydoğuda iki bina halinde düzenlenmiş beş mekânlı imaret bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-grand-mosque-complex/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-grand-mosque-complex/book-view-1.jpg",
+      "alt": "Ağaçlı avlu boyunca cami cephesi ve uzakta minare",
+      "description": "Ulu Camii ve Külliyesi — kitaptaki görünüm 1 (s. 74–75)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-grand-mosque-complex/book-view-2.jpg",
+      "alt": "Bahçe ve yolun gerisinde taş cami ile ince minare",
+      "description": "Ulu Camii ve Külliyesi — kitaptaki görünüm 2 (s. 76–77)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-grand-mosque-complex/book-view-3.jpg",
+      "alt": "Ahşap saçak altında yuvarlak kemerli ahşap kapı",
+      "description": "Ulu Camii ve Külliyesi — kitaptaki görünüm 3 (s. 78–79)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-grand-mosque-complex/book-view-4.jpg",
+      "alt": "Mavi halılı iç mekânda taş ayaklar ve art arda tonozlar",
+      "description": "Ulu Camii ve Külliyesi — kitaptaki görünüm 4 (s. 80–81)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-grand-mosque-complex/book-view-1.jpg",
+      "x": 41,
+      "y": 36,
+      "title": "Minare",
+      "text": "Minare beyaz kesme taşlı, yirmi iki kenarlı gövdelidir.",
+      "sourceId": "inv-p84"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-grand-mosque-complex/book-view-4.jpg",
+      "x": 58,
+      "y": 22,
+      "title": "Çapraz tonozlar",
+      "text": "Harimin batı bölümündeki kemer gözleri çapraz tonozlarla örtülüdür.",
+      "sourceId": "inv-p80"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harim hangi taşla yapılmıştır?",
+      "options": [
+        "Siyah bazalt",
+        "Beyaz kalker taşı",
+        "Kırmızı granit",
+        "Pembe mermer"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Beyaz kalker taşı.",
+      "sourceId": "inv-p80"
+    },
+    {
+      "question": "Yazlık mescit kaç sahınlıdır?",
+      "options": [
+        "Bir",
+        "Üç",
+        "İki",
+        "Beş"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p88"
+    },
+    {
+      "question": "Külliye hangi kurum aracılığıyla 1986 ve 2002’de restore edilmiştir?",
+      "options": [
+        "Türk Tarih Kurumu",
+        "Darülfünun",
+        "İstanbul Üniversitesi",
+        "Vakıflar Genel Müdürlüğü"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Vakıflar Genel Müdürlüğü.",
+      "sourceId": "inv-p78"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p76",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "76"
+    },
+    {
+      "id": "inv-p78",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "78"
+    },
+    {
+      "id": "inv-p80",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "80"
+    },
+    {
+      "id": "inv-p81",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "81"
+    },
+    {
+      "id": "inv-p82",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "82"
+    },
+    {
+      "id": "inv-p84",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "84"
+    },
+    {
+      "id": "inv-p87",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "87"
+    },
+    {
+      "id": "inv-p88",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "88"
+    },
+    {
+      "id": "inv-p89",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "89"
+    },
+    {
+      "id": "inv-p90",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "90"
+    },
+    {
+      "id": "inv-p91",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "91"
+    },
+    {
+      "id": "inv-p92",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "92"
+    },
+    {
+      "id": "inv-p190",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ulu Camii ve Külliyesi\"",
+      "page": "190"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

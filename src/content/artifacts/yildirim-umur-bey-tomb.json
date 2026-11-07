@@ -1,0 +1,106 @@
+{
+  "id": "yildirim-umur-bey-tomb",
+  "name": "Umur Bey Türbesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · inşa tarihi kitapta belirtilmemiştir; Umur Bey H. Zilkade 865 / M. Ağustos 1461'de vefat etmiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Umur Bey Camii haziresinde, dört ayağa oturan, tamamen tuğladan yapılmış baldaken planlı ve kiremit kaplı kubbeli Umur Bey türbesi.",
+  "history": "Umur Bey Türbesi, Umur Bey Külliyesi'nde caminin haziresinde yer alır ve 4,60 × 4,60 m ölçülerindedir. Dört ayağa oturan, baldaken planlı ve pandantifli bir kubbeyle örtülü yapı tamamen tuğladan inşa edilmiştir; duvarlarda taş kullanılmamıştır. Kemer araları ahşap gergilerle desteklenmiş, kirpi saçaklı kubbenin üzeri kiremitle kaplanmıştır.\n\nTürbenin içindeki son derece gösterişli taş sanduka yapının anıtsal niteliğini pekiştirir. Sandukanın baş şahidesindeki kitabeden Umur Bey'in H. Zilkade 865 / M. Ağustos 1461'de vefat ettiği anlaşılır.\n\nBaş taşının ön yüzünde müminlerin ölmeyip fâni yurttan beka yurduna nakledildiğini, dünyanın ahiretin tarlası olduğunu anlatan ifadeler; arka yüzünde ise ne hüznün ne de sevincin kalıcı olduğunu söyleyen bir metin yazılıdır. Ayak taşının ön yüzünde Timurtaş oğlu Umur Bey'e rahmet dilenir ve Hicretin 865. yılında Zilkade ayının başlarında vefat ettiği belirtilir. Ayak taşının arka yüzündeki metin ise dünyanın padişahlar için saraylar kurduğunu, ancak ne padişahların ne de sarayların kaldığını hatırlatır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-umur-bey-tomb/tomb-in-graveyard.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-umur-bey-tomb/tomb-in-graveyard.jpg",
+      "alt": "Hazire içinde dört yanı kemerli açık tuğla türbe, üzerinde kiremit kaplı kubbe; içinde yeşil boyalı sanduka ve yaldızlı yazılı baş taşı; önde mezar taşları, sağda caminin tuğla ve taş duvarı",
+      "description": "Türbe ve çevresindeki hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-umur-bey-tomb/tomb.jpg",
+      "alt": "Tuğla kemerin içinden türbenin içi: beyaz sıvalı kubbe, kemerleri birbirine bağlayan ahşap gergiler ve ortada altın yaldızlı yazılarla kaplı yeşil sanduka baş taşı",
+      "description": "Sanduka ve baş taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "tiled-dome",
+      "image": "/images/yildirim-umur-bey-tomb/tomb-in-graveyard.jpg",
+      "x": 49,
+      "y": 23,
+      "title": "Kiremit kaplı kubbe",
+      "text": "Kirpi saçaklı kubbenin üzeri kiremitle kaplanmıştır.",
+      "sourceId": "inv-p331"
+    },
+    {
+      "id": "ties",
+      "image": "/images/yildirim-umur-bey-tomb/tomb.jpg",
+      "x": 50,
+      "y": 33,
+      "title": "Ahşap gergiler",
+      "text": "Dört ayağa oturan baldaken planlı türbede kemer araları ahşap gergilerle desteklenmiştir.",
+      "sourceId": "inv-p331"
+    },
+    {
+      "id": "headstone",
+      "image": "/images/yildirim-umur-bey-tomb/tomb.jpg",
+      "x": 49,
+      "y": 48,
+      "title": "Baş şahidesi",
+      "text": "Sandukanın baş şahidesindeki kitabeden Umur Bey'in H. Zilkade 865 / M. Ağustos 1461'de vefat ettiği anlaşılır.",
+      "sourceId": "inv-p331"
+    }
+  ],
+  "test": [
+    {
+      "question": "Umur Bey Türbesi hangi malzemeyle inşa edilmiştir?",
+      "options": [
+        "Kesme küfeki taşıyla",
+        "Ahşapla",
+        "Mermerle",
+        "Tamamen tuğlayla"
+      ],
+      "correct": 3,
+      "description": "Türbe tamamen tuğladan inşa edilmiştir; duvarlarda taş kullanılmamıştır.",
+      "sourceId": "inv-p331"
+    },
+    {
+      "question": "Türbenin kubbesinin üzeri neyle kaplıdır?",
+      "options": [
+        "Kurşunla",
+        "Kiremitle",
+        "Çiniyle",
+        "Bakırla"
+      ],
+      "correct": 1,
+      "description": "Kirpi saçaklı kubbenin üzeri kiremitle kaplanmıştır.",
+      "sourceId": "inv-p331"
+    },
+    {
+      "question": "Türbenin planı nasıl tanımlanır?",
+      "options": [
+        "Dört ayağa oturan baldaken plan",
+        "Sekizgen gövdeli kapalı plan",
+        "Dikdörtgen eyvanlı plan",
+        "Silindirik kümbet planı"
+      ],
+      "correct": 0,
+      "description": "4,60 × 4,60 m ölçülerindeki türbe dört ayağa oturan, baldaken planlı ve pandantifli kubbeyle örtülü bir yapıdır.",
+      "sourceId": "inv-p331"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p331",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Umur Bey Türbesi\"",
+      "page": "331-332"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

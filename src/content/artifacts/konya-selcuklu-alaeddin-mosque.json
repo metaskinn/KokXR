@@ -1,0 +1,151 @@
+{
+  "id": "konya-selcuklu-alaeddin-mosque",
+  "name": "Sultan Alâeddin (Ulu) Camii",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu; ilk evre I. Mesud dönemi (minber kitâbesi H. 550 / M. 1155), son şekli 1220",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Konya İç Kalesi'ndeki Alâeddin Camii, I. Mesud'dan I. Alâeddin Keykubad'a uzanan evrelerle 1220'de son şeklini almış Anadolu Selçuklu yapısıdır.",
+  "history": "Cami, Konya'nın ortasında Alâeddin Tepesi denilen höyük üzerindeki İç Kale'nin kuzeydoğusundadır. Kazılarda kalenin tarihinin MÖ 2000'e uzandığı, Frig, Helenistik, Roma, Bizans ve Selçuklu katmanları bulunduğu anlaşılmıştır. İç Kale, II. Kılıç Arslan'ın H. 569 / M. 1173 ve III. Kılıç Arslan'ın H. 600 / M. 1203'teki onarım ve eklemeleriyle son şeklini almıştır. Kale içindeki yapılardan günümüze yalnız Alâeddin Camii ile Kılıçaslan Köşkü'nün bir bölümü ulaşmıştır.\n\nCaminin birkaç yapı evresi vardır. Mihrap duvarına paralel yedi sütunlu doğu bölümü en eski kısımdır; minberdeki H. 550 (1155) tarihli kitâbe bunun I. Mesud zamanında (1116-1155) yapıldığını gösterir. Cami ve minberin II. Kılıç Arslan (1155-1192) zamanında tamamlandığı tahmin edilir. Ortadaki mihrap önü kubbeli bölüm ile batısındaki çok bölümlü kısma I. İzzettin Keykavus (1211-1219) zamanında başlanmış, onun ölümüyle yarım kalan inşaat I. Alâeddin Keykubad'ın (1219-1237) emriyle tamamlanmıştır. 1220'de son şeklini alan caminin inşasını Atabek Ayaz yönetmiş, mimarı Muhammed b. Havlan el-Dımışki, çini mihrap ve diğer çini süslemelerin ustası Kerimüddin Erdişah'tır. Abanoz ağacından kündekâri minberi, kitâbesine göre Ahlatlı Hacı Mekkî Usta 550 yılının Recep ayında bitirmiştir.\n\nCami 1685-1687'de onarılmış, XIX. yüzyıl sonunda harap durumdayken Konya Valisi Sururi Paşa 1889'da tamir ettirmiştir. Dünya savaşları sırasında ibadete kapatılan yapı 1944'te Millî Eğitim Bakanlığı'na, 1952'de Vakıflar Genel Müdürlüğü'ne devredilip ibadete açılmış; çatlayan avlu duvarı kısımları 1957'de yeniden yapılmıştır. 1966-1976 arasında müdahaleler görmüş, 1980'de yeniden kapatılmış, 1980-1995 arasında Vakıflar Genel Müdürlüğü ve DSİ zemini güçlendirip cepheleri onarmıştır. Bugün ibadete açıktır.\n\nKuzey avlu cephesi üç taç kapıyla yapının en görkemli bölümüdür. İç mekânda düz damı sivri tuğla kemerler taşır; doğu kanadında bu kemerler farklı biçimlerdeki devşirme sütunlara oturur. Mihrap önü kubbesine geçişi sağlayan üçgenlerin çinili olması kubbenin de aslen çini kaplı olduğunu gösterir; kubbenin içi bugün kalem işi süslüdür. Asıl çini mozaik mihraptan çerçeve ve kitâbelik kalmış, ortasına mermer bir mihrap yerleştirilmiştir. Kitap, caminin cephe düzenini, mihrabını, kündekâri minberini ve çinilerini döneminin en nadide eserleri arasında sayar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-alaeddin-mosque/mihrab-dome.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-alaeddin-mosque/mihrab-dome.jpg",
+      "alt": "Sivri tuğla kemer arasından görülen çini kaplı kubbe geçişleri ve turkuaz çinili mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-alaeddin-mosque/east-wing-arches.jpg",
+      "alt": "Taş sütunlara oturan sivri tuğla kemerler ve mavi halılı geniş iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-alaeddin-mosque/tile-mihrab.jpg",
+      "alt": "Turkuaz zeminli yazı kuşaklarıyla çevrili çini mihrap çerçevesi ve ortasındaki mermer mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-alaeddin-mosque/dome-interior.jpg",
+      "alt": "Çinili geçişlerle çevrili kubbenin kalem işi süslemeli içi; ortada yıldızdan gelişen çiçek motifli madalyon",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-selcuklu-alaeddin-mosque/mihrab-dome.jpg",
+      "x": 50,
+      "y": 22,
+      "title": "Çinili kubbe geçişleri",
+      "text": "Mihrap önü kubbesine geçişi sağlayan üçgenler çinilidir; bu, kubbenin aslen çini kaplı olduğunu gösterir.",
+      "sourceId": "inv-p314"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-selcuklu-alaeddin-mosque/east-wing-arches.jpg",
+      "x": 75,
+      "y": 50,
+      "title": "Sivri tuğla kemerler",
+      "text": "Düz damı sivri kemerler taşır; doğu kanadında tuğla kemerler devşirme sütunlara oturur.",
+      "sourceId": "inv-p314"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-selcuklu-alaeddin-mosque/tile-mihrab.jpg",
+      "x": 12,
+      "y": 50,
+      "title": "Çini mozaik mihrap çerçevesi",
+      "text": "Asıl mozaik çini mihraptan geriye üç yönde dolanan çerçeve ve kitâbelik kalmıştır.",
+      "sourceId": "inv-p315"
+    }
+  ],
+  "test": [
+    {
+      "question": "Minberdeki kitâbeye göre caminin en eski bölümü hangi sultan zamanında yapılmıştır?",
+      "options": [
+        "I. Alâeddin Keykubad",
+        "I. Mesud",
+        "III. Murad",
+        "II. Kılıç Arslan"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: I. Mesud.",
+      "sourceId": "inv-p305"
+    },
+    {
+      "question": "Caminin mimarı kimdir?",
+      "options": [
+        "Kerimüddin Erdişah",
+        "Hacı Mekkî Usta",
+        "Muhammed b. Havlan el-Dımışki",
+        "Atabek Ayaz"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Muhammed b. Havlan el-Dımışki.",
+      "sourceId": "inv-p308"
+    },
+    {
+      "question": "Caminin minberi hangi teknikle yapılmıştır?",
+      "options": [
+        "Kündekâri",
+        "Kalem işi",
+        "Çini mozaik",
+        "Alçı oyma"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Kündekâri.",
+      "sourceId": "inv-p316"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p303",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sultan Alâeddin (Ulu) Camii\"",
+      "page": "303"
+    },
+    {
+      "id": "inv-p305",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sultan Alâeddin (Ulu) Camii\"",
+      "page": "305"
+    },
+    {
+      "id": "inv-p308",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sultan Alâeddin (Ulu) Camii\"",
+      "page": "308"
+    },
+    {
+      "id": "inv-p309",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sultan Alâeddin (Ulu) Camii\"",
+      "page": "309"
+    },
+    {
+      "id": "inv-p310",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sultan Alâeddin (Ulu) Camii\"",
+      "page": "310"
+    },
+    {
+      "id": "inv-p314",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sultan Alâeddin (Ulu) Camii\"",
+      "page": "314"
+    },
+    {
+      "id": "inv-p315",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sultan Alâeddin (Ulu) Camii\"",
+      "page": "315"
+    },
+    {
+      "id": "inv-p316",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sultan Alâeddin (Ulu) Camii\"",
+      "page": "316"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "konya-selcuklu-dokuzun-inn",
+  "name": "Dokuzun (Derbent-Şadiye-İğdişleri) Hanı",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · I. Gıyaseddin Keyhüsrev dönemi, kitâbeye göre Muharrem 607 / Haziran-Temmuz 1210",
+  "endowment": "Banisi iğdişler emiri Ebubekir oğlu Hacı İbrahim; kitâbeye göre ribatı Abdurrahman oğlu Osman yapmıştır",
+  "summary": "Konya-Afyon yolu üzerinde, Şadiye Köyü'nde, 1210 yılında yapılmış, açık ve kapalı avlulu klasik Selçuklu menzil hanı.",
+  "history": "Yapı, Konya-Afyon yolu üzerinde, Konya merkeze 24 km uzaklıktaki Şadiye Köyü'ndedir. Taç kapısındaki inşa kitâbesine göre I. Gıyaseddin Keyhüsrev döneminde, 1210 yılında, Emir Hacı İbrahim bin Ebu Bekir tarafından Osman bin Abdurrahman'a yaptırılmıştır.\n\nKapalı bölüme geçiş açıklığı üzerindeki kitâbenin içeriği genel olarak şöyledir: \"Allah'a tevekkül ediyorum. Bu ribatın yapılışı 607 Muharreminde / Haziran-Temmuz 1210, büyük sultan, müminler emirinin (halifenin) yardımcısı, din ve dünya hizmetlerine koşturan, fetih sahibi, II. Kılıçarslan oğlu Keyhüsrev'in hükümdarlığı günlerindedir. Sahibi Tanrı'nın rahmetine muhtaç, fakir, zayıf kulu, iğdişler emiri Ebubekir oğlu Hacı İbrahim'dir. Ribatı Abdurrahman oğlu Osman yapmıştır.\"\n\nHanın inşasında kaba yonu taş kullanılmıştır. Taşların çoğu erimiş, duvarların biçimi bozulmuştur; restorasyonda aslına uygun malzemeyle beden duvarları tamamlanmıştır. Yapının güneyinde bir köprü, batısında bir çeşme vardır. Rivayete göre önünden akan akarsu, üzerinden geçmeye çalışan birine dokuz gün geçit vermemiş; bu yüzden hana \"Dokuzun\" adı verilmiştir.\n\nKuzey-güney doğrultusundaki yapı kapalı bölüm ve açık avludan oluşur. Avlu bölümü günümüze ulaşmamıştır. 1990'lı yıllardaki kazılarda avlu girişinin doğusunda bir eyvan, eyvanın arkasında bir oda ve batısında bir oda daha bulunmuştur; odaların devamının revak şeklinde, beşik tonozlu beşer bölüm hâlinde olduğu düşünülmektedir.\n\nKapalı mekâna doğu cephedeki son derece sade, sivri kemerli taç kapıdan girilir. Derinlemesine dikdörtgen planlı, üç sahınlı bu bölümün üzeri beşik tonozla örtülüdür. Sahınlar, 8 ayağın taşıdığı dörder sivri kemerle birbirinden ayrılır. Orta sahın hem iç mekânda hem cephede diğerlerinden yüksek tutularak yapıya abidevi bir görünüm kazandırılmıştır. Beden duvarlarında payandalar bulunan yapı, açık ve kapalı avlulu plan tipiyle Selçuklu döneminin klasik menzil hanlarındandır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-dokuzun-inn/general-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-dokuzun-inn/general-view.jpg",
+      "alt": "Bulutlu gökyüzü altında, çam ağaçları arasında kesme taştan alçak, tek kapılı han yapısı ve önüne uzanan taş döşeli yol",
+      "description": "Hanın genel görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-dokuzun-inn/crown-gate.jpg",
+      "alt": "Kaba yonu taş duvarda sivri kemerli sade kapı açıklığı ve içinde çift kanatlı ahşap kapı",
+      "description": "Sivri kemerli giriş kapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-dokuzun-inn/stone-remains.jpg",
+      "alt": "Taş duvarın önünde yerde duran büyük kesme taş bloklar ve parçalar; aralarında otlar",
+      "description": "Han çevresindeki taş kalıntılar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "crown-gate",
+      "image": "/images/konya-selcuklu-dokuzun-inn/crown-gate.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Sivri kemerli taç kapı",
+      "text": "Kapalı mekâna doğu cephedeki son derece sade, sivri kemerli taç kapıdan girilir.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "id": "rough-stone",
+      "image": "/images/konya-selcuklu-dokuzun-inn/crown-gate.jpg",
+      "x": 12,
+      "y": 40,
+      "title": "Kaba yonu taş",
+      "text": "Hanın inşasında kaba yonu taş kullanılmış; restorasyonda beden duvarları aslına uygun malzemeyle tamamlanmıştır.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "id": "closed-section",
+      "image": "/images/konya-selcuklu-dokuzun-inn/general-view.jpg",
+      "x": 48,
+      "y": 55,
+      "title": "Kapalı bölüm",
+      "text": "Derinlemesine dikdörtgen planlı, üç sahınlı kapalı bölümün üzeri beşik tonozla örtülüdür.",
+      "sourceId": "inv-p261"
+    }
+  ],
+  "test": [
+    {
+      "question": "Rivayete göre han \"Dokuzun\" adını nereden almıştır?",
+      "options": [
+        "Dokuz odası olduğu için",
+        "Önündeki akarsu birine dokuz gün geçit vermediği için",
+        "Dokuz yılda yapıldığı için",
+        "Dokuz ayak üzerinde durduğu için"
+      ],
+      "correct": 1,
+      "description": "Rivayete göre hanın önünden akan akarsu, geçmeye çalışan birine dokuz gün geçit vermemiş; bu yüzden hana \"Dokuzun\" adı verilmiştir.",
+      "sourceId": "inv-p261"
+    },
+    {
+      "question": "Kitâbeye göre han hangi sultanın hükümdarlığı sırasında yapılmıştır?",
+      "options": [
+        "I. Alâeddin Keykubad",
+        "II. Kılıçarslan",
+        "I. İzzeddin Keykavus",
+        "II. Kılıçarslan oğlu Keyhüsrev"
+      ],
+      "correct": 3,
+      "description": "Kitâbeye göre ribat, Muharrem 607 / Haziran-Temmuz 1210'da II. Kılıçarslan oğlu Keyhüsrev'in hükümdarlığı günlerinde yapılmıştır.",
+      "sourceId": "inv-p260"
+    },
+    {
+      "question": "Kapalı bölümün sahınlarını ayıran sivri kemerleri kaç ayak taşır?",
+      "options": [
+        "8",
+        "4",
+        "12",
+        "6"
+      ],
+      "correct": 0,
+      "description": "Sahınlar, 8 ayağın taşıdığı dörder sivri kemerle birbirinden ayrılır.",
+      "sourceId": "inv-p261"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p260",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Dokuzun (Derbent-Şadiye-İğdişleri) Hanı\"",
+      "page": "260"
+    },
+    {
+      "id": "inv-p261",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Dokuzun (Derbent-Şadiye-İğdişleri) Hanı\"",
+      "page": "261"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

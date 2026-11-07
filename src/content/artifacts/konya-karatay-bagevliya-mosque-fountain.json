@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-bagevliya-mosque-fountain",
+  "name": "Bağevliya Camii Çeşmesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Kitâbesi yok · XIX. yüzyıl sonları ya da XX. yüzyıl başlarında inşa edilmiş olması muhtemel",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karatay'da Bağevliya Camii'nin önünde duran, üçgen alınlıklı ve teğet kemer nişli, bugün kullanılmayan taş çeşme.",
+  "history": "Çeşme, Karatay'da, Bağevliya Sokak'ta, Bağevliya Camii'nin önünde bulunur. Eserin inşa tarihine dair bilgi yoktur; ancak XIX. yüzyıl sonları ya da XX. yüzyıl başlarında yapılmış olması muhtemeldir.\n\nÇeşme \"bağımsız, tek cepheli ve teğet kemer nişli\" tipolojide inşa edilmiş, üst bölümü üçgen alınlıkla bitirilmiştir. Çeşmenin tamamı Gödene taşıyla yapılmışken bu alınlık bölümünde Sille taşı kullanılmıştır. Cepheye bakan kısımda tamamen kesme taş malzeme vardır.\n\nTeğet kemeri iki yandaki ayaklar taşır. Başlıklar cephe yönünde profillendirilmiş, ayaklar da alt bölümde cephe yönüne taşırılarak bir alt başlık oluşturulmuştur.\n\nLülesi ya da musluğu bulunmayan çeşmede yer yer çimento kullanılarak niteliksiz müdahaleler yapıldığı gözlenmektedir; çeşme bugün kullanılmamaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-bagevliya-mosque-fountain/fountain-and-mosque.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-bagevliya-mosque-fountain/fountain-and-mosque.jpg",
+      "alt": "Sarı sıvalı, ahşap saçaklı ve kurşun külahlı ahşap minareli küçük caminin köşesinde, cami duvarının önünde duran üçgen alınlıklı kesme taş çeşme; sağda demir parmaklıklı alçak bahçe duvarı",
+      "description": "Çeşme ve arkasındaki Bağevliya Camii",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-bagevliya-mosque-fountain/fountain-front.jpg",
+      "alt": "Önden çeşme: üstte üçgen alınlık, altında sivri tepeli kemerle çevrili taş niş; nişin üst kısmında küçük bir levha, ortasında rozet biçimli oyma, altta beyaz taş yalak",
+      "description": "Çeşmenin ön cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pediment",
+      "image": "/images/konya-karatay-bagevliya-mosque-fountain/fountain-front.jpg",
+      "x": 50,
+      "y": 10,
+      "title": "Üçgen alınlık",
+      "text": "Çeşmenin üst bölümü üçgen alınlıklıdır; çeşmenin tamamı Gödene taşından yapılmışken bu kısımda Sille taşı kullanılmıştır.",
+      "sourceId": "inv-p235"
+    },
+    {
+      "id": "arch",
+      "image": "/images/konya-karatay-bagevliya-mosque-fountain/fountain-front.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Teğet kemerli niş",
+      "text": "Çeşme teğet kemer nişli tipolojidedir; kemeri iki yandaki ayaklar taşır.",
+      "sourceId": "inv-p235"
+    },
+    {
+      "id": "capital",
+      "image": "/images/konya-karatay-bagevliya-mosque-fountain/fountain-front.jpg",
+      "x": 20,
+      "y": 50,
+      "title": "Profilli başlık",
+      "text": "Kemeri taşıyan ayakların başlıkları cephe yönünde profillendirilmiştir.",
+      "sourceId": "inv-p235"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bağevliya Camii Çeşmesi'nin büyük bölümü hangi taşla inşa edilmiştir?",
+      "options": [
+        "Sille taşı",
+        "Gödene taşı",
+        "Mermer",
+        "Tuğla"
+      ],
+      "correct": 1,
+      "description": "Çeşmenin tamamı Gödene taşıyla inşa edilmiş; yalnızca üçgen alınlıklı üst bölümde Sille taşı kullanılmıştır.",
+      "sourceId": "inv-p235"
+    },
+    {
+      "question": "Çeşmenin üst bölümü nasıl bitirilmiştir?",
+      "options": [
+        "Kubbeyle",
+        "Ahşap saçakla",
+        "Üçgen alınlıkla",
+        "Düz bir silmeyle"
+      ],
+      "correct": 2,
+      "description": "Çeşme üçgen alınlıklıdır.",
+      "sourceId": "inv-p235"
+    },
+    {
+      "question": "Çeşme bugün neden kullanılmamaktadır?",
+      "options": [
+        "Üzerinde lülesi ya da musluğu yoktur",
+        "Camiyle birlikte yıkılmıştır",
+        "Başka bir yere taşınmıştır",
+        "Üzeri duvarla örülmüştür"
+      ],
+      "correct": 0,
+      "description": "Lülesi ya da musluğu bulunmayan ve yer yer çimentoyla niteliksiz müdahaleler görmüş çeşme kullanılmamaktadır.",
+      "sourceId": "inv-p235"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p235",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Bağevliya Camii Çeşmesi\"",
+      "page": "235"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

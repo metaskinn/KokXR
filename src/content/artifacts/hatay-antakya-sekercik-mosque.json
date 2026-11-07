@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-sekercik-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Şekercik Camii",
+  "period": "Muhtemelen 1869; çeşme kitabesi H. 1286 (1869/1870)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şekercik Camii’nin özgün minareli taç kapısı ile yanındaki çeşmesi kitapta öne çıkarılır.",
+  "history": "1869’da yapıldığı düşünülen caminin özgün kısmından minareli taç kapı ve yanındaki çeşme kalmıştır. Harimin 1872 depreminde veya daha sonra harap olduğu ve yeniden yapıldığı düşünülür. Basık kemerli kapıyı sivri kemerli kavsara kuşatır. Üstündeki minare kare kaideden üçgen prizmalı geçişlerle sekizgen gövdeye yükselir. Pabuçluk kapısına birkaç basamakla ulaşılır. Şerefe korkuluğu pahlı silme üzerinde hafifçe dışarı taşar. Kapının sağındaki sade çeşmenin kitabesi H. 1286 (M. 1869/1870) tarihlidir. Bu tarih kesin cami inşa tarihi olarak kullanılmamıştır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sekercik-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sekercik-mosque/book-view-1.jpg",
+      "alt": "Taş cephede üstte kitabe, önünde saçak ve kemerli pencereler",
+      "description": "Şekercik Camii — kitaptaki görünüm 1 (s. 334–335)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-sekercik-mosque/book-view-2.jpg",
+      "alt": "Taş minarenin çokgen gövdesi ve üstte ahşap örtülü şerefesi",
+      "description": "Şekercik Camii — kitaptaki görünüm 2 (s. 336–337)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sekercik-mosque/book-view-2.jpg",
+      "x": 43,
+      "y": 56,
+      "title": "Sekizgen gövde",
+      "text": "Minare kare kaideden sekizgen gövdeye geçer.",
+      "sourceId": "inv-p336"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sekercik-mosque/book-view-2.jpg",
+      "x": 41,
+      "y": 19,
+      "title": "Şerefe",
+      "text": "Şerefe korkuluğu pahlı silme üzerinde hafifçe dışarı taşar.",
+      "sourceId": "inv-p337"
+    }
+  ],
+  "test": [
+    {
+      "question": "Özgün yapıdan hangi unsur korunmuştur?",
+      "options": [
+        "Ahşap kütüphane",
+        "Çifte hamam",
+        "Minareli taç kapı",
+        "Dört kubbeli harim"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Minareli taç kapı.",
+      "sourceId": "inv-p336"
+    },
+    {
+      "question": "Minarenin gövdesi hangi biçimdedir?",
+      "options": [
+        "Dairesel",
+        "Üçgen",
+        "On ikigen",
+        "Sekizgen"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Sekizgen.",
+      "sourceId": "inv-p336"
+    },
+    {
+      "question": "Taç kapının sağında ne bulunur?",
+      "options": [
+        "Çeşme",
+        "Türbe",
+        "Bedesten",
+        "Mektep"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Çeşme.",
+      "sourceId": "inv-p337"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p336",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şekercik Camii\"",
+      "page": "336"
+    },
+    {
+      "id": "inv-p337",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şekercik Camii\"",
+      "page": "337"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şekercik Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

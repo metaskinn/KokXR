@@ -1,0 +1,97 @@
+{
+  "id": "konya-doganhisar-ayaslar-grand-upper-mosque",
+  "name": "Ayaslar Ulu (Yukarı) Camii",
+  "city": "Konya",
+  "district": "Doğanhisar",
+  "period": "XVIII-XIX. yüzyıl olarak değerlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Doğanhisar Ayaslar Mahallesi'ndeki caminin kitabesi yoktur.",
+  "history": "Doğanhisar Ayaslar Mahallesi'ndeki caminin kitabesi yoktur. Planı, mimari öğeleri ve süslemeleri XVIII-XIX. yüzyıllarda yapıldığını düşündürür. Batısına yapıdan bağımsız iki şerefeli minare ve yanına şadırvan sonradan eklenmiştir.\n\nDerinlemesine dikdörtgen planlı, ahşap direkli ve tavanlı yapı dıştan kırma çatılıdır. Cepheler yeşil sıvalıdır; güney, batı ve doğudaki pencereler içeri ışık verir. Kuzeydeki son cemaat yerinden girilen harim ahşap sütunlarla üç sahına ayrılır. Duvar ve direklerin altı turkuaz, üstü beyazdır. Madalyonlarda celî sülüs hatlı Allah, Muhammed ve dört halifenin isimleri vardır. Giriş eksenindeki mihrap yarım daire planlı ve mukarnas kavsaralıdır. Üç bordürü akant başlıklı sütuncelerle sınırlıdır; yüzeyi turkuaz ve altın sarısı boyalıdır. Doğu duvarındaki turkuaz vaaz kürsüsü minberle benzer süsleme tekniğindedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-doganhisar-ayaslar-grand-upper-mosque/prayer-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-doganhisar-ayaslar-grand-upper-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde beyaz-turkuaz sütunlar, mihrap ve minber",
+      "description": "Turkuaz halılı harimde beyaz-turkuaz sütunlar, mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-doganhisar-ayaslar-grand-upper-mosque/aerial-view.jpg",
+      "alt": "Yeşil cepheli kırma çatılı cami, minare ve çevredeki ağaçlar",
+      "description": "Yeşil cepheli kırma çatılı cami, minare ve çevredeki ağaçlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-doganhisar-ayaslar-grand-upper-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Mukarnas kavsaralı mihrap turkuaz ve altın sarısı boyalıdır.",
+      "sourceId": "inv-p414"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-doganhisar-ayaslar-grand-upper-mosque/prayer-hall.jpg",
+      "x": 30,
+      "y": 55,
+      "title": "Ahşap sütunlar",
+      "text": "Ahşap sütunlar harimi üç sahına ayırır.",
+      "sourceId": "inv-p414"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ayaslar Ulu (Yukarı) Camii hangi ilçededir?",
+      "options": [
+        "Doğanhisar",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Ayaslar Ulu (Yukarı) Camii, Konya'nın Doğanhisar ilçesindedir.",
+      "sourceId": "inv-p414"
+    },
+    {
+      "question": "Caminin dış cepheleri hangi renktir?",
+      "options": [
+        "Kırmızı",
+        "Yeşil",
+        "Sarı",
+        "Mavi"
+      ],
+      "correct": 1,
+      "description": "Yeşil.",
+      "sourceId": "inv-p414"
+    },
+    {
+      "question": "Camiye sonradan eklenen minare kaç şerefelidir?",
+      "options": [
+        "Bir",
+        "Üç",
+        "Dört",
+        "İki"
+      ],
+      "correct": 3,
+      "description": "İki.",
+      "sourceId": "inv-p414"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p414",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Doğanhisar, \"Ayaslar Ulu (Yukarı) Camii\"",
+      "page": "414"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

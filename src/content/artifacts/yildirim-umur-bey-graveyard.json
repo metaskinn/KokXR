@@ -1,0 +1,111 @@
+{
+  "id": "yildirim-umur-bey-graveyard",
+  "name": "Umur Bey Haziresi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · en eski mezar taşı Umur Bey'e (ö. 1461) aittir; XVI. ve XVIII. yüzyıl taşları da bulunur",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Umur Bey Camii'nin güney ve kuzeyinde iki bölümden oluşan, Umur Bey'in türbesini de içeren ve yaklaşık 80 mezar taşı barındıran hazire.",
+  "history": "Umur Bey Haziresi, Umur Bey Külliyesi'nde caminin çevresinde yer alır ve iki ayrı bölümden oluşur. Umur Bey'in türbesinin de bulunduğu ilk bölüm caminin güney bahçesindedir; diğer hazire caminin kuzey tarafındadır. Her iki alanda, bir kısmı kırık ya da yazısız olmak üzere yaklaşık 80 mezar taşı bulunur.\n\nGüneydeki hazirenin en eski mezar taşı Umur Bey'e aittir; burada XVI. yüzyıla tarihlenen örnekler de vardır. Aynı paftadaki, H. 1208 / M. 1794'te vefat eden Çıngıllızâde Hacı Hasan Ağa ile aynı yıl vefat eden Sadullah Efendi'nin mezar taşları anıtsal nitelikleriyle dikkat çeker. Sadullah Efendi'nin mezar taşındaki manzum kitabe, akranları arasında öne çıkan Sadullah Efendi'nin malını ve evladını bırakarak canını Hakk'a teslim ettiğini anlatır ve şair Sâdık'ın düşürdüğü tarihle biter.\n\nHacı Selman Ağa'nın kızı Fatma Hanım'ın kabri de bu paftadadır. Mezar taşındaki manzum kitabe, genç yaşta vefat eden Fatma Hanım'ı anne babasının çaresiz kuzusu olarak anar ve Hicri 1202 / Miladi 1788 tarihini verir.\n\nUmurbey Camii haziresi zaman içinde düzenlenmiş ve taşlar düzgün bir şekilde yerlerine yerleştirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-umur-bey-graveyard/graveyard.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-umur-bey-graveyard/graveyard.jpg",
+      "alt": "Çimenlik alanda sıra sıra beyaz mezar taşları; arkada solda tuğla kemerli açık türbe, ortada taş ve tuğla örgülü cami ile minaresi, sağda büyük bir ağaç gövdesi",
+      "description": "Hazire, türbe ve cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-umur-bey-graveyard/sarcophagus-graves.jpg",
+      "alt": "Kabartma rozetlerle süslü mermer sandukalı iki mezar ve uzun, yazılı bir baş taşı; arkada tuğla kemerli türbe ve otlar arasında başka mezar taşları",
+      "description": "Sandukalı mezarlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-umur-bey-graveyard/headstone.jpg",
+      "alt": "Mermer sanduka üzerinde yükselen, yüzeyi yazılarla kaplı uzun baş taşı ve tepesindeki kabartma başlık; solda tuğla duvar, arkada diğer mezar taşları",
+      "description": "Yazılı baş taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-umur-bey-graveyard/gravestones.jpg",
+      "alt": "Otların arasında farklı biçimlerde beyaz mezar taşları; öndeki taşın üzerinde yuvarlak bir madalyon içinde kabartma yazı",
+      "description": "Haziredeki mezar taşları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "gravestones",
+      "image": "/images/yildirim-umur-bey-graveyard/graveyard.jpg",
+      "x": 40,
+      "y": 80,
+      "title": "Mezar taşları",
+      "text": "Haziredeki iki alanda, bir kısmı kırık ya da yazısız olmak üzere yaklaşık 80 mezar taşı bulunur.",
+      "sourceId": "inv-p327"
+    },
+    {
+      "id": "tomb",
+      "image": "/images/yildirim-umur-bey-graveyard/graveyard.jpg",
+      "x": 30,
+      "y": 48,
+      "title": "Umur Bey Türbesi",
+      "text": "Umur Bey'in türbesi, haziresinin caminin güney bahçesindeki ilk bölümünde yer alır.",
+      "sourceId": "inv-p327"
+    }
+  ],
+  "test": [
+    {
+      "question": "Umur Bey Haziresi kaç bölümden oluşur?",
+      "options": [
+        "Tek bölümden",
+        "Üç bölümden",
+        "Dört bölümden",
+        "İki bölümden"
+      ],
+      "correct": 3,
+      "description": "Hazire, caminin güney bahçesindeki ve kuzey tarafındaki iki ayrı bölümden oluşur.",
+      "sourceId": "inv-p327"
+    },
+    {
+      "question": "Güneydeki hazirenin en eski mezar taşı kime aittir?",
+      "options": [
+        "Umur Bey'e",
+        "Sadullah Efendi'ye",
+        "Fatma Hanım'a",
+        "Çıngıllızâde Hacı Hasan Ağa'ya"
+      ],
+      "correct": 0,
+      "description": "Güneydeki hazirenin en eski mezar taşı Umur Bey'e aittir.",
+      "sourceId": "inv-p327"
+    },
+    {
+      "question": "Hazirede yaklaşık kaç mezar taşı bulunur?",
+      "options": [
+        "25",
+        "80",
+        "170",
+        "16"
+      ],
+      "correct": 1,
+      "description": "Her iki alanda, bir kısmı kırık ya da yazısız olmak üzere yaklaşık 80 mezar taşı bulunur.",
+      "sourceId": "inv-p327"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p327",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Umur Bey Haziresi\"",
+      "page": "327-329"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

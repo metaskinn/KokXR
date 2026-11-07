@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-sheikh-muhammed-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Şeyh Muhammed Camii",
+  "period": "Kitabe: H. 1131 (1718/1719); inşa mı onarım mı belirsiz",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh Muhammed Camii, alt katında fırın bulunan yapısı ve özgün minareli taç kapısıyla tanıtılır.",
+  "history": "Küçük avlu içindeki iki katlı binanın üst katı harim, alt katı fırındır. Avluya minareli taç kapıdan girilir. Yenilenmiş harimin mihrap nişinde pencere vardır. Özgün taç kapının sokağa bakan eyvan kemeri dıştan silmelerle ikinci bir kemer gibi çerçevelenmiştir. Kapıyla ortak minare kaidesinden silindirik gövdeye kaval silme ve bilezikle geçilir. Şerefeye geçişte profilli silmeler kullanılmıştır; minare silindirik petek ve konik külahla biter. Alınlıktaki H. 1131 (1718/1719) kitabesinin inşa mı onarım mı anlattığı belli değildir. Basık kapı kemeri üzerindeki ay yıldız motifi kitapta 20. yüzyıl başındaki onarımın işareti olarak yorumlanır. Adres listesinde ad Muhammet biçiminde de yazılır; burada bölüm başlığı esas alınmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sheikh-muhammed-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sheikh-muhammed-mosque/book-view-1.jpg",
+      "alt": "Taş girişin üstünde iç içe kemerler, kitabe ve ay yıldız kabartması",
+      "description": "Şeyh Muhammed Camii — kitaptaki görünüm 1 (s. 322–323)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-sheikh-muhammed-mosque/book-view-2.jpg",
+      "alt": "Dar sokakta taç kapının üstünden yükselen taş minare",
+      "description": "Şeyh Muhammed Camii — kitaptaki görünüm 2 (s. 324–325)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sheikh-muhammed-mosque/book-view-1.jpg",
+      "x": 48,
+      "y": 44,
+      "title": "Kitabe",
+      "text": "H. 1131 kitabesinin inşa mı onarım mı anlattığı belli değildir.",
+      "sourceId": "inv-p324"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sheikh-muhammed-mosque/book-view-2.jpg",
+      "x": 52,
+      "y": 39,
+      "title": "Minare",
+      "text": "Minare silindirik gövde, petek ve konik külahla tamamlanır.",
+      "sourceId": "inv-p324"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin alt katında ne vardır?",
+      "options": [
+        "Fırın",
+        "Hamam",
+        "Kütüphane",
+        "Türbe"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Fırın.",
+      "sourceId": "inv-p324"
+    },
+    {
+      "question": "Avluya hangi unsurdan girilir?",
+      "options": [
+        "Ahşap köprü",
+        "Minareli taç kapı",
+        "Yer altı tüneli",
+        "Avlu revakı"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Minareli taç kapı.",
+      "sourceId": "inv-p324"
+    },
+    {
+      "question": "Minare hangi külahla tamamlanır?",
+      "options": [
+        "Şemsiye",
+        "Soğan",
+        "Konik",
+        "Düz dam"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Konik.",
+      "sourceId": "inv-p324"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p324",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Muhammed Camii\"",
+      "page": "324"
+    },
+    {
+      "id": "inv-p325",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Muhammed Camii\"",
+      "page": "325"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Muhammed Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

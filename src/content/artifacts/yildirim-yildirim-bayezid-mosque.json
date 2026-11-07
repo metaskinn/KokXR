@@ -1,0 +1,166 @@
+{
+  "id": "yildirim-yildirim-bayezid-mosque",
+  "inventoryId": "yildirim-yildirim-bayezid-camii",
+  "name": "Yıldırım Bayezid Camii",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Sultan Yıldırım Bayezid dönemi; külliye H. 793-797 / M. 1391-1395 (kitabesi yoktur)",
+  "endowment": "Banisi Sultan Yıldırım Bayezid; vakfiyesi Molla Fenârî tasdikli (kitapta H. 802 / M. 1399 ve H. Ramazan 802 / M. Mayıs 1400 olarak iki farklı tarihle anılır)",
+  "summary": "Yıldırım Bayezid Külliyesi'nin merkezindeki tabhaneli cami; \"Bursa kemeri\"nin ilk kez uygulandığı yapı olarak bilinir.",
+  "history": "Cami, Yıldırım ilçesi Yıldırım Mahallesi, Yardım Sokak No: 10'dadır ve H. 793-797 / M. 1391-1395 yılları arasında Sultan Yıldırım Bayezid'in yaptırdığı külliyenin bir parçasıdır. Şehrin doğusuna hâkim bir tepeye kurulan külliyenin çevresi surları andıran yüksek duvarlarla kuşatılmıştır. Külliyede cami, medrese, hamam, imaret, han, ahır, su kemerleri ve darüşşifa yer alıyordu; bunlardan cami, türbe, hamam, medrese ve darüşşifa günümüze ulaşmıştır. Yıldırım Bayezid, Akçağlayan suyunu terazi ve kemerlerle külliyeye getirtmiştir.\n\nI. Murad ile Gülçiçek Hatun'un oğlu olan Yıldırım Bayezid, \"Yıldırım\" lakabını Karamanoğulları ile yapılan Frenkyazısı Muharebesi'ndeki atılganlığı nedeniyle almıştır. 1389'da Kosova'dan sonra tahta çıkmış, 1402'de Ankara Muharebesi'nde Timur'a esir düşmüş ve 1403'te vefat etmiştir.\n\nCami, Orhan Camii ile başlayan tabhaneli/zaviyeli cami tipolojisinin önde gelen örneklerindendir. Kitabesi olmadığından kesin inşa tarihi ve mimarı bilinmemektedir; Timur'un Bursa'yı istilası sırasında yarım kalıp Çelebi Mehmed döneminde tamamlandığına dair görüşler de vardır. Nesih hatla yazılmış, 240 satırlık ve 6,5 m uzunluğundaki vakfiye Molla Fenârî tarafından tasdik edilmiş, kenarında Emir Süleyman'ın imzası bulunur. Vakfa Kalealtı'ndaki \"Yeni Bedesten\" ve dükkânlar, Yıldırım Hamamı, bağ, bahçe ve sürüler bağlanmıştır.\n\nUsta işi mermer kaplamaları Osmanlı mimarisinde yükseliş döneminin işareti sayılır; \"Bursa kemeri\" adıyla bilinen form ilk kez bu camide uygulanmıştır. Simetrik planlı cami, kuzey-güney doğrultusunda art arda iki büyük kubbeyle örtülüdür; orta mekâna doğu ve batıdan daha küçük kubbeli, yükseltilmiş iki eyvan bağlanır. Yapı yaklaşık 766 m² alan kaplar. 33,60 × 7,10 m ölçüsündeki son cemaat yeri sekiz ayakla taşınır, beş birime ayrılır ve ayakları Bursa kemerleriyle birbirine bağlanır; ortadaki kubbesi zeminden 14 m yüksekliktedir. Cephe tamamen kesme taştır; siyah-beyaz mermerli ana kapının kitabe alanı boştur. 12,20 × 12,20 m ölçüsündeki harim orta mekânındaki şadırvan 1930'lu yıllara kadar varlığını sürdürmüştür. Mihraplı bölüm 11,50 m çapında bir kubbeyle örtülüdür. Mihrap yedi sıra mukarnaslı kavsaraya ve renkli mermer sütunçelere sahiptir; ahşap minberin sonradan eklendiği anlaşılmaktadır. Harimin yan duvarlarındaki hatlar, Ahmed Vefik Paşa'nın talimatıyla Cemâlizâde Şeyh Hacı İbrahim Edhem Efendi tarafından yazılmıştır.\n\nCami depremler ve lodos fırtınaları yüzünden pek çok kez onarılmıştır. 1780'de yıldırım düşmesi sonucu minare yeniden yapılmış, 1849'da kapsamlı bir onarım gerçekleştirilmiştir. 2009-2010'da Bursa Büyükşehir Belediyesi ve Vakıflar Bölge Müdürlüğü'nün rekonstrüksiyon projesiyle sonradan eklenen minare yıkılmış, özgün plana göre iki minare asıl yerlerinde yeniden yapılmıştır. Evliya Çelebi, Moltke ve başka gezginler camiyi eserlerinde anlatmıştır. Külliye 2014'te UNESCO Dünya Mirası Alanı olarak tescillenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-yildirim-bayezid-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-yildirim-bayezid-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kesme taş cami gövdesi, art arda iki büyük kurşun kubbe ve yanlardaki küçük kubbeler, iki ince tuğla minare; çevrede ağaçlar ve Bursa'nın binaları",
+      "description": "Caminin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yildirim-bayezid-mosque/portico.jpg",
+      "alt": "Son cemaat yeri: beyaz mermer ayaklar arasında yuvarlak hatlı geniş kemerler, ortada içeride mukarnaslı taç kapı",
+      "description": "Bursa kemerli son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yildirim-bayezid-mosque/prayer-hall.jpg",
+      "alt": "Harim: turkuaz halılı geniş mekân, iki yanda yükseltilmiş eyvanlar ve sivri kemerler, arkada mihraplı bölüm",
+      "description": "Harim ve eyvanlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yildirim-bayezid-mosque/mihrab.jpg",
+      "alt": "Mihraplı bölüm: ortada altın yaldızlı mukarnaslı mihrap, sağda ahşap minber, duvarlarda yuvarlak hat levhaları ve pencereler",
+      "description": "Mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "bursa-arch",
+      "image": "/images/yildirim-yildirim-bayezid-mosque/portico.jpg",
+      "x": 50,
+      "y": 18,
+      "title": "Bursa kemeri",
+      "text": "\"Bursa Kemeri\" adıyla bilinen mimari form ilk kez bu camide uygulanmıştır; son cemaat yerinin ayakları bu kemerlerle birbirine bağlanır.",
+      "sourceId": "inv-p418"
+    },
+    {
+      "id": "two-domes",
+      "image": "/images/yildirim-yildirim-bayezid-mosque/aerial-view.jpg",
+      "x": 42,
+      "y": 38,
+      "title": "Art arda iki büyük kubbe",
+      "text": "Simetrik planlı cami, kuzey-güney doğrultusunda ardışık biçimde yerleştirilmiş iki büyük kubbeyle örtülüdür.",
+      "sourceId": "inv-p418"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/yildirim-yildirim-bayezid-mosque/mihrab.jpg",
+      "x": 48,
+      "y": 62,
+      "title": "Mihrap",
+      "text": "Mihrabın taç kısmı yedi sıra mukarnaslı kavsaraya sahiptir; yan köşelerde stalaktit başlıklı renkli mermer sütunlar bulunur.",
+      "sourceId": "inv-p432"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hangi mimari form ilk kez Yıldırım Bayezid Camii'nde uygulanmıştır?",
+      "options": [
+        "Hünkâr mahfili",
+        "Bursa kemeri",
+        "Çifte minare",
+        "Sivri kemer"
+      ],
+      "correct": 1,
+      "description": "\"Bursa Kemeri\" adıyla bilinen mimari formun ilk kez bu camide uygulanmış olması, yapının tipolojik değerini artırır.",
+      "sourceId": "inv-p418"
+    },
+    {
+      "question": "Caminin kesin inşa tarihi ve mimarı neden bilinmemektedir?",
+      "options": [
+        "Vakfiyesi kaybolduğu için",
+        "1855 depreminde yıkıldığı için",
+        "Herhangi bir kitabesi bulunmadığı için",
+        "Yalnızca sözlü rivayetlerle bilindiği için"
+      ],
+      "correct": 2,
+      "description": "Herhangi bir kitabesi bulunmayan yapının kesin inşa tarihi ve mimarı bilinmemektedir.",
+      "sourceId": "inv-p418"
+    },
+    {
+      "question": "2009-2010 rekonstrüksiyon projesinde minarelere ne yapılmıştır?",
+      "options": [
+        "Sonradan eklenen minare yıkılıp iki minare asıl yerlerinde yeniden yapılmıştır",
+        "Tek minare şerefeye kadar onarılmıştır",
+        "Minareler çiniyle kaplanmıştır",
+        "Minareler kaldırılıp yerine saçak yapılmıştır"
+      ],
+      "correct": 0,
+      "description": "Sonradan camiye bitişik olarak inşa edilen minare yıkılmış, özgün plana uygun olarak iki minare asıl yerlerinde yeniden yapılmıştır.",
+      "sourceId": "inv-p434"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p415",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "415"
+    },
+    {
+      "id": "inv-p416",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "416"
+    },
+    {
+      "id": "inv-p417",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "417"
+    },
+    {
+      "id": "inv-p418",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "418"
+    },
+    {
+      "id": "inv-p420",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "420"
+    },
+    {
+      "id": "inv-p424",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "424"
+    },
+    {
+      "id": "inv-p426",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "426"
+    },
+    {
+      "id": "inv-p430",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "430"
+    },
+    {
+      "id": "inv-p432",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "432"
+    },
+    {
+      "id": "inv-p434",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yıldırım Bayezid Camii\"",
+      "page": "434"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

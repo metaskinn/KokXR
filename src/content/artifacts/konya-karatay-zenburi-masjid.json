@@ -1,0 +1,102 @@
+{
+  "id": "konya-karatay-zenburi-masjid",
+  "name": "Zenburi Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Selçuklu · plan, malzeme ve teknik özelliklerine göre XIII. yüzyılın ilk yarısı",
+  "endowment": "Kitapta kesin bilgi yok; İbrahim Hakkı Konyalı, Sultan Alâeddin Keykubat’ın arıcıbaşısı ya da Kara Aslan tarafından yaptırılmış olabileceğini söyler",
+  "summary": "Şems Camii ve türbesinin güneydoğusunda, tuğla kubbesi ve balıksırtı örgülü minaresiyle XIII. yüzyılın ilk yarısına tarihlenen kare planlı Selçuklu mescidi.",
+  "history": "Mescit, Karatay, Zenburi Mahallesi, Müftüler Sokak üzerindedir. Şems Camii ve türbesinin güneydoğusundaki yapı “Zenburi” ya da “İplikçi Mescit” olarak da bilinir. Mescitte görev yapan imamın iplikçilikle uğraşması nedeniyle mescide “İplikçi” adının verildiği söylenir.\n\nÜzerinde inşa tarihini ya da banisini gösteren bir kitâbe yoktur; plan, malzeme ve teknik özellikleri bakımından XIII. yüzyılın ilk yarısına tarihlendirilebilir. İbrahim Hakkı Konyalı, eserin Sultan Alâeddin Keykubat’ın arıcıbaşısı ya da Kara Aslan tarafından yaptırılmış olabileceğini söyler. 1990’daki onarım sırasında mescitten oldukça zengin çini ve alçı süslemeler çıkmış; bunların yan duvarlardaki süslemeli alçı raflar olduğu anlaşılmıştır. Eser yakın zamanda Vakıflar Bölge Müdürlüğü tarafından tamir ettirilmiştir.\n\nMescit kare planlıdır ve tek kubbeyle örtülüdür. Kubbe, üçlü tromplarla geçilen bir kasnağa oturur. Yapı tuğla malzemeyle inşa edilmiştir. Kuzeybatı köşesindeki minare sekizgen kaideli, silindirik gövdeli, tek şerefeli ve külahlıdır; 1960 yılında Türkiye Anıtlar Derneği Konya Şubesi’nin yardımlarıyla onarılmıştır. Minare gövdesinde tuğlaların farklı dizilmesiyle oluşan balıksırtı motif görülür.\n\nBeden duvarları sadedir; güney, batı ve doğu cephelerinin üst kısmında birer sivri kemerli aydınlatma penceresi vardır. Kuzey cephede yapıya sonradan eklenmiş giriş bölümü bugün camekânla kapatılmış ve meyilli bir çatıyla örtülmüştür; bu bölüme doğu cephenin kuzeye yakın köşesindeki kapıdan girilir. Son cemaat yerindeki kapıdan harime geçilir. Harimi örten tek kubbenin içinde de balıksırtı motif yer alır. Mihrap ve minber yenidir. Mescit, klasik Selçuklu dönemi kare planlı, tek kubbeli yapılarındandır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-zenburi-masjid/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-zenburi-masjid/aerial-view.jpg",
+      "alt": "Havadan görünüm: apartmanlar ve ağaçlar arasında, kurşun kaplı tek kubbeli taş ve tuğla mescit; yanında sonradan eklenmiş kiremit çatılı bölüm",
+      "description": "Mescidin çevresiyle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-zenburi-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: beyaz sıvalı duvarda sivri nişli mihrap, sağında ahşap minber ve alt kısımda ahşap lambri",
+      "description": "Harimde mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "tek-kubbe",
+      "image": "/images/konya-karatay-zenburi-masjid/aerial-view.jpg",
+      "x": 50,
+      "y": 42,
+      "title": "Tek kubbe",
+      "text": "Kare planlı mescit, üçlü tromplarla geçilen kasnağa oturan tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p239"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-zenburi-masjid/prayer-hall.jpg",
+      "x": 22,
+      "y": 50,
+      "title": "Mihrap",
+      "text": "Mescidin mihrabı ve minberi yenidir.",
+      "sourceId": "inv-p240"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin halk arasındaki diğer adı nedir?",
+      "options": [
+        "Sırçalı Mescit",
+        "İplikçi Mescit",
+        "Ferhuniye Mescidi",
+        "Pisili Mescit"
+      ],
+      "correct": 1,
+      "description": "Yapı “Zenburi” veya “İplikçi Mescit” olarak da bilinir; imamın iplikçilikle uğraştığı söylenir.",
+      "sourceId": "inv-p239"
+    },
+    {
+      "question": "1990’daki onarım sırasında mescitte ne ortaya çıkmıştır?",
+      "options": [
+        "Bir vakfiye",
+        "Bir hazine",
+        "Zengin çini ve alçı süslemeler",
+        "Yeraltı mezar odası"
+      ],
+      "correct": 2,
+      "description": "Onarımda çıkan zengin çini ve alçı süslemelerin yan duvarlardaki süslemeli alçı raflar olduğu anlaşılmıştır.",
+      "sourceId": "inv-p239"
+    },
+    {
+      "question": "Minarenin gövdesinde hangi tuğla motifi görülür?",
+      "options": [
+        "Balıksırtı",
+        "Zikzak",
+        "Satranç",
+        "Kufi yazı"
+      ],
+      "correct": 0,
+      "description": "Minarenin gövdesinde tuğlaların farklı dizilmesiyle oluşan balıksırtı motif görülür.",
+      "sourceId": "inv-p240"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p239",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Zenburi Mescidi\"",
+      "page": "239"
+    },
+    {
+      "id": "inv-p240",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Zenburi Mescidi\"",
+      "page": "240"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

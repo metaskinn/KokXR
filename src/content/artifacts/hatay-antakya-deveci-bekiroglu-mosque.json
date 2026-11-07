@@ -1,0 +1,98 @@
+{
+  "id": "hatay-antakya-deveci-bekiroglu-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Deveci Bekiroğlu Camii",
+  "period": "İnşa dönemi kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Deveci Bekiroğlu Camii, İplik Pazarı Mahallesi’nde bulunan ve 1985’te tescillenen yapıdır.",
+  "history": "İplik Pazarı Mahallesi, Gökşen Sokak’ta 1485 numaralı parseldeki yapı kitapta kesme taş cami olarak tanıtılır. Metinde kemerli bir niş, niş içindeki kurna ve kitabe, kemerin başlangıcındaki taş kornişler ve üstteki ahşap sundurma anlatılır. Cami duvarında düzgün kesme taşlı tarihî çeşme olduğu da belirtilir. Yapı, Kültür ve Tabiat Varlıklarını Koruma Kurulunun 15.11.1985 tarihli 1558 sayılı kararıyla tescillenmiştir. Kitabın fotoğrafları ile niş-kurna-çeşme tarifinin eşleşmesi kesinleştirilemediğinden bu unsurlar için görsel bilgi noktası eklenmemiştir.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-deveci-bekiroglu-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-deveci-bekiroglu-mosque/book-view-1.jpg",
+      "alt": "Ağaçlı avluda sarı boyalı tek katlı yapı, kapılar, pencereler ve banklar",
+      "description": "Deveci Bekiroğlu Camii — kitaptaki görünüm 1 (s. 222–223)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-deveci-bekiroglu-mosque/book-view-2.jpg",
+      "alt": "Aşağıdan bakışta kesme taş minarenin gövdesi ve şerefesi",
+      "description": "Deveci Bekiroğlu Camii — kitaptaki görünüm 2 (s. 224–225)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-deveci-bekiroglu-mosque/book-view-2.jpg",
+      "x": 52,
+      "y": 62,
+      "title": "Kesme taş",
+      "text": "Kitap yapıyı kesme taş malzemeyle tanıtır; fotoğrafta taş örgü görünür.",
+      "sourceId": "inv-p224"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi mahallededir?",
+      "options": [
+        "Güllübahçe",
+        "Nardüzü",
+        "Cumhuriyet",
+        "İplik Pazarı"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: İplik Pazarı.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "question": "Cami hangi sokaktadır?",
+      "options": [
+        "Gökşen Sokak",
+        "Selçuk Sokak",
+        "Gazi Paşa Caddesi",
+        "İnönü Caddesi"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Gökşen Sokak.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "question": "Tescil yılı nedir?",
+      "options": [
+        "1902",
+        "1985",
+        "1947",
+        "2006"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: 1985.",
+      "sourceId": "inv-p224"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p224",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Deveci Bekiroğlu Camii\"",
+      "page": "224"
+    },
+    {
+      "id": "inv-p225",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Deveci Bekiroğlu Camii\"",
+      "page": "225"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Deveci Bekiroğlu Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

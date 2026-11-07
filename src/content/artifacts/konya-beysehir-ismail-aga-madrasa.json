@@ -1,0 +1,118 @@
+{
+  "id": "konya-beysehir-ismail-aga-madrasa",
+  "name": "İsmail Ağa Medresesi (Taş Medrese)",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "Eşrefoğlu Süleyman Bey Camii (1296-1299) ile çağdaş olduğu düşünülür; H. 771 / M. 1369-70 yenilemesi",
+  "endowment": "Kitapta belirtilmemiştir; H. 771 / M. 1369-70 yenilemesi Halil oğlu Emir İsmail Ağa (Aka) tarafından yapılmıştır",
+  "summary": "Beyşehir'de Eşrefoğlu Süleyman Bey Külliyesi içinde, 1369-70'te Emir İsmail Ağa'nın yenilettiği açık avlulu, iki eyvanlı medrese.",
+  "history": "Medrese, Pisidya bölgesinde Selçuklu çağında bir uç beyliği olarak kurulan Eşrefoğulları'nın başkenti Beyşehir'dedir. Bugün yalnız kale kapısı ayakta kalan İçerişehir'in merkezinde, Eşrefoğlu Süleyman Bey Külliyesi içinde, Seyfeddin Süleyman Bey Camii'nin (1299) hemen batısında yer alır. Taçkapısındaki kitâbeye göre Halil oğlu Emir İsmail Ağa (Aka) tarafından H. 771 / M. 1369-70'te yenilenmiştir.\n\nAçık avlulu, iki eyvanlı medresenin taçkapısı ve güneybatıdaki türbesi dışındaki bölümleri bugünkü durumlarını restorasyon ve rekonstrüksiyonlarla almıştır. Moloz taş örgülü duvarlar dış cephelerde kesme taş kaplıdır. Doğu cephede orta akstan yaklaşık 1,5 m güneye kaydırılan taçkapı, dörder sıra stilize bitkisel bordürü ve sivri kavsara kuşatma kemeriyle Eşrefoğlu Süleyman Bey Camii taçkapısına yakın benzerlik gösterir.\n\nDoğu-batı doğrultusunda kareye yakın dikdörtgen bir alanı kaplayan medrese tam simetrik değildir. Beşik tonozlu eyvanla girilen avlu üç yönden revaklarla çevrilidir ve ortasında bir su ögesi bulunur. Avlunun kuzey ve güney kanatlarında üçer, girişin iki yanında birer olmak üzere farklı büyüklükte sekiz öğrenci hücresi vardır.\n\nTaçkapı kompozisyonuna göre 1296-1299 tarihli camiyle çağdaş olduğu düşünülen medrese, mevcut kitâbeye göre ilk inşasından yaklaşık yarım asır sonra onarım görmüştür. Bugün İlhanlı dönemindeki onarımın patronu Emir İsmail Ağa'nın adıyla anılır. Selçuklu ve Beylikler çağı medreselerinin genel karakterini yansıtan yapının en yakın benzeri Karaman'daki Hatuniye Medresesi'dir (1382).",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-ismail-aga-madrasa/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-ismail-aga-madrasa/courtyard.jpg",
+      "alt": "Avlu: iki yanda koyu kesme taştan sivri kemerli revaklar ve sütunlar, ortada genç bir ağaç ve zeminde dikdörtgen çukur, karşıda taş cephe",
+      "description": "Revaklı avlu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-ismail-aga-madrasa/aerial-view.jpg",
+      "alt": "Gün batımında havadan görünüm: önde kubbeli taş medrese, arkasında kurşun çatılı Eşrefoğlu Camii, konik külahlar ve minare; uzakta dağlar",
+      "description": "Medrese ve Eşrefoğlu Camii",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-ismail-aga-madrasa/arcade.jpg",
+      "alt": "Revak: açık renkli taş kemer taşlarıyla çevrili sivri kemerler, kalın taş sütunlar ve aralarında ahşap gergi",
+      "description": "Revak kemerleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "arcade",
+      "image": "/images/konya-beysehir-ismail-aga-madrasa/courtyard.jpg",
+      "x": 15,
+      "y": 55,
+      "title": "Revaklar",
+      "text": "Beşik tonozlu eyvanla girilen avlu üç yönden revaklarla çevrilidir.",
+      "sourceId": "inv-p115"
+    },
+    {
+      "id": "water",
+      "image": "/images/konya-beysehir-ismail-aga-madrasa/courtyard.jpg",
+      "x": 50,
+      "y": 87,
+      "title": "Su ögesi",
+      "text": "Avlunun ortasında bir su ögesi bulunmaktadır.",
+      "sourceId": "inv-p115"
+    },
+    {
+      "id": "mosque",
+      "image": "/images/konya-beysehir-ismail-aga-madrasa/aerial-view.jpg",
+      "x": 55,
+      "y": 57,
+      "title": "Eşrefoğlu Süleyman Bey Camii",
+      "text": "Medrese, Seyfeddin Süleyman Bey Camii'nin (1299) hemen batısında yer alır.",
+      "sourceId": "inv-p113"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medreseyi H. 771 / M. 1369-70'te kim yenilemiştir?",
+      "options": [
+        "Eşrefoğlu Süleyman Bey",
+        "Halil oğlu Emir İsmail Ağa",
+        "Sahip Ata Fahreddîn Ali",
+        "Celaleddin Karatay"
+      ],
+      "correct": 1,
+      "description": "Taçkapı kitâbesine göre medrese Halil oğlu Emir İsmail Ağa (Aka) tarafından yenilenmiştir.",
+      "sourceId": "inv-p113"
+    },
+    {
+      "question": "Medresede kaç öğrenci hücresi vardır?",
+      "options": [
+        "Dört",
+        "Altı",
+        "Sekiz",
+        "On iki"
+      ],
+      "correct": 2,
+      "description": "Kuzey ve güney kanatlarda üçer, girişin iki yanında birer olmak üzere farklı büyüklükte sekiz öğrenci hücresi vardır.",
+      "sourceId": "inv-p115"
+    },
+    {
+      "question": "Yapının en yakın benzeri olarak hangi medrese gösterilir?",
+      "options": [
+        "Karaman Hatuniye Medresesi",
+        "Karatay Medresesi",
+        "Sırçalı Medrese",
+        "Akşehir Taş Medrese"
+      ],
+      "correct": 0,
+      "description": "Yapının en yakın benzeri Karaman'daki Hatuniye Medresesi'dir (1382).",
+      "sourceId": "inv-p115"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p113",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"İsmail Ağa Medresesi (Taş Medrese)\"",
+      "page": "113"
+    },
+    {
+      "id": "inv-p115",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"İsmail Ağa Medresesi (Taş Medrese)\"",
+      "page": "115"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

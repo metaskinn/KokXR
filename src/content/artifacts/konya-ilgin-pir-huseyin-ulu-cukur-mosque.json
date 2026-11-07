@@ -1,0 +1,100 @@
+{
+  "id": "konya-ilgin-pir-huseyin-ulu-cukur-mosque",
+  "name": "Pir Hüseyin (Ulu - Çukur) Camii",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Karamanoğulları · H. 826 / M. 1422",
+  "endowment": "Banisi Turgut oğlu Pir Hüseyin Bey; 23 Şevval 826 tarihli vakfiye",
+  "summary": "Ilgın’ın çarşı içindeki ulu camisi, zeminden aşağıda kalması nedeniyle Çukur Camii adıyla da bilinir.",
+  "history": "Cami, Ilgın merkezinde çarşı içindeki kendi adıyla anılan mahallededir. Zeminden 1,5 metre aşağıda kaldığı için halk arasında Çukur Camii denir. İnşa kitabesi günümüze gelmemiştir. Vakıflar Genel Müdürlüğündeki 23 Şevval 826 / M. 1422 tarihli vakfiye, yapının Karamanoğulları döneminde Turgut oğlu Pir Hüseyin Bey tarafından 1422’de yaptırıldığını gösterir. Vakfiyede Ilgın ve başka yerlerde pek çok gelir kaynağı ayrılmıştır.\n\nEski hâlinden az unsur kalan yapı, 2015–2022 arasında Vakıflar Genel Müdürlüğü restorasyonuyla aslına uygun biçimde yeniden inşa edilmiştir. Enine gelişen dikdörtgen planlı camide mihrap önü kubbesi vardır. Kuzeybatı minaresi kare prizmal kaideli ve silindirik gövdelidir. Kitap, planını Konya Alaaddin Camii’ne benzetir ve yapıyı Ilgın’ın ulu camisi olarak tanımlar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-pir-huseyin-ulu-cukur-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-pir-huseyin-ulu-cukur-mosque/exterior.jpg",
+      "alt": "Taş caminin dış cephesi, yüksek külahlı mihrap önü örtüsü ve soldaki minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-pir-huseyin-ulu-cukur-mosque/prayer-hall.jpg",
+      "alt": "Açık renkli sütunlara oturan tuğla kemerlerle bölünmüş halılı harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-ilgin-pir-huseyin-ulu-cukur-mosque/exterior.jpg",
+      "x": 59,
+      "y": 29,
+      "title": "Mihrap önü örtüsü",
+      "text": "Enine dikdörtgen planlı caminin mihrap önü kubbelidir.",
+      "sourceId": "inv-p449"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-ilgin-pir-huseyin-ulu-cukur-mosque/exterior.jpg",
+      "x": 7,
+      "y": 29,
+      "title": "Minare",
+      "text": "Kuzeybatıdaki minare kare prizmal kaideli ve silindirik gövdelidir.",
+      "sourceId": "inv-p449"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çukur Camii adı neden verilmiştir?",
+      "options": [
+        "Zeminden 1,5 metre aşağıda kaldığı için",
+        "Avlusunda kuyu olduğu için",
+        "Bir vadide bulunduğu için",
+        "Kubbesi olmadığı için"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Zeminden 1,5 metre aşağıda kaldığı için.",
+      "sourceId": "inv-p448"
+    },
+    {
+      "question": "Yapının banisi kimdir?",
+      "options": [
+        "Emir İshak Bey",
+        "Turgut oğlu Pir Hüseyin Bey",
+        "Konyalı Kulu oğlu Ferruh Şah",
+        "Kemal oğlu İsmail Fakih"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Turgut oğlu Pir Hüseyin Bey.",
+      "sourceId": "inv-p448"
+    },
+    {
+      "question": "Pir Hüseyin (Ulu - Çukur) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Ilgın",
+        "Beyşehir"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Ilgın.",
+      "sourceId": "inv-p448"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p448",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Pir Hüseyin (Ulu - Çukur) Camii\"",
+      "page": "448"
+    },
+    {
+      "id": "inv-p449",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Pir Hüseyin (Ulu - Çukur) Camii\"",
+      "page": "449"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

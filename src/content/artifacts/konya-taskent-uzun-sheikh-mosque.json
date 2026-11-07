@@ -1,0 +1,107 @@
+{
+  "id": "konya-taskent-uzun-sheikh-mosque",
+  "name": "Uzun Şeyh (Şıh) Camii",
+  "city": "Konya",
+  "district": "Taşkent",
+  "period": "Kaynaklarda Yavuz Sultan Selim dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Taşkent ilçe merkezindeki caminin inşa kitabesi yoktur.",
+  "history": "Taşkent ilçe merkezindeki caminin inşa kitabesi yoktur. Kitap kaynaklarda yapının Yavuz Sultan Selim döneminde Uzun Şıh adlı bir kişi tarafından yaptırıldığının söylendiğini aktarır. Onarım levhasında kitapta aynen “H. 1283 / M. 866” olarak verilen tarih, giriş kitabesinde H. 1337 / M. 1920 bulunur. Kuzeybatıdaki minare 1960'ta eklenmiştir. Dış duvarlar, pencereler ve çatı 1995'te yenilenmiştir. 5 Kasım 2005'te elektrik kontağı kaynaklı yangında duvar ve minare dışında tüm yapı yanmıştır. Yeniden onarılarak Ekim 2008'de ibadete açılmıştır.\n\nKitap ayrıca Uzun Şıh'ın Yavuz Sultan Selim'in otağındaki gizlenmiş Kur'an'ı fark ettiğini, sefer için zafer müjdesi verdiğini ve seferden sonra memleketinde cami yapılmasını istediğini anlatan bir rivayet aktarır. Bu anlatımda cami padişahın emriyle yaptırılır.\n\nEğimli arazideki yapı derinlemesine dikdörtgen planlı, çok destekli ve kırma çatılıdır. Duvarlar ahşap hatıllı moloz taştır; doğu cephesi arazi kotu nedeniyle büyük ölçüde sağırdır. Batı cephesinin kuzey köşesinden girilen harim mihraba dik altı sahına ayrılır. Ahşap destekli kirişler üst örtüyü taşır. Mihrap önündeki iki sütunun başlığı mukarnaslıdır. Kuzeyde U biçimli ahşap mahfil doğu ve batıya uzanır. Kıble duvarındaki kesme taş mihrap dikdörtgen çerçeveli ve yarım daire planlıdır. Sağdaki dokuz basamaklı ahşap minberin kafes ve ajurlu korkulukları, çakma kündekâri altı kollu yıldızları, gül ve lale motifleri vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-taskent-uzun-sheikh-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-taskent-uzun-sheikh-mosque/aerial-view.jpg",
+      "alt": "Yamaç yerleşiminde büyük kırma çatılı cami ve yanındaki minare",
+      "description": "Yamaç yerleşiminde büyük kırma çatılı cami ve yanındaki minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-taskent-uzun-sheikh-mosque/prayer-hall.jpg",
+      "alt": "Yeşil halılı harimde çok sayıda ahşap direk ve bezemeli ahşap tavan",
+      "description": "Yeşil halılı harimde çok sayıda ahşap direk ve bezemeli ahşap tavan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-taskent-uzun-sheikh-mosque/prayer-hall.jpg",
+      "x": 29,
+      "y": 65,
+      "title": "Ahşap destekler",
+      "text": "Harim mihraba dik altı sahına ayrılmıştır.",
+      "sourceId": "inv-p480"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-taskent-uzun-sheikh-mosque/prayer-hall.jpg",
+      "x": 37,
+      "y": 23,
+      "title": "Ahşap kirişler",
+      "text": "Üst örtüyü ahşap desteklerin taşıdığı ahşap kirişler taşır.",
+      "sourceId": "inv-p480"
+    }
+  ],
+  "test": [
+    {
+      "question": "Uzun Şeyh (Şıh) Camii hangi ilçededir?",
+      "options": [
+        "Taşkent",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Uzun Şeyh (Şıh) Camii, Konya'nın Taşkent ilçesindedir.",
+      "sourceId": "inv-p478"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "Üç",
+        "Altı",
+        "Dört",
+        "Beş"
+      ],
+      "correct": 1,
+      "description": "Altı.",
+      "sourceId": "inv-p480"
+    },
+    {
+      "question": "Yangından sonra cami ne zaman yeniden ibadete açılmıştır?",
+      "options": [
+        "Mart 1957",
+        "Ocak 1914",
+        "Mayıs 1720",
+        "Ekim 2008"
+      ],
+      "correct": 3,
+      "description": "Ekim 2008.",
+      "sourceId": "inv-p479"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p478",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Taşkent, \"Uzun Şeyh (Şıh) Camii\"",
+      "page": "478"
+    },
+    {
+      "id": "inv-p479",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Taşkent, \"Uzun Şeyh (Şıh) Camii\"",
+      "page": "479"
+    },
+    {
+      "id": "inv-p480",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Taşkent, \"Uzun Şeyh (Şıh) Camii\"",
+      "page": "480"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

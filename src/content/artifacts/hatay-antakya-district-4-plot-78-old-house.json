@@ -1,0 +1,102 @@
+{
+  "id": "hatay-antakya-district-4-plot-78-old-house",
+  "name": "4. Mıntıka 78 Parsel Eski Ev",
+  "district": "Antakya",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "4. Mıntıka 78 Parsel Eski Ev, Antakya’da L planlı avlu düzenine sahip geleneksel bir sivil mimari örneğidir.",
+  "history": "Yapı Antakya 4. Mıntıka Mahallesi 78 parseldedir. Geleneksel Hatay sivil mimarisi örneği olan evin avlusuna güneydoğudan ahşap lentolu kapıyla girilir. L tipi avlulu planda, güneybatı ve kuzeybatı yönlerinde toplam dört oda vardır. Ahşap asma çatı kiremitle örtülüdür.\n\nGüneybatı cephe 40 Yıllık Türk Yurdu Caddesi’ne, güneydoğu cephe Kelebek Sokağı’na bakar. Güneybatıda geçmeli metal korkuluklu üç dikdörtgen pencere bulunur. Sağ köşedeki taş kemerli çeşme kullanılmamaktadır. Girişin bulunduğu güneydoğu cephede de geçmeli metal korkuluklu bir dikdörtgen pencere vardır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-district-4-plot-78-old-house/street-corner.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-district-4-plot-78-old-house/street-corner.jpg",
+      "alt": "Dar sokak köşesinde taş duvarlı kiremit çatılı ev, parmaklıklı pencereler ve köşede geniş kemerli kapalı niş",
+      "description": "Dar sokak köşesinde taş duvarlı kiremit çatılı ev, parmaklıklı pencereler ve köşede geniş kemerli kapalı niş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-district-4-plot-78-old-house/courtyard.jpg",
+      "alt": "Taş döşeli iç avluda masa ve sandalyeler, solda büyük pencereler ve çevrede ahşap ayrıntılı cepheler",
+      "description": "Taş döşeli iç avluda masa ve sandalyeler, solda büyük pencereler ve çevrede ahşap ayrıntılı cepheler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-district-4-plot-78-old-house/street-corner.jpg",
+      "x": 57,
+      "y": 65,
+      "title": "Taş kemerli çeşme",
+      "text": "Güneybatı cephenin sağ köşesindeki taş kemerli çeşmenin kullanılmadığı belirtilir.",
+      "sourceId": "inv-p485"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-district-4-plot-78-old-house/street-corner.jpg",
+      "x": 29,
+      "y": 61,
+      "title": "Metal korkuluklu pencereler",
+      "text": "Güneybatı cephede metal korkuluklu üç dikdörtgen pencere bulunur.",
+      "sourceId": "inv-p485"
+    }
+  ],
+  "test": [
+    {
+      "question": "4. Mıntıka 78 Parsel Eski Ev kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Arsuz",
+        "Samandağ",
+        "Antakya"
+      ],
+      "correct": 3,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p488"
+    },
+    {
+      "question": "Konutun avlulu planı hangi biçimdedir?",
+      "options": [
+        "L tipi",
+        "Dairesel",
+        "Sekizgen",
+        "Üçgen"
+      ],
+      "correct": 0,
+      "description": "Kitap avlulu yapının L tipi plana sahip olduğunu belirtir.",
+      "sourceId": "inv-p485"
+    },
+    {
+      "question": "Yapıda toplam kaç oda vardır?",
+      "options": [
+        "Bir",
+        "Dört",
+        "Yedi",
+        "On iki"
+      ],
+      "correct": 1,
+      "description": "Güneybatı ve kuzeybatı yönlerinde toplam dört oda bulunur.",
+      "sourceId": "inv-p485"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p485",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"4. Mıntıka 78 Parsel Eski Ev\"",
+      "page": "485"
+    },
+    {
+      "id": "inv-p488",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"4. Mıntıka 78 Parsel Eski Ev\"",
+      "page": "488"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "konya-aksehir-cinaralti-mosque",
+  "name": "Çınaraltı Camii",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Mevcut yapının tarihi kitapta belirtilmemiştir; yerindeki eski cami H. 992 / M. 1584 tarihli vakıf defterinde geçer",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Önündeki büyük çınardan adını alan Akşehir'deki cami, Seyyid Necmeddin'in yaptırdığı eski caminin yerine mahalleli tarafından inşa edilmiştir.",
+  "history": "Cami, Akşehir Merkez Anıt Mahallesi'ndedir ve adını önünde yükselen büyük çınardan alır. Mevcut kaynaklardan ve III. Sultan Murat zamanında düzenlenen H. 992 / M. 1584 tarihli vakıf defterindeki kayıtlardan, caminin yerinde Seyyid Mahmut Hayrani'nin oğlu Seyyid Necmeddin'in yaptırdığı bir cami bulunduğu öğrenilir. Zamanla harap olan bu yapı mahalle sakinlerince yıkılarak Çınaraltı Camii yaptırılmıştır.\n\nDıştan dikdörtgen planlı cami kırma çatıyla örtülüdür; yakın zamanda bir de minare eklenmiştir. Duvarlarda taş, tuğla ve ahşap kullanılmıştır. Sokağa bakan batı cephenin alt kısımlarında taş, üstte yer yer tuğla görülür; bu cephede altta dört dikdörtgen pencere vardır, üstte güneybatı kısım sivri kemerli sağır nişlerle hareketlendirilmiştir. Harim derinlemesine dikdörtgen planlıdır ve kıble duvarının ortasındaki mihrap sade tutulmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-cinaralti-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-cinaralti-mosque/exterior.jpg",
+      "alt": "Taş alt duvarlı, ahşap çerçeveli üst katlı ve kiremit kırma çatılı köşe yapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-cinaralti-mosque/plane-tree.jpg",
+      "alt": "Kalın gövdeli çınar ağacı, arkasında caminin girişi ve oturma bankları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-cinaralti-mosque/aerial-view.jpg",
+      "alt": "Dağ eteğindeki kiremit çatılı Akşehir evleri arasında caminin çatısı ve ilerideki minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-cinaralti-mosque/interior.jpg",
+      "alt": "Kırmızı halılı harimde beyaz direkler, ahşap korkuluklu mahfil ve karşıda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-cinaralti-mosque/plane-tree.jpg",
+      "x": 25,
+      "y": 50,
+      "title": "Büyük çınar",
+      "text": "Cami adını önünde yükselen büyük çınardan alır.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-cinaralti-mosque/exterior.jpg",
+      "x": 33,
+      "y": 52,
+      "title": "Taş ve tuğla duvarlar",
+      "text": "Caminin duvarlarında taş, tuğla ve ahşap kullanılmıştır; cephelerin alt kısmında taş görülür.",
+      "sourceId": "inv-p326"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami adını nereden alır?",
+      "options": [
+        "Bir bâniden",
+        "Önündeki büyük çınardan",
+        "Mahallenin adından",
+        "Bir çeşmeden"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Önündeki büyük çınardan.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "question": "Yerindeki eski camiyi kim yaptırmıştır?",
+      "options": [
+        "Seyyid Necmeddin",
+        "Hasan Paşa",
+        "Ferruh Şah",
+        "Ambardar Kerim Ağa"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Seyyid Necmeddin.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "question": "Eski caminin kaydı hangi padişah döneminde düzenlenen vakıf defterinde geçer?",
+      "options": [
+        "Fatih Sultan Mehmet",
+        "II. Abdülhamit",
+        "III. Sultan Murat",
+        "Yavuz Sultan Selim"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: III. Sultan Murat.",
+      "sourceId": "inv-p326"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p326",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Çınaraltı Camii\"",
+      "page": "326"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

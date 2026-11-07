@@ -1,0 +1,104 @@
+{
+  "id": "konya-meram-tarhana-masjid",
+  "name": "Tarhana Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Mimari özelliklerine göre XX. yüzyıl başları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hacı Fettah Mahallesi’ndeki Tarhana Mescidi, iki ahşap direkli ve ahşap tavanlı harimi olan küçük bir mahalle mescididir.",
+  "history": "Mescit, Meram, Hacı Fettah Mahallesi, Tahtatepen Sokak üzerindedir. Kitâbesi yoktur; mimari özelliklerine göre XX. yüzyıl başlarına tarihlendirilebilir. Vakıflar Genel Müdürlüğü tarafından 2007’de onarılmıştır.\n\nDikdörtgen planlı mescit kırma çatıyla örtülüdür. Batı cephesi imam evine bitişiktir, güney cephesi sağırdır. Harime kuzey cephedeki kapıdan girilir. Merkezde iki ahşap direğin taşıdığı ahşap tavanlı harimin kuzeyinde mahfil, kıble duvarında mihrap bulunur. Mihrap ahşap kaplamalı ve dikdörtgen formludur; bordürleri bitkisel süslemelidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-tarhana-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-tarhana-masjid/exterior.jpg",
+      "alt": "Turuncu sıvalı tek katlı yapı, parmaklıklı pencere, mavi çift kanatlı kapı ve geniş saçak",
+      "description": "Turuncu sıvalı tek katlı yapı, parmaklıklı pencere, mavi çift kanatlı kapı ve geniş saçak",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-tarhana-masjid/window.jpg",
+      "alt": "Turuncu sıvalı duvarda mavi çerçeveli, demir parmaklıklı uzun pencere",
+      "description": "Turuncu sıvalı duvarda mavi çerçeveli, demir parmaklıklı uzun pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-tarhana-masjid/door.jpg",
+      "alt": "Üstünde mahalle tabelası bulunan mavi boyalı çift kanatlı ahşap kapı",
+      "description": "Üstünde mahalle tabelası bulunan mavi boyalı çift kanatlı ahşap kapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-tarhana-masjid/door.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Giriş kapısı",
+      "text": "Harime kuzey cephedeki kapıdan girilir.",
+      "sourceId": "inv-p145"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-tarhana-masjid/exterior.jpg",
+      "x": 50,
+      "y": 12,
+      "title": "Çatı",
+      "text": "Mescit kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p145"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi yıl onarılmıştır?",
+      "options": [
+        "1991",
+        "2019",
+        "2007",
+        "1962"
+      ],
+      "correct": 2,
+      "description": "Vakıflar Genel Müdürlüğü mescidi 2007’de onarmıştır.",
+      "sourceId": "inv-p145"
+    },
+    {
+      "question": "Mescidin batı cephesi neye bitişiktir?",
+      "options": [
+        "Medreseye",
+        "İmam evine",
+        "Çeşmeye",
+        "Türbeye"
+      ],
+      "correct": 1,
+      "description": "Batı cephesi imam evi ile bitişiktir.",
+      "sourceId": "inv-p145"
+    },
+    {
+      "question": "Harimin tavanını kaç ahşap direk taşır?",
+      "options": [
+        "Altı",
+        "Dört",
+        "Sekiz",
+        "İki"
+      ],
+      "correct": 3,
+      "description": "Merkezde iki ahşap direk ahşap tavanı taşır.",
+      "sourceId": "inv-p145"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p145",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Tarhana Mescidi\"",
+      "page": "145"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

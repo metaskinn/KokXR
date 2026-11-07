@@ -1,0 +1,109 @@
+{
+  "id": "konya-meram-fahrunnisa-caybasi-masjid-and-tomb",
+  "name": "Fahrünnisa (Çaybaşı) Mescit ve Türbesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Fahrünnisa Hatun hatırası; kitapta onarım H. 1342 / M. 1925",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Çaybaşı’ndaki mescit ve türbe, Mevlâna’nın müridelerinden Nizam Hatun’un Fahrünnisa adıyla yaşatılan hatırasını taşır.",
+  "history": "Yapı, Meram, Uluırmak Mahallesi, Çaybaşı Caddesi’ndedir. Konya’da doğan ve Hızır Bey’in kızı olan Nizam Hatun, Mevlâna’nın sadık müridelerindendir. İslamiyet’e bağlılığı ve faziletleri nedeniyle kadınlığın övüncü anlamındaki Fahrünnisa lakabıyla anılmıştır. Vefatında Çaybaşı’nda adını taşıyan mahalledeki türbesine defnedilmiş; yanına aynı adla küçük bir mescit ve zaviye yapılmıştır.\n\nZaman içinde cami ve türbe onarılmıştır. Harim girişindeki kitâbede inşa tarihi 1342 olarak yazılır; kitap esaslı onarımı H. 1342 / M. 1925 diye verir. Türbe aynı dönemde onarılmamış ve hazire biçimine dönüşmüştür. İbrahim Hakkı Konyalı’nın ahşap sandukalı olarak anlattığı mezarın yerinde bugün 174 cm uzunluğunda yatay bir taş bulunur. Taşın üç yüzündeki üçer satırlık kitâbeler besmele, ayetler, Fahrünnisa Hatun’un kimlik bilgileri ve ölüm tarihini içerir.\n\nCami dıştan kareye yakın dikdörtgen planlı ve kırma çatılıdır; harimi içten basık kubbeyle örtülüdür. Kıble duvarındaki yarım daire planlı ve yarım kubbe kavsaralı mihrapta perde motifi bulunur. Güneybatıdaki ahşap minber yakın zamanda eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-fahrunnisa-caybasi-masjid-and-tomb/entrance.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-fahrunnisa-caybasi-masjid-and-tomb/entrance.jpg",
+      "alt": "Bahçe duvarı ve demir kapı arkasında beyaz sıvalı, kiremit çatılı mescit",
+      "description": "Bahçe duvarı ve demir kapı arkasında beyaz sıvalı, kiremit çatılı mescit",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-fahrunnisa-caybasi-masjid-and-tomb/garden-view.jpg",
+      "alt": "Apartmanlar arasındaki bahçede kiremit çatılı mescit ve küçük ek yapı",
+      "description": "Apartmanlar arasındaki bahçede kiremit çatılı mescit ve küçük ek yapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-fahrunnisa-caybasi-masjid-and-tomb/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde beyaz mihrap, ahşap minber, pencereler ve duvar levhaları",
+      "description": "Mavi halılı harimde beyaz mihrap, ahşap minber, pencereler ve duvar levhaları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-fahrunnisa-caybasi-masjid-and-tomb/entrance.jpg",
+      "x": 47,
+      "y": 27,
+      "title": "Kırma çatı",
+      "text": "Cami dıştan kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-fahrunnisa-caybasi-masjid-and-tomb/prayer-hall.jpg",
+      "x": 52,
+      "y": 51,
+      "title": "Mihrap",
+      "text": "Kıble duvarındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+      "sourceId": "inv-p162"
+    }
+  ],
+  "test": [
+    {
+      "question": "Fahrünnisa Hatun’un asıl adı nedir?",
+      "options": [
+        "Devlet Hatun",
+        "Nizam Hatun",
+        "Hüsnüşah Hatun",
+        "Sitte Hatun"
+      ],
+      "correct": 1,
+      "description": "Kitap asıl adını Nizam Hatun olarak verir.",
+      "sourceId": "inv-p159"
+    },
+    {
+      "question": "Fahrünnisa Hatun kimin müridelerindendir?",
+      "options": [
+        "Nasuh Bey",
+        "Erdemşah",
+        "Kadı Mürsel",
+        "Mevlâna"
+      ],
+      "correct": 3,
+      "description": "Fahrünnisa Hatun Mevlâna’nın sadık müridelerinden biri olarak anlatılır.",
+      "sourceId": "inv-p159"
+    },
+    {
+      "question": "Mihrap nişinde hangi motif yer alır?",
+      "options": [
+        "Balıksırtı",
+        "Çift başlı kartal",
+        "Perde",
+        "Çarkıfelek"
+      ],
+      "correct": 2,
+      "description": "Kitap mihrap nişinde perde motifi bulunduğunu belirtir.",
+      "sourceId": "inv-p162"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p159",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Fahrünnisa (Çaybaşı) Mescit ve Türbesi\"",
+      "page": "159"
+    },
+    {
+      "id": "inv-p162",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Fahrünnisa (Çaybaşı) Mescit ve Türbesi\"",
+      "page": "162"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

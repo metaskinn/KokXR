@@ -1,0 +1,113 @@
+{
+  "id": "konya-karatay-kemaliye-kucuk-karatay-madrasa",
+  "name": "Kemaliye (Küçük Karatay) Medresesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Anadolu Selçuklu · muhtemelen XIII. yüzyılın ikinci çeyreği",
+  "endowment": "Banisi sipehsâlar Kemaleddin Rumtaş (Turumtaş)",
+  "summary": "Kemaleddin Rumtaş’ın yaptırdığı Selçuklu medresesinden günümüze yalnız çini süslemeli mescit eyvanı kalmıştır.",
+  "history": "“Kemaliye” ya da “Küçük Karatay” olarak bilinen Selçuklu devri medresesinden günümüze gelebilen tek eyvan kalıntısı, Karatay, Ankara Caddesi üzerinde, Kız Öğretmen Okulu’nun (Konya Büyükşehir Belediyesi Taş Bina) güneybatı köşesindedir.\n\nMedreseyi, Selçuklu Devleti’nde sipehsâlarlık (ordu komutanlığı) yapmış Kemaleddin Rumtaş (Turumtaş) yaptırmıştır. Hemen karşısındaki, ağabeyi Emir Celaleddin Karatay’a ait (Büyük) Karatay Medresesi’nin (1251) vakfiyesindeki yer tanımına göre, Karatay Medresesi’nden önce ve muhtemelen XIII. yüzyılın ikinci çeyreğinde inşa edilmiştir. Alâeddin Tepesi’nden çekilmiş XX. yüzyıl başlarına ait bir fotoğrafta, bugünkü eyvanın önünde batıya uzanan dikdörtgen bir avlu ve çevresinde sıralanan kerpiçten tek katlı medrese odaları görülür.\n\nXIX. yüzyılın sonlarında medresenin müderrisliği Konya Mevlevî Dergâhı’na geçmiş, Postnişin Abdülvahid Çelebi’nin (1858-1907) müderrisliği sırasında metruk öğrenci hücreleri yenilenmiştir. 1939’da Ankara Caddesi’ni genişletmek için avlu bölümü tamamen kaldırılmış, yalnız yol kenarındaki ana eyvan korunmuştur.\n\nEyvan, içten 4,70 x 5,40 m ölçülerinde kareye yakın dikdörtgen planlıdır; beşik tonozu yıkılmıştır. 1,30 m kalınlığındaki kâgir duvarlar moloz ağırlıklı taş ve tuğladan örülmüştür. Güney duvarın ortasındaki yarım daire planlı mihrap nişine göre bu kalıntı medresenin mescit eyvanı olmalıdır. Duvarların üst kısmı tuğla ve çinilerle süslüdür: turkuaz sırlı dikdörtgen çinilerden diyagonal kırık hatlarla geometrik istifli bir dekorasyon oluşturulmuş, pencere kemerinin köşeliklerinde patlıcan moru ve turkuaz çini mozaik kullanılmıştır.\n\nEyvan günümüzde turistik eşya satış mağazası olarak kullanılmaktadır. Karatay kardeşlerin eğitim alanındaki katkısının göstergesi olan Karatay medreselerinden Kemaleddin Rumtaş’ınki bütünlüğünü yitirmiş olsa da, Konya’nın kaybolan Selçuklu kent dokusu ve eğitim yapıları için önemli bir arkeolojik belgedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-kemaliye-kucuk-karatay-madrasa/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-kemaliye-kucuk-karatay-madrasa/exterior.jpg",
+      "alt": "Yukarıdan görünüm: kırmızı kiremit çatılı, taş ve tuğla duvarlı küçük yapı; cephesinde vitrinler ve çini tabaklar, arkada renkli ahşap evler",
+      "description": "Eyvanın bugünkü dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-kemaliye-kucuk-karatay-madrasa/tile-decoration.jpg",
+      "alt": "İç duvar: tuğla yüzey üzerinde turkuaz dikdörtgen çinilerden çapraz kırık çizgili desen; önde rafta mavi-beyaz çini vazolar",
+      "description": "Turkuaz çinili duvar süslemesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-kemaliye-kucuk-karatay-madrasa/shop-interior.jpg",
+      "alt": "İç mekân: raflarda çini tabaklar ve vazolar, tezgâhlar; arka duvarda altıgen ızgaralı sivri kemerli pencere ve çinili duvar",
+      "description": "Mağaza olarak kullanılan iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "turquoise-tiles",
+      "image": "/images/konya-karatay-kemaliye-kucuk-karatay-madrasa/tile-decoration.jpg",
+      "x": 50,
+      "y": 22,
+      "title": "Turkuaz çinili desen",
+      "text": "Turkuaz sırlı dikdörtgen çinilerden diyagonal kırık hatlarla geometrik istifli dekorasyon oluşturulmuştur.",
+      "sourceId": "inv-p82"
+    },
+    {
+      "id": "walls",
+      "image": "/images/konya-karatay-kemaliye-kucuk-karatay-madrasa/exterior.jpg",
+      "x": 27,
+      "y": 62,
+      "title": "Taş ve tuğla duvarlar",
+      "text": "1,30 m kalınlığındaki kâgir duvarlar moloz ağırlıklı taş ve tuğladan örülmüştür.",
+      "sourceId": "inv-p82"
+    },
+    {
+      "id": "shop",
+      "image": "/images/konya-karatay-kemaliye-kucuk-karatay-madrasa/shop-interior.jpg",
+      "x": 30,
+      "y": 45,
+      "title": "Bugünkü kullanım",
+      "text": "Eyvan günümüzde turistik eşya satış mağazası olarak kullanılmaktadır.",
+      "sourceId": "inv-p82"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medreseyi kim yaptırmıştır?",
+      "options": [
+        "Celaleddin Karatay",
+        "Kemaleddin Rumtaş (Turumtaş)",
+        "Sahip Ata Fahreddin Ali",
+        "Bedreddin Müslih"
+      ],
+      "correct": 1,
+      "description": "Medreseyi Selçuklu sipehsâları Kemaleddin Rumtaş (Turumtaş) yaptırmıştır.",
+      "sourceId": "inv-p82"
+    },
+    {
+      "question": "1939’da medresenin avlu bölümü neden kaldırılmıştır?",
+      "options": [
+        "Deprem hasarı yüzünden",
+        "Yangından sonra",
+        "Ankara Caddesi’ni genişletmek için",
+        "Okul bahçesi açmak için"
+      ],
+      "correct": 2,
+      "description": "1939’da Ankara Caddesi’ni genişletmek için avlu bölümü kaldırılmış, yalnız ana eyvan korunmuştur.",
+      "sourceId": "inv-p82"
+    },
+    {
+      "question": "Kemaliye Medresesi eyvanı bugün ne olarak kullanılmaktadır?",
+      "options": [
+        "Turistik eşya satış mağazası",
+        "Mescit",
+        "Kütüphane",
+        "Müze deposu"
+      ],
+      "correct": 0,
+      "description": "Eyvan günümüzde turistik eşya satış mağazası olarak kullanılmaktadır.",
+      "sourceId": "inv-p82"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p82",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Kemaliye (Küçük Karatay) Medresesi\"",
+      "page": "82-83"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

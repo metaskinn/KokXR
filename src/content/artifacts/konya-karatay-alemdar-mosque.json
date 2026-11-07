@@ -1,0 +1,104 @@
+{
+  "id": "konya-karatay-alemdar-mosque",
+  "name": "Alemdar Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "İlk inşa 1909; 1948’de yeniden inşa",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "İlk olarak 1909’da yapılan, 1948’de yeniden inşa edilen ve minaresi 1972’de betonarme olarak yenilenen Karatay camisi.",
+  "history": "Cami, Karatay, Küçük Sinan Mahallesi, Araplar Caddesi üzerindedir. İlk inşa tarihi 1909 olan cami, özgün hâliyle günümüze ulaşamamıştır. 1948’de yeniden inşa edilen caminin minaresi 1972’de betonarme olarak yeniden yapılmıştır.\n\nCaminin doğu cephesinde depo ve gasilhane, güneybatı köşesinde abdest alma yerleri bulunur. Dikdörtgen planlı caminin üzeri kırma çatıyla örtülüdür. Harimdeki tavan göbeği ile minber, ilk yapıldığı dönemden kalmadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-alemdar-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-alemdar-mosque/aerial-view.jpg",
+      "alt": "Yüksekten görünüm: kiremit çatılı cami, yanında ince gövdeli, mavi külahlı yüksek minare; arkada apartmanlar",
+      "description": "Cami ve minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-alemdar-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: koyu ahşap kirişli tavan, ince ahşap direkler, karşıda mihrap ve sağda ahşap minber",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-alemdar-mosque/inscription.jpg",
+      "alt": "Kesme taş duvara yerleştirilmiş, iki sütun hâlinde Arapça harfli yazı bulunan mermer levha",
+      "description": "Duvardaki yazılı mermer levha",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "betonarme-minare",
+      "image": "/images/konya-karatay-alemdar-mosque/aerial-view.jpg",
+      "x": 17,
+      "y": 35,
+      "title": "Betonarme minare",
+      "text": "Caminin minaresi 1972’de betonarme olarak yeniden yapılmıştır.",
+      "sourceId": "inv-p257"
+    },
+    {
+      "id": "minber",
+      "image": "/images/konya-karatay-alemdar-mosque/prayer-hall.jpg",
+      "x": 82,
+      "y": 48,
+      "title": "Minber",
+      "text": "Harimdeki tavan göbeği ile minber ilk yapıldığı dönemden kalmadır.",
+      "sourceId": "inv-p257"
+    }
+  ],
+  "test": [
+    {
+      "question": "Alemdar Camii’nin ilk inşa tarihi nedir?",
+      "options": [
+        "1948",
+        "1972",
+        "1909",
+        "1821"
+      ],
+      "correct": 2,
+      "description": "İlk inşa tarihi 1909 olan cami özgün hâliyle günümüze ulaşamamıştır.",
+      "sourceId": "inv-p257"
+    },
+    {
+      "question": "Caminin minaresi 1972’de hangi malzemeyle yeniden yapılmıştır?",
+      "options": [
+        "Betonarme",
+        "Ahşap",
+        "Tuğla",
+        "Kesme taş"
+      ],
+      "correct": 0,
+      "description": "1972’de minare betonarme olarak yeniden yapılmıştır.",
+      "sourceId": "inv-p257"
+    },
+    {
+      "question": "Harimde ilk yapıldığı dönemden kalan öğeler hangileridir?",
+      "options": [
+        "Mihrap ve mahfil",
+        "Pencereler ve kapı",
+        "Kubbe ve kasnak",
+        "Tavan göbeği ve minber"
+      ],
+      "correct": 3,
+      "description": "Harimdeki tavan göbeği ile minber ilk yapıldığı dönemden kalmadır.",
+      "sourceId": "inv-p257"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p257",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Alemdar Camii\"",
+      "page": "257"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

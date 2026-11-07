@@ -1,0 +1,119 @@
+{
+  "id": "osmangazi-sehzade-mahmut-tomb",
+  "inventoryId": "osmangazi-sehzade-mahmut-turbesi",
+  "name": "Şehzade Mahmut Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · kitabeye göre H. 913 / M. 1507",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Muradiye türbeleri arasında, II. Bayezid'in oğlu Şehzade Mahmud için yapılan, içi firuze-lacivert ve İznik çinileriyle kaplı sekizgen türbe.",
+  "history": "Şehzade Mahmut Türbesi, Osmangazi İlçesi, Muradiye Mahallesi, Sedat Sokak No: 1/6'da, Muradiye türbeleri arasında yer alır.\n\nII. Bayezid'in, Manisa'da vali iken H. 912 / M. 1506'da vefat eden oğlu Şehzade Mahmud'un naaşı Bursa'ya getirilmiş ve üzerine bu türbe yapılmıştır. Zemini mermer ve tuğla kaplı türbede dört mermer sanduka vardır; burada Şehzade Mahmud ile H. 918 / M. 1512'de vefat eden oğulları Orhan, Emir ve Musa yatmaktadır.\n\nKaynaklara göre kündekâri kapının üstünde ahşap kabartma olarak işlenmiş iki satırlık bir kitabe bulunmakta ve H. 913 / M. 1507 tarihini taşımaktadır. Türbenin mimarı, II. Bayezid dönemi mimarlarından Yakup Şah bin Sultan Şah'tır.\n\nKitap, yapıyı Muradiye türbelerinin en batısında olarak tanımlar. Bir sıra kesme taş ve üç sıra tuğlalık duvar işçiliğiyle yapılmıştır. Bursa kemerli mermer revaktan girilen sekizgen mekânın üzeri kubbeyle örtülüdür. Çini, kalem işi ve malakâri süsleme bakımından zengin iç mekân, 2,90 m yüksekliğe kadar firuze ve lacivert altıgen çinilerle kaplıdır; mihrap ve pencerelerin çevresinde ve üst kesimlerde mavi-beyaz İznik çinileri kullanılmıştır. Rumiler, kıvrık dallar, palmetler ve vazodan çıkan çiçek demetlerinden oluşan stilize bitkisel motifler bütün yüzeyleri süsler. 2014-2015'te kapsamlı bir restorasyondan geçen türbe ziyarete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sehzade-mahmut-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sehzade-mahmut-tomb/exterior.jpg",
+      "alt": "Taş ve tuğla sıralarıyla örülmüş sekizgen türbe ve kurşun kaplı kubbesi; önünde beyaz mermer sütunlu, çatılı giriş revakı",
+      "description": "Sekizgen türbe ve mermer revak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sehzade-mahmut-tomb/interior.jpg",
+      "alt": "İç mekân: önde uzun beyaz mermer sandukalar; duvarların alt kısmı firuze ve lacivert altıgen çinilerle kaplı, üstte renkli kalem işli kemerler ve şebekeli pencereler",
+      "description": "Mermer sandukalar ve altıgen çiniler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sehzade-mahmut-tomb/dome.jpg",
+      "alt": "Kubbenin aşağıdan görünümü: ortada kırmızı, yeşil ve mavi bitkisel motiflerle bezeli yuvarlak göbek, çevresinde beyaz mukarnaslı geçişler ve renkli kemerli pencereler",
+      "description": "Kubbe ve kalem işleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "marble-portico",
+      "image": "/images/osmangazi-sehzade-mahmut-tomb/exterior.jpg",
+      "x": 64,
+      "y": 72,
+      "title": "Mermer revak",
+      "text": "Sekizgen mekâna Bursa kemerli mermer revaktan girilir.",
+      "sourceId": "inv-p165"
+    },
+    {
+      "id": "hexagonal-tiles",
+      "image": "/images/osmangazi-sehzade-mahmut-tomb/interior.jpg",
+      "x": 88,
+      "y": 50,
+      "title": "Firuze ve lacivert çiniler",
+      "text": "İç mekân 2,90 m yüksekliğe kadar firuze ve lacivert altıgen çinilerle kaplıdır.",
+      "sourceId": "inv-p165"
+    },
+    {
+      "id": "four-sarcophagi",
+      "image": "/images/osmangazi-sehzade-mahmut-tomb/interior.jpg",
+      "x": 70,
+      "y": 72,
+      "title": "Dört mermer sanduka",
+      "text": "Türbede Şehzade Mahmud ile H. 918 / M. 1512'de vefat eden oğulları Orhan, Emir ve Musa yatmaktadır.",
+      "sourceId": "inv-p164"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şehzade Mahmud nerede vali iken vefat etmiştir?",
+      "options": [
+        "Amasya",
+        "Manisa",
+        "Trabzon",
+        "Konya"
+      ],
+      "correct": 1,
+      "description": "II. Bayezid'in oğlu Şehzade Mahmud, Manisa'da vali iken H. 912 / M. 1506'da vefat etmiştir.",
+      "sourceId": "inv-p164"
+    },
+    {
+      "question": "Türbenin mimarı kimdir?",
+      "options": [
+        "Mimar Sinan",
+        "Mehmed Çavuş",
+        "Alâaddin",
+        "Yakup Şah bin Sultan Şah"
+      ],
+      "correct": 3,
+      "description": "Türbenin mimarı II. Bayezid dönemi mimarlarından Yakup Şah bin Sultan Şah'tır.",
+      "sourceId": "inv-p165"
+    },
+    {
+      "question": "Türbede kaç mermer sanduka vardır?",
+      "options": [
+        "Dört",
+        "İki",
+        "Üç",
+        "Altı"
+      ],
+      "correct": 0,
+      "description": "Zemini mermer ve tuğla kaplı türbede dört mermer sanduka bulunur.",
+      "sourceId": "inv-p164"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p164",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehzade Mahmut Türbesi\"",
+      "page": "164"
+    },
+    {
+      "id": "inv-p165",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehzade Mahmut Türbesi\"",
+      "page": "165"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

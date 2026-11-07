@@ -1,0 +1,109 @@
+{
+  "id": "konya-aksehir-sheikh-eyup-yagli-dede-tomb",
+  "name": "Şeyh Eyüp (Yağlı Dede) Türbesi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Sandukadaki tarihe göre H. 769 / M. 1367-1368",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ahşap sandukasındaki tarihe göre H. 769 / M. 1367-1368'de yapılmış olması gereken, dıştan kare, içten baldaken düzenini hatırlatan Akşehir türbesi.",
+  "history": "Şeyh Eyüp (Yağlı Dede) Türbesi, Akşehir İlçesi, Kızılca Mahallesi, Mektep Sokak'tadır. Yapının inşa kitâbesi yoktur. Türbeye ait ahşap sanduka Akşehir Müzesi'ndedir; bu sandukanın üzerindeki tarihe göre türbe H. 769 / M. 1367-1368 yıllarında yapılmış olmalıdır.\n\nŞeyh Eyyüb Efendi halk arasında Yağlı Dede olarak da anılır. Geceleri sabaha kadar ilim ve ibadetle meşgul olan bir veli olduğu için kandillerinin sabaha kadar yandığı bilinir; kandilleri için sürekli yağ istediğinden halk arasında adının \"Yağlı Dede\" olduğu rivayet edilir. Başka bir rivayete göre türbede uzun yıllar mum yakma âdeti olduğundan yerler mum artığıyla dolmuş, Akşehirliler de bu yüzden ona \"Yağlı Dede\" demiştir.\n\nKaynaklarda türbenin asıl plan şemasının baldaken tarzında olduğu ve tuğladan inşa edildiği belirtilir. Türbe bugün kare planlıdır; üst örtüsü içten kubbe, dıştan külahtır ve üzeri kurşunla kaplanmıştır. Beden duvarlarında moloz taş, kaba yonu taş ve devşirme malzeme kullanılmıştır. Türbeye kuzey cephenin ortasındaki bir kapıdan girilir.\n\nSandukanın bulunduğu üst katta dış görünüşten farklı bir düzenleme vardır: türbenin dört köşesine yerleştirilen ayaklar sivri kemerlerle birbirine bağlanmıştır. Bu da yapının daha önce baldaken plan şemasında yapıldığını akla getirir. İç mekân kubbe örtülüdür ve kubbeye geçişte pandantifler kullanılmıştır. Akşehir Müzesi'ne kaldırılan ahşap sanduka bitkisel süslemelerle bezenmiştir. Yapı, dış cephe plan algısı ile iç mekân düzenlemesi arasındaki farklılıklar bakımından önemli bir eserdir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-sheikh-eyup-yagli-dede-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-sheikh-eyup-yagli-dede-tomb/exterior.jpg",
+      "alt": "Çam ağaçları arasında, moloz ve kaba yonu taşlarla örülmüş, arasında beyaz devşirme bloklar görülen küçük kare yapı; ortada koyu renkli kapı, üstte yeşil boyalı sivri külah",
+      "description": "Türbenin giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-sheikh-eyup-yagli-dede-tomb/interior.jpg",
+      "alt": "Tuğla sivri kemerlerin çevrelediği iç mekânda yeşil, altın sırmalı yazılı örtüyle kaplı sanduka; baş tarafında sarık sarılı bir şahide, arkada dar bir pencere",
+      "description": "Sandukanın bulunduğu iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-sheikh-eyup-yagli-dede-tomb/turban-gravestone.jpg",
+      "alt": "Ağaç gövdesinin yanında, üzeri kabartma yazılı taş gövde üzerinde sarık biçimli başlıklı bir mezar taşı",
+      "description": "Türbe çevresindeki sarıklı bir mezar taşı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "entrance",
+      "image": "/images/konya-aksehir-sheikh-eyup-yagli-dede-tomb/exterior.jpg",
+      "x": 50,
+      "y": 82,
+      "title": "Giriş kapısı",
+      "text": "Türbeye kuzey cephenin ortasındaki bir kapıdan girilir; beden duvarlarında moloz taş, kaba yonu taş ve devşirme malzeme kullanılmıştır.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "id": "pointed-arches",
+      "image": "/images/konya-aksehir-sheikh-eyup-yagli-dede-tomb/interior.jpg",
+      "x": 50,
+      "y": 22,
+      "title": "Sivri kemerler",
+      "text": "İçeride dört köşedeki ayaklar sivri kemerlerle birbirine bağlanır; bu düzen yapının daha önce baldaken planlı olduğunu akla getirir.",
+      "sourceId": "inv-p196"
+    }
+  ],
+  "test": [
+    {
+      "question": "Halk arasında Şeyh Eyyüb Efendi'ye hangi ad verilir?",
+      "options": [
+        "Kazan Dede",
+        "Yağlı Dede",
+        "Kalender Baba",
+        "Kuzucu Baba"
+      ],
+      "correct": 1,
+      "description": "Şeyh Eyyüb Efendi halk arasında Yağlı Dede olarak da isimlendirilir.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "question": "Türbenin yapım tarihi hangi kaynağa göre tahmin edilir?",
+      "options": [
+        "Giriş kapısındaki inşa kitâbesine",
+        "Vakfiye kaydına",
+        "Akşehir Müzesi'ndeki ahşap sandukanın üzerindeki tarihe",
+        "Türbe duvarındaki tamir kitâbesine"
+      ],
+      "correct": 2,
+      "description": "İnşa kitâbesi yoktur; Akşehir Müzesi'ndeki ahşap sandukanın üzerindeki tarihe göre türbe H. 769 / M. 1367-1368'de yapılmış olmalıdır.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "question": "İç mekânda kubbeye geçişte ne kullanılmıştır?",
+      "options": [
+        "Pandantif",
+        "Türk üçgeni",
+        "Mukarnas",
+        "Tromp"
+      ],
+      "correct": 0,
+      "description": "Türbe iç mekânı kubbelidir ve kubbeye geçişte pandantifler kullanılmıştır.",
+      "sourceId": "inv-p197"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p196",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Şeyh Eyüp (Yağlı Dede) Türbesi\"",
+      "page": "196"
+    },
+    {
+      "id": "inv-p197",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Şeyh Eyüp (Yağlı Dede) Türbesi\"",
+      "page": "197"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

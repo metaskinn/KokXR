@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-komurculer-mosque",
+  "name": "Kömürcüler Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Geç Osmanlı; 1990'larda taşınarak bugünkü hâlini almış",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Aslen son dönem Osmanlı eseri olan, 1990'larda taşınarak bugünkü hâlini alan kare planlı, tek kubbeli cami.",
+  "history": "Cami, Meram İlçesi, Uluğbey Mahallesi, Gazezler Sokak, No. 13'te yer almaktadır. Yapının banisi ve tarihi ile ilgili hiçbir bilgi yoktur. Aslında son dönem Osmanlı eseridir; 1990'lı yıllarda taşınarak bugünkü hâlini almıştır.\n\nCami kare planlı ve tek kubbelidir; üzeri dıştan kırma çatıyla örtülüdür. İnşasında taş ve tuğla kullanılmıştır. Cephelerde aynı boyutlarda, iki katlı, düz lentolu pencereler vardır. Kubbe kasnağındaki kalem işi süslemeler Cumhuriyet dönemi özelliklerini taşır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-komurculer-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-komurculer-mosque/exterior.jpg",
+      "alt": "Açık yeşil sıvalı, kare görünümlü yapı; cephede iki sıra hâlinde dört parmaklıklı pencere ve kırmızı-beyaz tabela, çatı kenarında saçak, çatıda güneş paneli",
+      "description": "Caminin cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-komurculer-mosque/prayer-hall.jpg",
+      "alt": "Harim içi: kubbenin beyaz iç yüzeyi, solda koyu ahşap kemerli mihrap, ortada ahşap minber, sağda ahşap bölmeli giriş ve mahfile çıkan merdiven, mavi halı",
+      "description": "Harim ve kubbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "two-tier-windows",
+      "image": "/images/konya-meram-komurculer-mosque/exterior.jpg",
+      "x": 33,
+      "y": 40,
+      "title": "İki katlı pencereler",
+      "text": "Cami cephelerinde aynı boyutlarda, iki katlı, düz lentolu pencereler vardır.",
+      "sourceId": "inv-p82"
+    },
+    {
+      "id": "dome",
+      "image": "/images/konya-meram-komurculer-mosque/prayer-hall.jpg",
+      "x": 58,
+      "y": 12,
+      "title": "Kubbe",
+      "text": "Kare planlı cami tek kubbelidir; üzeri dıştan kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p82"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kömürcüler Camii hangi plana sahiptir?",
+      "options": [
+        "Dikdörtgen, üç sahınlı",
+        "Kare planlı, tek kubbeli",
+        "Sekizgen",
+        "L biçimli"
+      ],
+      "correct": 1,
+      "description": "Cami kare planlı ve tek kubbelidir.",
+      "sourceId": "inv-p82"
+    },
+    {
+      "question": "Cami 1990'lı yıllarda ne yaşamıştır?",
+      "options": [
+        "Yıkılmıştır",
+        "Müzeye dönüştürülmüştür",
+        "Taşınarak bugünkü hâlini almıştır",
+        "Minaresi eklenmiştir"
+      ],
+      "correct": 2,
+      "description": "Aslen son dönem Osmanlı eseri olan cami, 1990'lı yıllarda taşınarak bugünkü hâlini almıştır.",
+      "sourceId": "inv-p82"
+    },
+    {
+      "question": "Kubbe kasnağındaki kalem işleri hangi dönemin özelliklerini taşır?",
+      "options": [
+        "Cumhuriyet dönemi",
+        "Selçuklu dönemi",
+        "Beylikler dönemi",
+        "Klasik Osmanlı dönemi"
+      ],
+      "correct": 0,
+      "description": "Kubbe kasnağındaki kalem işi süslemeler Cumhuriyet dönemi özelliklerini taşır.",
+      "sourceId": "inv-p82"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p82",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Kömürcüler Camii\"",
+      "page": "82"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

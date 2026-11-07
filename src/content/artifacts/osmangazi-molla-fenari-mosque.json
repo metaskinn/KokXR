@@ -56,7 +56,7 @@
       "y": 50,
       "title": "Mihrap",
       "text": "Mihrap 16. yüzyıl Kütahya çinileriyle süslenmiştir; mihrap yönünde sağda, solda ve üstte üç vitraylı pencere bulunur.",
-      "sourceId": "inv-p398"
+      "sourceId": "inv-p397-398"
     },
     {
       "id": "grave",
@@ -121,6 +121,11 @@
       "id": "inv-p398",
       "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Molla Fenârî Camii ve Haziresi\"",
       "page": "398"
+    },
+    {
+      "id": "inv-p397-398",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Molla Fenârî Camii ve Haziresi\"",
+      "page": "397-398"
     },
     {
       "id": "inv-p399",

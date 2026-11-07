@@ -1,0 +1,124 @@
+{
+  "id": "osmangazi-mukrime-hatun-tomb",
+  "inventoryId": "osmangazi-mukrime-hatun-turbesi",
+  "name": "Mükrime Hatun Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Mükrime Hatun'un vefatından (1517) önce",
+  "endowment": "Şehzade Şehinşah tarafından yaptırılmıştır",
+  "summary": "Muradiye Külliyesi türbeler topluluğunda, II. Bayezid'in oğlu Şehinşah'ın eşi Mükrime Hatun'a atfedilen, zengin kalem işli kare planlı türbe.",
+  "history": "Mükrime Hatun Türbesi, Osmangazi İlçesi, Muradiye Mahallesi, Kaplıca Caddesi No: 1/5'te, Muradiye Külliyesi türbeler topluluğu içinde yer alır. Türbe, II. Bayezid'in oğlu Şehinşah'ın eşi ve Şehzade Mehmed'in annesi Mükrime Hatun'a (v. 1517) atfedilir; Şehzade Şehinşah tarafından Mükrime Hatun'un vefatından önce yaptırılmıştır. Türbede ortada Mükrime Hatun, solda Şehzade Alemşah'ın kızı Fatma Hatun (1495–1522), sağda II. Bayezid'in oğlu Şehzade Korkut'un (1465–1513) sandukaları bulunur. Şer'iye sicillerinde Şehzade Sultan Mehmed bin Sultan Şehinşah'ın validesi \"El-merhûme muhtereme Hatun\" olarak kaydedilmiştir.\n\nTürbeye doğudaki dikdörtgen planlı, sivri kemerli ve altı sıra mukarnaslı taç kapıdan girilir. Mermer söveli, basık kemerli giriş kapısı ahşap kündekâri tekniğiyle yapılmıştır; kapının iki yanında yuvarlak kemerli nişler vardır. Kare planlı türbenin beden duvarları bir sıra taş ve üç sıra tuğlayla örülmüştür. Üzeri sekizgen kasnağa oturan kurşun kaplı kubbeyle örtülü türbe on iki pencereyle aydınlanır: alt pencereler dikdörtgen, mermer söveli, ahşap çerçeveli ve sivri kemerli alınlıklı; kasnaktakiler sivri kemerli ve alçı şebekelidir. Tarihî kaynaklarda yapı için çini satın alındığına dair bir kayda rastlanmamaktadır.\n\nİç mekân zengin kalem işleriyle bezelidir. Geniş bir yazı kuşağında celi sülüs Âyetü'l-kürsî ve Fatiha suresi, kırmızı zemin üzerine işlenerek bütün duvarları dolaşır. Güney duvarındaki beş dilimli, mukarnaslı mihrap nişi kavsarasıyla birlikte zengin bezemelidir. Mihrabın üstünde dairevi ve dilimli madalyonlar içinde Âl-i İmrân suresinin 18. ayeti yer alır; girişin karşısında Rahman suresinin 26. ayeti aynı istifle yazılmıştır. Sağ duvardaki madalyonda \"Ya Rezzak\" ve \"Ya Vehhab\" isimleri altışar kez tekrarlanır.\n\nFarklı dönemlerde onarılan yapının iç mekânı, 20. yüzyıl başındaki onarımda badanayla sıvanıp basit bir kalem işiyle kaplanmış; zamanla dökülen sıvaların altından özgün süsleme izleri görünmeye başlamıştır. Türbe, 2012'de Bursa Büyükşehir Belediyesi'nin restorasyonuyla özgün kimliğine kavuşturularak ziyarete açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-mukrime-hatun-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-mukrime-hatun-tomb/exterior.jpg",
+      "alt": "Ağaçlar arasında, çimenlik alanda taş ve tuğla sıralarıyla örülmüş kare gövdeli türbe; üstte sekizgen kasnak ve kurşun kaplı kubbe",
+      "description": "Türbenin dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-mukrime-hatun-tomb/interior.jpg",
+      "alt": "İç mekân: biri kırmızı-sırma örtülü üç sanduka; duvarların üstünde kırmızı zeminli yazı kuşağı, solda mukarnaslı mihrap nişi, renkli kalem işli pencere alınlıkları",
+      "description": "Sandukalar ve kalem işli duvarlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-mukrime-hatun-tomb/mihrab.jpg",
+      "alt": "Mihrap duvarı: üstte kırmızı zemin üzerine beyaz sülüs yazı kuşağı, ortada mukarnaslı beyaz mihrap nişi ve üstünde yazılı alınlık, iki yanda kalem işli alınlıklı pencereler",
+      "description": "Mukarnaslı mihrap ve yazı kuşağı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome-drum",
+      "image": "/images/osmangazi-mukrime-hatun-tomb/exterior.jpg",
+      "x": 33,
+      "y": 30,
+      "title": "Sekizgen kasnak ve kubbe",
+      "text": "Kare planlı türbenin üzeri sekizgen kasnağa oturan, kurşun kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p160"
+    },
+    {
+      "id": "mihrab-niche",
+      "image": "/images/osmangazi-mukrime-hatun-tomb/mihrab.jpg",
+      "x": 50,
+      "y": 75,
+      "title": "Mihrap nişi",
+      "text": "Güney duvarındaki beş dilimli ve mukarnaslı mihrap nişi, kavsarasıyla birlikte oldukça zengin bezemelidir.",
+      "sourceId": "inv-p161"
+    },
+    {
+      "id": "inscription-band",
+      "image": "/images/osmangazi-mukrime-hatun-tomb/mihrab.jpg",
+      "x": 50,
+      "y": 14,
+      "title": "Yazı kuşağı",
+      "text": "Celi sülüs Âyetü'l-kürsî ve Fatiha suresi, kırmızı zemin üzerine işlenerek türbenin tüm duvarlarını dolaşır.",
+      "sourceId": "inv-p160"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe kim tarafından yaptırılmıştır?",
+      "options": [
+        "II. Bayezid",
+        "Şehzade Şehinşah",
+        "Şehzade Korkut",
+        "Yavuz Sultan Selim"
+      ],
+      "correct": 1,
+      "description": "Türbe, Mükrime Hatun'un vefatından önce eşi Şehzade Şehinşah tarafından yaptırılmıştır.",
+      "sourceId": "inv-p159"
+    },
+    {
+      "question": "İç mekândaki büyük yazı kuşağı hangi renk zemin üzerine işlenmiştir?",
+      "options": [
+        "Lacivert",
+        "Yeşil",
+        "Kırmızı",
+        "Altın"
+      ],
+      "correct": 2,
+      "description": "Âyetü'l-kürsî ve Fatiha suresi kırmızı zemin üzerine işlenerek bütün duvarları dolaşır.",
+      "sourceId": "inv-p160"
+    },
+    {
+      "question": "Türbe 2012'de kim tarafından restore edilerek ziyarete açılmıştır?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Kültür Bakanlığı",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Bursa Büyükşehir Belediyesi"
+      ],
+      "correct": 3,
+      "description": "Türbe, 2012'de Bursa Büyükşehir Belediyesi'nin restorasyonuyla özgün kimliğine kavuşturulmuştur.",
+      "sourceId": "inv-p161"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p159",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Mükrime Hatun Türbesi\"",
+      "page": "159"
+    },
+    {
+      "id": "inv-p160",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Mükrime Hatun Türbesi\"",
+      "page": "160"
+    },
+    {
+      "id": "inv-p161",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Mükrime Hatun Türbesi\"",
+      "page": "161"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

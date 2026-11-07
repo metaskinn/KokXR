@@ -1,0 +1,113 @@
+{
+  "id": "konya-meram-ihtiyarettin-masjid",
+  "name": "İhtiyarettin Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Kitâbesine göre H. 1337 / M. 1918",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kale Sokak’taki 1918 tarihli İhtiyarettin Mescidi, moloz taştan yapılmış kare planlı sade bir mescittir.",
+  "history": "Mescit, Meram, İhtiyarettin Mahallesi, Kale Sokak No. 22’dedir. Mahalle adını II. Kılıçaslan’ın Selahaddin Eyyubi’ye elçi olarak gönderdiği büyük devlet adamı, emir ve vezir İhtiyareddin Hasan’dan alır. Taş levha üzerindeki kitâbeye göre mescit H. 1337 / M. 1918’de yapılmıştır.\n\nKare planlı mescit içten düz dam, dıştan kırma çatıyla örtülüdür ve moloz taştan yapılmıştır. Cephelerinde süsleme yoktur; doğu ve batı cepheler sağırdır. Güney ve kuzey cephelerde basık kemerli ikişer pencere bulunur; harime kuzey cephenin ortasındaki basık kemerli kapıdan girilir. Kare planlı harimin duvarları süslemesizdir. Kuzeyde ahşap bir mahfil vardır. Kıble duvarının ortasında, giriş ekseninde yer alan mihrap yarım daire planlı ve yarım kavsaralıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-ihtiyarettin-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-ihtiyarettin-masjid/exterior.jpg",
+      "alt": "Ağaçlar arasında kiremit çatılı, taş duvarlı küçük mescit ve önündeki bahçe duvarı",
+      "description": "Ağaçlar arasında kiremit çatılı, taş duvarlı küçük mescit ve önündeki bahçe duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-ihtiyarettin-masjid/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde beyaz mihrap nişi, turkuaz renkli minber ve kemerli pencereler",
+      "description": "Kırmızı halılı harimde beyaz mihrap nişi, turkuaz renkli minber ve kemerli pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-ihtiyarettin-masjid/roof-aerial.jpg",
+      "alt": "Yukarıdan görülen dört yöne eğimli kiremit kırma çatı",
+      "description": "Yukarıdan görülen dört yöne eğimli kiremit kırma çatı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-ihtiyarettin-masjid/roof-aerial.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Kırma çatı",
+      "text": "Mescit dıştan kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p141"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-ihtiyarettin-masjid/prayer-hall.jpg",
+      "x": 34,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Mihrap yarım daire planlı ve yarım kavsaralıdır.",
+      "sourceId": "inv-p141"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-meram-ihtiyarettin-masjid/exterior.jpg",
+      "x": 35,
+      "y": 55,
+      "title": "Moloz taş duvar",
+      "text": "Mescit moloz taş malzemeden inşa edilmiştir.",
+      "sourceId": "inv-p141"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi yıl yapılmıştır?",
+      "options": [
+        "M. 1874",
+        "M. 1871",
+        "M. 1801",
+        "M. 1918"
+      ],
+      "correct": 3,
+      "description": "Kitâbeye göre mescit H. 1337 / M. 1918’de yapılmıştır.",
+      "sourceId": "inv-p141"
+    },
+    {
+      "question": "Mahalle adını kimden alır?",
+      "options": [
+        "İhtiyareddin Hasan’dan",
+        "Sahip Ata’dan",
+        "Kemalettin Rumtaş’tan",
+        "Abdülaziz Sultan’dan"
+      ],
+      "correct": 0,
+      "description": "Mahalle adını emir ve vezir İhtiyareddin Hasan’dan alır.",
+      "sourceId": "inv-p141"
+    },
+    {
+      "question": "Hangi cepheler sağırdır?",
+      "options": [
+        "Kuzey ve güney",
+        "Doğu ve batı",
+        "Yalnız kuzey",
+        "Yalnız güney"
+      ],
+      "correct": 1,
+      "description": "Doğu ve batı cepheler sağırdır, açıklık bulunmaz.",
+      "sourceId": "inv-p141"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p141",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"İhtiyarettin Mescidi\"",
+      "page": "141"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

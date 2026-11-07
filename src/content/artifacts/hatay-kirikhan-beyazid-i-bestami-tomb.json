@@ -1,0 +1,112 @@
+{
+  "id": "hatay-kirikhan-beyazid-i-bestami-tomb",
+  "name": "Beyazıd-ı Bestami Türbesi",
+  "district": "Kırıkhan",
+  "period": "1890",
+  "endowment": "Mustafa Şevki Paşa tarafından yaptırılmıştır",
+  "summary": "Beyazıd-ı Bestami Türbesi, Alaybeyli’de Darbısak Kalesi tepesinin güney yamacında, 1890’da yaptırılmış bir makam yapısıdır.",
+  "history": "Yapı Kırıkhan ilçesi Alaybeyli Köyü’nde, Darbısak Kalesi’nin bulunduğu tepenin ovaya bakan güney yamacındadır. Kitap, bölge halkının burayı Beyazıd-ı Bestami’nin gerçek kabri olarak benimsediğini, ancak onun doğduğu şehirde vefat edip orada defnedildiğini belirtir; Hatay’daki sandukayı makam olarak tanımlar. Vefat tarihi için 848 veya 875 seçeneklerini aktarır. Horasan erenlerinin bölgeye gelişini ve annesine bağlılığıyla ilgili anlatıları inanış ve menkıbe olarak sunar.\n\nEski Rumeli Beylerbeyi Mustafa Şevki Paşa, türbeyi 1890’da yaptırmıştır. Güneye bakan kapının alınlığında talik hatla yazılmış beş beyitlik kitabe vardır. Dikdörtgen harim beşik tonozla örtülü, mihrap duvarına paralel tek sahınlıdır. Doğu duvarındaki iki yuvarlak kemerli özgün pencere ile sonradan açılan çeyrek daire biçimli pencere içeri ışık verir. At nalı kemerli mihrap, onarım sonrasına ait mavi fayansları ve süslemeleriyle anlatılır. Yapıda dışa kapalı çilehane de bulunur.\n\nGirişteki iki sandukadan biri Mustafa Şevki Paşa’ya aittir. Harimin kuzeydoğusundaki sanduka Beyazıd-ı Bestami’ye atfedilen makamdır. Yan yana beş hücreli medresenin üç hücresi ikişer, ikisi birer pencerelidir. Hücreler beşik tonozludur; batıdakine eyvan biçimli taç kapıdan girilir. Kitap bu yöndeki iki hücrenin konut olarak kullanıldığını aktarır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-kirikhan-beyazid-i-bestami-tomb/terrace.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-kirikhan-beyazid-i-bestami-tomb/terrace.jpg",
+      "alt": "Taş döşeli geniş teras boyunca sıralanan taş yapı odaları, banklar ve küçük ağaçlar",
+      "description": "Taş döşeli geniş teras boyunca sıralanan taş yapı odaları, banklar ve küçük ağaçlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-kirikhan-beyazid-i-bestami-tomb/vaulted-entrance.jpg",
+      "alt": "Taş duvarda geniş tonozlu geçit, gerisinde merdiven ve sağda korkuluklu basamaklar",
+      "description": "Taş duvarda geniş tonozlu geçit, gerisinde merdiven ve sağda korkuluklu basamaklar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-kirikhan-beyazid-i-bestami-tomb/terrace.jpg",
+      "x": 58,
+      "y": 57,
+      "title": "Medrese hücreleri",
+      "text": "Medrese yan yana sıralanmış beş hücreden oluşur.",
+      "sourceId": "inv-p422"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-kirikhan-beyazid-i-bestami-tomb/vaulted-entrance.jpg",
+      "x": 50,
+      "y": 58,
+      "title": "Eyvan türü giriş",
+      "text": "Beşik tonozlu hücrelerden batıdakine eyvan türü taç kapıdan girilir.",
+      "sourceId": "inv-p422"
+    }
+  ],
+  "test": [
+    {
+      "question": "Beyazıd-ı Bestami Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "Arsuz",
+        "Kırıkhan"
+      ],
+      "correct": 3,
+      "description": "Türkçe adres listesinde ilçe Kırıkhan olarak verilmiştir.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "question": "Türbeyi 1890’da kim yaptırmıştır?",
+      "options": [
+        "Mustafa Şevki Paşa",
+        "Kasım Bey",
+        "Tomas Antepyan",
+        "Beşirzâde Mustafa Efendi"
+      ],
+      "correct": 0,
+      "description": "Eski Rumeli Beylerbeyi Mustafa Şevki Paşa yapıyı 1890’da yaptırmıştır.",
+      "sourceId": "inv-p422"
+    },
+    {
+      "question": "Medrese kaç hücreden oluşur?",
+      "options": [
+        "İki",
+        "Beş",
+        "Yedi",
+        "On iki"
+      ],
+      "correct": 1,
+      "description": "Medresenin yan yana sıralanmış beş hücresi vardır.",
+      "sourceId": "inv-p422"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p420",
+      "text": "Hatay Vakıf Eserleri, Kırıkhan, \"Beyazıd-ı Bestami Türbesi\"",
+      "page": "420"
+    },
+    {
+      "id": "inv-p421",
+      "text": "Hatay Vakıf Eserleri, Kırıkhan, \"Beyazıd-ı Bestami Türbesi\"",
+      "page": "421"
+    },
+    {
+      "id": "inv-p422",
+      "text": "Hatay Vakıf Eserleri, Kırıkhan, \"Beyazıd-ı Bestami Türbesi\"",
+      "page": "422"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Kırıkhan, \"Beyazıd-ı Bestami Türbesi\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

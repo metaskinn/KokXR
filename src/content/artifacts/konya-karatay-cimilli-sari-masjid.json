@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-cimilli-sari-masjid",
+  "name": "Cimilli (Sarı) Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XX. yüzyıl başı (plan ve mimari özelliklerine göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Plan ve mimari özelliklerine göre XX. yüzyıl başlarına tarihlenen, kare planlı ve dört yöne eğimli kırma çatılı mahalle mescidi.",
+  "history": "Cimilli (Sarı) Mescidi, Karatay, Sırçalı Mescit Mahallesi, Köprübaşı Caddesi üzerindedir. Mescidin ilk inşası ve banisi hakkında herhangi bir bilgi yoktur. Plan ve mimari özelliklerinden hareketle yapı XX. yüzyıl başlarına tarihlendirilmektedir.\n\nMescit kare planlıdır; üzeri içten düz dam, dıştan dört yöne eğimli kırma çatıyla kaplıdır. Yapının güney ve batı cephelerinde dikdörtgen biçimli ikişer pencere açıklığı bulunur. Mescide giriş, batı yönünde açılan bir kapıyla sağlanır. Harim sade bir düzenlemeye sahiptir: kuzeyde mahfil, kıble duvarında ise mihrap ve minber yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-cimilli-sari-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-cimilli-sari-masjid/exterior.jpg",
+      "alt": "Köşede tek katlı, kirli beyaz sıvalı yapı; alt kısmı taş kaplı, dikdörtgen pencereli iki cephe, solda kapı ve kahverengi saçaklı kırma çatı",
+      "description": "Mescidin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-cimilli-sari-masjid/mihrab-minbar.jpg",
+      "alt": "Kırmızı halılı harim; solda ahşap çerçeveli sivri kemerli mihrap, sağda geometrik ahşap işçilikli minber, üstte kristal avize",
+      "description": "Kıble duvarında mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-karatay-cimilli-sari-masjid/exterior.jpg",
+      "x": 55,
+      "y": 15,
+      "title": "Kırma çatı",
+      "text": "Mescidin üzeri içten düz dam, dıştan dört yöne eğimli kırma çatıyla kaplıdır.",
+      "sourceId": "inv-p238"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-karatay-cimilli-sari-masjid/mihrab-minbar.jpg",
+      "x": 31,
+      "y": 32,
+      "title": "Mihrap",
+      "text": "Kıble duvarında mihrap ve minber yer alır.",
+      "sourceId": "inv-p238"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/konya-karatay-cimilli-sari-masjid/mihrab-minbar.jpg",
+      "x": 70,
+      "y": 45,
+      "title": "Minber",
+      "text": "Sade düzenlemeli harimde minber kıble duvarı önündedir.",
+      "sourceId": "inv-p238"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi döneme tarihlendirilmektedir?",
+      "options": [
+        "XIII. yüzyılın ilk yarısı",
+        "XVIII. yüzyıl",
+        "XX. yüzyıl başları",
+        "XIX. yüzyıl sonu"
+      ],
+      "correct": 2,
+      "description": "İnşa bilgisi olmayan yapı, plan ve mimari özelliklerinden hareketle XX. yüzyıl başlarına tarihlendirilmektedir.",
+      "sourceId": "inv-p238"
+    },
+    {
+      "question": "Mescide hangi yönden girilir?",
+      "options": [
+        "Batı",
+        "Kuzey",
+        "Güney",
+        "Doğu"
+      ],
+      "correct": 0,
+      "description": "Mescide giriş batı yönünde açılan bir kapıyla sağlanmıştır.",
+      "sourceId": "inv-p238"
+    },
+    {
+      "question": "Harimin kuzey yönünde ne bulunur?",
+      "options": [
+        "Minber",
+        "Mihrap",
+        "Son cemaat yeri",
+        "Mahfil"
+      ],
+      "correct": 3,
+      "description": "Harimin kuzeyinde mahfil, kıble duvarında ise mihrap ve minber yer alır.",
+      "sourceId": "inv-p238"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p238",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Cimilli (Sarı) Mescidi\"",
+      "page": "238"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

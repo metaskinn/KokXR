@@ -1,0 +1,99 @@
+{
+  "id": "konya-meram-hoca-fakih-fountain",
+  "name": "Hoca Fakih Çeşmesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Kitâbesi yok; kitaba göre 1325 R. / 1909-10 selinden sonra duvarla birlikte yenilenmiş olması kuvvetle muhtemel",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Meram'da Hocafakih Caddesi'ndeki bir külliyenin kuzey duvarında, sebil ve sarnıçla birlikte yer alan, teğet kemerli nişli tek cepheli çeşme.",
+  "history": "Çeşme, Meram, Armağan Mahallesi, Hocafakih Caddesi üzerindedir. Zaman içinde tamamlanan bir yapılar grubunun elemanı olarak inşa edilmiş olup külliyenin kuzey duvarı üzerinde, bu cephedeki sebil ve sarnıçla birlikte, cephenin doğu kısmında yer alır.\n\nÇeşmenin üzerinde inşa tarihi ya da banisiyle ilgili bir bilgi yoktur. Külliyenin kuzey cephe duvarı önceden yaklaşık 10 m geride iken R. 1325 / M. 1909-10'daki selin yol açtığı tahribat sonrasında, külliyeye girişi sağlayan kapıyla birlikte yenileme ve onarım çalışmaları kapsamında bugünkü yerine alınmıştır. Bu çalışmalar sırasında çeşmenin de duvarla birlikte yenilenmiş olması kuvvetle muhtemeldir.\n\nÇeşme tipolojik olarak \"bağımsız, tek cepheli ve teğet kemerli nişli çeşmeler\" grubundandır. Yapımında Sille taşı ve Gödene taşı olmak üzere iki farklı taş kullanılmıştır. Duvardan taşırılarak duvarla aynı malzemelerle inşa edilen çeşmede farklı renkteki taşların kullanımında simetriye dikkat edildiği görülür. Yapısal olarak sağlam durumdaki çeşme kullanılmamaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-hoca-fakih-fountain/front-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-hoca-fakih-fountain/front-view.jpg",
+      "alt": "Kiremit saçaklı, iri kesme taş duvarda dışa taşkın açık renkli taş çerçeve içinde sivri uçlu kemerli derin bir niş; duvar taşlarında kırmızımsı ve açık tonlar, arkada ağaçlar",
+      "description": "Çeşmenin önden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "arched-niche",
+      "image": "/images/konya-meram-hoca-fakih-fountain/front-view.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Teğet kemerli niş",
+      "text": "Çeşme tipolojik olarak bağımsız, tek cepheli ve teğet kemerli nişli çeşmeler grubundandır.",
+      "sourceId": "inv-p231"
+    },
+    {
+      "id": "two-stones",
+      "image": "/images/konya-meram-hoca-fakih-fountain/front-view.jpg",
+      "x": 30,
+      "y": 45,
+      "title": "İki farklı taş",
+      "text": "Çeşmede Sille taşı ve Gödene taşı kullanılmış; farklı renkteki taşların kullanımında simetriye dikkat edilmiştir.",
+      "sourceId": "inv-p231"
+    },
+    {
+      "id": "north-wall",
+      "image": "/images/konya-meram-hoca-fakih-fountain/front-view.jpg",
+      "x": 86,
+      "y": 45,
+      "title": "Külliyenin kuzey duvarı",
+      "text": "Kuzey duvar, 1909-10 selinden sonra yaklaşık 10 m ileriye, bugünkü yerine alınmıştır; çeşmenin de bu sırada yenilendiği düşünülmektedir.",
+      "sourceId": "inv-p231"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşmenin yapımında hangi iki taş kullanılmıştır?",
+      "options": [
+        "Mermer ve granit",
+        "Bazalt ve tuf",
+        "Küfeki ve andezit",
+        "Sille taşı ve Gödene taşı"
+      ],
+      "correct": 3,
+      "description": "Eserin inşasında Sille taşı ve Gödene taşı olmak üzere iki farklı taş kullanılmıştır.",
+      "sourceId": "inv-p231"
+    },
+    {
+      "question": "Külliyenin kuzey duvarı hangi olaydan sonra bugünkü yerine alınmıştır?",
+      "options": [
+        "Bir depremden",
+        "R. 1325 / M. 1909-10 selinden",
+        "Bir yangından",
+        "Yol genişletmesinden"
+      ],
+      "correct": 1,
+      "description": "Kuzey cephe duvarı 1909-10'daki selin yol açtığı tahribattan sonra bugünkü konumuna alınmıştır.",
+      "sourceId": "inv-p231"
+    },
+    {
+      "question": "Çeşme hangi yapılarla birlikte külliyenin kuzey cephesinde yer alır?",
+      "options": [
+        "Sebil ve sarnıç",
+        "Hamam ve han",
+        "Medrese ve kütüphane",
+        "Minare ve şadırvan"
+      ],
+      "correct": 0,
+      "description": "Çeşme, kuzey cepheye konumlandırılmış sebil ve sarnıç yapılarıyla bir arada bulunur.",
+      "sourceId": "inv-p231"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p231",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Hoca Fakih Çeşmesi\"",
+      "page": "231"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

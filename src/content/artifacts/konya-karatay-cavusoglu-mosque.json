@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-cavusoglu-mosque",
+  "name": "Çavuşoğlu Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Cumhuriyet’in ilk yılları · 1940’ta inşa, 1949’da ibadete açıldı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "1940’ta inşa edilip 1949’da ibadete açılan, Bursa kemerli ahşap mahfilli mahalle mescidi.",
+  "history": "Cami, Karatay, Şeyh Ulema Recep Ağa Mahallesi, Şeyh Ulema Yahşi Caddesi üzerindedir. Cumhuriyet’in ilk yıllarında, 1940’ta inşa edilen yapı 1949’da ibadete açılmıştır.\n\nYapı dikdörtgen planlıdır; içten düz ahşap tavan, dıştan dört yöne eğimli kırma çatıyla örtülüdür. Kitaba göre caminin girişi kuzeybatı köşededir ve bu bölümde beden duvarı üzerinde tek şerefeli köşk tipi minare bulunur; aynı metinde yapıya girişin doğu bölümden sağlandığı da belirtilir.\n\nHarim kareye yakın dikdörtgen planlıdır. Kuzey duvarında, birbirine Bursa kemeriyle bağlanan üç ahşap direğe oturan mahfil yer alır. Kıble duvarının ortasındaki mihrap yarım daire planlıdır; sağında, güneybatı köşede ahşap minber bulunur. Yapı, Konya merkezde oldukça sık görülen mahalle mescitlerindendir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-cavusoglu-mosque/roof-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-cavusoglu-mosque/roof-view.jpg",
+      "alt": "Tepeden görünüm: dört yöne eğimli kiremit kırma çatı, köşede küçük minare külahı ve çanak anten",
+      "description": "Kırma çatının tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-cavusoglu-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi ahşap tavan, kırmızı perdeli pencereler, ortada çinili mihrap, kırmızı halı",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kirma-cati",
+      "image": "/images/konya-karatay-cavusoglu-mosque/roof-view.jpg",
+      "x": 47,
+      "y": 40,
+      "title": "Kırma çatı",
+      "text": "Yapı dıştan dört yöne eğimli kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p274"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-cavusoglu-mosque/prayer-hall.jpg",
+      "x": 56,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p274"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çavuşoğlu Camii hangi yıl ibadete açılmıştır?",
+      "options": [
+        "1940",
+        "1929",
+        "1949",
+        "1888"
+      ],
+      "correct": 2,
+      "description": "1940’ta inşa edilen yapı 1949’da ibadete açılmıştır.",
+      "sourceId": "inv-p274"
+    },
+    {
+      "question": "Mahfili taşıyan üç ahşap direk birbirine hangi kemerle bağlanır?",
+      "options": [
+        "Bursa kemeri",
+        "Sivri kemer",
+        "At nalı kemer",
+        "Basık kemer"
+      ],
+      "correct": 0,
+      "description": "Mahfil, birbirine Bursa kemeriyle bağlı üç ahşap direk üzerine oturur.",
+      "sourceId": "inv-p274"
+    },
+    {
+      "question": "Minber hangi malzemeden yapılmıştır?",
+      "options": [
+        "Mermer",
+        "Alçı",
+        "Taş",
+        "Ahşap"
+      ],
+      "correct": 3,
+      "description": "Güneybatı köşedeki minber ahşap malzemedendir.",
+      "sourceId": "inv-p274"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p274",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Çavuşoğlu Camii\"",
+      "page": "274"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

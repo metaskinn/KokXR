@@ -1,0 +1,95 @@
+{
+  "id": "hatay-iskenderun-kaptan-pasha-mosque-minaret",
+  "name": "Kaptan Paşa Camii Minaresi",
+  "district": "İskenderun",
+  "period": "Eski cami H.1280 / M.1863–1864",
+  "endowment": "Caminin Kaptan Paşa tarafından yaptırılmış olabileceği belirtilir",
+  "summary": "Kaptan Paşa Camii’nin iki renk taş sıralı eski minaresi, ahşap caminin 1969’da değiştirilmesinden sonra korunmuştur.",
+  "history": "Kitap, İskenderun’daki caminin Kırım Harbi’nin önemli komutanlarından Kaptan Paşa ile muhtemel ilişkisini aktarır; bu bağlantıyı kesin bilgi olarak vermez. H.1280 / M.1863–1864’te yapıldığı bilinen ahşap cami eskiyince 1969’da yıkılmış ve yerine betonarme kubbeli cami yapılmıştır. Eski caminin sağlam minaresi korunmuştur.\n\nYeni caminin kırkar metre yüksekliğindeki çift şerefeli iki minaresi çatlamalar nedeniyle yıkılmış, yerlerine tek şerefeli kısa bir minare yapılmıştır. Eski minare ise kare kaide üstünde yükselir. Gövdesi dönüşümlü sıralanan iki renk taşla örülmüştür. Sade şerefeyi kısa petek, konik külah ve alem izler.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-iskenderun-kaptan-pasha-mosque-minaret/old-minaret-and-mosque.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-iskenderun-kaptan-pasha-mosque-minaret/old-minaret-and-mosque.jpg",
+      "alt": "Solda iki renk taş sıralı kısa eski minare, sağda beyaz cami cephesi ve geride daha ince bir minare",
+      "description": "Solda iki renk taş sıralı kısa eski minare, sağda beyaz cami cephesi ve geride daha ince bir minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-iskenderun-kaptan-pasha-mosque-minaret/old-minaret-and-mosque.jpg",
+      "x": 20,
+      "y": 57,
+      "title": "İki renk taşlı gövde",
+      "text": "Eski minare dönüşümlü sıralanan iki renk taşla yapılmıştır.",
+      "sourceId": "inv-p396"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-iskenderun-kaptan-pasha-mosque-minaret/old-minaret-and-mosque.jpg",
+      "x": 21,
+      "y": 28,
+      "title": "Şerefe ve külah",
+      "text": "Sade şerefeden sonra kısa petek ve konik külah gelir.",
+      "sourceId": "inv-p396"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kaptan Paşa Camii Minaresi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "İskenderun",
+        "Arsuz"
+      ],
+      "correct": 2,
+      "description": "Türkçe adres listesinde ilçe İskenderun olarak verilmiştir.",
+      "sourceId": "inv-p399"
+    },
+    {
+      "question": "Eski ahşap caminin yerini betonarme yapı hangi yıl almıştır?",
+      "options": [
+        "1798",
+        "1890",
+        "2014",
+        "1969"
+      ],
+      "correct": 3,
+      "description": "Eskiyen ahşap cami 1969’da yıkılarak betonarme cami yapılmıştır.",
+      "sourceId": "inv-p396"
+    },
+    {
+      "question": "Eski minarenin kaidesi hangi biçimdedir?",
+      "options": [
+        "Kare",
+        "Daire",
+        "Üçgen",
+        "Yıldız"
+      ],
+      "correct": 0,
+      "description": "Korunan eski minare kare kaide üzerine inşa edilmiştir.",
+      "sourceId": "inv-p396"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p396",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Kaptan Paşa Camii Minaresi\"",
+      "page": "396"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Kaptan Paşa Camii Minaresi\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

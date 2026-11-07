@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-seyh-ulema-yusuf-aga-mosque",
+  "name": "Şeyh Ulema Yusuf Ağa Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XIX. yüzyıl sonu ya da XX. yüzyıl başı (mimari özelliklerine göre); 1947'de büyük ölçüde yenilenmiş",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Tavanı bütünüyle kalem işi süslemelerle bezeli, ahşap minareli, derinlemesine dikdörtgen planlı mahalle camii.",
+  "history": "Cami, Karatay, Şeyh Ulema Mahallesi'nde, Şeyh Alaman Mezarlığı'nın kuzeydoğusundadır. İlk inşası ve bânisi hakkında bilgi bulunmayan yapı, mimari özelliklerinden hareketle muhtemelen XIX. yüzyıl sonlarına ya da XX. yüzyıl başlarına tarihlendirilir. 1947'de büyük ölçüde yenilenmiş, harimdeki süslemeler Gaziantepli Müslim Gökçek adlı usta tarafından yapılmıştır. Vakıflar Bölge Müdürlüğü tarafından yakın zamanda onarılmıştır.\n\nDerinlemesine dikdörtgen planlı cami içten düz ahşap tavanla, dıştan kırma çatıyla örtülüdür; cephelerde iki sıra pencere düzeni görülür. Harim, mahfil ve minareden oluşan yapı alt seviyede kaba yonu taş, üst kısımda kerpiçle inşa edilmiştir. Güneydoğu köşedeki minare ahşaptan, yivli silindirik gövdeli ve köşk tipi şerefelidir.\n\nHarime batı cephenin kuzey köşesinden girilir. Harim tavanı bütünüyle kalem işi süslemelerle bezenmiştir: merkezde çok kollu yıldız motifinden gelişmiş, merkezden çıkan ışınlarla oluşturulmuş daire biçimli, fırfır motifli bir tavan göbeği ve çevresinde beş kuşaktan oluşan kalem işleri vardır. Kuşaklarda palmet ve rûmi motifleri, ortadaki daha geniş kuşakta bitkisel motifler görülür.\n\nKıble duvarının ortasındaki yarım daire planlı mihrap yanlardan düz silmelerle sınırlanmıştır; nişte geç dönemde yaygın olarak kullanılan perde motifi vardır. Mihrabın güneybatısında, köşedeki ahşap minberin üzeri boyalıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-seyh-ulema-yusuf-aga-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-seyh-ulema-yusuf-aga-mosque/exterior.jpg",
+      "alt": "Kiremit kırma çatılı, sarı sıvalı yapı ve önünde mavi boyalı ahşap kaplamalı bir giriş bölümü; arkada yüksek apartmanlar",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-seyh-ulema-yusuf-aga-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi boyalı iki ahşap direk arasında yanlardan silmelerle sınırlanmış mihrap, kırmızı seccade desenli halı ve pencereler",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/konya-karatay-seyh-ulema-yusuf-aga-mosque/exterior.jpg",
+      "x": 60,
+      "y": 22,
+      "title": "Kırma çatı",
+      "text": "Derinlemesine dikdörtgen planlı cami dıştan kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p279"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-karatay-seyh-ulema-yusuf-aga-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 35,
+      "title": "Mihrap",
+      "text": "Yarım daire planlı mihrap yanlardan düz silmelerle sınırlanmıştır; nişte perde motifi vardır.",
+      "sourceId": "inv-p279"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harimdeki süslemeleri yapan usta kimdir?",
+      "options": [
+        "Konyalı Hacı Mehmet",
+        "Bağdatlı İsmail Efendi",
+        "Gaziantepli Müslim Gökçek",
+        "Mimar Usta Kadı"
+      ],
+      "correct": 2,
+      "description": "Yapı 1947'de büyük ölçüde yenilenmiş, harimdeki süslemeler Gaziantepli Müslim Gökçek tarafından yapılmıştır.",
+      "sourceId": "inv-p279"
+    },
+    {
+      "question": "Caminin minaresi hangi malzemedendir?",
+      "options": [
+        "Ahşap",
+        "Kesme taş",
+        "Tuğla",
+        "Kerpiç"
+      ],
+      "correct": 0,
+      "description": "Güneydoğu köşedeki minare ahşaptan, yivli silindirik gövdeli ve köşk tipi şerefelidir.",
+      "sourceId": "inv-p279"
+    },
+    {
+      "question": "Yapı hangi yıl büyük ölçüde yenilenmiştir?",
+      "options": [
+        "1923",
+        "1958",
+        "2003",
+        "1947"
+      ],
+      "correct": 3,
+      "description": "Yapı 1947 senesinde büyük oranda yenilenmiştir.",
+      "sourceId": "inv-p279"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p279",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Şeyh Ulema Yusuf Ağa Camii\"",
+      "page": "279"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

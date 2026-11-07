@@ -1,0 +1,102 @@
+{
+  "id": "hatay-samandag-vakifli-village-house",
+  "name": "Samandağ Vakıflı Köyü Konut",
+  "district": "Samandağ",
+  "period": "20. yüzyılın ilk yılları; 1915 sonrasında",
+  "endowment": "Tomas Antepyan tarafından yaptırılmış vakıf konutu",
+  "summary": "Vakıflı Köyü’ndeki konut, Tomas Antepyan’ın 1915 sonrasında yaptırdığı, iki katlı ve bahçeli bir taş evdir.",
+  "history": "Samandağ’ın doğusundaki Vakıflı Köyü’nde bulunan vakıf konutu bahçesiyle birlikte 555 m² alana sahiptir. İki katlı yapının duvarları kaba yonu ve moloz taş, harcı topraktır; çatı ahşap beşik çatıdır. Alt katta iki oda, mutfak ve ahır; merdivenle ulaşılan üst katta iki oda ve samanlık vardır. Alt kat 93,15 m²’dir; zemini şap, tavanı ahşaptır.\n\nYerel taşın kullanıldığı duvarlar 50–60 cm kalınlığındadır. Küçük pencere açıklıklarının üzerinde ahşap hatıllar, dışa açılan ahşap kapaklar bulunur. Kitap evi 20. yüzyılın ilk yıllarına tarihler; Antepyan ailesinden Tomas Antepyan tarafından 1915 sonrasında yaptırıldığını belirtir. 1929 Fransız kadastro paftalarında izleri vardır. Vakıflar Genel Müdürlüğü 2013’te restore ederek hizmete açmıştır. Türkçe adres listesinde köy adı farklı olarak Yoğunoluk, parsel numarası 80 olarak yazılıdır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-samandag-vakifli-village-house/house-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-samandag-vakifli-village-house/house-exterior.jpg",
+      "alt": "İki katlı taş evin önünde ahşap direkler ve üst katta ahşap korkuluklu açık bölüm, kiremit çatı ve bahçe",
+      "description": "İki katlı taş evin önünde ahşap direkler ve üst katta ahşap korkuluklu açık bölüm, kiremit çatı ve bahçe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-samandag-vakifli-village-house/room.jpg",
+      "alt": "Taş duvarlı odada ahşap tavan kirişleri, yatak, dolap ve ışık alan pencere",
+      "description": "Taş duvarlı odada ahşap tavan kirişleri, yatak, dolap ve ışık alan pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-samandag-vakifli-village-house/house-exterior.jpg",
+      "x": 58,
+      "y": 58,
+      "title": "Taş duvarlar",
+      "text": "Duvarlar yerel kaba yonu ve moloz taşla, toprak harcı kullanılarak örülmüştür.",
+      "sourceId": "inv-p481"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-samandag-vakifli-village-house/house-exterior.jpg",
+      "x": 47,
+      "y": 35,
+      "title": "İki katlı konut",
+      "text": "Kitap bahçeli konutun iki katlı olduğunu belirtir.",
+      "sourceId": "inv-p481"
+    }
+  ],
+  "test": [
+    {
+      "question": "Samandağ Vakıflı Köyü Konut kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Samandağ",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 1,
+      "description": "Türkçe adres listesinde ilçe Samandağ olarak verilmiştir.",
+      "sourceId": "inv-p488"
+    },
+    {
+      "question": "Konutun banisi kimdir?",
+      "options": [
+        "Kasım Bey",
+        "Cafer Ağa",
+        "Tomas Antepyan",
+        "Mustafa Şevki Paşa"
+      ],
+      "correct": 2,
+      "description": "Konut Tomas Antepyan tarafından 1915’ten sonra yaptırılmıştır.",
+      "sourceId": "inv-p481"
+    },
+    {
+      "question": "Konut hangi yıl restore edilerek hizmete açılmıştır?",
+      "options": [
+        "1876",
+        "1936",
+        "1990",
+        "2013"
+      ],
+      "correct": 3,
+      "description": "Vakıflar Genel Müdürlüğü 2013’te restorasyonu tamamlamıştır.",
+      "sourceId": "inv-p481"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p481",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Samandağ Vakıflı Köyü Konut\"",
+      "page": "481"
+    },
+    {
+      "id": "inv-p488",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Samandağ Vakıflı Köyü Konut\"",
+      "page": "488"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

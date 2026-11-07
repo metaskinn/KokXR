@@ -1,0 +1,123 @@
+{
+  "id": "konya-meram-cemal-ali-dede-turut-tomb",
+  "name": "Cemal Ali Dede (Turut) Türbesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu · tahminen XIII. yüzyılın sonları (kitâbesi yoktur)",
+  "endowment": "Kitapta belirtilmemiştir (banisi bilinmemektedir)",
+  "summary": "Mevlâna’nın çağdaşı Cemal Ali Dede’ye ait, çinili kemerli cephesiyle Selçuklu eyvanlı türbelerinin önemli bir örneği.",
+  "history": "Türbe, Meram İlçesi, Yaka Mahallesi, Dere Caddesi No. 13’tedir. Cemal Ali Dede Hz. Mevlâna’nın çağdaşıdır ve rivayete göre Bahaeddin Veled’in müritlerindendir. Mevlâna’ya duyduğu derin saygı ve sevgiden dolayı deve taklidi yaparak onu sırtında taşıdığı için kendisine “deve” anlamına gelen “cemel” lakabı takılmış ve bu adla anılmıştır. İbrahim Hakkı Konyalı, Mevlâna’nın mektuplarında adı geçen Hoca Ali’nin Cemel Ali olabileceğini tahmin eder. Türbenin şeyhliğini yapan Şeyh Turut tekkede şeyhlik, türbe mektebinde hocalık yapmıştır.\n\nTürbenin kitâbesi yoktur; banisi, mimarı ve yapım tarihi bilinmez. Selçuklu döneminin özgün yapı özelliklerini taşıyan türbenin XIII. yüzyılın sonlarına doğru yapılmış olabileceği tahmin edilir. Yer daha önce farklı yapılardan oluşan bir Mevlevî zaviyesiydi; bu kompleksten günümüze yalnız semahane (mescit) ve türbe ulaşmıştır. Mescidin yanındaki mektep ve konak XX. yüzyılda yıkılmıştır.\n\nArşiv kayıtlarına göre türbe, mescit ve mektep H. 1311 / M. 1893’te 86.700 kuruşa tamir ettirilmiştir; mescidin banisinin de Cemal Ali olduğu anlaşılmaktadır. 1961 onarımında duvarların üst kısımları yenilenmiş, türbenin eyvan cephesi sivri kemer içine yerleştirilen bir pencereyle kapatılmış, mescitle bağlantı kesilmiş, batı duvarı yenilenerek payanda ile desteklenmiştir. Yapı 2016’da Konya Büyükşehir Belediyesi tarafından restore edilmiştir.\n\nTürbe, doğu tarafından mescide bitişik olarak yapılmıştır. Anadolu Selçuklu eyvanlı türbelerinin bir örneği olan eserin sivri kemerli tonozu kuzeye açılır; içten sivri beşik tonozludur. Taş ve tuğla kullanılan yapının kuzey cephesindeki eyvan kemeri ve köşelikleri tuğla örülmüş ve çiniyle bezenmiştir. Kemeri çevreleyen bordürde siyaha yakın koyu mor üstüne turkuaz sekiz köşeli yıldızlar birbirine ulanır; içteki tuğla örgüde patlıcan moru küçük altıgen çiniler ve turkuaz papyon biçimli dolgular vardır. Köşeliklerde açık renkli plakalar turkuaz üçgen çinilerle altı kollu yıldızlar oluşturur.\n\nTürbenin doğusunda mescide bağlanan duvar iki kemerlidir; ortadaki silindirik gövdeli mermer sütunun bitkisel süslemeli başlığı devşirmedir. İçeride kuzey-güney yönünde yan yana dizilmiş yedi sanduka bulunur; baş ve ayak taşları dışındaki yüzeyleri düz plaka çinilerle kaplıdır. Ortadaki daha büyük ve yüksek sandukanın Cemal Ali Dede’ye, yanındakilerin karısı, kızı ve aşçısına ait olduğu rivayet edilir; ancak bu kesin bir bilgi değildir. Türbe, Selçuklu döneminin özgün plan şemasının uygulandığı en önemli eyvan tipi türbe örneklerinden biridir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-cemal-ali-dede-turut-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-cemal-ali-dede-turut-tomb/exterior.jpg",
+      "alt": "Dış görünüm: sağda çini bordürlerle çevrili sivri kemerli cephesi olan tuğla türbe, solda kurşun kubbeli mescit ve ağaçlar",
+      "description": "Türbe ve bitişiğindeki mescit",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-cemal-ali-dede-turut-tomb/sarcophagi.jpg",
+      "alt": "Tuğla tonozlu iç mekânda yan yana dizilmiş, yeşil örtülü sandukalar",
+      "description": "Türbedeki sandukalar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-cemal-ali-dede-turut-tomb/buttress.jpg",
+      "alt": "Moloz taş ve tuğla duvara yaslanmış, kesme taştan çıkıntılı bir destek ayağı",
+      "description": "Duvarı destekleyen taş ayak",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "tiled-arch",
+      "image": "/images/konya-meram-cemal-ali-dede-turut-tomb/exterior.jpg",
+      "x": 72,
+      "y": 48,
+      "title": "Çinili eyvan kemeri",
+      "text": "Kuzey cephedeki eyvan kemeri ve köşelikleri tuğla örülmüş ve çiniyle bezenmiştir.",
+      "sourceId": "inv-p120"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/konya-meram-cemal-ali-dede-turut-tomb/sarcophagi.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Sandukalar",
+      "text": "Türbede kuzey-güney yönünde yan yana dizilmiş yedi sanduka bulunur; yüzeyleri düz plaka çinilerle kaplıdır.",
+      "sourceId": "inv-p122"
+    },
+    {
+      "id": "buttress",
+      "image": "/images/konya-meram-cemal-ali-dede-turut-tomb/buttress.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Payanda",
+      "text": "1961 onarımında batı duvarı yenilenmiş ve payanda ile desteklenmiştir.",
+      "sourceId": "inv-p120"
+    }
+  ],
+  "test": [
+    {
+      "question": "“Cemel” lakabı ne anlama gelir?",
+      "options": [
+        "Aslan",
+        "Deve",
+        "Kartal",
+        "Derviş"
+      ],
+      "correct": 1,
+      "description": "Mevlâna’yı deve taklidi yaparak sırtında taşıdığı için kendisine “deve” anlamına gelen “cemel” lakabı takılmıştır.",
+      "sourceId": "inv-p119"
+    },
+    {
+      "question": "Türbenin içinde kaç sanduka bulunur?",
+      "options": [
+        "Üç",
+        "Beş",
+        "Dokuz",
+        "Yedi"
+      ],
+      "correct": 3,
+      "description": "Türbenin içinde kuzey-güney yönünde yan yana dizilmiş yedi sanduka vardır.",
+      "sourceId": "inv-p122"
+    },
+    {
+      "question": "Yapının 2016’daki restorasyonunu kim yapmıştır?",
+      "options": [
+        "Konya Büyükşehir Belediyesi",
+        "Vakıflar Genel Müdürlüğü",
+        "Meram Belediyesi",
+        "Kültür Bakanlığı"
+      ],
+      "correct": 0,
+      "description": "Yapının restorasyonu 2016’da Konya Büyükşehir Belediyesi tarafından yapılmıştır.",
+      "sourceId": "inv-p120"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p119",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Cemal Ali Dede (Turut) Türbesi\"",
+      "page": "119"
+    },
+    {
+      "id": "inv-p120",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Cemal Ali Dede (Turut) Türbesi\"",
+      "page": "120-121"
+    },
+    {
+      "id": "inv-p122",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Cemal Ali Dede (Turut) Türbesi\"",
+      "page": "122-123"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

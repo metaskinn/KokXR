@@ -1,0 +1,125 @@
+{
+  "id": "konya-beysehir-hizir-ali-pasha-bayafsar-mosque",
+  "name": "Hızır Ali Paşa (Bayafşar) Camii",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "Osmanlı · kapı kitâbesinde okunabilen tarih H. 1209 / M. 1794-95; minare H. 1376 / M. 1956",
+  "endowment": "Kitapta belirtilmemiştir (bânisi bilinmemektedir)",
+  "summary": "Bayafşar'da, mihraba dik beşerli ahşap direk sıralarıyla dört sahına ayrılan, ahşap direkli çok destekli cami.",
+  "history": "Cami, Beyşehir, Bayafşar Kasabası merkezindedir ve \"Bayafşar Camisi\" olarak da bilinir. Bânisinin kim olduğu bilinmemektedir. Doğu cephedeki basık kemerli kapının üzerindeki kitâbeden yalnızca H. 1209 / M. 1794-95 tarihi okunabilmektedir. Minare, giriş kapısı üzerindeki tarihe göre H. 1376 / M. 1956'da camiye eklenmiştir. Yapı 2014-2015 yıllarında Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nDerinlemesine dikdörtgen planlı cami ahşap direkli, içten düz tavanlı, dıştan dört yöne eğimli kırma çatılıdır ve ahşap hatıllı kaba yonu taşla inşa edilmiştir. Kuzeydoğu köşedeki minare kare kaideli, silindirik gövdeli ve tek şerefelidir; kaidesinde kesme taş, devamında tuğla kullanılmıştır.\n\nHarime kuzey cephedeki basık kemerli açıklıktan geçilir. Harim, mihraba dik uzanan, her birinde beş ahşap direk bulunan üç sıra direkle dört sahına ayrılmıştır; sahın düzenindeki eğiklik nedeniyle mihrap tam ortaya denk gelmez. Tavan ahşap kirişli düz hatıl biçimindedir. Kıble duvarındaki ahşap mihrap yarım daire planlıdır; mihrabın sağında, güneybatıdaki minber yenidir. Harimin içinde Hacı Abdullah Efendi'ye ait bir mezar bulunur.\n\nCami, Beyşehir Eşrefoğlu Camii'nden itibaren görülmeye başlanan ahşap direkli çok destekli camilerin güzel bir örneğidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-hizir-ali-pasha-bayafsar-mosque/town-view-with-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-hizir-ali-pasha-bayafsar-mosque/town-view-with-minaret.jpg",
+      "alt": "Kasaba evlerinin arasında kiremit kırma çatılı cami ve hemen yanında yükselen sivri külahlı, tek şerefeli minare; arkada ova ve dağlar",
+      "description": "Cami ve minaresi kasaba içinde",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-hizir-ali-pasha-bayafsar-mosque/wooden-pillared-hall.jpg",
+      "alt": "İç mekân: ahşap tavanı taşıyan sıra sıra ince ahşap direkler, kırmızı halı ve ortada bir soba",
+      "description": "Ahşap direkli harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-hizir-ali-pasha-bayafsar-mosque/wooden-mihrab.jpg",
+      "alt": "Yakın plan: zikzak ve dişli oymalı ahşap çerçeve içinde yarım daire planlı ahşap mihrap nişi",
+      "description": "Ahşap mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-hizir-ali-pasha-bayafsar-mosque/grave-in-prayer-hall.jpg",
+      "alt": "Harim içinde yeşil yazılı örtüyle örtülü sanduka, arkasında ahşap direkler ve mahfil merdiveni",
+      "description": "Harimdeki mezar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/konya-beysehir-hizir-ali-pasha-bayafsar-mosque/town-view-with-minaret.jpg",
+      "x": 48,
+      "y": 35,
+      "title": "Minare",
+      "text": "Kuzeydoğu köşedeki minare kare kaideli, silindirik gövdeli ve tek şerefelidir; 1956'da camiye eklenmiştir.",
+      "sourceId": "inv-p387"
+    },
+    {
+      "id": "wooden-pillars",
+      "image": "/images/konya-beysehir-hizir-ali-pasha-bayafsar-mosque/wooden-pillared-hall.jpg",
+      "x": 48,
+      "y": 55,
+      "title": "Ahşap direkler",
+      "text": "Harim, mihraba dik uzanan beşerli üç sıra ahşap direkle dört sahına ayrılmıştır.",
+      "sourceId": "inv-p388"
+    },
+    {
+      "id": "grave",
+      "image": "/images/konya-beysehir-hizir-ali-pasha-bayafsar-mosque/grave-in-prayer-hall.jpg",
+      "x": 52,
+      "y": 55,
+      "title": "Hacı Abdullah Efendi'nin mezarı",
+      "text": "Harimin içinde Hacı Abdullah Efendi'ye ait bir mezar bulunur.",
+      "sourceId": "inv-p388"
+    }
+  ],
+  "test": [
+    {
+      "question": "Doğu cephedeki kapı kitâbesinden hangi tarih okunabilmektedir?",
+      "options": [
+        "H. 1009 / M. 1600",
+        "H. 1109 / M. 1697",
+        "H. 1209 / M. 1794-95",
+        "H. 1309 / M. 1891"
+      ],
+      "correct": 2,
+      "description": "Kitâbeden yalnızca H. 1209 / M. 1794-95 tarihi okunabilmektedir.",
+      "sourceId": "inv-p387"
+    },
+    {
+      "question": "Harim ahşap direklerle kaç sahına ayrılmıştır?",
+      "options": [
+        "Dört",
+        "İki",
+        "Üç",
+        "Beş"
+      ],
+      "correct": 0,
+      "description": "Harim, mihraba dik uzanan beşerli üç sıra ahşap direkle dört sahına ayrılmıştır.",
+      "sourceId": "inv-p388"
+    },
+    {
+      "question": "Harimin içinde kime ait bir mezar bulunur?",
+      "options": [
+        "Hızır Ali Paşa",
+        "Eşrefoğlu Süleyman Bey",
+        "Hacı Lütfullah Ağa",
+        "Hacı Abdullah Efendi"
+      ],
+      "correct": 3,
+      "description": "Harimin içerisinde Hacı Abdullah Efendi'ye ait bir mezar vardır.",
+      "sourceId": "inv-p388"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p387",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Hızır Ali Paşa (Bayafşar) Camii\"",
+      "page": "387"
+    },
+    {
+      "id": "inv-p388",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Hızır Ali Paşa (Bayafşar) Camii\"",
+      "page": "388"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

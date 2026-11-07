@@ -1,0 +1,125 @@
+{
+  "id": "yildirim-emir-sultan-bath",
+  "name": "Emir Sultan Hamamı",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · inşa tarihi kitapta belirtilmemiştir; 1606, 1622, 1670 ve 1712'de onarım görmüştür",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Emir Sultan Külliyesi'ne ait, caminin güneyinde tekkenin yakınında bulunan, kurşun kaplı kubbeleri aydınlık fenerleriyle donatılmış tarihî hamam.",
+  "history": "Emir Sultan Hamamı, Emir Sultan Külliyesi'nin bir parçasıdır ve caminin güneyinde, tekkenin yakınında yer alır. Kaynaklarda külliye bünyesindeki hamam ve medresenin Cezerî Kasım Paşa tarafından yaptırıldığına dair bilgiler bulunmaktadır.\n\nHamam, 12,45 × 3,78 m ölçülerinde ve kuzey-güney doğrultusunda uzanan dikdörtgen bir plan üzerine inşa edilmiştir. Beden duvarları bir sıra küfeki taşı ile iki sıra tuğladan almaşık düzende örülmüş, taş sıralarının arasına dikey olarak ikişer tuğla yerleştirilmiştir. Tüm çatı ve kubbe saçakları iki sıra kirpi silmesiyle çevrilidir. Kuzey cephedeki basık kemerli, mermer söveli cümle kapısının üstünde tuğladan örülmüş yuvarlak kemerli bir alınlık görülür.\n\nÇift kanatlı ahşap kapıdan girilen soğukluk dıştan dışa 12,45 × 12,67 m ölçülerindedir ve toplam 106 m²'lik bir alan kaplar. Zemini mermer döşeli bu bölüm, sekizgen bir kasnağa oturan kurşun kaplı bir kubbeyle örtülüdür; altı pencereden ve kubbe tepesindeki dörtgen formlu konik fenerden ışık alır. Soğukluktan küçük kemerli bir kapıyla yaklaşık 20 m²'lik kare planlı ılıklığa geçilir; burası helezoni formda, 24 dilimli ve kurşun kaplı bir kubbeyle örtülüdür. Ilıklıktan usturalık, hela ve iki halvete, buradan da 63 m²'lik sekizgen planlı sıcaklığa ulaşılır. Önceden göbek taşı bulunan sıcaklığın kubbesi sekizgen kasnağa oturur; kasnaktaki bezemeler dikkat çekicidir. Sıcaklığın doğu, batı ve güneyinde birer yıkanmalık eyvan, güneybatı ve güneydoğu köşelerinde iki halvet bulunur. Yapının güney ucunda tonoz örtülü bir su deposu ile külhan yer alır. Hamamın tüm örtüsü kurşunla kaplanmış, kubbelerin üzerine dört köşeli konik aydınlık fenerleri yerleştirilmiştir.\n\n1606, 1622, 1670 ve 1712 yıllarında onarılan hamam, 1741'deki bir toprak kayması nedeniyle sıkıntı yaşamış, 1855 depreminde bir miktar zarar görse de uzun yıllar kullanılmıştır. En son 2009-2010 yıllarında Vakıflar Genel Müdürlüğü tarafından kapsamlı biçimde restore edilmiş, Bursa Büyükşehir Belediyesi'nin bakım ve onarım çalışmalarının ardından 2011'de \"Geleneksel Sanatlar Merkezi\" olarak hizmete açılmıştır. Yapı bugün kapalıdır; yeniden işlevlendirilmesi için hazırlık süreci devam etmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-emir-sultan-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-emir-sultan-bath/exterior.jpg",
+      "alt": "Yukarıdan görünüm: taş ve tuğla bantlı duvarlarıyla kare gövdeli hamam yapısı, üzerinde kurşun kaplı büyük kubbe, solda fenerli küçük kubbeler; önde ahşap çatılı bir sundurma ve meydan, arkada apartmanlar",
+      "description": "Hamamın dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-emir-sultan-bath/roof-domes.jpg",
+      "alt": "Hamamın kurşun kaplı kubbeleri ve üzerlerindeki sivri, konik aydınlık fenerleri; solda arkada caminin kubbesi ve minaresi, gökyüzü bulutlu",
+      "description": "Kurşun kaplı kubbeler ve aydınlık fenerleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-emir-sultan-bath/interior.jpg",
+      "alt": "Beyaz sıvalı iç mekân: sivri kemerli açıklıklar, kemerli kapılar, duvar diplerinde gri damarlı mermer kaplama ve geometrik desenli mermer zemin; tavandan sarkan iki lamba",
+      "description": "Hamamın iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-emir-sultan-bath/dome-interior.jpg",
+      "alt": "Aşağıdan bakış: beyaz kubbe içinde iç içe dalgalı halkalar hâlinde kabartma bezeme ve ortada ışık alan fener açıklığı",
+      "description": "Kubbe içindeki bezemeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "main-dome",
+      "image": "/images/yildirim-emir-sultan-bath/exterior.jpg",
+      "x": 52,
+      "y": 42,
+      "title": "Soğukluk kubbesi",
+      "text": "106 m²'lik soğukluk, sekizgen bir kasnağa oturan ve kurşunla kaplanmış bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "id": "walls",
+      "image": "/images/yildirim-emir-sultan-bath/exterior.jpg",
+      "x": 35,
+      "y": 70,
+      "title": "Almaşık duvar örgüsü",
+      "text": "Beden duvarları bir sıra küfeki taşı ile iki sıra tuğladan almaşık düzende örülmüştür.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "id": "lanterns",
+      "image": "/images/yildirim-emir-sultan-bath/roof-domes.jpg",
+      "x": 63,
+      "y": 73,
+      "title": "Aydınlık fenerleri",
+      "text": "Hamamın tüm örtüsü kurşunla kaplanmış, kubbelerin üzerine dört köşeli konik aydınlık fenerleri yerleştirilmiştir.",
+      "sourceId": "inv-p296"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam 2011 yılında hangi işlevle hizmete açılmıştır?",
+      "options": [
+        "Kent Müzesi",
+        "Kütüphane",
+        "Halk Eğitim Merkezi",
+        "Geleneksel Sanatlar Merkezi"
+      ],
+      "correct": 3,
+      "description": "2009-2010'daki restorasyonun ardından hamam, 2011'de \"Geleneksel Sanatlar Merkezi\" olarak hizmete açılmıştır.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "question": "Ilıklık bölümünün kubbesi nasıl tanımlanmıştır?",
+      "options": [
+        "Helezoni formda, 24 dilimli ve kurşun kaplı",
+        "Ahşap kaplamalı ve düz",
+        "Kiremit kaplı ve sekiz dilimli",
+        "Çini kaplı ve fenersiz"
+      ],
+      "correct": 0,
+      "description": "Yaklaşık 20 m²'lik kare planlı ılıklık, helezoni formda 24 dilimli ve kurşun kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "question": "Hamamın sıcaklık bölümü hangi plandadır?",
+      "options": [
+        "Dikdörtgen",
+        "Sekizgen",
+        "Haç biçimli",
+        "Yuvarlak"
+      ],
+      "correct": 1,
+      "description": "Ilıklıktan 63 m²'lik sekizgen planlı sıcaklık bölümüne ulaşılır.",
+      "sourceId": "inv-p296"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p296",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Emir Sultan Hamamı\"",
+      "page": "296-297"
+    },
+    {
+      "id": "inv-p274",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Emir Sultan Camii\"",
+      "page": "274"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

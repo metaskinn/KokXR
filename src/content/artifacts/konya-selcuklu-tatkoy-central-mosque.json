@@ -1,0 +1,106 @@
+{
+  "id": "konya-selcuklu-tatkoy-central-mosque",
+  "name": "Tatköy Merkez Camii",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "H. 1284 / M. 1867-68 (batı cephesindeki kitâbeye göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Tatköy'ün ulu camisi, kitâbesine göre 1867-68'de eğimli arazide moloz taştan inşa edilmiştir.",
+  "history": "Cami, Selçuklu ilçesi Tatköy (Köyü) Mahallesi'nin ulu camisidir. Batı cephesindeki kitâbeye göre H. 1284 / M. 1867-68'de yapılmıştır. Eğimli bir arazide moloz taştan inşa edilen yapı kuzeyden tek, güneyden iki katlıdır.\n\nDıştan dikdörtgen planlı cami kırma çatıyla örtülüdür; alt kat bodrum olarak kullanılır. Harim derinlemesine dikdörtgen planlı ve dört sahınlıdır.\n\nKıble duvarındaki ahşap mihrap nişi yarım daire planlıdır. Mihrabın en dış bordürü lale, ikincisi kıvrım dal, üçüncüsü tomurcuklu çiçek motifleriyle bezenmiştir; üzerinde mihrap ayeti vardır, tepeliği kıvrım dallı yaprak ve çiçeklerle süslüdür. Güneybatı köşedeki ahşap minberde de mihraba benzer süslemeler görülür. Doğu duvarındaki iki pencere arasına yerleştirilen vaaz kürsüsünün süslemeleri motif, kompozisyon ve teknik bakımından mihrap ve minberdekilere benzer. Kuzeydeki kadınlar mahfili ahşaptır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-tatkoy-central-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-tatkoy-central-mosque/aerial-view.jpg",
+      "alt": "Turuncu kiremitli kırma çatılı caminin ve çevresindeki köy dokusunun havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-tatkoy-central-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direklerin sıralandığı turkuaz halılı harim ve karşıda koyu renkli ahşap mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-tatkoy-central-mosque/wooden-ceiling.jpg",
+      "alt": "Yuvarlak ahşap kirişlerden oluşan tavan ve onu taşıyan ahşap direk başlığı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-selcuklu-tatkoy-central-mosque/aerial-view.jpg",
+      "x": 50,
+      "y": 42,
+      "title": "Kırma çatı",
+      "text": "Dıştan dikdörtgen planlı yapı kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p298"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-selcuklu-tatkoy-central-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Ahşap mihrap",
+      "text": "Yarım daire planlı ahşap mihrap lale, kıvrım dal ve tomurcuklu çiçek motifli bordürlerle çevrilidir.",
+      "sourceId": "inv-p298"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbeye göre cami hangi yılda yapılmıştır?",
+      "options": [
+        "M. 1789",
+        "M. 1907",
+        "M. 1867-68",
+        "M. 1584"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: M. 1867-68.",
+      "sourceId": "inv-p298"
+    },
+    {
+      "question": "Eğimli arazideki yapının güney tarafı kaç katlıdır?",
+      "options": [
+        "İki",
+        "Tek",
+        "Üç",
+        "Dört"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: İki.",
+      "sourceId": "inv-p298"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Beş",
+        "Dört"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Dört.",
+      "sourceId": "inv-p298"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p298",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Tatköy Merkez Camii\"",
+      "page": "298"
+    },
+    {
+      "id": "inv-p299",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Tatköy Merkez Camii\"",
+      "page": "299"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

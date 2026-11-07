@@ -1,0 +1,117 @@
+{
+  "id": "hatay-antakya-halil-agha-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Halil Ağa Camii",
+  "period": "Kitaptaki tarih: 119 (M. 1729)",
+  "endowment": "Medeni Halil Ağa",
+  "summary": "Halil Ağa Camii, özgün kapı kitabesi korunmuş kâgir bir yapıdır.",
+  "history": "Kitap Antakya Merkez’deki caminin parselini metinde 1276, bölüm sonundaki adres listesinde 1253 olarak verir. Özgün yapıdan kalan unsur kapı üzerindeki dört satırlık kitabedir. Medeni Halil Ağa’nın yaptırdığı caminin tarihi kitapta aynen “119 (M. 1729)” biçiminde geçer; bu eksik veya belirsiz tarih düzeltilmeden aktarılmıştır. Ön kapıdan girilen kâgir yapının çatısı kiremit, tavanı betonarmedir. Solda minare, kesme taş döşeli avluda minber bulunur. 1930 tapusunda da Halil Ağa Camii adı kullanılır. Avluya bakan kuzey cephesinin ortasında kapı, onun solunda mihrabiye ve iki yanında birer pencere vardır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-halil-agha-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-halil-agha-mosque/book-view-1.jpg",
+      "alt": "Geniş avluda ince taş minare, solda sundurma ve çevrede alçak yapılar",
+      "description": "Halil Ağa Camii — kitaptaki görünüm 1 (s. 238–239)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-halil-agha-mosque/book-view-2.jpg",
+      "alt": "Taş cephede ortada kapı, üstünde kitabe ve iki yanda pencereler",
+      "description": "Halil Ağa Camii — kitaptaki görünüm 2 (s. 240–241)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-halil-agha-mosque/book-view-2.jpg",
+      "x": 49,
+      "y": 40,
+      "title": "Özgün kitabe",
+      "text": "Kapı üstündeki dört satırlık kitabe özgün unsur olarak korunmuştur.",
+      "sourceId": "inv-p240"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-halil-agha-mosque/book-view-1.jpg",
+      "x": 53,
+      "y": 41,
+      "title": "Minare",
+      "text": "Minare caminin solunda yer alır.",
+      "sourceId": "inv-p240"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabede baninin adı nasıl geçer?",
+      "options": [
+        "Halefzâde Cemil Ağa",
+        "Sokullu Mehmet Paşa",
+        "Medeni Halil Ağa",
+        "Hacı Sadık"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Medeni Halil Ağa.",
+      "sourceId": "inv-p240"
+    },
+    {
+      "question": "Tavan hangi malzemedendir?",
+      "options": [
+        "Ahşap",
+        "Tuğla tonoz",
+        "Taş kubbe",
+        "Betonarme"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Betonarme.",
+      "sourceId": "inv-p240"
+    },
+    {
+      "question": "1930 tarihli tapuda hangi ad kullanılır?",
+      "options": [
+        "Halil Ağa Camii",
+        "Şirince Camii",
+        "Orhaniye Camii",
+        "Sermaye Camii"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Halil Ağa Camii.",
+      "sourceId": "inv-p242"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p240",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Halil Ağa Camii\"",
+      "page": "240"
+    },
+    {
+      "id": "inv-p241",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Halil Ağa Camii\"",
+      "page": "241"
+    },
+    {
+      "id": "inv-p242",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Halil Ağa Camii\"",
+      "page": "242"
+    },
+    {
+      "id": "inv-p243",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Halil Ağa Camii\"",
+      "page": "243"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Halil Ağa Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

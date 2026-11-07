@@ -1,0 +1,126 @@
+{
+  "id": "osmangazi-cem-sultan-tomb",
+  "inventoryId": "osmangazi-cem-sultan-turbesi",
+  "name": "Cem Sultan Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 884 / M. 1479",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "II. Murad Külliyesi'nde, Fâtih'in oğlu Şehzade Mustafa için yapılan ve Cem Sultan'ın da defnedilmesiyle onun adıyla anılan, Muradiye türbelerinin en zengin süslemeli olanı.",
+  "history": "Cem Sultan Türbesi, Osmangazi İlçesi, Muradiye Mahallesi'nde, II. Murad Külliyesi bünyesinde yer alır.\n\nFâtih Sultan Mehmed'in oğlu Şehzade Mustafa, H. 879 / M. 1474'te Niğde yakınlarında Bor-Pazarcığı'nda vefat etmiş; naaşı önce Konya'ya, ardından Bursa'ya getirilerek amcası Şehzade Alâaddin'in türbesine defnedilmiştir. H. 884 / M. 1479'da kendisi için inşa edilen bu türbeye nakledilmiştir. Kitap, Napoli'de vefat eden ve cenazesi 1499'da Bursa'ya getirilen Cem Sultan'ı Şehzade Mustafa'nın \"yeğeni\" olarak anar; Cem Sultan'ın da buraya defnedilmesiyle türbe zamanla \"Cem Sultan Türbesi\" adıyla anılmaya başlanmıştır. Türbedeki dört mermer sandukada Şehzade Mustafa, II. Bayezid'in oğlu Şehzade Abdullah (v. H. 890 / M. 1485), Şehzade Cem ve II. Bayezid'in oğlu Şehzade Alemşah (v. H. 909 / M. 1503) yatmaktadır.\n\nKesme taş ve tuğladan temiz bir işçilikle yapılan türbeye mermer bir revakla girilir. Altıgen planlı türbe, yine altıgen kasnağa oturan kurşun kaplı bir kubbeyle örtülüdür; kubbenin ortasında altı kenarlı küçük bir açıklık vardır. Alt sırada dört, üst sırada altı ve kasnakta altı olmak üzere on altı pencereyle aydınlanan mekân, Muradiye türbelerinin en zengin süslemeli olanıdır.\n\nDuvarlar yerden 2,35 m yüksekliğe kadar firuze ve lacivert altıgen çinilerle kaplıdır; çinilerin çevresi ve ortaları, Yeşil ve Muradiye camilerinde olduğu gibi yaldızla stampalıdır. Kemerler, alınlıklar, kasnak ve kubbe gibi çinisiz alanlar zengin kalem işleriyle bezenmiş, özellikle servi motifleri malakâri tekniğinde işlenmiştir. Kubbe içi rumi ve hatâyî motifleriyle doldurulmuş, eteğinde altı kartuş içinde celi sülüs hatla Âyetü'l-kürsî yazılmıştır. Mihrabın iki yanında müsennâ besmele ve yine müsennâ tarzında \"Allâhu Hâliku külli şey'in ve hüve alâ külli şey'in kadîr\" ibaresi bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-cem-sultan-tomb/sarcophagi.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-cem-sultan-tomb/sarcophagi.jpg",
+      "alt": "İç mekân: yan yana dört beyaz mermer sanduka; arkada alt kısmı firuze ve lacivert altıgen çinilerle kaplı duvarlar, üstte servi ve bitkisel motifli renkli kalem işleri",
+      "description": "Dört mermer sanduka ve çini kaplı duvarlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cem-sultan-tomb/dome.jpg",
+      "alt": "Kubbenin aşağıdan görünümü: altıgen bir çerçeve içinde yuvarlak kubbe, eteğinde mavi zeminli yazı kuşağı, içi yoğun bitkisel motiflerle dolu ve tam ortasında küçük altıgen bir açıklık",
+      "description": "Kubbe ve ortadaki altı kenarlı açıklık",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cem-sultan-tomb/cypress-motifs.jpg",
+      "alt": "Kemer altındaki duvar yüzeyi: renkli camlı sivri kemerli pencerenin iki yanında, vazodan yükselen iri servi biçimli motifler; altta lacivert altıgen çinili yarım daire alan",
+      "description": "Servi motifli kalem işleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cem-sultan-tomb/interior.jpg",
+      "alt": "Dikey çekilmiş iç mekân: önde mermer sandukalar, duvarlarda altıgen firuze çiniler, üstte pencereli kemerler ve kubbe eteğinde mavi zeminli yazı kuşağı",
+      "description": "Sandukalar ve kubbe eteğindeki yazı kuşağı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hexagonal-tiles",
+      "image": "/images/osmangazi-cem-sultan-tomb/sarcophagi.jpg",
+      "x": 85,
+      "y": 52,
+      "title": "Altıgen çiniler",
+      "text": "Duvarlar yerden 2,35 m yüksekliğe kadar firuze ve lacivert altıgen çinilerle kaplıdır.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "id": "dome-opening",
+      "image": "/images/osmangazi-cem-sultan-tomb/dome.jpg",
+      "x": 49,
+      "y": 51,
+      "title": "Kubbedeki açıklık",
+      "text": "Altıgen kasnağa oturan kurşun kaplı kubbenin ortasında altı kenarlı küçük bir açıklık vardır.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "id": "cypress",
+      "image": "/images/osmangazi-cem-sultan-tomb/cypress-motifs.jpg",
+      "x": 18,
+      "y": 50,
+      "title": "Servi motifleri",
+      "text": "Çinisiz alanlar zengin kalem işleriyle bezenmiş; servi motifleri malakâri tekniğinde işlenmiştir.",
+      "sourceId": "inv-p148"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe aslen kimin için inşa edilmiştir?",
+      "options": [
+        "Fâtih'in oğlu Şehzade Mustafa",
+        "Cem Sultan",
+        "II. Bayezid",
+        "Şehzade Alemşah"
+      ],
+      "correct": 0,
+      "description": "Fâtih Sultan Mehmed'in oğlu Şehzade Mustafa, H. 884 / M. 1479'da kendisi için yapılan bu türbeye nakledilmiştir.",
+      "sourceId": "inv-p145"
+    },
+    {
+      "question": "Türbenin planı nasıldır?",
+      "options": [
+        "Kare",
+        "Sekizgen",
+        "Dikdörtgen",
+        "Altıgen"
+      ],
+      "correct": 3,
+      "description": "Altıgen planlı türbe, yine altıgen kasnağa oturan kurşun kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "question": "Mekân toplam kaç pencereyle aydınlanır?",
+      "options": [
+        "Sekiz",
+        "On iki",
+        "On altı",
+        "Yirmi"
+      ],
+      "correct": 2,
+      "description": "Alt sırada dört, üst sırada altı ve kasnakta altı olmak üzere on altı pencere vardır.",
+      "sourceId": "inv-p148"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p145",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Cem Sultan Türbesi\"",
+      "page": "145"
+    },
+    {
+      "id": "inv-p148",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Cem Sultan Türbesi\"",
+      "page": "148"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

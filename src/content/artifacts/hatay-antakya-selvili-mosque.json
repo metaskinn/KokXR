@@ -1,0 +1,130 @@
+{
+  "id": "hatay-antakya-selvili-mosque",
+  "name": "Selvili Camii",
+  "district": "Antakya",
+  "period": "1842 öncesi; 1873 tarihli inşa veya onarım kitabesi",
+  "endowment": "Kitabede Mustafa oğlu Abdullah; diğer anlatımda Mustafa oğlu Ali Abdullah",
+  "summary": "Selvili Camii, bahçeli avlusunda yazlık namazgâh ve dört odalı medrese kalıntısı bulunan, iki sahınlı bir yapıdır.",
+  "history": "Eser geniş bahçeli bir avluda, dört odalı medrese bakiyesi ve namazgâhla birlikte yer alır. Kitap, 1873 tarihli kitabesine rağmen Şer’i Mahkeme Sicili kayıtlarının yapıyı 1842 öncesine götürdüğünü, kesin inşa tarihinin bilinmediğini belirtir. Kitabeye göre Mustafa oğlu Abdullah, büyük Antakya depreminden bir yıl sonra, 1873’te yapıyı inşa ettirmiş veya tamir ettirmiştir. Metnin ilerleyen kısmında bani Mustafa oğlu Ali Abdullah olarak anılır; kitabelerde savaşta şehit olduğu ifade edilir.\n\nAvluya basık kemerli bir açıklığı izleyen kısa tonozlu dehlizden geçilir. Giriş üstünde sekizgen gövdeli, ahşap külahlı bir mezene bulunur. Avlunun ortasındaki kare planlı seki yazlık namazgâhtır; aynı zamanda son cemaat yeri işlevi görür. Harime güney duvarındaki düz atkılı kapıdan girilir; sağında altta üç büyük, üstte üç küçük pencere vardır.\n\nOrtadaki kısa sütunun taşıdığı iki sivri kemer harimi kıbleye paralel iki sahına ayırır. Üst örtü kırma çatıdır. Duvarın kıble doğrultusuna uymaması nedeniyle mihrap güneydoğu köşeye çapraz yerleştirilmiştir; kitap bunu evden dönüştürülmüş olma ihtimaliyle ilişkilendirir. Dört kare medrese odasının her biri avluya bir kapı ve iki pencereyle açılır; duvarlarda dolap nişleri vardır. Medrese ve mescit 1955’te birlikte tamir edilmiştir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-selvili-mosque/entrance-tower.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-selvili-mosque/entrance-tower.jpg",
+      "alt": "Dar sokakta taş kemerli girişin üzerinde ahşap külahlı küçük ezanlık",
+      "description": "Dar sokakta taş kemerli girişin üzerinde ahşap külahlı küçük ezanlık",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-selvili-mosque/courtyard.jpg",
+      "alt": "Ağaç ve asmalarla gölgelenmiş avluda halıyla kaplı yükselti ve küçük örtülü bölüm",
+      "description": "Ağaç ve asmalarla gölgelenmiş avluda halıyla kaplı yükselti ve küçük örtülü bölüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-selvili-mosque/corner-mihrab.jpg",
+      "alt": "İki duvarın birleştiği köşede açık renk taş mihrap nişi ve yanında pencere",
+      "description": "İki duvarın birleştiği köşede açık renk taş mihrap nişi ve yanında pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-selvili-mosque/prayer-hall.jpg",
+      "alt": "İç mekânda iki renk taşlı sivri kemer, halı ve duvar boyunca sıralanan pencereler",
+      "description": "İç mekânda iki renk taşlı sivri kemer, halı ve duvar boyunca sıralanan pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-selvili-mosque/entrance-tower.jpg",
+      "x": 47,
+      "y": 23,
+      "title": "Mezene",
+      "text": "Avlu girişinin üzerinde sekizgen gövdeli, ahşap külahlı ezanlık bulunur.",
+      "sourceId": "inv-p384"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-selvili-mosque/corner-mihrab.jpg",
+      "x": 50,
+      "y": 56,
+      "title": "Köşeye yerleştirilmiş mihrap",
+      "text": "Mihrap güneydoğu köşeye çapraz olarak yapılmıştır.",
+      "sourceId": "inv-p385"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/hatay-antakya-selvili-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 41,
+      "title": "Sivri kemer",
+      "text": "Ortadaki kısa sütuna oturan iki sivri kemer harimi iki sahına böler.",
+      "sourceId": "inv-p384"
+    }
+  ],
+  "test": [
+    {
+      "question": "Selvili Camii kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Arsuz",
+        "Samandağ",
+        "Antakya"
+      ],
+      "correct": 3,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p399"
+    },
+    {
+      "question": "Avludaki yazlık namazgâhın planı nasıldır?",
+      "options": [
+        "Kare",
+        "Dairesel",
+        "Üçgen",
+        "Sekizgen"
+      ],
+      "correct": 0,
+      "description": "Avlunun ortasında kare planlı sekiden oluşan yazlık namazgâh vardır.",
+      "sourceId": "inv-p384"
+    },
+    {
+      "question": "Medrese bakiyesi kaç odadan oluşur?",
+      "options": [
+        "İki",
+        "Dört",
+        "Altı",
+        "Sekiz"
+      ],
+      "correct": 1,
+      "description": "Medrese birbirine benzer dört kare odadan oluşur.",
+      "sourceId": "inv-p385"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p384",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Selvili Camii\"",
+      "page": "384"
+    },
+    {
+      "id": "inv-p385",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Selvili Camii\"",
+      "page": "385"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Selvili Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

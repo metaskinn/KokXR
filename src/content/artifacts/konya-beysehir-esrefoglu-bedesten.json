@@ -1,0 +1,113 @@
+{
+  "id": "konya-beysehir-esrefoglu-bedesten",
+  "name": "Eşrefoğlu Bedesteni",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "Eşrefoğulları dönemi · H. 958 / M. 1551'de onarılmıştır",
+  "endowment": "Banisi Eşrefoğlu Süleyman Bey",
+  "summary": "Eşrefoğlu Camii'nin kuzeyinde, iki kâgir ayağın taşıdığı altı kubbeyle örtülü ve dört yanı dükkân sıralarıyla çevrili bedesten.",
+  "history": "Bedesten, Eşrefoğlu Külliyesi'nin ticari yapılarındandır ve cami taç kapısındaki kitâbede \"Bezziye Hanı\" (Bezzaziye / Bezciler Hanı) olarak geçer. İçeri Şehir Mahallesi'nde, Eşrefoğlu Camii'nin kuzeyinde yer alır; batısında hamam, kuzeyinde kale kapısı bulunur. Banisi Eşrefoğlu Süleyman Bey'dir, sanatçısı ise bilinmemektedir. Türbede saklanan onarım kitâbesine göre H. 958 / M. 1551'de Çavuş Başı adlı biri tarafından tamir ve ihya edilmiştir.\n\n1980'e kadar harap durumda olan bedesten, o yıl tescil edilerek koruma altına alınmış ve mülkiyeti Vakıflar Genel Müdürlüğüne geçmiştir.\n\nKuzey-güney yönünde uzanan yapı dikdörtgen biçimlidir. İki kâgir ayak ve bunlardan duvarlara atılan kemerlerin taşıdığı altı kubbeyle örtülüdür; yani iki ayaklı, iki sahınlı ve altı kubbelidir. Doğu, batı ve güney cephelerine açılan üç kapıyla girilir. Dört cephesi dükkân sıralarıyla çevrilidir: doğuda dokuz, batıda on, kuzeyde yedi, güneyde sekiz olmak üzere toplam otuz dört dükkân vardır. Giriş bölümleri daha belirgin olsun diye dükkânlardan yüksek tutulmuş; kurşun kaplama ve alem kullanımı girişleri vurgular.\n\nKubbelerin altına gelecek biçimde doğu ve batı cephelere üçer, kuzey ve güney cephelere ikişer dikdörtgen pencere açılmıştır. Beden duvarlarında moloz taş, içerideki kare ayaklarda düzgün kesme taş, kemer, pandantif ve kubbelerde tuğla kullanılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-esrefoglu-bedesten/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-esrefoglu-bedesten/exterior.jpg",
+      "alt": "Önünde kırmızı kepenkli dükkânların sıralandığı revaklı, kurşun kubbeli taş yapı; arkada tuğla minare ve göl kıyısındaki tepeler",
+      "description": "Bedestenin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-esrefoglu-bedesten/domes-from-above.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: iki sıra hâlinde dizilmiş altı kurşun kaplı kubbe",
+      "description": "Altı kubbenin tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-beysehir-esrefoglu-bedesten/interior-pillar.jpg",
+      "alt": "İç mekân: kesme taştan kalın kare ayak, üstte tuğla kemerler ve kubbe; çevrede sergi panoları ve raflar",
+      "description": "Bedestenin içindeki kâgir ayak",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "six-domes",
+      "image": "/images/konya-beysehir-esrefoglu-bedesten/domes-from-above.jpg",
+      "x": 50,
+      "y": 47,
+      "title": "Altı kubbe",
+      "text": "Yapı, iki kâgir ayak ve bunlardan duvarlara atılan kemerlerin taşıdığı altı kubbeyle örtülüdür.",
+      "sourceId": "inv-p30"
+    },
+    {
+      "id": "shops",
+      "image": "/images/konya-beysehir-esrefoglu-bedesten/exterior.jpg",
+      "x": 50,
+      "y": 75,
+      "title": "Dükkân sıraları",
+      "text": "Bedestenin dört cephesi dükkân sıralarıyla çevrilidir; toplam otuz dört dükkân vardır.",
+      "sourceId": "inv-p30"
+    },
+    {
+      "id": "pillar",
+      "image": "/images/konya-beysehir-esrefoglu-bedesten/interior-pillar.jpg",
+      "x": 45,
+      "y": 55,
+      "title": "Kâgir ayak",
+      "text": "İçerideki kare ayaklarda düzgün kesme taş, kemer, pandantif ve kubbelerde tuğla kullanılmıştır.",
+      "sourceId": "inv-p30"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bedesten, cami taç kapısındaki kitâbede hangi adla geçer?",
+      "options": [
+        "Kapalı Çarşı",
+        "Arasta",
+        "Bezziye Hanı",
+        "Bedesten-i Atik"
+      ],
+      "correct": 2,
+      "description": "Bedesten, cami taç kapısındaki kitâbede \"Bezziye Hanı\" (Bezzaziye / Bezciler Hanı) olarak zikredilmiştir.",
+      "sourceId": "inv-p30"
+    },
+    {
+      "question": "Bedestenin dört yanında toplam kaç dükkân vardır?",
+      "options": [
+        "Yirmi altı",
+        "Otuz dokuz",
+        "Kırk iki",
+        "Otuz dört"
+      ],
+      "correct": 3,
+      "description": "Dükkânlar doğuda dokuz, batıda on, kuzeyde yedi, güneyde sekiz olmak üzere toplam otuz dört adettir.",
+      "sourceId": "inv-p30"
+    },
+    {
+      "question": "Onarım kitâbesine göre bedesteni H. 958 / M. 1551'de kim tamir ve ihya etmiştir?",
+      "options": [
+        "Mübarizüddin Mehmet Bey",
+        "Çavuş Başı adlı biri",
+        "Eşref Bey",
+        "Seyfettin Süleyman Bey"
+      ],
+      "correct": 1,
+      "description": "Türbede saklanan onarım kitâbesinde, H. 958 / M. 1551'de Çavuş Başı isimli birisi tarafından tamir ve ihya edildiği yazar.",
+      "sourceId": "inv-p30"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p30",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Beyşehir, \"Beyşehir Eşrefoğlu Bedesteni\"",
+      "page": "30"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

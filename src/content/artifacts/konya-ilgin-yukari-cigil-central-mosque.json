@@ -1,0 +1,125 @@
+{
+  "id": "konya-ilgin-yukari-cigil-central-mosque",
+  "name": "Yukarı Çiğil Beldesi Merkez (Camii Kebir) Camii",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Osmanlı · son cemaat yerindeki ahşap sütun başlığında H. 1266 / M. 1850 tarihi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Son cemaat yerindeki sütun başlığında 1850 tarihi bulunan, iç mekânı özgün hâlini koruyan ahşap direkli ve ahşap tavanlı cami.",
+  "history": "Cami, Ilgın, Yukarı Çiğil Beldesi'ndedir. Son cemaat yerindeki ahşap sütun başlığında H. 1266 / M. 1850 tarihi bulunur. 2014-2015 yıllarında Vakıflar Genel Müdürlüğü tarafından esaslı bir tamir görmüştür; iç mekân özgün hâlini korurken dış cephelerde çeşitli onarımlar yapılmıştır.\n\nDıştan dikdörtgen planlı cami, iki bölümlü son cemaat mahalli ve kuzeydoğudaki minareden oluşur. Kuzeydeki yatay eksen üzerindeki giriş kısmı ahşap direkli ve düz tavanlıdır. İç mekân iki ahşap direkle derinlemesine üç sahına ayrılmıştır. İçeriyi ahşap sütunlara bindirmeli ahşap bir tavan örter; dıştan kırma çatı vardır.\n\nGirişin üzerindeki mahfilde geometrik süslemeler bulunur. Girişin tam karşısında, kıble duvarının ortasındaki mihrap alçıdan yapılmıştır; dikdörtgen planlı mihrap nişi üstte mukarnasla sonlanır. Cami bugün sağlam durumdadır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-yukari-cigil-central-mosque/exterior-with-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-yukari-cigil-central-mosque/exterior-with-minaret.jpg",
+      "alt": "Kiremit kırma çatılı cami, önünde ahşap çerçeveli camlı son cemaat bölümü ve solda taş gövdeli, tek şerefeli yüksek minare; arkada kavak ağaçları",
+      "description": "Caminin dış görünümü ve minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-yukari-cigil-central-mosque/narthex.jpg",
+      "alt": "Ahşap direkli ve geniş camlı son cemaat bölümünün önden görünümü, önünde taş döşeli avlu ve rampa korkuluğu",
+      "description": "Son cemaat yeri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-yukari-cigil-central-mosque/prayer-hall.jpg",
+      "alt": "Geniş iç mekân: kalın ahşap direkler, kiriş yuvalı ahşap tavan, karşıda beyaz alçı mihrap ve sağda ahşap minber, mavi halı",
+      "description": "Ahşap direkli harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-yukari-cigil-central-mosque/wooden-ceiling.jpg",
+      "alt": "Yuvarlak ahşap kirişlerden oluşan tavan ve ortasında yıldız biçimli avize halkası",
+      "description": "Ahşap tavan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/konya-ilgin-yukari-cigil-central-mosque/exterior-with-minaret.jpg",
+      "x": 25,
+      "y": 30,
+      "title": "Minare",
+      "text": "Cami, iki bölümlü son cemaat mahalli ve kuzeydoğudaki minareden oluşur.",
+      "sourceId": "inv-p451"
+    },
+    {
+      "id": "wooden-pillars",
+      "image": "/images/konya-ilgin-yukari-cigil-central-mosque/prayer-hall.jpg",
+      "x": 18,
+      "y": 55,
+      "title": "Ahşap direkler",
+      "text": "İç mekân iki ahşap direkle derinlemesine üç sahına ayrılmıştır.",
+      "sourceId": "inv-p452"
+    },
+    {
+      "id": "plaster-mihrab",
+      "image": "/images/konya-ilgin-yukari-cigil-central-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Alçı mihrap",
+      "text": "Kıble duvarının ortasındaki alçı mihrabın dikdörtgen planlı nişi mukarnasla sonlanır.",
+      "sourceId": "inv-p452"
+    }
+  ],
+  "test": [
+    {
+      "question": "Son cemaat yerindeki ahşap sütun başlığında hangi tarih bulunur?",
+      "options": [
+        "H. 1166 / M. 1753",
+        "H. 1366 / M. 1947",
+        "H. 1206 / M. 1792",
+        "H. 1266 / M. 1850"
+      ],
+      "correct": 3,
+      "description": "Son cemaat yerindeki ahşap sütun başlığında H. 1266 / M. 1850 tarihi bulunur.",
+      "sourceId": "inv-p451"
+    },
+    {
+      "question": "Caminin mihrabı hangi malzemeden yapılmıştır?",
+      "options": [
+        "Ahşap",
+        "Alçı",
+        "Mermer",
+        "Çini"
+      ],
+      "correct": 1,
+      "description": "Kıble duvarının ortasındaki mihrap alçı malzemeden yapılmıştır.",
+      "sourceId": "inv-p452"
+    },
+    {
+      "question": "Cami 2014-2015 yıllarında hangi kurum tarafından esaslı biçimde tamir edilmiştir?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Ilgın Belediyesi",
+        "Kültür Bakanlığı",
+        "Konya Valiliği"
+      ],
+      "correct": 0,
+      "description": "Cami 2014-2015 yıllarında Vakıflar Genel Müdürlüğü tarafından esaslı bir tamirat geçirmiştir.",
+      "sourceId": "inv-p451"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p451",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Yukarı Çiğil Beldesi Merkez (Camii Kebir) Camii\"",
+      "page": "451"
+    },
+    {
+      "id": "inv-p452",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Yukarı Çiğil Beldesi Merkez (Camii Kebir) Camii\"",
+      "page": "452"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "konya-meram-hasbey-darulhuffaz-masjid",
+  "name": "Hasbey (Dar’ül Huffaz) Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "H. 824 / M. 1421 · Karamanoğulları",
+  "endowment": "Hatıplı Hacı Hasbey oğlu Mehmet",
+  "summary": "Hasbey Mescidi, cenazelik katı ve mozaik çinili mihrabıyla Karamanoğulları dönemine ait tek kubbeli bir yapıdır.",
+  "history": "Mescit, Meram, Mücellit Mahallesi, Ayine Sokak No. 2’dedir. Girişteki iki satırlık kitâbeye göre Karamanoğlu II. Mehmet Bey zamanında Hatıplı Hacı Hasbey oğlu Mehmet tarafından H. 824 / M. 1421’de yaptırılmıştır. Farklı dönemlerde onarılmıştır. Altında cenazelik, yani kripta bölümü vardır.\n\nKare harimi tek kubbe örter. Üçgenlerle geçilen yüksek onaltıgen kasnağın dört yönünde pencereler açılmıştır. Kubbe yüzeyinde üç sıra üçgen diş görülür. Kesme taş cephelerin kaplaması dökülen yerleri tuğlayla onarılmıştır. Kuzey, güney ve doğu cepheleri silme kuşakları çerçeveler; güney cephe sağırdır. Kuzeyde Bursa kemerli kripta kapısı bulunur. Batıdaki girişe iki yandan üçer basamakla çıkılır. Girişte rûmi ve zencerek motifli bordürler, celî sülüs kitâbe ve tamamlanmamış mermer bezemeler vardır.\n\nKıble duvarındaki sekiz kenarlı mihrap nişi çini mozaikle kaplıdır; niş ve mukarnaslı kavsaranın çinileri büyük ölçüde dökülmüştür. Patlıcan moru, turkuaz ve kobalt mavisi bordürlerde zencerek, ağ ve palmet düzenlemeleri bulunur. Kıble duvarında turkuaz altıgenler ve mor üçgenlerden oluşan altı kollu yıldızlar görülür. Dört sıra mukarnaslı kavsarada kırık çizgiler ve dört kollu çarkıfelekler yer alır. Çapraz tonozlu kriptada sonradan eklenmiş kitâbesiz bir sanduka vardır. Kitap mihrabı Anadolu’daki çini mozaik mihrapların son örnekleri arasında değerlendirir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-hasbey-darulhuffaz-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-hasbey-darulhuffaz-masjid/exterior.jpg",
+      "alt": "Yüksek tuğla kasnak ve kubbeli taş yapının önünde merdivenli mermer giriş",
+      "description": "Yüksek tuğla kasnak ve kubbeli taş yapının önünde merdivenli mermer giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-hasbey-darulhuffaz-masjid/entrance.jpg",
+      "alt": "Tuğla kemer içinde bezemeli mermer kapı çerçevesi, kitâbe ve ahşap kapı",
+      "description": "Tuğla kemer içinde bezemeli mermer kapı çerçevesi, kitâbe ve ahşap kapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-hasbey-darulhuffaz-masjid/mihrab.jpg",
+      "alt": "Mavi çini mozaikli mihrabın dökülmüş yüzeyleri ve sağında ahşap minber",
+      "description": "Mavi çini mozaikli mihrabın dökülmüş yüzeyleri ve sağında ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-hasbey-darulhuffaz-masjid/exterior.jpg",
+      "x": 54,
+      "y": 20,
+      "title": "Yüksek kubbe kasnağı",
+      "text": "Kubbeye üçgenlerle geçilen yüksek onaltıgen kasnağın dört yönünde pencereler vardır.",
+      "sourceId": "inv-p163"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-hasbey-darulhuffaz-masjid/mihrab.jpg",
+      "x": 35,
+      "y": 45,
+      "title": "Çini mozaik mihrap",
+      "text": "Mihrabın niş ve mukarnaslı kavsarasındaki çiniler büyük ölçüde dökülmüştür.",
+      "sourceId": "inv-p164"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidi kim yaptırmıştır?",
+      "options": [
+        "Canbazzade Nasuh Bey",
+        "Devlet Hatun",
+        "Hatıplı Hacı Hasbey oğlu Mehmet",
+        "Veznedar Hüseyin Paşa"
+      ],
+      "correct": 2,
+      "description": "Giriş kitâbesi baninin Hatıplı Hacı Hasbey oğlu Mehmet olduğunu bildirir.",
+      "sourceId": "inv-p163"
+    },
+    {
+      "question": "Yapının altında hangi bölüm bulunur?",
+      "options": [
+        "Kripta (cenazelik)",
+        "Hamam",
+        "Kervansaray",
+        "Sarnıç"
+      ],
+      "correct": 0,
+      "description": "Mescidin altında cenazelik, yani kripta vardır.",
+      "sourceId": "inv-p163"
+    },
+    {
+      "question": "Mihrap hangi teknikle kaplanmıştır?",
+      "options": [
+        "Vitray",
+        "Fresk",
+        "Metal kakma",
+        "Çini mozaik"
+      ],
+      "correct": 3,
+      "description": "Kıble duvarının ortasındaki mihrap çini mozaikle kaplıdır.",
+      "sourceId": "inv-p164"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p163",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Hasbey (Dar’ül Huffaz) Mescidi\"",
+      "page": "163"
+    },
+    {
+      "id": "inv-p164",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Hasbey (Dar’ül Huffaz) Mescidi\"",
+      "page": "164"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

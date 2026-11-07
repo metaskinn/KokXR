@@ -1,0 +1,109 @@
+{
+  "id": "konya-karatay-kadi-izzettin-karpuzoglu-mosque",
+  "name": "Kadı İzzettin (Karpuzoğlu) Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Selçuklu kuruluşu H. 652 / M. 1254; bugünkü yapı 1925",
+  "endowment": "Banisi Kadı İzzeddin; vakfiyesinde türbe, medrese ve dârüşşifa da kayıtlıdır",
+  "summary": "Kadı İzzeddin'in 1254'te yaptırdığı Selçuklu camisinin yerine 1925'te inşa edilen, külliyeden günümüze ulaşan tek yapı olan cami.",
+  "history": "Kadı İzzettin (Karpuzoğlu) Camii, Karatay, Çifte Merdiven Mahallesi, Şerafeddin Caddesi üzerindedir. Kadı İzzeddin tarafından H. 652 / M. 1254'te yaptırılan Selçuklu dönemi camisinin yerine 1925'te yeni bir cami inşa edilmiştir.\n\nKadı İzzeddin, Selçuklu döneminin büyük âlim, kadı ve devlet adamlarındandır. İzzeddin Keykâvus 1246'da Selçuklu tahtına geçtikten sonra Kadı İzzeddin Muhammed'i vezirlik makamına getirmiştir. Muineddin Süleyman, Sahip Fahreddin Ali ve Celâleddin Karatayî gibi tanınmış âlim ve yöneticiler de bu dönemde onunla birlikte görev almıştır. Hayatı boyunca önemli görevlerde bulunan Kadı İzzeddin, Aksaray yakınlarında Moğollarla yapılan savaşta şehit düşmüştür. İ. Hakkı Konyalı, buradaki türbenin Seyfeddin Karasungur Türbesi gibi olduğunu ve türbedeki Kadı İzzeddin'e ait kıymetli ahşap sandukanın 1900'lü yılların başında çalındığını kaydeder.\n\nEserin vakfiyesinde cami dışında türbe, medrese ve dârüşşifa gibi yapıların da bulunduğu kayıtlıdır. Külliyeyi oluşturan yapılardan yalnızca cami, betonarme olarak ayaktadır. 1970'teki onarım sırasında bugün mevcut olmayan türbeye ait duvar ve sanduka çinileri bulunmuş, bunların bir kısmı Konya Müzesi'ne kaldırılmıştır.\n\nYapı derinlemesine dikdörtgen planlıdır ve dört yöne eğimli kırma çatıyla örtülüdür. Caminin kuzeybatı köşesinde kare kaideli, silindirik gövdeli ve tek şerefeli minaresi yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-kadi-izzettin-karpuzoglu-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-kadi-izzettin-karpuzoglu-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit kaplı kırma çatılı beyaz cami, köşesinde tek şerefeli, külahlı ince minare; arkada Konya'nın kiremit çatılı evleri",
+      "description": "Caminin çevresiyle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-kadi-izzettin-karpuzoglu-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı geniş harim; ahşap tavanı taşıyan direkler, pencereler ve tavandan sarkan avizeler",
+      "description": "Harimin iç görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-kadi-izzettin-karpuzoglu-mosque/gravestone.jpg",
+      "alt": "Yaprakların arasında üzerinde \"Merhum Kadı İzzettin Efendi Ruhuna Fatiha\" yazan beyaz mezar taşı",
+      "description": "Kadı İzzettin Efendi adını taşıyan mezar taşı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/konya-karatay-kadi-izzettin-karpuzoglu-mosque/aerial-view.jpg",
+      "x": 43,
+      "y": 55,
+      "title": "Minare",
+      "text": "Caminin kuzeybatı köşesinde kare kaideli, silindirik gövdeli ve tek şerefeli minare yer alır.",
+      "sourceId": "inv-p217"
+    },
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-karatay-kadi-izzettin-karpuzoglu-mosque/aerial-view.jpg",
+      "x": 55,
+      "y": 64,
+      "title": "Kırma çatı",
+      "text": "Derinlemesine dikdörtgen planlı yapının üzeri dört yöne eğimli kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p217"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kadı İzzeddin'in yaptırdığı Selçuklu dönemi camisi hangi yıla tarihlenir?",
+      "options": [
+        "M. 1246",
+        "M. 1254",
+        "M. 1207",
+        "M. 1925"
+      ],
+      "correct": 1,
+      "description": "Kadı İzzeddin, Selçuklu dönemi camisini H. 652 / M. 1254'te yaptırmıştır; bugünkü cami 1925'te inşa edilmiştir.",
+      "sourceId": "inv-p216"
+    },
+    {
+      "question": "Eserin vakfiyesinde cami dışında hangi yapılar kayıtlıdır?",
+      "options": [
+        "Han, hamam ve çeşme",
+        "Kervansaray ve imaret",
+        "Türbe, medrese ve dârüşşifa",
+        "Bedesten ve arasta"
+      ],
+      "correct": 2,
+      "description": "Vakfiyede cami dışında türbe, medrese ve dârüşşifa gibi yapılar kayıtlıdır; günümüze yalnızca cami ulaşmıştır.",
+      "sourceId": "inv-p217"
+    },
+    {
+      "question": "1970'teki onarımda bulunan türbe çinilerinin bir kısmı nereye kaldırılmıştır?",
+      "options": [
+        "Konya Müzesi'ne",
+        "Mevlâna Dergâhı'na",
+        "İstanbul'a",
+        "Karatay Medresesi'ne"
+      ],
+      "correct": 0,
+      "description": "1970'teki onarımda türbeye ait duvar ve sanduka çinileri bulunmuş, bir kısmı Konya Müzesi'ne kaldırılmıştır.",
+      "sourceId": "inv-p217"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p216",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Kadı İzzettin (Karpuzoğlu) Camii\"",
+      "page": "216"
+    },
+    {
+      "id": "inv-p217",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Kadı İzzettin (Karpuzoğlu) Camii\"",
+      "page": "217"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

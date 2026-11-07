@@ -1,0 +1,104 @@
+{
+  "id": "osmangazi-timurtas-pasha-bath",
+  "name": "Timurtaş Paşa Hamamı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1420 yılından önce",
+  "endowment": "Oruç Bey tarafından yaptırılıp kardeşi Ali Bey'in Timurtaşpaşa Camii'ne vakfedilmiştir",
+  "summary": "Timurtaş oğlu Oruç Bey'in babası adına 1420'den önce yaptırdığı, yıkılmaktan kurtulup bugün de işleyen hamam.",
+  "history": "Timurtaş Paşa Hamamı, Timurtaş Paşa Külliyesi'nin bir parçasıdır. Timurtaş oğlu Oruç Bey tarafından babası adına 1420 yılından önce yaptırılmış ve kardeşi Ali Bey'in yaptırdığı Timurtaşpaşa Camii'ne vakfedilmiştir. Oruç Bey 1426'da vefat etmiş ve Hisar'da yaptırdığı Kapamalı Mektep'e defnedilmiştir.\n\nGiriş kapısı kuzeyde olan hamam doğu-batı ekseninde dikdörtgen bir alan üzerine kurulmuştur; girişin kavsarası yedi sıra stalaktitlidir. 15.75 × 17.85 m iç ölçülerindeki soğukluk bölümü kubbeyle örtülüdür. Soğukluğun doğusundaki kapıdan tonoz ve kubbeyle örtülü ılıklığa geçilir; buna bağlı bir halvet ve hela da kubbelidir. Kemerli bir geçitle göbek taşının bulunduğu sıcaklığa ulaşılır; sıcaklıktaki iki büyük halvet de kubbeyle örtülüdür. Külhan yapının doğusundadır. Duvarlar bir sıra tuğla ve bir sıra moloz taşla örülmüştür.\n\nKitaba göre süsleme bakımından oldukça zengin olan hamam, uzun süre kullanılmadığı için harap olmuş ve H. 959 / M. 1552'de enkazının satılması için fetva verilmiştir. Bu fetvayla döşeme mermerlerinin büyük kısmı ve kaygan taşları Rüstem Paşa'nın vekili Kerim Bey'e satılmış, Rüstem Paşa bu taşları kendi vakfı olan Yeni Kaplıca'nın inşasında kullanmıştır. Hamamı daha sonra şair ve saray mensubu Hubbî Hatun satın alıp onartarak yeniden çalıştırmıştır. Ancak H. 979 / M. 1571'de vakıf mütevellileri suyunu başkalarına sattığından su kaynağı kesilmiştir.\n\nYeniden Oruç Bey vakfına geçen hamam eski hâline kavuşamamış; bir dönem hapishane yapılmak istenmiş ama kanunen mümkün görülmemiş, bir süre belediyenin gaz deposu olarak kullanılmıştır. 1957'de kapsamlı bir onarım geçiren hamam en son 2010'da restore edilmiş ve bugün de işlevini sürdürmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-timurtas-pasha-bath/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-timurtas-pasha-bath/exterior.jpg",
+      "alt": "Taş ve tuğla duvarlı alçak dikdörtgen yapı; üstünde fenerli büyük kiremit kaplı kubbe ve “Demirtaşpaşa Hamamı” yazılı levha",
+      "description": "Hamamın dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-timurtas-pasha-bath/cold-room.jpg",
+      "alt": "İç mekân: iki katlı ahşap galerilerle çevrili geniş salon, şezlonglar, oturma grupları ve renkli aydınlatılmış tavan",
+      "description": "Soğukluk bölümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-timurtas-pasha-bath/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: üzerinde çok sayıda yuvarlak ışık deliği bulunan büyük ve küçük kubbeler",
+      "description": "Kubbelerin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-timurtas-pasha-bath/exterior.jpg",
+      "x": 40,
+      "y": 65,
+      "title": "Duvar örgüsü",
+      "text": "Hamamın duvarları bir sıra tuğla ve bir sıra moloz taşla inşa edilmiştir.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "id": "cold-room",
+      "image": "/images/osmangazi-timurtas-pasha-bath/cold-room.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Soğukluk",
+      "text": "15.75 × 17.85 m iç ölçülerindeki soğukluk bölümünün üzeri kubbeyle örtülüdür.",
+      "sourceId": "inv-p224"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamamı kim yaptırmıştır?",
+      "options": [
+        "Ali Bey",
+        "Hubbî Hatun",
+        "Rüstem Paşa",
+        "Oruç Bey"
+      ],
+      "correct": 3,
+      "description": "Hamam, Timurtaş oğlu Oruç Bey tarafından babası adına 1420 yılından önce yaptırılmıştır.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "question": "Hamamdan satılan kaygan taşlar hangi yapının inşasında kullanılmıştır?",
+      "options": [
+        "Yeni Kaplıca",
+        "Ulucami",
+        "Emir Hanı",
+        "Kapamalı Mektep"
+      ],
+      "correct": 0,
+      "description": "Rüstem Paşa bu taşları kendi vakfı olan Yeni Kaplıca'nın inşaatında kullanmıştır.",
+      "sourceId": "inv-p224"
+    },
+    {
+      "question": "Hamam bir dönem neyin deposu olarak kullanılmıştır?",
+      "options": [
+        "Tahıl",
+        "Belediyenin gaz deposu",
+        "Cephane",
+        "Kitap"
+      ],
+      "correct": 1,
+      "description": "Hapishaneye dönüştürülmesi mümkün görülmeyen hamam, bir müddet belediyenin gaz deposu olarak kullanılmıştır.",
+      "sourceId": "inv-p224"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p224",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Timurtaş Paşa Hamamı\"",
+      "page": "224-226"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

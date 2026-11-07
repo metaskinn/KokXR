@@ -1,0 +1,95 @@
+{
+  "id": "konya-karatay-cayir-mosque",
+  "name": "Çayır Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Cumhuriyet · XX. yüzyıl ortaları olarak düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Cemil Çiçek Caddesi’ndeki cami, ahşap çardak minaresiyle Cumhuriyet döneminde süren yapı geleneğini yansıtır.",
+  "history": "Cami, Cemil Çiçek Caddesi’ndedir ve mimari özellikleriyle XX. yüzyıl ortalarına tarihlendirilir. Kuzey kesimine 1965’te ek yapılarak genişletilmiştir. Temeli taş, diğer bölümleri kerpiç yığmadır. Üst örtüsü kırma çatılıdır; batı cephesinde ahşap çardak minaresi bulunur. Alt pencereler dikdörtgen, üstteki tepe pencereleri karedir.\n\nKareye yakın dikdörtgen harimin kuzeyinde kare ayaklarla taşınan mahfil vardır. Ahşap çıtalı tavanın altındaki mihrap ve minber sade tutulmuştur; duvarların alt bölümlerini ahşap lambri çevreler. Kitap, çardaklı minareyi Osmanlı geleneğinin Cumhuriyet döneminde sürmesi bakımından önemli bulur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-cayir-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-cayir-mosque/exterior.jpg",
+      "alt": "Yeşilimsi sıvalı kırma çatılı cami ve ön cephede ahşap çardak minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-cayir-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı, ahşap lambri kaplı harimde sade mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-cayir-mosque/exterior.jpg",
+      "x": 36,
+      "y": 31,
+      "title": "Çardak minare",
+      "text": "Batı cephesindeki minare ahşap çardak biçimindedir.",
+      "sourceId": "inv-p268"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-cayir-mosque/prayer-hall.jpg",
+      "x": 54,
+      "y": 13,
+      "title": "Çıtalı tavan",
+      "text": "Caminin iç mekânını ahşap çıtalı tavan örter.",
+      "sourceId": "inv-p268"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin kuzeyindeki ek hangi yıl yapılmıştır?",
+      "options": [
+        "1815",
+        "1905",
+        "1965",
+        "2019"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: 1965.",
+      "sourceId": "inv-p268"
+    },
+    {
+      "question": "Cami hangi cadde üzerindedir?",
+      "options": [
+        "Keçeciler Caddesi",
+        "Konya Caddesi",
+        "Sedirler Caddesi",
+        "Cemil Çiçek Caddesi"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Cemil Çiçek Caddesi.",
+      "sourceId": "inv-p268"
+    },
+    {
+      "question": "Çayır Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p268"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p268",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Çayır Camii\"",
+      "page": "268"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

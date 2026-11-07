@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-timurtas-mosque",
+  "name": "Demirtaş (Timurtaş) Camii ve Şadırvanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 792 / M. 1390'da mescit olarak; H. 981 / M. 1573'te camiye dönüştürüldü",
+  "endowment": "Banisi Kara Timurtaş Paşa'nın oğlu Ali Paşa (Ali Bey); vakfiyesi kitaba göre 1485'te Bursa'da yazılmıştır",
+  "summary": "Timurtaş Paşa Külliyesi'nin 1390'da mescit olarak yapılan, altı ayak üzerinde yükselen şadırvanlı minaresiyle mahallenin simgesi olmuş zaviyeli camisi.",
+  "history": "Demirtaş (Timurtaş) Camii, Osmangazi İlçesi, Demirtaşpaşa Mahallesi, Demirtaşpaşa Sokak No: 8'dedir ve Timurtaş Paşa Külliyesi'nin bir parçasıdır. Bursa'da “Kara” ve “Gazi” unvanlı iki Demirtaş Paşa vardır. Kara Timurtaş Paşa'nın oğlu Ali Paşa, 1390'da cami, imaret ve hamamdan oluşan külliyeyi yaptırmıştır. Babasıyla birlikte Timurlenk'e esir düşen Ali Bey, daha sonra beylerbeyi ve vezir olmuş, 1427'de vefat etmiştir; mezarının yeri bilinmemektedir.\n\nCami H. 792 / M. 1390'da mescit olarak inşa edilmiştir. Şehre uzak olması ve cuma namazı kılınacak bir camiye ihtiyaç duyulması nedeniyle H. 981 / M. 1573'te şeyhülislâmdan izin alınarak, minber masraflarını Derviş Çelebi adlı bir hayırseverin karşılamasıyla camiye dönüştürülmüştür. Daha önce H. 959 / M. 1551'de mescit, şadırvan, zaviye matbahı, odalar, evler ve su yolu harap olduğundan 46.972 akçe harcanarak kapsamlı bir onarım yapılmıştır.\n\nÜç sıra tuğla ve bir sıra kesme taşla örülen cami zaviyeli plan şemasına sahiptir. Beş gözlü son cemaat yerinin daha geniş ve yüksek orta bölümü Türk üçgenlerine oturan bir kubbeyle örtülüdür. Doğu ve batıda zaviye/tabhaneler, batıda ise günümüze ulaşmayan beşik tonozlu bir imaret bulunuyordu. Harimdeki iç avlu kubbesi tromplarla taşınır; tabhaneler ile mihraplı asıl ibadet mekânının üzeri beşik tonozludur.\n\nYapının en dikkat çeken unsuru minaresidir. Tuğladan örülen minare, kemerlerle birbirine bağlanmış altı paye üzerinde yükselir; altıgen kasnağa oturan gövdesi ve şerefesi de tuğladandır. Altındaki şadırvanla birlikte mahallenin simgesi olmuştur. 1855 depreminde minarenin şerefesi düşmüş, imaret harap olmuştur. Şadırvanlı minare yıkılmasının ardından 1966'da yeniden yapılmış, son olarak 2017'de Bursa Büyükşehir Belediyesi tarafından restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-timurtas-mosque/minaret-fountain.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-timurtas-mosque/minaret-fountain.jpg",
+      "alt": "Altı kalın tuğla payeye oturan kemerli taban üzerinde yükselen ince tuğla minare; yanında ağaçlar, mavi gökyüzü",
+      "description": "Şadırvanlı minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-timurtas-mosque/fountain.jpg",
+      "alt": "Minarenin tuğla kemerleri altında beyaz mermer, çok köşeli şadırvan; çevresinde abdest tabureleri ve demir parmaklık",
+      "description": "Minarenin altındaki şadırvan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-timurtas-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi halılı harim, karşıda ahşap çerçeveli mihrap, sağda ahşap minber; duvarlarda çiçek motifli bezemeler",
+      "description": "Mihraplı ibadet mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "piers",
+      "image": "/images/osmangazi-timurtas-mosque/minaret-fountain.jpg",
+      "x": 35,
+      "y": 78,
+      "title": "Altı paye",
+      "text": "Tuğla minare, kemerlerle birbirine bağlanmış altı paye üzerine inşa edilmiştir.",
+      "sourceId": "inv-p219"
+    },
+    {
+      "id": "minaret-shaft",
+      "image": "/images/osmangazi-timurtas-mosque/minaret-fountain.jpg",
+      "x": 35,
+      "y": 35,
+      "title": "Minare gövdesi",
+      "text": "Altıgen kasnağa oturan minarenin gövdesi ve şerefesi tuğladan yapılmıştır.",
+      "sourceId": "inv-p219"
+    },
+    {
+      "id": "fountain",
+      "image": "/images/osmangazi-timurtas-mosque/fountain.jpg",
+      "x": 50,
+      "y": 65,
+      "title": "Şadırvan",
+      "text": "Minare, altındaki şadırvanla birlikte mahallenin simgesi hâline gelmiştir.",
+      "sourceId": "inv-p219"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin minaresi kaç paye üzerine inşa edilmiştir?",
+      "options": [
+        "Dört",
+        "Sekiz",
+        "Altı",
+        "Üç"
+      ],
+      "correct": 2,
+      "description": "Tuğladan örülen minare, kemerlerle birbirine bağlanmış altı paye üzerine inşa edilmiştir.",
+      "sourceId": "inv-p219"
+    },
+    {
+      "question": "Mescit hangi yıl camiye dönüştürülmüştür?",
+      "options": [
+        "1390",
+        "H. 981 / M. 1573",
+        "1855",
+        "1966"
+      ],
+      "correct": 1,
+      "description": "Şehre uzaklığı ve cuma namazı ihtiyacı nedeniyle H. 981 / M. 1573'te camiye dönüştürülmüştür.",
+      "sourceId": "inv-p219"
+    },
+    {
+      "question": "Camiye dönüştürülürken minber masraflarını kim karşılamıştır?",
+      "options": [
+        "Derviş Çelebi",
+        "Ali Bey",
+        "Oruç Bey",
+        "Kara Timurtaş Paşa"
+      ],
+      "correct": 0,
+      "description": "Minber masrafları Derviş Çelebi adlı bir hayırsever tarafından karşılanmıştır.",
+      "sourceId": "inv-p219"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p219",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Demirtaş (Timurtaş) Camii ve Şadırvanı\"",
+      "page": "219-220"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

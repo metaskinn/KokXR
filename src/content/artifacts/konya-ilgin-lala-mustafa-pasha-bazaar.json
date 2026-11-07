@@ -1,0 +1,114 @@
+{
+  "id": "konya-ilgin-lala-mustafa-pasha-bazaar",
+  "name": "Lala Mustafa Paşa Külliyesi Arastası",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Osmanlı · külliye H. 984 / M. 1576",
+  "endowment": "Kıbrıs Fâtihi Lala Mustafa Paşa (külliyenin banisi)",
+  "summary": "Lala Mustafa Paşa Külliyesi'nin kuzeyini kaplayan, açık ve kapalı bölümlerden oluşan, halk arasında \"kapalı çarşı\" denen arasta.",
+  "history": "Ilgın şehir merkezindeki Lala Mustafa Paşa Külliyesi, Sultan Murad zamanında Kıbrıs Fâtihi Lala Mustafa Paşa tarafından H. 984 / M. 1576'da yaptırılmıştır. Arasta bu külliyenin kuzeyini kaplar.\n\nDört taraftan girişi bulunan, açık ve kapalı kısımlardan oluşan arasta halk arasında \"kapalı çarşı\" olarak da bilinir. Doğu-batı yönünde uzanan arasta dikdörtgen plandadır. Kapalı bölümün ortasındaki eyvanlı mekândan camiye bir kapı, karşısında ise tonozlu küçük bir kapı daha açılmıştır.\n\nArastanın birbirine bakan 23'er dükkânı vardır; dükkânlar beşik tonozla örtülüdür. Kapalı bölümün iki yanındaki kapılar akşamları kapatılır; kuzeye çıkışı sağlayan kapının üzerinde bir bekçi odası bulunur.\n\nOrta ve batı kısmı oluşturan kapalı bölümdeki koridorun kuzey ve güneyinde karşılıklı dükkânlar sıralanır. Koridorun üzerinde doğu-batı yönünde sivri beşik tonozlu, aralarına gergiler yerleştirilmiş kemerler vardır. Sivri kemerli eyvanlar şeklinde koridora açılan dükkânlar kuzey-güney yönünde sivri beşik tonozlarla örtülüdür.\n\nDoğudaki açık bölümün üzeri örtülmemiştir ve kuzey-güney yönünde sıra dükkânlardan oluşur; buradaki mekânlar daha küçüktür ve yine beşik tonozla örtülüdür. Üzeri kapatılmadığı için çatı seviyesi kapalı bölüme göre aşağıda kalır. Sokağa bakan batı cephenin ekseninde iki renkli taşla örülmüş basık kemerli bir kapı görülür. Kuzey cephe yapının en serbest bölümüdür; caddeye bakan sağır cephenin örtü sisteminde bacalar yer alır. Arastanın sokakla bağlantısını sağlayan cephelerden biri olan doğu cephede açık kısım bulunur.\n\nHem kapalı hem açık çarşıda kesme taş ve tuğla karışık olarak kullanılmış; özellikle kapalı çarşının doğu ve batı giriş kapısı kemerlerinde tuğla karışık biçimde kullanılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-lala-mustafa-pasha-bazaar/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-bazaar/exterior.jpg",
+      "alt": "Sokak kenarında uzanan, taş duvarlı uzun yapı; kurşun kaplı çatısı üzerinde sıra sıra tuğla bacalar, köşede kemerli bir giriş; arkada caminin kubbesi ve minaresi",
+      "description": "Arastanın sokaktan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-bazaar/shop-interior.jpg",
+      "alt": "Taş ve tuğla duvarlı küçük bir mekânda duvara asılı kırmızı halı ve tablo, önünde ahşap masa ve oturaklar",
+      "description": "Arasta içinde bir dükkân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-bazaar/brick-and-stone-vault.jpg",
+      "alt": "Yakın çekim: moloz taş duvar yüzeyleri arasında sıralar hâlinde örülmüş kırmızı tuğla kemer",
+      "description": "Taş ve tuğla örgü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "chimneys",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-bazaar/exterior.jpg",
+      "x": 40,
+      "y": 58,
+      "title": "Bacalar",
+      "text": "Caddeye bakan sağır kuzey cephenin örtü sisteminde bacalar yer alır.",
+      "sourceId": "inv-p65"
+    },
+    {
+      "id": "mixed-masonry",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-bazaar/brick-and-stone-vault.jpg",
+      "x": 45,
+      "y": 35,
+      "title": "Taş ve tuğla",
+      "text": "Kapalı ve açık çarşıda kesme taş ve tuğla karışık olarak kullanılmıştır.",
+      "sourceId": "inv-p65"
+    }
+  ],
+  "test": [
+    {
+      "question": "Arasta halk arasında hangi adla bilinir?",
+      "options": [
+        "Bedesten",
+        "Kapalı çarşı",
+        "Uzun çarşı",
+        "Yeni han"
+      ],
+      "correct": 1,
+      "description": "Açık ve kapalı kısımlardan oluşan arasta halk arasında \"kapalı çarşı\" olarak da bilinir.",
+      "sourceId": "inv-p64"
+    },
+    {
+      "question": "Kuzeye çıkışı sağlayan kapının üzerinde ne bulunur?",
+      "options": [
+        "Saat kulesi",
+        "Mescit",
+        "Kitâbe",
+        "Bekçi odası"
+      ],
+      "correct": 3,
+      "description": "Kuzeye çıkışı sağlayan kapının üzerinde bir bekçi odası bulunur.",
+      "sourceId": "inv-p64"
+    },
+    {
+      "question": "Arastanın dükkânları nasıl örtülüdür?",
+      "options": [
+        "Beşik tonozla",
+        "Kubbeyle",
+        "Düz ahşap tavanla",
+        "Çapraz tonozla"
+      ],
+      "correct": 0,
+      "description": "Birbirine bakan 23'er dükkân beşik tonozla örtülüdür.",
+      "sourceId": "inv-p64"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p53",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Lala Mustafa Paşa Külliyesi\"",
+      "page": "53"
+    },
+    {
+      "id": "inv-p64",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Arasta\"",
+      "page": "64"
+    },
+    {
+      "id": "inv-p65",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Arasta\"",
+      "page": "65"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

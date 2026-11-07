@@ -1,0 +1,116 @@
+{
+  "id": "konya-aksehir-eski-kale-residence",
+  "name": "Konut (Akşehir, Eski Kale Mahallesi)",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Osmanlı'nın son dönemi · mimari ve teknik özelliklerine göre XIX. yüzyıl sonları – XX. yüzyılın ilk yarısı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Akşehir'de Ayasofya Mescidi'nin yanında, taş ve kerpiç duvarlı, ahşap elemanlı, iç sofalı plan tipinde üç katlı geç Osmanlı evi.",
+  "history": "Konut, Akşehir'de Eski Kale Mahallesi'nde, Ayasofya Mescidi'nin yanındadır. Mimari ve teknik özelliklerine bakılarak XIX. yüzyıl sonları ile XX. yüzyılın ilk yarısı arasında inşa edildiği anlaşılmaktadır.\n\nYapı zemin kat, birinci kat ve çatı katı olmak üzere üç katlıdır; arka cephesinde bahçesi vardır. Evin temeli ve duvarları belli bir seviyeye kadar kaba yontu taştan yığma teknikle örülmüş, duvarların üst kısımlarında kerpiç kullanılmıştır. Merdivenlerde, üst örtüde, kapı, dolap ve yüklüklerde, saçaklarda, balkonda, çıkmada ve çıkmanın altında kaplama ve taşıyıcı eleman olarak ahşap kullanılmıştır.\n\nKitapta, ikinci kat sofanın iki yanına oda çıkılması ve çatı katındaki sofanın dışarı doğru çıkma yapmasının ana cepheyi hareketlendirdiği belirtilir. Cephelerde parmaklıklı dikdörtgen pencereler vardır; saçaklar sade tutulmuştur.\n\nEv, Konya ve Akşehir'de sık görülen plan tipindedir: ilk iki katta iç sofalı plan, çatı katında haçvari plan şeması uygulanmıştır. Zemin katta sofaya iki kanatlı bir kapıdan girilir; odalar sofanın sağına ve soluna yerleştirilmiştir ve iç sofaya açılır. Üst kata zemin kat sofasının sağ köşesindeki ahşap merdivenle çıkılır. Üst kat da aynı plandadır: sofanın iki yanında ikişer oda bulunur. İç sofanın kuzeyindeki odalar, oda çıkmasıyla birlikte başoda olarak kullanılır; çıkmalar oda genişliğindedir.\n\nÇatı katına odalardan birindeki yüklüğün içinden çıkılır ve merdiven doğrudan sofaya açılır. Bu kat bir sofa, iki oda ve seyir balkonu olmak üzere üç bölüme ayrılmıştır; odalar sofanın iki ucundadır. Çatı katı sofası alt kattaki sofanın üzerine doğru taşırılmıştır ve bu bölümün cumbasında sedir bulunur. Çatı sofasından bahçeye açılan seyir balkonunun (köşkünün) önü açıktır.\n\nOsmanlı'nın son döneminde yapılan konut süsleme bakımından sadedir. En süslü bölümleri yüklük, çiçeklik, merdiven korkulukları ve zemin kat döşemeleri gibi ahşap elemanlarıdır. Çiçeklik altlarındaki süslemeler, dışta geometrik bezemeli bir bordür ve bordürün içinde altı kollu yıldız motifleriyle işlenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-eski-kale-residence/house-and-garden.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-eski-kale-residence/house-and-garden.jpg",
+      "alt": "Bahçedeki havuzun ardında açık renk sıvalı, koyu ahşap kirişli ve geniş saçaklı çok katlı ev; zemin katta parmaklıklı pencereler, üst katta demir korkuluklu balkon; önde biri oturan biri ayakta duran iki koyu renkli insan heykeli, sağda taş ve tuğla bahçe duvarı",
+      "description": "Konutun bahçeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-eski-kale-residence/aerial-view.jpg",
+      "alt": "Havadan görünüm: kırmızı kiremit çatılı evlerle dolu yamaçta, sokak köşesinde beyaz cepheli çok katlı bir ev ve hemen yanında kurşun kaplı kubbeli küçük taş yapı; arkada düzenli bir park ve ağaçlık tepe",
+      "description": "Konutun çevresiyle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-eski-kale-residence/room-display.jpg",
+      "alt": "Desenli karo zeminli bir odada, rahle önünde yere oturmuş sarıklı ve sakallı bir figür ile yanında ayakta duran uzun kaftanlı, sarıklı ikinci figür; sağda koyu renk ahşap kapı ve yerde kilim minder",
+      "description": "İç mekânda bir oda",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-eski-kale-residence/sitting-room.jpg",
+      "alt": "Ahşap tavanlı ve ahşap döşemeli bir oda: pencere önündeki sedirde ve yerdeki kilim üzerinde oturan, sarıklı ve fesli giysili üç figür, ortalarında alçak yuvarlak bir sofra; tavanda ahşap çember avize",
+      "description": "İç mekânda bir oda",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "barred-window",
+      "image": "/images/konya-aksehir-eski-kale-residence/house-and-garden.jpg",
+      "x": 31,
+      "y": 53,
+      "title": "Parmaklıklı pencereler",
+      "text": "Konutun cephelerinde parmaklıklı dikdörtgen pencereler yer almaktadır.",
+      "sourceId": "inv-p293"
+    },
+    {
+      "id": "eaves",
+      "image": "/images/konya-aksehir-eski-kale-residence/house-and-garden.jpg",
+      "x": 8,
+      "y": 11,
+      "title": "Ahşap saçak",
+      "text": "Saçaklarda ahşap malzeme kullanılmış, saçaklar sade tutulmuştur.",
+      "sourceId": "inv-p291"
+    }
+  ],
+  "test": [
+    {
+      "question": "Konut Akşehir'de hangi yapının yanında yer alır?",
+      "options": [
+        "Ulu Cami",
+        "Ayasofya Mescidi",
+        "Nasreddin Hoca Türbesi",
+        "Taş Medrese"
+      ],
+      "correct": 1,
+      "description": "Konut, Akşehir Eski Kale Mahallesi'nde, Ayasofya Mescidi'nin yanında yer almaktadır.",
+      "sourceId": "inv-p291"
+    },
+    {
+      "question": "Konutun çatı katına nereden çıkılır?",
+      "options": [
+        "Bahçedeki dış merdivenden",
+        "Zemin kat sofasındaki taş merdivenden",
+        "Balkondaki ahşap merdivenden",
+        "Odalardan birindeki yüklüğün içinden"
+      ],
+      "correct": 3,
+      "description": "Çatı katına odalardan birinde bulunan yüklüğün içinden çıkılır; merdiven doğrudan sofaya açılır.",
+      "sourceId": "inv-p293"
+    },
+    {
+      "question": "Çiçeklik altlarındaki süslemelerde bordürün içinde hangi motif vardır?",
+      "options": [
+        "Altı kollu yıldız",
+        "Lale",
+        "Hilal",
+        "Selvi"
+      ],
+      "correct": 0,
+      "description": "Çiçeklik altlarındaki süslemeler, geometrik bezemeli bir bordür ve bordür içinde altı kollu yıldız motifleriyle işlenmiştir.",
+      "sourceId": "inv-p293"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p291",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Konut\"",
+      "page": "291"
+    },
+    {
+      "id": "inv-p293",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Konut\"",
+      "page": "293"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

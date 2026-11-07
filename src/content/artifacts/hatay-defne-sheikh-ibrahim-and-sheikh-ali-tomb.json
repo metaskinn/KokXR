@@ -1,0 +1,100 @@
+{
+  "id": "hatay-defne-sheikh-ibrahim-and-sheikh-ali-tomb",
+  "name": "Şeyh İbrahim ve Şeyh Ali Türbesi",
+  "district": "Defne",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh İbrahim ve Şeyh Ali Türbesi, Tavla Köyü’nde briket ve taş örgülü, yedi mezarlı kare planlı bir türbedir.",
+  "history": "Defne ilçesinin Tavla Köyü’nde yüksekçe bir tepeye kurulan türbe kare planlıdır. Briket ve taş örgülü beden duvarlarında sıva veya boya kullanılmamıştır.\n\nBazı cephelerde pencereler, girişte ise ahşap kapı bulunur. İçerideki yedi mezardan ikisi mozaik, beşi taş kaplıdır. Baş şahide taşlarında Arapça yazıtlar görülür. Yakınında hazire, giriş yönünde de mezarlar vardır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-defne-sheikh-ibrahim-and-sheikh-ali-tomb/tomb-and-cemetery.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-defne-sheikh-ibrahim-and-sheikh-ali-tomb/tomb-and-cemetery.jpg",
+      "alt": "Önde açık renk taş mezarlar, geride ağaçlar arasında geniş çatılı taş duvarlı yapı",
+      "description": "Önde açık renk taş mezarlar, geride ağaçlar arasında geniş çatılı taş duvarlı yapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-defne-sheikh-ibrahim-and-sheikh-ali-tomb/tomb-and-cemetery.jpg",
+      "x": 65,
+      "y": 46,
+      "title": "Taş örgülü türbe",
+      "text": "Kare planlı yapı briket ve taş örgüyle yapılmış, beden duvarları sıvasız ve boyasız bırakılmıştır.",
+      "sourceId": "inv-p414"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-defne-sheikh-ibrahim-and-sheikh-ali-tomb/tomb-and-cemetery.jpg",
+      "x": 21,
+      "y": 60,
+      "title": "Çevredeki mezarlar",
+      "text": "Türbe yakınlarında hazire ve giriş yönünde mezarlar bulunur.",
+      "sourceId": "inv-p415"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh İbrahim ve Şeyh Ali Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Antakya",
+        "Arsuz",
+        "Samandağ"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe Defne olarak verilmiştir.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "question": "Türbenin içindeki mezar sayısı kaçtır?",
+      "options": [
+        "Üç",
+        "Yedi",
+        "On dört",
+        "Yirmi"
+      ],
+      "correct": 1,
+      "description": "İçerideki yedi mezarın ikisi mozaik, beşi taş kaplıdır.",
+      "sourceId": "inv-p415"
+    },
+    {
+      "question": "Beden duvarlarının yüzeyi nasıl bırakılmıştır?",
+      "options": [
+        "Tamamen mermer kaplı",
+        "Çini kaplı",
+        "Sıvasız ve boyasız",
+        "Altın yaldızlı"
+      ],
+      "correct": 2,
+      "description": "Kitap beden duvarlarında sıva ve boya kullanılmadığını belirtir.",
+      "sourceId": "inv-p414"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p414",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Şeyh İbrahim ve Şeyh Ali Türbesi\"",
+      "page": "414"
+    },
+    {
+      "id": "inv-p415",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Şeyh İbrahim ve Şeyh Ali Türbesi\"",
+      "page": "415"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Şeyh İbrahim ve Şeyh Ali Türbesi\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

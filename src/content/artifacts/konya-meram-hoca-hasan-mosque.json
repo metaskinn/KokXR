@@ -1,0 +1,118 @@
+{
+  "id": "konya-meram-hoca-hasan-mosque",
+  "name": "Hoca Hasan Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu dönemi; inşa tekniği ve çinilerine göre XIII. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "XIII. yüzyıla tarihlenen Hoca Hasan Camii, yivli tuğla minaresi ve iç içe iki nişli mihrabıyla dikkat çeker.",
+  "history": "Cami, Meram, Abdülaziz Mahallesi, Kazım Karabekir Caddesi No. 15’tedir. İnşa tekniği ve mozaik çini süslemelerine göre XIII. yüzyılda Anadolu Selçukluları zamanında yapıldığı düşünülür. Yapı Osmanlılar zamanında H. 1185 / M. 1771’de, sonra 1990 ve 2007’de tamir görmüştür. 1990 restorasyonundaki kazılarda alçı ve çini parçaları ile alçı pencere kafesi parçaları bulunmuş ve Karatay Medresesi Çini Eserleri Müzesi’ne taşınmıştır.\n\nCami kare planlı tek kubbeli harim, son cemaat yeri ve minareden oluşur; alt kısımlar taş, üst kısımlar tuğladır. Son cemaat yerinin ortasında sırsız tuğla ve firuze çinilerle süslü üç dilimli bir mihrabiye bulunur. Kuzeydoğudaki minare kare gövdelidir; köşelerde üçgen, eksenlerde yarım daire yivlerle şekillendirilmiş, üstünde firuze çini bir kuşak dolanır. Şerefe altı iki sıra mukarnaslıdır.\n\nHarim tromp geçişli kubbeyle örtülüdür. Kıble duvarındaki mihrapta iç içe iki mihrap uygulaması vardır: sekiz sıra mukarnas kavsaralı dikdörtgen nişin ortasında, üç dilimli ve mukarnas kavsaralı ikinci bir niş yer alır. 1990 çalışmalarında mihrabın aslında çini kaplı ve bugünkünden büyük olduğu, pencerelerin de alçı kaplamalı olduğu anlaşılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-hoca-hasan-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-hoca-hasan-mosque/exterior.jpg",
+      "alt": "Önünde budanmış ağaçlar bulunan kubbeli tuğla cami ve solunda yivli tuğla minare",
+      "description": "Önünde budanmış ağaçlar bulunan kubbeli tuğla cami ve solunda yivli tuğla minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-hoca-hasan-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı harimde beyaz mukarnaslı mihrap, iki yanda pencereler ve büyük halka avize",
+      "description": "Turkuaz halılı harimde beyaz mukarnaslı mihrap, iki yanda pencereler ve büyük halka avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-hoca-hasan-mosque/minaret.jpg",
+      "alt": "Firuze kuşaklı, yivli tuğla minare gövdesi, şerefe ve kurşun külah",
+      "description": "Firuze kuşaklı, yivli tuğla minare gövdesi, şerefe ve kurşun külah",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-hoca-hasan-mosque/exterior.jpg",
+      "x": 27,
+      "y": 35,
+      "title": "Yivli minare",
+      "text": "Taş ve tuğladan yapılan minarenin gövdesi yivlerle şekillendirilmiştir.",
+      "sourceId": "inv-p117"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-hoca-hasan-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "İç içe iki mihrap",
+      "text": "Mukarnas kavsaralı dikdörtgen nişin ortasında üç dilimli ikinci bir mihrap nişi bulunur.",
+      "sourceId": "inv-p117"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-meram-hoca-hasan-mosque/exterior.jpg",
+      "x": 55,
+      "y": 55,
+      "title": "Tek kubbe",
+      "text": "Kare planlı harim tromp geçişli bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p117"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapı Osmanlı döneminde hangi yıl tamir görmüştür?",
+      "options": [
+        "M. 1650",
+        "M. 1801",
+        "M. 1771",
+        "M. 1899"
+      ],
+      "correct": 2,
+      "description": "Yapı H. 1185 / M. 1771’de tamir görmüştür.",
+      "sourceId": "inv-p116"
+    },
+    {
+      "question": "1990 kazılarında bulunan alçı parçalar nereye taşınmıştır?",
+      "options": [
+        "İnce Minareli Medrese",
+        "Mevlâna Müzesi",
+        "Konya Arkeoloji Müzesi",
+        "Karatay Medresesi Çini Eserleri Müzesi"
+      ],
+      "correct": 3,
+      "description": "Buluntular Karatay Medresesi Çini Eserleri Müzesi’ne nakledilmiştir.",
+      "sourceId": "inv-p116"
+    },
+    {
+      "question": "Dıştaki mihrap nişi kaç sıra mukarnas kavsaralıdır?",
+      "options": [
+        "Sekiz",
+        "Üç",
+        "Beş",
+        "On"
+      ],
+      "correct": 0,
+      "description": "Dikdörtgen mihrap nişi sekiz sıra mukarnas kavsaralıdır.",
+      "sourceId": "inv-p117"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p116",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Hoca Hasan Camii\"",
+      "page": "116"
+    },
+    {
+      "id": "inv-p117",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Hoca Hasan Camii\"",
+      "page": "117"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

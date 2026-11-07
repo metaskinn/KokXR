@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-debruz-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Debruz Mescidi",
+  "period": "Muhtemelen 1872 depremi sonrası düzenleme",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Debruz Mescidi, güneydoğu köşesindeki mihrabı ve küçük avlusuyla evden dönüştürüldüğü düşünülen bir yapıdır.",
+  "history": "Kitap, yapının büyük olasılıkla evken 1872 Antakya depreminden sonra mahalle mescidine dönüştürüldüğünü belirtir. Kimin dönüştürdüğü bilinmez. Kıbleyi sağlamak için mihrap güneydoğu köşesine yerleştirilmiştir. Kuzeyi ve batısı dükkânlarla çevrilidir. İnce uzun avlu ile kare planlı harim, bir kapı ve üç pencereyle bağlanır. Ahşap kirişli tavanı gömme ayaklara basan sivri kemer destekler; kemerin yan duvarlardan yüksek tutulmasıyla iki yöne eğimli kırma çatı elde edilmiştir. Mihrap sadedir. Yanında 1911 tarihli Hacı Sait Helvacı Çeşmesi vardır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-debruz-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-debruz-masjid/book-view-1.jpg",
+      "alt": "Sokak boyunca taş cephe, kemerli pencereler, kapı ve sağında duvar çeşmesi",
+      "description": "Debruz Mescidi — kitaptaki görünüm 1 (s. 218–219)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-debruz-masjid/book-view-2.jpg",
+      "alt": "İçeride solda sade niş, ortada pencereler ve sağda ahşap minber",
+      "description": "Debruz Mescidi — kitaptaki görünüm 2 (s. 220–221)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-debruz-masjid/book-view-1.jpg",
+      "x": 95,
+      "y": 68,
+      "title": "Duvar çeşmesi",
+      "text": "Mescidin hemen yanında Hacı Sait Helvacı Çeşmesi vardır.",
+      "sourceId": "inv-p220"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-debruz-masjid/book-view-2.jpg",
+      "x": 11,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Sade mihrap güneydoğu köşesine yerleştirilmiştir.",
+      "sourceId": "inv-p220"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mihrap hangi köşededir?",
+      "options": [
+        "Kuzeybatı",
+        "Kuzeydoğu",
+        "Güneydoğu",
+        "Güneybatı"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Güneydoğu.",
+      "sourceId": "inv-p220"
+    },
+    {
+      "question": "Yanındaki çeşmenin adı nedir?",
+      "options": [
+        "Tevfik Çeşmesi",
+        "Kurtuluş Çeşmesi",
+        "Halil Ağa Çeşmesi",
+        "Hacı Sait Helvacı Çeşmesi"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Hacı Sait Helvacı Çeşmesi.",
+      "sourceId": "inv-p220"
+    },
+    {
+      "question": "Harimin planı nasıldır?",
+      "options": [
+        "Kare",
+        "Sekizgen",
+        "Daire",
+        "Haç"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Kare.",
+      "sourceId": "inv-p220"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p220",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Debruz Mescidi\"",
+      "page": "220"
+    },
+    {
+      "id": "inv-p221",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Debruz Mescidi\"",
+      "page": "221"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Debruz Mescidi\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

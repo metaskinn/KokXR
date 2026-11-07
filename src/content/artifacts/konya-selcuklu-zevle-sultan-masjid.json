@@ -1,0 +1,104 @@
+{
+  "id": "konya-selcuklu-zevle-sultan-masjid",
+  "name": "Zevle Sultan Mescidi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu, Alâeddin Keykubat dönemi (kitâbeye dayanarak kabul edilir)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hamidiye Mahallesi'ndeki tek kubbeli tuğla mescit, kitâbesine göre Alâeddin Keykubat döneminde yapılmış kabul edilir.",
+  "history": "Mescit, Selçuklu ilçesi Hamidiye Mahallesi, Abdülezel Caddesi No. 17'dedir. Giriş kapısının üzerinde celî sülüs hatla yazılmış dört satırlık bir kitâbe bulunur. Kitâbenin ilk satırındaki “Es-sultân'ul muazzam, Alâü'd-dünya ve'd-dîn” ifadesinden hareketle yapının Alâeddin Keykubat döneminde inşa edildiği kabul edilir. Bânisi Zevle Sultan hakkında herhangi bir bilgi yoktur.\n\nMescit 1960'ta onarılmış, bu sırada türbe mescidin dışında ve açıkta bırakılmıştır. Vakıflar Genel Müdürlüğü 1998'de yapıyı yeniden tamir ettirmiştir.\n\nKare planlı yapının beden duvarlarında ve kubbesinde tuğla kullanılmıştır. Harime batıdaki, profilli silmelerle çevrili kapıdan girilir. Kare harim tek kubbeyle örtülüdür; yarım daire planlı mihrap güneydoğu köşededir. Günümüzde mescitten ayrılıp sundurma altına alınan türbede üç sanduka bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-zevle-sultan-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-zevle-sultan-masjid/exterior.jpg",
+      "alt": "Kurşun kaplı kubbesi olan tuğla mescit; solda sundurma altında demir parmaklıklı bölüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-zevle-sultan-masjid/interior.jpg",
+      "alt": "Beyaz kubbeli iç mekânda köşede ahşap kaplı mihrap, sağda ahşap minber ve kitaplıklar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-selcuklu-zevle-sultan-masjid/exterior.jpg",
+      "x": 62,
+      "y": 22,
+      "title": "Tuğla kubbe",
+      "text": "Kare planlı mescit tek kubbeyle örtülüdür; beden duvarlarında ve kubbede tuğla kullanılmıştır.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-selcuklu-zevle-sultan-masjid/exterior.jpg",
+      "x": 12,
+      "y": 62,
+      "title": "Sundurma altındaki türbe",
+      "text": "1960 onarımında mescidin dışında kalan türbe bugün sundurma altındadır ve içinde üç sanduka vardır.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-selcuklu-zevle-sultan-masjid/interior.jpg",
+      "x": 15,
+      "y": 58,
+      "title": "Köşedeki mihrap",
+      "text": "Yarım daire planlı mihrap harimin güneydoğu köşesinde yer alır.",
+      "sourceId": "inv-p296"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin tarihlendirilmesinde neye dayanılır?",
+      "options": [
+        "Vakfiyesine",
+        "Giriş kapısındaki kitâbeye",
+        "Minaresindeki yazıya",
+        "Bir seyahatnameye"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Giriş kapısındaki kitâbeye.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "question": "Mescitten ayrılan türbede kaç sanduka bulunur?",
+      "options": [
+        "Bir",
+        "İki",
+        "Dört",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Üç.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "question": "Vakıflar Genel Müdürlüğü mescidi hangi yıl yeniden tamir ettirmiştir?",
+      "options": [
+        "1998",
+        "1960",
+        "1977",
+        "2008"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: 1998.",
+      "sourceId": "inv-p296"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p296",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Zevle Sultan Mescidi\"",
+      "page": "296"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

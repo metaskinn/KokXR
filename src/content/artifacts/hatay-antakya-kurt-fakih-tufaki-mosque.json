@@ -1,0 +1,112 @@
+{
+  "id": "hatay-antakya-kurt-fakih-tufaki-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Kürt Fakih (Tufaki) Camii",
+  "period": "16. yüzyıla tarihleme önerisi; 1872 depremi sonrası biçimlenme",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kürt Fakih Camii, rozetli avlu kapısı ve ahşap örtülü minaresiyle tanıtılan küçük bir mahalle camisidir.",
+  "history": "Antakya’daki yapının geçmişinin 16. yüzyıla uzandığı düşünülse de kitap bugünkü biçimini 1872 depreminden sonra aldığını kabul etmeyi daha gerçekçi bulur. Kareye yakın dikdörtgen harim düz ahşap tavanlı, mihrap ve minber sadedir. Kitap doğu ve batıda birer, kuzeyde iki, güneyde dört olmak üzere sekiz pencere sayar. Batıda aynı adlı çeşme ve avlu vardır. Kapı yanındaki minare kare kaideden sekizgen gövdeye geçer; ahşap iskeletli külah ve örtülü şerefeyle tamamlanır. Özenli avlu kapısı üç yandan sivri kemerle çevrilidir. Alınlıktaki iki rozetin devşirme olabileceği, geometrik ve bitkisel kompozisyonlar taşıdığı belirtilir. Kemer cephesindeki testere dişine benzer yivler Memlük ve Adana örnekleriyle karşılaştırılır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-kurt-fakih-tufaki-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-kurt-fakih-tufaki-mosque/book-view-1.jpg",
+      "alt": "Kiremit çatılı taş cami cephesi, kemerli pencereler ve arkada kısa minare",
+      "description": "Kürt Fakih (Tufaki) Camii — kitaptaki görünüm 1 (s. 272–273)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-kurt-fakih-tufaki-mosque/book-view-2.jpg",
+      "alt": "Taş duvar içine alınmış kapının üstünde iç içe kemerler ve rozetler",
+      "description": "Kürt Fakih (Tufaki) Camii — kitaptaki görünüm 2 (s. 274–275)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-kurt-fakih-tufaki-mosque/book-view-2.jpg",
+      "x": 50,
+      "y": 19,
+      "title": "Rozetler",
+      "text": "Kapı alınlığına altta büyük, üstte küçük iki rozet konulmuştur.",
+      "sourceId": "inv-p275"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-kurt-fakih-tufaki-mosque/book-view-1.jpg",
+      "x": 42,
+      "y": 25,
+      "title": "Minare",
+      "text": "Kare kaide üzerinde sekizgen gövde ve ahşap örtülü şerefe bulunur.",
+      "sourceId": "inv-p274"
+    }
+  ],
+  "test": [
+    {
+      "question": "Avlu kapısının alınlığında kaç rozet vardır?",
+      "options": [
+        "Bir",
+        "Dört",
+        "Altı",
+        "İki"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p275"
+    },
+    {
+      "question": "Harimin tavanı nasıldır?",
+      "options": [
+        "Düz ahşap",
+        "Çapraz tonoz",
+        "Kurşun kubbe",
+        "Tuğla kubbe"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Düz ahşap.",
+      "sourceId": "inv-p274"
+    },
+    {
+      "question": "Minarenin kaidesi hangi planla başlar?",
+      "options": [
+        "Daire",
+        "Kare",
+        "Üçgen",
+        "On ikigen"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Kare.",
+      "sourceId": "inv-p274"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p274",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kürt Fakih (Tufaki) Camii\"",
+      "page": "274"
+    },
+    {
+      "id": "inv-p275",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kürt Fakih (Tufaki) Camii\"",
+      "page": "275"
+    },
+    {
+      "id": "inv-p276",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kürt Fakih (Tufaki) Camii\"",
+      "page": "276"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kürt Fakih (Tufaki) Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

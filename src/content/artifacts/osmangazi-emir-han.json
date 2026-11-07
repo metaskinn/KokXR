@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-emir-han",
+  "name": "Emir Hanı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 740 / M. 1339-40, Orhan Bey dönemi",
+  "endowment": "Kitapta belirtilmemiştir; hanın gelir kaynağı kantariye geliriydi",
+  "summary": "Orhan Bey Külliyesi'nin parçası olarak 1339-40'ta yapılan, Bursa'nın ilk bedesteni sayılan iki katlı, revaklı avlulu şehir hanı.",
+  "history": "Emir Hanı, Osmangazi İlçesi, Nalbantoğlu Mahallesi, Uzunçarşı Caddesi No: 11'de, Ulucami'nin kuzeydoğu köşesinde yer alır. Gazi Orhan Bey tarafından külliyesinin bir parçası olarak H. 740 / M. 1339-40'ta At Pazarı'nın kurulduğu bölgede yaptırılmıştır. 1326'daki fetihten sonra Bursa'nın yeni bir ticaret merkezi olma iddiasını güçlendiren çekirdeğin ilk ticari yapısı kabul edilir. Selçuklu kervansaray tipinin şehrin ihtiyaçlarına göre yeniden yorumlanmasıyla yapılmış, Osmanlı şehir hanlarının tipinin ilk örneklerinden biri sayılmıştır.\n\nHan, kayıtlarda “Bey Hanı”, “Hân-ı Bezzâziye”, “Eski Bedesten”, “Kepenekçiler Çarşısı”, “Sultan Hanı” ve “Kervansaray” gibi adlarla geçer; çarşı kantarı burada bulunduğundan “Bahar Kapanı” olarak da bilinirdi. Bursa'nın ilk bedesteni kabul edilir; Yıldırım Bayezid döneminde yeni bedesten yapılınca “Eski Bedesten” adını almıştır. Şehirde alınıp satılan mallar burada tartılmış, kantariye geliri hanın finansal kaynağı olmuştur. Fetihten 1781'e kadar kullanılan kantarlar için yapılan peykeler girişte görülebilir.\n\nYaklaşık 45 × 45 m ölçülerindeki han, geniş ayaklara oturan revaklarla çevrili, 650 m² civarında bir orta avluya sahiptir. Duvarlar iki sıra tuğla ve bir sıra küfeki taşıyla almaşık örülmüştür. İki katlı yapının alt katında 36, üst katında 38 oda vardır. Alt kattaki penceresiz odalar kervanların getirdiği malların depolandığı korunaklı mekânlar, üst kattaki ocaklı odalar tüccarların konakladığı odalardır. Hanın güneyindeki ahırlar sonradan kaldırılmış ve bu alana 1399'da Ulucami inşa edilmiştir.\n\nHan 1544, 1634, 1674, 1788, 1855 ve 1958'de yangın ve depremler geçirmiş, her seferinde onarılarak asıl işlevini korumuştur. En kapsamlı tadilatlardan biri 1958 Büyük Çarşı Yangını'ndan sonra 1962-63'te yapılmıştır. Bugün üzeri kurşun kaplıdır. Üst katta kitapçılar, hac ve dinî malzeme satıcıları ile kuyumcular, alt katta yeme-içme mekânları bulunur. Fıskiyeli şadırvanı ve çınar ağaçlarının gölgelediği avlusuyla han, hâlâ bir buluşma mekânıdır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-emir-han/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-emir-han/aerial-view.jpg",
+      "alt": "Yüksekten çekilmiş fotoğraf: çok kubbeli büyük cami ve iki minaresi, önünde tarihi çarşının çatıları; arkada yamaçlara yayılan şehir",
+      "description": "Ulucami ve çevresindeki çarşı bölgesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/osmangazi-emir-han/courtyard.jpg",
+      "alt": "Avlu: taş döşeli zemin, alçak çitle çevrili yeşillik içinde masalar ve yüksek ağaçlar; arka planda revaklı han cepheleri",
+      "description": "Hanın avlusu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ulu-mosque",
+      "image": "/images/osmangazi-emir-han/aerial-view.jpg",
+      "x": 30,
+      "y": 40,
+      "title": "Ulucami",
+      "text": "Hanın güneyindeki ahırlar kaldırılmış ve bu alana 1399'da Ulucami inşa edilmiştir; han Ulucami'nin kuzeydoğu köşesindedir.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "id": "courtyard",
+      "image": "/images/osmangazi-emir-han/courtyard.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Orta avlu",
+      "text": "Revaklarla çevrili orta avlu yaklaşık 650 m² büyüklüğündedir.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "id": "plane-trees",
+      "image": "/images/osmangazi-emir-han/courtyard.jpg",
+      "x": 75,
+      "y": 25,
+      "title": "Çınar ağaçları",
+      "text": "Fıskiyeli şadırvanı ve tarihi çınar ağaçlarının gölgelediği avlu, bugün de bir buluşma mekânıdır.",
+      "sourceId": "inv-p214"
+    }
+  ],
+  "test": [
+    {
+      "question": "Emir Hanı neden “Bahar Kapanı” olarak da bilinmiştir?",
+      "options": [
+        "Baharda açıldığı için",
+        "Çarşı kantarı burada bulunduğu için",
+        "Baharat satıldığı için",
+        "Kapısı bahçeye açıldığı için"
+      ],
+      "correct": 1,
+      "description": "Bursa'daki çarşı kantarının burada bulunması nedeniyle han “Bahar Kapanı” adıyla da bilinmekteydi.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "question": "İki katlı hanın alt ve üst katlarında kaçar oda vardır?",
+      "options": [
+        "30 ve 30",
+        "40 ve 42",
+        "24 ve 26",
+        "36 ve 38"
+      ],
+      "correct": 3,
+      "description": "Hanın alt katında 36, üst katında 38 bağımsız oda bulunmaktadır.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "question": "Hanın güneyindeki ahırların yerine hangi yapı inşa edilmiştir?",
+      "options": [
+        "Ulucami",
+        "Koza Hanı",
+        "Yeni Bedesten",
+        "Orhan Hamamı"
+      ],
+      "correct": 0,
+      "description": "Hanın güneyindeki ahırlar kaldırılmış ve 1399'da bu alana Ulucami inşa edilmiştir.",
+      "sourceId": "inv-p214"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p214",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Emir Hanı\"",
+      "page": "214-217"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

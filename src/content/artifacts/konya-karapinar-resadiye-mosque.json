@@ -1,0 +1,95 @@
+{
+  "id": "konya-karapinar-resadiye-mosque",
+  "name": "Reşadiye Camii",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "Osmanlı · H. 1329 / M. 1911",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Adalet Sokak’taki Reşadiye Camii, kesme taş duvarları ve sekizgen kasnağa oturan tek kubbesiyle tanınır.",
+  "history": "Cami, Karapınar Adalet Sokak’tadır. İlk inşa kitabesi bulunmaz; minare kapısındaki kitabe yapının H. 1329 / M. 1911’de yapıldığını bildirir. Kaynaklarda ustası Niğde Fertek yöresinden Fertekli Nazif Usta olarak verilir. 2019’da Vakıflar Bölge Müdürlüğü tarafından onarılarak ibadete açılmıştır.\n\nKare planlı tek kubbeli cami düzgün kesme taştandır. Kubbe, dört cephesinde dairesel pencereler açılmış sekizgen kasnağa oturur. Kuzeydoğudaki minare kare kaideli, silindirik gövdeli ve tek şerefelidir. Kuzeydeki basık kemerli kapı harime açılır. Restorasyonun ardından harim sıvanmış, mihrap ve minber yüzeyleri beyaz-yeşil fayanslarla kaplanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-resadiye-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-resadiye-mosque/exterior.jpg",
+      "alt": "Ağaçlar arkasında kesme taş caminin kubbesi ve sağdaki minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karapinar-resadiye-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı kubbeli harimde yeşil-beyaz kaplı mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karapinar-resadiye-mosque/exterior.jpg",
+      "x": 37,
+      "y": 36,
+      "title": "Kubbe",
+      "text": "Tek kubbe sekizgen kasnağa oturur.",
+      "sourceId": "inv-p464"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karapinar-resadiye-mosque/prayer-hall.jpg",
+      "x": 56,
+      "y": 61,
+      "title": "Mihrap",
+      "text": "Restorasyon sonrasında mihrap yüzeyi beyaz-yeşil fayanslarla kaplanmıştır.",
+      "sourceId": "inv-p464"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapının ustası olarak kim belirtilmiştir?",
+      "options": [
+        "Fertekli Nazif Usta",
+        "Bağdatlı İsmail Efendi",
+        "Hasan Usta",
+        "Ali Yapıcı"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Fertekli Nazif Usta.",
+      "sourceId": "inv-p464"
+    },
+    {
+      "question": "2019’da hangi kurum onarım yapmıştır?",
+      "options": [
+        "Akşehir Belediyesi",
+        "Vakıflar Bölge Müdürlüğü",
+        "Anıtlar Derneği",
+        "Topbaşlar ailesi"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Vakıflar Bölge Müdürlüğü.",
+      "sourceId": "inv-p464"
+    },
+    {
+      "question": "Reşadiye Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Karapınar",
+        "Beyşehir"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Karapınar.",
+      "sourceId": "inv-p464"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p464",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karapınar, \"Reşadiye Camii\"",
+      "page": "464"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

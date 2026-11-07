@@ -1,0 +1,95 @@
+{
+  "id": "konya-ilgin-lala-mustafa-pasha-tabhane",
+  "name": "Lala Mustafa Paşa Külliyesi Tabhanesi",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Osmanlı · külliye H. 984 / M. 1576",
+  "endowment": "Kıbrıs Fâtihi Lala Mustafa Paşa (külliyenin banisi)",
+  "summary": "Lala Mustafa Paşa Külliyesi'nde, avlunun doğu kenarı boyunca sıralanan ve eyvanlarla avluya açılan odalardan oluşan tabhane.",
+  "history": "Ilgın şehir merkezindeki Lala Mustafa Paşa Külliyesi, Sultan Murad zamanında Kıbrıs Fâtihi Lala Mustafa Paşa tarafından H. 984 / M. 1576'da yaptırılmıştır. Tabhane bu külliyenin bir parçasıdır.\n\nTabhanenin kuzeyinde fırın ve arasta, doğusunda han, batısında cami ve avlu, güneyinde ise yol bulunur. Odaları avlunun doğu kenarı boyunca sıralanmıştır. Odalar hanın batı kapısına göre yerleştirildiği için üçlü düzenlenen kısım kuzey, ikili düzenlenen kısım güney bölümdür.\n\nKitaba göre tabhanenin kuzey bölümü kare planlıdır ve üzeri tonozla örtülüdür; kuzey ve güneyden bitişik iki odadan oluşur. Mekânın üzeri pandantif geçişli kubbelerle örtülüdür. Odalar kare planlıdır ve eyvanla avluya açılır. Güney bölüm de benzer düzendedir; aynı sıranın sonunda, hanın batı kapısının kuzeyinde ve caminin doğusundadır. Cephe mimarisi bakımından yalnızca batı cephede fark edilir.\n\nAvluya bakan cephelerde kapı ve pencere açıklıkları seçilir. Örtü sisteminde tonoz ve kubbe tercih edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-lala-mustafa-pasha-tabhane/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-tabhane/courtyard.jpg",
+      "alt": "Avlu: kurşun kaplı kubbeler altında taş duvarlı yapı ve kemerli açıklıklar; önünde büyük şemsiye altında masa ve sandalyeler, sağda çam ağacı",
+      "description": "Tabhanenin avludan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-tabhane/courtyard.jpg",
+      "x": 45,
+      "y": 22,
+      "title": "Kubbeler",
+      "text": "Tabhanenin örtü sisteminde tonoz ve kubbe tercih edilmiştir.",
+      "sourceId": "inv-p68"
+    },
+    {
+      "id": "iwan-openings",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-tabhane/courtyard.jpg",
+      "x": 42,
+      "y": 52,
+      "title": "Avluya açılan odalar",
+      "text": "Kare planlı odalar eyvanla avluya açılır; avluya bakan cephelerde kapı ve pencere açıklıkları seçilir.",
+      "sourceId": "inv-p68"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tabhanenin doğusunda hangi yapı bulunur?",
+      "options": [
+        "Cami",
+        "Han",
+        "İmaret",
+        "Hamam"
+      ],
+      "correct": 1,
+      "description": "Tabhanenin kuzeyinde fırın ve arasta, doğusunda han, batısında cami ve avlu, güneyinde yol vardır.",
+      "sourceId": "inv-p68"
+    },
+    {
+      "question": "Tabhane odaları avluya nasıl açılır?",
+      "options": [
+        "Revaklı galeriyle",
+        "Yalnızca pencereyle",
+        "Eyvanla",
+        "Merdivenle"
+      ],
+      "correct": 2,
+      "description": "Kare planlı odalar eyvanla avluya açılır.",
+      "sourceId": "inv-p68"
+    },
+    {
+      "question": "Tabhanenin odaları avlunun hangi kenarı boyunca sıralanmıştır?",
+      "options": [
+        "Batı kenarı",
+        "Kuzey kenarı",
+        "Güney kenarı",
+        "Doğu kenarı"
+      ],
+      "correct": 3,
+      "description": "Tabhanenin odaları avlunun doğu kenarı boyunca sıralanmıştır.",
+      "sourceId": "inv-p68"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p53",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Lala Mustafa Paşa Külliyesi\"",
+      "page": "53"
+    },
+    {
+      "id": "inv-p68",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Tabhane\"",
+      "page": "68"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

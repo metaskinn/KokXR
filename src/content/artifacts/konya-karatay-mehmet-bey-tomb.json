@@ -1,0 +1,99 @@
+{
+  "id": "konya-karatay-mehmet-bey-tomb",
+  "name": "Mehmet Bey Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · H. 941 / M. 1535 (sandukadaki tarihe göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hamuşan Mezarlığı'nın doğusunda, Mustafa Paşa oğlu Mehmet Bey için yapıldığı düşünülen, dört mermer sütunlu açık (baldaken) türbe.",
+  "history": "Hamuşan Mezarlığı'nın doğusunda yer alan türbenin, mermer mezar sandukasındaki yazıdan hareketle Mustafa Paşa oğlu Mehmet Bey için H. 941 / M. 1535 yılında yaptırılmış olduğu düşünülmektedir.\n\nSandukada \"İntikale'l-merhûmü's-saîdü'r-râci min rahmetillahi'l-hamîd / Mehmet Bek b. Mustafa Paşa fi seneti ihdâ ve erbaîn ve tis'amie\" yazmaktadır. Kitapta verilen anlamı şöyledir: Mustafa Paşa oğlu, Allah'ın rahmetini isteyen Mehmed Bey 941 yılında Hakk'ın rahmetine ulaştı.\n\nBaldaken tarzında dört mermer sütunun taşıdığı sivri kemerli, kubbeli türbe Gödene taşından yapılmıştır. Oldukça yalın ve bezemesiz olan türbe 2021 yılında mozaik beton kaplanmış, kubbesi de betondan ayrıştırıldıktan sonra kurşunla kaplanmıştır. Türbenin mermer sütunları alt tarafta kalın, üstte ise daha ince ve yalındır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-mehmet-bey-tomb/baldachin-tomb.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-mehmet-bey-tomb/baldachin-tomb.jpg",
+      "alt": "Dört mermer sütun üzerinde yükselen, sivri kemerli açık taş türbe; üstte kurşun kaplı küçük kubbe, ortada çiçeklik içinde beyaz mezar taşı, arkada taş duvar",
+      "description": "Baldaken tarzındaki türbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/konya-karatay-mehmet-bey-tomb/baldachin-tomb.jpg",
+      "x": 50,
+      "y": 19,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Türbenin kubbesi 2021'de betondan ayrıştırıldıktan sonra kurşunla kaplanmıştır.",
+      "sourceId": "inv-p57"
+    },
+    {
+      "id": "pointed-arch",
+      "image": "/images/konya-karatay-mehmet-bey-tomb/baldachin-tomb.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Sivri kemer",
+      "text": "Türbe, baldaken tarzında dört mermer sütunun taşıdığı sivri kemerli, kubbeli bir yapıdır.",
+      "sourceId": "inv-p57"
+    },
+    {
+      "id": "marble-column",
+      "image": "/images/konya-karatay-mehmet-bey-tomb/baldachin-tomb.jpg",
+      "x": 79,
+      "y": 62,
+      "title": "Mermer sütun",
+      "text": "Türbenin mermer sütunları altta kalın, üstte ise daha ince ve yalındır.",
+      "sourceId": "inv-p57"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mehmet Bey Türbesi hangi mezarlığın doğusunda yer alır?",
+      "options": [
+        "Üçler Mezarlığı",
+        "Musalla Mezarlığı",
+        "Hamuşan Mezarlığı",
+        "Sırçalı Mezarlığı"
+      ],
+      "correct": 2,
+      "description": "Türbe Hamuşan Mezarlığı'nın doğusunda yer almaktadır.",
+      "sourceId": "inv-p57"
+    },
+    {
+      "question": "Türbenin üst örtüsünü kaç mermer sütun taşır?",
+      "options": [
+        "Dört",
+        "Altı",
+        "Sekiz",
+        "İki"
+      ],
+      "correct": 0,
+      "description": "Türbe baldaken tarzında dört mermer sütunun taşıdığı sivri kemerli ve kubbelidir.",
+      "sourceId": "inv-p57"
+    },
+    {
+      "question": "Türbe 2021 yılında yapılan çalışmada nasıl kaplanmıştır?",
+      "options": [
+        "Çini ile",
+        "Mozaik betonla; kubbesi de kurşunla",
+        "Kiremit çatıyla",
+        "Mermer levhalarla"
+      ],
+      "correct": 1,
+      "description": "Türbe 2021'de mozaik beton kaplanmış, kubbesi betondan ayrıştırıldıktan sonra kurşunla kaplanmıştır.",
+      "sourceId": "inv-p57"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p57",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Mehmet Bey Türbesi\"",
+      "page": "57"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

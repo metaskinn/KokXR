@@ -1,0 +1,107 @@
+{
+  "id": "hatay-arsuz-narduzu-mosque",
+  "city": "Hatay",
+  "district": "Arsuz",
+  "name": "Nardüzü Camii",
+  "period": "Osmanlı · H. 1313 (M. 1895–96)",
+  "endowment": "Sultan II. Abdülhamit tarafından yaptırıldığı düşünülür",
+  "summary": "Arsuz Nardüzü Camii, tek sahınlı harimi ve II. Abdülhamit tuğralı kitabesiyle anlatılır.",
+  "history": "Adres listesinde Arsuz Nardüzü olarak verilen caminin güneyinde İnönü, doğusunda Atatürk caddeleri vardır. Harim kıbleye paralel enine dikdörtgen ve tek sahınlıdır. Kıble duvarının ortasındaki yarım daire mihrap nişi tuğladandır; gömme payeler ve üstteki silmeli kuşak betondur. Kuzeydeki kapının iki yanında birer, doğu ve batıda ikişer pencere bulunur. Tavan ahşap kaplamalı, ahşap kırma çatı kiremitlidir. Batı duvarının kuzey ucundaki taş minarenin yalnız kare kaidesi kalmıştır. Harim briket bölmelerle okula dönüştürülmüş, bir süre kullanıldıktan sonra terk edilmiştir. Kuzey kapısındaki taş kitabenin üstünde II. Abdülhamit tuğrası, altında iki satırlık H. 1313 (M. 1895–96) yazısı bulunur. Kitap, benzer planlı Orhaniye, Osmaniye ve Affan camilerini de anarak banisinin II. Abdülhamit olabileceğini düşünür; bunu kesin hüküm olarak vermez.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-arsuz-narduzu-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-arsuz-narduzu-mosque/book-view-1.jpg",
+      "alt": "Açık alanda kiremit çatılı küçük cami, sade giriş ve pencereler",
+      "description": "Nardüzü Camii — kitaptaki görünüm 1 (s. 364–365)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-arsuz-narduzu-mosque/book-view-2.jpg",
+      "alt": "Ahşap tavan altında yuvarlak kemerli sade mihrap ve silmeli çerçevesi",
+      "description": "Nardüzü Camii — kitaptaki görünüm 2 (s. 366–367)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-arsuz-narduzu-mosque/book-view-2.jpg",
+      "x": 50,
+      "y": 53,
+      "title": "Mihrap",
+      "text": "Yarım daire planlı, yuvarlak kemerli mihrap nişi tarif edilir.",
+      "sourceId": "inv-p366"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-arsuz-narduzu-mosque/book-view-1.jpg",
+      "x": 53,
+      "y": 29,
+      "title": "Kiremitli çatı",
+      "text": "Ahşap kırma çatı kiremitle kaplanmıştır.",
+      "sourceId": "inv-p366"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "İki",
+        "Tek",
+        "Üç",
+        "Dört"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Tek.",
+      "sourceId": "inv-p366"
+    },
+    {
+      "question": "Harim bir dönem hangi amaçla kullanılmıştır?",
+      "options": [
+        "Hamam",
+        "Kervansaray",
+        "Okul",
+        "Darphane"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Okul.",
+      "sourceId": "inv-p366"
+    },
+    {
+      "question": "Caminin güneyinde hangi cadde vardır?",
+      "options": [
+        "Atatürk Caddesi",
+        "Kurtuluş Caddesi",
+        "Oğuzlar Caddesi",
+        "İnönü Caddesi"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: İnönü Caddesi.",
+      "sourceId": "inv-p366"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p366",
+      "text": "Hatay Vakıf Eserleri, Arsuz, \"Nardüzü Camii\"",
+      "page": "366"
+    },
+    {
+      "id": "inv-p367",
+      "text": "Hatay Vakıf Eserleri, Arsuz, \"Nardüzü Camii\"",
+      "page": "367"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Arsuz, \"Nardüzü Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

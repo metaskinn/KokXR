@@ -1,0 +1,102 @@
+{
+  "id": "hatay-antakya-foundation-cultural-mansions",
+  "name": "Vakıf Kültür Konakları",
+  "district": "Antakya",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Vakıf Kültür Konakları, Habib-i Neccar Camii çevresindeki dört parseli ve üzerlerindeki yapıları konu alan bir kayıttır.",
+  "history": "Kitap bu başlık altında Antakya 5. mıntıkada 4676, 4677, 1329 ve 1330 parselleri ele alır. Alan Habib-i Neccar Camii çevresindedir ve kentsel sit ile üçüncü derece arkeolojik sit sınırları içindedir. Koruma amaçlı imar planı içinde cami meydanının genişletilmesi ve düzenlenmesine yönelik tadilat planı kapsamında bulunduğu belirtilir.\n\nAna metin parseller üzerinde bir-iki katlı, niteliksiz betonarme, ağırlıkla iş yeri olarak kullanılan ve tamamı faal binalar bulunduğunu söyler. Sayfadaki fotoğraflar taş cepheli, avlulu ve süslü yapı görünümleri sunmaktadır; metnin malzeme ve nitelik anlatımı fotoğraflarla tam örtüşmediği için mimari malzeme konusunda ek çıkarım yapılmamıştır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-foundation-cultural-mansions/street-fronts.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-foundation-cultural-mansions/street-fronts.jpg",
+      "alt": "Önde taş döşeli meydan, palmiye ve oturma alanları; geride kemerli taş cepheli iki katlı yapılar",
+      "description": "Önde taş döşeli meydan, palmiye ve oturma alanları; geride kemerli taş cepheli iki katlı yapılar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-foundation-cultural-mansions/courtyard.jpg",
+      "alt": "Ortası yuvarlak havuzlu taş döşeli avlu, çevresinde iki katlı pencereli cepheler ve bitkiler",
+      "description": "Ortası yuvarlak havuzlu taş döşeli avlu, çevresinde iki katlı pencereli cepheler ve bitkiler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-foundation-cultural-mansions/street-fronts.jpg",
+      "x": 50,
+      "y": 37,
+      "title": "İki katlı yapılar",
+      "text": "Kitap parsellerde bir-iki katlı binalar bulunduğunu belirtir.",
+      "sourceId": "inv-p483"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-foundation-cultural-mansions/street-fronts.jpg",
+      "x": 73,
+      "y": 64,
+      "title": "İş yeri kullanımı",
+      "text": "Ana metne göre parsellerdeki yapılar ağırlıklı olarak iş yeri olarak kullanılmaktadır.",
+      "sourceId": "inv-p483"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakıf Kültür Konakları kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Arsuz",
+        "Antakya",
+        "Samandağ"
+      ],
+      "correct": 2,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p488"
+    },
+    {
+      "question": "Parseller hangi caminin çevresindedir?",
+      "options": [
+        "Kasımbey Camii",
+        "Yenişehir Camii",
+        "Terzi Mehmet Camii",
+        "Habib-i Neccar Camii"
+      ],
+      "correct": 3,
+      "description": "Kitap alanı Habib-i Neccar Camii çevresinde gösterir.",
+      "sourceId": "inv-p483"
+    },
+    {
+      "question": "Alan hangi koruma statülerindedir?",
+      "options": [
+        "Kentsel sit ve 3. derece arkeolojik sit",
+        "Yalnız doğal park",
+        "Yalnız tarım alanı",
+        "Sanayi bölgesi"
+      ],
+      "correct": 0,
+      "description": "Parseller kentsel sit ve üçüncü derece arkeolojik sit alanındadır.",
+      "sourceId": "inv-p483"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p483",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Vakıf Kültür Konakları\"",
+      "page": "483"
+    },
+    {
+      "id": "inv-p488",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Vakıf Kültür Konakları\"",
+      "page": "488"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

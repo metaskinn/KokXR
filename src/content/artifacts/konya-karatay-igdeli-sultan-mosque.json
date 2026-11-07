@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-igdeli-sultan-mosque",
+  "name": "İğdeli Sultan Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "1908 (kitabın aktardığı kaynaklara göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Keçeciler’deki İğdeli Sultan Camii, ahşap direkli ve içten bağdadi kubbeli geç Osmanlı mahalle camilerindendir.",
+  "history": "Cami, Karatay, Keçeciler Mahallesi, Araplar Caddesi’ndedir. Kaynaklarda 1908’de yapıldığı belirtilir; banisi ve sanatkârlarını bildiren kitâbesi yoktur.\n\nDerinlemesine dikdörtgen planlı yapı dıştan kırma çatıyla örtülüdür. Sade cephelerinde altta büyük, üstte benzer biçimde küçük düz lentolu dikdörtgen pencereler simetrik iki sıra oluşturur. Kuzeye sonradan eklenen bölümden harime geçilir. Harim mihraba paralel üç sahınlı ve içten bağdadi kubbelidir. Kuzeydeki ahşap mahfil iki ahşap direğe oturur.\n\nKıble duvarındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır. Kitap perde motifi ile bordür ve tepeliklerdeki bitkisel süslemeleri “ahşap minberin niş kısmında” ifadesiyle anlatır. Sağdaki güneybatı minberi kapı, aynalık, korkuluk, köşk ve külah bölümleriyle sade bir düzenlemeye sahiptir. Yapı geç Osmanlı ahşap direkli cami şemasındadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-igdeli-sultan-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-igdeli-sultan-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı bej renkli caminin köşe görünümü, dikdörtgen pencereleri ve ahşap kapısı",
+      "description": "Kiremit çatılı bej renkli caminin köşe görünümü, dikdörtgen pencereleri ve ahşap kapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-igdeli-sultan-mosque/mihrab.jpg",
+      "alt": "Yeşil ve altın renkli çerçeve içinde koyu perde motifli mihrap ve önde avize",
+      "description": "Yeşil ve altın renkli çerçeve içinde koyu perde motifli mihrap ve önde avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-igdeli-sultan-mosque/exterior.jpg",
+      "x": 64,
+      "y": 52,
+      "title": "Pencere düzeni",
+      "text": "Cephelerde altta büyük, üstte küçük dikdörtgen pencereler iki sıra oluşturur.",
+      "sourceId": "inv-p199"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-igdeli-sultan-mosque/mihrab.jpg",
+      "x": 49,
+      "y": 53,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+      "sourceId": "inv-p199"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabın aktardığı kaynaklara göre cami hangi yıl yapılmıştır?",
+      "options": [
+        "1908",
+        "1254",
+        "1748",
+        "1930"
+      ],
+      "correct": 0,
+      "description": "Kaynaklarda inşa yılı 1908 olarak belirtilir.",
+      "sourceId": "inv-p199"
+    },
+    {
+      "question": "Harim içten hangi örtüye sahiptir?",
+      "options": [
+        "Çapraz tonoz",
+        "Metal çadır",
+        "Bağdadi kubbe",
+        "Cam çatı"
+      ],
+      "correct": 2,
+      "description": "Harimin iç örtüsü bağdadi kubbedir.",
+      "sourceId": "inv-p199"
+    },
+    {
+      "question": "Kuzeydeki ahşap mahfil kaç ahşap direğe oturur?",
+      "options": [
+        "Dört",
+        "İki",
+        "Altı",
+        "Sekiz"
+      ],
+      "correct": 1,
+      "description": "Kitap mahfilin iki ahşap direğe oturduğunu belirtir.",
+      "sourceId": "inv-p199"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p199",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"İğdeli Sultan Camii\"",
+      "page": "199"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

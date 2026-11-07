@@ -1,0 +1,100 @@
+{
+  "id": "konya-yunak-piribeyli-central-mosque",
+  "name": "Piribeyli Beldesi Merkez Camii",
+  "city": "Konya",
+  "district": "Yunak",
+  "period": "Kaynaklarda 1896 olarak belirtilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Piribeyli’deki kesme taş cami, ahşap direkli üç sahınlı harimi ve kalem işi bezemeli ahşap mihrabıyla tanınır.",
+  "history": "Cami, Yunak Piribeyli Kasabası’ndadır. İnşa kitabesi yoktur; kaynaklarda 1896’da yaptırıldığı belirtilir. Derinlemesine dikdörtgen planlı çok destekli yapı kırma çatıyla örtülüdür. Düzgün kesme taştan yapılan caminin hariminde ahşap kullanılmıştır.\n\nBatı cephesinin kuzey köşesindeki kapıdan girilen harim, mihraba dik üç sahına ayrılır. Kuzeyinde ahşap mahfil vardır. Kıble duvarının ortasındaki ahşap mihrap yarım daire planlı, hafif dışa taşıntılı ve yuvarlak kemer tepeliklidir; kalem işi bezemeler taşır. Sağında, güneybatı köşede sade ahşap minber bulunur. Kitap, yapıyı bölgedeki ahşap direkli, düz damlı camilerin bir örneği olarak tanımlar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-yunak-piribeyli-central-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-yunak-piribeyli-central-mosque/exterior.jpg",
+      "alt": "Kesme taş duvarlı kiremit çatılı cami, ağaçlar ve arkasındaki minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-yunak-piribeyli-central-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde açık renk direkler, geometrik bölümlü tavan ve turkuaz mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-yunak-piribeyli-central-mosque/prayer-hall.jpg",
+      "x": 39,
+      "y": 48,
+      "title": "Ahşap direkler",
+      "text": "Harim mihraba dik üç sahına ayrılmıştır.",
+      "sourceId": "inv-p485"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-yunak-piribeyli-central-mosque/prayer-hall.jpg",
+      "x": 55,
+      "y": 62,
+      "title": "Ahşap mihrap",
+      "text": "Yarım daire planlı ahşap mihrap hafif çıkıntılı ve kalem işi bezemelidir.",
+      "sourceId": "inv-p485"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kaynaklarda hangi yapım yılı belirtilmektedir?",
+      "options": [
+        "1896",
+        "1236",
+        "1510",
+        "1947"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: 1896.",
+      "sourceId": "inv-p484"
+    },
+    {
+      "question": "Harime hangi cephenin kuzey köşesinden girilir?",
+      "options": [
+        "Doğu",
+        "Batı",
+        "Kuzey",
+        "Güney"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Batı.",
+      "sourceId": "inv-p484"
+    },
+    {
+      "question": "Piribeyli Beldesi Merkez Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Yunak",
+        "Beyşehir"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Yunak.",
+      "sourceId": "inv-p484"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p484",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Yunak, \"Piribeyli Beldesi Merkez Camii\"",
+      "page": "484"
+    },
+    {
+      "id": "inv-p485",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Yunak, \"Piribeyli Beldesi Merkez Camii\"",
+      "page": "485"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

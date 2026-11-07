@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-veznedar-huseyin-efendi-mosque",
+  "name": "Veznedar Hüseyin Efendi (Asri) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Cumhuriyet dönemi · 1940",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Alaaddin Tepesi'nin doğusunda, 1940'ta yapılmış; enine dikdörtgen planlı, iki sahınlı ve barok motifli ahşap tavan göbeğiyle dikkat çeken cami.",
+  "history": "Cami, Meram, Kürkçü Mahallesi, Karahöyüklü Sokak No. 5'tedir; Alaaddin Tepesi'nin doğusunda, Mevlâna Caddesi üzerinde yer alır. Cumhuriyet döneminde, 1940'ta yapılmıştır ve kitaba göre yapıldığı zamanki hâliyle günümüze ulaşmıştır.\n\nEnine dikdörtgen planlı ve iki sahınlı caminin üzeri kırma çatıyla örtülüdür. Kuzey duvarı sağırdır; güney ve batı duvarlarında altta ikişer, üstte üçer pencere bulunur. Doğu duvarında da büyük bir tepe penceresi açılmıştır.\n\nHarim enine dikdörtgen planlıdır. Sade tutulmuş mihrap ve minberin aksine orijinal tavan göbeği barok karakterli motiflerle bezenmiştir: ahşaptan ajur tekniğiyle elde edilmiş \"S\" ve \"C\" kıvrımları tüm yüzeyi kaplar. Tavan göbeğine asılı avize de oldukça gösterişlidir. Kıble duvarının ortasındaki mihrap yakın zamanda betondan yapılarak sıvanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-veznedar-huseyin-efendi-mosque/prayer-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-veznedar-huseyin-efendi-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavanın ortasında süslü göbek ve büyük avize, solda beyaz sıvalı mihrap, ortada minber, sağda büyük pencereler; kırmızı halı",
+      "description": "Harim, tavan göbeği ve avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-veznedar-huseyin-efendi-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit kaplı kırma çatılı taş duvarlı yapı, arkada küçük bir minare külahı ve çevredeki binaların çatıları",
+      "description": "Caminin kırma çatısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ceiling",
+      "image": "/images/konya-meram-veznedar-huseyin-efendi-mosque/prayer-hall.jpg",
+      "x": 62,
+      "y": 8,
+      "title": "Tavan göbeği",
+      "text": "Orijinal tavan göbeği barok karakterli motiflerle bezelidir; ahşaptan ajur tekniğiyle yapılmış \"S\" ve \"C\" kıvrımları tüm yüzeyi kaplar.",
+      "sourceId": "inv-p146"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-veznedar-huseyin-efendi-mosque/prayer-hall.jpg",
+      "x": 31,
+      "y": 62,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yakın zamanda betondan yapılarak üzeri sıvanmıştır.",
+      "sourceId": "inv-p146"
+    },
+    {
+      "id": "roof",
+      "image": "/images/konya-meram-veznedar-huseyin-efendi-mosque/aerial-view.jpg",
+      "x": 55,
+      "y": 55,
+      "title": "Kırma çatı",
+      "text": "Enine dikdörtgen planlı, iki sahınlı caminin üzeri kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p146"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi yıl yapılmıştır?",
+      "options": [
+        "1888",
+        "1925",
+        "1972",
+        "1940"
+      ],
+      "correct": 3,
+      "description": "Cami Cumhuriyet döneminde, 1940'ta yapılmıştır.",
+      "sourceId": "inv-p146"
+    },
+    {
+      "question": "Tavan göbeğindeki süslemeler hangi teknikle yapılmıştır?",
+      "options": [
+        "Ahşap ajur tekniğiyle",
+        "Kalem işiyle",
+        "Mozaik çiniyle",
+        "Alçı kabartmayla"
+      ],
+      "correct": 0,
+      "description": "Ahşaptan ajur tekniğiyle elde edilmiş \"S\" ve \"C\" kıvrımları tavan göbeğinin tüm yüzeyini kaplar.",
+      "sourceId": "inv-p146"
+    },
+    {
+      "question": "Caminin planı ve örtüsü nasıldır?",
+      "options": [
+        "Kare planlı ve tek kubbeli",
+        "Derinlemesine dikdörtgen planlı ve düz damlı",
+        "Enine dikdörtgen planlı, iki sahınlı ve kırma çatılı",
+        "Beş sahınlı ve ahşap direkli"
+      ],
+      "correct": 2,
+      "description": "Cami enine dikdörtgen planlı ve iki sahınlıdır; üzeri kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p146"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p146",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Veznedar Hüseyin Efendi (Asri) Camii\"",
+      "page": "146"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

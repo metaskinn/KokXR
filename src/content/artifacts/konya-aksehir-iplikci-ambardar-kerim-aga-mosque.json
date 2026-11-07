@@ -1,0 +1,121 @@
+{
+  "id": "konya-aksehir-iplikci-ambardar-kerim-aga-mosque",
+  "name": "İplikçi (Ambardar Kerim Ağa) Camii",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Hamitoğulları · H. 738 / M. 1337",
+  "endowment": "Banisi Ambardar Kerim Ağa",
+  "summary": "Kuşçu Mahallesi’ndeki İplikçi Camii, beylikler döneminden gelen yapısı ve taş-tuğla almaşık cepheleriyle tanınır.",
+  "history": "Cami, Kuşçu Mahallesi’nde çarşı içindedir; çevresindeki iplikçi dükkânları nedeniyle İplikçi adını almıştır. Batı girişindeki Arapça kitabeye göre Hamitoğulları döneminde H. 738 / M. 1337’de Ambardar Kerim Ağa tarafından yaptırılmıştır; baninin tüccar olduğu anlaşılır.\n\n1540–41 onarımını anlatan kitabede “Şeyh Bedrettin zade Abdullah oğlu Abdurrahman” adı aktarılırken kitabın açıklamasında “Şeyh Bedreddinzade Abdurrahman oğlu Abdullah” denir. Şer’iyye sicillerinde ise tamiri yaptıran Kanuni’nin ambardarı Abdülkerim Ağa olarak verilir. Bu farklı ifadeler kesinleştirilememektedir. 1894’te çevredeki dükkânlarda çıkan yangın camiye de zarar vermiş; Müftü Salim Efendi’nin gayretiyle başta kubbeler olmak üzere tamir edilmiştir. 1955’te, 1990’larda ve 2010 sonrasında da kısmi onarımlar olmuştur.\n\nKuzey-güney yönünde dikdörtgen yapıya kuzey, doğu ve batıdan girilir. Duvarlar bir sıra taş, üç sıra tuğladan oluşan almaşık tekniktedir; devşirme malzeme de kullanılmıştır. Batıdaki minare kare prizmal kaideli, silindirik gövdeli ve tek şerefelidir. İlk hâlinin mihraba paralel beş sahınlı olduğu anlaşılır; onarımlar planı değiştirmiştir. Günümüzde mihrap önü pandantif geçişli üç kubbeyle örtülüdür. İçte barok tarzda natüralist kalem işleri vardır. Yarım daire planlı mihrap betonla, kuzeydeki kadınlar mahfili son onarımda yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-iplikci-ambardar-kerim-aga-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-iplikci-ambardar-kerim-aga-mosque/aerial.jpg",
+      "alt": "Çarşı çatıları arasında geniş gri örtülü cami ve tuğla minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-iplikci-ambardar-kerim-aga-mosque/prayer-hall.jpg",
+      "alt": "Kemerlerle bağlı sütunlar, bezemeli kubbeler, kırmızı halı ve ortada mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-iplikci-ambardar-kerim-aga-mosque/entrance.jpg",
+      "alt": "Taş-tuğla almaşık duvarda sivri kemerli ahşap kapı ve üzerindeki yazılı taşlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-iplikci-ambardar-kerim-aga-mosque/entrance.jpg",
+      "x": 15,
+      "y": 30,
+      "title": "Almaşık duvar",
+      "text": "Cepheler bir sıra taş ve üç sıra tuğladan oluşan almaşık teknikle örülmüştür.",
+      "sourceId": "inv-p347"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-iplikci-ambardar-kerim-aga-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 44,
+      "title": "Kalem işleri",
+      "text": "İç mekânın kalem işleri barok tarzda natüralist motifler içerir.",
+      "sourceId": "inv-p347"
+    }
+  ],
+  "test": [
+    {
+      "question": "İplikçi adı neye dayanır?",
+      "options": [
+        "Bir mimarın soyadına",
+        "Çevresindeki iplikçi dükkânlarına",
+        "Kubbenin şekline",
+        "Yakındaki dereye"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Çevresindeki iplikçi dükkânlarına.",
+      "sourceId": "inv-p343"
+    },
+    {
+      "question": "Cami hangi beylik döneminde yapılmıştır?",
+      "options": [
+        "Karamanoğulları",
+        "Germiyanoğulları",
+        "Hamitoğulları",
+        "Dulkadiroğulları"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Hamitoğulları.",
+      "sourceId": "inv-p346"
+    },
+    {
+      "question": "İplikçi (Ambardar Kerim Ağa) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Beyşehir",
+        "Bozkır",
+        "Akşehir"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Akşehir.",
+      "sourceId": "inv-p343"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p343",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İplikçi (Ambardar Kerim Ağa) Camii\"",
+      "page": "343"
+    },
+    {
+      "id": "inv-p346",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İplikçi (Ambardar Kerim Ağa) Camii\"",
+      "page": "346"
+    },
+    {
+      "id": "inv-p347",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İplikçi (Ambardar Kerim Ağa) Camii\"",
+      "page": "347"
+    },
+    {
+      "id": "inv-p350",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İplikçi (Ambardar Kerim Ağa) Camii\"",
+      "page": "350"
+    },
+    {
+      "id": "inv-p351",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"İplikçi (Ambardar Kerim Ağa) Camii\"",
+      "page": "351"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

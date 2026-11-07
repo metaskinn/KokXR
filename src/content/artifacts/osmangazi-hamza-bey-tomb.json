@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-hamza-bey-tomb",
+  "name": "Hamza Bey Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · inşa tarihi kitapta belirtilmemiştir; Hamza Bey 1462'de öldürülmüştür",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hamza Bey Külliyesi'nde, Gazi ve şehit Hamza Bey'in sandukasıyla birlikte on iki sandukanın daha bulunduğu sekizgen planlı kubbeli türbe.",
+  "history": "Hamza Bey Türbesi, Osmangazi İlçesi, Hamzabey Mahallesi, Kaplıca Caddesi No: 55'teki Hamza Bey Camii bahçesindedir ve Hamza Bey Külliyesi'nin bir parçasıdır. Gazi ve şehit Hamza Bey'in türbesi, kitapta cami avlusunun güneybatı köşesinde olarak tanımlanır. Fâtih Sultan Mehmed'in 1462'de Eflak'a gönderdiği heyette öldürülen Hamza Bey'in naaşı Bursa'daki bu türbeye defnedilmiştir.\n\nSekizgen planlı türbenin duvarları iki sıra tuğla ve bir sıra moloz taşla örülmüş, taşların arasına düşey tuğlalar yerleştirilerek duvar yüzeyi düzgünleştirilmiştir. Kapı doğu cephededir ve dışa taşkın, dar bir eyvan içine alınmıştır. Kapı ve mihrap yönündeki yüzler dışında kalan altı cephede mermer söveli, parmaklıklı birer pencere bulunur. Yüksek, sekizgen kasnağa oturan kubbenin kasnağında alçı şebekeli, sivri kemerli sekiz pencere vardır. Saçak altında iki, kubbe eteğinde üç sıra testere dişi motifi yapıyı çepeçevre kuşatır.\n\nİç mekân oldukça sadedir; mihrabı mukarnaslıdır. Kubbenin sekiz köşesinde iri yaprak motifleri yer alır. Türbede Hamza Bey'in sandukasının yanında on iki sanduka daha bulunur; lahitlerin tamamı sıvalıdır ve önceden ahşap sanduka oldukları tahmin edilmektedir. Türbe 1962'de camiyle birlikte Bursa Eski Eserleri Sevenler Kurumu tarafından kapsamlı biçimde onarılmış, 2011'de Vakıflar Genel Müdürlüğü tarafından cami ile birlikte restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hamza-bey-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hamza-bey-tomb/exterior.jpg",
+      "alt": "Ağaçlar arasında tuğla ve taş almaşık duvarlı sekizgen türbe; dışa taşkın kemerli giriş eyvanı, ahşap kapı ve kurşun kaplı kubbe",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hamza-bey-tomb/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: ağaçlarla çevrili sekizgen, kurşun kaplı türbe kubbesi",
+      "description": "Kubbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hamza-bey-tomb/interior.jpg",
+      "alt": "İç mekân: ahşap kaidelerde koyu renk örtülü sandukalar; ortadakinin önünde “Gazi Hamzabey” yazılı levha",
+      "description": "Türbe içindeki sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "entrance",
+      "image": "/images/osmangazi-hamza-bey-tomb/exterior.jpg",
+      "x": 40,
+      "y": 82,
+      "title": "Kapı eyvanı",
+      "text": "Kapı doğu cephededir ve dışa taşkın, dar bir eyvan şeklinde inşa edilmiştir.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "id": "drum-windows",
+      "image": "/images/osmangazi-hamza-bey-tomb/exterior.jpg",
+      "x": 41,
+      "y": 33,
+      "title": "Kasnak pencereleri",
+      "text": "Yüksek sekizgen kasnakta alçı şebekeli ve sivri kemerli sekiz pencere yer alır.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "id": "cenotaph",
+      "image": "/images/osmangazi-hamza-bey-tomb/interior.jpg",
+      "x": 50,
+      "y": 57,
+      "title": "Hamza Bey'in sandukası",
+      "text": "Türbede Hamza Bey'in sandukasının yanı sıra on iki sanduka daha bulunur; lahitlerin tamamı sıvalıdır.",
+      "sourceId": "inv-p184"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamza Bey Türbesi nasıl bir plana sahiptir?",
+      "options": [
+        "Kare",
+        "Dikdörtgen",
+        "Sekizgen",
+        "Altıgen"
+      ],
+      "correct": 2,
+      "description": "İki sıra tuğla ve bir sıra moloz taşla örülen türbe sekizgen planlıdır.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "question": "Türbede Hamza Bey'inkinden başka kaç sanduka daha bulunur?",
+      "options": [
+        "On iki",
+        "Üç",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 0,
+      "description": "Hamza Bey'in sandukasının yanı sıra türbede on iki sanduka daha bulunur.",
+      "sourceId": "inv-p184"
+    },
+    {
+      "question": "Türbe 2011'de hangi kurum tarafından restore edilmiştir?",
+      "options": [
+        "Bursa Büyükşehir Belediyesi",
+        "Kültür Bakanlığı",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Vakıflar Genel Müdürlüğü"
+      ],
+      "correct": 3,
+      "description": "Türbe 1962'de Bursa Eski Eserleri Sevenler Kurumu tarafından onarılmış, 2011'de Vakıflar Genel Müdürlüğü tarafından restore edilmiştir.",
+      "sourceId": "inv-p184"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p184",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Türbesi\"",
+      "page": "184"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

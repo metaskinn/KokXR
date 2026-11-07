@@ -1,0 +1,97 @@
+{
+  "id": "inegol-sungur-pasha-village-tomb",
+  "name": "Sungur Paşa Köyü Türbesi",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Yakın dönem yapısı; kesin tarih kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sungur Paşa Köyü Türbesi, yeni cami yanında bulunan ve Sungur Paşa’ya aidiyeti kabul edilen tek sandukalı yakın dönem yapısıdır.",
+  "history": "Sungur Paşa köyündeki türbe, hamamın yaklaşık 100 metre batısında ve yeni yapılan caminin hemen yanındadır. Kitap yapının yakın dönemde inşa edildiğini ve bu nedenle özgün bir tarihî değer taşımadığını belirtir. Yenişehir’deki Sungur Paşa Camii’nin banisinin, doğduğu köydeki bu türbeye defnedildiği kabul edilmektedir; bu aidiyet kesin bir kitabe bilgisi olarak verilmez.\n\nİçeride yalnızca bir sanduka vardır. Baş ve ayak taşlarında kitabe ya da yazı bulunmaz. Kitap mevcut taşların Sungur Paşa dönemine ait olma olasılığını oldukça düşük değerlendirir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-sungur-pasha-village-tomb/tomb-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-sungur-pasha-village-tomb/tomb-exterior.jpg",
+      "alt": "Yeşil sıvalı küçük türbenin beyaz kemerli kapısı, kiremit çatısı ve cephede Türk bayrağı",
+      "description": "Yeşil sıvalı küçük türbenin beyaz kemerli kapısı, kiremit çatısı ve cephede Türk bayrağı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-sungur-pasha-village-tomb/sarcophagus.jpg",
+      "alt": "Ahşap tavanlı küçük odada yeşil örtülü tek sanduka, iki uçta mezar taşları ve renkli camlı pencereler",
+      "description": "Ahşap tavanlı küçük odada yeşil örtülü tek sanduka, iki uçta mezar taşları ve renkli camlı pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-sungur-pasha-village-tomb/tomb-exterior.jpg",
+      "x": 50,
+      "y": 53,
+      "title": "Yakın dönem türbesi",
+      "text": "Kitap bu türbeyi yakın dönemde yapılmış bir yapı olarak tanımlar.",
+      "sourceId": "inv-p190"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-sungur-pasha-village-tomb/sarcophagus.jpg",
+      "x": 53,
+      "y": 72,
+      "title": "Tek sanduka",
+      "text": "Türbede yalnızca bir sanduka bulunur; baş ve ayak taşlarında yazı yoktur.",
+      "sourceId": "inv-p190"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbenin içinde kaç sanduka vardır?",
+      "options": [
+        "İki",
+        "Bir",
+        "Üç",
+        "Dört"
+      ],
+      "correct": 1,
+      "description": "Yapı içinde yalnızca bir sanduka bulunur.",
+      "sourceId": "inv-p190"
+    },
+    {
+      "question": "Baş ve ayak taşlarının yazıları hakkında kitap ne söyler?",
+      "options": [
+        "İnşa tarihini verir",
+        "Vakfiyeyi içerir",
+        "Baninin adını verir",
+        "Kitabe veya yazı içermez"
+      ],
+      "correct": 3,
+      "description": "Baş ve ayak taşlarında kitabe ya da yazı bulunmaz.",
+      "sourceId": "inv-p190"
+    },
+    {
+      "question": "Kitap türbenin yapım dönemini nasıl tanımlar?",
+      "options": [
+        "Yakın dönemde yapılmış",
+        "XIV. yüzyılda yapılmış",
+        "Roma döneminde yapılmış",
+        "Selçuklu döneminde yapılmış"
+      ],
+      "correct": 0,
+      "description": "Yapı yakın dönemde inşa edilmiş olarak tanımlanır.",
+      "sourceId": "inv-p190"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p190",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Sungur Paşa Köyü Türbesi\"",
+      "page": "190"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-karakayis-sari-mosque-fountain",
+  "name": "Karakayış Sarı Cami Çeşmesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · Kitâbeye göre H. 1086 Rebiülevvel / M. 1675 Mayıs-Haziran",
+  "endowment": "Kitâbede banisiyle ilgili bilgi yoktur",
+  "summary": "Karakayış Sarı Camii'nin batısında bulunan, kitâbesine göre 1675 yılında inşa edilmiş, tam kemerli nişli bağımsız çeşme.",
+  "history": "Çeşme, Karatay'da Karakayış Caddesi ile Karacaoğlan Sokağı'nın kesiştiği köşedeki Sarı Camii'nin batısındadır. Eserin yeri daha önce birkaç kez değiştirilmiş; bu taşımalar sırasında özellikle üst bölümünün orijinalliği tamamen kaybolmuştur.\n\nAynalığın üst kısmında, koyu renkli mermer üzerine iki kartuş hâlinde, dört satır olarak Osmanlı Türkçesiyle, kabartma tekniğinde ve sülüs hatla yazılmış bir kitâbe bulunur. Kitâbede banisiyle ilgili bilgi yoktur. İlk satırda yapının Rebiülevvel ayında tamamlandığı belirtilir; buna göre çeşme Hicri 1086 yılının üçüncü ayında, 1675 yılının Mayıs-Haziran aylarında inşa edilmiştir.\n\nÇeşme \"bağımsız, tek cepheli ve tam kemerli nişli\" tipolojidedir. Son onarımda geniş saçaklı bir beşik çatıyla koruma altına alınmıştır. Suyu akan çeşme hâlen kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-karakayis-sari-mosque-fountain/front-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-karakayis-sari-mosque-fountain/front-view.jpg",
+      "alt": "Kiremit kaplı, geniş saçaklı beşik çatının altında kesme taştan çeşme; ortada yuvarlak kemerli niş ve nişin üst kısmında küçük bir kitâbe levhası, iki yanında demir parmaklıklar",
+      "description": "Çeşmenin önden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-karakayis-sari-mosque-fountain/inscription.jpg",
+      "alt": "Koyu renkli taş üzerinde iki kartuşa bölünmüş, dört satırlık kabartma Arap harfli kitâbenin yakın çekimi",
+      "description": "Kitâbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "arched-niche",
+      "image": "/images/konya-karatay-karakayis-sari-mosque-fountain/front-view.jpg",
+      "x": 45,
+      "y": 50,
+      "title": "Tam kemerli niş",
+      "text": "Çeşme \"bağımsız, tek cepheli ve tam kemerli nişli\" tipolojidedir.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "id": "gable-roof",
+      "image": "/images/konya-karatay-karakayis-sari-mosque-fountain/front-view.jpg",
+      "x": 50,
+      "y": 18,
+      "title": "Geniş saçaklı beşik çatı",
+      "text": "Çeşme son onarımda geniş saçaklı bir beşik çatıyla koruma altına alınmıştır.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/konya-karatay-karakayis-sari-mosque-fountain/inscription.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "İnşa kitâbesi",
+      "text": "Koyu renkli mermer üzerine iki kartuş hâlinde, dört satır, kabartma ve sülüs hatla yazılmıştır.",
+      "sourceId": "inv-p236"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbeye göre çeşme hangi yılda inşa edilmiştir?",
+      "options": [
+        "1595",
+        "1675",
+        "1795",
+        "1875"
+      ],
+      "correct": 1,
+      "description": "Kitâbeye göre çeşme H. 1086 Rebiülevvel ayında, yani 1675 yılının Mayıs-Haziran aylarında inşa edilmiştir.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "question": "Çeşmenin üst bölümünün orijinalliği neden kaybolmuştur?",
+      "options": [
+        "Bir depremde yıkıldığı için",
+        "Yangında zarar gördüğü için",
+        "Eser birkaç kez yer değiştirdiği için",
+        "Hiç tamamlanmadığı için"
+      ],
+      "correct": 2,
+      "description": "Eserin yeri birkaç kez değiştirilmiş, bu taşımalar sırasında özellikle üst bölümünün orijinalliği tamamen kaybolmuştur.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "question": "Son onarımda çeşme nasıl korunmuştur?",
+      "options": [
+        "Cam bir kafesle",
+        "Kubbeyle",
+        "Ahşap bir köşkle",
+        "Geniş saçaklı beşik çatıyla"
+      ],
+      "correct": 3,
+      "description": "Çeşme son onarımda geniş saçaklı bir beşik çatıyla koruma altına alınmıştır.",
+      "sourceId": "inv-p236"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p236",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Karakayış Sarı Cami Çeşmesi\"",
+      "page": "236"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-yanik-mosque",
+  "name": "Yanık (Sedirler - Kenan Dede) Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Plan ve mimari özelliklerine göre XX. yüzyıl başları; yerinde 1646 tarihli Kenan Dede Mescidi bulunuyordu",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "1646 tarihli Kenan Dede Mescidi’nin yerinde, XX. yüzyıl başında yapıldığı düşünülen çok destekli, üç sahınlı mahalle camisi.",
+  "history": "Cami, Karatay, Hacı Hasan Baş Caddesi’nde, Aliyenler Mezarlığı’nın kuzeybatısındadır. Bugünkü yapının yerinde 1646 tarihli Kenan Dede Mescidi’nin bulunduğu bilinmektedir. Kitâbesi olmayan mevcut yapının, plan ve mimari özelliklerinden hareketle XX. yüzyıl başlarında inşa edildiği düşünülür. Yapı 1981’deki onarımlarla son şeklini almıştır.\n\nCami derinlemesine dikdörtgen planlı, çok destekli ve üç sahınlıdır; içten düz ahşap tavanlı, dıştan dört yöne eğimli kırma çatılıdır. Yapımında taş ve kerpiç kullanılmıştır. Doğu cephenin güney köşesinde, beden duvarı üzerinde ahşap köşk tipi minare bulunur.\n\nCaminin kuzeyine sonradan son cemaat yeri eklenmiştir; harime buradaki kapıdan geçilir. Mihraba dik üç sahınlı sade harimin kuzeyinde mahfil, kıble duvarında mihrap, minber ve minareye çıkan ahşap merdiven yer alır. Kıble duvarının ortasındaki dikdörtgen formlu mihrap iç bükey silmelerle sınırlanmış, yarım daire planlı bir nişe sahiptir. Güneybatı köşesindeki ahşap minber camiye sonradan eklenmiştir. Cami, Konya merkez ve çevresinde sık görülen çok destekli mahalle mescitlerindendir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-yanik-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-yanik-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit kırma çatılı uzun dikdörtgen cami, çatı köşesinde beyaz köşk tipi minare, arkada şehir ve dağlar",
+      "description": "Caminin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-yanik-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: koyu ahşap direkler arasında beyaz mihrap, üstte kristal avize, kırmızı halı",
+      "description": "Çok destekli harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kosk-tipi-minare",
+      "image": "/images/konya-karatay-yanik-mosque/aerial-view.jpg",
+      "x": 30,
+      "y": 40,
+      "title": "Köşk tipi minare",
+      "text": "Doğu cephenin güney köşesinde, beden duvarı üzerinde ahşap köşk tipi minare bulunur.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "id": "ahsap-destekler",
+      "image": "/images/konya-karatay-yanik-mosque/prayer-hall.jpg",
+      "x": 18,
+      "y": 55,
+      "title": "Ahşap destekler",
+      "text": "Cami çok destekli ve mihraba dik üç sahınlıdır.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-yanik-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Mihrap",
+      "text": "Dikdörtgen formlu mihrap iç bükey silmelerle sınırlanmış, yarım daire planlı bir nişe sahiptir.",
+      "sourceId": "inv-p264"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bugünkü caminin yerinde daha önce hangi yapı bulunuyordu?",
+      "options": [
+        "Kenan Dede Mescidi",
+        "Abid İmam Mescidi",
+        "Sikaye Mescidi",
+        "İplikçi Mescidi"
+      ],
+      "correct": 0,
+      "description": "Yapının yerinde 1646 tarihli Kenan Dede Mescidi olduğu bilinmektedir.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "question": "Yapı hangi yıldaki onarımlarla son şeklini almıştır?",
+      "options": [
+        "1946",
+        "1981",
+        "2015",
+        "1928"
+      ],
+      "correct": 1,
+      "description": "Yapı 1981 senesinde yapılan onarımlarla son şeklini almıştır.",
+      "sourceId": "inv-p264"
+    },
+    {
+      "question": "Caminin minaresi nasıldır?",
+      "options": [
+        "Tuğla, iki şerefeli",
+        "Betonarme",
+        "Ahşap, köşk tipi",
+        "Taş, sekizgen gövdeli"
+      ],
+      "correct": 2,
+      "description": "Doğu cephenin güney köşesinde ahşap malzemeden köşk tipi minare yer alır.",
+      "sourceId": "inv-p264"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p264",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Yanık (Sedirler - Kenan Dede) Camii\"",
+      "page": "264"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

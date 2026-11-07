@@ -1,0 +1,112 @@
+{
+  "id": "osmangazi-gulruh-hatun-tomb",
+  "inventoryId": "osmangazi-gulruh-hatun-turbesi",
+  "name": "Gülruh Hatun Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1527",
+  "endowment": "Gülruh Sultan türbesini hayattayken kendisi yaptırmıştır",
+  "summary": "II. Murad Külliyesi'nde, II. Bayezid'in eşi Gülruh Sultan'ın hayattayken yaptırdığı, kare planlı ve mukarnaslı tromplu kubbeyle örtülü türbe.",
+  "history": "Gülruh Hatun Türbesi, Osmangazi İlçesi, Muradiye Mahallesi'nde, II. Murad Külliyesi bünyesinde yer alır; Muradiye türbelerinin en batısında, hazireyi çevreleyen duvarın dibindedir.\n\nGülruh Sultan, II. Bayezid'in eşi, Şehzade Alemşah ile Kamer Sultan'ın annesidir ve Şehzade Alemşah ile birlikte şehzade sancağında bulunmuştur. Hayırsever kişiliğiyle tanınan Gülruh Sultan, Akhisar'da bir mescit, Bursa'da bir mektep yaptırmış, ayrıca çok sayıda dükkân, hamam, han ve değirmen vakfetmiştir. Henüz hayattayken yaptırdığı türbesinin yapım tarihi 1527 olarak bilinir; vefatı türbenin inşasından birkaç yıl sonradır.\n\nKare planlı türbe, yüksek sekizgen kasnağa oturan mukarnaslı tromplu bir kubbeyle örtülüdür; duvarları bir sıra kesme taş ve iki sıra tuğlayla örülmüştür. Mermer bir revakla girilen mekân, alt sırada sekiz, üst sırada dört olmak üzere on iki pencereyle aydınlanır. Güney duvarında mihrap nişi, diğer iki duvarda ahşap kapaklı dolaplar vardır. Türbenin içini dolaşan Âyetü'l-kürsî yazı frizi rumi ve palmet motifli bitkisel süslemelerle donatılmıştır.\n\nSüslemeler 19. yüzyılın sonlarında sıvanarak Barok-Rokoko üslubunda bezemelerle kaplanmış; son restorasyondaki sıva raspasıyla özgün süslemeler tespit edilmiştir. Kündekâri tekniğindeki ahşap kapılar çok kötü durumdaydı ve 2014 restorasyonunda aslına uygun biçimde yeniden ihya edilmiştir.\n\nKitabesi bulunmayan türbede dört mermer mezar vardır: II. Bayezid'in eşi Gülruh Hatun, kızı Kamer Sultan, Şehzade Alemşah'ın kızı Fatma Sultan ve Kamer Sultan'ın oğlu Osman.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-gulruh-hatun-tomb/interior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-gulruh-hatun-tomb/interior.jpg",
+      "alt": "İç mekân: yan yana dizilmiş beyaz mermer sandukalar, öndekinin önünde 'Gülruh Hatun' yazılı tabela; duvarların üst kısmında kırmızı zeminli yazı kuşağı, üstte şebekeli pencereler ve mukarnaslı köşe geçişleri",
+      "description": "Mermer sandukalar ve yazı frizi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gulruh-hatun-tomb/inscription-frieze.jpg",
+      "alt": "Yakın çekim: kırmızı zemin üzerinde beyaz sülüs harfli yazı kuşağı ve kıvrık dallar; altında beyaz duvarda zincirle asılı gibi çizilmiş sarı yuvarlak bir madalyon",
+      "description": "Yazı frizinden ayrıntı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "gulruh-sarcophagus",
+      "image": "/images/osmangazi-gulruh-hatun-tomb/interior.jpg",
+      "x": 42,
+      "y": 84,
+      "title": "Gülruh Hatun'un mezarı",
+      "text": "Türbedeki dört mermer mezardan biri II. Bayezid'in eşi Gülruh Hatun'a aittir.",
+      "sourceId": "inv-p153"
+    },
+    {
+      "id": "ayetel-kursi-frieze",
+      "image": "/images/osmangazi-gulruh-hatun-tomb/interior.jpg",
+      "x": 32,
+      "y": 19,
+      "title": "Âyetü'l-kürsî frizi",
+      "text": "Türbenin içini dolaşan Âyetü'l-kürsî yazı frizi, rumi ve palmet motifli bitkisel süslemelerle donatılmıştır.",
+      "sourceId": "inv-p153"
+    },
+    {
+      "id": "frieze-detail",
+      "image": "/images/osmangazi-gulruh-hatun-tomb/inscription-frieze.jpg",
+      "x": 50,
+      "y": 20,
+      "title": "Yazı frizi",
+      "text": "Bu friz 19. yüzyıl sonunda sıvanmış, son restorasyondaki sıva raspasıyla özgün süslemeler ortaya çıkmıştır.",
+      "sourceId": "inv-p153"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gülruh Sultan kimin eşidir?",
+      "options": [
+        "II. Murad",
+        "Fâtih Sultan Mehmed",
+        "II. Bayezid",
+        "Yavuz Sultan Selim"
+      ],
+      "correct": 2,
+      "description": "Gülruh Sultan, II. Bayezid'in eşi, Şehzade Alemşah ile Kamer Sultan'ın annesidir.",
+      "sourceId": "inv-p152"
+    },
+    {
+      "question": "Türbenin yapım tarihi olarak hangi yıl bilinir?",
+      "options": [
+        "1527",
+        "1449",
+        "1487",
+        "1573"
+      ],
+      "correct": 0,
+      "description": "Gülruh Sultan'ın hayattayken yaptırdığı türbenin yapım tarihi 1527 olarak bilinir.",
+      "sourceId": "inv-p153"
+    },
+    {
+      "question": "Kündekâri tekniğindeki ahşap kapılar hangi restorasyonda ihya edilmiştir?",
+      "options": [
+        "1844",
+        "1960'lar",
+        "2011",
+        "2014"
+      ],
+      "correct": 3,
+      "description": "Kötü durumdaki kündekâri kapılar 2014 restorasyonunda aslına uygun biçimde yeniden ihya edilmiştir.",
+      "sourceId": "inv-p153"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p152",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Gülruh Hatun Türbesi\"",
+      "page": "152"
+    },
+    {
+      "id": "inv-p153",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Gülruh Hatun Türbesi\"",
+      "page": "153"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "konya-meram-kurkcu-masjid",
+  "name": "Kürkçü Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XX. yüzyıl başlarına tarihlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Alâeddin Tepesi’nin güneyindeki Kürkçü Mescidi, onarımda kalem işiyle bezenen tavanı ve perde motifli mihrabıyla tanımlanır.",
+  "history": "Mescit, Meram, Kürkçü Mahallesi, Gürcü Hatun Sokak No. 23’te, Alâeddin Tepesi’nin güneyindedir. İnşa tarihi ve banisini bildiren kitâbe veya vakfiyesi yoktur. Plan ve mimari ögelerine dayanılarak XX. yüzyıl başlarında yapıldığı düşünülür. Harap durumdayken onarılıp ibadete açılmış; bu onarımda harim tavanı kalem işiyle bezenmiştir.\n\nDıştan dörtgen planlı yapı beşik çatılıdır. Kitap kuzey ve batı duvarlarının sağır olduğunu, harime batıdaki kapıdan girildiğini belirtir. Giriş üzerinde mahfil bulunur. Kıble duvarının ortasındaki yarım daire planlı mihrap yanlarda sütuncelerle sınırlanır ve yarım kavsarayla biter. Nişte dönemin özelliği olarak perde motifi görülür. Mihrabın sağında ahşap minber vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-kurkcu-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-kurkcu-masjid/exterior.jpg",
+      "alt": "Beyaz sıvalı, geniş saçaklı yapının köşesi, sundurmalı kapısı ve demir bahçe çiti",
+      "description": "Beyaz sıvalı, geniş saçaklı yapının köşesi, sundurmalı kapısı ve demir bahçe çiti",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-kurkcu-masjid/mihrab-and-minbar.jpg",
+      "alt": "Çini kaplı duvar önünde perde motifli mihrap ve sağında ahşap minber",
+      "description": "Çini kaplı duvar önünde perde motifli mihrap ve sağında ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-kurkcu-masjid/gallery.jpg",
+      "alt": "Ahşap korkuluklu mahfilden kalem işi bezemeli tavana ve harime bakış",
+      "description": "Ahşap korkuluklu mahfilden kalem işi bezemeli tavana ve harime bakış",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-kurkcu-masjid/mihrab-and-minbar.jpg",
+      "x": 40,
+      "y": 59,
+      "title": "Perde motifli mihrap",
+      "text": "Yarım daire planlı mihrabın nişinde perde motifi bulunur.",
+      "sourceId": "inv-p169"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-kurkcu-masjid/gallery.jpg",
+      "x": 47,
+      "y": 17,
+      "title": "Kalem işi tavan",
+      "text": "Harim tavanı onarım sırasında kalem işiyle tezyin edilmiştir.",
+      "sourceId": "inv-p168"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi tepenin güneyindedir?",
+      "options": [
+        "Alâeddin Tepesi",
+        "Alaçam Tepesi",
+        "Çamlıca Tepesi",
+        "Tınaztepe"
+      ],
+      "correct": 0,
+      "description": "Kitap konumunu Alâeddin Tepesi’nin güneyi olarak verir.",
+      "sourceId": "inv-p168"
+    },
+    {
+      "question": "Onarım sırasında hangi bölüm kalem işiyle süslenmiştir?",
+      "options": [
+        "Bahçe kapısı",
+        "Minare kaidesi",
+        "Harim tavanı",
+        "Çeşme yalağı"
+      ],
+      "correct": 2,
+      "description": "Onarımda harim mekânının tavanı kalem işiyle bezenmiştir.",
+      "sourceId": "inv-p168"
+    },
+    {
+      "question": "Mihrap nişinde hangi motif vardır?",
+      "options": [
+        "Balıksırtı",
+        "Perde",
+        "Çift başlı kartal",
+        "Üzüm salkımı"
+      ],
+      "correct": 1,
+      "description": "Kitap mihrap nişindeki perde motifini tanımlar.",
+      "sourceId": "inv-p169"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p168",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Kürkçü Mescidi\"",
+      "page": "168"
+    },
+    {
+      "id": "inv-p169",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Kürkçü Mescidi\"",
+      "page": "169"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

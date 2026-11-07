@@ -1,0 +1,109 @@
+{
+  "id": "konya-meram-nasuh-bey-darulhuffaz-mosque",
+  "name": "Nasuh Bey Camii (Canbazzade Nasuh Bey Dârü’l-Huffazı)",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XV. yüzyılın ikinci yarısı · Karamanoğulları",
+  "endowment": "Canbazzade Nasuh Bey; kitapta 1315 tarihli vakfiye ve H. 918 / M. 1512 tarihli Pir Ahmed Bey vakfiyesi anılır",
+  "summary": "Canbazzade Nasuh Bey’in yaptırdığı yapı, tek kubbeli harimi ve üç kubbeli son cemaat yeriyle bir Karamanoğlu dârü’l-huffazıdır.",
+  "history": "Cami, Meram, Abdülaziz Mahallesi, Abdülmümin Sokak No. 7’dedir. XV. yüzyılın ikinci yarısında Canbazzade Nasuh Bey tarafından yaptırılmıştır. Kitaba göre Nasuh Bey’in annesi II. İbrahim Bey’in kızı, babası Defterdar Canbaz Kadıoğlu’dur; kızı Hüsnüşah Hatun’u II. Bayezit ile evlendirmiştir. Elde ettiği toprak gelirlerini hayır ve eğitim işlerinde kullanmıştır.\n\nKitap dârü’l-huffaza ait 1315 tarihli bir vakfiye bulunduğunu belirtir; ayrıca H. 918 / M. 1512 tarihli Pir Ahmed Bey vakfiyesinin yapının yeri ve banisi hakkında bilgi verdiğini aktarır. Yapı Osmanlı döneminde Musa Bey Kütüphanesi, daha sonra askeri malzeme deposu, belediyenin gaz deposu ve 1950–1977 arasında kitaplık olarak kullanılmış; 1977’de ibadete açılmıştır. Gaz deposu işlevi nedeniyle halk arasında Gazhane diye tanınmıştır.\n\nKare harimi tek kubbeli, batıdaki son cemaat yeri üç gözlüdür. Beden duvarları kesme taş, revak sütunları mermer, örtüsü tuğladır. Yıkılmış son cemaat yeri 1980’de yenilenmiştir. Batı cephedeki özgün kemer bingilerinde akant yaprakları arasında lale veya palmet motifleri vardır. Dört silindirik sütuna oturan sivri kemerler üç kubbeyi taşır. Harim kubbesi pandantiflerle geçilen sekizgen kasnağa oturur; kasnağın her yüzünde dairesel pencere vardır. Batıdaki basık kemerli kapıdan girilir. Kıble duvarındaki yarım daire biçimli sade mihrabın süslemeleri sonradan yapılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-nasuh-bey-darulhuffaz-mosque/portico.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-nasuh-bey-darulhuffaz-mosque/portico.jpg",
+      "alt": "Taş yapının üç kemerli revakı, mermer sütunları ve sokak cephesi",
+      "description": "Taş yapının üç kemerli revakı, mermer sütunları ve sokak cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-nasuh-bey-darulhuffaz-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde önde koyu renkli ahşap taşıyıcılar, karşıda mihrap ve sağda minber",
+      "description": "Mavi halılı harimde önde koyu renkli ahşap taşıyıcılar, karşıda mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-nasuh-bey-darulhuffaz-mosque/mihrab.jpg",
+      "alt": "İki kemerli pencere arasında koyu taş çerçeveli, dilimli kavsaralı mihrap",
+      "description": "İki kemerli pencere arasında koyu taş çerçeveli, dilimli kavsaralı mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-nasuh-bey-darulhuffaz-mosque/portico.jpg",
+      "x": 49,
+      "y": 54,
+      "title": "Son cemaat yeri",
+      "text": "Batıdaki son cemaat yeri dört sütun ve sivri kemerlerle üç göze ayrılır.",
+      "sourceId": "inv-p152"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-nasuh-bey-darulhuffaz-mosque/mihrab.jpg",
+      "x": 50,
+      "y": 54,
+      "title": "Mihrap",
+      "text": "Kıble duvarındaki yarım daire biçimli sade mihrabın süslemeleri sonradan yapılmıştır.",
+      "sourceId": "inv-p152"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapıyı kim yaptırmıştır?",
+      "options": [
+        "Mehmet Emin Usta",
+        "Hacı İsmail",
+        "Canbazzade Nasuh Bey",
+        "Devlet Hatun"
+      ],
+      "correct": 2,
+      "description": "XV. yüzyılın ikinci yarısında Canbazzade Nasuh Bey yaptırmıştır.",
+      "sourceId": "inv-p151"
+    },
+    {
+      "question": "Halk arasındaki Gazhane adı hangi kullanımdan gelir?",
+      "options": [
+        "Belediyenin gaz deposu olmasından",
+        "Çini atölyesi olmasından",
+        "Han olarak kullanılmasından",
+        "Çeşmesinden"
+      ],
+      "correct": 0,
+      "description": "Yapı uzun süre belediyenin gaz deposu olarak kullanılmıştır.",
+      "sourceId": "inv-p152"
+    },
+    {
+      "question": "Son cemaat yeri kaç kubbeyle örtülüdür?",
+      "options": [
+        "Bir",
+        "İki",
+        "Altı",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Üç gözlü son cemaat yeri üç kubbeyle örtülüdür.",
+      "sourceId": "inv-p152"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p151",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Nasuh Bey Camii (Canbazzade Nasuh Bey Dârü’l-Huffazı)\"",
+      "page": "151"
+    },
+    {
+      "id": "inv-p152",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Nasuh Bey Camii (Canbazzade Nasuh Bey Dârü’l-Huffazı)\"",
+      "page": "152"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

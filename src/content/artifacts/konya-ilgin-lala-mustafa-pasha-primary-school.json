@@ -1,0 +1,118 @@
+{
+  "id": "konya-ilgin-lala-mustafa-pasha-primary-school",
+  "name": "Lala Mustafa Paşa Külliyesi Medresesi (Sıbyan Mektebi)",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Osmanlı · külliye H. 984 / M. 1576",
+  "endowment": "Kıbrıs Fâtihi Lala Mustafa Paşa (külliyenin banisi)",
+  "summary": "Vakfiyesine göre fakir ve miskinlerin çocuklarına Kur'an-ı Kerim öğretmek için yapılan, içinde kütüphane bulunduğu belirtilen sıbyan mektebi.",
+  "history": "Ilgın şehir merkezindeki Lala Mustafa Paşa Külliyesi, Sultan Murad zamanında Kıbrıs Fâtihi Lala Mustafa Paşa tarafından H. 984 / M. 1576'da yaptırılmıştır. Sıbyan mektebi bu külliyenin bir parçasıdır.\n\nVakfiyesinde fakir ve miskinlerin çocuklarına Kur'an-ı Kerim öğretmek için inşa edildiği belirtilen sıbyan mektebi, caminin batı yönünde yer alır. Vakfiyede \"içinde kütüphanesi olan\" bir sıbyan mektebi olarak geçer; adı geçen kütüphane ve sıbyan mektebinin burası olduğu düşünülmektedir.\n\nMektep dikdörtgen planlıdır ve üzeri aynalı tonozla örtülüdür. Aynalı tonozun güney ucunda yuvarlak kemerli, tuğla örgülü bir aydınlık penceresi göze çarpar. Mektebin avluya açılan tarafında bir kapı açıklığı ve yine bu cephede bir pencere vardır. İç mekân güney cephedeki iki ve batı cephedeki bir pencereyle aydınlatılır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-lala-mustafa-pasha-primary-school/door.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-primary-school/door.jpg",
+      "alt": "Moloz taş ve tuğla örgülü duvarda, mermer söveli ve sivri kemerli alınlıklı ahşap kapı; solda küçük bir tabela, sağda duvar lambası",
+      "description": "Mektebin kapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-primary-school/interior.jpg",
+      "alt": "Kırmızı tuğla örgülü tonozlu iç mekân; tonozdaki küçük açıklıktan giren ışık huzmesi ve tavandan sarkan avize, yerde halılar",
+      "description": "Mektebin içi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-ilgin-lala-mustafa-pasha-primary-school/courtyard.jpg",
+      "alt": "Avlu: büyük bir ağacın gölgelediği taş döşeli alan, arkada kemerli kapılı taş yapılar ve çini kaplı ağaç havuzu",
+      "description": "Mektebin önündeki avlu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "skylight",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-primary-school/interior.jpg",
+      "x": 58,
+      "y": 35,
+      "title": "Aydınlık penceresi",
+      "text": "Aynalı tonozun güney ucunda yuvarlak kemerli, tuğla örgülü bir aydınlık penceresi göze çarpar.",
+      "sourceId": "inv-p69"
+    },
+    {
+      "id": "vault",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-primary-school/interior.jpg",
+      "x": 40,
+      "y": 12,
+      "title": "Aynalı tonoz",
+      "text": "Dikdörtgen planlı mektebin üzeri aynalı tonozla örtülüdür.",
+      "sourceId": "inv-p69"
+    },
+    {
+      "id": "door",
+      "image": "/images/konya-ilgin-lala-mustafa-pasha-primary-school/door.jpg",
+      "x": 50,
+      "y": 75,
+      "title": "Kapı",
+      "text": "Mektebin avluya açılan tarafında bir kapı açıklığı vardır.",
+      "sourceId": "inv-p69"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakfiyeye göre sıbyan mektebi kimin çocuklarına Kur'an öğretmek için yapılmıştır?",
+      "options": [
+        "Fakir ve miskinlerin",
+        "Askerlerin",
+        "Tüccarların",
+        "Vakıf görevlilerinin"
+      ],
+      "correct": 0,
+      "description": "Vakfiyesinde fakir ve miskinlerin çocuklarına Kur'an-ı Kerim öğretmek için inşa edildiği belirtilir.",
+      "sourceId": "inv-p69"
+    },
+    {
+      "question": "Vakfiyede mektebin içinde ne bulunduğu belirtilir?",
+      "options": [
+        "Bir çeşme",
+        "Bir türbe",
+        "Bir kütüphane",
+        "Bir mutfak"
+      ],
+      "correct": 2,
+      "description": "Vakfiyede \"içinde kütüphanesi olan\" bir sıbyan mektebi olarak geçer.",
+      "sourceId": "inv-p69"
+    },
+    {
+      "question": "Mektep caminin hangi yönündedir?",
+      "options": [
+        "Doğusunda",
+        "Kuzeyinde",
+        "Güneyinde",
+        "Batısında"
+      ],
+      "correct": 3,
+      "description": "Sıbyan mektebi caminin batı yönünde yer alır.",
+      "sourceId": "inv-p69"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p53",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Lala Mustafa Paşa Külliyesi\"",
+      "page": "53"
+    },
+    {
+      "id": "inv-p69",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Ilgın, \"Medrese (Sıbyan Mektebi)\"",
+      "page": "69"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

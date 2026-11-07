@@ -1,0 +1,101 @@
+{
+  "id": "konya-aksehir-kalayci-masjid",
+  "name": "Kalaycı Mescidi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "XII. yüzyıl (plan, malzeme ve teknik özelliklerine göre tahmin)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Akşehir Kuşçu Mahallesi'ndeki, yerinde Ahi Celal Mescidi bulunduğu belirtilen tek kubbeli Ahi yapısı.",
+  "history": "Mescit, Akşehir Kuşçu Mahallesi, Kalaycı Sokak üzerindedir. Yapıya ait kitâbe yoktur. Kaynaklarda mescidin bulunduğu yerin Ahi Celal Mahallesi olduğu ve Kalaycı Mescidi'nin yerinde Ahi Celal Mescidi'nin bulunduğu belirtilir. Ahi Celal Mescidi'nin zamanla hasar görmesi üzerine yapılan onarımdan sonra adının “Kalaycı Mescidi” olarak değişmiş olabileceği düşünülür. Plan, malzeme ve teknik özelliklerinden hareketle yapı XII. yüzyıla tarihlendirilebilir.\n\nTuğla ve moloz taştan yapılan mescit yakın zamanda esaslı bir onarım geçirmiştir. Kare planlı ve tek kubbeyle örtülü yapıda kubbeye tromplarla geçilir; kubbe sonradan kırma çatı altına alınmıştır. Doğu cephede harime giriş kapısı ve bir pencere vardır; bu cephenin yarısında bir sundurma ile giriş vurgulanmıştır. Harimde mihrabın yönü düzeltilmiştir. Kitap Kalaycı Mescidi'ni Akşehir'deki Selçuklu dönemi eserleri arasında oldukça önemli bir Ahi yapısı olarak niteler.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-kalayci-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-kalayci-masjid/exterior.jpg",
+      "alt": "Moloz taş duvarlı kubbeli mescit, cephenin bir kısmında kiremit örtülü sundurma ve demir korkuluklar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-kalayci-masjid/mihrab.jpg",
+      "alt": "Tuğla kubbe altında kademeli nişli ahşap mihrap ve turkuaz halı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-kalayci-masjid/minbar.jpg",
+      "alt": "Köşede ajurlu korkuluklu ahşap minber ve arkasında tuğla tromp",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-kalayci-masjid/exterior.jpg",
+      "x": 25,
+      "y": 55,
+      "title": "Girişteki sundurma",
+      "text": "Doğu cephenin yarısında bir sundurma ile giriş vurgulanmıştır.",
+      "sourceId": "inv-p352"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-kalayci-masjid/exterior.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Tuğla ve moloz taş duvarlar",
+      "text": "Mescit tuğla ve moloz taş malzemeden yapılmıştır.",
+      "sourceId": "inv-p352"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kaynaklara göre Kalaycı Mescidi'nin yerinde hangi mescit bulunuyordu?",
+      "options": [
+        "Ahi Celal Mescidi",
+        "Hamza Mescidi",
+        "Kileci Mescidi",
+        "Ferruhşah Mescidi"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Ahi Celal Mescidi.",
+      "sourceId": "inv-p352"
+    },
+    {
+      "question": "Mescit hangi yüzyıla tarihlendirilebilir?",
+      "options": [
+        "XIV. yüzyıl",
+        "XVI. yüzyıl",
+        "XII. yüzyıl",
+        "XIX. yüzyıl"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: XII. yüzyıl.",
+      "sourceId": "inv-p352"
+    },
+    {
+      "question": "Kitap mescidi nasıl bir yapı olarak niteler?",
+      "options": [
+        "Bir saray mescidi",
+        "Bir Ahi yapısı",
+        "Bir medrese mescidi",
+        "Bir kervansaray mescidi"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Bir Ahi yapısı.",
+      "sourceId": "inv-p352"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p352",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Kalaycı Mescidi\"",
+      "page": "352"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

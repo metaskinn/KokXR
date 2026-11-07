@@ -1,0 +1,109 @@
+{
+  "id": "konya-meram-karatay-emir-kemalettin-masjid",
+  "name": "Karatay (Emir Kemalettin) Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu dönemi; vakfiyesine göre H. 646 / M. 1248",
+  "endowment": "Vakfiyesine göre Celaleddin Karatay’ın ortanca kardeşi Kemalettin Rumtaş tarafından yaptırılmıştır.",
+  "summary": "Kemalettin Rumtaş’ın 1248’de yaptırdığı mescit, balıksırtı tuğla kubbesi ve prizmatik üçgen geçişleriyle bilinir.",
+  "history": "Mescit, Meram, Armağan Mahallesi, Hoca Fakih Caddesi No. 59’dadır. Vakfiyesine göre Celaleddin Karatay’ın ortanca kardeşi Kemalettin Rumtaş tarafından H. 646 / M. 1248’de yaptırılmıştır. Mihraptaki değerli çiniler XX. yüzyılın başında sökülerek çalınmış, son cemaat yerinin üstündeki iki kubbe bakımsızlık yüzünden 1919’da çökmüş, mescit 1940’larda sellerin getirdiği molozla dolmuştur. Restorasyonu Vakıflar Genel Müdürlüğü 1991’de tamamlamıştır. Yapı bugünkü zeminden 1,50 m aşağıdadır.\n\nKare planlı harim ile iki gözlü son cemaat yerinden oluşur. Kurşun kaplı, normalden yüksek tutulmuş kubbe içten ve dıştan tuğla ile örülmüştür; eski resimlerden, tuğlaların çapraz dizilmesiyle tabandan tepeye daralan halkalardan oluşan balıksırtı bir süslemesi olduğu anlaşılır. İbrahim Hakkı Konyalı kubbenin kandil yerinin siyah ve yeşil çinilerle süslü olduğunu yazar; kubbenin ortasında yuvarlak çini parçaları görülür ve kitap eskiden bütün kubbenin mavi ve siyah mozaiklerle kaplı olabileceğini belirtir. Paratoner yerleştirilirken bu çiniler de zarar görmüştür. Kubbeye geçiş Türk üçgenleriyle sağlanır.\n\nSon cemaat yeri kesme taş ve tuğla, mescit köşelerde kesme, diğer yerlerde moloz taş, kubbe tuğla ile yapılmıştır. Aslında iki kubbeli olan son cemaat yeri bugün tek yöne eğimli çatıyla örtülüdür. Harime düz lentolu kapıdan girilir; kıble duvarındaki dikdörtgen ve basık kemerli sade mihrapta mozaik çini izlerine bugün rastlanmaz. Oktay Aslanapa’ya göre Alâeddin Camii’nde ilk kez görülen prizmatik üçgenler Karatay Mescidi kubbesinde karakteristik bir gelişme göstermiştir; kitap yapıyı bu yönüyle ayrıca önemli bulur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-karatay-emir-kemalettin-masjid/prayer-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-karatay-emir-kemalettin-masjid/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde sade kemerli niş, iki yanda sivri kemerli üst pencereler ve ahşap rahle",
+      "description": "Kırmızı halılı harimde sade kemerli niş, iki yanda sivri kemerli üst pencereler ve ahşap rahle",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-karatay-emir-kemalettin-masjid/dome-interior.jpg",
+      "alt": "Aşağıdan bakıldığında tuğla örgülü kubbenin içi ve iki yanda kemerli pencereler",
+      "description": "Aşağıdan bakıldığında tuğla örgülü kubbenin içi ve iki yanda kemerli pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-karatay-emir-kemalettin-masjid/brick-arch.jpg",
+      "alt": "Tuğla ve taş örgülü duvarda yarım daire biçimli kemer ve örgü izleri",
+      "description": "Tuğla ve taş örgülü duvarda yarım daire biçimli kemer ve örgü izleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-karatay-emir-kemalettin-masjid/dome-interior.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Tuğla kubbe",
+      "text": "Kubbe içten ve dıştan tamamen tuğla ile örülmüştür.",
+      "sourceId": "inv-p104"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-karatay-emir-kemalettin-masjid/prayer-hall.jpg",
+      "x": 48,
+      "y": 37,
+      "title": "Sade mihrap",
+      "text": "Kıble duvarının ortasında dikdörtgen ve basık kemerli sade bir mihrap bulunur.",
+      "sourceId": "inv-p105"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitaba göre mescidi kim yaptırmıştır?",
+      "options": [
+        "Kemalettin Rumtaş",
+        "Sahip Ata",
+        "Celaleddin Karatay’ın oğlu",
+        "II. Kılıç Arslan"
+      ],
+      "correct": 0,
+      "description": "Vakfiyeye göre Celaleddin Karatay’ın ortanca kardeşi Kemalettin Rumtaş yaptırmıştır.",
+      "sourceId": "inv-p104"
+    },
+    {
+      "question": "Son cemaat yerinin üstündeki iki kubbe hangi yıl çökmüştür?",
+      "options": [
+        "1891",
+        "1940",
+        "1919",
+        "1991"
+      ],
+      "correct": 2,
+      "description": "Kubbeler bakımsızlık nedeniyle 1919’da çökmüştür.",
+      "sourceId": "inv-p104"
+    },
+    {
+      "question": "Kubbe hangi malzemeyle örülmüştür?",
+      "options": [
+        "Kesme taş",
+        "Ahşap",
+        "Mermer",
+        "Tuğla"
+      ],
+      "correct": 3,
+      "description": "Kubbe içten ve dıştan tamamen tuğla ile örülmüştür.",
+      "sourceId": "inv-p104"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p104",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Karatay (Emir Kemalettin) Mescidi\"",
+      "page": "104"
+    },
+    {
+      "id": "inv-p105",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Karatay (Emir Kemalettin) Mescidi\"",
+      "page": "105"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

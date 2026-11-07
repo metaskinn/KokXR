@@ -1,0 +1,101 @@
+{
+  "id": "konya-aksehir-haci-hamza-masjid",
+  "name": "Hacı Hamza (Hafız Hatip Ali) Mescidi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "XIII-XIV. yüzyıl (tahmini)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Akşehir Yıldırım Mahallesi'ndeki, kitâbesiz ve XIII-XIV. yüzyıla tarihlendirilen kare planlı tek kubbeli mescit.",
+  "history": "Mescit, Akşehir Yıldırım Mahallesi, Hacı Hamza Sokak üzerindedir. Cumhuriyetten önce “Hacı Hamza Mahallesi” olarak bilinen mahallenin adı Cumhuriyetten sonra “Yıldırım Mahallesi” olmuştur.\n\nYapının inşa kitâbesi yoktur. Fatih Sultan Mehmet devrine ait H. 881 / M. 1476 tarihli vakıf kayıtlarında Akşehir'de “Hamza Mescidi” adıyla biri Hacı Hamza, diğeri Cambaz Mahallesi'nde iki mescit geçer. İnşa tarihi ve bânisi belli olmayan mescidin XIII-XIV. yüzyıllarda yapıldığı düşünülür. Vakıflar Bölge Müdürlüğü 2008'de yapıyı onarmıştır.\n\nKare planlı mescit tek kubbeyle örtülüdür; taş ve tuğla kullanılmıştır. Harime kuzeydeki kapıdan girilir. Kuzeydeki son cemaat yeri ve minare sonradan eklenmiştir. Son cemaat yerindeki sivri kemerli pencere alınlığında firuze renkli geometrik süslemeler görülür. Kıble duvarının ortasındaki mihrap yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-haci-hamza-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-haci-hamza-masjid/exterior.jpg",
+      "alt": "Mermer sütunlara oturan üç tuğla kemerli revak ve arkasında taş-tuğla duvarlı mescit",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-haci-hamza-masjid/narthex-window.jpg",
+      "alt": "Tuğla kemerli pencere ve üstünde yeşil-turkuaz geometrik geçmeli alınlık",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-haci-hamza-masjid/interior.jpg",
+      "alt": "Beyaz sıvalı harimde ahşap lambri, kemerli kapı ve sağda ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-haci-hamza-masjid/exterior.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Sonradan eklenen son cemaat yeri",
+      "text": "Kuzey cephedeki son cemaat yeri ve minare yapıya sonradan eklenmiştir.",
+      "sourceId": "inv-p332"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-haci-hamza-masjid/narthex-window.jpg",
+      "x": 50,
+      "y": 12,
+      "title": "Firuze geometrik süsleme",
+      "text": "Son cemaat yerindeki sivri kemerli pencere alınlığında firuze renkte geometrik süslemeler vardır.",
+      "sourceId": "inv-p332"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hacı Hamza Mahallesi'nin Cumhuriyetten sonraki adı nedir?",
+      "options": [
+        "Kileci",
+        "Anıt",
+        "Yıldırım",
+        "Kızılca"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Yıldırım.",
+      "sourceId": "inv-p332"
+    },
+    {
+      "question": "H. 881 / M. 1476 tarihli kayıtlarda Akşehir'de “Hamza Mescidi” adıyla kaç mescit geçer?",
+      "options": [
+        "İki",
+        "Bir",
+        "Üç",
+        "Dört"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: İki.",
+      "sourceId": "inv-p332"
+    },
+    {
+      "question": "Harime hangi yöndeki kapıdan girilir?",
+      "options": [
+        "Doğu",
+        "Batı",
+        "Güney",
+        "Kuzey"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Kuzey.",
+      "sourceId": "inv-p332"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p332",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Hacı Hamza (Hafız Hatip Ali) Mescidi\"",
+      "page": "332"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,15 +1,15 @@
-// VR'da vazo onarımı: Quest kumandasıyla parçayı tut, yerine götür, oturt. Vazo sahnesine yalnız VazoXrBaglam üzerinden dokunur.
-// Üst bölümdeki saf hesapları masaüstü sahnesi de kullanır; dosya çalışma anında yalnız three'ye bağlıdır, Node testi doğrudan içe aktarır.
+// Vase repair in VR: grab a piece with the Quest controller, carry it to its place, seat it. Touches the vase scene only through VaseXrContext.
+// The pure calculations in the top section are also used by the desktop scene; at runtime the file depends only on three, and the Node test imports it directly.
 import * as THREE from 'three'
 
 export const ILLUSTRATIVE_MODEL_LABEL = 'Temsilî model · Tarihî eser değildir'
 export const PIECE_COUNT = 6
 
-/** Rig ölçeği: bir cihaz metresi 100 model birimi. Vazo modeli 44 birim, VR'da 44 cm görünür. */
+/** Rig scale: one device meter is 100 model units. The vase model is 44 units and appears 44 cm in VR. */
 export const METER = 100
-/** Parça merkezi hedefe bu kadar yakınsa oturur (model birimi, yani cm). */
+/** A piece seats if its center is this close to the target (model units, i.e. cm). */
 export const XR_SEAT_THRESHOLD = 9
-/** Masaüstü tablası 66 birimdir; VR'da kullanıcı tablanın içinde kalmasın diye küçülür. */
+/** The desktop turntable is 66 units; in VR it is shrunk so the user does not end up inside it. */
 export const XR_TABLE_RADIUS = 50
 const VASE_DISTANCE = 0.7
 
@@ -19,17 +19,17 @@ export function snapsIn(distance: number, threshold: number) {
   return distance < threshold
 }
 
-/** Masaüstünde yakınlık ekranda ölçülür: piksel eşiği alan genişliğine göre 20–34. */
+/** On desktop proximity is measured on screen: the pixel threshold is 20–34 depending on area width. */
 export function screenThreshold(width: number) {
   return Math.max(20, Math.min(34, width * 0.055))
 }
 
-/** Tablanın cihaz yüksekliği (metre): ayakta ve oturarak erişilebilsin. */
+/** Turntable height in device space (meters): reachable both standing and seated. */
 export function tableHeight(headY: number) {
   return Math.min(0.85, Math.max(0.55, headY - 0.85))
 }
 
-/** Model başlangıcı başın önünde masa yüksekliğine gelsin, kullanıcı vazoya masaüstündeki onarım açısıyla (+z'den) baksın. */
+/** Put the model origin in front of the head at table height, with the user viewing the vase from the desktop repair angle (from +z). */
 export function vaseRig(head: { x: number; y: number; z: number; yaw: number }) {
   const localX = head.x - Math.sin(head.yaw) * VASE_DISTANCE
   const localZ = head.z - Math.cos(head.yaw) * VASE_DISTANCE
@@ -43,11 +43,11 @@ export function vaseRig(head: { x: number; y: number; z: number; yaw: number }) 
   }
 }
 
-// Derece: +z kullanıcıya bakar. Tam önde parça yok: vazoyu kapatmasın. Parça sırası karışık: komşu parçalar komşu yuvaya düşmesin.
+// Degrees: +z faces the user. No piece directly in front, so the vase is not blocked. Piece order is shuffled so neighboring pieces do not land in neighboring slots.
 const SHELF_ANGLES = [-35, 150, 95, 35, -95, -150]
 const SHELF_RADIUS = 35
 
-/** VR'da parçalar vazonun çevresinde, tablanın üstünde. `altPaylari`: merkezden parçanın altına uzaklık. */
+/** In VR the pieces sit around the vase, on the turntable. `bottomShares`: distance from the center to the bottom of the piece. */
 export function xrShelfLayout(bottomShares: number[], turntableY: number): Pointed[] {
   return bottomShares.map((alt, id) => {
     const a = (SHELF_ANGLES[id % SHELF_ANGLES.length] * Math.PI) / 180
@@ -57,7 +57,7 @@ export function xrShelfLayout(bottomShares: number[], turntableY: number): Point
 
 export interface PieceCandidate { id: number; center: Pointed; radius: number }
 
-/** Önce kumandanın değdiği parça, yoksa ışının en ortadan geçtiği parça. Aday yoksa `null`. */
+/** First the piece the controller touches, otherwise the piece the ray passes most centrally through. `null` if there is no candidate. */
 export function selectPiece(start_: Pointed, dir: Pointed, candidates: PieceCandidate[], reach: number): number | null {
   let touching: number | null = null, nearestTouch = 1
   let aimed: number | null = null, bestAim = 1
@@ -75,16 +75,16 @@ export function selectPiece(start_: Pointed, dir: Pointed, candidates: PieceCand
 
 export type VasePhase = 'traceless' | 'repair' | 'done'
 
-/** Onarılmış vazo masaüstünde incelemeye dönülmüş olsa da tamamdır: izleri kalıcıdır. */
+/** A repaired vase counts as done even if the desktop switched back to inspection: its traces are permanent. */
 export function vaseStage_(repair: boolean, placed: number): VasePhase {
   if (placed >= PIECE_COUNT) return 'done'
   return repair ? 'repair' : 'traceless'
 }
 
-// Panelin alt sırasında yan yana iki düğme. uv.y 1 üst kenardır.
+// Two side-by-side buttons in the panel's bottom row. uv.y 1 is the top edge.
 const BUTTON_V = { min: 0.07, max: 0.31 }
 const BUTTON_U = [{ min: 0.05, max: 0.48 }, { min: 0.52, max: 0.95 }]
-/** Panelde (u, v) noktasındaki düğmenin sırası; düğme yoksa `null`. */
+/** Index of the button at panel point (u, v); `null` if there is none. */
 export function panelButton(u: number, v: number): number | null {
   if (v < BUTTON_V.min || v > BUTTON_V.max) return null
   const i = BUTTON_U.findIndex((d) => u >= d.min && u <= d.max)
@@ -113,7 +113,7 @@ export function panelText(phase: VasePhase, placed: number, result: string) {
   }
 }
 
-// ---------- Oturum ----------
+// ---------- Session ----------
 
 export interface VaseXrContext {
   renderer: THREE.WebGLRenderer
@@ -121,35 +121,35 @@ export interface VaseXrContext {
   camera: THREE.PerspectiveCamera
   pieces: THREE.Object3D[]
   targets: { position: THREE.Vector3; quaternion: THREE.Quaternion }[]
-  /** Parçalar yerindeyken vazoyla birlikte taşınan nesneler (izsiz gövde, onarım izleri). */
+  /** Objects carried with the vase while the pieces are in place (traceless body, repair traces). */
   wholeObjects: THREE.Object3D[]
-  /** Tutulabilir, henüz oturmamış parça mı? */
+  /** Is this a grabbable piece that has not seated yet? */
   isFree: (id: number) => boolean
-  /** Bütün vazo elde çevrilebilir mi: izsiz, ya da onarım bitti ve animasyon durdu. */
+  /** Can the whole vase be turned in hand: traceless, or repair finished and animation stopped. */
   isInspecting: () => boolean
   phase: () => VasePhase
   placedCount: () => number
-  /** Panelden: masaüstündeki parçalama akışı. Sonuç durumu `sifirla` üzerinden geri gelir. */
+  /** From the panel: the desktop shatter flow. The resulting state comes back through `reset`. */
   shatterRequest: () => void
   gripStarted: (id: number) => void
-  /** Masaüstündeki bırakma yolu: animasyon ve oyun durumu aynı yerden gider. */
+  /** The desktop release path: animation and game state go through the same place. */
   release: (id: number, seated: boolean) => void
-  /** Oyun denemesi saymadan rafa döndürür (kumanda koptu, oturum kapandı). */
+  /** Returns to the shelf without counting a game attempt (controller disconnected, session closed). */
   gripCancel: (id: number) => void
   sec: (id: number | null) => void
   emphasize: (ids: number[]) => void
-  /** VR dizilimi ve kilitleri; `false` masaüstü görünümüne döndürür. */
+  /** VR layout and locks; `false` returns to the desktop view. */
   xrMode: (open: boolean, shelves?: Pointed[]) => void
   sessionEnded: () => void
 }
 
 export interface VaseXr {
-  /** Çağrıldığı anda requestSession'a gider: kullanıcı jesti içinde çağrılmalı. Reddedilirse sahnede iz bırakmaz. */
+  /** Goes to requestSession immediately when called: must be called inside a user gesture. Leaves no trace in the scene if rejected. */
   start: () => Promise<void>
   frame: () => void
   finish: () => void
   active: () => boolean
-  /** Oyun baştan başlarken: tutuşları bırakır, vazoyu dayanaktan çıkarır. Parça konumları sahnenindir. */
+  /** On game restart: releases grips, takes the vase off the holder. Piece positions belong to the scene. */
   reset: () => void
   clear: () => void
 }
@@ -157,7 +157,7 @@ export interface VaseXr {
 const RAY_LENGTH = 1.5
 const VASE_CENTER_Y = 22
 const VASE_RADIUS = 22
-// Vazo ele çekilir: uzaktan tutulup çevrilince kaldıraçla savrulmasın. Cihaz metresi.
+// The vase is pulled to the hand so it does not swing like a lever when grabbed and turned from afar. Device meters.
 const VASE_HAND_DISTANCE = 0.25
 const TURNTABLE_TOP = -1.25
 const TEXT = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
@@ -168,7 +168,7 @@ export function canvasPlane(width: number, height: number, realWidth: number) {
   el.width = width
   el.height = height
   const c = el.getContext('2d', { willReadFrequently: true })
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   const texture = new THREE.CanvasTexture(el)
   texture.colorSpace = THREE.SRGBColorSpace
   texture.anisotropy = 8
@@ -178,7 +178,7 @@ export function canvasPlane(width: number, height: number, realWidth: number) {
   return { c, texture, obj, dispose: () => { texture.dispose(); material.dispose(); geometry.dispose() } }
 }
 
-/** Başlık, ilerleme, ipucu ve `panelDugmesi` ile eşleşen iki düğme. `gercekGenislik` sahne biriminde. */
+/** Title, progress, hint and two buttons matching `panelButton`. `realWidth` is in scene units. */
 export function statePanel(realWidth = 64) {
   const G = 1024, Y = 512
   const p = canvasPlane(G, Y, realWidth)
@@ -234,9 +234,9 @@ interface El {
   ray: THREE.Line
   trigger: boolean
   side: boolean
-  /** Parça kimliği, bütün vazo için VAZO. */
+  /** Piece id, VASE for the whole vase. */
   held: number | null
-  /** Tuş bırakıldı, karar kare başında: kopan kumanda da önce tek başına selectend yollar, sonra `disconnected`. */
+  /** Button released, decided at frame start: a disconnecting controller also sends a lone selectend first, then `disconnected`. */
   toRelease: boolean
   offset: THREE.Matrix4
   listeners: [string, () => void][]
@@ -249,7 +249,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   xr.enabled = true
   xr.setReferenceSpaceType('local-floor')
 
-  // Rig ölçeği yüzünden sahne ölçüleri model birimi, rig içi (kumanda, ışın, baş) metredir.
+  // Because of the rig scale, scene sizes are model units while rig-internal ones (controller, ray, head) are meters.
   const rig = new THREE.Group()
   rig.scale.setScalar(METER)
 
@@ -260,7 +260,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   environment.add(floor, leg)
 
   const panel = statePanel()
-  panel.obj.position.z = -40 // Yüksekliği baş pozu gelince
+  panel.obj.position.z = -40 // Height set once the head pose arrives
   const label = labelPanel()
   label.obj.material.depthTest = false
   label.obj.renderOrder = 1003
@@ -272,7 +272,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   const handGeometry = new THREE.SphereGeometry(0.015, 12, 8)
   const handMaterial = new THREE.MeshBasicMaterial({ color: '#f0e1bc', toneMapped: false })
 
-  // Parçalar hedef duruşundayken alt paylar ve sınır küreleri ölçülür; merkez parçanın yerel başlangıcıdır.
+  // Bottom shares and bounding spheres are measured with the pieces in their target pose; the center is the piece's local origin.
   const box = new THREE.Box3()
   const bottomShares: number[] = []
   const radii: number[] = []
@@ -292,7 +292,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     })
   }
 
-  // Bütün vazo tutulunca parçalar, izler ve alt yazı bu dayanakla birlikte gider.
+  // When the whole vase is grabbed, pieces, traces and the caption move with this holder.
   const stand = new THREE.Group()
   const standHome = new THREE.Vector3(0, VASE_CENTER_Y, 0)
   stand.position.copy(standHome)
@@ -353,7 +353,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     if (id === VASE) {
       takeToStand()
       standSpinning = false
-      el.controller.matrixWorld.decompose(position, turn, scale) // Dünya matrisi rig ölçeğini taşır
+      el.controller.matrixWorld.decompose(position, turn, scale) // The world matrix carries the rig scale
       turn.invert().multiply(stand.quaternion)
       el.offset.compose(position.set(0, 0, -VASE_HAND_DISTANCE), turn, scale.setScalar(1 / METER))
       return
@@ -387,7 +387,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     else { b.gripCancel(id); b.sec(null) }
   }
 
-  const finish = () => { session?.end().catch(() => {}) } // Zaten kapanmış oturumda end() reddeder
+  const finish = () => { session?.end().catch(() => {}) } // end() rejects on an already closed session
 
   const text = () => panelText(b.phase(), b.placedCount(), result)
   const panelAim = (el: El) => {
@@ -402,7 +402,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     el[tour] = true
     el.toRelease = false
     if (el.held !== null) return
-    // Düğmeye nişan alan kullanıcı parça tutmak istemiyor: panel önce gelir.
+    // A user aiming at a button does not want to grab a piece: the panel comes first.
     const button = tour === 'trigger' ? panelAim(el) : null
     if (button !== null) {
       if (text().buttons[button].id === 'exit') finish()
@@ -438,7 +438,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     b.xrMode(true, xrShelfLayout(bottomShares, TURNTABLE_TOP))
     fallback.near = camera.near
     fallback.far = camera.far
-    // Near/far rig'in içindeki metreyle işler.
+    // Near/far work in the rig's internal meters.
     camera.near = 0.05
     camera.far = 30
     rig.add(camera)
@@ -453,7 +453,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     removeFromStand()
     label.obj.removeFromParent()
     camera.removeFromParent()
-    camera.scale.set(1, 1, 1) // Rig'den ayrışırken kalan yuvarlama hatası
+    camera.scale.set(1, 1, 1) // Rounding error left over from decomposing out of the rig
     camera.near = fallback.near
     camera.far = fallback.far
     rig.removeFromParent()
@@ -467,7 +467,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     b.xrMode(false)
   }
   const onSessionEnd = () => {
-    if (!session) return // Yarım kalan açılışın kapanışı: sahneye dokunulmamıştı
+    if (!session) return // Closing a half-finished start: the scene was not touched
     undo()
     b.sessionEnded()
   }
@@ -488,19 +488,19 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   return {
     start: async () => {
       if (session || starting) return
-      if (!navigator.xr) throw new Error('Bu tarayıcıda WebXR yok')
+      if (!navigator.xr) throw new Error('WebXR not available in this browser')
       starting = true
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
       let fresh: XRSession | null = null
       try {
         fresh = await navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })
-        // İzin beklenirken sahne kapanmış olabilir: kullanıcı boş oturumda kalmasın.
-        if (closed) throw new Error('Sahne kapandı')
+        // The scene may have closed while waiting for permission: do not leave the user in an empty session.
+        if (closed) throw new Error('Scene closed')
         await xr.setSession(fresh)
-        if (closed || xr.getSession() !== fresh) throw new Error('VR oturumu açılırken kapandı')
+        if (closed || xr.getSession() !== fresh) throw new Error('VR session closed while opening')
       } catch (error) {
         if (fresh) {
-          // setSession yarıda kaldıysa kapanış renderer boyutunu bozabilir.
+          // If setSession failed midway, closing may break the renderer size.
           const restore = () => {
             xr.removeEventListener('sessionend', restore)
             if (closed) return
@@ -520,7 +520,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     frame: () => {
       if (!session) return
       if (!settled) {
-        // Baş pozu gelmeden vazonun önde olacağı yer bilinemez.
+        // Until the head pose arrives, where "in front" of the vase is cannot be known.
         const frame = xr.getFrame(), space = xr.getReferenceSpace()
         const pose = frame && space ? frame.getViewerPose(space) : null
         if (!pose) return
@@ -529,11 +529,11 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
         const r = vaseRig({ x: p.x, y: p.y, z: p.z, yaw: Math.atan2(-forward.x, -forward.z) })
         rig.position.set(r.x, r.y, r.z)
         rig.rotation.set(0, r.rotY, 0)
-        // Ayak yerden tablaya uzanır; zemin rig yüksekliğine gelir.
+        // The stand reaches from the floor to the turntable; the floor is set at rig height.
         floor.position.y = r.y
         leg.scale.y = leg.position.y - r.y
         rig.updateWorldMatrix(false, true)
-        // Panel göz hizasından biraz aşağıda: ayakta da oturarak da düz bakınca görünür.
+        // Panel slightly below eye level: visible looking straight ahead both standing and seated.
         panel.obj.position.y = METER * (p.y - tableHeight(p.y)) - 5
         settled = true
       }
@@ -576,7 +576,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       closed = true
       xr.removeEventListener('sessionend', onSessionEnd)
       const open = session
-      // Sahne de kapanıyor: oturumBitti çağrılmaz, sonradan gelen sessionend de dinlenmez.
+      // The scene is closing too: sessionEnded is not called and a later sessionend is not listened to.
       if (open) {
         undo()
         open.end().catch(() => {})

@@ -1,4 +1,4 @@
-// VR oturumu: rig, kumandalar, görünüm geçişleri. Sahnenin kendisine yalnız XrSecenek üzerinden dokunur.
+// VR session: rig, controllers, view transitions. Touches the scene itself only through XrOption.
 import * as THREE from 'three'
 import { TITLE_FAR, TITLE_NEAR, TABLE_SCALE_INITIAL, TABLE_SCALE_MAX, TABLE_SCALE_MIN, rotateAroundHead, titlePlace, stopRig, controllerInput, tableRig, deadZone, nonOverlapAngle, smoothTurn, walkStep, type RigPose } from '../../shared/xr/xrMotion'
 import { FLOOR_Y, type InteriorStop, type InteriorWalk } from './uluMosqueInterior'
@@ -11,31 +11,31 @@ import { PLAYER_RADIUS, viewBlocked, stopFloor, floorStep } from './walkingColli
 export interface XrOption {
   renderer: THREE.WebGLRenderer; scene: THREE.Scene; camera: THREE.PerspectiveCamera;
   walking: InteriorWalk; stops: InteriorStop[];
-  /** İç ışık ve ortam; kameraya dokunmaz. */
+  /** Interior light and environment; doesn't touch the camera. */
   interiorState: (inside: boolean) => void;
-  /** Katmanlar anında hedefe gider. */
+  /** Layers go to the target instantly. */
   setShatter: (open: boolean) => void;
   isFragmented: () => boolean;
   layers: ModelLayer[];
   refreshShadow: () => void;
   closeInfo: () => void;
-  /** İç mekânda sahnede duran, tıklanınca kartı açan başlıklar. */
+  /** Titles standing in the interior scene that open the card when clicked. */
   titles: { id: string; title: string; position: number[] }[];
-  /** Açık kartın başlığına yeniden tıklanırsa kartı kapatır. */
+  /** Clicking the open card's title again closes the card. */
   selectInfo: (id: string) => void;
-  /** Sahne kamera, near/far, boyut ve React durumunu geri alır. */
+  /** The scene restores camera, near/far, size and React state. */
   sessionEnded: () => void;
 }
 
 export interface XrSession {
-  /** Reddedilirse reddeder, sahnede iz bırakmaz. */
+  /** Rejects if refused, leaving no trace in the scene. */
   start(): Promise<void>;
   frame(dt: number): void;
-  /** Açık oturumu kapatır, yoksa bir şey yapmaz. */
+  /** Closes the open session; otherwise does nothing. */
   finish(): void;
   showInfo(k: { title: string; text: string; source: string } | null): void;
   active(): boolean;
-  /** Katmanlar birleştirme oyununun elinde mi. */
+  /** Whether the assembly game owns the layers. */
   inAssembly(): boolean;
   clear(): void;
 }
@@ -45,7 +45,7 @@ const DISK_RADIUS = 6
 const RAY_LENGTH = 1.5
 const PANEL_DISTANCE = 1.3
 const CARD_BOTTOM = 0.24
-// Kart ve menü aynı anda açıksa yan yana durur: ışın öndekine takılıp arkadakini seçilemez bırakmasın.
+// If the card and menu are open together they sit side by side: the ray must not catch the front one and leave the back one unselectable.
 const PANEL_GAP = (MENU_G / 2 + CARD_G / 2 + 0.06) / PANEL_DISTANCE
 const STICK_SPEED = 1.2, MAX_DT = 0.1
 const TRANSITION_DECISION = 0.12, TRANSITION_URGENT = 0.2
@@ -57,8 +57,8 @@ export function setupXrSession(s: XrOption): XrSession {
   xr.enabled = true
   xr.setReferenceSpaceType('local-floor')
 
-  // Rig 100× iken göz aralığı da 100× olur (WebXRManager kamera dünya matrisini rig ile çarpar), dünya masa boyutunda görünür.
-  // Rig'in içi hep cihaz metresidir: disk, ışın ve paneller ölçekten bağımsız aynı boyutta kalır.
+  // When the rig is 100×, eye separation is 100× too (WebXRManager multiplies the camera world matrix by the rig), so the world looks table-sized.
+  // Inside the rig is always device meters: disc, ray and panels keep the same size regardless of scale.
   const rig = new THREE.Group()
   const disk = new THREE.Mesh(
     new THREE.CircleGeometry(DISK_RADIUS, 64).rotateX(-Math.PI / 2),
@@ -68,7 +68,7 @@ export function setupXrSession(s: XrOption): XrSession {
 
   const menu = xrPanel()
   const card = infoPanel()
-  // Paneller derinlik sınamasına girmez: duvar dibinde veya maketin önünde de okunur.
+  // Panels skip the depth test: readable even against a wall or in front of the model.
   for (const [panel, row] of [[menu, 1000], [card, 1001]] as const) {
     panel.obj.material.transparent = true
     panel.obj.material.depthTest = false
@@ -78,7 +78,7 @@ export function setupXrSession(s: XrOption): XrSession {
   }
   menu.obj.visible = false
 
-  // Görünüm değişimi kısa karartmayla olur: VR'da tek karelik sıçrama hem göze batar hem rahatsız eder.
+  // View changes use a short fade: a single-frame jump in VR is both jarring and uncomfortable.
   const darken = new THREE.Mesh(
     new THREE.SphereGeometry(0.25, 16, 12),
     new THREE.MeshBasicMaterial({ color: '#000000', side: THREE.BackSide, transparent: true, opacity: 0, depthTest: false, depthWrite: false }),
@@ -108,7 +108,7 @@ export function setupXrSession(s: XrOption): XrSession {
     }
   }
 
-  // Etiket başa bağlıdır: menü kapansa, kart önüne geçse veya baş dönse de görüş alanının altında kalır.
+  // The label is attached to the head: it stays at the bottom of the view even if the menu closes, the card covers it or the head turns.
   const label = labelPanel()
   label.obj.material.transparent = true
   label.obj.material.depthTest = false
@@ -117,7 +117,7 @@ export function setupXrSession(s: XrOption): XrSession {
   label.obj.frustumCulled = false
   label.obj.position.set(0, -0.38, -1.2)
 
-  // Başlıklar rig'de değil sahnededir, derinlik sınamasına girer: duvarın ardında kalan görünmez.
+  // Titles are in the scene, not the rig, and take part in the depth test: those behind a wall are hidden.
   const titles = s.titles.map(({ id, title, position }) => ({ id, position, ...titlePanel(title) }))
   const titleGroup = new THREE.Group()
   titleGroup.visible = false
@@ -137,7 +137,7 @@ export function setupXrSession(s: XrOption): XrSession {
   let inside = false
   let angle = 0, scale = TABLE_SCALE_INITIAL
   let menuOpen = true, menuPressed = false
-  // Baş pozu gelmeden paneller yerleştirilemez; ilk karelerde bekletilir.
+  // Panels can't be placed before the head pose arrives; they wait during the first frames.
   let poseReady = false
   let pendingCard: { title: string; text: string; source: string } | null = null
 
@@ -150,15 +150,15 @@ export function setupXrSession(s: XrOption): XrSession {
     applyRig(tableRig(angle, scale))
   }
 
-  // XR kamerası her karenin başında güncellenir; konumu rig içindeki (yerel) baş pozudur.
+  // The XR camera is updated at the start of each frame; its position is the (local) head pose inside the rig.
   const headLocal = () => xr.getCamera()
   const horizontalForward = new THREE.Vector3()
-  /** Başın rig içindeki yatay yönü; artı yön sola. Tam yukarı veya aşağı bakarken 0. */
+  /** Horizontal direction of the head inside the rig; positive is left. 0 when looking straight up or down. */
   const headYaw = () => {
     horizontalForward.set(0, 0, -1).applyQuaternion(headLocal().quaternion).setY(0)
     return horizontalForward.lengthSq() < 1e-6 ? 0 : Math.atan2(-horizontalForward.x, -horizontalForward.z)
   }
-  /** Paneli başın önüne koyar; öteki panel açıksa onunla örtüşmeyecek yana kayar. */
+  /** Places the panel in front of the head; if the other panel is open, shifts aside so they don't overlap. */
   const placePanelAt = (obj: THREE.Object3D, another: THREE.Object3D, dir: 1 | -1) => {
     const head = headLocal().position
     const angle = another.visible
@@ -167,7 +167,7 @@ export function setupXrSession(s: XrOption): XrSession {
     obj.position.set(head.x - Math.sin(angle) * PANEL_DISTANCE, head.y, head.z - Math.cos(angle) * PANEL_DISTANCE)
     obj.rotation.set(0, angle, 0)
   }
-  // Kart bakışın altında durur: sahneyi kapatmaz, okumak için göz hafifçe aşağı iner.
+  // The card sits below the gaze: it doesn't cover the scene, the eye drops slightly to read.
   const placeCard = () => { placePanelAt(card.obj, menu.obj, -1); card.obj.position.y -= CARD_BOTTOM }
 
   const drawMenu = () => menu.draw(menuItems({ inside, fragmented: s.isFragmented(), inAssembly: assembly.inGame(), stops }))
@@ -175,7 +175,7 @@ export function setupXrSession(s: XrOption): XrSession {
     menuOpen = open
     menu.obj.visible = open
     if (!open) {
-      // Yanında menü kalmayan kart görüşün ortasına gelir.
+      // A card with no menu beside it moves to the center of view.
       if (card.obj.visible) placeCard()
       return
     }
@@ -210,11 +210,11 @@ export function setupXrSession(s: XrOption): XrSession {
     applyTable()
   }
 
-  const finish = () => { session?.end().catch(() => {}) } // Zaten kapanmış oturumda end() reddeder
+  const finish = () => { session?.end().catch(() => {}) } // end() rejects on an already closed session
 
   const action = (id: string) => {
     if (id === 'exit') return finish()
-    // İçeride menü durak seçilince kapanır: görüş kapanmaz, kart tam önde açılır. Y/B ile yeniden açılır.
+    // Inside, the menu closes when a stop is selected: the view stays clear and the card opens straight ahead. Reopens with Y/B.
     if (id === 'inside' || id.startsWith('stop:')) {
       const target = id === 'inside' ? stops[0]?.id : id.slice('stop:'.length)
       if (!target) return
@@ -230,7 +230,7 @@ export function setupXrSession(s: XrOption): XrSession {
       })
       return
     }
-    // Maket başlangıç açı ve ölçeğine döner: raf kullanıcının sağında, elin erişiminde olsun.
+    // The model returns to its initial angle and scale: the shelf should be on the user's right, within reach.
     if (id === 'assemble') {
       showMenu(false)
       doTransition(() => {
@@ -258,12 +258,12 @@ export function setupXrSession(s: XrOption): XrSession {
     drawMenu()
   }
 
-  /** Paneller önce denenir: derinlik sınamasına girmedikleri için görünüşte hep öndedirler. */
+  /** Panels are tested first: since they skip the depth test, they always appear in front. */
   const findHit = (controller: THREE.XRTargetRaySpace) => {
-    // select olayı kare döngüsünün dışında gelir: dünya matrisleri elle tazelenir.
-    controller.updateWorldMatrix(true, false, true) // matrixAutoUpdate kapalı; zorlanmazsa rig değişimi yansımaz
+    // The select event arrives outside the frame loop: world matrices are refreshed by hand.
+    controller.updateWorldMatrix(true, false, true) // matrixAutoUpdate is off; unless forced, rig changes are not reflected
     raycaster.setFromXRController(controller)
-    // Raycaster görünmezliğe bakmaz; kapalı nesneler aday olmamalı.
+    // Raycaster ignores visibility; hidden objects must not be candidates.
     const panels = [menu.obj, card.obj].filter((n) => n.visible)
     panels.forEach((n) => n.updateWorldMatrix(true, false))
     const panel = raycaster.intersectObjects(panels, false)[0]
@@ -305,7 +305,7 @@ export function setupXrSession(s: XrOption): XrSession {
     scene.add(titleGroup)
     prevBack = scene.background
     scene.background = new THREE.Color(BACKGROUND)
-    // Near/far rig'in içindeki metreyle işler (görünüm matrisi rig ölçeğine bölünür): 100× iken near 5 sahne birimidir.
+    // Near/far work in rig-local meters (the view matrix is divided by the rig scale): at 100×, near is 5 scene units.
     camera.near = 0.05
     camera.far = 900
     disk.visible = true
@@ -316,7 +316,7 @@ export function setupXrSession(s: XrOption): XrSession {
     assembly.finish()
     label.obj.removeFromParent()
     camera.removeFromParent()
-    camera.scale.set(1, 1, 1) // Rig'den ayrışırken kalan yuvarlama hatası
+    camera.scale.set(1, 1, 1) // Rounding error left over when detaching from the rig
     rig.removeFromParent()
     titleGroup.removeFromParent()
     titleGroup.visible = false
@@ -339,7 +339,7 @@ export function setupXrSession(s: XrOption): XrSession {
   }
 
   const onSessionEnd = () => {
-    if (!session) return // Yarım kalan açılışın kapanışı: sahneye dokunulmamıştı
+    if (!session) return // Closing a half-finished start: the scene was never touched
     undo()
     s.sessionEnded()
   }
@@ -347,7 +347,7 @@ export function setupXrSession(s: XrOption): XrSession {
 
   const headWorld = new THREE.Vector3(), forwardWorld = new THREE.Vector3()
 
-  /** Başlıkları başa çevirir; ışın değen başlık parlar, ışın da ona kadar uzar ki neye nişan alındığı görülsün. */
+  /** Turns titles towards the head; the title hit by the ray glows and the ray extends to it, so it's clear what is being aimed at. */
   const updateTitles = () => {
     camera.updateWorldMatrix(true, false)
     headWorld.setFromMatrixPosition(camera.matrixWorld)
@@ -375,14 +375,14 @@ export function setupXrSession(s: XrOption): XrSession {
   }
 
   const innerFrame = (input: ReturnType<typeof controllerInput>, dt: number) => {
-    // Rig bu kare içinde (durak seçimiyle) yer değiştirmiş olabilir; matris tazelenmeden okunmaz.
+    // The rig may have moved within this frame (via stop selection); don't read the matrix without refreshing it.
     camera.updateWorldMatrix(true, false)
     headWorld.setFromMatrixPosition(camera.matrixWorld)
     forwardWorld.set(0, 0, -1).transformDirection(camera.matrixWorld)
     const head = { x: headWorld.x, z: headWorld.z }
     const fresh = walkStep(head, { x: forwardWorld.x, z: forwardWorld.z }, { x: input.leftX, y: input.leftY }, dt,
       (x, z) => floorStep(walking, x, z, PLAYER_RADIUS, innerFloor) === null)
-    // Merdiven ve platformda rig zeminle birlikte yükselir; eğim sürekli olduğu için sıçramaz.
+    // On stairs and platforms the rig rises with the floor; since the slope is continuous, it doesn't jump.
     innerFloor = floorStep(walking, fresh.x, fresh.z, PLAYER_RADIUS, innerFloor) ?? innerFloor
     rig.position.y = (walking.baseY ?? FLOOR_Y) + innerFloor
     rig.position.x += fresh.x - head.x
@@ -409,18 +409,18 @@ export function setupXrSession(s: XrOption): XrSession {
   return {
     start: async () => {
       if (session || starting) return
-      if (!navigator.xr) throw new Error('Bu tarayıcıda WebXR yok')
+      if (!navigator.xr) throw new Error('WebXR is not available in this browser')
       starting = true
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
       let fresh: XRSession | null = null
       try {
         fresh = await navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })
-        // İzin beklenirken sahne kapanmış olabilir: kullanıcı boş oturumda kalmasın.
-        if (closed) throw new Error('Sahne kapandı')
+        // The scene may have closed while waiting for permission: don't leave the user in an empty session.
+        if (closed) throw new Error('Scene closed')
         await xr.setSession(fresh)
-        if (closed || xr.getSession() !== fresh) throw new Error('VR oturumu açılırken kapandı')
+        if (closed || xr.getSession() !== fresh) throw new Error('VR session closed while starting')
       } catch (error) {
-        // setSession yarıda kaldıysa renderer boyutu bozulabilir (kapanışta boş piksel oranı yazar); kapanınca eskisine döner.
+        // If setSession was interrupted, the renderer size may be corrupted (it writes an empty pixel ratio on close); it's restored on close.
         if (fresh) {
           const restore = () => {
             xr.removeEventListener('sessionend', restore)
@@ -478,7 +478,7 @@ export function setupXrSession(s: XrOption): XrSession {
       closed = true
       xr.removeEventListener('sessionend', onSessionEnd)
       const open = session
-      // Sahne de kapanıyor: oturumBitti çağrılmaz, sonradan gelen sessionend de dinlenmez.
+      // The scene is closing too: sessionEnded is not called and a later sessionend is not listened to.
       if (open) {
         undo()
         open.end().catch(() => {})

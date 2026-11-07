@@ -5,8 +5,8 @@ import PhotoCredit from '../../../shared/ui/PhotoCredit'
 import Section from '../../../shared/ui/Section'
 import { PUBLIC_BUILD } from '../../../shared/config/publicBuild'
 
-function Fullscreen({ images, sources, selected, sec, close }: {
-  images: Image[]; sources: Source[]; selected: number; sec: (index: number) => void; close: () => void
+function Fullscreen({ images, sources, selected, select, close }: {
+  images: Image[]; sources: Source[]; selected: number; select: (index: number) => void; close: () => void
 }) {
   const dialog = useRef<HTMLDialogElement>(null)
   const photoArea = useRef<HTMLDivElement>(null)
@@ -16,8 +16,8 @@ function Fullscreen({ images, sources, selected, sec, close }: {
   useEffect(() => {
     const prevFocus = document.activeElement as HTMLElement | null
     const prevOverflow = document.body.style.overflow
-    const window = dialog.current!
-    window.showModal()
+    const dlg = dialog.current!
+    dlg.showModal()
     document.body.style.overflow = 'hidden'
     const observer = new ResizeObserver(([entry]) => {
       setAreaSize({ w: entry.contentRect.width, h: entry.contentRect.height })
@@ -25,23 +25,23 @@ function Fullscreen({ images, sources, selected, sec, close }: {
     observer.observe(photoArea.current!)
     return () => {
       observer.disconnect()
-      window.close()
+      dlg.close()
       document.body.style.overflow = prevOverflow
       prevFocus?.focus()
     }
   }, [])
   const image = images[selected]
   const width = Math.min(areaSize.w, areaSize.h * ratio)
-  function git(index: number) {
+  function go(index: number) {
     setProximity(1)
     photoArea.current?.scrollTo(0, 0)
-    sec((index + images.length) % images.length)
+    select((index + images.length) % images.length)
   }
   return <dialog className="full-screen" ref={dialog} aria-labelledby="full-screen-title" onCancel={(event) => { event.preventDefault(); close() }}
     onKeyDown={(event) => {
       if ((event.key === 'ArrowLeft' || event.key === 'ArrowRight') && proximity === 1) {
         event.preventDefault()
-        git(selected + (event.key === 'ArrowLeft' ? -1 : 1))
+        go(selected + (event.key === 'ArrowLeft' ? -1 : 1))
       }
       if (event.key === 'Tab') {
         const focusables = [...dialog.current!.querySelectorAll<HTMLElement>('button:not(:disabled), [tabindex="0"]')]
@@ -63,7 +63,7 @@ function Fullscreen({ images, sources, selected, sec, close }: {
       </div>
       <figcaption aria-live="polite">{image.description && <p>{image.description}</p>}<p>Fotoğraf {selected + 1} / {images.length}</p></figcaption>
     </figure>
-    <div className="gallery-controls"><button disabled={images.length < 2} onClick={() => git(selected - 1)}>← Önceki fotoğraf</button><button disabled={images.length < 2} onClick={() => git(selected + 1)}>Sonraki fotoğraf →</button></div>
+    <div className="gallery-controls"><button disabled={images.length < 2} onClick={() => go(selected - 1)}>← Önceki fotoğraf</button><button disabled={images.length < 2} onClick={() => go(selected + 1)}>Sonraki fotoğraf →</button></div>
     <p className="gallery-help">Ok tuşlarıyla fotoğraf değiştir. Yakınlaştırınca kaydırarak ayrıntıları incele.</p>
     {image.credit && <PhotoCredit text={image.credit} />}
     {sources.find((k) => k.id === image.sourceId)?.text !== image.credit && <SourceLine sources={sources} sourceId={image.sourceId} />}
@@ -87,13 +87,13 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
     const button = thumbnails.current?.querySelector<HTMLElement>('[aria-pressed="true"]')
     const area = thumbnails.current
     if (!button || !area) return
-    // Yalnız küçük resim şeridini kaydır; sayfanın dikey konumunu koru.
+    // Scroll only the thumbnail strip; keep the page's vertical position.
     const left = button.offsetLeft - area.offsetLeft
     if (left < area.scrollLeft) area.scrollLeft = left
     else if (left + button.offsetWidth > area.scrollLeft + area.clientWidth) area.scrollLeft = left + button.offsetWidth - area.clientWidth
   }, [selected])
   const image = artifact.images[selected]
-  function sec(index: number) {
+  function select(index: number) {
     if (!artifact.images.length) return
     setSelected((index + artifact.images.length) % artifact.images.length)
     setOpenPoint(null)
@@ -106,7 +106,7 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
           <div className="gallery-scene" tabIndex={0} role="group" aria-label="Fotoğraflar; sağ ve sol ok tuşlarıyla gezinebilirsin"
             onKeyDown={(e) => {
               if (e.target !== e.currentTarget && !(e.target as HTMLElement).closest('.zoom')) return
-              if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); sec(selected + (e.key === 'ArrowLeft' ? -1 : 1)) }
+              if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); select(selected + (e.key === 'ArrowLeft' ? -1 : 1)) }
             }}
             onTouchStart={(e) => {
               scrolled.current = false
@@ -120,7 +120,7 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
               touch.current = null
               if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) {
                 scrolled.current = true
-                sec(selected + (dx < 0 ? 1 : -1))
+                select(selected + (dx < 0 ? 1 : -1))
               }
             }}>
             <div className="image-area" style={{ width: `min(100%, calc(var(--gallery-height) * ${ratio}))`, aspectRatio: String(ratio) }}>
@@ -132,19 +132,19 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
             </div>
           </div>
           <div className="gallery-nav" role="group" aria-label="Galeri gezinme">
-            <button className="secondary-button" disabled={artifact.images.length < 2} onClick={() => sec(selected - 1)} aria-label="Önceki fotoğraf">← <span>Önceki</span></button>
+            <button className="secondary-button" disabled={artifact.images.length < 2} onClick={() => select(selected - 1)} aria-label="Önceki fotoğraf">← <span>Önceki</span></button>
             <div className="gallery-photo-name" aria-live="polite"><strong>{image.description || 'Eser fotoğrafı'}</strong><span>Fotoğraf {selected + 1} / {artifact.images.length}</span></div>
-            <button className="secondary-button" disabled={artifact.images.length < 2} onClick={() => sec(selected + 1)} aria-label="Sonraki fotoğraf"><span>Sonraki</span> →</button>
+            <button className="secondary-button" disabled={artifact.images.length < 2} onClick={() => select(selected + 1)} aria-label="Sonraki fotoğraf"><span>Sonraki</span> →</button>
           </div>
           <div className="small-images" ref={thumbnails} role="group" aria-label="Fotoğraf seçimi">
-            {artifact.images.map((photo, index) => <button key={photo.file} aria-label={`${index + 1}. fotoğraf: ${photo.description || photo.alt}`} aria-pressed={selected === index} onClick={() => sec(index)}
+            {artifact.images.map((photo, index) => <button key={photo.file} aria-label={`${index + 1}. fotoğraf: ${photo.description || photo.alt}`} aria-pressed={selected === index} onClick={() => select(index)}
               onKeyDown={(e) => {
                 let fresh: number | undefined
                 if (e.key === 'ArrowLeft') fresh = (index - 1 + artifact.images.length) % artifact.images.length
                 if (e.key === 'ArrowRight') fresh = (index + 1) % artifact.images.length
                 if (e.key === 'Home') fresh = 0
                 if (e.key === 'End') fresh = artifact.images.length - 1
-                if (fresh !== undefined) { e.preventDefault(); sec(fresh); thumbnails.current?.querySelectorAll<HTMLButtonElement>('button')[fresh]?.focus({ preventScroll: true }) }
+                if (fresh !== undefined) { e.preventDefault(); select(fresh); thumbnails.current?.querySelectorAll<HTMLButtonElement>('button')[fresh]?.focus({ preventScroll: true }) }
               }}>
               <img src={photo.file} alt="" loading="lazy" /><span>{index + 1}</span>
             </button>)}
@@ -163,14 +163,14 @@ export default function Gallery({ artifact }: { artifact: Artifact }) {
       {artifact.hotspots.map((item, index) => <details key={item.id} open={openPoint === item.id} className="point-detail">
         <summary onClick={(event) => {
           event.preventDefault()
-          const ac = openPoint !== item.id
-          setOpenPoint(ac ? item.id : null)
+          const opening = openPoint !== item.id
+          setOpenPoint(opening ? item.id : null)
           const imageIndex = artifact.images.findIndex((photo) => photo.file === item.image)
-          if (ac && imageIndex >= 0) setSelected(imageIndex)
+          if (opening && imageIndex >= 0) setSelected(imageIndex)
         }}>{index + 1}. {item.title}</summary>
         <div id={`point-${item.id}`}><p>{item.text}</p><SourceLine sources={artifact.sources} sourceId={item.sourceId} /></div>
       </details>)}
     </Section>
-    {fullscreen && image && <Fullscreen images={artifact.images} sources={artifact.sources} selected={selected} sec={sec} close={() => setFullscreen(false)} />}
+    {fullscreen && image && <Fullscreen images={artifact.images} sources={artifact.sources} selected={selected} select={select} close={() => setFullscreen(false)} />}
   </>
 }

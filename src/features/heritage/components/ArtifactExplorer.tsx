@@ -5,13 +5,13 @@ import type { ModelScene } from '../../scale-models/modelScene'
 import SourceLine from '../../../shared/ui/SourceLine'
 import Section from '../../../shared/ui/Section'
 
-const smallMove = () => matchMedia('(prefers-reduced-motion: reduce)').matches
+const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches
 const WALK_KEYS = new Set(['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Shift'])
 const keyName = (e: React.KeyboardEvent) => e.key.length === 1 ? e.key.toLowerCase() : e.key
 
-/** Dokunmatik yürüme kolu: itilen yön, sahnenin klavye yürüyüşüne çevrilir. Etrafa bakmak için ekran sürüklenir. */
-function WalkPad({ keyBtn }: { keyBtn: (ad: string, pressed: boolean) => void }) {
-  const RADIUS = 36, SILL = 0.3
+/** Touch walking pad: the pushed direction is translated into the scene's keyboard walking. Drag the screen to look around. */
+function WalkPad({ keyBtn }: { keyBtn: (key: string, pressed: boolean) => void }) {
+  const RADIUS = 36, THRESHOLD = 0.3
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const pressed = useRef(new Set<string>())
   const apply = (fresh: Set<string>) => {
@@ -27,10 +27,10 @@ function WalkPad({ keyBtn }: { keyBtn: (ad: string, pressed: boolean) => void })
     if (length > RADIUS) { x *= RADIUS / length; y *= RADIUS / length }
     setPosition({ x, y })
     const fresh = new Set<string>()
-    if (y < -RADIUS * SILL) fresh.add('w')
-    if (y > RADIUS * SILL) fresh.add('s')
-    if (x < -RADIUS * SILL) fresh.add('a')
-    if (x > RADIUS * SILL) fresh.add('d')
+    if (y < -RADIUS * THRESHOLD) fresh.add('w')
+    if (y > RADIUS * THRESHOLD) fresh.add('s')
+    if (x < -RADIUS * THRESHOLD) fresh.add('a')
+    if (x > RADIUS * THRESHOLD) fresh.add('d')
     apply(fresh)
   }
   useEffect(() => () => { for (const k of pressed.current) keyBtn(k, false) }, [keyBtn])
@@ -42,11 +42,11 @@ function WalkPad({ keyBtn }: { keyBtn: (ad: string, pressed: boolean) => void })
   </div>
 }
 
-export default function ArtifactExplorer({ model, sources, ad, openNow = false }: { model: Model; sources: Source[]; ad: string; openNow?: boolean }) {
+export default function ArtifactExplorer({ model, sources, name, openNow = false }: { model: Model; sources: Source[]; name: string; openNow?: boolean }) {
   const [open, setOpen] = useState(openNow)
   const [state, setState] = useState<'loading' | 'ready' | 'error'>('loading')
   const [fragmented, setFragmented] = useState(false)
-  const [auto, setAuto] = useState(!smallMove())
+  const [auto, setAuto] = useState(!reducedMotion())
   const [announcement, setAnnouncement] = useState('')
   const [stops, setStops] = useState<{ id: string; ad: string }[]>([])
   const [stop, setStop] = useState<string | null>(null)
@@ -55,12 +55,12 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
   const [infoOverflows, setInfoOverflows] = useState(false)
   const info = model.interiorInfos?.find((b) => b.id === infoId)
   const [xrSupport, setXrSupport] = useState(false)
-  // Oturum açılırken ve açıkken dolu: bu sırada sayfadaki düğmeler sahneyi değiştirmesin.
+  // Set while the session is starting and active: page buttons must not change the scene meanwhile.
   const [xrBusy, setXrBusy] = useState(false)
   const [xrError, setXrError] = useState(false)
   const ready = state === 'ready' && !xrBusy
   const [touchscreen] = useState(() => matchMedia('(pointer: coarse)').matches)
-  const walkKey = useCallback((ad: string, pressed: boolean) => scene.current?.walkKey(ad, pressed), [])
+  const walkKey = useCallback((key: string, pressed: boolean) => scene.current?.walkKey(key, pressed), [])
   const infoText = useRef<HTMLParagraphElement>(null)
   const area = useRef<HTMLDivElement>(null)
   const box = useRef<HTMLDivElement>(null)
@@ -83,13 +83,13 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
     import('../../scale-models/modelScene').then(({ createModelScene }) => {
       if (cancel || !area.current) return
       try {
-        scene.current = createModelScene(area.current, model.model, smallMove(), {
+        scene.current = createModelScene(area.current, model.model, reducedMotion(), {
           infos: model.interiorInfos,
           sources,
           infoChanged: setInfoId,
           xrChanged: (active) => {
             setXrBusy(active)
-            // Oturum açılınca otomatik dönüş kapanır; düğme de bunu göstersin.
+            // Starting a session turns auto-rotate off; the button should reflect that.
             if (active) setAuto(false)
           },
         })
@@ -100,7 +100,7 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
     return () => { cancel = true; scene.current?.clear(); scene.current = null; setStop(null); setInfoId(null); setXrBusy(false); setXrError(false) }
   }, [open, model.model, model.interiorInfos, sources])
 
-  // Kart her değiştiğinde kısa hâline döner; "Devamı" yalnız metin gerçekten kısaldıysa görünür.
+  // The card collapses whenever it changes; "Devamı" appears only if the text was actually truncated.
   useEffect(() => { setInfoOpen(false) }, [infoId])
   useLayoutEffect(() => {
     const el = infoText.current
@@ -109,7 +109,7 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
 
   function keyBtn(e: React.KeyboardEvent) {
     const s = scene.current
-    if (!s || xrBusy) return // VR'da kamera rig yerelindedir, klavye onu ezmesin
+    if (!s || xrBusy) return // In VR the camera is rig-local; the keyboard must not override it
     if (stop && WALK_KEYS.has(keyName(e))) {
       e.preventDefault()
       s.walkKey(keyName(e), true)
@@ -123,14 +123,14 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
     if (action[e.key]) { e.preventDefault(); action[e.key](); setAuto(false); s.auto(false) }
   }
 
-  function vrAc() {
+  function openVr() {
     const s = scene.current
     if (!s) return
     setXrError(false)
     setStop(null)
     setFragmented(false)
     setXrBusy(true)
-    // Tarayıcı oturumu yalnız kullanıcı jesti içinde açar: bundan önce await olmamalı.
+    // Browsers start the session only within a user gesture: no await may come before this.
     s.startXr().catch(() => { setXrBusy(false); setXrError(true) })
   }
 
@@ -148,9 +148,9 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
     scene.current?.interior(id)
     if (id) { setFragmented(false); setAuto(false) }
     else setAuto(false)
-    const ad = stops.find((d) => d.id === id)?.ad
-    setAnnouncement(ad ? `İç mekân görünümü: ${ad}. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.` : 'Maketin dış görünümüne dönüldü.')
-    // Tuşlar hemen çalışsın diye odak sahneye alınır.
+    const stopName = stops.find((d) => d.id === id)?.ad
+    setAnnouncement(stopName ? `İç mekân görünümü: ${stopName}. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.` : 'Maketin dış görünümüne dönüldü.')
+    // Focus moves to the scene so keys work immediately.
     if (id) area.current?.focus({ preventScroll: true })
   }
 
@@ -161,15 +161,15 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
 
   return <Section id="model-title" title="Eseri eline al" className="artifact-filter-out-al">
     <p className="label">{model.description}</p>
-    {!open ? <button type="button" className="model-start" onClick={() => setOpen(true)}>{ad} maketini eline al</button> : <>
+    {!open ? <button type="button" className="model-start" onClick={() => setOpen(true)}>{name} maketini eline al</button> : <>
       <div className="model-box" ref={box}>
         <div className="model-area" ref={area} tabIndex={0} role="application" onKeyDown={keyBtn}
           onKeyUp={(e) => { if (WALK_KEYS.has(keyName(e))) scene.current?.walkKey(keyName(e), false) }}
           onBlur={(e) => { if (!area.current?.contains(e.relatedTarget)) scene.current?.walkRelease() }}
           onPointerDown={() => { setXrError(false); if (stop) area.current?.focus({ preventScroll: true }) }}
           aria-label={stop
-            ? `${ad} iç mekânı. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.`
-            : `${ad} 3B maketi. Ok tuşlarıyla döndür, artı ve eksi ile yakınlaştır.`}>
+            ? `${name} iç mekânı. W, A, S, D veya yukarı ve aşağı ok ile yürü, sol ve sağ ok ile dön.`
+            : `${name} 3B maketi. Ok tuşlarıyla döndür, artı ve eksi ile yakınlaştır.`}>
           {stop && touchscreen && !xrBusy && <WalkPad keyBtn={walkKey} />}
         </div>
         {stop && <p className="model-keys" aria-hidden="true"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> yürü · <kbd>←</kbd><kbd>→</kbd> dön · <kbd>Shift</kbd> hızlan</p>}
@@ -182,7 +182,7 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
         </aside>}
         {state === 'loading' && <p className="model-state">Maket hazırlanıyor…</p>}
         {state === 'error' && <p className="model-state">Bu cihazda 3B görüntüleme (WebGL) kullanılamıyor.</p>}
-        {/* Sahneyi sürüklemeyi engellemez: kullanıcı maketi kullanmayı sürdürebilir. */}
+        {/* Does not block dragging the scene: the user can keep using the model. */}
         {xrError && <p className="model-state" aria-live="polite" style={{ pointerEvents: 'none', textAlign: 'center', padding: '1rem', textShadow: '0 1px 4px #000' }}>VR oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin.</p>}
         <div className="model-control">
           {stop ? <>
@@ -190,7 +190,7 @@ export default function ArtifactExplorer({ model, sources, ad, openNow = false }
             {stops.map((d) => <button type="button" key={d.id} aria-pressed={stop === d.id} onClick={() => goToStop(d.id)}>{d.ad}</button>)}
           </> : <>
             <button type="button" disabled={!ready || !stops.length} onClick={() => goToStop(stops[0]?.id ?? null)}>İçeri gir</button>
-            {xrSupport && <button type="button" disabled={!ready} onClick={vrAc}>VR'da aç</button>}
+            {xrSupport && <button type="button" disabled={!ready} onClick={openVr}>VR'da aç</button>}
             <button type="button" onClick={shatter} aria-pressed={fragmented} disabled={!ready}>{fragmented ? '⤓ Birleştir' : '⤒ Parçala'}</button>
             <button type="button" aria-pressed={auto} disabled={!ready}
               onClick={() => { setAuto(!auto); scene.current?.auto(!auto) }}>⟳ Kendi kendine dönsün</button>

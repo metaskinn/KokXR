@@ -1,11 +1,11 @@
-// Yeşil Külliyesi maketinin geometri yardımcıları: boşluklu duvar, yüzey kaplaması, prizma ve geçiş kuşağı.
+// Geometry helpers for the Yeşil Complex model: wall with openings, surface cladding, prism and transition belt.
 import * as THREE from 'three'
 import { Bucket, subtract, rect, arch, type Mat } from '../../uluMosquePiece'
 
-/** Duvar boşluğu: `u` duvar başlangıcından metre; `kemerH` varsa sivri, `bursa` ise basık Bursa kemeri. */
+/** Wall opening: `u` in meters from the wall start; pointed if `archH` is set, flat Bursa arch if `bursa`. */
 export interface Gap { u0: number; u1: number; y0: number; y1: number; archH?: number; bursa?: boolean }
 
-/** Bursa kemeri: düşey ayaklar, kısa eğri omuz ve neredeyse düz üst. */
+/** Bursa arch: vertical jambs, short curved shoulders and an almost flat top. */
 export function bursaArchOf<P extends THREE.Path>(p: P, u0: number, u1: number, y0: number, leg: number, archH: number): P {
   const g = u1 - u0, y = y0 + leg
   p.moveTo(u0, y0)
@@ -25,14 +25,14 @@ function toGap<P extends THREE.Path>(p: P, b: Gap): P {
   return p
 }
 
-/** a→b doğrultusundaki yerel düzlemi dünyaya taşır; yerel +z, a→b'nin solundaki yöne (-dz, dx) bakar. */
+/** Moves the local plane along a→b into the world; local +z faces left of a→b, i.e. (-dz, dx). */
 export function align<G extends THREE.BufferGeometry>(g: G, ax: number, az: number, bx: number, bz: number) {
   g.rotateY(Math.atan2(-(bz - az), bx - ax))
   g.translate(ax, 0, az)
   return g
 }
 
-/** Kalın duvar: a→b hattından başlayıp normal yönünde `t` kalınlığında. */
+/** Thick wall: starts at the a→b line, `t` thick in the normal direction. */
 export function wall(k: Bucket, ax: number, az: number, bx: number, bz: number, t: number, y0: number, y1: number, mat: Mat, gaps: Gap[] = []) {
   const L = Math.hypot(bx - ax, bz - az)
   const s = rect(0, y0, L, y1)
@@ -40,7 +40,7 @@ export function wall(k: Bucket, ax: number, az: number, bx: number, bz: number, 
   k.add(align(subtract(s, t), ax, az, bx, bz), mat)
 }
 
-/** İnce kaplama yüzeyi: normal a→b'nin soluna bakar. UV metre cinsindendir. */
+/** Thin cladding surface: the normal faces left of a→b. UVs are in meters. */
 export function surface(k: Bucket, ax: number, az: number, bx: number, bz: number, y0: number, y1: number, mat: Mat, gaps: Gap[] = [], slip = 0.015) {
   const L = Math.hypot(bx - ax, bz - az)
   const s = rect(0, y0, L, y1)
@@ -48,7 +48,7 @@ export function surface(k: Bucket, ax: number, az: number, bx: number, bz: numbe
   k.add(align(new THREE.ShapeGeometry(s, 10).translate(0, 0, slip), ax, az, bx, bz), mat)
 }
 
-/** Yatay bant kaplaması: dokunun yüksekliği bandın yüksekliğine oturur, u ekseninde `tekrarM` metrede tekrarlar. */
+/** Horizontal band cladding: texture height fits the band height, repeats every `repeatM` meters along u. */
 export function band(k: Bucket, ax: number, az: number, bx: number, bz: number, y0: number, y1: number, mat: Mat, repeatM = 1, slip = 0.02) {
   const L = Math.hypot(bx - ax, bz - az)
   const g = new THREE.PlaneGeometry(L, y1 - y0).translate(L / 2, (y0 + y1) / 2, slip)
@@ -57,7 +57,7 @@ export function band(k: Bucket, ax: number, az: number, bx: number, bz: number, 
   k.add(align(g, ax, az, bx, bz), mat)
 }
 
-/** Yerel düzlemde kemer biçimli tek parça levha; doku levhaya bir kez oturur. */
+/** Single arch-shaped plaque in the local plane; the texture fits the plaque once. */
 export function plaque(k: Bucket, s: THREE.Shape, ax: number, az: number, bx: number, bz: number, mat: Mat, thickness = 0, slip = 0.02, fit = true) {
   const g = thickness ? subtract(s, thickness, slip) : new THREE.ShapeGeometry(s, 12).translate(0, 0, slip)
   if (fit) {
@@ -69,7 +69,7 @@ export function plaque(k: Bucket, s: THREE.Shape, ax: number, az: number, bx: nu
   k.add(align(g, ax, az, bx, bz), mat)
 }
 
-/** Kapalı çokgen tabanlı açık prizma; yanlar dışa bakar, UV metre cinsindendir. */
+/** Open prism on a closed polygon base; sides face outward, UVs in meters. */
 export function prism(points: [number, number][], y0: number, y1: number, inner = false) {
   const position: number[] = [], uv: number[] = []
   let u = 0
@@ -92,20 +92,20 @@ export function prism(points: [number, number][], y0: number, y1: number, inner 
   return g
 }
 
-/** Düzgün çokgen köşeleri; `don` radyan, ilk köşe +z yönünden başlar. Köşeler saat yönünde (yukarıdan) dizilir. */
-export const polygon = (n: number, r: number, cx = 0, cz = 0, don = Math.PI / n): [number, number][] =>
+/** Regular polygon corners; `rotation` in radians, the first corner starts from +z. Corners run clockwise (seen from above). */
+export const polygon = (n: number, r: number, cx = 0, cz = 0, rotation = Math.PI / n): [number, number][] =>
   Array.from({ length: n }, (_, i) => {
-    const a = don + (i / n) * Math.PI * 2
+    const a = rotation + (i / n) * Math.PI * 2
     return [cx + Math.sin(a) * r, cz + Math.cos(a) * r] as [number, number]
   })
 
-/** Köşeleri pahlı kare (kuşbakışı): kubbe kasnaklarının gövdesi. */
+/** Chamfered square (bird's-eye): body of the dome drums. */
 export const chamferedSquare = (cx: number, cz: number, y: number, chamfer: number): [number, number][] => [
   [cx - y + chamfer, cz + y], [cx + y - chamfer, cz + y], [cx + y, cz + y - chamfer], [cx + y, cz - y + chamfer],
   [cx + y - chamfer, cz - y], [cx - y + chamfer, cz - y], [cx - y, cz - y + chamfer], [cx - y, cz + y - chamfer],
 ]
 
-/** Çokgen halka kapağı (dış çokgen → iç daire), üstten görünür. */
+/** Polygon ring cap (outer polygon → inner circle), visible from above. */
 export function ring(points: [number, number][], r: number, cx: number, cz: number, y: number) {
   const s = new THREE.Shape()
   points.forEach(([x, z], i) => (i ? s.lineTo(x - cx, -(z - cz)) : s.moveTo(x - cx, -(z - cz))))
@@ -115,8 +115,8 @@ export function ring(points: [number, number][], r: number, cx: number, cz: numb
 }
 
 /**
- * Kare mekândan daire ağza geçen kuşak; `dilim` köşeli yüzler Türk üçgeni izlenimi verir. İçten görünür.
- * UV: u çevre (0–1), v alttan üste (0–1).
+ * Belt transitioning from a square room to a circular mouth; `slice` faceted faces give a Turkish-triangle impression. Visible from inside.
+ * UV: u around (0–1), v bottom to top (0–1).
  */
 export function transitionBelt(cx: number, cz: number, ax: number, az: number, y0: number, y1: number, R: number, slice = 16) {
   const position: number[] = [], uv: number[] = []
@@ -140,7 +140,7 @@ export function transitionBelt(cx: number, cz: number, ax: number, az: number, y
   return g
 }
 
-/** Basit dörtgen: köşe sırası saat yönünün tersi (normal yukarı). */
+/** Simple quad: counter-clockwise corner order (normal up). */
 export function quad(a: number[], b: number[], c: number[], d: number[], scale = 1) {
   const g = new THREE.BufferGeometry()
   g.setAttribute('position', new THREE.Float32BufferAttribute([...a, ...b, ...c, ...a, ...c, ...d], 3))
@@ -151,8 +151,8 @@ export function quad(a: number[], b: number[], c: number[], d: number[], scale =
 }
 
 /**
- * Kırma çatı: dikdörtgenin kenarlarından `perde` eğimiyle mahyaya yükselir.
- * UV: yatay metre ve eğim metresi; kiremit sıraları saçağa paralel kalır.
+ * Hipped roof: rises from the rectangle's edges to the ridge with slope `burden`.
+ * UV: horizontal meters and slope meters; tile rows stay parallel to the eave.
  */
 export function hipRoof(x0: number, x1: number, z0: number, z1: number, y: number, burden: number) {
   const narrow = Math.min(x1 - x0, z1 - z0) / 2

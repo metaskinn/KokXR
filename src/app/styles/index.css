@@ -1,4 +1,4 @@
-/* KökXR arayüzü — canlı eğitim teması. Öğrenciler için sıcak ve davetkâr: krem zemin, yuvarlak kartlar, çini paletinden turkuaz (ana), mercan ve hardal (ikincil) vurgular. */
+/* KökXR UI — lively educational theme. Warm and inviting for students: cream background, rounded cards, accents from the tile palette: turquoise (primary), coral and mustard (secondary). */
 :root {
   font-family: ui-rounded, 'SF Pro Rounded', 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   color: #1e2933;
@@ -57,7 +57,7 @@ figure { margin: 0; }
 figcaption { padding: 0.75rem 0 0; font-size: 0.875rem; color: var(--secondary); }
 main { max-width: 1160px; padding: 0 1.5rem 4rem; margin: auto; }
 
-/* Üst ve alt çubuk */
+/* Header and footer bars */
 .site-header { border-bottom: 1px solid var(--stroke); background: var(--surface); }
 .site-header-inner { max-width: 1160px; padding: 0.5rem 1.5rem; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 64px; }
 .brand { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; text-decoration: none; color: var(--text); line-height: 1; }
@@ -79,14 +79,14 @@ main { max-width: 1160px; padding: 0 1.5rem 4rem; margin: auto; }
 .site-footer p { margin: 0; }
 .site-footer .brand { font-size: 1rem; min-height: 44px; }
 
-/* Başlıklar */
+/* Headings */
 .top-title { color: var(--secondary); font-size: 0.9rem; font-weight: 500; line-height: 1.5; margin-bottom: 0.25rem; }
 .section-title { display: flex; justify-content: space-between; gap: 1rem 2rem; align-items: end; flex-wrap: wrap; margin-bottom: 1.5rem; }
 .section-title h1, .section-title h2 { margin: 0; }
 .section-title h1 { font-size: clamp(2.2rem, 5vw, 3rem); }
 .section-description { color: var(--secondary); margin: 0.25rem 0 0; max-width: 40rem; }
 
-/* Eser listesi */
+/* Artifact list */
 .artifacts-section { padding-top: 2.5rem; }
 .artifacts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1.75rem; margin: 0; padding: 0; list-style: none; }
 .artifacts > li { display: flex; min-width: 0; }
@@ -108,14 +108,14 @@ main { max-width: 1160px; padding: 0 1.5rem 4rem; margin: auto; }
 .card-features .mustard { background: var(--mustard-open); color: var(--mustard-dark); }
 .artifacts-credit { margin-top: 2rem; }
 
-/* Eser, galeri ve deneyimler */
+/* Artifact, gallery and experiences */
 .page { padding-top: 1.5rem; }
 .page > a:first-child { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.9rem; text-decoration: none; color: var(--secondary); }
 .page > a:first-child:hover { color: var(--text); }
 .page h1 { margin-top: 1rem; }
 .artifact-title { max-width: 46rem; margin-bottom: 2rem; }
 .artifact-title > p:last-child { color: var(--secondary); max-width: 68ch; }
-/* Eser detayı: tam genişlik kapak, yapışkan yan sütun */
+/* Artifact detail: full-width cover, sticky side column */
 body:has(.artifact-detail) main { max-width: none; padding: 0 0 4rem; }
 .artifact-cover { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: min(72dvh, 680px); color: #fff; background: #16191c; overflow: hidden; }
 .artifact-cover-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -151,7 +151,7 @@ body:has(.artifact-detail) main { max-width: none; padding: 0 0 4rem; }
 .artifact-content .history { font-size: 1.075rem; }
 .section { padding: 2.5rem 0; border-top: 1px solid var(--stroke); min-width: 0; }
 .section > h2 { font-size: 1.5rem; }
-/* Açılır bölüm: başlığın tamamı düğmedir, sağdaki ok durumu gösterir. */
+/* Collapsible section: the whole heading is a button; the arrow on the right shows the state. */
 .section-title-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; }
 .section-title-row h2 { flex: 1 1 auto; margin: 0; font-size: 1.5rem; }
 .section-ac { display: flex; align-items: center; justify-content: flex-start; gap: 0.6rem; width: 100%; min-height: 44px; padding: 0; border: 0; border-radius: 4px; background: none; color: var(--text); font: inherit; font-weight: inherit; letter-spacing: inherit; text-align: left; }
@@ -199,7 +199,7 @@ legend { font-weight: 600; margin-bottom: 1rem; }
 .secondary-button:hover { color: var(--highlight-dark); background: var(--highlight-open); border-color: var(--highlight-open); }
 .hint-text { margin-top: 0.75rem; color: var(--secondary); font-size: 0.875rem; }
 
-/* Fotoğraf galerisi: görüntü ve keşif işaretleri aynı koordinat alanında. */
+/* Photo gallery: image and discovery markers share one coordinate space. */
 .gallery-title-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
 .gallery-title-actions { display: flex; gap: 1rem; align-items: center; }
 .gallery-title-actions button { font-size: 0.875rem; }
@@ -231,7 +231,7 @@ legend { font-weight: 600; margin-bottom: 1rem; }
 .full-screen figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; }
 .full-screen .gallery-controls:first-child button { background: var(--text); border-color: var(--text); color: #fff; }
 
-/* Yönetim ve formlar */
+/* Admin and forms */
 .admin { max-width: 52rem; margin-inline: auto; overflow-wrap: anywhere; }
 .admin h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
 .admin-note, .preparing { margin-block: 1.5rem; padding: 1rem 1.25rem; border-left: 3px solid var(--highlight); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface-gray); font-size: 0.95rem; }

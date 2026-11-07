@@ -1,5 +1,5 @@
-// Hamzabey Külliyesi maketinin dokuları. Tuvalde üretilir; renk ve düzen Drive arşiv fotoğraflarına bakılarak yorumlanmıştır.
-// Hat yazısı taklit edilmez. Yalnız iki fotoğraf dokusu vardır (kitabe, kubbe göbeği); açık yayında kullanılmaz.
+// Textures for the Hamzabey Complex model. Generated on canvas; colors and layout interpreted from the Drive archive photos.
+// Calligraphy is not imitated. There are only two photo textures (inscription, dome center); not used in the public build.
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../../../shared/config/publicBuild'
 import { random } from '../../uluMosqueFloor'
@@ -11,12 +11,12 @@ function canvas(g: number, y: number, draw: Draw) {
   el.width = g
   el.height = y
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   draw(c, g, y)
   return el
 }
 
-/** `gx`, `gy` metre: doku bu kadar metrede bir tekrarlanır (UV'ler metre cinsinden). */
+/** `gx`, `gy` in meters: the texture repeats every this many meters (UVs in meters). */
 function texture(el: HTMLCanvasElement, gx = 1, gy = gx, colored = true) {
   const t = new THREE.CanvasTexture(el)
   t.wrapS = t.wrapT = THREE.RepeatWrapping
@@ -30,7 +30,7 @@ const sec = <T,>(r: () => number, l: T[]) => l[Math.floor(r() * l.length)]
 const BRICK = ['#8d4a31', '#975238', '#9f5a3f', '#864429', '#a56247', '#914f36']
 const STONE = ['#a5957a', '#94866c', '#ae9f85', '#9a8c72', '#8a7c64', '#a99a80']
 
-/** Üç sıra tuğla, bir sıra moloz taş; taş aralarında düşey tuğla (envanter, s. 180-182). */
+/** Three courses of brick, one course of rubble stone; vertical bricks between stones (inventory, pp. 180-182). */
 function weave() {
   const G = 1024, Y = 512, STONE_H = 146, BRK_H = 37
   const r = random(11)
@@ -78,7 +78,7 @@ function weave() {
   return { color: texture(color, 2.1, 1.05), relief: texture(relief, 2.1, 1.05, false) }
 }
 
-/** Yalnız tuğla: kasnak, minare gövdesi ve kemer halkaları. */
+/** Brick only: drum, minaret shaft and arch rings. */
 function brickTexture() {
   const G = 512, Y = 256, H = 64
   const r = random(23)
@@ -100,7 +100,7 @@ function brickTexture() {
   }), 0.6, 0.3)
 }
 
-/** Aile Türbesi'nin üst cephesindeki zikzak tuğla düzeni (fotoğraftan yorum). */
+/** Zigzag brick pattern on the upper facade of the Aile Türbesi (interpreted from the photo). */
 function zigzagTexture() {
   const G = 768, Y = 576, A = 64, B = 96
   const r = random(7)
@@ -109,7 +109,7 @@ function zigzagTexture() {
     c.fillRect(0, 0, G, Y)
     for (let s = 0; s < Y / B; s++) {
       const yt = s * B
-      // Bant arası ince tuğla sırası
+      // Thin brick course between bands
       c.fillStyle = sec(r, BRICK)
       c.fillRect(0, yt, G, 12)
       for (let i = -1; i <= G / (A * 2); i++) {
@@ -127,7 +127,7 @@ function zigzagTexture() {
   }), 1.2, 0.9)
 }
 
-/** Kaburgalı kurşun kubbe: dilim dikişleri ve yatay ek yerleri; UV kubbeye bir kez sarılır. */
+/** Ribbed lead dome: segment seams and horizontal joints; UV wraps the dome once. */
 function leadDome(slice: number) {
   const G = 2048, Y = 512
   const r = random(31)
@@ -151,7 +151,7 @@ function leadDome(slice: number) {
   }))
 }
 
-/** Renkli cam pencere: beyaz daireler ve kırmızı-mavi dolgu (fotoğrafa göre). */
+/** Stained-glass window: white circles and red-blue fill (based on the photo). */
 function stainedGlassTexture() {
   return texture(canvas(256, 384, (c, g, y) => {
     c.fillStyle = '#f7f2e6'
@@ -168,7 +168,7 @@ function stainedGlassTexture() {
   }))
 }
 
-/** İçeriden görülen ahşap kanatlı pencere ve aydınlık cam. */
+/** Window with wooden leaves and bright glass, seen from inside. */
 function windowTexture() {
   return texture(canvas(256, 320, (c, g, y) => {
     c.fillStyle = '#eef4f6'
@@ -186,7 +186,7 @@ function windowTexture() {
   }))
 }
 
-/** Dışarıdan görülen demir parmaklıklı pencere. */
+/** Window with iron grille, seen from outside. */
 function balustradeTexture() {
   return texture(canvas(256, 320, (c, g, y) => {
     c.fillStyle = '#17120e'
@@ -198,7 +198,7 @@ function balustradeTexture() {
   }))
 }
 
-/** Dıştan alçı şebeke: daire dizili kafes. */
+/** Plaster grille from outside: lattice of rows of circles. */
 function latticeTexture() {
   return texture(canvas(256, 384, (c, g, y) => {
     c.fillStyle = '#ece3d0'
@@ -221,7 +221,7 @@ function flower(c: CanvasRenderingContext2D, x: number, y: number, r: number, co
   c.beginPath(); c.arc(x, y, r * 0.3, 0, Math.PI * 2); c.fill()
 }
 
-/** Bal rengi halı: 1,2 metrede bir saf bandı ve çiçek dizisi (fotoğrafa göre). */
+/** Honey-colored carpet: a prayer-row band every 1.2 m and a row of flowers (based on the photo). */
 function carpetTexture() {
   const G = 1024
   const r = random(5)
@@ -249,7 +249,7 @@ function carpetTexture() {
   }), 2.4, 2.4)
 }
 
-/** Orta sofadaki göbek halı: iç içe halkalarda iri çiçekler; kenarı saydam. */
+/** Medallion carpet in the central hall: large flowers in nested rings; transparent edge. */
 function roseCarpetTexture() {
   const G = 1024, m = G / 2
   return texture(canvas(G, G, (c) => {
@@ -280,7 +280,7 @@ function roseCarpetTexture() {
   }))
 }
 
-/** İç kubbe: u çevre, v tabandan tepeye. Eteğinde yeşil-kahve yaprak kuşağı. */
+/** Inner dome: u around, v base to apex. Green-brown leaf band at its skirt. */
 function domeInnerTexture() {
   return texture(canvas(2048, 512, (c, g, y) => {
     c.fillStyle = '#efece4'
@@ -301,7 +301,7 @@ function domeInnerTexture() {
   }))
 }
 
-/** Kubbe göbeği yedeği (açık yayın veya foto yoksa): halkalı rozet. */
+/** Dome center fallback (public build or no photo): ringed rosette. */
 function bossTexture() {
   const G = 512, m = G / 2
   return texture(canvas(G, G, (c) => {
@@ -320,7 +320,7 @@ function bossTexture() {
   }))
 }
 
-/** Türk üçgeni yüzü: her üçgene çizgili kontur (fotoğraftaki boyalı çizgiler). */
+/** Turkish triangle face: striped outline on each triangle (the painted lines in the photo). */
 function triangleTexture() {
   return texture(canvas(256, 256, (c, g, y) => {
     c.fillStyle = '#efece4'
@@ -335,7 +335,7 @@ function triangleTexture() {
   }))
 }
 
-/** Mihrap çerçevesi şeridi: krem üzerine yeşil geçme. */
+/** Mihrab frame strip: green interlace on cream. */
 function mihrabBandTexture() {
   return texture(canvas(128, 128, (c, g, y) => {
     c.fillStyle = '#e7e6da'
@@ -350,7 +350,7 @@ function mihrabBandTexture() {
   }), 0.26)
 }
 
-/** Sekizgen levha: yazısız, yıldız geçmeli. Fotoğraftaki hat levhaları taklit edilmez. */
+/** Octagonal panel: no inscription, star interlace. The calligraphy panels in the photo are not imitated. */
 function medallionTexture() {
   const G = 256, m = G / 2
   return texture(canvas(G, G, (c) => {
@@ -371,7 +371,7 @@ function medallionTexture() {
   }))
 }
 
-/** Sanduka örtüsü: siyah üzerine altın zikzak (Hamza Bey Türbesi fotoğrafı). */
+/** Sarcophagus cover: gold zigzag on black (Hamza Bey Türbesi photo). */
 function cenotaphTexture() {
   return texture(canvas(256, 256, (c, g, y) => {
     c.fillStyle = '#14161a'
@@ -388,7 +388,7 @@ function cenotaphTexture() {
   }), 0.32)
 }
 
-/** Aile Türbesi sanduka örtüsü: kırmızı brokar. */
+/** Aile Türbesi sarcophagus cover: red brocade. */
 function brocadeTexture() {
   return texture(canvas(256, 256, (c, g, y) => {
     c.fillStyle = '#7d1f1c'
@@ -397,7 +397,7 @@ function brocadeTexture() {
   }), 0.5)
 }
 
-/** Sıvalı niş içindeki dökümlü perde tasviri (batı eyvanı mihrabı için temsilî). */
+/** Depiction of a draped curtain in a plastered niche (representative, for the west iwan mihrab). */
 function curtainTexture() {
   return texture(canvas(256, 512, (c, g, y) => {
     for (let x = 0; x < g; x++) {
@@ -412,7 +412,7 @@ function curtainTexture() {
   }))
 }
 
-/** Sıva üstü kahverengi kıvrım bezeme; saydam zemin. */
+/** Brown scroll ornament on plaster; transparent ground. */
 function malakariTexture() {
   const G = 512, Y = 256, m = G / 2
   return texture(canvas(G, Y, (c) => {
@@ -431,7 +431,7 @@ function malakariTexture() {
   }))
 }
 
-/** Tuğla döşeme: türbelerde kırmızı-kahve kare tuğla. */
+/** Brick paving: red-brown square bricks in the tombs. */
 function pavingBrickTexture() {
   const r = random(41)
   return texture(canvas(256, 256, (c, g, y) => {

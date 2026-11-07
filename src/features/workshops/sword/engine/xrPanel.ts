@@ -1,11 +1,11 @@
-// Kılıç atölyesi VR panelleri: tuvale çizilip düzleme giydirilir. Metin çağırandan gelir, burada tarihsel metin yazılmaz.
-// ciz dokuyu yeniden yükler; yalnız içerik değişince çağrılır.
+// Sword workshop VR panels: drawn on a canvas and mapped onto a plane. Text comes from the caller; no historical text is written here.
+// draw re-uploads the texture; call it only when the content changes.
 import * as T from 'three'
 import { wrapLine } from '../../../../shared/xr/xrText'
 import { PANEL_G, PANEL_Y, panelFrame, panelLayout } from './xrCalc'
 import type { Frame, PanelButton, PanelState, infoState } from './xrCalc'
 
-// Atölye sayfasının renkleri (pages/kilic.css).
+// Workshop page colors (sword/sword.css).
 const FLOOR = '#141b1c', SURFACE = '#283232', EDGE = '#5e655f', TEXT_ = '#ede9e0', SECONDARY = '#adb6ae', GOLD = '#d6b183', GOLD_DARK = '#3a2d1c', GREEN = '#a3c3ae', WARNING = '#f0a860'
 const TEXT = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
 const SIDE = 32, GEN = PANEL_G - 2 * SIDE
@@ -13,10 +13,10 @@ export const PANEL_METER = .8
 
 function canvas(y: number) {
   const el = document.createElement('canvas'); el.width = PANEL_G; el.height = y
-  const c = el.getContext('2d'); if (!c) throw new Error('Tuval kullanılamıyor')
+  const c = el.getContext('2d'); if (!c) throw new Error('Canvas unavailable')
   const texture = new T.CanvasTexture(el); texture.colorSpace = T.SRGBColorSpace; texture.anisotropy = 4
   const geometry = new T.PlaneGeometry(PANEL_METER, PANEL_METER * y / PANEL_G)
-  // Paneller derinlik sınamasına girmez: ocağın veya tezgâhın önünde de okunur.
+  // Panels skip depth testing: readable even in front of the forge or workbench.
   const material = new T.MeshBasicMaterial({ map: texture, toneMapped: false, transparent: true, depthTest: false, depthWrite: false, fog: false })
   const obj = new T.Mesh(geometry, material)
   return { c, texture, obj, dispose: () => { texture.dispose(); material.dispose(); geometry.dispose() } }
@@ -99,7 +99,7 @@ export function infoPanel() {
   const draw = (b: ReturnType<typeof infoState>) => {
     c.fillStyle = FLOOR; c.fillRect(0, 0, PANEL_G, INFO_Y)
     c.textAlign = 'left'; c.textBaseline = 'top'
-    // Dürüstlük notu alta yaslıdır, her boyutta sabit; üstte kalan yere kaynaklı not sığdırılır, metin kesilmez.
+    // The honesty note is bottom-aligned and fixed at every size; the sourced note fits in the space above, text is not truncated.
     const nFont = `400 25px ${TEXT}`, nLine = lines(c, b.honesty, nFont), nTop = INFO_Y - 18 - nLine.length * 31
     c.fillStyle = GOLD; c.fillRect(SIDE, nTop - 46, GEN, 2)
     c.font = `600 21px ${TEXT}`; c.fillText(b.honestyTitle, SIDE, nTop - 34)

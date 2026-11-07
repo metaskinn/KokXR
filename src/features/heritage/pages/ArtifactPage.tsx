@@ -4,10 +4,10 @@ import ArtifactExplorer from '../components/ArtifactExplorer'
 import Gallery from '../components/Gallery'
 import Section from '../../../shared/ui/Section'
 import SourceLine, { sourceText } from '../../../shared/ui/SourceLine'
-import NotFound from '../../../app/NotFound'
+import NotFound from '../../../shared/ui/NotFound'
 import { PUBLIC_BUILD } from '../../../shared/config/publicBuild'
 
-/** Fotoğraf öncelikli katalog düzeni: tam genişlik kapak, yapışkan künye ve bölüm listesi, okunur içerik sütunu. */
+/** Photo-first catalogue layout: full-width cover, sticky fact sheet and section list, readable content column. */
 export default function ArtifactPage({ artifacts }: { artifacts: Artifact[] }) {
   const { id } = useParams()
   const artifact = artifacts.find((item) => item.id === id)
@@ -47,7 +47,7 @@ export default function ArtifactPage({ artifacts }: { artifacts: Artifact[] }) {
       </aside>
       <div className="artifact-content">
         <Gallery artifact={artifact} />
-        {artifact.model && <ArtifactExplorer model={artifact.model} sources={artifact.sources} ad={artifact.ad} />}
+        {artifact.model && <ArtifactExplorer model={artifact.model} sources={artifact.sources} name={artifact.ad} />}
         <Section id="history-title" title="Tarihçe">
           <p className="history">{artifact.history}</p>
           {artifact.sources.filter((source) => source.id.endsWith('-history')).map((source) => <SourceLine key={source.id} sources={artifact.sources} sourceId={source.id} />)}

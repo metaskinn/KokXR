@@ -1,8 +1,8 @@
-// Mekanlar sekmesinin listesi. Yapı adları "Vakıf Eserleri Envanteri - Bursa Fotoğraf Arşivi" klasör adlarından,
-// yayınlar Vakıf Katılım "Yayınlarımız" sayfasındandır. Yapı, `eserId`'si olan eser verisinde maket varsa açılır; yoksa "VR henüz yok" yazar.
+// List for the Places tab. Building names come from the folder names of "Vakıf Eserleri Envanteri - Bursa Fotoğraf Arşivi";
+// publications come from Vakıf Katılım's "Yayınlarımız" page. A building opens if the artifact data for its `artifactId` has a model; otherwise it shows "VR henüz yok".
 import type { MapId } from './turkeyMap'
 
-// `konum` [boylam, enlem]: külliyenin ana camisinin yeri. `kaynak`: OSM ve Wikidata karşılıklı denetlendi (Kasım 2026).
+// `position` [longitude, latitude]: location of the complex's main mosque. `source`: OSM and Wikidata cross-checked (November 2026).
 export interface VrBuilding { ad: string; district: string; artifactId: string; position: [number, number]; source: string }
 export interface VrBroadcast { ad: string; address: string }
 export interface VrCity { ad: string; map: MapId; position: [number, number]; buildings: VrBuilding[]; broadcasts: VrBroadcast[] }

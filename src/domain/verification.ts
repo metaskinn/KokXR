@@ -30,7 +30,7 @@ export function artifactErrors(artifact: Artifact): Errors {
     if (s.sourceId && !sourceIds.includes(s.sourceId)) errors[`test-${i}-source-id`] = 'Geçerli bir kaynak seçin veya kaynağı kaldırın.'
   })
   artifact.images.forEach((g, i) => {
-    if (!imageUrlValid(g.file)) errors[`image-${i}-file`] = 'Yerel /gorseller/... yolu veya http/https URL girin.'
+    if (!imageUrlValid(g.file)) errors[`image-${i}-file`] = 'Yerel /images/... yolu veya http/https URL girin.'
     if (artifact.images.findIndex(x => x.file === g.file) !== i) errors[`image-${i}-file`] = 'Bu görsel zaten eklenmiş.'
     required(`image-${i}-alt`, g.alt)
     if (g.sourceId && !sourceIds.includes(g.sourceId)) errors[`image-${i}-source-id`] = 'Geçerli bir kaynak seçin veya kaynağı kaldırın.'
@@ -47,7 +47,7 @@ export function artifactErrors(artifact: Artifact): Errors {
   return errors
 }
 
-// JSON'dan gelen nesneler React'e ulaşmadan önce yapısal ve anlamsal olarak denetlenir.
+// Objects from JSON are checked structurally and semantically before they reach React.
 const obj = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v)
 const texts = (v: Record<string, unknown>, areas: string[]) => areas.every(a => typeof v[a] === 'string')
 const list = (v: unknown, control: (n: Record<string, unknown>) => boolean): boolean => Array.isArray(v) && v.every(n => obj(n) && control(n))

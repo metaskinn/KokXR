@@ -1,5 +1,5 @@
-// Tabağın yüzeyi tek bir tuvaldir: çamur, astar, kömür noktaları, tahrir, boya ve sır sırayla üst üste çizilir.
-// Tuvalin (x, y) noktası tabağın (ux, uz) birim koordinatıdır: merkez 0, kenar 1.
+// The plate surface is a single canvas: clay, slip, charcoal dots, outline (tahrir), paint and glaze are drawn on top of each other in order.
+// Canvas point (x, y) is the plate's (ux, uz) unit coordinate: center 0, rim 1.
 import * as THREE from 'three'
 import { regions, traces, contours, type N } from './pattern'
 import { COAL_CELL, traceHead, colors, type Game } from './state'
@@ -13,7 +13,7 @@ function shuffle(a: string, b: string, t: number) {
   const k = (i: number) => Math.round(h(a, i) + (h(b, i) - h(a, i)) * t).toString(16).padStart(2, '0')
   return `#${k(1)}${k(3)}${k(5)}`
 }
-/** Tohumlu gürültü: el yapımı yüzeyin küçük lekeleri her açılışta aynı olur. */
+/** Seeded noise: the small blemishes of the handmade surface are the same on every load. */
 function stains(c: CanvasRenderingContext2D, count: number, color: string, wB: number, alpha: number) {
   let s = 12345
   const r = () => { s = (s * 16807) % 2147483647; return s / 2147483647 }
@@ -27,7 +27,7 @@ function stains(c: CanvasRenderingContext2D, count: number, color: string, wB: n
 function layer(draw: (c: CanvasRenderingContext2D) => void) {
   const e = document.createElement('canvas'); e.width = e.height = S
   const c = e.getContext('2d', { willReadFrequently: true })
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   draw(c)
   return e
 }
@@ -37,7 +37,7 @@ const path = (c: CanvasRenderingContext2D, p: N[], closedState = true) => {
   if (closedState) c.closePath()
 }
 
-// Kontur boyunca eşit aralıklı kömür noktaları ve düştükleri hücre.
+// Evenly spaced charcoal dots along the contour and the cell they fall in.
 const points: { x: number; y: number; h: number }[] = contours.flatMap((k) => {
   const o: { x: number; y: number; h: number }[] = []
   let remaining = 0
@@ -52,7 +52,7 @@ const points: { x: number; y: number; h: number }[] = contours.flatMap((k) => {
   return o
 })
 
-/** Kömürleme kâğıdı: delikli desen, yarı saydam parşömen. */
+/** Pouncing paper: perforated pattern, semi-transparent parchment. */
 export function paperTexture() {
   const e = layer((c) => {
     c.fillStyle = 'rgba(232,222,196,.86)'; c.beginPath(); c.arc(S / 2, S / 2, S / 2, 0, 7); c.fill()
@@ -69,7 +69,7 @@ export function createSurface(anisotropy: number) {
   const glaze = layer((c) => { c.fillStyle = GLAZE; c.fillRect(0, 0, S, S); stains(c, 4000, '#fbfaf5', 5, .5); stains(c, 1500, '#cfcabb', 3, .3) })
   const el = document.createElement('canvas'); el.width = el.height = S
   const c = el.getContext('2d', { willReadFrequently: true })
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   const texture = new THREE.CanvasTexture(el)
   texture.colorSpace = THREE.SRGBColorSpace; texture.flipY = false; texture.anisotropy = anisotropy; texture.generateMipmaps = true
   let keyStr = ''
@@ -83,7 +83,7 @@ export function createSurface(anisotropy: number) {
     if (d.primer > 0) {
       c.save(); c.beginPath(); c.arc(S / 2, S / 2, (d.primer * 1.5 * S) / 2, 0, 7); c.clip(); c.drawImage(primer, 0, 0); c.restore()
     }
-    // Boya: fırına kadar mat, sır pişince canlı.
+    // Paint: matte until firing, vivid once the glaze is fired.
     d.paints.forEach((r, i) => {
       if (!r) return
       const b = regions[i], color = colors.find((x) => x.id === r)
@@ -91,12 +91,12 @@ export function createSurface(anisotropy: number) {
       c.fillStyle = shuffle(color.mat, color.live, d.live)
       c.beginPath(); path(c, b.outer); if (b.inner) path(c, b.inner); c.fill('evenodd')
     })
-    // Kömür noktaları, tahrirden sonra da altta kalır.
+    // Charcoal dots stay underneath even after the outline.
     if (d.stage >= 2 && d.stage <= 4) {
       c.fillStyle = 'rgba(40,36,34,.75)'
       for (const n of points) if (d.coal[n.h]) { c.beginPath(); c.arc(px(n.x), px(n.y), 2.1, 0, 7); c.fill() }
     }
-    // Tahrir.
+    // Outline (tahrir).
     c.strokeStyle = INK; c.lineCap = 'round'; c.lineJoin = 'round'; c.lineWidth = 4.2
     if (d.stage > 3) { c.beginPath(); contours.forEach((k) => path(c, k, false)); c.stroke() }
     if (d.stage === 3) {
@@ -106,7 +106,7 @@ export function createSurface(anisotropy: number) {
       const n = traceHead(d)
       if (n) { c.strokeStyle = '#e5902f'; c.lineWidth = 6; c.beginPath(); c.arc(px(n[0]), px(n[1]), 15, 0, 7); c.stroke() }
     }
-    // Pişmemiş sır deseni örter; piştikçe saydamlaşır.
+    // Unfired glaze covers the pattern; it turns transparent as it fires.
     if (d.glaze > 0 && d.live < 1) {
       c.save(); c.globalAlpha = .96 * (1 - d.live)
       c.beginPath(); c.arc(S / 2, S / 2, (d.glaze * 1.5 * S) / 2, 0, 7); c.clip(); c.drawImage(glaze, 0, 0); c.restore()

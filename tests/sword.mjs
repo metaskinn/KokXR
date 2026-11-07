@@ -24,16 +24,16 @@ try {
     await p.goto(url)
     // A home visit must not load Three.js or the workshop renderer.
     const imports = await p.evaluate(() => performance.getEntriesByType('resource').map(r => r.name))
-    assert(!imports.some(s => /three\.js|three\.module|components\/kilic\/sahne/.test(s)), 'Three.js ana sayfada yüklendi')
+    assert(!imports.some(s => /three\.js|three\.module|workshops\/sword\/engine\/scene/.test(s)), 'Three.js loaded on the home page')
     await p.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Atölyeler' }).click(); await p.getByRole('link', { name: 'Kılıç atölyesi', exact: true }).click()
     await p.locator('.sword-scene canvas').waitFor(); await p.waitForFunction(() => document.querySelector('.sword-scene')?.dataset.lengthVal)
     const initial = Number(await stage.getAttribute('data-length-val')); assert(initial < .25)
     await snap('01-ingot')
     for (let n = 0; n < 7; n++) {
-      console.log(width, 'usta aşama', n)
+      console.log(width, 'master stage', n)
       await click(/^Ustaya bırak/); await waitStage(n + 1)
       if (n === 1) assert(Number(await stage.getAttribute('data-length-val')) < .3)
-      if (n === 2) assert(Number(await stage.getAttribute('data-length-val')) > initial * 4, 'Namlu uzamadı')
+      if (n === 2) assert(Number(await stage.getAttribute('data-length-val')) > initial * 4, 'Blade did not lengthen')
       if (n === 5) assert(Number(await stage.getAttribute('data-attached')) >= 9)
       await snap(`master-0${n + 2}`)
     }
@@ -52,7 +52,7 @@ try {
       const box = await stage.boundingBox(), coords = await stage.evaluate(e => [Number(e.dataset.strikeX), Number(e.dataset.strikeY)])
       await p.mouse.click(box.x + coords[0], box.y + coords[1])
     }
-    // Gerçek oyuncu gibi: bitmemiş bölgeyi seçip vurur (vuruş tıklanan noktanın bölgesine gider).
+    // Like a real player: selects an unfinished region and strikes (the strike goes to the clicked point's region).
     for (let tour = 0, midTaken = false; tour < 90 && await stage.getAttribute('data-stage') === '2'; tour++) {
       if (Number(await p.locator('#sword-temperature').getAttribute('value')) < 800) {
         await click('Yeniden ısıt'); await hold('Körüğü basılı tut', () => heat(1050)); await click('Örse geç →'); await p.waitForTimeout(1500)
@@ -70,7 +70,7 @@ try {
       await click(new RegExp(`^Bölge ${i + 1}$`))
       // A pointer stroke selects the region under the blade and polishes while held.
       await stage.scrollIntoViewIfNeeded(); await p.waitForTimeout(450)
-      // Bileme sahnede herhangi bir yere basılı tutularak yapılır; bölge panelden seçildi.
+      // Sharpening is done by holding anywhere on the scene; the region was selected from the panel.
       const r = await stage.boundingBox()
       await p.mouse.move(r.x + r.width * .25, r.y + r.height * .22); await p.mouse.down()
       await p.waitForFunction(i => { const b = document.querySelector(`[aria-label="Bölge ${i + 1}"]`); return !b || parseFloat(b.style.getPropertyValue('--progress')) >= 98 }, i, { timeout: 30000 })
@@ -88,20 +88,20 @@ try {
       const b = await stage.boundingBox(), x = b.x + (width > 700 ? (b.width - 340) / 2 : b.width / 2), y = b.y + b.height * .52
       await p.mouse.move(x - 90, y); await p.mouse.down(); await p.mouse.move(x + 90, y, { steps: 3 }); await p.mouse.up(); await p.waitForTimeout(800)
       if (i === 0) assert(Number(await stage.getAttribute('data-detached-one')) > 0)
-      if (i === 1) assert((await stage.getAttribute('data-damage')).split(',')[1] > 0, 'kütük hasar almadı')
+      if (i === 1) assert((await stage.getAttribute('data-damage')).split(',')[1] > 0, 'log took no damage')
       await snap(`cut-${i}`)
     }
-    assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${width}px taşma`)
+    assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${width}px overflow`)
     assert(await p.getByText('Temsilî model ve kurgusal oyun.', { exact: false }).isVisible())
     // Page is keyboard operable, sound toggle works, reset does not persist session.
     await click('♪ Ses açık'); assert(await p.getByRole('button', { name: '♪ Ses kapalı', exact: true }).isVisible())
     await click('Baştan başla'); await waitStage(0)
     await p.reload(); await waitStage(0)
     await p.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Eserler', exact: true }).click(); await p.waitForFunction(() => !document.querySelector('.sword-scene canvas'), null, { timeout: 5000 })
-    report.push({ width, master: '8/8', manual: '8/8', initial, deformation: 'uzama doğrulandı', targets: '3/3', dispose: 'canvas temizlendi' }); console.log(report.at(-1))
+    report.push({ width, master: '8/8', manual: '8/8', initial, deformation: 'lengthening verified', targets: '3/3', dispose: 'canvas cleaned up' }); console.log(report.at(-1))
     await p.close()
   }
   // Expected failure is a user-facing message, with no orphan canvas.
   const fail = await browser.newPage(); await fail.route('**/models/sword.glb', r => r.abort()); await fail.goto(url + '/workshops/sword'); await fail.getByRole('alert').filter({ hasText: 'Atölye görüntülenemedi' }).waitFor(); assert.equal(await fail.locator('.sword-scene canvas').count(), 0); await fail.close()
-  assert.deepEqual(errors, []); console.log('Kılıç testleri başarılı.', report)
+  assert.deepEqual(errors, []); console.log('Sword tests passed.', report)
 } finally { await browser.close() }

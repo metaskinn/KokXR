@@ -1,8 +1,8 @@
-// Ulu Camii ışığı: ton eşleme, iç ve dış ortam, malzemelere işlenen hazır iç ışık alanı.
-// Karakter fotoğraflardan: ic-mekan*.jpg ve sadirvan.jpg (yüksek anahtarlı, sıcak krem, düşük karşıtlık),
-// kubbeler-icten.jpg (kubbe içleri kemerlerden koyu ve ten rengi), dis-gorunum.jpg (altın güneş, gümüş mavi kurşun).
-// Şadırvan gözünden düşen gün ışığı ve köşe kararması gerçek zamanlı ışık değil; birkaç satır gölgelendirici
-// hesabıdır, gölge haritası istemez, Quest'te de aynı biçimde çalışır.
+// Ulu Camii lighting: tone mapping, interior and exterior environment, a precomputed interior light field baked into materials.
+// Character from photos: ic-mekan*.jpg and sadirvan.jpg (high-key, warm cream, low contrast),
+// kubbeler-icten.jpg (dome interiors darker than the arches and skin-toned), dis-gorunum.jpg (golden sun, silver-blue lead).
+// The daylight falling from the şadırvan bay and the corner darkening are not real-time lights; they are a few lines of shader
+// math, need no shadow map, and work the same way on Quest.
 import * as THREE from 'three'
 import { WALL, BAY_X, DRUM_BASE, FOUNTAIN_ROW, FOUNTAIN_COLUMN, YX, YZ, baySize, px, pz } from '../uluMosquePiece'
 import type { UluMosqueMaterials } from '../uluMosqueTextures'
@@ -13,16 +13,16 @@ const SETTING = {
   inner: { exposure: 1.08, environment: 0.66, hemi: 0.34, glow: 0.12, threshold: 1.3, lamp: 28 },
 }
 
-/** Lamba ve gökyüzü parıltısı: yalnız Ulu Camii'nin kendi malzeme kopyasında değişir, doku ve çizim sayısı aynı kalır. */
+/** Lamp and sky glow: changes only on Ulu Camii's own material copies; texture and draw call counts stay the same. */
 export function uluLightMaterials(m: UluMosqueMaterials) {
-  // Fotoğrafta ampuller küçük ve beyaz; hale, duvarı örtmeyecek kadar kısık.
+  // In the photo the bulbs are small and white; the halo is dim enough not to cover the wall.
   m.lamp.color.setRGB(3.4, 3, 2.35)
   m.lampHalo.color.setRGB(0.62, 0.52, 0.38)
   m.lightColumn.color.setRGB(0.1, 0.1, 0.095)
   m.sky.color.setRGB(1.75, 1.9, 2)
 }
 
-/** Dış ortam: açık gök, sıcak ufuk, koyu zemin. Kurşun kubbeler fotoğraftaki gibi gök rengini yansıtır. */
+/** Exterior environment: clear sky, warm horizon, dark ground. The lead domes reflect the sky color, as in the photo. */
 function setupOuterEnv(environment: THREE.PMREMGenerator) {
   const scene = new THREE.Scene()
   const geo = new THREE.SphereGeometry(50, 24, 16)
@@ -43,7 +43,7 @@ function setupOuterEnv(environment: THREE.PMREMGenerator) {
   return texture
 }
 
-/** İç ortam: krem duvar, gül zemin, aydınlık tavan, kubbe gözü. Avize noktaları kısık: su ve mermerde patlamasın. */
+/** Interior environment: cream wall, rose floor, bright ceiling, dome oculus. Chandelier points are dim so they don't blow out on water and marble. */
 function setupInteriorEnv(environment: THREE.PMREMGenerator) {
   const scene = new THREE.Scene()
   const box = new THREE.BoxGeometry(70, 26, 56), sphere = new THREE.SphereGeometry(1, 10, 6)
@@ -69,36 +69,36 @@ function setupInteriorEnv(environment: THREE.PMREMGenerator) {
 
 const number = (n: number) => n.toFixed(3)
 
-/** Yapıya göre hesaplanan hazır ışık alanı. Zemin kendi temas gölgesini malzemeden alır; burada yalnız duvar ve tavan koyulur. */
+/** Precomputed light field based on the building. The floor gets its own contact shadow from its material; only walls and ceiling are darkened here. */
 function areaGlsl() {
   const sx = px(FOUNTAIN_COLUMN + 0.5), sz = pz(FOUNTAIN_ROW + 0.5)
   const eyeY = DRUM_BASE + baySize(FOUNTAIN_COLUMN).drumH + 2.6
   return `{
-    vec3 uluP = vUluKonum;
+    vec3 uluP = vUluPos;
     float uluY = uluP.y - ${number(FLOOR)};
-    float uluDuvar = smoothstep(0.08, 0.5, uluY);
-    vec2 uluMesafe = vec2(${number(YX - WALL)}, ${number(YZ - WALL)}) - abs(uluP.xz);
-    float uluKose = smoothstep(0.0, ${number(BAY_X * 0.8)}, uluMesafe.x) * smoothstep(0.0, ${number(BAY_X * 0.8)}, uluMesafe.y);
-    vec3 uluCarpan = vec3(mix(1.0, mix(0.82, 1.0, uluKose) * mix(0.84, 1.0, smoothstep(0.0, 4.5, uluY)), uluDuvar));
-    uluCarpan *= mix(vec3(1.0), vec3(0.9, 0.84, 0.76), smoothstep(${number(DRUM_BASE)}, ${number(DRUM_BASE + 4)}, uluP.y));
-    vec3 uluGoz = vec3(${number(sx)}, ${number(eyeY)}, ${number(sz)}) - uluP;
-    float uluEksen = dot(uluGoz.xz, uluGoz.xz);
-    float uluGun = exp(-uluEksen / 120.0) * (0.3 + 0.7 * max(dot(normal, normalize(uluGoz)), 0.0));
-    uluCarpan = mix(vec3(1.0), uluCarpan, uUluIc);
-    reflectedLight.directDiffuse *= uluCarpan;
-    reflectedLight.indirectDiffuse *= uluCarpan;
-    reflectedLight.indirectSpecular *= uluCarpan;
-    reflectedLight.indirectDiffuse += material.diffuseColor * vec3(0.3, 0.32, 0.335) * uluGun * uUluIc;
-    // Gölgesiz iç lambalar su ve cilalı mermerde patlayan benek bırakmasın; yansımayı ortam haritası verir.
-    float uluBenek = mix(1.0, 0.22, uUluIc);
-    reflectedLight.directSpecular *= uluBenek;
+    float uluWall = smoothstep(0.08, 0.5, uluY);
+    vec2 uluDist = vec2(${number(YX - WALL)}, ${number(YZ - WALL)}) - abs(uluP.xz);
+    float uluCorner = smoothstep(0.0, ${number(BAY_X * 0.8)}, uluDist.x) * smoothstep(0.0, ${number(BAY_X * 0.8)}, uluDist.y);
+    vec3 uluFactor = vec3(mix(1.0, mix(0.82, 1.0, uluCorner) * mix(0.84, 1.0, smoothstep(0.0, 4.5, uluY)), uluWall));
+    uluFactor *= mix(vec3(1.0), vec3(0.9, 0.84, 0.76), smoothstep(${number(DRUM_BASE)}, ${number(DRUM_BASE + 4)}, uluP.y));
+    vec3 uluEye = vec3(${number(sx)}, ${number(eyeY)}, ${number(sz)}) - uluP;
+    float uluAxisDist = dot(uluEye.xz, uluEye.xz);
+    float uluDay = exp(-uluAxisDist / 120.0) * (0.3 + 0.7 * max(dot(normal, normalize(uluEye)), 0.0));
+    uluFactor = mix(vec3(1.0), uluFactor, uUluInner);
+    reflectedLight.directDiffuse *= uluFactor;
+    reflectedLight.indirectDiffuse *= uluFactor;
+    reflectedLight.indirectSpecular *= uluFactor;
+    reflectedLight.indirectDiffuse += material.diffuseColor * vec3(0.3, 0.32, 0.335) * uluDay * uUluInner;
+    // Shadowless interior lamps must not leave blown-out specks on water and polished marble; the environment map provides reflections.
+    float uluSpeck = mix(1.0, 0.22, uUluInner);
+    reflectedLight.directSpecular *= uluSpeck;
     #ifdef USE_CLEARCOAT
-      clearcoatSpecularDirect *= uluBenek;
+      clearcoatSpecularDirect *= uluSpeck;
     #endif
   }`
 }
 
-/** Tüm malzemelere bir kez işlenir; dışarıdayken uUluIc 0'dır, yeniden derleme gerekmez. */
+/** Applied once to all materials; uUluInner is 0 while outside, no recompilation needed. */
 function processArea(root: THREE.Object3D, uUluInner: { value: number }) {
   const glsl = areaGlsl(), processed = new WeakSet<THREE.Material>()
   root.traverse((o) => {
@@ -111,15 +111,15 @@ function processArea(root: THREE.Object3D, uUluInner: { value: number }) {
         previous(s, r)
         s.uniforms.uUluInner = uUluInner
         s.vertexShader = s.vertexShader
-          .replace('#include <common>', '#include <common>\nvarying vec3 vUluKonum;')
+          .replace('#include <common>', '#include <common>\nvarying vec3 vUluPos;')
           .replace('#include <project_vertex>', `#include <project_vertex>
-            vec4 uluYer = vec4(transformed, 1.0);
+            vec4 uluLocal = vec4(transformed, 1.0);
             #ifdef USE_INSTANCING
-              uluYer = instanceMatrix * uluYer;
+              uluLocal = instanceMatrix * uluLocal;
             #endif
-            vUluKonum = (modelMatrix * uluYer).xyz;`)
+            vUluPos = (modelMatrix * uluLocal).xyz;`)
         s.fragmentShader = s.fragmentShader
-          .replace('#include <common>', '#include <common>\nvarying vec3 vUluKonum;\nuniform float uUluIc;')
+          .replace('#include <common>', '#include <common>\nvarying vec3 vUluPos;\nuniform float uUluInner;')
           .replace('#include <aomap_fragment>', `${glsl}\n#include <aomap_fragment>`)
       }
       m.customProgramCacheKey = () => `${prevKey()}|uluLight`
@@ -135,7 +135,7 @@ export interface UluLightScene {
 }
 
 export function setupUluLight(renderer: THREE.WebGLRenderer, environment: THREE.PMREMGenerator, root: THREE.Object3D) {
-  // Nötr ton eşleme: ACES'in krem duvarı griye, halıyı turuncuya çeken kaymasını yapmaz.
+  // Neutral tone mapping: avoids ACES's shift that pulls the cream wall towards grey and the carpet towards orange.
   renderer.toneMapping = THREE.NeutralToneMapping
   const uUluInner = { value: 0 }
   processArea(root, uUluInner)
@@ -144,7 +144,7 @@ export function setupUluLight(renderer: THREE.WebGLRenderer, environment: THREE.
     outerEnv: outerTarget.texture,
     interiorEnv: innerTarget.texture,
     clear: () => { outerTarget.dispose(); innerTarget.dispose() },
-    /** Dıştaki ana ışıklar: alçak altın güneş, gökten serin dolgu. */
+    /** Main exterior lights: low golden sun, cool fill from the sky. */
     outerLight: (hemi: THREE.HemisphereLight, sun: THREE.DirectionalLight) => {
       hemi.color.set('#e6edf2')
       hemi.groundColor.set('#6f6252')

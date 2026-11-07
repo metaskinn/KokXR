@@ -7,12 +7,12 @@ import './sword.css'
 const instructions = ['Tezgâhtaki külçeyi seç. Ateşe ilk adımı at.', 'Körüğü basılı tut. Çeliğin rengini izle; 750–1150 aralığında örse geç.', 'Namlu boyunca tıkla veya sürükle. Her bölgeyi döverek çeliği uzat.', 'Isının 780–880 aralığına gelmesini bekle. Suya daldır düğmesini basılı tut.', 'Namlu boyunca sürükle. Her bölgeyi bile; aynı yerde fazla kalma.', 'Havada bekleyen parçaları sırayla seç. Her biri yerini bulsun.', 'Çevir, yakınlaş, ayrıntılara bak. Numaralardan parça notlarını aç.', 'Bir hedef seç. Sahnede hızlı bir kesim çizgisi çiz; kılıcını dene.']
 export default function SwordWorkshop() {
   const area = useRef<HTMLDivElement>(null), root = useRef<HTMLElement>(null), scene = useRef<SwordScene | null>(null)
-  const [game, setGame] = useState(firstGame), [ready, setReady] = useState(false), [error, setError] = useState(false), [sound, setSound] = useState(true), [not, setNot] = useState<number | null>(null), [open, setOpen] = useState(true), [xrSupport, setXrSupport] = useState(false), [xrOpen, setXrOpen] = useState(false), [xrError, setXrError] = useState(false)
+  const [game, setGame] = useState(firstGame), [ready, setReady] = useState(false), [error, setError] = useState(false), [sound, setSound] = useState(true), [note, setNote] = useState<number | null>(null), [open, setOpen] = useState(true), [xrSupport, setXrSupport] = useState(false), [xrOpen, setXrOpen] = useState(false), [xrError, setXrError] = useState(false)
   useEffect(() => {
     let cancel = false, local: SwordScene | undefined
     import('./engine/scene').then(async ({ createScene }) => {
       if (cancel || !area.current) return
-      local = await createScene(area.current, d => { if (!cancel) setGame(d) }, () => { if (!cancel) setError(true) }, id => { if (!cancel) setNot(id) }, a => { if (!cancel) setXrOpen(a) })
+      local = await createScene(area.current, d => { if (!cancel) setGame(d) }, () => { if (!cancel) setError(true) }, id => { if (!cancel) setNote(id) }, a => { if (!cancel) setXrOpen(a) })
       if (cancel) { local.clear(); return }
       scene.current = local; setReady(true)
     }).catch(() => { if (!cancel) setError(true) })
@@ -27,14 +27,14 @@ export default function SwordWorkshop() {
     })()
     return () => { cancel = true }
   }, [])
-  const { stage, selected, master } = game, heat = Math.round(average(game, 'heat')), activeNote = not === null ? null : swordPartNotes[not]
+  const { stage, selected, master } = game, heat = Math.round(average(game, 'heat')), activeNote = note === null ? null : swordPartNotes[note]
   const sourced = stage === 3 ? swordStageInfo.water : stage >= 5 ? swordStageInfo.equip : swordStageInfo.ingot
   function vrAc() {
     setXrError(false); setXrOpen(true)
-    // Tarayıcı oturumu yalnız kullanıcı jesti içinde açar: bundan önce await olmamalı.
+    // The browser only opens the session inside a user gesture: no await before this.
     scene.current?.startXr().catch(() => { setXrOpen(false); setXrError(true) })
   }
-  function command(ad: Command) { scene.current?.command(ad); if (ad === 'fromStart') setNot(null) }
+  function command(ad: Command) { scene.current?.command(ad); if (ad === 'fromStart') setNote(null) }
   const hold = (ad: 'bellows' | 'water' | 'wrist') => ({
     onPointerDown: (e: React.PointerEvent<HTMLButtonElement>) => { e.currentTarget.setPointerCapture(e.pointerId); scene.current?.hold(ad, true) },
     onPointerUp: () => scene.current?.hold(ad, false), onPointerCancel: () => scene.current?.hold(ad, false), onLostPointerCapture: () => scene.current?.hold(ad, false),
@@ -70,7 +70,7 @@ export default function SwordWorkshop() {
         </div>
       </aside>
       <div className="sword-footer-label"><span>Ateş · çelik · ustalık</span><span>{stage === 6 ? 'Sürükle: çevir / Tekerlek: yaklaş' : stage === 7 ? 'Sürükle: kesim çiz' : 'Fare, dokunma veya klavye'}</span></div>
-      {activeNote && stage === 6 && <section className="sword-piece-note" role="dialog" aria-label={activeNote.title}><button aria-label="Parça notunu kapat" onClick={() => setNot(null)}>×</button><h3>{activeNote.title}</h3><p>{activeNote.text}</p><small>Kaynak: {swordSources[activeNote.source]}</small></section>}
+      {activeNote && stage === 6 && <section className="sword-piece-note" role="dialog" aria-label={activeNote.title}><button aria-label="Parça notunu kapat" onClick={() => setNote(null)}>×</button><h3>{activeNote.title}</h3><p>{activeNote.text}</p><small>Kaynak: {swordSources[activeNote.source]}</small></section>}
     </div>
     <footer className="sword-honesty"><div><span>Model hakkında</span><strong>{swordIntro.title}</strong><small>{swordIntro.position}</small></div><p>{swordIntro.honesty}</p></footer>
     <details className="sword-keyboard"><summary>Kaynaklar</summary>{Object.values(swordSources).map(k => <p key={k}>{k}</p>)}</details>

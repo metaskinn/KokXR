@@ -5,7 +5,7 @@
 
 .vr-layout-of { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); gap: 1.25rem; align-items: start; }
 
-/* Harita: svg görünümü tuvale tam oturur; işaretler ayrı katmanda, piksel ölçüsünde kalır. */
+/* Map: the svg view fills the canvas exactly; markers live on a separate layer and stay in pixel units. */
 .vr-map-wrapper { min-width: 0; margin: 0; }
 .vr-map { --water: #bcd3d6; position: relative; width: 100%; overflow: clip; border: 1px solid var(--control-stroke); border-radius: var(--card-radius); background: var(--water); user-select: none; touch-action: pan-y; }
 .vr-map[data-tur='sehir'] { min-height: 320px; max-height: 72dvh; cursor: grab; }
@@ -27,7 +27,7 @@
 .vr-map .k-town { fill: #cfc4ae; fill-opacity: 0.85; }
 .vr-map .k-rail { stroke: #5f6f78; stroke-width: 1; stroke-dasharray: 3 2; }
 
-/* Yollar: büyük yol zarfla, küçük yol yakınlaştıkça belirir. */
+/* Roads: major roads have a casing; minor roads appear as you zoom in. */
 .vr-map .k-motorway-z { stroke: #8a5a2e; stroke-width: 3.6; }
 .vr-map .k-motorway { stroke: #e0a765; stroke-width: 2.2; }
 .vr-map .k-main-z { stroke: #9a7c50; stroke-width: 3; }
@@ -48,14 +48,14 @@
 .vr-map .e-peak path { fill: #6c5a3f; stroke: #fbf8f0; stroke-width: 1; }
 .vr-map .e-city circle { fill: #3d4438; }
 
-/* Kayan işaretin gerçek yerine bağı */
+/* Link from a shifted marker to its true location */
 .vr-link { position: absolute; inset: 0; pointer-events: none; }
 .vr-link line { stroke: var(--highlight-dark); stroke-width: 1.2; stroke-opacity: 0.75; }
 .vr-link circle { fill: var(--highlight-dark); stroke: #fff; stroke-width: 1; }
 .vr-link [data-vurgu] line { stroke: var(--bronze); stroke-width: 2; stroke-opacity: 1; }
 .vr-link [data-vurgu] circle { fill: var(--bronze); }
 
-/* İşaret: 44 px dokunma hedefi, ortasında görünür nokta. */
+/* Marker: 44 px touch target with a visible dot in the centre. */
 .vr-markers { position: absolute; inset: 0; pointer-events: none; }
 .vr-marker { position: absolute; display: grid; place-items: center; width: 44px; min-width: 44px; height: 44px; min-height: 44px; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 50%; background: none; box-shadow: none; color: inherit; font-weight: 700; text-decoration: none; pointer-events: auto; cursor: pointer; }
 .vr-marker:hover, .vr-marker:active { background: none; box-shadow: none; }
@@ -73,7 +73,7 @@
 .vr-marker[data-yan='sol'] .vr-marker-ad { right: calc(100% - 4px); }
 .vr-marker[data-vurgu] .vr-marker-ad, .vr-marker:hover .vr-marker-ad, .vr-marker:focus-visible .vr-marker-ad { display: flex; }
 
-/* Türkiye görünümünde şehir: adı hep yazar, nokta boş. */
+/* City in the Türkiye view: name always shown, hollow dot. */
 .vr-city .vr-marker-point { width: 18px; height: 18px; background: var(--bronze); }
 .vr-city .vr-marker-ad { display: flex; border: 0; background: rgb(255 255 255 / 86%); box-shadow: none; padding: 0.1rem 0.35rem; }
 .vr-city[data-kapali] .vr-marker-point { background: #fff; border-color: var(--secondary); }

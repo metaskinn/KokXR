@@ -1,5 +1,5 @@
-// Ulu Camii maketinin dokuları: tamamı tuvalde üretilir, dışarıdan görsel kullanılmaz.
-// Renkler ve örgü düzeni arşiv fotoğraflarına bakılarak yorumlanmıştır; yazı veya hat taklidi çizilmez.
+// Textures of the Ulu Camii model: all generated on canvas; no external images are used.
+// Colors and masonry layout are interpreted from archive photos; no imitation of writing or calligraphy is drawn.
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../shared/config/publicBuild'
 import { innerDomeSetting, domeTexLen, drawLeadFlat, drawLeadDome, drawPendentive } from './ulu-mosque/domes'
@@ -12,12 +12,12 @@ function canvas(g: number, y: number, draw: Draw) {
   el.width = g
   el.height = y
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas is not available')
   draw(c, g, y)
   return el
 }
 
-/** `olcek` metre: dokunun kaç metrede bir tekrarlanacağı (UV'ler metre cinsindendir). */
+/** `scale` in meters: how often the texture repeats (UVs are in meters). */
 function texture(el: HTMLCanvasElement, scale: number, colored = true) {
   const t = new THREE.CanvasTexture(el)
   t.wrapS = t.wrapT = THREE.RepeatWrapping
@@ -45,7 +45,7 @@ interface Weave {
   color: (r: () => number) => string
 }
 
-/** Sıra sıra blok örgüsü: aynı düzenden renk ve kabartma dokusu üretir. */
+/** Coursed block masonry: produces color and relief textures from the same layout. */
 function weave(o: Weave) {
   const layout: { x: number; y: number; g: number; h: number; color: string; tone: number }[] = []
   const r = random(o.seed)
@@ -144,7 +144,7 @@ export function uluMosqueTextures() {
     c.moveTo(0, -b); c.quadraticCurveTo(b * 0.75, -b * 0.15, 0, b); c.quadraticCurveTo(-b * 0.75, -b * 0.15, 0, -b)
     c.closePath(); c.fill(); c.restore()
   }
-  /** Sekiz köşeli yıldızlı geometrik göbek. */
+  /** Geometric medallion with an eight-pointed star. */
   const boss = (c: CanvasRenderingContext2D, x: number, y: number, r: number, outer: string, inner: string) => {
     for (const [o, color] of [[r, outer], [r * 0.62, inner]] as const) {
       c.fillStyle = color
@@ -157,7 +157,7 @@ export function uluMosqueTextures() {
     }
   }
 
-  // Paye yüzü: mermer kaide ve koyu çift çizgi. Yazılar ayrı olarak arşiv fotoğrafından gelir.
+  // Pier face: marble base and dark double line. The inscriptions come separately from an archive photo.
   const pier = canvas(512, 2048, (c, g, y) => {
     const cy = (m: number) => ((13 - m) / 12.3) * y
     c.fillStyle = '#f1e8d6'
@@ -178,8 +178,8 @@ export function uluMosqueTextures() {
 
   const pendentive = canvas(1024, 256, drawPendentive)
 
-  // Fotoğraflardaki gibi yaprak dizili dal kuşağı. Yazı üretmez;
-  // açık yayında özel fotoğrafın yerine kullanılan boyalı bezemedir.
+  // A branch band lined with leaves, as in the photos. It produces no writing;
+  // it is the painted ornament used instead of the private photo in the public build.
   const archBand = canvas(256, 256, (c, g, y) => {
     c.fillStyle = '#dfc899'; c.fillRect(0, 0, g, y)
     for (let row = 0; row < 4; row++) {
@@ -201,7 +201,7 @@ export function uluMosqueTextures() {
     }
   })
 
-  // Pencereden gelen ışık: koyu kafes, sıcak açık boşluklar
+  // Light from the window: dark lattice, warm bright openings
   const glassCage = canvas(128, 128, (c, g, y) => {
     c.fillStyle = '#3d2e22'
     c.fillRect(0, 0, g, y)
@@ -214,8 +214,8 @@ export function uluMosqueTextures() {
     }
   })
 
-  // İç duvar: dokunun yüksekliği duvarın yüksekliğine eşlenir (0–13 m). Fotoğraflarda (ERD05007, ERD05161) sıva
-  // halıya kadar iner; dipte koyu ve aşı boyası çift bant, yukarıda ince bir çizgi vardır, mermer kaide yoktur.
+  // Inner wall: the texture height maps to the wall height (0–13 m). In the photos (ERD05007, ERD05161) the plaster
+  // comes down to the carpet; at the bottom there is a dark and ochre-red double band, a thin line above, and no marble base.
   const innerWall = canvas(64, lightDevice() ? 1024 : 2048, (c, g, y) => {
     const cy = (m: number) => ((13 - m) / 13) * y
     c.fillStyle = '#f2e9d8'
@@ -226,14 +226,14 @@ export function uluMosqueTextures() {
     band(1.35, 1.37, '#a98a4a')
     band(6.72, 6.75, '#3b342c')
     band(6.77, 6.785, '#a98a4a')
-    // Halı kenarındaki temas gölgesi
+    // Contact shadow at the carpet edge
     const dip = c.createLinearGradient(0, cy(1.05), 0, cy(0.7))
     dip.addColorStop(0, 'rgba(70,52,34,0)'); dip.addColorStop(1, 'rgba(70,52,34,0.42)')
     c.fillStyle = dip
     c.fillRect(0, cy(1.05), g, cy(0.7) - cy(1.05))
   })
 
-  // Kündekâri izlenimi: koyu ahşapta yıldız ağı. Gerçek minberin deseninin kopyası değildir.
+  // Kündekâri impression: star network in dark wood. It is not a copy of the real minbar's pattern.
   const kundekari = canvas(256, 256, (c, g, y) => {
     c.fillStyle = '#1b100a'
     c.fillRect(0, 0, g, y)
@@ -251,7 +251,7 @@ export function uluMosqueTextures() {
     for (let x = 17; x < g; x += 32) c.fillRect(x - 2, 56, 4, 16)
   })
 
-  // Mihrap yüzeyleri: bitkisel kıvrımlar ve geometrik dizi; yazı içermez
+  // Mihrab surfaces: floral scrolls and a geometric sequence; contains no writing
   const ornament = canvas(512, 512, (c, g, y) => {
     c.fillStyle = '#5a2019'
     c.fillRect(0, 0, g, y)
@@ -291,7 +291,7 @@ export function uluMosqueTextures() {
     for (let v = 0; v < y; v += 32) c.fillRect(0, v, g, 6)
   })
 
-  const cam = canvas(512, 256, (c, g, y) => {
+  const glassCanvas = canvas(512, 256, (c, g, y) => {
     c.fillStyle = 'rgba(150,190,205,0.32)'
     c.fillRect(0, 0, g, y)
     c.strokeStyle = 'rgba(30,38,42,0.95)'
@@ -313,8 +313,8 @@ export function uluMosqueTextures() {
     }
   }
 
-  // Kâbe kapısının örtüsü: siyah dokuma, burgulu bordür, işlemeleri dökülmüş altın kemer ve göbekler.
-  // Yazı içermez; gerçek ayet işlemeleri taklit edilmez.
+  // Cover of the Kaaba door: black weave, twisted border, gold arch and medallions with worn-off embroidery.
+  // Contains no writing; the real verse embroidery is not imitated.
   const kaabaCover = canvas(1024, 1332, (c, g, y) => {
     const r = random(131)
     c.fillStyle = '#0d0c0b'
@@ -323,7 +323,7 @@ export function uluMosqueTextures() {
       c.fillStyle = `rgba(255,255,255,${0.012 + r() * 0.022})`
       c.fillRect(0, v, g, 1)
     }
-    // Burgulu bordür
+    // Twisted border
     const b = 78
     c.strokeStyle = '#a08a5e'; c.lineWidth = 3
     c.strokeRect(b, b, g - b * 2, y - b * 2)
@@ -338,18 +338,18 @@ export function uluMosqueTextures() {
     }
     for (let x = b / 2 + 10; x < g - 30; x += 40) { twist(x, 44, 0); twist(x, y - 44, 0) }
     for (let v = b + 34; v < y - b - 10; v += 40) { twist(44, v, Math.PI / 2); twist(g - 44, v, Math.PI / 2) }
-    // İç işleme: iç içe sivri kemer, baklava ağı, köşe göbekleri
+    // Inner embroidery: nested pointed arches, lozenge net, corner medallions
     const gold = '#c79d4d'
-    const drawArch = (o: number, alt: number, top: number) => {
+    const drawArch = (o: number, bottom: number, top: number) => {
       c.beginPath()
-      c.moveTo(g / 2 - o, alt); c.lineTo(g / 2 - o, top + o * 1.05)
+      c.moveTo(g / 2 - o, bottom); c.lineTo(g / 2 - o, top + o * 1.05)
       c.quadraticCurveTo(g / 2 - o, top + o * 0.3, g / 2, top)
       c.quadraticCurveTo(g / 2 + o, top + o * 0.3, g / 2 + o, top + o * 1.05)
-      c.lineTo(g / 2 + o, alt)
+      c.lineTo(g / 2 + o, bottom)
     }
-    const alt = y - 190, top = 190
+    const bottom = y - 190, top = 190
     c.save()
-    drawArch(300, alt, top + 40); c.closePath(); c.clip()
+    drawArch(300, bottom, top + 40); c.closePath(); c.clip()
     c.strokeStyle = 'rgba(199,157,77,0.55)'; c.lineWidth = 2
     for (let i = -y; i < y; i += 64) {
       c.beginPath(); c.moveTo(0, i); c.lineTo(g, i + g * 0.6); c.stroke()
@@ -359,14 +359,14 @@ export function uluMosqueTextures() {
     for (let a = 0; a < 9; a++) for (let e = 0; e < 13; e++) leaf(c, 130 + a * 95 + (e % 2) * 47, 180 + e * 80, 11, (a + e) * 0.7)
     c.restore()
     c.strokeStyle = gold
-    for (const [o, l, u] of [[300, 6, 40], [335, 3, 0], [355, 2, -24]] as const) { c.lineWidth = l; drawArch(o, alt, top + u); c.stroke() }
+    for (const [o, l, u] of [[300, 6, 40], [335, 3, 0], [355, 2, -24]] as const) { c.lineWidth = l; drawArch(o, bottom, top + u); c.stroke() }
     c.lineWidth = 6
-    c.beginPath(); c.moveTo(g / 2 - 355, alt); c.lineTo(g / 2 + 355, alt); c.stroke()
-    for (let x = g / 2 - 320; x <= g / 2 + 320; x += 80) boss(c, x, alt + 48, 26, gold, '#2a1f10')
+    c.beginPath(); c.moveTo(g / 2 - 355, bottom); c.lineTo(g / 2 + 355, bottom); c.stroke()
+    for (let x = g / 2 - 320; x <= g / 2 + 320; x += 80) boss(c, x, bottom + 48, 26, gold, '#2a1f10')
     for (const [x, v] of [[170, 190], [g - 170, 190]] as const) { boss(c, x, v, 62, gold, '#14100b'); boss(c, x, v, 24, gold, '#14100b') }
-    boss(c, g / 2, (alt + top) / 2 + 40, 118, gold, '#14100b')
-    boss(c, g / 2, (alt + top) / 2 + 40, 54, gold, '#14100b')
-    // Dökülmüş işlemeler: altının üzerine düzensiz koyu yamalar
+    boss(c, g / 2, (bottom + top) / 2 + 40, 118, gold, '#14100b')
+    boss(c, g / 2, (bottom + top) / 2 + 40, 54, gold, '#14100b')
+    // Worn embroidery: irregular dark patches over the gold
     for (let i = 0; i < 520; i++) {
       const x = 90 + r() * (g - 180), v = 90 + r() * (y - 180), a = 6 + r() * r() * 70
       c.fillStyle = `rgba(13,12,11,${0.25 + r() * 0.6})`
@@ -374,14 +374,14 @@ export function uluMosqueTextures() {
     }
   })
 
-  // Lamba halesi: görüntü işleme kapalıyken ve VR'da da parıltı verir.
+  // Lamp halo: gives a glow even with post-processing off and in VR.
   const halo = canvas(128, 128, (c, g, y) => {
     const z = c.createRadialGradient(g / 2, y / 2, 0, g / 2, y / 2, g / 2)
     z.addColorStop(0, 'rgba(255,240,210,1)'); z.addColorStop(0.16, 'rgba(255,214,150,0.55)'); z.addColorStop(0.5, 'rgba(255,190,110,0.12)'); z.addColorStop(1, 'rgba(255,180,100,0)')
     c.fillStyle = '#000'; c.fillRect(0, 0, g, y)
     c.fillStyle = z; c.fillRect(0, 0, g, y)
   })
-  // Şadırvan kubbesinden inen ışık: yukarıda parlak, aşağıda sönen, hafif çizgili.
+  // Light coming down from the şadırvan dome: bright at the top, fading at the bottom, slightly streaked.
   const lightColumn = canvas(256, 256, (c, g, y) => {
     const r = random(151)
     const z = c.createLinearGradient(0, 0, 0, y)
@@ -393,7 +393,7 @@ export function uluMosqueTextures() {
 
   const domeTex = texture(canvas(domeTexLen(), domeTexLen() / 2, drawLeadDome(false)), 1)
   const domeRelief = texture(canvas(domeTexLen() / 2, domeTexLen() / 4, drawLeadDome(true)), 1, false)
-  const glassTex = texture(cam, 1)
+  const glassTex = texture(glassCanvas, 1)
   const innerWallTex = texture(innerWall, 1)
   innerWallTex.repeat.set(0.25, 1 / 13)
   const woodLatticeTex = texture(woodLattice, 1)
@@ -426,98 +426,98 @@ export function uluMosqueTextures() {
     mihrabBlue: texture(mihrabBlue, 0.9),
     mihrabGreen: texture(mihrabGreen, 0.42),
     mihrabRed: texture(mihrabRed, 0.9),
-    cam: glassTex,
+    glass: glassTex,
     halo: texture(halo, 1),
     lightColumn: texture(lightColumn, 1),
   }
 }
 
 const AGE_COMMON = `
-varying vec3 vYasPoz;
-float yasKarma(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
-float yasGurultu(vec2 p) {
+varying vec3 vAgePos;
+float ageHash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+float ageNoise(vec2 p) {
   vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
-  return mix(mix(yasKarma(i), yasKarma(i + vec2(1, 0)), f.x), mix(yasKarma(i + vec2(0, 1)), yasKarma(i + vec2(1, 1)), f.x), f.y);
+  return mix(mix(ageHash(i), ageHash(i + vec2(1, 0)), f.x), mix(ageHash(i + vec2(0, 1)), ageHash(i + vec2(1, 1)), f.x), f.y);
 }
-float yasFbm(vec2 p) {
+float ageFbm(vec2 p) {
   float t = 0.0, a = 0.5;
-  for (int i = 0; i < 4; i++) { t += a * yasGurultu(p); p = p * 2.03 + 17.0; a *= 0.5; }
+  for (int i = 0; i < 4; i++) { t += a * ageNoise(p); p = p * 2.03 + 17.0; a *= 0.5; }
   return t;
 }`
 
-// Zemin için ortak: en yakın paye köşesi, duvar uzaklığı ve göz ortasındaki avizenin düşürdüğü ışık.
-const FLOOR_LIGHT = `vec2 goz = vec2(13.8, 13.75), kayma = vec2(34.5, 27.5), p = vYasPoz.xz;
-    vec2 kose = floor((p + kayma) / goz + 0.5) * goz - kayma;
-    float paye = length(max(abs(p - kose) - vec2(1.62), vec2(0.0)));
-    vec2 merkez = (floor((p + kayma) / goz) + 0.5) * goz - kayma;
-    float havuz = exp(-dot(p - merkez, p - merkez) / 22.0);
-    float duvar = min(32.5 - abs(p.x), 25.5 - abs(p.y));
-    float golge = mix(0.64, 1.0, smoothstep(0.0, 2.4, paye)) * mix(0.72, 1.0, smoothstep(0.0, 2.0, duvar));`
+// Shared for the floor: nearest pier corner, wall distance and the light cast by the chandelier at the bay center.
+const FLOOR_LIGHT = `vec2 bay = vec2(13.8, 13.75), bayOffset = vec2(34.5, 27.5), p = vAgePos.xz;
+    vec2 corner = floor((p + bayOffset) / bay + 0.5) * bay - bayOffset;
+    float pier = length(max(abs(p - corner) - vec2(1.62), vec2(0.0)));
+    vec2 center = (floor((p + bayOffset) / bay) + 0.5) * bay - bayOffset;
+    float pool = exp(-dot(p - center, p - center) / 22.0);
+    float wall = min(32.5 - abs(p.x), 25.5 - abs(p.y));
+    float shade = mix(0.64, 1.0, smoothstep(0.0, 2.4, pier)) * mix(0.72, 1.0, smoothstep(0.0, 2.0, wall));`
 
-/** Parça koordinatına bağlı yaşlanma: katmanlar kalksa da leke yerinde kalır. */
+/** Aging tied to piece coordinates: stains stay in place even when layers are lifted. */
 const AGE_KINDS = {
-  // Duvar: saçaktan süzülen yağmur izi, zemine yakın kir, geniş ton farkı
-  wall: `float u = vYasPoz.x + vYasPoz.z;
-    float leke = yasFbm(vec2(u * 0.16, vYasPoz.y * 0.11));
-    float cizgi = yasFbm(vec2(u * 1.5, vYasPoz.y * 0.05));
-    float sacak = smoothstep(6.5, 13.0, vYasPoz.y) * smoothstep(0.42, 0.72, cizgi);
-    float taban = 1.0 - smoothstep(0.2, 2.8, vYasPoz.y);
-    diffuseColor.rgb *= mix(1.0, 0.66, sacak * 0.6) * mix(1.0, 0.62, taban * 0.7) * (0.88 + 0.24 * leke);`,
-  marble: `float u = vYasPoz.x + vYasPoz.z;
-    float cizgi = yasFbm(vec2(u * 1.2, vYasPoz.y * 0.06));
-    float taban = 1.0 - smoothstep(0.1, 1.8, vYasPoz.y);
-    diffuseColor.rgb *= mix(1.0, 0.8, taban * 0.6) * (0.92 + 0.14 * cizgi);`,
-  // Kurşun döşeme: dağınık oksit lekeleri
-  lead: `float leke = yasFbm(vYasPoz.xz * 0.28);
-    diffuseColor.rgb *= vec3(0.97, 1.0, 1.03) * (0.78 + 0.34 * leke);`,
-  // Kubbe: her gözde farklı ton, tepeden eteğe süzülen izler
-  dome: `vec2 goz = vec2(13.8, 13.75), kayma = vec2(34.5, 27.5);
-    vec2 kimlik = floor((vYasPoz.xz + kayma) / goz);
-    vec2 merkez = (kimlik + 0.5) * goz - kayma;
-    float aci = atan(vYasPoz.x - merkez.x, vYasPoz.z - merkez.y);
-    float iz = yasFbm(vec2(aci * 5.0, vYasPoz.y * 0.22) + kimlik * 7.0);
-    float ton = 0.9 + 0.2 * yasKarma(kimlik);
-    diffuseColor.rgb *= vec3(0.95, 1.0, 1.05) * ton * (0.78 + 0.38 * iz);`,
-  plaster: `float leke = yasFbm(vec2((vYasPoz.x + vYasPoz.z) * 0.9, vYasPoz.y * 0.35));
-    diffuseColor.rgb *= 0.84 + 0.26 * leke;`,
-  brick: `float leke = yasFbm(vec2(atan(vYasPoz.x, vYasPoz.z) * 3.0, vYasPoz.y * 0.28));
-    diffuseColor.rgb *= 0.8 + 0.34 * leke;`,
-  paving: `float leke = yasFbm(vYasPoz.xz * 0.12);
-    diffuseColor.rgb *= 0.8 + 0.34 * leke;`,
-  // Halı: paye ve duvar diplerinde temas gölgesi, avize altında sıcak ışık havuzu, ayak izi solması
+  // Wall: rain streaks dripping from the eaves, dirt near the ground, broad tone variation
+  wall: `float u = vAgePos.x + vAgePos.z;
+    float stain = ageFbm(vec2(u * 0.16, vAgePos.y * 0.11));
+    float streak = ageFbm(vec2(u * 1.5, vAgePos.y * 0.05));
+    float eave = smoothstep(6.5, 13.0, vAgePos.y) * smoothstep(0.42, 0.72, streak);
+    float base = 1.0 - smoothstep(0.2, 2.8, vAgePos.y);
+    diffuseColor.rgb *= mix(1.0, 0.66, eave * 0.6) * mix(1.0, 0.62, base * 0.7) * (0.88 + 0.24 * stain);`,
+  marble: `float u = vAgePos.x + vAgePos.z;
+    float streak = ageFbm(vec2(u * 1.2, vAgePos.y * 0.06));
+    float base = 1.0 - smoothstep(0.1, 1.8, vAgePos.y);
+    diffuseColor.rgb *= mix(1.0, 0.8, base * 0.6) * (0.92 + 0.14 * streak);`,
+  // Lead roofing: scattered oxide stains
+  lead: `float stain = ageFbm(vAgePos.xz * 0.28);
+    diffuseColor.rgb *= vec3(0.97, 1.0, 1.03) * (0.78 + 0.34 * stain);`,
+  // Dome: a different tone per bay, streaks running from the crown to the skirt
+  dome: `vec2 bay = vec2(13.8, 13.75), bayOffset = vec2(34.5, 27.5);
+    vec2 cellId = floor((vAgePos.xz + bayOffset) / bay);
+    vec2 center = (cellId + 0.5) * bay - bayOffset;
+    float angle = atan(vAgePos.x - center.x, vAgePos.z - center.y);
+    float trace = ageFbm(vec2(angle * 5.0, vAgePos.y * 0.22) + cellId * 7.0);
+    float tone = 0.9 + 0.2 * ageHash(cellId);
+    diffuseColor.rgb *= vec3(0.95, 1.0, 1.05) * tone * (0.78 + 0.38 * trace);`,
+  plaster: `float stain = ageFbm(vec2((vAgePos.x + vAgePos.z) * 0.9, vAgePos.y * 0.35));
+    diffuseColor.rgb *= 0.84 + 0.26 * stain;`,
+  brick: `float stain = ageFbm(vec2(atan(vAgePos.x, vAgePos.z) * 3.0, vAgePos.y * 0.28));
+    diffuseColor.rgb *= 0.8 + 0.34 * stain;`,
+  paving: `float stain = ageFbm(vAgePos.xz * 0.12);
+    diffuseColor.rgb *= 0.8 + 0.34 * stain;`,
+  // Carpet: contact shadow at pier and wall bases, warm pool of light under the chandelier, footstep fading
   carpet: `${FLOOR_LIGHT}
-    float genis = yasFbm(p * 0.28);
-    float asinma = smoothstep(0.52, 0.74, yasFbm(p * 0.55 + 9.0));
-    vec3 solgun = mix(diffuseColor.rgb, vec3(dot(diffuseColor.rgb, vec3(0.33))), 0.3) * 1.1;
-    diffuseColor.rgb = mix(diffuseColor.rgb, solgun, asinma * 0.4);
-    diffuseColor.rgb *= golge * (0.92 + 0.16 * genis) * (0.9 + vec3(0.42, 0.36, 0.26) * havuz);`,
-  // Hafif sürüm: gürültüsüz; yalnız temas gölgesi ve ışık havuzu
+    float broad = ageFbm(p * 0.28);
+    float wear = smoothstep(0.52, 0.74, ageFbm(p * 0.55 + 9.0));
+    vec3 faded = mix(diffuseColor.rgb, vec3(dot(diffuseColor.rgb, vec3(0.33))), 0.3) * 1.1;
+    diffuseColor.rgb = mix(diffuseColor.rgb, faded, wear * 0.4);
+    diffuseColor.rgb *= shade * (0.92 + 0.16 * broad) * (0.9 + vec3(0.42, 0.36, 0.26) * pool);`,
+  // Lite version: no noise; only the contact shadow and the light pool
   floorLight: `${FLOOR_LIGHT}
-    diffuseColor.rgb *= golge * (0.9 + vec3(0.42, 0.36, 0.26) * havuz);`,
+    diffuseColor.rgb *= shade * (0.9 + vec3(0.42, 0.36, 0.26) * pool);`,
   marblePaving: `${FLOOR_LIGHT}
-    diffuseColor.rgb *= golge * (0.94 + 0.12 * yasFbm(p * 0.7));`,
-  // Boyalı sıva: geniş bulutlanma, ince fırça farkı, zemine yakın kir
-  innerPlaster: `float u = vYasPoz.x + vYasPoz.z;
-    float leke = yasFbm(vec2(u * 0.35, vYasPoz.y * 0.22));
-    float ince = yasFbm(vec2(u * 2.2, vYasPoz.y * 1.6));
-    float taban = 1.0 - smoothstep(0.7, 1.9, vYasPoz.y);
-    diffuseColor.rgb *= (0.93 + 0.12 * leke) * (0.975 + 0.05 * ince) * mix(1.0, 0.84, taban);`,
+    diffuseColor.rgb *= shade * (0.94 + 0.12 * ageFbm(p * 0.7));`,
+  // Painted plaster: broad clouding, fine brush variation, dirt near the ground
+  innerPlaster: `float u = vAgePos.x + vAgePos.z;
+    float stain = ageFbm(vec2(u * 0.35, vAgePos.y * 0.22));
+    float fine = ageFbm(vec2(u * 2.2, vAgePos.y * 1.6));
+    float base = 1.0 - smoothstep(0.7, 1.9, vAgePos.y);
+    diffuseColor.rgb *= (0.93 + 0.12 * stain) * (0.975 + 0.05 * fine) * mix(1.0, 0.84, base);`,
 } as const
 
-function age<M extends THREE.MeshStandardMaterial>(material: M, tour: keyof typeof AGE_KINDS) {
+function age<M extends THREE.MeshStandardMaterial>(material: M, kind: keyof typeof AGE_KINDS) {
   material.onBeforeCompile = (s) => {
     s.vertexShader = s.vertexShader
-      .replace('#include <common>', '#include <common>\nvarying vec3 vYasPoz;')
-      .replace('#include <begin_vertex>', '#include <begin_vertex>\nvYasPoz = position;')
+      .replace('#include <common>', '#include <common>\nvarying vec3 vAgePos;')
+      .replace('#include <begin_vertex>', '#include <begin_vertex>\nvAgePos = position;')
     s.fragmentShader = s.fragmentShader
       .replace('#include <common>', `#include <common>\n${AGE_COMMON}`)
-      .replace('#include <map_fragment>', `#include <map_fragment>\n{ ${AGE_KINDS[tour]} }`)
+      .replace('#include <map_fragment>', `#include <map_fragment>\n{ ${AGE_KINDS[kind]} }`)
   }
-  material.customProgramCacheKey = () => `age-${tour}`
+  material.customProgramCacheKey = () => `age-${kind}`
   return material
 }
 
-/** İç pencere atlası: fotoğrafın ışığı dokuda olduğu için kısmen kendinden aydınlık; tepeliğin kenarı alfa ile kesilir. */
+/** Inner window atlas: partly self-lit since the photo's light is in the texture; the crest edge is cut with alpha. */
 function innerWindowMaterial(map: THREE.Texture | null) {
   return new THREE.MeshStandardMaterial({ map, emissive: map ? '#ffffff' : '#000000', emissiveMap: map, emissiveIntensity: 0.5, color: map ? '#ffffff' : '#e7dcc4', roughness: 0.85, alphaTest: 0.5, side: THREE.DoubleSide })
 }
@@ -526,19 +526,19 @@ export function uluMosqueMaterials() {
   const d = uluMosqueTextures()
   const pbr = (p: THREE.MeshStandardMaterialParameters) => new THREE.MeshStandardMaterial({ roughness: 0.85, metalness: 0, ...p })
   const loader = new THREE.TextureLoader()
-  const photoTexture = (ad: string) => {
+  const photoTexture = (file: string) => {
     if (PUBLIC_BUILD) return null
-    const f = loader.load(`/images/ulu-mosque/model/${ad.includes('.') ? ad : `${ad}.jpg`}`)
+    const f = loader.load(`/images/ulu-mosque/model/${file.includes('.') ? file : `${file}.jpg`}`)
     f.colorSpace = THREE.SRGBColorSpace
     f.anisotropy = 8
     return f
   }
   const lite = lightDevice()
-  // Halı havı: sheen, bakış açısına göre kadife parlaklığı verir.
+  // Carpet pile: sheen gives a velvet gloss depending on the view angle.
   const pile = (color: string, glow: string) => age(lite
     ? pbr({ map: d.carpet.color, normalMap: d.carpet.normal, normalScale: new THREE.Vector2(0.75, 0.75), color: color, roughness: 0.96 })
     : new THREE.MeshPhysicalMaterial({ map: d.carpet.color, normalMap: d.carpet.normal, normalScale: new THREE.Vector2(0.75, 0.75), color: color, roughness: 0.96, sheen: 0.28, sheenRoughness: 0.8, sheenColor: new THREE.Color(glow) }), lite ? 'floorLight' : 'carpet')
-  // Cila: masaüstünde ayrı parlak katman, hafif cihazda yalnız düşük pürüzlülük.
+  // Varnish: a separate glossy layer on desktop, only low roughness on lite devices.
   const polished = (p: THREE.MeshStandardMaterialParameters, varnish: number, varnishRough: number) => lite ? pbr(p) : new THREE.MeshPhysicalMaterial({ ...p, clearcoat: varnish, clearcoatRoughness: varnishRough })
   const plaster = <M extends THREE.MeshStandardMaterial>(m: M) => lite ? m : age(m, 'innerPlaster')
   const light = (map: THREE.Texture) => new THREE.MeshBasicMaterial({ map, color: new THREE.Color(1.5, 1.4, 1.25), side: THREE.DoubleSide })
@@ -556,7 +556,7 @@ export function uluMosqueMaterials() {
     plaster: age(pbr({ map: d.plaster, roughness: 0.9, side: THREE.DoubleSide }), 'plaster'),
     cage: pbr({ map: d.cage, roughness: 0.75, side: THREE.DoubleSide }),
     carpet: pile('#d9a39b', '#ecc2b6'),
-    // Ulu Camii göz düzeni gölgesi içermez; başka yapılarda bunu kullan.
+    // Contains no Ulu Camii bay-layout shading; use this for other buildings.
     carpetPlain: pbr({ map: d.carpet.color, normalMap: d.carpet.normal, normalScale: new THREE.Vector2(0.75, 0.75), color: '#c9877c', roughness: 0.96 }),
     carpetOlive: pile('#a29b63', '#c9c188'),
     marblePaving: age(polished({ map: d.marblePaving.color, bumpMap: d.marblePaving.relief, bumpScale: 0.4, roughness: 0.34 }, 0.55, 0.14), lite ? 'floorLight' : 'marblePaving'),
@@ -580,7 +580,7 @@ export function uluMosqueMaterials() {
     goldDark: pbr({ color: '#a97f2e', metalness: 0.6, roughness: 0.42, side: THREE.DoubleSide }),
     bronze: pbr({ color: '#6f5a35', metalness: 0.75, roughness: 0.4, side: THREE.DoubleSide }),
     water: polished({ color: '#5fb3b5', normalMap: d.waterNormalOf, normalScale: new THREE.Vector2(0.28, 0.28), roughness: 0.16 }, 1, 0.08),
-    cam: new THREE.MeshStandardMaterial({ map: d.cam, transparent: true, depthWrite: false, roughness: 0.15, metalness: 0.3, side: THREE.DoubleSide }),
+    glass: new THREE.MeshStandardMaterial({ map: d.glass, transparent: true, depthWrite: false, roughness: 0.15, metalness: 0.3, side: THREE.DoubleSide }),
     cream: pbr({ color: '#e7dcc4', roughness: 0.8, side: THREE.DoubleSide }),
     glassCage: light(d.glassCage),
     windowInner: innerWindowMaterial(photoTexture('interior-window.webp')),

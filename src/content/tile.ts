@@ -1,4 +1,4 @@
-// Çini atölyesi metinleri. Süreç bilgileri yalnızca aşağıdaki kaynaklardan alınır (docs/cini-atolyesi.md).
+// Tile workshop texts. Process information is taken only from the sources below (docs/tile-workshop.md).
 export const tileSources = {
   ministry: 'T.C. Kültür ve Turizm Bakanlığı, Yaşayan Kültür Mirası: "Geleneksel Çini Ustalığı" (yakegm.ktb.gov.tr)',
   workshop: 'İstanbulumSanat, "Çini Nasıl Yapılır, Çini Yapım Aşamaları Nelerdir?" (atölye anlatımı, 2020)',

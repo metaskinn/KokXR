@@ -1,7 +1,7 @@
 import * as T from 'three'
 import type { Region } from './state'
 const s = (p: number) => p * p * (3 - 2 * p)
-// Bitmiş namluda ağzın yerel yüksekliği ve X konumu: bilemede taşa tam temas için (scripts/kilic_uret.py ile aynı biçim).
+// Local height and X position of the edge on the finished blade: for full stone contact while grinding (same shape as scripts/sword_generate.py).
 export function mouthLocal(u: number) {
   let ga = .028 - .0065 * u
   if (u > .8) ga *= (1 - ((u - .8) / .2) ** 2.2) ** .9
@@ -10,7 +10,7 @@ export function mouthLocal(u: number) {
 export function prepareBlade(mesh: T.Mesh) {
   const g = mesh.geometry = mesh.geometry.clone()
   const pos = g.getAttribute('position'), norm = g.getAttribute('normal'), uv = g.getAttribute('uv1')
-  if (!uv) throw new Error('Namlunun bölge verisi bulunamadı.')
+  if (!uv) throw new Error('Blade region data not found.')
   const last = Float32Array.from(pos.array), normal = Float32Array.from(norm.array)
   const heat = new T.BufferAttribute(new Float32Array(pos.count), 1), shell = heat.clone(), skin = heat.clone()
   g.setAttribute('aHeat', heat); g.setAttribute('aShell', shell); g.setAttribute('aSkin', skin)
@@ -18,18 +18,18 @@ export function prepareBlade(mesh: T.Mesh) {
   const mat = (mesh.material as T.MeshStandardMaterial).clone(); mesh.material = mat
   mat.metalness = .85; mat.roughness = .48
   mat.onBeforeCompile = shader => {
-    shader.vertexShader = 'attribute float aIsi; attribute float aKabuk; attribute float aCilt; varying vec3 vIslem;\n' + shader.vertexShader
-    shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\nvIslem=vec3(aIsi,aKabuk,aCilt);')
-    shader.fragmentShader = 'varying vec3 vIslem;\n' + shader.fragmentShader
+    shader.vertexShader = 'attribute float aHeat; attribute float aShell; attribute float aSkin; varying vec3 vProcess;\n' + shader.vertexShader
+    shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\nvProcess=vec3(aHeat,aShell,aSkin);')
+    shader.fragmentShader = 'varying vec3 vProcess;\n' + shader.fragmentShader
     shader.fragmentShader = shader.fragmentShader.replace('#include <color_fragment>', `#include <color_fragment>
       float noiseScale = .75 + .25*sin(vViewPosition.x*920.)*sin(vViewPosition.y*840.);
-      diffuseColor.rgb *= mix(1., .14 * noiseScale, vIslem.y);`)
-    shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', '#include <roughnessmap_fragment>\nroughnessFactor = clamp(roughnessFactor + vIslem.y*.4 - vIslem.z*.35,.12,1.);')
-    shader.fragmentShader = shader.fragmentShader.replace('#include <metalnessmap_fragment>', '#include <metalnessmap_fragment>\nmetalnessFactor *= 1.-vIslem.y*.7;')
+      diffuseColor.rgb *= mix(1., .14 * noiseScale, vProcess.y);`)
+    shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', '#include <roughnessmap_fragment>\nroughnessFactor = clamp(roughnessFactor + vProcess.y*.4 - vProcess.z*.35,.12,1.);')
+    shader.fragmentShader = shader.fragmentShader.replace('#include <metalnessmap_fragment>', '#include <metalnessmap_fragment>\nmetalnessFactor *= 1.-vProcess.y*.7;')
     shader.fragmentShader = shader.fragmentShader.replace('#include <emissivemap_fragment>', `#include <emissivemap_fragment>
-      float heat = smoothstep(450.,1200.,vIslem.x);
-      vec3 hot = mix(vec3(.55,.008,.001),vec3(1.,.18,.008),smoothstep(500.,850.,vIslem.x));
-      hot=mix(hot,vec3(1.,.76,.3),smoothstep(850.,1150.,vIslem.x));
+      float heat = smoothstep(450.,1200.,vProcess.x);
+      vec3 hot = mix(vec3(.55,.008,.001),vec3(1.,.18,.008),smoothstep(500.,850.,vProcess.x));
+      hot=mix(hot,vec3(1.,.76,.3),smoothstep(850.,1150.,vProcess.x));
       totalEmissiveRadiance += hot*heat*3.;`)
   }
   const n = new T.Vector3(), nFinal = new T.Vector3()

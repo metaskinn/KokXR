@@ -1,8 +1,8 @@
-// Orhan Bey Külliyesi maketinin yapı yardımcıları: yönlü duvar, sivri kemer dizisi, kurşun kubbe, kirpi saçak.
+// Building helpers for the Orhan Bey Complex model: oriented wall, pointed-arch row, lead dome, saw-tooth (kirpi) eave.
 import * as THREE from 'three'
 import { Bucket, type Mat, subtract, rect, rotateG, flatShadow, arch, boxG, cylinderG, uvFit, place } from '../../uluMosquePiece'
 
-/** Geometriyi kovaya koymadan önce yapının yerine kaydırır; her yapı kendi yerel ölçüleriyle çizilir. */
+/** Moves geometry to the building's position before adding it to the bucket; each building is drawn in its own local dimensions. */
 export class LocalBucket extends Bucket {
   x = 0
   z = 0
@@ -15,7 +15,7 @@ export class LocalBucket extends Bucket {
 export type Dir = 'K' | 'G' | 'D' | 'B'
 export interface Open { p: number; y0: number; g: number; flat: number; kh: number }
 
-/** Yerel +z dışa bakar. Yerel x ekseni K ve D'de dünya ekseninin tersidir. */
+/** Local +z faces outward. Local x axis is opposite to the world axis for N and E. */
 function marker(dir: Dir) { return dir === 'K' || dir === 'D' ? -1 : 1 }
 
 export function orient<G extends THREE.BufferGeometry>(g: G, dir: Dir, fixed: number, center: number) {
@@ -25,7 +25,7 @@ export function orient<G extends THREE.BufferGeometry>(g: G, dir: Dir, fixed: nu
   return place(g, fixed, 0, center, -Math.PI / 2)
 }
 
-/** `sabit`: dış yüzün ekseni; `a..b`: duvar boyunca aralık. Duvar `t` kalınlığında içe doğru çıkar. */
+/** `fixed`: axis of the outer face; `a..b`: range along the wall. The wall extends `t` thick inward. */
 export function wall(kv: Bucket, dir: Dir, fixed: number, a: number, b: number, y0: number, y1: number, t: number, mat: Mat, open: Open[] = []) {
   const m = (a + b) / 2, L = Math.abs(b - a), s = marker(dir)
   const shape = rect(-L / 2, y0, L / 2, y1)
@@ -33,13 +33,13 @@ export function wall(kv: Bucket, dir: Dir, fixed: number, a: number, b: number, 
   kv.add(orient(subtract(shape, t, -t), dir, fixed, m), mat)
 }
 
-/** Kemer şekilli düzlem: pencere camı, şebeke, kapı yüzü. `derin`: dış yüzden içeri uzaklık. */
+/** Arch-shaped plane: window glass, grille, door face. `deep`: distance inward from the outer face. */
 export function archPlane(kv: Bucket, dir: Dir, fixed: number, o: Open, deep: number, mat: Mat) {
   const g = uvFit(new THREE.ShapeGeometry(arch(new THREE.Shape(), 0, o.y0, o.g, o.flat, o.kh), 10))
   kv.add(orient(g.translate(0, 0, -deep), dir, fixed, o.p), mat)
 }
 
-/** Kemer eğrisi üzerinde örnekler: kemer() ile aynı ikinci derece eğri. */
+/** Samples on the arch curve: the same quadratic curve as arch(). */
 function archPoints(o: number, y: number, kh: number, n: number) {
   const point: [number, number, number, number][] = []
   for (let i = 0; i <= n; i++) {
@@ -54,7 +54,7 @@ function archPoints(o: number, y: number, kh: number, n: number) {
   return point
 }
 
-/** Taş ve tuğlanın sırayla dizildiği kemer yüzü; yüzeyden `cik` kadar dışarı taşar. */
+/** Arch face of alternating stone and brick; protrudes `exit` beyond the surface. */
 export function archStones(kv: Bucket, dir: Dir, fixed: number, ac: Open, en: number, exit: number, stone: Mat, brick: Mat, count = 11) {
   const o = ac.g / 2, y = ac.y0 + ac.flat, point = archPoints(o, y, ac.kh, count)
   for (const side of [-1, 1]) for (let i = 0; i < count; i++) {
@@ -67,14 +67,14 @@ export function archStones(kv: Bucket, dir: Dir, fixed: number, ac: Open, en: nu
     if (side > 0) b.scale(-1, 1, 1).computeVertexNormals()
     kv.add(orient(b, dir, fixed, ac.p), i % 2 ? brick : stone)
   }
-  // Kemer ayakları: yere inen dar şerit
+  // Arch legs: narrow strip down to the ground
   for (const side of [-1, 1]) {
     const b = boxG(en, Math.max(0.01, ac.flat), exit).translate(side * (o + en / 2), ac.y0 + ac.flat / 2, exit / 2)
     kv.add(orient(b, dir, fixed, ac.p), stone)
   }
 }
 
-/** Saçak boyunca iki sıra testere dişi tuğla (kirpi saçak) ve üstte silme. */
+/** Two rows of saw-tooth bricks along the eave (kirpi eave) and a molding on top. */
 export function dentilEave(kv: Bucket, dir: Dir, fixed: number, a: number, b: number, y: number, brick: Mat, top: Mat) {
   const m = (a + b) / 2, L = Math.abs(b - a), step = 0.32
   const count = Math.floor(L / step)
@@ -86,7 +86,7 @@ export function dentilEave(kv: Bucket, dir: Dir, fixed: number, a: number, b: nu
   kv.add(orient(boxG(L + 0.1, 0.1, 0.32).translate(0, y - 0.1, 0.03), dir, fixed, m), top)
 }
 
-/** Çoğu yan yüzeyi saklı dikdörtgen çatı: sekiz değil, tepeye doğru daralan dört yüz. */
+/** Rectangular roof with most side faces hidden: four faces narrowing toward the top instead of eight. */
 export function triangleG(a: number[], b: number[], c: number[], d: number[], scale = 3) {
   const g = new THREE.BufferGeometry()
   g.setAttribute('position', new THREE.Float32BufferAttribute([...a, ...b, ...c, ...a, ...c, ...d], 3))
@@ -96,7 +96,7 @@ export function triangleG(a: number[], b: number[], c: number[], d: number[], sc
   return g
 }
 
-/** Kurşun kubbe: alta doğru açılan etek, sekizgen ağızdan daireye geçiş, kurşun dikişleri ve alem. */
+/** Lead dome: skirt flaring downward, transition from octagonal mouth to circle, lead seams and finial. */
 export function leadDome(kv: Bucket, dome: Mat, finialMat: Mat, cx: number, cz: number, kY: number, R: number, h: number, seam = 24, finial = true, zScale = 1) {
   const OCTA = Math.cos(Math.PI / 8)
   const profile: [number, number][] = [[R * 1.18, -0.24], [R * 1.11, 0], [R * 1.03, h * 0.07]]
@@ -128,7 +128,7 @@ export function leadDome(kv: Bucket, dome: Mat, finialMat: Mat, cx: number, cz: 
   }
 }
 
-/** Dış sekizgen kasnak; `zOlcek` oval planlı odalar içindir. */
+/** Outer octagonal drum; `zScale` is for rooms with an oval plan. */
 export function outerDrum(kv: Bucket, mat: Mat, molding: Mat, cx: number, cz: number, y0: number, y1: number, R: number, zScale = 1) {
   const g = flatShadow(cylinderG(R, R, y1 - y0, 8, true).rotateY(Math.PI / 8))
   kv.add(place(g.scale(1, 1, zScale), cx, (y0 + y1) / 2, cz), mat)
@@ -136,7 +136,7 @@ export function outerDrum(kv: Bucket, mat: Mat, molding: Mat, cx: number, cz: nu
   kv.add(place(top.scale(1, 1, zScale), cx, y1 - 0.1, cz), molding)
 }
 
-/** Dikdörtgen tabandan daireye geçiş: Türk üçgeni ve tromp bölgesini tek yüzeyle temsil eder. u çevre, v yukarı. */
+/** Transition from rectangular base to circle: represents the Turkish triangle and squinch zone with a single surface. u around, v up. */
 export function transitionG(cx: number, cz: number, x0: number, x1: number, z0: number, z1: number, y0: number, y1: number, Rx: number, Rz: number) {
   const SEG = 64, ROW = 8
   const position: number[] = [], uv: number[] = [], index: number[] = []
@@ -163,7 +163,7 @@ export function transitionG(cx: number, cz: number, x0: number, x1: number, z0: 
   return g
 }
 
-/** İç kubbe: v kenardan tepeye. */
+/** Inner dome: v from edge to apex. */
 export function innerDome(kv: Bucket, mat: Mat, cx: number, cz: number, y: number, Rx: number, Rz: number, h: number) {
   const profile: [number, number][] = []
   for (let t = 0; t <= 16; t++) {
@@ -175,7 +175,7 @@ export function innerDome(kv: Bucket, mat: Mat, cx: number, cz: number, y: numbe
   kv.add(place(g, cx, y, cz), mat)
 }
 
-/** Yuvarlak ve yapraklı basit ağaç; yerel gürültüyle düzgün küre görünümünden çıkar. */
+/** Simple round leafy tree; local noise breaks the perfect-sphere look. */
 export function tree(kv: Bucket, body: Mat, leaf: Mat, x: number, z: number, length: number, R: number) {
   kv.add(place(cylinderG(R * 0.1, R * 0.16, length * 0.55, 8), x, length * 0.275, z), body)
   for (const [ox, oy, oz, o] of [[0, 0.62, 0, 1], [0.45, 0.72, 0.2, 0.7], [-0.4, 0.7, -0.25, 0.72], [0.1, 0.9, -0.15, 0.62]] as const) {

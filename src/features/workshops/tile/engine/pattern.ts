@@ -1,5 +1,5 @@
-// Çini tabağın deseni: uygulama için çizilmiş özgün bir lale-yaprak düzeni; belirli bir tarihî eserin kopyası değildir.
-// Koordinatlar tabak yarıçapına göredir: merkez (0, 0), kenar 1.
+// Tile plate pattern: an original tulip-and-leaf layout drawn for the app; not a copy of any specific historical work.
+// Coordinates are relative to the plate radius: center (0, 0), rim 1.
 export type N = [number, number]
 export type Tour = 'tulip' | 'leaf' | 'center' | 'ring'
 export interface Region { tour: Tour; outer: N[]; inner?: N[] }
@@ -21,7 +21,7 @@ export const rotate = (p: N[], angle: number): N[] => {
   return p.map(([x, y]) => [x * c - y * s, x * s + y * c])
 }
 
-// Üç dilimli lale, tepesi kenara bakar.
+// Three-lobed tulip, tip facing the rim.
 const tulipHalf: N[] = [
   ...curve([0, .34], [-.15, .38], [-.2, .56], [-.135, .74]),
   ...curve([-.135, .74], [-.105, .67], [-.075, .62], [-.05, .61], 8),
@@ -30,7 +30,7 @@ const tulipHalf: N[] = [
 ]
 export const tulip: N[] = [...tulipHalf, ...mirrorize(tulipHalf).slice(1)]
 
-// İki lale arasına giren ince, kıvrımsız yaprak.
+// Thin, uncurled leaf fitting between two tulips.
 const leafHalf: N[] = [...curve([0, .3], [-.075, .42], [-.075, .62], [0, .8]), [0, .8]]
 const leaf0: N[] = [...leafHalf, ...mirrorize(leafHalf).slice(1)]
 export const leaf = rotate(leaf0, Math.PI / 6)
@@ -46,11 +46,11 @@ export const regions: Region[] = [
   { tour: 'ring', outer: circle(RING_OUT, 96), inner: circle(RING_IN, 96) },
 ]
 
-// Oyuncunun fırçayla geçtiği izler; aynı desenin kalan tekrarları çırak tarafından tamamlanır.
+// Traces the player follows with the brush; the remaining repeats of the same pattern are completed by the apprentice.
 const close = (p: N[]): N[] => [...p, p[0]]
 export const traces: N[][] = [close(tulip), close(leaf), close(centerCircle)]
 
-/** Bütün kontur çizgileri: kömür noktaları ve bitmiş tahrir buradan çizilir. */
+/** All contour lines: charcoal dots and the finished outline are drawn from these. */
 export const contours: N[][] = [
   ...regions.flatMap((b) => (b.inner ? [close(b.outer), close(b.inner)] : [close(b.outer)])),
 ]
@@ -69,7 +69,7 @@ export function findRegion(n: N): number {
 }
 
 export interface TraceResult { row: number; distance: number }
-/** Fırça izin devamına yakınsa ilerler. Geri gitmez, ileri atlayarak izi kısaltamaz. */
+/** Advances if the brush is near the continuation of the trace. Never goes back, cannot shortcut the trace by jumping ahead. */
 export function advanceTrace(iz: N[], row: number, n: N, tolerance: number, window = 10): TraceResult {
   let en = row, wU = Infinity
   for (let i = row; i < Math.min(iz.length, row + window); i++) {

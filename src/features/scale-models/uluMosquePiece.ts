@@ -1,4 +1,4 @@
-// Ulu Camii maketinin ortak ölçüleri ve geometri yardımcıları.
+// Shared dimensions and geometry helpers of the Ulu Camii model.
 import * as THREE from 'three'
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js'
 
@@ -14,7 +14,7 @@ export const OCTA = Math.cos(Math.PI / 8)
 export const px = (i: number) => -YX + BAY_X * i
 export const pz = (j: number) => -YZ + BAY_Z * j
 
-/** Gözün kemer ve duvar yüzleri arasındaki açıklığı. */
+/** Clear span of a bay between its arch and wall faces. */
 export const bayOpening = (i: number, j: number) => ({
   x0: i === 0 ? -YX + WALL : px(i) + 1,
   x1: i === COLUMN - 1 ? YX - WALL : px(i + 1) - 1,
@@ -22,7 +22,7 @@ export const bayOpening = (i: number, j: number) => ({
   z1: j === LINE - 1 ? YZ - WALL : pz(j + 1) - 1,
 })
 
-/** Fotoğraflarda orta sütunun kubbeleri belirgin biçimde yüksektir; ölçüler temsilidir. */
+/** In the photos the domes of the middle column are noticeably higher; dimensions are representative. */
 export const baySize = (column: number) => {
   const c = Math.abs(column - 2)
   return { drumH: [3.5, 2.8, 2.3][c], domeH: [4.5, 3.9, 3.5][c] }
@@ -30,7 +30,7 @@ export const baySize = (column: number) => {
 
 export type Mat = THREE.Material
 
-/** Parçaları malzemeye göre biriktirir; böylece sahnede yüzlerce yerine birkaç çizim çağrısı kalır. */
+/** Accumulates pieces by material, so the scene has a few draw calls instead of hundreds. */
 export class Bucket {
   private pieces = new Map<Mat, THREE.BufferGeometry[]>()
   add(g: THREE.BufferGeometry, m: Mat) {
@@ -43,7 +43,7 @@ export class Bucket {
     const group = new THREE.Group()
     for (const [m, list] of this.pieces) {
       const merged = mergeGeometries(list, false)
-      if (!merged) throw new Error('Maket geometrisi birleştirilemedi')
+      if (!merged) throw new Error('Could not merge model geometry')
       list.forEach((g) => g.dispose())
       const mesh = new THREE.Mesh(merged, m)
       mesh.castShadow = !m.transparent
@@ -60,7 +60,7 @@ export function place<G extends THREE.BufferGeometry>(g: G, x: number, y: number
   return g
 }
 
-/** Kutu: UV'ler metre cinsinden, böylece taş ve mermer her ölçekte aynı boyda görünür. */
+/** Box: UVs in meters, so stone and marble look the same size at any scale. */
 export function boxG(g: number, h: number, d: number) {
   const k = new THREE.BoxGeometry(g, h, d)
   const uv = k.attributes.uv
@@ -72,7 +72,7 @@ export function boxG(g: number, h: number, d: number) {
   return k
 }
 
-/** Dönel gövde; `uvOlcek` verilmezse UV'ler çevre ve boy metresine ölçeklenir. */
+/** Body of revolution; if `uvScaleOf` is not given, UVs are scaled to circumference and height in meters. */
 export function rotateG(points: [number, number][], piece: number, uvScaleOf?: [number, number]) {
   const g = new THREE.LatheGeometry(points.map(([r, y]) => new THREE.Vector2(r, y)), piece)
   const widest = Math.max(...points.map((n) => n[0]))
@@ -83,15 +83,15 @@ export function rotateG(points: [number, number][], piece: number, uvScaleOf?: [
   return g
 }
 
-export function cylinderG(top: number, alt: number, h: number, piece: number, open = false) {
-  const g = new THREE.CylinderGeometry(top, alt, h, piece, 1, open)
+export function cylinderG(top: number, bottom: number, h: number, piece: number, open = false) {
+  const g = new THREE.CylinderGeometry(top, bottom, h, piece, 1, open)
   const uv = g.attributes.uv
-  const water = Math.PI * 2 * Math.max(top, alt)
-  for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * water, uv.getY(i) * h)
+  const circumference = Math.PI * 2 * Math.max(top, bottom)
+  for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * circumference, uv.getY(i) * h)
   return g
 }
 
-/** Köşeli yüzeyler için düz gölgeleme. */
+/** Flat shading for faceted surfaces. */
 export function flatShadow<G extends THREE.BufferGeometry>(g: G) {
   const d = g.index ? g.toNonIndexed() : g
   d.computeVertexNormals()
@@ -121,7 +121,7 @@ export function subtract(s: THREE.Shape, depth: number, z = 0) {
   return g
 }
 
-/** Yüzeyin UV'sini kendi sınırına oturtur: doku pencereye tek parça yerleşir. */
+/** Fits the surface UVs to its own bounds: the texture sits on the window as a single piece. */
 export function uvFit<G extends THREE.BufferGeometry>(g: G) {
   g.computeBoundingBox()
   const b = g.boundingBox, p = g.attributes.position, uv = g.attributes.uv

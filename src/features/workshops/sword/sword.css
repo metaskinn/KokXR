@@ -1,4 +1,4 @@
-/* Kılıç ve çini atölyesinin ortak stüdyo düzeni: açık sayfa, solda koyu 3B sahne, sağda beyaz görev kartı. Vazo atölyesiyle aynı dil. */
+/* Shared studio layout of the sword and tile workshops: light page, dark 3D scene on the left, white task card on the right. Same language as the vase workshop. */
 .sword-workshop { --panel-width: 320px; padding-top: 1.25rem; font-size: 15px; line-height: 1.55; color: var(--text); }
 .sword-workshop button { background: var(--surface); border: 2px solid var(--stroke); border-radius: 999px; color: var(--text); min-height: 44px; padding: 0.55rem 0.9rem; font-size: 0.9rem; font-weight: 500; }
 .sword-workshop button:hover { background: var(--surface-gray); color: var(--text); border-color: var(--text); }
@@ -8,7 +8,7 @@
 .sword-workshop [aria-pressed=true] { border-color: var(--highlight); background: var(--highlight-open); color: var(--highlight-dark); }
 .sword-workshop [hidden] { display: none !important; }
 
-/* Başlık satırı ve adımlar */
+/* Title row and steps */
 .sword-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1rem; }
 .sword-title > div:first-child { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.01em; }
 .sword-tools { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -18,7 +18,7 @@
 .sword-stages .done { border-top-color: var(--highlight); }
 .sword-stages li[aria-current] { border-top-color: var(--mustard); color: var(--text); font-weight: 800; }
 
-/* Sahne ve görev kartı */
+/* Scene and task card */
 .sword-experience { position: relative; height: clamp(540px, calc(100dvh - 300px), 820px); isolation: isolate; }
 .sword-scene { position: absolute; top: 0; left: 0; bottom: 0; right: calc(var(--panel-width) + 1.5rem); overflow: hidden; border-radius: var(--card-radius); background: #1b1f23; touch-action: none; box-shadow: var(--shadow); }
 .sword-scene canvas { width: 100%; height: 100%; display: block; }
@@ -39,7 +39,7 @@
 .sword-message { min-height: 2rem; margin-top: 0.25rem; padding: 0.75rem 0; color: var(--highlight-dark); font-size: 0.9rem; }
 .sword-message:empty { padding: 0; }
 
-/* Isı göstergesi: renk ölçeği sıcaklığı anlattığı için korunur. */
+/* Heat gauge: the color scale is kept because it conveys temperature. */
 .sword-heat { margin: 0.25rem 0; padding: 0.9rem 0 0.25rem; border-top: 1px solid var(--stroke); }
 .sword-heat > div:first-child { display: flex; justify-content: space-between; align-items: center; }
 .sword-heat label { font-size: 0.9rem; font-weight: 500; }
@@ -55,7 +55,7 @@
 .sword-targets { display: grid; grid-template-columns: 1fr; gap: 0.4rem; }
 .sword-workshop progress { width: 55%; height: 6px; accent-color: var(--highlight); }
 
-/* Kaynak, usta ve kalite */
+/* Source, master and quality */
 .sword-source { padding: 1rem 0; border-block: 1px solid var(--stroke); }
 .sword-source > span { font-size: 0.85rem; font-weight: 600; }
 .sword-source p { margin: 0.4rem 0; font-size: 0.9rem; }
@@ -71,7 +71,7 @@
 .sword-quality p { margin: 0.6rem 0 0; color: var(--highlight-dark); font-size: 0.9rem; }
 .sword-quality .sword-rosette { padding: 0.75rem; border-radius: var(--radius); background: var(--highlight-open); text-align: center; }
 
-/* Sahne üstü işaretler ve kartlar */
+/* On-scene markers and cards */
 .sword-workshop .sword-point { position: absolute; width: 44px; height: 44px; padding: 0; transform: translate(-50%, -50%); border: 2px solid #fff; border-radius: 50%; background: var(--highlight); color: #fff; font-size: 0.85rem; font-weight: 700; box-shadow: 0 2px 8px rgb(0 0 0 / 40%); }
 .sword-workshop .sword-point:hover { background: var(--highlight-dark); color: #fff; border-color: #fff; }
 .sword-workshop .sword-scene-marker { position: absolute; transform: translate(-50%, -50%); border: 0; border-radius: 999px; background: #fff; color: var(--text); font-size: 0.85rem; font-weight: 600; white-space: nowrap; box-shadow: 0 4px 16px rgb(0 0 0 / 45%); }
@@ -85,7 +85,7 @@
 .sword-xr-error { position: absolute; z-index: 5; top: 0.75rem; left: 50%; width: min(440px, calc(100% - 2rem)); margin: 0; padding: 0.7rem 1rem; transform: translateX(-50%); border-left: 3px solid #b42318; border-radius: var(--radius); background: #fff; color: #912018; font-size: 0.9rem; text-align: center; pointer-events: none; box-shadow: 0 4px 16px rgb(0 0 0 / 30%); }
 .sword-workshop .sword-drawer { display: none; }
 
-/* Sahne altı bilgi */
+/* Below-scene info */
 .sword-honesty { display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem 2.5rem; margin-top: 1.5rem; padding: 1.5rem; border-radius: var(--card-radius); background: var(--surface); box-shadow: var(--shadow); }
 .sword-honesty > div { display: flex; flex-direction: column; gap: 0.35rem; }
 .sword-honesty span { color: var(--secondary); font-size: 0.85rem; font-weight: 500; }

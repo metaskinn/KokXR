@@ -1,6 +1,6 @@
-// Muradiye maketine özel dokular: tamamı tuvalde üretilir, fotoğraf kullanılmaz, yazı veya hat çizilmez.
-// Renk ve düzen envanterdeki fotoğraflara ve metne göre yorumlanmıştır (üç sıra tuğla + bir sıra moloz taş,
-// altıgen zümrüt ve firuze çini, tuğla örgü desenleri, kalem işi bantlar).
+// Textures specific to the Muradiye model: all generated on canvas, no photos used, no inscription or calligraphy drawn.
+// Colors and layout interpreted from the photos and text in the inventory (three brick courses + one rubble stone course,
+// hexagonal emerald and turquoise tiles, brick pattern designs, painted (kalem işi) bands).
 import * as THREE from 'three'
 import { random } from '../../uluMosqueFloor'
 
@@ -11,7 +11,7 @@ function canvas(g: number, y: number, draw: Draw) {
   el.width = g
   el.height = y
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   draw(c, g, y)
   return el
 }
@@ -25,7 +25,7 @@ function texture(el: HTMLCanvasElement, scaleU: number, scaleV = scaleU) {
   return t
 }
 
-/** Almaşık örgü: `tugla` sıra tuğla, bir sıra moloz taş; taşların arasına düşey tuğla girer. */
+/** Alternating (almaşık) masonry: `brick` courses of brick, one course of rubble stone; vertical bricks go between the stones. */
 function alternating(brick: number, seed: number) {
   return canvas(512, 512, (c, g, y) => {
     const r = random(seed)
@@ -53,7 +53,7 @@ function alternating(brick: number, seed: number) {
         c.fillStyle = `hsl(${30 + r() * 14} ${18 + r() * 16}% ${54 + r() * 18}%)`
         c.fillRect(x + 2, v * o + 2, b - 4, stoneH * o - 4)
         x += b
-        // Taş araları: düşey tuğlalar
+        // Between stones: vertical bricks
         for (let d = 0; d < 2; d++) {
           c.fillStyle = brickColor()
           c.fillRect(x + 1, v * o + 2, 7, stoneH * o - 4)
@@ -65,7 +65,7 @@ function alternating(brick: number, seed: number) {
   })
 }
 
-/** Son cemaat yeri cephesi: kırık geçmeli tuğla ağı, aralarda firuze yıldızlar. */
+/** Late-comers' portico facade: broken interlaced brick net, turquoise stars in between. */
 function brickPattern() {
   return canvas(512, 512, (c, g, y) => {
     const r = random(83)
@@ -96,12 +96,12 @@ function brickPattern() {
   })
 }
 
-/** Altıgen çini; aralar `ara` rengiyle dolar, ortada ve çevrede yaldız izi. */
-function hexagon(color: string, dark: string, ara: string) {
+/** Hexagonal tile; gaps are filled with the `gap` color, gilding traces in the center and around. */
+function hexagon(color: string, dark: string, gap: string) {
   const G = 256, H = Math.round(G / Math.sqrt(3))
   return canvas(G, H, (c) => {
     const r = random(color.length * 13)
-    c.fillStyle = ara
+    c.fillStyle = gap
     c.fillRect(0, 0, G, H)
     const R = G / 3 * 0.94, dx = G, dy = H
     const cell = (x: number, y: number) => {
@@ -123,7 +123,7 @@ function hexagon(color: string, dark: string, ara: string) {
   })
 }
 
-/** Çini pano çevresi ve şerit: yalnız geometrik ve palmet motifi. */
+/** Tile panel border and strip: geometric and palmette motifs only. */
 function band(floor: string, motif: string, edge: string) {
   return canvas(256, 64, (c, g, y) => {
     c.fillStyle = floor
@@ -142,7 +142,7 @@ function band(floor: string, motif: string, edge: string) {
   })
 }
 
-/** Kemer yüzü: fotoğraftaki kırmızı-lacivert dilimli şerit. */
+/** Arch face: the red-navy segmented strip in the photo. */
 function archStrip() {
   return canvas(256, 64, (c, g, y) => {
     c.fillStyle = '#efe6d2'
@@ -159,7 +159,7 @@ function archStrip() {
   })
 }
 
-/** Kubbeye geçiş kabuğu: krem zemin, kırmızı hatlı üçgen ağı. */
+/** Transition shell to the dome: cream ground, triangle net with red lines. */
 function squinchPattern() {
   return canvas(512, 256, (c, g, y) => {
     c.fillStyle = '#efe6d3'
@@ -177,7 +177,7 @@ function squinchPattern() {
   })
 }
 
-/** İç kubbe: açık krem göbek, eteğinde kalem işi süs halkası (u: çevre, v: etekten tepeye). */
+/** Inner dome: light cream center, painted (kalem işi) ornamental ring at its skirt (u: around, v: skirt to apex). */
 function innerDome() {
   return canvas(1024, 512, (c, g, y) => {
     c.fillStyle = '#f0e8d4'
@@ -199,7 +199,7 @@ function innerDome() {
   })
 }
 
-/** Kasnak iç bandı: sivri kemerli madalyonlar. */
+/** Drum inner band: pointed-arch medallions. */
 function drumInner() {
   return canvas(1024, 128, (c, g, y) => {
     c.fillStyle = '#efe6d1'
@@ -214,10 +214,10 @@ function drumInner() {
   })
 }
 
-/** Renkli camlı pencere: kurşun ağı arasında kırmızı, yeşil, mavi ve sarı parçalar. */
+/** Stained-glass window: red, green, blue and yellow pieces between lead cames. */
 function stainedGlass() {
   return canvas(128, 256, (c, g, y) => {
-    // Açık sarı zemin, kırmızı-yeşil kenar, ortada servi biçimli bir dal: ışığı boğmayan sade bir cam.
+    // Light yellow ground, red-green border, a cypress-shaped branch in the middle: a plain glass that does not dim the light.
     c.fillStyle = '#f4e3a8'
     c.fillRect(0, 0, g, y)
     c.fillStyle = '#b8402f'
@@ -236,7 +236,7 @@ function stainedGlass() {
   })
 }
 
-/** Kurşun kubbe: mavimsi gri, ışınsal dikişli (fotoğraflara göre). Kubbeyi bir kez sarar. */
+/** Lead dome: bluish gray, radial seams (based on the photos). Wraps the dome once. */
 function leadDome() {
   return canvas(1024, 256, (c, g, y) => {
     const r = random(61)
@@ -258,7 +258,7 @@ function leadDome() {
   })
 }
 
-/** Dış cephe taş-alçı şebeke: küçük kare gözler. */
+/** Exterior stone-plaster grille: small square openings. */
 function lattice() {
   return canvas(128, 128, (c, g, y) => {
     c.fillStyle = '#d9cfbb'
@@ -295,7 +295,7 @@ function lawn() {
   })
 }
 
-/** Son cemaat yerinin altıgen tuğla döşemesi. */
+/** Hexagonal brick paving of the late-comers' portico. */
 function hexBrick() {
   const G = 128, H = Math.round(G / Math.sqrt(3))
   return canvas(G, H, (c) => {
@@ -314,7 +314,7 @@ function hexBrick() {
   })
 }
 
-/** Rokoko alçı mihrap yüzeyi: krem zeminde altın kıvrımlar (temsilî; gerçek desen kopyalanmaz). */
+/** Rococo plaster mihrab surface: gold scrolls on cream ground (representative; the real pattern is not copied). */
 function rococo() {
   return canvas(256, 256, (c, g, y) => {
     const r = random(43)
@@ -333,7 +333,7 @@ function rococo() {
   })
 }
 
-/** Altın çerçeveli koyu pano: yazı taşımaz. Levha ve Kâbe örtüsünün yeri için. */
+/** Dark panel with gold frame: carries no inscription. For the positions of the panel and the Kaaba cover. */
 function darkBoard(floor: string) {
   return canvas(256, 128, (c, g, y) => {
     c.fillStyle = floor
@@ -346,7 +346,7 @@ function darkBoard(floor: string) {
   })
 }
 
-/** Ağaç yaprağı: benekli ton. */
+/** Tree leaves: speckled tone. */
 function leaf(tone: number, saturation: number, glossy: number, seed: number) {
   return canvas(128, 128, (c, g, y) => {
     const r = random(seed)

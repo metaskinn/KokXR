@@ -1,12 +1,12 @@
-"""Ulu Camii maketinin paye ve levha atlaslarını arşiv fotoğraflarından üretir.
+"""Generates the pier and plaque atlases of the Ulu Mosque model from archive photographs.
 
-Yazı taklit edilmez, aynalanmaz: her pano arşivdeki düz çekim fotoğrafın kendisidir. Fotoğrafın aydınlatması
-ve zemin rengi çıkarılır, yazı sıva rengiyle çarpılır; böylece pano payenin üstüne yapıştırılmış kart gibi değil,
-sıvaya boyanmış gibi durur. Tepelik ve kemer bandı da arşiv fotoğraflarından alınır.
+Writing is not imitated or mirrored: each panel is the archive's own straight-on photograph. The photo's lighting
+and background colour are removed and the writing is multiplied with the plaster colour, so the panel looks painted on
+the plaster rather than a card glued onto the pier. The crest and the arch band are also taken from archive photographs.
 
-Gereken: Pillow. Çalıştırma: python3 scripts/ulucami_paye_atlas.py <arşiv Links klasörü> [çıktı klasörü]
-Çıktı: paye-atlas.jpg, levha-atlas.jpg (2048 px) ve hafif cihaz için -k sürümleri (1024 px).
-Yerleşim src/components/maket/ulucami/payeler.ts dosyasındaki sabitlerle aynı kalmalıdır.
+Requires: Pillow. Run: python3 scripts/ulu_mosque_pier_atlas.py <archive Links folder> [output folder]
+Output: pier-atlas.jpg, plaque-atlas.jpg (2048 px) and -k versions (1024 px) for light devices.
+The layout must stay in sync with the constants in src/features/scale-models/ulu-mosque/piers.ts.
 """
 import os
 import sys
@@ -16,226 +16,226 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 Image.MAX_IMAGE_PIXELS = None
 LINKS = Path(sys.argv[1])
-KOK = Path(__file__).resolve().parent.parent
-CIKTI = Path(sys.argv[2]) if len(sys.argv) > 2 else KOK / 'public/gorseller/ulu-camii/maket'
+ROOT = Path(__file__).resolve().parent.parent
+OUTPUT = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / 'public/images/ulu-mosque/model'
 
 ATLAS = 2048
-HUCRE_G, HUCRE_Y = 512, 1000
-SIVA = (241, 232, 214)
+CELL_W, CELL_H = 512, 1000
+PLASTER = (241, 232, 214)
 
-# Sekiz pano (arşiv kodu, kırpma payı). Hangi yüzde durdukları temsilîdir.
-PANOLAR = ['0022', '0061', '0063', '0075', '0108', '0093', '0106', '0190']
-# Tepelik: (arşiv kodu, kutu 0-1)
-TEPELIKLER = [('ERD05161', (0.762, 0.150, 0.996, 0.281))]
-# Levhalar: (arşiv kodu, atlastaki sol, üst, sağ, alt)
-LEVHALAR = [
+# Eight panels (archive code). Which face they sit on is representative.
+PANELS = ['0022', '0061', '0063', '0075', '0108', '0093', '0106', '0190']
+# Crest: (archive code, box 0-1)
+CRESTS = [('ERD05161', (0.762, 0.150, 0.996, 0.281))]
+# Plaques: (archive code, left, top, right, bottom in the atlas)
+PLAQUES = [
     ('0011', (0, 150, 1400, 790)),
     ('0081', (0, 800, 1400, 1250)),
     ('0183', (0, 1260, 1400, 1760)),
     ('0124', (1410, 150, 2048, 620)),
     ('0087', (1410, 630, 2048, 1200)),
 ]
-# Kemer bandının orta çizgisi: 0288 fotoğrafında (5139x3706) kemerin sağ yarısı boyunca noktalar.
-BANT_KAYNAK = '0288'
-BANT_YOL = [(2470, 300), (2720, 350), (2960, 450), (3170, 590), (3350, 770), (3490, 990), (3590, 1240), (3650, 1500)]
-BANT_ISARET = 1
-BANT_KAYMA = 32   # orta çizginin bandın ortasına oturması için kemer dışına doğru kayma
-BANT_YARI = 36
+# Centre line of the arch band: points along the right half of the arch in photo 0288 (5139x3706).
+BAND_SOURCE = '0288'
+BAND_PATH = [(2470, 300), (2720, 350), (2960, 450), (3170, 590), (3350, 770), (3490, 990), (3590, 1240), (3650, 1500)]
+BAND_SIGN = 1
+BAND_SHIFT = 32   # shift outwards from the arch so the centre line sits in the middle of the band
+BAND_HALF = 36
 
 
-def bul(kod):
-    return LINKS / next(f for f in sorted(os.listdir(LINKS)) if kod in f and f.lower().endswith(('.jpg', '.jpeg')))
+def find(code):
+    return LINKS / next(f for f in sorted(os.listdir(LINKS)) if code in f and f.lower().endswith(('.jpg', '.jpeg')))
 
 
-def ac(kod):
-    return Image.open(bul(kod)).convert('RGB')
+def open_photo(code):
+    return Image.open(find(code)).convert('RGB')
 
 
-def zemin_duzle(im, yaricap=6, kucuk=96, esik=0.9):
-    """Aydınlatmayı ve kâğıt rengini çıkarır: zemin 255'e gider, mürekkep kalır."""
+def flatten_background(im, radius=6, small=96, threshold=0.9):
+    """Removes lighting and paper colour: the background goes to 255, the ink remains."""
     k = im.copy()
-    k.thumbnail((kucuk, kucuk), Image.Resampling.BOX)
-    arka = k.filter(ImageFilter.MaxFilter(yaricap * 2 + 1)).filter(ImageFilter.GaussianBlur(yaricap))
-    arka = arka.resize(im.size, Image.Resampling.BICUBIC)
-    a, b = im.tobytes(), arka.tobytes()
-    tablo = bytearray(len(a))
+    k.thumbnail((small, small), Image.Resampling.BOX)
+    back = k.filter(ImageFilter.MaxFilter(radius * 2 + 1)).filter(ImageFilter.GaussianBlur(radius))
+    back = back.resize(im.size, Image.Resampling.BICUBIC)
+    a, b = im.tobytes(), back.tobytes()
+    table = bytearray(len(a))
     for i in range(len(a)):
-        v = a[i] / max(b[i], 1) / esik
-        tablo[i] = 255 if v >= 1 else int(v * 255)
-    return Image.frombytes('RGB', im.size, bytes(tablo))
+        v = a[i] / max(b[i], 1) / threshold
+        table[i] = 255 if v >= 1 else int(v * 255)
+    return Image.frombytes('RGB', im.size, bytes(table))
 
 
-def kenar_soldur(im, pay):
-    """Kırpımın kenarını beyaza yaklaştırır: çarpınca kesik çizgisi kalmaz."""
+def fade_edges(im, margin):
+    """Brings the crop's edge towards white so no cut line remains after multiplying."""
     w, h = im.size
-    maske = Image.new('L', (w, h), 0)
-    ImageDraw.Draw(maske).rectangle((pay, pay, w - pay, h - pay), fill=255)
-    maske = maske.filter(ImageFilter.GaussianBlur(pay / 2))
-    return Image.composite(im, Image.new('RGB', (w, h), (255, 255, 255)), maske)
+    mask = Image.new('L', (w, h), 0)
+    ImageDraw.Draw(mask).rectangle((margin, margin, w - margin, h - margin), fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(margin / 2))
+    return Image.composite(im, Image.new('RGB', (w, h), (255, 255, 255)), mask)
 
 
-def tepelik_uret():
-    sonuc = []
-    for kod, (x0, y0, x1, y1) in TEPELIKLER:
-        im = ac(kod)
+def make_crests():
+    result = []
+    for code, (x0, y0, x1, y1) in CRESTS:
+        im = open_photo(code)
         k = im.crop((int(x0 * im.width), int(y0 * im.height), int(x1 * im.width), int(y1 * im.height)))
-        sonuc.append(Image.blend(kenar_soldur(zemin_duzle(k, 12, 128, 0.94), 6), kenar_soldur(zemin_duzle(k, 12, 128, 0.94), 6).convert('L').convert('RGB'), 0.45))
-    return sonuc
+        result.append(Image.blend(fade_edges(flatten_background(k, 12, 128, 0.94), 6), fade_edges(flatten_background(k, 12, 128, 0.94), 6).convert('L').convert('RGB'), 0.45))
+    return result
 
 
-def pano_uret(kod, tepelik):
-    """Hücre: üstte tepelik (rafıyla), altında çerçeveli yazı alanı. Payedeki ölçek: 512 px = 2.33 m."""
-    hucre = Image.new('RGB', (HUCRE_G, HUCRE_Y), SIVA)
-    TEPE_H = 300
-    # Yazı alanı: arşiv panosunun kendi ince çerçevesi durur; altta koyu çizgi (ERD05027)
-    d = ImageDraw.Draw(hucre)
-    im = ac(kod)
-    pay = int(min(im.size) * 0.012)
-    im = im.crop((pay, pay, im.width - pay, im.height - pay))
-    alan_g, alan_h = HUCRE_G - 8, HUCRE_Y - TEPE_H - 12
-    o = min(alan_g / im.width, alan_h / im.height)
+def make_panel(code, crest):
+    """Cell: crest at the top (with its shelf), framed writing area below. Scale on the pier: 512 px = 2.33 m."""
+    cell = Image.new('RGB', (CELL_W, CELL_H), PLASTER)
+    CREST_H = 300
+    # Writing area: the archive panel's own thin frame stays; dark line at the bottom (ERD05027)
+    d = ImageDraw.Draw(cell)
+    im = open_photo(code)
+    margin = int(min(im.size) * 0.012)
+    im = im.crop((margin, margin, im.width - margin, im.height - margin))
+    area_w, area_h = CELL_W - 8, CELL_H - CREST_H - 12
+    o = min(area_w / im.width, area_h / im.height)
     k = im.resize((int(im.width * o), int(im.height * o)), Image.Resampling.LANCZOS)
-    k = kenar_soldur(zemin_duzle(k), 3)
-    x, y = (HUCRE_G - k.width) // 2, TEPE_H + (HUCRE_Y - TEPE_H - 6 - k.height) // 2
-    parca = hucre.crop((x, y, x + k.width, y + k.height))
-    hucre.paste(ImageChops.multiply(parca, k), (x, y))
-    d.rectangle((0, HUCRE_Y - 6, HUCRE_G, HUCRE_Y), fill=(46, 40, 34))
-    ox = int(tepelik.width * TEPE_H / tepelik.height)
-    t = tepelik.resize((ox, TEPE_H), Image.Resampling.LANCZOS)
-    if ox > HUCRE_G:
-        t = t.crop(((ox - HUCRE_G) // 2, 0, (ox + HUCRE_G) // 2, TEPE_H))
-    tx, ty = (HUCRE_G - t.width) // 2, TEPE_H - t.height
-    parca = hucre.crop((tx, ty, tx + t.width, ty + t.height))
-    hucre.paste(ImageChops.multiply(parca, t), (tx, ty))
-    return hucre
+    k = fade_edges(flatten_background(k), 3)
+    x, y = (CELL_W - k.width) // 2, CREST_H + (CELL_H - CREST_H - 6 - k.height) // 2
+    piece = cell.crop((x, y, x + k.width, y + k.height))
+    cell.paste(ImageChops.multiply(piece, k), (x, y))
+    d.rectangle((0, CELL_H - 6, CELL_W, CELL_H), fill=(46, 40, 34))
+    ox = int(crest.width * CREST_H / crest.height)
+    t = crest.resize((ox, CREST_H), Image.Resampling.LANCZOS)
+    if ox > CELL_W:
+        t = t.crop(((ox - CELL_W) // 2, 0, (ox + CELL_W) // 2, CREST_H))
+    tx, ty = (CELL_W - t.width) // 2, CREST_H - t.height
+    piece = cell.crop((tx, ty, tx + t.width, ty + t.height))
+    cell.paste(ImageChops.multiply(piece, t), (tx, ty))
+    return cell
 
 
-def bant_ac(kaynak, yol, yari, boy_y):
-    """Yol boyunca şeridi düzleştirir (dörtgen ağ ile)."""
-    uz = [0.0]
-    for (a, b), (c, e) in zip(yol, yol[1:]):
-        uz.append(uz[-1] + ((c - a) ** 2 + (e - b) ** 2) ** 0.5)
-    dx_olcek = boy_y / (2 * yari)
-    W = int(uz[-1] * dx_olcek)
+def unwrap_band(source, path, half, height):
+    """Straightens the strip along the path (with a quad mesh)."""
+    lengths = [0.0]
+    for (a, b), (c, e) in zip(path, path[1:]):
+        lengths.append(lengths[-1] + ((c - a) ** 2 + (e - b) ** 2) ** 0.5)
+    dx_scale = height / (2 * half)
+    W = int(lengths[-1] * dx_scale)
 
-    def nokta(s):
-        for i in range(len(yol) - 1):
-            if s <= uz[i + 1] or i == len(yol) - 2:
-                t = (s - uz[i]) / (uz[i + 1] - uz[i])
-                x = yol[i][0] + (yol[i + 1][0] - yol[i][0]) * t
-                y = yol[i][1] + (yol[i + 1][1] - yol[i][1]) * t
-                nx, ny = -(yol[i + 1][1] - yol[i][1]), yol[i + 1][0] - yol[i][0]
+    def point(s):
+        for i in range(len(path) - 1):
+            if s <= lengths[i + 1] or i == len(path) - 2:
+                t = (s - lengths[i]) / (lengths[i + 1] - lengths[i])
+                x = path[i][0] + (path[i + 1][0] - path[i][0]) * t
+                y = path[i][1] + (path[i + 1][1] - path[i][1]) * t
+                nx, ny = -(path[i + 1][1] - path[i][1]), path[i + 1][0] - path[i][0]
                 L = (nx * nx + ny * ny) ** 0.5
                 return x, y, nx / L, ny / L
 
-    ag = []
-    ADIM = 16
-    for u in range(0, W, ADIM):
-        s0, s1 = u / dx_olcek, min(u + ADIM, W) / dx_olcek
-        a, b = nokta(s0), nokta(s1)
-        # Dörtgen köşeleri: sol üst, sol alt, sağ alt, sağ üst; üst = kemerin dışı
-        q = (a[0] + a[2] * yari, a[1] + a[3] * yari, a[0] - a[2] * yari, a[1] - a[3] * yari,
-             b[0] - b[2] * yari, b[1] - b[3] * yari, b[0] + b[2] * yari, b[1] + b[3] * yari)
-        ag.append(((u, 0, min(u + ADIM, W), boy_y), q))
-    return kaynak.transform((W, boy_y), Image.Transform.MESH, ag, Image.Resampling.BICUBIC)
+    mesh = []
+    STEP = 16
+    for u in range(0, W, STEP):
+        s0, s1 = u / dx_scale, min(u + STEP, W) / dx_scale
+        a, b = point(s0), point(s1)
+        # Quad corners: top left, bottom left, bottom right, top right; top = outside of the arch
+        q = (a[0] + a[2] * half, a[1] + a[3] * half, a[0] - a[2] * half, a[1] - a[3] * half,
+             b[0] - b[2] * half, b[1] - b[3] * half, b[0] + b[2] * half, b[1] + b[3] * half)
+        mesh.append(((u, 0, min(u + STEP, W), height), q))
+    return source.transform((W, height), Image.Transform.MESH, mesh, Image.Resampling.BICUBIC)
 
 
-def bant_uret():
-    im = ac(BANT_KAYNAK)
-    BANT_H = 128
-    # Yol: köşeleri yumuşat (Chaikin), sonra banda kaydır
-    yol = list(BANT_YOL)
+def make_band():
+    im = open_photo(BAND_SOURCE)
+    BAND_H = 128
+    # Path: smooth the corners (Chaikin), then shift onto the band
+    path = list(BAND_PATH)
     for _ in range(3):
-        yeni = [yol[0]]
-        for (a, b), (c, e) in zip(yol, yol[1:]):
-            yeni += [(a * 0.75 + c * 0.25, b * 0.75 + e * 0.25), (a * 0.25 + c * 0.75, b * 0.25 + e * 0.75)]
-        yol = yeni + [yol[-1]]
-    kayik = []
-    for n, (a, b) in enumerate(yol):
-        c, e = yol[min(n + 1, len(yol) - 1)]
-        p, r = yol[max(n - 1, 0)]
+        new = [path[0]]
+        for (a, b), (c, e) in zip(path, path[1:]):
+            new += [(a * 0.75 + c * 0.25, b * 0.75 + e * 0.25), (a * 0.25 + c * 0.75, b * 0.25 + e * 0.75)]
+        path = new + [path[-1]]
+    shifted = []
+    for n, (a, b) in enumerate(path):
+        c, e = path[min(n + 1, len(path) - 1)]
+        p, r = path[max(n - 1, 0)]
         nx, ny = -(e - r), c - p
         L = (nx * nx + ny * ny) ** 0.5 or 1
-        kayik.append((a - nx / L * BANT_KAYMA * BANT_ISARET, b - ny / L * BANT_KAYMA * BANT_ISARET))
-    kirp = 180  # fotoğraftaki avize telini dışarıda bırak
-    s = bant_ac(im, kayik, BANT_YARI, BANT_H)
-    s = s.crop((kirp, 0, s.width - 40, BANT_H))
-    if os.environ.get('BANT_ONIZLE'):
-        s.save(os.environ['BANT_ONIZLE'])
-    # Yalnız parlaklık alınır: gece ışığının renk kayması atılır, boya ERD05161'deki zeytin krem zemin ve koyu kahve dala eşlenir.
+        shifted.append((a - nx / L * BAND_SHIFT * BAND_SIGN, b - ny / L * BAND_SHIFT * BAND_SIGN))
+    trim = 180  # leave out the chandelier wire in the photo
+    s = unwrap_band(im, shifted, BAND_HALF, BAND_H)
+    s = s.crop((trim, 0, s.width - 40, BAND_H))
+    if os.environ.get('BAND_PREVIEW'):
+        s.save(os.environ['BAND_PREVIEW'])
+    # Only brightness is taken: the colour shift of the night light is dropped; paint is mapped to the olive cream ground and dark brown stem in ERD05161.
     s = s.convert('L')
     k = s.resize((max(1, s.width // 48), 1), Image.Resampling.BOX).filter(ImageFilter.GaussianBlur(1)).resize(s.size, Image.Resampling.BICUBIC)
     a, b = s.tobytes(), k.tobytes()
-    ort = sum(b) / len(b)
-    s = Image.frombytes('L', s.size, bytes(min(255, int(x / max(y, 1) * ort)) for x, y in zip(a, b)))
-    bind = 96
-    tek = s.resize((ATLAS + bind, BANT_H), Image.Resampling.LANCZOS)
-    gri = tek.crop((0, 0, ATLAS, BANT_H))
-    for x in range(bind):
-        sol = tek.crop((ATLAS + x, 0, ATLAS + x + 1, BANT_H))
-        sag = tek.crop((x, 0, x + 1, BANT_H))
-        gri.paste(Image.blend(sol, sag, x / bind), (x, 0))
-    # Renk eşlemesi: en koyu kahve, orta sıcak kahve, zemin krem
-    durak = [(0, (30, 24, 17)), (90, (74, 56, 36)), (170, (176, 158, 118)), (255, (226, 214, 180))]
-    tablo = []
-    for kanal in range(3):
+    mean = sum(b) / len(b)
+    s = Image.frombytes('L', s.size, bytes(min(255, int(x / max(y, 1) * mean)) for x, y in zip(a, b)))
+    blend = 96
+    single = s.resize((ATLAS + blend, BAND_H), Image.Resampling.LANCZOS)
+    gray = single.crop((0, 0, ATLAS, BAND_H))
+    for x in range(blend):
+        left = single.crop((ATLAS + x, 0, ATLAS + x + 1, BAND_H))
+        right = single.crop((x, 0, x + 1, BAND_H))
+        gray.paste(Image.blend(left, right, x / blend), (x, 0))
+    # Colour mapping: darkest brown, mid warm brown, cream ground
+    stops = [(0, (30, 24, 17)), (90, (74, 56, 36)), (170, (176, 158, 118)), (255, (226, 214, 180))]
+    table = []
+    for channel in range(3):
         for v in range(256):
-            for (a0, r0), (a1, r1) in zip(durak, durak[1:]):
+            for (a0, r0), (a1, r1) in zip(stops, stops[1:]):
                 if v <= a1:
-                    tablo.append(int(r0[kanal] + (r1[kanal] - r0[kanal]) * (v - a0) / (a1 - a0)))
+                    table.append(int(r0[channel] + (r1[channel] - r0[channel]) * (v - a0) / (a1 - a0)))
                     break
-    cikti = Image.merge('RGB', (gri, gri, gri)).point(tablo)
-    # Bandın iki kenarında ince koyu çizgi (0288, ERD05161)
-    d = ImageDraw.Draw(cikti)
+    out = Image.merge('RGB', (gray, gray, gray)).point(table)
+    # Thin dark line on both edges of the band (0288, ERD05161)
+    d = ImageDraw.Draw(out)
     d.rectangle((0, 0, ATLAS, 4), fill=(66, 52, 34))
-    d.rectangle((0, BANT_H - 5, ATLAS, BANT_H - 1), fill=(66, 52, 34))
-    return cikti
+    d.rectangle((0, BAND_H - 5, ATLAS, BAND_H - 1), fill=(66, 52, 34))
+    return out
 
 
-def paye_atlasi():
-    tepelikler = tepelik_uret()
-    atlas = Image.new('RGB', (ATLAS, ATLAS), SIVA)
-    for n, kod in enumerate(PANOLAR):
-        hucre = pano_uret(kod, tepelikler[n % len(tepelikler)])
-        atlas.paste(hucre, ((n % 4) * HUCRE_G, (n // 4) * HUCRE_Y))
-        print('pano', kod)
-    # Alt şerit: düz boya örnekleri (sıva, koyu, altın): dosya başındaki sabitlerle u = 1/8, 3/8, 5/8
+def pier_atlas():
+    crests = make_crests()
+    atlas = Image.new('RGB', (ATLAS, ATLAS), PLASTER)
+    for n, code in enumerate(PANELS):
+        cell = make_panel(code, crests[n % len(crests)])
+        atlas.paste(cell, ((n % 4) * CELL_W, (n // 4) * CELL_H))
+        print('panel', code)
+    # Bottom strip: flat paint swatches (plaster, dark, gold): u = 1/8, 3/8, 5/8 per the constants at the top of piers.ts
     d = ImageDraw.Draw(atlas)
-    y0 = 2 * HUCRE_Y
-    d.rectangle((0, y0, ATLAS // 4, ATLAS), fill=SIVA)
+    y0 = 2 * CELL_H
+    d.rectangle((0, y0, ATLAS // 4, ATLAS), fill=PLASTER)
     d.rectangle((ATLAS // 4, y0, ATLAS // 2, ATLAS), fill=(44, 40, 36))
     d.rectangle((ATLAS // 2, y0, 3 * ATLAS // 4, ATLAS), fill=(138, 108, 56))
     return atlas
 
 
-def levha_atlasi():
+def plaque_atlas():
     atlas = Image.new('RGB', (ATLAS, ATLAS), (40, 34, 26))
-    bant = bant_uret()
-    atlas.paste(bant, (0, 0))
-    # Kemer altı çerçeve şeridi: açık, koyu, kahve, krem (ERD05161 ve 0334): 128-168 arası, boyuna tekrarlı.
-    # Üstünde ve altında sıva payı: küçük mip düzeylerinde çizgi kararmasın.
+    band = make_band()
+    atlas.paste(band, (0, 0))
+    # Frame strip under the arch: light, dark, brown, cream (ERD05161 and 0334): rows 128-168, repeating lengthwise.
+    # Plaster margin above and below so the line does not darken at small mip levels.
     d = ImageDraw.Draw(atlas)
     for y0, y1, r in [(128, 136, (150, 138, 118)), (136, 154, (44, 38, 32)), (154, 162, (128, 98, 60)), (162, 176, (232, 222, 200))]:
         d.rectangle((0, y0, ATLAS, y1 - 1), fill=r)
-    for kod, (x0, y0, x1, y1) in LEVHALAR:
-        im = ac(kod)
-        pay = int(min(im.size) * 0.02) if kod == '0081' else 0  # fotoğraftaki açık kenar
-        im = im.crop((pay, pay, im.width - pay, im.height - pay))
-        g, h = x1 - x0, y1 - y0
-        o = min(g / im.width, h / im.height)
+    for code, (x0, y0, x1, y1) in PLAQUES:
+        im = open_photo(code)
+        margin = int(min(im.size) * 0.02) if code == '0081' else 0  # light edge in the photo
+        im = im.crop((margin, margin, im.width - margin, im.height - margin))
+        w, h = x1 - x0, y1 - y0
+        o = min(w / im.width, h / im.height)
         k = im.resize((int(im.width * o), int(im.height * o)), Image.Resampling.LANCZOS)
-        px0, py0 = x0 + (g - k.width) // 2, y0 + (h - k.height) // 2
+        px0, py0 = x0 + (w - k.width) // 2, y0 + (h - k.height) // 2
         atlas.paste(k, (px0, py0))
-        print('levha', kod, [px0, py0, k.width, k.height])
+        print('plaque', code, [px0, py0, k.width, k.height])
     return atlas
 
 
-def yaz(im, ad):
-    CIKTI.mkdir(parents=True, exist_ok=True)
-    im.save(CIKTI / f'{ad}.jpg', quality=86, optimize=True, progressive=True)
-    im.resize((ATLAS // 2, ATLAS // 2), Image.Resampling.LANCZOS).filter(ImageFilter.UnsharpMask(1, 40, 2)).save(CIKTI / f'{ad}-k.jpg', quality=84, optimize=True, progressive=True)
+def write(im, name):
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    im.save(OUTPUT / f'{name}.jpg', quality=86, optimize=True, progressive=True)
+    im.resize((ATLAS // 2, ATLAS // 2), Image.Resampling.LANCZOS).filter(ImageFilter.UnsharpMask(1, 40, 2)).save(OUTPUT / f'{name}-k.jpg', quality=84, optimize=True, progressive=True)
 
 
 if __name__ == '__main__':
-    yaz(paye_atlasi(), 'paye-atlas')
-    yaz(levha_atlasi(), 'levha-atlas')
+    write(pier_atlas(), 'pier-atlas')
+    write(plaque_atlas(), 'plaque-atlas')

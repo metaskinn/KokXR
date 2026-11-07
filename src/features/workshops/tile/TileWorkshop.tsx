@@ -36,7 +36,7 @@ export default function TileWorkshop() {
     return () => r?.removeEventListener('xrended', done)
   }, [])
 
-  const { stage, alt: subStage } = game, not = tileNotes[Math.min(stage, tileNotes.length - 1)], last = stage === 6
+  const { stage, alt: subStage } = game, note = tileNotes[Math.min(stage, tileNotes.length - 1)], last = stage === 6
   const list = actions(game), interval = stage === 1 ? BISQUE : GLAZE_KILN, locked = !ready || error || vr !== 'closedState'
   const hold = (ad: HoldName) => ({
     onPointerDown: (e: React.PointerEvent<HTMLButtonElement>) => { e.currentTarget.setPointerCapture(e.pointerId); scene.current?.hold(ad, true) },
@@ -79,7 +79,7 @@ export default function TileWorkshop() {
           </fieldset>
           {last && <div className="sword-quality"><div><span>Eserinin kalitesi</span><strong>{quality(game)}<small>/100</small></strong></div></div>}
           <div className="sword-message" role="status" aria-live="polite">{game.message}</div>
-          <div className="sword-source"><span>Atölye notu</span><p>{not.text}</p><small>Kaynak: {tileSources[not.source]}</small></div>
+          <div className="sword-source"><span>Atölye notu</span><p>{note.text}</p><small>Kaynak: {tileSources[note.source]}</small></div>
           {!last && <><button disabled={locked || (stage === 5 && subStage === 2)} className="sword-master" onClick={() => scene.current?.master()}>Ustaya bırak <span>↗</span></button><small className="sword-master-not">Bu adımı orta kalitede tamamla.</small></>}
         </div>
       </aside>

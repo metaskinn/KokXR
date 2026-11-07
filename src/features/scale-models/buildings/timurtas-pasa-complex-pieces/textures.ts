@@ -1,5 +1,5 @@
-// Timurtaş Paşa Külliyesi dokuları: tuvalde üretilir. Örgü oranları Şener 1997 çizimine (üç sıra tuğla, bir sıra köfeki),
-// renk ve desenler envanter fotoğraflarına bakılarak yorumlanmıştır. Hat yazısı taklit edilmez.
+// Timurtaş Paşa Complex textures: generated on canvas. Masonry proportions follow Şener's 1997 drawing (three brick courses, one köfeki course),
+// colors and patterns interpreted from inventory photos. Calligraphy is not imitated.
 import * as THREE from 'three'
 import { lightDevice, random } from '../../uluMosqueFloor'
 
@@ -7,7 +7,7 @@ function canvas(w: number, h: number) {
   const el = document.createElement('canvas')
   el.width = w; el.height = h
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   return { el, c }
 }
 
@@ -41,7 +41,7 @@ function brickCourse(c: CanvasRenderingContext2D, B: number, measure: number, y:
 
 const BRICK_COLOR = ['#a9553a', '#b5613f', '#9d4c35', '#bd6c49', '#a65a3f', '#8f4632']
 
-/** Almaşık duvar: 0,67 m'lik dönem içinde bir sıra köfeki taşı ve üç sıra tuğla. Dört dönem tekrar eder. */
+/** Alternating (almaşık) wall: one course of köfeki stone and three courses of brick within a 0.67 m period. Four periods repeat. */
 export function alternatingTexture() {
   const B = size(), METER = 2.68, measure = B / METER
   const { el, c } = canvas(B, B)
@@ -66,7 +66,7 @@ export function alternatingTexture() {
   return { color: texture(el, METER, METER), relief: texture(el, METER, METER, false) }
 }
 
-/** Minare ve şadırvan ayakları: yalnız tuğla, geniş derz. */
+/** Minaret and şadırvan piers: brick only, wide joints. */
 export function brickTexture() {
   const B = size(), METER = 1.84, measure = B / METER
   const { el, c } = canvas(B, B)
@@ -78,7 +78,7 @@ export function brickTexture() {
   return { color: texture(el, METER, METER), relief: texture(el, METER, METER, false) }
 }
 
-/** Hamam duvarı: bir sıra tuğla, bir sıra moloz taş (envanter s. 220). */
+/** Hamam wall: one course of brick, one course of rubble stone (inventory p. 220). */
 export function rubbleTexture() {
   const B = size(), METER = 2.4, measure = B / METER
   const { el, c } = canvas(B, B)
@@ -108,7 +108,7 @@ export function rubbleTexture() {
   return { color: texture(el, METER, METER), relief: texture(el, METER, METER, false) }
 }
 
-/** Minare kasnağı: iri kesme taş sıraları. */
+/** Minaret drum: courses of large cut stone. */
 export function ashlarTexture() {
   const B = lightDevice() ? 256 : 512, METER = 2.4, measure = B / METER
   const { el, c } = canvas(B, B)
@@ -128,7 +128,7 @@ export function ashlarTexture() {
   return texture(el, METER, METER)
 }
 
-/** Hamam kubbesindeki oluklu kiremit: dönel gövdenin 0-1 UV'sine sarılır. */
+/** Grooved tiles on the hamam dome: wrapped onto the 0-1 UV of the lathe body. */
 export function roofTileTexture() {
   const B = lightDevice() ? 512 : 1024, N = 16, h = B / N
   const { el, c } = canvas(B, B)
@@ -152,7 +152,7 @@ export function roofTileTexture() {
   return t
 }
 
-/** Kemer alınlığı: tuğla parçaları ve turkuaz çiniyle fırıldak örgüsü (envanter fotoğrafı). */
+/** Arch lunette: pinwheel pattern of brick pieces and turquoise tile (inventory photo). */
 export function tileTexture() {
   const B = 512, N = 4, s = B / N, METER = 0.92
   const { el, c } = canvas(B, B)
@@ -173,7 +173,7 @@ export function tileTexture() {
   return texture(el, METER, METER)
 }
 
-/** Düzensiz taş döşeme (hazire, meydan). Hücreleri dikişsiz Voronoi ile üretilir. 7 metrede tekrar. */
+/** Irregular stone paving (hazire, square). Cells generated with seamless Voronoi. Repeats every 7 m. */
 export function stonePavingTexture(seed: number, palette: [number, number, number][], joint: [number, number, number]) {
   const B = lightDevice() ? 256 : 512, N = 16, CELL = B / N, METER = 7
   const { el, c } = canvas(B, B)
@@ -200,7 +200,7 @@ export function stonePavingTexture(seed: number, palette: [number, number, numbe
   return texture(el, METER, METER)
 }
 
-/** Yol: küçük gri parke sıraları. */
+/** Road: rows of small gray pavers. */
 export function parquetTexture() {
   const B = 512, METER = 2.4, measure = B / METER
   const { el, c } = canvas(B, B)
@@ -215,7 +215,7 @@ export function parquetTexture() {
   return texture(el, METER, METER)
 }
 
-/** Yapı içi duvar: 9 m boyunca tek parça; açık yeşil izare, bitkisel kuşak, beyaz sıva ve geçmeli üst kuşak (fotoğrafa göre). */
+/** Interior wall: one piece along 9 m; light green dado, floral band, white plaster and interlaced upper band (based on the photo). */
 export function innerWallTexture() {
   const G = lightDevice() ? 512 : 1024, H = G * 2, METER_U = 3, METER_V = 9, oy = H / METER_V, ou = G / METER_U
   const { el, c } = canvas(G, H)
@@ -227,7 +227,7 @@ export function innerWallTexture() {
   const build = (y0: number, y1: number, color: string) => { c.fillStyle = color; c.fillRect(0, Y(y1), G, (y1 - y0) * oy) }
   build(1.5, 1.98, '#bcd3a3')
   build(1.95, 1.99, '#23402f'); build(1.49, 1.52, '#23402f')
-  // Bitkisel kuşak: yan yana palmet ve kıvrım dalları.
+  // Floral band: palmettes and scrolling branches side by side.
   for (let i = 0; i < 24; i++) {
     const x = ((i + 0.5) / 24) * G, y = Y(1.74), o = oy * 0.15
     c.fillStyle = i % 2 ? '#2d5a3b' : '#264b64'
@@ -235,7 +235,7 @@ export function innerWallTexture() {
     c.strokeStyle = '#2d5a3b'; c.lineWidth = Math.max(2, oy * 0.012)
     c.beginPath(); c.arc(x + G / 48, y + o * 0.2, o * 0.45, Math.PI, 0); c.stroke()
   }
-  // Geçmeli üst kuşak: renkli halkalar.
+  // Interlaced upper band: colored rings.
   build(4.82, 5.28, '#efece1'); build(4.8, 4.83, '#21354c'); build(5.27, 5.3, '#21354c')
   const count = 18, step = G / count, cy = Y(5.05)
   for (let i = 0; i < count; i++) {
@@ -246,7 +246,7 @@ export function innerWallTexture() {
     c.fillStyle = ['#c9443a', '#20648f', '#2f8554'][i % 3]
     c.beginPath(); c.arc(x, cy, oy * 0.045, 0, Math.PI * 2); c.fill()
   }
-  // Üstte ince mavi kuşak ve küçük noktalar
+  // Thin blue band and small dots on top
   build(5.34, 5.44, '#d7e1e6')
   for (let i = 0; i < 48; i++) {
     c.fillStyle = i % 2 ? '#20486e' : '#a33a33'
@@ -261,7 +261,7 @@ export function innerWallTexture() {
   return t
 }
 
-/** Pencere nişlerindeki bitkisel rozet: yazı içermez. */
+/** Floral rosette in the window niches: contains no inscription. */
 export function rosetteTexture() {
   const { el, c } = canvas(256, 256)
   c.translate(128, 128)
@@ -277,7 +277,7 @@ export function rosetteTexture() {
   return new THREE.CanvasTexture(el)
 }
 
-/** Mezar taşı yüzü: oyma hissi veren geometrik ve bitkisel ağ; hat taklidi yoktur. */
+/** Gravestone face: geometric and floral net suggesting carving; no calligraphy imitation. */
 export function gravestoneTexture(floor: string, dark: string, open: string, seed: number) {
   const W = 256, H = 512
   const { el, c } = canvas(W, H)
@@ -304,7 +304,7 @@ export function gravestoneTexture(floor: string, dark: string, open: string, see
   return t
 }
 
-/** Fotoğraf dokusu kapalıyken mihrap yüzü: bronz çerçeve ve mukarnas hissi veren dizi. Yazı içermez. */
+/** Mihrab face when the photo texture is off: bronze frame and a row suggesting muqarnas. Contains no inscription. */
 export function mihrabFallbackTexture() {
   const W = 512, H = 860
   const { el, c } = canvas(W, H)

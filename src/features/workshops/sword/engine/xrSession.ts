@@ -1,4 +1,4 @@
-// Kılıç atölyesi VR oturumu: rig, kumandalar, paneller. Oyun kurallarına yalnız KilicKopru üzerinden dokunur.
+// Sword workshop VR session: rig, controllers, panels. Touches game rules only through SwordBridge.
 import * as T from 'three'
 import { controllerInput, deadZone } from '../../../../shared/xr/xrMotion'
 import type { Game } from './state'
@@ -18,18 +18,18 @@ export interface SwordBridge {
   targetBox: (i: number) => Box; wristU: () => number; wristDrag: (u: number) => void; stoneZ: number
   cutOff: (k: { a: T.Vector3; b: T.Vector3; dx: number; dy: number; sure: number }) => void; addTrace: () => void; cutOngoing: () => boolean
   swordPos: (p: T.Vector3, q: T.Quaternion) => void
-  /** Kuşanma: parçanın dünya matrisi, elde taşınması (null bırakır), kılıçtaki yeri, yerine uzaklığı ve oturtma. */
+  /** Assembly: part world matrix, carrying in hand (null releases), its place on the sword, distance to it, and seating. */
   pieceMatrix: (ad: string) => T.Matrix4; movePiece: (ad: string, m: T.Matrix4 | null) => void
   piecePlace: (ad: string, h: T.Vector3) => T.Vector3; pieceDistance: (ad: string) => number; seatPiece: () => void
   floor: (visible: boolean) => void
-  /** Sahne kamera, gölge, efekt ve boyutu geri alır. */
+  /** The scene restores camera, shadows, effects and size. */
   sessionStarted: () => void; sessionEnded: () => void
   stamp: (ad: string, value: string) => void
 }
 
 const RAY_LENGTH = 3, PANEL_FAR = 1.25, PANEL_BOTTOM = .12, DRAW_INTERVAL = .4
 const NEAR = { eggShape: .25, bellows: .5, water: .35, piece: .22, region: .16, target: .6 }
-// Kabza ortası (kılıç yerel x = -.11) avuca oturur; namlu kumandanın önüne uzanır.
+// The middle of the grip (sword local x = -.11) sits in the palm; the blade extends in front of the controller.
 const HILT = .11, BLADE_MID = .6 + HILT
 const handBase = (left: boolean) => new T.Quaternion().setFromRotationMatrix(new T.Matrix4().makeBasis(
   new T.Vector3(0, 0, -1), new T.Vector3(0, left ? -1 : 1, 0), new T.Vector3(left ? -1 : 1, 0, 0)))
@@ -53,7 +53,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
   control.obj.position.y = -infoY / 2; control.obj.renderOrder = 1000
   info.obj.position.y = controlY / 2 + .006; info.obj.renderOrder = 1000
   panel.add(control.obj, info.obj)
-  // Işının üstündeki düğme: doku yeniden yüklenmesin diye ayrı saydam düzlem.
+  // Button under the ray: a separate transparent plane so the texture is not re-uploaded.
   const highlightMaterial = new T.MeshBasicMaterial({ color: '#d6b183', transparent: true, opacity: .28, depthTest: false, depthWrite: false, toneMapped: false, fog: false })
   const highlight = new T.Mesh(new T.PlaneGeometry(1, 1), highlightMaterial); highlight.renderOrder = 1001; highlight.visible = false; control.obj.add(highlight)
 
@@ -61,26 +61,26 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
   const rayMat = new T.LineBasicMaterial({ color: '#f6d6ad', transparent: true, opacity: .8, depthTest: false, depthWrite: false, toneMapped: false, fog: false })
   const pointGeo = new T.SphereGeometry(.008, 8, 6), pointMat = new T.MeshBasicMaterial({ color: '#fff2cf', depthTest: false, depthWrite: false, transparent: true, toneMapped: false, fog: false })
   const elGeo = new T.CylinderGeometry(.018, .024, .11, 10).rotateX(Math.PI / 2), elMat = new T.MeshStandardMaterial({ color: '#2a2f30', roughness: .7 })
-  // Sıradaki hedefi gösteren küçük ışık; ince namluda ve küçük parçada gözle bulmayı kolaylaştırır.
+  // Small light marking the next target; makes it easier to spot on the thin blade and small parts.
   const markerMat = new T.MeshBasicMaterial({ color: '#ffb35c', transparent: true, opacity: .9, depthTest: false, depthWrite: false, toneMapped: false, fog: false })
   const marker = new T.Mesh(new T.SphereGeometry(.022, 12, 8), markerMat); marker.renderOrder = 990; marker.visible = false; rig.add(marker)
 
   const raycaster = new T.Raycaster()
   let session: XRSession | null = null, starting = false, poseReady = false
-  let not: number | null = null, awaitingSettle = true, panelYaw = 0, farDuration = 0, drawDuration = 0, drawKey = '', infoKey = '', active: El | null = null, stickTurn = 0
+  let note: number | null = null, awaitingSettle = true, panelYaw = 0, farDuration = 0, drawDuration = 0, drawKey = '', infoKey = '', active: El | null = null, stickTurn = 0
   const swingMotion = new SwingMeter()
   let pieceHand: El | null = null, pieceName = ''
   const pieceM = new T.Matrix4()
   const tmp = new T.Vector3(), tmp2 = new T.Vector3(), tmpQ = new T.Quaternion(), dir = new T.Vector3(), headQ = new T.Euler(0, 0, 0, 'YXZ')
 
   const vibrate = (el: El | null, power: number, ms: number) => {
-    // Quest'te hapticActuators[0].pulse; tarayıcıda yoksa sessiz geçilir.
+    // hapticActuators[0].pulse on Quest; silently skipped if the browser lacks it.
     const g = el?.source?.gamepad as (Gamepad & { hapticActuators?: { pulse?: (g: number, ms: number) => Promise<boolean> }[] }) | undefined
-    try { void g?.hapticActuators?.[0]?.pulse?.(power, ms)?.catch?.(() => {}) } catch { /* desteklenmiyor */ }
+    try { void g?.hapticActuators?.[0]?.pulse?.(power, ms)?.catch?.(() => {}) } catch { /* unsupported */ }
   }
   const swordHand = () => hands.find(e => e.source?.handedness === 'right') ?? hands.find(e => e.source)
   const inHand = () => k.game().stage === 7 && !k.game().master
-  // İki kumanda varken kılıç eli panel seçmez: savururken yanlışlıkla düğmeye basılmaz.
+  // With two controllers the sword hand does not select panels: no accidental button presses while swinging.
   const isSwordHand = (el: El) => inHand() && el === swordHand() && hands.filter(e => e.source).length > 1
 
   const headYaw = () => { headQ.setFromQuaternion(xr.getCamera().quaternion); return headQ.y }
@@ -96,7 +96,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
     hands.forEach(el => el.hammer.reset())
     placePanel(); awaitingSettle = false
   }
-  // Masaüstünde ekran koordinatları data-* ile veriliyor; VR testi de düğmeleri buradan bulur.
+  // On desktop screen coordinates are exposed via data-*; the VR test also finds buttons here.
   const buttonStamp = () => {
     rig.updateWorldMatrix(true, true)
     k.stamp('xrButtons', JSON.stringify(control.squares().map(q => {
@@ -108,24 +108,24 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
   const frameLocal = (q: Frame, h: T.Vector3) => h.set(((q.x + q.g / 2) / PANEL_G - .5) * PANEL_METER, (.5 - (q.y + q.y2) / 2 / PANEL_Y) * controlY, .001)
 
   const drawPanel = (force = false) => {
-    const d = k.game(), p = panelState(d, { reheat: k.reheat(), not }), keyStr = JSON.stringify(p)
+    const d = k.game(), p = panelState(d, { reheat: k.reheat(), not: note }), keyStr = JSON.stringify(p)
     if (force || keyStr !== drawKey) { drawKey = keyStr; control.draw(p); buttonStamp() }
-    const b = infoState(d.stage, not)
+    const b = infoState(d.stage, note)
     if (force || b.text !== infoKey) { infoKey = b.text; info.draw(b); k.stamp('xrInfo', `${b.title}|${b.source}|${b.honesty.length}`) }
   }
 
   const action = (id: string, el: El) => {
     if (id === 'exit') return finish()
     const [tour, value] = id.split(':')
-    if (tour === 'command') { k.command(value as Command); if (value === 'fromStart') not = null; if (value === 'clink') vibrate(el, .4, 40) }
+    if (tour === 'command') { k.command(value as Command); if (value === 'fromStart') note = null; if (value === 'clink') vibrate(el, .4, 40) }
     else if (tour === 'hold') { el.held = value as HoldName; k.hold(el.held, true) }
     else if (tour === 'region') k.selectRegion(Number(value))
     else if (tour === 'target') k.selectTarget(Number(value))
-    else if (tour === 'not') not = value === 'close' ? null : Number(value)
+    else if (tour === 'not') note = value === 'close' ? null : Number(value)
     drawPanel()
   }
 
-  // Panel dışına basış: aşamanın sahnedeki eylemi. Kurallar sahnenin komut/tut işlevlerindedir.
+  // Press outside the panel: the stage's scene action. Rules live in the scene's command/hold functions.
   const sceneAction = (el: El) => {
     const d = k.game(), ray3 = raycaster.ray
     if (d.master) return
@@ -144,7 +144,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
     }
   }
 
-  // Kuşanma: parça tutulur, kılıçtaki yerine götürülür, yakınsa oturur. Sıra ve sayım sahnenin tak kuralındadır.
+  // Assembly: the part is grabbed, carried to its place on the sword, and seats if close. Order and counting live in the scene's attach rule.
   const grabPiece = (el: El) => {
     const d = k.game()
     if (pieceHand || d.stage !== 5 || d.master || d.attached >= pieces.length) return
@@ -174,7 +174,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
   }
 
   const refresh = (el: El) => {
-    // select olayı kare döngüsünün dışında gelir; matrixAutoUpdate kapalı, zorlanmazsa rig değişimi yansımaz.
+    // The select event arrives outside the frame loop; matrixAutoUpdate is off, so rig changes do not apply unless forced.
     el.controller.updateWorldMatrix(true, false, true)
     raycaster.setFromXRController(el.controller)
   }
@@ -194,7 +194,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
     if (q && !q.button.passive) action(q.id, el)
   }
   const released = (el: El) => { if (el.held) k.hold(el.held, false); el.held = null; el.wristX = null }
-  // Karar kare başında: kopan kumanda da önce selectend yollar, oturtma denemesi sayılmasın.
+  // Decided at frame start: a disconnecting controller also sends selectend first, which must not count as a seating attempt.
   const keyRelease = (el: El) => { if (!el.trigger && !el.side && el === pieceHand) el.toRelease = true }
 
   const hands: El[] = [0, 1].map(i => {
@@ -227,19 +227,19 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
     pieceCancel()
     hands.forEach(el => { released(el); el.source = null; el.hammer.reset(); el.trigger = el.side = false })
     k.floor(false)
-    session = null; poseReady = false; not = null; active = null; drawKey = infoKey = ''
+    session = null; poseReady = false; note = null; active = null; drawKey = infoKey = ''
     swingMotion.reset(); marker.visible = false; highlight.visible = false
   }
   const onSessionEnd = () => {
-    if (!session) return // Yarım kalan açılışın kapanışı: sahneye dokunulmamıştı
+    if (!session) return // Closing a half-finished start: the scene was not touched
     undo()
     k.sessionEnded()
   }
   xr.addEventListener('sessionend', onSessionEnd)
 
-  const finish = () => { session?.end().catch(() => {}) } // Zaten kapanmış oturumda end() reddeder
+  const finish = () => { session?.end().catch(() => {}) } // end() rejects on an already closed session
 
-  /** Işın, panel üstündeyse boyu kısalır ve üstündeki düğme vurgulanır. */
+  /** When the ray is over the panel it is shortened and the button under it is highlighted. */
   const rayFrame = () => {
     let highlighted: Frame | null = null
     for (const el of hands) {
@@ -259,14 +259,14 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
     if (highlighted) { const q: Frame = highlighted; frameLocal(q, highlight.position); highlight.scale.set(q.g / PANEL_G * PANEL_METER, (q.y2 - q.y) / PANEL_Y * controlY, 1) }
   }
 
-  /** Aşamanın asıl nesnesini gösterir; ışın ona yakınsa büyür. Dövmede üzerindeki bölgeyi de hatırlar. */
+  /** Marks the stage's main object; grows when the ray is near it. While forging it also remembers the region under it. */
   const markerFrame = () => {
     const d = k.game()
     let var_ = !d.master, limit = 0
     if (d.stage === 0) { k.objPoint('eggShape', tmp); limit = NEAR.eggShape }
     else if (d.stage === 1 || d.again) { k.objPoint('bellows', tmp); limit = NEAR.bellows }
     else if (d.stage === 3) { k.objPoint('water', tmp); limit = NEAR.water }
-    else if (d.stage === 5 && pieceHand) k.piecePlace(pieceName, tmp) // Taşınırken işaret kılıçtaki yeri gösterir.
+    else if (d.stage === 5 && pieceHand) k.piecePlace(pieceName, tmp) // While carrying, the marker shows the place on the sword.
     else if (d.stage === 5 && d.attached < 7) { k.objPoint(pieces[d.attached], tmp); limit = NEAR.piece }
     else if (d.stage === 7) tmp.copy(k.targetPointAt(d.target))
     else if (d.stage === 2) {
@@ -290,16 +290,16 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
   return {
     start: async () => {
       if (session || starting) return
-      if (!navigator.xr) throw new Error('Bu tarayıcıda WebXR yok')
+      if (!navigator.xr) throw new Error('WebXR not available in this browser')
       starting = true
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new T.Vector2())
       let fresh: XRSession | null = null
       try {
         fresh = await navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })
         await xr.setSession(fresh)
-        if (xr.getSession() !== fresh) throw new Error('VR oturumu açılırken kapandı')
+        if (xr.getSession() !== fresh) throw new Error('VR session closed while opening')
       } catch (error) {
-        // setSession yarıda kaldıysa renderer boyutu bozulabilir; kapanınca eskisine döner.
+        // If setSession failed midway the renderer size may be broken; it is restored on close.
         if (fresh) {
           const restore = () => {
             xr.removeEventListener('sessionend', restore)
@@ -316,7 +316,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
       xr.setFoveation(1)
       enter(fresh)
     },
-    /** Render'dan önce, oyun durumu işlenmeden çağrılır. */
+    /** Called before render, before the game state is processed. */
     frame: (dt: number) => {
       if (!session) return
       if (!poseReady) {
@@ -328,7 +328,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
       if (awaitingSettle) settle()
       const d = k.game()
 
-      // Usta, panel veya baştan başlama sıradaki parçayı değiştirdiyse tutuş düşer.
+      // If the master, the panel or a restart changed the next part, the grip is dropped.
       if (pieceHand && (d.stage !== 5 || d.master || pieces[d.attached] !== pieceName)) pieceCancel()
       if (pieceHand?.toRelease) dropPiece()
       trackPiece()
@@ -348,7 +348,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
         if (g) { k.rotate(g * dt * 1.4); stickTurn += g * dt * 1.4; k.stamp('xrTurn', stickTurn.toFixed(3)) }
       }
 
-      // Bileme: tetik basılıyken ışının namlu yönündeki hareketi temas noktasını kaydırır.
+      // Grinding: while the trigger is held, the ray's motion along the blade moves the contact point.
       for (const el of hands) if (el.held === 'wrist') {
         refresh(el)
         const x = planeX(raycaster.ray.origin, raycaster.ray.direction, k.stoneZ)
@@ -356,7 +356,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
         el.wristX = x
       }
 
-      // Dövme: yalnız takip edilen elin kendi yakın zamandaki namlu hedefi vurulur.
+      // Forging: only the tracked hand's own recent blade target is struck.
       for (const el of hands) {
         if (d.stage !== 2 || d.again || d.master || !el.source || !el.grip.visible || !el.controller.visible) {
           el.hammer.reset(); continue
@@ -369,7 +369,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
         if (struck !== null) { active = el; k.selectRegion(struck); k.command('strike') }
       }
 
-      // Test: kılıç elde; savrulan namlu noktasının yolu kesim çizgisi olur.
+      // Test: sword in hand; the path of the swung blade point becomes the cut line.
       if (inHand() && !k.cutOngoing() && !d.broke) {
         const el = swordHand()
         if (el) {
@@ -387,7 +387,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
         }
       } else swingMotion.reset()
     },
-    /** Kılıcı avuca oturtur; kesim düğmesi animasyonu sürerken çağrılmaz. */
+    /** Seats the sword in the palm; not called while the cut-button animation runs. */
     placeSword: () => {
       const el = swordHand()
       if (!el || !el.grip.visible || !inHand()) return false
@@ -400,8 +400,8 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
       return true
     },
     stageChanged: () => {
-      not = null; awaitingSettle = true; swingMotion.reset()
-      hands.forEach(el => { el.hammer.reset(); el.held = null; el.wristX = null }) // Sahne basılı işleri zaten bıraktı.
+      note = null; awaitingSettle = true; swingMotion.reset()
+      hands.forEach(el => { el.hammer.reset(); el.held = null; el.wristX = null }) // The scene already released held actions.
       if (poseReady) drawPanel()
     },
     targetChanged: () => { awaitingSettle = true; swingMotion.reset() },
@@ -410,7 +410,7 @@ export function setupXrSession(renderer: T.WebGLRenderer, scene: T.Scene, camera
     clear: () => {
       xr.removeEventListener('sessionend', onSessionEnd)
       const open = session
-      // Sahne de kapanıyor: oturumBitti çağrılmaz, sonradan gelen sessionend de dinlenmez.
+      // The scene is closing too: sessionEnded is not called and a later sessionend is not listened to.
       if (open) { undo(); open.end().catch(() => {}) }
       for (const el of hands) {
         for (const [ad, f] of el.events) el.controller.removeEventListener(ad as never, f as never)

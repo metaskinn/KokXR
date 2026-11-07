@@ -29,7 +29,7 @@ try {
     await page.screenshot({ path: `test-results/vase-${width}-blender-inspect.png`, fullPage: true })
     await start.click()
     const stage = page.locator('.vase-scene')
-    // GLB'deki bilinen yerleşimden ekran koordinatı üret; uygulama hedef ipucu yayımlamaz.
+    // Derive screen coordinates from the known layout in the GLB; the app publishes no target hints.
     const targetPoint = async (id) => {
       const box = await stage.boundingBox()
       const camera = new PerspectiveCamera(box.width / box.height < 1 ? 62 : 42, box.width / box.height, .1, 500)
@@ -45,11 +45,11 @@ try {
     const drag = async (id, good = true, touch = false, physical = false) => {
       const piece = page.locator(`.vase-handle[data-piece-id="${id}"]`)
       const b = await piece.boundingBox()
-      assert.ok(b, 'Parça tutamacı yok')
+      assert.ok(b, 'No piece handle')
       const cx = b.x + b.width / 2, cy = b.y + b.height / 2
       let sx = cx, sy = cy, started = false
       if (physical) {
-        // Sayı tutamacına değil, gerçek GLB yüzeyine fareyle tutun.
+        // Grab the real GLB surface with the mouse, not the number handle.
         for (const [dx, dy] of [[-28, 0], [28, 0], [-25, -18], [25, -18], [-30, 18], [30, 18], [0, -32], [0, 32]]) {
           const x = cx + dx, y = cy + dy
           const canvas = await page.evaluate(({ x, y }) => document.elementFromPoint(x, y)?.tagName === 'CANVAS', { x, y })
@@ -62,7 +62,7 @@ try {
           }
           await page.keyboard.press('Escape'); await page.mouse.up()
         }
-        assert.ok(started, 'GLB yüzeyinden parça tutulamadı')
+        assert.ok(started, 'Could not grab a piece from the GLB surface')
       }
       let cdp
       if (touch) {
@@ -70,7 +70,7 @@ try {
         await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: sx, y: sy }] })
       } else if (!started) { await page.mouse.move(sx, sy); await page.mouse.down() }
       await page.waitForFunction((id) => document.querySelector(`.vase-handle[data-piece-id="${id}"]`)?.getAttribute('aria-pressed') === 'true', id)
-      assert.equal(await page.locator('.vase-target').count(), 0, 'Seçim sırasında hedef yardımı göründü')
+      assert.equal(await page.locator('.vase-target').count(), 0, 'Target hint shown during selection')
       const target = await targetPoint(id)
       const tx = good ? target.x + sx - cx : sx + 18
       const ty = good ? target.y + sy - cy : sy + 18
@@ -86,7 +86,7 @@ try {
     await drag(0, false, width === 360)
     await page.waitForFunction(() => document.querySelector('.vase-message').textContent.includes('henüz'))
     assert.equal(await page.getByRole('progressbar').getAttribute('value'), '0')
-    // Geri dönüş animasyonu bitsin; sonrasında yeni tutuş aynı yerden başlar.
+    // Let the return animation finish; the next grab then starts from the same spot.
     await page.waitForTimeout(350)
     for (let id = 0; id < 6; id++) {
       await drag(id, true, width === 360, width === 1280 && id === 0)
@@ -98,18 +98,18 @@ try {
     await page.getByRole('button', { name: 'İncelemeye dön' }).click()
     await page.getByRole('button', { name: 'Görünümü sıfırla' }).click()
     const restored = await canvas.screenshot({ path: `test-results/vase-${width}-repair-traces.png` })
-    assert.notDeepEqual(original, restored, 'Onarılan vazo izsiz başlangıç görünümüne döndü')
+    assert.notDeepEqual(original, restored, 'Repaired vase reverted to the traceless start view')
     await start.click()
     await stage.scrollIntoViewIfNeeded()
     await page.waitForFunction(() => document.querySelector('progress')?.value === 0)
-    // Yakalama iptali parçayı yerleştirmeden bırakır ve kameranın kilidini açar.
+    // Cancelling the capture releases the piece without placing it and unlocks the camera.
     const p0 = await page.locator('.vase-handle[data-piece-id="0"]').boundingBox()
     await page.mouse.move(p0.x + p0.width / 2, p0.y + p0.height / 2)
     await page.mouse.down(); await page.mouse.move(p0.x + 25, p0.y + 25)
     await page.keyboard.press('Escape'); await page.mouse.up()
     assert.equal(await stage.evaluate((s) => s.classList.contains('piece-dragging')), false)
     assert.equal(await page.getByRole('progressbar').getAttribute('value'), '0')
-    // Klavye alternatifi: aynı yakınlık kuralıyla parçayı hedefe taşı.
+    // Keyboard alternative: move the piece to the target with the same proximity rule.
     await page.getByText('Klavye ile birleştir', { exact: true }).click()
     await page.getByRole('group', { name: 'Klavye için parça seçimi' }).getByRole('button', { name: 'Parça 1', exact: true }).click()
     await page.waitForTimeout(300)
@@ -125,13 +125,13 @@ try {
     await page.waitForFunction(() => [...document.querySelectorAll('.vase-handle')].every((e) => e.hidden))
     await page.getByRole('button', { name: 'Görünümü sıfırla' }).click()
     const reset = await canvas.screenshot()
-    assert.deepEqual(original, reset, 'İptalden sonra izsiz başlangıç görünümü geri gelmedi')
+    assert.deepEqual(original, reset, 'Traceless start view not restored after cancelling')
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false)
     await page.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Eserler', exact: true }).click()
     await page.getByRole('link', { name: 'Atölyeler', exact: true }).click()
     await page.waitForFunction(() => document.querySelector('.vase-scene canvas'))
     assert.deepEqual(errors, [])
-    console.log(`${width}px: izsiz başlangıç, parçaya özel hedef olmadan ${width === 360 ? 'byTouch' : 'byMouse'} 6 parça onarımı, kalıcı onarım izleri, iptal, Escape ve klavye geçti.`)
+    console.log(`${width}px: traceless start, 6-piece repair ${width === 360 ? 'by touch' : 'by mouse'} without per-piece targets, persistent repair traces, cancel, Escape and keyboard passed.`)
     await page.close()
   }
   const failed = await browser.newPage()
@@ -141,5 +141,5 @@ try {
   assert.equal(await failed.getByRole('button', { name: 'Vazoyu parçala ve onar' }).isDisabled(), true)
   assert.equal(await failed.locator('.vase-scene canvas').count(), 0)
   await failed.close()
-  console.log('GLB yükleme hatası: anlaşılır hata durumu, devre dışı başlangıç ve sızan canvas yok.')
+  console.log('GLB load error: clear error state, disabled start and no leaked canvas.')
 } finally { await browser.close() }

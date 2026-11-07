@@ -1,5 +1,5 @@
-// Yıldırım Külliyesi temsilî maketi: cami içiyle, diğer yapılar dış kütle olarak.
-// Kaynak ölçüler parça dosyalarının başında yazılıdır. Gerçek bir 3B tarama değildir.
+// Representative model of the Yıldırım Complex: the mosque with its interior, other buildings as exterior masses.
+// Source dimensions are written at the top of the piece files. Not a real 3D scan.
 import * as THREE from 'three'
 import { Bucket } from '../uluMosquePiece'
 import type { Model } from '../uluMosqueModel'
@@ -8,7 +8,7 @@ import { BAY_Y, BASE, mosque } from './yildirim-complex-pieces/mosque'
 import { hospital, madrasa, fountainKiosk, site, tomb } from './yildirim-complex-pieces/other'
 import { yildirimMaterials } from './yildirim-complex-pieces/common'
 
-/** Yapılar kuzeye doğru uzanır; kaideye ortalamak için hepsi güneye kaydırılır. */
+/** The buildings extend to the north; all are shifted south to center them on the base. */
 const OZ = 16
 const PEDESTAL = 90
 
@@ -25,7 +25,7 @@ export const building = (): Model => {
   const root = k.group()
   const roofGroup = kRoof.group(), drumGroup = kDrum.group(), domeGroup = kDome.group()
   root.add(roofGroup, drumGroup, domeGroup)
-  // Tüm geometri kaideye ortalanır.
+  // All geometry is centered on the base.
   for (const g of [root, roofGroup, drumGroup, domeGroup]) {
     g.children.forEach((c) => { if (c instanceof THREE.Mesh) c.geometry.translate(0, 0, OZ) })
   }

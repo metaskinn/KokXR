@@ -24,17 +24,17 @@ try {
           const r = i.getBoundingClientRect(), s = i.closest('.gallery-scene').getBoundingClientRect()
           return { fits: r.left >= s.left - 1 && r.right <= s.right + 1 && r.top >= s.top - 1 && r.bottom <= s.bottom + 1, ratio: Math.abs(r.width / r.height - i.naturalWidth / i.naturalHeight) }
         })
-        assert.ok(result.fits && result.ratio < 0.015, 'Görüntü kırpılmış veya alan dışına taşmış')
+        assert.ok(result.fits && result.ratio < 0.015, 'Image cropped or overflowing its area')
       }
       for (let index = 0; index < count; index++) {
         await thumbs.nth(index).click()
         await fitted()
         assert.equal(await thumbs.nth(index).getAttribute('aria-pressed'), 'true')
         const visible = await thumbs.nth(index).evaluate((button) => { const b=button.getBoundingClientRect(), p=button.parentElement.getBoundingClientRect(); return b.left >= p.left - 1 && b.right <= p.right + 1 })
-        assert.ok(visible, 'Seçili küçük resim şerit dışında')
+        assert.ok(visible, 'Selected thumbnail outside the strip')
       }
       await next.click()
-      assert.equal(await thumbs.first().getAttribute('aria-pressed'), 'true', 'Son fotoğraftan başa dönmedi')
+      assert.equal(await thumbs.first().getAttribute('aria-pressed'), 'true', 'Did not wrap from the last photo to the first')
       await previous.click()
       assert.equal(await thumbs.last().getAttribute('aria-pressed'), 'true')
       await thumbs.first().focus()
@@ -71,7 +71,7 @@ try {
         for (let i = 1; i <= 8; i++) await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: box.x + box.width * (.8 - .6 * i / 8), y }] })
         await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
         await page.waitForFunction(() => document.querySelectorAll('.small-images button')[1]?.getAttribute('aria-pressed') === 'true')
-        assert.equal(await dialog.count(), 0, 'Kaydırma büyütme penceresini açtı')
+        assert.equal(await dialog.count(), 0, 'Swipe opened the zoom dialog')
         await cdp.detach()
       }
       const hotspotThumb = gallery.getByRole('button', { name: /fotoğraf: İç mekândaki şadırvan/ })
@@ -84,13 +84,13 @@ try {
           const x=parseFloat(p.style.left)/100, y=parseFloat(p.style.top)/100
           return Math.abs(b.x+b.width/2-(i.x+i.width*x)) < 1 && Math.abs(b.y+b.height/2-(i.y+i.height*y)) < 1
         })
-        assert.ok(aligned, 'Keşif noktası fotoğrafla hizalı değil')
+        assert.ok(aligned, 'Hotspot not aligned with the photo')
         await point.click()
         assert.ok(await gallery.locator('.info-card').isVisible())
       }
       await gallery.screenshot({ path: `test-results/gallery-${width}-${id}.png` })
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false)
-      console.log(`${width}px ${id}: ${count} fotoğraf, oran/sığdırma, küçük resimler, oklar, klavye, büyütme, odak ve mobil kaydırma geçti.`)
+      console.log(`${width}px ${id}: ${count} photos, ratio/fit, thumbnails, arrows, keyboard, zoom, focus and mobile swipe passed.`)
     }
     assert.deepEqual(errors, [])
     await page.close()

@@ -10,10 +10,10 @@ export interface AdminProps {
   overlay: Overlay
   save: (data: Overlay) => void
 }
-export function downloadJson(data: unknown, ad: string) {
+export function downloadJson(data: unknown, filename: string) {
   const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2) + '\n'], { type: 'application/json' }))
   const a = document.createElement('a')
-  a.href = url; a.download = ad; a.click()
+  a.href = url; a.download = filename; a.click()
   setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
 export function DemoNote() {

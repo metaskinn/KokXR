@@ -2,8 +2,8 @@ import { average, limit } from './state.ts'
 import type { Game } from './state.ts'
 export const targets = ['Hasır rulo', 'Kütük', 'Asılı kumaş']
 export interface Cut { power: number; wasCut: boolean; depth: number; message: string; broke: boolean }
-export function computeCut(d: Game, dx: number, dy: number, sure: number): Cut {
-  const speed = Math.hypot(dx, dy) / Math.max(.08, sure)
+export function computeCut(d: Game, dx: number, dy: number, duration: number): Cut {
+  const speed = Math.hypot(dx, dy) / Math.max(.08, duration)
   const dir = Math.max(Math.abs(dx), Math.abs(dy)) / Math.max(.001, Math.hypot(dx, dy))
   const power = limit(average(d, 'skin') * .55 + d.hardness * .45 + (speed > .7 ? .08 : 0) + (dir > .9 ? .04 : 0) - (d.crack_ ? .18 : 0) - d.burn * .1)
   const broke = d.broke || (d.crack_ && d.target === 1 && speed > 1)

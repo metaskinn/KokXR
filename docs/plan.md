@@ -21,8 +21,8 @@ dışa aktarılabilir.
 | Çalışan mobil/masaüstü uygulama | Duyarlı tasarım + PWA (kurulabilir, çevrimdışı) |
 | Birden fazla vakıf eseri | İki eser, eser seçim ekranı |
 | Tarihçe, görsel, kaynak | Eser sayfası: galeri, bilgi paneli, kaynak etiketi |
-| İçerik ekleme/düzenleme | `/yonetim` ekranı: eser ekle, metin düzenle, JSON dışa/içe aktar |
-| Yeni eser eklenebilir mimari | Her eser = `src/data/eserler/<id>.json` + görsel klasörü; kod değişmez |
+| İçerik ekleme/düzenleme | `/admin` ekranı: eser ekle, metin düzenle, JSON dışa/içe aktar |
+| Yeni eser eklenebilir mimari | Her eser = `src/content/artifacts/<id>.json` + görsel klasörü; kod değişmez |
 | Uçtan uca demo | Ana sayfa → eser seç → keşfet → test → rozet |
 
 ## Kapsam
@@ -52,7 +52,7 @@ type Dogrulama = "dogrulanmis" | "temsili";
 interface Kaynak { id: string; metin: string; sayfa?: string; }
 
 interface Gorsel {
-  dosya: string;          // public/gorseller/<eserId>/...
+  dosya: string;          // public/images/<eserId>/...
   alt: string;            // ekran okuyucu metni
   aciklama?: string;
   kaynakId: string;       // fotoğraf arşivi kaynağı
@@ -100,20 +100,20 @@ interface Eser {
 
 - Arşiv `proje bilgileri/` altında, git dışında kalır.
 - Eser başına 8–12 fotoğraf seçilir, 1600 px genişliğe küçültülür,
-  `public/gorseller/<eserId>/` altına konur.
+  `public/images/<eserId>/` altına konur.
 - Kullanım izni netleşmeden repo herkese açık yapılmaz, demo herkese açık yayınlanmaz.
 
 ## Ajanlar ve iş akışı
 
 | Ajan | Komut | Rol | Dokunduğu yer |
 |---|---|---|---|
-| Claude Code | `claude` | Lider: plan, veri/içerik, kod incelemesi | `docs/`, `src/data/` |
+| Claude Code | `claude` | Lider: plan, veri/içerik, kod incelemesi | `docs/`, `src/content/` |
 | Codex CLI | `codex` | Uygulama kodu, build | `src/` (data hariç), yapılandırma |
-| Antigravity | `agy` | Tarayıcı testi, tasarım raporu | `docs/arsiv/test-raporu.md` |
+| Antigravity | `agy` | Tarayıcı testi, tasarım raporu | `docs/archive/test-report.md` |
 
-1. Claude `docs/arsiv/next-task.md` dosyasına tek bir görev yazar.
+1. Claude `docs/archive/next-task.md` dosyasına tek bir görev yazar.
 2. Codex görevi uygular, `npm run build` ile doğrular, commit atar.
-3. Antigravity uygulamayı tarayıcıda test eder, sonucu `docs/arsiv/test-raporu.md`'ye yazar.
+3. Antigravity uygulamayı tarayıcıda test eder, sonucu `docs/archive/test-report.md`'ye yazar.
 4. Claude raporu ve kodu inceler, sıradaki görevi yazar.
 
 Aynı anda iki ajan aynı dosyayı düzenlemez. Her görev sonunda commit.

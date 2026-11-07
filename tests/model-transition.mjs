@@ -1,5 +1,5 @@
-// Durak animasyonunu tuş/fareyle kesmek güvenli hedefte yürümeyi sürdürmeli.
-// TEST_URL=http://127.0.0.1:5187 TEST_BROWSER_CHANNEL=chromium node tests/maket-gecis.mjs
+// Interrupting the stop animation with a key/mouse must keep walking at a safe target.
+// TEST_URL=http://127.0.0.1:5187 TEST_BROWSER_CHANNEL=chromium node tests/model-transition.mjs
 import assert from 'node:assert/strict'
 import { chromium } from 'playwright'
 
@@ -9,8 +9,8 @@ try {
   page.setDefaultTimeout(120000)
   const errors = []
   page.on('pageerror', (e) => errors.push(String(e)))
-  // Tek kareyi 170ms ilerletmek geçişi gerçekten ortasında keser. Yazılımsal
-  // çizimin duvar saati testin girişten önce animasyonu bitirmesine yol açmaz.
+  // Advancing a single frame by 170 ms really interrupts the transition midway. The wall
+  // clock of software rendering cannot make the animation finish before the test's input.
   await page.addInitScript(() => {
     const raf = requestAnimationFrame.bind(window), cancel = cancelAnimationFrame.bind(window)
     const now = performance.now.bind(performance), waiting = new Map()
@@ -52,8 +52,8 @@ try {
   const pos = async () => (await area.getAttribute('data-position'))?.split(',').map(Number)
   const key = (type, name = 'w') => area.evaluate((el, [event, key]) => el.dispatchEvent(new KeyboardEvent(event, { key, bubbles: true })), [type, name])
   await page.evaluate(() => window.__transitionTest.pause())
-  for (const [name, input] of [['Mahfile çık', 'tuş'], ['Mahfile çık', 'mouse'], ['Mihrap', 'tuş']]) {
-    if (input !== 'tuş' || name !== 'Mahfile çık') {
+  for (const [name, input] of [['Mahfile çık', 'key'], ['Mahfile çık', 'mouse'], ['Mihrap', 'key']]) {
+    if (input !== 'key' || name !== 'Mahfile çık') {
       await click('← Dışarı çık'); await click('İçeri gir')
     }
     await click(name)
@@ -71,11 +71,11 @@ try {
     const second = await pos()
     await key('keyup')
     const [x, , z] = targets[name]
-    assert(first && second, `${name}/${input}: yürüyüş konumu yazılmadı`)
-    assert(Math.hypot(first[0] - x, first[1] - z) < 1.5, `${name}/${input}: güvenli hedefe ulaşılmadı: ${first}`)
-    assert(Math.hypot(second[0] - first[0], second[1] - first[1]) > .02, `${name}/${input}: geçişten sonra yürüme kilitlendi: ${second}`)
-    console.log(`${name}/${input}: geçiş ortasında kesildi, hedefte yürüyüş sürdü.`)
+    assert(first && second, `${name}/${input}: walking position not written`)
+    assert(Math.hypot(first[0] - x, first[1] - z) < 1.5, `${name}/${input}: safe target not reached: ${first}`)
+    assert(Math.hypot(second[0] - first[0], second[1] - first[1]) > .02, `${name}/${input}: walking locked after the transition: ${second}`)
+    console.log(`${name}/${input}: transition interrupted midway, walking continued at the target.`)
   }
-  assert.deepEqual(errors, [], 'Tarayıcı çalışma zamanı hatası')
-  console.log('Durak geçişi: mahfil tuş/fare kesintisi ve mihrap havuz geçişi başarılı.')
+  assert.deepEqual(errors, [], 'Browser runtime error')
+  console.log('Stop transition: mahfil key/mouse interruption and mihrab pool transition passed.')
 } finally { await browser.close() }

@@ -1,4 +1,4 @@
-// Çini atölyesinin VR oturumu: oyunu kumanda ışınıyla oynatır. Oyun kuralı burada yoktur; sahnedeki işaret yoluna bağlanır.
+// Tile workshop VR session: plays the game with the controller ray. No game rules here; it hooks into the scene's pointer path.
 import * as THREE from 'three'
 import type { Action, Game } from './state'
 import type { HoldName } from './scene'
@@ -18,11 +18,11 @@ const HEAD_Y = 300, LINE = 64, GAP = 8
 const TEXT = 'system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif'
 const LABEL = 'Temsilî çini · Oyun ölçeği'
 
-/** Panel satırları: oyun eylemleri, ustaya bırak ve çıkış. */
+/** Panel rows: game actions, leave to the master, and exit. */
 export function panelItems(items: Action[], hasMaster: boolean): Action[] {
   return [...items, ...(hasMaster ? [{ id: 'master', ad: 'Ustaya bırak', tour: 'head' as const }] : []), { id: 'exit', ad: "VR'dan çık", tour: 'head' as const }]
 }
-/** `v` üst kenarda 1'dir. */
+/** `v` is 1 at the top edge. */
 export function panelHit(v: number, count: number) {
   const py = (1 - v) * Y
   if (py < HEAD_Y) return -1
@@ -48,7 +48,7 @@ export function setupXr(b: XrContext): TileXr {
 
   const el = document.createElement('canvas'); el.width = G; el.height = Y
   const c = el.getContext('2d', { willReadFrequently: true })
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   const texture = new THREE.CanvasTexture(el); texture.colorSpace = THREE.SRGBColorSpace; texture.anisotropy = 8
   const panelG = new THREE.PlaneGeometry(METER, (METER * Y) / G)
   const panelM = new THREE.MeshBasicMaterial({ map: texture, toneMapped: false })
@@ -111,7 +111,7 @@ export function setupXr(b: XrContext): TileXr {
     if (e.heldName) { b.hold(e.heldName, false); e.heldName = null }
     if (e.markers) { e.markers = false; b.markerRelease() }
   }
-  // İnceleme adımında yan tuş tabağı ele alır.
+  // In the inspection step the side button picks up the plate.
   const grab = (e: El) => {
     if (!session || b.game().stage !== 6 || holder) return
     holder = e.controller
@@ -154,9 +154,9 @@ export function setupXr(b: XrContext): TileXr {
   return {
     start: async () => {
       if (session) return
-      if (!navigator.xr) throw new Error('Bu tarayıcıda WebXR yok')
+      if (!navigator.xr) throw new Error('WebXR not available in this browser')
       const fresh = await navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })
-      if (closed) { await fresh.end().catch(() => {}); throw new Error('Sahne kapandı') }
+      if (closed) { await fresh.end().catch(() => {}); throw new Error('Scene closed') }
       await xr.setSession(fresh)
       xr.setFoveation(1)
       enter(fresh)
@@ -169,7 +169,7 @@ export function setupXr(b: XrContext): TileXr {
       for (const e of hands) {
         if (e.markers) b.walkMarkers(ray(e.controller))
         else if (e === hands[1] && !hands[0].markers && !e.heldName) {
-          // Basılmadan da alet ışının ucunda görünür: nereye dokunacağın belli olsun.
+          // The tool shows at the ray tip even without pressing, so it is clear where you will touch.
           const r = ray(e.controller)
           if (!raycaster.intersectObject(panel, false)[0]) b.walkMarkers(r)
         }

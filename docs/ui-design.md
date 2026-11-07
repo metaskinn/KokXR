@@ -4,7 +4,7 @@ Amaç: Türkçe, sade ve modern bir dijital miras arayüzü. Fotoğrafları, ese
 
 ## Araştırma ve kararlar
 
-- [Material Design 3 — renk rolleri](https://m3.material.io/m3/pages/color-roles?s=m3): yüzey, ana eylem, ikincil metin ve vurgu rollerini ayır. Uygulamada bunlar `src/index.css` değişkenleriyle tanımlandı. Bronz küçük başlıklarda, yeşil ana eylemlerde kullanıldı.
+- [Material Design 3 — renk rolleri](https://m3.material.io/m3/pages/color-roles?s=m3): yüzey, ana eylem, ikincil metin ve vurgu rollerini ayır. Uygulamada bunlar `src/app/styles/index.css` değişkenleriyle tanımlandı. Bronz küçük başlıklarda, yeşil ana eylemlerde kullanıldı.
 - [Material Design 3 — tipografi](https://m3.material.io/styles/typography/applying-type): başlık, gövde ve etiketler için ayrı ölçekler. Ana sayfada kısa, büyük serif başlıklar; içerik ve kontrollerde sistem sans-serif yazı tipi. Harici font isteği yok.
 - [NN/g — Aesthetic and Minimalist Design](https://www.nngroup.com/articles/aesthetic-minimalist-design/): görevle ilişkili bilgiyi öne çıkar, görsel gürültüyü azalt. Ana sayfada tek ana çağrı, açık eser kartları ve ayrı atölye alanı; eser sayfalarında bölüm bağlantıları.
 - [WCAG 2.2 — Contrast Minimum](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html): normal metinde en az 4,5:1 hedefi. Renk tek başına durum anlatmıyor; seçili parça, aktif menü, doğru/yanlış yanıtlar ayrıca çizgi, metin ve işaret içeriyor.
@@ -39,8 +39,8 @@ Bu oranlar seçili eşleşmelerin ölçümüdür; tüm uygulama için kapsamlı 
 
 - `npm run build`
 - `node tests/ui.mjs`: Google Chrome ile 1440, 768, 360 ve 320px; altı rota, taşma, başlıklar, bölüm hedefleri, gezinme ölçüleri, atlama bağlantısı, rota odağı, seçili renk eşleşmeleri ve azaltılmış hareket.
-- `node tests/vazo.mjs`: Google Chrome ile 1280 ve 360px; inceleme, yanlış parça/yön, tam onarım, masaüstünde sürükleme, telefonda dokunma ve yeniden başlatma.
-- Mevcut `tests/uctan-uca.mjs` senaryoları kurulu Chrome ve geliştirme sunucusuna uyarlanmış geçici kopyayla ayrıca çalıştırıldı. Asıl senaryo dosyası değiştirilmedi.
+- `node tests/vase.mjs`: Google Chrome ile 1280 ve 360px; inceleme, yanlış parça/yön, tam onarım, masaüstünde sürükleme, telefonda dokunma ve yeniden başlatma.
+- Mevcut `tests/end-to-end.mjs` senaryoları kurulu Chrome ve geliştirme sunucusuna uyarlanmış geçici kopyayla ayrıca çalıştırıldı. Asıl senaryo dosyası değiştirilmedi.
 - Ekran görüntüleri git dışında kalan `test-sonuclari/` içinde. Firefox bu ortamda çalıştırılmadı.
 
 ### Sonuç notu
@@ -67,7 +67,7 @@ Kullanıcı yönlendirmesi: fotoğraf boyutlarını/yerleşimini ve fotoğraflar
 
 Etkileşim kararları [WAI Carousel Controls](https://www.w3.org/WAI/tutorials/carousels/controls/) ve [WAI Carousel Functionality](https://www.w3.org/WAI/tutorials/carousels/functionality/) rehberlerindeki kullanıcı kontrolü, açık gezinme ve odak koruma ilkelerine dayanır. Otomatik fotoğraf geçişi yok.
 
-Galeri kontrolleri: `node tests/galeri.mjs`. Yalnız renk ölçümü: `node tests/ui.mjs --contrast-only`.
+Galeri kontrolleri: `node tests/gallery.mjs`. Yalnız renk ölçümü: `node tests/ui.mjs --contrast-only`.
 
 ## Sade arayüz revizyonu — 7 Kasım 2026
 

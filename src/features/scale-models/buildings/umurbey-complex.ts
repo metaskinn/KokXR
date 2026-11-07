@@ -1,8 +1,8 @@
-// Umur Bey Külliyesi temsilî maketi (Bursa, Yıldırım). Birim metre. Kuzey = -z, kıble (güney) = +z, doğu = +x.
-// Kaynaklı ölçüler: iki mekân 8,18 × 8,10 m ve 6,34 × 6,60 m, aradaki geçit 2,20 m (Yıldırım Belediyesi, envanter);
-// türbe 4,60 × 4,60 m; taş vakfiye 1,35 × 2,15 m; beş gözlü son cemaat yeri (envanter).
-// Yerleşim, yükseklikler, duvar kalınlığı, pencere ve mobilya biçimleri Drive arşivindeki fotoğraflara bakılarak yorumlanmıştır.
-// Hat yazısı taklit edilmez: yalnız taş vakfiye ve çeşme kitabesi gerçek fotoğrafla gösterilir.
+// Representative model of the Umur Bey Complex (Bursa, Yıldırım). Units in meters. North = -z, qibla (south) = +z, east = +x.
+// Sourced dimensions: two spaces 8.18 × 8.10 m and 6.34 × 6.60 m, passage between them 2.20 m (Yıldırım Municipality, inventory);
+// tomb 4.60 × 4.60 m; stone endowment deed 1.35 × 2.15 m; five-bay late-comers' portico (inventory).
+// Layout, heights, wall thickness, window and furniture forms are interpreted from the photos in the Drive archive.
+// Calligraphy is not imitated: only the stone endowment deed and the fountain inscription are shown with real photos.
 import * as THREE from 'three'
 import type { Model } from '../uluMosqueModel'
 import type { Box, InteriorStop, FloorArea } from '../uluMosqueInterior'
@@ -14,15 +14,15 @@ type Mat = THREE.Material
 
 // --- Plan ---
 const WALL = 1.05
-/** Ana mekân iç yüzleri (8,18 × 8,10 m). */
+/** Interior faces of the main space (8.18 × 8.10 m). */
 const A = { x0: -7.785, x1: 0.395, z0: -1.9, z1: 6.2 }
-/** Küçük mekân iç yüzleri (6,34 × 6,60 m). Kuzey duvarı ana mekânla aynı hizada (tepeden fotoğraf). */
+/** Interior faces of the small space (6.34 × 6.60 m). North wall aligned with the main space (aerial photo). */
 const B = { x0: 1.445, x1: 7.785, z0: -1.9, z1: 4.7 }
 const AX = (A.x0 + A.x1) / 2, AZ = (A.z0 + A.z1) / 2
 const BX = (B.x0 + B.x1) / 2, BZ = (B.z0 + B.z1) / 2
 const XB = A.x0 - WALL, XD = B.x1 + WALL
 const ZK = A.z0 - WALL, ZG_A = A.z1 + WALL, ZG_B = B.z1 + WALL
-/** Son cemaat yeri: tepeden fotoğraftaki orana göre 4,3 m derin. */
+/** Late-comers' portico: 4.3 m deep, per the proportion in the aerial photo. */
 const ZSC = ZK - 4.3
 const END_WALL = 0.85
 const BAY = (XD - XB - 2 * END_WALL) / 5
@@ -39,7 +39,7 @@ const FOUNTAIN = { x: 8, z: ZSC - 3 }
 
 const upright = (x0: number, y0: number, x1: number, y1: number) => rect(x0, y0, x1, y1) as unknown as THREE.Path
 
-/** Düz üçgen yüzey listesinden gölgeli geometri (UV metre). */
+/** Shaded geometry from a flat triangle list (UV in meters). */
 function surface(triangles: { p: number[]; uv: number[] }[]) {
   const pos: number[] = [], uv: number[] = []
   triangles.forEach((u) => { pos.push(...u.p); uv.push(...u.uv) })
@@ -50,12 +50,12 @@ function surface(triangles: { p: number[]; uv: number[] }[]) {
   return g
 }
 
-/** Dört yana eğimli çatı: alt dikdörtgenden üst dikdörtgene (üst nokta olabilir). UV: u saçak boyunca, v eğim boyunca. */
+/** Roof sloping to four sides: from the lower rectangle to the upper rectangle (top may be a point). UV: u along the eave, v along the slope. */
 function fourSlope(x0: number, x1: number, z0: number, z1: number, y0: number, y1: number, ix: number, iz: number) {
   const X0 = x0 + ix, X1 = x1 - ix, Z0 = z0 + iz, Z1 = z1 - iz
   const a: { p: number[]; uv: number[] }[] = []
   const trapezoid = (ax: number, az: number, bx: number, bz: number, cx: number, cz: number, dx: number, dz: number) => {
-    // a-b saçak, c-d mahya (c, b'nin üstünde)
+    // a-b eave, c-d ridge (c above b)
     const L = Math.hypot(bx - ax, bz - az)
     const mid = (L - Math.hypot(cx - dx, cz - dz)) / 2
     const slope = Math.hypot(Math.hypot((ax + bx) / 2 - (cx + dx) / 2, (az + bz) / 2 - (cz + dz) / 2), y1 - y0)
@@ -69,7 +69,7 @@ function fourSlope(x0: number, x1: number, z0: number, z1: number, y0: number, y
   return surface(a)
 }
 
-/** Sıra sıra bindirmeli kiremit kubbe; profil basamaklıdır, UV'nin v'si sıraya oturur. */
+/** Tile dome in overlapping rows; the profile is stepped, UV v fits the rows. */
 function roofTileDome(r: number, h: number, row: number, piece: number) {
   const points: [number, number][] = []
   const v: number[] = []
@@ -85,7 +85,7 @@ function roofTileDome(r: number, h: number, row: number, piece: number) {
   return g
 }
 
-/** Kare ağızdan on altıgen ağza geçen "Türk üçgenleri" kuşağı (içeriden fotoğraftaki kırma yüzler). */
+/** Belt of "Turkish triangles" from a square mouth to a sixteen-sided mouth (the faceted faces in the interior photo). */
 function triangleBeltOf(cx: number, cz: number, ax: number, az: number, y0: number, y1: number, R: number) {
   const N = 16, alt: [number, number][] = []
   for (let k = 0; k < 4; k++) for (let i = 0; i < 4; i++) {
@@ -116,7 +116,7 @@ export const building = (): Model => {
     kv.add(place(boxG(g, h, d), x, y, z), mat)
   const r = random(865)
 
-  // --- Çarpışma listeleri ---
+  // --- Collision lists ---
   const obstacles: Box[] = []
   const walls: Box[] = []
   const circles: { x: number; z: number; r: number; top?: number }[] = []
@@ -127,15 +127,15 @@ export const building = (): Model => {
     if (wall) walls.push(b)
   }
 
-  // --- Zemin: çim, avlu taşı, sekiler ---
+  // --- Ground: grass, courtyard stone, benches ---
   const floorCircle = new THREE.CircleGeometry(23.8, 64).rotateX(-Math.PI / 2).translate(0, 0.01, 0)
   const zp = floorCircle.attributes.position, zuv = floorCircle.attributes.uv
   for (let i = 0; i < zuv.count; i++) zuv.setXY(i, zp.getX(i), zp.getZ(i))
   k.add(floorCircle, m.grass)
-  // Kuzey avlusu ve doğudaki yol (tepeden ve kuzeydoğudan fotoğraf)
+  // North courtyard and the road to the east (aerial and northeast photos)
   box(XD - XB + 1, 0.04, 8.2, m.stonePaving, 0, 0.02, ZSC - 4.1)
   box(1.5, 0.04, ZG_B - ZSC + 1, m.stonePaving, XD + 0.75, 0.02, (ZG_B + ZSC) / 2)
-  // Bina sekisi
+  // Building platform
   box(XD - XB, PAVING, ZK - ZSC + 0.25, m.stonePaving, 0, PAVING / 2, (ZK + ZSC) / 2)
   box(A.x1 - XB + 0.5, PAVING, ZG_A - ZK, m.cream, (XB + A.x1 + 0.5) / 2, PAVING / 2, (ZK + ZG_A) / 2)
   box(XD - A.x1 - 0.5, PAVING, ZG_B - ZK, m.cream, (XD + A.x1 + 0.5) / 2, PAVING / 2, (ZK + ZG_B) / 2)
@@ -144,15 +144,15 @@ export const building = (): Model => {
     { x0: A.x0, x1: A.x1 + 0.5, z0: A.z0, z1: A.z1, h0: PAVING, h1: PAVING },
     { x0: A.x1, x1: B.x1, z0: B.z0, z1: B.z1, h0: PAVING, h1: PAVING },
   )
-  // Halı: kırmızı saf çizgileri kıbleye paralel
+  // Carpet: red prayer-row lines parallel to the qibla
   box(A.x1 - A.x0, 0.02, A.z1 - A.z0, m.carpet, AX, PAVING + 0.01, AZ)
   box(B.x1 - B.x0, 0.02, B.z1 - B.z0, m.carpet, BX, PAVING + 0.01, BZ)
   box(WALL, 0.02, PASSAGE.z1 - PASSAGE.z0, m.stonePaving, (A.x1 + B.x0) / 2, PAVING + 0.01, BZ)
-  // Süpürgelik (ahşap)
+  // Baseboard (wood)
   for (const [g, x, z] of [[A.x1 - A.x0, AX, A.z0 + 0.02], [A.x1 - A.x0, AX, A.z1 - 0.02], [B.x1 - B.x0, BX, B.z0 + 0.02], [B.x1 - B.x0, BX, B.z1 - 0.02]] as const)
     box(g, 0.16, 0.04, m.wood, x, PAVING + 0.08, z)
 
-  // --- Duvarlar: dış örgü + iç sıva; açıklıklar duvardan gerçekten geçer ---
+  // --- Walls: outer masonry + inner plaster; openings really pass through the wall ---
   type Opening = { tip: 'top' | 'alt' | 'door' | 'passage' | 'smallDoor'; u: number }
   const TOPY = { y0: 3.75, g: 0.82, d: 0.95, k: 0.62 }, BOTTOMY = { y0: 0.95, g: 1.05, h: 1.45 }
   const DOOR = { g: 1.5, h: 2.5, k: 0.42 }, KDOOR = { g: 1.15, h: 2.25, k: 0.38 }
@@ -173,7 +173,7 @@ export const building = (): Model => {
     local(subtract(holes(rect(-L / 2, 0, L / 2, CORNICE + 0.02)), 0.04, -t), innerMat)
     for (const a of open) {
       if (a.tip === 'top') {
-        // İçeride sıvalı pencere boşluğu, ortada alçı revzen, içte vitray
+        // Plastered window opening inside, plaster revzen in the middle, stained glass inside
         const ring = arch(new THREE.Shape(), a.u, TOPY.y0 - 0.04, TOPY.g + 0.08, TOPY.d, TOPY.k + 0.06)
         ring.holes.push(arch(new THREE.Path(), a.u, TOPY.y0, TOPY.g - 0.06, TOPY.d, TOPY.k))
         local(subtract(ring, 0.14, -t - 0.01), innerMat)
@@ -189,15 +189,15 @@ export const building = (): Model => {
       }
       if (a.tip === 'alt') {
         const { g, h, y0 } = BOTTOMY
-        // Ahşap kasa, iç aydınlık, dış parmaklık
+        // Wooden frame, inner light, outer grille
         for (const s of [-1, 1]) local(boxG(0.09, h, t - 0.12).translate(a.u + s * (g / 2 - 0.045), y0 + h / 2, -t / 2 - 0.08), m.wood)
         for (const yy of [y0 + 0.045, y0 + h - 0.045]) local(boxG(g, 0.09, t - 0.12).translate(a.u, yy, -t / 2 - 0.08), m.wood)
         local(new THREE.PlaneGeometry(g, h).translate(a.u, y0 + h / 2, -0.08), m.balustrade)
         local(new THREE.PlaneGeometry(g, h).rotateY(Math.PI).translate(a.u, y0 + h / 2, -t + 0.2), m.daylight)
-        // İçten pencere kanatları
+        // Window leaves from inside
         for (const s of [-1, 1]) local(boxG(0.05, h - 0.12, g * 0.42).rotateY(0).translate(a.u + s * (g / 2 + 0.02), y0 + h / 2, -t - 0.2), m.wood)
         if (outerRing) {
-          // Dışta krem lento ve üstünde tuğla boşaltma kemeri (fotoğrafa göre)
+          // Cream lintel outside with a brick relieving arch above it (based on the photo)
           local(boxG(g + 0.26, 0.2, 0.08).translate(a.u, y0 + h + 0.1, -0.02), m.cream)
           for (const s of [-1, 1]) local(boxG(0.13, h, 0.08).translate(a.u + s * (g / 2 + 0.065), y0 + h / 2, -0.02), m.cream)
           local(boxG(g + 0.26, 0.1, 0.1).translate(a.u, y0 - 0.05, -0.01), m.cream)
@@ -211,7 +211,7 @@ export const building = (): Model => {
     }
   }
 
-  // Kuzey duvarı: son cemaat yerine bakar, iki yüzü de sıvalı (fotoğraf). ry=π olduğu için u = -x.
+  // North wall: faces the late-comers' portico, both faces plastered (photo). Since ry=π, u = -x.
   facade(XD - XB - 0.1, 0, ZK, Math.PI, WALL, [
     { tip: 'door', u: -AX },
     { tip: 'alt', u: -(AX - 2.6) }, { tip: 'alt', u: -(AX + 2.6) },
@@ -219,18 +219,18 @@ export const building = (): Model => {
     { tip: 'smallDoor', u: -BX },
     { tip: 'alt', u: -(BX + 2) }, { tip: 'alt', u: -(BX - 2) },
   ], m.plasterOuter, m.plaster, false)
-  // Batı duvarı: iki üst, iki alt pencere (içeriden fotoğraf). ry=-π/2 için u = z - merkez.
+  // West wall: two upper, two lower windows (interior photo). For ry=-π/2, u = z - center.
   const ZO_A = (ZK + ZG_A) / 2
   facade(ZG_A - ZK, XB, ZO_A, -Math.PI / 2, WALL, [
     { tip: 'top', u: AZ - 2.05 - ZO_A }, { tip: 'top', u: AZ + 2.05 - ZO_A },
     { tip: 'alt', u: AZ - 2.05 - ZO_A }, { tip: 'alt', u: AZ + 2.05 - ZO_A },
   ], m.alternating, m.plaster)
-  // Ana mekân güney duvarı: mihrabın iki yanında alt ve üst pencere
+  // Main space south wall: lower and upper windows on both sides of the mihrab
   const XO_A = (XB + B.x0) / 2
   facade(B.x0 - XB, XO_A, ZG_A, 0, WALL, [
     { tip: 'top', u: AX - XO_A - 2.45 }, { tip: 'top', u: AX - XO_A + 2.45 }, { tip: 'alt', u: AX - XO_A - 2.45 }, { tip: 'alt', u: AX - XO_A + 2.45 },
   ], m.alternating, m.plaster)
-  // Küçük mekân güney ve doğu duvarları
+  // South and east walls of the small space
   const XO_B = (XD + B.x0) / 2
   facade(XD - B.x0, XO_B, ZG_B, 0, WALL, [
     { tip: 'top', u: BX - XO_B - 1.6 }, { tip: 'top', u: BX - XO_B + 1.6 }, { tip: 'alt', u: BX - XO_B + 1.6 },
@@ -239,16 +239,16 @@ export const building = (): Model => {
   facade(ZG_B - ZK, XD, ZO_B, Math.PI / 2, WALL, [
     { tip: 'top', u: -(BZ - 1.6 - ZO_B) }, { tip: 'top', u: -(BZ + 1.6 - ZO_B) }, { tip: 'alt', u: -(BZ - 1.6 - ZO_B) },
   ], m.alternating, m.plaster)
-  // İki mekân arasındaki duvar ve 2,20 m'lik geçit. Dış yüzü x = B.x0.
+  // Wall between the two spaces and the 2.20 m passage. Outer face at x = B.x0.
   const ZO_MID = (ZK + ZG_B) / 2
   facade(ZG_B - ZK, B.x0, ZO_MID, Math.PI / 2, WALL, [{ tip: 'passage', u: -(BZ - ZO_MID) }], m.plaster, m.plaster, false)
-  // Üst pencereler bu duvarda da olmalı: fotoğrafta görünmüyor, boş bırakıldı.
-  // Ortak duvarın güneye taşan parçası: küçük mekânın arkasında dışarıda kalır
+  // Upper windows should be on this wall too: not visible in the photo, left empty.
+  // Part of the shared wall extending south: stays outside, behind the small space
   const overhang = rect(-(ZG_A - ZG_B) / 2, 0, (ZG_A - ZG_B) / 2, H)
   k.add(place(subtract(overhang, WALL - 0.04, -WALL + 0.04), B.x0, 0, (ZG_A + ZG_B) / 2, Math.PI / 2), m.alternating)
   box(0.04, CORNICE, ZG_A - ZG_B, m.plaster, A.x1 + 0.02, CORNICE / 2, (ZG_A + ZG_B) / 2)
 
-  // Çarpışma: dış duvarlar
+  // Collision: exterior walls
   obstacle(XB, A.x0, ZK, ZG_A, true)
   obstacle(A.x0, A.x1 + WALL, A.z1, ZG_A, true)
   obstacle(B.x0, XD, B.z1, ZG_B, true)
@@ -259,7 +259,7 @@ export const building = (): Model => {
   obstacle(A.x1, B.x0, A.z0, PASSAGE.z0, true)
   obstacle(A.x1, B.x0, PASSAGE.z1, A.z1 + WALL, true)
 
-  // Kapılar: kırmızı-kahve kanat açık, üstte küçük kubbecik (Yıldırım Belediyesi metni) ve yaprak süsü yerine sade kavsara
+  // Doors: red-brown leaf open, a small domelet on top (Yıldırım Municipality text) and a plain hood instead of the leaf ornament
   const doorLeaf = (cx: number, g: number, h: number) => {
     for (const s of [-1, 1]) {
       box(0.07, h, g / 2, m.woodDark, cx + s * (g / 2 + 0.04), PAVING + h / 2 - 0.2, A.z0 + g / 4)
@@ -269,14 +269,14 @@ export const building = (): Model => {
   doorLeaf(BX, KDOOR.g, KDOOR.h)
   const hood = rotateG([[0.5, 0], [0.46, 0.08], [0.28, 0.26], [0.001, 0.36]], 14, [2, 1])
   k.add(place(hood.scale(1, 1, 0.35), AX, DOOR.h + DOOR.k + 0.34, ZK - 0.02), m.muqarnas)
-  // Kapıyı çevreleyen mermer söve (son cemaat yerinden)
+  // Marble frame around the door (from the late-comers' portico)
   for (const [cx, g, hh, kk] of [[AX, DOOR.g, DOOR.h, DOOR.k], [BX, KDOOR.g, KDOOR.h, KDOOR.k]] as const) {
     const s = arch(new THREE.Shape(), -cx, 0.02, g + 0.36, hh + 0.05, kk + 0.1)
     s.holes.push(arch(new THREE.Path(), -cx, 0.02, g, hh, kk))
     k.add(place(subtract(s, 0.08, -0.02), 0, 0, ZK, Math.PI), m.marble)
   }
 
-  // --- Taş vakfiyeler: son cemaat yerinin iki yan duvarında, yerden yüksekte ve çevreleri sıvalı (envanter). 2,15 × 1,35 m ---
+  // --- Stone endowment deeds: on both side walls of the late-comers' portico, high above the floor with plastered surrounds (inventory). 2.15 × 1.35 m ---
   const plaque = (x: number, ry: number, mat: Mat) => {
     const G = 2.15, Y = 1.35, cy = 4.55, zc = (ZSC + ZK) / 2
     const g = new THREE.PlaneGeometry(G, Y)
@@ -284,20 +284,20 @@ export const building = (): Model => {
     k.add(place(boxG(G + 0.3, Y + 0.3, 0.05).translate(0, cy, 0), x, 0, zc, ry), m.muqarnas)
   }
 
-  // --- Son cemaat yeri ---
+  // --- Late-comers' portico ---
   const ZSC_I = ZSC + 0.55
   const BOW = 3.72, TOP = 5.72
-  // Yan duvarlar
+  // Side walls
   facade(ZK - ZSC, XD - 0.0, (ZSC + ZK) / 2, Math.PI / 2, END_WALL, [], m.alternating, m.plasterOuter)
   facade(ZK - ZSC, XB + 0.0, (ZSC + ZK) / 2, -Math.PI / 2, END_WALL, [], m.alternating, m.plasterOuter)
   plaque(XD - END_WALL - 0.01, -Math.PI / 2, m.deed1)
   plaque(XB + END_WALL + 0.01, Math.PI / 2, m.deed2)
   obstacle(XB, XB + END_WALL, ZSC, ZK, true)
   obstacle(XD - END_WALL, XD, ZSC, ZK, true)
-  // Minareye çıkılan kapı (son cemaat yerinin batı duvarında)
+  // Door to the minaret (on the west wall of the late-comers' portico)
   box(0.06, 2.2, 0.95, m.woodDark, XB + END_WALL + 0.03, PAVING + 1.1, ZK - 1.2)
 
-  // Ön duvar: beş kemer. u = -x. Altı açık, sütun üzerine oturur.
+  // Front wall: five arches. u = -x. Open below, resting on columns.
   const FRONT_L = XD - XB
   const on = new THREE.Shape()
   on.moveTo(-FRONT_L / 2, 0); on.lineTo(-FRONT_L / 2 + END_WALL, 0); on.lineTo(-FRONT_L / 2 + END_WALL, BOW)
@@ -308,7 +308,7 @@ export const building = (): Model => {
   }
   on.lineTo(FRONT_L / 2 - END_WALL, 0); on.lineTo(FRONT_L / 2, 0); on.lineTo(FRONT_L / 2, H); on.lineTo(-FRONT_L / 2, H); on.closePath()
   k.add(place(subtract(on, 0.55, -0.55), 0, 0, ZSC, Math.PI), m.alternatingLight)
-  // Kemer halkası: krem taş ve tuğla
+  // Arch ring: cream stone and brick
   for (let i = 0; i < 5; i++) {
     const a = -FRONT_L / 2 + END_WALL + BAY * i, b = a + BAY, o = (a + b) / 2
     const ring = new THREE.Shape()
@@ -325,10 +325,10 @@ export const building = (): Model => {
     inner.quadraticCurveTo(a + 0.04, BOW + (TOP - BOW) * 0.72, o, TOP - 0.02)
     inner.quadraticCurveTo(b - 0.04, BOW + (TOP - BOW) * 0.72, b - 0.02, BOW)
     inner.lineTo(a + 0.02, BOW); inner.closePath()
-    // Kemer karnı: dış örgünün iç yüzü görünür; ince ahşap gergi fotoğraftaki gibi
+    // Arch soffit: the inner face of the outer masonry is visible; thin wooden tie rod as in the photo
     box(BAY - 0.1, 0.14, 0.14, m.woodDark, (b + a) / -2, BOW + 0.02, ZSC + 0.27)
   }
-  // Tavan ve iç bölme kemerleri
+  // Ceiling and inner dividing arches
   k.add(new THREE.PlaneGeometry(FRONT_L - 2 * END_WALL, ZK - ZSC_I).rotateX(Math.PI / 2).translate(0, 6.9, (ZK + ZSC_I) / 2), m.plaster)
   for (let i = 1; i < 5; i++) {
     const x = XB + END_WALL + BAY * i
@@ -338,13 +338,13 @@ export const building = (): Model => {
     k.add(place(subtract(s, 0.3, -0.15), x, 0, (ZK + ZSC_I) / 2, Math.PI / 2), m.plaster)
     box(0.12, 0.14, ZK - ZSC_I, m.woodDark, x, BOW + 0.02, (ZK + ZSC_I) / 2)
   }
-  // Destekler: fotoğrafa göre doğudan batıya sütun, örme paye, sütun, sütun. Korint başlıklı mermer.
+  // Supports: per the photo, from east to west: column, masonry pier, column, column. Marble with Corinthian capitals.
   const COLUMN_Z = ZSC + 0.27
   const column = (x: number) => {
     const ext = (g: THREE.BufferGeometry, mat: Mat) => k.add(place(g, x, 0, COLUMN_Z), mat)
     ext(boxG(0.56, 0.22, 0.56).translate(0, PAVING + 0.11, 0), m.marble)
     ext(rotateG([[0.27, PAVING + 0.22], [0.2, PAVING + 0.34], [0.18, 3.0], [0.21, 3.06]], 16), m.marble)
-    // Korint başlık: alta doğru daralan çan, iki sıra yaprak, üstte kare yastık
+    // Corinthian capital: bell tapering downward, two rows of leaves, square abacus on top
     ext(rotateG([[0.2, 3.06], [0.26, 3.3], [0.36, 3.56]], 16), m.marble)
     for (let i = 0; i < 8; i++) {
       const a = (i / 8) * Math.PI * 2
@@ -363,7 +363,7 @@ export const building = (): Model => {
   obstacle(support(3) - 0.4, support(3) + 0.4, COLUMN_Z - 0.36, COLUMN_Z + 0.36)
   obstacle(XB, XB + END_WALL, ZSC, ZSC + 0.55)
 
-  // --- Saçak silmesi: testere dişi tuğla ---
+  // --- Eave molding: saw-tooth brick ---
   const dentil = (x0: number, z0: number, x1: number, z1: number, y: number, kv: { add(g: THREE.BufferGeometry, mat: Mat): void }, outerX: number, outerZ: number) => {
     const L = Math.hypot(x1 - x0, z1 - z0), n = Math.max(2, Math.floor(L / 0.24))
     for (let i = 0; i < n; i++) {
@@ -387,12 +387,12 @@ export const building = (): Model => {
     ring(0.34, y + 0.2)
   }
 
-  // --- Çatı: kiremitli son cemaat yeri ve mekânların kare omuzları ---
+  // --- Roof: tiled late-comers' portico and square shoulders of the spaces ---
   eaveB(XB, XD, ZSC, ZK, H + 0.04, kRoof)
   eaveB(XB, A.x1 + WALL, ZK, ZG_A, H + 0.04, kRoof)
   eaveB(A.x1 + 0.1, XD, ZK, ZG_B, H + 0.04, kRoof)
   const ROOF_Y = H + 0.3
-  // Son cemaat yeri: taban eğimi, üstünde her göz için piramit; kapının karşısındaki göz küçük kubbeli
+  // Late-comers' portico: base slope, a pyramid above each bay; the bay opposite the door has a small dome
   kRoof.add(fourSlope(XB - 0.35, XD + 0.35, ZSC - 0.35, ZK + 0.4, ROOF_Y, ROOF_Y + 0.55, 0.9, 0.9), m.roofTile)
   kRoof.add(new THREE.PlaneGeometry(XD - XB - 1, ZK - ZSC - 1).rotateX(-Math.PI / 2).translate(0, ROOF_Y + 0.55, (ZSC + ZK) / 2), m.roofTile)
   const SC_MID = (ZSC + ZK) / 2
@@ -408,19 +408,19 @@ export const building = (): Model => {
     }
   }
 
-  // --- Mekân örtüsü: kare omuz → sekizgen kasnak → saçak → kiremit kubbe; içte üçgen kuşağı, on altıgen kasnak, kubbe ---
+  // --- Space cover: square shoulder → octagonal drum → eave → tile dome; inside triangle belt, sixteen-sided drum, dome ---
   const OCT = Math.cos(Math.PI / 8)
   const cloak = (o: {
     cx: number; cz: number; xa: number; za: number; innerX: number; innerZ: number
     drum: number; drumTop: number; eaveBR: number; domeR: number; domeH: number; innerR: number; innerBelt: number; innerDrum: number; innerDomeH: number
   }) => {
-    // Kare omuz: dört yana eğimli, ortası kasnak için boş
+    // Square shoulder: sloping to four sides, empty in the middle for the drum
     kRoof.add(fourSlope(o.cx - o.xa - 0.3, o.cx + o.xa + 0.3, o.cz - o.za - 0.3, o.cz + o.za + 0.3, ROOF_Y, ROOF_Y + 0.9, 0.5, 0.5), m.roofTile)
     const cover = rect(o.cx - o.xa + 0.2, -o.cz - o.za + 0.2, o.cx + o.xa - 0.2, -o.cz + o.za - 0.2)
     cover.holes.push(new THREE.Path().absarc(o.cx, -o.cz, o.innerR + 0.55, 0, Math.PI * 2, true))
     kRoof.add(new THREE.ShapeGeometry(cover, 20).rotateX(-Math.PI / 2).translate(0, ROOF_Y + 0.9, 0), m.roofTile)
 
-    // Dış kasnak: sekizgen, açık taşlı almaşık, tuğla silme, dört yönde küçük pencere
+    // Outer drum: octagonal, alternating masonry with light stones, brick molding, small windows in four directions
     const H0 = o.drum, H1 = o.drumTop, RK = o.eaveBR - 0.42
     const dk = flatShadow(cylinderG(RK / OCT, RK / OCT, H1 - H0, 8, true).rotateY(Math.PI / 8))
     kDrum.add(place(dk, o.cx, (H0 + H1) / 2, o.cz), m.alternatingLight)
@@ -438,7 +438,7 @@ export const building = (): Model => {
       }
     }
 
-    // Sekizgen saçak ve kubbe
+    // Octagonal eave and dome
     const sheet = flatShadow(cylinderG(o.domeR + 0.02, o.eaveBR / OCT, 0.34, 8, true).rotateY(Math.PI / 8))
     const uvs = sheet.attributes.uv
     for (let i = 0; i < uvs.count; i++) uvs.setXY(i, uvs.getX(i) * 0.7, uvs.getY(i) * 3)
@@ -447,7 +447,7 @@ export const building = (): Model => {
     const finial: [number, number][] = [[0.08, 0], [0.05, 0.12], [0.1, 0.2], [0.03, 0.34], [0.07, 0.42], [0.001, 0.62]]
     kDome.add(place(rotateG(finial, 8), o.cx, H1 + 0.48 + o.domeH, o.cz), m.bronze)
 
-    // İç: silme, üçgen kuşağı, on altıgen kasnak ve sade beyaz kubbe (içeriden fotoğraf yalnız beyaz yüzey gösteriyor)
+    // Interior: molding, triangle belt, sixteen-sided drum and plain white dome (the interior photo shows only a white surface)
     for (const [gx, gz, x, z] of [[o.innerX * 2, 0.12, o.cx, o.cz - o.innerZ + 0.05], [o.innerX * 2, 0.12, o.cx, o.cz + o.innerZ - 0.05], [0.12, o.innerZ * 2, o.cx - o.innerX + 0.05, o.cz], [0.12, o.innerZ * 2, o.cx + o.innerX - 0.05, o.cz]] as const)
       box(gx, 0.14, gz, m.plaster, x, CORNICE, z, kRoof)
     kDrum.add(triangleBeltOf(o.cx, o.cz, o.innerX, o.innerZ, CORNICE + 0.05, o.innerBelt, o.innerR), m.muqarnas)
@@ -467,7 +467,7 @@ export const building = (): Model => {
   cloak({ cx: AX, cz: AZ, xa: (A.x1 - A.x0) / 2 + WALL, za: (A.z1 - A.z0) / 2 + WALL, innerX: (A.x1 - A.x0) / 2, innerZ: (A.z1 - A.z0) / 2, drum: 8.7, drumTop: 10.5, eaveBR: 5.0, domeR: 4.4, domeH: 2.95, innerR: 3.98, innerBelt: 9.25, innerDrum: 10.5, innerDomeH: 2.85 })
   cloak({ cx: BX, cz: BZ, xa: (B.x1 - B.x0) / 2 + WALL, za: (B.z1 - B.z0) / 2 + WALL, innerX: (B.x1 - B.x0) / 2, innerZ: (B.z1 - B.z0) / 2, drum: 8.7, drumTop: 10.0, eaveBR: 4.1, domeR: 3.55, domeH: 2.5, innerR: 3.18, innerBelt: 8.9, innerDrum: 10, innerDomeH: 2.4 })
 
-  // --- Mihrap duvarı (fotoğrafa göre): krem kenarlı niş, bezeli bant, üstte ahşap taç ve levha, iki yanda kırmızı seki ---
+  // --- Mihrab wall (based on the photo): niche with cream edges, decorated band, wooden crown and panel above, red benches on both sides ---
   const ZM = A.z1
   const face = (g: THREE.BufferGeometry, mat: Mat) => k.add(g, mat)
   const FRAME_G = 2.1, FRAME_Y = PAVING + 4
@@ -477,7 +477,7 @@ export const building = (): Model => {
   }
   const topBand = uvFit(new THREE.PlaneGeometry(FRAME_G, 0.24)).rotateY(Math.PI)
   face(topBand.translate(AX, FRAME_Y - 0.12, ZM - 0.015), m.mihrabBand)
-  // Niş: öne çıkan beyaz gövde, kademeli alçı mukarnas, yeşil boyalı alt yarı
+  // Niche: projecting white body, tiered plaster muqarnas, green-painted lower half
   const NICHE_G = 1.05, NICHE_Y = 3.3
   for (const s of [-1, 1]) box(0.2, NICHE_Y - 0.02, 0.32, m.muqarnas, AX + s * (NICHE_G / 2 + 0.1), PAVING + NICHE_Y / 2, ZM - 0.16)
   const paint = uvFit(new THREE.PlaneGeometry(NICHE_G, 1.62)).rotateY(Math.PI)
@@ -492,7 +492,7 @@ export const building = (): Model => {
       k.add(hc.translate(AX - g / 2 + (j + 0.5) * (g / n), y + 0.02, ZM - dr), m.muqarnas)
     }
   }
-  // Niş önü basamak ve iki yandaki kırmızı halılı mermer seki
+  // Step in front of the niche and marble benches with red carpets on both sides
   box(FRAME_G + 0.1, 0.1, 0.62, m.cream, AX, PAVING + 0.05, ZM - 0.31)
   box(FRAME_G - 0.2, 0.03, 0.6, m.carpet, AX, PAVING + 0.115, ZM - 0.3)
   floors.push({ x0: AX - FRAME_G / 2, x1: AX + FRAME_G / 2, z0: ZM - 0.62, z1: ZM, h0: PAVING + 0.1, h1: PAVING + 0.1 })
@@ -503,7 +503,7 @@ export const building = (): Model => {
     box(b - a - 0.02, 0.03, 0.83, m.redCarpet, (a + b) / 2, PAVING + TERRACE_H + 0.015, ZM - 0.425)
     floors.push({ x0: a, x1: b, z0: ZM - 0.85, z1: ZM, h0: PAVING + TERRACE_H, h1: PAVING + TERRACE_H })
   }
-  // Mihrap üstü ahşap taç (alınlık) ve yazısız levha
+  // Wooden crown (pediment) above the mihrab and a blank panel
   const crown = new THREE.Shape()
   crown.moveTo(-0.76, 0); crown.lineTo(0.76, 0); crown.lineTo(0.76, 0.3); crown.lineTo(0, 0.78); crown.lineTo(-0.76, 0.3); crown.closePath()
   k.add(place(subtract(crown, 0.07, 0).rotateY(Math.PI), AX, FRAME_Y + 0.46, ZM - 0.01), m.wood)
@@ -511,7 +511,7 @@ export const building = (): Model => {
   box(1.28, 0.3, 0.02, m.plaque, AX, FRAME_Y + 0.24, ZM - 0.06)
   box(1.1, 0.5, 0.02, m.woodDark, AX, FRAME_Y + 0.78, ZM - 0.09)
 
-  // Madalyonlar: yazısız, fotoğraftaki yerlerine
+  // Medallions: blank, in their positions in the photo
   const medallion = (x: number, y: number, z: number, ry: number, R = 0.42) => {
     const g = new THREE.CircleGeometry(R, 24)
     const uv = g.attributes.uv
@@ -523,14 +523,14 @@ export const building = (): Model => {
   medallion(A.x0 + 0.025, PAVING + 5.05, AZ - 4 + 0.05, Math.PI / 2)
   medallion(A.x1 - 0.025, PAVING + 5.05, AZ - 2.05, -Math.PI / 2); medallion(A.x1 - 0.025, PAVING + 5.05, AZ + 2.05, -Math.PI / 2)
 
-  // Şamdanlar: pirinç gövde, küresel başlık
+  // Candlesticks: brass body, spherical top
   const candlestick = (x: number, z: number) => {
     k.add(place(rotateG([[0.18, 0], [0.08, 0.07], [0.04, 0.25], [0.12, 0.34], [0.04, 0.45], [0.09, 0.56], [0.03, 0.72], [0.1, 0.86], [0.03, 1.0], [0.06, 1.08]], 12), x, PAVING + TERRACE_H + 0.03, z), m.brass)
     k.add(new THREE.SphereGeometry(0.11, 12, 8).translate(x, PAVING + TERRACE_H + 1.23, z), m.marble)
   }
   candlestick(AX - 1.6, ZM - 0.42); candlestick(AX + 1.6, ZM - 0.42)
 
-  // Duvar lambaları
+  // Wall lamps
   const lamp = (x: number, y: number, z: number, dx: number, dz: number) => {
     k.add(new THREE.BoxGeometry(0.03 + Math.abs(dz) * 0.04, 0.05, 0.03 + Math.abs(dx) * 0.04).translate(x - dx * 0.1, y + 0.1, z - dz * 0.1), m.dark)
     k.add(new THREE.SphereGeometry(0.05, 8, 6).translate(x, y, z), m.lamp)
@@ -539,7 +539,7 @@ export const building = (): Model => {
   lamp(A.x0 + 0.16, 3.4, AZ, -1, 0); lamp(A.x1 - 0.16, 3.4, AZ + 3, 1, 0)
   lamp(B.x1 - 0.16, 3.4, BZ, 1, 0); lamp(B.x0 + 0.16, 3.4, BZ - 2.2, -1, 0)
 
-  // --- Minber: koyu ahşap, köşk kıble duvarında; merdiven kuzeyden güneye çıkar (fotoğraf) ---
+  // --- Minbar: dark wood, kiosk at the qibla wall; the stair rises from north to south (photo) ---
   const mb = MINBAR
   const side = new THREE.Shape()
   side.moveTo(0, PAVING); side.lineTo(mb.z0 + 3.9 - mb.z0, PAVING); side.lineTo(3.9, mb.apex + 0.08); side.lineTo(2.9, mb.apex + 0.08)
@@ -551,7 +551,7 @@ export const building = (): Model => {
     const zc = mb.rz0 + (mb.rz1 - mb.rz0) * t
     box(mb.en - 0.1, y - PAVING, (mb.rz1 - mb.rz0) / STEP + 0.01, m.redCarpet, mb.x, (y + PAVING) / 2, zc)
   }
-  // Korkuluk: eğimli kol ve sık baba
+  // Railing: sloped rail and dense balusters
   const armL = Math.hypot(mb.rz1 - mb.rz0, mb.apex - PAVING), slope = Math.atan2(mb.apex - PAVING, mb.rz1 - mb.rz0)
   for (const s of [-1, 1]) {
     const arm = new THREE.BoxGeometry(0.07, 0.07, armL + 0.3).rotateX(-slope)
@@ -561,7 +561,7 @@ export const building = (): Model => {
       k.add(new THREE.BoxGeometry(0.03, 0.9, 0.03).translate(mb.x + s * (mb.en / 2), y + 0.45, z), m.woodDark)
     }
   }
-  // Köşk: dört dikme, kemerli aralık, kademeli külah ve hilalli alem
+  // Kiosk: four posts, arched openings, tiered cone and crescent finial
   const KZ = (mb.rz1 + A.z1) / 2, KY = mb.apex + 0.08
   for (const sx of [-1, 1]) for (const sz of [-1, 1]) box(0.1, 1.5, 0.1, m.woodDark, mb.x + sx * (mb.en / 2 - 0.05), KY + 0.75, KZ + sz * 0.42)
   box(mb.en + 0.06, 0.22, 1, m.interlock, mb.x, KY + 1.56, KZ)
@@ -569,7 +569,7 @@ export const building = (): Model => {
   k.add(place(flatShadow(cylinderG(0.08, 0.62, 0.72, 8).rotateY(Math.PI / 8)), mb.x, KY + 2.09, KZ), m.woodDark)
   k.add(place(rotateG([[0.05, 0], [0.03, 0.2], [0.06, 0.3], [0.015, 0.5]], 8), mb.x, KY + 2.42, KZ), m.brass)
   k.add(new THREE.TorusGeometry(0.075, 0.015, 6, 14, Math.PI * 1.5).rotateZ(-Math.PI * 0.25).translate(mb.x, KY + 3, KZ), m.brass)
-  // Kapı: söveler, tepelik, kırmızı perde tek yana toplu
+  // Door: jambs, crest, red curtain gathered to one side
   for (const s of [-1, 1]) box(0.1, 2.5, 0.2, m.woodDark, mb.x + s * (mb.en / 2 - 0.02), PAVING + 1.25, mb.z0 + 0.1)
   box(mb.en + 0.1, 0.22, 0.22, m.woodDark, mb.x, PAVING + 2.45, mb.z0 + 0.1)
   const crest = new THREE.Shape()
@@ -579,7 +579,7 @@ export const building = (): Model => {
   floors.push({ x0: mb.x - mb.en / 2 + 0.05, x1: mb.x + mb.en / 2 - 0.05, z0: mb.rz0, z1: mb.rz1, h0: PAVING, h1: mb.apex })
   obstacle(mb.x - mb.en / 2, mb.x + mb.en / 2, mb.rz1, A.z1)
 
-  // Doğudaki ahşap kürsü (fotoğraf)
+  // Wooden kürsü on the east (photo)
   const KRX = AX + 3.55
   box(0.82, 0.7, 0.7, m.woodDark, KRX, PAVING + 0.5, ZM - 0.4)
   box(0.82, 0.08, 0.7, m.wood, KRX, PAVING + 0.9, ZM - 0.4)
@@ -587,14 +587,14 @@ export const building = (): Model => {
   box(0.05, 0.4, 0.7, m.interlock, KRX - 0.39, PAVING + 1.15, ZM - 0.4)
   obstacle(KRX - 0.42, KRX + 0.42, ZM - 0.78, ZM)
 
-  // --- Mahfil: kuzey duvarında ahşap sekili kat, dört dikme, tornalı korkuluk ---
+  // --- Gallery: wooden raised floor on the north wall, four posts, turned railing ---
   const MH = MAHFIL.y
   box(A.x1 - A.x0, 0.2, MAHFIL.z1 - A.z0, m.wood, AX, MH - 0.1, (MAHFIL.z1 + A.z0) / 2)
   box(A.x1 - A.x0, 0.14, 0.14, m.woodDark, AX, MH - 0.26, MAHFIL.z1 - 0.1)
   for (const x of [A.x0 + 1.4, AX - 1.1, AX + 1.1, A.x1 - 1.05]) {
     box(0.2, MH - PAVING - 0.2, 0.2, m.wood, x, (MH - 0.2 + PAVING) / 2, MAHFIL.z1 - 0.1)
     obstacle(x - 0.1, x + 0.1, MAHFIL.z1 - 0.2, MAHFIL.z1, false, 2.8)
-    // Dirsekler
+    // Brackets
     const d = new THREE.BoxGeometry(0.1, 0.1, 0.9).rotateX(0.65)
     k.add(d.translate(x, MH - 0.55, MAHFIL.z1 - 0.45), m.wood)
   }
@@ -605,7 +605,7 @@ export const building = (): Model => {
   }
   railingX(A.x0, MAHFIL.stair.x0 - 0.02); railingX(MAHFIL.stair.x1 + 0.02, A.x1)
   floors.push({ x0: A.x0, x1: A.x1, z0: A.z0, z1: MAHFIL.z1, h0: MH, h1: MH, underPassable: true })
-  // Mahfil merdiveni: yeri kaynakta yok, temsilî
+  // Gallery stairs: position not in the source, representative
   const md = MAHFIL.stair
   floors.push({ x0: md.x0, x1: md.x1, z0: MAHFIL.z1, z1: md.z1, h0: MH, h1: PAVING })
   const STAIR_STEP = 14
@@ -622,11 +622,11 @@ export const building = (): Model => {
       k.add(new THREE.BoxGeometry(0.03, 0.9, 0.03).translate(x, MH + (PAVING - MH) * t + 0.42, MAHFIL.z1 + (md.z1 - MAHFIL.z1) * t), m.woodDark)
     }
   }
-  // Mahfil altında dolap ve alçak korkuluk (fotoğraf)
+  // Cupboard and low railing under the gallery (photo)
   box(1.2, 2.2, 0.5, m.woodDark, AX - 2.45, PAVING + 1.1, A.z0 + 0.25)
   obstacle(AX - 3.05, AX - 1.85, A.z0, A.z0 + 0.5)
 
-  // --- Minare: sekizgen kaide, sekiz niş, Türk üçgenleri, tuğla gövde, tuğla kirpi şerefe altı, mermer korkuluk, sivri kurşun külah ---
+  // --- Minaret: octagonal base, eight niches, Turkish triangles, brick shaft, brick saw-tooth under the balcony, marble railing, pointed lead cone ---
   const MN = MINARET
   const extMin = (g: THREE.BufferGeometry, mat: Mat) => k.add(place(g, MN.x, 0, MN.z), mat)
   const PEDESTAL_R = 1.75, PEDESTAL_Y = 9.6
@@ -641,7 +641,7 @@ export const building = (): Model => {
     h.holes.push(arch(new THREE.Path(), 0, PEDESTAL_Y - 2.44, 0.86, 1.12, 0.5))
     k.add(place(subtract(h, 0.04, PEDESTAL_R).rotateY(a), MN.x, 0, MN.z), m.brick)
   }
-  // Geçiş kuşağı
+  // Transition band
   const SR = 1.12, TRANSITION = 1.5, GY = PEDESTAL_Y + 0.06
   const transition = cylinderG(SR + 0.04, PEDESTAL_R / OCT, TRANSITION, 16, true).rotateY(Math.PI / 8)
   const guv = transition.attributes.uv
@@ -653,7 +653,7 @@ export const building = (): Model => {
   extMin(cylinderG(SR + 0.12, SR + 0.12, 0.1, 28).translate(0, GY + TRANSITION + 0.03, 0), m.marble)
   const BODY0 = GY + TRANSITION, BODY1 = BODY0 + 5.9
   extMin(rotateG([[SR, BODY0], [SR - 0.05, BODY1]], 28), m.brick)
-  // Şerefe altı: yedi kat tuğla kirpi (envanter), yukarı açılır
+  // Under the balcony: seven tiers of brick saw-tooth (inventory), opening upward
   const FLOOR_LEVEL = 7
   for (let t = 0; t < FLOOR_LEVEL; t++) {
     const rr = SR - 0.03 + t * 0.075, y = BODY1 + t * 0.27
@@ -669,7 +669,7 @@ export const building = (): Model => {
   extMin(cylinderG(SERR + 0.03, SERR + 0.03, 0.06, 16).translate(0, SY + 1.2, 0), m.darkStone)
   const PTK = 0.83, PY = SY + 1.2, PH = 3
   extMin(rotateG([[PTK, PY], [PTK, PY + PH]], 24), m.brick)
-  // Petek üstü: dişli kuşak ve küçük açıklıklar
+  // Above the upper shaft: toothed band and small openings
   for (let a = 0; a < 16; a++) {
     const te = (a * Math.PI * 2) / 16
     extMin(new THREE.BoxGeometry(0.2, 0.3, 0.1).translate(0, PY + PH - 0.28, PTK).rotateY(te), a % 2 ? m.brick : m.darkStone)
@@ -679,7 +679,7 @@ export const building = (): Model => {
   extMin(rotateG([[0.04, 0], [0.02, 0.2], [0.05, 0.3], [0.01, 0.6], [0.001, 0.62]], 8).translate(0, PY + PH + 2, 0), m.bronze)
   circles.push({ x: MN.x, z: MN.z, r: PEDESTAL_R + 0.08 })
 
-  // --- Çeşme: batı duvarına gömülü, sivri kemerli, üstünde gerçek kitabe fotoğrafı (fotoğraf ve envanter) ---
+  // --- Fountain: embedded in the west wall, pointed-arched, with the real inscription photo above it (photo and inventory) ---
   const CZ = AZ
   const fountainTap = (g: THREE.BufferGeometry, mat: Mat) => k.add(place(g, XB, 0, CZ, -Math.PI / 2), mat)
   const cg = arch(new THREE.Shape(), 0, 0.1, 2, 0.95, 1)
@@ -692,7 +692,7 @@ export const building = (): Model => {
   fountainTap(new THREE.PlaneGeometry(1.1, 0.62).translate(0, 2.62, 0.09), m.fountainInscription)
   fountainTap(boxG(1.26, 0.76, 0.05).translate(0, 2.62, 0.06), m.cream)
 
-  // --- Türbe: 4,60 × 4,60 m, dört ayak üzerinde baldaken, tamamen tuğla, kirpi saçak, kiremit örtülü kubbe, ahşap gergi ---
+  // --- Tomb: 4.60 × 4.60 m, baldachin on four piers, all brick, saw-tooth eave, tile-covered dome, wooden tie rods ---
   const T = TOMB, TY = 4.05, TA = T.y / 2
   const tk = (g: THREE.BufferGeometry, mat: Mat, kv = k) => kv.add(place(g, T.x, 0, T.z), mat)
   tk(boxG(T.y + 0.3, 0.3, T.y + 0.3).translate(0, 0.15, 0), m.brick)
@@ -703,20 +703,20 @@ export const building = (): Model => {
     s.holes.push(arch(new THREE.Path(), 0, TARCH.y0, TARCH.g, TARCH.d, TARCH.k))
     const ry = (n * Math.PI) / 2
     k.add(place(subtract(s, 0.72, TA - 0.72).rotateY(ry), T.x, 0, T.z), m.brick)
-    // İç sıva ve kemer karnı beyaz
+    // Interior plaster and arch soffit white
     const inner = arch(new THREE.Shape(), 0, TARCH.y0, TARCH.g + 0.02, TARCH.d, TARCH.k + 0.01)
     inner.holes.push(arch(new THREE.Path(), 0, TARCH.y0, TARCH.g - 0.1, TARCH.d, TARCH.k - 0.05))
     k.add(place(subtract(inner, 0.74, TA - 0.73).rotateY(ry), T.x, 0, T.z), m.plasterOuter)
     const ring = arch(new THREE.Shape(), 0, TARCH.y0 + 1.1, TARCH.g + 0.72, TARCH.d - 1.05, TARCH.k + 0.36)
     ring.holes.push(arch(new THREE.Path(), 0, TARCH.y0 + 1.1, TARCH.g + 0.02, TARCH.d - 1.05, TARCH.k + 0.01))
     k.add(place(subtract(ring, 0.04, TA).rotateY(ry), T.x, 0, T.z), m.brick)
-    // Ahşap gergi
+    // Wooden tie rods
     tk(boxG(T.y - 1.2, 0.12, 0.12).translate(0, TARCH.y0 + TARCH.d - 0.1, TA - 0.36).rotateY(ry), m.woodDark)
   }
   for (const sx of [-1, 1]) for (const sz of [-1, 1]) obstacle(T.x + sx * (TA - 0.36) - 0.36, T.x + sx * (TA - 0.36) + 0.36, T.z + sz * (TA - 0.36) - 0.36, T.z + sz * (TA - 0.36) + 0.36)
   floors.push({ x0: T.x - TA - 0.15, x1: T.x + TA + 0.15, z0: T.z - TA - 0.15, z1: T.z + TA + 0.15, h0: 0.32, h1: 0.32 })
   eaveB(T.x - TA, T.x + TA, T.z - TA, T.z + TA, TY + 0.04, kRoof)
-  // İç pandantif kubbe
+  // Inner pendentive dome
   const tp: [number, number][] = [[1.62, 0]]
   for (let t = 1; t <= 10; t++) { const a = (t / 10) * Math.PI / 2; tp.push([Math.max(1.62 * Math.cos(a), 0.001), 1.5 * Math.sin(a)]) }
   kDome.add(place(rotateG(tp, 28, [1, 1]), T.x, TY - 0.28, T.z), m.plaster)
@@ -727,7 +727,7 @@ export const building = (): Model => {
   kRoof.add(new THREE.ShapeGeometry(rect(-TA, -TA, TA, TA), 1).rotateX(-Math.PI / 2).translate(T.x, TY + 0.55, T.z), m.roofTile)
   kDome.add(place(roofTileDome(2.08, 1.45, 7, 36), T.x, TY + 0.55, T.z), m.roofTile)
   kDome.add(place(rotateG([[0.06, 0], [0.03, 0.14], [0.06, 0.22], [0.001, 0.42]], 8), T.x, TY + 2, T.z), m.bronze)
-  // Sanduka ve şahideler: yeşil gövde, altın renkli baş ve ayak taşı. Yazısız kabartma izlenimi.
+  // Sarcophagus and headstones: green body, gold-colored head and foot stones. Blank relief impression.
   tk(boxG(1, 0.42, 2).translate(0, 0.53, 0), m.green)
   tk(boxG(1.2, 0.08, 2.2).translate(0, 0.36, 0), m.marble)
   const headstone = (z: number, y: number) => {
@@ -738,7 +738,7 @@ export const building = (): Model => {
   headstone(-0.85, 1.55); headstone(0.85, 1.25)
   obstacle(T.x - 0.6, T.x + 0.6, T.z - 1.1, T.z + 1.1)
 
-  // --- Şadırvan (kuzey avlusu): sekiz ahşap direk, kemerli kuşak, kiremit külah; ortada mermer gövde (fotoğraf) ---
+  // --- Şadırvan (north courtyard): eight wooden posts, arched band, tile cone; marble body in the middle (photo) ---
   const SD = FOUNTAIN
   const extSd = (g: THREE.BufferGeometry, mat: Mat, kv = k) => kv.add(place(g, SD.x, 0, SD.z), mat)
   extSd(flatShadow(cylinderG(2.1, 2.1, 0.2, 8).rotateY(Math.PI / 8)).translate(0, 0.14, 0), m.marble)
@@ -756,14 +756,14 @@ export const building = (): Model => {
     const ks = rect(-gen / 2, 2.1, gen / 2, 2.85)
     ks.holes.push(arch(new THREE.Path(), 0, 2.1, gen - 0.12, 0.05, 0.56))
     extSd(subtract(ks, 0.08, SR_D * OCT - 0.04).rotateY(dir), m.wood)
-    // Taburecikler
+    // Small stools
     if (n % 2 === 0) extSd(boxG(0.32, 0.36, 0.32).translate(Math.sin(dir) * 1.28, 0.42, Math.cos(dir) * 1.28), m.wood)
   }
   extSd(flatShadow(cylinderG(SR_D + 0.1, SR_D + 0.1, 0.15, 8).rotateY(Math.PI / 8)).translate(0, 2.92, 0), m.woodDark)
   extSd(flatShadow(cylinderG(0.08, 2.42, 1.15, 8, true).rotateY(Math.PI / 8)).translate(0, 3.52, 0), m.roofTile, kDome)
   extSd(rotateG([[0.08, 0], [0.04, 0.16], [0.07, 0.24], [0.001, 0.46]], 8).translate(0, 4.08, 0), m.bronze, kDome)
 
-  // --- Hazire: yaklaşık seksen taş; güneyde ve kuzeyde, çerçeveli kabirler (fotoğraf). Yerleri temsilîdir. ---
+  // --- Hazire: about eighty stones; to the south and north, framed graves (photo). Positions are representative. ---
   const graveArea = (x: number, z: number) => {
     if (Math.hypot(x, z) > 21.5) return false
     if (x > XB - 1.4 && x < XD + 1.8 && z > ZSC - 8.6 && z < ZG_A + 0.9) return false
@@ -775,16 +775,16 @@ export const building = (): Model => {
   const title = (tip: number, x: number, z: number, y0: number) => {
     const base = 0.18 + r() * 0.04
     if (tip === 0) {
-      // Sivri tepeli düz şahide
+      // Flat headstone with pointed top
       const s = new THREE.Shape()
       s.moveTo(-base, 0); s.lineTo(base, 0); s.lineTo(base, 0.72); s.lineTo(0, 0.98); s.lineTo(-base, 0.72); s.closePath()
       k.add(place(subtract(s, 0.09, -0.045).rotateY(Math.PI / 2), x, y0, z), m.marble)
     } else if (tip === 1) {
-      // Silindir gövde ve kavuk
+      // Cylindrical body and turban (kavuk)
       k.add(place(rotateG([[0.13, 0], [0.13, 0.78]], 8), x, y0, z), m.marble)
       k.add(place(new THREE.SphereGeometry(0.17, 8, 5).scale(1, 0.72, 1), x, y0 + 0.86, z), m.marble)
     } else {
-      // Kanatlı (fiyonk) şahide
+      // Winged (bow) headstone
       const s = new THREE.Shape()
       s.moveTo(-0.1, 0); s.lineTo(0.1, 0); s.lineTo(0.1, 0.5); s.lineTo(0.28, 0.82); s.lineTo(0.05, 0.7); s.lineTo(0, 0.95); s.lineTo(-0.05, 0.7); s.lineTo(-0.28, 0.82); s.lineTo(-0.1, 0.5); s.closePath()
       k.add(place(subtract(s, 0.08, -0.04).rotateY(Math.PI / 2), x, y0, z), m.marble)
@@ -809,7 +809,7 @@ export const building = (): Model => {
       obstacle(mx - gen / 2, mx + gen / 2, mz - der / 2, mz + der / 2)
     }
   }
-  // Anıtsal sandukalar: H. 1208 / M. 1794 tarihli taşlar (fotoğrafa göre; konumları temsilîdir)
+  // Monumental sarcophagi: stones dated H. 1208 / M. 1794 (based on the photo; positions are representative)
   for (const [x, z] of [[T.x - 4.4, T.z + 2.2], [T.x + 4.3, T.z + 2.5]] as const) {
     box(2.1, 0.62, 0.92, m.marble, x, 0.31, z)
     box(2.14, 0.06, 0.96, m.terraceMarble, x, 0.65, z)
@@ -821,7 +821,7 @@ export const building = (): Model => {
     obstacle(x - 1.05, x + 1.05, z - 0.46, z + 0.46)
   }
 
-  // --- Ağaçlar: selviler ve büyük yapraklı ağaç (fotoğraf). Yerleri temsilîdir ---
+  // --- Trees: cypresses and a large leafy tree (photo). Positions are representative ---
   const cypress = (x: number, z: number, length: number) => {
     const p: [number, number][] = [[0.1, 1], [0.8, 1.4], [1.2, length * 0.22], [1.32, length * 0.38], [1.2, length * 0.55], [0.9, length * 0.72], [0.5, length * 0.88], [0.001, length]]
     const g = rotateG(p, 14)
@@ -855,7 +855,7 @@ export const building = (): Model => {
   }
   bigTree(-16.5, -9.5, 4, 12)
 
-  // --- Duraklar ---
+  // --- Stops ---
   const stop = (id: string, ad: string, position: [number, number, number], look: [number, number, number]): InteriorStop => ({ id, ad, position, look })
   const ICY = BAY_Y + PAVING
   const SC_CENTER = (ZSC + ZK) / 2
@@ -872,7 +872,7 @@ export const building = (): Model => {
     stop('fountain', 'Şadırvan', [SD.x - 4.2, BAY_Y, SD.z - 1.2], [SD.x, 2, SD.z]),
   ]
 
-  // --- Katmanlar ---
+  // --- Layers ---
   const roofGroup = kRoof.group(), drumGroup = kDrum.group(), domeGroup = kDome.group()
   const root = k.group()
   root.add(roofGroup, drumGroup, domeGroup)
@@ -886,7 +886,7 @@ export const building = (): Model => {
     ],
     stops,
     walking: {
-      // Çokgen kaidenin iç çemberi: köşelerde boşluğa çıkılmaz.
+      // Inner circle of the polygonal base: corners cannot be walked into the void.
       limit: { x0: -20, x1: 20, z0: -20, z1: 20, circle: { x: 0, z: 0, r: 23.8 * Math.cos(Math.PI / 64) } },
       boxes: obstacles,
       circles,
@@ -895,7 +895,7 @@ export const building = (): Model => {
       eyeY: BAY_Y,
       baseY: 0,
     },
-    // Fotoğraftaki gibi kuzeydoğudan: son cemaat yeri önde, minare geride.
+    // From the northeast as in the photo: late-comers' portico in front, minaret behind.
     camera: { position: [31, 24, -40], target: [0, 7.2, 0] },
     pedestalRadius: 24.5,
     innerLights: [[AX, 9.4, AZ], [BX, 8.6, BZ], [0, 6.2, SC_CENTER]],

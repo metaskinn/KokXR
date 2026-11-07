@@ -1,6 +1,6 @@
-// Ulu Camii iç zemini: halı ve mermer dokuları piksel piksel üretilir, dışarıdan görsel kullanılmaz.
-// Renk ve düzen arşiv fotoğraflarına bakılarak yorumlanmıştır (ic-mekan, sadirvan); gerçek halının veya
-// döşemenin deseni kopyalanmaz. Dokular kesintisiz tekrarlanır, geniş ölçekli farkı gölgelendirici ekler.
+// Ulu Camii interior floor: carpet and marble textures are generated pixel by pixel; no external images are used.
+// Color and layout are interpreted from archive photos (ic-mekan, sadirvan); the pattern of the real carpet or
+// paving is not copied. Textures tile seamlessly; the shader adds large-scale variation.
 import * as THREE from 'three'
 
 export function random(seed: number) {
@@ -12,7 +12,7 @@ export function random(seed: number) {
   }
 }
 
-/** Dokunmatik cihaz ve Quest: dokular yarı boyutta, malzemeler ek yüzey hesabı olmadan çalışır. */
+/** Touch devices and Quest: textures at half size, materials run without extra surface computation. */
 export const lightDevice = () => matchMedia('(hover: none)').matches || /OculusBrowser|Quest/i.test(navigator.userAgent)
 
 export function repeated(el: HTMLCanvasElement, meter: number, colored: boolean) {
@@ -28,11 +28,11 @@ export function canvas(size: number) {
   const el = document.createElement('canvas')
   el.width = el.height = size
   const c = el.getContext('2d', { willReadFrequently: true })
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas is not available')
   return { el, c }
 }
 
-/** Dikişsiz gürültü: `per` hücrede bir kendini tekrarlar. */
+/** Seamless noise: repeats itself every `per` cells. */
 export function makeNoise(seed: number) {
   const N = 256, r = random(seed), t = new Float32Array(N * N)
   for (let i = 0; i < t.length; i++) t[i] = r()
@@ -47,7 +47,7 @@ export function makeNoise(seed: number) {
     const v = d(x0, y1) + (d(x1, y1) - d(x0, y1)) * fx
     return u + (v - u) * fy
   }
-  /** `per` hücrelik fbm; x ve y hücre biriminde verilir. */
+  /** fbm with a period of `per` cells; x and y are given in cell units. */
   return (x: number, y: number, per: number, octave: number) => {
     let s = 0, a = 0.5, topV = 0
     for (let i = 0; i < octave; i++) {
@@ -72,9 +72,9 @@ function drop(c: CanvasRenderingContext2D, x: number, y: number, b: number, a: n
 }
 
 /**
- * Halı: enine saf bantları, aralarda şaşırtmalı küçük damla motifleri ve hav dokusu.
- * Doku nötr tonludur; aynı doku malzeme rengiyle gül kurusu ve zeytin yeşili halıya dönüşür.
- * İki saf (2,4 m) bir tekrardır. Hav düğümleri yaklaşık 5 mm'dir.
+ * Carpet: transverse saf (prayer row) bands, staggered small drop motifs in between, and pile texture.
+ * The texture is neutral; with the material color the same texture becomes a dusty-rose or olive-green carpet.
+ * Two safs (2.4 m) form one repeat. Pile knots are about 5 mm.
  */
 export function carpetTextures() {
   const B = lightDevice() ? 1024 : 2048
@@ -85,7 +85,7 @@ export function carpetTextures() {
 
   for (let s = 0; s < 2; s++) {
     const y0 = s * PURE
-    // Saf bandı: koyu zemin, ince çift çizgi ve örgü zinciri (yaklaşık 12 cm).
+    // Saf band: dark ground, thin double line and braided chain (about 12 cm).
     const band = 104 * measure
     c.fillStyle = '#94695c'
     c.fillRect(0, y0, B, band)
@@ -93,19 +93,19 @@ export function carpetTextures() {
     c.fillRect(0, y0, B, 7 * measure); c.fillRect(0, y0 + band - 7 * measure, B, 7 * measure)
     c.fillStyle = '#dfcfc3'
     c.fillRect(0, y0 + 14 * measure, B, 4 * measure); c.fillRect(0, y0 + band - 18 * measure, B, 4 * measure)
-    const count = 24, ad = B / count, mid = y0 + band / 2
+    const count = 24, stepW = B / count, mid = y0 + band / 2
     c.lineWidth = 7 * measure
     for (let i = 0; i < count; i++) {
-      const x = (i + 0.5) * ad
+      const x = (i + 0.5) * stepW
       c.strokeStyle = i % 2 ? '#ecdccd' : '#54322a'
-      c.beginPath(); c.ellipse(x, mid, ad * 0.62, 25 * measure, 0, 0, Math.PI * 2); c.stroke()
+      c.beginPath(); c.ellipse(x, mid, stepW * 0.62, 25 * measure, 0, 0, Math.PI * 2); c.stroke()
     }
-    // Bant dışında ince eşlik çizgileri.
+    // Thin accompanying lines outside the band.
     c.fillStyle = '#a98a7d'
     c.fillRect(0, y0 + band + 22 * measure, B, 5 * measure)
     c.fillRect(0, y0 - 27 * measure + (s === 0 ? B : 0), B, 5 * measure)
 
-    // Alan: şaşırtmalı damla ikilileri (yaklaşık 30 cm aralık).
+    // Field: staggered pairs of drops (about 30 cm spacing).
     const column = 8, row = 3, area = PURE - band - 60 * measure
     c.fillStyle = '#7d4a3d'
     for (let j = 0; j < row; j++) for (let i = 0; i < column; i++) {
@@ -118,7 +118,7 @@ export function carpetTextures() {
     }
   }
 
-  // Hav: tuval deseni üzerine düğüm düğüm ton farkı, sıra izi ve yumuşak leke.
+  // Pile: knot-by-knot tone variation, row marks and soft blotches on top of the canvas pattern.
   const fbm = makeNoise(19), D = B >> 2
   const knot = new Float32Array(D * D)
   for (let i = 0; i < knot.length; i++) knot[i] = r()
@@ -131,7 +131,7 @@ export function carpetTextures() {
       px[i] = Math.min(255, px[i] * t); px[i + 1] = Math.min(255, px[i + 1] * t); px[i + 2] = Math.min(255, px[i + 2] * t)
     }
   }
-  // Normal haritası için motif kabartması, hav çarpanından önceki parlaklığa yakın olduğu için buradan okunur.
+  // Motif relief for the normal map is read here, since it is close to the brightness before the pile multiplier.
   const N = B >> 1, burden = new Float32Array(N * N)
   for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
     const i = ((y * 2) * B + x * 2) * 4
@@ -143,8 +143,8 @@ export function carpetTextures() {
   const nt = canvas(N), nv = nt.c.createImageData(N, N), nd = nv.data, g = 2.2
   for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
     const right = burden[y * N + ((x + 1) % N)], left = burden[y * N + ((x + N - 1) % N)]
-    const alt = burden[((y + 1) % N) * N + x], top = burden[((y + N - 1) % N) * N + x]
-    const dx = (left - right) * g, dy = (alt - top) * g, u = 1 / Math.hypot(dx, dy, 1), i = (y * N + x) * 4
+    const below = burden[((y + 1) % N) * N + x], top = burden[((y + N - 1) % N) * N + x]
+    const dx = (left - right) * g, dy = (below - top) * g, u = 1 / Math.hypot(dx, dy, 1), i = (y * N + x) * 4
     nd[i] = (dx * u * 0.5 + 0.5) * 255; nd[i + 1] = (dy * u * 0.5 + 0.5) * 255; nd[i + 2] = (u * 0.5 + 0.5) * 255; nd[i + 3] = 255
   }
   nt.c.putImageData(nv, 0, 0)
@@ -153,7 +153,7 @@ export function carpetTextures() {
 
 type Fbm = ReturnType<typeof makeNoise>
 
-/** Damarlı gri-beyaz mermer: bulutlu zemin, ana damarlar ve ince çatlaklar. `a`,`b` tam sayı: damar yönü, dikişsiz kalır. */
+/** Veined grey-white marble: cloudy ground, main veins and fine cracks. `a`,`b` are integers: vein direction, stays seamless. */
 function marblePixel(fbm: Fbm, u: number, v: number, a: number, b: number, ox: number, oy: number, tone: number, output: number[]) {
   const w1 = fbm(u * 6 + ox, v * 6 + oy, 6, 4), w2 = fbm(u * 6 + ox + 3, v * 6 + oy + 5, 6, 4)
   const ana = Math.pow(1 - Math.abs(Math.sin(Math.PI * (u * a + v * b + (w1 - 0.5) * 3))), 16)
@@ -167,16 +167,16 @@ function marblePixel(fbm: Fbm, u: number, v: number, a: number, b: number, ox: n
   }
 }
 
-/** Şadırvan çevresi döşemesi: sıra sıra büyük levhalar, her levhada ayrı damar yönü. 4,2 metrede tekrar. */
+/** Paving around the şadırvan: rows of large slabs, each slab with its own vein direction. Repeats every 4.2 m. */
 export function marblePavingTextures() {
   const B = lightDevice() ? 512 : 1024, measure = B / 1024
   const { el, c } = canvas(B)
-  const kab = canvas(B)
+  const reliefCanvas = canvas(B)
   const r = random(29), fbm = makeNoise(47)
   const data = c.createImageData(B, B), px = data.data, color = [0, 0, 0]
   const dirs: [number, number][] = [[3, 1], [1, 3], [2, -2], [4, 1], [-1, 4], [3, 2]]
-  kab.c.fillStyle = '#d0d0d0'
-  kab.c.fillRect(0, 0, B, B)
+  reliefCanvas.c.fillStyle = '#d0d0d0'
+  reliefCanvas.c.fillRect(0, 0, B, B)
   const joint = Math.max(1, Math.round(3 * measure))
   const rows = 4, glazeH = Math.floor(B / rows)
   for (let s = 0; s < rows; s++) {
@@ -192,17 +192,17 @@ export function marblePavingTextures() {
         marblePixel(fbm, x / B, y / B, a, b, ox, oy, edge ? tone * 0.45 : tone, color)
         px[i] = color[0]; px[i + 1] = color[1]; px[i + 2] = color[2]; px[i + 3] = 255
       }
-      kab.c.fillStyle = '#202020'
-      kab.c.fillRect(x0 % B, y0, joint, y1 - y0)
+      reliefCanvas.c.fillStyle = '#202020'
+      reliefCanvas.c.fillRect(x0 % B, y0, joint, y1 - y0)
     }
-    kab.c.fillStyle = '#202020'
-    kab.c.fillRect(0, y0, B, joint)
+    reliefCanvas.c.fillStyle = '#202020'
+    reliefCanvas.c.fillRect(0, y0, B, joint)
   }
   c.putImageData(data, 0, 0)
-  return { color: repeated(el, 4.2, true), relief: repeated(kab.el, 4.2, false) }
+  return { color: repeated(el, 4.2, true), relief: repeated(reliefCanvas.el, 4.2, false) }
 }
 
-/** Havuz gövdesi, kaide ve kürsü için derzsiz damarlı mermer. 3 metrede tekrar. */
+/** Jointless veined marble for the pool body, base and pedestal. Repeats every 3 m. */
 export function marbleBodyTexture() {
   const B = lightDevice() ? 512 : 1024
   const { el, c } = canvas(B)
@@ -216,7 +216,7 @@ export function marbleBodyTexture() {
   return repeated(el, 3, true)
 }
 
-/** Havuz suyu için dikişsiz ince dalga normali. 3 metrede tekrar. */
+/** Seamless fine wave normal for the pool water. Repeats every 3 m. */
 export function waterNormal() {
   const B = 512, nt = canvas(B), fbm = makeNoise(73), burden = new Float32Array(B * B)
   for (let y = 0; y < B; y++) for (let x = 0; x < B; x++) burden[y * B + x] = fbm((x / B) * 10, (y / B) * 10, 10, 3)

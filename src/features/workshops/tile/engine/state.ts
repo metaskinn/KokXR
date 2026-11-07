@@ -1,5 +1,5 @@
-// Çini atölyesinin oyun mantığı: masaüstü ve VR aynı durumu kullanır. Üç.js'e bağlı değildir.
-// Süreler ve bisküvi sıcaklığı oyun ölçeğidir; sır pişirimi aralığı kaynaktan gelir (src/data/cini.ts).
+// Tile workshop game logic: desktop and VR share the same state. Does not depend on three.js.
+// Durations and bisque temperature are game scale; the glaze firing range comes from a source (src/content/tile.ts).
 import { regions, advanceTrace, traces, type N } from './pattern.ts'
 
 export const stages = ['Şekil', 'Astar ve bisküvi', 'Desen', 'Tahrir', 'Boyama', 'Sır ve fırın', 'İnceleme']
@@ -18,7 +18,7 @@ export const OUTLINE_TOLERANCE = .075
 
 export interface Game {
   stage: number
-  /** Astar ve bisküvi ile sır ve fırın adımlarının iki bölümü: 0 sürme, 1 fırın. */
+  /** The two parts of the slip-and-bisque and glaze-and-kiln steps: 0 applying, 1 kiln. */
   alt: number
   form: number; formPenalty: number
   primer: number; glaze: number
@@ -26,7 +26,7 @@ export interface Game {
   coal: boolean[]; coalRatio: number
   iz: number; traceIndex: number; traceError: number; traceMeasure: number
   paints: (ColorId | null)[]; color: ColorId
-  /** Sır piştikçe 0'dan 1'e: boyalar canlanır, yüzey camlaşır. */
+  /** 0 to 1 as the glaze fires: paints become vivid, the surface vitrifies. */
   live: number
   masterStep: number; message: string
 }
@@ -42,7 +42,7 @@ export function firstGame(): Game {
 const limit = (n: number, a = 0, b = 1) => Math.max(a, Math.min(b, n))
 function advance(d: Game, message: string) { d.stage = Math.min(6, d.stage + 1); d.alt = 0; d.holding = 0; d.heat = 20; d.inKiln = false; d.message = message }
 
-/** `mesafe` tabak yarıçapı cinsinden sürükleme. Çok hızlı çekmek çamuru yalpalatır. */
+/** `dist` is the drag in plate radii. Pulling too fast makes the clay wobble. */
 export function shapeUp(d: Game, dist: number, dt: number) {
   if (d.stage !== 0 || dist <= 0) return
   if (dist / Math.max(dt, .001) > 7) { d.formPenalty = limit(d.formPenalty + dt * .8); d.message = 'Yavaş: çamur hızlı çekilince yalpalar.'; return }
@@ -61,7 +61,7 @@ export function pourGlaze(d: Game, dt: number) {
   if (d.glaze >= 1) { d.alt = 1; d.inKiln = true; d.message = 'Sır deseni örttü; korkma, pişince cam gibi saydamlaşır. Fırını ısıt.' }
 }
 
-/** Fırın adımı. Aralıkta kalındıkça pişer; aşırı ısı kaliteyi düşürür. */
+/** Kiln step. Fires while kept in range; excess heat lowers quality. */
 export function kiln(d: Game, dt: number, fire: boolean) {
   const bisk = d.stage === 1 && d.alt === 1, glaze = d.stage === 5 && d.alt === 1
   if (!bisk && !glaze) return
@@ -77,7 +77,7 @@ export function kiln(d: Game, dt: number, fire: boolean) {
     else { d.inKiln = false; d.alt = 2; d.message = 'Sır eridi. Fırın soğuyor…' }
   }
 }
-/** Fırın sonrası görünüm değişimi; bitince incelemeye geçer. */
+/** Post-kiln appearance change; moves to inspection when done. */
 export function cool(d: Game, dt: number) {
   if (d.stage !== 5 || d.alt !== 2) return
   d.live = limit(d.live + dt * .4)
@@ -96,7 +96,7 @@ export function withCoal(d: Game, n: N) {
   d.coalRatio = full / total.length
   if (d.coalRatio >= COAL_THRESHOLD) { d.coal.fill(true); d.coalRatio = 1; advance(d, 'Desen noktalar halinde geçti. Şimdi samur fırçayla noktaların üstünden git.') }
 }
-/** Tabağın içine düşen hücreler. */
+/** Cells that fall inside the plate. */
 export function coalCells() {
   const o: number[] = []
   for (let y = 0; y < CELL; y++) for (let x = 0; x < CELL; x++) {
@@ -110,14 +110,14 @@ export function drawOutline(d: Game, n: N) {
   if (d.stage !== 3) return
   const iz = traces[d.iz], s = advanceTrace(iz, d.traceIndex, n, OUTLINE_TOLERANCE)
   if (s.row > d.traceIndex) { d.traceError += s.distance; d.traceMeasure++; d.traceIndex = s.row }
-  // Çizgi kapalıdır: son nokta başlangıçla aynı, fare bırakılırken son adımı kaçırmak izi kilitlemesin.
+  // The line is closed: the last point equals the start, so missing the last step on mouse release must not lock the trace.
   if (d.traceIndex >= iz.length - 2) {
     d.traceIndex = 0; d.iz++
     if (d.iz >= traces.length) { d.iz = traces.length; advance(d, 'Tahrir bitti, kalan tekrarları çırak tamamladı. Renk seç, desenin içine dokun.') }
     else d.message = 'Güzel. Sıradaki çizgiyi başından izle.'
   }
 }
-/** Sıradaki izin başlangıcı: fırçanın gideceği yeri göstermek için. */
+/** Start of the next trace: to show where the brush should go. */
 export const traceHead = (d: Game): N | null => (d.stage === 3 && d.iz < traces.length ? traces[d.iz][d.traceIndex] : null)
 
 export function paint(d: Game, region: number) {
@@ -136,7 +136,7 @@ export function quality(d: Game) {
   return Math.round(100 * limit((1 - d.formPenalty * .6) * .25 + (1 - d.excess) * .2 + outline * .3 + (1 - d.excessGlaze) * .25))
 }
 
-/** Mevcut adımı orta kalitede tamamlar. Boyamada boş kalan bölgelere dengeli bir düzen verir. */
+/** Completes the current step at medium quality. When painting, gives empty regions a balanced arrangement. */
 export function masterComplete(d: Game) {
   const a = d.stage
   if (a === 0) { d.form = 1; advance(d, 'Usta şekillendirdi. Şimdi astar.') }
@@ -151,7 +151,7 @@ export function masterComplete(d: Game) {
 }
 
 export type Action = { id: string; ad: string; tour: 'head' | 'hold'; passive?: boolean; selected?: boolean }
-/** Masaüstü panelindeki ve VR panelindeki düğmeler aynı listeden çıkar. */
+/** Desktop panel and VR panel buttons come from the same list. */
 export function actions(d: Game): Action[] {
   if (d.stage === 1 && d.alt === 0) return [{ id: 'primer', ad: 'Astar sür · basılı tut', tour: 'hold' }]
   if (d.stage === 5 && d.alt === 0) return [{ id: 'glaze', ad: 'Sır dök · basılı tut', tour: 'hold' }]

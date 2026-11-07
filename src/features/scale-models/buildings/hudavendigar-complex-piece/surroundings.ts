@@ -1,5 +1,5 @@
-// Külliyenin diğer yapıları: dış kütle olarak. Yerleşim kitaptaki yönlere (s. 97, 100, 103) göre temsilîdir:
-// imaret caminin batısında, hamam doğusunda, türbe kuzeybatıda yolun karşısında, şadırvan karşıdaki bahçede.
+// The complex's other buildings: as exterior masses. Layout is representative, following the directions in the book (pp. 97, 100, 103):
+// imaret west of the mosque, hamam to the east, tomb to the northwest across the road, şadırvan in the garden opposite.
 import * as THREE from 'three'
 import { Bucket, type Mat, subtract, rect, rotateG, flatShadow, arch, boxG, cylinderG, place } from '../../uluMosquePiece'
 import type { UluMosqueMaterials } from '../../uluMosqueTextures'
@@ -12,13 +12,13 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
   const boxUpright = (x0: number, x1: number, y0: number, y1: number, z0: number, z1: number, mat: Mat) =>
     k.add(wallUV(place(boxG(x1 - x0, y1 - y0, z1 - z0), (x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2)), mat)
 
-  // --- Zemin ---
+  // --- Ground ---
   const R = PEDESTAL_R - 0.5
   const courtyard = new THREE.CircleGeometry(R, 96).rotateX(-Math.PI / 2).translate(0, 0.01, 0)
   const ap = courtyard.attributes.position, au = courtyard.attributes.uv
   for (let i = 0; i < au.count; i++) au.setXY(i, ap.getX(i), ap.getZ(i))
   k.add(courtyard, m.paving)
-  // Daireye sığan düz yüzey parçaları
+  // Flat surface pieces fitting inside the circle
   const piece = (z0: number, z1: number, xMin: number, xMax: number, y: number, mat: Mat) => {
     const s = new THREE.Shape(), N = 10
     const right: [number, number][] = [], left: [number, number][] = []
@@ -34,14 +34,14 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
     for (let i = 0; i < u.count; i++) u.setXY(i, p.getX(i), p.getZ(i))
     k.add(g, mat)
   }
-  piece(-38, -29, -999, 999, 0.03, x.path) // caminin önündeki yol
-  piece(-R + 1, -38.2, -999, 999, 0.03, x.grass) // ovaya bakan bahçe ve türbe seti
+  piece(-38, -29, -999, 999, 0.03, x.path) // road in front of the mosque
+  piece(-R + 1, -38.2, -999, 999, 0.03, x.grass) // garden facing the plain and the tomb terrace
   piece(-29, -24.5, -999, -18, 0.03, x.grass)
   piece(-29, -24.5, 18, 999, 0.03, x.grass)
   piece(27, R - 1, -999, 999, 0.03, x.grass)
   piece(-20, 27, 34, 999, 0.03, x.grass)
 
-  // --- Ağaçlar: kitaptaki fotoğraflarda yapıları çevreleyen yeşillik (konumlar temsilî) ---
+  // --- Trees: greenery surrounding the buildings in the book's photos (positions representative) ---
   const tree = (px: number, pz: number, length: number, r: number, dark = false) => {
     k.add(place(cylinderG(0.28, 0.42, length * 0.45, 7), px, length * 0.22, pz), x.tension)
     let t = px * 7.1 + pz * 3.3
@@ -68,7 +68,7 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
   }
   cypress(-12, -43, 13); cypress(-46, -30.5 - 8, 12); cypress(19, 14, 12)
 
-  // --- Şadırvan: altı ahşap direk, kurşun kaplı ahşap çatı (s. 95) ---
+  // --- Şadırvan: six wooden posts, lead-covered wooden roof (p. 95) ---
   {
     const cx = 13, cz = -47, ext = (g: THREE.BufferGeometry, mat: Mat) => k.add(place(g, cx, 0, cz), mat)
     ext(flatShadow(cylinderG(3.2, 3.3, 0.25, 6)).translate(0, 0.13, 0), m.marble)
@@ -84,7 +84,7 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
     ext(rotateG([[0.1, 0], [0.05, 0.3], [0.13, 0.5], [0.02, 0.9], [0, 0.95]], 8).translate(0, 5.7, 0), m.bronze)
   }
 
-  // --- Cıkcık (Girçık, Bekârlar) Hamamı: kare plan, 6 m çaplı fenerli kubbe (s. 100) ---
+  // --- Cıkcık (Girçık, Bekârlar) Hamamı: square plan, 6 m diameter dome with lantern (p. 100) ---
   {
     const cx = 25, cz = -4, Y = 11.6, H = 5.2
     const ext = (g: THREE.BufferGeometry, mat: Mat) => k.add(place(g, cx, 0, cz), mat)
@@ -103,11 +103,11 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
     const last = p[p.length - 1]
     ext(cylinderG(0.38, 0.4, 0.4, 8).translate(0, H + 2.42 + last[1] + 0.2, 0), m.marble)
     ext(rotateG([[0.46, 0], [0.04, 0.3], [0, 0.32]], 8, [1, 1]).translate(0, H + 2.42 + last[1] + 0.4, 0), m.lead)
-    // Kapı ve dış merdiven
+    // Door and outer stairs
     k.add(place(boxG(1.3, 2.4, 0.08).translate(0, 1.2, 0), cx, 0, cz - Y / 2, Math.PI), x.door)
   }
 
-  // --- İmaret: "L" biçimli, 40 m'lik uzun kolu camiye paralel; moloz taş, kiremitli ahşap çatı (s. 97-99) ---
+  // --- İmaret: "L"-shaped, 40 m long arm parallel to the mosque; rubble stone, tiled wooden roof (pp. 97-99) ---
   {
     const X0 = -33, X1 = -24, Z0 = -14, Z1 = 26, H = 6.3, K0 = -56, KZ0 = 17
     boxUpright(X0, X1, 0, H, Z0, Z1, x.rubble)
@@ -115,12 +115,12 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
     const saca = 1.2
     k.add(hipRoof(X0 - saca, X1 + saca, Z0 - saca, Z1 + saca, H, H + 2.8, 'z'), x.roofTile)
     k.add(hipRoof(K0 - saca, X0 + 1, KZ0 - saca, Z1 + saca, H, H + 2.6, 'x'), x.roofTile)
-    // Saçak altı ahşap
+    // Wood under the eaves
     boxUpright(X0 - saca, X1 + saca, H - 0.1, H, Z0 - saca, Z1 + saca, x.tension)
     boxUpright(K0 - saca, X0, H - 0.1, H, KZ0 - saca, Z1 + saca, x.tension)
-    // Kesme taş köşeler
+    // Cut-stone corners
     for (const [a, b] of [[X0, Z0], [X1, Z0], [X1, Z1], [K0, Z1], [K0, KZ0]]) boxUpright(a - 0.05, a + 0.05, 0, H, b - 0.6, b + 0.6, m.stone)
-    // Doğu duvarında kesme taş söveli beş pencere (s. 99)
+    // Five windows with cut-stone jambs on the east wall (p. 99)
     const window = (px: number, pz: number, ry: number, y = 2) => {
       k.add(place(boxG(1.5, 2.1, 0.08).translate(0, y + 1.05, 0), px, 0, pz, ry), m.marble)
       k.add(place(boxG(0.95, 1.55, 0.03).translate(0, y + 1.05, 0.05), px, 0, pz, ry), x.darkGlass)
@@ -130,7 +130,7 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
     for (let i = 0; i < 4; i++) window(K0 + 4 + i * 5.5, KZ0, Math.PI)
     for (let i = 0; i < 5; i++) window(K0 + 3 + i * 6, Z1, 0)
     window((X0 + X1) / 2, Z0, Math.PI)
-    // Avlu duvarı ve kuzeydeki kemerli büyük kapı (s. 99)
+    // Courtyard wall and large arched gate on the north (p. 99)
     const wallH = 3.6
     boxUpright(K0, K0 + 0.7, 0, wallH, Z0, KZ0, x.rubble)
     const on = rect(K0, 0, X0, wallH)
@@ -138,23 +138,23 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
     k.add(wallUV(subtract(on, 0.7, Z0)), x.rubble)
     boxUpright(K0, X0, wallH, wallH + 0.14, Z0 - 0.08, Z0 + 0.78, m.stone)
     boxUpright(K0, K0 + 0.78, wallH, wallH + 0.14, Z0, KZ0, m.stone)
-    // Çınar: avludaki büyük ağaç (fotoğrafa göre, temsilî)
+    // Plane tree: the large tree in the courtyard (based on the photo, representative)
     tree(-44, 1, 12, 6, true)
     k.add(place(cylinderG(1.4, 1.5, 0.5, 16), -21, 0.25, -16), m.marble)
     tree(-21, -16, 11, 5, false)
   }
 
-  // --- Türbe: 17.60 x 17.60 m kare plan, kasnaksız basık kubbe, doğu duvarında sundurma (s. 103, 105; TDV) ---
+  // --- Tomb: 17.60 x 17.60 m square plan, shallow dome without drum, porch on the east wall (pp. 103, 105; TDV) ---
   {
     const cx = -31, cz = -54, O = 8.8, H = 7.6
     const add = (g: THREE.BufferGeometry, mat: Mat) => k.add(place(g, cx, 0, cz), mat)
-    // Set
+    // Terrace
     boxUpright(cx - O - 2.2, cx + O + 2.2, 0, 0.9, cz - O - 2.2, cz + O + 2.2, m.stone)
     add(boxG(O * 2, H, O * 2).translate(0, H / 2 + 0.9, 0), x.cream)
     add(boxG(O * 2 + 0.4, 0.3, O * 2 + 0.4).translate(0, H + 0.8, 0), m.marble)
-    // Kuzey duvarında masif payandalar (TDV; yönleri temsilî)
+    // Massive buttresses on the north wall (TDV; directions representative)
     for (const a of [-5, 0, 5]) add(flatShadow(boxG(1.5, H - 0.8, 1.3)).translate(a, (H - 0.8) / 2 + 0.9, -O - 0.65), x.cream)
-    // Her cephede demir parmaklıklı kemerli pencereler
+    // Arched windows with iron grilles on every facade
     for (const [a, b, ry] of [[O, 0, Math.PI / 2], [-O, 0, -Math.PI / 2], [0, O, 0], [0, -O, Math.PI]] as const) for (const u of [-4.6, 4.6]) {
       const px = cx + a, pz = cz + b
       k.add(place(new THREE.ShapeGeometry(arch(new THREE.Shape(), u, 2.8, 1.7, 1.9, 0.95), 8).translate(0, 0, 0.03), px, 0, pz, ry), x.darkGlass)
@@ -163,12 +163,12 @@ export function setupSurroundings(m: UluMosqueMaterials, x: ComplexMaterials, k:
       k.add(place(subtract(hal, 0.08, 0.01), px, 0, pz, ry), m.marble)
     }
     k.add(place(hipRoof(-O - 0.4, O + 0.4, -O - 0.4, O + 0.4, H + 0.95, H + 2.6, 'x'), cx, 0, cz), m.lead)
-    // Kasnaksız basık kubbe (TDV)
+    // Shallow dome without drum (TDV)
     const p: [number, number][] = []
     for (let t = 0; t <= 12; t++) { const a = (t / 12) * Math.PI / 2; p.push([Math.max(5.6 * Math.cos(a), 0.001), 3.1 * Math.sin(a)]) }
     add(rotateG(p, 64, [1, 1]).translate(0, H + 1.8, 0), m.dome)
     add(rotateG([[0.14, 0], [0.06, 0.3], [0.16, 0.5], [0.03, 0.9], [0, 1]], 8).translate(0, H + 4.85, 0), m.bronze)
-    // Doğu duvarında dışa taşan sundurma, iki kanatlı ahşap kapı (s. 105)
+    // Porch projecting from the east wall, double-leaf wooden door (p. 105)
     const sx = cx + O
     boxUpright(sx, sx + 2.8, 0.9, 1.05, cz - 1.8, cz + 1.8, m.marble)
     for (const a of [-1.55, 1.55]) k.add(place(boxG(0.3, 3, 0.3), sx + 2.4, 2.5, cz + a), m.marble)

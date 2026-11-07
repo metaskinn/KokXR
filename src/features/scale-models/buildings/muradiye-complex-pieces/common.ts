@@ -1,14 +1,14 @@
-// Muradiye maketinin geometri yardımcıları. Birim metre; kuzey -z, doğu +x.
+// Geometry helpers for the Muradiye model. Units in meters; north -z, east +x.
 import * as THREE from 'three'
 import { Bucket, subtract, rect, rotateG, flatShadow, arch, cylinderG, uvFit, place } from '../../uluMosquePiece'
 
 export type Mat = THREE.Material
-/** Yön dönüşleri: yerel +z dışarı bakar. */
+/** Facing rotations: local +z faces outward. */
 export const NORTH = Math.PI, SOUTH = 0, EAST = Math.PI / 2, WEST = -Math.PI / 2
 
 export interface Gap { u: number; g: number; y: number; flat: number; k: number }
 
-/** Boşluklu duvar: dış yüzü (cx, cz) çizgisinde, kalınlık içeri doğru. İki malzeme katmanı. */
+/** Wall with openings: outer face on the (cx, cz) line, thickness goes inward. Two material layers. */
 export function wall(kv: Bucket, cx: number, cz: number, L: number, y0: number, y1: number, T: number, ry: number, outer: Mat, inner: Mat, gaps: Gap[] = [], outerRatio = 0.6) {
   const shape = () => {
     const s = rect(-L / 2, y0, L / 2, y1)
@@ -19,7 +19,7 @@ export function wall(kv: Bucket, cx: number, cz: number, L: number, y0: number, 
   kv.add(place(subtract(shape(), T * (1 - outerRatio), -T), cx, 0, cz, ry), inner)
 }
 
-/** Dört köşesi verilen yüz; UV metre cinsinden. */
+/** Face given by four corners; UVs in meters. */
 export function quadG(a: number[], b: number[], c: number[], d: number[]) {
   const g = new THREE.BufferGeometry()
   g.setAttribute('position', new THREE.Float32BufferAttribute([...a, ...b, ...c, ...a, ...c, ...d], 3))
@@ -32,7 +32,7 @@ export function quadG(a: number[], b: number[], c: number[], d: number[]) {
   return g
 }
 
-/** Kırma çatı: dört eğimli yüz; sırt uzun kenar boyuncadır. */
+/** Hipped roof: four sloped faces; the ridge runs along the long side. */
 export function hipRoof(kv: Bucket, x0: number, x1: number, z0: number, z1: number, y: number, h: number, mat: Mat) {
   const gi = Math.min(x1 - x0, z1 - z0) / 2
   const Y = y + h
@@ -44,14 +44,14 @@ export function hipRoof(kv: Bucket, x0: number, x1: number, z0: number, z1: numb
   kv.add(quadG(c, b, q, r), mat)
 }
 
-/** Daire delikli düz döşeme (çatı güvertesi veya tavan). */
+/** Flat slab with a circular hole (roof deck or ceiling). */
 export function perforatedPaving(kv: Bucket, x0: number, x1: number, z0: number, z1: number, y: number, holes: [number, number, number][], mat: Mat) {
   const s = rect(x0, -z1, x1, -z0)
   for (const [x, z, r] of holes) s.holes.push(new THREE.Path().absarc(x, -z, r, 0, Math.PI * 2, true))
   kv.add(new THREE.ShapeGeometry(s, 24).rotateX(-Math.PI / 2).translate(0, y, 0), mat)
 }
 
-/** Kurşun (veya kiremit) kubbe: alta açılan etek ve yayvan gövde. */
+/** Lead (or tile) dome: skirt opening downward and a shallow body. */
 export function outerDome(kv: Bucket, x: number, y: number, z: number, R: number, H: number, mat: Mat, piece = 48, openR = 0) {
   const p: [number, number][] = [[R + 0.5, -0.28], [R, 0]]
   for (let t = 1; t <= 14; t++) {
@@ -63,33 +63,33 @@ export function outerDome(kv: Bucket, x: number, y: number, z: number, R: number
   kv.add(place(rotateG(p, piece, [1, 1]), x, y, z), mat)
 }
 
-/** Alem: dilimli küçük tepelik. */
+/** Finial (alem): small segmented crown. */
 export function finial(kv: Bucket, x: number, y: number, z: number, mat: Mat, scale = 1) {
   const p: [number, number][] = [[0.14, 0], [0.05, 0.12], [0.13, 0.28], [0.04, 0.46], [0.1, 0.58], [0.02, 0.9], [0, 0.95]]
   kv.add(place(rotateG(p.map(([r, h]) => [r * scale, h * scale] as [number, number]), 8), x, y, z), mat)
 }
 
-/** Çokgen kasnak: yan yüz, üstte silme. */
+/** Polygonal drum: side face, molding on top. */
 export function drum(kv: Bucket, x: number, y0: number, y1: number, z: number, R: number, n: number, mat: Mat, molding: Mat) {
   const h = y1 - y0
   kv.add(place(flatShadow(cylinderG(R, R, h, n, true).rotateY(Math.PI / n)), x, y0 + h / 2, z), mat)
   kv.add(place(flatShadow(cylinderG(R + 0.22, R + 0.06, 0.32, n, true).rotateY(Math.PI / n)), x, y1 - 0.14, z), molding)
 }
 
-/** Duvar yüzüne sivri kemerli ince bezeme (pencere, niş). `ileri`: yerel +z kayması. */
+/** Thin pointed-arch ornament on a wall face (window, niche). `forward`: local +z offset. */
 export function archFace(kv: Bucket, x: number, z: number, ry: number, u: number, y: number, g: number, flat: number, k: number, forward: number, mat: Mat) {
   const geo = uvFit(new THREE.ShapeGeometry(arch(new THREE.Shape(), u, y, g, flat, k), 10)).translate(0, 0, forward)
   kv.add(place(geo, x, 0, z, ry), mat)
 }
 
-/** Sivri kemerli çerçeve halkası. */
+/** Pointed-arch frame ring. */
 export function archRing(kv: Bucket, x: number, z: number, ry: number, u: number, y: number, g: number, flat: number, k: number, thick: number, forward: number, mat: Mat, depth = 0.08) {
   const s = arch(new THREE.Shape(), u, y - thick, g + thick * 2, flat + thick, k + thick)
   s.holes.push(arch(new THREE.Path(), u, y, g, flat, k))
   kv.add(place(subtract(s, depth, forward), x, 0, z, ry), mat)
 }
 
-/** Kare veya dikdörtgen tabandan daireye geçen kabuk; iç mekânda kubbeyi taşır. */
+/** Shell transitioning from a square or rectangular base to a circle; carries the dome in the interior. */
 export function transitionShell(cx: number, cz: number, ax: number, az: number, y0: number, y1: number, R: number, piece = 32, row = 4) {
   const position: number[] = [], uv: number[] = [], index: number[] = []
   for (let s = 0; s <= row; s++) {
@@ -114,7 +114,7 @@ export function transitionShell(cx: number, cz: number, ax: number, az: number, 
   return g
 }
 
-/** İç kubbe: kasnak yarıçapından tepeye. */
+/** Inner dome: from the drum radius to the apex. */
 export function innerDomeG(R: number, H: number) {
   const p: [number, number][] = []
   for (let t = 0; t <= 16; t++) {

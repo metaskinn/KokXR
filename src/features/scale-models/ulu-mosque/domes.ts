@@ -1,7 +1,7 @@
-// Ulu Camii kubbe bölgesi: kurşun kubbeler, iç kubbeler, pandantifler, avizeler ve minarelerin üst bölümü.
-// Biçimler arşiv fotoğraflarından yorumlanmıştır: kurşun dikişleri, etek ve âlem DJI_0315; tepeden görünüş DJI_0228;
-// minare gövdesi, şerefe ve külah DJI_0417 ile DJI_0085; iç kubbe bezemesi ERD05149 (doku doğrudan bu fotoğraftan).
-// Ölçüler temsilîdir. Aynı kurşun dokusu her kubbede döndürülerek kullanılır; hepsi Kova ile birleşir.
+// Ulu Camii dome zone: lead domes, inner domes, pendentives, chandeliers and the upper part of the minarets.
+// Forms are interpreted from archive photos: lead seams, skirt and finial DJI_0315; top view DJI_0228;
+// minaret shaft, balcony and cap DJI_0417 and DJI_0085; inner dome decoration ERD05149 (texture directly from this photo).
+// Dimensions are representative. The same lead texture is rotated for each dome; all are merged with Bucket.
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../../shared/config/publicBuild'
 import type { UluMosqueMaterials } from '../uluMosqueTextures'
@@ -10,9 +10,9 @@ import { DRUM_BASE, type Bucket, OCTA, rotateG, arch, boxG, cylinderG, place } f
 
 type Draw = (c: CanvasRenderingContext2D, g: number, y: number) => void
 
-/** Kurşun kubbe dokusunun üst şeridi: âlemlerin bakır yeşili buradan okunur, böylece ayrı çizim çağrısı açılmaz. */
+/** Top strip of the lead dome texture: the finials' copper green is read from here, so no separate draw call is needed. */
 const PATCH_V = 0.94
-/** Kurşun levha sıraları (v) ve her sıranın sütun sayısı: tepeye doğru her ikinci dikiş biter (DJI_0315). */
+/** Lead sheet rows (v) and the column count of each row: towards the top every second seam ends (DJI_0315). */
 const ROWS: [number, number, number][] = [[0, 0.15, 40], [0.15, 0.33, 40], [0.33, 0.53, 40], [0.53, 0.74, 20], [0.74, PATCH_V, 20]]
 const DOME_SEAM = 40
 
@@ -32,7 +32,7 @@ export const drawLeadDome = (relief: boolean): Draw => (c, g, y) => {
         c.fillRect(x, u, d, h)
         continue
       }
-      // Levhaların tonu: çoğu açık mavi gri, seyrek olarak yenilenmiş veya kahverengi oksitli levha.
+      // Sheet tone: mostly light blue-grey, occasionally a renewed or brown-oxidized sheet.
       c.fillStyle = s < 0.035 && count === DOME_SEAM ? `rgba(138,116,94,${0.35 + r() * 0.3})`
         : s < 0.14 ? `rgba(214,226,233,${0.3 + r() * 0.3})`
           : s < 0.42 ? `rgba(120,138,150,${0.08 + r() * 0.16})` : `rgba(235,242,246,${r() * 0.16})`
@@ -41,18 +41,18 @@ export const drawLeadDome = (relief: boolean): Draw => (c, g, y) => {
       iz.addColorStop(0, 'rgba(255,255,255,0.1)'); iz.addColorStop(1, 'rgba(66,76,84,0.14)')
       c.fillStyle = iz
       c.fillRect(x, u, d, h)
-      // Bindirmeden süzülen ince izler
+      // Thin streaks running down from the overlap
       for (let n = 0; n < 7; n++) {
         c.fillStyle = `rgba(${r() > 0.35 ? '70,76,80' : '255,255,255'},${0.03 + r() * 0.07})`
         c.fillRect(x + r() * d, u, (1 + r() * 3) * unit, h * (0.3 + r() * 0.7))
       }
-      // Dikişin iki yanındaki gölge ve üstündeki ışık
+      // Shadow on both sides of the seam and light on top of it
       c.fillStyle = 'rgba(42,50,56,0.34)'
       c.fillRect(x + 3 * unit, u, 3 * unit, h); c.fillRect(x - 6 * unit, u, 3 * unit, h)
       c.fillStyle = 'rgba(244,248,250,0.26)'
       c.fillRect(x - 2 * unit, u, 4 * unit, h)
     }
-    // Yatay bindirme
+    // Horizontal overlap
     c.fillStyle = relief ? '#2a2a2a' : 'rgba(44,52,58,0.62)'
     c.fillRect(0, oy(v1), g, 3 * unit)
     c.fillStyle = relief ? '#e8e8e8' : 'rgba(246,249,250,0.4)'
@@ -63,12 +63,12 @@ export const drawLeadDome = (relief: boolean): Draw => (c, g, y) => {
     c.fillRect(0, 0, g, oy(PATCH_V))
     return
   }
-  // Eteğin kiri ve koyu saçak ağzı
+  // Dirt on the skirt and the dark eave edge
   const skirt = c.createLinearGradient(0, oy(0.13), 0, y)
   skirt.addColorStop(0, 'rgba(84,86,84,0)'); skirt.addColorStop(0.42, 'rgba(84,86,84,0.3)'); skirt.addColorStop(0.47, 'rgba(38,40,42,0.92)'); skirt.addColorStop(1, 'rgba(30,32,34,0.95)')
   c.fillStyle = skirt
   c.fillRect(0, oy(0.13), g, y - oy(0.13))
-  // Bakır yeşili yama
+  // Copper-green patch
   c.fillStyle = '#56685c'
   c.fillRect(0, 0, g, oy(PATCH_V))
   for (let i = 0; i < 900; i++) {
@@ -77,7 +77,7 @@ export const drawLeadDome = (relief: boolean): Draw => (c, g, y) => {
   }
 }
 
-/** Düz kurşun: yamaca dik levhalar, dikişler, oksit ve toz. */
+/** Flat lead: sheets running down the slope, seams, oxide and dust. */
 export const drawLeadFlat: Draw = (c, g, y) => {
   const r = random(53), count = 8, length = 2, d = g / count, h = y / length
   c.fillStyle = '#9ea7ab'
@@ -98,7 +98,7 @@ export const drawLeadFlat: Draw = (c, g, y) => {
   for (let j = 0; j < length; j++) { c.fillStyle = 'rgba(36,40,44,0.5)'; c.fillRect(0, j * h, g, 2) }
 }
 
-/** Pandantif: düz sıva, kenarlarda çift çizgi, kemer tepelerine bakan küçük bitkisel motif (ERD05124). */
+/** Pendentive: plain plaster, double lines at the edges, a small floral motif facing the arch apexes (ERD05124). */
 export const drawPendentive: Draw = (c, g, y) => {
   c.fillStyle = '#f2ead9'
   c.fillRect(0, 0, g, y)
@@ -121,7 +121,7 @@ export const drawPendentive: Draw = (c, g, y) => {
   }
 }
 
-/** İç kubbe atlası yoksa (açık yayın) kodla çizilen aynı düzen: kuşak, sekiz taç, göbek. */
+/** Without the inner dome atlas (public build), the same layout drawn in code: band, eight crowns, medallion. */
 const drawInnerDomeFallback: Draw = (c, g, y) => {
   c.fillStyle = '#efe3cd'
   c.fillRect(0, 0, g, y)
@@ -153,13 +153,13 @@ const drawInnerDomeFallback: Draw = (c, g, y) => {
   }
 }
 
-/** İç kubbe haritası: fotoğraf atlası; açık yayında kodla çizilen eşi. */
+/** Inner dome map: the photo atlas; in the public build, its code-drawn counterpart. */
 function innerDomeMap() {
   if (PUBLIC_BUILD) {
     const el = document.createElement('canvas')
     el.width = 2048; el.height = 1024
     const c = el.getContext('2d')
-    if (!c) throw new Error('Tuval kullanılamıyor')
+    if (!c) throw new Error('Canvas is not available')
     drawInnerDomeFallback(c, el.width, el.height)
     const t = new THREE.CanvasTexture(el)
     t.colorSpace = THREE.SRGBColorSpace
@@ -172,7 +172,7 @@ function innerDomeMap() {
   return t
 }
 
-/** İç kubbe malzemesinin ayarları: resim kendi ışığını taşıdığından az bir öz ışık gölgeleri açar. */
+/** Inner dome material settings: since the image carries its own light, a little emission lifts the shadows. */
 export function innerDomeSetting() {
   const map = innerDomeMap()
   return { map, emissive: '#ffffff', emissiveMap: map, emissiveIntensity: 0.3, roughness: 0.9, side: THREE.DoubleSide }
@@ -180,9 +180,9 @@ export function innerDomeSetting() {
 
 const smooth = THREE.MathUtils.smoothstep
 
-/** Dikişleri gerçekten kabaran, eteği sekizgene açılan kurşun kubbe (DJI_0315). */
+/** Lead dome whose seams are truly raised and whose skirt flares to an octagon (DJI_0315). */
 function leadDomeG(domeH: number, openR: number, turn: number) {
-  // Saçak altı, ağız, içbükey etek, sonra dışbükey gövde
+  // Eave underside, mouth, concave skirt, then the convex body
   const profile: [number, number][] = [[6.12, -0.24], [6.86, -0.17], [6.92, -0.08], [6.64, 0.08], [6.3, 0.26], [6.0, 0.5], [5.76, 0.8]]
   const a0 = Math.asin(Math.pow(0.83 / domeH, 1 / 1.08))
   for (let t = 0; t <= 13; t++) {
@@ -219,7 +219,7 @@ function leadDomeG(domeH: number, openR: number, turn: number) {
   g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2))
   g.setIndex(index)
   g.computeVertexNormals()
-  // Doku dikişinde normaller kopmasın
+  // Don't let normals break at the texture seam
   const n = g.attributes.normal
   for (let s = 0; s < profile.length; s++) {
     const a = s * (milk + 1), z = a + milk
@@ -229,7 +229,7 @@ function leadDomeG(domeH: number, openR: number, turn: number) {
   return { g, last: profile[profile.length - 1] }
 }
 
-/** Kasnağın dört yana eğimli kurşun kaidesi: levhalar yamaç boyunca düz iner. */
+/** The drum's lead base sloping four ways: sheets run straight down the slope. */
 export function leadPedestalG(topR: number, bottomR: number, h: number) {
   const g = new THREE.CylinderGeometry(topR, bottomR, h, 4, 1, true).rotateY(Math.PI / 4).toNonIndexed()
   g.computeVertexNormals()
@@ -238,14 +238,14 @@ export function leadPedestalG(topR: number, bottomR: number, h: number) {
   return g
 }
 
-/** UV'yi kurşun dokusunun bakır yeşili şeridine taşır. */
+/** Moves the UVs to the copper-green strip of the lead texture. */
 function patchUV<G extends THREE.BufferGeometry>(g: G) {
   const uv = g.attributes.uv
   for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i), PATCH_V + 0.012 + (uv.getY(i) % 1) * 0.04)
   return g
 }
 
-/** Kubbe âlemi: geniş tabla, kademeler ve hilal (DJI_0315). */
+/** Dome finial: wide base plate, tiers and crescent (DJI_0315). */
 function addFinial(kv: Bucket, m: UluMosqueMaterials, x: number, y: number, z: number) {
   const P: [number, number][] = [[0.44, 0], [0.44, 0.05], [0.22, 0.12], [0.17, 0.3], [0.24, 0.42], [0.14, 0.56], [0.2, 0.68], [0.11, 0.78], [0.15, 0.86], [0.05, 0.96], [0.09, 1.03], [0.025, 1.18], [0.02, 1.32]]
   kv.add(place(patchUV(rotateG(P, 8, [1, 1])), x, y, z), m.dome)
@@ -253,22 +253,22 @@ function addFinial(kv: Bucket, m: UluMosqueMaterials, x: number, y: number, z: n
   kv.add(place(patchUV(crescent), x, y + 1.44, z), m.dome)
 }
 
-/** Dış kubbe: kurşun gövde; şadırvan gözünde üstü geniş cam açıklık (DJI_0228), diğerlerinde âlem. */
+/** Outer dome: lead body; over the şadırvan bay a wide glazed opening on top (DJI_0228), a finial on the others. */
 export function addLeadDome(kv: Bucket, m: UluMosqueMaterials, x: number, kY: number, z: number, domeH: number, open: boolean, i: number, j: number) {
   const { g, last } = leadDomeG(domeH, open ? 3.5 : 0, ((i * 7 + j * 13) % DOME_SEAM) / DOME_SEAM)
   kv.add(place(g, x, kY, z), m.dome)
   if (!open) { addFinial(kv, m, x, kY + 0.32 + domeH - 0.05, z); return }
   const [lastR, lastY] = last
   kv.add(place(new THREE.TorusGeometry(lastR, 0.14, 8, 32).rotateX(Math.PI / 2), x, kY + lastY, z), m.dark)
-  kv.add(place(rotateG([[lastR, 0], [lastR * 0.93, 0.55], [lastR * 0.72, 1.15], [lastR * 0.4, 1.6], [0.01, 1.8]], 32, [1, 1]), x, kY + lastY, z), m.cam)
+  kv.add(place(rotateG([[lastR, 0], [lastR * 0.93, 0.55], [lastR * 0.72, 1.15], [lastR * 0.4, 1.6], [0.01, 1.8]], 32, [1, 1]), x, kY + lastY, z), m.glass)
   kv.add(place(rotateG([[0.1, 0], [0.04, 0.5], [0, 0.55]], 8), x, kY + lastY + 1.8, z), m.bronze)
 }
 
-/** Pandantifin ağız yarıçapı: dış kurşun halkanın içinde kalır. */
+/** Mouth radius of the pendentive: stays inside the outer lead ring. */
 export const IN_DOME_R = 5.38
 const OPEN_IN_R = 3.1
 
-/** Doku yarıçapı (tepe 0, ağız 1) ile yükseliş açısı arasındaki eşleme: alttan bakışta fotoğrafa yakın, ağızda sündürmez. */
+/** Mapping between texture radius (apex 0, mouth 1) and elevation angle: close to the photo when seen from below, no stretching at the mouth. */
 const texQ = (t: number) => 0.62 * Math.cos(t) + 0.38 * (1 - t / (Math.PI / 2))
 function texTheta(q: number) {
   let a = 0, b = Math.PI / 2
@@ -276,12 +276,12 @@ function texTheta(q: number) {
   return (a + b) / 2
 }
 
-/** İç kubbe: pandantiften tepeye tek yüzey. Kasnak yüksekliğine kadarı kasnak katmanına, üstü kubbe katmanına gider. */
+/** Inner dome: a single surface from the pendentive to the apex. Up to the drum height goes to the drum layer, above it to the dome layer. */
 export function addInnerDome(m: UluMosqueMaterials, kDrum: Bucket, kDome: Bucket, x: number, z: number, drumH: number, domeH: number, open: boolean, i: number, j: number) {
   const H2 = drumH + domeH - 0.35, R = IN_DOME_R
   const apex = open ? Math.acos(OPEN_IN_R / R) : Math.PI / 2
   const mid = Math.asin(drumH / H2)
-  const tour = (i + j) % 2, quarter = (i * 3 + j) % 4
+  const variant = (i + j) % 2, quarter = (i * 3 + j) % 4
   const SEG = 64
   const piece = (t0: number, t1: number, row: number) => {
     const position: number[] = [], uv: number[] = [], index: number[] = []
@@ -290,7 +290,7 @@ export function addInnerDome(m: UluMosqueMaterials, kDrum: Bucket, kDome: Bucket
       for (let a = 0; a <= SEG; a++) {
         const f = (a / SEG) * Math.PI * 2, fd = f + (quarter * Math.PI) / 2
         position.push(Math.sin(f) * R * rho, y, Math.cos(f) * R * rho)
-        uv.push((tour + 0.5 + 0.48 * Math.sin(fd) * q) / 2, 0.5 + 0.48 * Math.cos(fd) * q)
+        uv.push((variant + 0.5 + 0.48 * Math.sin(fd) * q) / 2, 0.5 + 0.48 * Math.cos(fd) * q)
       }
     }
     for (let s = 0; s < row; s++) for (let a = 0; a < SEG; a++) {
@@ -307,7 +307,7 @@ export function addInnerDome(m: UluMosqueMaterials, kDrum: Bucket, kDome: Bucket
   kDrum.add(piece(0, Math.min(mid, apex), 6), m.innerDome)
   if (apex > mid) kDome.add(piece(mid, apex, open ? 5 : 10), m.innerDome)
 
-  // Fotoğraftaki sekiz pencerenin kafesi, dokudaki yerine oturur ve ışık alır.
+  // The lattice of the eight windows in the photo sits in its place in the texture and lets light in.
   for (let n = 0; n < 8; n++) {
     const f = (n * Math.PI) / 4
     const s = arch(new THREE.Shape(), 0, 0, 2, 0.62, 0.38)
@@ -323,13 +323,13 @@ export function addInnerDome(m: UluMosqueMaterials, kDrum: Bucket, kDome: Bucket
   }
 
   if (open) {
-    // Camın ardındaki gökyüzü: yalnız aşağıdan görünür, dıştan bakınca yok sayılır.
+    // The sky behind the glass: visible only from below, ignored when seen from outside.
     const sky = new THREE.CircleGeometry(OPEN_IN_R + 0.4, 32).rotateX(Math.PI / 2).translate(x, DRUM_BASE + H2 * Math.sin(apex) + 0.55, z)
     kDome.add(sky, m.sky)
   }
 }
 
-/** DJI_0312/0339: ince koyu halka, yıldız kollar, uzun askılar ve küçük ampuller. */
+/** DJI_0312/0339: thin dark ring, star arms, long hangers and small bulbs. */
 export function addChandelier(k: Bucket, m: UluMosqueMaterials, x: number, z: number, apex: number) {
   const ay = 4.5, R = 1.4, bossY = ay + 2.3, N = 12
   const dir = new THREE.Vector3(0, 1, 0), q = new THREE.Quaternion(), delta = new THREE.Vector3()
@@ -344,7 +344,7 @@ export function addChandelier(k: Bucket, m: UluMosqueMaterials, x: number, z: nu
   k.add(new THREE.TorusGeometry(R * 0.52, 0.009, 4, 32).rotateX(Math.PI / 2).translate(x, ay + 0.3, z), m.bronze)
   tel(new THREE.Vector3(0, bossY, 0), new THREE.Vector3(0, apex, 0), 0.007)
   for (let n = 0; n < N; n++) {
-    // İki iç içe üçgen örgüsü yıldız iskeletini kurar; kalın disk yoktur.
+    // Two nested triangle frames form the star skeleton; there is no thick disc.
     tel(point(n), point(n + 5), 0.007)
     if (n % 2 === 0) tel(point(n), new THREE.Vector3(0, bossY, 0), 0.005)
     for (const inner of [false, true]) {
@@ -357,19 +357,19 @@ export function addChandelier(k: Bucket, m: UluMosqueMaterials, x: number, z: nu
   }
 }
 
-/** Minarenin gövdeden yukarısı: tuğla gövde, kademeli tuğla çıkma, mermer şerefe, ince gövde, boğumlu külah (DJI_0417, DJI_0085). */
+/** The minaret above the base: brick shaft, stepped brick corbel, marble balcony, slender shaft, knobbed cap (DJI_0417, DJI_0085). */
 export function minaretTop(ext: (g: THREE.BufferGeometry, mat: THREE.Material) => void, m: UluMosqueMaterials, bodyBase: number) {
   ext(rotateG([[2.35, bodyBase], [2.05, 26.5]], 32), m.brick)
   for (const [y, h] of [[bodyBase + 0.4, 0.28], [18.5, 0.12], [25.95, 0.42]]) {
     const r = THREE.MathUtils.lerp(2.35, 2.05, (y - bodyBase) / (26.5 - bodyBase)) + 0.05
     ext(cylinderG(r, r, h, 32).translate(0, y, 0), m.stone)
   }
-  // Gövdedeki dar ışık yarıkları (DJI_0315)
+  // Narrow light slits in the shaft (DJI_0315)
   for (const [y, a] of [[15.5, 1.1], [20.5, 3.3], [24, 5.2]]) {
     const r = THREE.MathUtils.lerp(2.35, 2.05, (y - bodyBase) / (26.5 - bodyBase))
     ext(boxG(0.15, 0.72, 0.06).translate(0, y, r).rotateY(a), m.dark)
   }
-  // Şerefe altı: yukarı açılan kademeler ve sıra sıra çıkıntı yapan tuğlalar
+  // Below the balcony: tiers flaring upwards and rows of projecting bricks
   const TIER = 6, UPPER = 29.75
   for (let t = 0; t < TIER; t++) {
     const h = (UPPER - 26.2) / TIER, y = 26.2 + t * h, r = 2.05 + t * 0.125
@@ -380,14 +380,14 @@ export function minaretTop(ext: (g: THREE.BufferGeometry, mat: THREE.Material) =
       ext(boxG(0.27, h * 0.56, 0.2).translate(0, y + h * 0.5, r + 0.08).rotateY(theta), m.brick)
     }
   }
-  // Şerefe: dikmeli mermer korkuluk
+  // Balcony: marble balustrade with posts
   ext(cylinderG(2.86, 2.72, 0.25, 32).translate(0, UPPER + 0.1, 0), m.marble)
   ext(cylinderG(2.84, 2.84, 1.35, 32, true).translate(0, UPPER + 0.85, 0), m.marble)
   ext(cylinderG(2.96, 2.96, 0.16, 32).translate(0, UPPER + 1.58, 0), m.marble)
   for (let a = 0; a < 32; a++) {
     ext(boxG(0.05, 1.12, 0.03).translate(0, UPPER + 0.85, 2.85).rotateY((a * Math.PI * 2) / 32), m.marbleDark)
   }
-  // İnce gövde, kornişli üst bitim ve iki boğumlu külah
+  // Slender shaft, corniced top finish and two-knobbed cap
   ext(rotateG([[1.78, UPPER + 1.6], [1.68, 37.65]], 28), m.brick)
   ext(rotateG([[1.7, 37.6], [2.02, 37.88], [2.02, 38.08], [1.72, 38.22]], 28), m.marble)
   const Y = 38.2

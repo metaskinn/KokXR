@@ -1,4 +1,4 @@
-// Bu modül yalnızca «Maketi eline al» sonrasında dinamik olarak yüklenir.
+// This module is loaded dynamically only after «Maketi eline al».
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { lightDevice } from './uluMosqueFloor'
@@ -21,14 +21,14 @@ export interface ModelScene {
   reset: () => void;
   rotate: (horizontal: number, vertical: number) => void;
   zoomIn: (ratio: number) => void;
-  /** İç mekân durağına gider; `null` dışarı çıkarır. */
+  /** Goes to an interior stop; `null` exits to the outside. */
   interior: (stopId: string | null) => void;
   stops: { id: string; ad: string }[];
-  /** İçeride yürüme ve bakış tuşları: w a s d, ok tuşları, PageUp/PageDown, Shift. */
+  /** Walking and look keys inside: w a s d, arrow keys, PageUp/PageDown, Shift. */
   walkKey: (keyBtn: string, pressed: boolean) => void;
   walkRelease: () => void;
   closeInfo: () => void;
-  /** VR oturumu açar; reddedilirse Promise reddedilir, sahne çalışmaya devam eder. */
+  /** Opens a VR session; if refused, the Promise rejects and the scene keeps running. */
   startXr: () => Promise<void>;
   clear: () => void;
 }
@@ -36,7 +36,7 @@ export interface ModelScene {
 export interface SceneOption {
   infos?: ModelHotspot[];
   sources?: Source[];
-  /** Görünecek bilgi kartı değiştiğinde çağrılır. */
+  /** Called when the info card to show changes. */
   infoChanged?: (id: string | null) => void;
   xrChanged?: (active: boolean) => void;
 }
@@ -45,15 +45,15 @@ const WALK_SPEED = 5, RUN_SPEED = 9, TURN_SPEED = 1.7
 const MARKER_VIEW = 32
 const SLOW_FRAME_MS = 42
 
-/** Yazılımsal çizimde görüntü işleme kullanılamayacak kadar yavaştır. */
+/** Post-processing is too slow to use with software rendering. */
 function softwareRendering(renderer: THREE.WebGLRenderer) {
   const gl = renderer.getContext()
   const extension = gl.getExtension('WEBGL_debug_renderer_info')
-  const ad = extension ? String(gl.getParameter(extension.UNMASKED_RENDERER_WEBGL)) : ''
-  return /swiftshader|llvmpipe|software/i.test(ad)
+  const rendererName = extension ? String(gl.getParameter(extension.UNMASKED_RENDERER_WEBGL)) : ''
+  return /swiftshader|llvmpipe|software/i.test(rendererName)
 }
 
-// Her yapı `yapilar/<eser-id>.ts` dosyasından `export const yapi` ile kaydolur; buraya elle eklenmez.
+// Each building registers itself from `buildings/<artifact-id>.ts` via `export const building`; it is not added here by hand.
 const buildingFiles = import.meta.glob<{ building: () => BuildingModel }>('./buildings/*.ts', { eager: true })
 const models: Record<string, () => BuildingModel> = { 'ulu-mosque': uluMosqueModel }
 for (const [path, file] of Object.entries(buildingFiles)) models[path.replace(/^.*\/|\.ts$/g, '')] = file.building
@@ -62,7 +62,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   if (!create) throw new Error(`Bilinmeyen maket: ${model}`)
   const building = create()
   const canvas = document.createElement('canvas')
-  if (!canvas.getContext('webgl2')) throw new Error('WebGL kullanılamıyor')
+  if (!canvas.getContext('webgl2')) throw new Error('WebGL is not available')
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true })
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5))
   renderer.shadowMap.enabled = true
@@ -75,7 +75,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   area.append(canvas)
 
   const threeScene = new THREE.Scene()
-  // Stüdyo arka planı: ortada hafif aydınlık, kenarlara doğru koyulaşan yeşil
+  // Studio background: green, slightly bright in the middle, darkening towards the edges
   const backdropCanvas = document.createElement('canvas')
   backdropCanvas.width = backdropCanvas.height = 512
   const drawBackdrop = backdropCanvas.getContext('2d')
@@ -95,7 +95,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   room?.dispose()
   const envMap = uluLight?.outerEnv ?? outerEnvTarget!.texture
   threeScene.environment = envMap
-  // İç mekân yansıması: krem duvarlar, gül zemin ve avize noktaları. Altın, mermer ve su bunları yansıtır.
+  // Interior reflection: cream walls, rose floor and chandelier points. Gold, marble and water reflect these.
   const interiorEnvScene = new THREE.Scene()
   const interiorEnvGeo = new THREE.SphereGeometry(1, 12, 8), interiorEnvBox = new THREE.BoxGeometry(70, 26, 56)
   const interiorEnvMat = [
@@ -114,7 +114,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   interiorEnvGeo.dispose(); interiorEnvBox.dispose(); interiorEnvMat.forEach((m) => m.dispose())
   threeScene.environmentIntensity = 0.42
   const camera = new THREE.PerspectiveCamera(40, 1, 4, 900)
-  // Açılış kuzeyden: taç kapı, avlu köşkleri ve iki minare fotoğraftaki gibi önde görünür.
+  // Opening view from the north: the crown gate, courtyard kiosks and the two minarets appear in front, as in the photo.
   const start_ = new THREE.Vector3(...(building.camera?.position ?? [-58, 40, -118]))
   const startTarget = new THREE.Vector3(...(building.camera?.target ?? [0, 14, -3]))
   camera.position.copy(start_)
@@ -140,7 +140,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   const { root, layers, stops, walking } = building
   threeScene.add(root)
 
-  // Bilgi noktası işaretleri: yapıların üstünde duran, sahneye bağlı düğmeler
+  // Info point markers: scene-anchored buttons standing above the buildings
   const markerLayer = document.createElement('div')
   markerLayer.className = 'model-markers'
   markerLayer.hidden = true
@@ -154,10 +154,10 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     const point = document.createElement('span')
     point.className = 'model-marker-point'
     point.textContent = 'i'
-    const ad = document.createElement('span')
-    ad.className = 'model-marker-ad'
-    ad.textContent = info.title
-    button.append(point, ad)
+    const labelEl = document.createElement('span')
+    labelEl.className = 'model-marker-labelEl'
+    labelEl.textContent = info.title
+    button.append(point, labelEl)
     button.addEventListener('click', () => { selectedInfo = info.id; closedInfo = null })
     markerLayer.append(button)
     return { info, button, position: new THREE.Vector3(info.position[0], info.position[1], info.position[2]) }
@@ -166,7 +166,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   let selectedInfo: string | null = null, closedInfo: string | null = null
   const projection = new THREE.Vector3()
   const worldPos = new THREE.Vector3()
-  // XR'da kamera rig'e bağlıdır; yerel konumu dünyadaki yeri vermez.
+  // In XR the camera is attached to the rig; its local position does not give its world position.
   const gazePos = () => renderer.xr.isPresenting ? camera.getWorldPosition(worldPos) : camera.position
   const xrCard = (id: string | null) => {
     const info = markers.find((i) => i.info.id === id)?.info
@@ -184,7 +184,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     }
     if (nearest !== nearInfo) { nearInfo = nearest; closedInfo = null }
     if (!inside) { selectedInfo = null; closedInfo = null }
-    // VR'da kart yalnız başlığa tıklanınca açılır; yakınlık masaüstünde geçerlidir.
+    // In VR the card opens only when its title is clicked; proximity applies on desktop.
     const toShow = selectedInfo ?? (!renderer.xr.isPresenting && nearInfo !== closedInfo ? nearInfo : null)
     if (toShow !== activeInfo) {
       activeInfo = toShow
@@ -196,14 +196,14 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   const positionMarkers = () => {
     if (!inside) return
     const w = area.clientWidth, h = area.clientHeight
-    // Tavana bakarken yalnız başın üstündeki noktalar anlamlıdır; duvarların ötesi gösterilmez.
+    // When looking at the ceiling only points above the head matter; nothing beyond the walls is shown.
     const looksUp = controls.target.y - camera.position.y > 0.3
     for (const { info, button, position } of markers) {
       projection.copy(position).project(camera)
       const distance = camera.position.distanceTo(position)
       const horizontalDistance = Math.hypot(camera.position.x - position.x, camera.position.z - position.z)
       const visible = projection.z < 1 && Math.abs(projection.x) < 1.05 && Math.abs(projection.y) < 1.05 && distance < MARKER_VIEW &&
-        // Altında durulan noktanın kartı zaten açıktır; işareti ekran köşesine yığılmasın.
+        // The card of the point you stand under is already open; don't let its marker pile up in the screen corner.
         horizontalDistance > 4 && !(looksUp && horizontalDistance > 8) &&
         !walking.viewBlockers.some((k) => viewBlocked(camera.position.x, camera.position.z, position.x, position.z, k))
       button.hidden = !visible
@@ -213,16 +213,16 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     }
   }
 
-  // Yürüme: çarpışma kutuları oyuncu yarıçapı kadar şişirilmiş kabul edilir; eksen eksen denenerek duvar boyunca kayılır.
+  // Walking: collision boxes are treated as inflated by the player radius; trying axis by axis lets you slide along walls.
   const pressedKeys = new Set<string>()
-  // Yürünen zeminin yüksekliği: merdiven ve platformda artar.
+  // Height of the walked floor: rises on stairs and platforms.
   let innerFloor = 0
   const takeStep = (x: number, z: number) => floorStep(walking, x, z, PLAYER_RADIUS, innerFloor)
   const eye = new THREE.Vector3()
   const walkDir = new THREE.Vector3(), gazeDir = new THREE.Spherical()
   const finishInteriorTransition = () => {
     if (!innerTarget) return
-    // Geçişin ortası duvar/havuz içinde olabilir; hareket güvenli hedefte başlar.
+    // The middle of the transition may be inside a wall/pool; movement starts at the safe target.
     camera.position.copy(innerTarget.position)
     controls.target.copy(innerTarget.gaze)
     innerTarget = null
@@ -242,7 +242,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       controls.target.copy(camera.position).add(walkDir.setFromSpherical(gazeDir))
     }
     if (forward || side) {
-      // Yön dizisi yatay düzleme indirgenir: yukarı bakarken de yerde yürünür.
+      // The direction vector is projected onto the horizontal plane: you walk on the ground even while looking up.
       walkDir.copy(controls.target).sub(camera.position).setY(0)
       if (walkDir.lengthSq() < 1e-6) return
       walkDir.normalize()
@@ -250,7 +250,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       const dx = (walkDir.x * forward - walkDir.z * side) * path
       const dz = (walkDir.z * forward + walkDir.x * side) * path
       const oldX = camera.position.x, oldZ = camera.position.z
-      // Düşük kare hızında koşarken de ince duvarlar ve basamaklar atlanmasın.
+      // Don't skip thin walls and steps even when running at a low frame rate.
       const steps = Math.max(1, Math.ceil(Math.hypot(dx, dz) / 0.12))
       for (let n = 0; n < steps; n++) {
         const newX = takeStep(camera.position.x + dx / steps, camera.position.z)
@@ -270,7 +270,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     }
   }
 
-  // İç aydınlatma yalnız içerideyken yanar: gölgesiz olduğu için dışarıdayken duvarlardan sızardı.
+  // Interior lighting is on only while inside: being shadowless, it would leak through the walls from outside.
   const innerLights = (building.innerLights ?? [[-15, 8, -7], [15, 8, -7], [-8, 8, 12], [8, 8, 12]]).map(([x, y, z]) => {
     const light = new THREE.PointLight('#ffdcae', 0, 46, uluLight ? 1.3 : 2)
     light.position.set(x, y, z)
@@ -294,7 +294,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   controls.autoRotate = !smallMove
   controls.autoRotateSpeed = 0.8
   controls.update()
-  // Kullanıcı tutup çevirince otomatik dönüş durur, eser "elinde" kalır.
+  // When the user grabs and rotates, auto-rotation stops and the artifact stays "in hand".
   controls.addEventListener('start', () => { controls.autoRotate = false; cameraTarget = null; finishInteriorTransition() })
 
   const spherical = new THREE.Spherical()
@@ -310,7 +310,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     const { clientWidth: w, clientHeight: h } = area
     renderer.setSize(w, h, false)
     camera.aspect = w / Math.max(h, 1)
-    // Dar ekranda maketin tamamı sığsın diye görüş açısı genişletilir.
+    // On narrow screens the field of view is widened so the whole model fits.
     camera.fov = inside ? interiorFov : camera.aspect < 1 ? 62 : 40
     camera.updateProjectionMatrix()
     if (composerReady) {
@@ -318,8 +318,8 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       composer.setSize(w, h)
     }
   }
-  // Görüntü işleme: ortam gölgesi (AO) ve hafif parlama, yumuşak kenar için çoklu örnekleme.
-  // Kalite 0: hepsi · 1: AO kapalı · 2: görüntü işleme kapalı, düşük piksel oranı.
+  // Post-processing: ambient occlusion (AO) and light bloom, multisampling for soft edges.
+  // Quality 0: everything · 1: AO off · 2: post-processing off, low pixel ratio.
   const forceQuality = new URLSearchParams(location.search).get('quality')
   let quality = forceQuality === 'tall' ? 0 : softwareRendering(renderer) ? 2 : 0
   const target = new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: 4 })
@@ -330,10 +330,10 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   gtao.updateGtaoMaterial({ radius: 5, distanceExponent: 1.3, thickness: 2, scale: 1.2, samples: 16, distanceFallOff: 1, screenSpaceRadius: false })
   gtao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 6, rings: 2, samples: 16 })
   composer.addPass(gtao)
-  // Saydam ışık katmanları AO'nun derinlik geçişine girmez, yoksa etraflarında leke bırakır.
+  // Transparent light layers are excluded from the AO depth pass, otherwise they leave smudges around them.
   const aoOuter: THREE.Object3D[] = []
   threeScene.traverse((o) => { if (o instanceof THREE.Mesh && (o.material as THREE.Material).blending === THREE.AdditiveBlending) aoOuter.push(o) })
-  // Three bu iki yöntemi dışa açmıyor; yalnız görünürlük listesini genişletmek için sarılır.
+  // Three does not expose these two methods; they are wrapped only to extend the visibility list.
   const aoInner = gtao as unknown as { _overrideVisibility(): void; _restoreVisibility(): void }
   const hideAo = aoInner._overrideVisibility.bind(gtao), showAo = aoInner._restoreVisibility.bind(gtao)
   aoInner._overrideVisibility = () => { hideAo(); aoOuter.forEach((o) => { o.visible = false }) }
@@ -352,17 +352,17 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   composerReady = true
   applyQuality()
 
-  // Işık, ortam ve AO geçişi; kameraya dokunmaz, VR'daki iç görünüm de bunu kullanır.
+  // Light, environment and AO pass; doesn't touch the camera, the interior view in VR uses it too.
   const interiorState = (inner: boolean) => {
     inside = inner
-    // VR'da HTML görünmez, işaretler açılmaz.
+    // HTML is not visible in VR; markers are not opened.
     markerLayer.hidden = !inner || renderer.xr.isPresenting
     threeScene.environment = inner ? interiorEnv : envMap
     threeScene.environmentIntensity = inner ? 0.5 : 0.42
     hemi.intensity = inner ? 0.34 : outerHemi
     glow.strength = inner ? 0.12 : 0.18
     glow.threshold = inner ? 1.3 : 1.2
-    // Gerçek paye ve kemer gölgeleri: bir kez çizilir; Quest, telefon ve yazılımsal çizimde kapalıdır.
+    // Real pier and arch shadows: drawn once; off on Quest, phones and software rendering.
     const innerShadow = inner && !lightDevice() && quality < 2
     if (innerLights[0]?.castShadow !== innerShadow) {
       innerLights.forEach((i) => { i.castShadow = innerShadow })
@@ -388,7 +388,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     setShatter: (open) => { fragmented = open },
     isFragmented: () => fragmented,
     sessionEnded: () => {
-      // VR menüsünden parçalanmış kalmasın: sayfadaki düğme birleşik gösterir.
+      // Don't stay exploded from the VR menu: the button on the page shows it assembled.
       fragmented = false
       controls.enabled = true
       camera.position.copy(start_)
@@ -409,7 +409,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     const elapsedSec = Math.min((now - prevTime) / 1000, 0.5)
     prevTime = now
     if (renderer.xr.isPresenting) {
-      // Katmanlar animasyonsuz gider: gölgeyi her karede yeniden çizmek VR'da pahalıdır. Birleştirme sırasında katmanlar oyunundur.
+      // Layers move without animation: redrawing the shadow every frame is expensive in VR. During assembly the layers belong to the game.
       if (!xr.inAssembly()) for (const { group, height } of layers) {
         const target = fragmented ? height : 0
         if (group.position.y !== target) { group.position.y = target; renderer.shadowMap.needsUpdate = true }
@@ -419,7 +419,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       renderer.render(threeScene, camera)
       return
     }
-    // Uyarlamalı kalite: ısınma karelerinden sonra art arda yavaş kare görülürse efekt azaltılır.
+    // Adaptive quality: if consecutive slow frames appear after the warm-up frames, effects are reduced.
     if (forceQuality !== 'tall' && quality < 2 && ++measuredFrame > 20) {
       slowFrame = elapsedSec * 1000 > SLOW_FRAME_MS ? slowFrame + 1 : Math.max(0, slowFrame - 1)
       if (slowFrame > 30) { quality++; slowFrame = 0; measuredFrame = 0; applyQuality() }
@@ -441,14 +441,14 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       if (camera.position.distanceTo(innerTarget.position) < 0.02) finishInteriorTransition()
     }
     if (inside) {
-      // Adım sınırı: kare hızı düşse de tek adımda ince korkulukların içinden geçilmez.
+      // Step limit: even if the frame rate drops, a single step can't pass through thin railings.
       updateWalk(Math.min(elapsedSec, 0.1))
       eye.copy(camera.position)
       area.dataset.frame = String(++frameCount)
     }
     controls.update()
     if (inside) {
-      // Sürüklerken kamera hedefin çevresinde değil kendi çevresinde döner: bakış değişir, göz yerinde kalır.
+      // While dragging, the camera rotates around itself, not around the target: the view changes, the eye stays in place.
       const diff = camera.position.clone().sub(eye)
       camera.position.copy(eye)
       controls.target.sub(diff)
@@ -462,7 +462,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   const scene: ModelScene = {
     shatter: (open) => {
       fragmented = open
-      // İçerisi ve katmanların tamamı görünsün diye kamera geriye ve yukarıya alınır.
+      // The camera is moved back and up so the inside and all layers are visible.
       if (open) {
         spherical.setFromVector3(camera.position.clone().sub(controls.target))
         spherical.phi = Math.min(spherical.phi, 0.95)
@@ -498,13 +498,13 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     walkKey: (keyBtn, pressed) => { if (pressed) pressedKeys.add(keyBtn); else pressedKeys.delete(keyBtn) },
     walkRelease: () => pressedKeys.clear(),
     closeInfo,
-    // Kullanıcı jesti kaybolmasın: requestSession'dan önce await yok.
+    // Don't lose the user gesture: no await before requestSession.
     startXr: async () => {
       if (inside) scene.interior(null)
       fragmented = false
       cameraTarget = null
       await xr.start()
-      // VR'da kamera rig yerelindedir: fare masaüstü koordinatıyla ezmesin.
+      // In VR the camera is in rig-local space: don't let the mouse overwrite it with desktop coordinates.
       controls.enabled = false
       controls.autoRotate = false
       option.xrChanged?.(true)
@@ -513,7 +513,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       const stop = stops.find((d) => d.id === stopId)
       const input = !!stop && !inside
       const output = !stop && inside
-      // Yeni durak seçilince eski durağa süren kamera hareketi sona erer.
+      // When a new stop is selected, the camera movement towards the old stop ends.
       innerTarget = null
       cameraTarget = null
       selectedInfo = null
@@ -535,7 +535,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
         interiorFov = 68
         camera.fov = interiorFov
         camera.updateProjectionMatrix()
-        // Dıştaki dönüşün kalan ivmesi içeride bakışı kaydırmasın.
+        // Don't let leftover momentum from the outside rotation shift the view inside.
         controls.enableDamping = false
         controls.update()
         controls.enableDamping = true

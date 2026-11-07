@@ -4,7 +4,7 @@ import { PUBLIC_BUILD } from '../../../shared/config/publicBuild'
 
 export default function ArtifactsPage({ artifacts }: { artifacts: Artifact[] }) {
   const cover = (artifact: Artifact) => artifact.images.find((g) => g.file === artifact.coverImage)
-  // Kapak kredileri çoğunlukla aynı kaynaktan; her kartta tekrarlamak yerine sayfa sonunda bir kez yazılır.
+  // Cover credits mostly share a source; they are written once at the page end instead of repeating on every card.
   const credits = [...new Set(artifacts.map((e) => cover(e)?.credit).filter((k): k is string => !!k))]
   return <section id="artifacts" className="artifacts-section" aria-labelledby="artifacts-title">
     <div className="section-title"><div><h1 id="artifacts-title">Eserler</h1><p className="section-description">Bursa’daki {artifacts.length} vakıf eseri. Birini seç; fotoğraflarına yakından bak, tarihçesini oku, varsa maketini eline al.</p></div></div>

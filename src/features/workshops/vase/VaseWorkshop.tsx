@@ -71,10 +71,10 @@ export default function VaseWorkshop() {
     if (!scene.current) return
     setVrError('')
     setVr('opening')
-    // Kullanıcı jesti kaybolmasın: requestSession bu çağrının içinde, await'siz gider.
+    // Keep the user gesture: requestSession runs inside this call, without await.
     scene.current.startXr().then(() => {
       setVr('open')
-      // Vazo olduğu durumda VR'a geçer: izsizse parçalama paneldedir, yarım onarım sürer.
+      // Enters VR with the vase as is: if traceless, shattering is on the panel; a partial repair continues.
       setGame((previous) => ({ ...previous, selected: null, message: 'Atölye VR gözlüğünde sürüyor.' }))
     }).catch(() => {
       setVr('closedState')

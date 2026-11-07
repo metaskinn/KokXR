@@ -1,5 +1,5 @@
-// Emir Sultan maketinin tuval dokuları. Hepsi kodla çizilir; renk ve düzen envanterdeki fotoğraflara bakılarak
-// yorumlanmıştır. Hat yazısı taklit edilmez: levha, madalyon ve kartuşlar yalnız düz zemin ve bitkisel motif taşır.
+// Canvas textures for the Emir Sultan model. All drawn in code; colors and layout interpreted from the inventory
+// photos. Calligraphy is not imitated: panels, medallions and cartouches carry only plain ground and floral motifs.
 import * as THREE from 'three'
 import { lightDevice, random } from '../../uluMosqueFloor'
 
@@ -7,7 +7,7 @@ function canvas(g: number, y = g) {
   const el = document.createElement('canvas')
   el.width = g; el.height = y
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   return { el, c }
 }
 
@@ -22,7 +22,7 @@ function texture(el: HTMLCanvasElement, colored = true, repeat?: [number, number
   return t
 }
 
-/** Almaşık duvar: bir sıra küfeki taş, üç sıra tuğla; taşların arasında dikey ikişer tuğla. 2,64 metrede tekrarlar. */
+/** Alternating (almaşık) wall: one course of küfeki stone, three courses of brick; two vertical bricks between stones. Repeats every 2.64 m. */
 function alternatingTexture() {
   const B = lightDevice() ? 512 : 1024, measure = B / 2.64
   const { el, c } = canvas(B)
@@ -35,7 +35,7 @@ function alternatingTexture() {
   const CYCLE = STONE + 3 * ROW
   for (let p = 0; p < 4; p++) {
     const y0 = p * CYCLE
-    // Taş sırası: taş, iki dikey tuğla, taş...
+    // Stone course: stone, two vertical bricks, stone...
     let x = -r() * 0.4
     while (x < 2.64) {
       const g = 0.5 + r() * 0.55
@@ -48,7 +48,7 @@ function alternatingTexture() {
         x += 0.062
       }
     }
-    // Üç sıra yatay tuğla
+    // Three courses of horizontal brick
     for (let s = 0; s < 3; s++) {
       const y = y0 + STONE + s * ROW
       let t = -r() * 0.3
@@ -59,7 +59,7 @@ function alternatingTexture() {
       }
     }
   }
-  // Yıpranma lekeleri
+  // Weathering stains
   for (let i = 0; i < 5200; i++) {
     c.fillStyle = `rgba(${r() < 0.5 ? '40,28,18' : '250,235,210'},${0.03 + r() * 0.05})`
     const s = 1 + r() * 6
@@ -68,7 +68,7 @@ function alternatingTexture() {
   return { color: texture(el, true, [1 / 2.64, 1 / 2.64]), relief: texture(el, false, [1 / 2.64, 1 / 2.64]) }
 }
 
-/** Dış pencere: beyaz kasalı, kare bölmeli demir çerçeve ve koyu cam (fotoğraftaki gibi). Şekle tek parça oturur. */
+/** Exterior window: white frame, iron frame with square panes and dark glass (as in the photo). Fits the shape in one piece. */
 function windowOuterTexture() {
   const { el, c } = canvas(256, 512)
   c.fillStyle = '#23292c'; c.fillRect(0, 0, 256, 512)
@@ -82,7 +82,7 @@ function windowOuterTexture() {
   return texture(el)
 }
 
-/** Üst sıra içi: alçı şebeke ve revzen; aydınlık mavi-beyaz bölmeler, krem örgü. */
+/** Upper-row interior: plaster grille and revzen; bright blue-white panes, cream lattice. */
 function transomTexture() {
   const { el, c } = canvas(256, 512)
   c.fillStyle = '#f2ece0'; c.fillRect(0, 0, 256, 512)
@@ -99,7 +99,7 @@ function transomTexture() {
   return texture(el)
 }
 
-/** Alt sıra içi: demir şebekeli aydınlık pencere. */
+/** Lower-row interior: bright window with iron grille. */
 function lowerWindowTexture() {
   const { el, c } = canvas(256, 384)
   const g = c.createLinearGradient(0, 0, 0, 384)
@@ -112,7 +112,7 @@ function lowerWindowTexture() {
   return texture(el)
 }
 
-/** Demir parmaklık: türbe pencereleri ve niyaz penceresi için geçme baklava örgü. */
+/** Iron grille: interlocking lozenge lattice for the tomb windows and the niyaz window. */
 function ironTexture() {
   const { el, c } = canvas(256, 512)
   c.fillStyle = '#39352c'; c.fillRect(0, 0, 256, 512)
@@ -128,7 +128,7 @@ function ironTexture() {
   return texture(el)
 }
 
-/** Aynı parmaklık, içeriden: gün ışığı dolu pencere ve ince demir. */
+/** Same grille, from inside: window full of daylight and thin iron. */
 function ironLightTexture() {
   const { el, c } = canvas(256, 512)
   const g = c.createLinearGradient(0, 0, 0, 512)
@@ -143,13 +143,13 @@ function ironLightTexture() {
   return texture(el)
 }
 
-/** İç kubbe: sekiz dilim, ortada gül, açık tonlu bitkisel kuşak. UV kuşbakışı düzleme oturur. */
+/** Inner dome: eight segments, rose in the middle, light-toned floral band. UV fits the bird's-eye plane. */
 function innerDomeTexture() {
   const B = lightDevice() ? 1024 : 2048, M = B / 2
   const { el, c } = canvas(B)
   c.fillStyle = '#f4e8d8'; c.fillRect(0, 0, B, B)
   const bow = (r: number, color: string, en: number) => { c.strokeStyle = color; c.lineWidth = en; c.beginPath(); c.arc(M, M, r * M, 0, Math.PI * 2); c.stroke() }
-  // Dilim çizgileri ve bantlar
+  // Segment lines and bands
   c.save(); c.translate(M, M)
   for (let i = 0; i < 16; i++) {
     c.save(); c.rotate((i / 16) * Math.PI * 2)
@@ -172,7 +172,7 @@ function innerDomeTexture() {
   bow(0.5, '#8c7b66', M * 0.012)
   bow(0.53, '#d9c7ae', M * 0.03)
   bow(0.2, '#2c2a26', M * 0.016)
-  // Ortadaki gül
+  // Central rose
   c.fillStyle = '#e8d9bd'; c.beginPath(); c.arc(M, M, M * 0.2, 0, Math.PI * 2); c.fill()
   c.save(); c.translate(M, M)
   for (let i = 0; i < 16; i++) {
@@ -183,7 +183,7 @@ function innerDomeTexture() {
   }
   c.restore()
   c.fillStyle = '#7d3f2c'; c.beginPath(); c.arc(M, M, M * 0.03, 0, Math.PI * 2); c.fill()
-  // Etek kuşağı: tekrarlı palmet
+  // Skirt band: repeating palmettes
   bow(0.96, '#8c7b66', M * 0.012)
   c.save(); c.translate(M, M)
   for (let i = 0; i < 48; i++) {
@@ -196,7 +196,7 @@ function innerDomeTexture() {
   return texture(el)
 }
 
-/** Pandantif: açık zeminde köşeye inen koyu üçgen alan ve açık kıvrımlar. u bir duvar açıklığını, 0,5 köşeyi gösterir. */
+/** Pendentive: dark triangular area down to the corner on a light ground, with light scrolls. u spans one wall opening, 0.5 marks the corner. */
 function pendentiveTexture() {
   const { el, c } = canvas(1024, 512)
   c.fillStyle = '#f0e1cf'; c.fillRect(0, 0, 1024, 512)
@@ -211,7 +211,7 @@ function pendentiveTexture() {
   return texture(el, true, [1, 1])
 }
 
-/** Mihrap nişi: açık mermer görünümlü dikey fırça çizgileri (fotoğraftaki yivli kalem işi). */
+/** Mihrab niche: vertical brush strokes resembling light marble (the fluted painted work in the photo). */
 function nicheTexture() {
   const { el, c } = canvas(512, 512)
   const r = random(9)
@@ -223,7 +223,7 @@ function nicheTexture() {
   return texture(el, true, [1, 1])
 }
 
-/** Sanduka örtüsü: koyu yeşil zeminde altın sırma benzeri bitkisel dal. Yazı yoktur. */
+/** Sarcophagus cover: gold-thread-like floral branch on dark green ground. No inscription. */
 function coverTexture() {
   const { el, c } = canvas(512, 512)
   c.fillStyle = '#0e3c37'; c.fillRect(0, 0, 512, 512)
@@ -237,7 +237,7 @@ function coverTexture() {
   return texture(el, true, [1, 1])
 }
 
-/** Korkuluk paneli: koyu yeşil zemin üstünde altın palmet ve çerçeve. */
+/** Railing panel: gold palmettes and frame on dark green ground. */
 function railingTexture() {
   const { el, c } = canvas(256, 256)
   c.fillStyle = '#14463f'; c.fillRect(0, 0, 256, 256)
@@ -250,7 +250,7 @@ function railingTexture() {
   return texture(el, true, [1, 1])
 }
 
-/** Türbe içi duvar: açık yeşil damarlı mermer taklidi boyalı panolar. 3 metrede tekrar. */
+/** Tomb interior wall: painted panels imitating light green veined marble. Repeats every 3 m. */
 function tombWallTexture() {
   const { el, c } = canvas(512, 512)
   const r = random(55)
@@ -264,7 +264,7 @@ function tombWallTexture() {
   return texture(el, true, [1 / 3, 1 / 3])
 }
 
-/** Dokuları tek seferde üretir; maket her açıldığında bir kez çağrılır. */
+/** Generates the textures at once; called once each time the model opens. */
 export function emirTextures() {
   return {
     alternating: alternatingTexture(),
@@ -283,8 +283,8 @@ export function emirTextures() {
 }
 
 /**
- * Yalnız avlu ve revaklardan görünen gökyüzü: dışarıdan bakan kamerada çizilmez.
- * Eklemeli karışım AO geçişinden muaf kalmasını sağlar (maketSahnesi eklemeli örgüleri ayırır).
+ * Sky seen only from the courtyard and porticoes: not drawn for a camera looking from outside.
+ * Additive blending keeps it exempt from the AO pass (modelScene separates additive meshes).
  */
 export function skyMaterial(mx: number, mz: number, radius: number) {
   return new THREE.ShaderMaterial({

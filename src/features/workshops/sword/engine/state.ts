@@ -1,6 +1,6 @@
-// Oyun ölçeği; tarihsel bir üretim veya sıcaklık simülasyonu değildir.
+// Game scale; not a historical production or temperature simulation.
 export const stages = ['Külçe', 'Isıtma', 'Dövme', 'Su verme', 'Bileme', 'Kuşanma', 'İnceleme', 'Test alanı']
-export const pieces = ['Balcak', 'Hilt_Left', 'Hilt_Right', 'Rivet_1', 'Rivet_2', 'Rivet_3', 'Rivet_4']
+export const pieces = ['Guard', 'Hilt_Left', 'Hilt_Right', 'Rivet_1', 'Rivet_2', 'Rivet_3', 'Rivet_4']
 export interface Region { p: number; heat: number; skin: number; shell: number }
 export interface Game {
   stage: number; regions: Region[]; selected: number; strain: number; burn: number; crack_: boolean

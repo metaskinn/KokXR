@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react'
 
-/** Başlığı tıklanınca açılıp kapanan sayfa bölümü. İçerik kapalıyken de bağlı kalır; sahne ve galeri durumu korunur.
- *  Bölüme giden `#id` bağlantısı tıklanınca bölüm kendiliğinden açılır. */
+/** Page section that opens and closes when its heading is clicked. Content stays mounted while closed, so scene and gallery state are kept.
+ *  Clicking a `#id` link to the section opens it automatically. */
 export default function Section({ id, title, className = '', action, children }: {
   id: string; title: ReactNode; className?: string; action?: ReactNode; children: ReactNode
 }) {

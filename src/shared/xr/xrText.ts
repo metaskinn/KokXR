@@ -1,9 +1,9 @@
-// VR menüsü ve bilgi kartının saf hesapları: three ve DOM kullanmaz, Node'da da çalışır.
+// Pure calculations for the VR menu and info card: no three or DOM, so it also runs in Node.
 
 export interface MenuItem { id: string; ad: string }
 
 export const ILLUSTRATIVE_LABEL = 'Temsilî maket · Gerçek bir 3B tarama değildir'
-/** Menü panelinin üstündeki başlık bandının yükseklik oranı. */
+/** Height ratio of the title band at the top of the menu panel. */
 export const MENU_TITLE_RATIO = 0.2
 
 export function menuItems(d: { inside: boolean; fragmented: boolean; inAssembly?: boolean; stops: { id: string; ad: string }[] }): MenuItem[] {
@@ -12,17 +12,17 @@ export function menuItems(d: { inside: boolean; fragmented: boolean; inAssembly?
   if (d.inside) {
     return [{ id: 'outside', ad: 'Dışarı çık' }, ...d.stops.map(({ id, ad }) => ({ id: `stop:${id}`, ad })), exit]
   }
-  // Parçalıyken "Birleştir" zaten var; yanında ikinci bir birleştirme adı karışır.
+  // While shattered, "Birleştir" is already there; a second assemble label next to it would confuse.
   if (d.fragmented) return [{ id: 'inside', ad: 'İçeri gir' }, { id: 'shatter', ad: 'Birleştir' }, exit]
   return [{ id: 'inside', ad: 'İçeri gir' }, { id: 'shatter', ad: 'Parçala' }, { id: 'assemble', ad: 'Maketi birleştir' }, exit]
 }
 
-// Modül yüklenirken çalışmamalı: bu dosya masaüstü sahnesiyle birlikte yüklenir, API'si olmayan tarayıcıda maket açılmaz.
+// Must not run at module load: this file loads with the desktop scene, and the model would fail to open in browsers without the API.
 const splitChars = (word: string): string[] => typeof Intl.Segmenter === 'function'
   ? Array.from(new Intl.Segmenter('tr', { granularity: 'grapheme' }).segment(word), (h) => h.segment)
   : Array.from(word)
 
-/** Metni sözcük sınırından kırar; genişliğe sığmayan tek sözcük harf sınırından bölünür. */
+/** Wraps text at word boundaries; a single word wider than the width is split at grapheme boundaries. */
 export function wrapLine(text: string, measure: (s: string) => number, width: number): string[] {
   const lines: string[] = []
   let line = ''
@@ -50,7 +50,7 @@ export function wrapLine(text: string, measure: (s: string) => number, width: nu
   return lines
 }
 
-/** `v` panelin uv.y değeridir (1 üst kenar). Başlık bandına veya panel dışına düşerse `null`. */
+/** `v` is the panel's uv.y (1 is the top edge). Returns `null` if it falls on the title band or outside the panel. */
 export function menuHit(v: number, itemCount: number, titleRatio: number): number | null {
   if (itemCount <= 0 || v < 0 || v > 1) return null
   const body = 1 - titleRatio

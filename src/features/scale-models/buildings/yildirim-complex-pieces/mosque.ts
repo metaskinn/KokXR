@@ -1,8 +1,8 @@
-// Yıldırım Bayezid Camii. Ölçüler envanterden (Bursa Cilt 2, s. 166, 170, 172, 176): son cemaat yeri 33,60 × 7,10 m,
-// orta kubbe zeminden 14 m; harim orta mekânı 12,20 × 12,20 m; mihraplı kubbe 11,50 m; eyvanlar ~8,5 × 6,75 m;
-// tabhane odaları ~6,3 × 6,5 m; yan eyvan ve mihraplı bölüme iki basamakla çıkılır.
-// Duvar kalınlıkları, yükseklikler ve dış pencere yerleri fotoğraflardan oranlanmıştır; temsilîdir.
-// Birim metre. Kuzey -z, kıble +z, doğu +x. Bu dosyadaki z'ler site kaydırmasından önceki değerlerdir.
+// Yıldırım Bayezid Mosque. Dimensions from the inventory (Bursa Vol. 2, pp. 166, 170, 172, 176): late-comers' portico 33.60 × 7.10 m,
+// middle dome 14 m above the floor; central space of the prayer hall 12.20 × 12.20 m; mihrab dome 11.50 m; iwans ~8.5 × 6.75 m;
+// tabhane rooms ~6.3 × 6.5 m; the side iwans and the mihrab section are reached by two steps.
+// Wall thicknesses, heights and exterior window positions are proportioned from photos; they are representative.
+// Units in meters. North -z, qibla +z, east +x. Suffixes: _N north, _S south. z values in this file are before the site offset.
 import * as THREE from 'three'
 import { subtract, rotateG, flatShadow, arch, boxG, Bucket, cylinderG, place } from '../../uluMosquePiece'
 import type { InteriorWalk, Box, FloorArea } from '../../uluMosqueInterior'
@@ -11,14 +11,14 @@ import { chandelier, bursaArch, roof, outerDrum, outerDome, wallX, wallZ, boxK, 
 
 export const BASE = 0.6
 export const BAY_Y = BASE + 1.6
-const HIGH = 0.4 // eyvan ve mihraplı bölümün iki basamağı
-const SOFA = 0.5 // son cemaat yerinin yan sofaları
+const HIGH = 0.4 // the two steps of the iwans and the mihrab section
+const SOFA = 0.5 // side platforms (sofa) of the late-comers' portico
 
-// Plan sabitleri
+// Plan constants
 const W = 16.8, N0 = -21, N1 = -13.9, N_IN = -19.6
-const LOBBY_N = -8, LOBBY_G = 4.2, LOBBY_X = 6.1, GAP_G = 5.8
-const SIDE_X = 7.55, IW_G = -1.25, TAB_K = -0.2, TAB_G = 6.5, TAB_D = 14
-const MIH_X = 5.75, MIH_G = 17.3, OUT_G = 19.1, BODY_G = 7.6
+const LOBBY_N = -8, LOBBY_S = 4.2, LOBBY_X = 6.1, GAP_S = 5.8
+const SIDE_X = 7.55, IW_S = -1.25, TAB_N = -0.2, TAB_S = 6.5, TAB_D = 14
+const MIH_X = 5.75, MIH_S = 17.3, OUT_S = 19.1, BODY_S = 7.6
 const IW_OUT = 15.9
 const BODY_H = 12.8, ROOF_TOP = 13.7, PORTICO_H = 11
 const POLE = [3.3, 9.75, 16.05]
@@ -30,34 +30,34 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
   const mirror = (s: number, a: number, b: number): [number, number] => s > 0 ? [a, b] : [-b, -a]
   const ext3 = (kv: Bucket, g: THREE.BufferGeometry, mat: Mat) => kv.add(g, mat)
 
-  // --- Kaide ve dış basamaklar ---
-  box(-W - 0.4, W + 0.4, 0, BASE - 0.02, N0 - 0.4, BODY_G + 0.4, m.ashlar)
-  box(-MIH_X - 2.2, MIH_X + 2.2, 0, BASE - 0.02, BODY_G, OUT_G + 0.4, m.ashlar)
+  // --- Base and exterior steps ---
+  box(-W - 0.4, W + 0.4, 0, BASE - 0.02, N0 - 0.4, BODY_S + 0.4, m.ashlar)
+  box(-MIH_X - 2.2, MIH_X + 2.2, 0, BASE - 0.02, BODY_S, OUT_S + 0.4, m.ashlar)
   for (let i = 0; i < 3; i++) box(-3.4 - i * 0.5 + 0.8, 3.4 + i * 0.5 - 0.8, 0, BASE * (3 - i) / 3, N0 - 0.4 - i * 0.42 - 0.42, N0 - 0.4 - i * 0.42, m.ashlarLight)
 
-  // --- Son cemaat yeri: zemin, yan sofalar ---
+  // --- Late-comers' portico: floor, side platforms ---
   box(-W, W, BASE - 0.05, BASE, N0, N1, m.ashlarLight)
   double((s) => {
     for (const [a, b] of [[POLE[0], POLE[1]], [POLE[1], IW_OUT]]) {
       const [x0, x1] = mirror(s, a, b)
       box(x0, x1, BASE, BASE + SOFA, N0, N1, m.ashlarLight)
     }
-    // Sofaya çıkan üç basamak: orta gözün iki yanında
+    // Three steps up to the platform: on both sides of the middle bay
     for (let i = 0; i < 2; i++) {
       const [x0, x1] = mirror(s, POLE[0] - 0.56 - i * 0.28 + 0.28, POLE[0])
       box(x0, x1, BASE, BASE + SOFA * (2 - i) / 3, N_IN + 0.4, N1 - 0.4, m.ashlarLight)
     }
   })
 
-  // --- Son cemaat yeri ön cephesi: beş Bursa kemeri, silindirik silmeler ---
+  // --- Late-comers' portico front facade: five Bursa arches, cylindrical moldings ---
   const mid = bursaArch(new THREE.Path(), 0, 0.02 + BASE, 4.7, 5.4, 3.5)
   const armTop = (x: number) => bursaArch(new THREE.Path(), x, BASE + SOFA, 4.55, 4.9, 2.7)
   const koler = [(POLE[0] + POLE[1]) / 2, (POLE[1] + POLE[2]) / 2]
   const hole = [mid, ...koler.flatMap((x) => [armTop(x), armTop(-x)])]
   K(wallX(-W, W, N0, N_IN, BASE, PORTICO_H, hole), m.ashlarLight)
-  // Kaba alt parça: yan gözlerin korkuluk taşı kemer ağzında sofa ile aynı hizadadır.
+  // Rough lower piece: the railing stone of the side bays is level with the platform at the arch mouth.
   for (const x of [...koler, ...koler.map((v) => -v)]) box(x - 2.28, x + 2.28, BASE, BASE + SOFA, N0 - 0.02, N_IN, m.ashlarLight)
-  // Dikey silindirik silmeler ve dikdörtgen çerçeveler
+  // Vertical cylindrical moldings and rectangular frames
   for (const x of [-POLE[2] - 0.75, -POLE[1] - 0.95, -POLE[1] + 0.95, -POLE[0] - 0.95, -POLE[0] + 0.95, POLE[0] - 0.95, POLE[0] + 0.95, POLE[1] - 0.95, POLE[1] + 0.95, POLE[2] + 0.75]) {
     K(cylinderG(0.13, 0.13, PORTICO_H - BASE - 0.3, 8).translate(x, (PORTICO_H + BASE - 0.3) / 2, N0 - 0.04), m.ashlarLight)
   }
@@ -66,7 +66,7 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     K(cylinderG(0.09, 0.09, g, 8).rotateZ(Math.PI / 2).translate(x, u - 0.02, N0 - 0.16), m.ashlarLight)
   }
   molding(K, m.ashlarLight, -W - 0.3, W + 0.3, PORTICO_H - 0.28, PORTICO_H, N0 - 0.3, N1, 0.5)
-  // Kemer başlangıcında yatay yastık, altında mukarnas sarkıt ve demir gergi
+  // Horizontal impost at the arch springing, muqarnas pendant and iron tie rod below it
   const cushion = (x: number, y: number, s: number) => {
     K(cylinderG(0.22, 0.22, 1.5, 8).rotateX(Math.PI / 2).translate(x, y, N0 + 0.7), m.ashlarLight)
     for (let i = 0; i < 5; i++) {
@@ -84,7 +84,7 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     cushion(x - 2.27, y, 1); cushion(x + 2.27, y, -1); tension(x, 4.55, y)
   }
 
-  // Yan cepheler: dikdörtgen çerçeve içinde ikiz Bursa kemeri
+  // Side facades: twin Bursa arches within a rectangular frame
   double((s) => {
     const [x0, x1] = mirror(s, IW_OUT, W)
     const inner = [N0 + 2.45, N1 - 2.05].map((z) => bursaArch(new THREE.Path(), z, BASE + SOFA, 2.2, 3.2, 1.55))
@@ -93,14 +93,14 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     box(fx, fx + 0.12, 7.4, 7.6, N_IN + 0.3, N1 - 0.2, m.ashlarLight)
     box(fx, fx + 0.12, BASE + SOFA, 7.6, N_IN + 0.3, N_IN + 0.46, m.ashlarLight)
     box(fx, fx + 0.12, BASE + SOFA, 7.6, N1 - 0.36, N1 - 0.2, m.ashlarLight)
-    // Direk araları: bölme kemerleri
+    // Between posts: dividing arches
     for (const d of [POLE[0], POLE[1]]) {
       const x = s * d
       K(wallZ(x - 0.6, x + 0.6, N_IN, N1, BASE, PORTICO_H - 1.1, [bursaArch(new THREE.Path(), (N_IN + N1) / 2, BASE + (d === POLE[0] ? 0 : SOFA), 3.55, 3.6, 2.2)]), m.ashlarLight)
     }
   })
 
-  // Son cemaat kubbeleri: içte pandantifli küçük kubbe, dışta kurşun; orta kubbe zeminden 14 m
+  // Late-comers' portico domes: small dome with pendentives inside, lead outside; middle dome 14 m above the floor
   const porticoBay = [[-POLE[2] + 0.6, -POLE[1] - 0.6], [-POLE[1] + 0.6, -POLE[0] - 0.6], [-POLE[0] + 0.6, POLE[0] - 0.6], [POLE[0] + 0.6, POLE[1] - 0.6], [POLE[1] + 0.6, POLE[2] - 0.6]]
   const porticoHole: { x: number; z: number; r: number }[] = []
   const nzMid = (N_IN + N1) / 2
@@ -121,11 +121,11 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
   })
   roof((g) => kRoof.add(g, m.lead), -W, W, N0, N1, PORTICO_H + 0.02, PORTICO_H + 0.08, 0.2, 0.2, porticoHole)
 
-  // --- Ana giriş: mermer taç kapı, derin niş, siyah-beyaz kemer ---
+  // --- Main entrance: marble crown portal, deep niche, black-and-white arch ---
   const niche = arch(new THREE.Path(), 0, BASE, 3.4, 4.6, 2.2)
   K(wallX(-W, W, N1, -9.2, 0, BODY_H, [niche]), m.ashlar)
   box(-W, W, 0, BASE, N1, LOBBY_N, m.ashlar)
-  // Niş yüzü ve kemer: siyah-beyaz dönüşüm
+  // Niche face and arch: black-and-white alternation
   const blackWhite = (i: number) => (i % 2 ? m.dark : m.whiteStone)
   const ringS = 13
   for (let i = 0; i < ringS; i++) {
@@ -134,15 +134,15 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     const s = new THREE.Shape([nok(a0, 1.7), nok(a1, 1.7), nok(a1, 2.05), nok(a0, 2.05)])
     K(subtract(s, 0.12, N1 - 0.12), blackWhite(i))
   }
-  // Giriş kapısı: kapı duvarı, sivri kemerli açıklık ve açık ahşap kanat
+  // Entrance door: door wall, pointed-arch opening and open wooden leaf
   const doorPath = () => arch(new THREE.Path(), 0, BASE, 2, 2.9, 1.1)
   K(wallX(-LOBBY_X - 0.5, LOBBY_X + 0.5, -9.2, LOBBY_N, 0, ROOF_TOP, [doorPath()]), m.ashlarInner)
   K(new THREE.BoxGeometry(0.1, 3.4, 1).translate(-1.18, BASE + 1.7, LOBBY_N - 0.5), m.woodDark)
   K(new THREE.BoxGeometry(0.1, 3.4, 1).translate(1.18, BASE + 1.7, -9.7), m.woodDark)
-  // Kapı önünde niş iç pencereleri ve küçük nefeslik
+  // Inner niche windows in front of the door and a small vent
   K(new THREE.PlaneGeometry(0.6, 0.6).translate(0, BASE + 5.4, -9.19).rotateY(0).translate(0, 0, -0.02), m.lattice)
 
-  // Revak duvarı: simetrik mihrap nişi ve üstte dikdörtgen pencere, altta sivri alınlıklı pencere
+  // Portico wall: symmetric mihrab niche with a rectangular window above and a pointed-lunette window below
   const porticoWindows = (x: number) => {
     const z = N1 - 0.02
     box(x - 0.95, x + 0.95, BASE + SOFA + 0.2, BASE + SOFA + 3.55, z - 0.06, z, m.ashlar)
@@ -156,45 +156,45 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
   }
   for (const x of [...koler, ...koler.map((v) => -v)]) porticoWindows(x)
 
-  // --- Gövde duvarları (dış taş) ---
+  // --- Body walls (exterior stone) ---
   double((s) => {
     const [x0, x1] = mirror(s, IW_OUT, W)
-    box(x0, x1, 0, BODY_H, N1, BODY_G, m.ashlar)
-    // Eyvan kuzey dolgu (kuzeydeki odalar kapalı bırakılmıştır)
+    box(x0, x1, 0, BODY_H, N1, BODY_S, m.ashlar)
+    // Iwan north infill (the rooms to the north are left closed)
     const [yx0, yx1] = mirror(s, LOBBY_X, IW_OUT)
     box(yx0, yx1, 0, BODY_H, -9.2, LOBBY_N, m.ashlar)
-    // Tabhane dolgu ve güney duvarı
+    // Tabhane infill and south wall
     const [dx0, dx1] = mirror(s, TAB_D, IW_OUT)
-    box(dx0, dx1, 0, BODY_H, TAB_K, BODY_G, m.ashlar)
+    box(dx0, dx1, 0, BODY_H, TAB_N, BODY_S, m.ashlar)
     const [gx0, gx1] = mirror(s, SIDE_X, IW_OUT)
-    box(gx0, gx1, 0, BODY_H, TAB_G, BODY_G, m.ashlar)
-    // Eyvan güney duvarı / tabhane kuzey duvarı
-    box(gx0, gx1, 0, BODY_H, IW_G, TAB_K, m.ashlar)
-    // Harim yan duvarı: eyvan kemeri ve tabhane kapısı
+    box(gx0, gx1, 0, BODY_H, TAB_S, BODY_S, m.ashlar)
+    // Iwan south wall / tabhane north wall
+    box(gx0, gx1, 0, BODY_H, IW_S, TAB_N, m.ashlar)
+    // Prayer hall side wall: iwan arch and tabhane door
     const [hx0, hx1] = mirror(s, LOBBY_X, SIDE_X)
-    const iwanArch = bursaArch(new THREE.Path(), (LOBBY_N + IW_G) / 2 - 0.2, BASE, 5.95, 4.6, 4.0)
+    const iwanArch = bursaArch(new THREE.Path(), (LOBBY_N + IW_S) / 2 - 0.2, BASE, 5.95, 4.6, 4.0)
     const door = arch(new THREE.Path(), 1.8, BASE, 1.6, 2.4, 0.5)
-    K(wallZ(hx0, hx1, LOBBY_N, GAP_G, 0, ROOF_TOP, [iwanArch, door]), m.ashlarInner)
-    // Mihraplı bölümün yan duvarı
+    K(wallZ(hx0, hx1, LOBBY_N, GAP_S, 0, ROOF_TOP, [iwanArch, door]), m.ashlarInner)
+    // Side wall of the mihrab section
     const [mx0, mx1] = mirror(s, MIH_X, SIDE_X)
-    box(mx0, mx1, 0, BODY_H + 1, GAP_G, OUT_G, m.ashlar)
+    box(mx0, mx1, 0, BODY_H + 1, GAP_S, OUT_S, m.ashlar)
   })
-  box(-SIDE_X, SIDE_X, 0, BODY_H + 1, MIH_G, OUT_G, m.ashlar)
+  box(-SIDE_X, SIDE_X, 0, BODY_H + 1, MIH_S, OUT_S, m.ashlar)
 
-  // Hol ile mihraplı bölümü ayıran geniş kemer
+  // Wide arch separating the hall from the mihrab section
   const bigArch = bursaArch(new THREE.Path(), 0, BASE, 9.8, 6.2, 5.2)
-  K(wallX(-SIDE_X, SIDE_X, LOBBY_G, GAP_G, 0, ROOF_TOP, [bigArch]), m.ashlarInner)
-  // Kemer ayaklarında mukarnaslı niş ve yastıklar
+  K(wallX(-SIDE_X, SIDE_X, LOBBY_S, GAP_S, 0, ROOF_TOP, [bigArch]), m.ashlarInner)
+  // Muqarnas niches and imposts at the arch piers
   double((s) => {
     for (let i = 0; i < 11; i++) {
       const g = 1.1 - i * 0.05
-      K(boxG(g, 0.2, 1.2).translate(s * (5.55 - i * 0.04), BASE + 4.7 + i * 0.2, (LOBBY_G + GAP_G) / 2), m.ashlarLight)
+      K(boxG(g, 0.2, 1.2).translate(s * (5.55 - i * 0.04), BASE + 4.7 + i * 0.2, (LOBBY_S + GAP_S) / 2), m.ashlarLight)
     }
     const nicheS = arch(new THREE.Shape(), s * 5.55, BASE + 0.1, 0.9, 2.5, 1)
-    K(subtract(nicheS, 0.04, LOBBY_G - 0.04), m.plasterDark)
+    K(subtract(nicheS, 0.04, LOBBY_S - 0.04), m.plasterDark)
   })
 
-  // --- Dış görünüm: gövde pencereleri ve saçak silmeleri ---
+  // --- Exterior: body windows and eave moldings ---
   const outerBay = (cx: number, y: number, cz: number, ry: number, g: number, h: number, pointed: boolean) => {
     const ext = (a: THREE.BufferGeometry, mat: Mat) => K(place(a, cx, 0, cz, ry), mat)
     ext(boxK(-g / 2 - 0.18, g / 2 + 0.18, y - 0.16, y + h + 0.16, -0.02, 0.08), m.ashlarLight)
@@ -206,36 +206,36 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     }
   }
   double((s) => {
-    // Yan cephe: üstte yedi, altta iki pencere (envanter s. 178)
+    // Side facade: seven windows above, two below (inventory p. 178)
     for (let i = 0; i < 7; i++) outerBay(s * (W + 0.0), 8.6, -11.5 + i * 3, s > 0 ? Math.PI / 2 : -Math.PI / 2, 0.85, 1.3, false)
     for (const z of [-4.6, 3.3]) outerBay(s * W, 2.9, z, s > 0 ? Math.PI / 2 : -Math.PI / 2, 1, 1.6, true)
-    // Güneydoğu ve güneybatı köşeleri
-    for (const x of [10.4, 13.9]) outerBay(s * x, 8.6, BODY_G, 0, 0.85, 1.3, false)
-    // Mihraplı bölüm
+    // Southeast and southwest corners
+    for (const x of [10.4, 13.9]) outerBay(s * x, 8.6, BODY_S, 0, 0.85, 1.3, false)
+    // Mihrab section
     for (const z of [10, 14.5]) {
       outerBay(s * SIDE_X, 8.6, z, s > 0 ? Math.PI / 2 : -Math.PI / 2, 0.85, 1.3, false)
       outerBay(s * SIDE_X, 2.9, z, s > 0 ? Math.PI / 2 : -Math.PI / 2, 1, 1.6, true)
     }
-    outerBay(s * 3.2, 8.6, OUT_G, 0, 0.85, 1.3, false)
-    outerBay(s * 3.2, 2.9, OUT_G, 0, 1, 1.6, true)
+    outerBay(s * 3.2, 8.6, OUT_S, 0, 0.85, 1.3, false)
+    outerBay(s * 3.2, 2.9, OUT_S, 0, 1, 1.6, true)
   })
-  // Taş saçak silmesi
-  molding(K, m.ashlarLight, -W - 0.1, W + 0.1, BODY_H - 0.3, BODY_H, N1, BODY_G + 0.1, 0.5)
-  molding(K, m.ashlarLight, -SIDE_X - 0.1, SIDE_X + 0.1, BODY_H + 0.7, BODY_H + 1, BODY_G, OUT_G + 0.1, 0.5)
+  // Stone eave molding
+  molding(K, m.ashlarLight, -W - 0.1, W + 0.1, BODY_H - 0.3, BODY_H, N1, BODY_S + 0.1, 0.5)
+  molding(K, m.ashlarLight, -SIDE_X - 0.1, SIDE_X + 0.1, BODY_H + 0.7, BODY_H + 1, BODY_S, OUT_S + 0.1, 0.5)
 
-  // --- Çatı: iki gövde kırma çatısı ---
-  const midDome = { x: 0, z: (LOBBY_N + LOBBY_G) / 2, r: 6.4 }
-  const iwanX = (SIDE_X + IW_OUT) / 2, iwanZ = (LOBBY_N + IW_G) / 2
-  const mihZ = (GAP_G + MIH_G) / 2
-  roof((g) => kRoof.add(g, m.lead), -W, W, N1, BODY_G, BODY_H, ROOF_TOP, 0.5, 2.3, [
+  // --- Roof: hipped roofs of the two bodies ---
+  const midDome = { x: 0, z: (LOBBY_N + LOBBY_S) / 2, r: 6.4 }
+  const iwanX = (SIDE_X + IW_OUT) / 2, iwanZ = (LOBBY_N + IW_S) / 2
+  const mihZ = (GAP_S + MIH_S) / 2
+  roof((g) => kRoof.add(g, m.lead), -W, W, N1, BODY_S, BODY_H, ROOF_TOP, 0.5, 2.3, [
     midDome, { x: iwanX, z: iwanZ, r: 3.45 }, { x: -iwanX, z: iwanZ, r: 3.45 },
   ])
-  roof((g) => kRoof.add(g, m.lead), -SIDE_X, SIDE_X, BODY_G - 0.5, OUT_G, BODY_H + 1, ROOF_TOP + 0.1, 0.5, 0.8, [{ x: 0, z: mihZ, r: 5.9 }])
+  roof((g) => kRoof.add(g, m.lead), -SIDE_X, SIDE_X, BODY_S - 0.5, OUT_S, BODY_H + 1, ROOF_TOP + 0.1, 0.5, 0.8, [{ x: 0, z: mihZ, r: 5.9 }])
 
-  // --- Kasnak ve kubbeler ---
+  // --- Drums and domes ---
   const room = (cx: number, cz: number, x0: number, x1: number, z0: number, z1: number, yWall: number, yRing: number, R: number, drumH: number, domeH: number, edge: number, window: number) => {
     kRoof.add(pendentiveG(cx, cz, x0, x1, z0, z1, yWall, yRing, R), m.plasterInner)
-    // İç kasnak, kuşak ve pencereler
+    // Inner drum, band and windows
     kDrum.add(place(flatShadow(cylinderG(R, R, drumH, edge, true).rotateY(Math.PI / edge)), cx, yRing + drumH / 2, cz), m.plasterInner)
     kDrum.add(place(cylinderG(R - 0.03, R - 0.03, 0.3, 32, true), cx, yRing + 0.12, cz), m.band)
     const face = R * Math.cos(Math.PI / edge) - 0.05
@@ -244,30 +244,30 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
       const g = new THREE.ShapeGeometry(arch(new THREE.Shape(), 0, yRing + 0.42, drumH * 0.5, drumH * 0.28, drumH * 0.26), 8).translate(0, 0, face).rotateY(a)
       kDrum.add(place(g, cx, 0, cz), m.transom)
     }
-    // İç kubbe ve göbek
+    // Inner dome and center
     kDome.add(place(innerDomeG(R, domeH), cx, yRing + drumH, cz), m.plasterInner)
     kDome.add(place(cylinderG(R - 0.02, R - 0.02, 0.26, 32, true), cx, yRing + drumH + 0.14, cz), m.band)
     const gr = R * 0.42
     const boss = new THREE.CircleGeometry(gr, 32).rotateX(Math.PI / 2)
     kDome.add(boss.translate(cx, yRing + drumH + domeH * Math.sin(Math.acos(Math.min(1, gr / R))) - 0.02, cz), m.boss)
   }
-  // Harim orta mekânı: dört pencereli sekizgen kasnak (s. 172)
-  room(0, midDome.z, -LOBBY_X, LOBBY_X, LOBBY_N, LOBBY_G, 10.9, 14.6, 6.05, 1.7, 5.4, 8, 4)
+  // Central space of the prayer hall: octagonal drum with four windows (p. 172)
+  room(0, midDome.z, -LOBBY_X, LOBBY_X, LOBBY_N, LOBBY_S, 10.9, 14.6, 6.05, 1.7, 5.4, 8, 4)
   outerDrum(ext3, kDrum, m, 0, midDome.z, ROOF_TOP - 0.3, 3.2, 7.45, 8, 4)
   outerDome(ext3, kDome, m, 0, midDome.z, ROOF_TOP + 2.85, 7.5, 6.1, 1.2)
-  // Mihraplı bölüm: 11,50 m çapında kubbe, dört pencereli kasnak (s. 176)
-  room(0, mihZ, -MIH_X, MIH_X, GAP_G, MIH_G, 11.2, 14.4, MIH_X - 0.02, 1.5, 5, 16, 4)
+  // Mihrab section: 11.50 m diameter dome, drum with four windows (p. 176)
+  room(0, mihZ, -MIH_X, MIH_X, GAP_S, MIH_S, 11.2, 14.4, MIH_X - 0.02, 1.5, 5, 16, 4)
   outerDrum(ext3, kDrum, m, 0, mihZ, BODY_H + 0.8, 3.1, 7.05, 24, 4)
   outerDome(ext3, kDome, m, 0, mihZ, BODY_H + 3.65, 7.2, 5.7, 1.2)
-  // Yan eyvanlar: üç pencereli küçük kubbeler (s. 172)
+  // Side iwans: small domes with three windows (p. 172)
   double((s) => {
     const [x0, x1] = mirror(s, SIDE_X, IW_OUT)
-    room(s * iwanX, iwanZ, x0, x1, LOBBY_N, IW_G, 8.7, 11, 3.3, 1.2, 2.5, 8, 3)
+    room(s * iwanX, iwanZ, x0, x1, LOBBY_N, IW_S, 8.7, 11, 3.3, 1.2, 2.5, 8, 3)
     outerDrum(ext3, kDrum, m, s * iwanX, iwanZ, ROOF_TOP - 0.25, 1.1, 3.95, 8, 0)
     outerDome(ext3, kDome, m, s * iwanX, iwanZ, ROOF_TOP + 0.8, 4.05, 2.7, 0.8)
   })
 
-  // --- Minareler: taş kaide, tuğla silindirik gövde, iki bilezik, tek şerefe, kurşun külah (s. 180) ---
+  // --- Minarets: stone base, cylindrical brick shaft, two rings, single balcony, lead cone (p. 180) ---
   double((s) => {
     const x = s * (W + 1.85), z = -12
     const e = (g: THREE.BufferGeometry, mat: Mat) => K(place(g, x, 0, z), mat)
@@ -284,29 +284,29 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     e(rotateG([[0.08, 45.3], [0.16, 45.55], [0.04, 45.8], [0.1, 46], [0.01, 46.4], [0, 46.45]], 8), m.gold)
   })
 
-  // ===== İÇ MEKÂN =====
-  // Halı zeminler
-  box(-LOBBY_X - 0.01, LOBBY_X + 0.01, BASE - 0.03, BASE + 0.02, LOBBY_N, LOBBY_G, m.carpetT)
+  // ===== INTERIOR =====
+  // Carpeted floors
+  box(-LOBBY_X - 0.01, LOBBY_X + 0.01, BASE - 0.03, BASE + 0.02, LOBBY_N, LOBBY_S, m.carpetT)
   double((s) => {
     const [x0, x1] = mirror(s, LOBBY_X, IW_OUT)
-    box(x0, x1, BASE, BASE + HIGH, LOBBY_N, IW_G, m.plasterInner)
-    box(x0, x1, BASE + HIGH, BASE + HIGH + 0.02, LOBBY_N, IW_G, m.carpetT)
+    box(x0, x1, BASE, BASE + HIGH, LOBBY_N, IW_S, m.plasterInner)
+    box(x0, x1, BASE + HIGH, BASE + HIGH + 0.02, LOBBY_N, IW_S, m.carpetT)
     const [tx0, tx1] = mirror(s, SIDE_X - 1.5, TAB_D)
-    box(tx0, tx1, BASE - 0.03, BASE + 0.02, TAB_K, TAB_G, m.carpetT)
+    box(tx0, tx1, BASE - 0.03, BASE + 0.02, TAB_N, TAB_S, m.carpetT)
   })
-  box(-MIH_X, MIH_X, BASE, BASE + HIGH, LOBBY_G, MIH_G, m.plasterInner)
-  box(-MIH_X, MIH_X, BASE + HIGH, BASE + HIGH + 0.02, LOBBY_G, MIH_G, m.carpetT)
-  // Basamaklar: orta eksende iki basamak, ahşap tırabzan
+  box(-MIH_X, MIH_X, BASE, BASE + HIGH, LOBBY_S, MIH_S, m.plasterInner)
+  box(-MIH_X, MIH_X, BASE + HIGH, BASE + HIGH + 0.02, LOBBY_S, MIH_S, m.carpetT)
+  // Steps: two steps on the central axis, wooden handrail
   const stairs = (x0: number, x1: number, z0: number, z1: number, xAxis: boolean) => {
     for (let i = 0; i < 2; i++) {
       if (xAxis) box(x0 - 0.3 * (2 - i), x1 + 0.0, BASE, BASE + 0.2 * (i + 1), z0, z1, m.carpetT)
       else box(x0, x1, BASE, BASE + 0.2 * (i + 1), z0 - 0.3 * (2 - i), z1, m.carpetT)
     }
   }
-  stairs(-1.1, 1.1, LOBBY_G, LOBBY_G + 0.02, false)
+  stairs(-1.1, 1.1, LOBBY_S, LOBBY_S + 0.02, false)
   for (const x of [-1.15, 1.15]) {
-    K(boxG(0.08, 0.9, 0.08).translate(x, BASE + 0.65, LOBBY_G - 0.6), m.woodDark)
-    K(boxG(0.06, 0.06, 1.3).translate(x, BASE + 1.05, LOBBY_G).rotateX(0), m.woodDark)
+    K(boxG(0.08, 0.9, 0.08).translate(x, BASE + 0.65, LOBBY_S - 0.6), m.woodDark)
+    K(boxG(0.06, 0.06, 1.3).translate(x, BASE + 1.05, LOBBY_S).rotateX(0), m.woodDark)
   }
   double((s) => {
     const gX = s > 0 ? LOBBY_X : -LOBBY_X
@@ -316,46 +316,46 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
       box(ax, bx, BASE, BASE + 0.2 * (i + 1), iwanZ - 1, iwanZ + 1, m.carpetT)
     }
     for (const dz of [-1.05, 1.05]) K(boxG(1.3, 0.06, 0.06).translate(gX, BASE + 1.05, iwanZ + dz), m.woodDark)
-    // Pabuçluk nişleri
+    // Shoe niches
     for (const dz of [-2.4, 2.1]) K(boxG(0.03, 0.22, 0.7).translate(gX - s * 0.01, BASE + 0.2, iwanZ + dz), m.plasterDark)
   })
-  for (const dx of [-3.2, 3.2]) K(boxG(0.7, 0.22, 0.03).translate(dx, BASE + 0.2, LOBBY_G - 0.01), m.plasterDark)
-  // Harim duvarları üstünde taş-sıva kuşağı ve eyvan sıvaları
+  for (const dx of [-3.2, 3.2]) K(boxG(0.7, 0.22, 0.03).translate(dx, BASE + 0.2, LOBBY_S - 0.01), m.plasterDark)
+  // Stone-plaster band above the prayer hall walls and iwan plaster
   const innerPanel = (x0: number, x1: number, y0: number, y1: number, z0: number, z1: number) => box(x0, x1, y0, y1, z0, z1, m.plasterInner)
   double((s) => {
     const [ix0, ix1] = mirror(s, SIDE_X, IW_OUT)
     innerPanel(ix0, ix1, BASE, 8.8, LOBBY_N - 0.0, LOBBY_N + 0.04)
-    innerPanel(ix0, ix1, BASE, 8.8, IW_G - 0.04, IW_G)
+    innerPanel(ix0, ix1, BASE, 8.8, IW_S - 0.04, IW_S)
     const [dx0, dx1] = s > 0 ? [IW_OUT - 0.04, IW_OUT] : [-IW_OUT, -IW_OUT + 0.04]
-    innerPanel(dx0, dx1, BASE, 8.8, LOBBY_N, IW_G)
-    // Eyvan penceresi: dış duvarda altta sivri alınlıklı, üstte dikdörtgen
+    innerPanel(dx0, dx1, BASE, 8.8, LOBBY_N, IW_S)
+    // Iwan window: pointed lunette below, rectangular above on the outer wall
     const pc = s > 0 ? -Math.PI / 2 : Math.PI / 2
     const window = (x: number, y: number, z: number, ry: number, g: number, h: number, mat: Mat) => K(place(new THREE.PlaneGeometry(g, h).translate(0, y + h / 2, 0), x, 0, z, ry), mat)
     window(s * (IW_OUT - 0.05), BASE + HIGH + 1.05, iwanZ, pc, 1.15, 1.45, m.iron)
     window(s * (IW_OUT - 0.05), BASE + HIGH + 3.85, iwanZ, pc, 0.75, 1.05, m.transom)
     K(place(subtract(archFrame(1.9, 2.6), 0.04, 0), s * (IW_OUT - 0.06), BASE + HIGH + 0.85, iwanZ, pc), m.band)
-    // Tabhane: duvar sıvası, üst ocak ve raf nişleri, çapraz tonoz
+    // Tabhane: wall plaster, upper hearth and shelf niches, cross vault
     const [tx0, tx1] = mirror(s, SIDE_X, TAB_D)
-    innerPanel(tx0, tx1, BASE, 7, TAB_K, TAB_K + 0.04)
-    const rafZ = TAB_G - 0.03
-    innerPanel(tx0, tx1, BASE, 7, TAB_G - 0.04, TAB_G)
+    innerPanel(tx0, tx1, BASE, 7, TAB_N, TAB_N + 0.04)
+    const rafZ = TAB_S - 0.03
+    innerPanel(tx0, tx1, BASE, 7, TAB_S - 0.04, TAB_S)
     const [px0, px1] = s > 0 ? [SIDE_X, SIDE_X + 0.04] : [-SIDE_X - 0.04, -SIDE_X]
-    innerPanel(px0, px1, BASE, 7, TAB_K, TAB_G)
+    innerPanel(px0, px1, BASE, 7, TAB_N, TAB_S)
     const [qx0, qx1] = s > 0 ? [TAB_D - 0.04, TAB_D] : [-TAB_D, -TAB_D + 0.04]
-    innerPanel(qx0, qx1, BASE, 7, TAB_K, TAB_G)
-    const tc = s * (SIDE_X + TAB_D) / 2, tz = (TAB_K + TAB_G) / 2
-    // Ocak ve iki sıra kemerli raf nişi (ERD02013 fotoğrafına göre)
+    innerPanel(qx0, qx1, BASE, 7, TAB_N, TAB_S)
+    const tc = s * (SIDE_X + TAB_D) / 2, tz = (TAB_N + TAB_S) / 2
+    // Hearth and two rows of arched shelf niches (based on photo ERD02013)
     for (let j = 0; j < 2; j++) for (let i = -2; i <= 2; i++) {
       if (j === 0 && i === 0) continue
       const nx = tc + i * 1.05, ny = BASE + 1.5 + j * 1.5
       const n = arch(new THREE.Shape(), nx, ny, 0.72, 0.5, 0.4)
       K(new THREE.ShapeGeometry(n, 6).rotateY(Math.PI).translate(2 * nx, 0, rafZ - 0.02), m.plasterDark)
     }
-    K(boxG(1.5, 2.3, 0.3).translate(tc, BASE + 1.15, TAB_G - 0.18), m.plasterInner)
-    K(boxG(0.9, 1.5, 0.04).translate(tc, BASE + 0.8, TAB_G - 0.35), m.dark)
-    // Tonoz: dört üçgen yüz
+    K(boxG(1.5, 2.3, 0.3).translate(tc, BASE + 1.15, TAB_S - 0.18), m.plasterInner)
+    K(boxG(0.9, 1.5, 0.04).translate(tc, BASE + 0.8, TAB_S - 0.35), m.dark)
+    // Vault: four triangular faces
     const apex = BASE + 8.6, yk = BASE + 6.6
-    const corners = [[tx0, TAB_K], [tx1, TAB_K], [tx1, TAB_G], [tx0, TAB_G]]
+    const corners = [[tx0, TAB_N], [tx1, TAB_N], [tx1, TAB_S], [tx0, TAB_S]]
     for (let i = 0; i < 4; i++) {
       const a = corners[i], b = corners[(i + 1) % 4]
       const g = new THREE.BufferGeometry()
@@ -367,13 +367,13 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     K(place(new THREE.PlaneGeometry(1.1, 1.5), s * (TAB_D - 0.05), BASE + 2.2, tz, pc), m.iron)
   })
 
-  // Mihraplı bölümün sıvası, kuşağı, pencereleri
+  // Plaster, band and windows of the mihrab section
   const mihPanel = (x0: number, x1: number, z0: number, z1: number) => box(x0, x1, BASE, 11.25, z0, z1, m.plasterInner)
-  mihPanel(-MIH_X, MIH_X, MIH_G - 0.05, MIH_G)
+  mihPanel(-MIH_X, MIH_X, MIH_S - 0.05, MIH_S)
   double((s) => {
     const [a, b] = s > 0 ? [MIH_X - 0.05, MIH_X] : [-MIH_X, -MIH_X + 0.05]
-    mihPanel(a, b, GAP_G, MIH_G)
-    // Yan duvar: alt pencere, üst şebekeli kemerli pencereler
+    mihPanel(a, b, GAP_S, MIH_S)
+    // Side wall: lower window, upper arched windows with grilles
     const ry = s > 0 ? -Math.PI / 2 : Math.PI / 2, x = s * (MIH_X - 0.06)
     const windows = [8, 14.5]
     for (const z of windows) {
@@ -383,40 +383,40 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
       K(place(new THREE.ShapeGeometry(arch(new THREE.Shape(), 0, BASE + HIGH + 2.8, 1, 0.1, 0.5), 6).translate(0, 0, 0.02), x, 0, z, ry), m.latticeLight)
       K(place(new THREE.ShapeGeometry(arch(new THREE.Shape(), 0, 8.1, 0.8, 0.6, 0.45), 6).translate(0, 0, 0.02), x, 0, z, ry), m.transom)
     }
-    // Kıble duvarı: mihrap yanındaki alt pencere ve üstte revzenli kemerli pencere
-    const dz = MIH_G - 0.07
+    // Qibla wall: lower window beside the mihrab and arched window with revzen above
+    const dz = MIH_S - 0.07
     K(new THREE.PlaneGeometry(1.1, 1.8).rotateY(Math.PI).translate(s * 3.85, BASE + HIGH + 1.45, dz), m.iron)
     K(boxK(s * 3.85 - 0.75, s * 3.85 + 0.75, BASE + HIGH + 0.48, BASE + HIGH + 0.56, dz - 0.1, dz), m.ashlarLight)
     K(new THREE.PlaneGeometry(1.25, 0.05).translate(0, 0, 0).rotateY(Math.PI).translate(s * 3.85, BASE + HIGH + 2.42, dz), m.ashlarLight)
     K(new THREE.ShapeGeometry(arch(new THREE.Shape(), 0, BASE + HIGH + 2.65, 1.15, 0.1, 0.5), 6).rotateY(Math.PI).translate(s * 3.85, 0, dz), m.latticeLight)
     K(new THREE.ShapeGeometry(arch(new THREE.Shape(), 0, 7.6, 0.95, 1.2, 0.5), 6).rotateY(Math.PI).translate(s * 3.95, 0, dz), m.transom)
   })
-  // Mihrap duvarı: Drive fotoğrafı doğrudan duvar olarak (ACIK_YAYIN'da düz panel)
-  const mihG = 5.08, mihH = 10.03
-  K(new THREE.PlaneGeometry(mihG, mihH).rotateY(Math.PI).translate(0, BASE + HIGH + mihH / 2 + 0.02, MIH_G - 0.075), m.mihrabWall)
-  box(-MIH_X, MIH_X, 11.05, 11.28, MIH_G - 0.12, MIH_G - 0.05, m.band)
+  // Mihrab wall: the Drive photo used directly as the wall (plain panel in PUBLIC_BUILD)
+  const mihW = 5.08, mihH = 10.03
+  K(new THREE.PlaneGeometry(mihW, mihH).rotateY(Math.PI).translate(0, BASE + HIGH + mihH / 2 + 0.02, MIH_S - 0.075), m.mihrabWall)
+  box(-MIH_X, MIH_X, 11.05, 11.28, MIH_S - 0.12, MIH_S - 0.05, m.band)
   double((s) => {
     const [a, b] = s > 0 ? [MIH_X - 0.12, MIH_X - 0.05] : [-MIH_X + 0.05, -MIH_X + 0.12]
-    box(a, b, 11.05, 11.28, GAP_G, MIH_G, m.band)
+    box(a, b, 11.05, 11.28, GAP_S, MIH_S, m.band)
   })
-  // Harim taş kuşağı
-  for (const [x0, x1, z0, z1] of [[-LOBBY_X, LOBBY_X, LOBBY_N, LOBBY_N + 0.06], [-LOBBY_X, LOBBY_X, LOBBY_G - 0.06, LOBBY_G], [-LOBBY_X, -LOBBY_X + 0.06, LOBBY_N, LOBBY_G], [LOBBY_X - 0.06, LOBBY_X, LOBBY_N, LOBBY_G]]) box(x0, x1, 10.78, 11, z0, z1, m.band)
-  // Levhalar: Drive görsellerinden (ACIK_YAYIN'da yok)
+  // Prayer hall stone band
+  for (const [x0, x1, z0, z1] of [[-LOBBY_X, LOBBY_X, LOBBY_N, LOBBY_N + 0.06], [-LOBBY_X, LOBBY_X, LOBBY_S - 0.06, LOBBY_S], [-LOBBY_X, -LOBBY_X + 0.06, LOBBY_N, LOBBY_S], [LOBBY_X - 0.06, LOBBY_X, LOBBY_N, LOBBY_S]]) box(x0, x1, 10.78, 11, z0, z1, m.band)
+  // Panels: from Drive images (absent in PUBLIC_BUILD)
   if (m.medallion) {
-    K(new THREE.CircleGeometry(1.2, 28).rotateY(Math.PI).translate(3.95, 6.3, MIH_G - 0.08), m.medallion)
+    K(new THREE.CircleGeometry(1.2, 28).rotateY(Math.PI).translate(3.95, 6.3, MIH_S - 0.08), m.medallion)
     K(place(new THREE.CircleGeometry(1.25, 28), -MIH_X + 0.07, 5.7, 11.3, Math.PI / 2), m.medallion)
   }
   if (m.plaque) {
-    K(new THREE.CircleGeometry(1.2, 28).rotateY(Math.PI).translate(-3.95, 6.3, MIH_G - 0.08), m.plaque)
+    K(new THREE.CircleGeometry(1.2, 28).rotateY(Math.PI).translate(-3.95, 6.3, MIH_S - 0.08), m.plaque)
     K(place(new THREE.CircleGeometry(1.25, 28), MIH_X - 0.07, 5.7, 11.3, -Math.PI / 2), m.plaque)
   }
 
-  // Harim kuzey duvarı: iki kemerli pencere ve ortada nefeslik
+  // Prayer hall north wall: two arched windows and a vent in the middle
   for (const x of [-2.9, 2.9]) {
     K(new THREE.ShapeGeometry(arch(new THREE.Shape(), x, 7, 1.05, 1.2, 0.7), 6).translate(0, 0, LOBBY_N + 0.03), m.latticeLight)
   }
   K(new THREE.PlaneGeometry(1.2, 0.8).translate(0, 8.1, LOBBY_N + 0.03), m.latticeLight)
-  // Tabhane kapısı üstü: iki yanda iri lokma demirli niş pencere (b31)
+  // Above the tabhane door: niche windows with large lokma iron on both sides (b31)
   double((s) => {
     const ry = s > 0 ? -Math.PI / 2 : Math.PI / 2
     K(place(new THREE.PlaneGeometry(1.5, 2.3).translate(0, 7.2, 0), s * (LOBBY_X + 0.02), 0, 1.8, ry), m.ironDark)
@@ -425,40 +425,40 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     K(new THREE.BoxGeometry(0.12, 2.9, 0.08).translate(s * (LOBBY_X + 0.02), BASE + 1.45, 2.6), m.woodDark)
   })
 
-  // Minber: ahşap, sade, sivri külahlı; merdiven kıbleye doğru yükselir (fotoğraf ERD01977)
-  const MIN_X = -4.75, MIN_G = 1, RZ0 = 12.2, RZ1 = 15.7, TOP = 2.4
+  // Minbar: wooden, plain, pointed cone; the stair rises toward the qibla (photo ERD01977)
+  const MINBAR_X = -4.75, MINBAR_W = 1, RZ0 = 12.2, RZ1 = 15.7, TOP = 2.4
   const ZM = BASE + HIGH
   const step = 12
   for (let i = 0; i < step; i++) {
     const z0 = RZ0 + (RZ1 - RZ0) * (i / step), z1 = RZ0 + (RZ1 - RZ0) * ((i + 1) / step)
     const h = TOP * ((i + 0.5) / step)
-    box(MIN_X - MIN_G / 2, MIN_X + MIN_G / 2, ZM, ZM + h, z0, z1, m.carpetT)
+    box(MINBAR_X - MINBAR_W / 2, MINBAR_X + MINBAR_W / 2, ZM, ZM + h, z0, z1, m.carpetT)
   }
   const edgeSide = (s: number) => {
     const ks = new THREE.Shape()
     ks.moveTo(RZ0, 0); ks.lineTo(RZ1 + 0.2, TOP); ks.lineTo(RZ1 + 1.4, TOP); ks.lineTo(RZ1 + 1.4, 0); ks.closePath()
-    const x = MIN_X + s * (MIN_G / 2 + 0.04)
+    const x = MINBAR_X + s * (MINBAR_W / 2 + 0.04)
     K(subtract(ks, 0.07, 0).rotateY(-Math.PI / 2).translate(x + 0.035, ZM, 0), m.woodLight)
     const kk = new THREE.Shape()
     kk.moveTo(RZ0, 0.2); kk.lineTo(RZ1 + 0.05, TOP + 0.85); kk.lineTo(RZ1 + 0.05, TOP + 0.75); kk.lineTo(RZ0, 0.08); kk.closePath()
     K(subtract(kk, 0.05, 0).rotateY(-Math.PI / 2).translate(x + 0.025, ZM + 0.2, 0), m.woodLight)
   }
   edgeSide(1); edgeSide(-1)
-  box(MIN_X - MIN_G / 2, MIN_X + MIN_G / 2, ZM, ZM + TOP, RZ1, RZ1 + 1.4, m.woodDark)
-  for (const [dx, dz] of [[-0.55, RZ1 + 0.05], [0.55, RZ1 + 0.05], [-0.55, RZ1 + 1.35], [0.55, RZ1 + 1.35]]) K(boxG(0.1, 1.9, 0.1).translate(MIN_X + dx, ZM + TOP + 0.95, dz), m.woodLight)
-  K(place(flatShadow(cylinderG(0.05, 0.86, 2.5, 8).rotateY(Math.PI / 8)), MIN_X, ZM + TOP + 3.2, RZ1 + 0.7), m.goldDark)
-  K(place(rotateG([[0.08, 0], [0.15, 0.1], [0.03, 0.28], [0, 0.4]], 8), MIN_X, ZM + TOP + 4.43, RZ1 + 0.7), m.gold)
-  // Minber kapısı
-  box(MIN_X - 0.62, MIN_X - 0.5, ZM, ZM + 2.25, RZ0 - 0.35, RZ0 - 0.25, m.woodLight)
-  box(MIN_X + 0.5, MIN_X + 0.62, ZM, ZM + 2.25, RZ0 - 0.35, RZ0 - 0.25, m.woodLight)
-  box(MIN_X - 0.62, MIN_X + 0.62, ZM + 2.25, ZM + 2.55, RZ0 - 0.35, RZ0 - 0.25, m.woodLight)
+  box(MINBAR_X - MINBAR_W / 2, MINBAR_X + MINBAR_W / 2, ZM, ZM + TOP, RZ1, RZ1 + 1.4, m.woodDark)
+  for (const [dx, dz] of [[-0.55, RZ1 + 0.05], [0.55, RZ1 + 0.05], [-0.55, RZ1 + 1.35], [0.55, RZ1 + 1.35]]) K(boxG(0.1, 1.9, 0.1).translate(MINBAR_X + dx, ZM + TOP + 0.95, dz), m.woodLight)
+  K(place(flatShadow(cylinderG(0.05, 0.86, 2.5, 8).rotateY(Math.PI / 8)), MINBAR_X, ZM + TOP + 3.2, RZ1 + 0.7), m.goldDark)
+  K(place(rotateG([[0.08, 0], [0.15, 0.1], [0.03, 0.28], [0, 0.4]], 8), MINBAR_X, ZM + TOP + 4.43, RZ1 + 0.7), m.gold)
+  // Minbar door
+  box(MINBAR_X - 0.62, MINBAR_X - 0.5, ZM, ZM + 2.25, RZ0 - 0.35, RZ0 - 0.25, m.woodLight)
+  box(MINBAR_X + 0.5, MINBAR_X + 0.62, ZM, ZM + 2.25, RZ0 - 0.35, RZ0 - 0.25, m.woodLight)
+  box(MINBAR_X - 0.62, MINBAR_X + 0.62, ZM + 2.25, ZM + 2.55, RZ0 - 0.35, RZ0 - 0.25, m.woodLight)
 
-  // Vaaz kürsüsü: yalın ahşap (s. 178)
+  // Preaching pulpit (kürsü): plain wood (p. 178)
   box(3.55, 4.75, ZM, ZM + 1, 15.3, 16.5, m.woodDark)
   box(3.5, 4.8, ZM + 1, ZM + 1.12, 15.25, 16.55, m.woodLight)
   box(3.55, 4.75, ZM + 1.12, ZM + 2.2, 16.42, 16.5, m.woodDark)
 
-  // Müezzin mahfili: harim kuzeybatı köşesi, dört direk ve korkuluk; merdivenle çıkılır (fotoğraf ERD01991)
+  // Muezzin's gallery: northwest corner of the prayer hall, four posts and railing; reached by stairs (photo ERD01991)
   const MAH = { x0: -5.95, x1: -2.3, z0: LOBBY_N, z1: -5.9, h: 2.9 }
   const MY = BASE + MAH.h
   box(MAH.x0, MAH.x1, MY - 0.18, MY, MAH.z0, MAH.z1, m.woodDark)
@@ -472,7 +472,7 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
       K(boxG(0.04, 0.94, 0.04).translate(x0 + (x1 - x0) * t, MY + 0.47, z0 + (z1 - z0) * t), m.woodDark)
     }
   }
-  // Mahfil merdiveni: düz koşu, yerden platforma
+  // Gallery stairs: straight run, from the floor to the platform
   const MRZ0 = MAH.z1, MRZ1 = -2.3
   const madim = 14
   for (let i = 0; i < madim; i++) {
@@ -484,71 +484,71 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
     ks.moveTo(MRZ1, 0.9); ks.lineTo(MRZ0, MAH.h + 1); ks.lineTo(MRZ0, MAH.h + 0.9); ks.lineTo(MRZ1, 0.8); ks.closePath()
     K(subtract(ks, 0.05, 0).rotateY(-Math.PI / 2).translate(x + 0.025, BASE, 0), m.woodLight)
   }
-  // Pabuç rafları: kapının iki yanında (fotoğraf)
+  // Shoe racks: on both sides of the door (photo)
   for (const [x0, x1] of [[1.4, 5.8], [-2.1, -1.3]] as const) {
     box(x0, x1, BASE, BASE + 0.85, LOBBY_N, LOBBY_N + 0.4, m.woodLight)
   }
-  // Avizeler
+  // Chandeliers
   chandelier(k, m, 0, 5.4, midDome.z, 3.2, 21, 22)
   chandelier(k, m, 0, 5.8, mihZ, 3, 20.6, 20)
   double((s) => chandelier(k, m, s * iwanX, 5.2, iwanZ, 1.15, 12.5, 8))
 
-  // ===== YÜRÜME =====
+  // ===== WALKING =====
   const K0 = (x0: number, x1: number, z0: number, z1: number, top?: number): Box => ({ x0, x1, z0, z1, ...(top === undefined ? {} : { top }) })
   const boxes: Box[] = []
   const all = (x0: number, x1: number, z0: number, z1: number, top?: number) => { boxes.push(K0(x0, x1, z0, z1, top), K0(-x1, -x0, z0, z1, top)) }
-  // Son cemaat: bölme kemeri ayakları; ön cephe ve yan duvar sınır
+  // Late-comers' portico: dividing arch piers; front facade and side wall are the limit
   for (const d of [POLE[0], POLE[1]]) { all(d - 0.6, d + 0.6, N_IN, nzMid - 1.75); all(d - 0.6, d + 0.6, nzMid + 1.75, N1) }
-  // Revak duvarı: yalnız orta niş açık
+  // Portico wall: only the middle niche is open
   all(1.7, IW_OUT + 1, N1, -9.2)
   all(1, IW_OUT + 1, -9.2, LOBBY_N)
-  // Harim yan duvarları: eyvan kemeri ve tabhane kapısı
+  // Prayer hall side walls: iwan arch and tabhane door
   all(LOBBY_X, SIDE_X, LOBBY_N, -7.6)
   all(LOBBY_X, SIDE_X, -1.65, 1)
-  all(LOBBY_X, SIDE_X, 2.6, LOBBY_G)
-  // Eyvan-tabhane arası ve tabhane dış dolgu
-  all(SIDE_X, IW_OUT + 1, IW_G, TAB_K)
-  all(TAB_D, IW_OUT + 1, TAB_K, TAB_G)
-  all(SIDE_X, IW_OUT + 1, TAB_G, MIH_G)
-  // Ara kemer ve mihraplı bölüm yan duvarları
-  all(4.9, SIDE_X + 1, LOBBY_G, GAP_G)
-  all(MIH_X, SIDE_X + 1, GAP_G, MIH_G)
-  // Harimden eyvan/mihraplı bölüme yalnız basamaktan çıkılır
+  all(LOBBY_X, SIDE_X, 2.6, LOBBY_S)
+  // Between iwan and tabhane, and tabhane outer infill
+  all(SIDE_X, IW_OUT + 1, IW_S, TAB_N)
+  all(TAB_D, IW_OUT + 1, TAB_N, TAB_S)
+  all(SIDE_X, IW_OUT + 1, TAB_S, MIH_S)
+  // Intermediate arch and side walls of the mihrab section
+  all(4.9, SIDE_X + 1, LOBBY_S, GAP_S)
+  all(MIH_X, SIDE_X + 1, GAP_S, MIH_S)
+  // From the prayer hall, the iwans/mihrab section are reached only via the steps
   all(LOBBY_X - 0.06, LOBBY_X, -7.6, iwanZ - 1.1, HIGH)
   all(LOBBY_X - 0.06, LOBBY_X, iwanZ + 1.1, -1.65, HIGH)
-  all(1.15, 4.9, LOBBY_G - 0.06, LOBBY_G, HIGH)
-  // Eşyalar
+  all(1.15, 4.9, LOBBY_S - 0.06, LOBBY_S, HIGH)
+  // Furnishings
   boxes.push(
-    K0(MIN_X - MIN_G / 2 - 0.07, MIN_X + MIN_G / 2 + 0.07, RZ1 + 1.42, MIH_G), // minber arkası
-    K0(3.55, 4.75, 15.3, MIH_G), // kürsü
-    K0(1.4, 5.8, LOBBY_N, LOBBY_N + 0.4), K0(-2.1, -1.3, LOBBY_N, LOBBY_N + 0.4), // raflar
+    K0(MINBAR_X - MINBAR_W / 2 - 0.07, MINBAR_X + MINBAR_W / 2 + 0.07, RZ1 + 1.42, MIH_S), // behind the minbar
+    K0(3.55, 4.75, 15.3, MIH_S), // kürsü
+    K0(1.4, 5.8, LOBBY_N, LOBBY_N + 0.4), K0(-2.1, -1.3, LOBBY_N, LOBBY_N + 0.4), // shelves
     K0(MAH.x0 + 0, MAH.x0 + 0.2, MAH.z1 - 0.22, MAH.z1 - 0.02), K0(-4.2, -4, MAH.z1 - 0.22, MAH.z1 - 0.02), K0(MAH.x1 - 0.2, MAH.x1, MAH.z1 - 0.22, MAH.z1 - 0.02),
-    K0(-MIH_X, MIH_X, MIH_G - 0.1, MIH_G),
+    K0(-MIH_X, MIH_X, MIH_S - 0.1, MIH_S),
   )
   const floors: FloorArea[] = [
-    // Yan eyvanlar ve mihraplı bölüm: iki basamak yüksek
-    { x0: LOBBY_X, x1: IW_OUT, z0: LOBBY_N, z1: IW_G, h0: HIGH, h1: HIGH },
-    { x0: -IW_OUT, x1: -LOBBY_X, z0: LOBBY_N, z1: IW_G, h0: HIGH, h1: HIGH },
-    { x0: -MIH_X - 1, x1: MIH_X + 1, z0: LOBBY_G, z1: MIH_G, h0: HIGH, h1: HIGH },
-    // Son cemaat yan sofaları
+    // Side iwans and mihrab section: two steps higher
+    { x0: LOBBY_X, x1: IW_OUT, z0: LOBBY_N, z1: IW_S, h0: HIGH, h1: HIGH },
+    { x0: -IW_OUT, x1: -LOBBY_X, z0: LOBBY_N, z1: IW_S, h0: HIGH, h1: HIGH },
+    { x0: -MIH_X - 1, x1: MIH_X + 1, z0: LOBBY_S, z1: MIH_S, h0: HIGH, h1: HIGH },
+    // Late-comers' portico side platforms
     { x0: POLE[0], x1: IW_OUT, z0: N_IN, z1: N1, h0: SOFA, h1: SOFA },
     { x0: -IW_OUT, x1: -POLE[0], z0: N_IN, z1: N1, h0: SOFA, h1: SOFA },
-    // Minber merdiveni ve köşkü
-    { x0: MIN_X - MIN_G / 2, x1: MIN_X + MIN_G / 2, z0: RZ0, z1: RZ1, h0: HIGH, h1: HIGH + TOP },
-    { x0: MIN_X - MIN_G / 2, x1: MIN_X + MIN_G / 2, z0: RZ1, z1: RZ1 + 1.4, h0: HIGH + TOP, h1: HIGH + TOP },
-    // Mahfil: alttan geçilir, merdivenle çıkılır
+    // Minbar stairs and kiosk
+    { x0: MINBAR_X - MINBAR_W / 2, x1: MINBAR_X + MINBAR_W / 2, z0: RZ0, z1: RZ1, h0: HIGH, h1: HIGH + TOP },
+    { x0: MINBAR_X - MINBAR_W / 2, x1: MINBAR_X + MINBAR_W / 2, z0: RZ1, z1: RZ1 + 1.4, h0: HIGH + TOP, h1: HIGH + TOP },
+    // Gallery: passable underneath, reached by stairs
     { x0: MAH.x0, x1: MAH.x1, z0: MAH.z0, z1: MAH.z1, h0: MAH.h, h1: MAH.h, underPassable: true },
     { x0: -4.72, x1: -3.8, z0: MRZ0, z1: MRZ1, h0: MAH.h, h1: 0 },
   ]
   const viewBlockers: Box[] = [
     K0(-W, -1.7, N1, LOBBY_N), K0(1.7, W, N1, LOBBY_N),
-    K0(LOBBY_X, SIDE_X, -1.65, LOBBY_G), K0(-SIDE_X, -LOBBY_X, -1.65, LOBBY_G),
-    K0(4.9, SIDE_X, LOBBY_G, GAP_G), K0(-SIDE_X, -4.9, LOBBY_G, GAP_G),
-    K0(SIDE_X, W, IW_G, TAB_K), K0(-W, -SIDE_X, IW_G, TAB_K),
-    K0(MIH_X, W, TAB_G, OUT_G), K0(-W, -MIH_X, TAB_G, OUT_G),
+    K0(LOBBY_X, SIDE_X, -1.65, LOBBY_S), K0(-SIDE_X, -LOBBY_X, -1.65, LOBBY_S),
+    K0(4.9, SIDE_X, LOBBY_S, GAP_S), K0(-SIDE_X, -4.9, LOBBY_S, GAP_S),
+    K0(SIDE_X, W, IW_S, TAB_N), K0(-W, -SIDE_X, IW_S, TAB_N),
+    K0(MIH_X, W, TAB_S, OUT_S), K0(-W, -MIH_X, TAB_S, OUT_S),
   ]
   return {
-    limit: { x0: -IW_OUT, x1: IW_OUT, z0: N_IN, z1: MIH_G },
+    limit: { x0: -IW_OUT, x1: IW_OUT, z0: N_IN, z1: MIH_S },
     boxes: boxes.filter((b) => b.x1 > b.x0 && b.z1 > b.z0),
     circles: [],
     floors,
@@ -558,7 +558,7 @@ export function mosque(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bu
   }
 }
 
-/** İçte küçük kubbe: tek parça yüzey. */
+/** Small dome inside: single-piece surface. */
 function innerDomeG(R: number, H: number) {
   const p: [number, number][] = []
   for (let t = 0; t <= 14; t++) {

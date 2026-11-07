@@ -5,8 +5,8 @@ Kullanıcının isteği: düğmelerle yön/yuva seçmek yerine parçaları farey
 ## Kaynaklar
 
 - `assets/vazo/vazo.blend`: Blender 4.5.3 LTS ile üretilmiş, düzenlenebilir kaynak.
-- `public/modeller/vazo.glb`: tarayıcının GLTFLoader ile yüklediği model.
-- `scripts/vazo_uret.py`: Blender Python betiği; kaynak ve GLB dosyalarını yeniden üretir.
+- `public/models/vase.glb`: tarayıcının GLTFLoader ile yüklediği model.
+- `scripts/vase_generate.py`: Blender Python betiği; kaynak ve GLB dosyalarını yeniden üretir.
 
 Model proje için özgün oluşturuldu. Üçüncü taraf model, fotoğraf veya doku kullanılmadı. Belirli bir tarihî eseri temsil etmez. Ölçüler oyun sahnesi için seçilmiştir.
 
@@ -15,10 +15,10 @@ Blender'da altı kırık parça vardır: `Vazo_Parca_01`–`Vazo_Parca_06`. Her 
 Yeniden üretim:
 
 ```bash
-blender --background --python scripts/vazo_uret.py
+blender --background --python scripts/vase_generate.py
 ```
 
-Bu komut `assets/vazo/vazo.blend` ve `public/modeller/vazo.glb` çıktılarını günceller. Betiği çalıştırmadan mevcut elle yapılan Blender düzenlemelerini ayrı dosyada saklayın; betik sahneyi yeniden kurar.
+Bu komut `assets/vazo/vazo.blend` ve `public/models/vase.glb` çıktılarını günceller. Betiği çalıştırmadan mevcut elle yapılan Blender düzenlemelerini ayrı dosyada saklayın; betik sahneyi yeniden kurar.
 
 ## Etkileşim
 
@@ -38,7 +38,7 @@ Bu komut `assets/vazo/vazo.blend` ve `public/modeller/vazo.glb` çıktılarını
 
 ## VR (Meta Quest Browser, WebXR)
 
-`VR'da aç` düğmesi yalnız `immersive-vr` destekleyen tarayıcıda görünür. Kod `src/components/maket/vazoXr.ts`; sahneye yalnız `VazoXrBaglam` üzerinden dokunur, oyun durumu masaüstüyle aynı yoldan geçer.
+`VR'da aç` düğmesi yalnız `immersive-vr` destekleyen tarayıcıda görünür. Kod `src/features/workshops/vase/vaseXr.ts`; sahneye yalnız `VazoXrBaglam` üzerinden dokunur, oyun durumu masaüstüyle aynı yoldan geçer.
 
 - Vazo 1:1 ölçekte (44 cm), masa yüksekliğinde, başın 70 cm önünde açılır. Vazo hangi durumdaysa VR'a öyle geçer: izsiz, yarım onarım veya onarılmış.
 - Izsiz vazo ve onarılmış vazo bütün olarak tutulup çevrilir; bırakınca masaya döner. Onarım izleri tamamlanınca görünür. Panel: `Vazoyu parçala` / `Yeniden başlat` / `Yeniden parçala` ve `VR'dan çık`.
@@ -53,10 +53,10 @@ Gerçek Quest'te denenmedi: aşağıdaki VR testleri IWER taklidiyle çalışır
 ## Doğrulama
 
 - `npm run build`
-- `node tests/vazo-xr-mantik.mjs`: saf hesaplar; `npm run test:hizli` içindedir.
-- `TEST_URL=… node tests/vazo-xr-dugme.mjs`: sahte `navigator.xr` ile düğme: xr yok, destek yok, reddedildi.
-- `XR_SIM=/gecici/klasor bash tests/xr-sim/kur.sh`, kopya derleme önizlenip `XR_SIM=… TEST_URL=… node tests/xr-sim/vazo-sim.mjs`: simüle Quest ile baştan sona.
-- `node tests/vazo.mjs`: Chrome, 1280 ve 360px; gerçek GLB isteği, izsiz başlangıç, parçaya özel hedef işaretinin yokluğu, yanlış bırakma, fare/dokunma ile 6 parça tamamlama, onarım sonrası farklı görünüm, iptalde başlangıç görüntüsüne birebir dönüş, model yüzeyinden tutuş, Escape, klavye, rota temizliği ve model yükleme hatası.
+- `node tests/vase-xr-logic.mjs`: saf hesaplar; `npm run test:hizli` içindedir.
+- `TEST_URL=… node tests/vase-xr-button.mjs`: sahte `navigator.xr` ile düğme: xr yok, destek yok, reddedildi.
+- `XR_SIM=/gecici/klasor bash tests/xr-sim/setup.sh`, kopya derleme önizlenip `XR_SIM=… TEST_URL=… node tests/xr-sim/vase-sim.mjs`: simüle Quest ile baştan sona.
+- `node tests/vase.mjs`: Chrome, 1280 ve 360px; gerçek GLB isteği, izsiz başlangıç, parçaya özel hedef işaretinin yokluğu, yanlış bırakma, fare/dokunma ile 6 parça tamamlama, onarım sonrası farklı görünüm, iptalde başlangıç görüntüsüne birebir dönüş, model yüzeyinden tutuş, Escape, klavye, rota temizliği ve model yükleme hatası.
 - Blender'da sağlam gövde ve altı parçanın kapalı manifold olduğu ve pozitif hacim taşıdığı bmesh ile kontrol edildi.
 - `vazo-*-izsiz.png` ile `vazo-*-onarim-izleri.png` aynı kamera açısından başlangıç/onarım karşılaştırmasıdır.
 - Ekran görüntüleri `test-sonuclari/vazo-*-blender-incele.png`, `vazo-*-surukle-baslangic.png`, `vazo-*-surukle-tamam.png` dosyalarında (git dışında).

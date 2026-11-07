@@ -1,4 +1,4 @@
-/* Kılıç atölyesinin stüdyo düzeni paylaşılır; yalnız çiniye özgü farklar burada. */
+/* The sword workshop's studio layout is shared; only tile-specific differences are here. */
 .tile-workshop .sword-stages { grid-template-columns: repeat(7, minmax(0, 1fr)); }
 .tile-scene { cursor: crosshair; }
 .tile-colors { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }

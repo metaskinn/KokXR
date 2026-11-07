@@ -2,7 +2,7 @@ import * as T from 'three'
 export function particlePool(scene: T.Scene, az: boolean) {
   const n = az ? 90 : 700, positions = new Float32Array(n * 3), colors = positions.slice(), velocities = positions.slice(), life = new Float32Array(n), max = life.slice(), tip = new Uint8Array(n)
   positions.fill(-100)
-  // VR: aynı anda yaşayan parçacık ve üretim oranı düşer; masaüstü değerleri değişmez.
+  // VR: fewer live particles and a lower spawn rate; desktop values are unchanged.
   let limitN = n, ratio = 1
   const geo = new T.BufferGeometry(); geo.setAttribute('position', new T.BufferAttribute(positions, 3)); geo.setAttribute('color', new T.BufferAttribute(colors, 3))
   const point = document.createElement('canvas'); point.width = point.height = 32
@@ -32,7 +32,7 @@ export function particlePool(scene: T.Scene, az: boolean) {
       positions.set(p.toArray(), i * 3); velocities.set([(Math.random() - .5) * 2.5, .6 + Math.random() * 2.8, (Math.random() - .5) * 2], i * 3)
     }
   }
-  // Yönlü fışkırma: bileme taşının dönüş yönü, çekiç darbesinin yana açılan yelpazesi, su sıçraması.
+  // Directional burst: grindstone spin direction, sideways fan of a hammer blow, water splash.
   function spray(p: T.Vector3, dir: T.Vector3, count: number, spread: number, speed: number, tour: 0 | 1 = 0) {
     for (let k = 0; k < (az ? Math.ceil(count * .25) : Math.ceil(count * ratio)); k++) {
       const i = life.findIndex(v => v <= 0); if (i < 0 || i >= limitN) break

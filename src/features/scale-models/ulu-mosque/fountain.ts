@@ -1,6 +1,6 @@
-// Ulu Camii iç şadırvanı. Biçim ve renkler arşiv fotoğraflarına (ERD05081, sadirvan.jpg) bakılarak yorumlanmıştır;
-// ölçüler temsilîdir. Dokular kodla üretilir: mermer damarı, leke ve döşeme düzeni fotoğrafın karakterini izler,
-// taş taş kopyası değildir. Havuzun on altı köşesi önceki modelden korunmuştur.
+// Ulu Camii interior şadırvan. Form and colors are interpreted from archive photos (ERD05081, sadirvan.jpg);
+// dimensions are representative. Textures are generated in code: marble veining, stains and paving layout follow the photo's character
+// and are not a stone-by-stone copy. The pool's sixteen corners are kept from the previous model.
 import * as THREE from 'three'
 import { Bucket, flatShadow, place } from '../uluMosquePiece'
 import { lightDevice, random } from '../uluMosqueFloor'
@@ -13,7 +13,7 @@ const R_BODY = 3.8, R_WATER = 3.69, BODY_H = 1.06, PEDESTAL_H = 0.14
 const FLOOR_G = 10.6, FLOOR_D = 10.55
 const STOOL = 14, R_STOOL = 4.3
 
-// --- Atlas düzeni (2048 x 1024 mantıksal piksel): solda su, sağda mermer bölgeleri ---
+// --- Atlas layout (2048 x 1024 logical pixels): water on the left, marble regions on the right ---
 const region = (x: number, y: number, g: number, h: number): Region => {
   const p = 6
   return [(x + p) / 2048, 1 - (y + h - p) / 1024, (x + g - p) / 2048, 1 - (y + p) / 1024]
@@ -24,7 +24,7 @@ const PEDESTAL = region(1536, 768, 512, 128)
 const IVORY = region(1536, 896, 384, 128)
 const PLANK = region(1920, 896, 128, 128)
 
-/** UV'yi verilen atlas bölgesine sığdırır. */
+/** Fits the UVs into the given atlas region. */
 function uvRegion<G extends THREE.BufferGeometry>(g: G, b: Region, inverse = false) {
   const uv = g.attributes.uv
   let u0 = Infinity, u1 = -Infinity, v0 = Infinity, v1 = -Infinity
@@ -46,7 +46,7 @@ function canvas(g: number, h: number, scale: number) {
   const el = document.createElement('canvas')
   el.width = g * scale; el.height = h * scale
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas is not available')
   c.scale(scale, scale)
   return { el, c }
 }
@@ -58,11 +58,11 @@ function makeTexture(el: HTMLCanvasElement) {
   return t
 }
 
-/** Mermer damarı: seçili alanın içine, verilen açıda uzun paralel şeritler çizer. Tuval önceden kırpılmış olmalı. */
+/** Marble veining: draws long parallel strips at the given angle inside the selected area. The canvas must be clipped beforehand. */
 function veins(c: CanvasRenderingContext2D, r: () => number, x: number, y: number, length: number, angle: number, count: number, dark: number, spreadCloth = 1) {
   c.save()
   c.translate(x, y); c.rotate(angle)
-  // Bantlar kümelenir: fotoğraftaki taşlarda koyu damarlar aynı şeritte toplanır.
+  // Bands cluster: in the stones in the photo the dark veins gather in the same strip.
   const cluster = (r() - 0.5) * length * 0.8
   for (let n = 0; n < count; n++) {
     const inCluster = r() < 0.6
@@ -87,14 +87,14 @@ function stain(c: CanvasRenderingContext2D, x: number, y: number, rx: number, ry
   c.restore()
 }
 
-/** Su ve mermer atlası: tek dokuda, böylece havuz, fıskiye ve tabureler tek malzemede birleşir. */
+/** Water and marble atlas: in a single texture, so the pool, jet and stools merge into one material. */
 function atlasTexture(scale: number) {
   const { el, c } = canvas(2048, 1024, scale), r = random(4217)
   const area = (x: number, y: number, g: number, h: number, draw: () => void) => {
     c.save(); c.beginPath(); c.rect(x, y, g, h); c.clip(); draw(); c.restore()
   }
 
-  // Su: sütlü turkuaz; koyu lekeler yansıyan kubbe ve fıskiye gölgesi, açık lekeler yansıyan krem duvarlar.
+  // Water: milky turquoise; dark patches are the reflected dome and jet shadow, light patches the reflected cream walls.
   area(0, 0, 1024, 1024, () => {
     const t = c.createRadialGradient(512, 512, 60, 512, 512, 512)
     t.addColorStop(0, '#3f8592'); t.addColorStop(0.4, '#4f97a3'); t.addColorStop(1, '#6aabb0')
@@ -106,20 +106,20 @@ function atlasTexture(scale: number) {
       stain(c, 512 + Math.sin(a) * u, 512 + Math.cos(a) * u, 40 + r() * 110, 40 + r() * 110, dark ? '50,112,130' : '176,206,204', dark ? 0.42 : 0.4)
     }
     stain(c, 512, 512, 215, 215, '40,96,112', 0.6)
-    // Uzak payelerin yansıması: bakan kişiye doğru uzanır, bu yüzden merkezden ışınsal çizilir
+    // Reflection of distant piers: extends towards the viewer, so it is drawn radially from the center
     c.save(); c.translate(512, 512); c.filter = `blur(${9 * scale}px)`
     for (let n = 0; n < 22; n++) {
       c.save(); c.rotate(r() * Math.PI * 2)
-      const en = 16 + r() * 60, dark = r() < 0.5
+      const stripW = 16 + r() * 60, dark = r() < 0.5
       const d = c.createLinearGradient(0, 130, 0, 505)
       const color = dark ? '46,100,114' : '206,216,204'
       d.addColorStop(0, `rgba(${color},0)`); d.addColorStop(0.45, `rgba(${color},${dark ? 0.36 : 0.2})`); d.addColorStop(1, `rgba(${color},${dark ? 0.16 : 0.08})`)
       c.fillStyle = d
-      c.fillRect(-en / 2, 130, en, 375)
+      c.fillRect(-stripW / 2, 130, stripW, 375)
       c.restore()
     }
     c.restore()
-    // Durgun yüzeydeki ince halkalar
+    // Thin rings on the still surface
     c.lineWidth = 1.4
     for (let n = 0; n < 90; n++) {
       c.strokeStyle = `rgba(240,248,244,${0.04 + r() * 0.1})`
@@ -128,7 +128,7 @@ function atlasTexture(scale: number) {
     }
   })
 
-  // Havuz yüzleri: gri damarlı beyaz mermer, sarı pas lekeleri, çerçeve diplerinde kir
+  // Pool faces: grey-veined white marble, yellow rust stains, dirt at the frame bases
   const face = (x: number, y: number, base: string, draw: () => void) => area(x, y, 512, 512, () => {
     c.fillStyle = base
     c.fillRect(x, y, 512, 512)
@@ -155,14 +155,14 @@ function atlasTexture(scale: number) {
     stain(c, 1120, 620, 110, 200, '120,116,126', 0.32)
   })
 
-  // Fıskiye: yatay kuşaklı gri beyaz mermer
+  // Jet: grey-white marble with horizontal bands
   area(1536, 512, 512, 256, () => {
     c.fillStyle = '#d6d5d8'
     c.fillRect(1536, 512, 512, 256)
     veins(c, r, 1792, 640, 620, 0.02, 90, 1.6, 2)
   })
 
-  // Kaide: kirlenmiş kaba taş, kahve ve toprak tonlarında
+  // Base: soiled rough stone in brown and earth tones
   area(1536, 768, 512, 128, () => {
     c.fillStyle = '#7c7366'
     c.fillRect(1536, 768, 512, 128)
@@ -175,14 +175,14 @@ function atlasTexture(scale: number) {
     c.globalAlpha = 1
   })
 
-  // Fildişi mermer: çerçeve, kabartma, ağız ve tabure gövdesi
+  // Ivory marble: frame, relief, rim and stool body
   area(1536, 896, 384, 128, () => {
     c.fillStyle = '#ebe9e6'
     c.fillRect(1536, 896, 384, 128)
     for (let n = 0; n < 16; n++) stain(c, 1536 + r() * 384, 896 + r() * 128, 14 + r() * 42, 10 + r() * 24, r() < 0.25 ? '206,164,104' : '176,170,160', 0.16)
   })
 
-  // Tabure tablası: turuncuya çalan cilalı ceviz
+  // Stool top: polished walnut with an orange tinge
   area(1920, 896, 128, 128, () => {
     c.fillStyle = '#9e5d2a'
     c.fillRect(1920, 896, 128, 128)
@@ -194,7 +194,7 @@ function atlasTexture(scale: number) {
   return makeTexture(el)
 }
 
-/** Havuz döşemesi: merkezden ışınsal halkalara dizilmiş düzensiz mermer plakalar. */
+/** Pool paving: irregular marble slabs arranged in radial rings from the center. */
 function floorTexture(scale: number) {
   const { el, c } = canvas(2048, 2048, scale), r = random(90211)
   const pm = 2048 / FLOOR_G, m = 1024
@@ -218,13 +218,13 @@ function floorTexture(scale: number) {
     c.restore()
   }
 
-  // İç halka: havuzu çeviren dar açık taşlar
+  // Inner ring: narrow light stones surrounding the pool
   const piece = (Math.PI * 2) / CORNER
   for (let n = 0; n < CORNER; n++) {
     const a0 = n * piece, a1 = a0 + piece
     plate([point(a0, 3.8), point(a1, 3.8), point(a1, 4.42), point(a0, 4.42)], tones[Math.floor(r() * 3)], a0 + piece / 2 + (r() < 0.5 ? Math.PI / 2 : 0), 0.55)
   }
-  // Dış halkalar: geniş, açıları düzensiz plakalar
+  // Outer rings: wide slabs with irregular angles
   const rings: [number, number, number][] = [[4.42, 5.95, 0.3], [5.95, 7.7, 1.1]]
   for (const [inner, outer, slip] of rings) {
     let a = slip
@@ -240,7 +240,7 @@ function floorTexture(scale: number) {
       a = b
     }
   }
-  // Fotoğraftaki koyu benekli taş ve iki yandaki gider yarıkları
+  // The dark speckled stone and the drain slots on both sides, as in the photo
   const [bx, by] = point(Math.PI, 4.82)
   c.fillStyle = '#4a4a4c'
   c.fillRect(bx - 66, by - 48, 132, 96)
@@ -257,7 +257,7 @@ function floorTexture(scale: number) {
     c.lineCap = 'butt'
   }
 
-  // Temas gölgeleri: havuz dibi ve tabure ayakları
+  // Contact shadows: pool base and stool feet
   const ao = c.createRadialGradient(m, m, 3.72 * pm, m, m, 4.45 * pm)
   ao.addColorStop(0, 'rgba(34,28,24,0.62)'); ao.addColorStop(0.35, 'rgba(34,28,24,0.2)'); ao.addColorStop(1, 'rgba(34,28,24,0)')
   c.fillStyle = ao
@@ -266,7 +266,7 @@ function floorTexture(scale: number) {
     const a = (n / STOOL) * Math.PI * 2, x = m + Math.sin(a) * R_STOOL * pm, y = m + Math.cos(a) * R_STOOL * pm
     stain(c, x, y, 0.34 * pm, 0.34 * pm, '30,25,22', 0.55)
   }
-  // Köşelere doğru hafif kararma: payelerin arasında kalan ışık farkı
+  // Slight darkening towards the corners: the light difference between the piers
   const k = c.createRadialGradient(m, m, 4.4 * pm, m, m, 7.6 * pm)
   k.addColorStop(0, 'rgba(50,42,34,0)'); k.addColorStop(1, 'rgba(50,42,34,0.3)')
   c.fillStyle = k
@@ -274,17 +274,17 @@ function floorTexture(scale: number) {
   return makeTexture(el)
 }
 
-/** Su yansımayı boyalı dokudan alır: ışık hesabı yok, yalnız yatık bakışta krem duvarları yansıtan bir karışım. */
+/** The water takes its reflection from the painted texture: no lighting math, only a blend reflecting the cream walls at grazing angles. */
 function waterMaterial(map: THREE.Texture) {
   const water = new THREE.MeshBasicMaterial({ map, color: new THREE.Color(0.8, 0.86, 0.8) })
   water.onBeforeCompile = (s) => {
     s.vertexShader = s.vertexShader
-      .replace('#include <common>', '#include <common>\nvarying vec3 vSuBakis;')
-      .replace('#include <begin_vertex>', '#include <begin_vertex>\nvSuBakis = cameraPosition - (modelMatrix * vec4(position, 1.0)).xyz;')
+      .replace('#include <common>', '#include <common>\nvarying vec3 vWaterView;')
+      .replace('#include <begin_vertex>', '#include <begin_vertex>\nvWaterView = cameraPosition - (modelMatrix * vec4(position, 1.0)).xyz;')
     s.fragmentShader = s.fragmentShader
-      .replace('#include <common>', '#include <common>\nvarying vec3 vSuBakis;')
+      .replace('#include <common>', '#include <common>\nvarying vec3 vWaterView;')
       .replace('#include <map_fragment>', `#include <map_fragment>
-      { float f = 1.0 - clamp(normalize(vSuBakis).y, 0.0, 1.0);
+      { float f = 1.0 - clamp(normalize(vWaterView).y, 0.0, 1.0);
         diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.62, 0.62, 0.56), f * f * f * 0.42); }`)
   }
   water.customProgramCacheKey = () => 'fountain-water'
@@ -293,34 +293,34 @@ function waterMaterial(map: THREE.Texture) {
 
 export interface FountainSize { sx: number; sz: number; floor: number; skyY: number }
 
-/** Şadırvanın tamamını `k` kovasına ekler. Çarpışma dairesi (r 3.75) ve korkuluk kutuları ulucamiIc'te aynı kalır. */
+/** Adds the whole şadırvan to bucket `k`. The collision circle (r 3.75) and railing boxes stay the same in uluMosqueInterior. */
 export function fountain(m: UluMosqueMaterials, k: Bucket, { sx, sz, floor, skyY }: FountainSize) {
   const scale = lightDevice() ? 0.5 : 1
   const atlas = atlasTexture(scale), floorTex = floorTexture(scale)
-  // Ortam haritasındaki lamba küresi havuzun üstüne denk gelir: mermer düşük yansımalı kalmalı, yoksa beyaz parlar.
+  // The lamp sphere in the environment map falls above the pool: the marble must stay low-reflective, or it glows white.
   const stone = new THREE.MeshStandardMaterial({ map: atlas, color: '#dcdde2', roughness: 0.46, metalness: 0, envMapIntensity: 0.5 })
   const paving = new THREE.MeshStandardMaterial({ map: floorTex, color: '#d2d3d9', roughness: 0.38, metalness: 0, envMapIntensity: 0.55 })
   const water = waterMaterial(atlas)
 
   const base = floor + 0.1, yBody = base + PEDESTAL_H, yTop = yBody + BODY_H, yWater = yTop + 0.005
 
-  // --- Döşeme ---
+  // --- Paving ---
   const dg = new THREE.BoxGeometry(FLOOR_G, 0.1, FLOOR_D)
   for (let i = 0, p = dg.attributes.position, uv = dg.attributes.uv; i < p.count; i++) uv.setXY(i, p.getX(i) / FLOOR_G + 0.5, 0.5 - p.getZ(i) / FLOOR_D)
   k.add(place(dg, sx, floor + 0.05, sz), paving)
 
-  // --- Kaide ve ağız: on altı köşeli, düz gölgeli ---
+  // --- Base and rim: sixteen-sided, flat-shaded ---
   k.add(place(uvRegion(flatShadow(rotate([[3.97, 0], [3.95, 0.09], [3.86, PEDESTAL_H + 0.01], [3.8, PEDESTAL_H + 0.01]], CORNER)), PEDESTAL), sx, base, sz), stone)
   k.add(place(uvRegion(flatShadow(rotate([
     [3.82, 0], [3.835, 0.02], [3.815, 0.045], [3.8, 0.06], [3.8, 0.085], [3.77, 0.115], [3.72, 0.115], [3.695, 0.09], [3.68, 0.0], [3.68, -0.3],
   ], CORNER)), IVORY), sx, yTop - 0.05, sz), stone)
 
-  // --- Su ---
+  // --- Water ---
   const sg = new THREE.CylinderGeometry(R_WATER, R_WATER, 0.02, CORNER)
   for (let i = 0, p = sg.attributes.position, uv = sg.attributes.uv; i < p.count; i++) uv.setXY(i, 0.25 + (p.getX(i) / R_WATER) * 0.247, 0.5 - (p.getZ(i) / R_WATER) * 0.494)
   k.add(place(sg, sx, yWater, sz), water)
 
-  // --- Bir yüzün süslemesi yerel koordinatta kurulur, sonra on altı yüze döndürülür ---
+  // --- The ornament of one face is built in local coordinates, then rotated onto the sixteen faces ---
   const apothem = R_BODY * Math.cos(Math.PI / CORNER), beam = 2 * R_BODY * Math.sin(Math.PI / CORNER), H = BODY_H
   const yY = (t: number) => yBody + t * H
   const leaf = new THREE.SphereGeometry(1, 6, 4)
@@ -335,42 +335,42 @@ export function fountain(m: UluMosqueMaterials, k: Bucket, { sx, sz, floor, skyY
     const a = (n + 0.5) * (Math.PI * 2) / CORNER
     const add = (g: THREE.BufferGeometry, mat: THREE.Material, z = apothem) => k.add(place(g.translate(0, 0, z), sx, 0, sz, a), mat)
 
-    // Yüz plakası
+    // Face plate
     const pl = uvRegion(new THREE.PlaneGeometry(beam, H), FACES[n % 3], n % 2 === 1)
     add(pl.translate(0, yBody + H / 2, 0), stone)
 
-    // Çerçeve: üstte kalın, altta ve yanlarda ince kabartma
+    // Frame: thick relief on top, thin at the bottom and sides
     const bar = (g: number, h: number, x: number, y: number, d = 0.016) => add(uvRegion(new THREE.BoxGeometry(g, h, d), IVORY).translate(x, y, 0), stone)
     bar(beam - 0.1, 0.035, 0, yY(0.915))
     bar(beam - 0.1, 0.016, 0, yY(0.875), 0.01)
     bar(beam - 0.1, 0.03, 0, yY(0.06))
     for (const s of [-1, 1]) bar(0.02, H * 0.86, s * (beam / 2 - 0.085), yY(0.487), 0.01)
 
-    // Palmet: dokuz yaprak, ortadaki en uzun
+    // Palmette: nine leaves, the middle one the longest
     for (let y = -4; y <= 4; y++) {
-      const t = y / 4, angle = t * 1.2, length = 0.17 - 0.06 * t * t, en = 0.03
-      const g = leaf.clone().scale(en, length, 0.016).translate(0, length, 0).rotateZ(-angle).translate(0, yY(0.67), 0)
+      const t = y / 4, angle = t * 1.2, length = 0.17 - 0.06 * t * t, leafW = 0.03
+      const g = leaf.clone().scale(leafW, length, 0.016).translate(0, length, 0).rotateZ(-angle).translate(0, yY(0.67), 0)
       add(uvRegion(g, IVORY), stone, apothem + 0.016)
     }
     add(uvRegion(leaf.clone().scale(0.06, 0.038, 0.02).translate(0, yY(0.665), 0), IVORY), stone, apothem + 0.016)
-    // Musluğu çeviren iki S kıvrımı
+    // Two S-curves framing the tap
     for (const s of [-1, 1]) add(uvRegion(curl(s), IVORY), stone, apothem + 0.012)
 
-    // Bronz musluk: gövde, aşağı dönen ağız, tepede düğme
+    // Bronze tap: body, downturned spout, knob on top
     const yM = yY(0.53)
     add(new THREE.CylinderGeometry(0.019, 0.026, 0.1, 7).rotateX(Math.PI / 2).translate(0, yM, 0.05), m.bronze)
     add(new THREE.CylinderGeometry(0.018, 0.021, 0.08, 7).translate(0, yM - 0.035, 0.092), m.bronze)
     add(new THREE.CylinderGeometry(0.009, 0.012, 0.04, 6).translate(0, yM + 0.035, 0.05), m.bronze)
     add(new THREE.BoxGeometry(0.055, 0.012, 0.016).translate(0, yM + 0.058, 0.05), m.bronze)
 
-    // Köşe payesi ve ağız üstündeki bronz boru (fotoğrafta iç kenarda görünür)
-    const ka = n * (Math.PI * 2) / CORNER
-    k.add(place(uvRegion(cornerPier.clone(), IVORY).translate(0, yBody, R_BODY + 0.012), sx, 0, sz, ka), stone)
+    // Corner post and the bronze pipe over the rim (visible on the inner edge in the photo)
+    const cornerAngle = n * (Math.PI * 2) / CORNER
+    k.add(place(uvRegion(cornerPier.clone(), IVORY).translate(0, yBody, R_BODY + 0.012), sx, 0, sz, cornerAngle), stone)
     if (n % 2 === 0) k.add(place(new THREE.CylinderGeometry(0.011, 0.011, 0.17, 6).rotateZ(Math.PI / 2).translate(0, yTop + 0.09, 3.71), sx, 0, sz, a), m.bronze)
   }
   leaf.dispose(); cornerPier.dispose()
 
-  // --- Fıskiye: kuşaklı ayak, üç kademeli tas, tepede kozalak ---
+  // --- Jet: banded stand, three-tiered basin, pinecone on top ---
   const f0 = yWater - 0.02
   const leg: [number, number][] = [[0.46, 0], [0.42, 0.1], [0.34, 0.14], [0.31, 0.3], [0.36, 0.42], [0.34, 0.5]]
   k.add(place(uvRegion(rotate(leg, 24), JET), sx, f0, sz), stone)
@@ -380,7 +380,7 @@ export function fountain(m: UluMosqueMaterials, k: Bucket, { sx, sz, floor, skyY
   k.add(place(uvRegion(rotate(mid, 28), JET), sx, f0, sz), stone)
   const top: [number, number][] = [[0.15, 1.66], [0.1, 1.82], [0.09, 2.02], [0.2, 2.1], [0.34, 2.2], [0.38, 2.27], [0.34, 2.3], [0.26, 2.26], [0.09, 2.27], [0.075, 2.36], [0.12, 2.46], [0.14, 2.56], [0.09, 2.68], [0.02, 2.76], [0, 2.78]]
   k.add(place(uvRegion(rotate(top, 18), IVORY), sx, f0, sz), stone)
-  // Taşlardaki bronz lüleler: alttaki ve ortadaki tasın dış yüzünde, dirsekli
+  // Bronze spouts on the basins: on the outer face of the lower and middle basin, elbowed
   const spouts = (count: number, r: number, y: number, o: number) => {
     for (let n = 0; n < count; n++) {
       const a = ((n + o) / count) * Math.PI * 2
@@ -391,7 +391,7 @@ export function fountain(m: UluMosqueMaterials, k: Bucket, { sx, sz, floor, skyY
   spouts(8, 0.98, 0.84, 0)
   spouts(8, 0.62, 1.67, 0.5)
 
-  // --- Tabureler: bel veren mermer gövde, cilalı ahşap tabla ---
+  // --- Stools: waisted marble body, polished wooden top ---
   const stoolBody = rotate([[0.17, 0], [0.18, 0.025], [0.15, 0.05], [0.125, 0.07], [0.115, 0.2], [0.14, 0.34], [0.175, 0.44], [0.17, 0.47], [0, 0.47]], 12)
   const stoolTop = rotate([[0, 0], [0.2, 0], [0.225, 0.016], [0.228, 0.036], [0.21, 0.056], [0, 0.058]], 14)
   uvRegion(stoolBody, IVORY)
@@ -404,7 +404,7 @@ export function fountain(m: UluMosqueMaterials, k: Bucket, { sx, sz, floor, skyY
   }
   stoolBody.dispose(); stoolTop.dispose()
 
-  // --- Korkuluk: koyu ahşap, kesme dilimli pano, kalın küpeşte ---
+  // --- Railing: dark wood, panels with cut slats, thick handrail ---
   const slice = new THREE.Shape()
   const halfway: [number, number][] = [[0.026, 0], [0.05, 0.07], [0.022, 0.14], [0.05, 0.25], [0.022, 0.36], [0.05, 0.43], [0.026, 0.5]]
   halfway.forEach(([x, y], i) => (i ? slice.lineTo(x, y) : slice.moveTo(x, y)))
@@ -436,18 +436,18 @@ export function fountain(m: UluMosqueMaterials, k: Bucket, { sx, sz, floor, skyY
   }
   sliceG.dispose(); boss.dispose()
 
-  // --- Fener: fotoğraftaki pirinç gemi feneri; yan çemberleri, nervürlü camı ve sivri tabanıyla ---
+  // --- Lantern: the brass ship's lantern from the photo, with its side hoops, ribbed glass and pointed base ---
   const fY = 4.95
   k.add(place(new THREE.CylinderGeometry(0.013, 0.013, skyY - fY - 1.5, 5), sx, (skyY + fY + 1.5) / 2, sz), m.dark)
-  // Alt tabla ve sivri uç
+  // Bottom plate and pointed tip
   k.add(place(rotate([[0, -0.14], [0.05, -0.08], [0.24, 0], [0.34, 0.04], [0.35, 0.08], [0.3, 0.1]], 12), sx, fY, sz), m.gold)
-  // Soluk cam gövde ve önünde nervürler (lamba malzemesi parlayıp fıskiyeyi yıkıyordu)
+  // Pale glass body with ribs in front (the lamp material glowed and washed out the jet)
   k.add(place(uvRegion(new THREE.CylinderGeometry(0.25, 0.25, 0.46, 12), IVORY), sx, fY + 0.33, sz), stone)
   for (const y of [0.13, 0.25, 0.37, 0.49]) k.add(place(new THREE.TorusGeometry(0.27, 0.012, 4, 14).rotateX(Math.PI / 2), sx, fY + y, sz), m.goldDark)
-  // Üst tabla, kubbe, baca ve halka
+  // Top plate, dome, chimney and ring
   k.add(place(rotate([[0.3, 0.55], [0.35, 0.58], [0.34, 0.63], [0.3, 0.68], [0.25, 0.8], [0.15, 0.9], [0.1, 0.94], [0.1, 1.08], [0.14, 1.11], [0.13, 1.15], [0, 1.2]], 12), sx, fY, sz), m.gold)
   k.add(place(new THREE.TorusGeometry(0.06, 0.012, 4, 10), sx, fY + 1.25, sz), m.goldDark)
-  // Dört dikme ve iki yan çember
+  // Four posts and two side hoops
   for (let n = 0; n < 4; n++) {
     const a = (n + 0.5) * Math.PI / 2
     k.add(place(new THREE.CylinderGeometry(0.014, 0.014, 0.62, 5).translate(0, fY + 0.36, 0.33), sx, 0, sz, a), m.goldDark)

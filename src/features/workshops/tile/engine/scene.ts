@@ -1,4 +1,4 @@
-// Çini atölyesi sahnesi: masaüstü fare/dokunma ve VR kumandası aynı "işaret" yolundan oyuna girer.
+// Tile workshop scene: desktop mouse/touch and VR controller enter the game through the same "pointer" path.
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
@@ -21,8 +21,8 @@ export interface TileScene {
 
 function canvas(g: number, y: number, draw: (c: CanvasRenderingContext2D) => void, repeat?: [number, number]) {
   const e = document.createElement('canvas'); e.width = g; e.height = y
-  const c = e.getContext('2d', { willReadFrequently: true }) // Yazılımsal tuval: GPU bağlamı düşse de içeriği silinmez
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  const c = e.getContext('2d', { willReadFrequently: true }) // Software canvas: its content survives even if the GPU context is lost
+  if (!c) throw new Error('Canvas unavailable')
   draw(c)
   const d = new THREE.CanvasTexture(e); d.colorSpace = THREE.SRGBColorSpace; d.anisotropy = 8
   if (repeat) { d.wrapS = d.wrapT = THREE.RepeatWrapping; d.repeat.set(...repeat) }
@@ -49,7 +49,7 @@ const floorTex = () => canvas(512, 512, (c) => {
   for (let y = 0; y < 4; y++) for (let x = 0; x < 4; x++) { c.fillStyle = ['#7c5a44', '#6f4f3a', '#85634b'][(x * 2 + y) % 3]; c.fillRect(x * 128, y * 128, 128, 128); c.strokeStyle = '#3d2c20'; c.lineWidth = 4; c.strokeRect(x * 128, y * 128, 128, 128) }
   speck(c, 512, 512, 4000, ['#4a3526', '#9b7a60'], 5, .22)
 }, [5, 5])
-/** Duvar şeridi: lale biçiminden üretilmiş dekor karoları. Yalnız atmosfer içindir. */
+/** Wall band: decorative tiles generated from the tulip shape. Atmosphere only. */
 const tileSquareTex = () => canvas(256, 256, (c) => {
   c.fillStyle = '#f1ecdf'; c.fillRect(0, 0, 256, 256)
   c.strokeStyle = '#123f96'; c.lineWidth = 6; c.strokeRect(5, 5, 246, 246)
@@ -103,7 +103,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
     geometries.push(g); const o = new THREE.Mesh(g, m); o.position.set(x, y, z); o.castShadow = shadow; o.receiveShadow = true; parent.add(o); return o
   }
 
-  // Oda
+  // Room
   const floor = ext(new THREE.PlaneGeometry(7, 7), std({ map: floorTex(), roughness: .9 }), 0, 0, 0, threeScene, false); floor.rotation.x = -Math.PI / 2
   const plaster = std({ map: plasterTex(), roughness: .95 })
   ext(new THREE.PlaneGeometry(7, 3.4), plaster, 0, 1.7, -1.75, threeScene, false)
@@ -112,7 +112,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
   const ceiling = ext(new THREE.PlaneGeometry(7, 7), std({ color: '#4a3425', roughness: .95 }), 0, 3.4, 0, threeScene, false); ceiling.rotation.x = Math.PI / 2
   ext(new THREE.PlaneGeometry(7, .36), std({ map: tileSquareTex(), roughness: .25, metalness: .05 }), 0, 1.25, -1.74, threeScene, false)
 
-  // Tezgâh ve çark
+  // Workbench and wheel
   const plank = std({ map: plankTex(), roughness: .72 })
   ext(new THREE.BoxGeometry(1.7, .06, .95), plank, 0, .86, -.05)
   for (const [x, z] of [[-.78, -.45], [.78, -.45], [-.78, .35], [.78, .35]]) ext(new THREE.BoxGeometry(.07, .84, .07), plank, x, .42, z)
@@ -121,7 +121,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
   const wheel = ext(new THREE.CylinderGeometry(.2, .2, .018, 56), std({ color: '#8c6a4d', roughness: .78 }), 0, .93, 0)
   const stroke = ext(new THREE.BoxGeometry(.36, .002, .012), std({ color: '#51392a', roughness: .9 }), 0, .01, 0, wheel, false); stroke.castShadow = false
 
-  // Raf, kurumakta olan ve bitmiş kaplar
+  // Shelf, drying and finished vessels
   const raf = ext(new THREE.BoxGeometry(2.3, .05, .3), plank, -.6, 1.72, -1.58)
   raf.receiveShadow = true
   const container = (x: number, r: number, h: number, color: string, glossy: boolean) => {
@@ -130,13 +130,13 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
   }
   container(-1.4, .1, .27, '#c7a483', false); container(-1.05, .08, .22, '#c7a483', false); container(-.7, .11, .3, '#e9e2d0', false); container(-.3, .09, .26, '#159fa8', true); container(.1, .1, .28, '#123f96', true)
 
-  // Boya kapları (renkler oyundakiyle aynı)
+  // Paint pots (colors match the game)
   ;['#123f96', '#159fa8', '#1f7d4d', '#c5301f'].forEach((r, i) => {
     ext(new THREE.CylinderGeometry(.038, .032, .045, 22), std({ color: '#d9d1bd', roughness: .6 }), -.62 + i * .1, .912, .22)
     ext(new THREE.CylinderGeometry(.031, .031, .002, 22), std({ color: r, roughness: .9 }), -.62 + i * .1, .935, .22, threeScene, false)
   })
 
-  // Fırın: tuğla gövde, kemerli ağız, içte ateş.
+  // Kiln: brick body, arched mouth, fire inside.
   const kilnGroup = new THREE.Group()
   kilnGroup.position.set(1.32, .38, -1.02); kilnGroup.rotation.y = -.55
   threeScene.add(kilnGroup)
@@ -159,7 +159,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
   const fireLight = new THREE.PointLight('#ff8a3a', 0, 3.2, 1.6); fireLight.position.set(0, .8, .5); kilnGroup.add(fireLight)
   const kilnPoint = new THREE.Vector3(0, .72, .2)
 
-  // Tabak
+  // Plate
   const surface = createSurface(renderer.capabilities.getMaxAnisotropy())
   const plateM = new THREE.MeshPhysicalMaterial({ map: surface.texture, roughness: .86, metalness: 0, clearcoat: 0, clearcoatRoughness: .22, specularIntensity: .55, side: THREE.DoubleSide })
   materials.push(plateM)
@@ -173,22 +173,22 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
   const surfaceY = () => plateGeometryY(d.form)
   function plateGeometryY(b: number) { return .03 * (1 - b) + .013 * b }
 
-  // Kömür kâğıdı
+  // Pouncing paper
   const paperD = paperTexture(); textures.push(paperD)
   const paper = ext(new THREE.CircleGeometry(R * 1.04, 64), new THREE.MeshBasicMaterial({ map: paperD, transparent: true, depthWrite: false, toneMapped: false }), 0, .02, 0, plate, false)
   paper.rotation.x = -Math.PI / 2
-  // Dairenin UV'si tuvalle aynı hizaya alınır.
+  // The disc's UVs are aligned with the canvas.
   { const g = paper.geometry, p = g.attributes.position, uv = g.attributes.uv; for (let i = 0; i < p.count; i++) uv.setXY(i, .5 + p.getX(i) / (2 * R * 1.04), .5 - p.getY(i) / (2 * R * 1.04)) }
   materials.push(paper.material as THREE.Material)
 
-  // Aletler: işaretin gittiği yerde durur.
+  // Tools: stay where the pointer goes.
   const brushGroup = new THREE.Group(); threeScene.add(brushGroup); brushGroup.visible = false
   ext(new THREE.CylinderGeometry(.0045, .0035, .17, 10), std({ color: '#7a4f2d', roughness: .6 }), 0, .1, 0, brushGroup)
   const brushTip = ext(new THREE.ConeGeometry(.0065, .026, 10), std({ color: '#1b2230', roughness: .8 }), 0, .012, 0, brushGroup); brushTip.rotation.x = Math.PI
   const pouch = ext(new THREE.SphereGeometry(.034, 18, 12), std({ color: '#2b2622', roughness: 1 }), 0, 0, 0, threeScene); pouch.visible = false; pouch.scale.y = .72
   const flow = ext(new THREE.CylinderGeometry(.008, .012, .44, 12), std({ color: '#f7f3e8', roughness: .4 }), 0, 1.2, 0, threeScene, false); flow.visible = false
 
-  // Durum
+  // State
   const held: Record<HoldName, boolean> = { primer: false, glaze: false, fire: false }
   const ray3 = new THREE.Ray(), inverse = new THREE.Matrix4(), local = new THREE.Vector3(), plane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0)
   const unitPoint = (r: THREE.Ray): N | null => {
@@ -215,7 +215,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
     if (a === 0) { if (lastN && !first) shapeUp(d, Math.hypot(n[0] - lastN[0], n[1] - lastN[1]), Math.max((t - lastT) / 1000, 1 / 60)) }
     else if (a === 2) withCoal(d, n)
     else if (a === 3) {
-      // Hızlı fırça olaylar arasında kalan noktaları atlamasın.
+      // A fast brush must not skip points between events.
       const step = lastN && !first ? Math.ceil(Math.hypot(n[0] - lastN[0], n[1] - lastN[1]) / .025) : 1
       for (let i = 1; i <= step; i++) drawOutline(d, lastN && !first ? [lastN[0] + ((n[0] - lastN[0]) * i) / step, lastN[1] + ((n[1] - lastN[1]) * i) / step] : n)
     } else if (a === 4) paint(d, findRegion(n))
@@ -234,7 +234,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
   const hold = (ad: HoldName, open: boolean) => { held[ad] = open }
   const master = () => { masterComplete(d); renew(true) }
 
-  // Masaüstü girişi
+  // Desktop input
   const controls = new OrbitControls(camera, renderer.domElement)
   controls.enabled = false; controls.enableDamping = true; controls.minDistance = .25; controls.maxDistance = 1.3
   const pointer = new THREE.Raycaster(), ndc = new THREE.Vector2()
@@ -249,12 +249,12 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
   const up = () => markerRelease()
   const canvasEl3 = renderer.domElement
   canvasEl3.addEventListener('pointerdown', down); canvasEl3.addEventListener('pointermove', roam); canvasEl3.addEventListener('pointerup', up); canvasEl3.addEventListener('pointercancel', up)
-  // Bağlam kısa süreliğine düşüp geri gelebilir (bazı tarayıcılar açılışta böyle yapar): hemen hata gösterilmez.
+  // The context may drop briefly and come back (some browsers do this on startup): no error is shown right away.
   let lossCounter = 0
   const lost = (e: Event) => { e.preventDefault(); renderer.setAnimationLoop(null); lossCounter = window.setTimeout(error, 3000) }
   const arrived = () => {
     clearTimeout(lossCounter)
-    // Çevre haritası bir çizim hedefidir, içeriği bağlamla kaybolur.
+    // The environment map is a render target; its content is lost with the context.
     surroundings.dispose(); surroundings = pmrem.fromScene(new RoomEnvironment(), .04); threeScene.environment = surroundings.texture
     previous = performance.now(); renderer.setAnimationLoop(frame)
   }
@@ -270,7 +270,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
   }
   const watcher = new ResizeObserver(resize); watcher.observe(area); resize()
 
-  // Poz hedefleri
+  // Pose targets
   const targetK = new THREE.Vector3(), targetB = new THREE.Vector3(), targetP = new THREE.Vector3(), targetQ = new THREE.Quaternion(), targetE = new THREE.Euler()
   let targetO = 1
   const cameraTargetOf = () => {
@@ -326,7 +326,7 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
     if (d.inKiln) kiln(d, dt, held.fire); else if (held.fire) held.fire = false
     cool(d, dt)
 
-    // Çark: şekil verilirken ve sıvı sürülürken döner.
+    // Wheel: spins while shaping and while applying liquid.
     const isSpinning = d.stage === 0 || held.primer || held.glaze
     if (isSpinning) { wheel.rotation.y += dt * 6; spinning.rotation.y += dt * 6 }
     else if (d.stage >= 1 && d.stage <= 5) spinning.rotation.y = 0
@@ -337,14 +337,14 @@ export function createScene(area: HTMLElement, publish: (d: Game) => void, error
     if (d.stage !== 2) pouch.visible = false
     if (d.stage !== 3 && d.stage !== 4) brushGroup.visible = false
 
-    // Yüzey malzemesi: mat bisküviden camlaşan sıra.
+    // Surface material: from matte bisque to vitrified glaze.
     plateM.roughness = d.live > 0 ? .86 + (.3 - .86) * d.live : d.primer > 0 ? .78 : .62
     plateM.clearcoat = d.live * .55
     const hot = d.inKiln ? Math.max(0, (d.heat - 300) / 700) : 0
     plateM.emissive.setRGB(hot * .9, hot * .28, hot * .05)
     plateM.emissiveIntensity = hot * .55
 
-    // Ateş
+    // Fire
     const power = d.inKiln ? Math.min(1, (d.heat - 20) / 880) : 0
     fireM.opacity += (power * (.72 + Math.sin(time * 13) * .1) - fireM.opacity) * Math.min(1, dt * 6)
     fireLight.intensity = fireM.opacity * 5.5

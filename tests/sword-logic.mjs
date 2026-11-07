@@ -18,4 +18,4 @@ d = firstGame(); d.stage = 4; for (let i = 0; i < 40; i++) wrist(d, 0, .2); asse
 d = firstGame(); for (let i = 0; i < 7; i++) masterComplete(d); assert.equal(d.stage, 7); assert.equal(d.attached, 7); assert.equal(d.hardness, .6); assert(Math.abs(average(d, 'skin') - .6) < .001)
 assert(computeCut(d, 1, 0, .2).wasCut); d.target = 1; assert.equal(computeCut(d, 1, 0, .2).wasCut, false); d.target = 2; assert.equal(computeCut(d, .1, .1, 2).wasCut, false)
 d.regions.forEach(b => { b.skin = 1 }); d.hardness = 1; assert(computeCut(d, 1, 0, .2).wasCut); d.crack_ = true; d.target = 1; assert(computeCut(d, 1, 0, .2).broke)
-console.log('Kılıç mantığı: sıcak/soğuk darbe, 12 bölge, su verme, yanma, bileme, usta ve üç hedef başarılı.')
+console.log('Sword logic: hot/cold strikes, 12 regions, quenching, burning, sharpening, master and three targets passed.')

@@ -1,5 +1,5 @@
-// Kılıç atölyesi VR hesapları ve panel içeriği: three ve DOM kullanmaz, Node testinde doğrudan çalışır.
-// Tarihsel metin burada yazılmaz; yalnız data/kilic.ts'ten okunur.
+// Sword workshop VR calculations and panel content: uses neither three nor the DOM, runs directly in the Node test.
+// No historical text is written here; it is only read from content/sword.ts.
 import { stages, quality, average, pieces, limit } from './state.ts'
 import type { Game } from './state.ts'
 import { targets } from './test.ts'
@@ -7,17 +7,17 @@ import { swordStageInfo, swordSources, swordPartNotes, swordIntro } from '../../
 
 export interface Point { x: number; y: number; z: number }
 
-// ---------------------------------------------------- istasyonlar
-/** Başın duracağı yer, baktığı yer ve panelin bakışa göre yatay açısı (artı sola). Ölçüler sahnenin metresidir. */
+// ---------------------------------------------------- stations
+/** Where the head stands, where it looks, and the panel's horizontal angle relative to the gaze (positive is left). Units are scene meters. */
 export interface Station { x: number; z: number; lookX: number; lookZ: number; panel: number }
 const WORKSHOP: Station[] = [
-  { x: 2.8, z: -1.75, lookX: 2.8, lookZ: -2.5, panel: .75 }, // Külçe: tezgâhın önü
-  { x: -3.1, z: -1, lookX: -2.9, lookZ: -2, panel: -.95 }, // Isıtma: körükle ocak ağzının arası
-  { x: .1, z: .55, lookX: .15, lookZ: -.1, panel: .85 }, // Dövme: örsün önü
-  { x: 1.95, z: 1.05, lookX: 1.95, lookZ: .15, panel: .85 }, // Su verme: teknenin yanı
-  { x: 3.05, z: -.45, lookX: 3.05, lookZ: -1.2, panel: .95 }, // Bileme: taşın önü
-  { x: 2.35, z: -1.7, lookX: 2.45, lookZ: -2.45, panel: .85 }, // Kuşanma: tezgâhın önü
-  { x: .42, z: 1, lookX: .42, lookZ: 0, panel: 1 }, // İnceleme: kaidenin önü
+  { x: 2.8, z: -1.75, lookX: 2.8, lookZ: -2.5, panel: .75 }, // Ingot: in front of the workbench
+  { x: -3.1, z: -1, lookX: -2.9, lookZ: -2, panel: -.95 }, // Heating: between the bellows and the forge mouth
+  { x: .1, z: .55, lookX: .15, lookZ: -.1, panel: .85 }, // Forging: in front of the anvil
+  { x: 1.95, z: 1.05, lookX: 1.95, lookZ: .15, panel: .85 }, // Quenching: beside the trough
+  { x: 3.05, z: -.45, lookX: 3.05, lookZ: -1.2, panel: .95 }, // Grinding: in front of the stone
+  { x: 2.35, z: -1.7, lookX: 2.45, lookZ: -2.45, panel: .85 }, // Assembly: in front of the workbench
+  { x: .42, z: 1, lookX: .42, lookZ: 0, panel: 1 }, // Inspection: in front of the pedestal
 ]
 const COURTYARD = [{ x: 12, z: 1.15, lookZ: 0 }, { x: 14, z: .95, lookZ: -.1 }, { x: 16.15, z: 1, lookZ: -.1 }]
 
@@ -30,66 +30,66 @@ export function station(d: Pick<Game, 'stage' | 'target' | 'again'>): Station {
 
 export const SEAT_THRESHOLD = 1.2, SEAT_EYE = 1.45
 
-/** Rig: başı istasyona getirir, bakışı hedefe çevirir. Oturan kullanıcı (baş alçaksa) göz hizasına kaldırılır. */
-export function stationRig(ist: Station, head: Point & { yaw: number }) {
-  const rotY = Math.atan2(-(ist.lookX - ist.x), -(ist.lookZ - ist.z)) - head.yaw
+/** Rig: brings the head to the station and turns the gaze to the target. A seated user (low head) is raised to eye level. */
+export function stationRig(st: Station, head: Point & { yaw: number }) {
+  const rotY = Math.atan2(-(st.lookX - st.x), -(st.lookZ - st.z)) - head.yaw
   const c = Math.cos(rotY), s = Math.sin(rotY)
   return {
-    x: ist.x - (head.x * c + head.z * s), y: head.y < SEAT_THRESHOLD ? SEAT_EYE - head.y : 0,
-    z: ist.z - (-head.x * s + head.z * c), rotY,
+    x: st.x - (head.x * c + head.z * s), y: head.y < SEAT_THRESHOLD ? SEAT_EYE - head.y : 0,
+    z: st.z - (-head.x * s + head.z * c), rotY,
   }
 }
 
-/** -PI..PI aralığına indirir. */
+/** Wraps into the -PI..PI range. */
 export const angleDiff = (a: number, b: number) => Math.atan2(Math.sin(a - b), Math.cos(a - b))
 export const PANEL_TURN_THRESHOLD = 1.55, PANEL_TURN_DURATION = 1.2
-/** Durum: bakış panelden bu süre boyunca uzak kaldıysa panel görüş alanına döner; dürüstlük notu hep erişilir kalır. */
+/** State: if the gaze stays away from the panel for this long, the panel returns to view; the honesty note always stays reachable. */
 export function panelShouldReturn(headYaw: number, panelYaw: number, farDuration: number, dt: number) {
   const sure = Math.abs(angleDiff(headYaw, panelYaw)) > PANEL_TURN_THRESHOLD ? farDuration + dt : 0
   return { sure: sure >= PANEL_TURN_DURATION ? 0 : sure, shouldCome: sure >= PANEL_TURN_DURATION }
 }
 
-// ---------------------------------------------------- ışın
-/** Yerel uzayda ışının X ekseni üzerindeki [0, boy] aralığına en yakın noktası: namlu tutturmak için. */
+// ---------------------------------------------------- ray
+/** Closest point of the ray to the [0, length] range on the X axis in local space: for aiming at the blade. */
 export function rayAxisX(o: Point, y: Point, length: number) {
   const yz = y.y * y.y + y.z * y.z, lenFrame = y.x * y.x + yz
   const t = yz < 1e-8 ? 0 : Math.max(0, -(o.y * y.y + o.z * y.z) / yz)
   const x = limit(o.x + t * y.x, 0, length)
-  // Eksen noktası kırpılmış olabilir; ışın parametresi ona göre yeniden bulunur.
+  // The axis point may have been clamped; the ray parameter is recomputed from it.
   const t2 = Math.max(0, ((x - o.x) * y.x - o.y * y.y - o.z * y.z) / lenFrame)
   return { x, distance: Math.hypot(o.x + t2 * y.x - x, o.y + t2 * y.y, o.z + t2 * y.z) }
 }
 
-/** Bölge merkezleri içinden x'e en yakın olanı. */
+/** The region center closest to x. */
 export function nearestRegion(centers: number[], x: number) {
   let en = 0
   centers.forEach((m, i) => { if (Math.abs(m - x) < Math.abs(centers[en] - x)) en = i })
   return en
 }
 
-/** Işının z sabit düzlemini kestiği x; ışın düzleme paralelse veya geriye bakıyorsa null. */
+/** The x where the ray crosses the constant-z plane; null if the ray is parallel to the plane or points away. */
 export function planeX(o: Point, y: Point, z: number) {
   if (Math.abs(y.z) < 1e-4) return null
   const t = (z - o.z) / y.z
   return t > 0 ? o.x + t * y.x : null
 }
-/** Bileme: namluyu tutmuş gibi; ışın sağa kayınca namlu sağa gider, temas noktası başa doğru kayar. */
+/** Grinding: as if holding the blade; when the ray moves right the blade moves right and the contact point slides toward the start. */
 export function wristStep(u: number, dx: number) { return limit(u - limit(dx, -.2, .2) / 1.06, 0, 1) }
 
-// ---------------------------------------------------- kuşanma
-/** Parça merkezi yerine bu kadar yakınken bırakılırsa oturur (metre); bekleme yeri 18 cm uzaktadır, tutup bırakmak yetmez. */
+// ---------------------------------------------------- assembly
+/** A part seats if released with its center this close to its slot (meters); the waiting spot is 18 cm away, so grabbing and releasing is not enough. */
 export const PIECE_SEAT_THRESHOLD = .09, PIECE_TOUCH = .12
 export const pieceSnaps = (distance: number) => distance < PIECE_SEAT_THRESHOLD
 
-// ---------------------------------------------------- çekiç
+// ---------------------------------------------------- hammer
 export const HAMMER_SPEED = 1.6, HAMMER_WEAPON = .4
-/** Kumandayı hızla indirme: her inişte bir kez tetikler; yavaşlamadan yeniden silahlanmaz. */
+/** Fast downward controller swing: triggers once per downswing; does not re-arm until it slows down. */
 export function hammerSwing(verticalSpeed: number, armed: boolean) {
   if (armed && verticalSpeed < -HAMMER_SPEED) return { strike: true, armed: false }
   return { strike: false, armed: armed || verticalSpeed > -HAMMER_WEAPON }
 }
 
-/** Her el kendi yakın zamandaki hedefini tutar; kaybolan poz veya rig sıçraması darbe sayılmaz. */
+/** Each hand keeps its own recent target; a lost pose or rig jump does not count as a strike. */
 export class HammerMeter {
   private onceY: number | null = null
   private region: number | null = null
@@ -110,17 +110,17 @@ export class HammerMeter {
   }
 }
 
-// ---------------------------------------------------- savurma
+// ---------------------------------------------------- swing
 export interface Swing { a: Point; b: Point; sure: number }
 export const SWING_START = 1.8, SWING_END = .9, SWING_LONGEST = .4, SWING_SHORTEST_PATH = .25, SWING_GAP = .5
 
-/** Namlu noktasının hız geçmişinden savurmaları ayırır. Dünya metresi ve saniye alır. */
+/** Detects swings from the velocity history of the blade point. Takes world meters and seconds. */
 export class SwingMeter {
   private once: Point | null = null
   private head: Point | null = null
   private sure = 0
   private wait = 0
-  /** Sürüyorsa namlu izi çizilir. */
+  /** While ongoing, the blade trail is drawn. */
   ongoing = false
   reset() { this.once = null; this.head = null; this.sure = 0; this.ongoing = false; this.wait = 0 }
   step(p: Point, dt: number): Swing | null {
@@ -146,12 +146,12 @@ export class SwingMeter {
 
 export interface Box { minX: number; maxX: number; minY: number; maxY: number; z: number }
 export const SWING_TOLERANCE = .5
-// Masaüstünde dx/dy sahnenin ekran kesridir; hedef düzleminde görünen genişlik yaklaşık bu kadar metredir.
+// On desktop dx/dy are fractions of the scene on screen; the visible width at the target plane is roughly this many meters.
 const SCREEN_METER = 2.5
 
 /**
- * Savurmayı kesimHesapla girdilerine ve hedef düzlemindeki çizgiye çevirir.
- * Kol boyu ve ıraksak bakış yüzünden çizgi hedefe az farkla değmeyebilir; yakınsa en küçük kaydırmayla hedefin içine alınır.
+ * Converts a swing into computeCut inputs and a line on the target plane.
+ * Because of arm length and divergent gaze the line may narrowly miss the target; if close, it is pulled inside with the smallest shift.
  */
 export function swingCut(s: Swing, k: Box) {
   const fx = s.b.x - s.a.x, fy = s.b.y - s.a.y
@@ -167,7 +167,7 @@ export function swingCut(s: Swing, k: Box) {
   }
 }
 
-// ---------------------------------------------------- panel içeriği
+// ---------------------------------------------------- panel content
 export interface PanelButton { id: string; ad: string; hold?: boolean; passive?: boolean; selected?: boolean }
 export interface PanelState {
   step: string; title: string; instruction: string; message: string
@@ -235,7 +235,7 @@ export function panelState(d: Game, s: { reheat: boolean; not: number | null }):
   return r
 }
 
-/** Bilgi panelinin içeriği; dürüstlük notu hiçbir durumda çıkmaz. */
+/** Info panel content; the honesty note is never dropped. */
 export function infoState(stage: number, not: number | null) {
   const p = stage === 6 && not !== null ? swordPartNotes[not] : null
   const k = stage === 3 ? swordStageInfo.water : stage >= 5 ? swordStageInfo.equip : swordStageInfo.ingot
@@ -245,12 +245,12 @@ export function infoState(stage: number, not: number | null) {
   }
 }
 
-// ---------------------------------------------------- panel yerleşimi (tuval pikseli)
+// ---------------------------------------------------- panel layout (canvas pixels)
 export const PANEL_G = 1024, PANEL_Y = 820
 export interface Frame { id: string; x: number; y: number; g: number; y2: number; button: PanelButton; region?: boolean }
 const EDGE = 32, BETWEEN = 10, LINE = 62
 
-/** Düğmeler alttan yukarı dizilir: en altta ortak satır, üstünde aşama düğmeleri, onun üstünde bölge hücreleri. */
+/** Buttons stack bottom-up: the common row at the bottom, stage buttons above it, region cells above those. */
 export function panelLayout(p: Pick<PanelState, 'buttons' | 'common' | 'regions'>) {
   const squares: Frame[] = []
   const gen = PANEL_G - 2 * EDGE
@@ -275,7 +275,7 @@ export function panelLayout(p: Pick<PanelState, 'buttons' | 'common' | 'regions'
   return { squares, contentBottom: alt }
 }
 
-/** uv (v=1 üst kenar) tuvaldeki kareye düşüyorsa onu verir; pasif de döner, karar çağırana bırakılır. */
+/** Returns the canvas box that uv (v=1 is the top edge) falls in; passive boxes are returned too, the caller decides. */
 export function panelFrame(squares: Frame[], u: number, v: number) {
   const x = u * PANEL_G, y = (1 - v) * PANEL_Y
   return squares.find(k => x >= k.x && x <= k.x + k.g && y >= k.y && y <= k.y2) ?? null

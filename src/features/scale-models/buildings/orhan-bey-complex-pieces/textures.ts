@@ -1,5 +1,5 @@
-// Orhan Bey Camii'ne özgü tuval dokuları. Renk ve düzen Vakıf Eserleri Envanteri fotoğraflarına bakılarak
-// yorumlanmıştır; gerçek desenlerin kopyası değildir. Hat yazısı çizilmez, yalnız geometrik ve bitkisel motif vardır.
+// Canvas textures specific to the Orhan Bey Mosque. Colors and layout interpreted from the Vakıf Eserleri Envanteri
+// photos; not copies of the real patterns. No calligraphy is drawn, only geometric and floral motifs.
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../../../shared/config/publicBuild'
 import { lightDevice, random } from '../../uluMosqueFloor'
@@ -8,11 +8,11 @@ function canvas(g: number, y = g) {
   const el = document.createElement('canvas')
   el.width = g; el.height = y
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   return { el, c }
 }
 
-/** `metre`: dokunun bir tekrarının gerçek boyu. UV'si metre olan kutu ve çıkarım yüzeylerinde kullanılır. */
+/** `meter`: real size of one repeat of the texture. Used on boxes and extruded surfaces whose UVs are in meters. */
 function repeated(el: HTMLCanvasElement, meter: number, colored = true) {
   const t = new THREE.CanvasTexture(el)
   t.wrapS = t.wrapT = THREE.RepeatWrapping
@@ -29,7 +29,7 @@ function onePiece(el: HTMLCanvasElement) {
   return t
 }
 
-/** Almaşık örgü: bir sıra moloz-kesme taş, üç sıra tuğla; taşların arasında dikey tuğlalar. */
+/** Alternating (almaşık) masonry: one course of rubble/cut stone, three courses of brick; vertical bricks between the stones. */
 function alternatingCanvas() {
   const B = lightDevice() ? 1024 : 2048, measure = B / 2048
   const { el, c } = canvas(B)
@@ -51,29 +51,29 @@ function alternatingCanvas() {
         c.fillStyle = `rgba(${r() < 0.5 ? '90,70,50' : '235,220,190'},${0.08 + r() * 0.14})`
         c.fillRect(x + 12 * measure + r() * (g - 30 * measure), y0 + 6 * measure + r() * (stoneH - 18 * measure), (6 + r() * 40) * measure, (3 + r() * 12) * measure)
       }
-      // Taşların arasında çift dikey tuğla
+      // Double vertical bricks between the stones
       c.fillStyle = `rgb(${172 + r() * 20},${92 + r() * 16},${62 + r() * 12})`
       c.fillRect(x + g - 12 * measure, y0 + 6 * measure, 10 * measure, stoneH - 12 * measure)
       c.fillRect(x + g + 2 * measure, y0 + 6 * measure, 10 * measure, stoneH - 12 * measure)
       x += g
     }
-    // Üç sıra tuğla
+    // Three courses of brick
     const brkH = (glazeH - stoneH) / 3
     for (let t = 0; t < 3; t++) {
       const y = y0 + stoneH + t * brkH
       let bx = -r() * 90 * measure
       while (bx < B) {
-        const uz = (90 + r() * 50) * measure, tone = 0.84 + r() * 0.24
+        const len = (90 + r() * 50) * measure, tone = 0.84 + r() * 0.24
         c.fillStyle = `rgb(${186 * tone},${100 * tone},${68 * tone})`
-        c.fillRect(bx, y + 4 * measure, uz - 5 * measure, brkH - 8 * measure)
-        bx += uz
+        c.fillRect(bx, y + 4 * measure, len - 5 * measure, brkH - 8 * measure)
+        bx += len
       }
     }
   }
   return el
 }
 
-/** Son cemaat yeri ve revak için tuğla ayırmalı dama: beyaz taş zemin, kırmızı küçük kareler. */
+/** Brick-separated checker for the late-comers' portico and the portico: white stone ground, small red squares. */
 function checkerCanvas() {
   const B = 512, { el, c } = canvas(B), step = B / 8
   c.fillStyle = '#e4dccb'
@@ -92,7 +92,7 @@ function checkerCanvas() {
   return el
 }
 
-/** Bugünkü meydan: koyu parke zemin üzerinde açık renk çapraz bantlar. */
+/** Today's square: light diagonal bands on dark paver ground. */
 function squareCanvas() {
   const B = 1024, { el, c } = canvas(B)
   const r = random(7)
@@ -124,7 +124,7 @@ function grassCanvas() {
   return el
 }
 
-/** Halı: fotoğraftaki turkuaz zemin ve iki yandan koyu çizgili örgü bandı. Bir saf 1,4 m. */
+/** Carpet: turquoise ground as in the photo and a dark-striped band on both sides. One prayer row is 1.4 m. */
 function carpetCanvas() {
   const B = lightDevice() ? 512 : 1024, { el, c } = canvas(B), r = random(23), measure = B / 1024
   c.fillStyle = '#0b8aa3'
@@ -151,7 +151,7 @@ function carpetCanvas() {
   return el
 }
 
-/** Daire örgülü alçı şebeke: beyaz örgü, arkası ışıklı veya koyu. */
+/** Circle-patterned plaster grille: white lattice, lit or dark behind. */
 function latticeCanvas(back: string, weave: string) {
   const B = 512, { el, c } = canvas(B)
   c.fillStyle = back
@@ -168,7 +168,7 @@ function latticeCanvas(back: string, weave: string) {
   return el
 }
 
-/** Alt pencere: ahşap kayıt ve baklava demir, arkası gün ışığı. */
+/** Lower window: wooden mullions and lozenge iron, daylight behind. */
 function diamondWindowCanvas(open: boolean) {
   const B = 512, { el, c } = canvas(B)
   c.fillStyle = open ? '#fff8e6' : '#23282a'
@@ -189,7 +189,7 @@ function diamondWindowCanvas(open: boolean) {
 
 const STROKE = '#f4efe2', RED = '#7f2a18', NAVY = '#23407a', GOLD = '#c79a3a', GREEN = '#2e5a43', DARK = '#1d3029'
 
-/** Yelpaze üçgenli köşe paneli: fotoğraftaki kırmızı zemin, beyaz kaburga, mavi-altın dolgu. */
+/** Corner panel with fan triangles: red ground, white ribs and blue-gold fill as in the photo. */
 function cornerStar(c: CanvasRenderingContext2D, cx: number, base: number, en: number, length: number) {
   c.save()
   c.beginPath()
@@ -215,7 +215,7 @@ function cornerStar(c: CanvasRenderingContext2D, cx: number, base: number, en: n
     c.lineWidth = en * 0.012
     c.beginPath(); c.moveTo(cx, base); c.lineTo(cx - Math.cos(a1) * R, base - Math.sin(a1) * R * (length / (en / 2)) * 0.5); c.stroke()
   }
-  // İkinci halka: içte yıldız kırığı
+  // Second ring: star fragments inside
   c.strokeStyle = STROKE
   c.lineWidth = en * 0.01
   c.beginPath()
@@ -235,14 +235,14 @@ function cornerStar(c: CanvasRenderingContext2D, cx: number, base: number, en: n
   c.stroke()
 }
 
-/** Geçiş bölgesi: u çevre (0 = güney), v taban-tepe. Köşelerde yıldız paneller. */
+/** Transition zone: u around (0 = south), v base to top. Star panels in the corners. */
 function transitionCanvas(southPediment: boolean, star = true) {
   const G = lightDevice() ? 1024 : 2048, Y = G / 4, { el, c } = canvas(G, Y)
   c.fillStyle = '#e9e7df'
   c.fillRect(0, 0, G, Y)
   if (star) for (const u of [1 / 8, 3 / 8, 5 / 8, 7 / 8]) cornerStar(c, u * G, Y, G * 0.2, Y * 0.92)
   if (southPediment) {
-    // Mihrap duvarındaki alınlık: yalnız geometrik örgü; kuşak yazısı çizilmez.
+    // Lunette on the mihrab wall: geometric interlace only; the band inscription is not drawn.
     for (const cx of [0, G]) {
       const en = G * 0.1, length = Y * 0.72
       c.beginPath()
@@ -267,12 +267,12 @@ function transitionCanvas(southPediment: boolean, star = true) {
   return el
 }
 
-/** İç kubbe: u çevre, v kenardan tepeye. Örgü kuşağı, boş alçı ve tepede renkli göbek. */
+/** Inner dome: u around, v edge to apex. Interlace band, plain plaster and a colored center at the top. */
 function innerDomeCanvas(boss: 'medallion' | 'rose' | 'plain') {
   const G = lightDevice() ? 1024 : 2048, Y = G / 2, { el, c } = canvas(G, Y)
   c.fillStyle = '#e9e7df'
   c.fillRect(0, 0, G, Y)
-  // Eteğe yakın örgü kuşağı (tuvalde alt taraf kubbe eteğidir)
+  // Interlace band near the skirt (on the canvas the bottom side is the dome skirt)
   const by = Y * 0.9, bh = Y * 0.04
   c.fillStyle = RED
   c.fillRect(0, by, G, bh)
@@ -303,7 +303,7 @@ function innerDomeCanvas(boss: 'medallion' | 'rose' | 'plain') {
     c.strokeStyle = '#3b2e20'; c.lineWidth = 3; c.stroke()
     c.fillStyle = boss === 'rose' ? GOLD : STROKE
     c.beginPath(); c.ellipse(x, Y * gY * 0.62, en * 0.1, Y * gY * 0.18, 0, 0, Math.PI * 2); c.fill()
-    // Eteğe uzanan yaprak
+    // Leaf reaching to the skirt
     c.fillStyle = NAVY
     c.beginPath(); c.moveTo(x, Y * gY); c.quadraticCurveTo(x - en * 0.12, Y * (gY + 0.06), x, Y * (gY + 0.11)); c.quadraticCurveTo(x + en * 0.12, Y * (gY + 0.06), x, Y * gY); c.fill()
   }
@@ -312,7 +312,7 @@ function innerDomeCanvas(boss: 'medallion' | 'rose' | 'plain') {
   return el
 }
 
-/** Fotoğrafın kullanılamadığı açık yayında mihrap yüzü: altın geometrik çerçeve, koyu kavsara, basamaklı mukarnas. */
+/** Mihrab face in the public build where the photo cannot be used: gold geometric frame, dark hood, stepped muqarnas. */
 function mihrabCanvas() {
   const G = 1024, Y = 1372, { el, c } = canvas(G, Y)
   c.fillStyle = DARK
@@ -344,7 +344,7 @@ function mihrabCanvas() {
   return el
 }
 
-/** Çeşmedeki mavi-beyaz çini yüzeyler: düzen genel, gerçek pano kopyalanmaz. */
+/** Blue-white tile surfaces on the fountain: layout is general, the real panel is not copied. */
 function tileCanvas() {
   const B = 512, { el, c } = canvas(B)
   c.fillStyle = '#f2f4f6'
@@ -364,7 +364,7 @@ function tileCanvas() {
   return el
 }
 
-/** Minber ve kürsünün koyu ceviz yüzünde ince oyma çizgileri. */
+/** Fine carving lines on the dark walnut face of the minbar and kürsü. */
 function carvingCanvas() {
   const B = 256, { el, c } = canvas(B)
   c.fillStyle = '#4c2f1b'

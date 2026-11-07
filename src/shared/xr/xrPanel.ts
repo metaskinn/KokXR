@@ -1,35 +1,35 @@
-// VR menüsü ve bilgi kartı: tuvale çizilip düzleme giydirilir. Düzlem ölçüleri metredir.
-// Görsel dil web kartıyla aynıdır (maket.css, .model-info-card): koyu cam, yuvarlak köşe, ince altın vurgu.
-// Kart metni çağırandan gelir; burada tarihsel metin yazılmaz.
+// VR menu and info card: drawn on a canvas and applied to a plane. Plane sizes are in metres.
+// Visual language matches the web card (model.css, .model-info-card): dark glass, rounded corners, thin gold accent.
+// Card text comes from the caller; no historical text is written here.
 import * as THREE from 'three'
 import { MENU_TITLE_RATIO, ILLUSTRATIVE_LABEL, menuHit, wrapLine, type MenuItem } from './xrText'
 
-// Okunan paneller yüksek çözünürlüktedir; sahnede çok sayıda duran küçük piller Quest belleği için düşük kalır.
-const SHARP_G = 2048, PIL_G = 1024
+// Panels meant for reading are high resolution; the many small pills in the scene stay low for Quest memory.
+const SHARP_W = 2048, PILL_W = 1024
 export const MENU_G = 0.7, CARD_G = 0.66
-const TITLE_G = 0.85, TITLE_Y = 130
-const MENU_Y = 1680, CARD_Y = 1520
+const TITLE_W = 0.85, TITLE_H = 130
+const MENU_H = 1680, CARD_H = 1520
 
 const GLASS_FLOOR = 'rgba(18,30,26,0.92)', GLASS_ROW = 'rgba(247,245,239,0.1)', GLASS_EDGE = 'rgba(247,245,239,0.22)'
-const TEXT_ = '#f7f5ef', SECONDARY = '#d6dcd5', GOLD = '#f2c14e'
-const TEXT = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+const TEXT_COLOR = '#f7f5ef', SECONDARY = '#d6dcd5', GOLD = '#f2c14e'
+const FONT = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
 
-/** Tuval, dokusu ve düzlemi: `metre` panelin genişliği, yükseklik tuval oranından gelir. */
-function panel(meter: number, canvasG: number, canvasY: number) {
+/** Canvas, its texture and plane: `meter` is the panel width; height follows the canvas aspect ratio. */
+function panel(meter: number, canvasW: number, canvasH: number) {
   const el = document.createElement('canvas')
-  el.width = canvasG
-  el.height = canvasY
+  el.width = canvasW
+  el.height = canvasH
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   const texture = new THREE.CanvasTexture(el)
   texture.colorSpace = THREE.SRGBColorSpace
   texture.anisotropy = 16
   texture.minFilter = THREE.LinearMipmapLinearFilter
   texture.generateMipmaps = true
-  // Önceden çarpılmış alfa: köşe ve mipmap geçişlerinde koyu saçak oluşmaz.
+  // Premultiplied alpha: avoids dark fringes at corners and mipmap transitions.
   texture.premultiplyAlpha = true
-  const geometry = new THREE.PlaneGeometry(meter, (meter * canvasY) / canvasG)
-  // alphaTest: sahnedeki pillerin boş köşeleri derinliğe yazıp arkasını silmesin.
+  const geometry = new THREE.PlaneGeometry(meter, (meter * canvasH) / canvasW)
+  // alphaTest: keeps the empty corners of scene pills from writing depth and erasing what is behind.
   const material = new THREE.MeshBasicMaterial({ map: texture, toneMapped: false, transparent: true, premultipliedAlpha: true, alphaTest: 0.01 })
   const obj = new THREE.Mesh(geometry, material)
   const dispose = () => {
@@ -40,7 +40,7 @@ function panel(meter: number, canvasG: number, canvasY: number) {
   return { c, texture, obj, dispose }
 }
 
-/** Koyu cam yüzey: yuvarlak köşe ve ince açık kenar. */
+/** Dark glass surface: rounded corners and a thin light edge. */
 function glassSurface(c: CanvasRenderingContext2D, x: number, y: number, g: number, h: number, r: number, edge: number) {
   c.beginPath()
   c.roundRect(x + edge / 2, y + edge / 2, g - edge, h - edge, r)
@@ -51,67 +51,67 @@ function glassSurface(c: CanvasRenderingContext2D, x: number, y: number, g: numb
   c.stroke()
 }
 
-/** Ortalanmış tek satır: sığmazsa yatayda sıkışır, taşmaz. */
+/** Centred single line: squeezes horizontally if it does not fit, never overflows. */
 function centered(c: CanvasRenderingContext2D, writing: string, x: number, y: number, size: number, weight: number, color: string, maxVal: number) {
   c.fillStyle = color
-  c.font = `${weight} ${size}px ${TEXT}`
+  c.font = `${weight} ${size}px ${FONT}`
   c.textAlign = 'center'
   c.textBaseline = 'middle'
   c.fillText(writing, x, y, maxVal)
 }
 
-/** Temsilî etiketi: oturum boyunca görünür, menü ve kart kapalıyken de kalır. */
+/** Illustrative label: visible for the whole session, even with menu and card closed. */
 export function labelPanel() {
   const height = 130
-  const { c, texture, obj, dispose } = panel(0.72, PIL_G, height)
-  glassSurface(c, 0, 0, PIL_G, height, 36, 3)
-  centered(c, ILLUSTRATIVE_LABEL, PIL_G / 2, 39, 32, 600, GOLD, PIL_G - 80)
-  centered(c, 'Menü: Y / B · Sol çubuk: yürü · Sağ çubuk: dön', PIL_G / 2, 91, 30, 500, TEXT_, PIL_G - 60)
+  const { c, texture, obj, dispose } = panel(0.72, PILL_W, height)
+  glassSurface(c, 0, 0, PILL_W, height, 36, 3)
+  centered(c, ILLUSTRATIVE_LABEL, PILL_W / 2, 39, 32, 600, GOLD, PILL_W - 80)
+  centered(c, 'Menü: Y / B · Sol çubuk: yürü · Sağ çubuk: dön', PILL_W / 2, 91, 30, 500, TEXT_COLOR, PILL_W - 60)
   texture.needsUpdate = true
   return { obj, dispose }
 }
 
-/** Bilgi başlığı: yalnız ad yazar, metin kartta açılır. Pil, yazının genişliğine oturur. */
+/** Info title: shows only the name; the text opens in the card. The pill fits the text width. */
 export function titlePanel(title: string) {
-  const { c, texture, obj, dispose } = panel(TITLE_G, PIL_G, TITLE_Y)
-  c.font = `700 68px ${TEXT}`
-  const g = Math.min(PIL_G - 8, c.measureText(title).width + 120)
-  glassSurface(c, (PIL_G - g) / 2, 4, g, TITLE_Y - 8, (TITLE_Y - 8) / 2, 4)
-  centered(c, title, PIL_G / 2, TITLE_Y / 2, 68, 700, TEXT_, g - 72)
+  const { c, texture, obj, dispose } = panel(TITLE_W, PILL_W, TITLE_H)
+  c.font = `700 68px ${FONT}`
+  const g = Math.min(PILL_W - 8, c.measureText(title).width + 120)
+  glassSurface(c, (PILL_W - g) / 2, 4, g, TITLE_H - 8, (TITLE_H - 8) / 2, 4)
+  centered(c, title, PILL_W / 2, TITLE_H / 2, 68, 700, TEXT_COLOR, g - 72)
   texture.needsUpdate = true
   return { obj, dispose }
 }
 
-/** Birleştirme durumu: başa bağlıdır, yalnız durum değişince çizilir. */
+/** Assembly status: attached to the head, redrawn only when the status changes. */
 export function assemblyPanel() {
   const height = 190
-  const { c, texture, obj, dispose } = panel(0.6, PIL_G, height)
+  const { c, texture, obj, dispose } = panel(0.6, PILL_W, height)
   const draw = ({ top, message, not }: { top: string; message: string; not: string }) => {
-    c.clearRect(0, 0, PIL_G, height)
-    glassSurface(c, 0, 0, PIL_G, height, 28, 3)
-    centered(c, top, PIL_G / 2, 42, 38, 700, GOLD, PIL_G - 60)
-    centered(c, message, PIL_G / 2, 102, 40, 600, TEXT_, PIL_G - 60)
-    centered(c, not, PIL_G / 2, 154, 30, 400, SECONDARY, PIL_G - 60)
+    c.clearRect(0, 0, PILL_W, height)
+    glassSurface(c, 0, 0, PILL_W, height, 28, 3)
+    centered(c, top, PILL_W / 2, 42, 38, 700, GOLD, PILL_W - 60)
+    centered(c, message, PILL_W / 2, 102, 40, 600, TEXT_COLOR, PILL_W - 60)
+    centered(c, not, PILL_W / 2, 154, 30, 400, SECONDARY, PILL_W - 60)
     texture.needsUpdate = true
   }
   return { obj, draw, dispose }
 }
 
 export function xrPanel() {
-  const G = SHARP_G
-  const { c, texture, obj, dispose } = panel(MENU_G, G, MENU_Y)
-  const bandY = MENU_Y * MENU_TITLE_RATIO
+  const G = SHARP_W
+  const { c, texture, obj, dispose } = panel(MENU_G, G, MENU_H)
+  const bandY = MENU_H * MENU_TITLE_RATIO
   let list: MenuItem[] = []
 
   const draw = (items: MenuItem[]) => {
     list = items
-    c.clearRect(0, 0, G, MENU_Y)
-    glassSurface(c, 0, 0, G, MENU_Y, 56, 6)
+    c.clearRect(0, 0, G, MENU_H)
+    glassSurface(c, 0, 0, G, MENU_H, 56, 6)
     centered(c, ILLUSTRATIVE_LABEL, G / 2, bandY / 2, 72, 600, GOLD, G - 160)
     c.fillStyle = GOLD
     c.fillRect(80, bandY - 4, G - 160, 4)
-    // Satırlar gövdeyi eşit böler; isabet hesabı (menuIsabet) aynı bölmeyi kullanır.
-    const line = (MENU_Y - bandY) / Math.max(1, items.length)
+    // Rows split the body evenly; hit testing (menuHit) uses the same split.
+    const line = (MENU_H - bandY) / Math.max(1, items.length)
     const gap = Math.min(24, line * 0.14)
     const size = Math.round(Math.max(68, Math.min(100, line * 0.5)))
     items.forEach((item, i) => {
@@ -120,7 +120,7 @@ export function xrPanel() {
       c.roundRect(80, y + gap / 2, G - 160, line - gap, 28)
       c.fillStyle = GLASS_ROW
       c.fill()
-      centered(c, item.ad, G / 2, y + line / 2, size, 600, TEXT_, G - 288)
+      centered(c, item.ad, G / 2, y + line / 2, size, 600, TEXT_COLOR, G - 288)
     })
     texture.needsUpdate = true
   }
@@ -135,48 +135,48 @@ export function xrPanel() {
 }
 
 export function infoPanel() {
-  const G = SHARP_G
-  const { c, texture, obj, dispose } = panel(CARD_G, G, CARD_Y)
-  const SIDE = 104, GEN = G - 2 * SIDE
+  const G = SHARP_W
+  const { c, texture, obj, dispose } = panel(CARD_G, G, CARD_H)
+  const SIDE = 104, CONTENT_W = G - 2 * SIDE
   const TITLE = 92, TITLE_TOP = 72, STROKE = TITLE_TOP + TITLE + 32
-  const UPPER = STROKE + 44, BOTTOM = CARD_Y - 64, BETWEEN = 56
+  const UPPER = STROKE + 44, BOTTOM = CARD_H - 64, BETWEEN = 56
 
   const show = (k: { title: string; text: string; source: string }) => {
-    c.clearRect(0, 0, G, CARD_Y)
+    c.clearRect(0, 0, G, CARD_H)
     c.textAlign = 'left'
     c.textBaseline = 'top'
 
-    // Gövde 84 px; gerçek yazı tipi tahminden geniş çıkıp karta sığmazsa küçültülür, metin kesilmez.
+    // Body is 84 px; if the real font renders wider than estimated and overflows the card, it shrinks rather than truncating text.
     let size = 84
     let lines: string[] = [], sources: string[] = [], interval = 0, sourceRange = 0
     for (; size >= 44; size -= 2) {
-      c.font = `400 ${size}px ${TEXT}`
-      lines = wrapLine(k.text, (s) => c.measureText(s).width, GEN)
-      c.font = `400 ${Math.round(size * 0.78)}px ${TEXT}`
-      sources = wrapLine(k.source, (s) => c.measureText(s).width, GEN)
+      c.font = `400 ${size}px ${FONT}`
+      lines = wrapLine(k.text, (s) => c.measureText(s).width, CONTENT_W)
+      c.font = `400 ${Math.round(size * 0.78)}px ${FONT}`
+      sources = wrapLine(k.source, (s) => c.measureText(s).width, CONTENT_W)
       interval = Math.round(size * 1.32)
       sourceRange = Math.round(size * 0.78 * 1.28)
       if (lines.length * interval + BETWEEN + sources.length * sourceRange <= BOTTOM - UPPER) break
     }
     if (size < 44) size = 44
 
-    // Cam, içeriğe göre kısalır: kısa metinde boş alan kalmaz. Düzlem aynı kalır, üstü hizalıdır.
+    // The glass shrinks to fit content so short text leaves no empty space. The plane stays the same, top-aligned.
     const sourceTop = Math.min(BOTTOM, UPPER + lines.length * interval + BETWEEN + sources.length * sourceRange) - sources.length * sourceRange
-    glassSurface(c, 0, 0, G, Math.min(CARD_Y, sourceTop + sources.length * sourceRange + 64), 56, 6)
-    c.font = `700 ${TITLE}px ${TEXT}`
-    c.fillStyle = TEXT_
-    c.fillText(k.title, SIDE, TITLE_TOP, GEN) // Sığmazsa yatayda sıkışır, taşmaz
+    glassSurface(c, 0, 0, G, Math.min(CARD_H, sourceTop + sources.length * sourceRange + 64), 56, 6)
+    c.font = `700 ${TITLE}px ${FONT}`
+    c.fillStyle = TEXT_COLOR
+    c.fillText(k.title, SIDE, TITLE_TOP, CONTENT_W) // Squeezes horizontally if it does not fit, never overflows
     c.fillStyle = GOLD
     c.fillRect(SIDE, STROKE, 168, 6)
 
-    c.font = `400 ${size}px ${TEXT}`
-    c.fillStyle = TEXT_
+    c.font = `400 ${size}px ${FONT}`
+    c.fillStyle = TEXT_COLOR
     lines.forEach((s, i) => c.fillText(s, SIDE, UPPER + i * interval))
 
-    // Kaynak metnin altındadır; üstünde ince çizgi.
+    // Source sits below the text, with a thin rule above it.
     c.fillStyle = GLASS_EDGE
-    c.fillRect(SIDE, sourceTop - BETWEEN / 2, GEN, 3)
-    c.font = `400 ${Math.round(size * 0.78)}px ${TEXT}`
+    c.fillRect(SIDE, sourceTop - BETWEEN / 2, CONTENT_W, 3)
+    c.font = `400 ${Math.round(size * 0.78)}px ${FONT}`
     c.fillStyle = SECONDARY
     sources.forEach((s, i) => c.fillText(s, SIDE, sourceTop + i * sourceRange))
 

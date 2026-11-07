@@ -1,8 +1,8 @@
-// Ulu Camii maketi: payeler, sivri kemerler ve doğu/batı duvarlarının hat levhaları.
-// Pano yazıları, tepelik, kemer bandı ve levhalar arşiv fotoğraflarından gelir (scripts/ulucami_paye_atlas.py);
-// kod yazı üretmez. Hangi panonun hangi yüzde, levhanın hangi duvarda durduğu temsilîdir.
-// Paye ve kemer anatomisi fotoğraflardan: sıvalı etek, koyu-altın çizgiler, üstte tepelikli pano,
-// iki kademeli başlık, kemer alnında bitkisel bant, kemer altında çerçeve çizgisi (ERD05027, ERD05161, 0288, 0334).
+// Ulu Camii model: piers, pointed arches and the calligraphy plaques of the east/west walls.
+// Panel inscriptions, crest, arch band and plaques come from archive photos (scripts/ulu_mosque_pier_atlas.py);
+// the code generates no writing. Which panel is on which face and which plaque is on which wall is representative.
+// Pier and arch anatomy from photos: plastered skirt, dark-gold lines, a crested panel on top,
+// two-tier capital, floral band on the arch face, frame line under the arch (ERD05027, ERD05161, 0288, 0334).
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../../shared/config/publicBuild'
 import type { UluMosqueMaterials } from '../uluMosqueTextures'
@@ -14,7 +14,7 @@ import { lightDevice } from '../uluMosqueFloor'
 const ATLAS = 2048
 const CELL_G = 512 / ATLAS, CELL_Y = 1000 / ATLAS, BOARD_COUNT = 8
 const BAND_H = 128 / ATLAS, STROKE_V0 = 128 / ATLAS, STROKE_V1 = 168 / ATLAS
-/** Düz boya örnekleri: paye atlasının alt şeridi. */
+/** Flat paint samples: the bottom strip of the pier atlas. */
 const PAINT = { plaster: 0.125, dark: 0.375, gold: 0.625 }
 
 const FLOOR = 0.7, BOARD_G = 2.33, BOARD_BOTTOM = 3.26, BODY_TOP = 7.18, BOARD_TOP = 6.98, SKIRT = 1.28
@@ -38,8 +38,8 @@ function mats(m: UluMosqueMaterials): Mats {
   } else {
     const loader = new THREE.TextureLoader()
     const last = lightDevice() ? '-k' : ''
-    const texture = (ad: string) => {
-      const t = loader.load(`/images/ulu-mosque/model/${ad}${last}.jpg`)
+    const texture = (name: string) => {
+      const t = loader.load(`/images/ulu-mosque/model/${name}${last}.jpg`)
       t.colorSpace = THREE.SRGBColorSpace
       t.anisotropy = 8
       return t
@@ -56,7 +56,7 @@ function mats(m: UluMosqueMaterials): Mats {
   return result
 }
 
-/** Yüksekliğe göre temas gölgesi: yerde ve başlık altında koyulaşır. Doku yerine köşe rengi: dikiş olmaz. */
+/** Height-based contact shadow: darkens at the floor and below the capital. Vertex color instead of a texture: no seams. */
 function shadow(y: number) {
   if (y < 1.5) return THREE.MathUtils.lerp(0.72, 0.98, THREE.MathUtils.smoothstep(y, FLOOR, 1.5))
   if (y > 6.4) return THREE.MathUtils.lerp(1, 0.84, THREE.MathUtils.smoothstep(y, 6.4, BODY_TOP))
@@ -66,8 +66,8 @@ function shadow(y: number) {
 const AO_ORDER = [FLOOR, 0.9, 1.1, 1.3, 1.5, 6.4, 6.7, 7, BODY_TOP]
 
 /**
- * +z'ye bakan dikdörtgen (x0-x1, y0-y1), z yüzünde. Yükseklik AO sırasına bölünür.
- * uv: (u0, v0) sol alt, (u1, v1) sağ üst. renk: payeye özgü köşe rengi eklensin mi.
+ * Rectangle facing +z (x0-x1, y0-y1), on the z face. The height is split into AO rows.
+ * uv: (u0, v0) bottom left, (u1, v1) top right. color: whether to add the pier-specific vertex color.
  */
 function face(x0: number, x1: number, y0: number, y1: number, z: number, u0: number, u1: number, v0: number, v1: number, color: boolean) {
   const ys = [y0, ...AO_ORDER.filter((a) => a > y0 && a < y1), y1]
@@ -93,7 +93,7 @@ function face(x0: number, x1: number, y0: number, y1: number, z: number, u0: num
 
 const pillar = (r: number, r2: number, h: number, y: number) => flatShadow(cylinderG(r2 * Math.SQRT2, r * Math.SQRT2, h, 4).rotateY(Math.PI / 4)).translate(0, y + h / 2, 0)
 
-/** İki kademeli başlık, paye merkezine göre (x,z). Fotoğraflarda: boyun, eğimli geçiş, geniş tabla, pah. */
+/** Two-tier capital, relative to the pier center (x,z). In the photos: neck, sloped transition, wide abacus, chamfer. */
 function title(k: Bucket, m: UluMosqueMaterials, x: number, z: number) {
   k.add(place(pillar(1.53, 1.53, 0.13, BODY_TOP), x, 0, z), m.inner)
   k.add(place(pillar(1.53, 1.74, 0.24, BODY_TOP + 0.13), x, 0, z), m.inner)
@@ -110,10 +110,10 @@ export function setupPiers(m: UluMosqueMaterials, k: Bucket) {
       const a = f * Math.PI / 2
       const ext = (x0: number, x1: number, y0: number, y1: number, ofs: number, u: readonly number[]) =>
         k.add(place(face(x0, x1, y0, y1, 1.5 + ofs, u[0], u[1], u[2], u[3], true), x, 0, z, a), g.pier)
-      // Sıva gövde (yerden başlık altına)
+      // Plaster body (from the floor to below the capital)
       ext(-1.5, 1.5, FLOOR, BODY_TOP, 0, paint(PAINT.plaster))
       if (g.open) continue
-      // Yan çizgiler, etek çizgisi, başlık altı çizgi: koyu ve ince altın (ERD05027)
+      // Side lines, skirt line, line under the capital: dark and thin gold (ERD05027)
       for (const s of [-1, 1]) {
         const d0 = s * 1.2, d1 = s * 1.32
         ext(Math.min(d0, d1), Math.max(d0, d1), SKIRT, BODY_TOP - 0.2, 0.003, paint(PAINT.dark))
@@ -124,18 +124,18 @@ export function setupPiers(m: UluMosqueMaterials, k: Bucket) {
       ext(-1.37, 1.37, SKIRT + 0.125, SKIRT + 0.15, 0.004, paint(PAINT.gold))
       ext(-1.5, 1.5, BODY_TOP - 0.14, BODY_TOP - 0.05, 0.004, paint(PAINT.dark))
       ext(-1.5, 1.5, BODY_TOP - 0.19, BODY_TOP - 0.165, 0.004, paint(PAINT.gold))
-      // Pano: atlastan. Sıra, komşu yüzlerde aynı yazı gelmeyecek biçimde.
+      // Panel: from the atlas. Ordered so neighboring faces don't get the same inscription.
       const n = (i * 3 + j * 5 + f * 3) % BOARD_COUNT
       const u0 = (n % 4) * CELL_G, v1 = 1 - Math.floor(n / 4) * CELL_Y
       ext(-BOARD_G / 2, BOARD_G / 2, BOARD_BOTTOM, BOARD_TOP, 0.002, [u0, u0 + CELL_G, v1 - CELL_Y, v1])
     }
     title(k, m, x, z)
-    // Başlığın üstünde paye kalkmaz: kemer duvarları haç biçiminde birleşir, araları kubbeye geçer.
+    // The pier doesn't rise above the capital: the arch walls meet in a cross shape and the gaps pass into the dome.
     const uy = (H + TITLE_TOP - 0.3) / 2, uh = H - TITLE_TOP + 0.3
     k.add(place(boxG(2, uh, 3), x, uy, z), m.inner)
     k.add(place(boxG(3, uh, 2), x, uy, z), m.inner)
   }
-  // Duvara oturan kemer ayakları: başlık yarısı. Kıble ortasındaki iki ayak madalyonlara değmesin diye yok.
+  // Arch springers resting on the wall: half a capital. The two in the middle of the qibla are omitted so they don't touch the medallions.
   const wallCap = (x: number, z: number, ry: number) => {
     const ext = (geo: THREE.BufferGeometry) => k.add(place(geo, x, 0, z, ry), m.inner)
     ext(boxG(3.06, 0.13, 0.08).translate(0, BODY_TOP + 0.065, 0.04))
@@ -149,14 +149,14 @@ export function setupPiers(m: UluMosqueMaterials, k: Bucket) {
   }
 }
 
-/** Kemer eğrisi: sol ayaktan tepeye (t 0-1) ikinci derece Bezier. */
+/** Arch curve: quadratic Bezier from the left springer to the apex (t 0-1). */
 function curvePoint(o: number, t: number, right: boolean) {
   const a = 1 - t
   const nx = a * a * -o + 2 * a * t * -o + 0
   const ny = a * a * ARCH_BOTTOM + 2 * a * t * ARCH_CHECK + t * t * ARCH_TOP
   const tx = 2 * a * 0 + 2 * t * o, ty = 2 * a * (ARCH_CHECK - ARCH_BOTTOM) + 2 * t * (ARCH_TOP - ARCH_CHECK)
   const L = Math.hypot(tx, ty) || 1
-  // İç normal (kemer merkezine doğru) ve dış normal aynı doğruda
+  // The inner normal (towards the arch center) and the outer normal lie on the same line
   const icx = ty / L, icy = -tx / L
   return right ? { x: -nx, y: ny, tx: tx / L, ty: ty / L, icx: -icx, icy } : { x: nx, y: ny, tx: tx / L, ty: ty / L, icx, icy }
 }
@@ -171,10 +171,10 @@ function emptyGeo(position: number[], nor: number[], uv: number[]) {
 
 const STEP = 24
 
-/** Kemer alnında bant: iç kenardan dışa BANT_EN genişlikte şerit. Fotoğraftaki boya, u boyuna tekrar eder. */
+/** Band on the arch face: a strip BAND_W wide from the inner edge outwards. The paint from the photo repeats along u. */
 function bandG(o: number, z: number, frontFace: boolean, open: boolean) {
   const position: number[] = [], nor: number[] = [], uv: number[] = []
-  const repeat = BAND_W * 16 // atlas şeridinin boyu (metre): 2048x128
+  const repeat = BAND_W * 16 // length of the atlas strip (meters): 2048x128
   const nz = frontFace ? 1 : -1
   for (const right of [false, true]) {
     let s = 0
@@ -187,7 +187,7 @@ function bandG(o: number, z: number, frontFace: boolean, open: boolean) {
       const dA = { x: a.x - a.icx * BAND_W, y: a.y - a.icy * BAND_W }, dB = { x: b.x - b.icx * BAND_W, y: b.y - b.icy * BAND_W }
       const inner0 = [a.x, a.y, z], inner1 = [b.x, b.y, z], d0 = [dA.x, dA.y, z], d1 = [dB.x, dB.y, z]
       const uv0 = [u0, v0], uv1 = [u1, v0], uv2 = [u1, v1], uv3 = [u0, v1]
-      // Sol yarıda yol saat yönünde; sağ yarıda ters. Sarım normal yönüyle uyumlu olmalı.
+      // On the left half the path is clockwise; on the right half reversed. The winding must agree with the normal direction.
       const flat = right ? frontFace : !frontFace
       const array = flat ? [inner0, d0, d1, inner0, d1, inner1] : [inner0, d1, d0, inner0, inner1, d1]
       const uvd = flat ? [uv0, uv3, uv2, uv0, uv2, uv1] : [uv0, uv2, uv3, uv0, uv1, uv2]
@@ -197,11 +197,11 @@ function bandG(o: number, z: number, frontFace: boolean, open: boolean) {
   return emptyGeo(position, nor, uv)
 }
 
-/** Kemer altı çerçeve çizgisi: iki kenar boyunca şerit, ayakta enine çizgiyle kapanır. */
+/** Frame line under the arch: a strip along both edges, closed by a transverse line at the springer. */
 function archBottomG(o: number, open: boolean) {
   const position: number[] = [], nor: number[] = [], uv: number[] = []
   const Z0 = 0.74, Z1 = 0.9, OFS = 0.012
-  // Başlığın üstünden başla
+  // Start above the capital
   let t0 = 0
   while (curvePoint(o, t0, false).y < TITLE_TOP + 0.06 && t0 < 0.5) t0 += 0.005
   const [v0, v1] = open ? [0, 1] : [1 - STROKE_V1, 1 - STROKE_V0]
@@ -216,7 +216,7 @@ function archBottomG(o: number, open: boolean) {
       for (let n = 0; n < STEP; n++) {
         const a = curvePoint(o, t0 + ((1 - t0) * n) / STEP, right), b = curvePoint(o, t0 + ((1 - t0) * (n + 1)) / STEP, right)
         const u0 = n * 0.1, u1 = (n + 1) * 0.1
-        // Normal aşağıya: sarım kemerin yarısına ve z yanına göre değişir
+        // Normal pointing down: the winding depends on the arch half and the z side
         const inverse = (s > 0) !== right
         if (inverse) {
           corner(a, zi, u0, v0); corner(b, zi, u1, v0); corner(b, zd, u1, v1)
@@ -227,7 +227,7 @@ function archBottomG(o: number, open: boolean) {
         }
       }
     }
-    // Ayakta enine çizgi
+    // Transverse line at the springer
     const a = curvePoint(o, t0, right), b = curvePoint(o, t0 + 0.035, right)
     const inverse = right
     if (inverse) {
@@ -241,7 +241,7 @@ function archBottomG(o: number, open: boolean) {
   return emptyGeo(position, nor, uv)
 }
 
-/** Kemer dolgusu: ExtrudeGeometry, eğri daha sık bölünür. */
+/** Arch infill: ExtrudeGeometry, the curve is subdivided more finely. */
 function infillG(o: number) {
   const s = new THREE.Shape()
   s.moveTo(-o, ARCH_BOTTOM)
@@ -268,7 +268,7 @@ export function setupArches(m: UluMosqueMaterials, k: Bucket) {
     arch(j === 0 ? -YZ + WALL : pz(j) + 1.5, j === LINE - 1 ? YZ - WALL : pz(j + 1) - 1.5, px(i), false)
 }
 
-/** Atlastaki levha dikdörtgenleri (piksel, scripts/ulucami_paye_atlas.py çıktısı). */
+/** Plaque rectangles in the atlas (pixels, output of scripts/ulu_mosque_pier_atlas.py). */
 const PLAQUE = {
   galib: [0, 190, 1400, 559],
   zikr: [93, 800, 1213, 450],
@@ -277,12 +277,12 @@ const PLAQUE = {
   quran: [1410, 662, 638, 505],
 }
 
-/** Eğik asılı hat levhası (ic-mekan-uzun.jpg'deki gibi üstü öne yatık). +z odaya bakar; x,y,z duvar yüzü. */
+/** Tilted hanging calligraphy plaque (top leaning forward, as in ic-mekan-uzun.jpg). +z looks into the room; x,y,z is the wall face. */
 function plaqueAs(k: Bucket, m: UluMosqueMaterials, l: Mats, r: readonly number[], g: number, h: number, x: number, y: number, z: number, ry: number) {
   const SLOPE = 0.1
   const add = (geo: THREE.BufferGeometry, mat: Mat) => {
     geo.rotateX(SLOPE)
-    // Eğik çerçevenin üst arka köşesi de sıvanın önünde kalır.
+    // The upper back corner of the tilted frame also stays in front of the plaster.
     geo.translate(0, y, ((h + 0.14) / 2) * Math.sin(SLOPE) + 0.09 * Math.cos(SLOPE) + 0.035)
     k.add(place(geo, x, 0, z, ry), mat)
   }
@@ -295,21 +295,21 @@ function plaqueAs(k: Bucket, m: UluMosqueMaterials, l: Mats, r: readonly number[
     }
   }
   add(surface.translate(0, 0, 0.004), l.plaque)
-  // Askı zincirleri
+  // Hanging chains
   for (const s of [-1, 1]) {
     const length = 0.42
     k.add(place(cylinderG(0.012, 0.012, length, 5).rotateX(-0.42).translate(s * g * 0.36, y + (h / 2) * Math.cos(SLOPE) + length * 0.42, (h / 2) * Math.sin(SLOPE) * 1.2), x, 0, z, ry), m.bronze)
   }
 }
 
-/** Doğu ve batı duvarı levhaları: üst pencerelerin altında, alt nişlerin üstünde (0288). Duvar seçimi temsilî. */
+/** East and west wall plaques: below the upper windows, above the lower niches (0288). The choice of wall is representative. */
 export function eastWestPlaques(m: UluMosqueMaterials, k: Bucket) {
   const l = mats(m)
   const east = YX - WALL - 0.02, west = -YX + WALL + 0.02
   const Y = 5.75
   const proportional = (r: readonly number[], g: number) => g * (r[3] / r[2])
   const settle: [readonly number[], number, number, number, number][] = [
-    // Çerçeveler, iki pencere tepeliği arasındaki yaklaşık 4.35 m boşluğa sığar.
+    // The frames fit into the roughly 4.35 m gap between two window crests.
     [PLAQUE.galib, 3.8, east, pz(2.5), -Math.PI / 2],
     [PLAQUE.hasm, 3.8, east, pz(3.5), -Math.PI / 2],
     [PLAQUE.zikr, 3.8, west, pz(2.5), Math.PI / 2],

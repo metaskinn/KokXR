@@ -1,6 +1,6 @@
-// Ulu Camii temsili maketi. Plan ölçüleri ile kubbe ve paye düzeni envanterden (s. 44, 46, 60, 63);
-// cephe, kasnak, kubbe, minare ve taç kapı biçimleri arşiv fotoğraflarına bakılarak yorumlanmıştır.
-// Yükseklikler ve pencere sayıları temsilidir. Birim: metre. Kuzey = -z, kıble (güney) = +z, doğu = +x.
+// Representative model of Ulu Camii. Plan dimensions and the dome and pier layout are from the inventory (pp. 44, 46, 60, 63);
+// facade, drum, dome, minaret and crown gate forms are interpreted from archive photos.
+// Heights and window counts are representative. Unit: meter. North = -z, qibla (south) = +z, east = +x.
 import * as THREE from 'three'
 import { innerWindowBottom, innerWindowTop } from './ulu-mosque/inner-wall'
 import { uluMosqueSurroundings } from './ulu-mosque/surroundings'
@@ -20,7 +20,7 @@ import {
 export interface ModelLayer { group: THREE.Group; height: number; ad: string }
 export interface Model {
   root: THREE.Group; layers: ModelLayer[]; stops: InteriorStop[]; walking: InteriorWalk
-  /** Verilmezse Ulu Camii ölçüsüne göre varsayılanlar kullanılır. */
+  /** If not given, defaults based on Ulu Camii dimensions are used. */
   camera?: { position: [number, number, number]; target: [number, number, number] }
   pedestalRadius?: number
   innerLights?: [number, number, number][]
@@ -35,12 +35,12 @@ export function uluMosqueModel(): Model {
   const box = (g: number, h: number, dd: number, mat: Mat, x: number, y: number, z: number, kv = k) =>
     kv.add(place(boxG(g, h, dd), x, y, z), mat)
 
-  // --- Zemin: çevre ayrı modülde; bina tabanı ve halı burada ---
+  // --- Ground: surroundings in a separate module; building base and carpet here ---
   const surroundings = uluMosqueSurroundings(m, k)
   box(EAST_WEST + 1, 0.6, NORTH_SOUTH + 1, m.marble, 0, 0.3, 0)
   interiorFloor(k, m)
 
-  // --- Cephe: üç katman (dış taş + kemerli nişler, gövde, iç sıva) ve kafesli pencereler ---
+  // --- Facade: three layers (outer stone + arched niches, body, inner plaster) and latticed windows ---
   const facade = (L: number, x: number, z: number, ry: number, noMid: 'all' | 'alt' | 'none', eye: number, count: number, noBottom = false) => {
     const arch = facadeArch
     const outer = rect(-L / 2, 0, L / 2, H), body = rect(-L / 2, 0, L / 2, H), inner = rect(-L / 2, 0, L / 2, H)
@@ -49,7 +49,7 @@ export function uluMosqueModel(): Model {
     for (let i = 0; i < count; i++) {
       const mid = i === (count - 1) / 2
       if (mid && noMid === 'all') continue
-      // Kıble duvarının ortasında pencereler mihrabın üstünde ve yeşil levhanın iki yanındadır (fotoğraflara göre).
+      // In the middle of the qibla wall the windows are above the mihrab and on both sides of the green plaque (according to the photos).
       const qiblaMid = mid && noBottom
       for (const f of qiblaMid ? [-0.2, 0.2] : [-0.25, 0.25]) {
         const px = first + i * eye + f * eye
@@ -70,7 +70,7 @@ export function uluMosqueModel(): Model {
         k.add(place(boxG(2.1, 0.12, 0.7).translate(px, 1.96, -0.3), x, 0, z, ry), m.innerMarble)
         for (const s of [-1, 1]) k.add(place(boxG(0.14, 2.2, 0.66).translate(px + s * 0.87, 3.05, -0.33), x, 0, z, ry), m.innerMarble)
         k.add(place(boxG(1.88, 0.16, 0.66).translate(px, 4.19, -0.33), x, 0, z, ry), m.innerMarble)
-        // Pencere üstü alınlık taştır, kafes değil (fotoğraflara göre).
+        // The pediment above the window is stone, not lattice (according to the photos).
         k.add(place(new THREE.ShapeGeometry(arch(new THREE.Shape(), px, 4.3, 1.1, 0.05, 0.6), 8).translate(0, 0, -0.45), x, 0, z, ry), K.facadeStone)
       }
     }
@@ -81,12 +81,12 @@ export function uluMosqueModel(): Model {
       k.add(place(p.clone().translate(0, 0, -0.72), x, 0, z, ry), m.glassCage)
       k.add(place(fitToAtlas(p, 'alt'), x, 0, z, ry), K.atlas)
     })
-    // Kaide, ara silme ve saçak silmesi
+    // Base, intermediate molding and eave molding
     strip((g) => k.add(place(g, x, 0, z, ry), K.atlas), 'pedestal', L + 0.3, 0, 1.3, 0.25)
     box2(L + 0.3, 0.2, 0.14, x, 6.05, z, ry, K.facadeStone)
     strip((g) => k.add(place(g, x, 0, z, ry), K.atlas), 'eave', L + 1, H - 0.7, 1, 0.7)
   }
-  /** Kemeri çeviren, duvardan hafif çıkıntılı taş dilimler (fotoğraflardaki gibi). */
+  /** Stone voussoirs framing the arch, projecting slightly from the wall (as in the photos). */
   const archRingOf = (cx: number, y0: number, gOuter: number, flat: number, kOuter: number, gInner: number, kInner: number, x: number, z: number, ry: number) =>
     archSlices((g) => k.add(place(g, x, 0, z, ry), K.facadeStone), cx, y0, gOuter, flat, kOuter, gInner, kInner)
   const box2 = (g: number, h: number, dd: number, x: number, y: number, z: number, ry: number, mat: Mat) => {
@@ -94,22 +94,22 @@ export function uluMosqueModel(): Model {
     k.add(place(b, x, 0, z, ry), mat)
   }
   facade(EAST_WEST, 0, -YZ, Math.PI, 'all', BAY_X, COLUMN)
-  // Güney duvarının alt sıra pencereleri sonradan kapatılmıştır (Kültür Portalı).
+  // The lower row of windows on the south wall was later closed up (Kültür Portalı).
   facade(EAST_WEST, 0, YZ, 0, 'alt', BAY_X, COLUMN, true)
   facade(NORTH_SOUTH - WALL * 2, YX, 0, Math.PI / 2, 'none', BAY_Z, LINE)
   facade(NORTH_SOUTH - WALL * 2, -YX, 0, -Math.PI / 2, 'none', BAY_Z, LINE)
 
-  // --- Taç kapı (kuzey cephesi): ulucami/kapilar.ts ---
+  // --- Crown gate (north facade): ulu-mosque/doors.ts ---
   crownDoor(k, m, K, YZ)
 
-  // --- İç mekân: ayrı modülde ---
+  // --- Interior: in a separate module ---
   uluMosqueInterior(m, k, kRoof, kDrum, kDome)
   uluMosqueDetails(m, k)
 
-  // --- Çatı: kurşun döşeme ve etekler, her gözde dört yana eğimli kurşun kaide ---
+  // --- Roof: lead roofing and skirts, a lead base sloping four ways on each bay ---
   const YO = YX - 0.5, ZO = YZ - 0.5
   const paving = rect(-YO, -ZO, YO, ZO)
-  // Her gözün üstü açık: döşeme yalnız kemerlerin üzerinde kalır, içeriden kubbeler görünür.
+  // Each bay is open on top: the roofing stays only over the arches, the domes are visible from inside.
   for (let i = 0; i < COLUMN; i++) for (let j = 0; j < LINE; j++) {
     const { x0, x1, z0, z1 } = bayOpening(i, j)
     paving.holes.push(rect(x0, -z1, x1, -z0) as unknown as THREE.Path)
@@ -134,7 +134,7 @@ export function uluMosqueModel(): Model {
     box(0.3, 0.3, NORTH_SOUTH + SA * 2 + 0.2, m.dark, s * ox, bottomY - 0.05, 0, kRoof)
   }
 
-  // --- Yirmi göz: kaide, sekizgen sarı kasnak + kafesli pencereler, kaburgalı kurşun kubbe ---
+  // --- Twenty bays: base, octagonal yellow drum + latticed windows, ribbed lead dome ---
   for (let i = 0; i < COLUMN; i++) for (let j = 0; j < LINE; j++) {
     const x = px(i + 0.5), z = pz(j + 0.5)
     const open = i === FOUNTAIN_COLUMN && j === FOUNTAIN_ROW
@@ -155,7 +155,7 @@ export function uluMosqueModel(): Model {
       const pilaster = boxG(0.36, drumH - 0.3, 0.2).translate(0, DRUM_BASE + drumH / 2 - 0.1, R - 0.01)
       kDrum.add(place(pilaster, x, 0, z, Math.PI / 8 + n * Math.PI / 4), m.cream)
     }
-    // Yüz başına tek kemerli pencere, yüksekliğin yarısından fazlası (DJI_0291): sıvadan hafif içeride, açık çerçeveli.
+    // One arched window per face, more than half the height (DJI_0291): slightly recessed from the plaster, light-framed.
     const face = R * OCTA + 0.04
     const pG = 1.42, pK = 0.68, pH = drumH * 0.62 - pK, y0 = DRUM_BASE + drumH * 0.17
     for (let n = 0; n < 8; n++) {
@@ -171,7 +171,7 @@ export function uluMosqueModel(): Model {
     addLeadDome(kDome, m, x, DRUM_BASE + drumH, z, domeH, open, i, j)
   }
 
-  // --- Minareler: batıdaki mermer çok köşeli kaideli, doğudaki taş kare kaideli (fotoğraflara göre) ---
+  // --- Minarets: the western one with a polygonal marble base, the eastern one with a square stone base (according to the photos) ---
   const minaret = (x: number, z: number, west: boolean) => {
     const ext = (g: THREE.BufferGeometry, mat: Mat) => k.add(place(g, x, 0, z), mat)
     let bodyBase: number
@@ -193,18 +193,18 @@ export function uluMosqueModel(): Model {
   minaret(-YX - 2.2, -YZ - 1.4, true)
   minaret(YX + 2.2, -YZ - 1.4, false)
 
-  // --- Kuzey avlusundaki iki şadırvan köşkü: ulucami/kapilar.ts ---
+  // --- The two şadırvan kiosks in the north courtyard: ulu-mosque/doors.ts ---
   kiosk(k, m, K, -17, -YZ - 15)
   kiosk(k, m, K, 17, -YZ - 15)
 
-  // --- Katmanlar ---
+  // --- Layers ---
   const root = k.group()
   root.add(surroundings)
   const roofGroup = kRoof.group(), drumGroup = kDrum.group(), domeGroup = kDome.group()
   root.add(roofGroup, drumGroup, domeGroup)
   return {
     root,
-    // Alttan üste: maketin üst üste oturma sırası.
+    // Bottom to top: the model's stacking order.
     layers: [
       { group: roofGroup, height: 24, ad: 'Çatı' },
       { group: drumGroup, height: 34, ad: 'Kasnaklar' },

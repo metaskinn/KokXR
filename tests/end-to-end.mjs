@@ -1,6 +1,6 @@
-// KökXR uçtan uca test. Önce: npm run build && npm run preview -- --port 4173
-// Çalıştır: npm run test:e2e  (veya node tests/uctan-uca.mjs <chromium|firefox> <genislik> <ekran-klasoru>)
-// İlk kurulumda tarayıcılar için: npx playwright install chromium firefox
+// KökXR end-to-end test. First: npm run build && npm run preview -- --port 4173
+// Run: npm run test:e2e  (or node tests/end-to-end.mjs <chromium|firefox> <width> <screenshot-folder>)
+// On first setup, install browsers with: npx playwright install chromium firefox
 import { chromium, firefox } from 'playwright';
 const [, , browserName = 'chromium', widthStr = '1280', out = 'test-results'] = process.argv;
 import { mkdirSync } from 'node:fs';
@@ -17,33 +17,33 @@ p.on('console', (m) => { if (m.type() !== 'error') return; (m.location().url.inc
 p.on('response', (r) => { if (r.status() >= 400 && r.url().startsWith(URL)) http404.push(`${r.status()} ${r.url()}`) });
 p.on('dialog', (d) => d.accept());
 const result = [];
-const control = async (ad, fn) => {
-  try { const not = await fn(); result.push(['✅', ad, not ?? '']) }
-  catch (e) { result.push(['❌', ad, String(e.message).split('\n')[0].slice(0, 200)]); await p.screenshot({ path: `${out}/error-${browserName}-${width}-${ad.replace(/\W+/g, '_')}.png` }).catch(() => {}) }
+const control = async (name, fn) => {
+  try { const note = await fn(); result.push(['✅', name, note ?? '']) }
+  catch (e) { result.push(['❌', name, String(e.message).split('\n')[0].slice(0, 200)]); await p.screenshot({ path: `${out}/error-${browserName}-${width}-${name.replace(/\W+/g, '_')}.png` }).catch(() => {}) }
 };
 const overflow = () => p.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
 const condition = (k, m) => { if (!k) throw new Error(m) };
-const screen = (ad) => p.screenshot({ path: `${out}/${browserName}-${width}-${ad}.png` });
+const screen = (name) => p.screenshot({ path: `${out}/${browserName}-${width}-${name}.png` });
 
-await control('1a ilk Tab atlama bağlantısı', async () => {
+await control('1a first Tab skip link', async () => {
   await p.goto(URL); await p.keyboard.press('Tab');
-  const t = await p.evaluate(() => document.activeElement?.textContent); condition(t?.includes('Ana içeriğe geç'), `ilk odak: ${t}`);
+  const t = await p.evaluate(() => document.activeElement?.textContent); condition(t?.includes('Ana içeriğe geç'), `first focus: ${t}`);
 });
 await control('1b favicon', async () => {
   const r = await p.request.get(`${URL}/favicon.svg`); condition(r.ok(), `favicon ${r.status()}`);
 });
 await control('artifacts', async () => {
-  await p.goto(URL); condition(await p.getByRole('heading', { name: 'Eserler', level: 1 }).count(), 'başlık yok');
-  condition(await p.locator('.artifact-card').count() >= 2, 'kart < 2'); condition(!(await overflow()), 'yatay taşma'); await screen('main');
+  await p.goto(URL); condition(await p.getByRole('heading', { name: 'Eserler', level: 1 }).count(), 'no heading');
+  condition(await p.locator('.artifact-card').count() >= 2, 'cards < 2'); condition(!(await overflow()), 'horizontal overflow'); await screen('main');
 });
-await control('1d keşif kartı görünür', async () => {
+await control('1d hotspot card visible', async () => {
   await p.goto(`${URL}/artifact/ulu-mosque`);
   await p.getByRole('button', { name: /fotoğraf: İç mekândaki şadırvan/ }).click();
   await p.locator('.info-point').first().click(); await p.waitForTimeout(600);
-  const visible = await p.evaluate(() => { const el = [...document.querySelectorAll('h3, .info-card, [id^="nokta-"]')].find((e) => /Şadırvan|şadırvan/.test(e.textContent) && e.getBoundingClientRect().height > 0); if (!el) return false; const r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0 });
-  condition(visible, 'kart görünür alanda değil');
+  const visible = await p.evaluate(() => { const el = [...document.querySelectorAll('h3, .info-card, [id^="point-"]')].find((e) => /Şadırvan|şadırvan/.test(e.textContent) && e.getBoundingClientRect().height > 0); if (!el) return false; const r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0 });
+  condition(visible, 'card not in visible area');
 });
-await control('2 maket: aç, çevir, yakınlaştır, parçala, klavye', async () => {
+await control('2 model: open, rotate, zoom, shatter, keyboard', async () => {
   await p.goto(`${URL}/artifact/ulu-mosque`);
   await p.getByRole('button', { name: /maketini eline al/ }).click();
   await p.locator('.model-area canvas').waitFor({ timeout: 30000 });
@@ -55,21 +55,21 @@ await control('2 maket: aç, çevir, yakınlaştır, parçala, klavye', async ()
   await p.getByRole('button', { name: '⤓ Birleştir' }).click();
   await a.focus(); await p.keyboard.press('ArrowLeft'); await p.keyboard.press('+');
   await p.getByRole('button', { name: 'Görünümü sıfırla' }).click();
-  condition(await p.getByText('Temsili maket').count(), 'temsili etiketi yok');
+  condition(await p.getByText('Temsili maket').count(), 'illustrative label missing');
 });
-await control('6 yönetim: düzenle, ana sayfa, varsayılana döndür', async () => {
+await control('6 admin: edit, home page, restore default', async () => {
   await p.goto(URL); await p.getByRole('link', { name: 'Yönetim', exact: true }).click();
   await p.getByRole('link', { name: /Düzenle\s*: Bursa Ulu Camii/ }).click();
   await p.locator('#summary').fill('TEST ÖZETİ — yönetim ekranından değiştirildi.');
   await p.getByRole('button', { name: 'Kaydet' }).click(); await p.waitForTimeout(500);
   await p.getByRole('link', { name: 'KökXR ana sayfa' }).click();
-  condition(await p.getByText('TEST ÖZETİ').count(), 'değişiklik eserler sayfasında yok');
+  condition(await p.getByText('TEST ÖZETİ').count(), 'change missing on artifacts page');
   await p.getByRole('link', { name: 'Yönetim', exact: true }).click();
   await p.getByRole('button', { name: /Varsayılana döndür\s*: Bursa Ulu Camii/ }).click();
   await p.getByRole('link', { name: 'KökXR ana sayfa' }).click();
-  condition(!(await p.getByText('TEST ÖZETİ').count()), 'varsayılana dönmedi');
+  condition(!(await p.getByText('TEST ÖZETİ').count()), 'not restored to default');
 });
-await control('6b yönetim: yeni eser ekle ve sil', async () => {
+await control('6b admin: add and delete new artifact', async () => {
   await p.goto(`${URL}/admin/new`);
   const areas = { ad: 'Deneme Eseri', city: 'Bursa', district: 'Osmangazi', period: 'Deneme', endowment: 'Deneme', summary: 'Deneme özeti', history: 'Deneme tarihçesi' };
   for (const [k, v] of Object.entries(areas)) await p.locator(`#${k}`).fill(v);
@@ -78,21 +78,21 @@ await control('6b yönetim: yeni eser ekle ve sil', async () => {
     for (let j = 0; j < 4; j++) await p.locator(`#test-${i}-option-${j}`).fill(`Seçenek ${j + 1}`);
     await p.locator(`#test-${i}-description`).fill('Açıklama');
   }
-  condition(await p.locator('#verification option[value="verified"]').evaluate((o) => o.disabled), 'kaynaksız Kaynaklı bilgi seçilebiliyor');
+  condition(await p.locator('#verification option[value="verified"]').evaluate((o) => o.disabled), '"Kaynaklı bilgi" selectable without sources');
   await p.getByRole('button', { name: 'Kaydet' }).click(); await p.waitForTimeout(700);
-  const error = await p.locator('.error-summary').textContent().catch(() => null); condition(!error, `kayıt hatası: ${error}`);
-  await p.goto(URL); condition(await p.getByText('Deneme Eseri').count(), 'yeni eser ana sayfada yok');
-  await p.getByText('Deneme Eseri').first().click(); condition(await p.getByRole('heading', { name: 'Deneme Eseri' }).count(), 'eser sayfası açılmadı');
+  const error = await p.locator('.error-summary').textContent().catch(() => null); condition(!error, `save error: ${error}`);
+  await p.goto(URL); condition(await p.getByText('Deneme Eseri').count(), 'new artifact missing on home page');
+  await p.getByText('Deneme Eseri').first().click(); condition(await p.getByRole('heading', { name: 'Deneme Eseri' }).count(), 'artifact page did not open');
   await p.goto(`${URL}/admin`); await p.getByRole('button', { name: /Sil\s*: Deneme Eseri/ }).click();
-  await p.goto(URL); condition(!(await p.getByText('Deneme Eseri').count()), 'notDeleted');
+  await p.goto(URL); condition(!(await p.getByText('Deneme Eseri').count()), 'not deleted');
 });
-await control('7b bulunamayan sayfa', async () => {
-  await p.goto(`${URL}/artifact/none`); condition(await p.getByText('Sayfa bulunamadı').count(), '404 metni yok');
+await control('7b page not found', async () => {
+  await p.goto(`${URL}/artifact/none`); condition(await p.getByText('Sayfa bulunamadı').count(), '404 text missing');
 });
-await control('7c taşma (tüm sayfalar)', async () => {
+await control('7c overflow (all pages)', async () => {
   const overhang = [];
   for (const path of ['/', '/artifact/ulu-mosque', '/artifact/muradiye-complex', '/admin', '/admin/new']) { await p.goto(URL + path); await p.waitForTimeout(400); if (await overflow()) overhang.push(path) }
-  condition(!overhang.length, `taşan: ${overhang}`);
+  condition(!overhang.length, `overflowing: ${overhang}`);
 });
 
 console.log(JSON.stringify({ browserName, width, result, appErrors: [...new Set(appErrors)].slice(0, 8), iframeErrorCount: iframeErrors.length, http404: [...new Set(http404)] }, null, 1));

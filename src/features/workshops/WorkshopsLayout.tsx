@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
-/** Vazo, kılıç ve çini atölyelerini tek sekmede toplar; her atölye kendi adresini korur. */
+/** Groups the vase, sword and tile workshops under one tab; each workshop keeps its own address. */
 export default function WorkshopsLayout() {
   return <>
     <nav className="workshop-nav" aria-label="Atölyeler">

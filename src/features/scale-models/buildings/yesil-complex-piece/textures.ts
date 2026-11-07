@@ -1,5 +1,5 @@
-// Yeşil Külliyesi dokuları: tamamı tuvalde üretilir. Renk ve düzen Drive'daki fotoğraflardan yorumlanmıştır
-// (altıgen çini, firuze türbe kaplaması, almaşık duvar, kiremit). Yazı ve hat taklidi çizilmez.
+// Yeşil Complex textures: all generated on canvas. Colors and layout interpreted from the photos on Drive
+// (hexagonal tiles, turquoise tomb cladding, alternating wall, roof tiles). No inscription or calligraphy imitation is drawn.
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../../../shared/config/publicBuild'
 import { random } from '../../uluMosqueFloor'
@@ -10,7 +10,7 @@ function canvas(g: number, y: number, draw: Draw) {
   const el = document.createElement('canvas')
   el.width = g; el.height = y
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   draw(c, g, y)
   return el
 }
@@ -32,7 +32,7 @@ function speck(c: CanvasRenderingContext2D, g: number, y: number, r: () => numbe
   }
 }
 
-/** Altıgen çini: yatay sıralı, dikişsiz. Bir hücre 2 sütun ve 2 sıra içerir. */
+/** Hexagonal tile: horizontal rows, seamless. One cell contains 2 columns and 2 rows. */
 function hexagon(colors: string[], joint: string, seed: number, raised = false) {
   const a = 56, h = Math.round(a * Math.sqrt(3))
   return canvas(a * 3 * 2, h * 2, (c, G, Y) => {
@@ -60,7 +60,7 @@ function hexagon(colors: string[], joint: string, seed: number, raised = false) 
   })
 }
 
-/** Beyaz-firuze-lacivert bitkisel kuşak: yazı yerine yinelenen palmet ve yıldız. */
+/** White-turquoise-navy floral band: repeating palmettes and stars instead of inscription. */
 function frieze(floor: string, motif: string, inner: string, stroke: string) {
   return canvas(512, 128, (c, G, Y) => {
     c.fillStyle = floor
@@ -86,7 +86,7 @@ function frieze(floor: string, motif: string, inner: string, stroke: string) {
   })
 }
 
-/** Yıldızlı geometrik örgü; mihrap ve mahfil yüzeylerinin yakın izlenimi. Gerçek desenin kopyası değildir. */
+/** Star geometric interlace; a close impression of the mihrab and mahfil surfaces. Not a copy of the real pattern. */
 function starWeave(floor: string, a: string, b: string, stroke: string) {
   return canvas(256, 256, (c, G, Y) => {
     c.fillStyle = floor
@@ -109,7 +109,7 @@ function starWeave(floor: string, a: string, b: string, stroke: string) {
   })
 }
 
-/** Kalem işi kubbe: alt kuşakta dilimler, tepeye doğru açılan beyaz alan. Yazı yok. */
+/** Painted (kalem işi) dome: segments in the lower band, white area opening toward the apex. No inscription. */
 function paintedDome(slice: number, alt: string, top: string, floor: string) {
   return canvas(1536, 512, (c, G, Y) => {
     c.fillStyle = floor
@@ -139,12 +139,12 @@ export function greenMaterials() {
   const pbr = (p: THREE.MeshStandardMaterialParameters) => new THREE.MeshStandardMaterial({ roughness: 0.75, metalness: 0, ...p })
   const glossy = (map: THREE.Texture, side: THREE.Side = THREE.FrontSide) => pbr({ map, roughness: 0.32, metalness: 0.04, side })
 
-  // Mihrap bölümündeki lacivert altıgen, yan eyvanlardaki yeşil, tabhane ve türbedeki firuze çini
+  // Navy hexagons in the mihrab section, green in the side iwans, turquoise tiles in the tabhane and tomb
   const navy = texture(hexagon(['#1b2c8c', '#1f3299', '#162680', '#23379f', '#2a2a78'], '#e6e2d6', 3), 1.02, 0.59)
   const green = texture(hexagon(['#0d6a58', '#0f7763', '#0a5c4c', '#127f6c', '#0d6f6a'], '#c9b86f', 5), 0.82, 0.48)
   const turquoise = texture(hexagon(['#2aa0c4', '#2fa9cd', '#2697b9', '#37b2d3', '#2aa6c9'], '#17506a', 7), 0.8, 0.46)
 
-  // Türbe cephesi: yatay sıralı firuze sırlı tuğla çini
+  // Tomb facade: turquoise glazed brick tiles in horizontal rows
   const tombBrick = canvas(512, 512, (c, G, Y) => {
     const r = random(13)
     c.fillStyle = '#0e6f8f'
@@ -156,7 +156,7 @@ export function greenMaterials() {
     }
   })
 
-  // Almaşık duvar: moloz taş sırası ile tuğla hatılları (imaret, medrese)
+  // Alternating wall: rubble stone courses with brick bands (imaret, madrasa)
   const alternating = (base: number) => canvas(512, 512, (c, G, Y) => {
     const r = random(19)
     c.fillStyle = '#6f5a44'
@@ -164,7 +164,7 @@ export function greenMaterials() {
     const rowT = 88, brickH = 12
     let v = 0
     while (v < Y) {
-      // üç sıra tuğla
+      // three courses of brick
       for (let i = 0; i < 3 && v < Y; i++) {
         let x = -r() * 30
         while (x < G) {
@@ -175,7 +175,7 @@ export function greenMaterials() {
         }
         v += brickH
       }
-      // moloz taş sırası: düşey tuğlalar arasında taş
+      // rubble stone course: stone between vertical bricks
       let x = 0
       while (x < G && v < Y) {
         const g = 66 + r() * 34
@@ -206,7 +206,7 @@ export function greenMaterials() {
     speck(c, G, Y, r, 1500, 0.05)
   })
 
-  // Pembe mermer kaplı duvar yerine kasnakların pembe sıvası
+  // Pink plaster of the drums instead of a pink marble-clad wall
   const pink = canvas(256, 256, (c, G, Y) => {
     const r = random(37)
     c.fillStyle = '#d99c7f'
@@ -221,7 +221,7 @@ export function greenMaterials() {
     speck(c, G, Y, r, 2000, 0.012)
   })
 
-  // Mermer oyma (taç kapı ve pencere alınlıkları): beyaz üstüne kabartma izlenimli rumî göbekler
+  // Marble carving (crown portal and window lunettes): rumi medallions with a relief impression on white
   const drawCarving = (relief: boolean): Draw => (c, G, Y) => {
     const r = random(43)
     c.fillStyle = relief ? '#606060' : '#dcd8cd'
@@ -243,7 +243,7 @@ export function greenMaterials() {
     if (!relief) speck(c, G, Y, r, 800, 0.03)
   }
 
-  // Teal halı: açık damarlı zemin, köşeli göbek
+  // Teal carpet: light veined ground, angular medallion
   const carpet = canvas(1024, 1024, (c, G, Y) => {
     const r = random(47)
     c.fillStyle = '#1e7489'
@@ -270,7 +270,7 @@ export function greenMaterials() {
   })
 
   const mihrabCanvas = canvas(1024, 1820, (c, G, Y) => {
-    // İç içe çerçeveler: geniş kuşak + iç alan; fotoğraftaki renklerle, yazısız.
+    // Nested frames: wide band + inner field; with the photo's colors, without inscription.
     const lac = '#14246d', fir = '#2fa6c6', yellow = '#d9a634', bey = '#e9e5d8', dark = '#0c1547'
     c.fillStyle = lac
     c.fillRect(0, 0, G, Y)
@@ -291,11 +291,11 @@ export function greenMaterials() {
     frameBorder(288, 320, yellow, lac)
     c.fillStyle = dark
     c.fillRect(320, 320, G - 640, Y - 640)
-    // Üst pano: yazı yerine geometrik örgü
+    // Upper panel: geometric interlace instead of inscription
     const o = starWeave('#132368', '#d9a634', '#2fa6c6', 'rgba(230,226,216,.5)')
     const des = c.createPattern(o, 'repeat')
     if (des) { c.fillStyle = des; c.fillRect(330, 330, G - 660, 330) }
-    // Kemer köşelikleri ve niş çevresi
+    // Arch spandrels and niche surround
     const des2 = c.createPattern(starWeave('#0c1547', '#2fa6c6', '#e9e5d8', 'rgba(217,166,52,.7)'), 'repeat')
     if (des2) { c.fillStyle = des2; c.fillRect(330, 680, G - 660, Y - 1010) }
     c.fillStyle = yellow

@@ -1,7 +1,7 @@
-// Yedek demo videosu: uygulamayı gerçek fare hareketleriyle gezer ve kaydeder.
-// Önce: npm run build && npm run preview -- --port 4173
-// Çalıştır: node scripts/demo_video.mjs <cikti.webm>   (ekran kartı yoksa GPU=0 ile)
-// İmleç ve altyazı yalnızca videoya eklenir; uygulamanın parçası değildir.
+// Fallback demo video: browses the app with real mouse movements and records it.
+// First: npm run build && npm run preview -- --port 4173
+// Run: node scripts/demo_video.mjs <output.webm>   (with GPU=0 if there is no graphics card)
+// The cursor and captions are added only to the video; they are not part of the app.
 import { chromium } from 'playwright'
 import { mkdtempSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -72,7 +72,7 @@ async function scrollShouldEnd() {
   }
 }
 async function see(locator) {
-  // Çok uzun formlarda (yönetim) yumuşak kaydırma videoyu boşa uzatır.
+  // On very long forms (admin) smooth scrolling needlessly lengthens the video.
   await locator.first().evaluate((e) => {
     const far = Math.abs(e.getBoundingClientRect().top) > 2500
     e.scrollIntoView({ block: 'center', behavior: far ? 'instant' : 'smooth' })
@@ -104,13 +104,13 @@ async function goToPage(path) {
   await wait(600)
 }
 
-async function section(ad, fn) {
+async function section(name, fn) {
   const t = Date.now()
-  try { await fn(); console.log(`✅ ${ad} (${Math.round((Date.now() - t) / 1000)} sn)`) }
-  catch (e) { console.log(`❌ ${ad}: ${String(e.message).split('\n')[0].slice(0, 200)}`); errors.push(ad) }
+  try { await fn(); console.log(`✅ ${name} (${Math.round((Date.now() - t) / 1000)} s)`) }
+  catch (e) { console.log(`❌ ${name}: ${String(e.message).split('\n')[0].slice(0, 200)}`); errors.push(name) }
 }
 
-await section('Eserler', async () => {
+await section('Artifacts', async () => {
   await goToPage('/artifacts')
   await writing('KökXR — Bursa\'nın vakıf eserlerini keşfet, incele, onar')
   await mouse(500, 400, 30); await wait(2200)
@@ -119,7 +119,7 @@ await section('Eserler', async () => {
   await scroll(0)
 })
 
-await section('Ulu Camii galeri', async () => {
+await section('Ulu Mosque gallery', async () => {
   await writing('Bursa Ulu Camii: envanterden kaynaklı bilgi ve fotoğraflar')
   await click(page.locator('.artifact-card', { hasText: 'Ulu Camii' }))
   await page.getByRole('heading', { level: 1 }).waitFor(); await wait(1800)
@@ -130,7 +130,7 @@ await section('Ulu Camii galeri', async () => {
   await click(page.locator('.info-point')); await wait(3000)
 })
 
-await section('Ulu Camii maket', async () => {
+await section('Ulu Mosque model', async () => {
   await writing('Eseri eline al: kitaptaki ölçülerden oluşturulan temsili 3B maket')
   const button = page.getByRole('button', { name: /maketini eline al/ })
   await see(button); await wait(1000)
@@ -148,7 +148,7 @@ await section('Ulu Camii maket', async () => {
   await click(page.getByRole('button', { name: /Birleştir/ })); await wait(2200)
 })
 
-await section('Vazo atölyesi', async () => {
+await section('Vase workshop', async () => {
   await goToPage('/workshops/vase')
   await writing('Vazo atölyesi: temsili 3B model, tarihî eser değildir')
   const start = page.getByRole('button', { name: 'Vazoyu parçala ve onar' })
@@ -168,7 +168,7 @@ await section('Vazo atölyesi', async () => {
   const glb = await (await page.request.get(`${url}/models/vase.glb`)).body()
   const model = JSON.parse(glb.subarray(20, 20 + glb.readUInt32LE(12)).toString())
   const targets = model.nodes.filter((n) => Number.isInteger(n.extras?.pieceId)).sort((a, b) => a.extras.pieceId - b.extras.pieceId)
-  // Uygulama hedef ipucu yayımlamaz; konum GLB ve varsayılan kameradan hesaplanır (tests/vazo.mjs ile aynı).
+  // The app publishes no target hints; the position is computed from the GLB and default camera (same as tests/vase.mjs).
   const targetPoint_ = async (id) => {
     s = await stage.boundingBox()
     const cam = new PerspectiveCamera(s.width / s.height < 1 ? 62 : 42, s.width / s.height, .1, 500)
@@ -193,7 +193,7 @@ await section('Vazo atölyesi', async () => {
   await drag(s.x + s.width / 2 - 200, s.y + s.height - 130, s.x + s.width / 2 + 200, s.y + s.height - 130, 70); await wait(2200)
 })
 
-await section('Yönetim', async () => {
+await section('Admin', async () => {
   await writing('Yönetim ekranı: içerik ekleme ve düzenleme')
   await click(page.getByRole('link', { name: 'Yönetim', exact: true })); await wait(1800)
   await click(page.getByRole('link', { name: /Düzenle\s*: Bursa Ulu Camii/ })); await wait(1300)
@@ -219,4 +219,4 @@ await context.close()
 await video.saveAs(output)
 await browser.close()
 rmSync(temp, { recursive: true, force: true })
-console.log(errors.length ? `HATALAR: ${JSON.stringify(errors)}` : 'Hatasız bitti.', '→', output)
+console.log(errors.length ? `ERRORS: ${JSON.stringify(errors)}` : 'Finished without errors.', '→', output)

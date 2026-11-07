@@ -1,5 +1,5 @@
-// I. Murad Hudâvendigâr Külliyesi temsilî maketi. Cami içiyle modellenir; imaret, hamam, türbe ve şadırvan dış kütledir.
-// Birim metre. Kuzey = -z, kıble (güney) = +z, doğu = +x. Ölçüler: yapilar/hudavendigar-kulliyesi-parca/plan.ts.
+// Representative model of the I. Murad Hudâvendigâr Complex. The mosque is modeled with its interior; the imaret, hamam, tomb and şadırvan are exterior masses.
+// Units in meters. North = -z, qibla (south) = +z, east = +x. Dimensions: buildings/hudavendigar-complex-piece/plan.ts.
 import type { Model } from '../uluMosqueModel'
 import { uluMosqueMaterials } from '../uluMosqueTextures'
 import { Bucket } from '../uluMosquePiece'
@@ -26,7 +26,7 @@ export const building = (): Model => {
     ],
     stops,
     walking: walkArea(),
-    // Açılış kuzeydoğudan: iki katlı cephe ve minare fotoğraftaki gibi önde görünür.
+    // Opening view from the northeast: the two-storey facade and minaret appear in front, as in the photo.
     camera: { position: [66, 40, -92], target: [0, 9, -6] },
     pedestalRadius: PEDESTAL_R,
     innerLights: [[0, 11.5, SAD_Z], [0, 8.5, 12], [0, 5.5, -13.5], [0, 5, -20.7]],

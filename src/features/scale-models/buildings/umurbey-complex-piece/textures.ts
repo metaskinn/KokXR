@@ -1,5 +1,5 @@
-// Umur Bey Külliyesi dokuları: almaşık örgü, kiremit, tuğla, halı ve pencereler piksel piksel üretilir.
-// Renk ve düzen Drive arşivindeki fotoğraflara bakılarak yorumlanmıştır; yalnız taş vakfiyeler gerçek fotoğraftır.
+// Umur Bey Complex textures: alternating masonry, roof tiles, brick, carpet and windows generated pixel by pixel.
+// Colors and layout interpreted from the photos in the Drive archive; only the stone endowment deeds are real photos.
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../../../shared/config/publicBuild'
 import { lightDevice, random } from '../../uluMosqueFloor'
@@ -11,12 +11,12 @@ function canvas(g: number, h = g) {
   const el = document.createElement('canvas')
   el.width = Math.round(g * scale()); el.height = Math.round(h * scale())
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   c.scale(scale(), scale())
   return { el, c }
 }
 
-/** Metre UV'li yüzeylerde tekrar eden doku: `g` ve `h` dokunun gerçek boyu. */
+/** Repeating texture on surfaces with meter UVs: `g` and `h` are the real size of the texture. */
 function repeat(el: HTMLCanvasElement, g: number, h: number, colored = true) {
   const t = new THREE.CanvasTexture(el)
   t.wrapS = t.wrapT = THREE.RepeatWrapping
@@ -25,7 +25,7 @@ function repeat(el: HTMLCanvasElement, g: number, h: number, colored = true) {
   if (colored) t.colorSpace = THREE.SRGBColorSpace
   return t
 }
-/** Tek parça oturan doku (pencere, levha): UV 0-1. */
+/** Texture fitted in one piece (window, panel): UV 0-1. */
 function single(el: HTMLCanvasElement) {
   const t = new THREE.CanvasTexture(el)
   t.anisotropy = 8
@@ -42,7 +42,7 @@ function speck(c: C, g: number, h: number, count: number, r: () => number, color
   c.globalAlpha = 1
 }
 
-/** Bir sıra kesme taş, taş araları düşey tuğla, ardından üç sıra tuğla (envanterdeki almaşık düzen). */
+/** One course of cut stone, vertical bricks between stones, then three courses of brick (the alternating pattern in the inventory). */
 function alternatingTexture(seed: number, option: { stoneColor: string[]; mortar: string; stoneWidth: number; stoneLen: number; brickRow: number }) {
   const P = 1024, METER = 2.08, ppm = P / METER
   const { el, c } = canvas(P), kab = canvas(P)
@@ -63,7 +63,7 @@ function alternatingTexture(seed: number, option: { stoneColor: string[]; mortar
   const rowCount = Math.round(METER / cycle)
   for (let s = 0; s < rowCount; s++) {
     let y = s * cycle
-    // Taş sırası: bloklar arasında düşey iki tuğla
+    // Stone course: two vertical bricks between blocks
     const count = Math.round(METER / (stoneWidth + 0.09))
     const step = METER / count
     for (let i = 0; i < count; i++) {
@@ -134,7 +134,7 @@ function brickTexture() {
   return { color: repeat(el, METER, METER), relief: repeat(kab.el, METER, METER, false) }
 }
 
-/** Fotoğraftaki bej benekli, kırmızı saf çizgili halı: çizgiler kıbleye paralel, 1,25 m arayla. */
+/** Carpet with beige speckles and red prayer-row lines as in the photo: lines parallel to the qibla, 1.25 m apart. */
 function carpetTexture() {
   const P = 512, METER = 1.25
   const { el, c } = canvas(P)
@@ -200,7 +200,7 @@ function woodTexture(seed: number, base: string, dark: string) {
   return repeat(el, 1, 1)
 }
 
-/** Kündekâri izlenimi: koyu ahşapta baklava geçmeler (minber yan yüzü). */
+/** Kündekâri impression: lozenge interlocking on dark wood (minbar side face). */
 function interlockTexture() {
   const { el, c } = canvas(256)
   c.fillStyle = '#3a2214'; c.fillRect(0, 0, 256, 256)
@@ -212,7 +212,7 @@ function interlockTexture() {
   return repeat(el, 0.5, 0.5)
 }
 
-/** Vitray: baklava camlar, üst ve alt sırada sarı (fotoğraftaki iç pencereler). */
+/** Stained glass: lozenge panes, yellow in the top and bottom rows (the interior windows in the photo). */
 function stainedGlass() {
   const G = 256, H = 512
   const { el, c } = canvas(G, H)
@@ -231,7 +231,7 @@ function stainedGlass() {
   return single(el)
 }
 
-/** Dıştan görünen beyaz alçı revzen: koyu altıgen delikler. */
+/** White plaster revzen seen from outside: dark hexagonal holes. */
 function transom() {
   const G = 256, H = 512
   const { el, c } = canvas(G, H)
@@ -244,7 +244,7 @@ function transom() {
   return single(el)
 }
 
-/** Alt pencere: dıştan demir parmaklık, ardında koyu boşluk. */
+/** Lower window: iron grille from outside, dark void behind it. */
 function balustrade() {
   const { el, c } = canvas(256, 340)
   c.fillStyle = '#23272a'; c.fillRect(0, 0, 256, 340)
@@ -254,7 +254,7 @@ function balustrade() {
   return single(el)
 }
 
-/** Alt pencere içten: açık kanatların ardında dış aydınlık. */
+/** Lower window from inside: outdoor light behind the open leaves. */
 function daylight() {
   const { el, c } = canvas(128, 170)
   const d = c.createLinearGradient(0, 0, 0, 170)
@@ -266,7 +266,7 @@ function daylight() {
   return single(el)
 }
 
-/** Duvardaki yuvarlak levha: yazısız, altın zeminli çiçekli çelenk. Hat taklit edilmez. */
+/** Round panel on the wall: no inscription, floral wreath on gold ground. Calligraphy is not imitated. */
 function medallion() {
   const { el, c } = canvas(256)
   c.fillStyle = '#e8ded0'; c.fillRect(0, 0, 256, 256)
@@ -289,7 +289,7 @@ function medallion() {
   return single(el)
 }
 
-/** Mihrap çerçevesi bandı: krem zeminde geçmeli süs ve alt bölümde mavi çiçek. Yazı yerine yalnız motif. */
+/** Mihrab frame band: interlaced ornament on cream ground and blue flowers in the lower part. Motifs only, instead of inscription. */
 function mihrabBand() {
   const { el, c } = canvas(96, 768)
   c.fillStyle = '#efe7d3'; c.fillRect(0, 0, 96, 768)
@@ -312,7 +312,7 @@ function mihrabBand() {
   return single(el)
 }
 
-/** Mihrabın alt yarısı: yeşil zemin, iki yana açılan gri perde boyası ve ortada koyu sarkıt (fotoğrafa göre). */
+/** Lower half of the mihrab: green ground, gray curtain painting opening to both sides and a dark pendant in the middle (based on the photo). */
 function mihrabPaint() {
   const { el, c } = canvas(256, 384)
   c.fillStyle = '#a9c79a'; c.fillRect(0, 0, 256, 384)
@@ -331,7 +331,7 @@ function mihrabPaint() {
   return single(el)
 }
 
-/** Minarenin geçiş kuşağı: beyaz mermer üçgenler arasında çizgili tuğla ve koyu taş (fotoğrafa göre). */
+/** Minaret transition band: striped brick and dark stone between white marble triangles (based on the photo). */
 function turkishTriangle() {
   const { el, c } = canvas(256, 128)
   c.fillStyle = '#7a4a34'; c.fillRect(0, 0, 256, 128)
@@ -349,7 +349,7 @@ function goldHeadstone() {
   c.fillStyle = '#c49a3c'; c.fillRect(6, 6, 148, 328)
   c.fillStyle = '#433219'
   const r = random(31)
-  // Yazı taklidi yerine kabartma izlenimi veren eş aralıklı süs satırları
+  // Evenly spaced ornament lines giving a relief impression instead of imitating inscription
   for (let y = 22; y < 330; y += 22) for (let x = 14; x < 146; x += 12 + r() * 6) c.fillRect(x, y, 5, 10)
   return single(el)
 }
@@ -426,7 +426,7 @@ export function umurbeyMaterials() {
     headstone: pbr({ map: goldHeadstone(), roughness: 0.45, metalness: 0.45 }),
     lamp: new THREE.MeshBasicMaterial({ color: new THREE.Color(2.4, 2.1, 1.6) }),
     water: pbr({ color: '#65878a', roughness: 0.2, metalness: 0.2 }),
-    // Taş vakfiyeler: Drive arşivinden gerçek fotoğraf; açık yayında fotoğrafsız, sade koyu levha.
+    // Stone endowment deeds: real photos from the Drive archive; in the public build, a plain dark panel without photos.
     deed1: pbr({ map: photo('deed-1'), color: PUBLIC_BUILD ? '#3a3020' : '#a8a8a8', roughness: 0.6 }),
     deed2: pbr({ map: photo('deed-2'), color: PUBLIC_BUILD ? '#3a3020' : '#a8a8a8', roughness: 0.6 }),
     fountainInscription: pbr({ map: photo('fountain-tap-inscription'), color: PUBLIC_BUILD ? '#3a3020' : '#ffffff', roughness: 0.5 }),

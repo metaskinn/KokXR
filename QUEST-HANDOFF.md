@@ -3,13 +3,13 @@
 > **Eski not.** Güncel durum ve sıradaki işler `PLAN.md` dosyasındadır; burayı yalnız VR teknik ayrıntıları ve yük ölçümleri için kullan. "Sıradaki işler" ve test durumu bölümleri artık geçerli değil.
 
 > Yazıldı: 4 Kasım 2026 akşamı. Kullanıcı bilgisayar değiştirdiği için çalışma burada durduruldu.
-> **Yeni oturumdaki yapay zekâ ajanına:** Önce bu dosyayı, sonra `AGENTS.md`, `DEVAM.md` ve
-> `docs/superpowers/plans/2026-11-04-ulu-camii-quest.md` dosyalarını oku. Ardından "Sıradaki işler" bölümünden devam et.
+> **Yeni oturumdaki yapay zekâ ajanına:** Önce bu dosyayı, sonra `AGENTS.md`, `HANDOFF.md` ve
+> `docs/superpowers/plans/2026-11-04-ulu-mosque-quest.md` dosyalarını oku. Ardından "Sıradaki işler" bölümünden devam et.
 > Kullanıcıyla Türkçe konuş.
 
 ## Yeni bilgisayarda başlangıç
 
-Gerekenler: Git, Node.js, npm, Google Chrome. `DEVAM.md` Node 24+ istiyor; aşağıdaki sonuçlar v22.23.3 ile alındı.
+Gerekenler: Git, Node.js, npm, Google Chrome. `HANDOFF.md` Node 24+ istiyor; aşağıdaki sonuçlar v22.23.3 ile alındı.
 
 ```bash
 git clone https://github.com/selamisimsek/kokxr.git   # depo private; erişim gerekir
@@ -17,14 +17,14 @@ cd kokxr
 git switch ulu-camii-quest
 npm install
 git restore package-lock.json   # npm sürümü lock dosyasını değiştirirse; bağımlılık değişikliği yok
-claude "DEVIR-QUEST.md dosyasını oku ve Sıradaki işler bölümünden devam et"
+claude "QUEST-HANDOFF.md dosyasını oku ve Sıradaki işler bölümünden devam et"
 ```
 
 Uygulamayı açmak için:
 
 ```bash
 npm run dev -- --host 127.0.0.1 --port 5173 --strictPort
-# http://127.0.0.1:5173/eser/ulu-camii
+# http://127.0.0.1:5173/artifact/ulu-mosque
 ```
 
 Chrome'a **Immersive Web Emulator** eklentisini yeniden kurmak gerekir (eski bilgisayarda kuruluydu).
@@ -49,7 +49,7 @@ Kullanıcıdan **henüz cevap gelmeyenler**:
 - Plandaki "Varsayımlar" bölümü açıkça onaylanmadı; kullanıcı "yapsınlar" diyerek devam ettirdi.
 - Emülatör denemesinin sonucu. Eklentiyi kurdu, adres verildi, sonuç yazmadan bilgisayar değiştirdi.
 - VR gösterimi şartnamede veya jüri beklentisinde zorunlu mu? Şartname (`proje bilgileri/`) bu bilgisayarda yoktu, kontrol edilemedi.
-- Bu branch ve `ulu-camii-maket` `master`'a alınacak mı? `master`'a dokunulmadı. `DEVAM.md`'ye göre kod dondurma 4 Kasım akşamı, final 7–8 Kasım.
+- Bu branch ve `ulu-camii-maket` `master`'a alınacak mı? `master`'a dokunulmadı. `HANDOFF.md`'ye göre kod dondurma 4 Kasım akşamı, final 7–8 Kasım.
 - Paylaşılan bağlantılarla ne yapılacağı. Açılmadı; bu plan yeni içerik gerektirmiyor:
   - Envanter yayınları: https://www.vakifkatilim.com.tr/tr/hakkimizda/medya-merkezi/yayinlarimiz
   - Fotoğraf arşivi: https://drive.google.com/drive/folders/1U-C6TeECHhlx5C15G_rhgx5f_-iJbXlM
@@ -64,29 +64,29 @@ Kullanıcıdan **henüz cevap gelmeyenler**:
 
 | Dosya | İçerik | Durum |
 |---|---|---|
-| `src/components/maket/yurumeCarpisma.ts` | Saf çarpışma | Tamam, testli |
-| `src/components/maket/xrHareket.ts` | Ölü bölge, yürüme, dönüş, rig, kumanda girdisi | Tamam, testli |
-| `src/components/maket/xrMetin.ts` | Menü öğeleri, satır kırma, isabet | Tamam, testli |
-| `src/components/maket/xrPanel.ts` | Menü ve bilgi kartı (`CanvasTexture`) | Tamam; ekran görüntüsüyle bakıldı |
-| `src/components/maket/xrOturum.ts` | Oturum, rig, kumanda, ışın, görünüm geçişi | Yazıldı; yalnız sahte `renderer.xr` ile denendi, o betik repoda değil |
-| `src/components/maket/maketSahnesi.ts` | XR bağlantısı, `icDurumu`, `bakisKonumu` | **Doğrulanmadı**, ajan rapor veremeden durduruldu |
-| `src/components/EseriEleAl.tsx` | `VR'da aç`, destek denetimi, hata mesajı | **Doğrulanmadı** |
-| `src/components/maket/ulucamiIc.ts` | `ZEMIN_Y` eklendi | Tip denetiminden geçti |
-| `tests/maket-xr-dugme.mjs` | Sahte `navigator.xr` ile düğme testi | **Sonucu bilinmiyor** |
+| `src/features/scale-models/walkingCollision.ts` | Saf çarpışma | Tamam, testli |
+| `src/shared/xr/xrMotion.ts` | Ölü bölge, yürüme, dönüş, rig, kumanda girdisi | Tamam, testli |
+| `src/shared/xr/xrText.ts` | Menü öğeleri, satır kırma, isabet | Tamam, testli |
+| `src/shared/xr/xrPanel.ts` | Menü ve bilgi kartı (`CanvasTexture`) | Tamam; ekran görüntüsüyle bakıldı |
+| `src/features/scale-models/xrSession.ts` | Oturum, rig, kumanda, ışın, görünüm geçişi | Yazıldı; yalnız sahte `renderer.xr` ile denendi, o betik repoda değil |
+| `src/features/scale-models/modelScene.ts` | XR bağlantısı, `icDurumu`, `bakisKonumu` | **Doğrulanmadı**, ajan rapor veremeden durduruldu |
+| `src/features/heritage/components/ArtifactExplorer.tsx` | `VR'da aç`, destek denetimi, hata mesajı | **Doğrulanmadı** |
+| `src/features/scale-models/uluMosqueInterior.ts` | `ZEMIN_Y` eklendi | Tip denetiminden geçti |
+| `tests/model-xr-button.mjs` | Sahte `navigator.xr` ile düğme testi | **Sonucu bilinmiyor** |
 
 ## Test durumu (eldeki gerçek sonuçlar)
 
 Son hâlde çalıştırılıp geçenler:
 - `npx tsc --noEmit -p tsconfig.app.json`: hata yok
 - `npx vite build`: başarılı (geçici klasöre)
-- `node tests/maket-xr-mantik.mjs`: geçti
-- `node tests/maket-xr-metin.mjs`: geçti, en uzun kart 10 satır (sınır 13)
+- `node tests/model-xr-logic.mjs`: geçti
+- `node tests/model-xr-text.mjs`: geçti, en uzun kart 10 satır (sınır 13)
 
 **Sonucu bilinmeyenler:**
-- `tests/maket-xr-dugme.mjs` ve değişiklik sonrası `tests/maket-ic.mjs`. Ajan bunları çalıştırıyordu, durduruldu ve rapor gelmedi. Yeniden çalıştırılmalı.
+- `tests/model-xr-button.mjs` ve değişiklik sonrası `tests/model-interior.mjs`. Ajan bunları çalıştırıyordu, durduruldu ve rapor gelmedi. Yeniden çalıştırılmalı.
 - VR'ın kendisi: emülatörde veya Quest'te çalıştığını henüz kimse doğrulamadı.
 
-VR değişikliklerinden **önceki** kodda (`57722ed`) `tests/maket-ic.mjs` geçti (yaklaşık 7 dakika sürüyor). Yani o testte yeni kırmızı çıkarsa neden büyük ihtimalle bu branch'teki değişikliktir.
+VR değişikliklerinden **önceki** kodda (`57722ed`) `tests/model-interior.mjs` geçti (yaklaşık 7 dakika sürüyor). Yani o testte yeni kırmızı çıkarsa neden büyük ihtimalle bu branch'teki değişikliktir.
 
 ## Yük ölçümü (`57722ed`, yazılımsal çizim)
 
@@ -125,13 +125,13 @@ Yorum: Plandaki kaba bütçenin (stereo ~1 milyon üçgen, ~200 çağrı) içind
 
 ## Sıradaki işler
 
-1. **Doğrula:** `npm run build`, `npm run preview -- --port 4173 --strictPort`, ardından `node tests/maket-xr-dugme.mjs` ve `node tests/maket-ic.mjs`. Hata varsa düzelt.
+1. **Doğrula:** `npm run build`, `npm run preview -- --port 4173 --strictPort`, ardından `node tests/model-xr-button.mjs` ve `node tests/model-interior.mjs`. Hata varsa düzelt.
 2. **Kullanıcıya sor:** Quest modeli var mı ve emülatörde ne gördü?
 3. **Emülatörde kullanıcıyla dene:** VR'a giriş, sağ çubuk, menü, `İçeri gir`, sol çubuk, bilgi kartı, çıkış. Sıra: plan Görev 2 Adım 6, Görev 3 Adım 4, Görev 4 Adım 4, Görev 5 Adım 5.
 4. **Tek kumanda sorununu düzelt.**
-5. **Gerçek cihaz (plan Görev 6):** Quest'te geliştirici modu, USB, `adb`. `adb reverse tcp:4173 tcp:4173`, sonra Quest Browser'da `http://localhost:4173/eser/ulu-camii`. FPS ölç; 72 altındaysa plandaki düşürme sırası.
+5. **Gerçek cihaz (plan Görev 6):** Quest'te geliştirici modu, USB, `adb`. `adb reverse tcp:4173 tcp:4173`, sonra Quest Browser'da `http://localhost:4173/artifact/ulu-mosque`. FPS ölç; 72 altındaysa plandaki düşürme sırası.
 6. **Düşük maliyetli yedek:** Mevcut 360TR turunu Quest Browser'da dene (kod gerekmez, internet gerekir, henüz denenmedi). Performans yetmezse serbest yürümeyi kapatıp masa üstü maket + durak geçişiyle devam et.
-7. **Bitirirken:** `DEVAM.md`'ye kısa paragraf ekle. `master`'a birleştirmeyi kullanıcıya sormadan yapma.
+7. **Bitirirken:** `HANDOFF.md`'ye kısa paragraf ekle. `master`'a birleştirmeyi kullanıcıya sormadan yapma.
 
 Kullanıcıya verilen süre tahmini: kalan kod ve birleştirme 20–40 dk, cihaz denemesi ve FPS ayarı 1–2 saat. Tahmindir, ölçüm değildir.
 

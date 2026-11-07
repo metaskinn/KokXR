@@ -3,17 +3,17 @@ export type Verification = "verified" | "illustrative";
 export interface Source { id: string; text: string; page?: string; }
 
 export interface Image {
-  file: string;          // public/gorseller/<eserId>/...
-  alt: string;            // ekran okuyucu metni
+  file: string;          // public/images/<artifactId>/...
+  alt: string;            // screen reader text
   description?: string;
-  sourceId: string;       // fotoğraf arşivi kaynağı
-  credit?: string;         // görselin altında gösterilen kredi satırı
+  sourceId: string;       // photo archive source
+  credit?: string;         // credit line shown under the image
 }
 
 export interface Hotspot {
   id: string;
-  image: string;         // hangi görselin üzerinde
-  x: number; y: number;   // yüzde (0–100)
+  image: string;         // which image it sits on
+  x: number; y: number;   // percent (0–100)
   title: string;
   text: string;
   sourceId: string;
@@ -22,8 +22,8 @@ export interface Hotspot {
 export interface Question {
   question: string;
   options: string[];
-  correct: number;          // secenekler dizisindeki sıra
-  description: string;       // cevaptan sonra gösterilir
+  correct: number;          // index into the options array
+  description: string;       // shown after answering
   sourceId: string;
 }
 
@@ -41,11 +41,11 @@ export interface Stop {
 
 export interface Tour {
   description: string;
-  start_?: string; // Belirtilmemişse ilk durak kullanılır.
+  start_?: string; // If unset, the first stop is used.
   stops: Stop[];
 }
 
-// Dış sağlayıcının resmî 360° oynatıcısı; görüntüler sağlayıcının sunucusundan gelir.
+// The external provider's official 360° player; images come from the provider's server.
 export interface Tour360 {
   provider: string;
   embedUrl: string;
@@ -53,19 +53,19 @@ export interface Tour360 {
   description: string;
 }
 
-// Fotoğraftan yapılan parça birleştirme oyunu; gorsel sutun:satir oranında olmalı.
+// Piece-assembly game made from a photo; the image must have a column:line aspect ratio.
 export interface RestorationTask {
   title: string; image: string; alt: string;
   column: number; line: number;
   text: string; sourceId: string; not: string;
 }
 
-// Kodla oluşturulan temsili 3B maket; model adı src/components/maket/maketSahnesi.ts içinde tanımlı.
+// Illustrative 3D model built in code; the model name is defined in src/features/scale-models/modelScene.ts.
 export interface Model {
   model: string;
   description: string;
   infos: { text: string; sourceId: string }[];
-  /** İç mekân bilgi noktaları: konum maket metresi, yaricap kartın açıldığı yaklaşma uzaklığı. */
+  /** Interior info points: position is in model metres, radius is the approach distance at which the card opens. */
   interiorInfos?: ModelHotspot[];
 }
 
@@ -78,17 +78,17 @@ export interface ModelHotspot {
   radius: number;
 }
 
-// Zaman Katmanı kaydı: metin yalnız kaynakId'nin gösterdiği kaynaktan alınır.
+// Time Layer record: text is taken only from the source that sourceId points to.
 export interface TimeRecord {
   id: string;
-  period: string;          // görünür tarih etiketi
+  period: string;          // visible date label
   title: string;
   text: string;
   sourceId: string;
 }
 
 export interface Artifact {
-  id: string;             // "ulu-camii", "muradiye-kulliyesi"
+  id: string;             // "ulu-mosque", "muradiye-complex"
   ad: string;
   city: string;
   district: string;
@@ -100,7 +100,7 @@ export interface Artifact {
   coverImage: string;
   images: Image[];
   hotspots: Hotspot[];
-  test: Question[];           // tam 3 soru
+  test: Question[];           // exactly 3 questions
   sources: Source[];
   tour?: Tour;
   tour360?: Tour360;

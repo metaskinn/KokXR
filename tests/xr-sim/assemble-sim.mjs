@@ -1,41 +1,41 @@
-// Ulu Camii maket birleştirme, WebXR akışı: IWER (Quest 3 taklidi) + gerçek three.js WebXRManager. Gerçek cihaz yerine geçmez.
-// Hazırlık ve çalıştırma için bkz. kur.sh. Kumanda olayları gerçek akıştan gelir; tutma ve bırakma kumanda hareketiyle yapılır.
+// Ulu Mosque model assembly, WebXR flow: IWER (Quest 3 emulation) + the real three.js WebXRManager. Not a substitute for a real device.
+// For setup and running see setup.sh. Controller events come from the real flow; grabbing and releasing are done by moving the controller.
 import { chromium } from 'playwright'
 import assert from 'node:assert/strict'
 import { mkdirSync, writeFileSync } from 'node:fs'
 
-const S = process.env.XR_SIM ?? (() => { throw new Error('XR_SIM klasörünü ver; bkz. kur.sh') })()
+const S = process.env.XR_SIM ?? (() => { throw new Error('Set the XR_SIM folder; see setup.sh') })()
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:4174'
 const SCREEN = S + '/screen-assemble'
 mkdirSync(SCREEN, { recursive: true })
-const SURE = 180000
+const TIMEOUT = 180000
 const ANGLE = process.env.ANGLE ?? 'swiftshader'
 const browser = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', `--use-angle=${ANGLE}`, ...(ANGLE === 'swiftshader' ? ['--enable-unsafe-swiftshader'] : ['--ignore-gpu-blocklist', '--enable-gpu'])] })
 let audit = 0
-const step = (ad, stand = '') => { audit++; console.log(`GEÇTİ  ${ad}${stand ? ' ' + JSON.stringify(stand) : ''}`) }
+const step = (name, evidence = '') => { audit++; console.log(`PASS  ${name}${evidence ? ' ' + JSON.stringify(evidence) : ''}`) }
 const ROOF = 0, DRUM = 1, DOME = 2
 
 function pageHelpers() {
-  // Tuvale yazılan her metin: uyarının gerçekten çizildiğini ve kare döngüsünde çizim olmadığını gösterir.
+  // Every text written to a canvas: shows the warning was really drawn and nothing is drawn in the frame loop.
   window.__texts = []
   const actual = CanvasRenderingContext2D.prototype.fillText
   CanvasRenderingContext2D.prototype.fillText = function (m, ...a) { window.__texts.push(m); return actual.call(this, m, ...a) }
   const t = () => window.__t, sim = () => window.__sim
-  const ev = []
+  const homes = []
   window.__b = {
-    // Etiketler katmanın çocuğu olmadan, oyundan önce çağrılır.
+    // Called before the game, while labels are not yet children of the layer.
     measure: () => {
       const { THREE, layers } = t()
       layers.forEach(({ group }, i) => {
         const k = new THREE.Box3().setFromObject(group)
-        ev[i] = k.getCenter(new THREE.Vector3()).sub(group.position)
+        homes[i] = k.getCenter(new THREE.Vector3()).sub(group.position)
       })
     },
     centerLocal: (id) => {
       const r = sim().rig(); r.updateWorldMatrix(true, false)
-      return r.worldToLocal(ev[id].clone().add(t().layers[id].group.position)).toArray()
+      return r.worldToLocal(homes[id].clone().add(t().layers[id].group.position)).toArray()
     },
-    homeLocal: (id) => { const r = sim().rig(); r.updateWorldMatrix(true, false); return r.worldToLocal(ev[id].clone()).toArray() },
+    homeLocal: (id) => { const r = sim().rig(); r.updateWorldMatrix(true, false); return r.worldToLocal(homes[id].clone()).toArray() },
     placeController: (el, position, target) => {
       const { THREE } = t(), k = sim().d.controllers[el]
       const C = new THREE.Vector3(...position), y = new THREE.Vector3(...target).sub(C).normalize()
@@ -59,13 +59,13 @@ function pageHelpers() {
   }
 }
 
-async function ac() {
+async function open() {
   const page = await (await browser.newContext({ viewport: { width: 960, height: 540 } })).newPage()
   const errors = []
   page.on('pageerror', (e) => errors.push('pageerror: ' + e))
   page.on('console', (m) => { if (m.type() === 'error' && !m.location().url.includes('360tr')) errors.push(m.text()) })
-  page.setDefaultTimeout(SURE)
-  await page.addInitScript({ path: S + '/paket/node_modules/iwer/build/iwer.min.js' })
+  page.setDefaultTimeout(TIMEOUT)
+  await page.addInitScript({ path: S + '/package/node_modules/iwer/build/iwer.min.js' })
   await page.addInitScript({ path: S + '/sim-page.js' })
   await page.addInitScript(pageHelpers)
   await page.goto(`${url}/artifact/ulu-mosque`)
@@ -81,253 +81,253 @@ const short = (s) => {
   const x = {
     d: () => s.evaluate(() => __b.state()),
     frame: (n = 3) => s.evaluate((n) => __sim.waitFrame(n, 60000), n),
-    head: async (el, button) => { await s.evaluate(([e, d]) => __sim.head(e, d, 1), [el, button]); await x.frame() },
-    release: async (el, button) => { await s.evaluate(([e, d]) => __sim.head(e, d, 0), [el, button]); await x.frame() },
+    press: async (el, button) => { await s.evaluate(([e, d]) => __sim.press(e, d, 1), [el, button]); await x.frame() },
+    release: async (el, button) => { await s.evaluate(([e, d]) => __sim.press(e, d, 0), [el, button]); await x.frame() },
     enter: async () => {
       await s.getByRole('button', { name: "VR'da aç" }).click()
       await s.waitForFunction(() => window.__t.renderer.xr.isPresenting && window.__t.camera.parent && __sim.menu().visible, null, { polling: 100 })
       await x.frame(3)
     },
-    /** Menünün i. öğesine (n öğeden) tetikle basar. */
+    /** Presses the trigger on the i-th menu item (of n). */
     item: async (i, n, el = 'right') => {
       const point = await s.evaluate(([i, n]) => __sim.menuItemPoint(i, n), [i, n])
       await s.evaluate(([el, point]) => __sim.aim(point, el), [el, point])
       await x.frame(2)
-      await x.head(el, 'trigger')
-      await s.evaluate((el) => __sim.head(el, 'trigger', 0), el)
+      await x.press(el, 'trigger')
+      await s.evaluate((el) => __sim.press(el, 'trigger', 0), el)
       await x.frame(2).catch(() => {})
     },
-    writeMenu: async () => { await s.evaluate(() => { window.__texts.length = 0 }) },
+    clearWritings: async () => { await s.evaluate(() => { window.__texts.length = 0 }) },
     writings: () => s.evaluate(() => [...window.__texts]),
-    /** Birleştirmeye girer ve geçişin bitmesini bekler. */
+    /** Enters assembly and waits for the transition to finish. */
     begin: async (n = 4, i = 2) => {
       await x.item(i, n)
       await s.waitForFunction(() => __t.xr.inAssembly(), null, { polling: 50 })
-      await x.frame(20) // karartma biter
+      await x.frame(20) // fade ends
     },
-    /** Katmana uzaktan nişan alıp kavrar. */
+    /** Aims at a layer from a distance and grips it. */
     hold: async (id, el = 'right', keyBtn = 'squeeze') => {
       const m = await s.evaluate((i) => __b.centerLocal(i), id)
       const k = [el === 'right' ? 0.25 : -0.25, 1.2, -0.35]
       await s.evaluate(([e, k, m]) => __b.placeController(e, k, m), [el, k, m])
       await x.frame(2)
-      await x.head(el, keyBtn)
+      await x.press(el, keyBtn)
     },
-    /** Tutulan katmanı `hedef`e götürür: el yolu kazancın yarısı. `pay`: hedefin yanına bırakma. */
-    move: async (id, target, el = 'right', share = [0, 0, 0]) => {
+    /** Moves the held layer to `target`: hand travel is half the gain. `offset`: release beside the target. */
+    move: async (id, target, el = 'right', offset = [0, 0, 0]) => {
       const m = await s.evaluate((i) => __b.centerLocal(i), id)
-      const d = [0, 1, 2].map((a) => (target[a] + share[a] - m[a]) / 2)
+      const d = [0, 1, 2].map((a) => (target[a] + offset[a] - m[a]) / 2)
       await s.evaluate(([e, d]) => __b.controllerScroll(e, d), [el, d])
       await x.frame()
     },
-    ev: (id) => s.evaluate((i) => __b.homeLocal(i), id),
-    /** Süzülmeler bitene dek bekler. */
+    home: (id) => s.evaluate((i) => __b.homeLocal(i), id),
+    /** Waits until all glides have finished. */
     settleDown: async () => {
-      let once = JSON.stringify((await x.d()).layer)
+      let previous = JSON.stringify((await x.d()).layer)
       for (let i = 0; i < 400; i++) {
         await x.frame(4)
         const now = JSON.stringify((await x.d()).layer)
-        if (now === once) return
-        once = now
+        if (now === previous) return
+        previous = now
       }
-      throw new Error('katmanlar durmadı')
+      throw new Error('layers did not settle')
     },
     placeAt: async (id, el = 'right') => {
       await x.hold(id, el)
-      await x.move(id, await x.ev(id), el)
+      await x.move(id, await x.home(id), el)
       await x.release(el, 'squeeze')
       await x.settleDown()
     },
-    save: async (ad) => {
+    save: async (name) => {
       const r = await s.evaluate(() => __sim.capture())
-      writeFileSync(`${SCREEN}/${ad}.png`, Buffer.from(r.png.split(',')[1], 'base64'))
+      writeFileSync(`${SCREEN}/${name}.png`, Buffer.from(r.png.split(',')[1], 'base64'))
       return { left: r.left, right: r.right }
     },
-    panel: async (ad) => { const u = await s.evaluate(() => __b.panelPng()); writeFileSync(`${SCREEN}/${ad}.png`, Buffer.from(u.split(',')[1], 'base64')) },
-    menu: async (ad) => { const u = await s.evaluate(() => __sim.texPng('menu')); writeFileSync(`${SCREEN}/${ad}.png`, Buffer.from(u.split(',')[1], 'base64')) },
+    panel: async (name) => { const u = await s.evaluate(() => __b.panelPng()); writeFileSync(`${SCREEN}/${name}.png`, Buffer.from(u.split(',')[1], 'base64')) },
+    menu: async (name) => { const u = await s.evaluate(() => __sim.texPng('menu')); writeFileSync(`${SCREEN}/${name}.png`, Buffer.from(u.split(',')[1], 'base64')) },
   }
   return x
 }
 const atHome = (k) => k.every((v) => v === 0)
 
 try {
-  const { page, errors, x } = await ac()
+  const { page, errors, x } = await open()
   const first = await x.d()
   await x.enter()
   await x.menu('0-menu-normal')
 
-  // Rafta: katmanlar kullanıcının sağında, üst üste binmeden.
+  // On the shelf: layers to the user's right, not overlapping.
   await x.begin()
   let d = await x.d()
-  assert.ok(d.inAssembly && !d.menu, 'oyun açılmadı veya menü kapanmadı')
+  assert.ok(d.inAssembly && !d.menu, 'game did not open or menu did not close')
   assert.equal(d.rig.scale, 100)
-  assert.equal(d.cameraChild, 2, 'etiket ve durum paneli başa bağlı değil')
-  assert.deepEqual(d.child, [1, 1, 1], 'katman adları yok')
+  assert.equal(d.cameraChild, 2, 'label and status panel not attached to the head')
+  assert.deepEqual(d.child, [1, 1, 1], 'layer names missing')
   const shelves = await Promise.all([ROOF, DRUM, DOME].map((i) => page.evaluate((i) => __b.centerLocal(i), i)))
-  assert.ok(shelves.every((r) => r[0] > 0.5), `raf sağda değil: ${shelves}`)
-  assert.ok(shelves[DOME][1] < shelves[DRUM][1] && shelves[DRUM][1] < shelves[ROOF][1], `raf sırası: ${shelves}`)
-  assert.ok(!d.layer.some(atHome), 'katman evinde kaldı')
+  assert.ok(shelves.every((r) => r[0] > 0.5), `shelf not on the right: ${shelves}`)
+  assert.ok(shelves[DOME][1] < shelves[DRUM][1] && shelves[DRUM][1] < shelves[ROOF][1], `shelf order: ${shelves}`)
+  assert.ok(!d.layer.some(atHome), 'layer stayed at home')
   await x.panel('1-panel-first')
-  step('Menü: Maketi birleştir; katmanlar sağda rafta, menü kapalı, etiket ve panel başa bağlı', { shelves })
-  step('Kare: raf', await x.save('1-shelf'))
+  step('Menu: "Maketi birleştir"; layers on the shelf to the right, menu closed, label and panel attached to the head', { shelves })
+  step('Frame: shelf', await x.save('1-shelf'))
 
-  // Çizim yalnız durum değişince: bekleyen ve nişan alınan karelerde tuvale yazı yok.
-  await x.writeMenu()
+  // Drawing only on state change: no canvas text in idle and aiming frames.
+  await x.clearWritings()
   await page.evaluate(([k, m]) => __b.placeController('right', k, m), [[0.25, 1.2, -0.35], shelves[ROOF]])
   await x.frame(30)
-  assert.deepEqual(await x.writings(), [], 'kare döngüsünde doku çizildi')
-  step('30 karede tuvale çizim yok')
+  assert.deepEqual(await x.writings(), [], 'texture drawn in the frame loop')
+  step('No canvas drawing in 30 frames')
 
-  // Çubuk oyunda maketi oynatmaz.
+  // The stick does not move the model during the game.
   const rig0 = (await x.d()).rig
-  await page.evaluate(() => __sim.bar('right', 1, 1))
+  await page.evaluate(() => __sim.stick('right', 1, 1))
   await x.frame(6)
-  await page.evaluate(() => __sim.bar('right', 0, 0))
+  await page.evaluate(() => __sim.stick('right', 0, 0))
   await x.frame(2)
-  assert.deepEqual((await x.d()).rig, rig0, 'çubuk oyunda rig oynattı')
-  step('Sağ çubuk oyunda rig oynatmıyor')
+  assert.deepEqual((await x.d()).rig, rig0, 'stick moved the rig during the game')
+  step('Right stick does not move the rig during the game')
 
-  // Tetik tutmaz, kavrama tutar.
+  // Trigger does not grab, grip does.
   await x.hold(ROOF, 'right', 'trigger')
-  const once = (await x.d()).layer[ROOF]
+  const before = (await x.d()).layer[ROOF]
   await page.evaluate(() => __b.controllerScroll('right', [0, 0.1, 0]))
   await x.frame()
-  assert.deepEqual((await x.d()).layer[ROOF], once, 'tetik katmanı tuttu')
+  assert.deepEqual((await x.d()).layer[ROOF], before, 'trigger grabbed the layer')
   await x.release('right', 'trigger')
-  step('Tetik katman tutmuyor')
+  step('Trigger does not grab a layer')
 
-  // Yanlış sıra: Kubbeler önce.
+  // Wrong order: domes first.
   await x.hold(DOME)
   const shelfDome = (await x.d()).layer[DOME]
-  await x.move(DOME, await x.ev(DOME))
+  await x.move(DOME, await x.home(DOME))
   d = await x.d()
-  assert.ok(Math.hypot(...d.layer[DOME]) < 3, `kubbe hedefe gitmedi: ${d.layer[DOME]}`)
-  step('Kare: yanlış sıra tutuluyor', await x.save('2-wrong-held'))
-  await x.writeMenu()
+  assert.ok(Math.hypot(...d.layer[DOME]) < 3, `dome did not reach the target: ${d.layer[DOME]}`)
+  step('Frame: holding in wrong order', await x.save('2-wrong-held'))
+  await x.clearWritings()
   await x.release('right', 'squeeze')
   await x.settleDown()
   d = await x.d()
-  assert.deepEqual(d.layer[DOME], shelfDome, `kubbe rafa dönmedi: ${d.layer[DOME]}`)
+  assert.deepEqual(d.layer[DOME], shelfDome, `dome did not return to the shelf: ${d.layer[DOME]}`)
   assert.ok(d.inAssembly)
   let writing = await x.writings()
-  assert.ok(writing.includes('Önce Çatı oturmalı. Sıra alttan üste gider.'), `uyarı yok: ${writing}`)
-  assert.ok(writing.includes('Maketi birleştir: 0/3 katman yerinde'), `ilerleme: ${writing}`)
-  assert.ok(writing.some((m) => /maketin üst üste oturma sırasıdır/.test(m)), 'sıra notu yok')
+  assert.ok(writing.includes('Önce Çatı oturmalı. Sıra alttan üste gider.'), `no warning: ${writing}`)
+  assert.ok(writing.includes('Maketi birleştir: 0/3 katman yerinde'), `progress: ${writing}`)
+  assert.ok(writing.some((m) => /maketin üst üste oturma sırasıdır/.test(m)), 'order note missing')
   await x.panel('2-panel-warning')
-  step('Yanlış sıra: Kubbeler oturmadı, rafa döndü, Türkçe uyarı çizildi', { writing })
+  step('Wrong order: domes did not snap, returned to the shelf, Turkish warning drawn', { writing })
 
-  // Yakın değil: Çatı hedefin eşiği dışında bırakılır.
+  // Not close: roof released outside the target threshold.
   await x.hold(ROOF)
   const shelfRoof = (await x.d()).layer[ROOF]
-  await x.move(ROOF, await x.ev(ROOF), 'right', [0.25, 0, 0])
+  await x.move(ROOF, await x.home(ROOF), 'right', [0.25, 0, 0])
   d = await x.d()
-  await x.writeMenu()
+  await x.clearWritings()
   await x.release('right', 'squeeze')
   await x.settleDown()
-  assert.deepEqual((await x.d()).layer[ROOF], shelfRoof, 'uzak bırakılan çatı rafa dönmedi')
+  assert.deepEqual((await x.d()).layer[ROOF], shelfRoof, 'roof released far away did not return to the shelf')
   assert.ok((await x.writings()).includes('Yerine yaklaşmadı. Yeniden dene.'))
-  step('Eşik dışı (25 cm): oturmadı, rafa döndü', { releasedOne: d.layer[ROOF] })
+  step('Outside threshold (25 cm): did not snap, returned to the shelf', { releasedOne: d.layer[ROOF] })
 
-  // Eşik içi: 15 cm yanda bırakılan oturur.
+  // Inside threshold: released 15 cm beside, it snaps.
   await x.hold(ROOF)
-  await x.move(ROOF, await x.ev(ROOF), 'right', [0.15, 0, 0])
-  await x.writeMenu()
+  await x.move(ROOF, await x.home(ROOF), 'right', [0.15, 0, 0])
+  await x.clearWritings()
   await x.release('right', 'squeeze')
   await x.settleDown()
   d = await x.d()
-  assert.ok(atHome(d.layer[ROOF]), `çatı oturmadı: ${d.layer[ROOF]}`)
+  assert.ok(atHome(d.layer[ROOF]), `roof did not snap: ${d.layer[ROOF]}`)
   assert.ok((await x.writings()).includes('Çatı yerine oturdu.'))
   assert.deepEqual(d.child.length, 3)
-  step('Çatı 15 cm yakından oturdu, evine süzüldü')
+  step('Roof snapped from 15 cm and glided home')
 
-  // Oturan katman yeniden tutulmaz.
-  await page.evaluate(([k, m]) => __b.placeController('right', k, m), [[0.25, 1.2, -0.35], await x.ev(ROOF)])
+  // A snapped layer cannot be grabbed again.
+  await page.evaluate(([k, m]) => __b.placeController('right', k, m), [[0.25, 1.2, -0.35], await x.home(ROOF)])
   await x.frame(2)
-  await x.head('right', 'squeeze')
+  await x.press('right', 'squeeze')
   await page.evaluate(() => __b.controllerScroll('right', [0, 0.1, 0]))
   await x.frame()
-  assert.ok(atHome((await x.d()).layer[ROOF]), 'oturan katman tutuldu')
+  assert.ok(atHome((await x.d()).layer[ROOF]), 'snapped layer was grabbed')
   await x.release('right', 'squeeze')
-  step('Oturan katman yeniden tutulmuyor')
+  step('Snapped layer cannot be grabbed again')
 
-  // Kumanda koparsa rafa döner, deneme sayılmaz.
+  // If the controller disconnects the layer returns to the shelf, no attempt counted.
   await x.hold(DRUM)
   const shelfDrum = (await x.d()).layer.at(DRUM)
-  await x.move(DRUM, await x.ev(DRUM), 'right', [0.3, 0, 0])
-  await page.evaluate(() => __sim.hillLink('right', false))
+  await x.move(DRUM, await x.home(DRUM), 'right', [0.3, 0, 0])
+  await page.evaluate(() => __sim.setConnected('right', false))
   await x.frame(4)
   await x.settleDown()
-  assert.deepEqual((await x.d()).layer[DRUM], shelfDrum, 'kopan kumandanın katmanı rafa dönmedi')
-  await page.evaluate(() => __sim.hillLink('right', true))
+  assert.deepEqual((await x.d()).layer[DRUM], shelfDrum, 'layer of the disconnected controller did not return to the shelf')
+  await page.evaluate(() => __sim.setConnected('right', true))
   await x.frame(4)
-  step('Kumanda koptu: katman rafa döndü')
+  step('Controller disconnected: layer returned to the shelf')
 
-  // İkinci katman sol elle, sonuncusu sağla.
+  // Second layer with the left hand, the last with the right.
   await x.placeAt(DRUM, 'left')
-  assert.ok(atHome((await x.d()).layer[DRUM]), 'kasnak oturmadı')
-  step('Sol kumandayla Kasnaklar oturdu')
-  await x.writeMenu()
+  assert.ok(atHome((await x.d()).layer[DRUM]), 'drum did not snap')
+  step('Drums snapped with the left controller')
+  await x.clearWritings()
   await x.placeAt(DOME)
   await page.waitForFunction(() => !__t.xr.inAssembly(), null, { polling: 50 })
   await x.frame(2)
   d = await x.d()
-  assert.ok(d.layer.every(atHome), `hepsi yerinde değil: ${d.layer}`)
-  assert.ok(d.menu, 'menü geri açılmadı')
-  assert.deepEqual(d.child, [0, 0, 0], 'katman adları kaldı')
-  assert.equal(d.cameraChild, 2, 'tamamlandı mesajı hemen kalktı')
+  assert.ok(d.layer.every(atHome), `not all in place: ${d.layer}`)
+  assert.ok(d.menu, 'menu did not reopen')
+  assert.deepEqual(d.child, [0, 0, 0], 'layer names left behind')
+  assert.equal(d.cameraChild, 2, 'completion message disappeared immediately')
   writing = await x.writings()
-  assert.ok(writing.includes('Tamamlandı: 3/3 katman yerinde') && writing.includes('Maket birleşti.'), `tamamlandı mesajı: ${writing}`)
-  assert.ok(writing.includes('Maketi birleştir'), `menü normale dönmedi: ${writing}`)
+  assert.ok(writing.includes('Tamamlandı: 3/3 katman yerinde') && writing.includes('Maket birleşti.'), `completion message: ${writing}`)
+  assert.ok(writing.includes('Maketi birleştir'), `menu did not return to normal: ${writing}`)
   await x.panel('3-panel-done')
   await x.menu('3-menu-normal')
-  step('Hepsi oturdu: tamamlandı mesajı, normal menü', { layer: d.layer })
-  step('Kare: tamam', await x.save('3-done'))
+  step('All snapped: completion message, normal menu', { layer: d.layer })
+  step('Frame: done', await x.save('3-done'))
   await page.waitForFunction(() => __t.camera.children.length === 1, null, { polling: 100, timeout: 20000 })
-  step('Tamamlandı mesajı kendiliğinden kalktı, Temsilî etiketi kaldı')
+  step('Completion message cleared by itself, "Temsilî" label remained')
 
-  // Yeniden başlat: katman eldeyken.
+  // Restart: while holding a layer.
   await x.begin()
   await x.placeAt(ROOF)
   await x.hold(DRUM, 'left')
   await page.evaluate(() => __b.controllerScroll('left', [0, 0.1, 0]))
   await x.frame()
-  await x.head('right', 'b-button'); await x.release('right', 'b-button')
-  assert.ok((await x.d()).menu, 'B ile menü açılmadı')
+  await x.press('right', 'b-button'); await x.release('right', 'b-button')
+  assert.ok((await x.d()).menu, 'menu did not open with B')
   await x.menu('4-menu-game')
   await x.item(0, 3)
   await x.frame(3)
   d = await x.d()
   assert.ok(d.inAssembly && !d.menu)
-  assert.ok(d.layer.every((k) => !atHome(k)), `yeniden başlatınca hepsi rafta değil: ${d.layer}`)
+  assert.ok(d.layer.every((k) => !atHome(k)), `not all on the shelf after restart: ${d.layer}`)
   assert.deepEqual(d.child, [1, 1, 1])
   await page.evaluate(() => __b.controllerScroll('left', [0, 0.1, 0]))
   const onShelf = (await x.d()).layer
   await x.frame(3)
-  assert.deepEqual((await x.d()).layer, onShelf, 'katman elde kaldı')
+  assert.deepEqual((await x.d()).layer, onShelf, 'layer stayed in hand')
   await x.release('left', 'squeeze')
-  step('Menü: Yeniden başlat, katman eldeyken; hepsi rafta, elde kalmadı')
+  step('Menu: restart while holding a layer; all on the shelf, none left in hand')
 
-  // Birleştirmeyi bırak.
-  await x.head('right', 'b-button'); await x.release('right', 'b-button')
+  // Quit assembly.
+  await x.press('right', 'b-button'); await x.release('right', 'b-button')
   await x.item(1, 3)
   await page.waitForFunction(() => !__t.xr.inAssembly(), null, { polling: 50 })
   await x.frame(20)
   d = await x.d()
   assert.ok(d.layer.every(atHome) && d.menu && d.cameraChild === 1, JSON.stringify(d))
-  step('Menü: Birleştirmeyi bırak; katmanlar evde, normal menü')
+  step('Menu: "Birleştirmeyi bırak"; layers at home, normal menu')
 
-  // Oyun sonrası parçala ve içeri gir bozulmadı; parçalıyken oyun öğesi yok, oyun parçalıdan başlamaz.
+  // Shatter and enter still work after the game; no game item while fragmented, game does not start fragmented.
   await x.item(1, 4)
   await x.frame(3)
   d = await x.d()
-  assert.ok(d.fragmented && d.layer.every((k) => k[1] > 0 && k[0] === 0 && k[2] === 0), `parçala: ${d.layer}`)
+  assert.ok(d.fragmented && d.layer.every((k) => k[1] > 0 && k[0] === 0 && k[2] === 0), `shatter: ${d.layer}`)
   await x.item(1, 3)
   await x.frame(3)
   d = await x.d()
-  assert.ok(!d.fragmented && d.layer.every(atHome), `birleştir: ${d.layer}`)
+  assert.ok(!d.fragmented && d.layer.every(atHome), `assemble: ${d.layer}`)
   await x.begin()
   assert.ok(!(await x.d()).layer.some(atHome))
-  await x.head('right', 'b-button'); await x.release('right', 'b-button')
+  await x.press('right', 'b-button'); await x.release('right', 'b-button')
   await x.item(1, 3)
   await page.waitForFunction(() => !__t.xr.inAssembly(), null, { polling: 50 })
   await x.frame(20)
@@ -336,35 +336,35 @@ try {
   await x.frame(20)
   d = await x.d()
   assert.ok(d.layer.every(atHome) && d.rig.scale === 1, JSON.stringify(d))
-  step('Oyundan sonra Parçala, Birleştir ve İçeri gir çalışıyor')
-  await x.head('right', 'b-button'); await x.release('right', 'b-button')
+  step('After the game, "Parçala", "Birleştir" and "İçeri gir" work')
+  await x.press('right', 'b-button'); await x.release('right', 'b-button')
   await x.item(0, 10)
   await page.waitForFunction(() => !__t.inside, null, { polling: 50 })
   await x.frame(20)
   assert.ok(!(await x.d()).inside)
 
-  // Oyun ortasında menüden çıkış.
+  // Exit from the menu mid-game.
   await x.begin()
   await x.placeAt(ROOF)
-  await x.head('right', 'b-button'); await x.release('right', 'b-button')
+  await x.press('right', 'b-button'); await x.release('right', 'b-button')
   await x.item(2, 3)
   await page.waitForFunction(() => !__sim.d.activeSession && !__t.renderer.xr.isPresenting, null, { polling: 100 })
   await page.getByRole('button', { name: "VR'da aç" }).waitFor()
   await page.waitForFunction(() => document.querySelector('.model-control button') && !document.querySelector('.model-control button').disabled)
   d = await x.d()
-  const desktopOk = (d, ad) => {
-    assert.ok(!d.presenting && !d.inAssembly, ad)
-    assert.ok(d.layer.every(atHome), `${ad}: katmanlar evde değil: ${d.layer}`)
-    assert.deepEqual(d.child, [0, 0, 0], `${ad}: ad panelleri kaldı`)
-    assert.equal(d.cameraChild, 0, `${ad}: kamerada panel kaldı`)
-    assert.equal(d.cameraParent, null, ad)
-    assert.equal(d.sceneChild, first.sceneChild, `${ad}: sahnede nesne kaldı`)
-    assert.deepEqual([d.near, d.far, d.control], [first.near, first.far, first.control], ad)
+  const desktopOk = (d, name) => {
+    assert.ok(!d.presenting && !d.inAssembly, name)
+    assert.ok(d.layer.every(atHome), `${name}: layers not at home: ${d.layer}`)
+    assert.deepEqual(d.child, [0, 0, 0], `${name}: name panels left behind`)
+    assert.equal(d.cameraChild, 0, `${name}: panel left on the camera`)
+    assert.equal(d.cameraParent, null, name)
+    assert.equal(d.sceneChild, first.sceneChild, `${name}: object left in the scene`)
+    assert.deepEqual([d.near, d.far, d.control], [first.near, first.far, first.control], name)
   }
-  desktopOk(d, 'menüden çıkış')
-  step("Menü: VR'dan çık, oyun ortasında; masaüstü temiz")
+  desktopOk(d, 'exit from menu')
+  step('Menu: "VR\'dan çık" mid-game; desktop clean')
 
-  // Katman eldeyken dışarıdan kapanış (Meta düğmesi yerine session.end).
+  // External close while holding a layer (session.end instead of the Meta button).
   await x.enter()
   await x.begin()
   await x.hold(DOME)
@@ -374,17 +374,17 @@ try {
   await page.waitForFunction(() => !__t.renderer.xr.isPresenting, null, { polling: 100 })
   await page.getByRole('button', { name: "VR'da aç" }).waitFor()
   await x.frame(3)
-  desktopOk(await x.d(), 'dışarıdan kapanış')
-  step('Dışarıdan kapanış, katman eldeyken: masaüstü temiz')
+  desktopOk(await x.d(), 'external close')
+  step('External close while holding a layer: desktop clean')
 
-  // Masaüstü Parçala hâlâ yalnız y'de gider.
+  // Desktop "Parçala" still moves only along y.
   await page.getByRole('button', { name: /Parçala/ }).click()
   await page.waitForFunction(() => __t.layers[2].group.position.y > 20, null, { polling: 100 })
   d = await x.d()
-  assert.ok(d.layer.every((k) => k[0] === 0 && k[2] === 0), `masaüstü parçala: ${d.layer}`)
-  step('Masaüstü Parçala çalışıyor')
+  assert.ok(d.layer.every((k) => k[0] === 0 && k[2] === 0), `desktop shatter: ${d.layer}`)
+  step('Desktop "Parçala" works')
 
-  assert.deepEqual(errors, [], 'konsol hatası')
+  assert.deepEqual(errors, [], 'console error')
   step('Konsol temiz')
-  console.log(`Maket birleştirme VR simülasyonu: ${audit} denetim geçti.`)
+  console.log(`Model assembly VR simulation: ${audit} checks passed.`)
 } finally { await browser.close() }

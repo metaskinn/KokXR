@@ -1,10 +1,10 @@
-// Test alanı hedefleri: kesim gerçek geometriyle yapılır, hasar birikir ve görünür.
+// Test area targets: cuts use real geometry, damage accumulates and is visible.
 import * as T from 'three'
 import { bowStep } from './animation'
 
-const ROLL = { x: 12, z: 0, r: .075, alt: .55, top: 1.6 }
+const ROLL = { x: 12, z: 0, r: .075, bottom: .55, top: 1.6 }
 const LOG = { x: 14, y: .74, z: -.1, half: .45, r: .11 }
-const CLOTH = { x: 16.15, top: 1.95, z: -.1, gen: .84, length: 1.3 }
+const CLOTH = { x: 16.15, top: 1.95, z: -.1, width: .84, length: 1.3 }
 export const targetPlaneZ = [ROLL.z, LOG.z, CLOTH.z]
 export const targetCenter = [new T.Vector3(ROLL.x, 1.1, ROLL.z), new T.Vector3(LOG.x, LOG.y, LOG.z), new T.Vector3(CLOTH.x, 1.3, CLOTH.z)]
 
@@ -25,11 +25,11 @@ function sectionTexture() {
   return new T.CanvasTexture(c)
 }
 
-function rollGeometry(alt: CrossSection, top: CrossSection) {
-  const cy = (alt.y + top.y) / 2, S = 40, Z = 14, pos: number[] = [], nor: number[] = [], uv: number[] = [], idx: number[] = []
+function rollGeometry(bottom: CrossSection, top: CrossSection) {
+  const cy = (bottom.y + top.y) / 2, S = 40, Z = 14, pos: number[] = [], nor: number[] = [], uv: number[] = [], idx: number[] = []
   for (let j = 0; j <= Z; j++) for (let i = 0; i <= S; i++) {
     const a = i / S * Math.PI * 2, cx = Math.cos(a), cz = Math.sin(a), ax = cx * ROLL.r
-    const y = T.MathUtils.lerp(alt.y + alt.m * ax, top.y + top.m * ax, j / Z)
+    const y = T.MathUtils.lerp(bottom.y + bottom.m * ax, top.y + top.m * ax, j / Z)
     pos.push(ax, y - cy, cz * ROLL.r); nor.push(cx, 0, cz); uv.push(y * 8, i / S * 3)
   }
   for (let j = 0; j < Z; j++) for (let i = 0; i < S; i++) {
@@ -46,7 +46,7 @@ function rollGeometry(alt: CrossSection, top: CrossSection) {
     }
     for (let i = 1; i <= S; i++) { if (dir > 0) idx.push(head, head + i + 1, head + i); else idx.push(head, head + i, head + i + 1) }
   }
-  cover(top, 1); cover(alt, -1)
+  cover(top, 1); cover(bottom, -1)
   const g = new T.BufferGeometry()
   g.setAttribute('position', new T.Float32BufferAttribute(pos, 3)); g.setAttribute('normal', new T.Float32BufferAttribute(nor, 3)); g.setAttribute('uv', new T.Float32BufferAttribute(uv, 2)); g.setIndex(idx)
   g.addGroup(0, sideCount, 0); g.addGroup(sideCount, idx.length - sideCount, 1)
@@ -58,7 +58,7 @@ const logRadius = (x: number) => { const u = Math.abs(x - LOG.x) / LOG.half; ret
 function logGeometry(x0: number, x1: number, dents: Dent[], sectionCap: 0 | 1 | 2) {
   const cx = (x0 + x1) / 2, N = Math.max(14, Math.round((x1 - x0) * 230)), M = 96
   const pos: number[] = [], uv: number[] = [], color: number[] = [], idx: number[] = []
-  // Kama kesik: yüzeyden d kadar içeri inen, iki eğik düzlemli V; balta izi gibi düz yüzlü.
+  // Wedge notch: a V of two slanted planes going d deep from the surface; flat-faced like an axe mark.
   const ringHalf = (x: number, a: number) => {
     const R = logRadius(x); let r = R
     for (const o of dents) {
@@ -99,7 +99,7 @@ function intersects(a: T.Vector2, b: T.Vector2, c: T.Vector2, d: T.Vector2) {
 }
 
 export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, smallMove: boolean) {
-  // ---------------------------------------------------- kırıntılar: hasarın elle tutulur izi
+  // ---------------------------------------------------- debris: the tangible trace of damage
   const COUNT = smallMove ? 24 : 110
   const kiriMat = new T.MeshStandardMaterial({ roughness: .9 })
   const crumb = new T.InstancedMesh(new T.BoxGeometry(.018, .005, .03), kiriMat, COUNT)
@@ -118,7 +118,7 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
     if (crumb.instanceColor) crumb.instanceColor.needsUpdate = true
   }
 
-  // ---------------------------------------------------- rulo
+  // ---------------------------------------------------- roll
   const rollOld = find('Straw_Roll'), post = find('Straw_Post'), rings = [0, 1, 2].map(i => find(`Straw_Link_${i}`))
   const strawMat = rollOld.material as T.MeshStandardMaterial
   const sectionTex = sectionTexture(), sectionMat = new T.MeshStandardMaterial({ map: sectionTex, color: '#a39a86', roughness: 1 })
@@ -131,12 +131,12 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
   const rollTraces: T.Mesh[] = []
   function placeRoll(top: CrossSection) {
     if (standing) { rollGroup.remove(standing); standing.geometry.dispose() }
-    const { g, center } = rollGeometry({ y: ROLL.alt, m: 0 }, top)
+    const { g, center } = rollGeometry({ y: ROLL.bottom, m: 0 }, top)
     standing = new T.Mesh(g, [strawMat, sectionMat]); standing.castShadow = standing.receiveShadow = true
     standing.position.copy(center).sub(rollGroup.position); rollGroup.add(standing); rollTop = top
   }
 
-  // ---------------------------------------------------- kütük
+  // ---------------------------------------------------- log
   const logOld = find('Test_Log')
   const logMat = (logOld.material as T.MeshStandardMaterial).clone(); logMat.vertexColors = true
   logOld.visible = false
@@ -147,11 +147,11 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
     log = new T.Mesh(g, logMat); log.castShadow = log.receiveShadow = true; log.position.copy(center); scene.add(log)
   }
 
-  // ---------------------------------------------------- kumaş: Verlet simülasyonu
+  // ---------------------------------------------------- cloth: Verlet simulation
   const clothOld = find('Test_Cloth')
   const clothMat = (clothOld.material as T.MeshStandardMaterial).clone(); clothMat.side = T.DoubleSide
   clothOld.visible = false
-  const NX = smallMove ? 18 : 30, NY = smallMove ? 24 : 40, ax = CLOTH.gen / (NX - 1), ay = CLOTH.length / (NY - 1)
+  const NX = smallMove ? 18 : 30, NY = smallMove ? 24 : 40, ax = CLOTH.width / (NX - 1), ay = CLOTH.length / (NY - 1)
   const clothGeo = new T.BufferGeometry(), P = new Float32Array(NX * NY * 3), O = new Float32Array(NX * NY * 3)
   const uvK = new Float32Array(NX * NY * 2)
   for (let j = 0; j < NY; j++) for (let i = 0; i < NX; i++) { uvK[(j * NX + i) * 2] = i / (NX - 1) * 2; uvK[(j * NX + i) * 2 + 1] = 2 - j / (NY - 1) * 2 }
@@ -162,7 +162,7 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
   const broken = new Set<number>(), bindKey = (a: number, b: number) => Math.min(a, b) * NX * NY + Math.max(a, b)
   function setupCloth() {
     for (let j = 0; j < NY; j++) for (let i = 0; i < NX; i++) {
-      const k = nk(i, j) * 3, x = CLOTH.x - CLOTH.gen / 2 + i * ax, y = CLOTH.top - j * ay, z = CLOTH.z + Math.sin(i / 2.2 + j / 9) * .012 * (j / NY)
+      const k = nk(i, j) * 3, x = CLOTH.x - CLOTH.width / 2 + i * ax, y = CLOTH.top - j * ay, z = CLOTH.z + Math.sin(i / 2.2 + j / 9) * .012 * (j / NY)
       P[k] = O[k] = x; P[k + 1] = O[k + 1] = y; P[k + 2] = O[k + 2] = z
     }
     binds = []
@@ -178,7 +178,7 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
     for (let j = 0; j < NY - 1; j++) for (let i = 0; i < NX - 1; i++) {
       if (clearFrame[j * (NX - 1) + i]) continue
       const a = nk(i, j), b = nk(i + 1, j), c = nk(i, j + 1), d = nk(i + 1, j + 1)
-      // Kopan bağı olan kare çizilmez; yoksa ayrılan parçalar arasında üçgen şeritler uzar.
+      // Quads with a broken link are not drawn; otherwise triangle strips stretch between separated pieces.
       if (broken.has(bindKey(a, b)) || broken.has(bindKey(a, c)) || broken.has(bindKey(a, d)) || broken.has(bindKey(b, d)) || broken.has(bindKey(c, d))) continue
       idx.push(a, c, b, b, c, d)
     }
@@ -215,14 +215,14 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
     return see.some(v => !v)
   }
 
-  // ---------------------------------------------------- düşen parçalar
+  // ---------------------------------------------------- falling pieces
   const falling: Body[] = []; let detachedOne = 0
   const up = new T.Vector3(0, 1, 0), a3 = new T.Vector3(), t3 = new T.Vector3()
   function dropDown(mesh: T.Mesh, axis: T.Vector3, half: number, r: number, v: T.Vector3, w: T.Vector3) {
     falling.push({ mesh, v, w, axis, half, r, dur: false }); detachedOne++
   }
 
-  // ---------------------------------------------------- hasar değerleri (arayüz için)
+  // ---------------------------------------------------- damage values (for the UI)
   const damage = [0, 0, 0]
   function reset() {
     falling.forEach(b => {
@@ -240,7 +240,7 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
   }
   reset()
 
-  // ---------------------------------------------------- vuruşlar
+  // ---------------------------------------------------- strikes
   function strikeRoll(a: T.Vector3, b: T.Vector3, power: number): StrikeResult {
     const dir = b.clone().sub(a), point = targetCenter[0].clone()
     const slope = T.MathUtils.clamp(dir.y / (Math.abs(dir.x) < 1e-3 ? 1e-3 * Math.sign(dir.x || 1) : dir.x), -1.1, 1.1)
@@ -248,7 +248,7 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
     const vertical = Math.abs(dir.x) < Math.abs(dir.y) * .12
     const yC = vertical ? (a.y + b.y) / 2 : a.y + dir.y * kk
     const topY = rollTop.y
-    if ((!vertical && (kk < -.2 || kk > 1.2)) || yC < ROLL.alt + .05 || yC > topY - .025) return { hit: false, detached: false, message: 'Hasır ruloyu ıskaladın. Kesim çizgisi rulodan geçmeli.', sound: 'cut', point }
+    if ((!vertical && (kk < -.2 || kk > 1.2)) || yC < ROLL.bottom + .05 || yC > topY - .025) return { hit: false, detached: false, message: 'Hasır ruloyu ıskaladın. Kesim çizgisi rulodan geçmeli.', sound: 'cut', point }
     point.set(ROLL.x, yC, ROLL.z + ROLL.r)
     sway.v += -Math.sign(dir.x || 1) * (.6 + power * 1.1)
     sheet(point, STRAW, 18, dir.clone().normalize())
@@ -262,13 +262,13 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
     const crossSection: CrossSection = { y: yC, m: slope }
     const { g, center } = rollGeometry(crossSection, rollTop)
     const piece = new T.Mesh(g, [strawMat, sectionMat]); piece.castShadow = piece.receiveShadow = true; piece.position.copy(center); scene.add(piece)
-    // Kesitin üstünde kalan bağlar üst parçayla birlikte düşer.
+    // Links above the cut fall together with the upper piece.
     rings.forEach(h => { h.getWorldPosition(t3); if (h.parent === rollGroup && t3.y + .011 > yC + slope * 0) piece.attach(h) })
     const y2 = dir.clone().normalize()
     dropDown(piece, new T.Vector3(0, 1, 0), Math.max(.03, (rollTop.y - yC) / 2), ROLL.r, new T.Vector3(y2.x * (.35 + power * .9), .25 + power * .5, .15 + Math.random() * .2), new T.Vector3((Math.random() - .5) * 2, Math.random() - .5, -Math.sign(y2.x || 1) * (1.2 + power * 2.4)))
     placeRoll(crossSection)
-    damage[0] = Math.min(1, 1 - (yC - ROLL.alt) / (ROLL.top - ROLL.alt) * .7)
-    return { hit: true, detached: true, message: `Hasır rulo kesildi; üst parça düştü. Kalan boy %${Math.round((yC - ROLL.alt) / (ROLL.top - ROLL.alt) * 100)}.`, sound: 'cut', point }
+    damage[0] = Math.min(1, 1 - (yC - ROLL.bottom) / (ROLL.top - ROLL.bottom) * .7)
+    return { hit: true, detached: true, message: `Hasır rulo kesildi; üst parça düştü. Kalan boy %${Math.round((yC - ROLL.bottom) / (ROLL.top - ROLL.bottom) * 100)}.`, sound: 'cut', point }
   }
 
   function strikeLog(a: T.Vector3, b: T.Vector3, power: number): StrikeResult {
@@ -291,7 +291,7 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
       placeLog()
       return { hit: true, detached: false, message: power < .3 ? `Sığ bir çentik: ${Math.round(o.d * 1000)} mm. Sert ağaç keskinliğini sınıyor.` : `Kütükte oyuk derinliği ${Math.round(o.d * 1000)} mm. Aynı yere vurmaya devam edersen ayrılır.`, sound: power < .3 ? 'ting' : 'cut', point }
     }
-    // Yeterince derin: iki parçaya ayrılır ve sehpadan düşer.
+    // Deep enough: splits in two and falls off the stand.
     scene.remove(log); log.geometry.dispose(); log = null
     const left = logGeometry(LOG.x - LOG.half, x, dents, 2), right = logGeometry(x, LOG.x + LOG.half, dents, 1)
     for (const [p, yn] of [[left, -1], [right, 1]] as const) {
@@ -306,8 +306,8 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
 
   function strikeCloth(a: T.Vector3, b: T.Vector3, power: number): StrikeResult {
     const point = targetCenter[2].clone(), dir = b.clone().sub(a)
-    const left = CLOTH.x - CLOTH.gen / 2 - .03, right = CLOTH.x + CLOTH.gen / 2 + .03
-    // Kesim çizgisini kumaşın dikdörtgenine kırp.
+    const left = CLOTH.x - CLOTH.width / 2 - .03, right = CLOTH.x + CLOTH.width / 2 + .03
+    // Clip the cut line to the cloth's rectangle.
     let t0 = 0, t1 = 1
     for (const [p, q] of [[-dir.x, a.x - left], [dir.x, right - a.x], [-dir.y, a.y - (CLOTH.top - CLOTH.length - .1)], [dir.y, CLOTH.top - a.y]]) {
       if (p === 0) { if (q < 0) t1 = -1; continue }
@@ -315,7 +315,7 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
     }
     if (t0 >= t1) return { hit: false, detached: false, message: 'Kumaşı ıskaladın. Kesim çizgisi kumaştan geçmeli.', sound: 'cut', point }
     const mid = (t0 + t1) / 2; point.copy(a).addScaledVector(dir, mid); point.z = CLOTH.z
-    // Her vuruş kumaşı sallar.
+    // Every strike sways the cloth.
     for (let k = NX; k < NX * NY; k++) {
       const i = k * 3, u = Math.hypot(P[i] - point.x, P[i + 1] - point.y), e = Math.max(0, 1 - u / .55)
       if (e > 0) { O[i] -= dir.x * e * .012; O[i + 1] -= dir.y * e * .006; O[i + 2] -= (.018 + power * .02) * e }
@@ -347,12 +347,12 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
     reset,
     detachedOne: () => detachedOne,
     damages: () => damage.slice(),
-    // VR savurmasının hedefe çekileceği dikdörtgen; rulo kesildikçe tepesi alçalır.
-    box: (i: number) => i === 0 ? { minX: ROLL.x - ROLL.r, maxX: ROLL.x + ROLL.r, minY: ROLL.alt + .06, maxY: Math.max(ROLL.alt + .07, rollTop.y - .03), z: ROLL.z }
+    // Rectangle that VR swings are snapped to; its top lowers as the roll is cut.
+    box: (i: number) => i === 0 ? { minX: ROLL.x - ROLL.r, maxX: ROLL.x + ROLL.r, minY: ROLL.bottom + .06, maxY: Math.max(ROLL.bottom + .07, rollTop.y - .03), z: ROLL.z }
       : i === 1 ? { minX: LOG.x - LOG.half, maxX: LOG.x + LOG.half, minY: LOG.y - LOG.r, maxY: LOG.y + LOG.r, z: LOG.z }
-      : { minX: CLOTH.x - CLOTH.gen / 2, maxX: CLOTH.x + CLOTH.gen / 2, minY: CLOTH.top - CLOTH.length, maxY: CLOTH.top, z: CLOTH.z },
+      : { minX: CLOTH.x - CLOTH.width / 2, maxX: CLOTH.x + CLOTH.width / 2, minY: CLOTH.top - CLOTH.length, maxY: CLOTH.top, z: CLOTH.z },
     update(dt: number, active: boolean) {
-      // Kumaş yalnız test alanındayken hesaplanır.
+      // The cloth is simulated only while in the test area.
       if (active) clothStep(dt)
       bowStep(sway, 90, 7, dt); rollGroup.rotation.z = sway.x * .12
       for (const b of falling) {
@@ -366,7 +366,7 @@ export function setupTargets(scene: T.Scene, find: (ad: string) => T.Mesh, small
           b.mesh.position.y = height
           b.v.y = b.v.y < -.6 ? -b.v.y * .22 : 0
           b.v.x *= .9; b.v.z *= .9; b.w.multiplyScalar(.9)
-          // Yere değen parça yan yatar.
+          // A piece that touches the ground tips over.
           if (ay2 > .08) { t3.crossVectors(a3, up).multiplyScalar(-Math.sign(a3.y) * 13 * dt); if (t3.lengthSq() < 1e-7) t3.set(.1, 0, 0); b.w.add(t3) }
           if (b.v.lengthSq() < .004 && b.w.lengthSq() < .01 && ay2 < .1) { b.v.set(0, 0, 0); b.w.set(0, 0, 0); b.dur = true }
         }

@@ -13,7 +13,7 @@ export interface VaseScene {
   releasePiece: () => void
   cancel: () => void
   reset: () => void
-  /** Kullanıcı jesti içinde çağrılır: requestSession'dan önce await yok. */
+  /** Called inside a user gesture: no await before requestSession. */
   startXr: () => Promise<void>
   endXr: () => void
   clear: () => void
@@ -21,7 +21,7 @@ export interface VaseScene {
 interface Notices { sec: (id: number | null) => void; release: (id: number, seated: boolean) => void; error: () => void; xrEnded: () => void; xrShatter: () => void }
 
 export async function createVaseScene(area: HTMLElement, notify: Notices): Promise<VaseScene> {
-  // .blend kaynağından dışa aktarılan altı fiziksel seramik parça; harici model/doku yok.
+  // Six physical ceramic pieces exported from the .blend source; no external model/texture.
   const gltf = await new GLTFLoader().loadAsync('/models/vase.glb')
   const geometries = new Set<THREE.BufferGeometry>()
   const materials = new Set<THREE.Material>()
@@ -45,7 +45,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
   })
   if (!intact || !repairTraces || pieces.length !== 6 || Array.from({ length: 6 }, (_, id) => pieces[id]).some((p) => !p)) {
     releaseSources()
-    throw new Error('Vazonun sağlam gövdesi, kırık parçaları veya onarım izleri bulunamadı.')
+    throw new Error('Vase intact body, broken pieces or repair traces not found.')
   }
   const intactView = intact
   const assemblyTraces = repairTraces
@@ -86,14 +86,14 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     p.traverse((o) => {
       o.userData.pieceId = id
       if (!(o instanceof THREE.Mesh)) return
-      // glTF malzemeleri parçalarda paylaşılabilir; seçili parça diğerlerini boyamasın.
+      // glTF materials may be shared between pieces; the selected piece must not tint the others.
       o.material = Array.isArray(o.material) ? o.material.map((m) => m.clone()) : o.material.clone()
     })
     scene.add(p)
   })
   scene.attach(intact)
   scene.attach(repairTraces)
-  // Genel formu gösterir; seçili parçaya göre değişmez veya yerini işaretlemez.
+  // Shows the overall form; does not change with the selected piece or mark its place.
   const silhouette = intact.clone(true)
   silhouette.name = 'Vase_General_Silhouette'
   silhouette.traverse((o) => {
@@ -118,7 +118,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
   let drag: { id: number; pointer: number; offset: THREE.Vector3; x: number; y: number; moved: boolean } | null = null
   let closed = false
   let xrHighlight: number[] = []
-  // Oturma bildirildi, oyun durumuna henüz yansımadı: VR kumandası bu arada yeniden tutmasın.
+  // Seating was reported but not yet reflected in game state: the VR controller must not grab again meanwhile.
   const seatedOnes = new Set<number>()
   const smallMove = matchMedia('(prefers-reduced-motion: reduce)').matches
 
@@ -160,7 +160,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     const fromStart = fresh.session !== state.session || fresh.repair !== state.repair
     if (fromStart) {
       releaseCapture()
-      // Elde veya dayanakta kalan vazo aşağıdaki konumları bozmasın.
+      // A vase left in hand or on the holder must not disturb the positions below.
       if (renderer.xr.isPresenting) xr.reset()
       moves.clear(); seatedOnes.clear()
     }
@@ -200,11 +200,11 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     const id: number | undefined = label ? Number(label.dataset.pieceIdOf) : hit?.object.userData.pieceId
     if (id === undefined || state.placed.includes(id)) return
     e.stopPropagation(); e.preventDefault()
-    // OrbitControls aynı tutuşu kamerayı döndürmek için kullanmasın.
+    // Keep OrbitControls from using the same grab to rotate the camera.
     controls.enableDamping = false; controls.update(); controls.enableDamping = true
     controls.enabled = false
-    // Tutuş derinliğini koru: perspektifte parça fareden uzaklaşmasın.
-    // Doğru yere bırakınca eksik derinlik otomatik hizalanır.
+    // Keep the grab depth: in perspective the piece must not drift away from the mouse.
+    // Missing depth is aligned automatically when dropped in the right place.
     plane.setFromNormalAndCoplanarPoint(camera.getWorldDirection(new THREE.Vector3()), pieces[id].position)
     ray(e.clientX, e.clientY)
     if (!ray3.ray.intersectPlane(plane, point)) { controls.enabled = true; return }
@@ -288,7 +288,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     for (const [id, target] of moves) {
       const piece = pieces[id]
       piece.position.lerp(target, smallMove ? 1 : .2)
-      // Masaüstünde parça dönmez; VR'da elde dönmüş olabilir.
+      // On desktop pieces do not rotate; in VR they may have been rotated in hand.
       if (!piece.quaternion.equals(targets[id].quaternion)) piece.quaternion.slerp(targets[id].quaternion, smallMove ? 1 : .2)
       if (piece.position.distanceTo(target) < .05) { piece.position.copy(target); piece.quaternion.copy(targets[id].quaternion); moves.delete(id) }
     }

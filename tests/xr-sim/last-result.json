@@ -1,16 +1,16 @@
 [
  {
-  "ad": "A0 VR'da aç görünüyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A0 VR'da aç görünüyor",
+  "result": "PASS",
+  "evidence": {
    "kalite": 2,
    "kare": 6
   }
  },
  {
-  "ad": "A1 oturum açıldı, WebXRManager sunuyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A1 oturum açıldı, WebXRManager sunuyor",
+  "result": "PASS",
+  "evidence": {
    "sunuyor": true,
    "xr": {
     "katman": "$n",
@@ -34,9 +34,9 @@
   }
  },
  {
-  "ad": "A1 menü görünür",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A1 menü görünür",
+  "result": "PASS",
+  "evidence": {
    "menuYerel": [
     -0.0315,
     1.6,
@@ -50,9 +50,9 @@
   }
  },
  {
-  "ad": "A1 rig maket görünümünde (ölçek 100, P=0,-90,-120, rotY=π)",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A1 rig maket görünümünde (ölçek 100, P=0,-90,-120, rotY=π)",
+  "result": "PASS",
+  "evidence": {
    "rigP": [
     0,
     -90,
@@ -74,9 +74,9 @@
   }
  },
  {
-  "ad": "A1 sayfa düğmeleri oturumda kilitli",
-  "sonuc": "GECTI",
-  "dayanak": [
+  "name": "A1 sayfa düğmeleri oturumda kilitli",
+  "result": "PASS",
+  "evidence": [
    [
     "İçeri gir",
     true
@@ -104,9 +104,9 @@
   ]
  },
  {
-  "ad": "A1 iki göz framebuffer çizimi",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A1 iki göz framebuffer çizimi",
+  "result": "PASS",
+  "evidence": {
    "yol": "xr-sim/ekran/01-oturum-acilis.png",
    "w": 960,
    "h": 540,
@@ -122,14 +122,14 @@
   }
  },
  {
-  "ad": "A1 menü dokusu",
-  "sonuc": "GECTI",
-  "dayanak": "xr-sim/ekran/01-menu-doku.png"
+  "name": "A1 menü dokusu",
+  "result": "PASS",
+  "evidence": "xr-sim/ekran/01-menu-doku.png"
  },
  {
-  "ad": "A2 ölü bölge altı hareket yok (0.15)",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A2 ölü bölge altı hareket yok (0.15)",
+  "result": "PASS",
+  "evidence": {
    "once": [
     3.1416,
     100
@@ -141,9 +141,9 @@
   }
  },
  {
-  "ad": "A2 sağ çubuk x maketi döndürür, maket önde kalır",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A2 sağ çubuk x maketi döndürür, maket önde kalır",
+  "result": "PASS",
+  "evidence": {
    "rotY": [
     3.1416,
     2.1816
@@ -161,9 +161,9 @@
   }
  },
  {
-  "ad": "A2 çubuk ileri: alt sınır 40, aşılmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A2 çubuk ileri: alt sınır 40, aşılmıyor",
+  "result": "PASS",
+  "evidence": {
    "rigOlcek": 40,
    "maketYerel": [
     0,
@@ -192,9 +192,9 @@
   }
  },
  {
-  "ad": "A2 çubuk geri: üst sınır 200, aşılmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A2 çubuk geri: üst sınır 200, aşılmıyor",
+  "result": "PASS",
+  "evidence": {
    "rigOlcek": 200,
    "maketYerel": [
     0,
@@ -218,17 +218,17 @@
   }
  },
  {
-  "ad": "A2 yön: ileri itiş maketi görsel büyütür (rig küçülür), arka plan dışı piksel 40>200",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A2 yön: ileri itiş maketi görsel büyütür (rig küçülür), arka plan dışı piksel 40>200",
+  "result": "PASS",
+  "evidence": {
    "arkaDisi40": 0.481,
    "arkaDisi200": 0.414
   }
  },
  {
-  "ad": "A3 menüden Parçala katmanları kaldırır",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A3 menüden Parçala katmanları kaldırır",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.4,
@@ -243,9 +243,9 @@
   }
  },
  {
-  "ad": "A3 parçalı görüntü ve Birleştir etiketi",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A3 parçalı görüntü ve Birleştir etiketi",
+  "result": "PASS",
+  "evidence": {
    "dk": "xr-sim/ekran/03-menu-birlestir.png",
    "f": {
     "yol": "xr-sim/ekran/03-parcali.png",
@@ -264,9 +264,9 @@
   }
  },
  {
-  "ad": "A3 menüden Birleştir katmanları indirir",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A3 menüden Birleştir katmanları indirir",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.4,
@@ -281,33 +281,33 @@
   }
  },
  {
-  "ad": "A4 B menüyü kapatır, basılı tutunca bir kez",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A4 B menüyü kapatır, basılı tutunca bir kez",
+  "result": "PASS",
+  "evidence": {
    "once": true,
    "basili": false,
    "birak": false
   }
  },
  {
-  "ad": "A4 Y menüyü açar",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A4 Y menüyü açar",
+  "result": "PASS",
+  "evidence": {
    "basili": true,
    "birak": true
   }
  },
  {
-  "ad": "A4 menü kapalıyken tetik eylem yapmaz",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A4 menü kapalıyken tetik eylem yapmaz",
+  "result": "PASS",
+  "evidence": {
    "iceride": false
   }
  },
  {
-  "ad": "A4 baş 90° sola dönükken menü başın önünde açılır",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A4 baş 90° sola dönükken menü başın önünde açılır",
+  "result": "PASS",
+  "evidence": {
    "menuYerel": [
     -1.34,
     1.6,
@@ -321,9 +321,9 @@
   }
  },
  {
-  "ad": "A5 İçeri gir: rig 1×, döşemede, durakta",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A5 İçeri gir: rig 1×, döşemede, durakta",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.667,
@@ -347,9 +347,9 @@
   }
  },
  {
-  "ad": "A5 durağa dönük (giris: +z)",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A5 durağa dönük (giris: +z)",
+  "result": "PASS",
+  "evidence": {
    "ileri": [
     0,
     0,
@@ -358,9 +358,9 @@
   }
  },
  {
-  "ad": "A5 giriş kartı açıldı (kapi yarıçapı içinde)",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A5 giriş kartı açıldı (kapi yarıçapı içinde)",
+  "result": "PASS",
+  "evidence": {
    "aktifBilgi": "kapi",
    "kartAcik": true,
    "menuAcik": true,
@@ -391,14 +391,14 @@
   }
  },
  {
-  "ad": "A5 kart dokusu kaydedildi",
-  "sonuc": "GECTI",
-  "dayanak": "xr-sim/ekran/05-kart-kapi.png"
+  "name": "A5 kart dokusu kaydedildi",
+  "result": "PASS",
+  "evidence": "xr-sim/ekran/05-kart-kapi.png"
  },
  {
-  "ad": "A5 GÖZLEM kart açıkken menü öğesine nişan karta çarpar (menü erişilemez)",
-  "sonuc": "KALDI",
-  "dayanak": {
+  "name": "A5 GÖZLEM kart açıkken menü öğesine nişan karta çarpar (menü erişilemez)",
+  "result": "FAIL",
+  "evidence": {
    "tani": {
     "nesne": "kart",
     "v": 0.365,
@@ -407,9 +407,9 @@
   }
  },
  {
-  "ad": "A6 karta ışınla tıkla: kart kapanır, kapalı kalır",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A6 karta ışınla tıkla: kart kapanır, kapalı kalır",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "kart",
     "v": 0.5,
@@ -421,14 +421,14 @@
   }
  },
  {
-  "ad": "A6 kapatılan kart aynı noktada geri açılmaz",
-  "sonuc": "GECTI",
-  "dayanak": {}
+  "name": "A6 kapatılan kart aynı noktada geri açılmaz",
+  "result": "PASS",
+  "evidence": {}
  },
  {
-  "ad": "A7 ölü bölge altı yürüyüş yok",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A7 ölü bölge altı yürüyüş yok",
+  "result": "PASS",
+  "evidence": {
    "once": [
     0,
     2.3,
@@ -442,9 +442,9 @@
   }
  },
  {
-  "ad": "A7 sol çubuk ileri: bakış yönünde (+z) yürür, adım ≤0.16 m/kare",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A7 sol çubuk ileri: bakış yönünde (+z) yürür, adım ≤0.16 m/kare",
+  "result": "PASS",
+  "evidence": {
    "once": [
     0,
     2.3,
@@ -459,9 +459,9 @@
   }
  },
  {
-  "ad": "A7 sol çubuk sağa: kullanıcının sağına kayar (+z bakarken −x)",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A7 sol çubuk sağa: kullanıcının sağına kayar (+z bakarken −x)",
+  "result": "PASS",
+  "evidence": {
    "once": [
     0,
     2.3,
@@ -475,9 +475,9 @@
   }
  },
  {
-  "ad": "A7 yapıya yaklaşınca bilgi kartı açılır, kaynak satırıyla",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A7 yapıya yaklaşınca bilgi kartı açılır, kaynak satırıyla",
+  "result": "PASS",
+  "evidence": {
    "aktifBilgi": "sadirvan",
    "bas": [
     -0.9656,
@@ -504,9 +504,9 @@
   }
  },
  {
-  "ad": "A7 kart başın önünde",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A7 kart başın önünde",
+  "result": "PASS",
+  "evidence": {
    "kartYerel": [
     -0.0315,
     1.6,
@@ -520,9 +520,9 @@
   }
  },
  {
-  "ad": "A7 yaklaşma kartı da tıkla kapanır",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A7 yaklaşma kartı da tıkla kapanır",
+  "result": "PASS",
+  "evidence": {
    "ht": {
     "nesne": "kart",
     "v": 0.5,
@@ -531,9 +531,9 @@
   }
  },
  {
-  "ad": "A7 11 kartın hepsinde kaynak metni çözülüyor (veri)",
-  "sonuc": "GECTI",
-  "dayanak": [
+  "name": "A7 11 kartın hepsinde kaynak metni çözülüyor (veri)",
+  "result": "PASS",
+  "evidence": [
    [
     "kapi",
     "Kaynak: Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ulucami\", s. 44"
@@ -581,9 +581,9 @@
   ]
  },
  {
-  "ad": "A8 0.6 itiş tetiklemez (eşik 0.7)",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A8 0.6 itiş tetiklemez (eşik 0.7)",
+  "result": "PASS",
+  "evidence": {
    "rotY": [
     -3.1416,
     -3.1416
@@ -591,17 +591,17 @@
   }
  },
  {
-  "ad": "A8 sağa itiş: 8 kare basılıyken tek 30° dönüş",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A8 sağa itiş: 8 kare basılıyken tek 30° dönüş",
+  "result": "PASS",
+  "evidence": {
    "donusDerece": -30.00007015304991,
    "kare": 8
   }
  },
  {
-  "ad": "A8 dönüş başın çevresinde: baş yeri sabit (tol 2 cm)",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A8 dönüş başın çevresinde: baş yeri sabit (tol 2 cm)",
+  "result": "PASS",
+  "evidence": {
    "once": [
     -0.9656,
     2.3,
@@ -616,9 +616,9 @@
   }
  },
  {
-  "ad": "A8 sağa itiş kullanıcıyı sağa döndürür",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A8 sağa itiş kullanıcıyı sağa döndürür",
+  "result": "PASS",
+  "evidence": {
    "ileriOnce": [
     0,
     0,
@@ -633,9 +633,9 @@
   }
  },
  {
-  "ad": "A8 ortaya dönüp sola itiş: yeniden tek 30° ters",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A8 ortaya dönüp sola itiş: yeniden tek 30° ters",
+  "result": "PASS",
+  "evidence": {
    "rotY": [
     -3.1416,
     -3.6652,
@@ -645,9 +645,9 @@
   }
  },
  {
-  "ad": "A9 durak giris: konum, yön, çarpmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 durak giris: konum, yön, çarpmıyor",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.68,
@@ -669,9 +669,9 @@
   }
  },
  {
-  "ad": "A9 durak sadirvan: konum, yön, çarpmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 durak sadirvan: konum, yön, çarpmıyor",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.6,
@@ -693,9 +693,9 @@
   }
  },
  {
-  "ad": "A9 durak mihrap: konum, yön, çarpmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 durak mihrap: konum, yön, çarpmıyor",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.52,
@@ -717,9 +717,9 @@
   }
  },
  {
-  "ad": "A9 durak minber: konum, yön, çarpmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 durak minber: konum, yön, çarpmıyor",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.44,
@@ -741,9 +741,9 @@
   }
  },
  {
-  "ad": "A9 durak kapi: konum, yön, çarpmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 durak kapi: konum, yön, çarpmıyor",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.36,
@@ -765,9 +765,9 @@
   }
  },
  {
-  "ad": "A9 durak kabe: konum, yön, çarpmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 durak kabe: konum, yön, çarpmıyor",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.28,
@@ -789,9 +789,9 @@
   }
  },
  {
-  "ad": "A9 durak levha: konum, yön, çarpmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 durak levha: konum, yön, çarpmıyor",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.2,
@@ -813,9 +813,9 @@
   }
  },
  {
-  "ad": "A9 durak kubbe: konum, yön, çarpmıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 durak kubbe: konum, yön, çarpmıyor",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.12,
@@ -837,9 +837,9 @@
   }
  },
  {
-  "ad": "A9 ileri: duvarda durur, içinden geçmez",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 ileri: duvarda durur, içinden geçmez",
+  "result": "PASS",
+  "evidence": {
    "bas0": [
     23.5,
     2.3,
@@ -869,9 +869,9 @@
   }
  },
  {
-  "ad": "A9 duvara çapraz itiş: duvar boyunca kayar",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A9 duvara çapraz itiş: duvar boyunca kayar",
+  "result": "PASS",
+  "evidence": {
    "once": [
     32.0058,
     2.3,
@@ -890,9 +890,9 @@
   }
  },
  {
-  "ad": "A9 BAŞ 90° DÖNÜKKEN durak: kullanıcı durağa dönük mü",
-  "sonuc": "KALDI",
-  "dayanak": {
+  "name": "A9 BAŞ 90° DÖNÜKKEN durak: kullanıcı durağa dönük mü",
+  "result": "FAIL",
+  "evidence": {
    "ileri": [
     1,
     0,
@@ -907,16 +907,16 @@
   }
  },
  {
-  "ad": "A10 kaynak listesi tek kumanda",
-  "sonuc": "GECTI",
-  "dayanak": [
+  "name": "A10 kaynak listesi tek kumanda",
+  "result": "PASS",
+  "evidence": [
    "right:4a/7b"
   ]
  },
  {
-  "ad": "A10 tek kumanda yana itiş: tek dönüş, kayma yok",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A10 tek kumanda yana itiş: tek dönüş, kayma yok",
+  "result": "PASS",
+  "evidence": {
    "donusDerece": -30.00007015304991,
    "bas0": [
     0.0315,
@@ -932,9 +932,9 @@
   }
  },
  {
-  "ad": "A10 tek kumanda 0.6 yana itiş: kayma da dönüş de yok",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A10 tek kumanda 0.6 yana itiş: kayma da dönüş de yok",
+  "result": "PASS",
+  "evidence": {
    "bas0": [
     0.0315,
     2.3,
@@ -948,9 +948,9 @@
   }
  },
  {
-  "ad": "A10 tek kumanda ileri itiş: yürür",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A10 tek kumanda ileri itiş: yürür",
+  "result": "PASS",
+  "evidence": {
    "once": [
     0.0315,
     2.3,
@@ -969,17 +969,17 @@
   }
  },
  {
-  "ad": "A10 tek kumanda B menü",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A10 tek kumanda B menü",
+  "result": "PASS",
+  "evidence": {
    "once": true,
    "sonra": false
   }
  },
  {
-  "ad": "A10 yalnız sol kumanda: yana itiş dönüş, kayma yok",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A10 yalnız sol kumanda: yana itiş dönüş, kayma yok",
+  "result": "PASS",
+  "evidence": {
    "girdiler": [
     "left:4a/7b"
    ],
@@ -996,9 +996,9 @@
   }
  },
  {
-  "ad": "A10 yalnız sol kumandayla menü tıklanır",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A10 yalnız sol kumandayla menü tıklanır",
+  "result": "PASS",
+  "evidence": {
    "kt": {
     "nesne": "menu",
     "v": 0.68,
@@ -1012,17 +1012,17 @@
   }
  },
  {
-  "ad": "A10 yeniden bağlanma hata vermiyor",
-  "sonuc": "GECTI",
-  "dayanak": [
+  "name": "A10 yeniden bağlanma hata vermiyor",
+  "result": "PASS",
+  "evidence": [
    "left:4a/7b",
    "right:4a/7b"
   ]
  },
  {
-  "ad": "A11 Dışarı çık: maket görünümü, ışık/disk geri, kart yok",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A11 Dışarı çık: maket görünümü, ışık/disk geri, kart yok",
+  "result": "PASS",
+  "evidence": {
    "tani": {
     "nesne": "menu",
     "v": 0.76,
@@ -1060,9 +1060,9 @@
   }
  },
  {
-  "ad": "A12 VRdan-cik: masaüstü kamera/near/far/arka plan",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A12 VRdan-cik: masaüstü kamera/near/far/arka plan",
+  "result": "PASS",
+  "evidence": {
    "near": 4,
    "far": 900,
    "arka": "artAlan",
@@ -1102,9 +1102,9 @@
   }
  },
  {
-  "ad": "A12 VRdan-cik: canvas boyutu alanla aynı",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A12 VRdan-cik: canvas boyutu alanla aynı",
+  "result": "PASS",
+  "evidence": {
    "canvas": [
     896,
     378
@@ -1120,9 +1120,9 @@
   }
  },
  {
-  "ad": "A12 VRdan-cik: düğmeler yeniden etkin, kart yok",
-  "sonuc": "GECTI",
-  "dayanak": [
+  "name": "A12 VRdan-cik: düğmeler yeniden etkin, kart yok",
+  "result": "PASS",
+  "evidence": [
    {
     "t": "İçeri gir",
     "d": false,
@@ -1156,9 +1156,9 @@
   ]
  },
  {
-  "ad": "A12 VRdan-cik: masaüstü kare çiziyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A12 VRdan-cik: masaüstü kare çiziyor",
+  "result": "PASS",
+  "evidence": {
    "yol": "xr-sim/ekran/A12 VRdan-cik-masaustu-fb.png",
    "w": 896,
    "h": 378,
@@ -1174,9 +1174,9 @@
   }
  },
  {
-  "ad": "A12 VRdan-cik: sürükleme kamerayı döndürüyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A12 VRdan-cik: sürükleme kamerayı döndürüyor",
+  "result": "PASS",
+  "evidence": {
    "once": [
     -57.3938,
     40,
@@ -1190,9 +1190,9 @@
   }
  },
  {
-  "ad": "A12 VRdan-cik: masaüstü İçeri gir çalışıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A12 VRdan-cik: masaüstü İçeri gir çalışıyor",
+  "result": "PASS",
+  "evidence": {
    "bas": [
     0,
     2.7,
@@ -1205,9 +1205,9 @@
   }
  },
  {
-  "ad": "A12 VRdan-cik: masaüstü Dışarı çık çalışıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A12 VRdan-cik: masaüstü Dışarı çık çalışıyor",
+  "result": "PASS",
+  "evidence": {
    "bas": [
     -58,
     40,
@@ -1218,33 +1218,33 @@
   }
  },
  {
-  "ad": "A12 konsol hatası yok",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "A12 konsol hatası yok",
+  "result": "PASS",
+  "evidence": {
    "hata": []
   }
  },
  {
-  "ad": "B yeniden açılış sıfırdan: ölçek 100, açı 0, menü açık",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B yeniden açılış sıfırdan: ölçek 100, açı 0, menü açık",
+  "result": "PASS",
+  "evidence": {
    "rigOlcek": 100,
    "rigRotY": 3.1416,
    "menuAcik": true
   }
  },
  {
-  "ad": "B içeride, kart açık",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B içeride, kart açık",
+  "result": "PASS",
+  "evidence": {
    "iceride": true,
    "aktifBilgi": "kapi"
   }
  },
  {
-  "ad": "B dissardan-kapanis: masaüstü kamera/near/far/arka plan",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B dissardan-kapanis: masaüstü kamera/near/far/arka plan",
+  "result": "PASS",
+  "evidence": {
    "near": 4,
    "far": 900,
    "arka": "artAlan",
@@ -1284,9 +1284,9 @@
   }
  },
  {
-  "ad": "B dissardan-kapanis: canvas boyutu alanla aynı",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B dissardan-kapanis: canvas boyutu alanla aynı",
+  "result": "PASS",
+  "evidence": {
    "canvas": [
     896,
     378
@@ -1302,9 +1302,9 @@
   }
  },
  {
-  "ad": "B dissardan-kapanis: düğmeler yeniden etkin, kart yok",
-  "sonuc": "GECTI",
-  "dayanak": [
+  "name": "B dissardan-kapanis: düğmeler yeniden etkin, kart yok",
+  "result": "PASS",
+  "evidence": [
    {
     "t": "İçeri gir",
     "d": false,
@@ -1338,9 +1338,9 @@
   ]
  },
  {
-  "ad": "B dissardan-kapanis: masaüstü kare çiziyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B dissardan-kapanis: masaüstü kare çiziyor",
+  "result": "PASS",
+  "evidence": {
    "yol": "xr-sim/ekran/B dissardan-kapanis-masaustu-fb.png",
    "w": 896,
    "h": 378,
@@ -1356,9 +1356,9 @@
   }
  },
  {
-  "ad": "B dissardan-kapanis: sürükleme kamerayı döndürüyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B dissardan-kapanis: sürükleme kamerayı döndürüyor",
+  "result": "PASS",
+  "evidence": {
    "once": [
     -58,
     40,
@@ -1372,9 +1372,9 @@
   }
  },
  {
-  "ad": "B dissardan-kapanis: masaüstü İçeri gir çalışıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B dissardan-kapanis: masaüstü İçeri gir çalışıyor",
+  "result": "PASS",
+  "evidence": {
    "bas": [
     0,
     2.7,
@@ -1387,9 +1387,9 @@
   }
  },
  {
-  "ad": "B dissardan-kapanis: masaüstü Dışarı çık çalışıyor",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B dissardan-kapanis: masaüstü Dışarı çık çalışıyor",
+  "result": "PASS",
+  "evidence": {
    "bas": [
     -58,
     40,
@@ -1400,16 +1400,16 @@
   }
  },
  {
-  "ad": "B konsol hatası yok",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "B konsol hatası yok",
+  "result": "PASS",
+  "evidence": {
    "hata": []
   }
  },
  {
-  "ad": "C parçalıyken çıkış: sayfa birleşik, düğme uyumlu",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "C parçalıyken çıkış: sayfa birleşik, düğme uyumlu",
+  "result": "PASS",
+  "evidence": {
    "parcaliIci": true,
    "parcaliSon": false,
    "katmanY": [
@@ -1421,9 +1421,9 @@
   }
  },
  {
-  "ad": "Sonuç konsol",
-  "sonuc": "GECTI",
-  "dayanak": {
+  "name": "Sonuç konsol",
+  "result": "PASS",
+  "evidence": {
    "hata": [],
    "uyari": []
   }

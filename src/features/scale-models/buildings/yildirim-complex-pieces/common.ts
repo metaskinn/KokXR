@@ -1,5 +1,5 @@
-// Yıldırım Külliyesi maketinin ortak dokuları ve geometri yardımcıları.
-// Taş, almaşık örgü, halı ve bezemeler tuvalde üretilir; yalnız mihrap ve iki levha Drive fotoğrafından gelir.
+// Shared textures and geometry helpers for the Yıldırım Complex model.
+// Stone, alternating masonry, carpet and ornaments are generated on canvas; only the mihrab and two panels come from Drive photos.
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../../../shared/config/publicBuild'
 import { uluMosqueMaterials } from '../../uluMosqueTextures'
@@ -15,7 +15,7 @@ function canvas(g: number, y: number, draw: (c: CanvasRenderingContext2D, g: num
   const el = document.createElement('canvas')
   el.width = g; el.height = y
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   draw(c, g, y)
   return el
 }
@@ -28,7 +28,7 @@ function texture(el: HTMLCanvasElement, meterX: number, meterY: number, colored 
   return t
 }
 
-/** Kesme taş: açık gri ve bej, damarlı bloklar (cephe ve iç payeler fotoğraflardaki gibi). */
+/** Cut stone: light gray and beige veined blocks (facade and interior piers as in the photos). */
 function ashlarCanvas(seed: number, colors: string[]) {
   const r = random(seed)
   return canvas(1024, 1024, (c, G, Y) => {
@@ -64,15 +64,15 @@ function ashlarCanvas(seed: number, colors: string[]) {
   })
 }
 
-/** Almaşık örgü: iki sıra tuğla ile bir sıra taş (envanter s. 176, 204). */
+/** Alternating (almaşık) masonry: two courses of brick with one course of stone (inventory pp. 176, 204). */
 function alternatingCanvas(seed: number, stoneColor: string[]) {
   const r = random(seed)
   return canvas(1024, 1024, (c, G, Y) => {
     c.fillStyle = '#c9b89b'; c.fillRect(0, 0, G, Y)
-    const PERIOD = 5, d = Y / PERIOD // 1024 px = 2,4 m; bir tekrar 0,48 m
+    const PERIOD = 5, d = Y / PERIOD // 1024 px = 2.4 m; one repeat 0.48 m
     for (let s = 0; s < PERIOD; s++) {
       const y0 = s * d
-      // Taş sırası
+      // Stone course
       let x = -r() * 90
       const stoneH = d * 0.62
       while (x < G) {
@@ -85,7 +85,7 @@ function alternatingCanvas(seed: number, stoneColor: string[]) {
         c.globalAlpha = 1
         x += w
       }
-      // İki sıra tuğla
+      // Two courses of brick
       for (let t = 0; t < 2; t++) {
         const yy = y0 + stoneH + t * (d - stoneH) / 2
         let bx = -(t * 40) - r() * 40
@@ -100,7 +100,7 @@ function alternatingCanvas(seed: number, stoneColor: string[]) {
   })
 }
 
-/** Moloz taş duvar: düzensiz, sıcak gri taşlar (darüşşifa). */
+/** Rubble stone wall: irregular warm gray stones (darüşşifa). */
 function rubbleCanvas(seed: number) {
   const r = random(seed)
   return canvas(512, 512, (c, G, Y) => {
@@ -114,7 +114,7 @@ function rubbleCanvas(seed: number) {
   })
 }
 
-/** Turkuaz halı: alacalı zemin ve kıbleye dik saf şeritleri (fotoğraflardaki gibi; desen kopyalanmaz). */
+/** Turquoise carpet: mottled ground and prayer-row strips perpendicular to the qibla (as in the photos; pattern not copied). */
 function carpetCanvas(seed: number) {
   const r = random(seed)
   return canvas(512, 512, (c, G, Y) => {
@@ -123,7 +123,7 @@ function carpetCanvas(seed: number) {
       c.fillStyle = r() > 0.5 ? 'rgba(70,160,165,0.1)' : 'rgba(8,70,80,0.14)'
       c.beginPath(); c.ellipse(r() * G, r() * Y, 8 + r() * 42, 3 + r() * 14, r() * 3, 0, Math.PI * 2); c.fill()
     }
-    // Saf şeridi: 2,4 m'de bir koyu bant ve baklava dizisi
+    // Prayer-row strip: a dark band and lozenge row every 2.4 m
     const y0 = Y * 0.46, h = Y * 0.075
     c.fillStyle = '#16323a'; c.fillRect(0, y0, G, h)
     c.fillStyle = '#b9c9c4'; c.fillRect(0, y0 - 2, G, 2); c.fillRect(0, y0 + h, G, 2)
@@ -134,7 +134,7 @@ function carpetCanvas(seed: number) {
   })
 }
 
-/** Kırmızı halı (türbe iç mekânı, parçalı görünüşte üstten görünür). */
+/** Red carpet (tomb interior, visible from above in the exploded view). */
 const redCanvas = (seed: number) => {
   const r = random(seed)
   return canvas(128, 128, (c, G, Y) => {
@@ -143,7 +143,7 @@ const redCanvas = (seed: number) => {
   })
 }
 
-/** Kalem işi kuşak: rumi benzeri geometrik tekrar; yazı içermez. */
+/** Painted (kalem işi) band: rumi-like geometric repeat; contains no inscription. */
 function bandCanvas() {
   return canvas(512, 64, (c, G, Y) => {
     c.fillStyle = '#f2ead9'; c.fillRect(0, 0, G, Y)
@@ -158,7 +158,7 @@ function bandCanvas() {
   })
 }
 
-/** Kubbe göbeği: on altı kollu geometrik madalyon; yazı içermez. */
+/** Dome center: sixteen-armed geometric medallion; contains no inscription. */
 function bossCanvas() {
   return canvas(512, 512, (c, G) => {
     const o = G / 2
@@ -176,7 +176,7 @@ function bossCanvas() {
   })
 }
 
-/** Revzen: alçı şebekeli renkli cam, ışık geçirir gibi parlar. */
+/** Revzen: colored glass with plaster grille, glows as if letting light through. */
 function transomCanvas() {
   return canvas(256, 384, (c, G, Y) => {
     c.fillStyle = '#f7f0dd'; c.fillRect(0, 0, G, Y)
@@ -191,7 +191,7 @@ function transomCanvas() {
   })
 }
 
-/** Lokma demir parmaklık ardında aydınlık pencere. */
+/** Bright window behind a lokma iron grille. */
 function ironCanvas() {
   return canvas(256, 256, (c, G, Y) => {
     c.fillStyle = '#dfe9ee'; c.fillRect(0, 0, G, Y)
@@ -206,7 +206,7 @@ function ironDarkCanvas() {
     for (let i = 0; i <= 8; i++) { c.fillRect(i * G / 8 - 4, 0, 8, Y); c.fillRect(0, i * Y / 8 - 4, G, 8) }
   })
 }
-/** Alçı şebeke: dışarıdan görünen kasnak penceresi. */
+/** Plaster grille: drum window seen from outside. */
 function latticeCanvas() {
   return canvas(128, 128, (c, G, Y) => {
     c.fillStyle = '#efe6d2'; c.fillRect(0, 0, G, Y)
@@ -214,7 +214,7 @@ function latticeCanvas() {
     for (let j = 0; j < 6; j++) for (let i = 0; i < 6; i++) { c.beginPath(); c.arc((i + 0.5 + (j % 2) * 0.5) * G / 6, (j + 0.5) * Y / 6, 7, 0, Math.PI * 2); c.fill() }
   })
 }
-/** Alçı şebekeli yarım ay pencere: içeriden ışıklı (fotoğraflardaki alt pencere alınlıkları). */
+/** Half-moon window with plaster grille: lit from inside (the lower window lunettes in the photos). */
 function latticeLightCanvas() {
   return canvas(128, 128, (c, G, Y) => {
     c.fillStyle = '#d9d2c0'; c.fillRect(0, 0, G, Y)
@@ -222,7 +222,7 @@ function latticeLightCanvas() {
     for (let j = 0; j < 8; j++) for (let i = 0; i < 8; i++) { c.beginPath(); c.arc((i + 0.5 + (j % 2) * 0.5) * G / 8, (j + 0.5) * Y / 8, 5.5, 0, Math.PI * 2); c.fill() }
   })
 }
-/** Çim ve yaprak: gürültülü yeşil. */
+/** Grass and leaves: noisy green. */
 function greenCanvas(seed: number, base: string, open: string, dark: string) {
   const r = random(seed)
   return canvas(256, 256, (c, G, Y) => {
@@ -301,7 +301,7 @@ export function yildirimMaterials() {
 }
 export type YM = ReturnType<typeof yildirimMaterials>
 
-/** Fotoğraflardaki Bursa kemeri: yanlarda dik inen, tepede hafif sivrilen basık yay. */
+/** Bursa arch as in the photos: flattened arc dropping vertically at the sides, slightly pointed at the top. */
 export function bursaArch<P extends THREE.Path>(p: P, cx: number, y0: number, g: number, flat: number, archH: number): P {
   const o = g / 2, apex = y0 + flat + archH, shoulder = y0 + flat
   p.moveTo(cx - o, y0)
@@ -324,35 +324,35 @@ const quadShape = (x0: number, y0: number, x1: number, y1: number) => {
   return p
 }
 
-/** X doğrultusunda uzanan duvar: delikler (x, y) düzleminde. Kalınlık z0..z1. */
+/** Wall running along X: holes in the (x, y) plane. Thickness z0..z1. */
 export function wallX(x0: number, x1: number, z0: number, z1: number, y0: number, y1: number, holes: THREE.Path[] = []) {
   const s = quadShape(x0, y0, x1, y1)
   s.holes.push(...holes)
   return subtract(s, z1 - z0, z0)
 }
-/** Z doğrultusunda uzanan duvar: delikler (z, y) düzleminde. Kalınlık x0..x1. */
+/** Wall running along Z: holes in the (z, y) plane. Thickness x0..x1. */
 export function wallZ(x0: number, x1: number, z0: number, z1: number, y0: number, y1: number, holes: THREE.Path[] = []) {
   const s = quadShape(z0, y0, z1, y1)
   s.holes.push(...holes)
   return subtract(s, x1 - x0, 0).rotateY(-Math.PI / 2).translate(x1, 0, 0)
 }
-/** Dikdörtgeni çeviren çerçeve (saçak silmesi): ortası boş kalır, tavanı kapatmaz. */
+/** Frame around a rectangle (eave molding): the middle stays empty, does not close the ceiling. */
 export function molding(ext: (g: THREE.BufferGeometry, mat: Mat) => void, mat: Mat, x0: number, x1: number, y0: number, y1: number, z0: number, z1: number, t: number) {
   ext(boxK(x0, x1, y0, y1, z0, z0 + t), mat)
   ext(boxK(x0, x1, y0, y1, z1 - t, z1), mat)
   ext(boxK(x0, x0 + t, y0, y1, z0 + t, z1 - t), mat)
   ext(boxK(x1 - t, x1, y0, y1, z0 + t, z1 - t), mat)
 }
-/** Köşeleri verilen kutu. */
+/** Box given by its corners. */
 export function boxK(x0: number, x1: number, y0: number, y1: number, z0: number, z1: number) {
   return boxG(x1 - x0, y1 - y0, z1 - z0).translate((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2)
 }
 
-/** Kemer ağzını çeviren dönüşümlü tuğla ve taş kemer taşları (fotoğraflardaki alacalı kemerler). */
+/** Alternating brick and stone voussoirs around the arch mouth (the mottled arches in the photos). */
 export function alternatingArch(ext: (g: THREE.BufferGeometry, mat: Mat) => void, m: YM, cx: number, y0: number, g: number, flat: number, archH: number, stay: number, depth: number, z: number, count = 15) {
   const innerPath = arch(new THREE.Path(), cx, y0, g, flat, archH).getPoints(10)
   const outerPath = arch(new THREE.Path(), cx, y0, g + stay * 2, flat + 0.02, archH + stay * 0.85).getPoints(10)
-  // getPoints: alt-sol, omuz, yay noktaları, omuz, alt-sağ; yalnız yay kısmı kullanılır
+  // getPoints: bottom-left, shoulder, arc points, shoulder, bottom-right; only the arc part is used
   const bow = (y: THREE.Vector2[]) => y.filter((n) => n.y >= y0 + flat - 0.001)
   const a = bow(innerPath), b = bow(outerPath)
   const n = Math.min(a.length, b.length) - 1
@@ -364,7 +364,7 @@ export function alternatingArch(ext: (g: THREE.BufferGeometry, mat: Mat) => void
   }
 }
 
-/** Dış kubbe: saçaklı etek, kurşun kaplama ve altın alem. */
+/** Outer dome: eaved skirt, lead cladding and gold finial. */
 export function outerDome(ext: (kv: Bucket, g: THREE.BufferGeometry, mat: Mat) => void, kv: Bucket, m: YM, cx: number, cz: number, y0: number, R: number, H: number, finial = 1) {
   const p: [number, number][] = [[R + 0.42, -0.2], [R + 0.36, -0.02], [R + 0.05, 0.1]]
   for (let t = 0; t <= 14; t++) {
@@ -377,11 +377,11 @@ export function outerDome(ext: (kv: Bucket, g: THREE.BufferGeometry, mat: Mat) =
   ext(kv, place(rotateG(q, 8), cx, y0 + 0.1 + H - 0.05, cz), m.gold)
 }
 
-/** Dış kasnak: çokgen gövde, saçak silmesi ve kemerli pencere yüzleri. */
+/** Outer drum: polygonal body, eave molding and arched window faces. */
 export function outerDrum(ext: (kv: Bucket, g: THREE.BufferGeometry, mat: Mat) => void, kv: Bucket, m: YM, cx: number, cz: number, y0: number, h: number, R: number, edge: number, window: number, lock = 0) {
-  const don = edge === 8 ? Math.PI / 8 : 0
-  ext(kv, place(flatShadow(cylinderG(R, R, h, edge, true).rotateY(don + lock)), cx, y0 + h / 2, cz), m.alternating)
-  ext(kv, place(flatShadow(cylinderG(R + 0.16, R + 0.04, 0.22, edge, true).rotateY(don + lock)), cx, y0 + h - 0.05, cz), m.ashlarLight)
+  const rotation = edge === 8 ? Math.PI / 8 : 0
+  ext(kv, place(flatShadow(cylinderG(R, R, h, edge, true).rotateY(rotation + lock)), cx, y0 + h / 2, cz), m.alternating)
+  ext(kv, place(flatShadow(cylinderG(R + 0.16, R + 0.04, 0.22, edge, true).rotateY(rotation + lock)), cx, y0 + h - 0.05, cz), m.ashlarLight)
   ext(kv, place(cylinderG(R + 0.01, R + 0.01, 0.02, 4), cx, y0, cz), m.dark)
   if (!window) return
   const face = R * Math.cos(Math.PI / edge) + 0.03
@@ -396,7 +396,7 @@ export function outerDrum(ext: (kv: Bucket, g: THREE.BufferGeometry, mat: Mat) =
   }
 }
 
-/** Dikdörtgen tabandan daire ağza geçen örtü (pandantif / Türk üçgeni yerine sade yüzey). */
+/** Cover transitioning from a rectangular base to a circular mouth (a plain surface instead of pendentive / Turkish triangle). */
 export function pendentiveG(cx: number, cz: number, x0: number, x1: number, z0: number, z1: number, y0: number, y1: number, R: number) {
   const SEG = 48, ROW = 6
   const position: number[] = [], uv: number[] = [], index: number[] = []
@@ -422,7 +422,7 @@ export function pendentiveG(cx: number, cz: number, x0: number, x1: number, z0: 
   return g
 }
 
-/** Halka avize: iki halka, askılar ve lambalar. */
+/** Ring chandelier: two rings, hangers and lamps. */
 export function chandelier(k: Bucket, m: YM, x: number, ay: number, z: number, R: number, apex: number, count: number) {
   const ring = (r: number, y: number) => k.add(new THREE.TorusGeometry(r, 0.035, 6, 32).rotateX(Math.PI / 2).translate(x, y, z), m.bronze)
   const lamp = (r: number, y: number, n: number) => {
@@ -447,7 +447,7 @@ export function chandelier(k: Bucket, m: YM, x: number, ay: number, z: number, R
   }
 }
 
-/** Kama çatı: tepe düzlüğü (deliklerle) ve dört yana inen kurşun etekler. */
+/** Wedge roof: top flat (with holes) and lead skirts descending to four sides. */
 export function roof(ext: (g: THREE.BufferGeometry) => void, x0: number, x1: number, z0: number, z1: number, bottomY: number, topY: number, eave: number, inward: number, holes: { x: number; z: number; r: number }[] = [], lash?: (g: THREE.BufferGeometry) => void) {
   const X0 = x0 - eave, X1 = x1 + eave, Z0 = z0 - eave, Z1 = z1 + eave
   const a0 = x0 + inward, a1 = x1 - inward, b0 = z0 + inward, b1 = z1 - inward
@@ -466,12 +466,12 @@ export function roof(ext: (g: THREE.BufferGeometry) => void, x0: number, x1: num
   face([[X1, bottomY, Z1], [X1, bottomY, Z0], [a1, topY, b0], [a1, topY, b1]], Z1 - Z0)
   face([[X0, bottomY, Z0], [X0, bottomY, Z1], [a0, topY, b1], [a0, topY, b0]], Z1 - Z0)
   if (lash) {
-    // Saçak altı silmesi
+    // Under-eave molding
     lash(boxK(X0, X1, bottomY - 0.28, bottomY, Z0, Z1 ))
   }
 }
 
-/** Dıştan görünen pencere: söve ve lokma demirli karanlık gözle dikdörtgen veya sivri alınlıklı. */
+/** Window seen from outside: frame and dark opening with lokma iron, rectangular or with a pointed lunette. */
 export function outerWindow(ext: (g: THREE.BufferGeometry, mat: Mat) => void, m: YM, x: number, y0: number, g: number, h: number, z: number, pointed: boolean, casing: Mat) {
   const k = 0.14
   ext(boxK(x - g / 2 - k, x + g / 2 + k, y0 - k, y0, z, z + 0.1), casing)
@@ -486,7 +486,7 @@ export function outerWindow(ext: (g: THREE.BufferGeometry, mat: Mat) => void, m:
   }
 }
 
-/** Yaprak dolu ağaç: gövde ve üç iri öbek. */
+/** Leafy tree: trunk and three large clusters. */
 export function tree(ext: (g: THREE.BufferGeometry, mat: Mat) => void, m: YM, x: number, z: number, length: number, yellow: boolean, seed: number) {
   const r = random(seed)
   ext(place(cylinderG(length * 0.03, length * 0.05, length * 0.45, 7), x, length * 0.22, z), m.shell)
@@ -503,7 +503,7 @@ export function tree(ext: (g: THREE.BufferGeometry, mat: Mat) => void, m: YM, x:
   }
 }
 
-/** Selvi: fotoğraflardaki koyu, ince ağaç. */
+/** Cypress: the dark, slender tree in the photos. */
 export function cypress(ext: (g: THREE.BufferGeometry, mat: Mat) => void, m: YM, x: number, z: number, length: number) {
   const p: [number, number][] = [[0.12, 1], [0.9, 1.8], [1.35, length * 0.24], [1.45, length * 0.4], [1.15, length * 0.62], [0.72, length * 0.82], [0.24, length * 0.96], [0, length]]
   const g = rotateG(p, 10)

@@ -1,5 +1,5 @@
-// Külliyeye özel tuval dokuları: dışarıdan görsel kullanılmaz. Örgü ve renkler kitaptaki fotoğraflara bakılarak
-// yorumlanmıştır; bezemeler temsilîdir, hat yazısı taklit edilmez.
+// Canvas textures specific to the complex: no external images are used. Masonry and colors are interpreted from the book's
+// photos; ornaments are representative, calligraphy is not imitated.
 import * as THREE from 'three'
 import { random } from '../../uluMosqueFloor'
 import type { UluMosqueMaterials } from '../../uluMosqueTextures'
@@ -10,7 +10,7 @@ function texture(w: number, h: number, meterX: number, meterY: number, seed: num
   const el = document.createElement('canvas')
   el.width = w; el.height = h
   const c = el.getContext('2d')
-  if (!c) throw new Error('Tuval kullanılamıyor')
+  if (!c) throw new Error('Canvas unavailable')
   draw(c, w, h, random(seed))
   const t = new THREE.CanvasTexture(el)
   t.wrapS = t.wrapT = THREE.RepeatWrapping
@@ -20,7 +20,7 @@ function texture(w: number, h: number, meterX: number, meterY: number, seed: num
   return t
 }
 
-/** Sıra sıra örgü: `sira` her dönemde [yükseklik oranı, tuğla mı]. */
+/** Row-by-row masonry: `row` per period [height ratio, is it brick]. */
 function weave(c: CanvasRenderingContext2D, w: number, h: number, r: () => number, row: { h: number; brick: boolean; block: number }[]) {
   c.fillStyle = '#bda98f'
   c.fillRect(0, 0, w, h)
@@ -59,11 +59,11 @@ function geometricRosette(c: CanvasRenderingContext2D, x: number, y: number, R: 
 export function complexMaterials(m: UluMosqueMaterials) {
   const pbr = (p: THREE.MeshStandardMaterialParameters) => new THREE.MeshStandardMaterial({ roughness: 0.85, metalness: 0, ...p })
 
-  // Almaşık: üç sıra tuğla, bir sıra kesme taş (kitap s. 82-83). Dönem 0.62 m.
+  // Alternating (almaşık): three courses of brick, one course of cut stone (book pp. 82-83). Period 0.62 m.
   const T = { h: 0.1, brick: true, block: 110 }, S = { h: 0.32, brick: false, block: 290 }
   const alternating = texture(1024, 512, 2.4, 1.24, 71, (c, w, h, r) => weave(c, w, h, r, [T, T, T, S, T, T, T, S]))
   const brick = texture(512, 512, 1.6, 1.6, 72, (c, w, h, r) => weave(c, w, h, r, Array.from({ length: 22 }, () => ({ h: 1, brick: true, block: 70 }))))
-  // Yan cephe: daha çok taş, araya iki sıra tuğla (s. 82 ve arka cephe fotoğrafı)
+  // Side facade: more stone, two brick courses in between (p. 82 and rear facade photo)
   const T2 = { h: 0.085, brick: true, block: 110 }
   const side = texture(1024, 512, 2.4, 1.16, 73, (c, w, h, r) => weave(c, w, h, r, [T2, T2, { h: 0.41, brick: false, block: 300 }, T2, T2, { h: 0.41, brick: false, block: 340 }]))
   const rubble = texture(1024, 1024, 4, 4, 74, (c, w, h, r) => {
@@ -83,7 +83,7 @@ export function complexMaterials(m: UluMosqueMaterials) {
       c.fillStyle = 'rgba(0,0,0,0.22)'; c.fillRect(x - w / SUT / 2 + 1, y + h / ROW - 5, w / SUT - 2, 4)
     }
   })
-  // Saçak altında tüm cepheyi geçen küçük sivri kemer dizisi (s. 84-85)
+  // Row of small pointed arches running across the whole facade under the eave (pp. 84-85)
   const friezeBand = texture(256, 256, 0.9, 0.8, 76, (c, w, h) => {
     c.fillStyle = '#b4674a'; c.fillRect(0, 0, w, h)
     c.fillStyle = '#d7c6a6'; c.fillRect(0, 0, w, h * 0.14)
@@ -92,7 +92,7 @@ export function complexMaterials(m: UluMosqueMaterials) {
     c.fillStyle = '#3c2a22'
     c.beginPath(); c.moveTo(w * 0.24, h); c.lineTo(w * 0.24, h * 0.6); c.quadraticCurveTo(w * 0.24, h * 0.42, w / 2, h * 0.34); c.quadraticCurveTo(w * 0.76, h * 0.42, w * 0.76, h * 0.6); c.lineTo(w * 0.76, h); c.fill()
   })
-  // Cephe panosu ve kemer alınlıkları: iki renkli geometrik dolgu (TDV; s. 82 fotoğrafı)
+  // Facade panel and arch lunettes: two-color geometric fill (TDV; photo on p. 82)
   const interlock = texture(256, 256, 0.8, 0.8, 77, (c, w, h) => {
     c.fillStyle = '#b4674a'; c.fillRect(0, 0, w, h)
     c.fillStyle = '#ddcfb2'
@@ -106,7 +106,7 @@ export function complexMaterials(m: UluMosqueMaterials) {
       c.beginPath(); c.arc(x, y, w * 0.08, 0, Math.PI * 2); c.fill()
     }
   })
-  // Minare gövdesi: tuğla dizilimleri ve geometrik kuşak
+  // Minaret shaft: brick patterns and geometric band
   const minaret = texture(1024, 1024, 8.6, 8.6, 78, (c, w, h, r) => {
     weave(c, w, h, r, Array.from({ length: 70 }, () => ({ h: 1, brick: true, block: 42 })))
     c.strokeStyle = 'rgba(214,190,150,0.8)'; c.lineWidth = 7
@@ -116,7 +116,7 @@ export function complexMaterials(m: UluMosqueMaterials) {
       c.stroke()
     }
   })
-  // Kalem işi kuşak: rumi kıvrımlar, lacivert ve altın
+  // Painted (kalem işi) band: rumi scrolls, navy and gold
   const border = texture(512, 128, 1, 0.25, 79, (c, w, h) => {
     c.fillStyle = '#1e3f5c'; c.fillRect(0, 0, w, h)
     c.fillStyle = '#c9a24d'; c.fillRect(0, 0, w, 8); c.fillRect(0, h - 8, w, 8)
@@ -129,7 +129,7 @@ export function complexMaterials(m: UluMosqueMaterials) {
       c.fillStyle = '#e8d6a0'; c.beginPath(); c.arc(x + w / 8, h / 2, 9, 0, Math.PI * 2); c.fill()
     }
   })
-  // Hal kenarı: meandr bordür (fotoğraflardaki mavi halı)
+  // Carpet border: meander border (the blue carpet in the photos)
   const carpetEdge = texture(256, 128, 0.8, 0.4, 80, (c, w, h) => {
     c.fillStyle = '#17333f'; c.fillRect(0, 0, w, h)
     c.strokeStyle = '#d7b667'; c.lineWidth = 8
@@ -138,28 +138,28 @@ export function complexMaterials(m: UluMosqueMaterials) {
       c.beginPath(); c.moveTo(x, h - 22); c.lineTo(x, 24); c.lineTo(x + w * 0.18, 24); c.lineTo(x + w * 0.18, h - 44); c.lineTo(x + w * 0.09, h - 44); c.stroke()
     }
   })
-  // Levha: yazısız, altın halkalı yeşil yuvarlak pano
+  // Panel: green round panel with gold ring, no inscription
   const plaque = texture(256, 256, 1, 1, 81, (c, w, h) => {
     c.fillStyle = '#c9a24d'; c.beginPath(); c.arc(w / 2, h / 2, w / 2, 0, Math.PI * 2); c.fill()
     c.fillStyle = '#1f4a39'; c.beginPath(); c.arc(w / 2, h / 2, w * 0.43, 0, Math.PI * 2); c.fill()
     geometricRosette(c, w / 2, h / 2, w * 0.33, '#d7b667')
   })
   plaque.repeat.set(1, 1)
-  // Kubbe göbeği: sekiz kandil, sekiz madalyon, palmet sonlanma (s. 88). Üstten görünüşe göre boyanır.
+  // Dome center: eight lamps, eight medallions, palmette terminations (p. 88). Painted as seen from above.
   const boss = texture(1024, 1024, 1, 1, 82, (c, w, h) => {
     c.fillStyle = '#efe7d6'; c.fillRect(0, 0, w, h)
     const m0 = w / 2
     c.translate(m0, m0)
     for (let k = 0; k < 8; k++) {
       c.save(); c.rotate((k * Math.PI) / 4)
-      // Madalyon
+      // Medallion
       c.fillStyle = '#23465f'; c.beginPath(); c.ellipse(0, -m0 * 0.47, m0 * 0.075, m0 * 0.11, 0, 0, Math.PI * 2); c.fill()
       c.strokeStyle = '#c9a24d'; c.lineWidth = 5; c.stroke()
-      // Palmet
+      // Palmette
       c.fillStyle = '#7e2a26'
       c.beginPath(); c.moveTo(0, -m0 * 0.74); c.quadraticCurveTo(m0 * 0.07, -m0 * 0.64, 0, -m0 * 0.58); c.quadraticCurveTo(-m0 * 0.07, -m0 * 0.64, 0, -m0 * 0.74); c.fill()
       c.rotate(Math.PI / 8)
-      // Kandil
+      // Lamp
       c.fillStyle = '#c9a24d'
       c.beginPath(); c.moveTo(0, -m0 * 0.3); c.lineTo(m0 * 0.035, -m0 * 0.42); c.lineTo(0, -m0 * 0.56); c.lineTo(-m0 * 0.035, -m0 * 0.42); c.closePath(); c.fill()
       c.strokeStyle = '#7e2a26'; c.lineWidth = 3
@@ -173,7 +173,7 @@ export function complexMaterials(m: UluMosqueMaterials) {
     c.beginPath(); c.arc(0, 0, m0 * 0.9, 0, Math.PI * 2); c.stroke()
   })
   boss.repeat.set(1, 1)
-  // Perde motifi: ortasında kandil sarkan perde (s. 88). Yan eyvanların güney duvarında.
+  // Curtain motif: a curtain with a lamp hanging in its middle (p. 88). On the south wall of the side iwans.
   const curtain = texture(512, 1024, 1, 1, 83, (c, w, h, r) => {
     c.fillStyle = '#f0e6d0'; c.fillRect(0, 0, w, h)
     const edge = 46
@@ -195,7 +195,7 @@ export function complexMaterials(m: UluMosqueMaterials) {
     c.fillStyle = '#6e4a22'; c.beginPath(); c.moveTo(w / 2, h * 0.6); c.lineTo(w / 2 + 28, h * 0.68); c.lineTo(w / 2, h * 0.78); c.lineTo(w / 2 - 28, h * 0.68); c.closePath(); c.fill()
   })
   curtain.repeat.set(1, 1)
-  // Mihrap çerçevesi: iç içe kırmızı, lacivert ve altın kuşaklar. Yazı yoktur.
+  // Mihrab frame: nested red, navy and gold bands. No inscription.
   const mihrabFrame = texture(1024, 1024, 1, 1, 84, (c, w, h, r) => {
     const belts: [string, number][] = [['#b08433', 26], ['#541c1b', 66], ['#c9a24d', 16], ['#16304a', 74], ['#c9a24d', 14], ['#6d2120', 96], ['#c9a24d', 14], ['#16304a', 66], ['#c9a24d', 20], ['#541c1b', 200]]
     let g = 0
@@ -222,7 +222,7 @@ export function complexMaterials(m: UluMosqueMaterials) {
   })
   hoodBottom.repeat.set(1, 1)
 
-  // Minber yüzü: kabartma geometrik motifli ahşap (s. 91); desen temsilîdir
+  // Minbar face: wood with carved geometric motifs (p. 91); pattern is representative
   const carving = texture(256, 256, 0.5, 0.5, 86, (c, w, h) => {
     c.fillStyle = '#7a4d28'; c.fillRect(0, 0, w, h)
     c.strokeStyle = '#3f2412'; c.lineWidth = 7

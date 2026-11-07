@@ -3,28 +3,28 @@ import type { PointerEvent as ReactPointerEvent } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import type { Artifact } from '../../domain/artifact'
 import ArtifactExplorer from '../heritage/components/ArtifactExplorer'
-import NotFound from '../../app/NotFound'
+import NotFound from '../../shared/ui/NotFound'
 import { RELIEF, mapPoint, loadMap, separateMarkers } from '../../content/turkeyMap'
 import type { MapId, MapData } from '../../content/turkeyMap'
 import { vrCities } from '../../content/vrArtifacts'
 import './places.css'
 
-/** Bu tarayıcı sürükleyici VR açabiliyor mu? Bilinmeden önce null. */
+/** Can this browser open immersive VR? null until known. */
 function useVrSupport() {
   const [support, setSupport] = useState<boolean | null>(null)
   useEffect(() => {
     let cancel = false
     void (async () => {
-      let var_ = false
-      try { var_ = !!(await navigator.xr?.isSessionSupported('immersive-vr')) } catch { var_ = false }
-      if (!cancel) setSupport(var_)
+      let supported = false
+      try { supported = !!(await navigator.xr?.isSessionSupported('immersive-vr')) } catch { supported = false }
+      if (!cancel) setSupport(supported)
     })()
     return () => { cancel = true }
   }, [])
   return support
 }
 
-/** Haritayı tembel yükler; yenisi gelene dek eskisi ekranda kalır. */
+/** Lazy-loads the map; the previous one stays on screen until the new one arrives. */
 function useMapData(identity: MapId) {
   const [state, setState] = useState<{ data: MapData | null; error: MapId | null }>({ data: null, error: null })
   useEffect(() => {
@@ -46,7 +46,7 @@ interface Marker {
   label: string
   no?: number
   closedState?: boolean
-  bag?: string
+  to?: string
   selected?: boolean
   click?: () => void
 }
@@ -75,12 +75,12 @@ const Layers = ({ v }: { v: MapData }) => {
   </>
 }
 
-function MapView({ data, markers, highlight, setHighlight, not }: {
+function MapView({ data, markers, highlight, setHighlight, note }: {
   data: MapData
   markers: Marker[]
   highlight: string | null
   setHighlight: (id: string | null) => void
-  not?: string
+  note?: string
 }) {
   const box = useRef<HTMLDivElement>(null)
   const [size, setSize] = useState({ w: 0, h: 0 })
@@ -113,7 +113,7 @@ function MapView({ data, markers, highlight, setHighlight, not }: {
   const s = base * z
   const vx = cx - w / s / 2, vy = cy - h / s / 2
 
-  /** Ekrandaki (px, py) noktası yerinde kalacak biçimde yakınlaştırır. */
+  /** Zooms so that the screen point (px, py) stays in place. */
   const zoomIn = useCallback((multiplier: number, px?: number, py?: number) => {
     setView((previous) => {
       const g = clamp(previous)
@@ -124,22 +124,22 @@ function MapView({ data, markers, highlight, setHighlight, not }: {
     })
   }, [clamp, base, w, h, zMax])
 
-  // Tekerlek: yalnız harita gerçekten yakınlaşabiliyorsa sayfa kaydırmasını alır.
+  // Wheel: takes over page scrolling only if the map can actually zoom.
   useEffect(() => {
     const el = box.current
     if (!el || !zoomsIn) return
-    const wheelRim = (e: WheelEvent) => {
-      const indoors = e.deltaY < 0 ? z < zMax : z > 1
-      if (!indoors) return
+    const onWheel = (e: WheelEvent) => {
+      const canZoom = e.deltaY < 0 ? z < zMax : z > 1
+      if (!canZoom) return
       e.preventDefault()
       const r = el.getBoundingClientRect()
       zoomIn(Math.exp(-e.deltaY * 0.0022), e.clientX - r.left, e.clientY - r.top)
     }
-    el.addEventListener('wheel', wheelRim, { passive: false })
-    return () => el.removeEventListener('wheel', wheelRim)
+    el.addEventListener('wheel', onWheel, { passive: false })
+    return () => el.removeEventListener('wheel', onWheel)
   }, [zoomIn, zoomsIn, z, zMax])
 
-  // Sürükleme ve iki parmakla yakınlaştırma. İşaret veya düğmede başlayan hareket kaydırma sayılmaz: tıklama bozulmaz.
+  // Drag and pinch zoom. Gestures starting on a marker or button do not pan, so clicks keep working.
   const fingers = useRef(new Map<number, { x: number; y: number }>())
   const begin = (e: ReactPointerEvent<HTMLDivElement>) => {
     if ((e.target as Element).closest('a, button') || !zoomsIn) return
@@ -171,11 +171,11 @@ function MapView({ data, markers, highlight, setHighlight, not }: {
   const places = useMemo(() => (w ? separateMarkers(real, w, h) : []), [real, w, h])
 
   const zDegree = z >= 4.5 ? 3 : z >= 1.7 ? 2 : 1
-  // Yakınlaştır düğmesi, görünen işaretlerin ortasına yaklaşır: boş araziye değil yapılara gider.
+  // The zoom-in button zooms toward the centre of visible markers: toward buildings, not empty terrain.
   const visibleOnes = real.filter((n) => n.x >= 0 && n.y >= 0 && n.x <= w && n.y <= h)
   const focusX = visibleOnes.length ? visibleOnes.reduce((t, n) => t + n.x, 0) / visibleOnes.length : undefined
   const focusY = visibleOnes.length ? visibleOnes.reduce((t, n) => t + n.y, 0) / visibleOnes.length : undefined
-  // Dar ekranda ülke haritasındaki genel etiketler işaretlerle çakışır; işaret etiketleri yeter.
+  // On narrow screens the country map's general labels collide with markers; marker labels are enough.
   const narrow = data.id === 'turkey' && w < 520
   const textPx = (n: number) => n / s
 
@@ -197,10 +197,10 @@ function MapView({ data, markers, highlight, setHighlight, not }: {
           const a = real[n], b = places[n]
           const visible = a.x >= 0 && a.y >= 0 && a.x <= w && a.y <= h
           if (!b || !visible) return null
-          const recordOf = Math.hypot(a.x - b.x, a.y - b.y) > 4
+          const shifted = Math.hypot(a.x - b.x, a.y - b.y) > 4
           return <g key={i.id} data-highlight={highlight === i.id ? 'yes' : undefined}>
-            {recordOf && <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} />}
-            {recordOf && <circle cx={a.x} cy={a.y} r={3} />}
+            {shifted && <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} />}
+            {shifted && <circle cx={a.x} cy={a.y} r={3} />}
           </g>
         })}
       </svg>}
@@ -226,12 +226,12 @@ function MapView({ data, markers, highlight, setHighlight, not }: {
             onFocus: () => setHighlight(i.id),
             onBlur: () => setHighlight(null),
           }
-          return i.bag
-            ? <Link key={i.id} to={i.bag} {...common}>{content}</Link>
+          return i.to
+            ? <Link key={i.id} to={i.to} {...common}>{content}</Link>
             : <button key={i.id} type="button" aria-pressed={!!i.selected} onClick={i.click} {...common}>{content}</button>
         })}
       </div>}
-      {not && <p className="vr-map-not">{not}</p>}
+      {note && <p className="vr-map-not">{note}</p>}
       {zoomsIn && <div className="vr-proximity">
         <button type="button" aria-label="Yakınlaştır" disabled={z >= zMax} onClick={() => zoomIn(1.8, focusX, focusY)}>+</button>
         <button type="button" aria-label="Uzaklaştır" disabled={z <= 1} onClick={() => zoomIn(1 / 1.8)}>−</button>
@@ -249,7 +249,7 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
   const [param, setParam] = useSearchParams()
   const selected = vrCities.find((s) => s.ad === param.get('city'))
   const support = useVrSupport()
-  const sec = (ad: string | null) => { setHighlight(null); setParam(ad ? { city: ad } : {}) }
+  const choose = (city: string | null) => { setHighlight(null); setParam(city ? { city } : {}) }
   const content = (artifactId: string) => artifacts.find((e) => e.id === artifactId && e.model)
   const description = (e: Artifact) => e.model ? 'Temsilî 3B maket: içinde yürü' : "Çini panosunu VR'da onar"
   const [highlight, setHighlight] = useState<string | null>(null)
@@ -264,13 +264,13 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
       position: y.position,
       no: i + 1,
       closedState: !content(y.artifactId),
-      bag: `/artifact/${y.artifactId}`,
+      to: `/artifact/${y.artifactId}`,
       label: `${y.ad}, ${y.district}: eser sayfasını aç`,
     }))
     : vrCities.map((s) => {
       const count = counts(s)
       const state = count ? `${count} yapı VR'da açılıyor` : 'Henüz VR yok'
-      return { id: s.ad, ad: s.ad, alt: count ? `${count} yapı` : 'Henüz VR yok', position: s.position, closedState: !count, selected: false, click: () => sec(s.ad), label: `${s.ad}: ${state}. Şehir haritasını aç` }
+      return { id: s.ad, ad: s.ad, alt: count ? `${count} yapı` : 'Henüz VR yok', position: s.position, closedState: !count, selected: false, click: () => choose(s.ad), label: `${s.ad}: ${state}. Şehir haritasını aç` }
     })
   const list = (id: string) => ({
     onMouseEnter: () => setHighlight(id),
@@ -289,19 +289,19 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
     <div className="vr-layout-of">
       {data
         ? <MapView key={data.id} data={data} markers={markers} highlight={highlight} setHighlight={setHighlight}
-          not={selected && !selected.buildings.length ? `${selected.ad}: Henüz VR yok` : undefined} />
+          note={selected && !selected.buildings.length ? `${selected.ad}: Henüz VR yok` : undefined} />
         : <div className="vr-map-empty" role="status">{error ? 'Harita yüklenemedi. Yandaki listeden devam edebilirsin.' : 'Harita yükleniyor…'}</div>}
       <section className="vr-panel" aria-live="polite" aria-label={selected ? `${selected.ad} yapıları` : 'Şehirler'}>
         {!selected ? <>
           <h2>Şehirler</h2>
           <ul className="vr-cities">{vrCities.map((s) => {
             const count = counts(s)
-            return <li key={s.ad}><button type="button" onClick={() => sec(s.ad)} {...list(s.ad)}>
+            return <li key={s.ad}><button type="button" onClick={() => choose(s.ad)} {...list(s.ad)}>
               <strong>{s.ad}</strong><span>{count ? `${count} yapı VR'da açılıyor` : 'Henüz VR yok'}</span>
             </button></li>
           })}</ul>
         </> : <>
-          <button type="button" className="vr-backward" onClick={() => sec(null)}>← Haritaya dön</button>
+          <button type="button" className="vr-backward" onClick={() => choose(null)}>← Haritaya dön</button>
           <h2>{selected.ad}</h2>
           {selected.buildings.length > 0 ? <ul className="vr-buildings">{selected.buildings.map((y, i) => {
             const e = content(y.artifactId)
@@ -330,6 +330,6 @@ export function PlacePage({ artifacts }: { artifacts: Artifact[] }) {
       {support === false && <p className="vr-not">Bu tarayıcı VR açamıyor. Gözlükle girmek için bu sayfayı Meta Quest tarayıcısında aç.</p>}
       {support && <p className="vr-not">Sahne yüklenince VR düğmesine bas. Tarayıcılar VR'ı yalnızca bir dokunuşla başlatır.</p>}
     </header>
-    {artifact.model && <ArtifactExplorer model={artifact.model} sources={artifact.sources} ad={artifact.ad} openNow />}
+    {artifact.model && <ArtifactExplorer model={artifact.model} sources={artifact.sources} name={artifact.ad} openNow />}
   </article>
 }

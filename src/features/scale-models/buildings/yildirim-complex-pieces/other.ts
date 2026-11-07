@@ -1,7 +1,7 @@
-// Külliyenin diğer yapıları: türbe, medrese, darüşşifa, şadırvan köşkü ve bahçe.
-// Yerleşim ve kütleler fotoğraftan (Drive; envanter s. 162 havadan görünüm) oranlanmış, ölçüler envanterden alınmıştır
-// (türbe 10,50 m kare, s. 204; medrese avlusu 200 m² ve dershane 8,65 × 8,86 m, s. 186; darüşşifa 30 × 53 m, s. 195).
-// Darüşşifa gerçekte yaklaşık 300 m doğudadır (s. 193); makete sığsın diye yakına alınmıştır.
+// The complex's other buildings: tomb, madrasa, darüşşifa, şadırvan kiosk and garden.
+// Layout and masses proportioned from photos (Drive; aerial view in inventory p. 162), dimensions taken from the inventory
+// (tomb 10.50 m square, p. 204; madrasa courtyard 200 m² and classroom 8.65 × 8.86 m, p. 186; darüşşifa 30 × 53 m, p. 195).
+// The darüşşifa is actually about 300 m to the east (p. 193); it was moved closer to fit the model.
 import * as THREE from 'three'
 import { rotateG, flatShadow, arch, Bucket, boxG, cylinderG, place } from '../../uluMosquePiece'
 import { tree, alternatingArch, roof, outerDrum, outerDome, outerWindow, wallX, wallZ, boxK, cypress, molding, type Mat, type YM } from './common'
@@ -22,7 +22,7 @@ function builtIn(k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bucket, p: { x:
   }
 }
 
-/** Dış duvarın boyunca pencere dizisi: `yon` duvarın baktığı yöne göre döndürülür. */
+/** Row of windows along the outer wall: rotated by `ry` according to the direction the wall faces. */
 function windowArray(y: Y, m: YM, ry: number, ox: number, oz: number, xList: number[], y0: number, g: number, h: number, pointed: boolean, casing: Mat) {
   const ext = (a: THREE.BufferGeometry, mat: Mat) => { y.ext(place(a, ox, 0, oz, ry), mat) }
   for (const x of xList) outerWindow(ext, m, x, y0, g, h, 0, pointed, casing)
@@ -33,10 +33,10 @@ export function tomb(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Buck
   const { ext } = y
   const box = (x0: number, x1: number, y0: number, y1: number, z0: number, z1: number, mat: Mat) => ext(boxK(x0, x1, y0, y1, z0, z1), mat)
   const B = 6.75, H = 8, TAB = 0.7, REV_Z = -B - 5.4
-  // Kaide ve zemin
+  // Base and ground
   box(-B - 0.5, B + 0.5, 0, TAB, -B - 5.9, B + 0.4, m.ashlarLight)
   for (let i = 0; i < 3; i++) box(-1.8 + i * 0.1, 1.8 - i * 0.1, 0, TAB * (3 - i) / 3, -B - 6.0 - (3 - i) * 0.4, -B - 6.0 - (2 - i) * 0.4, m.ashlarLight)
-  // Gövde: dört duvar, içte sıva; köşelerde beyaz mermer (s. 204)
+  // Body: four walls, plaster inside; white marble at the corners (p. 204)
   const K = 1.1
   box(-B, B, TAB, H, -B, -B + K, m.alternating); box(-B, B, TAB, H, B - K, B, m.alternating)
   box(-B, -B + K, TAB, H, -B, B, m.alternating); box(B - K, B, TAB, H, -B, B, m.alternating)
@@ -44,7 +44,7 @@ export function tomb(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Buck
   const I = B - K - 0.03
   box(-I, I, TAB, TAB + 0.04, -I, I, m.carpetK)
   for (const [a, b, c, d] of [[-I, I, -I, -I + 0.04], [-I, I, I - 0.04, I], [-I, -I + 0.04, -I, I], [I - 0.04, I, -I, I]]) box(a, b, TAB, H - 0.1, c, d, m.plasterInner)
-  // Sandukalar: Yıldırım Bayezid ortada, demir parmaklık içinde (s. 204, 207)
+  // Sarcophagi: Yıldırım Bayezid in the middle, inside an iron grille (pp. 204, 207)
   const cenotaph = (x: number, z: number, g: number, d: number, h: number) => {
     ext(boxK(x - g / 2, x + g / 2, TAB, TAB + h, z - d / 2, z + d / 2), m.cenotaph)
     ext(new THREE.SphereGeometry(g * 0.3, 8, 5).scale(1, 0.55, 1).translate(x, TAB + h + 0.3, z - d / 2 + g * 0.45), m.cream)
@@ -53,7 +53,7 @@ export function tomb(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Buck
   cenotaph(0, 0.2, 1, 2.6, 1.05); cenotaph(-2.2, 0.2, 0.85, 2.2, 0.85); cenotaph(2.2, 0.2, 0.85, 2.2, 0.85); cenotaph(-0.9, 3.1, 0.55, 1.1, 0.55); cenotaph(0.9, 3.1, 0.55, 1.1, 0.55)
   for (let i = 0; i <= 12; i++) { const z = -1.5 + i * 0.3; for (const x of [-0.9, 0.9]) ext(boxK(x - 0.02, x + 0.02, TAB, TAB + 1.35, z - 0.02, z + 0.02), m.greenIron) }
   for (let i = 0; i <= 6; i++) { const x = -0.9 + i * 0.3; for (const z of [-1.5, 2.1]) ext(boxK(x - 0.02, x + 0.02, TAB, TAB + 1.35, z - 0.02, z + 0.02), m.greenIron) }
-  // Cephe pencereleri: batıda üç, doğuda iki (biri kapalı), güneyde iki (s. 204, 206). Dikdörtgen niş içinde sivri.
+  // Facade windows: three on the west, two on the east (one closed), two on the south (pp. 204, 206). Pointed within a rectangular niche.
   const nicheB = (ry: number, ox: number, oz: number, xList: number[]) => {
     const e2 = (a: THREE.BufferGeometry, mat: Mat) => ext(place(a, ox, 0, oz, ry), mat)
     for (const x of xList) {
@@ -65,17 +65,17 @@ export function tomb(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Buck
   nicheB(0, 0, B, [-2.9, 2.9])
   nicheB(Math.PI / 2, B, 0, [-3.4, 0, 3.4])
   nicheB(-Math.PI / 2, -B, 0, [-3.4, 3.4])
-  // Saçak silmesi ve kurşun etek
+  // Eave molding and lead skirt
   molding(ext, m.brickArch, -B - 0.1, B + 0.1, H - 0.28, H, -B - 0.1, B + 0.1, 0.4)
   roof((g) => y.roof(g, m.lead), -B, B, -B, B, H, H + 0.8, 0.5, 0.9, [{ x: 0, z: 0, r: 5.3 }])
-  // Kasnak ve kubbe: sekizgen, üç penceresi; kubbe iri mukarnasla oturur (s. 204)
+  // Drum and dome: octagonal, three windows; the dome sits on large muqarnas (p. 204)
   const R = LAYOUT.tomb
   const gx = (lx: number, lz: number) => [R.x + lx * Math.cos(R.ry) + lz * Math.sin(R.ry), R.z - lx * Math.sin(R.ry) + lz * Math.cos(R.ry)] as const
   const [cx, cz] = gx(0, 0)
   outerDrum(y.put, kDrum, m, 0, 0, H + 0.45, 2.5, 6.2, 8, 3)
   outerDome((kv, g, mat) => kv.add(g, mat), kDome, m, cx, cz, H + 2.9, 6.3, 4.9, 1.1)
-  // Üstten bakınca: iç kapak (parçalanmış görünüşte içeri görülür)
-  // Revak: önde üç, yanlarda birer sivri kemer; köşelerde mermer ayak, ortada koyu bordo iki sütun; üç kubbe (s. 204)
+  // Seen from above: inner cap (the inside is visible in the exploded view)
+  // Portico: three pointed arches in front, one on each side; marble piers at the corners, two dark burgundy columns in the middle; three domes (p. 204)
   const RH = 6.9
   const frontDel = [-3.85, 3.85].map((x) => arch(new THREE.Path(), x, TAB + 3.0, 3.45, 0.02, 2.05))
   frontDel.push(arch(new THREE.Path(), 0, TAB + 3.0, 3.6, 0.02, 2.15))
@@ -94,7 +94,7 @@ export function tomb(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Buck
     alternatingArch(e3, m, 0, TAB + 3, 2.9, 0.02, 2.05, 0.4, 0.06, -0.02, 13)
   }
   alternatingArch(ext, m, 0, TAB + 3.0, 3.6, 0.02, 2.15, 0.42, 0.08, REV_Z - 0.05, 15)
-  // Kapı: koyu ahşap, kitabeli alınlık; yan pencereler
+  // Door: dark wood, lunette with inscription; side windows
   box(-1.25, 1.25, TAB, TAB + 4.4, -B - 0.08, -B, m.whiteStone)
   box(-0.75, 0.75, TAB, TAB + 2.6, -B - 0.11, -B - 0.08, m.woodDark)
   box(-0.6, 0.6, TAB + 3.1, TAB + 3.7, -B - 0.11, -B - 0.08, m.goldDark)
@@ -117,44 +117,44 @@ export function madrasa(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: B
   const y = builtIn(k, kRoof, kDrum, kDome, LAYOUT.madrasa)
   const { ext } = y
   const box = (x0: number, x1: number, y0: number, y1: number, z0: number, z1: number, mat: Mat) => ext(boxK(x0, x1, y0, y1, z0, z1), mat)
-  // Yerel +x giriş (doğu), -x dershane (batı). Dış ölçü fotoğraftan, avlu 200 m² (s. 186).
+  // Local +x entrance (east), -x classroom (west). Outer dimensions from the photo, courtyard 200 m² (p. 186).
   const X0 = -16, X1 = 17, ZD = 10.6, H = 6, AX0 = -11.8, AX1 = 11.4, AZ = 4.3
   const REV = 2.5
   box(X0 - 0.3, X1 + 0.3, 0, 0.5, -ZD - 0.3, ZD + 0.3, m.ashlar)
-  // Dış duvar: almaşık; giriş cephesi beyaz kesme taş (s. 185)
+  // Outer wall: alternating masonry; entrance facade white cut stone (p. 185)
   box(X0, X1 - 0.8, 0.5, H, -ZD, -ZD + 0.8, m.alternating)
   box(X0, X1 - 0.8, 0.5, H, ZD - 0.8, ZD, m.alternating)
   box(X0, X0 + 0.8, 0.5, H, -ZD, ZD, m.alternating)
   const port = arch(new THREE.Path(), 0, 0.5, 4.2, 3.2, 2.9)
   ext(wallZ(X1 - 1, X1, -ZD, ZD, 0.5, 8.2, [port]), m.whiteStone)
-  // Çerçeve
+  // Frame
   for (const [a, b, c, d] of [[-3.2, -2.9, 0.5, 7.7], [2.9, 3.2, 0.5, 7.7], [-3.2, 3.2, 7.4, 7.7]]) box(X1, X1 + 0.1, c, d, a, b, m.whiteStone)
   box(X1 - 2.2, X1 - 2, 0.5, 4, -2.3, 2.3, m.woodDark)
-  // Yan odalar penceresi: giriş cephesinde iki sivri nişli pencere
+  // Side room windows: two windows in pointed niches on the entrance facade
   for (const z of [-6.4, 6.4]) {
     const e2 = (a: THREE.BufferGeometry, mat: Mat) => ext(place(a, X1, 0, z, Math.PI / 2), mat)
     outerWindow(e2, m, 0, 2.1, 0.9, 1.5, 0, true, m.whiteStone)
   }
-  // Oda pencereleri: dikdörtgen, sivri alınlıklı (s. 186); sekiz talebe odası
+  // Room windows: rectangular, with pointed lunettes (p. 186); eight student rooms
   const roomStep = (AX1 - AX0) / 8
   const rooms = Array.from({ length: 8 }, (_, i) => AX0 + (i + 0.5) * roomStep)
   windowArray(y, m, 0, 0, ZD, rooms, 2, 0.8, 1.35, true, m.whiteStone)
   windowArray(y, m, Math.PI, 0, -ZD, rooms.map((x) => -x), 2, 0.8, 1.35, true, m.whiteStone)
-  // Kuzey cephe payandaları (s. 185)
+  // North facade buttresses (p. 185)
   for (let i = 0; i < 5; i++) {
     const x = X0 + 4 + i * 6.2
     box(x - 0.45, x + 0.45, 0.2, 4.6, -ZD - 0.9, -ZD, m.alternating)
     const p = new THREE.CylinderGeometry(0.5, 0.86, 0.6, 4).rotateY(Math.PI / 4).scale(1, 1, 1).translate(x, 4.9, -ZD - 0.4)
     ext(flatShadow(p), m.lead)
   }
-  // Oda sıraları: avlu tarafı duvar, oda kapıları
+  // Room rows: courtyard-side wall, room doors
   box(AX0, AX1, 0.5, H, -AZ - REV - 0.6, -AZ - REV, m.alternating)
   box(AX0, AX1, 0.5, H, AZ + REV, AZ + REV + 0.6, m.alternating)
   for (const x of rooms) for (const s of [-1, 1]) {
     const zFace = s * (AZ + REV) - s * 0.01
     ext(new THREE.BoxGeometry(0.9, 2.2, 0.03).translate(x, 2.05, zFace), m.woodDark)
   }
-  // Avlu: taban, sekizgen fıskiyeli havuz (s. 186)
+  // Courtyard: floor, octagonal pool with fountain jet (p. 186)
   box(AX0, AX1, 0.42, 0.5, -AZ, AZ, m.grass)
   box(AX0, AX1, 0.42, 0.9, -AZ - REV, -AZ, m.brickArch)
   box(AX0, AX1, 0.42, 0.9, AZ, AZ + REV, m.brickArch)
@@ -162,7 +162,7 @@ export function madrasa(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: B
   ext(flatShadow(cylinderG(2.05, 2.05, 0.6, 8)).translate(0, 0.8, 0), m.ashlarLight)
   ext(cylinderG(1.75, 1.75, 0.02, 8).translate(0, 1.11, 0), m.water)
   ext(rotateG([[0.45, 1.1], [0.35, 1.5], [0.12, 1.65], [0.05, 2], [0, 2.05]], 8), m.ashlarLight)
-  // Avlu revakları: üç cephede sivri kemer; ayaklar almaşık (s. 186; fotoğraf)
+  // Courtyard porticoes: pointed arches on three sides; piers in alternating masonry (p. 186; photo)
   const ay = 0.9, RH = 4.9
   const archArray = (axisX: boolean, c0: number, c1: number, count: number, fixed: number) => {
     const step = (c1 - c0) / count
@@ -184,7 +184,7 @@ export function madrasa(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: B
   archArray(true, AX0, AX1, 8, -AZ - 0.32)
   archArray(true, AX0, AX1, 8, AZ + 0.32)
   archArray(false, -AZ, AZ, 3, AX1 - 2.6 - 0.32)
-  // Örtü: odalarda uzunlamasına beşik tonoz, revakta düşük tonoz, kurşun (s. 186)
+  // Cover: longitudinal barrel vaults in the rooms, low vault in the portico, lead (p. 186)
   const barrel = (x0: number, x1: number, zo: number, gen: number, y0: number, burden: number) => {
     const n = 14, c = (x0 + x1) / 2, L = x1 - x0
     const g = new THREE.CylinderGeometry(gen / 2, gen / 2, L, n, 1, true, 0, Math.PI).rotateZ(Math.PI / 2).scale(1, burden / (gen / 2), 1).translate(c, y0, zo)
@@ -197,14 +197,14 @@ export function madrasa(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: B
     barrel(AX0 - 0.2, AX1, s * (AZ + REV / 2 - 0.05), REV + 0.8, RH, 0.5)
     y.roof(boxK(X0, AX1, H - 0.06, H + 0.08, s > 0 ? AZ + REV - 0.1 : -ZD, s > 0 ? ZD : -AZ - REV + 0.1), m.lead)
     y.roof(boxK(AX0, AX1, RH - 0.1, RH + 0.1, s > 0 ? AZ : -AZ - REV, s > 0 ? AZ + REV : -AZ), m.lead)
-    // Baca dizisi: kare gövde, piramit başlık (fotoğraf)
+    // Chimney row: square body, pyramid cap (photo)
     for (const x of rooms) {
       const zb = s * (ZD - 0.9)
       y.roof(boxK(x - 0.32, x + 0.32, H, H + 1.55, zb - 0.32, zb + 0.32), m.ashlarLight)
       y.roof(flatShadow(new THREE.ConeGeometry(0.56, 0.55, 4).rotateY(Math.PI / 4).translate(x, H + 1.82, zb)), m.lead)
     }
   }
-  // Giriş kütlesi: üstte düz kurşun ve iki kubbe (dershane ucu büyük kubbe)
+  // Entrance mass: flat lead on top and two domes (large dome at the classroom end)
   y.roof(boxK(AX1, X1 - 0.8, H + 1.2, H + 1.34, -ZD, ZD), m.lead)
   box(AX1, X1 - 1, 0.5, H + 1.2, -ZD, -3.3, m.alternating)
   box(AX1, X1 - 1, 0.5, H + 1.2, 3.3, ZD, m.alternating)
@@ -218,7 +218,7 @@ export function madrasa(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: B
     const [dx, dz] = gx(lx, 0)
     outerDome((kv, g, mat) => kv.add(g, mat), kDome, m, dx, dz, kas + 1.5, r + 0.1, r > 3 ? 2.6 : 2.1, 0.8)
   }
-  // Dershane: 8,65 × 8,86 m iç ölçü, sekizgen kasnak, kurşun kubbe (s. 186)
+  // Classroom: 8.65 × 8.86 m interior, octagonal drum, lead dome (p. 186)
   const DX1 = X0 + 1.1, DX0 = DX1 - 10.6, DZ = 5.45
   box(DX0 - 0.3, DX1, 0, 0.5, -DZ - 0.3, DZ + 0.3, m.ashlar)
   box(DX0, DX1, 0.5, 8.6, -DZ, -DZ + 1, m.alternating)
@@ -231,7 +231,7 @@ export function madrasa(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: B
   outerDrum(y.put, kDrum, m, dxo, 0, 9.05, 1.9, 4.95, 8, 4)
   const [dxx, dzz] = gx(dxo, 0)
   outerDome((kv, g, mat) => kv.add(g, mat), kDome, m, dxx, dzz, 10.85, 5.1, 3.9, 0.95)
-  // Dershaneye bakan iki pencere (cephe)
+  // Two windows facing the classroom (facade)
   for (const s of [-1, 1]) {
     const e2 = (a: THREE.BufferGeometry, mat: Mat) => ext(place(a, dxo, 0, s * DZ, s > 0 ? 0 : Math.PI), mat)
     outerWindow(e2, m, -2.2, 2.4, 1, 1.7, 0, true, m.whiteStone)
@@ -243,7 +243,7 @@ export function hospital(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: 
   const y = builtIn(k, kRoof, kDrum, kDome, LAYOUT.hospital)
   const { ext } = y
   const box = (x0: number, x1: number, y0: number, y1: number, z0: number, z1: number, mat: Mat) => ext(boxK(x0, x1, y0, y1, z0, z1), mat)
-  // Yerel: +x güney (kubbeli salon), -x kuzey (giriş). 30 × 53 m (s. 195), 420 m² avlu (s. 198).
+  // Local: +x south (domed hall), -x north (entrance). 30 × 53 m (p. 195), 420 m² courtyard (p. 198).
   const LX = 26.5, ZD = 15, H = 6.2, AX = 16.5, AZ = 6.35, D = 0.9
   box(-LX - 0.3, LX + 0.3, 0, 0.5, -ZD - 0.3, ZD + 0.3, m.ashlar)
   box(-LX, LX, 0.5, H, -ZD, -ZD + D, m.rubble); box(-LX, LX, 0.5, H, ZD - D, ZD, m.rubble)
@@ -254,17 +254,17 @@ export function hospital(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: 
   ext(wallZ(-LX - 0.1, -LX + 0.25, -2.9, 2.9, 0.5, H + 0.6, [arch(new THREE.Path(), 0, 0.5, 2.8, 2.3, 1.9)]), m.ashlarLight)
   box(-LX + 0.4, -LX + 0.5, 0.5, 3.7, -1.5, 1.5, m.woodDark)
   for (let i = 0; i < 3; i++) box(-LX - 0.1 - (3 - i) * 0.35, -LX - 0.1 - (2 - i) * 0.35, 0, 0.5 * (3 - i) / 3, -2.2, 2.2, m.ashlarLight)
-  // Köşelerde kesme taş ve tuğla; büyük yuvarlak kemerler (s. 198)
+  // Cut stone and brick at the corners; large round arches (p. 198)
   for (const sx of [-1, 1]) for (const sz of [-1, 1]) {
     const e2 = (a: THREE.BufferGeometry, mat: Mat) => ext(place(a, sx * (LX - 4), 0, sz * ZD, sz > 0 ? 0 : Math.PI), mat)
     alternatingArch(e2, m, 0, 3.1, 4.6, 0.01, 2.3, 0.42, 0.06, 0, 17)
     box(sx * LX - 0.4, sx * LX + 0.4, 0.5, H, sz * ZD - 0.4, sz * ZD + 0.4, m.alternating)
   }
-  // Pencereler: 34 dış pencere; dikdörtgen, küfeki söveli, sivri kemerli (s. 198)
+  // Windows: 34 exterior windows; rectangular, with küfeki frames, pointed arches (p. 198)
   const array = Array.from({ length: 10 }, (_, i) => -LX + 7.5 + i * 3.9)
   windowArray(y, m, 0, 0, ZD, array, 2, 0.9, 1.4, true, m.ashlarLight)
   windowArray(y, m, Math.PI, 0, -ZD, array, 2, 0.9, 1.4, true, m.ashlarLight)
-  // Oda sırası ve sivri kemerli revak
+  // Room row and pointed-arch portico
   box(-AX, AX, 0.5, H, -AZ - 2.6 - 0.5, -AZ - 2.6, m.rubble); box(-AX, AX, 0.5, H, AZ + 2.6, AZ + 2.6 + 0.5, m.rubble)
   box(-AX, AX, 0.42, 0.5, -AZ, AZ, m.grass)
   box(-AX, AX, 0.42, 0.95, -AZ - 2.6, -AZ, m.brickArch)
@@ -281,7 +281,7 @@ export function hospital(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: 
       alternatingArch(ext, m, c, 0.95 + 1.6, step - 0.9, 0.01, 1.5, 0.26, 0.04, s * AZ + 0.3, 11)
       alternatingArch(ext, m, c, 0.95 + 1.6, step - 0.9, 0.01, 1.5, 0.26, 0.04, s * AZ - 0.34, 11)
     }
-    // Örtü ve bacalar
+    // Cover and chimneys
     y.roof(boxK(-LX, LX, H - 0.04, H + 0.1, s > 0 ? AZ + 2.4 : -ZD, s > 0 ? ZD : -AZ - 2.4), m.lead)
     y.roof(boxK(-AX, AX, RH - 0.05, RH + 0.14, s > 0 ? AZ - 0.35 : -AZ - 2.7, s > 0 ? AZ + 2.7 : -AZ + 0.35), m.lead)
     const zb = s * (ZD - 1.4)
@@ -290,7 +290,7 @@ export function hospital(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: 
       y.roof(flatShadow(new THREE.ConeGeometry(0.55, 0.5, 4).rotateY(Math.PI / 4).translate(x, H + 1.65, zb)), m.lead)
     }
   }
-  // Uç kitleler: kuzeyde hekim odaları, güneyde kubbeli salon ve tonozlu iki oda
+  // End masses: physicians' rooms to the north, domed hall and two vaulted rooms to the south
   box(-LX, -AX, 0.5, H + 0.1, -ZD, -3, m.rubble); box(-LX, -AX, 0.5, H + 0.1, 3, ZD, m.rubble)
   y.roof(boxK(-LX - 0.2, -AX, H + 0.1, H + 0.3, -ZD - 0.2, ZD + 0.2), m.lead)
   box(AX, AX + 0.6, 0.5, H + 2.6, -AZ - 2.6, AZ + 2.6, m.alternating)
@@ -299,7 +299,7 @@ export function hospital(m: YM, k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: 
   y.roof(boxK(AX, LX + 0.2, H + 0.1, H + 0.3, 4.6, ZD + 0.2), m.lead)
   box(AX + 0.6, LX, 0.5, H + 2.6, -5, -4.4, m.alternating); box(AX + 0.6, LX, 0.5, H + 2.6, 4.4, 5, m.alternating)
   box(LX - 0.9, LX, 0.5, H + 2.6, -5, 5, m.alternating)
-  // Kubbeli salon: 9,40 × 7,67 m, sekizgen kasnak (s. 198)
+  // Domed hall: 9.40 × 7.67 m, octagonal drum (p. 198)
   const sx = AX + 5
   y.roof(boxK(AX, LX + 0.2, H + 2.6, H + 2.84, -5.2, 5.2), m.lead)
   outerDrum(y.put, kDrum, m, sx, 0, H + 2.7, 1.8, 4.7, 8, 4)
@@ -331,19 +331,19 @@ export function site(m: YM, k: Bucket, Rk: number, oz: number) {
     for (let i = 0; i < uv.count; i++) uv.setXY(i, p.getX(i), p.getZ(i))
     return g
   }
-  // Çim kaide ve döşeli avlular: fotoğraftaki taş döşeli geniş alan
+  // Grass base and paved courtyards: the wide stone-paved area in the photo
   e(uvFlat(new THREE.CircleGeometry(Rk - 0.6, 80).rotateX(-Math.PI / 2).translate(0, 0.01, -oz)), m.grass)
   const path = (pts: [number, number][], y: number) => {
     const s = new THREE.Shape(pts.map(([x, z]) => new THREE.Vector2(x, -z)))
     e(uvFlat(new THREE.ShapeGeometry(s).rotateX(-Math.PI / 2).translate(0, y, 0)), m.paving)
   }
-  // Cami çevresi
+  // Around the mosque
   path([[-22, -29], [22, -29], [23, 11], [10, 24], [-10, 24], [-23, 11]], 0.03)
-  // Türbe ve medrese arasındaki avlu
+  // Courtyard between the tomb and the madrasa
   path([[-34, -26], [-3, -33], [17, -48], [-1, -74], [-30, -58], [-56, -18], [-44, -8]], 0.035)
-  // Darüşşifa çevresi
+  // Around the darüşşifa
   path([[33, -68], [71, -68], [71, -5], [33, -5]], 0.03)
-  // İki terası ayıran kagir istinat duvarı (fotoğraf)
+  // Masonry retaining wall separating the two terraces (photo)
   const wall = (a: [number, number], b: [number, number], h: number) => {
     const L = Math.hypot(b[0] - a[0], b[1] - a[1])
     const g = boxG(L, h, 0.6).rotateY(-Math.atan2(b[1] - a[1], b[0] - a[0])).translate((a[0] + b[0]) / 2, h / 2, (a[1] + b[1]) / 2)
@@ -351,7 +351,7 @@ export function site(m: YM, k: Bucket, Rk: number, oz: number) {
   }
   wall([-23, -28], [6, -36], 1.5)
   wall([6, -36], [24, -28], 1.5)
-  // Ağaçlar: yalnız fotoğraftaki yeşil dokuyu andırır; konumları temsilîdir
+  // Trees: only evoke the green texture in the photo; positions are representative
   const ag: [number, number, number, boolean][] = [
     [29, -12, 13, false], [31, 6, 12, false], [26, 21, 11, true], [-27, 18, 12, false], [-29, 3, 13, true], [-31, -8, 10, false],
     [-8, 31, 12, false], [13, 34, 11, true], [-22, 36, 10, false], [40, 26, 13, false], [-42, 28, 12, true], [8, -33, 9, true], [-18, -34, 8, false],

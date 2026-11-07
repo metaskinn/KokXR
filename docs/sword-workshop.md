@@ -1,7 +1,7 @@
 # Kılıç atölyesi — tasarım ve kaynaklar
 
 **İstek:** Vazo atölyesi benzeri, gerçekçi bir deneyim. Ham çelikten başlayıp Fatih Sultan Mehmed'in kılıcını yap,
-sonra test alanında dene. Rota: `/atolye/kilic`.
+sonra test alanında dene. Rota: `/workshops/sword`.
 
 ## Kaynaklar ve doğrulanan bilgiler
 
@@ -40,5 +40,5 @@ sıcaklık rengine göre ısıma, WebAudio ile üretilen sesler (kapatılabilir)
 
 ## Dosyalar
 
-- `scripts/kilic_doku.py` — dokuları üretir (`assets/kilic/doku/`)
-- `scripts/kilic_uret.py` — Blender betiği: `assets/kilic/kilic.blend`, `public/modeller/kilic.glb`, `public/modeller/kilic-atolye.glb`
+- `scripts/sword_texture.py` — dokuları üretir (`assets/kilic/doku/`)
+- `scripts/sword_generate.py` — Blender betiği: `assets/kilic/kilic.blend`, `public/models/sword.glb`, `public/models/sword-workshop.glb`

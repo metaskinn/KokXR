@@ -1,4 +1,4 @@
-// Kılıç atölyesi metinleri. Tarihsel bilgiler yalnızca aşağıdaki kaynaklardan alınır (docs/kilic-atolyesi.md).
+// Sword workshop texts. Historical information is taken only from the sources below (docs/sword-workshop.md).
 export const swordSources = {
   yucel: 'Ünsal Yücel, Islamic Swords and Swordsmiths, Plate 87, s. 128',
   korkmaz: 'H. Korkmaz, İ. Özkeçeci, "Osmanlı kesici silahlarından bir form: Türk eğri kılıcı", YJAD, 2025',
@@ -20,7 +20,7 @@ export const swordStageInfo = {
   equip: { text: 'Bir kılıcın yapımı tek kişiye ait değildir: kılıç ustaları (Seyfiye ocağı), devrin hattat, sedefkâr, kuyumcu ve nakkaşları birlikte çalışırdı.', source: 'korkmaz' as SwordSourceId },
 }
 
-// İnceleme aşamasındaki parça notları. konum: sword grubunun yerel koordinatı (metre, X namlu boyunca, Y sırta doğru).
+// Part notes for the inspection stage. position: local coordinate within the sword group (metres, X along the blade, Y toward the spine).
 export const swordPartNotes: { id: string; title: string; text: string; source: SwordSourceId; position: [number, number, number] }[] = [
   { id: 'measurement', title: 'Ölçüler', text: 'Toplam 126,5 cm, namlu 106 cm. Milli Saraylar paylaşımında uzunluk 125 cm olarak verilir; kaynaklar arasında küçük fark vardır.', source: 'yucel', position: [.5, .03, 0] },
   { id: 'blade', title: 'Namlu', text: 'Tek ağızlı, hafif eğri ve geniş sırtlı. Osmanlı dönemine ait bilinen en eski kılıç olarak anılır; namlu henüz tam eğriliğine ulaşmamıştır.', source: 'korkmaz', position: [.3, .012, 0] },

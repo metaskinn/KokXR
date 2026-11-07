@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-karaseyh-mosque",
+  "name": "Karaşeyh Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 940 / M. 1533'ten önce",
+  "endowment": "Banisi Kara Şeyh Abdullah Efendi; vakfı kitapta belirtilmemiştir",
+  "summary": "Kara Şeyh Abdullah Efendi'nin 1533'ten önce yaptırdığı, üç gözlü son cemaat yerli, tek kubbeli ve tuğla minareli cami.",
+  "history": "Cami, Osmangazi ilçesi, Orhanbey Mahallesi'nde, Albay Bekir Sami Caddesi ile Ressam Şefik Bursalı Caddesi'nin kesiştiği köşededir. Kara Şeyh Abdullah Efendi'nin H. 940 / M. 1533'ten önce inşa ettirdiği yapı, Bursa'daki pek çok mescitte görüldüğü gibi almaşık duvar örgülüdür: beden duvarları moloz taş, son cemaat yeri ise üç sıra kesme taş ve bir sıra tuğlayla örülmüş, taşların arasına düşey tuğlalar yerleştirilmiştir.\n\nHarim 8,20 × 8,25 m ölçülerinde kare mekânlıdır ve sekizgen kasnağa oturan, Türk üçgenleriyle geçilen bir kubbeyle örtülüdür. Kitapta orta bölümün daha dar tutularak beşik tonozla, yan bölümlerin ise aynalı tonozlarla örtüldüğü belirtilir. Cami üç gözlü bir son cemaat yerine sahiptir; derinliği 4,30 m'dir. Yan cepheleri kapalı olduğundan yapı dikdörtgen plana benzer bir görünüm sergiler.\n\nCephedeki kemerlerin üzerine birer küçük niş açılarak kalkan duvarın kütle görüntüsü hafifletilmeye çalışılmıştır. Sekizgen kubbe kasnağı iki sıra kesme taş ve aralarında dikey tuğla örgüsüyle yapılmıştır. Kubbe dıştan kurşunla kaplıdır ve iki sıra kirpi saçakla son bulur. Doğu ve batıdaki pencerelerin arasında birer küçük niş vardır. Üst sıra ve kasnak pencereleri sivri kemerli ve alçı şebekelidir; harim toplam 16 pencereyle aydınlanır.\n\nDikdörtgen çerçeveli, beş köşeli mihrap nişi 66 cm derinliğindedir; kavsarasında beş sıra mukarnas dizilidir ve kavsara koltukları kabartma bitkisel motiflerle hareketlendirilmiştir. Son onarımda ahşaptan yeni bir minber yapılmış, ahşap kadınlar mahfili de yenilenmiştir.\n\nCaminin doğu duvarında, son cemaat yeriyle birleştiği noktada yükselen minareye içeriden çıkılır. Moloz taş ve tuğla örgülü sekizgen kaideden gövdeye geçiş, tuğla ve mermerden kesilmiş Türk üçgenleriyle sağlanır. Silindirik gövdeli tuğla minare iki bilezikle desteklenmiştir; şerefe altında dört sıra kirpi saçak vardır. Kurşun kaplı sivri külahı yenilenmiştir. 1892'de Bursa Evkaf muhasebecisi Bursalı Süleyman Bey camiyi kendi imkânlarıyla tamir ettirmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-karaseyh-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-karaseyh-mosque/aerial-view.jpg",
+      "alt": "Yüksekten görünüm: cadde köşesinde, kesme taş ve tuğla örgülü, kurşun kubbeli cami; önde üç kemerli son cemaat yeri, yanda tuğla gövdeli yüksek minare; çevrede apartmanlar ve dağlar",
+      "description": "Cami ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-karaseyh-mosque/mihrab.jpg",
+      "alt": "İç mekân: dikdörtgen çerçeveli, turkuaz zeminli ve yaldızlı mukarnas kavsaralı mihrap; iki yanında renkli camlı pencereler, kitaplık ve duvar saati",
+      "description": "Mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-karaseyh-mosque/minbar.jpg",
+      "alt": "İç mekân: kırmızı örtülü, ahşap korkuluklu ve sivri külahlı ahşap minber; solda duvar saati, üstte renkli camlı pencereler",
+      "description": "Ahşap minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-karaseyh-mosque/aerial-view.jpg",
+      "x": 40,
+      "y": 30,
+      "title": "Tuğla minare",
+      "text": "Silindirik gövdeli tuğla minare iki bilezikle desteklenmiştir; şerefe altında dört sıra kirpi saçak vardır ve kurşun kaplı sivri külahı yenilenmiştir.",
+      "sourceId": "inv-p368"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-karaseyh-mosque/aerial-view.jpg",
+      "x": 57,
+      "y": 71,
+      "title": "Son cemaat yeri",
+      "text": "Cami üç gözlü, 4,30 m derinliğinde bir son cemaat yerine sahiptir; yan cepheleri kapalı olduğundan yapı dikdörtgen plana benzer.",
+      "sourceId": "inv-p366"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-karaseyh-mosque/mihrab.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Dikdörtgen çerçeveli, beş köşeli mihrap nişi 66 cm derinliğindedir ve kavsarasında beş sıra mukarnas dizilidir.",
+      "sourceId": "inv-p367"
+    }
+  ],
+  "test": [
+    {
+      "question": "Karaşeyh Camii'ni kim inşa ettirmiştir?",
+      "options": [
+        "Bursalı Süleyman Bey",
+        "Kara Şeyh Abdullah Efendi",
+        "Hacı Ali Paşa",
+        "Hoca Tâceddin Kazgânî"
+      ],
+      "correct": 1,
+      "description": "Yapı, H. 940 / M. 1533'ten önce Kara Şeyh Abdullah Efendi tarafından inşa ettirilmiştir.",
+      "sourceId": "inv-p366"
+    },
+    {
+      "question": "1892'de camiyi kendi imkânlarıyla tamir ettiren kimdir?",
+      "options": [
+        "Bursa valisi",
+        "Caminin imamı",
+        "Mahalle halkı",
+        "Bursa Evkaf muhasebecisi Bursalı Süleyman Bey"
+      ],
+      "correct": 3,
+      "description": "1892'de Bursa Evkaf muhasebecisi Bursalı Süleyman Bey camiyi kendi imkânlarıyla tamir ettirmiştir.",
+      "sourceId": "inv-p368"
+    },
+    {
+      "question": "Son onarımda caminin minberi neyden yeniden yapılmıştır?",
+      "options": [
+        "Ahşaptan",
+        "Mermerden",
+        "Kesme taştan",
+        "Alçıdan"
+      ],
+      "correct": 0,
+      "description": "Son onarım sırasında ahşaptan yeni bir minber yapılmış, ahşap kadınlar mahfili de yenilenmiştir.",
+      "sourceId": "inv-p367"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p366",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Karaşeyh Camii\"",
+      "page": "366"
+    },
+    {
+      "id": "inv-p367",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Karaşeyh Camii\"",
+      "page": "367"
+    },
+    {
+      "id": "inv-p368",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Karaşeyh Camii\"",
+      "page": "368"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-kademeri-mosque",
+  "name": "Kademeri (Çukur) Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1498'deki vasiyetle yeniden inşa edilen mescit; 1511'de yeni vakıflar",
+  "endowment": "Hoca Tâceddin Kazgânî'nin yeni mescit için vasiyet ettiği 100.000 akçe; 1511'de Mustafa oğlu Hacı Veli'nin vakıfları",
+  "summary": "Harap hâldeki bir mahalle mescidinin yerine, Hoca Tâceddin Kazgânî'nin 1498'de vasiyet ettiği 100.000 akçeyle yeniden yapılan tek kubbeli cami.",
+  "history": "Cami, Osmangazi ilçesi, Maksem Mahallesi, Çukurcami Sokak No: 2'dedir. Çukur Camii adıyla da bilinen yapı, daha önce var olan bir mescidin yerine inşa edilmiştir. Çukur Mahallesi halkı, mescidin harap olduğunu ve vakfı bulunmadığı için onu yeniden yapamadıklarını belirtmiştir. 1498'de ağır hasta olan Hoca Tâceddin Kazgânî, yeni bir mescit yapılması için 100.000 akçe vasiyet etmiş ve Çukur Mahalle Mescidi bu parayla yeniden inşa edilmiştir. Ölümünden sonra vasiyetine uyulmuş, malının üçte biri ayrıldıktan sonra mescit için arazi aranmaya başlanmıştır. 1511'de Mustafa oğlu Hacı Veli de bu mescide vakıflar yapmıştır.\n\nCami kareye yakın planlı ve tek kubbelidir; içten içe 7,15 × 7,25 m ölçülerindedir. Kuzeyindeki son cemaat yerinin doğu ve batı yan duvarları kapatılmış, kuzeydeki direklerin yerine duvar çekilmiştir. Kapının iki yanına iki pencere açılmıştır. Beden duvarları ve sekizgen kasnak tuğla hatıllı taş örgüyle örülmüştür. Yapının her yönünde ikişer alt sıra pencere vardır; ancak güney pencereleri kapatılarak dolap yapılmıştır. Yapı toplam on altı pencereyle aydınlanır.\n\nMinareye son cemaat yerinden açılan bir pencereden çıkılır. Minare, bir mermer ve bir tuğla örgülü yüzeylerle silindirik gövdeye geçer; ardından altı sıra kirpi saçak dizili şerefe altı başlar. Petek kısmının üzeri kurşun kaplı sivri külahlıdır. Cami bugün bakımlıdır ve ibadete açıktır.\n\nCaminin günümüze ulaşmayan haziresine XV. yüzyıldan itibaren defin yapıldığı bilinmektedir. Buraya defnedildiği hâlde taşı günümüze gelmeyen kişiler arasında Seyyid Şemseddin bin Murtaza, Ayşe Hatun, Hoca İbrahim bin Hoca Musa (H. 909 / M. 1504; taşı Muradiye Camii bahçesindedir) ve Hoca Kemâleddin vardır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-kademeri-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-kademeri-mosque/aerial-view.jpg",
+      "alt": "Yüksekten görünüm: tuğla hatıllı taş duvarlı, kurşun kubbeli cami ve yanında tuğla gövdeli minare; önde kiremit çatılı, açık renkli kapalı son cemaat yeri; arkada yamaca dizilmiş evler ve dağ",
+      "description": "Cami ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-kademeri-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: dilimli kurşun kubbe, yanında minarenin şerefesi ve külahı, önde kiremit çatılı son cemaat yeri; çevrede kiremit çatılar ve ağaçlar",
+      "description": "Kubbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-kademeri-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: turuncu desenli halılı harim; çini kaplı mihrabın iki yanında ahşap kapaklı dolaplar, sağda ahşap minber, duvarlarda hat levhaları ve renkli camlı pencereler",
+      "description": "Mihrap duvarı ve harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-kademeri-mosque/aerial-view.jpg",
+      "x": 45,
+      "y": 53,
+      "title": "Tek kubbe",
+      "text": "Kareye yakın planlı cami tek kubbelidir; beden duvarları ve sekizgen kasnak tuğla hatıllı taş örgüyle örülmüştür.",
+      "sourceId": "inv-p360"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-kademeri-mosque/aerial-view.jpg",
+      "x": 60,
+      "y": 35,
+      "title": "Minare",
+      "text": "Silindirik gövdeli minarede altı sıra kirpi saçak dizili şerefe altı bulunur; petek kısmının üzeri kurşun kaplı sivri külahlıdır.",
+      "sourceId": "inv-p360"
+    },
+    {
+      "id": "cupboards",
+      "image": "/images/osmangazi-kademeri-mosque/prayer-hall.jpg",
+      "x": 32,
+      "y": 55,
+      "title": "Dolaba çevrilen pencereler",
+      "text": "Yapının her yönünde ikişer alt sıra pencere vardır; güney pencereleri kapatılarak dolap yapılmıştır.",
+      "sourceId": "inv-p360"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hoca Tâceddin Kazgânî yeni mescidin yapımı için ne kadar vasiyet etmiştir?",
+      "options": [
+        "10.000 akçe",
+        "50.000 akçe",
+        "100.000 akçe",
+        "1.000 altın"
+      ],
+      "correct": 2,
+      "description": "1498'de ağır hasta olan Hoca Tâceddin Kazgânî, yeni bir mescit inşası için 100.000 akçe vasiyet etmiştir.",
+      "sourceId": "inv-p359"
+    },
+    {
+      "question": "Yapı toplam kaç pencereyle aydınlanır?",
+      "options": [
+        "On altı",
+        "Sekiz",
+        "On iki",
+        "Yirmi"
+      ],
+      "correct": 0,
+      "description": "Güney pencereleri kapatılarak dolap yapılmış olsa da yapı toplam on altı pencereyle aydınlatılmaktadır.",
+      "sourceId": "inv-p360"
+    },
+    {
+      "question": "Hazireye defnedilen Hoca İbrahim bin Hoca Musa'nın mezar taşı bugün nerededir?",
+      "options": [
+        "Ulu Cami avlusunda",
+        "Bursa Müzesi'nde",
+        "Caminin son cemaat yerinde",
+        "Muradiye Camii bahçesinde"
+      ],
+      "correct": 3,
+      "description": "Hoca İbrahim bin Hoca Musa'nın (H. 909 / M. 1504) taşı Muradiye Camii bahçesindedir; hazirenin kendisi günümüze ulaşmamıştır.",
+      "sourceId": "inv-p360"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p359",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kademeri (Çukur) Camii ve Haziresi\"",
+      "page": "359"
+    },
+    {
+      "id": "inv-p360",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kademeri (Çukur) Camii ve Haziresi\"",
+      "page": "360"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

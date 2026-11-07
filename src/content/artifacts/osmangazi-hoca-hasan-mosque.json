@@ -1,0 +1,130 @@
+{
+  "id": "osmangazi-hoca-hasan-mosque",
+  "name": "Hoca Hasan Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 983 / M. 1575; 1855 depreminden sonra 1904'te yeniden inşa edildi",
+  "endowment": "Banisi Pir Gayb oğlu Hoca Hasan",
+  "summary": "Pir Gayb oğlu Hoca Hasan'ın H. 983 / M. 1575'te yaptırdığı, 1855 depreminde yıkılıp 1904'te kare planlı ve kırma çatılı olarak yeniden inşa edilen cami ve küçük haziresi.",
+  "history": "Hoca Hasan Camii, Osmangazi İlçesi, Hocahasan Mahallesi, Değirmen Caddesi No: 2'dedir. Caminin kuzey kapısı üzerindeki, hadis-i şerifle başlayan iki satırlık Arapça kitabe, yapının H. 983 / M. 1575'te Pir Gayb oğlu Hoca Hasan tarafından yaptırıldığını belirtir. Kitabenin meali şöyledir: \"Resûlullah buyurur: 'Bir mescit yapan kimseye, Allah cennette bir ev bina eder.' Bu hayırlı mabedi, iyilik ve sevap sahibi Hasan bin Pîr Gāib yaptırdı. Allah onu mağfiretiyle kuşatsın.\"\n\n1855 depreminde tamamen yıkılan cami, 1904'te bugünkü planıyla yeniden inşa edilmiştir. Kare planlıdır ve 235 m² iç alana sahiptir; kırma ahşap çatısı kiremitle örtülüdür, taş ve tuğlayla örülen duvarları sıvalıdır. Kitapta yapının yanında \"camiyi yaptıran Pir Gayb'ın\" kabrinin bulunduğu belirtilir. Zamanla bilinçsizce yapılan onarımlar nedeniyle iç mekân büyük ölçüde değişmiş, duvarlar sıvanmış ve doğuya ek bir bölüm eklenmiştir.\n\nMinare çatıya kadar yükselen sekizgen bir kaideye sahiptir; silindirik kısa gövdesi, tek şerefesi ve sivri külahıyla Bursa'daki birkaç minareye benzer. Cami 1955'te esaslı bir onarım görmüş, duvarları, çatısı ve minaresi tamamen yenilenmiştir. 2019'daki çevre düzenlemesinde sonradan eklenen kısımlar kaldırılmış, minare onarılarak çelik çember içine alınmıştır. Özgün planına uygun hâle getirilen yapının son cemaat revakı üç yönden ahşap camekânla çevrilmiştir. Hoca Hasan caminin karşısına bir de mektep yaptırmıştır; mektep günümüze ulaşmamış, kitabesi müzeye taşınmıştır.\n\nHazire caminin doğusundadır. Küçük hazirede Hoca Hasan'ın babası Pir Gayb bin Hüseyin'e (v. H. Zilhicce 989 / M. Ocak 1582) ait mezar ve mezar taşı ile yazısız iki mezar taşı daha bulunur. Cami civarında XV. yüzyıla ait mezarların da bulunduğu \"Hoca Hasan Mezarlığı\" adlı bir mezarlıktan söz edilir; kayıtlara göre buraya farklı dönemlerde başka kişiler de defnedilmiştir. Banisi Hoca Hasan'ın da bu civarda bir mezarı olduğu belirtilir, ancak yeri bugün bilinmemektedir ve mezar taşı günümüze ulaşmamıştır. Hazirede yer alan diğer üç taşın kime ait olduğu bilinmez, üzerlerinde tarih de yoktur; bu civardaki hazireye defnedildiği bilinen 20 kişinin mezar taşları ise zamanla kaybolmuştur. Son yıllarda hazire düzenlenmiş ve caminin çevresi açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hoca-hasan-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hoca-hasan-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: apartmanlar arasındaki meydanda kiremit kaplı kırma çatılı cami, önünde ahşap camekânlı son cemaat revakı ve yanında tuğla minare; arkada yeşil tepe",
+      "description": "Caminin çevresiyle havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hoca-hasan-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: turkuaz halılı harim, ortada mavi beyaz çinili mihrap, sağda ahşap minber, solda ahşap kürsü, üstte ahşap tavan ve büyük avize",
+      "description": "Harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hoca-hasan-mosque/inscription.jpg",
+      "alt": "Ahşap kapının üzerinde, siyah zemin üzerine beyaz Arapça yazılı iki satırlık kitabe",
+      "description": "Kuzey kapısı üzerindeki kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hoca-hasan-mosque/graveyard.jpg",
+      "alt": "Caminin sıvalı duvarının yanında mermer çerçeveli, bitkilerle kaplı küçük hazire ve arkasında demir korkuluk",
+      "description": "Hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "inscription",
+      "image": "/images/osmangazi-hoca-hasan-mosque/inscription.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "İnşa kitabesi",
+      "text": "Kuzey kapısı üzerindeki hadis-i şerifle başlayan iki satırlık Arapça kitabe, yapının H. 983 / M. 1575'te Pir Gayb oğlu Hoca Hasan tarafından yaptırıldığını belirtir.",
+      "sourceId": "inv-p344"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-hoca-hasan-mosque/aerial-view.jpg",
+      "x": 47,
+      "y": 60,
+      "title": "Kırma çatı",
+      "text": "1904'te yeniden inşa edilen kare planlı caminin kırma ahşap çatısı kiremitle örtülüdür.",
+      "sourceId": "inv-p345"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-hoca-hasan-mosque/aerial-view.jpg",
+      "x": 60,
+      "y": 39,
+      "title": "Minare",
+      "text": "Çatıya kadar yükselen sekizgen kaideli minare, silindirik kısa gövdesi, tek şerefesi ve sivri külahıyla Bursa'daki birkaç minareye benzer.",
+      "sourceId": "inv-p345"
+    }
+  ],
+  "test": [
+    {
+      "question": "İnşa kitabesi caminin hangi kapısının üzerindedir?",
+      "options": [
+        "Batı kapısı",
+        "Kuzey kapısı",
+        "Doğu kapısı",
+        "Avlu kapısı"
+      ],
+      "correct": 1,
+      "description": "Hadis-i şerifle başlayan iki satırlık Arapça kitabe caminin kuzey kapısı üzerindedir.",
+      "sourceId": "inv-p344"
+    },
+    {
+      "question": "1855 depreminde tamamen yıkılan cami hangi yılda bugünkü planıyla yeniden inşa edilmiştir?",
+      "options": [
+        "1860",
+        "1955",
+        "2019",
+        "1904"
+      ],
+      "correct": 3,
+      "description": "1855 depreminde tamamen yıkılan cami, 1904'te bugünkü planıyla yeniden inşa edilmiştir.",
+      "sourceId": "inv-p345"
+    },
+    {
+      "question": "2019'daki çevre düzenlemesinde minareye ne yapılmıştır?",
+      "options": [
+        "Onarılarak çelik çember içine alınmıştır",
+        "Yıkılıp yeniden yapılmıştır",
+        "Külahı kurşunla kaplanmıştır",
+        "Şerefesi kaldırılmıştır"
+      ],
+      "correct": 0,
+      "description": "2019'daki çevre düzenlemesinde sonradan eklenen kısımlar kaldırılmış, minare onarılarak çelik çember içine alınmıştır.",
+      "sourceId": "inv-p345"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p344",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hoca Hasan Camii ve Haziresi\"",
+      "page": "344"
+    },
+    {
+      "id": "inv-p345",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hoca Hasan Camii ve Haziresi\"",
+      "page": "345"
+    },
+    {
+      "id": "inv-p346",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hoca Hasan Camii ve Haziresi\"",
+      "page": "346"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

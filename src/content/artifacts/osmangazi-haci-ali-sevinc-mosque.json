@@ -1,0 +1,130 @@
+{
+  "id": "osmangazi-haci-ali-sevinc-mosque",
+  "name": "Hacı Ali Sevinç Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Fatih Sultan Mehmed dönemi",
+  "endowment": "Banisi tüccar Başçı Hacı Sevinç",
+  "summary": "Fatih döneminde tüccar Başçı Hacı Sevinç'in yaptırdığı, Bursa'ya özgü kare planlı, tek kubbeli ve minaresiz mescit.",
+  "history": "Cami, Osmangazi ilçesi, Tahtakale Mahallesi, Fırın Sokak No: 1'dedir. Mescit, Fatih Sultan Mehmed döneminde tüccar Başçı Hacı Sevinç tarafından yaptırılmıştır; yapıldığı dönemde bir süre tekke olarak kullanıldığı bilinir.\n\nBursa'da sık görülen kare planlı mescit tipindeki yapı 6,60 × 6,65 m ölçülerindedir. Harim, beden duvarları üzerine oturan, dıştan sekizgen bir kubbeyle örtülüdür. Kubbeye geçiş Türk üçgenleriyle sağlanmıştır: alt sıradaki üçgenler dışa doğru taşırılmış, üstteki sıralar bu taşan üçgenlere oturtulmuştur. Kubbeye geçiş yüksekliği dört metre olduğundan cami içinde oldukça basık bir görünüm ortaya çıkmıştır.\n\nBeden duvarları yaklaşık bir metre kalınlığındadır. Üç yönden başka binalara bitişik olan yapının yalnızca batı yönü açıktır. Duvarlar bazen tek, bazen çift tuğla hatıllı ve moloz taşla örülmüştür; batı duvarında taşlar gelişigüzel konulmuş, çevreleri tuğlayla çevrilmiştir. Duvarların üst kısımlarında zaman zaman çift sıra tuğla ve moloz taş kullanıldığı görülür. Batı, kuzey ve doğu duvarlarındaki toplam altı pencere ile kubbe kasnağındaki üç yuvarlak kemerli pencere iç mekânı aydınlatır.\n\nKuzeydeki, üzeri ahşap örtülü son cemaat yeri 2,90 m derinliğindedir; pandantif kalıntılarından burasının daha önce kubbeli olduğu anlaşılır. Onarıldığı anlaşılan son cemaat yerinde 19. yüzyıl üslubuna uygun dairesel kemerler kullanılmış, kemer boşlukları modern malzemeyle, alt sıraları tuğlayla örülerek camla kaplanmıştır.\n\nYapı 1855 depreminde önemli bir zarar görmemiş, ancak türbe kısmı yıkılmıştır. Dilimli mihrap ve minber yenidir; minare yoktur. Mescidin banisi Hacı Sevinç'in mezarı mescidin batısındaki bir avlunun içindedir; avlunun batısında da Helvacı Acele Bacı'nın mezarı bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-haci-ali-sevinc-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-haci-ali-sevinc-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kurşun kaplı kubbeli taş-tuğla mescit, önünde açık renkli kesme taştan, yuvarlak kemerli camlı açıklıkları olan giriş bölümü; çevrede renkli cepheli evler",
+      "description": "Mescit ve son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-haci-ali-sevinc-mosque/prayer-hall.jpg",
+      "alt": "Harimin içi: kırmızı halı, kubbe eteğinde dışa taşan üçgenlerden oluşan geçiş kuşağı, ortada çini çerçeveli mihrap, sağda oymalı ahşap minber",
+      "description": "Harim ve kubbeye geçiş",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-haci-ali-sevinc-mosque/wall-masonry.jpg",
+      "alt": "Yakın çekim: moloz taş ve tuğla hatıllarla örülmüş duvarda tuğla kemerli, demir parmaklıklı iki pencere",
+      "description": "Duvar örgüsü ve pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-haci-ali-sevinc-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kurşun kaplı kubbe ve önündeki küçük kubbeli bölüm, çevresinde kiremit çatılı binalar ve sokak",
+      "description": "Kubbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "transition",
+      "image": "/images/osmangazi-haci-ali-sevinc-mosque/prayer-hall.jpg",
+      "x": 37,
+      "y": 14,
+      "title": "Türk üçgenleri",
+      "text": "Kubbeye geçişte alt sıradaki Türk üçgenleri dışa taşırılmış, üstteki sıralar bu üçgenlere oturtulmuştur.",
+      "sourceId": "inv-p320"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-haci-ali-sevinc-mosque/aerial-view.jpg",
+      "x": 62,
+      "y": 58,
+      "title": "Son cemaat yeri",
+      "text": "Onarıldığı anlaşılan son cemaat yerinde 19. yüzyıl üslubuna uygun dairesel kemerler kullanılmış, kemer boşlukları camla kaplanmıştır.",
+      "sourceId": "inv-p321"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/osmangazi-haci-ali-sevinc-mosque/wall-masonry.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Duvar örgüsü",
+      "text": "Duvarlar bazen tek, bazen çift tuğla hatıllı ve moloz taşla örülmüştür.",
+      "sourceId": "inv-p320"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidi kim yaptırmıştır?",
+      "options": [
+        "Fatih Sultan Mehmed",
+        "Helvacı Acele Bacı",
+        "Tüccar Başçı Hacı Sevinç",
+        "Bursa Eski Eserleri Sevenler Kurumu"
+      ],
+      "correct": 2,
+      "description": "Mescit, Fatih Sultan Mehmed döneminde tüccar Başçı Hacı Sevinç tarafından yaptırılmıştır.",
+      "sourceId": "inv-p319"
+    },
+    {
+      "question": "Cami içindeki basık görünümün nedeni nedir?",
+      "options": [
+        "Kubbeye geçişin dört metre yükseklikte başlaması",
+        "Kubbenin sonradan yıkılması",
+        "Ahşap tavan eklenmesi",
+        "Zeminin yükseltilmesi"
+      ],
+      "correct": 0,
+      "description": "Kubbeye geçiş yüksekliği dört metre olduğundan cami içinde oldukça basık bir görünüm ortaya çıkmıştır.",
+      "sourceId": "inv-p320"
+    },
+    {
+      "question": "1855 depreminde yapının hangi kısmı yıkılmıştır?",
+      "options": [
+        "Minaresi",
+        "Kubbesi",
+        "Son cemaat yeri",
+        "Türbe kısmı"
+      ],
+      "correct": 3,
+      "description": "Yapı 1855 depreminde önemli bir zarar görmemiş, ancak türbe kısmı yıkılmıştır.",
+      "sourceId": "inv-p321"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p319",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacı Ali Sevinç Camii\"",
+      "page": "319"
+    },
+    {
+      "id": "inv-p320",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacı Ali Sevinç Camii\"",
+      "page": "320"
+    },
+    {
+      "id": "inv-p321",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacı Ali Sevinç Camii\"",
+      "page": "321"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

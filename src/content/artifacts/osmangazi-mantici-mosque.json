@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-mantici-mosque",
+  "name": "Mantıcı Cami",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Fâtih Sultan Mehmed dönemi",
+  "endowment": "Halkın yardımlarıyla inşa edilmiştir",
+  "summary": "Fâtih Sultan Mehmed döneminde halkın yardımlarıyla yapılan, zamanla tadilatlarla özgünlüğünü yitirmiş, kırma ahşap çatılı mahalle mescidi.",
+  "history": "Mantıcı Cami, Osmangazi İlçesi, Reyhan Mahallesi, Mantıcı Sokak'tadır. Şer'iyye sicillerindeki kayıtlardan, Fâtih Sultan Mehmed devri yapılarından olduğu ve halkın yardımlarıyla inşa edildiği anlaşılır.\n\nKareye yakın dikdörtgen planlı cami 8,10 × 8,25 m ölçülerindedir. Yerel taş kullanılarak moloz örgü tekniğiyle yapılmış, ancak zamanla yapılan tadilatlarla tamamen sıvanmış, pencere üslupları değiştirilmiş ve betonarme yapıya dönüştürülmüştür. Bu süreçte cami özgün niteliğini kaybetmiş, tarihî dokusu ve mimari değeri zayıflamıştır.\n\nKırma ahşap çatılı cami, basit bir mahalle mescidi görünümündedir. Ön cephesinde iki sıra hâlinde dörder pencere bulunur ve alt pencereler parmaklıklıdır. Yan duvarlarda altta ikişer pencere, üstte vitraylı küçük pencereler yer alır. Cuma namazı kılınabilmesi için sonradan eklenmiş ahşap bir minberi vardır. 4,60 m derinliğindeki son cemaat yerine bir arakat eklenerek kadınlar mahfili oluşturulmuştur. Minaresi bulunmayan camide bir mükebbire ile yetinilmiştir.\n\nDoğu yönüne bitişik haziresindeki 16. yüzyıl başlarına tarihlenen mezar taşları 1940'lı yıllara kadar varlığını sürdürmüştür. Çok sayıda onarım geçiren cami, son olarak 1959'da Bursa Eski Eserleri Sevenler Kurumu desteğiyle yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-mantici-mosque/facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-mantici-mosque/facade.jpg",
+      "alt": "Sıvalı pembe cephe: üstte kemerli pencereler ve ortada küçük balkon, altta demir parmaklıklı kemerli pencereler ve beyaz metal kapı; kapı yanında \"Mantıcı Camii\" tabelası",
+      "description": "Caminin ön cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-mantici-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: lambri tavanlı sade harim, ortada mavi-sarı boyalı mihrap ve avize, sağda ahşap minber, solda ahşap kürsü; yan duvarların üst kısmında küçük vitraylı pencereler",
+      "description": "Harim, mihrap ve ahşap minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "windows",
+      "image": "/images/osmangazi-mantici-mosque/facade.jpg",
+      "x": 22,
+      "y": 58,
+      "title": "Parmaklıklı pencereler",
+      "text": "Ön cephede iki sıra hâlinde pencereler bulunur; alt pencereler parmaklıklıdır.",
+      "sourceId": "inv-p394"
+    },
+    {
+      "id": "stained-glass",
+      "image": "/images/osmangazi-mantici-mosque/prayer-hall.jpg",
+      "x": 90,
+      "y": 20,
+      "title": "Vitraylı küçük pencereler",
+      "text": "Yan duvarlarda altta ikişer pencere, üstte vitraylı küçük pencereler yer alır.",
+      "sourceId": "inv-p394"
+    },
+    {
+      "id": "minbar",
+      "image": "/images/osmangazi-mantici-mosque/prayer-hall.jpg",
+      "x": 78,
+      "y": 55,
+      "title": "Ahşap minber",
+      "text": "Cuma namazı kılınabilmesi için camiye sonradan ahşap bir minber eklenmiştir.",
+      "sourceId": "inv-p394"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şer'iyye sicillerine göre cami nasıl inşa edilmiştir?",
+      "options": [
+        "Bir padişah vakfıyla",
+        "Halkın yardımlarıyla",
+        "Bir kadının vasiyetiyle",
+        "Bir lonca tarafından"
+      ],
+      "correct": 1,
+      "description": "Şer'iyye sicillerindeki kayıtlardan, Fâtih Sultan Mehmed devri yapılarından olduğu ve halkın yardımlarıyla inşa edildiği anlaşılır.",
+      "sourceId": "inv-p394"
+    },
+    {
+      "question": "Minaresi olmayan camide ne ile yetinilmiştir?",
+      "options": [
+        "Bir saat kulesiyle",
+        "Çatıdaki bir hoparlörle",
+        "Bir mükebbire ile",
+        "Komşu caminin minaresiyle"
+      ],
+      "correct": 2,
+      "description": "Minaresi bulunmayan camide bir mükebbire ile yetinilmiştir.",
+      "sourceId": "inv-p394"
+    },
+    {
+      "question": "Kadınlar mahfili nasıl oluşturulmuştur?",
+      "options": [
+        "Harime ahşap bir bölme konularak",
+        "Bitişik bir ev satın alınarak",
+        "Bahçeye yeni bir yapı eklenerek",
+        "Son cemaat yerine bir arakat eklenerek"
+      ],
+      "correct": 3,
+      "description": "4,60 m derinliğindeki son cemaat yerine bir arakat eklenerek kadınlar mahfili oluşturulmuştur.",
+      "sourceId": "inv-p394"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p394",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Mantıcı Cami\"",
+      "page": "394"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

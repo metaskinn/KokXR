@@ -1,0 +1,109 @@
+{
+  "id": "osmangazi-davutpasa-batpazari-mosque",
+  "name": "Davutpaşa (Batpazarı) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Bayezid dönemi; 1760'ta minber eklenerek camiye çevrilmiştir",
+  "endowment": "Sadrazam Davut Paşa (akar olarak bir han ve bir hamam)",
+  "summary": "II. Bayezid'in sadrazamı Davut Paşa'nın Demirciler Çarşısı'nda mescit olarak yaptırdığı, 1760'ta camiye çevrilen ve 2014'te restore edilen sade yapı.",
+  "history": "Davutpaşa (Batpazarı) Camii, Osmangazi ilçesi, Kayhan Mahallesi, Demirciler Çarşısı'ndadır. Davutpaşa Hamamı'nın doğusundaki yapı, Sultan II. Bayezid'in sadrazamı Davut Paşa tarafından mescit olarak yaptırılmış son derece sade bir binadır. Davut Paşa, mescide akar olarak bir han ve bir hamam yaptırıp vakfetmiştir; hamam günümüze ulaşmış, \"Yeni Tahtakale Hanı\" olarak bilinen han ise ulaşamamıştır.\n\nHarap durumdaki mescit, Mahkeme-i Kübrâ Başkâtibi Şiblizâde Ahmed Bey adlı bir hayırsever tarafından tamamen onarılıp yenilenmiş ve 1760'ta minber eklenerek camiye çevrilmiştir. 6,40 × 9 m iç ölçülerindeki caminin duvar kalınlığı 90 cm'dir. 1762'deki Kaygan yangınında Batpazarı'ndaki dükkânlarla birlikte yanmış, 1893'te yeniden harap olmuştur. İlk inşasında ahşap çatılı ve kiremit kaplı olan cami, bölge sakinlerinin desteğiyle yeniden ayağa kaldırılarak kâgir hâle getirilmiştir.\n\nÇevresinde bir mektep ile camiye gelir sağlamak için yapılmış bir kahvehane de bulunan yapı zamanla harap olmuştur. 2014'teki kapsamlı restorasyonda harimi ve son cemaat yeri çatılı olarak yeniden düzenlenmiş, güdük minaresi onarılmış ve cami ibadete açılmıştır. Davut Paşa farklı bölgelerde medrese ve hamam gibi hayratlar da yaptırmıştır; İstanbul'daki Davutpaşa Kışlası onun adıyla anılır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-davutpasa-batpazari-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-davutpasa-batpazari-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı alçak yapıların arasında beyaz badanalı cami ve yanında şerefeli, külahlı taş minare; sağda büyük bir ağaç, arkada dağlar",
+      "description": "Caminin ve minarenin çevresiyle görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-davutpasa-batpazari-mosque/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kiremit kaplı kırma çatı, yanında minarenin şerefesi ve büyük bir ağaç; çevrede çarşının kiremit çatıları",
+      "description": "Çatının tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-davutpasa-batpazari-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harim; ahşap kaplı tavan, mavi çerçeveli mihrap, sağda ahşap minber, duvarlarda yuvarlak hat levhaları",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-davutpasa-batpazari-mosque/exterior.jpg",
+      "x": 55,
+      "y": 55,
+      "title": "Minare",
+      "text": "2014'teki kapsamlı restorasyonda caminin minaresi de onarılmıştır.",
+      "sourceId": "inv-p297"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-davutpasa-batpazari-mosque/top-view.jpg",
+      "x": 57,
+      "y": 50,
+      "title": "Çatı",
+      "text": "2014 restorasyonunda harim ve son cemaat yeri çatılı olarak yeniden düzenlenmiştir.",
+      "sourceId": "inv-p297"
+    }
+  ],
+  "test": [
+    {
+      "question": "Davutpaşa Camii'ni mescit olarak kim yaptırmıştır?",
+      "options": [
+        "Şiblizâde Ahmed Bey",
+        "Çandarlı İbrahim Paşa",
+        "II. Bayezid'in sadrazamı Davut Paşa",
+        "Hacı İvaz Paşa"
+      ],
+      "correct": 2,
+      "description": "Mescit, Sultan II. Bayezid'in sadrazamı Davut Paşa tarafından yaptırılmıştır.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "question": "Mescit 1760'ta neyin eklenmesiyle camiye çevrilmiştir?",
+      "options": [
+        "Minber",
+        "Minare",
+        "Şadırvan",
+        "Mahfil"
+      ],
+      "correct": 0,
+      "description": "Şiblizâde Ahmed Bey'in onarttığı mescit, 1760'ta minber eklenerek camiye çevrilmiştir.",
+      "sourceId": "inv-p296"
+    },
+    {
+      "question": "Davut Paşa'nın mescide akar olarak vakfettiği yapılardan hangisi günümüze ulaşmıştır?",
+      "options": [
+        "Yeni Tahtakale Hanı",
+        "Kahvehane",
+        "Mektep",
+        "Hamam"
+      ],
+      "correct": 3,
+      "description": "Davut Paşa mescide akar olarak bir han ve bir hamam vakfetmiştir; hamam günümüze ulaşmış, Yeni Tahtakale Hanı ulaşamamıştır.",
+      "sourceId": "inv-p296"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p296",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Davutpaşa (Batpazarı) Camii\"",
+      "page": "296"
+    },
+    {
+      "id": "inv-p297",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Davutpaşa (Batpazarı) Camii\"",
+      "page": "297"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

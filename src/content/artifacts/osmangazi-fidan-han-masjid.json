@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-fidan-han-masjid",
+  "name": "Fidan (Mahmudpaşa) Hanı Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · İnşa tarihi kitapta belirtilmemiştir; bugünkü yapı 1965-1967 yenilemesidir",
+  "endowment": "Kitapta belirtilmemiştir; yapı, banisine ithafen Mahmut Paşa Mescidi olarak da bilinir",
+  "summary": "Fidan Hanı avlusunun ortasında, on iki mermer sütunlu bir şadırvanın üzerinde yükselen, içi turkuaz çinilerle kaplı han mescidi.",
+  "history": "Mescit, Osmangazi ilçesi, Nalbantoğlu Mahallesi, Uzunçarşı Caddesi No: 28'de, Fidan Hanı'nın avlusunun ortasındadır. Yapının banisine ithafen \"Mahmut Paşa Mescidi\" olarak da bilinir. Koza Hanı ve Geyve Hanı'ndan sonra günümüze ulaşan han mescitleri arasında önemli bir örnektir. Hana gelip konaklayan tüccarların vakit namazlarını kılmaları için yapılmıştır.\n\n1964 yılına kadar sekiz direk, havuz kenarları ve sağlam bir temele oturan mermer merdivenler mevcuttu. Bursa Eski Eserleri Sevenler Kurumu, Ekrem Hakkı Ayverdi'nin çizimleri doğrultusunda mescidi 1965'te, çinileri 1966'da, kalan eksikleri 1967'de tamamlamıştır. Giderler han esnafı tarafından kendi imkânlarıyla karşılanmıştır. Direkler üzerinde ağır bir yapının yükselmesi mümkün olmadığından özgün yapının ahşap olduğu düşünülür; ancak yenileme sırasında meşe kerestesi bulmak güç olduğundan kâgir malzeme kullanılmıştır. Bugün hanın duvar örgüsüne uyacak şekilde iki sıra tuğla ve bir sıra taştan oluşan duvar örgüsü, iki sıra kirpi saçakla tamamlanır.\n\nMescit, on iki köşeli bir şadırvanın üzerine on iki mermer sütunla taşıtılarak inşa edilmiştir. Altındaki havuzda su yoktur; musluklardan su yalnızca abdest için akar. Mermer havuz duvarına oturan sütunlar üzerinde yükselen mescide, kuzey taraftaki on bir basamaklı merdivenle çıkılır; giriş ahşap çift kanatlı bir kapıdandır. Merdiven boşluklarına her iki yanda üçer musluk eklenerek abdest alanı oluşturulmuş, bu alanlar kiremit çatılı ahşap sundurmayla kapatılmıştır. Güneybatıda sonradan eklendiği anlaşılan iki kurnalı bir çeşme vardır. Şadırvanın ortasındaki iki katlı mermer selsebil, her biri altı musluk deliğine sahip on iki demir tapadan oluşur ve geçmişte kullanıldığı anlaşılır.\n\nMescidin çatısı kurşun kaplıdır ve altı penceresi vardır. Dış cephede pencere üstlerinde sivri kemerler, pencere alınlıklarında beşgen petekler kullanılmıştır. İç mekâna hâkim turkuaz çiniler Yeşil Külliye'yi anımsatır. Mihrap çinidendir, kavsarası farklı bir malzemeyle işlenmiştir. Lacivert tonların hâkim olduğu mihrabın ayeti de çini üzerine yazılmıştır; bir kısmının diğer bölümlerden daha eski olduğu dikkati çeker. İsm-i Celâl, İsm-i Nebî ve dört halifenin adları yuvarlak çini levhalara yazılarak duvarlara asılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-fidan-han-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-fidan-han-masjid/exterior.jpg",
+      "alt": "Han avlusunda beyaz sütunlar üzerinde yükselen taş-tuğla örgülü çokgen mescit; önünde masalar ve sandalyeler, yanında büyük ağaçlar",
+      "description": "Şadırvan üzerindeki mescit",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-fidan-han-masjid/interior.jpg",
+      "alt": "Mescidin içi: duvarlar baştan sona turkuaz altıgen çinilerle kaplı, aralarda lacivert çini kümeleri; ortada mihrap, iki yanında pencereler ve yuvarlak levhalar",
+      "description": "Turkuaz çinili iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-fidan-han-masjid/tile-detail.jpg",
+      "alt": "Yakın çekim: turkuaz altıgen çiniler arasında lacivert altıgenlerden oluşan bir küme",
+      "description": "Çini ayrıntısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "columns",
+      "image": "/images/osmangazi-fidan-han-masjid/exterior.jpg",
+      "x": 35,
+      "y": 60,
+      "title": "Mermer sütunlar",
+      "text": "Mescit, on iki köşeli bir şadırvanın üzerine on iki mermer sütunla taşıtılarak inşa edilmiştir.",
+      "sourceId": "inv-p312"
+    },
+    {
+      "id": "tiles",
+      "image": "/images/osmangazi-fidan-han-masjid/interior.jpg",
+      "x": 81,
+      "y": 59,
+      "title": "Turkuaz çiniler",
+      "text": "İç mekâna hâkim turkuaz çiniler Yeşil Külliye'yi anımsatır.",
+      "sourceId": "inv-p312"
+    },
+    {
+      "id": "panels",
+      "image": "/images/osmangazi-fidan-han-masjid/interior.jpg",
+      "x": 14,
+      "y": 17,
+      "title": "Yuvarlak çini levhalar",
+      "text": "İsm-i Celâl, İsm-i Nebî ve dört halifenin adları yuvarlak çini levhalara yazılarak duvarlara asılmıştır.",
+      "sourceId": "inv-p312"
+    }
+  ],
+  "test": [
+    {
+      "question": "Fidan Hanı Mescidi hangi amaçla inşa edilmiştir?",
+      "options": [
+        "Handa konaklayan tüccarların vakit namazlarını kılması için",
+        "Hanın su ihtiyacını karşılamak için",
+        "Esnafın toplantı yapması için",
+        "Dervişlerin konaklaması için"
+      ],
+      "correct": 0,
+      "description": "Mescit, hana gelip konaklayan tüccarların vakit namazlarını kılmaları amacıyla inşa edilmiştir.",
+      "sourceId": "inv-p311"
+    },
+    {
+      "question": "Mescit kaç mermer sütun üzerinde yükselir?",
+      "options": [
+        "Sekiz",
+        "On",
+        "On iki",
+        "On altı"
+      ],
+      "correct": 2,
+      "description": "Mescit, on iki köşeli bir şadırvanın üzerine on iki mermer sütunla taşıtılarak inşa edilmiştir.",
+      "sourceId": "inv-p312"
+    },
+    {
+      "question": "1965-1967 yenilemesi kimin çizimleri doğrultusunda yapılmıştır?",
+      "options": [
+        "Mimar Sinan",
+        "İsmail Sönmez",
+        "Vedat Tek",
+        "Ekrem Hakkı Ayverdi"
+      ],
+      "correct": 3,
+      "description": "Bursa Eski Eserleri Sevenler Kurumu, mescidi Ekrem Hakkı Ayverdi'nin çizimleri doğrultusunda tamamlamıştır.",
+      "sourceId": "inv-p311"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p311",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Fidan (Mahmudpaşa) Hanı Mescidi\"",
+      "page": "311"
+    },
+    {
+      "id": "inv-p312",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Fidan (Mahmudpaşa) Hanı Mescidi\"",
+      "page": "312"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

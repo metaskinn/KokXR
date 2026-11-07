@@ -1,0 +1,102 @@
+{
+  "id": "osmangazi-geyve-han-masjid",
+  "name": "Geyve Hanı Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · İnşa tarihi kitapta belirtilmemiştir; 1743'te onarım",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Geyve Hanı'nın odalarından birinin üzeri kubbeyle örtülerek oluşturulan, bugün de aynı yerde kullanılan han mescidi.",
+  "history": "Mescit, Osmangazi ilçesi, Nalbantoğlu Mahallesi, Uzunçarşı'daki Geyve Hanı'nın içindedir. Diğer han mescitlerinden farklı olarak avlu ortasında değil, hanın odalarından birinin üzeri kubbeyle örtülerek mescit hâline getirilmiştir ve bugün hâlâ aynı yerde kullanılmaktadır.\n\nHanın batı girişinin tam karşısına denk gelen mescit, önde tonozlu bir giriş ile kemerlerle ayrılmış bir kubbeden oluşur. Kubbeye geçiş Türk üçgenleriyle sağlanmıştır. Önceki kullanımlarda tonozlu kısmın açık olduğu ve mescidin yalnızca kubbeli bölümden ibaret olduğu bilinir; bu nedenle tonozlu kısmın son cemaat yeri ya da giriş bölümü olarak kullanıldığı düşünülür.\n\nAhşap süsleme zeminde, duvarların alttan yarısına kadar, pencere kenarlarında ve mihrapta yer alır; koyu kahverengi tonlarda ince ahşap dilimler hâlindedir. Ahşabın üzerinde açık mavi zemin üzerine lacivert, beyaz ve kırmızı tonlarda kalem işi bir bordür çekilmiştir. Kalem işleri tonozda, kemer içlerinde ve kubbede de görülür. Mihrabın iki yanında siyah zemin üzerine sarı sülüs hatla Lafza-i Celâl ve İsm-i Nebî daire içinde yazılmış, diğer duvarlarda dua ve ayetler yer alır. Bu duvar süslemeleri ve kalem işleri tarihî özellik taşımaz; bugün camilerde yaygın olarak görülen süsleme biçimlerine benzer.\n\n1743'te hanın alt ve üst kaldırımları ile kiremitleri onarılırken mescit kısmı da tamir edilmiştir. Mescit, 2007'de Osmangazi Belediyesi'nin yaptığı onarımda yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-geyve-han-masjid/interior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-geyve-han-masjid/interior.jpg",
+      "alt": "Mescidin içi: mavi halı, duvarların alt yarısında koyu kahverengi ahşap kaplama, üstte beyaz duvarlarda yuvarlak hat levhaları; kemer ve kubbe mavi-beyaz kalem işleriyle bezeli",
+      "description": "Kubbeli mescit mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-geyve-han-masjid/han-courtyard.jpg",
+      "alt": "Geyve Hanı'nın avlusu: iki katlı tuğla revaklar, kiremit çatılar, avlunun ortasında taş şadırvan; arkada Ulu Cami'nin minareleri",
+      "description": "Hanın avlusu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-geyve-han-masjid/interior.jpg",
+      "x": 49,
+      "y": 13,
+      "title": "Kubbe ve kalem işleri",
+      "text": "Kubbeye geçiş Türk üçgenleriyle sağlanmıştır; kalem işleri tonozda, kemer içlerinde ve kubbede de görülür.",
+      "sourceId": "inv-p314"
+    },
+    {
+      "id": "wood",
+      "image": "/images/osmangazi-geyve-han-masjid/interior.jpg",
+      "x": 10,
+      "y": 81,
+      "title": "Ahşap kaplama",
+      "text": "Duvarların alttan yarısına kadar koyu kahverengi ince ahşap dilimlerden oluşan süsleme yer alır.",
+      "sourceId": "inv-p314"
+    }
+  ],
+  "test": [
+    {
+      "question": "Geyve Hanı Mescidi diğer han mescitlerinden nasıl ayrılır?",
+      "options": [
+        "Avlu ortasında, sütunlar üzerinde yükselir",
+        "Hanın odalarından birinin üzeri kubbeyle örtülerek mescide çevrilmiştir",
+        "Hanın dışında, ayrı bir binadır",
+        "Minaresi vardır"
+      ],
+      "correct": 1,
+      "description": "Mescit avlu ortasında değil, hanın odalarından birinin üzeri kubbeyle örtülerek oluşturulmuştur.",
+      "sourceId": "inv-p314"
+    },
+    {
+      "question": "Kubbeye geçiş nasıl sağlanmıştır?",
+      "options": [
+        "Tromplarla",
+        "Pandantiflerle",
+        "Türk üçgenleriyle",
+        "Mukarnaslarla"
+      ],
+      "correct": 2,
+      "description": "Mescidin kubbesine geçiş Türk üçgenleriyle sağlanmıştır.",
+      "sourceId": "inv-p314"
+    },
+    {
+      "question": "Mescit 2007'de kim tarafından yenilenmiştir?",
+      "options": [
+        "Osmangazi Belediyesi",
+        "Vakıflar Bölge Müdürlüğü",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Han esnafı"
+      ],
+      "correct": 0,
+      "description": "Mescit, 2007'de Osmangazi Belediyesi'nin yaptığı onarımda yenilenmiştir.",
+      "sourceId": "inv-p315"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p314",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Geyve Hanı Mescidi\"",
+      "page": "314"
+    },
+    {
+      "id": "inv-p315",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Geyve Hanı Mescidi\"",
+      "page": "315"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

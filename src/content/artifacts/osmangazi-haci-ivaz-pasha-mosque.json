@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-haci-ivaz-pasha-mosque",
+  "name": "Hacı İvaz Paşa Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1427'den önce (vakıf kaydı 1427); bugünkü yapı 1967'de yeniden inşa edildi",
+  "endowment": "Banisi vezir Hacı İvaz Paşa; 1642'de Seyit Mehmed Efendi minber vakfetmiştir",
+  "summary": "Çelebi Mehmed ve II. Murad dönemlerinin veziri Hacı İvaz Paşa'nın yaptırdığı, 1958 Kapalıçarşı yangınından sonra iki kubbeli olarak yeniden inşa edilen cami.",
+  "history": "Hacı İvaz Paşa Camii, Osmangazi İlçesi, Nalbantoğlu Mahallesi, Ulucami Caddesi No: 78'dedir. Cami, banisinin adıyla anılır; bölgeye yakınlığı nedeniyle Tavukpazarı, İmadiye ve Kazzazhane Camii adlarıyla da bilinir. Hacı İvaz Paşa, 15. yüzyılda Osmanlı'nın önemli devlet adamlarındandır ve Çelebi Mehmed ile II. Murad dönemlerinde vezirlik yapmıştır.\n\nCaminin vakıf kaydı 1427'de tescillendiğinden yapının bu tarihten önce inşa edildiği bilinir. İnşa edildiği dönemde cami, medrese ve mektepten oluşan bir külliye olarak düzenlenmiştir. Külliyeye gelir sağlamak için yapılan çarşı bugün ayaktadır, han ise zamanla yok olmuştur; bu yapılar Bursa İvaz Paşa Külliyesi'ni oluşturur. 1642'de Seyit Mehmed Efendi'nin minber vakfetmesiyle camiye dönüştürülmüştür.\n\n1855 depreminde duvarları, gövdesi ve minaresi yıkılmış; tamir edilemeyeceği düşünülerek 1860'ta kagir malzemeyle yeniden onarılmıştır. Yazılı kaynaklara göre gayet sade olan yapı 7,5 × 15 m ölçülerinde, iki kubbeli, dikdörtgen planlı kagir bir yapıydı; üzeri ahşap çatılı ve kiremit kaplıydı. Kuzey ve batıda iki kapısı, kuzeyde bir mahfil ile ahşap bir son cemaat yeri vardı. Avlusu yanındaki medreseden bir duvarla ayrılmış, iki yapıyı birleştiren ortak taş bir yol yapılmıştı. Mescit ile medresenin yakınlığı Selçuklu geleneği olarak yorumlanabilir.\n\n1958 Kapalıçarşı yangınında temeline kadar yanan cami, 1967'de bir hayırsever tarafından yeniden inşa edilmiştir; ancak eski yapının temel ölçüleri dışında benzer bir özelliği kalmamıştır. Bugünkü cami dikdörtgen planlı ve iki kubbelidir; Bursa'nın yerel mimarisine uygun olarak bir sıra kesme taş ile iki sıra ve düşey tuğlalı almaşık düzende örülmüştür. Planı Oruç Bey ve Abdal Mehmed camilerine benzer; 1990'larda esaslı bir tamir görmüştür.\n\nMinarenin kaidesi kesme taş ve tuğladan, gövdesi tamamen tuğladan örülmüştür; gövdeye geçiş Türk üçgenleriyle sağlanır. Tarihî kayıtlarda şerefe altının mihrapçıklarla süslendiği belirtilir; son inşada şerefe altı kirpi dizileriyle doldurulmuştur. Cami 1557, 1642, 1860, 1967-1968 ve 1990'lı yıllarda onarım görmüştür ve hâlen ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-haci-ivaz-pasha-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-haci-ivaz-pasha-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: yan yana iki kurşun kubbeli, taş ve tuğla almaşık duvarlı cami, solunda ince tuğla minare; arkada Kapalıçarşı'nın kubbeli çatıları ve Uludağ",
+      "description": "Caminin çarşı içindeki konumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-haci-ivaz-pasha-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: turkuaz halılı harim, sağda ahşap mahfil ve direkleri, karşıda mihrap ve minber, duvarlarda çini bordürler",
+      "description": "Harim ve ahşap mahfil",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-haci-ivaz-pasha-mosque/mihrab-minbar.jpg",
+      "alt": "Mihrap duvarı: işlemeli çerçeveli mihrap, sağında ahşap minber, üstte vitray pencereler ve yuvarlak hat levhaları",
+      "description": "Mihrap ve minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/osmangazi-haci-ivaz-pasha-mosque/aerial-view.jpg",
+      "x": 48,
+      "y": 50,
+      "title": "İki kubbe",
+      "text": "Bugünkü cami dikdörtgen planlı ve iki kubbelidir; planı Oruç Bey ve Abdal Mehmed camilerine benzer.",
+      "sourceId": "inv-p324"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-haci-ivaz-pasha-mosque/aerial-view.jpg",
+      "x": 45,
+      "y": 26,
+      "title": "Tuğla minare",
+      "text": "Minarenin kaidesi kesme taş ve tuğladan, gövdesi tamamen tuğladan örülmüş; gövdeye geçiş Türk üçgenleriyle sağlanmıştır.",
+      "sourceId": "inv-p324"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-haci-ivaz-pasha-mosque/aerial-view.jpg",
+      "x": 53,
+      "y": 74,
+      "title": "Almaşık duvarlar",
+      "text": "Duvarlar, Bursa'nın yerel mimarisine uygun olarak bir sıra kesme taş ile iki sıra ve düşey tuğlalı almaşık düzende örülmüştür.",
+      "sourceId": "inv-p324"
+    }
+  ],
+  "test": [
+    {
+      "question": "1958'de camiyi temeline kadar yıkan olay hangisidir?",
+      "options": [
+        "1855 depremi",
+        "Bir sel baskını",
+        "Kapalıçarşı yangını",
+        "Bir yıldırım düşmesi"
+      ],
+      "correct": 2,
+      "description": "Cami 1958 Kapalıçarşı yangınında temeline kadar yanmış, 1967'de yeniden inşa edilmiştir.",
+      "sourceId": "inv-p324"
+    },
+    {
+      "question": "Hacı İvaz Paşa hangi sultanların döneminde vezirlik yapmıştır?",
+      "options": [
+        "Çelebi Mehmed ve II. Murad",
+        "Orhan Gazi ve I. Murad",
+        "Fatih Sultan Mehmed ve II. Bayezid",
+        "Yavuz Sultan Selim ve Kanuni"
+      ],
+      "correct": 0,
+      "description": "Hacı İvaz Paşa, Çelebi Mehmed ve II. Murad dönemlerinde vezirlik yapmıştır.",
+      "sourceId": "inv-p322"
+    },
+    {
+      "question": "Minarenin tuğla gövdesine geçiş nasıl sağlanmıştır?",
+      "options": [
+        "Mukarnaslı bir kuşakla",
+        "Pandantiflerle",
+        "Kirpi saçakla",
+        "Türk üçgenleriyle"
+      ],
+      "correct": 3,
+      "description": "Minarenin gövdesine geçiş Türk üçgenleriyle sağlanmıştır.",
+      "sourceId": "inv-p324"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p322",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacı İvaz Paşa Camii\"",
+      "page": "322"
+    },
+    {
+      "id": "inv-p323",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacı İvaz Paşa Camii\"",
+      "page": "323"
+    },
+    {
+      "id": "inv-p324",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hacı İvaz Paşa Camii\"",
+      "page": "324"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

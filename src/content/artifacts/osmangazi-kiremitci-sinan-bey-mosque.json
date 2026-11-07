@@ -1,0 +1,109 @@
+{
+  "id": "osmangazi-kiremitci-sinan-bey-mosque",
+  "name": "Kiremitçi Sinan Bey Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 16. yüzyıl ortası; mihrabın üstündeki kayıp kitabede H. 939 / M. 1532 tarihi",
+  "endowment": "Banisi Pir Mehmed oğlu Sinan Bey",
+  "summary": "Pir Mehmed oğlu Sinan Bey'in yaptırdığı, Bursa Büyükşehir Belediyesince yıkılıp farklı bir planla yeniden inşa edilen; yalnızca haziresi ve birkaç mezar taşı özgün kalan cami.",
+  "history": "Kiremitçi Sinan Bey Camii, Osmangazi İlçesi, Kiremitçi Mahallesi, Doğanbey Caddesi No: 80'dedir. Kitaba göre cami, 16. yüzyıl ortalarında Pir Mehmed oğlu Sinan Bey tarafından yaptırılmıştır. Sinan Bey, Fâtih devri devlet adamlarındandır ve Pirinç Hanı, Hayrettin Paşa Vakfı'na mütevelli olarak görev yapmıştır.\n\nMerhum Şemseddin Ulusoy, mihrabın üstünde yer alan H. 939 / M. 1532 tarihini söyleyen kişinin Sarıkçızâde Seyyid İbrahim Râzî Efendi olduğunu belirtmiştir. Bugün kayıp olan bu kitabe, 20 × 40 cm boyutlarında kâğıt üzerine küçük talik harflerle yazılmış dokuz satırlık bir manzumedir. Şair İbrahim Râzî, camiyi yaptıran Sinan Bey için de manzume yazmıştır.\n\nYeni baştan yapıldığı için asli özelliklerini yitiren mabedin yalnızca haziresi ve buradaki birkaç mezar taşı özgün olarak günümüze gelebilmiştir. Doğan Bey Kentsel Dönüşüm Alanı içinde kalan yapı, yüksek binalar arasında görünmez hâle gelmiştir. Cami, Bursa Büyükşehir Belediyesi tarafından yıkılarak yeni baştan ve farklı bir planla inşa edilmiştir. Erken devir zaviyeli/tabhaneli Bursa camilerinden ilham alındığı, ancak modern kompozit malzemelerle ve ahşap çatılı olarak yapıldığı söylenebilir. Caminin haziresi de düzenlenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-kiremitci-sinan-bey-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-kiremitci-sinan-bey-mosque/aerial-view.jpg",
+      "alt": "Yüksek apartman bloklarının arasında, kiremit kaplı kırma çatılı, beyaz sıvalı ve ahşap kaplamalı iki katlı görünümlü cami; çatının arkasında kısa bir minare",
+      "description": "Caminin çevresindeki yüksek binalar arasındaki görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-kiremitci-sinan-bey-mosque/courtyard.jpg",
+      "alt": "Ağaçlar arasında kiremit çatılı, beyaz duvarlı cami; önde metal çatılı iki küçük yapı ve demir korkuluklu bahçe, ortada büyük bir çınar",
+      "description": "Caminin bahçesi ve çevre düzenlemesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-kiremitci-sinan-bey-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap lambri kaplı tavan, kırmızı halı, sağ köşede beyaz mihrap ve yanında hat levhası; duvarlarda sıra sıra pencereler ve avizeler",
+      "description": "Ahşap tavanlı harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-kiremitci-sinan-bey-mosque/aerial-view.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Yeniden yapılan cami",
+      "text": "Cami Bursa Büyükşehir Belediyesince yıkılarak farklı bir planla, modern kompozit malzemelerle ve ahşap çatılı olarak yeniden inşa edilmiştir.",
+      "sourceId": "inv-p382"
+    },
+    {
+      "id": "towers",
+      "image": "/images/osmangazi-kiremitci-sinan-bey-mosque/aerial-view.jpg",
+      "x": 88,
+      "y": 25,
+      "title": "Kentsel dönüşüm alanı",
+      "text": "Doğan Bey Kentsel Dönüşüm Alanı içinde kalan yapı, yüksek binalar arasında görünmez hâle gelmiştir.",
+      "sourceId": "inv-p382"
+    }
+  ],
+  "test": [
+    {
+      "question": "Camiyi yıkarak yeni baştan ve farklı bir planla inşa eden kurum hangisidir?",
+      "options": [
+        "Vakıflar Bölge Müdürlüğü",
+        "Bursa Büyükşehir Belediyesi",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Osmangazi Müftülüğü"
+      ],
+      "correct": 1,
+      "description": "Cami Bursa Büyükşehir Belediyesi tarafından yıkılarak yeni baştan ve farklı bir planla inşa edilmiştir.",
+      "sourceId": "inv-p382"
+    },
+    {
+      "question": "Kayıp kitabe hangi malzeme üzerine yazılmıştı?",
+      "options": [
+        "Kâğıt üzerine",
+        "Mermer levha üzerine",
+        "Ahşap pano üzerine",
+        "Çini üzerine"
+      ],
+      "correct": 0,
+      "description": "Kayıp kitabe, 20 × 40 cm boyutlarında kâğıt üzerine küçük talik harflerle yazılmış dokuz satırlık bir manzumedir.",
+      "sourceId": "inv-p382"
+    },
+    {
+      "question": "Caminin özgün olarak günümüze ulaşabilen bölümü hangisidir?",
+      "options": [
+        "Minaresi",
+        "Mihrabı",
+        "Son cemaat yeri",
+        "Haziresi ve birkaç mezar taşı"
+      ],
+      "correct": 3,
+      "description": "Yeni baştan yapıldığı için asli özelliklerini yitiren mabedin yalnızca haziresi ve birkaç mezar taşı özgün olarak günümüze gelebilmiştir.",
+      "sourceId": "inv-p382"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p381",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kiremitçi Sinan Bey Camii\"",
+      "page": "381"
+    },
+    {
+      "id": "inv-p382",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kiremitçi Sinan Bey Camii\"",
+      "page": "382"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

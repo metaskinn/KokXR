@@ -1,0 +1,116 @@
+{
+  "id": "osmangazi-darulkurra-haraccioglu-graveyard",
+  "name": "Darülkurra (Haraççıoğlu) Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Dârulkurrâ binası kitabesine göre 1492-93",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hoca Yakup Dârulkurrâsı'nın yanında, Haraççıoğlu (Cizyedârzâde) ailesinin ve çevreden taşınan taşlarla açık hava mezar taşı müzesine dönüşmüş hazire.",
+  "history": "Hazire, Osmangazi ilçesi, Kavaklı Caddesi, No: 39'dadır. Yanındaki Hoca Yakup Dârulkurrâsı, biri kışlık, diğeri yazlık ve dışa açık iki kubbeli mekândan oluşur. Hafızların kıraat ilmini öğrendiği yer anlamına gelen dârulkurrâ, Osmanlı Devleti döneminde hafızlara Kur'ân-ı Kerîm kıraati öğretmek için inşa edilmiş ilk bina olmasıyla önem taşır. Kitabesinden 1492-93'te Hoca Yakup tarafından yaptırıldığı anlaşılan binanın duvarlarında kesme küfeki taşı, tuğla ve horasan harcı kullanılmıştır. Bir dönem muallimhane olarak kullanılan yapı, 1966'dan itibaren Bursa Eski Eserleri Sevenler Kurumu binası olmuş, yakın zamanda Üftâde Kur'ân Kursu'na tahsis edilmiştir.\n\nBinanın hemen yanında \"küçük kabristan\" anlamına gelen bir hazire bulunur. Abdülkâdir-i Geylânî'nin torunlarından Ca'fer Çelebi'nin de burada medfun olduğu bilinmektedir. Bursa Büyükşehir Belediyesi yapıyı onarmış ve haziresini düzenlemiştir. Hazire, Bursa'nın çeşitli hazirelerinden, civardaki dergâhlardan ve kaldırılan mezarlıklardan getirilen mezar taşları ve kitabelerle zenginleşmiş, âdeta açık hava mezar taşı müzesine dönüşmüştür.\n\nHazirede Haraççıoğlu (Cizyedârzâde) Medresesi'nin kurucusu Hüseyin Ağa ve ailesinden bazı kişiler medfundur. Önemli kişiler arasında Kumandan Cizyedârzâde Hacı Süleyman Ağa, Bursa Ayânı Cizyedârzâde Hacı Hüseyin Ağa, Halep Kadısı Cizyedârzâde Şeyh Ahmed Bahâeddîn Efendi ve Seyyid Ca'fer bin Seyyid Ahmed bulunur. Hazirenin en görkemli taşları Cizyedârzâde Hüseyin Ağa ile eşi Münevvere Kadın'a aittir.\n\nZencîrî Ali Efendi Dergâhı Haziresi'nden buraya taşınanlar arasında dergâhın kurucusu Şeyh Zencîrî Ali Efendi, Halep Kadısı Seyyid Mehmed Râşid Efendi, Bursa Defterdârı Seyyid Şeyh Mustafa Ârif Efendi Sa'dî ve müderris Mehmed Râsih Efendi vardır; dergâh mensubu bazı şeyhler ile Râsih Efendi'nin annesi Ayşe Hanım da burada yatmaktadır. Zencîrî Ali Efendi'nin Sa'dî tarikatı tacı bulunan son derece süslü taşında \"sene 950\" tarihi okunur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-darulkurra-haraccioglu-graveyard/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-darulkurra-haraccioglu-graveyard/aerial-view.jpg",
+      "alt": "Kesme taş ve tuğla örgülü, kurşun kubbeli ve büyük kemerli bir yapı; önünde demir korkuluklu alanda sıra sıra beyaz mermer mezar taşları",
+      "description": "Dârulkurrâ binası ve hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-darulkurra-haraccioglu-graveyard/inscribed-gravestone.jpg",
+      "alt": "Yüzeyi baştan aşağı Osmanlıca yazıyla kaplı, sivri tepeli mermer mezar taşı; arkada başka taşlar ve taş duvar",
+      "description": "Yazılı bir mezar taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-darulkurra-haraccioglu-graveyard/tree-motif-gravestone.jpg",
+      "alt": "Tepesi kıvrımlı süslemeli, yüzünde saksıdan yükselen meyveli ağaç kabartması bulunan mermer mezar taşı; arkasında başka süslü taşlar",
+      "description": "Ağaç kabartmalı bir mezar taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-darulkurra-haraccioglu-graveyard/gravestone-group.jpg",
+      "alt": "Taş duvar önünde yan yana dikilmiş yazılı mezar taşları; ortadakinin tepesinde yuvarlak başlık",
+      "description": "Hazireden bir grup mezar taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "darulkurra",
+      "image": "/images/osmangazi-darulkurra-haraccioglu-graveyard/aerial-view.jpg",
+      "x": 28,
+      "y": 40,
+      "title": "Hoca Yakup Dârulkurrâsı",
+      "text": "Kitabesine göre 1492-93'te Hoca Yakup'un yaptırdığı bina, biri kışlık, diğeri yazlık ve dışa açık iki kubbeli mekândan oluşur.",
+      "sourceId": "inv-p293"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-darulkurra-haraccioglu-graveyard/aerial-view.jpg",
+      "x": 75,
+      "y": 70,
+      "title": "Hazire",
+      "text": "Bursa'nın çeşitli hazirelerinden, dergâhlardan ve kaldırılan mezarlıklardan getirilen taşlarla hazire âdeta açık hava mezar taşı müzesine dönüşmüştür.",
+      "sourceId": "inv-p294"
+    }
+  ],
+  "test": [
+    {
+      "question": "\"Dârulkurrâ\" ne anlama gelir?",
+      "options": [
+        "Medrese öğrencilerinin yatakhanesi",
+        "Hafızların kıraat ilmini öğrendikleri yer",
+        "Hattatların çalıştığı yer",
+        "Kadıların hüküm verdiği yer"
+      ],
+      "correct": 1,
+      "description": "Dârulkurrâ, hafızların kıraat ilmini öğrendikleri yer anlamına gelir.",
+      "sourceId": "inv-p293"
+    },
+    {
+      "question": "Dârulkurrâ binası 1966'dan itibaren hangi kurumun binası olarak hizmet vermiştir?",
+      "options": [
+        "Üftâde Kur'ân Kursu",
+        "Bursa Müze Müdürlüğü",
+        "Vakıflar Bölge Müdürlüğü",
+        "Bursa Eski Eserleri Sevenler Kurumu"
+      ],
+      "correct": 3,
+      "description": "Bir dönem muallimhane olarak kullanılan yapı, 1966'dan itibaren Bursa Eski Eserleri Sevenler Kurumu binası olarak hizmet vermiş, yakın zamanda Üftâde Kur'ân Kursu'na tahsis edilmiştir.",
+      "sourceId": "inv-p293"
+    },
+    {
+      "question": "Hazirenin en görkemli taşları kimlere aittir?",
+      "options": [
+        "Cizyedârzâde Hüseyin Ağa ve eşi Münevvere Kadın",
+        "Hoca Yakup ve oğlu",
+        "Şeyh Zencîrî Ali Efendi ve Ayşe Hanım",
+        "Ca'fer Çelebi ve kardeşi"
+      ],
+      "correct": 0,
+      "description": "Hazirede yer alan en görkemli taşlar Cizyedârzâde Hüseyin Ağa ve eşi Münevvere Kadın'a aittir.",
+      "sourceId": "inv-p294"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p293",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Darülkurra (Haraççıoğlu) Haziresi\"",
+      "page": "293"
+    },
+    {
+      "id": "inv-p294",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Darülkurra (Haraççıoğlu) Haziresi\"",
+      "page": "294"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

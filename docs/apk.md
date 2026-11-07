@@ -12,4 +12,4 @@ adb install -r android/app/build/outputs/apk/debug/app-debug.apk
 ```
 
 Bulutlu sürüm için `apk:esitle` yerine `npx vite build && npx cap sync android` kullanın (`.env` gömülür).
-Durum: iskelet (`android/`, `capacitor.config.json`) hazır ve Gradle eşitlemesi geçti; APK derlemesi JDK 21 olmadığından bu makinede doğrulanmadı.
+Durum: `assembleDebug` 2026-11-07'de JDK 21.0.2 ile başarıyla derlendi (`app-debug.apk`, yaklaşık 62 MB, imzasız debug). **Telefonda veya emülatörde kurulup açılmadı**; çalıştığı henüz doğrulanmadı. JDK 21 yoksa ikili dağıtım açılıp `JAVA_HOME` ona yöneltilebilir (sisteme kurmak gerekmez); `ANDROID_HOME=~/Library/Android/sdk`.

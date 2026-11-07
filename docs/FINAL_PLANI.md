@@ -40,7 +40,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [x] **G3. yonetim/bulut-saglamlastir:** Supabase kurulumu sonrası gerçek denemeler (giriş, eser kaydı, görsel yükleme, onay). Yönetim ekranı bulut açıkken giriş ister; `docs/supabase-kurulum.md` (5 dakikalık adımlar). Kurulum sabaha kalırsa yalnız belge ve yerel yedek yolu.
 
 ### B. Şartnamenin zorunlu açıkları
-- [!] **G4. paket/capacitor (onaylı bağımlılık):** Capacitor ile Android APK (aynı kod). Quest/VR akışı APK'da denenmez; APK keşif, harita, erişilebilirlik içindir. Android SDK yoksa yalnız proje iskeleti ve derleme adımı belgelenir.
+- [x] **G4. paket/capacitor (onaylı bağımlılık):** Capacitor ile Android APK (aynı kod). Quest/VR akışı APK'da denenmez; APK keşif, harita, erişilebilirlik içindir. Android SDK yoksa yalnız proje iskeleti ve derleme adımı belgelenir.
 - [x] **G5. demo/yedek:** `npm run demo` (derle + önizle), PWA önbelleğini ısıtan sayfa listesi `docs/demo-senaryosu.md`'ye; internetsiz çalışma kontrolü.
 - [x] **G6. veri/kategori:** **Eser sayısı en az 10 şartı sağlanmış kalır ve güvenli payla 14'e çıkar.** En az 3 yeni türde eser (han, hamam/çeşme, türbe, eğitim yapısı). Metin yalnız envanter kitabından (Drive PDF veya .idml), her bilgiye cilt ve sayfa. Metin çıkarılamazsa eser eklenmez, `[!]`.
 - [!] **G7. veri/yeni-sehir:** Konya veya Hatay envanterinden 1 eser (aynı kaynak kuralı). Demodaki "yeni şehir" adımı gerçek veriyle.
@@ -70,7 +70,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G7 (Konya/Hatay eseri): Konya ve Hatay envanter PDF'leri `vakifkatilim.com.tr/documents/KurumsalIletisim/...` adreslerinde. Betik indirmesi bu oturumda izin denetiminden geçmedi (ayrıca Firecrawl kredisi bitti). Çözüm: PDF'i tarayıcıdan indirip `~/Downloads`'a koy; metni macOS PDFKit ile çıkarıp 1 eser eklerim (kaynak cilt+sayfa). Konya/Hatay Drive'da yok (yalnız Bursa arşivi).
 - G6 notu: Yeni 4 eserin fotoğrafı yok (Drive görselleri 2–144 MB, araçla indirilemiyor); eser sayfaları fotoğrafsız çalışır. Fotoğraf eklenecekse el ile küçültülüp `public/gorseller/<eser-id>/` altına, `kredi` alanıyla konmalı.
 - Vakıf Katılım yayın adresleri (`src/data/vrEserler.ts`) doğru görünüyor (sayfadaki bağlantılarla aynı); bot istekleri 404 alıyor, tarayıcıda açılır.
-- APK: JDK 21 kurulu değil (makinede 17). Kurulumu sistem değişikliği olduğu için yapmadım. `brew install --cask temurin@21` sonrası `docs/apk.md` adımlarıyla APK derlenir.
+- APK: (güncelleme: debug APK derlendi, `docs/apk.md`; telefonda denenmedi) JDK 21 kurulu değil (makinede 17). Kurulumu sistem değişikliği olduğu için yapmadım. `brew install --cask temurin@21` sonrası `docs/apk.md` adımlarıyla APK derlenir.
 - Supabase tabloları henüz kurulu değil (REST `eserler` 404). `docs/supabase-kurulum.md` adımlarını yap; kurulana kadar yönetim giriş istemez, yerel kayıtla çalışır. Kurulduktan sonra giriş, kayıt, onay ve görsel yükleme gerçek sunucuda denenmeli.
 - `tests/kilic.mjs` 1280'de zaman aşımı: G17'de eski master'da (60d7787, FINAL_PLANI öncesi) aynı hata çıktı; yeni işlerden kaynaklanmıyor. Tıklanan öğe yazılımsal çizimde 'stable' olmuyor (animasyon). Gerçek cihazda/tarayıcıda elle denenmeli.
 
@@ -95,3 +95,4 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G18: `docs/sabah-brifingi.md` yazıldı. Liste bitti.
 - Çekme (2026-11-07): `origin/ulucami-gercekci` (32 commit: VR haritası, Ulu Camii iç mekânı, kılıç VR düzeltmeleri) `master`'a çakışmasız birleştirildi. Tüm tarayıcı testleri geçti; `vr-eserler` testi, menüm 360px'te uzadığı için ekran dışına düşen işareti 'örtülü' saydığından kırıldı, test ekran dışını kaydırarak ölçecek şekilde düzeltildi. `maket-gecis` geliştirme sunucusunda çalışır (`TEST_URL=http://127.0.0.1:5187 TEST_BROWSER_CHANNEL=chromium`), `test:tarayici` listesinde değil.
 - Harita koordinatı: diğer ekibin kaynaklı koordinatları (`src/data/vrEserler.ts`, OSM/Wikidata, ana cami yeri) `/harita` eser işaretlerine bağlandı; 10 eserin işareti var, yeni 4 eserin yok. Önceki 'koordinat yok' sorusu 10 eser için kapandı.
+- G4 kapandı: JDK 21.0.2 ikili dağıtımı (Homebrew önbelleğinden, sisteme kurulmadan) ile `assembleDebug` başarılı; APK cihazda denenmedi. `brew install openjdk@21` kaynaktan derlemeye başladığı için iptal edildi.

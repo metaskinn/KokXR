@@ -54,7 +54,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 ### D. Belgeler ve sunum
 - [x] **G11. docs/lisanslar.md** (bağımlılık lisansları betikle; model, ses, font, fotoğraf kaynakları; bulunamayan "doğrulanmadı") ve README bağlantısı.
 - [x] **G12. docs/dogrulama-raporu.md:** 10 eserin metni kitapla karşılaştırma durumu; hangi eser `dogrulanmis` kalabilir. Kitap yoksa işaretli bırakılır (kazanma planı 73/74).
-- [ ] **G13. docs/sunum-taslagi.md:** Şartname 5.4 sırası: problem, hedef kullanıcı, çözüm, canlı demo, mimari (mermaid), veri kullanımı, yenilik, ölçek (Bursa → Konya → Hatay), yol haritası, ekip. Şanlıurfa yok. Çalışan vaatler ve "vizyon" olanlar ayrılır. Kılıç, Bursa vakıf eseri olmayan ek deneyim olarak konumlanır.
+- [x] **G13. docs/sunum-taslagi.md:** Şartname 5.4 sırası: problem, hedef kullanıcı, çözüm, canlı demo, mimari (mermaid), veri kullanımı, yenilik, ölçek (Bursa → Konya → Hatay), yol haritası, ekip. Şanlıurfa yok. Çalışan vaatler ve "vizyon" olanlar ayrılır. Kılıç, Bursa vakıf eseri olmayan ek deneyim olarak konumlanır.
 - [ ] **G14. docs/juri-soru-cevap.md:** 30 soru; her cevapta dosya yolu. VGM/Vakıf Katılım jürisi için "kılıç neden var", "veri nereden", "doğrulama" öne.
 
 ### E. Performans ve kapanış

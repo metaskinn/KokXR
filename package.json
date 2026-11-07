@@ -9,10 +9,13 @@
     "preview": "vite preview",
     "test:hizli": "tsc --noEmit -p tsconfig.app.json && node tests/maket-xr-mantik.mjs && node tests/maket-xr-metin.mjs && node tests/vazo-xr-mantik.mjs && node tests/maket-birlestir-mantik.mjs && node tests/restorasyon-mantik.mjs && node tests/kredi-veri.mjs",
     "test:tarayici": "tsc -b && VITE_SUPABASE_URL= VITE_SUPABASE_ANON_KEY= vite build --logLevel error && node scripts/test-tarayici.mjs",
-    "test:e2e": "node tests/uctan-uca.mjs chromium 1280 && node tests/uctan-uca.mjs chromium 360 && node tests/uctan-uca.mjs firefox 1280"
+    "test:e2e": "node tests/uctan-uca.mjs chromium 1280 && node tests/uctan-uca.mjs chromium 360 && node tests/uctan-uca.mjs firefox 1280",
+    "apk:esitle": "tsc -b && VITE_SUPABASE_URL= VITE_SUPABASE_ANON_KEY= vite build --logLevel error && cap sync android"
   },
   "type": "module",
   "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
     "@supabase/supabase-js": "^2.119.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
@@ -20,6 +23,7 @@
     "three": "^0.187.0"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.6.0",
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

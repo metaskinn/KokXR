@@ -83,9 +83,11 @@ Tipler: `src/types/eser.ts`. `sehir`, `ilce` ve `yapiTuru` (Cami, Han, Hamam, T�
 | React, React DOM, React Router | Arayüz ve rotalar | MIT |
 | Three.js | 3B maket ve WebXR | MIT |
 | @supabase/supabase-js | İsteğe bağlı bulut kaydı, giriş, yükleme | MIT |
+| Leaflet | Harita (`/harita`) | BSD-2-Clause |
+| Capacitor | Android APK sarmalayıcı (`docs/apk.md`) | MIT |
 | Vite, TypeScript, Playwright (geliştirme) | Derleme, tip denetimi, testler | MIT / Apache-2.0 |
 
-Lisanslar paketlerin kendi `LICENSE` dosyalarından teyit edilmelidir. Türkiye sınır çizgisi Natural Earth verisidir (kamu malı). Üçüncü taraf 360° gezinti `360tr.com` gömmesidir.
+Tam ve güncel liste (bağımlılıklar, modeller, sesler, yazı tipleri, fotoğraflar, "doğrulanmadı" işaretleriyle): [docs/lisanslar.md](docs/lisanslar.md), `node scripts/lisans-cikar.mjs` ile yenilenir. Türkiye sınır çizgisi Natural Earth verisidir (kamu malı). Üçüncü taraf 360° gezinti `360tr.com` gömmesidir.
 
 ## Fotoğraf kredisi
 

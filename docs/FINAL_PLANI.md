@@ -52,7 +52,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [x] **G10. arayuz/erisilebilirlik-rapor:** axe veya Lighthouse raporu `docs/`'a (indirme izni gerekirse atlanır, sorulur). Renk körlüğü paleti, klavye ve ekran okuyucu denetimi.
 
 ### D. Belgeler ve sunum
-- [ ] **G11. docs/lisanslar.md** (bağımlılık lisansları betikle; model, ses, font, fotoğraf kaynakları; bulunamayan "doğrulanmadı") ve README bağlantısı.
+- [x] **G11. docs/lisanslar.md** (bağımlılık lisansları betikle; model, ses, font, fotoğraf kaynakları; bulunamayan "doğrulanmadı") ve README bağlantısı.
 - [ ] **G12. docs/dogrulama-raporu.md:** 10 eserin metni kitapla karşılaştırma durumu; hangi eser `dogrulanmis` kalabilir. Kitap yoksa işaretli bırakılır (kazanma planı 73/74).
 - [ ] **G13. docs/sunum-taslagi.md:** Şartname 5.4 sırası: problem, hedef kullanıcı, çözüm, canlı demo, mimari (mermaid), veri kullanımı, yenilik, ölçek (Bursa → Konya → Hatay), yol haritası, ekip. Şanlıurfa yok. Çalışan vaatler ve "vizyon" olanlar ayrılır. Kılıç, Bursa vakıf eseri olmayan ek deneyim olarak konumlanır.
 - [ ] **G14. docs/juri-soru-cevap.md:** 30 soru; her cevapta dosya yolu. VGM/Vakıf Katılım jürisi için "kılıç neden var", "veri nereden", "doğrulama" öne.
@@ -63,6 +63,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [ ] **G18. docs/sabah-brifingi.md:** 1 sayfa: ne bitti/bitmedi, 09.00 öncesi 5 adım (Supabase kurulumu, push kararı, Vercel'in `master`'a bağlanması, PWA/APK telefonda deneme, Quest şarjı) ve `gorev_dagilimi.md`'deki 4 kişinin ilk 2 saatlik işi. Sonra dur.
 
 ## Sabah sorulacaklar
+- Lisanslar: çini fotoğrafı (muradiye-cini.jpg) kaynağı, 360TR gömme izni, derinlik modeli lisansı, vazo/kılıç modeli lisansı ve arşiv fotoğraflarının kullanım izni docs/lisanslar.md'de 'doğrulanmadı'. Organizasyona/sahibine sorulmalı.
 - Erişilebilirlik: axe/Lighthouse çalıştırılamadı; yerine tests/erisilebilirlik.mjs ve docs/erisilebilirlik-raporu.md yazıldı. Gerçek axe raporu istenirse npx indirmesine izin ver. Ekran okuyucu ile elle tur yapılmadı.
 - Harita: eserlerin doğrulanmış koordinatı yok. Eser.konum {enlem, boylam, kaynak} alanı hazır (kaynak zorunlu); koordinat verilince eser işaretleri ve rota çizgisi kendiliğinden çıkar. Şimdilik şehir işareti ve rota listeleri var. Harita OpenStreetMap karolarını internetten çeker.
 - Topluluk katkıları şimdilik yalnız bu tarayıcıda (localStorage) saklanıyor. Buluta (`katkilar` tablosu) yazmak için anonim ziyaretçiye insert izni vermek gerekir (`sema.sql` bugün yalnız girişli kullanıcıya izin veriyor). Anonim katkıya izin verilsin mi? Spam riski var.
@@ -85,3 +86,4 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G9 (yonetim/katki): eser sayfasında 'Topluluk katkıları' formu (başlık ≤80, metin ≤600, e-posta/telefon reddi, kontrol karakteri temizliği), `/onay` sayfasında katkı kararları, yalnız onaylananlar 'Topluluk katkısı · doğrulanmamış bilgi' etiketiyle görünür. `tests/katki-mantik.mjs` (test:hizli'da) ve tarayıcı akışı (`tests/yonetim.mjs`) geçti.
 - G15 (arayuz/harita): Leaflet (onaylı bağımlılık) ile /harita (tembel yüklenir): şehir işaretleri, 3 hazır rota (src/data/rotalar.ts; sıra gezi önerisi), tüm eser listesi, çevrimdışı yedek liste. Menüye Harita eklendi. tests/harita.mjs ve hata-avi'ye /harita eklendi.
 - G10 (arayuz/erisilebilirlik-rapor): bağımlılıksız denetim 10 rota × 3 mod; gerçek hata bulundu ve düzeltildi: ana sayfada kılıç tanıtım kartı açık zeminde açık yazı (1,07:1) — CSS sırası; kilic.css seçicileri güçlendirildi. Rapor: docs/erisilebilirlik-raporu.md.
+- G11 (docs/lisanslar): scripts/lisans-cikar.mjs docs/lisanslar.md üretir (18 doğrudan, 12 dolaylı üretim bağımlılığı; MIT/BSD-2/Apache/0BSD). Modeller, sesler, yazı tipi, fotoğraflar için kaynak ve 'doğrulanmadı' işaretleri; README'ye bağlantı.

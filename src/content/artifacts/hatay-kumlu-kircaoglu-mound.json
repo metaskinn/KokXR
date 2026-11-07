@@ -1,0 +1,104 @@
+{
+  "id": "hatay-kumlu-kircaoglu-mound",
+  "name": "Kırcaoğlu Höyüğü",
+  "city": "Hatay",
+  "district": "Kumlu",
+  "period": "Höyükte Prehistorik ve Tunç Çağı'na ait seramik parçaları bulunmuştur",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kumlu ilçesinde, Kırcaoğlu köyü yolu üzerinde yer alan, Prehistorik ve Tunç Çağı seramik parçalarının bulunduğu konik biçimli höyük.",
+  "history": "Kırcaoğlu Höyüğü, Hatay ili, Kumlu ilçesi, Kırcaoğlu köyü yolu üzerinde yer alır. Kitapta vakıf mülkleri arasında Kumlu, Kırcaoğlu 23 parsel olarak listelenmiştir. Höyük 15-20 metre yüksekliğinde ve 200 metre genişliğindedir.\n\nHöyük konik biçimlidir. Etekleri yayvan biçimde ovaya yayılır ve eteklerin içinde birkaç konut bulunur. Höyüğün üzeri düzdür; yağmur suları bazı yerlerde oluklar oluşturmuştur.\n\nHöyük henüz aşırı bir tahribata uğramamıştır. Batı yamacında mezarlar yer alır. Eteklerinde ise tarımsal etkinlikler nedeniyle aşınma görülür.\n\nHöyükte Prehistorik ve Tunç Çağı'na ait seramik parçaları bulunmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-kumlu-kircaoglu-mound/mound-view.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-kumlu-kircaoglu-mound/mound-view.jpg",
+      "alt": "Açık mavi gökyüzü altında, üzerinde birkaç ağaç bulunan kahverengi, yuvarlak tepeli höyük; önünde çalılarla kaplı yayvan etekler, ön planda beyaz mermer mezar taşları ve solda tel çit",
+      "description": "Höyüğün ve eteklerindeki mezarların genel görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "mound-cone",
+      "image": "/images/hatay-kumlu-kircaoglu-mound/mound-view.jpg",
+      "x": 52,
+      "y": 35,
+      "title": "Konik höyük",
+      "text": "Höyük konik biçimlidir; 15-20 metre yüksekliğinde ve 200 metre genişliğindedir.",
+      "sourceId": "inv-p475"
+    },
+    {
+      "id": "graves",
+      "image": "/images/hatay-kumlu-kircaoglu-mound/mound-view.jpg",
+      "x": 19,
+      "y": 58,
+      "title": "Mezarlar",
+      "text": "Höyükte mezarlar bulunur; kitaba göre mezarlar höyüğün batı yamacında yer alır.",
+      "sourceId": "inv-p475"
+    },
+    {
+      "id": "spreading-skirts",
+      "image": "/images/hatay-kumlu-kircaoglu-mound/mound-view.jpg",
+      "x": 75,
+      "y": 55,
+      "title": "Yayvan etekler",
+      "text": "Höyüğün etekleri yayvan biçimde ovaya yayılır; eteklerde tarımsal etkinlikler nedeniyle aşınma vardır.",
+      "sourceId": "inv-p475"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kırcaoğlu Höyüğü hangi ilçededir?",
+      "options": [
+        "Reyhanlı",
+        "Kumlu",
+        "Antakya",
+        "Kırıkhan"
+      ],
+      "correct": 1,
+      "description": "Höyük, Hatay ili, Kumlu ilçesi, Kırcaoğlu köyü yolu üzerinde yer alır.",
+      "sourceId": "inv-p475"
+    },
+    {
+      "question": "Höyükte hangi dönemlere ait seramik parçaları bulunmuştur?",
+      "options": [
+        "Roma ve Bizans dönemlerine",
+        "Selçuklu ve Osmanlı dönemlerine",
+        "Helenistik döneme",
+        "Prehistorik dönem ve Tunç Çağı'na"
+      ],
+      "correct": 3,
+      "description": "Höyükte Prehistorik ve Tunç Çağı'na ait seramik parçaları bulunmuştur.",
+      "sourceId": "inv-p475"
+    },
+    {
+      "question": "Höyüğün eteklerindeki aşınmanın nedeni nedir?",
+      "options": [
+        "Tarımsal etkinlikler",
+        "Deprem",
+        "Kaçak kazılar",
+        "Yol yapımı"
+      ],
+      "correct": 0,
+      "description": "Höyük henüz aşırı bir tahribata uğramamıştır; eteklerinde tarımsal etkinlikler nedeniyle aşınma vardır.",
+      "sourceId": "inv-p475"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p475",
+      "text": "Hatay Vakıf Eserleri, Kumlu, \"Kırcaoğlu Höyüğü\"",
+      "page": "475"
+    },
+    {
+      "id": "inv-p476",
+      "text": "Hatay Vakıf Eserleri, Kumlu, \"Kırcaoğlu Höyüğü\"",
+      "page": "476"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

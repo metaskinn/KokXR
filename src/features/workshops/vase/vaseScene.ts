@@ -106,7 +106,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     const button = document.createElement('button')
     button.type = 'button'
     button.className = 'vase-handle'
-    button.dataset.pieceIdOf = String(id)
+    button.dataset.pieceId = String(id)
     button.setAttribute('aria-label', `Parça ${id + 1}: tut ve sürükle`)
     button.innerHTML = `<span>${id + 1}</span>`
     button.addEventListener('click', () => { if (!state.placed.includes(id) && !renderer.xr.isPresenting) notify.select(id) })
@@ -197,7 +197,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
     const label = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-piece-id]')
     ray(e.clientX, e.clientY)
     const hit = ray3.intersectObjects(pieces.filter((_, id) => !state.placed.includes(id)), true)[0]
-    const id: number | undefined = label ? Number(label.dataset.pieceIdOf) : hit?.object.userData.pieceId
+    const id: number | undefined = label ? Number(label.dataset.pieceId) : hit?.object.userData.pieceId
     if (id === undefined || state.placed.includes(id)) return
     e.stopPropagation(); e.preventDefault()
     // Keep OrbitControls from using the same grab to rotate the camera.

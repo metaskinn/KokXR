@@ -12,7 +12,13 @@ export default function Harita({ eserler }: { eserler: Eser[] }) {
   const [rotaId, setRotaId] = useState('')
   const rota = rotalar.find((r) => r.id === rotaId)
   const rotaEserleri = rota ? rota.eserIdleri.map((id) => eserler.find((e) => e.id === id)).filter((e): e is Eser => !!e) : []
-  const konumlu = eserler.filter((e) => e.konum)
+  // Eserin kendi konumu yoksa VR Eserler listesindeki kaynaklı koordinat (ana cami) kullanılır.
+  const vrYapilari = vrSehirler.flatMap((s) => s.yapilar)
+  const konumlu = eserler.flatMap((e): Eser[] => {
+    if (e.konum) return [e]
+    const y = vrYapilari.find((v) => v.eserId === e.id)
+    return y ? [{ ...e, konum: { enlem: y.konum[1], boylam: y.konum[0], kaynak: y.kaynak } }] : []
+  })
   const sehirler = [...new Set(eserler.map((e) => e.sehir))]
   useEffect(() => {
     if (!kap.current) return
@@ -30,7 +36,9 @@ export default function Harita({ eserler }: { eserler: Eser[] }) {
     for (const e of konumlu) {
       const nokta: L.LatLngTuple = [e.konum!.enlem, e.konum!.boylam]
       noktalar.push(nokta)
-      L.circleMarker(nokta, { radius: 6, color: '#8e6236', fillColor: '#8e6236', fillOpacity: 0.9 }).addTo(harita).bindPopup(e.ad)
+      const bilgi = document.createElement('div') // metin olarak eklenir: eser adı HTML sayılmaz
+      bilgi.textContent = `${e.ad} · konum kaynağı: ${e.konum!.kaynak}`
+      L.circleMarker(nokta, { radius: 6, color: '#8e6236', fillColor: '#8e6236', fillOpacity: 0.9 }).addTo(harita).bindPopup(bilgi)
     }
     if (rota) {
       const cizgi = rotaEserleri.filter((e) => e.konum).map((e): L.LatLngTuple => [e.konum!.enlem, e.konum!.boylam])
@@ -43,7 +51,7 @@ export default function Harita({ eserler }: { eserler: Eser[] }) {
   return <section className="sayfa" aria-labelledby="harita-basligi">
     <p className="ust-baslik">HARİTA VE ROTALAR</p>
     <h1 id="harita-basligi">Eserleri haritada bul</h1>
-    <p>Şehir işaretleri eser sayısını gösterir. Eser işareti yalnız konumu kaynağıyla doğrulanmış eserlerde çıkar; şu an {konumlu.length} eserin doğrulanmış konumu var. Harita çevrimiçi karo gerektirir; bağlantı yoksa aşağıdaki liste kullanılabilir.</p>
+    <p>Şehir işaretleri eser sayısını gösterir. Eser işareti yalnız konumu kaynağıyla doğrulanmış eserlerde çıkar (külliyenin ana camisinin yeri); şu an {konumlu.length} eserin kaynaklı konumu var. Harita çevrimiçi karo gerektirir; bağlantı yoksa aşağıdaki liste kullanılabilir.</p>
     <div ref={kap} className="harita-alani" role="region" aria-label="Eser haritası" />
     <h2>Hazır rotalar</h2>
     <div className="eser-filtre" role="group" aria-label="Rota seç">

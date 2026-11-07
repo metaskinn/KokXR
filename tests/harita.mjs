@@ -11,6 +11,7 @@ try {
   await p.goto(`${URL_KOK}/harita`)
   await p.locator('.leaflet-container').waitFor()
   assert.ok(await p.locator('.leaflet-interactive').count() >= 1, 'şehir işareti yok')
+  assert.ok(await p.locator('.leaflet-interactive').count() >= 11, 'şehir işareti ve kaynaklı 10 eser işareti beklenir')
   assert.equal(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, 'yatay taşma')
   await p.getByRole('button', { name: 'Hanlar ve çarşı' }).click()
   const sira = await p.locator('ol.rota-listesi li a').allTextContents()

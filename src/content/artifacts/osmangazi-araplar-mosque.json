@@ -1,0 +1,120 @@
+{
+  "id": "osmangazi-araplar-mosque",
+  "name": "Araplar Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Onarım H. 1275 / M. 1858 (inşa tarihi kitapta belirtilmemiştir)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Halk arasında Arap Dede Camii de denen, ahşap tavanlı, minaresiz ve camekânlı son cemaat yerine sahip bir mahalle camisi.",
+  "history": "Cami, Osmangazi ilçesi, Alipaşa (Araplar) Mahallesi, Alper Sokak, No: 1'dedir. Halk arasında Arap Dede Camii adıyla da anılır.\n\nKagir duvarlı yapıda ahşap tavanlı harim ile kuzeydeki son cemaat yeri birleşerek dikdörtgen bir plan oluşturur; üzeri ahşap çatıyla örtülüdür. Yuvarlak kemerli, üç gözlü son cemaat yeri camekânla kapatılmıştır; orta bölümü dar, yan bölümleri daha geniştir. Kot farkı nedeniyle son cemaat yerine iki yönlü çifte merdivenle çıkılır.\n\nKapının üzerinde daha önce bulunan ancak günümüze ulaşmayan bir levhada H. 1275 / M. 1858 tarihi yazılıydı; bu tarihin onarım yılı olduğu düşünülmektedir. Kalem işleri de büyük ihtimalle aynı döneme aittir ve son onarımda yeniden elden geçirilmiştir.\n\nHarim, kuzeyde iki ve doğuda üç yuvarlak kemerli alt pencere ile üst sıradaki dikdörtgen çerçeveli 10 pencereden ışık alır. Çini mihrap ile ahşap minber uyumsuz bir görüntü oluşturur. İç mekândaki levhalar son döneme aittir. Son yıllarda aslına uygun biçimde onarılan caminin yığma taş duvarları sıvadan arındırılmıştır; iç tavanı ahşap, üstü kiremit örtülüdür. Minaresi olmayan cami hâlen ibadete açıktır.\n\nArap Dede Haziresi: Caminin doğu tarafındaki kabirde, Araplar Camii'ni yaptıran tüccar bir kişi medfundur. 1490'dan önce yaşamış olan bu kişinin Mehmed Çelebi, Hoca Ahmed ve Mahmud Çelebi adında üç oğlu olduğu bilinmektedir. Kitaba göre Arap Mehmed'in oğlu Ahmed Çelebi yıllarca babasının vakıflarının mütevelliliğini üstlenmiştir. Arap Dede adıyla anılan başka bir kabir ise Acem Reis Camii'nin güneyindedir ve bu mezarın Acem Reis Camii'nin banisine ait olduğu rivayet edilir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-araplar-mosque/exterior-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-araplar-mosque/exterior-view.jpg",
+      "alt": "Kiremit çatılı, sıvasız taş duvarlı cami; ön cephede ahşap çerçeveli camekânla kapatılmış yuvarlak kemerli son cemaat yeri ve önündeki iki yönlü merdiven, yanında büyük bir ağaç",
+      "description": "Caminin dış görünüşü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-araplar-mosque/wooden-ceiling-interior.jpg",
+      "alt": "Ahşap tavanlı, mavi halılı harim: beyaz duvarlarda yuvarlak kemerli pencereler, üst sırada dikdörtgen pencereler, ahşap lambri ve halka avize",
+      "description": "Ahşap tavanlı harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-araplar-mosque/mihrab-and-minbar.jpg",
+      "alt": "Mavi-beyaz çinilerle kaplı mihrap, sağında kırmızı örtülü ahşap minber, üstte ahşap tavan ve sarkıt avize",
+      "description": "Çini mihrap ve ahşap minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-araplar-mosque/arap-dede-grave.jpg",
+      "alt": "Taş-tuğla duvar önünde, taş kaide üzerinde demir parmaklıkla çevrili kabir; parmaklıkta \"Arap Dede\" yazılı levha",
+      "description": "Arap Dede kabri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-araplar-mosque/exterior-view.jpg",
+      "x": 57,
+      "y": 59,
+      "title": "Camekânlı son cemaat yeri",
+      "text": "Yuvarlak kemerli, üç gözlü son cemaat yeri camekânla kapatılmıştır; orta bölümü dar, yan bölümleri daha geniştir.",
+      "sourceId": "inv-p262"
+    },
+    {
+      "id": "stairs",
+      "image": "/images/osmangazi-araplar-mosque/exterior-view.jpg",
+      "x": 60,
+      "y": 76,
+      "title": "Çifte merdiven",
+      "text": "Kot farkı nedeniyle son cemaat yerine iki yönlü çifte merdivenle çıkılır.",
+      "sourceId": "inv-p262"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-araplar-mosque/mihrab-and-minbar.jpg",
+      "x": 50,
+      "y": 49,
+      "title": "Çini mihrap",
+      "text": "Çiniden yapılan mihrap ile ahşap minber uyumsuz bir görüntü oluşturur.",
+      "sourceId": "inv-p262"
+    }
+  ],
+  "test": [
+    {
+      "question": "Araplar Camii halk arasında hangi adla da anılır?",
+      "options": [
+        "Acem Reis Camii",
+        "Aynalı Cami",
+        "Arap Dede Camii",
+        "Altıparmak Camii"
+      ],
+      "correct": 2,
+      "description": "Yapı halk arasında Arap Dede Camii adıyla da anılır.",
+      "sourceId": "inv-p262"
+    },
+    {
+      "question": "Son cemaat yerine neden iki yönlü çifte merdivenle çıkılır?",
+      "options": [
+        "Kot farkı nedeniyle",
+        "Deprem hasarı nedeniyle",
+        "Minare girişi için",
+        "Hazireye ulaşmak için"
+      ],
+      "correct": 0,
+      "description": "Kot farkı nedeniyle son cemaat yerine iki yönlü çifte merdivenle çıkılır.",
+      "sourceId": "inv-p262"
+    },
+    {
+      "question": "Araplar Camii'nin minaresiyle ilgili hangisi doğrudur?",
+      "options": [
+        "Tuğla gövdelidir",
+        "1967'de yenilenmiştir",
+        "İki şerefelidir",
+        "Caminin minaresi yoktur"
+      ],
+      "correct": 3,
+      "description": "Minaresi olmayan cami hâlen ibadete açıktır.",
+      "sourceId": "inv-p262"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p262",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Araplar Camii ve Haziresi\"",
+      "page": "262"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

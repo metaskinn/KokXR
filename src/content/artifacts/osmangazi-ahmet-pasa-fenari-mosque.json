@@ -1,0 +1,120 @@
+{
+  "id": "osmangazi-ahmet-pasa-fenari-mosque",
+  "name": "Ahmet Paşa (Fenari) Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1475",
+  "endowment": "Banisi Sadrazam Fenârî Ahmed Paşa",
+  "summary": "Sadrazam Fenârî Ahmed Paşa'nın 1475'te yaptırdığı, bir dönem Halvetî dergâhı olarak kullanılan, depremden sonra 1911'de büyük ölçüde onarılan cami ve batısındaki hazire.",
+  "history": "Ahmet Paşa (Fenârî) Camii, Osmangazi İlçesi, Ahmetpaşa Mahallesi, Fahri Korutürk Caddesi No: 66'dadır. Camiyi yaptıran, Molla Fenârî'nin torunu ve Yusuf Bâli Efendi'nin oğlu Sadrazam Fenârî Ahmed Paşa'dır. Paşa caminin yanı sıra bir medrese ve zaviye de yaptırmıştır; ancak bu yapılar günümüze ulaşmamıştır. Fenârî Ahmed Paşa H. 902 / M. 1497'de vefat etmiş ve rivayetlere göre büyük dedesi Molla Fenârî'nin de medfun olduğu Molla Fenârî Camii Haziresi'ne defnedilmiştir.\n\nCami 1475'te inşa edilmiştir; ancak ilk hâli korunamamış, zaman içinde çeşitli onarımlar geçirmiştir. Bir dönem Halvetiyye tarikatına bağlı bir dergâh olarak kullanılmıştır. 1803'teki bir yangından sonra Şerife Nefîse Hanım tarafından kısmen onarılmış, minarenin şerefeden yukarısı yeniden yapılmıştır. 1855'teki büyük depremde yıkılan cami uzun süre harap kalmış; 1911'de Hacı Atikzâde Fethiye Hanım ve mahalle sakinlerinin yardımlarıyla büyük çapta onarılmıştır.\n\nCaminin iç mekânı 7,60 × 10,80 m ölçülerinde, dikdörtgen planlıdır; duvar kalınlığı 85 cm'dir. Tuğla ve taşla inşa edilmiş, üzeri ahşap çatılı ve yerli kiremitle örtülüdür. Mihrabın iki yanında birer, sağ ve sol duvarlarda ikişer pencere vardır. Kapının üstünde mahfil, alt kısımda iki yanda maksure bulunur; mahfilin arkasında dört pencere yer alır. Son cemaat yerinde kapının solunda iki, doğu tarafında bir pencere vardır.\n\nCami tamamen yenilendiği için yalnızca mihraptaki iki sıra mukarnas parçası ilk inşa dönemine ait izlenimi verir. Minare de son büyük onarımda yeniden yapılmıştır. Cami bugün ibadete açıktır.\n\nHazire, caminin batı tarafındadır. Burada camiyi yeniden inşa ettiren Fethiye Hanım'ın mezarının yanı sıra birkaç mezar taşı daha günümüze ulaşmıştır. Caminin bir dönem dergâh olarak kullanılması nedeniyle burada görev yapan bazı kişiler de hazireye defnedilmiş, ancak onların mezar taşları zamanla kaybolmuştur. Hazirede Fethiye Hanım, Hacı Emir Salih Efendi, Safiye Hanım, Şeyh Hayreddin Efendi, Şeyh Ali Efendi, Şeyh Süleyman Efendi ve Şeyh Kalıbî Ahmed Efendi medfundur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-ahmet-pasa-fenari-mosque/facade-and-minaret.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-ahmet-pasa-fenari-mosque/facade-and-minaret.jpg",
+      "alt": "Kiremit çatılı, tuğla ve taş duvarlı, iki sıra tuğla kemerli pencereli cami cephesi; arkasında taş gövdeli şerefeli minare ve servi ağacı, önde ağaç dalları",
+      "description": "Cephe ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ahmet-pasa-fenari-mosque/mihrab-wall.jpg",
+      "alt": "İç mekân: kırmızı halılı harim, karşıda çini kaplı mihrap ve iki yanında birer renkli camlı pencere, sağda ahşap minber, yan duvarlarda büyük kemerli pencereler, tavanda kristal avize",
+      "description": "Mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ahmet-pasa-fenari-mosque/gallery.jpg",
+      "alt": "İç mekânın giriş tarafı: ahşap kapının üstünde parmaklıklı mahfil, kapının iki yanında korkulukla ayrılmış bölümler, ahşap tavan ve kristal avize",
+      "description": "Kapı üstündeki mahfil",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ahmet-pasa-fenari-mosque/gravestone.jpg",
+      "alt": "Hazirede, tepesinde koyu renkli sarık biçimli başlık bulunan, satırlar hâlinde Arapça harfli yazılı gri taş mezar taşı; arkada tuğla-taş duvar ve çiçekler",
+      "description": "Haziredeki bir mezar taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-ahmet-pasa-fenari-mosque/facade-and-minaret.jpg",
+      "x": 71,
+      "y": 34,
+      "title": "Minare",
+      "text": "Minarenin şerefeden yukarısı 1803 yangınından sonra yeniden yapılmış; minare son büyük onarımda da yeniden inşa edilmiştir.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-ahmet-pasa-fenari-mosque/mihrab-wall.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Mihrap ve pencereler",
+      "text": "Mihrabın iki yanında birer pencere vardır. Cami tamamen yenilendiği için yalnızca mihraptaki iki sıra mukarnas parçası ilk inşa dönemine ait izlenimi verir.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "id": "gallery",
+      "image": "/images/osmangazi-ahmet-pasa-fenari-mosque/gallery.jpg",
+      "x": 50,
+      "y": 32,
+      "title": "Mahfil ve maksureler",
+      "text": "Kapının üstünde mahfil, alt kısımda iki yanda maksure yer alır.",
+      "sourceId": "inv-p236"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami bir dönem hangi tarikata bağlı dergâh olarak kullanılmıştır?",
+      "options": [
+        "Mevleviyye",
+        "Halvetiyye",
+        "Nakşibendiyye",
+        "Kadiriyye"
+      ],
+      "correct": 1,
+      "description": "Cami bir dönem Halvetiyye tarikatına bağlı bir dergâh olarak kullanılmıştır.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "question": "1855 depreminde yıkılan cami 1911'de kimlerin yardımıyla büyük çapta onarılmıştır?",
+      "options": [
+        "Şerife Nefîse Hanım'ın",
+        "Vakıflar Bölge Müdürlüğü'nün",
+        "Bursa Eski Eserleri Sevenler Kurumu'nun",
+        "Hacı Atikzâde Fethiye Hanım ve mahalle sakinlerinin"
+      ],
+      "correct": 3,
+      "description": "Cami 1911'de Hacı Atikzâde Fethiye Hanım ve mahalle sakinlerinin yardımlarıyla büyük çapta onarılmıştır.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "question": "Caminin üzeri nasıl örtülüdür?",
+      "options": [
+        "Ahşap çatı ve yerli kiremitle",
+        "Tek kurşun kubbeyle",
+        "Yan yana iki kubbeyle",
+        "Beşik tonozla"
+      ],
+      "correct": 0,
+      "description": "Tuğla ve taşla inşa edilen caminin üzeri ahşap çatılı ve yerli kiremitle örtülüdür.",
+      "sourceId": "inv-p236"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p236",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Ahmet Paşa (Fenari) Camii ve Haziresi\"",
+      "page": "236-238"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-alacahirka-mosque",
+  "name": "Alacahırka Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Kuruluş yılları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Osmanlı'nın kuruluş yıllarında Buhara'dan gelen ve \"Alacahırkalı\" diye bilinen bir zatın yaptırdığı, moloz taş duvarlı, kırma çatılı küçük mahalle camisi.",
+  "history": "Alacahırka Camii, Osmangazi'nin Alacahırka Mahallesi'nde, Dereağzı Sokak'tadır. Kitapta caminin yapım tarihine dair bir kitabe bulunduğu belirtilir; Kâzım Baykal camiyi ilk Osmanlı eserlerinden biri olarak değerlendirmiştir.\n\nCamiye adını veren ve \"Alacahırkalı\" olarak bilinen kişi, Osmanlı Devleti'nin kuruluş yıllarında Buhara'dan gelerek Bursa'da Hisar dışına yerleşmiş ve burada bir mescit yaptırmıştır. Hakkında halk arasında çeşitli menkıbeler anlatılan Alacahırkalı'nın gerçek adı bilinmez. Vefatından sonra caminin bahçesine defnedilmiştir; mescit yaptırdığı mahalle de onun adıyla anılmıştır.\n\nDikdörtgen planlı cami, ana ibadet mekânı ve son cemaat yerinden oluşur. Moloz taş örgülü beden duvarları iki sıra kirpi saçakla son bulur. Tavanı ahşaptır; kırma çatısı kurşunla kaplıdır. Giriş tarafında bir, mihrabın üstünde iki yanda birer pencere; sağ ve sol duvarlarda biri üstte olmak üzere üçer pencere vardır.\n\nDoğu duvarına bitişik minare orijinalliğini korur. Sekizgen kaidesi, gövdesi ve peteği taştır; şerefenin altında altı sıra kirpi dizili süsleme bulunur. Demir şerefe korkuluklarının bazı kısımları dökülmüştür.\n\nCami 1585'te Hoca Yakub adlı bir hayırsever tarafından büyük ölçüde onarılmış, 1635'te İmamzade Mahmud Çelebi tarafından yeniden esaslı bir tamir görmüştür. Bahçedeki, şebekeyle çevrili küçük hazirede üç mezar taşı vardır: biri camiyi yeniden yaptıran Hacı Yakup Efendi'ye, diğer ikisi oğulları Hüseyin ve Abdullah'a aittir. Cami bugün ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-alacahirka-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-alacahirka-mosque/exterior.jpg",
+      "alt": "Yukarıdan bakış: yol kenarında moloz taş duvarlı, gri metal kaplı kırma çatılı küçük cami; arkasında sivri külahlı taş minare ve servi ağaçları, uzakta şehir",
+      "description": "Cami ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-alacahirka-mosque/prayer-hall.jpg",
+      "alt": "İbadet mekânı: düz beyaz tavan, ortada mermer mihrap ve kristal avize, iki yanda yuvarlak kemerli pencereler, sağda yeşil perdeli ahşap minber, mavi halı",
+      "description": "İbadet mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-alacahirka-mosque/exterior.jpg",
+      "x": 54,
+      "y": 40,
+      "title": "Taş minare",
+      "text": "Orijinalliğini koruyan minarenin sekizgen kaidesi, gövdesi ve peteği taştır. Şerefenin altında altı sıra kirpi dizili süsleme bulunur.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-alacahirka-mosque/exterior.jpg",
+      "x": 52,
+      "y": 66,
+      "title": "Kırma çatı",
+      "text": "Caminin tavanı ahşaptır; kırma çatısı üstten kurşunla kaplıdır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-alacahirka-mosque/exterior.jpg",
+      "x": 44,
+      "y": 82,
+      "title": "Moloz taş duvarlar",
+      "text": "Dikdörtgen planlı caminin beden duvarları moloz taş örgülüdür ve iki sıra kirpi saçakla tamamlanır.",
+      "sourceId": "inv-p248"
+    }
+  ],
+  "test": [
+    {
+      "question": "Camiye adını veren \"Alacahırkalı\" nereden gelmiştir?",
+      "options": [
+        "Konya'dan",
+        "Buhara'dan",
+        "Bağdat'tan",
+        "Mısır'dan"
+      ],
+      "correct": 1,
+      "description": "Alacahırkalı, Osmanlı Devleti'nin kuruluş yıllarında Buhara'dan gelerek Bursa'da Hisar dışına yerleşmiştir.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "Caminin kırma çatısı neyle kaplıdır?",
+      "options": [
+        "Kiremitle",
+        "Taş levhalarla",
+        "Kurşunla",
+        "Ahşap şindille"
+      ],
+      "correct": 2,
+      "description": "Caminin tavanı ahşap, kırma çatısı ise üstten kurşunla kaplıdır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "Cami 1635'te kim tarafından esaslı bir tamir görmüştür?",
+      "options": [
+        "Hoca Yakub",
+        "Kâzım Baykal",
+        "Alacahırkalı",
+        "İmamzade Mahmud Çelebi"
+      ],
+      "correct": 3,
+      "description": "1585'teki büyük onarımdan sonra cami, 1635'te İmamzade Mahmud Çelebi tarafından yeniden esaslı bir tamir görmüştür.",
+      "sourceId": "inv-p248"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p248",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Alacahırka Camii\"",
+      "page": "248"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

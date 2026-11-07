@@ -2159,5 +2159,25 @@
   "location": "Yenişehir, Yarhisar Köyü iç yolu üzerinde",
   "summary": "Kitabesi kalmadığından yapım yılı kesin bilinmez; camiye yakınlığı nedeniyle Orhan Gazi dönemine tarihlenir. Yaklaşık 1,30 m yüksekliğinde, moloz taşla yapılmış, iki dinlenme sekisi ve teknesi olan bir çeşmedir.",
   "source": "Cilt 3, s. 403"
+ },
+ "osmangazi-davutpasa-batpazari-camii": {
+  "builder": "Sadrazam Davut Paşa (mescit olarak); 1760'ta Şiblizâde Ahmed Bey onarıp camiye çevirdi",
+  "location": "Kayhan Mahallesi, Demirciler Çarşısı",
+  "summary": "II. Bayezid'in sadrazamı Davut Paşa'nın mescit olarak yaptırdığı sade yapı. Harap hâle gelince Şiblizâde Ahmed Bey yeniletti, 1760'ta minber eklenerek cami oldu. 1762 ve 1893'te zarar gördü; 2014'te kapsamlı restore edildi.",
+  "source": "Cilt 1, s. 296-297"
+ },
+ "yildirim-selami-dergahi-camii": {
+  "builder": "Selâmi Ali Efendi (Celvetiyye şeyhi)",
+  "date": "H. 1090 / M. 1679",
+  "location": "Namazgâh Mahallesi, Türe Sokak",
+  "summary": "Celvetiyye tarikatı şeyhi Selâmi Ali Efendi'nin yaptırdığı dergâh. Kitap, yapıyı Celvetiyye geleneğinin Bursa'daki önemli mekânlarından biri sayar; Ali Efendi'den sonra son postnişin Hacı Hakkı Efendi'ye (ö. 1923) kadar 11 şeyh görev yapmıştır.",
+  "source": "Cilt 2, s. 512"
+ },
+ "kestel-han-odasi": {
+  "builder": "Hoca Dursun (İstanbullu tüccar Mehmed oğlu)",
+  "date": "H. 904 / M. 1498",
+  "location": "Aksu Mahallesi",
+  "summary": "İçindekiler'de \"Han Odası\" adıyla geçen bu kayıtta kitap, Aksu'daki Beylik Han'ı (bazı belgelerde Kurşunlu Han) anlatır. II. Bayezid döneminde yapılmış, 1660 isyanında kısmen yanmış, sonra onarılmıştır; bugün kemerli girişi ve bazı duvarları ayaktadır.",
+  "source": "Cilt 3, s. 251"
  }
 }

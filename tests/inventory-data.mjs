@@ -11,7 +11,7 @@ const details = JSON.parse(readFileSync('src/content/inventory-details.json', 'u
 const ids = new Set(inventory.map((e) => e.id))
 for (const [id, v] of Object.entries(details)) {
   assert.ok(ids.has(id), `details for unknown id ${id}`)
-  assert.ok(v.summary && v.source && /^Cilt [123], s\. \d+$/.test(v.source), `${id}: summary and source`)
+  assert.ok(v.summary && v.source && /^Cilt [123], s\. \d+(-\d+)?$/.test(v.source), `${id}: summary and source`)
   assert.ok(v.summary.split(/\s+/).length <= 45, `${id}: summary too long`)
 }
 const sections = ['complex', 'mosque', 'tomb', 'education', 'commercial', 'water', 'sufi', 'civil']

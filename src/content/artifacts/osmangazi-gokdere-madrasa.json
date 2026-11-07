@@ -1,0 +1,104 @@
+{
+  "id": "osmangazi-gokdere-madrasa",
+  "name": "Gökdere Medresesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · II. Bayezid dönemi olduğu düşünülmektedir",
+  "endowment": "Zeyrekzâde Paşa Çelebi tarafından yaptırıldığı düşünülmektedir; giderleri için çok sayıda taşınmaz vakfedilmiştir",
+  "summary": "On iki öğrenci odası ve büyük bir ana eyvandan oluşan, avlusu cam tavanla örtülerek Gökdere Kültür ve Sanat Merkezi'ne dönüştürülen açık avlulu medrese.",
+  "history": "Medrese, Osmangazi ilçesinde, Kayhan Caddesi üzerindedir.\n\nYapının, II. Bayezid dönemi müderrislerinden \"Zeyrekzâde Paşa Çelebi\" adıyla bilinen bir hayırsever tarafından yaptırıldığı düşünülmektedir; bu nedenle kaynaklarda \"Paşa Çelebi Medresesi\" olarak anılır. Bir dönem Gökderelizâde Mehmed Efendi'nin burada müderrislik yapması sebebiyle \"Gökdere Medresesi\" adıyla da bilinir. Kayhan Caddesi üzerinde olduğu için, zamanla yıkılan Kayhan Medresesi ile karıştırılarak bu adla da anılmıştır.\n\nYapı bağımsız bir medrese olarak inşa edilmiştir. Tarihî belgelerde \"otuzlu medreseler\" arasında yer aldığı belirtilir. Giderlerinin karşılanması için çok sayıda taşınmaz mal vakfedilmiştir.\n\nAçık avlulu medreseler grubuna giren yapının planı, on iki öğrenci odası ile dershane işlevi gören büyük bir ana eyvandan oluşur. Son restorasyonda Bursa sivil mimarisinde sıkça görülen taş-tuğla almaşık duvar örgüsü korunarak onarılmış, avlu cam tavanla örtülerek bugünkü kullanıma uygun hale getirilmiştir.\n\nTarih boyunca pek çok kez onarılan yapı, 1906'da kadınlar hapishanesi olarak kullanılmış, ardından uzun süre metruk kalmıştır. 2006'da Osmangazi Belediyesi tarafından özgün mimari özelliklerine uygun biçimde restore edilerek \"Gökdere Kültür ve Sanat Merkezi\" adıyla yeniden işlev kazanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-gokdere-madrasa/glass-covered-courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-gokdere-madrasa/glass-covered-courtyard.jpg",
+      "alt": "Taş-tuğla almaşık örgülü iki ayak arasından, cam tavanla örtülü avluya bakış; avluda masalar ve sandalyeler, çevresinde tuğla sivri kemerli revaklar ve ahşap kapılar",
+      "description": "Cam tavanla örtülü avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gokdere-madrasa/arched-hall-view.jpg",
+      "alt": "Beyaz duvarlı, iki yanında kırmızı minderli sedirler bulunan tonozlu mekândan, tuğla sivri kemerli açıklık üzerinden cam tavanlı avluya bakış",
+      "description": "Kemerli açıklıktan avluya bakış",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gokdere-madrasa/brick-arched-doors.jpg",
+      "alt": "Taş-tuğla almaşık duvarlar arasında, tuğla sivri kemer alınlıklı iki ahşap kapı; önünde minderli oturma köşesi ve sekizgen sehpa",
+      "description": "Tuğla kemerli ahşap kapılar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "glass-roof",
+      "image": "/images/osmangazi-gokdere-madrasa/glass-covered-courtyard.jpg",
+      "x": 47,
+      "y": 10,
+      "title": "Cam tavan",
+      "text": "Son restorasyonda açık avlu cam tavanla örtülerek bugünkü kullanıma uygun hale getirilmiştir.",
+      "sourceId": "inv-p563"
+    },
+    {
+      "id": "alternating-wall",
+      "image": "/images/osmangazi-gokdere-madrasa/glass-covered-courtyard.jpg",
+      "x": 8,
+      "y": 55,
+      "title": "Taş-tuğla almaşık örgü",
+      "text": "Bursa sivil mimarisinde sıkça görülen taş-tuğla almaşık duvar örgüsü, son restorasyonda korunarak onarılmıştır.",
+      "sourceId": "inv-p563"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapı neden \"Gökdere Medresesi\" adıyla bilinir?",
+      "options": [
+        "Gökdere köyünde bulunduğu için",
+        "Gökderelizâde Mehmed Efendi burada müderrislik yaptığı için",
+        "Gökdere Paşa tarafından yaptırıldığı için",
+        "Yanından Gökdere deresi geçtiği için"
+      ],
+      "correct": 1,
+      "description": "Bir dönem Gökderelizâde Mehmed Efendi'nin burada müderrislik yapması sebebiyle \"Gökdere Medresesi\" adıyla da bilinir.",
+      "sourceId": "inv-p563"
+    },
+    {
+      "question": "Medresenin planında kaç öğrenci odası bulunur?",
+      "options": [
+        "Dokuz",
+        "Otuz",
+        "On iki",
+        "Altı"
+      ],
+      "correct": 2,
+      "description": "Plan şeması on iki öğrenci odası ile dershane işlevi gören büyük bir ana eyvandan oluşur.",
+      "sourceId": "inv-p563"
+    },
+    {
+      "question": "Yapı 1906 yılında hangi amaçla kullanılmıştır?",
+      "options": [
+        "Konserve fabrikası",
+        "Kütüphane",
+        "Hastane",
+        "Kadınlar hapishanesi"
+      ],
+      "correct": 3,
+      "description": "Yapı 1906'da kadınlar hapishanesi olarak kullanılmış, ardından uzun süre metruk kalmıştır.",
+      "sourceId": "inv-p563"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p563",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Gökdere Medresesi\"",
+      "page": "563"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

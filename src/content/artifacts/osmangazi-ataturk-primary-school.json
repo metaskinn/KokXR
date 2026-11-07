@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-ataturk-primary-school",
+  "name": "Atatürk İlköğretim Okulu",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Bugünkü bina H. 1331–1333 / M. 1915–1917",
+  "endowment": "İlk yapı Hoca Alizâde tarafından yaptırılmıştır; vakfiye kitapta belirtilmemiştir",
+  "summary": "Hoca Alizâde Mektebi'nin yerine 1915–1917 yıllarında yeniden yapılan ve bugün Atatürk İlköğretim Okulu olarak kullanılan iki katlı okul binası.",
+  "history": "Mektep, Osmangazi ilçesi, Hocaalizade Mahallesi, Hocaalizade Sokak, No: 29 adresindedir.\n\nYapı ilk olarak Hoca Alizâde tarafından inşa edilmiştir; kitap bu tarihi H. 914 / M. 1439 olarak verir. İlk döneme ait herhangi bir görüntü ya da kitabe günümüze ulaşmamıştır. Kaynaklarda \"Hoca Alizâde Mektebi\" ya da \"Muallimhanesi\" olarak geçen yapı, 1938'de Birinci İlkokul, 1948'den itibaren ise Atatürk İlkokulu adıyla hizmet vermiştir.\n\nBugünkü bina, özgün yapının yerine yeniden inşa edilmiştir ve iki katlıdır. Çatısı Marsilya kiremidiyle örtülüdür. Duvarlarda küfeki taşı ve tuğla sıralarıyla Erken Osmanlı mimarisi taklit edilmiştir; ancak tuğla izlenimi veren kırmızı alanlarda gerçek tuğla yerine boya kullanılmıştır. Batı cephesindeki balkonun üzerindeki kitabe, yapının Hoca Alizâde Muallimhanesi'nin yerine H. 1331–1333 / M. 1915–1917 yılları arasında inşa edildiğini belirtir.\n\nEser bugün \"Atatürk İlköğretim Okulu\" adıyla kullanılmakta ve 1915–1917 yıllarındaki mimari özelliklerini korumaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-ataturk-primary-school/school-front-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-ataturk-primary-school/school-front-aerial.jpg",
+      "alt": "Yukarıdan bakış: kiremit çatılı, iki katlı, kırmızı ve krem bantlı cepheli okul binası; önünde merdiven ve okul bahçesi, arkada kubbeli bir cami ile minare ve yamaçtaki evler",
+      "description": "Okul binası ve bahçesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ataturk-primary-school/school-side-aerial.jpg",
+      "alt": "Yandan havadan görünüm: kiremit çatılı, kemerli pencereli, bantlı duvarlı iki katlı okul binası; sağda kubbeli bir cami ve minare, önde yol ve okul bahçesi",
+      "description": "Binanın havadan yan görünüşü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ataturk-primary-school/painted-banded-wall.jpg",
+      "alt": "Yakın çekim: sarımsı taş sıraları ile pembe-kırmızı boyalı bantların dönüşümlü dizildiği duvarda, kırmızı çerçeveli sivri kemerli iki ahşap pencere",
+      "description": "Taş sıraları ve boyalı bantlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-ataturk-primary-school/school-front-aerial.jpg",
+      "x": 37,
+      "y": 33,
+      "title": "Marsilya kiremidi",
+      "text": "Bugünkü iki katlı binanın çatısı Marsilya kiremidiyle örtülmüştür.",
+      "sourceId": "inv-p554"
+    },
+    {
+      "id": "painted-bands",
+      "image": "/images/osmangazi-ataturk-primary-school/painted-banded-wall.jpg",
+      "x": 40,
+      "y": 43,
+      "title": "Boyanmış tuğla izlenimi",
+      "text": "Duvarlarda küfeki taşı ve tuğla sıralarıyla Erken Osmanlı mimarisi taklit edilmiştir; tuğla izlenimi veren kırmızı alanlarda gerçek tuğla yerine boya kullanılmıştır.",
+      "sourceId": "inv-p554"
+    },
+    {
+      "id": "stone-rows",
+      "image": "/images/osmangazi-ataturk-primary-school/painted-banded-wall.jpg",
+      "x": 50,
+      "y": 57,
+      "title": "Küfeki taşı sıraları",
+      "text": "Duvar örgüsündeki küfeki taşı sıraları, boyalı bantlarla birlikte Erken Osmanlı taş-tuğla örgüsünü taklit eder.",
+      "sourceId": "inv-p554"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kaynaklarda okulun ilk yapısı hangi adla geçer?",
+      "options": [
+        "Gökdere Medresesi",
+        "Hoca Alizâde Mektebi",
+        "Merdivenli Medrese",
+        "Paşa Çelebi Mektebi"
+      ],
+      "correct": 1,
+      "description": "Yapı kaynaklarda \"Hoca Alizâde Mektebi\" ya da \"Muallimhanesi\" olarak geçer.",
+      "sourceId": "inv-p554"
+    },
+    {
+      "question": "Bugünkü bina hangi yıllar arasında inşa edilmiştir?",
+      "options": [
+        "1938–1948",
+        "1880–1882",
+        "1960–1962",
+        "1915–1917"
+      ],
+      "correct": 3,
+      "description": "Batı cephesindeki balkonun üzerindeki kitabeye göre bina H. 1331–1333 / M. 1915–1917 yılları arasında yapılmıştır.",
+      "sourceId": "inv-p554"
+    },
+    {
+      "question": "Duvarlardaki tuğla izlenimi veren kırmızı alanlar nasıl yapılmıştır?",
+      "options": [
+        "Boya ile",
+        "Gerçek tuğla ile",
+        "Çini kaplama ile",
+        "Kırmızı mermer ile"
+      ],
+      "correct": 0,
+      "description": "Tuğla izlenimi veren kırmızı alanlarda gerçek tuğla yerine boya kullanılmıştır.",
+      "sourceId": "inv-p554"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p554",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Atatürk İlköğretim Okulu\"",
+      "page": "554"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-hoca-ilyas-middle-school",
+  "name": "Hoca İlyas Ortaokulu",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · ilk bina H. 872 / M. 1468; bugünkü bina 1912–1914",
+  "endowment": "Hoca İlyas oğlu Hoca Muhyiddin Mehmed Çelebi",
+  "summary": "Kökeni 1468'de yapılan bir vakıf mektebine dayanan, bugünkü iki katlı binası 1912–1914'te inşa edilen ve hâlâ okul olarak kullanılan yapı.",
+  "history": "Okul, Osmangazi ilçesi, Şehreküstü Mahallesi, Dinlendi Sokak No: 1 adresindedir.\n\nYapı, Hoca İlyas oğlu Hoca Muhyiddin Mehmed Çelebi tarafından yaptırıldığı için bu adla anılır. H. 872 / M. 1468'de kâgir olarak inşa edilen mektebin özgün binası günümüze ulaşmamıştır. Mektep zaman içinde \"Kümbetli Mektep\", \"Hoca İlyaszâde Vakıf Mektebi\", \"Hususi Reyhanpaşa Mektebi\", \"Hacı İlyasoğlu\", \"Hoca Muhyiddin\" ve \"Hoca Mehmed\" gibi adlarla da anılmıştır. 1855 Bursa Depremi'nde kısmen yıkılan bina aynı yerde yeniden yapılmıştır.\n\n1912–1914 yılları arasında inşa edilen yeni bina iki katlıdır ve bu dönemde \"Müdafaa-i Milliye Hoca İlyaszâde Vakıf Mektebi\" adını almıştır. Giriş kapısının üzerinde \"Müdafaa-i Milliye – Rumi 1330 / Hoca İlyaszâde Vakıf Mektebi – Hicri 1332\" ibaresi yer alır.\n\nDış cephe özellikleriyle I. Ulusal Mimarlık Akımı'nın çizgilerini taşıyan yapının zemin katı kâgir, üst katı ise ahşap çatkılı ve tuğla dolgulu olarak yapılmışken 1912–1914 arasında tamamen taş malzemeyle yenilenmiş, cephesi çeşitli değişikliklere uğramıştır. Binada 10 derslik ve çeşitli hizmet odaları vardır; ayrıca geniş bir bahçesi bulunur. Giriş taç kapısının alınlığında, Kütahyalı Mehmed Emin adlı ustanın imzasını taşıyan, 20. yüzyıl başlarına ait firuze renkli Kütahya çinileri vardı; bu özgün çiniler yakın dönemdeki onarımlar sırasında kırılarak yok olmuştur.\n\nOkulun bahçesindeki Hoca İlyaszâde Mehmed Çelebi ailesine ait mezarlar 1933'te kaldırılmış, mezar taşları Bursa Arkeoloji Müzesi'ne taşınmıştır.\n\nCumhuriyet döneminde bir süre 15. Mektep olarak eğitim veren okul, ardından uzun yıllar \"Hocailyas İlkokulu\" adıyla çalışmıştır. 1997–2012 arasında ilköğretim okulu olan bina, 2012'den beri ortaokul olarak kullanılmaktadır. Bursa'nın en eski eğitim yapılarından biri olan mektep, tarih boyunca çok sayıda tanınmış mezun yetiştirmiştir. Yapı bugün bakımlıdır ve eğitim kurumu olarak kullanılmaya devam etmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hoca-ilyas-middle-school/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hoca-ilyas-middle-school/aerial-view.jpg",
+      "alt": "Yüksekten görünüm: çok katlı şehir binaları arasında, kiremit kırma çatılı, bacalı, beyaz cepheli ve tuğla kemerli pencereli iki katlı okul binası; önünde ağaçlar",
+      "description": "Okulun havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hoca-ilyas-middle-school/front-facade.jpg",
+      "alt": "Okul bahçesinden iki katlı binanın simetrik ön cephesi: beyaz duvar, tuğla çerçeveli kemerli pencereler, ortada balkonlu giriş, önünde büst; cephede \"Hocailyas Ortaokulu\" yazısı",
+      "description": "Ön cephe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hoca-ilyas-middle-school/entrance-inscription.jpg",
+      "alt": "Giriş aksı yakından: tuğla ve taş söveli sivri kemerli demir kapı, üstünde ahşap ayaklı, oymalı korkuluklu balkon; en üstte Osmanlıca yazılı yeşil zeminli kitabe levhası",
+      "description": "Giriş ve kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "two-storeys",
+      "image": "/images/osmangazi-hoca-ilyas-middle-school/front-facade.jpg",
+      "x": 25,
+      "y": 42,
+      "title": "İki katlı bina",
+      "text": "1912–1914 yılları arasında inşa edilen bugünkü bina iki katlıdır ve dış cephe özellikleriyle I. Ulusal Mimarlık Akımı'nın çizgilerini taşır.",
+      "sourceId": "inv-p574"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/osmangazi-hoca-ilyas-middle-school/entrance-inscription.jpg",
+      "x": 49,
+      "y": 8,
+      "title": "Giriş kitabesi",
+      "text": "Giriş kapısı üzerinde \"Müdafaa-i Milliye – Rumi 1330 / Hoca İlyaszâde Vakıf Mektebi – Hicri 1332\" ibaresi yer alır.",
+      "sourceId": "inv-p574"
+    },
+    {
+      "id": "portal",
+      "image": "/images/osmangazi-hoca-ilyas-middle-school/entrance-inscription.jpg",
+      "x": 49,
+      "y": 64,
+      "title": "Taç kapı",
+      "text": "Taç kapının alınlığında Kütahyalı Mehmed Emin imzalı, firuze renkli Kütahya çinileri vardı; bu çiniler yakın dönemdeki onarımlarda kırılarak yok olmuştur.",
+      "sourceId": "inv-p574"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mektebin özgün binası hangi yıl inşa edilmiştir?",
+      "options": [
+        "M. 1855",
+        "H. 872 / M. 1468",
+        "M. 1933",
+        "M. 1912"
+      ],
+      "correct": 1,
+      "description": "Mektebin özgün binası H. 872 / M. 1468'de kâgir olarak inşa edilmiş, ancak günümüze ulaşmamıştır.",
+      "sourceId": "inv-p574"
+    },
+    {
+      "question": "1933'te kaldırılan aile mezarlarının taşları nereye taşınmıştır?",
+      "options": [
+        "Bursa İnebey Yazma Eser Kütüphanesi'ne",
+        "Okulun bodrum katına",
+        "Bursa Arkeoloji Müzesi'ne",
+        "Emir Sultan Mezarlığı'na"
+      ],
+      "correct": 2,
+      "description": "Hoca İlyaszâde Mehmed Çelebi ailesine ait mezarlar 1933'te kaldırılmış, mezar taşları Bursa Arkeoloji Müzesi'ne taşınmıştır.",
+      "sourceId": "inv-p574"
+    },
+    {
+      "question": "Taç kapı alınlığındaki firuze renkli Kütahya çinilerinin bugünkü durumu nedir?",
+      "options": [
+        "Müzeye taşınmıştır",
+        "Yenileriyle değiştirilmiştir",
+        "Sıva altında korunmaktadır",
+        "Yakın dönemdeki onarımlarda kırılıp yok olmuştur"
+      ],
+      "correct": 3,
+      "description": "Kütahyalı Mehmed Emin imzalı özgün çiniler, yakın dönemde yapılan onarımlar sırasında kırılmış ve yok olmuştur.",
+      "sourceId": "inv-p574"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p574",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Osmangazi, \"Hoca İlyas Ortaokulu\"",
+      "page": "574"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

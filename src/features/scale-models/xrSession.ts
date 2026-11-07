@@ -447,6 +447,7 @@ export function setupXrSession(s: XrOption): XrSession {
       if (session || starting) return
       if (!navigator.xr) throw new Error('WebXR is not available in this browser')
       starting = true
+      narration.unlock() // inside the click that starts VR, so the browser lets the guide play later
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
       let fresh: XRSession | null = null
       try {
@@ -530,6 +531,7 @@ export function setupXrSession(s: XrOption): XrSession {
       titles.forEach((b) => b.dispose())
       disk.geometry.dispose()
       disk.material.dispose()
+      narration.dispose()
       camera.remove(vignette)
       vignette.geometry.dispose()
       ;(vignette.material as THREE.Material).dispose()

@@ -1,7 +1,7 @@
 // VR menüsü ve bilgi kartının saf metin hesapları. Çalıştırma: node tests/maket-xr-metin.mjs
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { menuItems, wrapLine, menuHit, ILLUSTRATIVE_LABEL, MENU_TITLE_RATIO } from '../src/components/model/xrText.ts'
+import { menuItems, wrapLine, menuHit, ILLUSTRATIVE_LABEL, MENU_TITLE_RATIO } from '../src/shared/xr/xrText.ts'
 
 assert.equal(ILLUSTRATIVE_LABEL, 'Temsilî maket · Gerçek bir 3B tarama değildir')
 assert.equal(MENU_TITLE_RATIO, 0.2)
@@ -36,13 +36,13 @@ assert.deepEqual(wrapLine('ab ' + 'c'.repeat(12) + ' de', lengthVal, 5), ['ab', 
 const segmenter = Intl.Segmenter
 delete Intl.Segmenter
 assert.deepEqual(wrapLine('ş'.repeat(7), lengthVal, 3), ['şşş', 'şşş', 'ş'])
-await import(`../src/components/model/xrText.ts?noSegmenter`)
+await import(`../src/shared/xr/xrText.ts?noSegmenter`)
 Intl.Segmenter = segmenter
 assert.deepEqual(wrapLine('abc', lengthVal, 0), ['a', 'b', 'c']) // Genişlik yetmese de sonsuz döngü olmaz
 assert.deepEqual(wrapLine('İ̇ş', lengthVal, 1), ['İ̇', 'ş']) // Birleşen işaret harfinden ayrılmaz
 
 // Tüm bilgi kartları sığar; 900 px genişlik, karakter başına 0,55 × 34 px
-const artifact = JSON.parse(readFileSync(new URL('../src/data/artifacts/ulu-mosque.json', import.meta.url), 'utf8'))
+const artifact = JSON.parse(readFileSync(new URL('../src/content/artifacts/ulu-mosque.json', import.meta.url), 'utf8'))
 const measure = (s) => s.length * 0.55 * 34
 let mostOf = 0
 assert(artifact.model.interiorInfos.length > 0)

@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict'
-import { viewBlocked, collides, PLAYER_RADIUS } from '../src/components/model/walkingCollision.ts'
+import { viewBlocked, collides, PLAYER_RADIUS } from '../src/features/scale-models/walkingCollision.ts'
 import {
   deadZone, XR_WALK_SPEED, XR_TURN_SPEED, walkStep, smoothTurn, rotateAroundHead, tableRig, stopRig, controllerInput, nonOverlapAngle, titlePlace,
   TABLE_Y, TABLE_DISTANCE, TABLE_SCALE_INITIAL, TABLE_SCALE_MIN, TABLE_SCALE_MAX,
-} from '../src/components/model/xrMotion.ts'
+} from '../src/shared/xr/xrMotion.ts'
 const near = (g, b) => { for (const a in b) assert(Math.abs(g[a] - b[a]) < 1e-6, `${a}: ${g[a]} ≠ ${b[a]}`) }
 
 // Sabitler

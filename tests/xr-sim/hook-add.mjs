@@ -27,15 +27,15 @@ const render = `  ;(window as any).__t = __t
 
 `
 
-toggle('src/components/model/modelScene.ts', '  const sahne: MaketSahnesi = {\n', `  // TEST KANCASI (yalnız scratch kopya)
+toggle('src/features/scale-models/modelScene.ts', '  const sahne: MaketSahnesi = {\n', `  // TEST KANCASI (yalnız scratch kopya)
   const __t: any = { THREE, renderer, scene, camera, controls, katmanlar, duraklar, yurume, artAlan, hemi, icIsiklar, xr, carpiyor, xrKarti, isaretler, kare: 0, yakala: null,
     get parcali() { return parcali }, get iceride() { return iceride }, get aktifBilgi() { return aktifBilgi }, get kalite() { return kalite } }
 ${render}`)
-toggle('src/components/model/modelScene.ts', '  const xr = xrOturumuKur({', '  renderer.xr.setFramebufferScaleFactor(0.2)\n')
+toggle('src/features/scale-models/modelScene.ts', '  const xr = xrOturumuKur({', '  renderer.xr.setFramebufferScaleFactor(0.2)\n')
 
-toggle('src/components/model/vaseScene.ts', '  renderer.setAnimationLoop(() => {\n', `  // TEST KANCASI (yalnız scratch kopya)
+toggle('src/features/workshops/vase/vaseScene.ts', '  renderer.setAnimationLoop(() => {\n', `  // TEST KANCASI (yalnız scratch kopya)
   const __t: any = { THREE, renderer, scene, camera, controls, parcalar, hedefler, masaustuRaflari, saglamGorunum, birlesimIzleri, siluet, base, xr, kare: 0, yakala: null,
     get durum() { return durum }, get raflar() { return raflar }, get hareket() { return hareketler.size } }
 ${render}`)
-toggle('src/components/model/vaseScene.ts', '  const xr = vazoXrKur({', '  renderer.xr.setFramebufferScaleFactor(0.2)\n')
+toggle('src/features/workshops/vase/vaseScene.ts', '  const xr = vazoXrKur({', '  renderer.xr.setFramebufferScaleFactor(0.2)\n')
 

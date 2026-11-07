@@ -42,7 +42,7 @@ try {
   await click('İçeri gir')
   await page.waitForFunction(() => Number(document.querySelector('.model-area')?.dataset.frame) >= 2, null, { polling: 50 })
   const targets = await page.evaluate(async () => {
-    const { interiorStops } = await import('/src/components/maket/ulucamiIc.ts')
+    const { interiorStops } = await import('/src/features/scale-models/uluMosqueInterior.ts')
     return Object.fromEntries(interiorStops.map((d) => [d.ad, d.position]))
   })
   const step = async (ms = 50) => {

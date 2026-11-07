@@ -7,9 +7,9 @@ const browser = await chromium.launch({ channel: process.env.TEST_BROWSER_CHANNE
 const page = await browser.newPage()
 await page.goto(url)
 const result = await page.evaluate(async () => {
-  const { interiorWalkArea, interiorStops } = await import('/src/components/maket/ulucamiIc.ts')
-  const { floorStep, stopFloor, PLAYER_RADIUS: R } = await import('/src/components/maket/yurumeCarpisma.ts')
-  const { MAHFIL, KURSU } = await import('/src/components/maket/ulucamiDetay.ts')
+  const { interiorWalkArea, interiorStops } = await import('/src/features/scale-models/uluMosqueInterior.ts')
+  const { floorStep, stopFloor, PLAYER_RADIUS: R } = await import('/src/features/scale-models/walkingCollision.ts')
+  const { MAHFIL, KURSU } = await import('/src/features/scale-models/uluMosqueDetail.ts')
   const y = interiorWalkArea()
   /** Noktadan noktaya 3 cm adımlarla yürür; takıldığı yeri ve yüksekliği döner. */
   const walk = (head, path) => {

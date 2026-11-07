@@ -1,10 +1,10 @@
 // VR maket birleştirmenin saf hesapları. Çalıştırma: node tests/maket-birlestir-mantik.mjs
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { HAND_GAIN, RAY_RANGE, SEAT_THRESHOLD, releaseResult, assemblyText, selectLayer, shelfLayout, carriedPlace } from '../src/components/model/modelAssembleLogic.ts'
+import { HAND_GAIN, RAY_RANGE, SEAT_THRESHOLD, releaseResult, assemblyText, selectLayer, shelfLayout, carriedPlace } from '../src/features/scale-models/modelAssembleLogic.ts'
 
 // Modül three'siz kalır
-assert(!/from 'three'/.test(readFileSync(new URL('../src/components/model/modelAssembleLogic.ts', import.meta.url), 'utf8')))
+assert(!/from 'three'/.test(readFileSync(new URL('../src/features/scale-models/modelAssembleLogic.ts', import.meta.url), 'utf8')))
 
 // Sıra: yakında değilse sıra sorulmaz; sıradaki oturur, üstteki reddedilir, sınır dahil değil
 assert.equal(releaseResult(0, 0, 0), 'seated')

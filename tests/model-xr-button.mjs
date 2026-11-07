@@ -117,7 +117,7 @@ async function insideWorks(page, goInside) {
   await insideWorks(page, goInside)
   condition(!errors.length, `doğrudan VR rotasında hata: ${errors.join(' | ')}`)
   await page.close()
-  console.log('/vr/ulu-camii: sahne kendiliğinden açılır, iç mekân çizimi sürer.')
+  console.log('/places/ulu-camii: sahne kendiliğinden açılır, iç mekân çizimi sürer.')
 }
 
 await browser.close()

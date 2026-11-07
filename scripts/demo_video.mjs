@@ -149,7 +149,7 @@ await section('Ulu Camii maket', async () => {
 })
 
 await section('Vazo atölyesi', async () => {
-  await goToPage('/workshop/vase')
+  await goToPage('/workshops/vase')
   await writing('Vazo atölyesi: temsili 3B model, tarihî eser değildir')
   const start = page.getByRole('button', { name: 'Vazoyu parçala ve onar' })
   await page.waitForFunction(() => ![...document.querySelectorAll('button')].find((d) => d.textContent === 'Vazoyu parçala ve onar')?.disabled, null, { timeout: 60000 })

@@ -70,7 +70,7 @@ await control('6 yönetim: düzenle, ana sayfa, varsayılana döndür', async ()
   condition(!(await p.getByText('TEST ÖZETİ').count()), 'varsayılana dönmedi');
 });
 await control('6b yönetim: yeni eser ekle ve sil', async () => {
-  await p.goto(`${URL}/admin/fresh`);
+  await p.goto(`${URL}/admin/new`);
   const areas = { ad: 'Deneme Eseri', city: 'Bursa', district: 'Osmangazi', period: 'Deneme', endowment: 'Deneme', summary: 'Deneme özeti', history: 'Deneme tarihçesi' };
   for (const [k, v] of Object.entries(areas)) await p.locator(`#${k}`).fill(v);
   for (let i = 0; i < 3; i++) {
@@ -91,7 +91,7 @@ await control('7b bulunamayan sayfa', async () => {
 });
 await control('7c taşma (tüm sayfalar)', async () => {
   const overhang = [];
-  for (const path of ['/', '/artifact/ulu-mosque', '/artifact/muradiye-complex', '/admin', '/admin/fresh']) { await p.goto(URL + path); await p.waitForTimeout(400); if (await overflow()) overhang.push(path) }
+  for (const path of ['/', '/artifact/ulu-mosque', '/artifact/muradiye-complex', '/admin', '/admin/new']) { await p.goto(URL + path); await p.waitForTimeout(400); if (await overflow()) overhang.push(path) }
   condition(!overhang.length, `taşan: ${overhang}`);
 });
 

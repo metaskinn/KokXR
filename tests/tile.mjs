@@ -42,12 +42,12 @@ n = await window(); await s.mouse.move(...n(-.9, -.9)); await s.mouse.down()
 for (let y = -.9; y <= .95 && (await stage()) === 2; y += .22) { for (let x = -.9; x <= .95; x += .18) { await s.mouse.move(...n(x, y)); await s.waitForTimeout(8) } if (y > 0 && y < .22) await see('2-coal') }
 await s.mouse.up(); await awaitStage(3); console.log('✅ Kömürleme'); await s.waitForTimeout(600); await see('3-points')
 // 3 Tahrir: izleri gerçekten izle
-const { traces } = await import('../src/components/tile/pattern.ts')
+const { traces } = await import('../src/features/workshops/tile/engine/pattern.ts')
 await s.waitForTimeout(1800); n = await window()
 for (const [i, iz] of traces.entries()) { await s.mouse.move(...n(...iz[0])); await s.mouse.down(); for (const p of iz) { await s.mouse.move(...n(...p)); await s.waitForTimeout(12) } await s.mouse.up(); await s.waitForTimeout(200); if (i === 0) await see('3-outline') }
 await awaitStage(4); console.log('✅ Tahrir'); await s.waitForTimeout(400); await see('4-paint-start')
 // 4 Boyama
-const { regions } = await import('../src/components/tile/pattern.ts'); const color = { tulip: 'Kırmızı', leaf: 'Yeşil', center: 'Turkuaz', ring: 'Kobalt mavisi' }
+const { regions } = await import('../src/features/workshops/tile/engine/pattern.ts'); const color = { tulip: 'Kırmızı', leaf: 'Yeşil', center: 'Turkuaz', ring: 'Kobalt mavisi' }
 assert(await button('Sırlamaya geç →').isDisabled())
 for (const t of ['tulip', 'leaf', 'center', 'ring']) {
   await button(color[t]).click()

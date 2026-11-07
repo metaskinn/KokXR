@@ -11,7 +11,7 @@ try {
     const page = await browser.newPage({ viewport: { width, height: 1000 }, hasTouch: width === 360 })
     const errors = []
     page.on('pageerror', (e) => errors.push(e.message))
-    await page.goto(url + '/workshop/vase')
+    await page.goto(url + '/workshops/vase')
     const start = page.getByRole('button', { name: 'Vazoyu parçala ve onar' })
     await page.waitForFunction(() => ![...document.querySelectorAll('button')].find((b) => b.textContent === 'Vazoyu parçala ve onar')?.disabled)
     assert.equal(await page.locator('.vase-scene canvas').count(), 1)
@@ -136,7 +136,7 @@ try {
   }
   const failed = await browser.newPage()
   await failed.route('**/models/vase.glb', (route) => route.abort())
-  await failed.goto(url + '/workshop/vase')
+  await failed.goto(url + '/workshops/vase')
   await failed.getByRole('alert').waitFor()
   assert.equal(await failed.getByRole('button', { name: 'Vazoyu parçala ve onar' }).isDisabled(), true)
   assert.equal(await failed.locator('.vase-scene canvas').count(), 0)

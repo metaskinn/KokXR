@@ -1,13 +1,13 @@
 // Kılıç VR'ının saf hesapları ve panel içeriği. Çalıştırma: node tests/kilic-xr-mantik.mjs
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { firstGame, masterComplete, stages } from '../src/components/sword/state.ts'
-import { computeCut } from '../src/components/sword/test.ts'
-import { swordIntro, swordSources, swordPartNotes } from '../src/data/sword.ts'
+import { firstGame, masterComplete, stages } from '../src/features/workshops/sword/engine/state.ts'
+import { computeCut } from '../src/features/workshops/sword/engine/test.ts'
+import { swordIntro, swordSources, swordPartNotes } from '../src/content/sword.ts'
 import {
   station, stationRig, SEAT_EYE, angleDiff, panelShouldReturn, rayAxisX, nearestRegion, planeX, wristStep, hammerSwing, HammerMeter,
   SwingMeter, swingCut, SWING_TOLERANCE, pieceSnaps, PIECE_SEAT_THRESHOLD, panelState, infoState, panelLayout, panelFrame, PANEL_G, PANEL_Y,
-} from '../src/components/sword/xrCalc.ts'
+} from '../src/features/workshops/sword/engine/xrCalc.ts'
 
 const near = (a, b, e = 1e-6) => assert(Math.abs(a - b) < e, `${a} ≠ ${b}`)
 
@@ -133,7 +133,7 @@ p = panelState(d7, { reheat: false, not: null }); assert(p.buttons[0].ad.include
 
 // --- Yasak ifadeler: yazdığımız VR metinleri (data/kilic.ts dışı) tarihsel iddia ve abartı içermez.
 for (const file of ['xrCalc.ts', 'xrPanel.ts', 'xrSession.ts']) {
-  const text = readFileSync(new URL(`../src/components/sword/${file}`, import.meta.url), 'utf8')
+  const text = readFileSync(new URL(`../src/features/workshops/sword/engine/${file}`, import.meta.url), 'utf8')
   for (const forbidden of [/birebir/i, /gerçek kılıç/i, /dijital ikiz/i, /XRControllerModelFactory/]) assert(!forbidden.test(text), `${file}: ${forbidden}`)
 }
 console.log('Kılıç VR hesapları: istasyon, panel dönüşü, ışın, bileme, çekiç, savurma, kesim girdileri, panel içeriği ve yerleşimi başarılı.')

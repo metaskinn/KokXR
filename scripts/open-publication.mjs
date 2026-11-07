@@ -14,7 +14,7 @@ writeFileSync(join(root, 'vercel.json'), JSON.stringify({
   redirects: [
     { source: '/c', destination: '/artifact/ulu-mosque', permanent: false },
     { source: '/m', destination: '/artifact/muradiye-complex', permanent: false },
-    { source: '/v', destination: '/workshop/vase', permanent: false },
+    { source: '/v', destination: '/workshops/vase', permanent: false },
   ],
   rewrites: [{ source: '/(.*)', destination: '/index.html' }],
 }, null, 2))

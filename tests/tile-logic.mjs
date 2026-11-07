@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
-import { firstGame, shapeUp, applySlip, kiln, cool, pourGlaze, withCoal, drawOutline, paint, finishPaint, pickColor, quality, masterComplete, actions, BISQUE, GLAZE_KILN, HOLD_DURATION } from '../src/components/tile/state.ts'
-import { findRegion, regions, within, advanceTrace, traces, tulip, leaf, CENTER_R, RING_IN, RING_OUT } from '../src/components/tile/pattern.ts'
+import { firstGame, shapeUp, applySlip, kiln, cool, pourGlaze, withCoal, drawOutline, paint, finishPaint, pickColor, quality, masterComplete, actions, BISQUE, GLAZE_KILN, HOLD_DURATION } from '../src/features/workshops/tile/engine/state.ts'
+import { findRegion, regions, within, advanceTrace, traces, tulip, leaf, CENTER_R, RING_IN, RING_OUT } from '../src/features/workshops/tile/engine/pattern.ts'
 
 // Desen: bölgeler doğru yerde, birbirine binmiyor.
 assert.equal(regions.length, 14)

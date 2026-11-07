@@ -102,6 +102,6 @@ try {
     await p.close()
   }
   // Expected failure is a user-facing message, with no orphan canvas.
-  const fail = await browser.newPage(); await fail.route('**/models/sword.glb', r => r.abort()); await fail.goto(url + '/workshop/sword'); await fail.getByRole('alert').filter({ hasText: 'Atölye görüntülenemedi' }).waitFor(); assert.equal(await fail.locator('.sword-scene canvas').count(), 0); await fail.close()
+  const fail = await browser.newPage(); await fail.route('**/models/sword.glb', r => r.abort()); await fail.goto(url + '/workshops/sword'); await fail.getByRole('alert').filter({ hasText: 'Atölye görüntülenemedi' }).waitFor(); assert.equal(await fail.locator('.sword-scene canvas').count(), 0); await fail.close()
   assert.deepEqual(errors, []); console.log('Kılıç testleri başarılı.', report)
 } finally { await browser.close() }

@@ -5,7 +5,7 @@ import { mkdirSync } from 'node:fs'
 const url = process.env.TEST_URL ?? 'http://127.0.0.1:5173'
 const browser = await chromium.launch({ channel: 'chrome', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 mkdirSync('test-results', { recursive: true })
-const routes = ['/artifacts', '/vr', '/artifact/ulu-mosque', '/artifact/muradiye-complex', '/workshop/vase', '/admin', '/admin/fresh']
+const routes = ['/artifacts', '/places', '/artifact/ulu-mosque', '/artifact/muradiye-complex', '/workshops/vase', '/admin', '/admin/new']
 try {
   for (const width of process.argv.includes('--contrast-only') ? [] : [1440, 768, 360, 320]) {
     const page = await browser.newPage({ viewport: { width, height: 1000 } })
@@ -21,8 +21,8 @@ try {
       const nav = page.getByRole('navigation', { name: 'Ana gezinme' })
       const sizes = await nav.getByRole('link').evaluateAll((links) => links.map((a) => a.getBoundingClientRect().height))
       assert.ok(sizes.every((h) => h >= 44), `${width}px: gezinme hedefleri küçük`)
-      if ([1440, 360].includes(width) && ['/artifacts', '/workshop/vase', '/admin'].includes(route)) {
-        if (route === '/workshop/vase') await page.waitForFunction(() => document.querySelector('.vase-scene canvas'))
+      if ([1440, 360].includes(width) && ['/artifacts', '/workshops/vase', '/admin'].includes(route)) {
+        if (route === '/workshops/vase') await page.waitForFunction(() => document.querySelector('.vase-scene canvas'))
         await page.screenshot({ path: `test-results/ui-${width}-${route.replaceAll('/', '-')}.png`, fullPage: true })
       }
     }
@@ -32,7 +32,7 @@ try {
     await page.keyboard.press('Enter')
     assert.equal(await page.evaluate(() => document.activeElement.id), 'main-content')
     await page.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Atölyeler' }).click()
-    await page.waitForFunction(() => document.querySelector('nav[aria-label="Main nav"] a[href="/workshop"]')?.getAttribute('aria-current') === 'page' && document.activeElement.id === 'main-content')
+    await page.waitForFunction(() => document.querySelector('nav[aria-label="Main nav"] a[href="/workshops"]')?.getAttribute('aria-current') === 'page' && document.activeElement.id === 'main-content')
     assert.equal(await page.getByRole('navigation', { name: 'Atölyeler', exact: true }).getByRole('link', { name: 'Vazo atölyesi' }).getAttribute('aria-current'), 'page')
     assert.equal(await page.evaluate(() => document.activeElement.id), 'main-content')
     assert.deepEqual(errors, [])

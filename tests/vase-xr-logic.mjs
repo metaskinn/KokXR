@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import {
   METER, ILLUSTRATIVE_MODEL_LABEL, XR_SEAT_THRESHOLD, XR_TABLE_RADIUS,
   screenThreshold, tableHeight, panelButton, panelText, selectPiece, vaseStage_, vaseRig, xrShelfLayout, snapsIn,
-} from '../src/components/model/vaseXr.ts'
+} from '../src/features/workshops/vase/vaseXr.ts'
 
 const near = (a, b, tol = 1e-6) => assert(Math.abs(a - b) <= tol, `${a} ≠ ${b}`)
 

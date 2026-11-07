@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
-import { firstGame, strike, heatUp, giveWater, wrist, masterComplete, average } from '../src/components/sword/state.ts'
-import { computeCut } from '../src/components/sword/test.ts'
+import { firstGame, strike, heatUp, giveWater, wrist, masterComplete, average } from '../src/features/workshops/sword/engine/state.ts'
+import { computeCut } from '../src/features/workshops/sword/engine/test.ts'
 let d = firstGame(); d.stage = 2
 for (let i = 0; i < 10; i++) strike(d, 0)
 assert.equal(d.regions[0].p, 0); assert(d.crack_); assert(d.strain > 1)

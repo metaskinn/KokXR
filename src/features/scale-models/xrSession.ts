@@ -1,7 +1,9 @@
 // VR session: rig, controllers, view transitions. Touches the scene itself only through XrOption.
 import * as THREE from 'three'
-import { TITLE_FAR, TITLE_NEAR, TABLE_SCALE_INITIAL, TABLE_SCALE_MAX, TABLE_SCALE_MIN, rotateAroundHead, titlePlace, stopRig, controllerInput, tableRig, deadZone, nonOverlapAngle, smoothTurn, walkStep, type RigPose } from '../../shared/xr/xrMotion'
+import { TITLE_FAR, TITLE_NEAR, TABLE_SCALE_INITIAL, TABLE_SCALE_MAX, TABLE_SCALE_MIN, rotateAroundHead, titlePlace, stopRig, controllerInput, tableRig, deadZone, nonOverlapAngle, walkStep, type RigPose } from '../../shared/xr/xrMotion'
 import { FLOOR_Y, type InteriorStop, type InteriorWalk } from './uluMosqueInterior'
+import { snapTurn } from '../../shared/xr/xrSnapTurn'
+import { createNarration } from './xrNarration'
 import { setupModelAssembly } from './modelAssembleXr'
 import type { ModelLayer } from './uluMosqueModel'
 import { menuItems } from '../../shared/xr/xrText'
@@ -338,7 +340,10 @@ export function setupXrSession(s: XrOption): XrSession {
     card.hide()
   }
 
+  const narration = createNarration()
+  let snapReady = true
   const onSessionEnd = () => {
+    narration.stop()
     if (!session) return // Closing a half-finished start: the scene was never touched
     undo()
     s.sessionEnded()
@@ -388,13 +393,16 @@ export function setupXrSession(s: XrOption): XrSession {
     rig.position.x += fresh.x - head.x
     rig.position.z += fresh.z - head.z
 
-    const a = smoothTurn(input.rightX, dt)
+    const turn = snapTurn(input.rightX, snapReady)
+    snapReady = turn.ready
+    const a = turn.angle
     if (a !== 0) {
       const r = rotateAroundHead({ x: rig.position.x, z: rig.position.z }, fresh, a)
       rig.position.x = r.x
       rig.position.z = r.z
       rig.rotation.y += a
     }
+    narration.update(fresh, s.titles)
     updateTitles()
   }
 

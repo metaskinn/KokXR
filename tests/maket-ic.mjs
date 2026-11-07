@@ -112,8 +112,8 @@ async function duvaraKadar(sayfa, tus, enFazlaMs = 200000) {
   sart(await sayfa.locator('.maket-isaretler').isHidden(), 'dışarıda işaretler görünüyor')
 
   // Rota değişince sahne temizlenir.
-  await sayfa.getByRole('link', { name: /Ana sayfaya dön/ }).first().click()
-  await sayfa.waitForURL(`${url}/`)
+  await sayfa.getByRole('link', { name: /Eserlere dön/ }).first().click()
+  await sayfa.waitForURL(`${url}/eserler`)
   await sayfa.locator('.maket-alan').waitFor({ state: 'detached', timeout: 30000 })
   sart(!(await sayfa.locator('.maket-isaretler').count()), 'işaret katmanı temizlenmedi')
   sart(!hatalar.length, `konsol hatası: ${hatalar.join(' | ')}`)

@@ -1,49 +1,61 @@
 import { Link, useParams } from 'react-router-dom'
 import type { Eser } from '../types/eser'
-import SanalGezinti from '../components/SanalGezinti'
-import Tur360 from '../components/Tur360'
 import EseriEleAl from '../components/EseriEleAl'
-import Restorasyon from '../components/Restorasyon'
-import ZamanKatmani from '../components/ZamanKatmani'
 import Galeri from '../components/Galeri'
-import Test from '../components/Test'
+import Bolum from '../components/Bolum'
 import KaynakSatiri, { kaynakMetni } from '../components/KaynakSatiri'
 import Bulunamadi from './Bulunamadi'
 import { ACIK_YAYIN } from '../data/acikYayin'
 
-export default function EserSayfasi({ eserler, rozetKazan }: { eserler: Eser[]; rozetKazan: (id: string) => boolean }) {
+/** Fotoğraf öncelikli katalog düzeni: tam genişlik kapak, yapışkan künye ve bölüm listesi, okunur içerik sütunu. */
+export default function EserSayfasi({ eserler }: { eserler: Eser[] }) {
   const { id } = useParams()
   const eser = eserler.find((item) => item.id === id)
   if (!eser) return <Bulunamadi />
-  return <article className="sayfa" key={eser.id}>
-    <Link to="/">← Ana sayfaya dön</Link>
-    <header className="eser-baslik eser-detay-baslik">
-      <p className="ust-baslik">BURSA’NIN VAKIF ESERLERİ</p>
-      <h1>{eser.ad}</h1>
-      <p className="konum">{eser.sehir} · {eser.ilce}</p>
-      <dl><div><dt>Dönem</dt><dd>{eser.donem}</dd></div><div><dt>Vakıf</dt><dd>{eser.vakif}</dd></div></dl>
-      <p className="etiket">{eser.dogrulama === 'dogrulanmis' ? 'Kaynaklı bilgi' : 'Temsili içerik'}</p>
-      <p>{eser.ozet}</p>
+  const kapak = ACIK_YAYIN ? undefined : eser.gorseller.find((g) => g.dosya === eser.kapakGorsel)
+  const galeriVar = !ACIK_YAYIN && eser.gorseller.length > 0
+  return <article className="eser-detay" key={eser.id}>
+    <header className={`eser-kapak${kapak ? '' : ' eser-kapak-gorselsiz'}`}>
+      {kapak && <img className="eser-kapak-gorsel" src={kapak.dosya} alt={kapak.alt} />}
+      <div className="eser-kapak-ic">
+        <Link className="eser-geri" to="/eserler">← Eserlere dön</Link>
+        <div className="eser-kapak-metin">
+          <p className="eser-kapak-konum">{eser.ilce}, {eser.sehir}</p>
+          <h1>{eser.ad}</h1>
+          <p className="eser-ozet">{eser.ozet}</p>
+        </div>
+      </div>
+      {kapak?.kredi && <p className="eser-kapak-kredi">{kapak.kredi}</p>}
     </header>
-    <nav className="bolum-gezinme" aria-label="Eser bölümleri">
-      {!ACIK_YAYIN && <a className="bolum-oncelikli" href="#galeri-basligi">Fotoğrafları keşfet</a>}<a href="#kesif-basligi">Keşif noktaları</a><a href="#tarihce-basligi">Tarihçe</a>
-      {eser.maket && <a href="#maket-basligi">3B maket</a>}
-      <a href="#test-basligi">Bilgini sına</a><a href="#kaynaklar-basligi">Kaynaklar</a>
-    </nav>
-    <Galeri eser={eser} />
-    {eser.maket && <EseriEleAl maket={eser.maket} kaynaklar={eser.kaynaklar} ad={eser.ad} />}
-    {eser.tur360 && <Tur360 tur={eser.tur360} ad={eser.ad} />}
-    {eser.tur && <SanalGezinti tur={eser.tur} kaynaklar={eser.kaynaklar} />}
-    <section className="bolum" aria-labelledby="tarihce-basligi">
-      <h2 id="tarihce-basligi">Tarihçe</h2><p className="tarihce">{eser.tarihce}</p>
-      {eser.kaynaklar.filter((kaynak) => kaynak.id.endsWith('-tarihce')).map((kaynak) => <KaynakSatiri key={kaynak.id} kaynaklar={eser.kaynaklar} kaynakId={kaynak.id} />)}
-    </section>
-    <ZamanKatmani eser={eser} />
-    {eser.restorasyon && <Restorasyon gorev={eser.restorasyon} kaynaklar={eser.kaynaklar} rozetKazan={rozetKazan} rozetId={`${eser.id}:restorasyon`} />}
-    <Test eser={eser} rozetKazan={rozetKazan} />
-    <section className="bolum" aria-labelledby="kaynaklar-basligi">
-      <h2 id="kaynaklar-basligi">Kaynaklar</h2>
-      <ul className="kaynak-listesi">{eser.kaynaklar.map((kaynak) => <li key={kaynak.id}>{kaynakMetni(kaynak)}</li>)}</ul>
-    </section>
+    <div className="eser-govde">
+      <aside className="eser-yan">
+        <dl className="eser-kunye">
+          <div><dt>Dönem</dt><dd>{eser.donem}</dd></div>
+          <div><dt>Vakıf</dt><dd>{eser.vakif}</dd></div>
+          <div><dt>Bilgi durumu</dt><dd>{eser.dogrulama === 'dogrulanmis' ? 'Kaynaklı bilgi' : 'Temsili içerik'}</dd></div>
+        </dl>
+        <nav className="bolum-gezinme" aria-label="Eser bölümleri">
+          <p>Bu sayfada</p>
+          <ul>
+            {galeriVar && <li><a href="#galeri-basligi">Fotoğraflar <span>{eser.gorseller.length}</span></a></li>}
+            <li><a href="#kesif-basligi">Keşif noktaları</a></li>
+            {eser.maket && <li><a href="#maket-basligi">3B maket</a></li>}
+            <li><a href="#tarihce-basligi">Tarihçe</a></li>
+            <li><a href="#kaynaklar-basligi">Kaynaklar <span>{eser.kaynaklar.length}</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div className="eser-icerik">
+        <Galeri eser={eser} />
+        {eser.maket && <EseriEleAl maket={eser.maket} kaynaklar={eser.kaynaklar} ad={eser.ad} />}
+        <Bolum id="tarihce-basligi" baslik="Tarihçe">
+          <p className="tarihce">{eser.tarihce}</p>
+          {eser.kaynaklar.filter((kaynak) => kaynak.id.endsWith('-tarihce')).map((kaynak) => <KaynakSatiri key={kaynak.id} kaynaklar={eser.kaynaklar} kaynakId={kaynak.id} />)}
+        </Bolum>
+        <Bolum id="kaynaklar-basligi" baslik="Kaynaklar">
+          <ul className="kaynak-listesi">{eser.kaynaklar.map((kaynak) => <li key={kaynak.id}>{kaynakMetni(kaynak)}</li>)}</ul>
+        </Bolum>
+      </div>
+    </div>
   </article>
 }

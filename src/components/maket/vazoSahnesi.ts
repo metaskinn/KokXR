@@ -56,7 +56,7 @@ export async function vazoSahnesiOlustur(alan: HTMLElement, bildir: Bildirimler)
   renderer.domElement.setAttribute('aria-hidden', 'true')
   alan.append(renderer.domElement)
   const scene = new THREE.Scene()
-  scene.background = new THREE.Color('#24352d')
+  scene.background = new THREE.Color('#1b1f23')
   const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 500)
   const controls = new OrbitControls(camera, renderer.domElement)
   controls.enablePan = false

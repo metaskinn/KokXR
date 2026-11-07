@@ -5,7 +5,6 @@
 #           XR_SIM=/gecici/klasor node tests/xr-sim/sim.mjs ana      (Ulu Camii)
 #           XR_SIM=/gecici/klasor TEST_URL=http://127.0.0.1:4174 node tests/xr-sim/vazo-sim.mjs      (Vazo)
 #           XR_SIM=/gecici/klasor TEST_URL=http://127.0.0.1:4174 node tests/xr-sim/birlestir-sim.mjs      (Maket birleştirme)
-#           XR_SIM=/gecici/klasor TEST_URL=http://127.0.0.1:4174 node tests/xr-sim/restorasyon-sim.mjs      (Muradiye çini panosu)
 set -e
 : "${XR_SIM:?XR_SIM klasörünü ver}"
 K="$(cd "$(dirname "$0")/../.." && pwd)"

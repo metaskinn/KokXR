@@ -39,8 +39,3 @@ degistir('src/components/maket/vazoSahnesi.ts', '  renderer.setAnimationLoop(() 
 ${render}`)
 degistir('src/components/maket/vazoSahnesi.ts', '  const xr = vazoXrKur({', '  renderer.xr.setFramebufferScaleFactor(0.2)\n')
 
-degistir('src/components/restorasyon/xr.ts', '  renderer.setAnimationLoop(kare)\n', `  // TEST KANCASI (yalnız scratch kopya)
-  const __t: any = { THREE, renderer, scene, camera, alan, meshler, eller, durum, kare: 0, yakala: null,
-    get parcalar() { return parcalar }, get hamle() { return hamle }, get bitis() { return bitis }, get sonuc() { return sonuc }, get yerlesti() { return yerlesti }, bilgi: bilgi.nesne, hedefVurgular, OLCU: { sutun, satir, oran } }
-${render}`)
-degistir('src/components/restorasyon/xr.ts', "  renderer.xr.setReferenceSpaceType('local-floor')\n", '  renderer.xr.setFramebufferScaleFactor(0.35)\n')

@@ -1,5 +1,5 @@
-// VR Eserler sekmesinin listesi. Yapı adları "Vakıf Eserleri Envanteri - Bursa Fotoğraf Arşivi" klasör adlarından,
-// yayınlar Vakıf Katılım "Yayınlarımız" sayfasındandır. Yapı, `eserId`'si olan eser verisinde maket veya restorasyon görevi varsa açılır; yoksa "VR henüz yok" yazar.
+// Mekanlar sekmesinin listesi. Yapı adları "Vakıf Eserleri Envanteri - Bursa Fotoğraf Arşivi" klasör adlarından,
+// yayınlar Vakıf Katılım "Yayınlarımız" sayfasındandır. Yapı, `eserId`'si olan eser verisinde maket varsa açılır; yoksa "VR henüz yok" yazar.
 import type { HaritaKimlik } from './turkiyeHaritasi'
 
 // `konum` [boylam, enlem]: külliyenin ana camisinin yeri. `kaynak`: OSM ve Wikidata karşılıklı denetlendi (Kasım 2026).

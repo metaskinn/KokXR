@@ -3,7 +3,6 @@ import type { PointerEvent as ReactPointerEvent } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import type { Eser } from '../types/eser'
 import EseriEleAl from '../components/EseriEleAl'
-import Restorasyon from '../components/Restorasyon'
 import Bulunamadi from './Bulunamadi'
 import { KABARTMA, haritaNoktasi, haritaYukle, isaretleriAyir } from '../data/turkiyeHaritasi'
 import type { HaritaKimlik, HaritaVerisi } from '../data/turkiyeHaritasi'
@@ -251,7 +250,7 @@ export default function VrEserler({ eserler }: { eserler: Eser[] }) {
   const secili = vrSehirler.find((s) => s.ad === parametre.get('sehir'))
   const destek = useVrDestegi()
   const sec = (ad: string | null) => { setVurgu(null); setParametre(ad ? { sehir: ad } : {}) }
-  const icerik = (eserId: string) => eserler.find((e) => e.id === eserId && (e.maket || e.restorasyon))
+  const icerik = (eserId: string) => eserler.find((e) => e.id === eserId && e.maket)
   const aciklama = (e: Eser) => e.maket ? 'Temsilî 3B maket: içinde yürü' : "Çini panosunu VR'da onar"
   const [vurgu, setVurgu] = useState<string | null>(null)
   const { veri, hata } = useHaritaVerisi(secili?.harita ?? 'turkiye')
@@ -283,7 +282,7 @@ export default function VrEserler({ eserler }: { eserler: Eser[] }) {
 
   return <article className="sayfa vr-eserler">
     <header className="vr-baslik">
-      <h1>VR Eserler</h1>
+      <h1>Mekanlar</h1>
       <p>Haritadan bir şehir seç, o şehirdeki yapıya gir.</p>
       {destek === false && <p className="vr-not">Bu tarayıcı VR açamıyor. Gözlükle girmek için bu sayfayı Meta Quest tarayıcısında aç; maketi burada ekranda da gezebilirsin.</p>}
     </header>
@@ -318,11 +317,11 @@ export default function VrEserler({ eserler }: { eserler: Eser[] }) {
   </article>
 }
 
-export function VrEser({ eserler, rozetKazan }: { eserler: Eser[]; rozetKazan: (id: string) => boolean }) {
+export function VrEser({ eserler }: { eserler: Eser[] }) {
   const { id } = useParams()
   const eser = eserler.find((e) => e.id === id)
   const destek = useVrDestegi()
-  if (!eser || (!eser.maket && !eser.restorasyon)) return <Bulunamadi />
+  if (!eser?.maket) return <Bulunamadi />
   return <article className="sayfa vr-eser" key={eser.id}>
     <Link to={`/vr?sehir=${encodeURIComponent(eser.sehir)}`}>← {eser.sehir} yapıları</Link>
     <header className="vr-baslik">
@@ -332,6 +331,5 @@ export function VrEser({ eserler, rozetKazan }: { eserler: Eser[]; rozetKazan: (
       {destek && <p className="vr-not">Sahne yüklenince VR düğmesine bas. Tarayıcılar VR'ı yalnızca bir dokunuşla başlatır.</p>}
     </header>
     {eser.maket && <EseriEleAl maket={eser.maket} kaynaklar={eser.kaynaklar} ad={eser.ad} hemenAc />}
-    {eser.restorasyon && <Restorasyon gorev={eser.restorasyon} kaynaklar={eser.kaynaklar} rozetKazan={rozetKazan} rozetId={`${eser.id}:restorasyon`} />}
   </article>
 }

@@ -92,18 +92,7 @@ try {
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false)
       console.log(`${width}px ${id}: ${count} fotoğraf, oran/sığdırma, küçük resimler, oklar, klavye, büyütme, odak ve mobil kaydırma geçti.`)
     }
-    await page.getByRole('button', { name: /Gezintiye başla/ }).click()
-    await page.waitForFunction(() => document.querySelector('.gezinti-canvas.hazir'))
-    await page.getByRole('button', { name: 'Fotoğrafın tamamını göster' }).click()
-    await page.waitForFunction(() => !document.querySelector('.gezinti-canvas.hazir'))
-    assert.equal(await page.locator('.gezinti-fotograf').evaluate((i) => getComputedStyle(i).objectFit), 'contain')
-    const oldTitle = await page.locator('.gezinti-durak-basligi').textContent()
-    await page.getByRole('group', { name: 'Bağlı duraklara git' }).getByRole('button').first().click()
-    await page.waitForFunction((title) => document.querySelector('.gezinti-durak-basligi').textContent !== title, oldTitle)
-    await page.getByRole('button', { name: 'Derinlik etkisine dön' }).click()
-    await page.waitForFunction(() => document.querySelector('.gezinti-canvas.hazir'))
     assert.deepEqual(errors, [])
-    console.log(`${width}px: gezinti fotoğraf modu, durak geçişi ve derinlik etkisine dönüş geçti.`)
     await page.close()
   }
 } finally { await browser.close() }

@@ -110,8 +110,8 @@ async function bolum(ad, fn) {
   catch (e) { console.log(`❌ ${ad}: ${String(e.message).split('\n')[0].slice(0, 200)}`); hatalar.push(ad) }
 }
 
-await bolum('Ana sayfa', async () => {
-  await sayfayaGit('/')
+await bolum('Eserler', async () => {
+  await sayfayaGit('/eserler')
   await yazi('KökXR — Bursa\'nın vakıf eserlerini keşfet, incele, onar')
   await fare(500, 400, 30); await bekle(2200)
   await kaydir(620); await bekle(1800)
@@ -146,73 +146,6 @@ await bolum('Ulu Camii maket', async () => {
   await tikla(page.getByRole('button', { name: /Parçala/ })); await bekle(3500)
   await surukle(ox - 150, oy + 40, ox + 170, oy + 40, 45); await bekle(1500)
   await tikla(page.getByRole('button', { name: /Birleştir/ })); await bekle(2200)
-})
-
-await bolum('Ulu Camii 360', async () => {
-  await yazi('Gerçek 360° tur: 360TR resmî oynatıcısı (görüntüler 360TR\'ye aittir)')
-  const dugme = page.getByRole('button', { name: '360° turu başlat' })
-  await gor(dugme); await bekle(900)
-  await tikla(dugme)
-  await page.locator('.tur360-cerceve').waitFor()
-  await gor(page.locator('.tur360-cerceve')); await bekle(6500)
-  const c = await page.locator('.tur360-cerceve').boundingBox()
-  const ox = c.x + c.width / 2, oy = c.y + c.height / 2
-  await surukle(ox + 260, oy, ox - 260, oy, 55); await bekle(1000)
-  await surukle(ox + 260, oy - 20, ox - 260, oy + 20, 55); await bekle(1000)
-  await surukle(ox - 260, oy, ox + 260, oy, 55); await bekle(2000)
-})
-
-await bolum('Ulu Camii test ve rozet', async () => {
-  await yazi('Bilgini sına: her cevap kaynağıyla birlikte, 3/3 yapana rozet')
-  await gor(page.locator('#test-basligi')); await bekle(1200)
-  for (const dogru of ['20', 'Kündekâri', "Bursa'nın Ayasofyası"]) {
-    await tikla(page.getByRole('radio', { name: dogru, exact: true }).locator('xpath=..'), 16); await bekle(500)
-    await tikla(page.getByRole('button', { name: 'Cevabı kontrol et' }), 14); await bekle(2000)
-    await tikla(page.getByRole('button', { name: /Sonraki soru|Sonucu gör/ }), 14); await bekle(700)
-  }
-  await gor(page.locator('#test-basligi')); await bekle(2500)
-})
-
-await bolum('Muradiye gezinti', async () => {
-  await sayfayaGit('/eser/muradiye-kulliyesi')
-  await yazi('II. Murad (Muradiye) Külliyesi: fotoğraflarla sanal gezinti')
-  await bekle(1800)
-  const b = page.getByRole('button', { name: /Gezintiye başla/ })
-  await gor(b); await bekle(800); await tikla(b)
-  await page.locator('.gezinti-canvas.hazir').waitFor({ timeout: 30000 })
-  await gor(page.locator('.gezinti-sahne')); await bekle(1000)
-  const sallan = async () => {
-    const s = await page.locator('.gezinti-sahne').boundingBox()
-    const cx = s.x + s.width / 2, cy = s.y + s.height / 2
-    await fare(cx - s.width * .3, cy - 60, 26); await fare(cx + s.width * .3, cy + 60, 34); await fare(cx, cy, 18)
-  }
-  const git = async (ad) => {
-    await tikla(page.getByRole('group', { name: 'Bağlı duraklara git' }).getByRole('button', { name: ad }), 16)
-    await bekle(1500); await sallan()
-  }
-  await sallan()
-  await yazi('Derinlik yapay zekâ ile tahmin edildi; temsilîdir, 360° çekim değildir')
-  await git(/Türbeler bahçesi/); await git(/Cem Sultan/)
-  await git(/Bahçeye dön/); await git(/Avluya dön/)
-  await git(/Caminin kapısına/); await git(/İçeri gir/)
-})
-
-await bolum('Muradiye restorasyon', async () => {
-  await yazi('Restorasyon görevi: gerçek çini fotoğrafından bulmaca')
-  const b = page.getByRole('button', { name: 'Panoyu parçala ve onar' })
-  await gor(b); await bekle(1200); await tikla(b); await bekle(1200)
-  const sec = page.locator('.restorasyon')
-  await gor(page.locator('.restorasyon-tahta')); await bekle(800)
-  const parca = (id) => sec.getByRole('button', { name: new RegExp(`^Parça ${id},`) })
-  for (let id = 1; id <= 8; id++) {
-    await tikla(parca(id), 10)
-    for (let k = 0; k < 4 && !(await parca(id).getAttribute('aria-label')).includes(', düz,'); k++) {
-      await tikla(sec.getByRole('button', { name: /Döndür/ }), 8); await bekle(120)
-    }
-    await tikla(sec.getByRole('button', { name: `Boş yuva ${id}`, exact: true }), 10); await bekle(120)
-  }
-  await yazi('Pano onarıldı: rozet ve envanterden kaynaklı bilgi')
-  await gor(sec.getByText('Pano onarıldı!')); await bekle(3200)
 })
 
 await bolum('Vazo atölyesi', async () => {
@@ -269,12 +202,10 @@ await bolum('Yönetim', async () => {
   await tikla(ozet, 14)
   await ozet.fill('Demo: yönetim ekranından değiştirilen özet.'); await bekle(1100)
   await tikla(page.getByRole('button', { name: 'Kaydet' })); await bekle(1500)
-  await yazi('Değişiklik anında ana sayfaya yansır')
+  await yazi('Değişiklik anında eserler sayfasına yansır')
   await tikla(page.getByRole('link', { name: 'KökXR ana sayfa' })); await bekle(800)
   const kart = page.locator('.eser-karti', { hasText: 'Demo: yönetim' })
   await gor(kart); await bekle(2800)
-  await yazi('Testi 3/3 tamamlayınca kazanılan rozet de kartta görünür')
-  await bekle(2200)
   await yazi('')
   await tikla(page.getByRole('link', { name: 'Yönetim', exact: true })); await bekle(800)
   await tikla(page.getByRole('button', { name: /Varsayılana döndür\s*: Bursa Ulu Camii/ })); await bekle(800)

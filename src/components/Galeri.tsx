@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import type { Eser, Gorsel, Kaynak } from '../types/eser'
 import KaynakSatiri from './KaynakSatiri'
 import FotoKredi from './FotoKredi'
+import Bolum from './Bolum'
 import { ACIK_YAYIN } from '../data/acikYayin'
 
 function TamEkran({ gorseller, kaynaklar, secili, sec, kapat }: {
@@ -99,8 +100,7 @@ export default function Galeri({ eser }: { eser: Eser }) {
   }
   const oran = gorsel ? oranlar[gorsel.dosya] ?? 4 / 3 : 4 / 3
   return <>
-    {!(ACIK_YAYIN && !gorsel) && <section className="bolum fotograf-galerisi" aria-labelledby="galeri-basligi">
-      <div className="galeri-baslik-satiri"><div><p className="ust-baslik">AYRINTILARA YAKLAŞ</p><h2 id="galeri-basligi" className="sr-only">Fotoğraf galerisi</h2></div><div className="galeri-baslik-eylemler"><span className="galeri-sayac" role="status">{gorsel ? `${secili + 1} / ${eser.gorseller.length}` : '0 / 0'}</span>{gorsel && <button className="ikincil-dugme" onClick={() => setTamEkran(true)}>Fotoğrafı büyüt</button>}</div></div>
+    {!(ACIK_YAYIN && !gorsel) && <Bolum id="galeri-basligi" baslik="Fotoğraflar" className="fotograf-galerisi" eylem={<div className="galeri-baslik-eylemler"><span className="galeri-sayac" role="status">{gorsel ? `${secili + 1} / ${eser.gorseller.length}` : '0 / 0'}</span>{gorsel && <button className="ikincil-dugme" onClick={() => setTamEkran(true)}>Fotoğrafı büyüt</button>}</div>}>
       {!gorsel ? <p>Fotoğraflar hazırlanıyor.</p> : <>
         <figure>
           <div className="galeri-sahne" tabIndex={0} role="group" aria-label="Fotoğraflar; sağ ve sol ok tuşlarıyla gezinebilirsin"
@@ -156,9 +156,8 @@ export default function Galeri({ eser }: { eser: Eser }) {
           <figcaption>{gorsel.kredi && <FotoKredi metin={gorsel.kredi} />}{eser.kaynaklar.find((k) => k.id === gorsel.kaynakId)?.metin !== gorsel.kredi && <KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={gorsel.kaynakId} />}</figcaption>
         </figure>
       </>}
-    </section>}
-    <section className="bolum" aria-labelledby="kesif-basligi">
-      <h2 id="kesif-basligi">Keşif noktaları</h2>
+    </Bolum>}
+    <Bolum id="kesif-basligi" baslik="Keşif noktaları">
       <p>{gorsel ? 'Fotoğraflardaki numaralardan veya aşağıdaki listeden bir keşif noktası seç.' : 'Aşağıdaki listeden bir keşif noktası seç.'}</p>
       {eser.bilgiNoktalari.length === 0 && <p>Keşif noktaları hazırlanıyor.</p>}
       {eser.bilgiNoktalari.map((item, index) => <details key={item.id} open={acikNokta === item.id} className="nokta-detay">
@@ -171,7 +170,7 @@ export default function Galeri({ eser }: { eser: Eser }) {
         }}>{index + 1}. {item.baslik}</summary>
         <div id={`nokta-${item.id}`}><p>{item.metin}</p><KaynakSatiri kaynaklar={eser.kaynaklar} kaynakId={item.kaynakId} /></div>
       </details>)}
-    </section>
+    </Bolum>
     {tamEkran && gorsel && <TamEkran gorseller={eser.gorseller} kaynaklar={eser.kaynaklar} secili={secili} sec={sec} kapat={() => setTamEkran(false)} />}
   </>
 }

@@ -18,7 +18,7 @@ npm run dev -- --host 127.0.0.1 --port 5173 --strictPort   # http://127.0.0.1:51
 Node 22+ gerekir (`.nvmrc` 24 ister). Okul makinesindeki sistem Node'u v12'dir, projeyi çalıştırmaz.
 
 ### Bu dalda eklenenler
-- **VR Eserler sekmesi (`/vr`):** Türkiye haritası → şehir → yapı → `/vr/<eser-id>`. Liste `src/data/vrEserler.ts`; yapı, eser verisinde `maket` veya `restorasyon` varsa kendiliğinden açılır. Sınır çizgisi Natural Earth (kamu malı). Konya ve Hatay'da VR yok, yalnız kitap bağlantısı var.
+- **Mekanlar sekmesi (`/vr`):** Türkiye haritası → şehir → yapı → `/vr/<eser-id>`. Liste `src/data/vrEserler.ts`; yapı, eser verisinde `maket` veya `restorasyon` varsa kendiliğinden açılır. Sınır çizgisi Natural Earth (kamu malı). Konya ve Hatay'da VR yok, yalnız kitap bağlantısı var.
 - **9 yeni Bursa maketi (web ve VR):** Orhan Bey, I. Murat Hüdavendigar, Hamzabey, Timurtaş Paşa, II. Murat (Muradiye), Yeşil Çelebi Mehmed, Yıldırım, Emir Sultan, Umurbey. Her biri `src/components/maket/yapilar/<eser-id>.ts`, `src/data/eserler/<eser-id>.json`, `public/gorseller/<eser-id>/`.
 - **Yeni yapı ekleme:** `yapilar/<eser-id>.ts` içinde `export const yapi = (): Maket => ...` yeterlidir, otomatik kaydolur; yardımcı dosyalar alt klasöre konur. Kamera, kaide ve iç ışık `Maket` arayüzünde yapıya özeldir. `m.hali` Ulu Camii'nin paye düzenine bağlıdır, başka yapıda `m.haliSade` kullanın.
 - **Ulu Camii iç mekânı:** kodla üretilen halı ve mermer (`maket/ulucamiZemin.ts`), avize haleleri, ışık sütunu, iç yansıma ortamı, gerçek iç gölgeler. Quest ve dokunmatik cihazda `hafifCihaz()` daha hafif malzeme ve yarı boyutlu doku kullanır.

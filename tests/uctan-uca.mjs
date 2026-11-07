@@ -32,21 +32,9 @@ await kontrol('1a ilk Tab atlama bağlantısı', async () => {
 await kontrol('1b favicon', async () => {
   const r = await p.request.get(`${URL}/favicon.svg`); sart(r.ok(), `favicon ${r.status()}`);
 });
-await kontrol('ana sayfa', async () => {
-  await p.goto(URL); sart(await p.getByRole('heading', { name: 'KökXR' }).count(), 'başlık yok');
+await kontrol('eserler', async () => {
+  await p.goto(URL); sart(await p.getByRole('heading', { name: 'Eserler', level: 1 }).count(), 'başlık yok');
   sart(await p.locator('.eser-karti').count() >= 2, 'kart < 2'); sart(!(await tasma()), 'yatay taşma'); await ekran('ana');
-});
-await kontrol('1c test klavyeyle 3/3 + rozet', async () => {
-  await p.goto(`${URL}/eser/ulu-camii`);
-  for (const dogru of ['20', 'Kündekâri', "Bursa'nın Ayasofyası"]) {
-    const sec = p.getByRole('radio', { name: dogru, exact: true });
-    await p.getByRole('radio').first().focus();
-    for (let i = 0; i < 4 && !(await sec.isChecked()); i++) await p.keyboard.press('ArrowDown');
-    sart(await sec.isChecked(), `klavyeyle seçilemedi: ${dogru}`);
-    await p.getByRole('button', { name: 'Cevabı kontrol et' }).press('Enter');
-    await p.getByRole('button', { name: /Sonraki soru|Sonucu gör/ }).press('Enter');
-  }
-  sart(await p.getByText('3 sorudan 3 doğru').count(), 'sonuç 3/3 değil');
 });
 await kontrol('1d keşif kartı görünür', async () => {
   await p.goto(`${URL}/eser/ulu-camii`);
@@ -69,53 +57,13 @@ await kontrol('2 maket: aç, çevir, yakınlaştır, parçala, klavye', async ()
   await p.getByRole('button', { name: 'Görünümü sıfırla' }).click();
   sart(await p.getByText('Temsili maket').count(), 'temsili etiketi yok');
 });
-await kontrol('3 360° tur', async () => {
-  await p.goto(`${URL}/eser/ulu-camii`);
-  await p.getByRole('button', { name: '360° turu başlat' }).click();
-  await p.waitForTimeout(8000);
-  const f = p.frames().find((fr) => fr.url().includes('360tr.com/embed'));
-  sart(f, 'iframe yüklenmedi'); const c = await f.locator('canvas').count(); sart(c > 0, 'oynatıcı canvas yok');
-  sart(await p.getByRole('link', { name: /yeni sekmede aç/ }).count(), 'yedek bağlantı yok');
-  await p.locator('.tur360-cerceve').screenshot({ path: `${out}/${tarayiciAdi}-${genislik}-360.png` });
-  return `${c} canvas`;
-});
-for (const eser of ['ulu-camii', 'muradiye-kulliyesi']) await kontrol(`4 gezinti ${eser}`, async () => {
-  await p.goto(`${URL}/eser/${eser}`);
-  await p.getByRole('button', { name: /Gezintiye başla/ }).click();
-  const grup = p.getByRole('group', { name: 'Bağlı duraklara git' });
-  const basliklar = [];
-  for (let i = 0; i < 4; i++) {
-    await grup.getByRole('button').first().waitFor({ timeout: 20000 });
-    await grup.getByRole('button').first().click(); await p.waitForTimeout(1200);
-    basliklar.push(await p.locator('.gezinti-durak-basligi').first().textContent().catch(() => '?'));
-  }
-  sart(await p.getByText('360° çekim veya 3B tarama değildir').count(), 'dürüstlük etiketi yok');
-  if (eser === 'muradiye-kulliyesi') await ekran('gezinti');
-  return basliklar.join(' → ');
-});
-await kontrol('5 restorasyon: klavye + tamamlama', async () => {
-  await p.goto(`${URL}/eser/muradiye-kulliyesi`);
-  await p.getByRole('button', { name: 'Panoyu parçala ve onar' }).click();
-  const sec = p.locator('.restorasyon');
-  const parca = (id) => sec.getByRole('button', { name: new RegExp(`^Parça ${id},`) });
-  await parca(1).focus(); await p.keyboard.press('Enter');
-  for (let k = 0; k < 4 && !(await parca(1).getAttribute('aria-label')).includes(', düz,'); k++) await p.keyboard.press('r');
-  await sec.getByRole('button', { name: 'Boş yuva 1', exact: true }).focus(); await p.keyboard.press('Enter');
-  sart((await parca(1).getAttribute('aria-label')).includes('1. yuvada'), 'klavyeyle yerleşmedi');
-  for (let id = 2; id <= 8; id++) {
-    await parca(id).click();
-    for (let k = 0; k < 4 && !(await parca(id).getAttribute('aria-label')).includes(', düz,'); k++) await sec.getByRole('button', { name: '⟳ Döndür' }).click();
-    await sec.getByRole('button', { name: `Boş yuva ${id}`, exact: true }).click();
-  }
-  sart(await sec.getByText('Pano onarıldı!').count(), 'tamamlanmadı'); await ekran('restorasyon');
-});
 await kontrol('6 yönetim: düzenle, ana sayfa, varsayılana döndür', async () => {
   await p.goto(URL); await p.getByRole('link', { name: 'Yönetim', exact: true }).click();
   await p.getByRole('link', { name: /Düzenle\s*: Bursa Ulu Camii/ }).click();
   await p.locator('#ozet').fill('TEST ÖZETİ — yönetim ekranından değiştirildi.');
   await p.getByRole('button', { name: 'Kaydet' }).click(); await p.waitForTimeout(500);
   await p.getByRole('link', { name: 'KökXR ana sayfa' }).click();
-  sart(await p.getByText('TEST ÖZETİ').count(), 'değişiklik ana sayfada yok');
+  sart(await p.getByText('TEST ÖZETİ').count(), 'değişiklik eserler sayfasında yok');
   await p.getByRole('link', { name: 'Yönetim', exact: true }).click();
   await p.getByRole('button', { name: /Varsayılana döndür\s*: Bursa Ulu Camii/ }).click();
   await p.getByRole('link', { name: 'KökXR ana sayfa' }).click();
@@ -137,10 +85,6 @@ await kontrol('6b yönetim: yeni eser ekle ve sil', async () => {
   await p.getByText('Deneme Eseri').first().click(); sart(await p.getByRole('heading', { name: 'Deneme Eseri' }).count(), 'eser sayfası açılmadı');
   await p.goto(`${URL}/yonetim`); await p.getByRole('button', { name: /Sil\s*: Deneme Eseri/ }).click();
   await p.goto(URL); sart(!(await p.getByText('Deneme Eseri').count()), 'silinmedi');
-});
-await kontrol('7 rozetler ana sayfada', async () => {
-  await p.goto(URL); const r = await p.evaluate(() => localStorage.getItem('kokxr-rozetler'));
-  sart(await p.getByText('Rozet kazanıldı').count(), 'test rozeti kartta yok'); return r;
 });
 await kontrol('7b bulunamayan sayfa', async () => {
   await p.goto(`${URL}/eser/yok`); sart(await p.getByText('Sayfa bulunamadı').count(), '404 metni yok');

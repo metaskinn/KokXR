@@ -3,6 +3,7 @@ import './maket/maket.css'
 import type { Kaynak, Maket } from '../types/eser'
 import type { MaketSahnesi } from './maket/maketSahnesi'
 import KaynakSatiri from './KaynakSatiri'
+import Bolum from './Bolum'
 
 const azHareket = () => matchMedia('(prefers-reduced-motion: reduce)').matches
 const YURUME_TUSLARI = new Set(['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Shift'])
@@ -158,8 +159,7 @@ export default function EseriEleAl({ maket, kaynaklar, ad, hemenAc = false }: { 
     alan.current?.focus({ preventScroll: true })
   }
 
-  return <section className="bolum eseri-ele-al" aria-labelledby="maket-basligi">
-    <h2 id="maket-basligi">Eseri eline al</h2>
+  return <Bolum id="maket-basligi" baslik="Eseri eline al" className="eseri-ele-al">
     <p className="etiket">{maket.aciklama}</p>
     {!acik ? <button type="button" className="maket-baslat" onClick={() => setAcik(true)}>{ad} maketini eline al</button> : <>
       <div className="maket-kutu" ref={kutu}>
@@ -207,5 +207,5 @@ export default function EseriEleAl({ maket, kaynaklar, ad, hemenAc = false }: { 
       {maket.bilgiler.map((b, i) => <li key={i}>{b.metin}<KaynakSatiri kaynaklar={kaynaklar} kaynakId={b.kaynakId} /></li>)}
     </ul>
     <div className="gorunmez" aria-live="polite">{duyuru}</div>
-  </section>
+  </Bolum>
 }

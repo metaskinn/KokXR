@@ -1,4 +1,4 @@
-// VR Eserler sekmesi: harita → şehir → yapı → VR sayfası; içeriği olmayan yapı açılmaz, telefonda taşma olmaz.
+// Mekanlar sekmesi: harita → şehir → yapı → VR sayfası; içeriği olmayan yapı açılmaz, telefonda taşma olmaz.
 // Gerçek harita: işaret eser sayfasını açar, liste ve işaret birbirini vurgular, harita internetsiz çalışır.
 // Çalıştırma: geliştirme sunucusu açıkken TEST_URL=http://127.0.0.1:5173 node tests/vr-eserler.mjs
 import { chromium } from 'playwright'
@@ -34,8 +34,8 @@ const tiklanabilir = (sayfa) => sayfa.evaluate(() => [...document.querySelectorA
 {
   const { sayfa, hatalar } = await ac(1280, false)
   await sayfa.goto(url)
-  await sayfa.getByRole('link', { name: 'VR Eserler' }).click()
-  await sayfa.getByRole('heading', { name: 'VR Eserler' }).waitFor()
+  await sayfa.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Mekanlar' }).click()
+  await sayfa.getByRole('heading', { name: 'Mekanlar' }).waitFor()
   await sayfa.getByText(/Bu tarayıcı VR açamıyor/).waitFor()
   await sayfa.getByRole('img', { name: 'Türkiye haritası' }).waitFor()
   await sayfa.locator('.vr-sehir', { hasText: 'Konya' }).waitFor()
@@ -164,7 +164,7 @@ const tiklanabilir = (sayfa) => sayfa.evaluate(() => [...document.querySelectorA
   await sayfa.close()
 }
 
-// Tembel yükleme: harita verisi yalnız VR Eserler açılınca iner.
+// Tembel yükleme: harita verisi yalnız Mekanlar açılınca iner.
 {
   const { sayfa } = await ac(1280, false)
   const istek = []
@@ -177,4 +177,4 @@ const tiklanabilir = (sayfa) => sayfa.evaluate(() => [...document.querySelectorA
 }
 
 await tarayici.close()
-console.log('VR Eserler: harita, işaret, liste vurgusu, klavye, dokunma, kapalı şehir, internetsiz ve telefon görünümü geçti.')
+console.log('Mekanlar: harita, işaret, liste vurgusu, klavye, dokunma, kapalı şehir, internetsiz ve telefon görünümü geçti.')

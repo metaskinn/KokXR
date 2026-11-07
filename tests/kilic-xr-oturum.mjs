@@ -342,7 +342,7 @@ await sayfa.evaluate(() => { window.__xr.bas = { p: [0, 1.6, 0], yaw: 0 } })
 await gir()
 {
   const onceSon = await sayfa.evaluate(() => window.__xr.sonlandi)
-  await sayfa.evaluate(() => document.querySelector('.kilic-baslik a').click())
+  await sayfa.evaluate(() => document.querySelector('nav[aria-label="Ana gezinme"] a[href="/eserler"]').click())
   await sayfa.waitForFunction(() => !document.querySelector('.kilic-sahne canvas'), null, { timeout: 30000 })
   assert.equal(await sayfa.evaluate(() => window.__xr.sonlandi), onceSon + 1, 'rota değişince oturum kapanmadı')
   await sayfa.waitForTimeout(500)

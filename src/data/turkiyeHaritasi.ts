@@ -1,4 +1,4 @@
-// VR Eserler haritasının veri modeli ve yükleyicisi. Geometri `harita/*.json`, kabartma `harita/*-kabartma.webp`:
+// Mekanlar haritasının veri modeli ve yükleyicisi. Geometri `harita/*.json`, kabartma `harita/*-kabartma.webp`:
 // ikisi de repoya gömülüdür, internet istemez ve yalnız gereken harita açılınca yüklenir. Kaynak ve lisans: harita/KAYNAK.md
 import kabartmaTurkiye from './harita/turkiye-kabartma.webp'
 import kabartmaBursa from './harita/bursa-kabartma.webp'

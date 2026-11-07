@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import type { VazoDurumu, VazoSahnesi } from '../components/maket/vazoSahnesi'
 import './vazo.css'
 
 interface Oyun extends VazoDurumu { hamle: number; mesaj: string }
 const ilkOyun: Oyun = { onarim: false, kirildi: false, oturum: 0, yerlesen: [], secili: null, hamle: 0, mesaj: '' }
 
-/** `gomulu`: başka bir sayfanın içinde; sayfa başlığı ve geri bağlantısı o sayfanındır. */
-export default function VazoAtolyesi({ gomulu = false }: { gomulu?: boolean }) {
+export default function VazoAtolyesi() {
   const alan = useRef<HTMLDivElement>(null)
   const sahne = useRef<VazoSahnesi | null>(null)
   const [durum, setDurum] = useState<'yukleniyor' | 'hazir' | 'hata'>('yukleniyor')
@@ -85,15 +83,10 @@ export default function VazoAtolyesi({ gomulu = false }: { gomulu?: boolean }) {
   }
 
   return <article className="sayfa vazo-atolyesi">
-    {!gomulu && <Link to="/">← Ana sayfaya dön</Link>}
     <header className="eser-baslik">
-      {!gomulu && <>
-        <p className="ust-baslik">RESTORASYON ATÖLYESİ</p>
-        <h1>Bir parçadan bütüne.</h1>
-        <p className="vazo-giris">Vazoyu çevir, ayrıntılarına yaklaş. Sonra parçaları elinle taşır gibi sürükleyerek birleştir.</p>
-      </>}
-      <p className="etiket">Temsili 3B model</p>
-      <p className="vazo-model-notu">Bu vazo uygulama için tasarlandı; belirli bir tarihî eseri temsil etmez.</p>
+      <h1>Bir parçadan bütüne.</h1>
+      <p className="vazo-giris">Vazoyu çevir, ayrıntılarına yaklaş. Sonra parçaları elinle taşır gibi sürükleyerek birleştir.</p>
+      <p className="vazo-model-notu"><span className="etiket">Temsili 3B model</span> Bu vazo uygulama için tasarlandı; belirli bir tarihî eseri temsil etmez.</p>
     </header>
     <div className="vazo-duzen">
       <section aria-labelledby="vazo-incele-basligi">
@@ -124,7 +117,7 @@ export default function VazoAtolyesi({ gomulu = false }: { gomulu?: boolean }) {
         <p className="ipucu-metni">{onarim && !bitti ? 'Parçanın kendisini veya üzerindeki numarayı tutup taşı. Boş alandan sürükleyerek vazoyu döndür; tekerlekle yakınlaştır.' : 'Fare veya parmakla çevir; tekerlek veya iki parmakla yakınlaştır.'}</p>
       </section>
       <section className="vazo-gorev" aria-labelledby="vazo-onar-basligi">
-        <p className="ust-baslik">SENİN DOKUNUŞUN</p>
+        <p className="ust-baslik">Senin dokunuşun</p>
         <h2 id="vazo-onar-basligi">Vazoyu restore et</h2>
         {!onarim ? <>
           <p>Altı parça, tek bir vazo. Parçaları sahnede tutup doğru yere yaklaştır; bıraktığında yerine otursun.</p>

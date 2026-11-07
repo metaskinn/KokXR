@@ -25,7 +25,7 @@ try {
     // A home visit must not load Three.js or the workshop renderer.
     const imports = await p.evaluate(() => performance.getEntriesByType('resource').map(r => r.name))
     assert(!imports.some(s => /three\.js|three\.module|components\/kilic\/sahne/.test(s)), 'Three.js ana sayfada yüklendi')
-    await p.getByRole('link', { name: /Kılıç atölyesine gir/ }).click()
+    await p.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Atölyeler' }).click(); await p.getByRole('link', { name: 'Kılıç atölyesi', exact: true }).click()
     await p.locator('.kilic-sahne canvas').waitFor(); await p.waitForFunction(() => document.querySelector('.kilic-sahne')?.dataset.uzunluk)
     const initial = Number(await stage.getAttribute('data-uzunluk')); assert(initial < .25)
     await snap('01-kulce')
@@ -97,7 +97,7 @@ try {
     await click('♪ Ses açık'); assert(await p.getByRole('button', { name: '♪ Ses kapalı', exact: true }).isVisible())
     await click('Baştan başla'); await waitStage(0)
     await p.reload(); await waitStage(0)
-    await p.getByRole('link', { name: 'Keşfe dön' }).click(); await p.waitForFunction(() => !document.querySelector('.kilic-sahne canvas'), null, { timeout: 5000 })
+    await p.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Eserler', exact: true }).click(); await p.waitForFunction(() => !document.querySelector('.kilic-sahne canvas'), null, { timeout: 5000 })
     report.push({ width, master: '8/8', manual: '8/8', initial, deformation: 'uzama doğrulandı', targets: '3/3', dispose: 'canvas temizlendi' }); console.log(report.at(-1))
     await p.close()
   }

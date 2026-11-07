@@ -1,0 +1,146 @@
+{
+  "id": "gursu-central-mosque",
+  "name": "Orta Camii",
+  "city": "Bursa",
+  "district": "Gürsu",
+  "period": "XIX. yüzyıl ortası (kilise olarak) · 1958'den beri cami",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "XIX. yüzyıl ortalarında kilise olarak yapıldığı kabul edilen, 1958'de \"Orta Cami\" adıyla yeniden ibadete açılan yapı.",
+  "history": "Gürsu ilçesi, İstiklal Mahallesi, Fatih Caddesi, No: 66 adresinde yer alır. Kitabesi bulunmamakla birlikte, yapı hakkındaki değerlendirmelere göre XIX. yüzyıl ortalarında \"15 Ağustos Meryem Ana Doğum Yıldönümü Kilisesi\" adıyla inşa edildiği kabul edilir. Bu işlevini, Kurtuluş Savaşı'nın ardından 1924'te gerçekleştirilen mübadele anlaşması sonrasında bölgedeki Rum nüfusun ayrılışına kadar sürdürmüştür.\n\nMübadelenin ardından çeşitli işlevlerle kullanılan yapı, 1950'de halkın girişimiyle başlatılan restorasyonun 1958'de tamamlanmasıyla \"Orta Cami\" adıyla yeniden ibadet mekânı olmuştur.\n\nDoğu-batı doğrultusundaki yapı yaklaşık 17,00 × 24,00 m ölçülerindedir. Duvarları moloz taş ve aralarına yerleştirilen tuğlalarla almaşık teknikte örülmüş, üstü kiremit kaplı kırma çatıyla örtülmüştür. Geniş bir avlu içindeki yapının ana girişi batı cephesindedir; üç basamakla çıkılan, iki ahşap direkle desteklenen bir sahanlığı vardır. Ahşap tavanlı harimde sade ahşap mihrap, ahşap minber ve kürsü, kuzeyde ahşap direkler üzerinde kadınlar mahfili bulunur.\n\nKuzeybatı köşedeki taş minare, kare planlı taş kaide üzerine üçgen geçişlerle oturur; çokgen gövdeli ve tek şerefelidir. Minarenin 1960'ta Ali Orhan tarafından yapıldığını belirten mermer kitabe geçmişte kaidesindeydi, bugün mevcut değildir. Yapının son kapsamlı restorasyonu 2010-2012 yılları arasında Vakıflar Genel Müdürlüğü tarafından yapılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/gursu-central-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/gursu-central-mosque/exterior.jpg",
+      "alt": "Orta Camii: taş duvarlı, kiremit kırma çatılı uzun yapı, köşesinde yüksek taş minare, önünde avlu; arkada karlı dağlar",
+      "description": "Yapının genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gursu-central-mosque/aerial-top.jpg",
+      "alt": "Tepeden görünüm: kiremit kaplı kırma çatı, köşede minarenin şerefesi, çevresinde avlu ve ağaçlar",
+      "description": "Tepeden görünüm ve avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gursu-central-mosque/interior-windows.jpg",
+      "alt": "Ahşap tavanlı iç mekân: ahşap direkler, beyaz duvarda yuvarlak kemerli pencereler dizisi, zeminde mavi halı",
+      "description": "İç mekân ve pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gursu-central-mosque/window-masonry.jpg",
+      "alt": "Taş ve tuğla örgülü duvarda, kabartma bezemeli taş söveli iki yuvarlak kemerli pencere",
+      "description": "Cephe duvarı ve pencere söveleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/gursu-central-mosque/mihrab-minbar.jpg",
+      "alt": "Ahşap mihrap, sağında ahşap minber, solda ahşap kürsü; duvarda yuvarlak kemerli pencereler ve hat levhaları",
+      "description": "Mihrap, minber ve kürsü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/gursu-central-mosque/exterior.jpg",
+      "x": 52,
+      "y": 40,
+      "title": "Taş minare",
+      "text": "Kuzeybatı köşedeki minare, kare planlı taş kaide üzerine üçgen geçişlerle oturur; çokgen gövdeli ve tek şerefelidir. Şerefe altı dört sıra stalaktitle süslenmiş, sivri külahı kurşunla kaplanmıştır.",
+      "sourceId": "inv-p337"
+    },
+    {
+      "id": "windows",
+      "image": "/images/gursu-central-mosque/window-masonry.jpg",
+      "x": 33,
+      "y": 45,
+      "title": "Pencere söveleri",
+      "text": "Pencereler yuvarlak kemerli, mermer söveli ve demir parmaklıklıdır; sövelerin orta ve yan kısımlarında kabartma bitkisel bezemeler vardır.",
+      "sourceId": "inv-p337"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/gursu-central-mosque/mihrab-minbar.jpg",
+      "x": 49,
+      "y": 57,
+      "title": "Ahşap mihrap ve minber",
+      "text": "Ahşap tavanla örtülü harimin güney duvarında sade tasarımlı ahşap bir mihrap yer alır. Minber ve kürsü de ahşaptır.",
+      "sourceId": "inv-p337"
+    },
+    {
+      "id": "masonry",
+      "image": "/images/gursu-central-mosque/window-masonry.jpg",
+      "x": 85,
+      "y": 60,
+      "title": "Almaşık duvar",
+      "text": "Duvarlar moloz taş ile aralara yerleştirilen tuğlaların oluşturduğu almaşık teknikle örülmüştür.",
+      "sourceId": "inv-p336"
+    }
+  ],
+  "test": [
+    {
+      "question": "Değerlendirmelere göre yapı ilk olarak hangi adla inşa edilmiştir?",
+      "options": [
+        "Panagia Pazariotissa",
+        "15 Ağustos Meryem Ana Doğum Yıldönümü Kilisesi",
+        "Aya Nikola Kilisesi",
+        "Orta Kilise"
+      ],
+      "correct": 1,
+      "description": "Yapının XIX. yüzyıl ortalarında \"15 Ağustos Meryem Ana Doğum Yıldönümü Kilisesi\" adıyla inşa edildiği kabul edilmektedir.",
+      "sourceId": "inv-p335"
+    },
+    {
+      "question": "Halkın girişimiyle başlayan restorasyon hangi yıl tamamlanıp yapı \"Orta Cami\" olarak ibadete açılmıştır?",
+      "options": [
+        "1924",
+        "1958",
+        "1960",
+        "2012"
+      ],
+      "correct": 1,
+      "description": "1950'de başlatılan restorasyon 1958'de tamamlanmış ve yapı \"Orta Cami\" adıyla yeniden ibadete açılmıştır.",
+      "sourceId": "inv-p336"
+    },
+    {
+      "question": "Yapının son kapsamlı restorasyonu hangi yıllar arasında yapılmıştır?",
+      "options": [
+        "1950-1958",
+        "1972-1975",
+        "2010-2012",
+        "2015-2017"
+      ],
+      "correct": 2,
+      "description": "Son kapsamlı restorasyon 2010-2012 yılları arasında Vakıflar Genel Müdürlüğü tarafından gerçekleştirilmiştir.",
+      "sourceId": "inv-p337"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p335",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Gürsu, \"Orta Camii\"",
+      "page": "335"
+    },
+    {
+      "id": "inv-p336",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Gürsu, \"Orta Camii\"",
+      "page": "336"
+    },
+    {
+      "id": "inv-p337",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Gürsu, \"Orta Camii\"",
+      "page": "337"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

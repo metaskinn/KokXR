@@ -1,6 +1,6 @@
 # KökXR haritası
 
-Ajanlar için okuma haritası. Önce `docs/DURUM.md`'nin başındaki "Şu an" özetini oku, sonra yalnız işinin satırına git.
+Ajanlar için okuma haritası. Önce `docs/guncel/DURUM.md`'nin başındaki "Şu an" özetini oku, sonra yalnız işinin satırına git.
 
 ## Klasör ağacı
 
@@ -55,9 +55,9 @@ kokxr/
 
 | Dosya | Ne için |
 |---|---|
-| `docs/DURUM.md` | Şu anki durum, plan, kurulum, mimari, Quest ve tarihçe |
+| `docs/guncel/DURUM.md` | Şu anki durum, plan, kurulum, mimari, Quest ve tarihçe |
+| `docs/guncel/FINAL_PLANI.md` | Açık işler ve sorular (biten günlük `_arsiv/docs/FINAL_PLANI-tam.md`) |
 | `docs/kokkod_kazanma_plani.md` | Final planı ve öncelikler |
-| `docs/gorev_dagilimi.md` | 24 saatlik görev dağılımı ve dört rol |
 | `docs/sartname.md` | Şartname metni; bölüm 5 puanlama |
 | `docs/kaynaklar/` | Resmî şartname PDF'i (asıl kaynak), ön eleme sunumu, Geliştirme Raporu 1 |
 | `docs/sunum-vaatleri.md` | Jüriye verilen vaatler |
@@ -85,12 +85,12 @@ Yönetim ekranı (`/yonetim/yeni`) şu an yalnız tarayıcıya kaydeder. Kalıc�
 | `npm run test:tarayici` | Derleme + `maket-xr-dugme`, `vazo-xr-dugme`, `maket-ic` | Arayüz veya sahne değişince; yaklaşık 10 dakika |
 | `node scripts/test-tarayici.mjs <test>` | Tek tarayıcı testi, örn. `galeri` | Önce `npm run build` |
 | `npm run test:e2e` | Chromium 1280 ve 360, Firefox 1280 | Ayrı terminalde `npm run preview` (port 4173) açık olmalı |
-| `tests/xr-sim/` | Simüle Quest | Kullanımı `docs/DURUM.md`, "Simüle Quest" başlığında |
+| `tests/xr-sim/` | Simüle Quest | Kullanımı `docs/guncel/DURUM.md`, "Simüle Quest" başlığında |
 | `node tests/<ad>.mjs` | `package.json`'a bağlı olmayan testler: `cini`, `kilic`, `vr-eserler`, `yolculuk`, `maket-yapi <eser-id>` vb. | Çoğu `TEST_URL` ve 4173'te preview ister |
 
 ## Hangi iş hangi dosyalarda
 
-| Rol (`gorev_dagilimi.md`) | Dosyalar | Henüz yok |
+| Rol | Dosyalar | Henüz yok |
 |---|---|---|
 | **Kişi 1: Veri ve içerik** | `src/data/eserler/`, `public/gorseller/`, `src/types/eser.ts` (şema ortak), `scripts/levha_kirp.py` | Görsel küçültme betiği, eser kategorisi ve koordinat alanları |
 | **Kişi 2: Yönetim ve onay** | `src/pages/Yonetim.tsx`, `EserFormu.tsx`, `OnayAkisi.tsx`, `src/data/index.ts`, `src/data/dogrulama.ts` | Supabase katmanı, giriş, görsel yükleme, gerçek onay akışı |

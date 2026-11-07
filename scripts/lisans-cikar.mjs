@@ -1,4 +1,4 @@
-// docs/lisanslar.md dosyasını üretir: bağımlılık lisansları node_modules/*/package.json'dan okunur.
+// docs/guncel/lisanslar.md dosyasını üretir: bağımlılık lisansları node_modules/*/package.json'dan okunur.
 // Kullanım: node scripts/lisans-cikar.mjs   (önce npm install)
 import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 
@@ -45,7 +45,7 @@ ${gecis.length ? `<details><summary>Dolaylı üretim bağımlılıkları</summar
 |---|---|---|
 | OpenStreetMap karoları (Leaflet haritası) | \`/harita\` | ODbL; ekranda "© OpenStreetMap katkıcıları" yazar. Karo sunucusu kullanım politikasına uyulmalı (yoğun demo trafiği için değil) |
 | Natural Earth 1:50m (Türkiye sınırı), world-atlas 2.0.2 | \`src/data/turkiyeHaritasi.ts\` | Kamu malı (dosya başlığında yazılı) |
-| 360TR gömmesi (Ulu Camii gezintisi) | \`https://www.360tr.com/embed/bursa-ulu-camii\` | Üçüncü taraf hizmet; yazılı izin/embed kodu **doğrulanmadı** (docs/DURUM.md: resmî embed kodu bekleniyor) |
+| 360TR gömmesi (Ulu Camii gezintisi) | \`https://www.360tr.com/embed/bursa-ulu-camii\` | Üçüncü taraf hizmet; yazılı izin/embed kodu **doğrulanmadı** (docs/guncel/DURUM.md: resmî embed kodu bekleniyor) |
 | Supabase (isteğe bağlı bulut) | \`src/data/bulut.ts\` | Hizmet koşulları; yalnız \`.env\` doluyken kullanılır |
 
 ## 3B modeller, derinlik haritaları, görseller
@@ -66,5 +66,5 @@ ${gecis.length ? `<details><summary>Dolaylı üretim bağımlılıkları</summar
 - **Yazı tipi:** \`Inter\` yalnız yığın içinde adı geçer; web yazı tipi dosyası yüklenmez, yoksa \`Segoe UI\`/sistem yazı tipi kullanılır. Yazı tipi lisansı gerektiren gömülü dosya yoktur.
 - **Tarihsel metinler:** Vakıf Eserleri Envanteri (Bursa) kitabından alınır; her bilgide cilt/bölüm ve sayfa kaynak satırı vardır. Yeni eklenen metinler \`scripts/idml_cikar.py\` ile envanter IDML dosyalarından çıkarılmıştır.
 `
-writeFileSync('docs/lisanslar.md', md)
-console.log(`docs/lisanslar.md yazıldı: ${dogrudan.length} doğrudan, ${gecis.length} dolaylı üretim bağımlılığı`)
+writeFileSync('docs/guncel/lisanslar.md', md)
+console.log(`docs/guncel/lisanslar.md yazıldı: ${dogrudan.length} doğrudan, ${gecis.length} dolaylı üretim bağımlılığı`)

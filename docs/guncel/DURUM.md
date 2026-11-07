@@ -12,7 +12,7 @@
 7. **Sıradaki iş:** Sırayla, ayrı dal ve commit: Supabase ile kalıcı kayıt + giriş + görsel yükleme (`yonetim/...`), onay akışı (`yonetim/...`).
 8. **Hazır:** `.env` içinde Supabase adresi ve anahtarı var; yeni bağımlılık olarak yalnız Supabase istemcisi onaylı.
 9. **Kurallar:** `master`'a birleştirme ve push için sor. Node 24 kullan (`nvm use 24`). Tarih veya kaynak uydurma.
-10. **Devamı:** Plan `docs/kokkod_kazanma_plani.md`, roller `docs/gorev_dagilimi.md`, dosya haritası `docs/HARITA.md`. Bu belgenin geri kalanını yalnız gerekirse oku.
+10. **Devamı:** Plan `docs/kokkod_kazanma_plani.md`, dosya haritası `docs/HARITA.md`. Bu belgenin geri kalanını yalnız gerekirse oku.
 
 
 ## Güncel durum

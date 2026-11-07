@@ -31,9 +31,9 @@ Yalnız görevin gerektirdiği satırı oku.
 |---|---|
 | Sunum vaatleri | `docs/sunum-vaatleri.md` |
 | Şartname, puanlama | `docs/sartname.md` (5. bölüm) |
-| **Plan ve durum (işe buradan başla)** | `docs/DURUM.md` |
-| Quest durumu | `docs/DURUM.md` (Quest bölümü) |
-| Kurulum, mimari, veri modeli | `docs/DURUM.md` |
+| **Plan ve durum (işe buradan başla)** | `docs/guncel/DURUM.md` |
+| Quest durumu | `docs/guncel/DURUM.md` (Quest bölümü) |
+| Kurulum, mimari, veri modeli | `docs/guncel/DURUM.md` |
 | Sayfa ve rota | `src/App.tsx`, `src/pages/` |
 | Eser içeriği | `src/data/eserler/*.json`, tipler `src/types/eser.ts` |
 | Maket ve VR | `src/components/maket/` (`xr*.ts`: VR) |

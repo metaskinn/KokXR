@@ -20,7 +20,7 @@ Sunumu yalnız takım üyeleri yapar. Süre ve şablon finalistlere ayrıca bild
 KökXR: kaynaklı eser sayfaları, galeri, bilgi noktaları, test, harita ve rota; web/mobil ana akış. VR, atölyeler ve Öğretmen "Deneyimler" altında.
 
 ### 4. Canlı demo
-`docs/demo-senaryosu.md` dakika dakika izlenir. Yedek: `npm run demo` (wifi olmadan yerel). Quest adımı gerçek cihaz ister.
+`docs/guncel/demo-senaryosu.md` dakika dakika izlenir. Yedek: `npm run demo` (wifi olmadan yerel). Quest adımı gerçek cihaz ister.
 
 ### 5. Mimari ve veri modeli
 README'deki iki şema kullanılır (`README.md` "Mimari", "Veri modeli"):
@@ -45,7 +45,7 @@ Not: Supabase tabloları henüz kurulu değilse uygulama yerel kayıtla çalış
 - 14 Bursa eseri; her biri kaynak satırı (kitap, sayfa) ve doğrulama etiketi taşır.
 - 85 fotoğraf kaydı (kredi alanıyla), 42 test sorusu. Yeni eklenen 4 eserin fotoğrafı yok (izin ve boyut nedeniyle).
 - Veri hattı: IDML → düz metin → eser JSON'u → doğrulama (`src/data/dogrulama.ts`) → onay → yayın.
-- Doğrulama durumu: `docs/dogrulama-raporu.md` (yalnız sayı karşılaştırması; tam okuma yapılmadı, bunu söyleyin).
+- Doğrulama durumu: `docs/guncel/dogrulama-raporu.md` (yalnız sayı karşılaştırması; tam okuma yapılmadı, bunu söyleyin).
 - Harita işaretleri doğrulanmış koordinat gelene kadar yok; rotalar liste olarak çalışır.
 
 ### 7. Yenilik
@@ -56,14 +56,14 @@ Not: Supabase tabloları henüz kurulu değilse uygulama yerel kayıtla çalış
 
 ### 8. Ölçek
 - Mimari: yeni şehir ve yapı türü kod değişmeden süzgeçlere gelir (`tests/yonetim.mjs` Konya/Meram/Han denemesi test verisidir).
-- Gerçek Konya ve Hatay verisi yok: kitap dosyaları elle indirilecek (`docs/FINAL_PLANI.md`, G7). "Ölçeklenebilir" diyebiliriz, "Konya'da çalışıyor" diyemeyiz.
+- Gerçek Konya ve Hatay verisi yok: kitap dosyaları elle indirilecek (`docs/guncel/FINAL_PLANI.md`, G7). "Ölçeklenebilir" diyebiliriz, "Konya'da çalışıyor" diyemeyiz.
 - Sıra: Bursa → Konya → Hatay.
 
 ### 9. Yol haritası
 Supabase'in kurulumu, APK derlemesi, fotoğraf izinleri, koordinat doğrulaması, Konya/Hatay verisi, erişilebilirlik için axe/Lighthouse ölçümü (henüz yapılmadı).
 
 ### 10. Ekip
-Muhammet Ali Divan (kaptan), İsmet Bayandur, Selami Ali Şimşek, Meltem Taşkın. Görev dağılımı: `docs/gorev_dagilimi.md`. Herkes kendi kısmını ve mimariyi 1 dakikada anlatabilmeli (şartname 5.2.3).
+Muhammet Ali Divan (kaptan), İsmet Bayandur, Selami Ali Şimşek, Meltem Taşkın. Herkes kendi kısmını ve mimariyi 1 dakikada anlatabilmeli (şartname 5.2.3).
 
 ## Çalışan vaatler ve vizyon
 
@@ -81,4 +81,4 @@ Muhammet Ali Divan (kaptan), İsmet Bayandur, Selami Ali Şimşek, Meltem Taşk�
 ## Sunumdan önce doğrulanacaklar
 - Quest'te VR akışları gerçek cihazda denendi mi?
 - kokxr.vercel.app başka ekip üyesinin hesabında; güncel sürüm orada mı?
-- Fotoğraf izinleri ve 360TR gömme izni (`docs/lisanslar.md`).
+- Fotoğraf izinleri ve 360TR gömme izni (`docs/guncel/lisanslar.md`).

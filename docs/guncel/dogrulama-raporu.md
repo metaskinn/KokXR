@@ -27,4 +27,4 @@ Yeni 4 eser (Koza Han, Eyne Bey Hamamı, Eyne Bey Medresesi, Osman Gazi Türbesi
 - Yalnız sayılar denetlendi. İsimler, ilişkiler ve yorum cümleleri satır satır okunmadı; bunlar için insan okuması gerekir.
 - Test soruları ve zaman katmanları karşılaştırmaya girmedi.
 - Hiçbir eserin etiketi değiştirilmedi; hepsi `dogrulanmis` kalıyor, ancak bu etiket "sayılar kitapla çelişmiyor" düzeyindedir, tam okuma düzeyinde değildir.
-- Görsel izinleri bu rapor kapsamında değil (bkz. `docs/lisanslar.md`).
+- Görsel izinleri bu rapor kapsamında değil (bkz. `docs/guncel/lisanslar.md`).

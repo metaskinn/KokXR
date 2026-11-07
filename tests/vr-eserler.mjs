@@ -26,6 +26,7 @@ const hedefOlcusu = async (sayfa) => {
 }
 /** Her işaret kendi merkezinde en üstte olmalı: başka işaret veya düğme altında kalıp tıklanamaz olmasın. */
 const tiklanabilir = (sayfa) => sayfa.evaluate(() => [...document.querySelectorAll('.vr-isaret')].filter((el) => {
+  el.scrollIntoView({ block: 'center' }) // ekran dışındaki işaret örtülü sayılmaz
   const r = el.getBoundingClientRect()
   return !el.contains(document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2))
 }).map((el) => el.getAttribute('aria-label')))

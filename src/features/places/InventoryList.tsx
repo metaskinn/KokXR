@@ -65,12 +65,13 @@ export default function InventoryList({ artifacts }: { artifacts: Artifact[] }) 
       {results.slice(0, shown).map((e) => {
         const model = e.hasScaleModel && hasModel(e.artifactId)
         const meta = [e.district, sectionLabels[e.section], e.group].filter(Boolean).join(' · ')
+        const full = artifacts.find((a) => a.inventoryId === e.id && !a.model)
         const d = inventoryDetails[e.id]
         const facts = d ? ([['Yaptıran', d.builder], ['Tarih', d.date], ['Mimar', d.architect], ['Konum', d.location]] as const).filter(([, v]) => v) : []
         return <li key={e.id} data-model={model ? 'yes' : 'no'}>
           {model
             ? <Link to={`/places/${e.artifactId}`}><strong>{e.name}</strong><span>{meta}</span><em>3B maket var</em></Link>
-            : <Link to={`/places/yapi/${e.id}`}><strong>{e.name}</strong><span>{meta}</span><em>3B maket yok</em></Link>}
+            : <Link to={full ? `/artifact/${full.id}` : `/places/yapi/${e.id}`}><strong>{e.name}</strong><span>{meta}</span><em>{full ? "Tam sayfa var · 3B maket yok" : "3B maket yok"}</em></Link>}
           {d && <details className="inventory-details">
             <summary>Bilgi</summary>
             <p>{d.summary}</p>

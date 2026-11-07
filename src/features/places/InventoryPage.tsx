@@ -1,12 +1,15 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router-dom'
+import type { Artifact } from '../../domain/artifact'
 import NotFound from '../../shared/ui/NotFound'
 import { inventory, inventoryDetails, sectionLabels } from '../../content/inventory'
 
 /** Page for one building of the printed inventory. Shows only what the book states; there is no 3D model or photo until data exists. */
-export default function InventoryPage() {
+export default function InventoryPage({ artifacts }: { artifacts: Artifact[] }) {
   const { id } = useParams()
   const item = inventory.find((e) => e.id === id)
   if (!item) return <NotFound />
+  const full = artifacts.find((a) => a.inventoryId === item.id)
+  if (full) return <Navigate to={`/artifact/${full.id}`} replace />
   const d = inventoryDetails[item.id]
   const facts = d ? ([['Yaptıran', d.builder], ['Tarih', d.date], ['Mimar', d.architect], ['Konum', d.location]] as const).filter(([, v]) => v) : []
   return <article className="sayfa inventory-page">

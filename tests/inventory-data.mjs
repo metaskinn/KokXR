@@ -32,3 +32,15 @@ const withModel = Object.values(artifacts).filter((a) => a.model)
 assert.equal(new Set(flagged.map((e) => e.artifactId)).size, flagged.length, 'one flagged building per model')
 assert.equal(flagged.length, withModel.length, 'every artifact with a model has exactly one flagged building')
 console.log(`Inventory data: ${inventory.length} buildings, ${flagged.length} with a scale model, links and flags passed.`)
+
+// Artifact modules: each artifact's inventoryId must point at a real inventory row, once per row, and its images must exist.
+import { existsSync } from 'node:fs'
+const seen = new Map()
+for (const a of Object.values(artifacts)) {
+  if (!a.inventoryId) continue
+  assert.ok(ids.has(a.inventoryId), `${a.id}: inventoryId ${a.inventoryId} is not in the inventory`)
+  assert.ok(!seen.has(a.inventoryId), `${a.id} and ${seen.get(a.inventoryId)} both claim ${a.inventoryId}`)
+  seen.set(a.inventoryId, a.id)
+  for (const g of a.images ?? []) assert.ok(existsSync(`public${g.file}`), `${a.id}: missing image ${g.file}`)
+}
+console.log(`Artifact modules: ${seen.size} linked to the inventory.`)

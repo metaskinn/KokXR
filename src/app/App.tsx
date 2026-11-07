@@ -44,7 +44,7 @@ export default function App() {
         <Route path="/" element={<Navigate to="/artifacts" replace />} />
         <Route path="/artifacts" element={<ArtifactsPage artifacts={artifacts} />} />
         <Route path="/places" element={<PlacesPage artifacts={artifacts} />} />
-        <Route path="/places/yapi/:id" element={<InventoryPage />} />
+        <Route path="/places/yapi/:id" element={<InventoryPage artifacts={artifacts} />} />
         <Route path="/places/:id" element={<PlacePage artifacts={artifacts} />} />
         <Route path="/workshops" element={<WorkshopsLayout />}>
           <Route index element={<Navigate to="vase" replace />} />

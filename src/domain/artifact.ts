@@ -89,6 +89,8 @@ export interface TimeRecord {
 
 export interface Artifact {
   id: string;             // "ulu-mosque", "muradiye-complex"
+  /** Id of the building in src/content/inventory.json this artifact describes. Links the inventory row to this page without editing shared files. */
+  inventoryId?: string;
   name: string;
   city: string;
   district: string;

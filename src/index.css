@@ -338,3 +338,7 @@ html[data-kontrast="yuksek"] {
 }
 html[data-kontrast="yuksek"] a { text-decoration: underline; }
 html[data-kontrast="yuksek"] button, html[data-kontrast="yuksek"] .dugme { border-color: #000; }
+
+.nav-grup { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.1rem; margin-left: 0.5rem; padding-left: 0.75rem; border-left: 1px solid var(--cizgi); }
+.nav-grup-ad { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ikincil); margin-right: 0.25rem; }
+@media (max-width: 760px) { .nav-grup { margin-left: 0; padding-left: 0; border-left: 0; } .nav-grup-ad { display: none; } }

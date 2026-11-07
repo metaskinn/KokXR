@@ -1,0 +1,97 @@
+{
+  "id": "yildirim-molla-arap-fountain",
+  "name": "Molla Arap Çeşmesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "1954 · cami onarımları sırasında inşa edildiği aktarılır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Mollaarap Camii’nin kuzeydoğu köşesindeki tek yüzlü duvar çeşmesi, taş-tuğla kemeri ve mermer teknesiyle tanınır.",
+  "history": "Mollaarap Mahallesi, Balabancık Caddesi No: 35’teki Mollaarap Camii’nin kuzeydoğu köşesinde, caddeye bakar. Camiye sonradan eklenmiştir. Camiye ilişkin eski kaynaklarda çeşmeden söz edilmez; Bursa Eski Eserleri Sevenler Kurumu’nun 1954 onarımlarını anlatan yayınlarında, kubbe ve minare tamiri sırasında çeşmenin de yapıldığı belirtilir.\n\nYaklaşık 3,60 × 2,50 m boyutlarında ve 60 cm derinliğindeki tek yüzlü duvar çeşmesinin sırtı cami duvarına dayanır. Küfeki taşı, tuğla ve mermer kullanılmıştır. Nişi, bir sıra taş ve bir sıra tuğlayla örülü yuvarlak kemer çevirir. Oval ayna taşı ve 1,50 × 0,30 m boyutlarındaki su teknesi mermerdir. Ayna taşında ışınsal bezeme ve ortada musluk bulunur; kitap suyun aktığını belirtir. Kot farkı nedeniyle kemer yüksekliğinde alınlık yapılmış, üst bölüm caminin bahçe duvarıyla birleştirilip beton örtüyle kapatılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-molla-arap-fountain/fountain-front.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-molla-arap-fountain/fountain-front.jpg",
+      "alt": "Taş duvardaki yuvarlak kemerli çeşme nişi, oval mermer ayna, musluk ve beyaz mermer tekne; sağda minare",
+      "description": "Taş duvardaki yuvarlak kemerli çeşme nişi, oval mermer ayna, musluk ve beyaz mermer tekne; sağda minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-molla-arap-fountain/mosque-setting.jpg",
+      "alt": "Sokaktan basamaklarla çıkılan cami avlusu, metal kapı, taş duvarlar ve arkada yükselen minare",
+      "description": "Sokaktan basamaklarla çıkılan cami avlusu, metal kapı, taş duvarlar ve arkada yükselen minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-molla-arap-fountain/fountain-front.jpg",
+      "x": 50,
+      "y": 56,
+      "title": "Yuvarlak kemerli niş",
+      "text": "Çeşme nişi bir sıra taş ve bir sıra tuğlayla örülen yuvarlak kemerle çevrilidir.",
+      "sourceId": "inv-p568"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-molla-arap-fountain/fountain-front.jpg",
+      "x": 51,
+      "y": 77,
+      "title": "Mermer tekne",
+      "text": "Çeşmenin su teknesi mermerden yapılmıştır; kitap ölçülerini 1,50 × 0,30 m olarak verir.",
+      "sourceId": "inv-p568"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşmenin hangi yılki onarımlar sırasında yapıldığı belirtilir?",
+      "options": [
+        "1442",
+        "1954",
+        "1786",
+        "2017"
+      ],
+      "correct": 1,
+      "description": "1954.",
+      "sourceId": "inv-p568"
+    },
+    {
+      "question": "Çeşme hangi yapı köşesinde yer alır?",
+      "options": [
+        "Mahfel’in batısında",
+        "Hançerli Medresesi’nin avlusunda",
+        "Irgandı Köprüsü’nün altında",
+        "Mollaarap Camii’nin kuzeydoğu köşesinde"
+      ],
+      "correct": 3,
+      "description": "Mollaarap Camii’nin kuzeydoğu köşesinde.",
+      "sourceId": "inv-p568"
+    },
+    {
+      "question": "Ayna taşı ve su teknesi hangi malzemeden yapılmıştır?",
+      "options": [
+        "Mermer",
+        "Ahşap",
+        "Bakır",
+        "Tuğla"
+      ],
+      "correct": 0,
+      "description": "Mermer.",
+      "sourceId": "inv-p568"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p568",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Molla Arap Çeşmesi\"",
+      "page": "568"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

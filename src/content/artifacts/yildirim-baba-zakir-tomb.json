@@ -1,0 +1,90 @@
+{
+  "id": "yildirim-baba-zakir-tomb",
+  "name": "Baba Zâkir Türbesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Kitapta inşa tarihi belirtilmemiştir; Emîr Sultan’dan ders alan Baba Zâkir dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Baba Zâkir’in kurduğu dergâhtan yapı kalmamış, kabri apartmanın zemin katındaki küçük pencere açıklığında korunmuştur.",
+  "history": "Namazgâh Mahallesi, Dereboyu Sokak No: 32’dedir. Emîr Sultan’dan ders alan Baba Zâkir Efendi, bugün mezarının bulunduğu yerde bir dergâh kurmuş, vefatında aynı yere defnedilmiştir. Türbe zamanla yok olmuş; kitapta mezara bir apartmanın zemin katındaki küçük pencereden ulaşılabildiği belirtilmiştir. Alt yamaçtaki binanın bahçesinde iki ayrı kabre ait, kısmen okunabilen taşlar bulunur.\n\nBir dönem mahalle mescidi olarak da kullanılan Baba Zâkir Dergâhı’ndan ve mescitten günümüze yapı kalmamıştır. Hazirenin eskiden daha çok defin içerdiği belirtilir. Kitapta Baba Zâkir Alâaddin’in yanı sıra Hatice Hatun bint Hüseyin, Hindî Mehmed Efendi, Celvetî Şeyhi Sebbâğ Hacı Ahmed Dede, Ahıskalı Fazıl Hasan Efendi, Seyyid Hafız Mehmed Tahir Efendi ve Tekfurdağlı Şeyh Said Efendi’nin burada medfun olduğu bilgisi aktarılır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-baba-zakir-tomb/grave-through-window.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-baba-zakir-tomb/grave-through-window.jpg",
+      "alt": "Dar, sıvalı duvar açıklığının içinde, üzerinde koyu yazılar bulunan yeşil boyalı mezar taşı ve toprak kabir",
+      "description": "Dar, sıvalı duvar açıklığının içinde, üzerinde koyu yazılar bulunan yeşil boyalı mezar taşı ve toprak kabir",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-baba-zakir-tomb/grave-through-window.jpg",
+      "x": 52,
+      "y": 57,
+      "title": "Baba Zâkir’in kabri",
+      "text": "Dergâhını burada kuran Baba Zâkir, vefatından sonra aynı yere defnedilmiştir.",
+      "sourceId": "inv-p535"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-baba-zakir-tomb/grave-through-window.jpg",
+      "x": 20,
+      "y": 43,
+      "title": "Pencere açıklığı",
+      "text": "Kitap, mezara apartmanın zemin katındaki küçük bir pencereden ulaşılabildiğini belirtir.",
+      "sourceId": "inv-p535"
+    }
+  ],
+  "test": [
+    {
+      "question": "Baba Zâkir kimden ders almıştır?",
+      "options": [
+        "Molla Gürânî",
+        "Emîr Sultan",
+        "Kuşadalı İbrahim Efendi",
+        "Molla Fenârî"
+      ],
+      "correct": 1,
+      "description": "Emîr Sultan.",
+      "sourceId": "inv-p535"
+    },
+    {
+      "question": "Dergâh bir dönem hangi işlevi de üstlenmiştir?",
+      "options": [
+        "Hamam",
+        "Kervansaray",
+        "Çarşı",
+        "Mahalle mescidi"
+      ],
+      "correct": 3,
+      "description": "Mahalle mescidi.",
+      "sourceId": "inv-p535"
+    },
+    {
+      "question": "Mezara nereden ulaşılabildiği belirtilir?",
+      "options": [
+        "Apartmanın zemin katındaki küçük pencereden",
+        "Köprü altından",
+        "Medrese kubbesinden",
+        "Hamam avlusundan"
+      ],
+      "correct": 0,
+      "description": "Apartmanın zemin katındaki küçük pencereden.",
+      "sourceId": "inv-p535"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p535",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Baba Zâkir Türbesi\"",
+      "page": "535"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

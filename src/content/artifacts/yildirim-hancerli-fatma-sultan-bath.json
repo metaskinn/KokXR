@@ -1,0 +1,107 @@
+{
+  "id": "yildirim-hancerli-fatma-sultan-bath",
+  "name": "Hançerli Fatma Sultan (Hanzade) Hamamı",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 938 / M. 1531 tarihli külliye vakfiyesi",
+  "endowment": "Hançerli Fatma Sultan; han, hamam, arazi, değirmen ve dükkân vakıfları",
+  "summary": "Hançerli Fatma Sultan külliyesinin hamamı, yeniden ihya edildikten sonra kültür ve sanat merkezi olarak işlevlendirilmiştir.",
+  "history": "Davutkadı Mahallesi, Musababa Caddesi No: 2’deki yapı Hanzade veya Hançerli Hamamı adlarıyla da anılır. Hançerli Fatma Sultan tarafından külliyenin bir parçası olarak yaptırılmıştır. H. 938 / M. 1531 tarihli vakfiye hamam, medrese, sıbyan mektebi ve türbeyi sayar. Medrese sonradan temelleri üzerinde yeniden yapılmış, sıbyan mektebi yok olmuştur. Fatma Sultan külliyeye İstanbul At Meydanı’nda han, hamamlar, İstanbul, Yalova ve Edirne’de arazi, değirmen ve dükkânlar vakfetmiştir.\n\nHamam soyunmalık, ılıklık, sıcaklık ve halvetlerden oluşur. Soyunmalık 9,12 × 13,90 m ölçülerindedir. Sivri kemerli kapıyla geçilen kare ılıklık 2,25 × 2,25 m’dir; pandantiflerle taşınan kubbesinde on iki aydınlatma deliği bulunur. Sıcaklık 5,60 × 6,70 m ölçülerinde olup büyük kubbesinde ortada dairesel, çevrede altıgen aydınlık pencereleri vardır. Güneydeki su deposu tuğla örgülü beşik tonozla örtülüdür. Beden duvarları moloz taş, kubbe tuğladır.\n\nUzun süre harap kalan hamam, 2007’de Bursa Büyükşehir Belediyesi tarafından orijinal planlara sadık kalınarak yeniden inşa edilmiştir. Kitap bir önceki bölümde hamamın özgün haliyle ayakta kaldığını da belirtir; bu iki tanımın kapsamı açıklığa kavuşturulmamıştır. İhya sonrasında girişin soluna tuvaletler, sağına bireysel çalışma mekânı düzenlenmiş, geniş salonda güzel sanatlar faaliyetleri yapılmaya başlanmıştır. Eski sıcaklık mutfağa dönüştürülmüş, su deposu teknik özelliği olmayan bir iç hacim olarak kullanılmıştır. Yapı Yıldırım Belediyesi Kültür ve Sanat Merkezi olarak hizmet vermektedir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-hancerli-fatma-sultan-bath/bath-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-hancerli-fatma-sultan-bath/bath-aerial.jpg",
+      "alt": "Ağaçlık alan ve mezarlar arasında kiremit örtülü kubbeleri bulunan küçük hamam yapısının havadan görünümü",
+      "description": "Ağaçlık alan ve mezarlar arasında kiremit örtülü kubbeleri bulunan küçük hamam yapısının havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-hancerli-fatma-sultan-bath/restored-interior.jpg",
+      "alt": "Beyaz kemer ve kubbe geçişleri bulunan mermer döşeli odada masalar, sandalyeler ve kemerli bir kapı",
+      "description": "Beyaz kemer ve kubbe geçişleri bulunan mermer döşeli odada masalar, sandalyeler ve kemerli bir kapı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-hancerli-fatma-sultan-bath/bath-aerial.jpg",
+      "x": 44,
+      "y": 43,
+      "title": "Kubbe örtüsü",
+      "text": "Hamamda ılıklık ve sıcaklık bölümleri kubbelerle örtülüdür; kitap kubbenin tuğladan yapıldığını belirtir.",
+      "sourceId": "inv-p557"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-hancerli-fatma-sultan-bath/restored-interior.jpg",
+      "x": 47,
+      "y": 80,
+      "title": "Yeniden kullanılan iç mekân",
+      "text": "İhya sonrasında yapı kültür ve sanat merkezi olarak işlevlendirilmiştir.",
+      "sourceId": "inv-p558"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamamın diğer adı hangisidir?",
+      "options": [
+        "İncirli Hamamı",
+        "Hanzade Hamamı",
+        "Ördekli Hamamı",
+        "Horhor Hamamı"
+      ],
+      "correct": 1,
+      "description": "Hanzade Hamamı.",
+      "sourceId": "inv-p556"
+    },
+    {
+      "question": "Ilıklık kubbesinde kaç aydınlatma deliği vardır?",
+      "options": [
+        "Üç",
+        "Altı",
+        "Yirmi",
+        "On iki"
+      ],
+      "correct": 3,
+      "description": "On iki.",
+      "sourceId": "inv-p557"
+    },
+    {
+      "question": "Eski sıcaklık bölümü ihya sonrasında ne olarak kullanılmıştır?",
+      "options": [
+        "Mutfak",
+        "Kütüphane",
+        "Otopark",
+        "Mescit"
+      ],
+      "correct": 0,
+      "description": "Mutfak.",
+      "sourceId": "inv-p558"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p556",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hançerli Fatma Sultan (Hanzade) Hamamı\"",
+      "page": "556"
+    },
+    {
+      "id": "inv-p557",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hançerli Fatma Sultan (Hanzade) Hamamı\"",
+      "page": "557"
+    },
+    {
+      "id": "inv-p558",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hançerli Fatma Sultan (Hanzade) Hamamı\"",
+      "page": "558"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

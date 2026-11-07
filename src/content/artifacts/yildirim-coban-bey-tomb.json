@@ -1,0 +1,97 @@
+{
+  "id": "yildirim-coban-bey-tomb",
+  "name": "Çoban Bey Türbesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı kuruluş devri; kesin inşa tarihi kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Mollaarap’ta sekiz kabir içeren, moloz taş ve tuğla hatıllarla yapılmış türbedir.",
+  "history": "Mollaarap Mahallesi, 6. Park Sokak’taki türbe 8,30 × 8,45 m ölçülerindedir ve sekiz kabir içerir. Moloz taştan yapılmış, tuğla hatıllarla desteklenmiştir. Kaynaklarda Çoban Bey’e ait kubbeli, tonoz örtülü ve son cemaat revaklı bir mescitten de söz edilir; bu mescit günümüze ulaşmamış, yalnız türbe ayakta kalmıştır.\n\nKapısı ve pencereleri uzun yıllar örülü kalan bakımsız türbe, 1997’de onarılarak korumaya alınmıştır. Kitapta yeşilliklerle çevrili türbenin yanına kaybolan mescidin yeniden inşa edilmesi önerilir; bu, mevcut bir yapı olarak sunulmaz. Çoban Bey’in İznik’in Tabakhane mevkiinde de mescit yaptırdığı ve bu yapıya vakıflar bağladığı belirtilir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-coban-bey-tomb/tomb-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-coban-bey-tomb/tomb-exterior.jpg",
+      "alt": "Bahçe içinde taş duvarlı, duvar aralarında tuğla sıraları görülen, kırmızı örtülü türbe ve çevresindeki ağaçlar",
+      "description": "Bahçe içinde taş duvarlı, duvar aralarında tuğla sıraları görülen, kırmızı örtülü türbe ve çevresindeki ağaçlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-coban-bey-tomb/garden-view.jpg",
+      "alt": "Ağaçlık bahçede taş türbe, önünde tek bir mezar taşı, çimenlik alan ve banklar",
+      "description": "Ağaçlık bahçede taş türbe, önünde tek bir mezar taşı, çimenlik alan ve banklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-coban-bey-tomb/tomb-exterior.jpg",
+      "x": 48,
+      "y": 58,
+      "title": "Moloz taş duvar",
+      "text": "Türbenin duvarları moloz taşla inşa edilmiştir.",
+      "sourceId": "inv-p536"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-coban-bey-tomb/tomb-exterior.jpg",
+      "x": 54,
+      "y": 41,
+      "title": "Tuğla hatıllar",
+      "text": "Taş duvarlar tuğla hatıllarla desteklenmiştir.",
+      "sourceId": "inv-p536"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbede kaç kabir vardır?",
+      "options": [
+        "İki",
+        "Sekiz",
+        "Dört",
+        "On iki"
+      ],
+      "correct": 1,
+      "description": "Sekiz.",
+      "sourceId": "inv-p536"
+    },
+    {
+      "question": "Türbe hangi yıl onarılarak korumaya alınmıştır?",
+      "options": [
+        "1855",
+        "1949",
+        "2017",
+        "1997"
+      ],
+      "correct": 3,
+      "description": "1997.",
+      "sourceId": "inv-p536"
+    },
+    {
+      "question": "Çoban Bey’in yanındaki mescit için kitap ne söyler?",
+      "options": [
+        "Günümüze ulaşmamıştır",
+        "Halen medresedir",
+        "Yeni bir hamamdır",
+        "Köprü üzerindedir"
+      ],
+      "correct": 0,
+      "description": "Günümüze ulaşmamıştır.",
+      "sourceId": "inv-p536"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p536",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Çoban Bey Türbesi\"",
+      "page": "536"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

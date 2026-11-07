@@ -1,0 +1,109 @@
+{
+  "id": "yildirim-mahfel",
+  "name": "Mahfel",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · kesin tarih bilinmiyor; 1870’lerin sonlarında yapı kaydı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Setbaşı Köprüsü’nün bitimindeki Mahfel, Bursa’nın tarihî buluşma mekânlarından bir çay bahçesidir.",
+  "history": "Karaağaç Mahallesi, Namazgah Caddesi’nde, Setbaşı Köprüsü’nün bitimindedir. Mahfel sözcüğünün toplanılan yer anlamına geldiği belirtilir. Kitap, kesin inşa tarihinin bilinmediğini; 1862 Suphi Bey Haritası’nda alanın boş arsa ve bahçe olarak gösterildiğini, 1870’lerin sonlarında burada yapı bulunduğunu ve 1887 gezgin fotoğraflarında mekânın görüldüğünü kaydeder.\n\nİlk işletmenin Ermeni bir girişimcinin dört masalı Vorpahnam Gazinosu olduğu anlatılır. Başlangıçta yandan olan giriş yol genişletilince caddeye alınmıştır. Kitap bir yandan Kurtuluş Savaşı’na kadar gayrimüslim işletmesi olduğunu, öte yandan Türklerin yönetimine geçtikten sonra 12 Kasım 1913’te Türk Ocağı Merkezi olarak kullanıldığını söyler; bu kronoloji değiştirilmeden aktarılmıştır. İşgal sırasında iki yıldan fazla kapalı kalan Mahfel, Ekim 1922’de İsmet İnönü, Hamdullah Suphi, Muhittin Baha Pars ve Yahya Kemal’in katıldığı ziyarette yeniden açılmıştır. Atatürk’ün 1922 ve 1925 ziyaretlerinde uğradığı da kaydedilir.\n\nYeni alfabenin halka öğretilmesine ev sahipliği yapan mekân, savaş sonrasında Cumhuriyet Aile Çay Bahçesi; işletmecisi nedeniyle Rıdvan Bey’in Kahvesi adlarıyla da anılmıştır. 1932’de Halkevleri tarafından kullanılmış, 1950’lerde emekli subayların uğrak yeri olmasıyla Mahfel adı yaygınlaşmıştır. 1956’da İşçi Sigortaları Kurumu mülkiyetine geçmiş; 1967’de işletmeyi Osman Enver Özer devralmıştır.\n\n1980’de tescillenen yapı, 1984’te kar ve Ocak 1999’da yangın nedeniyle zarar görmüştür. 2007’de İl Özel İdaresi’ne, ardından yönetimi Burfaş’a devredilmiş; 2018’de özelleştirilmiştir. Kitap, Mahfel Lounge adıyla işletildiğini ve Bursalıların buluşma, sosyalleşme işlevini sürdürdüğünü belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-mahfel/tea-garden.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-mahfel/tea-garden.jpg",
+      "alt": "Ağaçların altında yuvarlak masalar ve sandalyeler, arkada geniş camlı kafe cephesi",
+      "description": "Ağaçların altında yuvarlak masalar ve sandalyeler, arkada geniş camlı kafe cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-mahfel/meeting-hall.jpg",
+      "alt": "Ahşap masa ve koltuklarla döşenmiş, sarı perdeli geniş pencereleri ve beyaz tavanı olan salon",
+      "description": "Ahşap masa ve koltuklarla döşenmiş, sarı perdeli geniş pencereleri ve beyaz tavanı olan salon",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-mahfel/street-facade.jpg",
+      "alt": "Sokak boyunca uzanan ahşap çerçeveli pencereli cephe, önünde büyük ağaç ve arkada minare",
+      "description": "Sokak boyunca uzanan ahşap çerçeveli pencereli cephe, önünde büyük ağaç ve arkada minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-mahfel/tea-garden.jpg",
+      "x": 50,
+      "y": 79,
+      "title": "Çay bahçesi",
+      "text": "Kitap Mahfel’i Bursa’da kuşakların hafızasında yer etmiş bir çay bahçesi olarak tanıtır.",
+      "sourceId": "inv-p569"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-mahfel/street-facade.jpg",
+      "x": 49,
+      "y": 55,
+      "title": "Tarihî buluşma yapısı",
+      "text": "Setbaşı Köprüsü’nün bitimindeki Mahfel, Osmanlı döneminden gelen sosyal işlevini sürdürür.",
+      "sourceId": "inv-p569"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mahfel kelimesi hangi anlama gelir?",
+      "options": [
+        "Su deposu",
+        "Toplanılan yer",
+        "Eğitim odası",
+        "Köprü kemeri"
+      ],
+      "correct": 1,
+      "description": "Toplanılan yer.",
+      "sourceId": "inv-p569"
+    },
+    {
+      "question": "Mahfel 1932’de hangi kurum tarafından kullanılmaya başlanmıştır?",
+      "options": [
+        "Vakıflar İdaresi",
+        "Çocuk Üniversitesi",
+        "Bursa Müze Müdürlüğü",
+        "Halkevleri"
+      ],
+      "correct": 3,
+      "description": "Halkevleri.",
+      "sourceId": "inv-p570"
+    },
+    {
+      "question": "Yapı hangi yıl tescil edilmiştir?",
+      "options": [
+        "1980",
+        "1531",
+        "1945",
+        "2007"
+      ],
+      "correct": 0,
+      "description": "1980.",
+      "sourceId": "inv-p570"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p569",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Mahfel\"",
+      "page": "569"
+    },
+    {
+      "id": "inv-p570",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Mahfel\"",
+      "page": "570"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

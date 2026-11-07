@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-pir-emir-mehmet-tomb",
+  "name": "Pir Emir (Pir Emir Mehmet) Türbesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · XVI. yüzyıl mimari özellikleri",
+  "endowment": "Molla Yegân ailesinden Eyyühüm Ahmed Efendi türbeyi inşa ettirmiştir",
+  "summary": "Piremir Mezarlığı’nda, Pir Emir Mehmed adına yapılmış sekizgen planlı ve kurşun kubbeli türbedir.",
+  "history": "Piremir Mahallesi’ndeki mezarlık içindedir. Aslen Buharalı Pir Emir Mehmed’in H. 900 / M. 1495 civarında Bursa’ya geldiği, Emîr Sultan’la akrabalık ileri sürerek dergâhta tasarruf yetkisi istediği, ancak talebinin kabul edilmediği kaynaklardan aktarılır. Yakın çevresinden Hoca Alizâde, Musa Baba mevkiinde onun adına mescit ve zaviye yaptırmıştır. Pir Emir burada irşat faaliyetini sürdürmüş ve vefatında buraya defnedilmiştir.\n\nVefatından sonra Molla Yegân ailesinden Eyyühüm Ahmed Efendi mescidi camiye dönüştürmüş ve kabir üzerine türbe yaptırmıştır. XVI. yüzyıl Osmanlı mimari özellikleri taşıyan yapı sekizgen planlıdır; tuğla hatıllı taş duvarları yaklaşık 0,70 m kalınlıktadır. Üzeri kurşun kaplı kubbeyle örtülü, saçakları üç sıra kirpi saçaklıdır.\n\nDoğu kapısı sivri kemerli alınlığa ve mermer sövelere sahiptir. Son restorasyonda alınlığa kitabe yerleştirilmiştir. Alt sırada yedi, üstte dört pencere bulunur. İçeride tek sanduka vardır; sonradan eklenen levhada Pir Emir Sultan Mehmed adı yazılıdır. Dışarıda tarihî mezar taşları arasında H. 1327 / M. 1911’de vefat ettiği belirtilen Şeyh Sâbit Efendi’nin taşı da sayılır. Türbe 1964’te Bursa Eski Eserleri Sevenler Kurumu tarafından restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-pir-emir-mehmet-tomb/tomb-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-pir-emir-mehmet-tomb/tomb-exterior.jpg",
+      "alt": "Mezar taşları ve ağaçlar arasında, taş ve tuğla sıralı duvarları olan çokgen türbe ve kurşun kaplı kubbesi",
+      "description": "Mezar taşları ve ağaçlar arasında, taş ve tuğla sıralı duvarları olan çokgen türbe ve kurşun kaplı kubbesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-pir-emir-mehmet-tomb/sarcophagus.jpg",
+      "alt": "Sarı-yeşil duvarlı iç mekânda yeşil örtülü tek sanduka, kubbe ve kemerli üst pencereler",
+      "description": "Sarı-yeşil duvarlı iç mekânda yeşil örtülü tek sanduka, kubbe ve kemerli üst pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-pir-emir-mehmet-tomb/tomb-exterior.jpg",
+      "x": 49,
+      "y": 31,
+      "title": "Kurşun kubbe",
+      "text": "Sekizgen türbenin kubbesi dıştan kurşunla kaplıdır.",
+      "sourceId": "inv-p540"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-pir-emir-mehmet-tomb/sarcophagus.jpg",
+      "x": 49,
+      "y": 74,
+      "title": "Tek sanduka",
+      "text": "Türbe içinde yalnız bir sanduka yer alır.",
+      "sourceId": "inv-p540"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe hangi plana sahiptir?",
+      "options": [
+        "Dairesel",
+        "Sekizgen",
+        "Üçgen",
+        "Haç biçimli"
+      ],
+      "correct": 1,
+      "description": "Sekizgen.",
+      "sourceId": "inv-p540"
+    },
+    {
+      "question": "İçeride kaç sanduka bulunur?",
+      "options": [
+        "Üç",
+        "Beş",
+        "Dokuz",
+        "Bir"
+      ],
+      "correct": 3,
+      "description": "Bir.",
+      "sourceId": "inv-p540"
+    },
+    {
+      "question": "Türbeyi 1964’te hangi kurum restore etmiştir?",
+      "options": [
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Türk Ocağı",
+        "Halkevleri",
+        "Yıldırım Çocuk Üniversitesi"
+      ],
+      "correct": 0,
+      "description": "Bursa Eski Eserleri Sevenler Kurumu.",
+      "sourceId": "inv-p540"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p539",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Pir Emir (Pir Emir Mehmet) Türbesi\"",
+      "page": "539"
+    },
+    {
+      "id": "inv-p540",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Pir Emir (Pir Emir Mehmet) Türbesi\"",
+      "page": "540"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

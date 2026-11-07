@@ -1,0 +1,102 @@
+{
+  "id": "yildirim-haci-husamettin-tomb",
+  "name": "Hacı Hüsamettin Türbesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 1042 / M. 1632 vefat kaydı",
+  "endowment": "Hacı Halilzâde Hüsâmeddin Efendi tarafından yaptırılmıştır",
+  "summary": "Hacı Hüsâmeddin Bursevî ve diğer şeyhlere ait sandukaların yer aldığı dikdörtgen planlı türbedir.",
+  "history": "Temenyeri Mahallesi, Köşk Caddesi, Hüsamettin Tekke Sokağı’nda bulunur. Semerkandiyye tarikatının Bursa’daki temsilcilerinden Hacı Halilzâde Hüsâmeddin Efendi burada zaviye, mescit ve türbe yaptırmıştır. Bursevî mahlasını kullanan Hüsâmeddin Efendi, H. 1042 / M. 1632’de vefat ederek kendi adına yaptırdığı türbeye defnedilmiştir.\n\n1972’de virane durumdaki yapı, 1974’te kapsamlı onarım görmüştür. Şeyhin büyük sandukasının sağında üç, ayakucunda beş sanduka yer alır. Hüsâmeddin Bursevî yanında Şeyh Abdülkadir, Şeyh Muhyiddin Bursevî, Şeyh Abdülaziz, Şeyh Mustafa, Şeyh Abdurrahman ve Şeyh İzzettin Efendi’nin medfun olduğu belirtilir. Kimliği bilinmeyen iki sandukanın aile fertlerine ait olabileceği düşünülür; bu kesin bir kimlik tespiti değildir.\n\nCamiyle benzer özelliklerdeki türbe dikdörtgen planlıdır. Eski hazireden bahçede birkaç kırık taş dışında iz kalmadığı; batıdaki avluda selvilerin altında kitabesiz kabirler bulunduğu aktarılır. Kitap, arka bahçenin Zikir Bahçesi adıyla anılmasını ve buradaki ağaç ve taşlarla ilgili anlatıları halk inanışı ve rivayet olarak kaydeder. Taştaki delikten cuma vakti su içmenin çarpıntıya iyi geldiği anlatısı da yalnız bir inanış olarak aktarılır; söz konusu taşın son restorasyonda hazire duvarının altında kaldığı belirtilir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-haci-husamettin-tomb/sarcophagi.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-haci-husamettin-tomb/sarcophagi.jpg",
+      "alt": "Ahşap tavanlı odada mavi ve mor örtülerle kaplı, üzerlerinde yazılar bulunan sandukalar",
+      "description": "Ahşap tavanlı odada mavi ve mor örtülerle kaplı, üzerlerinde yazılar bulunan sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-haci-husamettin-tomb/tomb-exterior.jpg",
+      "alt": "Kiremit çatılı, taş duvarlı ve koyu parmaklıklı pencereli dikdörtgen yapı; yanında daha yüksek çatı",
+      "description": "Kiremit çatılı, taş duvarlı ve koyu parmaklıklı pencereli dikdörtgen yapı; yanında daha yüksek çatı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-haci-husamettin-tomb/sarcophagi.jpg",
+      "x": 47,
+      "y": 77,
+      "title": "Sandukalar",
+      "text": "Türbede şeyhin sandukası ile sağında üç, ayakucunda beş sanduka bulunduğu belirtilir.",
+      "sourceId": "inv-p537"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-haci-husamettin-tomb/tomb-exterior.jpg",
+      "x": 45,
+      "y": 60,
+      "title": "Dikdörtgen türbe",
+      "text": "Türbe camiyle benzer mimari özellikler taşır ve dikdörtgen planlıdır.",
+      "sourceId": "inv-p538"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hüsâmeddin Efendi hangi mahlası kullanmıştır?",
+      "options": [
+        "Yegân",
+        "Bursevî",
+        "Fenârî",
+        "Safvet"
+      ],
+      "correct": 1,
+      "description": "Bursevî.",
+      "sourceId": "inv-p537"
+    },
+    {
+      "question": "Kapsamlı onarım hangi yıl yapılmıştır?",
+      "options": [
+        "1531",
+        "1852",
+        "2017",
+        "1974"
+      ],
+      "correct": 3,
+      "description": "1974.",
+      "sourceId": "inv-p537"
+    },
+    {
+      "question": "Türbenin planı nasıldır?",
+      "options": [
+        "Dikdörtgen",
+        "Sekizgen",
+        "Dairesel",
+        "Üçgen"
+      ],
+      "correct": 0,
+      "description": "Dikdörtgen.",
+      "sourceId": "inv-p538"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p537",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Hüsamettin Türbesi\"",
+      "page": "537"
+    },
+    {
+      "id": "inv-p538",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Hacı Hüsamettin Türbesi\"",
+      "page": "538"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

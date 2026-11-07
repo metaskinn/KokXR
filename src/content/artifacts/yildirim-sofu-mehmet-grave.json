@@ -1,0 +1,90 @@
+{
+  "id": "yildirim-sofu-mehmet-grave",
+  "name": "Sofu Mehmet Mezarı",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · mezar taşında H. 832 / M. 1429 kaydı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Caminin doğusunda yer alan açık mezar, kitapta Sûfî Mehmed adıyla tanıtılırken taş metninde Sofu Sinan adı aktarılır.",
+  "history": "Kitap, caminin doğusundaki türbeyi caminin banisi Sûfî Mehmed Efendi’ye ait olarak tanıtır. Halk arasında Et Dede diye bilindiğini, Emîr Sultan’ın hizmetkârlarından olduğu ve dergâha et taşıdığı için bu adla anıldığının rivayet edildiğini aktarır. Üstü açık türbe ile hazire, 2015’te kapsamlı bakım ve onarım görmüştür.\n\nBununla birlikte aynı sayfada verilen mezar taşı metninde Emîr Sultan’ın müritlerinden Sofu Sinan Efendi adı ve H. 832 / M. 1429 vefat tarihi yer alır. Kitabın girişindeki Sûfî Mehmed adı ile aktardığı taş metnindeki Sofu Sinan adı birlikte korunmuştur; bu iki adın aynı kişiyi gösterdiği yönünde ek bir yorum yapılmamıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-sofu-mehmet-grave/open-grave.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-sofu-mehmet-grave/open-grave.jpg",
+      "alt": "Taş duvarlarla çevrili açık alanda mermer kabir, önünde Sufi Mehmet Efendi yazılı levha ve üzerinde yazılı mezar taşı",
+      "description": "Taş duvarlarla çevrili açık alanda mermer kabir, önünde Sufi Mehmet Efendi yazılı levha ve üzerinde yazılı mezar taşı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-sofu-mehmet-grave/open-grave.jpg",
+      "x": 50,
+      "y": 70,
+      "title": "Üstü açık mezar",
+      "text": "Kitap türbenin üstü açık düzenlendiğini ve hazireyle birlikte 2015’te onarıldığını belirtir.",
+      "sourceId": "inv-p541"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-sofu-mehmet-grave/open-grave.jpg",
+      "x": 51,
+      "y": 44,
+      "title": "Mezar taşı",
+      "text": "Kitapta aktarılan taş metni Sofu Sinan adını kullanırken yapı Sûfî Mehmed adına tanıtılır.",
+      "sourceId": "inv-p541"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe caminin hangi yönündedir?",
+      "options": [
+        "Batısında",
+        "Doğusunda",
+        "Kuzeyinde",
+        "Güneyinde"
+      ],
+      "correct": 1,
+      "description": "Doğusunda.",
+      "sourceId": "inv-p541"
+    },
+    {
+      "question": "Türbe nasıl düzenlenmiştir?",
+      "options": [
+        "Kurşun kubbeli",
+        "Cam tavanlı",
+        "Beşik tonozlu",
+        "Üstü açık"
+      ],
+      "correct": 3,
+      "description": "Üstü açık.",
+      "sourceId": "inv-p541"
+    },
+    {
+      "question": "Türbe ve hazire hangi yıl bakım ve onarım görmüştür?",
+      "options": [
+        "2015",
+        "1945",
+        "1964",
+        "1997"
+      ],
+      "correct": 0,
+      "description": "2015.",
+      "sourceId": "inv-p541"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p541",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Sofu Mehmet Mezarı\"",
+      "page": "541"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

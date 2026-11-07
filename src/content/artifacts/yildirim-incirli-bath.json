@@ -1,0 +1,119 @@
+{
+  "id": "yildirim-incirli-bath",
+  "name": "İncirli Hamamı",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · 1488",
+  "endowment": "Kazasker Alâaddin Ali Çelebi (Mevlânâ Fenârî) tarafından inşa ettirilerek vakfedilmiştir",
+  "summary": "Alâaddin Ali Çelebi’nin 1488’de vakfettiği İncirli Hamamı, restorasyonla kültür merkezi olarak yeniden kullanılmıştır.",
+  "history": "Meydancık Mahallesi, İncirli Caddesi No: 34’tedir. Molla Şemseddin Fenârî’nin torunu ve Yusuf Bâlî Efendi’nin oğlu Kazasker Alâaddin Ali Çelebi tarafından 1488’de yaptırılıp vakfedilmiştir. Bursa’da başlayıp Herat, Semerkant ve Buhara’da süren eğitiminin ardından müderrislik ve kadılık yapan Ali Çelebi, Anadolu Kazaskerliğine yükselmiş; 1497’de vefat ederek Molla Fenârî Camii haziresine defnedilmiştir.\n\nTek hamam planındaki yapı yangın ve depremlerle zarar görmüş, onarımlarla kullanılmıştır. 1805’te kiraya verilmiş, 1942’ye kadar farklı işlevler ve son olarak tütün deposu olarak kullanılmıştır. Şerif Artış’ın 1942’de Vakıflar İdaresi’nden satın alması sonrası onarılarak 25 Nisan 1945’te açılmıştır. Bu sırada yapılan eklemeler planı kısmen değiştirmiştir. 1985’e kadar kadınlar hamamı olan yapı, ardından işlevsiz kalmıştır.\n\n2010’da Bursa Büyükşehir Belediyesi tarafından kamulaştırılmış, restorasyon sonrasında 2013’te kültür merkezi olarak açılmıştır. Doğusundaki iki katlı sivil mimarlık örneği de birlikte restore edilmiştir. Yaklaşık 410 m² taban alanlı hamamın duvarları iki sıra tuğla ve iki sıra moloz taşla almaşık örgülüdür. 14 × 14 m boyutlarındaki soğukluk, tromplarla sekizgen kasnağa geçilen kurşun kaplı büyük kubbeyle örtülüdür. Sivri kemerli giriş, üst pencereler ve kubbe tepesindeki fener bu bölümü tanımlar.\n\nKitap, ılıklık ve altıgen planlı sıcaklığı; eyvanları, halvetleri, dilimli kemerleri, fil gözleri ve aydınlık fenerleriyle ayrıntılı anlatır. Sıcaklığa bitişik su deposu beşik tonozludur. Doğudaki yapıyla bağlantı için cam ve ahşap bir koridor eklenmiştir. Kubbe kasnakları ve saçak altında testere dişi tuğla bezemeler, içte ise farklı bezemeli özgün kurnalar bulunur. Kitap yapının Vakıflar Genel Müdürlüğü mülkiyetinde kültür merkezi olarak işlev gördüğünü de belirtir; bu kayıt, önce aktarılan satın alma ve kamulaştırma bilgileriyle birlikte korunmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-incirli-bath/bath-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-incirli-bath/bath-exterior.jpg",
+      "alt": "Taş ve tuğla sıralı duvarların üstünde kurşun kaplı büyük ve küçük kubbeler, kubbelerin tepesinde fenerler",
+      "description": "Taş ve tuğla sıralı duvarların üstünde kurşun kaplı büyük ve küçük kubbeler, kubbelerin tepesinde fenerler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-incirli-bath/restored-hall.jpg",
+      "alt": "Mermer zeminli salonda uzun masa ve kırmızı sandalyeler; sivri ve dilimli kemerler, yukarıda ışık delikleri bulunan kubbe",
+      "description": "Mermer zeminli salonda uzun masa ve kırmızı sandalyeler; sivri ve dilimli kemerler, yukarıda ışık delikleri bulunan kubbe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-incirli-bath/dome-interior.jpg",
+      "alt": "Aşağıdan bakışta dalgalı iç içe bezeme halkaları bulunan kubbe ve içeri ışık veren yuvarlak açıklıklar",
+      "description": "Aşağıdan bakışta dalgalı iç içe bezeme halkaları bulunan kubbe ve içeri ışık veren yuvarlak açıklıklar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/yildirim-incirli-bath/bath-exterior.jpg",
+      "x": 36,
+      "y": 21,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Soğukluk bölümü, sekizgen kasnak üzerinde kurşun kaplı büyük bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p565"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/yildirim-incirli-bath/dome-interior.jpg",
+      "x": 51,
+      "y": 53,
+      "title": "Kubbe aydınlatması",
+      "text": "Hamamın kubbelerinde iç mekânı aydınlatan fener açıklıkları ve fil gözü pencereleri bulunur.",
+      "sourceId": "inv-p566"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam hangi yıl yaptırılmıştır?",
+      "options": [
+        "1442",
+        "1488",
+        "1531",
+        "1852"
+      ],
+      "correct": 1,
+      "description": "1488.",
+      "sourceId": "inv-p563"
+    },
+    {
+      "question": "Yapı son olarak hangi depo işlevinde kullanılmıştır?",
+      "options": [
+        "Tahıl deposu",
+        "Su deposu",
+        "Silah deposu",
+        "Tütün deposu"
+      ],
+      "correct": 3,
+      "description": "Tütün deposu.",
+      "sourceId": "inv-p564"
+    },
+    {
+      "question": "Kültür merkezi olarak hangi yıl açılmıştır?",
+      "options": [
+        "2013",
+        "1945",
+        "1985",
+        "2004"
+      ],
+      "correct": 0,
+      "description": "2013.",
+      "sourceId": "inv-p565"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p563",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"İncirli Hamamı\"",
+      "page": "563"
+    },
+    {
+      "id": "inv-p564",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"İncirli Hamamı\"",
+      "page": "564"
+    },
+    {
+      "id": "inv-p565",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"İncirli Hamamı\"",
+      "page": "565"
+    },
+    {
+      "id": "inv-p566",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"İncirli Hamamı\"",
+      "page": "566"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

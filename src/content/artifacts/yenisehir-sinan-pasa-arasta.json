@@ -1,0 +1,103 @@
+{
+  "id": "yenisehir-sinan-pasa-arasta",
+  "inventoryId": "yenisehir-sinan-pasa-kulliyesi-nde-arasta",
+  "name": "Sinan Paşa Külliyesi'nde Arasta",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Osmanlı · XVI. yüzyıl; külliye H. 980-990 / M. 1572-1582 arasında inşa edilmiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sinan Paşa Külliyesi'nin doğusuna bitişik inşa edilen; kazılarda karşılıklı dükkân sıralarının izleri bulunan ve bugün yalnızca bazı duvarları ayakta olan arasta.",
+  "history": "Arasta, Yenişehir ilçesi Ulucami Mahallesi'ndeki Sinan Paşa Külliyesi bünyesindedir. Sinan Paşa tarafından külliyenin doğu tarafına bitişik ve külliyeye bağlı bir birim olarak inşa edilen yapının yalnızca bazı duvarları günümüze ulaşmıştır. Kalan duvarlar, bölümün arasta olarak düzenlendiğine işaret eder; yapının batı duvarında üç dikdörtgen niş tespit edilmiştir.\n\nVarsayılan plan şemasına göre arasta, kuzeydoğuda, külliyenin ana girişi kabul edilen taç kapının iki yanında, kuzey-güney doğrultusunda uzanan tonoz örtülü birimlerden oluşur. Son yıllardaki kazılarda arastayı oluşturan dükkânların izlerine ulaşılmış, doğu ve batı yönlerinde yirmi yedişer birimin varlığı tespit edilmiştir. Bu birimler orta eksendeki geçiş aralığıyla kesintiye uğrar. Batıdaki açıklığın yakınında küçük bir su haznesi bulunur. Doğuda ise kare planlı büyük bir mekân ve onun doğusunda bir su haznesi vardır; kare planlı birimin güney duvarında sonradan örülerek kapatılmış bir kapı açıklığı görülür. Bu yönde külliyeye ait başka yapı birimlerinin bulunduğu anlaşılsa da işlevleri ve plan özellikleri henüz netlik kazanmamıştır; alanda bugün bazı konutlar vardır ve daha güneyde külliyeye ait pahlı bir duvar parçası hâlâ ayaktadır.\n\nDükkânların karşılıklı sıralanarak bir sokak oluşturması ve caminin ayrı bir avlu içinde yer alması, Sinan Paşa Külliyesi'nin arastalı külliyeler grubunda değerlendirilebileceğini gösterir. Bu gruptaki örneklerde külliye yapıları arasta ekseninde iki ayrı kütleye ayrılır ve kervansaray bağımsız bir yapı adasında yer alır. Sinan Paşa Külliyesi'nde de kervansaray arastanın doğusunda, külliyeden ayrı bir blokta bulunur; bugün arastanın doğusunda görülen kalıntıların bu kervansaraya ait olma ihtimali oldukça kuvvetlidir.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-sinan-pasa-arasta/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-sinan-pasa-arasta/aerial-view.jpg",
+      "alt": "Havadan görünüm: yeşillikli geniş bir alanda birbirine paralel uzanan alçak duvar kalıntıları; sağda kurşun kubbeli uzun yapı, önde sokak kenarında taş duvar ve kapı, arkada Yenişehir'in evleri",
+      "description": "Arasta kalıntılarının havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-sinan-pasa-arasta/shop-foundations.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: otlarla kaplı zeminde, yan yana sıralanmış dikdörtgen hücreleri oluşturan taş temel kalıntıları",
+      "description": "Dükkân temellerinin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "shop-rows",
+      "image": "/images/yenisehir-sinan-pasa-arasta/aerial-view.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Dükkân sıraları",
+      "text": "Kazılarda arastayı oluşturan dükkânların izlerine ulaşılmış; doğu ve batı yönlerinde yirmi yedişer birimin varlığı tespit edilmiştir.",
+      "sourceId": "inv-p367"
+    },
+    {
+      "id": "shop-cells",
+      "image": "/images/yenisehir-sinan-pasa-arasta/shop-foundations.jpg",
+      "x": 35,
+      "y": 48,
+      "title": "Dükkân izleri",
+      "text": "Dükkânların karşılıklı sıralanarak bir sokak oluşturması, külliyenin arastalı külliyeler grubunda değerlendirilebileceğini gösterir.",
+      "sourceId": "inv-p368"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kazılarda arastanın doğu ve batı yönlerinde kaçar birim tespit edilmiştir?",
+      "options": [
+        "On ikişer",
+        "Yirmi yedişer",
+        "Otuzar",
+        "Onar"
+      ],
+      "correct": 1,
+      "description": "Son yıllardaki kazılarda doğu ve batı yönlerinde yirmi yedişer birimin varlığı tespit edilmiştir.",
+      "sourceId": "inv-p367"
+    },
+    {
+      "question": "Arasta, külliyenin hangi tarafına bitişik olarak inşa edilmiştir?",
+      "options": [
+        "Batı",
+        "Güney",
+        "Doğu",
+        "Kuzeybatı"
+      ],
+      "correct": 2,
+      "description": "Arasta, Sinan Paşa tarafından külliyenin doğu tarafına bitişik olarak inşa edilmiştir.",
+      "sourceId": "inv-p367"
+    },
+    {
+      "question": "Arastanın batı duvarında kaç dikdörtgen niş tespit edilmiştir?",
+      "options": [
+        "Üç",
+        "Bir",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 0,
+      "description": "Yapının batı duvarında üç adet dikdörtgen niş tespit edilmiştir.",
+      "sourceId": "inv-p367"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p367",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Sinan Paşa Külliyesi’nde Arasta\"",
+      "page": "367"
+    },
+    {
+      "id": "inv-p368",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Sinan Paşa Külliyesi’nde Arasta\"",
+      "page": "368"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-orhan-bey-bath",
+  "name": "Orhan Bey Hamamı (Aynalı Çarşı)",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1340, Orhan Bey dönemi",
+  "endowment": "Orhan Gazi'nin H. Cemaziyelahir 761 / M. Nisan 1360 tarihli vakfiyesiyle Bıçakçılar Hamamı (Orhan Hamamı) Orhan Gazi İmareti'ne vakfedilmiştir",
+  "summary": "Orhan Bey Külliyesi'nin parçası olarak 1340'ta yapılan, bugün “Eski Aynalı Çarşı” olarak kullanılan ilk Osmanlı çifte hamamlarından biri.",
+  "history": "Orhan Bey Hamamı, Osmangazi İlçesi, Nalbantoğlu Mahallesi, Uzunçarşı Caddesi No: 5'te, Ulucami'nin kuzeyinde, Emir Hanı ile Kozahan arasında yer alır. Orhan Bey tarafından külliyesinin bir parçası olarak 1340'ta yaptırılmıştır. Çifte hamam olarak tasarlanan yapı; Orhan Bey, Bıçakçılar, Hallaçlar, Hatuniye Hamamı, Hamam Kahve ve Aynalı Çarşı gibi adlarla anılmıştır. Cami ile hamam arasında bırakılan geniş bahçelik alana 1505'te Koza Hanı yapılmıştır.\n\nHamam 1519'da onarılmış, 1573'te terk edilmiş, 1584 yangınında Emir Hanı ve Orhan Vakfı'na ait 35 dükkânla birlikte yanarak kapsamlı bir onarım görmüştür. 1628 tarihli bir kayda göre kahvehane olarak kullanılmaya başlanmış, 1678'de yeniden onarılmıştır. Uzun yıllar çarşı olarak bilinen yapının hamam olduğu, 1934'te Maarif Vekâleti'nin gönderdiği Yüksek Mimar Sedat Çetintaş'ın araştırmalarıyla anlaşılmıştır. Çifte hamam olduğu sonradan arşiv araştırmalarıyla ortaya çıkmış, 1943'te Çetintaş başkanlığında kadınlar bölümü de ayağa kaldırılmıştır.\n\nErkekler bölümü 1943'e kadar Gemlikli Nuri Paşa'nın mirasçılarına aitken Vakıflar Genel Müdürlüğü tarafından satın alınmış; kadınlar bölümü ise başından beri Vakıflar'ın mülkiyetindedir. 1958 Bursa Çarşısı yangınından sonra yapılan onarımla yapı kadınlar bölümüyle birlikte tamamen çarşıya dönüştürülmüş; su deposu dükkân yapılmış, külhan yıkılarak çarşının batı girişi açılmıştır.\n\nErkekler bölümü kare planlı soyunmalık, ılıklık ve dört halvet ile dört eyvanlı sıcaklıktan; kadınlar bölümü kare planlı soyunmalık, ılıklık ve iki halvetten oluşur. Beden duvarları kesme taş, kubbe kasnakları üç sıra tuğla ve bir sıra kesme taşla örülmüştür. Üç girişten yalnızca kuzeydeki özgündür. 11.95 × 11.86 m ölçülerindeki soğukluk bugün ağırlıklı olarak antika ve hediyelik eşya satılan dükkânlarla kullanılmaktadır. Kubbe ve tonozları kurşun kaplı olan yapı 2022-2023'te onarılmıştır; içinde bulunduğu Hanlar Bölgesi 2014'te UNESCO Dünya Mirası Alanı'na alınmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-orhan-bey-bath/north-entrance.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-orhan-bey-bath/north-entrance.jpg",
+      "alt": "Tuğla-taş almaşık duvarlı cephede yuvarlak kemerli giriş; kapı üstünde “Eski Aynalı Çarşı” yazısı, kemerin üstünde yuvarlak pencere ve üçgen alınlık",
+      "description": "Kuzeydeki ana giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/osmangazi-orhan-bey-bath/shops-interior.jpg",
+      "alt": "İç mekân: iki yanı camlı vitrinli antika ve hediyelik eşya dükkânlarıyla dizili taş döşemeli koridor",
+      "description": "Dükkânlara dönüşen iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/osmangazi-orhan-bey-bath/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: çatılar arasında iki büyük kurşun kubbe ve çok sayıda küçük kubbe",
+      "description": "Kubbelerin tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "round-window",
+      "image": "/images/osmangazi-orhan-bey-bath/north-entrance.jpg",
+      "x": 50,
+      "y": 27,
+      "title": "Yuvarlak pencere",
+      "text": "Kapının üzerinde, yan yana dizilmiş dikine tuğlalarla örülmüş yuvarlak bir pencere bulunur.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "id": "main-entrance",
+      "image": "/images/osmangazi-orhan-bey-bath/north-entrance.jpg",
+      "x": 50,
+      "y": 58,
+      "title": "Kuzey girişi",
+      "text": "Kuzeydeki yuvarlak kemerli giriş özgündür; üç sıra kırmızı ve beyaz tuğla ile bir sıra küfeki taşla örülmüştür.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "id": "shops",
+      "image": "/images/osmangazi-orhan-bey-bath/shops-interior.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Dükkânlar",
+      "text": "Hamam zamanla çarşıya dönüştürülmüş; iç mekân bugün ağırlıklı olarak antika ve hediyelik eşya satılan dükkânlarla kullanılmaktadır.",
+      "sourceId": "inv-p207"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapının aslında hamam olduğunu 1934'teki araştırmalarıyla kim tespit etmiştir?",
+      "options": [
+        "Léon Parvillée",
+        "Ahmed Vefik Paşa",
+        "Gemlikli Nuri Paşa",
+        "Mimar Sedat Çetintaş"
+      ],
+      "correct": 3,
+      "description": "Maarif Vekâleti'nin gönderdiği Yüksek Mimar Sedat Çetintaş'ın araştırmaları yapının hamam olduğunu ortaya koymuştur.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "question": "Hamamın hangi bölümü 1943'te ayağa kaldırılmıştır?",
+      "options": [
+        "Külhan",
+        "Kadınlar bölümü",
+        "Erkekler bölümü",
+        "Su deposu"
+      ],
+      "correct": 1,
+      "description": "1943'te Mimar Sedat Çetintaş başkanlığında hamamın kadınlar bölümü de ayağa kaldırılmıştır.",
+      "sourceId": "inv-p207"
+    },
+    {
+      "question": "Hamamın üç girişinden hangisi özgündür?",
+      "options": [
+        "Kuzeydeki",
+        "Güneydeki",
+        "Batıdaki",
+        "Doğudaki"
+      ],
+      "correct": 0,
+      "description": "Yapının kuzey, güney ve batıda üç girişi vardır; yalnızca kuzeydeki giriş özgündür.",
+      "sourceId": "inv-p207"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p207",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Orhan Bey Hamamı (Aynalı Çarşı)\"",
+      "page": "207-212"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Bursa Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

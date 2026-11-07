@@ -1,0 +1,146 @@
+{
+  "id": "yildirim-yesil-tomb",
+  "inventoryId": "yildirim-yesil-turbe",
+  "name": "Yeşil Türbe",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · giriş kitabesine göre Çelebi Mehmed H. Cemaziyelevvel 824 / M. Mayıs-Haziran 1421'de vefat etmiş; türbe onun ölümünden sonra tamamlanmıştır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Yeşil Külliyesi'nin banisi Çelebi Mehmed'in, firuze çinilerle kaplı sekizgen ve 25,5 m yüksekliğindeki anıt mezarı.",
+  "history": "Yeşil Türbe, Yeşil Külliyesi'nin bir parçası olarak caminin güneyinde, onunla karşılıklı konumda küçük bir tepe üzerindedir. Külliyenin banisi Çelebi Mehmed'e ait olan türbe, çini süslemeleriyle Bursa'nın simgesel yapılarından biri olmuş ve külliyeye \"Yeşil\" adının verilmesine de ilham kaynağı olmuştur. Fetret Devri'nde tahtta birliği yeniden sağlayan Çelebi Mehmed \"bani-i sânî\" yani ikinci kurucu olarak anılır. Edirne yakınlarında bir av sırasında hastalanıp vefat etmiş; ölümü kırk gün gizlenmiş, naaşı tahnit edilerek korunup Bursa'daki türbesine defnedilmiştir. Türbenin yerinin onun sağlığında belirlendiği, yapının ise vefatından sonra tamamlandığı kabul edilir. Doğu cephesinde, Anadolu Selçuklu kümbetlerinde görülen ve tahnit edilmiş cenazelerin korunduğu bir \"cenazelik\" bölümü vardır.\n\nTürbe sekizgen planlı, yüksek kasnaklı ve hafif sivri kubbelidir. Her kenarı 8,20 m olan gövde, Türk üçgenleriyle geçilen kasnak ve kubbesiyle 25,5 m yüksekliğe ulaşır; bu özelliğiyle Osmanlı türbelerinin en yükseğidir. Saçak silmesine kadar 13,83 m yükselen cephelerin tamamı firuze çinilerle kaplıdır. Pencereler iki sıradadır; alt pencerelerin üstündeki sivri kemerli çini alınlıklarda lacivert zemin üzerine beyaz sülüs hatla ayet ve hadisler yazılmıştır. Kuzey cephedeki taç kapının kitabesi türbenin Sultan Mehmed bin Bayezid Han'a ait olduğunu ve onun H. 824 Cemaziyelevvel ayında (M. Mayıs-Haziran 1421) vefat ettiğini bildirir.\n\nAhşap giriş kapısının kanatlarındaki oyma kitabeler, yapının Mimar Hacı İvaz Paşa'nın yönetiminde yapıldığını, ahşap işçiliğinin ise Hacı Ali bin Ahmed Tebrîzî'ye ait olduğunu gösterir. Yeşil Cami'de imzası bulunan kalemkâr Ali bin İlyas Ali ile çini ustası Mehmed el-Mecnûn'un burada da çalıştıkları güçlü biçimde düşünülür. İç mekânın duvarları 3,20 m yüksekliğe kadar altıgen firuze çinilerle kaplıdır; yapı toplam yirmi iki pencereyle aydınlanır. Güney duvarındaki çini mihrap, tacıyla birlikte 7 m yüksekliğe ulaşır.\n\nÇelebi Mehmed'in 2,77 m uzunluğundaki çinili sandukası türbenin tam ortasında, yüksek bir platform üzerindedir. Platformda oğulları Şehzade Mahmud, Mustafa ve Yusuf'a ait üç basit sanduka daha vardır. Ayakucunda kızları ile sütannesi Dâye Hatun'a ait beş sanduka sıralanır; bunlardan dördü çinili kaideler üzerindedir. Kuzey uçtaki alçı sanduka, kitabesine göre H. 15 Şevval 890 / M. 25 Ekim 1485'te vefat eden kızı Selçuk Hatun'a aittir. Türbe, kitaba göre 1941-1943 yılları arasında Mimar Macit Kural tarafından restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-yesil-tomb/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-yesil-tomb/aerial-view.jpg",
+      "alt": "Havadan görünüm: sağda firuze çinilerle kaplı sekizgen türbe ve kurşun kubbesi, solda ağaçlar arasında caminin kubbeleri; arkada Bursa ovası",
+      "description": "Türbenin cami ile birlikte havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yesil-tomb/facade-window.jpg",
+      "alt": "Firuze çinili cephede beyaz mermerden sivri kemer, içinde kafesli sivri kemerli pencere ve altında lacivert desenli çini pano",
+      "description": "Cephedeki sivri kemer ve pencere",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yesil-tomb/sultan-cenotaph.jpg",
+      "alt": "Firuze çinili duvarlar önünde, mavi-sarı çinilerle kaplı yüksek sanduka; üzerinde sarı harfli lacivert kitabe ve başucunda sarık; çevresinde diğer sandukalar",
+      "description": "Çelebi Mehmed'in çinili sandukası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-yesil-tomb/cenotaphs.jpg",
+      "alt": "Platform üzerinde yan yana dizilmiş, çinilerle kaplı sandukalar; arkada pencereler ve çini alınlıklar",
+      "description": "Platformdaki sandukalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "turquoise-body",
+      "image": "/images/yildirim-yesil-tomb/aerial-view.jpg",
+      "x": 76,
+      "y": 62,
+      "title": "Firuze çinili sekizgen gövde",
+      "text": "Saçak silmesine kadar 13,83 m yükselen cephelerin tamamı firuze renkli çinilerle kaplanmıştır.",
+      "sourceId": "inv-p392"
+    },
+    {
+      "id": "facade-arch",
+      "image": "/images/yildirim-yesil-tomb/facade-window.jpg",
+      "x": 50,
+      "y": 22,
+      "title": "Sivri kemerli cephe düzeni",
+      "text": "Her cephe dikdörtgen çerçeveler içinde düzenlenmiş, taç kapı hizasına denk gelen sivri kemerlerle kütlesel etki hafifletilmiştir.",
+      "sourceId": "inv-p392"
+    },
+    {
+      "id": "sultan-cenotaph",
+      "image": "/images/yildirim-yesil-tomb/sultan-cenotaph.jpg",
+      "x": 50,
+      "y": 72,
+      "title": "Çelebi Mehmed'in sandukası",
+      "text": "2,77 m uzunluğundaki çinili sanduka türbenin tam ortasında, yüksekçe bir platform üzerindedir.",
+      "sourceId": "inv-p402"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yeşil Türbe kubbesiyle birlikte kaç metre yüksekliğe ulaşır?",
+      "options": [
+        "13,83 m",
+        "18 m",
+        "25,5 m",
+        "32 m"
+      ],
+      "correct": 2,
+      "description": "Her kenarı 8,20 m olan sekizgen gövde, kubbesiyle birlikte 25,5 m yüksekliğe ulaşır ve Osmanlı türbelerinin en yükseğidir.",
+      "sourceId": "inv-p392"
+    },
+    {
+      "question": "Kapı kanatlarındaki kitabeye göre ahşap işçiliği kime aittir?",
+      "options": [
+        "Hacı Ali bin Ahmed Tebrîzî",
+        "Mehmed el-Mecnûn",
+        "Ali bin İlyas Ali",
+        "Macit Kural"
+      ],
+      "correct": 0,
+      "description": "Kapı kitabelerinin altında \"Amel-i Hacı Ali bin Ahmed-i Tebrîzî\" imzası yer alır.",
+      "sourceId": "inv-p398"
+    },
+    {
+      "question": "Kuzey uçtaki sade sanduka hangi malzemeden yapılmıştır?",
+      "options": [
+        "Mermer",
+        "Ahşap",
+        "Çini",
+        "Alçı"
+      ],
+      "correct": 3,
+      "description": "Diğerlerinden biçim ve malzeme yönünden ayrılan kuzey uçtaki sanduka alçıdandır ve Çelebi Mehmed'in kızı Selçuk Hatun'a aittir.",
+      "sourceId": "inv-p403"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p391",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeşil Türbe\"",
+      "page": "391"
+    },
+    {
+      "id": "inv-p392",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeşil Türbe\"",
+      "page": "392"
+    },
+    {
+      "id": "inv-p395",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeşil Türbe\"",
+      "page": "395"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeşil Türbe\"",
+      "page": "398"
+    },
+    {
+      "id": "inv-p402",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeşil Türbe\"",
+      "page": "402"
+    },
+    {
+      "id": "inv-p403",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Yeşil Türbe\"",
+      "page": "403"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

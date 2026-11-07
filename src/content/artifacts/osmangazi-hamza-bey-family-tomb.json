@@ -1,0 +1,113 @@
+{
+  "id": "osmangazi-hamza-bey-family-tomb",
+  "name": "Hamza Bey Ailesi Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · inşa tarihi kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hamza Bey Camii'nin batı köşesine bitişik, zikzak tuğla bezemeli cepheli, kare planlı ve kasnaksız kubbeli aile türbesi.",
+  "history": "Hamza Bey Ailesi Türbesi, Osmangazi İlçesi, Hamzabey Mahallesi, Kaplıca Caddesi No: 55'teki Hamza Bey Camii bahçesinde yer alır ve Hamza Bey Külliyesi'nin bir parçasıdır.\n\nCaminin batı köşesine bitişik olan türbe kare planlıdır ve pandantiflerle geçilen kasnaksız bir kubbeyle örtülüdür. Pencereler içeri doğru çekilmiş, kapı daha derinde tasarlanmıştır. Cephe, pencere kemerleri seviyesine kadar iki ve üç sıra tuğla ile bir sıra kaba yonu taştan örülmüş; bu seviyeden sonra birbirine çatılarak devam eden zikzak tuğlalarla süslenmiştir. Duvar kenarları kabartma çerçeveyle vurgulanmıştır. Pencerelerin yalnızca üst başlıklarına mermer konmuştur.\n\nKuzey cephedeki kapı ile iki yanındaki mermer söveli pencereler sivri kemerli alınlıklara sahiptir. Kapının üstünde yuvarlak kemerli, alçı şebekeli ve renkli camlı bir pencere vardır. Türbede üç sanduka bulunur; kitaba göre bunlardan biri Hamza Bey'in eşine, diğer ikisi kızlarına aittir. Türbe ve cami 2011'de Vakıflar Genel Müdürlüğü tarafından restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hamza-bey-family-tomb/north-facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hamza-bey-family-tomb/north-facade.jpg",
+      "alt": "Kare planlı türbenin kuzey cephesi: üst kısmı zikzak tuğla desenli, ortada yuvarlak kemerli renkli camlı pencere, altta sivri kemerli kapı ve iki yanında parmaklıklı pencereler",
+      "description": "Türbenin kuzey cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hamza-bey-family-tomb/facade-and-mosque.jpg",
+      "alt": "Zikzak tuğla desenli kare türbe; sağda caminin tuğla-taş almaşık duvarı, önde taş döşeli avlu",
+      "description": "Türbe ve bitişiğindeki cami duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hamza-bey-family-tomb/interior.jpg",
+      "alt": "İç mekân: ahşap kaide üzerinde kırmızı desenli örtülü üç sanduka ve önlerinde “Gazi Hamzabeyin Ailesi” yazılı levha",
+      "description": "Türbedeki üç sanduka",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "zigzag-brick",
+      "image": "/images/osmangazi-hamza-bey-family-tomb/north-facade.jpg",
+      "x": 30,
+      "y": 30,
+      "title": "Zikzak tuğla bezeme",
+      "text": "Pencere kemerleri seviyesinden sonra cephe, birbirine çatılarak devam eden zikzak tuğlalarla süslenmiştir.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "id": "upper-window",
+      "image": "/images/osmangazi-hamza-bey-family-tomb/north-facade.jpg",
+      "x": 51,
+      "y": 43,
+      "title": "Renkli camlı pencere",
+      "text": "Kapının üstünde yuvarlak kemerli, alçı şebekeli ve renkli camlı bir pencere bulunur.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "id": "door",
+      "image": "/images/osmangazi-hamza-bey-family-tomb/north-facade.jpg",
+      "x": 50,
+      "y": 75,
+      "title": "Kuzey kapısı",
+      "text": "Kuzey cephedeki kapı ile iki yanındaki mermer söveli pencereler sivri kemerli alınlıklara sahiptir.",
+      "sourceId": "inv-p186"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamza Bey Ailesi Türbesi nasıl bir kubbeyle örtülüdür?",
+      "options": [
+        "Yüksek sekizgen kasnaklı kubbe",
+        "Pandantiflerle geçilen kasnaksız kubbe",
+        "Altıgen kasnaklı kubbe",
+        "Tromplu kasnaklı kubbe"
+      ],
+      "correct": 1,
+      "description": "Kare planlı türbe, pandantiflerle geçişi sağlanan kasnaksız bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "question": "Türbenin kapısı hangi cephededir?",
+      "options": [
+        "Doğu",
+        "Batı",
+        "Güney",
+        "Kuzey"
+      ],
+      "correct": 3,
+      "description": "Kapı ve iki yanındaki mermer söveli pencereler kuzey cephede yer alır.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "question": "Türbede kaç sanduka bulunur?",
+      "options": [
+        "Üç",
+        "Bir",
+        "On üç",
+        "Beş"
+      ],
+      "correct": 0,
+      "description": "Türbede üç sanduka bulunmaktadır.",
+      "sourceId": "inv-p186"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p186",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Ailesi Türbesi\"",
+      "page": "186"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

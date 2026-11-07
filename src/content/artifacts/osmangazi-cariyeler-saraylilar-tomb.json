@@ -1,0 +1,107 @@
+{
+  "id": "osmangazi-cariyeler-saraylilar-tomb",
+  "inventoryId": "osmangazi-cariyeler-saraylilar-turbesi",
+  "name": "Cariyeler (Saraylılar) Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 16. yüzyıl ortaları (arşiv çalışmalarına göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "II. Murad Külliyesi'nde, Muradiye Camii'nin doğusunda, etrafı açık, baldaken planlı ve piramidal külahla örtülü türbe.",
+  "history": "Cariyeler (Saraylılar) Türbesi, Osmangazi İlçesi, Muradiye Mahallesi'nde, II. Murad Külliyesi bünyesinde yer alır. Muradiye türbeleri içinde etrafı açık olarak inşa edilen iki yapıdan biri olan türbe, Muradiye Camii'nin doğusundadır.\n\nBaldaken planlı türbe, her kenarı 6,65 m olan kare bir kaide üzerine oturan sekiz ayaktan oluşur. Kesme taş ve tuğla sıralarıyla örülen ayaklar \"L\" biçiminde tasarlanmış, birbirlerine sivri kemerler ve ahşap gergilerle bağlanmıştır. Üzeri piramidal külahla örtülü olan türbe, Muradiye Külliyesi içinde bu tür örtüye sahip tek yapıdır.\n\nKitabesi bulunmadığı için uzun yıllar kime ait olduğu belirlenemeyen türbe, adındaki çağrışım nedeniyle saraylı kadınlara atfedilmiştir. Son yıllardaki arşiv çalışmaları, burada Kanuni Sultan Süleyman'ın eşi Mâhidevran Hatun'un halaları Âkile Hatun ile Bosfor Belkıs Hatun'un medfun olduğunu ortaya koymuştur; bu iki hanımın Çerkes Bitu Mustafa Paşa'nın kız kardeşleri olduğu da tespit edilmiştir. Erken Osmanlı duvar örgüsü nedeniyle sanat tarihçilerince 15. yüzyıla tarihlendirilen türbenin, bu bilgiyle 16. yüzyıl ortalarına ait olduğu anlaşılmıştır.\n\n2013 restorasyonunda temel yalıtımı yapılmış, derzler ve ahşap gergiler yenilenmiş, iç mekân yeniden sıvanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-cariyeler-saraylilar-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-cariyeler-saraylilar-tomb/exterior.jpg",
+      "alt": "Ağaçlar arasında, taş ve tuğla sıralarıyla örülmüş, dört yanı sivri kemerlerle açık küçük türbe; üstte piramidal çatının ucu görünüyor",
+      "description": "Türbenin dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-cariyeler-saraylilar-tomb/interior.jpg",
+      "alt": "Türbenin içi: taş zemin üzerinde iki sade taş sanduka, öndekinin önünde 'Âkile Hanım' yazılı tabela; arkada sivri kemerli açıklıklar ve kemerleri birbirine bağlayan kırmızı ahşap gergiler",
+      "description": "Âkile Hatun'un sandukası ve ahşap gergiler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pyramidal-roof",
+      "image": "/images/osmangazi-cariyeler-saraylilar-tomb/exterior.jpg",
+      "x": 40,
+      "y": 18,
+      "title": "Piramidal külah",
+      "text": "Türbe, Muradiye Külliyesi içinde piramidal külahla örtülü tek yapıdır.",
+      "sourceId": "inv-p142"
+    },
+    {
+      "id": "pointed-arches",
+      "image": "/images/osmangazi-cariyeler-saraylilar-tomb/exterior.jpg",
+      "x": 45,
+      "y": 45,
+      "title": "Sivri kemerli ayaklar",
+      "text": "Kesme taş ve tuğla sıralarıyla örülen \"L\" biçimli ayaklar birbirine sivri kemerlerle bağlanır.",
+      "sourceId": "inv-p142"
+    },
+    {
+      "id": "timber-ties",
+      "image": "/images/osmangazi-cariyeler-saraylilar-tomb/interior.jpg",
+      "x": 28,
+      "y": 30,
+      "title": "Ahşap gergiler",
+      "text": "Ayaklar birbirine sivri kemerler ve ahşap gergilerle bağlanmıştır; gergiler 2013 restorasyonunda yenilenmiştir.",
+      "sourceId": "inv-p142"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbenin üst örtüsü nasıldır?",
+      "options": [
+        "Kurşun kaplı kubbe",
+        "Piramidal külah",
+        "Beşik tonoz",
+        "Düz ahşap tavan"
+      ],
+      "correct": 1,
+      "description": "Türbe piramidal külahla örtülüdür ve Muradiye Külliyesi'nde bu örtüye sahip tek yapıdır.",
+      "sourceId": "inv-p142"
+    },
+    {
+      "question": "Arşiv çalışmalarına göre türbede kimler medfundur?",
+      "options": [
+        "II. Murad'ın kızları",
+        "Fâtih Sultan Mehmed'in eşleri",
+        "II. Bayezid'in ebeleri",
+        "Âkile Hatun ve Bosfor Belkıs Hatun"
+      ],
+      "correct": 3,
+      "description": "Arşiv çalışmaları, türbede Mâhidevran Hatun'un halaları Âkile Hatun ile Bosfor Belkıs Hatun'un yattığını ortaya koymuştur.",
+      "sourceId": "inv-p142"
+    },
+    {
+      "question": "Baldaken planlı türbe kaç ayaktan oluşur?",
+      "options": [
+        "Dört",
+        "Altı",
+        "Sekiz",
+        "On iki"
+      ],
+      "correct": 2,
+      "description": "Türbe, her kenarı 6,65 m olan kare bir kaide üzerine oturan sekiz ayaktan oluşur.",
+      "sourceId": "inv-p142"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p142",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Cariyeler (Saraylılar) Türbesi\"",
+      "page": "142"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

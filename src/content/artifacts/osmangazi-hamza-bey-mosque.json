@@ -1,0 +1,120 @@
+{
+  "id": "osmangazi-hamza-bey-mosque",
+  "name": "Hamza Bey Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Fâtih Sultan Mehmed dönemi; Haziran 1614'te mescitten camiye dönüştürüldü",
+  "endowment": "Banisi “İzmir Fâtihi” lakaplı Hamza Bey",
+  "summary": "Hamza Bey Külliyesi'nin ana yapısı olan, mescit olarak inşa edilip 1614'te camiye dönüştürülen tabhaneli/zaviyeli plan şemasında bir cami.",
+  "history": "Hamza Bey Camii, Osmangazi İlçesi, Hamzabey Mahallesi, Kaplıca Caddesi No: 55'te bulunan Hamza Bey Külliyesi'nin ana yapısıdır. Külliye; cami, tabhaneler, medrese, imaret ve türbelerden oluşur. Belgelere göre camiye yakın konumlanan imaret tamamen yıkılmış, caminin kuzeydoğusundaki medrese de zamanla yok olmuştur.\n\nCami, I. Mehmed ve II. Murad'ın veziriazamı Bayezid Paşa'nın kardeşi olan, “İzmir Fâtihi” lakaplı Hamza Bey tarafından inşa edilmiştir. Aslen Arnavut olan Hamza Bey'in babasının adı Yahşi Bey'dir. 1417'de Venedikliler Çanakkale Boğazı'na girerek Lapseki'yi topa tuttuğunda karada 10.000'den fazla askerle onlara karşı mücadele etmiş, İstanbul'un fethi sırasında Baltaoğlu Süleyman Bey'in yerine donanma kumandanı olmuştur. H. 866 / M. 1462'de Fâtih Sultan Mehmed'in Eflak'a gönderdiği heyette yer alırken Voyvoda Vlad Tepeş (Kazıklı Voyvoda) tarafından öldürtülmüş, naaşı Bursa'daki türbesine defnedilmiştir.\n\nFâtih devrinde Bursa'da yapılan en büyük camilerden olan yapı ovaya hâkim konumdadır. Başlangıçta mescit olarak inşa edilmiş; Müslümanların cuma namazı için uzak yerlere gitmekte zorlanması üzerine, Şeyhülislamlık makamının izniyle Haziran 1614'te Kazasker Muallimzâde Ahmed Efendi tarafından minber eklenerek camiye dönüştürülmüştür.\n\nTabhaneli/zaviyeli plan şemasındaki cami; son cemaat mahalli, kubbeli iç avlu, iki yanındaki dikdörtgen planlı tabhaneler ve ana ibadet mekânından oluşur. Beş gözlü son cemaat yeri revakının orta kubbesi diğerlerinden büyük ve yüksektir. Cümle kapısının üzerinde celi sülüs hatla Fetih Suresi'nin birinci ayeti yazılıdır. “Hazırlık mekânı” da denilen iç avluyu 8.10 m çapında bir kubbe örter. Mihrap nişinin kavsarası altı sıra mukarnaslıdır. Tabhaneler muhtemelen II. Abdülhamid devrinde ara duvarları kaldırılarak camiye katılmış ve eyvana dönüştürülmüştür. Duvarlar üç sıra tuğla ve bir sıra moloz taşla örülmüştür.\n\nSon cemaat yeri ile doğu tabhane duvarının birleştiği yerdeki tek şerefeli minare orijinal değildir; kaidesi tuğla ve kesme taştan, gövdesi tuğladandır ve şerefenin altında iki sıra çini levha bulunur. Cami 1855 depreminde büyük zarar görmemiş; 1826 ve 1874'te onarılmış, ikinci onarımda cümle kapısının üzerine bir kitabe eklenmiştir. 1959-1962'de Bursa Eski Eser Sevenler Derneği, 1969'da Vakıflar Genel Müdürlüğü tarafından onarılan cami, en son 2011'de kapsamlı bir restorasyon geçirmiştir; bugün ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-hamza-bey-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-hamza-bey-mosque/exterior.jpg",
+      "alt": "Kırmızı tuğla ve taş almaşık duvarlı caminin kemerli son cemaat revakı; solda tuğla minarenin gövdesi, arkada kurşun kaplı kubbe",
+      "description": "Son cemaat yeri ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hamza-bey-mosque/aerial-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: ağaçlar arasında kurşun kubbeli cami, önünde sıralı küçük kubbeler ve bahçede sekizgen kubbeli türbeler",
+      "description": "Külliyenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hamza-bey-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: halı kaplı harim, karşıda mihrap, sağında ahşap minber; renkli camlı pencereler ve yuvarlak hat levhaları",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-hamza-bey-mosque/portal-inscription.jpg",
+      "alt": "Beyaz zemin üzerinde altın yaldızlı celi sülüs Arapça hat yazısı",
+      "description": "Cümle kapısı üzerindeki Fetih Suresi yazısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-hamza-bey-mosque/exterior.jpg",
+      "x": 13,
+      "y": 35,
+      "title": "Minare",
+      "text": "Son cemaat yeri ile doğu tabhane duvarının birleştiği yerdeki tek şerefeli minare orijinal değildir; gövdesi tuğladandır.",
+      "sourceId": "inv-p177"
+    },
+    {
+      "id": "narthex",
+      "image": "/images/osmangazi-hamza-bey-mosque/exterior.jpg",
+      "x": 55,
+      "y": 42,
+      "title": "Son cemaat yeri",
+      "text": "Beş gözlü son cemaat yeri revakının orta kubbesi diğerlerinden daha büyük ve yüksektir.",
+      "sourceId": "inv-p177"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-hamza-bey-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Geniş bir çerçeve içine alınan mihrap nişinin kavsarası altı sıra mukarnaslıdır.",
+      "sourceId": "inv-p177"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamza Bey hangi lakapla anılır?",
+      "options": [
+        "Bursa Fâtihi",
+        "İzmir Fâtihi",
+        "Kaptan-ı Derya",
+        "Eflak Beyi"
+      ],
+      "correct": 1,
+      "description": "Cami, Bayezid Paşa'nın kardeşi “İzmir Fâtihi” lakaplı Hamza Bey tarafından inşa edilmiştir.",
+      "sourceId": "inv-p177"
+    },
+    {
+      "question": "Yapı ne zaman mescitten camiye dönüştürülmüştür?",
+      "options": [
+        "1462",
+        "1855",
+        "1874",
+        "Haziran 1614"
+      ],
+      "correct": 3,
+      "description": "Şeyhülislamlık makamının izniyle Haziran 1614'te Kazasker Muallimzâde Ahmed Efendi minber ekleterek camiye dönüştürmüştür.",
+      "sourceId": "inv-p177"
+    },
+    {
+      "question": "Cümle kapısının üzerinde hangi sureden bir ayet yazılıdır?",
+      "options": [
+        "Fetih Suresi",
+        "İsrâ Suresi",
+        "Âl-i İmrân Suresi",
+        "Yâsin Suresi"
+      ],
+      "correct": 0,
+      "description": "Cümle kapısının üzerinde celi sülüs hatla Fetih Suresi'nin birinci ayeti yazılıdır.",
+      "sourceId": "inv-p177"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p177",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hamza Bey Camii\"",
+      "page": "177-183"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

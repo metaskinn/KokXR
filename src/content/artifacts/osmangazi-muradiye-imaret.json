@@ -1,0 +1,114 @@
+{
+  "id": "osmangazi-muradiye-imaret",
+  "inventoryId": "osmangazi-ii-murad-muradiye-imareti",
+  "name": "II. Murad (Muradiye) İmareti",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad; Muradiye Külliyesi ile birlikte 1425",
+  "endowment": "Banisi Sultan II. Murad",
+  "summary": "Muradiye Camii'nin kuzeydoğusunda, II. Murad'ın külliyeyle birlikte yaptırdığı, kırma ahşap çatılı dikdörtgen planlı imaret.",
+  "history": "II. Murad (Muradiye) İmareti, Sultan II. Murad Külliyesi'nin bir birimidir ve caminin yaklaşık yirmi metre kuzeydoğusunda yer alır. II. Murad tarafından Muradiye Külliyesi ile birlikte 1425 yılında inşa ettirilmiştir. Tam karşısındaki Muradiye Çarşısı'na ait dükkânlar günümüze ulaşmamıştır.\n\n13,00 × 40,00 m ölçülerindeki dikdörtgen planlı imaret, bir sıra moloz taş ve üç sıra tuğla ile örülmüştür. Kırma ahşap çatısı alaturka kiremitle kaplıdır. İçinde fırınlardan bazı izler ile tahıl ve yağ küpleri bulunur. İmaretin kiler, odun ambarı, un ambarı ve ahırlardan oluşan, yapının güneyine bitişik diğer bölümleri günümüze ulaşmamıştır.\n\nPencere alınlıklarındaki altıgen ve yıldız motifli tuğla süslemeler yapının öne çıkan özelliklerindendir. Giriş kapısının üzerinde baklava ve yıldız motifleri, giriş eyvanında ise çapraz işlemeler dikkat çeker.\n\nİmaret 1649, 1825 ve 1878'de onarılmış, sonraki yıllarda uzun süre depo olarak kullanılıp bakımsız kalmıştır. Aralık 1996'da restore edilen yapı, 2000'li yılların başından beri özel bir restoran işletmesi olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-muradiye-imaret/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-muradiye-imaret/exterior.jpg",
+      "alt": "Uzun, alçak taş ve tuğla örgülü yapı; kiremit kaplı çatı, demir parmaklıklı pencereler, ahşap kapı ve cephede restoran tabelası; önde desenli taş döşeme",
+      "description": "İmaretin dış cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-muradiye-imaret/aerial-view.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında kiremit kaplı kırma çatılı uzun taş yapı; arkada caminin kubbeleri ve minare, sağda apartmanlar",
+      "description": "İmaretin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-muradiye-imaret/interior.jpg",
+      "alt": "Restoran olarak düzenlenmiş iç mekân: kırmızı örtülü uzun masalar ve sandalyeler, ahşap tavan, duvarlarda çini desenli kuşaklar ve kemerli nişler",
+      "description": "Restoran olarak kullanılan iç mekân",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "tiled-roof",
+      "image": "/images/osmangazi-muradiye-imaret/exterior.jpg",
+      "x": 60,
+      "y": 20,
+      "title": "Kiremitli kırma çatı",
+      "text": "Kırma ahşap çatısı alaturka kiremitle kaplanmıştır.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-muradiye-imaret/exterior.jpg",
+      "x": 40,
+      "y": 58,
+      "title": "Taş ve tuğla duvarlar",
+      "text": "İmaret bir sıra moloz taş, üç sıra tuğla ile inşa edilmiştir.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "id": "plan",
+      "image": "/images/osmangazi-muradiye-imaret/aerial-view.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Dikdörtgen plan",
+      "text": "13,00 × 40,00 m ölçülerindeki imaret dikdörtgen plan şeması gösterir.",
+      "sourceId": "inv-p128"
+    }
+  ],
+  "test": [
+    {
+      "question": "İmaret Muradiye Camii'ne göre nerede yer alır?",
+      "options": [
+        "Batısında",
+        "Güneyinde",
+        "Kuzeydoğusunda",
+        "Türbelerin arasında"
+      ],
+      "correct": 2,
+      "description": "İmaret, caminin yirmi metre kadar kuzeydoğusunda yer almaktadır.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi imaretin içinde bugün de bulunan izlerden biridir?",
+      "options": [
+        "Tahıl ve yağ küpleri",
+        "Kubbeli şadırvan",
+        "Mermer mihrap",
+        "Ahşap minber"
+      ],
+      "correct": 0,
+      "description": "İmaretin içinde fırınlardan bazı izler, tahıl ve yağ küpleri bulunmaktadır.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "question": "Aralık 1996'da restore edilen imaret 2000'li yılların başından beri nasıl kullanılmaktadır?",
+      "options": [
+        "Müze",
+        "Kütüphane",
+        "Depo",
+        "Restoran"
+      ],
+      "correct": 3,
+      "description": "Restore edilen yapı, 2000'li yılların başından itibaren özel bir restoran işletmesi olarak kullanılmaktadır.",
+      "sourceId": "inv-p128"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p128",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"II. Murad (Muradiye) İmareti\"",
+      "page": "128"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

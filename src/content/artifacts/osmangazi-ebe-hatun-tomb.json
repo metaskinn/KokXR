@@ -1,0 +1,100 @@
+{
+  "id": "osmangazi-ebe-hatun-tomb",
+  "inventoryId": "osmangazi-ebe-hatun-turbesi",
+  "name": "Ebe Hatun Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Kitapta yapım tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "II. Murad Külliyesi'nde, geleneğe göre Fâtih Sultan Mehmed'in ebesi Gülbahar Hatun'a atfedilen, etrafı açık, baldaken planlı küçük türbe.",
+  "history": "Ebe Hatun Türbesi, Osmangazi İlçesi, Muradiye Mahallesi'nde, II. Murad Külliyesi bünyesinde yer alır. Gülbahar Hatun ya da Ebe Kadın Türbesi olarak da bilinen yapı, Muradiye türbeleri içinde etrafı açık olarak tasarlanmış baldaken planlı ikinci türbedir ve Fâtih Sultan Mehmed'in ebesi Gülbahar Hatun'a izafe edilir. Muradiye Camii haziresinin en batısında, hazireyi çevreleyen ihata duvarının yanındadır.\n\nKüçük ve sade bir yapı olan türbenin kenar uzunluğu 4,46 m'dir; zeminden yaklaşık bir metre yükselen bir kaide üzerine oturur. Kaidenin dört köşesindeki 0,78 × 0,78 m ölçülerinde dört ayak, sivri kemerlerle birbirine bağlanmıştır. Üzeri aslan göğüslerine oturan bir kubbeyle örtülüdür. Kaide tamamen kaba yontma taşla, ayaklar iki sıra tuğla ve bir sıra taşla, kemerler üç sıra tuğla ve bir sıra taşla örülmüştür. Ayakları birbirine bağlayan ahşap gergiler kemer üzengilerinin biraz altına yerleştirilmiştir. Türbe, Bursa'daki hanedan türbelerinin en mütevazı örneklerinden biri olarak bilinir.\n\nKaynaklarda Gülbahar adında yalnızca iki hanım geçer: biri Fâtih Sultan Mehmed'in, diğeri II. Bayezid'in eşidir. Ancak Fâtih'in eşi İstanbul'daki, II. Bayezid'in eşi Trabzon'daki türbesinde medfundur. Türbenin kitabesi olmadığından burada yatan kişinin kimliği kesin değildir; Fâtih'in ebesi olduğu görüşü zamanla gelenek hâline gelmiş bir inanıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-ebe-hatun-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-ebe-hatun-tomb/exterior.jpg",
+      "alt": "Taş döşeli avluda, yüksek taş bir kaide üzerinde, taş ve tuğla sıralarıyla örülmüş, dört yanı sivri kemerlerle açık küçük yapı; kemerler arasında ahşap gergiler, arkada kubbeli diğer türbeler",
+      "description": "Etrafı açık, baldaken planlı türbe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pointed-arch",
+      "image": "/images/osmangazi-ebe-hatun-tomb/exterior.jpg",
+      "x": 23,
+      "y": 34,
+      "title": "Sivri kemerler",
+      "text": "Kaidenin dört köşesindeki dört ayak sivri kemerlerle birbirine bağlanmıştır; kemerler üç sıra tuğla ve bir sıra taşla örülmüştür.",
+      "sourceId": "inv-p150"
+    },
+    {
+      "id": "timber-tie",
+      "image": "/images/osmangazi-ebe-hatun-tomb/exterior.jpg",
+      "x": 24,
+      "y": 52,
+      "title": "Ahşap gergiler",
+      "text": "Ayakları birbirine bağlayan ahşap gergiler, kemer üzengilerinin biraz altına yerleştirilmiştir.",
+      "sourceId": "inv-p150"
+    },
+    {
+      "id": "plinth",
+      "image": "/images/osmangazi-ebe-hatun-tomb/exterior.jpg",
+      "x": 29,
+      "y": 81,
+      "title": "Kaide",
+      "text": "Türbe zeminden yaklaşık bir metre yükselen, tamamen kaba yontma taştan bir kaide üzerine oturur.",
+      "sourceId": "inv-p150"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe geleneğe göre kime atfedilir?",
+      "options": [
+        "II. Murad'ın kızına",
+        "Fâtih Sultan Mehmed'in ebesi Gülbahar Hatun'a",
+        "II. Bayezid'in annesine",
+        "Kanuni'nin eşine"
+      ],
+      "correct": 1,
+      "description": "Yapı, Fâtih Sultan Mehmed'in ebesi Gülbahar Hatun'a izafe edilir; bu görüş zamanla gelenek hâline gelmiştir.",
+      "sourceId": "inv-p150"
+    },
+    {
+      "question": "Türbenin kaidesi hangi malzemeyle inşa edilmiştir?",
+      "options": [
+        "Kesme mermerle",
+        "Yalnızca tuğlayla",
+        "Kaba yontma taşla",
+        "Ahşapla"
+      ],
+      "correct": 2,
+      "description": "Ebe Hatun Türbesi'nin kaidesi tamamen kaba yontma taş kullanılarak inşa edilmiştir.",
+      "sourceId": "inv-p150"
+    },
+    {
+      "question": "Türbede yatan kişinin kimliği neden kesin olarak bilinmiyor?",
+      "options": [
+        "Sandukası taşındığı için",
+        "Kitabesi bulunmadığı için",
+        "Türbe yıkılıp yeniden yapıldığı için",
+        "Vakfiyesi kaybolduğu için"
+      ],
+      "correct": 1,
+      "description": "Türbenin kitabesi bulunmadığından burada medfun kişinin kimliği hakkında kesin bilgi yoktur.",
+      "sourceId": "inv-p150"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p150",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Ebe Hatun Türbesi\"",
+      "page": "150"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

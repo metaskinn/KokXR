@@ -1,0 +1,126 @@
+{
+  "id": "yenisehir-sinan-pasa-imaret",
+  "inventoryId": "yenisehir-sinan-pasa-kulliyesi-nde-imaret",
+  "name": "Sinan Paşa Külliyesi'nde İmaret",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Osmanlı · Kuruluşu H. Rebiyülahir 998 / M. Şubat 1590 tarihli vakfiyede yer alır",
+  "endowment": "Koca Sinan Paşa vakfiyesi",
+  "summary": "Sinan Paşa Külliyesi'nin kuzeyinde, L şeklinde dizilmiş sekiz kubbeli odadan oluşan ve vakfiyede en ayrıntılı anlatılan birim olan imaret.",
+  "history": "İmaret, Yenişehir ilçesi Ulucami Mahallesi'ndeki Sinan Paşa Külliyesi'nin bir birimi olarak inşa edilmiştir. Kuruluşuna ilişkin bilgiler H. Rebiyülahir 998 / M. Şubat 1590 tarihli vakfiyede açıkça yer alır. Vakfiyede en ayrıntılı tanımlanan birim imarettir; burada görevlendirilen personelin sayısı ve barınma ile iaşeye ilişkin hükümler dikkat çekici ayrıntılarla yazılmıştır.\n\nİmaretin işleyişi için bir şeyh (yönetici), vekilharç, kilerci, kâtip, ambar muhafızı, iki aşçı yardımcısı, iki ekmekçi, bulaşıkçı, buğdaycı, buğday ayıklayıcı, uncu, kalburcu, temizlikçi, kapıcı, et ve odun hamalı, iki suyolcu, bir çiftlik görevlisi ve bir usta görevlendirilmiştir.\n\nKülliyenin kuzeyindeki imaret, L şeklinde dizilmiş sekiz kubbeli odadan oluşur: doğu-batı doğrultusundaki uzun kolda altı, kuzey-güney doğrultusundaki kısa kolda iki kubbeli birim vardır. Batı uçtaki birimin ambar olarak kullanıldığı tahmin edilir. Bunun doğusunda bir kemerle birbirine bağlanan iki kubbeli mekânın yemekhane olduğu düşünülür; hemen yanındaki üç kubbeli bölüm mutfak olarak planlanmıştır. Mutfağın doğu ve batı duvarlarında dikdörtgen nişli, yuvarlak kemerli ve tuğla kubbeli ocaklar bulunur.\n\nKısa koldaki iki kubbeli birim dikdörtgen planlıdır; avluya bakan cephelerinde yuvarlak kemerli birer kapı ve sivri kemerli alınlıklı dikdörtgen pencereler, kuzey cephede ise dışa açılan birer pencere vardır. Kubbelere geçiş pandantiflerle sağlanır. Mutfak ile güneydoğu köşesindeki birimin kubbeleri aydınlık feneriyle donatılmıştır; kubbe kasnakları ve fenerler sekizgen planlıdır. Cephelerde olduğu gibi kasnak, baca ve fener yüzeylerinde de kirpi saçaklar kullanılarak mimari hareketlilik sağlanmıştır. Medreseyle birlikte restore edilen imaret bugün sağlam durumdadır.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-sinan-pasa-imaret/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-sinan-pasa-imaret/exterior.jpg",
+      "alt": "Taş ve tuğla örgülü, uzun bir yapının dış cephesi; üstte sıra hâlinde kurşun kubbeler, aralarında bacalar, bir kubbenin üzerinde pencereli küçük fener ve sağda yüksek kare bir kule; önde yeşillikli kalıntı alanı",
+      "description": "İmaretin uzun kolu ve kubbeleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-sinan-pasa-imaret/courtyard.jpg",
+      "alt": "Çimenli avlu ve kırmızı döşeli yol; sağda kemerli kapı ve pencereleri olan, kubbeli taş-tuğla yapı, ortada büyük bir çam ağacı",
+      "description": "Avludan imaret ve külliye yapıları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-sinan-pasa-imaret/corner.jpg",
+      "alt": "Taş ve tuğla örgülü bir yapının köşesi; duvardan basamaklı biçimde yükselen tuğla çıkıntı ve üstte kubbe ile saçak",
+      "description": "Yapının köşesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-sinan-pasa-imaret/interior.jpg",
+      "alt": "Beyaz iç mekân; tavanı taşıyan tuğla sivri kemerler, duvarlarda nişler, çevrede mavi-altın desenli minderlerle kurulmuş sedirler",
+      "description": "İmaretin iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "lantern",
+      "image": "/images/yenisehir-sinan-pasa-imaret/exterior.jpg",
+      "x": 41,
+      "y": 35,
+      "title": "Aydınlık feneri",
+      "text": "Mutfak ile güneydoğu köşesindeki birimin kubbeleri sekizgen planlı aydınlık fenerleriyle donatılmıştır.",
+      "sourceId": "inv-p365"
+    },
+    {
+      "id": "domes",
+      "image": "/images/yenisehir-sinan-pasa-imaret/exterior.jpg",
+      "x": 23,
+      "y": 42,
+      "title": "Kubbeli birimler",
+      "text": "İmaret, L şeklinde dizilmiş sekiz kubbeli odadan oluşur; kubbelere geçiş pandantiflerle sağlanır.",
+      "sourceId": "inv-p364"
+    },
+    {
+      "id": "chimney",
+      "image": "/images/yenisehir-sinan-pasa-imaret/exterior.jpg",
+      "x": 29,
+      "y": 43,
+      "title": "Baca",
+      "text": "Kasnak, baca ve fener yüzeylerinde kirpi saçaklar kullanılarak mimari hareketlilik sağlanmıştır.",
+      "sourceId": "inv-p365"
+    }
+  ],
+  "test": [
+    {
+      "question": "İmaret kaç kubbeli odadan oluşur?",
+      "options": [
+        "Altı",
+        "Sekiz",
+        "On iki",
+        "Dört"
+      ],
+      "correct": 1,
+      "description": "İmaret, L şeklinde dizilmiş sekiz kubbeli odadan oluşur.",
+      "sourceId": "inv-p364"
+    },
+    {
+      "question": "Batı uçtaki birimin hangi amaçla kullanıldığı tahmin edilmektedir?",
+      "options": [
+        "Ambar",
+        "Mutfak",
+        "Yemekhane",
+        "Fırın"
+      ],
+      "correct": 0,
+      "description": "Batı uçtaki birimin ambar olarak kullanıldığı tahmin edilmektedir.",
+      "sourceId": "inv-p364"
+    },
+    {
+      "question": "Mutfak bölümünün doğu ve batı duvarlarında ne bulunur?",
+      "options": [
+        "Çeşmeler",
+        "Çinili nişler",
+        "Kitabeler",
+        "Yuvarlak kemerli, tuğla kubbeli ocaklar"
+      ],
+      "correct": 3,
+      "description": "Mutfağın doğu ve batı duvarlarında dikdörtgen nişli, yuvarlak kemerli ve tuğla kubbeli ocaklar yer alır.",
+      "sourceId": "inv-p364"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p364",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Sinan Paşa Külliyesi’nde İmaret\"",
+      "page": "364"
+    },
+    {
+      "id": "inv-p365",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Sinan Paşa Külliyesi’nde İmaret\"",
+      "page": "365"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

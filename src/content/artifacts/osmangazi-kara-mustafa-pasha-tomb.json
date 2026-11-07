@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-kara-mustafa-pasha-tomb",
+  "name": "Kara Mustafa Paşa Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · inşa tarihi kitapta belirtilmemiştir; Kara Mustafa Paşa 1483'te idam edilmiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hamza Bey Camii avlusunun kuzey ucunda, Hamza Bey'in torunu Kara Mustafa Paşa'nın gömülü olduğu kare planlı kubbeli türbe.",
+  "history": "Kara Mustafa Paşa Türbesi, Hamza Bey Camii avlusunun kuzey ucunda yer alır ve Hamza Bey Külliyesi'nin bir parçasıdır.\n\nKara Mustafa Paşa, Yahşi Beyzade Hamza Bey'in torunu, Mehmet Bey'in oğludur. Fatih Sultan Mehmet'in takdirini kazanarak vezir olmuş, 1474'te azledilip Üsküdar'a yerleşmiştir. Sadrazam Mahmut Paşa'nın desteğiyle yeniden vezir olmuş, Gedik Ahmet Paşa ile anlaşmazlığı nedeniyle Bursa sancağına mutasarrıf olarak atanmıştır. 1483'te Cem Sultan Vakası sırasında Seyitgazi civarında idam edilmiş, naaşı Hamza Bey Camii avlusunda babasının yanındaki türbeye defnedilmiştir. Bilecik'in Pazaryeri kasabasında bir cami ve imaret yaptırmış, İstanbul'da Cibali Kapısı yakınında bir hamam inşa ettirmiştir.\n\nKare planlı türbe, sekizgen kasnağa oturan bir kubbeyle örtülüdür. Alt sırada yedi, üst sırada sekiz ve kasnakta dört pencereyle aydınlanır; alt sıradaki sekizinci pencere sonradan örülmüştür. Türbenin arkasında ana yapıyla aynı dönemde yapıldığı anlaşılan bir ekleme vardır. Türbede üç büyük, bir küçük ve bir Zeynî mezar taşı olmak üzere beş lahit bulunur; mermer lahitler Şehzade Mustafa ile Cem Sultan'ın lahitlerine benzer. Pencere kapakları özgündür, mihrabı sivri kemerlidir. Cami ve diğer türbelerde kare döşeme tuğlaları kullanılırken burada 25 cm'lik altıgen tuğlalar kullanılmıştır.\n\nTürbe 1962'de camiyle birlikte Bursa Eski Eserleri Sevenler Kurumu tarafından kapsamlı biçimde onarılmış, 2011'de Vakıflar Genel Müdürlüğü tarafından külliyenin tüm yapılarıyla birlikte restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-kara-mustafa-pasha-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-kara-mustafa-pasha-tomb/exterior.jpg",
+      "alt": "Yüksekten çekilmiş fotoğraf: ağaçlar arasında tuğla-taş almaşık duvarlı, kurşun kubbeli kare türbe; arkada yamaçtaki evler",
+      "description": "Türbenin dış görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-kara-mustafa-pasha-tomb/interior.jpg",
+      "alt": "İç mekân: altıgen tuğla döşemeli zeminde yan yana duran mermer lahitler, beyaz duvarlarda ahşap kapaklı pencereler",
+      "description": "Türbedeki mermer lahitler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-kara-mustafa-pasha-tomb/exterior.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Kubbe",
+      "text": "Kare planlı türbe, sekizgen kasnağa oturan bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/osmangazi-kara-mustafa-pasha-tomb/interior.jpg",
+      "x": 60,
+      "y": 60,
+      "title": "Mermer lahitler",
+      "text": "Türbede beş lahit bulunur; mermer lahitler Şehzade Mustafa ile Cem Sultan'ın lahitlerine benzer.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "id": "hexagonal-floor",
+      "image": "/images/osmangazi-kara-mustafa-pasha-tomb/interior.jpg",
+      "x": 20,
+      "y": 90,
+      "title": "Altıgen döşeme tuğlaları",
+      "text": "Cami ve diğer türbelerde kare tuğlalar varken burada 25 cm'lik altıgen döşeme tuğlaları kullanılmıştır.",
+      "sourceId": "inv-p188"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kara Mustafa Paşa'nın Hamza Bey ile akrabalığı nedir?",
+      "options": [
+        "Kardeşi",
+        "Oğlu",
+        "Torunu",
+        "Damadı"
+      ],
+      "correct": 2,
+      "description": "Kara Mustafa Paşa, Yahşi Beyzade Hamza Bey'in torunu ve Mehmet Bey'in oğludur.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "question": "Türbede toplam kaç lahit bulunur?",
+      "options": [
+        "Beş",
+        "Üç",
+        "Yedi",
+        "On iki"
+      ],
+      "correct": 0,
+      "description": "Üç büyük, bir küçük ve bir Zeynî mezar taşı olmak üzere toplam beş lahit bulunur.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "question": "Türbenin zemininde hangi döşeme tuğlaları kullanılmıştır?",
+      "options": [
+        "Kare tuğlalar",
+        "Sekizgen tuğlalar",
+        "Dikdörtgen tuğlalar",
+        "25 cm'lik altıgen tuğlalar"
+      ],
+      "correct": 3,
+      "description": "Cami ve diğer türbelerden farklı olarak burada 25 cm'lik altıgen tuğlalar kullanılmıştır.",
+      "sourceId": "inv-p188"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p188",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Kara Mustafa Paşa Türbesi\"",
+      "page": "188-189"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

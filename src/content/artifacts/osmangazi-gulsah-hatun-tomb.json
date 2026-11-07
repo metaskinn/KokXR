@@ -1,0 +1,119 @@
+{
+  "id": "osmangazi-gulsah-hatun-tomb",
+  "inventoryId": "osmangazi-gulsah-hatun-turbesi",
+  "name": "Gülşah Hatun Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1487",
+  "endowment": "Gülşah Hatun türbesini vefatından önce kendisi yaptırmıştır",
+  "summary": "II. Murad Külliyesi'nde, Fâtih Sultan Mehmed'in eşi Gülşah Hatun'un 1487'de yaptırdığı, revaklı ve kubbeli küçük türbe.",
+  "history": "Gülşah Hatun Türbesi, Osmangazi İlçesi, Muradiye Mahallesi'nde, II. Murad Külliyesi bünyesinde, türbeler topluluğunun güneybatısında yer alır. Küçük ve mütevazı yapı, Fâtih Sultan Mehmed'in eşi ve Şehzade Mustafa'nın annesi Gülşah Hatun tarafından vefatından önce, 1487'de yaptırılmıştır.\n\nKuzeyinde bir revak bulunan, taş ve tuğla sıralarıyla örülmüş kübik gövde, sekizgen kasnağa oturan bir kubbeyle örtülüdür. Gövdeden dışa uzanan revakın önünde sivri kemerli bir açıklık vardır ve bu açıklık düz bir silmeyle dikdörtgen bir çerçeveye alınmıştır. Revakın iki yan duvarında sivri kemerli ve beş satırlı iki niş yer alır. Beyaz mermerden basık kemerli kapının üstünde kırmızı tuğlalarla oluşturulmuş dokuz dilimli bir taç bulunur; kapı kündekâri tekniğiyle işlenmiştir.\n\nİç mekânda 4,76 × 4,76 m ölçülerindeki kare planlı yapının kubbe yuvarlağına üçgenli bir kuşakla geçilir; kasnak büyük tahribata uğramış, üzerindeki hatlar kaybolmuştur. İçi tamamen sıvanmış, pencere çerçeveleri yenilenmiş olduğundan eski mimari ve süsleme özellikleri görülemez. Türbe alt sırada altı, kasnakta dört olmak üzere on pencereyle aydınlanır; kapının iki yanında iki dolap vardır.\n\nDıştan iki sıra tuğla ve bir sıra taş örgülüdür. Düz atkılı, mermer söveli alt pencerelerin üstüne sivri kemerler yapılmış, içleri tuğla sıralarıyla doldurulmuştur. Tek sıra kirpi saçakla biten kübik gövdenin üstünde, yine taş ve tuğla sıralarıyla örülmüş sekizgen kasnak yükselir.\n\nYapının ilk onarımı 1524'te, son onarımı 1960'larda yapılmış; bu iki tamirat arasındaki müdahalelerle tüm kalem işleri ve diğer süslemeler yok olmuştur. İçerideki iki mermer mezardan birinin Gülşah Sultan'a ait olduğu bilinir; yanındaki sandukanın kime ait olduğu tespit edilememiştir. Türbe, külliyenin diğer birimleriyle birlikte 2012-2015 arasında restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-gulsah-hatun-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-gulsah-hatun-tomb/exterior.jpg",
+      "alt": "Ağaçlar arasında taş ve tuğla sıralarıyla örülmüş kübik türbe; önünde sivri kemerli açıklığı olan revak ve içinde beyaz mermer çerçeveli kapı, üstte sekizgen kasnak",
+      "description": "Revaklı cephe ve sekizgen kasnak",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gulsah-hatun-tomb/interior.jpg",
+      "alt": "Sade, beyaz sıvalı iç mekân: mermer kaide üzerinde iki beyaz mermer sanduka, duvarlarda ahşap çerçeveli pencereler ve kubbe eteğinde ince bir bordür",
+      "description": "İki mermer sanduka",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-gulsah-hatun-tomb/aerial-dome.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: ağaçlarla çevrili sekizgen kasnak üzerinde dilimli kurşun kaplı kubbe",
+      "description": "Kubbenin tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "portico",
+      "image": "/images/osmangazi-gulsah-hatun-tomb/exterior.jpg",
+      "x": 67,
+      "y": 57,
+      "title": "Revak",
+      "text": "Gövdeden dışa uzanan revakın önünde sivri kemerli bir açıklık vardır; açıklık düz bir silmeyle dikdörtgen çerçeveye alınmıştır.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "id": "marble-door",
+      "image": "/images/osmangazi-gulsah-hatun-tomb/exterior.jpg",
+      "x": 67,
+      "y": 79,
+      "title": "Mermer kapı",
+      "text": "Beyaz mermerden basık kemerli kapının üstünde kırmızı tuğlalı dokuz dilimli bir taç bulunur; kapı kündekâri tekniğiyle işlenmiştir.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "id": "two-tombs",
+      "image": "/images/osmangazi-gulsah-hatun-tomb/interior.jpg",
+      "x": 52,
+      "y": 65,
+      "title": "İki mermer mezar",
+      "text": "İki mermer mezardan birinin Gülşah Sultan'a ait olduğu bilinir; yanındaki sandukanın kime ait olduğu tespit edilememiştir.",
+      "sourceId": "inv-p155"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gülşah Hatun kimin eşidir?",
+      "options": [
+        "Fâtih Sultan Mehmed",
+        "II. Murad",
+        "II. Bayezid",
+        "Kanuni Sultan Süleyman"
+      ],
+      "correct": 0,
+      "description": "Gülşah Hatun, Fâtih Sultan Mehmed'in eşi ve Şehzade Mustafa'nın annesidir.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "question": "Türbe hangi yıl inşa ettirilmiştir?",
+      "options": [
+        "1449",
+        "1527",
+        "1487",
+        "1513"
+      ],
+      "correct": 2,
+      "description": "Türbe, Gülşah Hatun tarafından vefatından önce 1487'de yaptırılmıştır.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "question": "Türbenin kalem işi süslemeleri neden günümüze ulaşmamıştır?",
+      "options": [
+        "Deprem sonucu yıkıldığı için",
+        "1524 ile 1960'lar arasındaki onarımlardaki müdahaleler yüzünden",
+        "Hiç kalem işi yapılmadığı için",
+        "Yangında yandığı için"
+      ],
+      "correct": 1,
+      "description": "1524'teki ilk ve 1960'lardaki son onarım arasındaki müdahalelerle tüm kalem işleri yok olmuştur.",
+      "sourceId": "inv-p155"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p154",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Gülşah Hatun Türbesi\"",
+      "page": "154"
+    },
+    {
+      "id": "inv-p155",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Gülşah Hatun Türbesi\"",
+      "page": "155"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

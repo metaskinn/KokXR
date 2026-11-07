@@ -1,0 +1,100 @@
+{
+  "id": "osmangazi-muradiye-fountain",
+  "inventoryId": "osmangazi-muradiye-cesmesi",
+  "name": "Muradiye Çeşmesi (Sıbyan Mektebi Çeşmesi)",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Erken Osmanlı Dönemi; külliyenin inşa edildiği dönemle eş zamanlı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Muradiye Külliyesi'nin batı ucunda, tamamı tuğladan örülmüş, sivri kemerli nişli Erken Osmanlı çeşmesi.",
+  "history": "Muradiye Külliyesi'ne ait çeşmeler, Osmangazi ilçesi, Muradiye Mahallesi, II. Murad Caddesi'nde, külliyenin farklı noktalarına dağılmış su yapılarıdır. Bunlar içinde yalnızca Sıbyan Mektebi (Medrese) Çeşmesi vakıf eseri niteliği taşır.\n\nKülliyenin batı ucundaki Sıbyan Mektebi Çeşmesi, Erken Osmanlı dönemi çeşme formunun tipik örneklerindendir. Kitabe yeri belirlenmiş olsa da kitabe günümüze ulaşmamıştır. Duvar örgüsü, çeşmenin külliyenin inşa edildiği dönemle eş zamanlı yapıldığını gösterir.\n\nTamamı tuğla ile örülen çeşme, dikdörtgen çerçeveli ve sivri kemerli bir nişe sahiptir. Nişin çevresi zikzak tuğlalarla tamamlanarak dikdörtgen bir form oluşturulmuştur; tuğlaların farklı şekiller oluşturacak biçimde dizilmesi, erken Osmanlı mimarisinde sık görülen bir tekniktir. Üstte iki sıra kirpi saçak bulunur ve yapı kiremitle sonlanır. Nişin içindeki ayna taşı yatay ve dikey tuğlalarla örülmüş, üzerine iki tas yuvası yerleştirilmiştir. Küfeki taşından yapılan su teknesi 1.30 × 0.43 m ölçülerindedir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-muradiye-fountain/fountain.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-muradiye-fountain/fountain.jpg",
+      "alt": "Sokak kenarında tamamı tuğla örgülü küçük çeşme; geometrik desenli tuğla yüzey içinde sivri kemerli niş, nişte musluk ve altında taş su teknesi, üstte kirpi saçak; arkada ağaç",
+      "description": "Sıbyan Mektebi Çeşmesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "niche",
+      "image": "/images/osmangazi-muradiye-fountain/fountain.jpg",
+      "x": 52,
+      "y": 42,
+      "title": "Sivri kemerli niş",
+      "text": "Tamamı tuğla ile örülen çeşme, dikdörtgen çerçeveli ve sivri kemerli bir nişe sahiptir.",
+      "sourceId": "inv-p127"
+    },
+    {
+      "id": "trough",
+      "image": "/images/osmangazi-muradiye-fountain/fountain.jpg",
+      "x": 52,
+      "y": 63,
+      "title": "Su teknesi",
+      "text": "Su teknesi küfeki taşından yapılmış olup 1.30 × 0.43 m ölçülerindedir.",
+      "sourceId": "inv-p127"
+    },
+    {
+      "id": "eaves",
+      "image": "/images/osmangazi-muradiye-fountain/fountain.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Kirpi saçak",
+      "text": "Çeşmenin üst kısmında iki sıra kirpi saçak yer alır ve yapı kiremitle sonlanır.",
+      "sourceId": "inv-p127"
+    }
+  ],
+  "test": [
+    {
+      "question": "Muradiye Külliyesi çeşmelerinden hangisi vakıf eseri niteliği taşır?",
+      "options": [
+        "Cami avlusundaki şadırvan",
+        "Türbeler bahçesindeki çeşme",
+        "Sıbyan Mektebi (Medrese) Çeşmesi",
+        "Hamam önündeki çeşme"
+      ],
+      "correct": 2,
+      "description": "Külliyenin çeşmeleri içinde yalnızca Sıbyan Mektebi (Medrese) Çeşmesi vakıf eseri niteliği taşır.",
+      "sourceId": "inv-p127"
+    },
+    {
+      "question": "Çeşmenin su teknesi hangi taştan yapılmıştır?",
+      "options": [
+        "Mermer",
+        "Küfeki taşı",
+        "Granit",
+        "Bazalt"
+      ],
+      "correct": 1,
+      "description": "Su teknesi küfeki taşından yapılmış olup 1.30 × 0.43 m ölçülerindedir.",
+      "sourceId": "inv-p127"
+    },
+    {
+      "question": "Çeşmenin kitabesi hakkında hangisi doğrudur?",
+      "options": [
+        "Kitabe yeri belirlenmiş ama kitabe günümüze ulaşmamıştır",
+        "Kitabesi müzede sergilenmektedir",
+        "Kitabesi sülüs hatla yazılmıştır",
+        "Kitabesi 1904 tarihlidir"
+      ],
+      "correct": 0,
+      "description": "Kitabe yeri belirlenmiş olmasına rağmen kitabe günümüze ulaşmamıştır.",
+      "sourceId": "inv-p127"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p127",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Muradiye Çeşmesi\"",
+      "page": "127"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

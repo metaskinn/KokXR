@@ -1,0 +1,119 @@
+{
+  "id": "osmangazi-sehzade-mustafa-tomb",
+  "inventoryId": "osmangazi-sehzade-mustafa-turbesi",
+  "name": "Şehzade Mustafa Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 981 / M. 1573",
+  "endowment": "II. Selim'in emriyle yaptırılmıştır",
+  "summary": "Muradiye türbeleri arasında, Kanuni'nin oğlu Şehzade Mustafa için II. Selim'in yaptırdığı, içi 16. yüzyıl İznik çinileriyle kaplı sekizgen türbe.",
+  "history": "Şehzade Mustafa Türbesi, Osmangazi İlçesi, Muradiye Mahallesi, Sedat Sokak No: 1/6'da, Muradiye türbeleri arasında yer alır.\n\nKanuni Sultan Süleyman'ın oğlu Şehzade Mustafa, H. 960 / M. 1553'te Konya Ereğlisi'nde bir komploya kurban gitmiştir. Naaşı Bursa'ya getirilerek önce başka bir yere defnedilmiş, yaklaşık yirmi yıl sonra, H. 981 / M. 1573'te üvey kardeşi II. Selim'in bu türbeyi yaptırmasıyla yeni kabrine nakledilmiştir.\n\nKapıdaki iki satırlık ta'lik mermer kitabe, türbenin Süleyman oğlu Selim Han'ın emriyle yapıldığını ve cennet misali bir bina olduğunu söyler; Edâyî'nin düşürdüğü tarih mısraı \"Merkad-i gülzâr-ı Sultan Mustafa\" (Sultan Mustafa'nın kabri gül bahçesidir) H. 981 / M. 1573'ü verir.\n\nTürbenin mimarı, Dergâh-ı Âlî çavuşlarından Mehmed Çavuş'tur; bu görev ona Hassa Başmimarı Mimar Sinan'ın tavsiyesiyle verilmiştir. Mehmed Çavuş ilerleyen yıllarda başmimarlığa yükselmiş, Sultanahmet Camii ve Külliyesi'ni inşa etmiş ve \"Sedefkâr Mehmed Ağa\" olarak tanınmıştır.\n\nBir sıra kesme taş ve üç sıra tuğlayla yapılan bina sekizgen planlıdır ve kubbeyle örtülüdür. İnşasında Bursa Sarayı'ndan alınma mermer levha ve sütunlar gibi devşirme malzemeler kullanılmıştır. Duvarların yerden 3 m'ye kadar olan kısmı on iki köşelidir ve tamamen 16. yüzyılın natüralist üsluptaki İznik çinileriyle kaplıdır; üst kısım muntazam bir sekizgene dönüşür. Çininin bittiği yerde sülüs hatla Âyetü'l-kürsî, Haşr suresinden bölümler ve Esmâ-i hüsnâ yazılıdır. Mekân, yedisi altta mermer söveli, yedisi üstte sivri kemerli on dört pencereyle aydınlanır.\n\nDört sandukadan üçü Şehzade Mustafa, annesi Mâhidevran Hatun ve Şehzade Bayezid'in oğlu Ahmet'e aittir; dördüncüsünün Şehzade Bayezid'in diğer oğlu Orhan'a ait olduğu düşünülmektedir. Türbe 2014-2015'te kapsamlı bir restorasyondan geçmiştir ve ziyarete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sehzade-mustafa-tomb/interior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sehzade-mustafa-tomb/interior.jpg",
+      "alt": "İç mekân: ahşap korkulukla çevrili, kırmızı ve sırma işlemeli örtülü sandukalar; duvarlarda mavi-beyaz desenli İznik çinileri, üstte servi motifli kalem işleri ve kemerli pencereler",
+      "description": "Sandukalar ve İznik çinileri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sehzade-mustafa-tomb/inscription.jpg",
+      "alt": "Taş cephede mermer çerçeve içinde dikdörtgen kitabe: koyu zemin üzerinde altın yaldızlı ta'lik yazılar dört kartuşta, iki satır hâlinde; altında kapının basık kemeri",
+      "description": "Kapı üzerindeki ta'lik kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sehzade-mustafa-tomb/wall-decoration.jpg",
+      "alt": "Çini kaplamanın üstündeki duvar: sivri kemerli nişler içinde şebekeli pencereler ve iki yanında mavi servi motifleri, kemerlerden sarkan kandil biçimli süslemeler",
+      "description": "Üst duvarlardaki kalem işleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "iznik-tiles",
+      "image": "/images/osmangazi-sehzade-mustafa-tomb/interior.jpg",
+      "x": 19,
+      "y": 55,
+      "title": "İznik çinileri",
+      "text": "Duvarların yerden 3 m'ye kadar olan kısmı tamamen 16. yüzyılın natüralist üsluptaki İznik çinileriyle kaplıdır.",
+      "sourceId": "inv-p168"
+    },
+    {
+      "id": "sarcophagi",
+      "image": "/images/osmangazi-sehzade-mustafa-tomb/interior.jpg",
+      "x": 62,
+      "y": 62,
+      "title": "Sandukalar",
+      "text": "Dört sandukadan üçü Şehzade Mustafa, annesi Mâhidevran Hatun ve Şehzade Bayezid'in oğlu Ahmet'e aittir.",
+      "sourceId": "inv-p168"
+    },
+    {
+      "id": "talik-inscription",
+      "image": "/images/osmangazi-sehzade-mustafa-tomb/inscription.jpg",
+      "x": 50,
+      "y": 36,
+      "title": "Kapı kitabesi",
+      "text": "Kapıdaki iki satırlık ta'lik mermer kitabe, türbenin Süleyman oğlu Selim Han'ın emriyle yapıldığını bildirir; tarih H. 981 / M. 1573'tür.",
+      "sourceId": "inv-p167"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbeyi kim yaptırmıştır?",
+      "options": [
+        "Kanuni Sultan Süleyman",
+        "Mâhidevran Hatun",
+        "II. Selim",
+        "III. Murad"
+      ],
+      "correct": 2,
+      "description": "Şehzade Mustafa'nın naaşı, H. 981 / M. 1573'te üvey kardeşi II. Selim'in bu türbeyi yaptırmasıyla yeni kabrine nakledilmiştir.",
+      "sourceId": "inv-p167"
+    },
+    {
+      "question": "Türbenin mimarı Mehmed Çavuş sonradan hangi adla tanınmıştır?",
+      "options": [
+        "Mimar Kasım",
+        "Davud Ağa",
+        "Mimar Hayreddin",
+        "Sedefkâr Mehmed Ağa"
+      ],
+      "correct": 3,
+      "description": "Mehmed Çavuş başmimarlığa yükselmiş, Sultanahmet Camii'ni yapmış ve \"Sedefkâr Mehmed Ağa\" olarak tanınmıştır.",
+      "sourceId": "inv-p168"
+    },
+    {
+      "question": "İnşaatta devşirme malzeme nereden alınmıştır?",
+      "options": [
+        "Bursa Sarayı'ndan",
+        "Ulu Cami'den",
+        "İznik surlarından",
+        "Yıldırım Külliyesi'nden"
+      ],
+      "correct": 0,
+      "description": "İnşasında Bursa Sarayı'ndan alınma mermer levha ve sütunlar gibi devşirme malzemeler kullanılmıştır.",
+      "sourceId": "inv-p168"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p167",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehzade Mustafa Türbesi\"",
+      "page": "167"
+    },
+    {
+      "id": "inv-p168",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehzade Mustafa Türbesi\"",
+      "page": "168"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

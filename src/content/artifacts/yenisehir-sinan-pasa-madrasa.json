@@ -1,0 +1,119 @@
+{
+  "id": "yenisehir-sinan-pasa-madrasa",
+  "inventoryId": "yenisehir-sinan-pasa-kulliyesi-nde-medrese",
+  "name": "Sinan Paşa Külliyesi'nde Medrese",
+  "city": "Bursa",
+  "district": "Yenişehir",
+  "period": "Osmanlı · Varlığı H. 998 / M. 1590 tarihli vakfiyede belgelenir",
+  "endowment": "Koca Sinan Paşa vakfiyesi; müderrise günlük 50 akçe ücret tahsis edilmiştir",
+  "summary": "Sinan Paşa Külliyesi'nde vakfiyeye göre caminin kuzeyinde yer alan, üç eyvan ve dört kapalı mekândan oluşan kareye yakın planlı medrese.",
+  "history": "Medrese, Yenişehir ilçesi Ulucami Mahallesi'ndeki Sinan Paşa Külliyesi bünyesinde inşa edilmiştir. Sinan Paşa vakfiyesinde külliyenin bir birimi olarak caminin kuzeyinde konumlandığı belirtilir; H. Rebiyülevvel 998 / M. Şubat 1590 tarihli vakfiyede medresenin varlığı açıktır.\n\nSinan Paşa, medresede ders verecek kişinin takva sahibi, faziletli, ilimlerin usulü ve füruu konusunda bilgili, makul ve meşru biri olmasını şart koşmuştur. Müderrise günlük 50 akçe gibi yüksek bir ücret tahsis edilmiştir. Müderris aynı zamanda Yenişehir'deki vakıfların nazırlığını üstlenecek, her yılın başında vakfın gelir-gider hesaplarını mütevelliye sunacak ve bu görev için ayrıca günlük 10 akçe alacaktı.\n\nKareye yakın planlı medrese, eş boyutlu üç eyvan ile dört kapalı mekândan oluşur. Avluya bakan doğu cephesinde eyvanların sivri kemerleri yer alır; kuzeydeki eyvanın kemeri kısmen tahrip olmuştur. Ana eksenin güneyinde dört, kuzeyinde üç sivri kemerli ve alınlıklı dikdörtgen pencere bulunur. Eyvanların konumu ve kuzeydeki pencere düzeni cephenin simetrik görünmesini engeller; kuzey ve batı cepheleri sağır duvar karakterindedir.\n\nDuvarlar dıştan moloz taş ve tuğlanın almaşık kullanıldığı bir örgüyle yapılmıştır; düzensiz örgüde genellikle bir-iki sıra farklı boyutlarda moloz taşı bir-iki sıra tuğla izler. Özgünlüğünü koruyan bölümlerde küçük taş parçaları içeren grimsi beyaz kireç harcı kullanılmış, derzler ise çoğunlukla çimento harcı ya da betonla sıvanmıştır. Son yıllarda restore edilen medrese bir süre öğrenci yurdu olarak kullanılmış, bugün restoran işlevi görmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/yenisehir-sinan-pasa-madrasa/iwan-arch.jpg",
+  "images": [
+    {
+      "file": "/images/yenisehir-sinan-pasa-madrasa/iwan-arch.jpg",
+      "alt": "Moloz taş ve tuğla örgülü duvarda, tuğla sivri kemerli geniş bir açıklık; açıklık ahşap doğramalı camlı bir bölmeyle kapatılmış",
+      "description": "Camekânla kapatılmış sivri kemerli açıklık",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-sinan-pasa-madrasa/facade-window.jpg",
+      "alt": "Taş ve tuğla sıraları dönüşümlü duvar; solda taş söveli yuvarlak kemerli ahşap kapı, sağda üstünde tuğla sivri kemerli alınlık bulunan demir parmaklıklı dikdörtgen pencere",
+      "description": "Duvar örgüsü ve pencere",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yenisehir-sinan-pasa-madrasa/interior.jpg",
+      "alt": "İç mekân: taş-tuğla duvarlarda iki büyük tuğla sivri kemer, tuğla döşemeli zeminde masalar, sandalyeler ve raflar",
+      "description": "Medresenin iç mekânı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "iwan-arch",
+      "image": "/images/yenisehir-sinan-pasa-madrasa/iwan-arch.jpg",
+      "x": 50,
+      "y": 20,
+      "title": "Eyvan kemeri",
+      "text": "Avluya bakan doğu cephesinde eyvanların sivri kemerleri yer alır.",
+      "sourceId": "inv-p361"
+    },
+    {
+      "id": "alternating-masonry",
+      "image": "/images/yenisehir-sinan-pasa-madrasa/facade-window.jpg",
+      "x": 85,
+      "y": 75,
+      "title": "Almaşık duvar örgüsü",
+      "text": "Duvarlar dıştan, bir-iki sıra moloz taş ile bir-iki sıra tuğlanın almaşık kullanıldığı bir örgüyle inşa edilmiştir.",
+      "sourceId": "inv-p362"
+    },
+    {
+      "id": "pediment-window",
+      "image": "/images/yenisehir-sinan-pasa-madrasa/facade-window.jpg",
+      "x": 72,
+      "y": 50,
+      "title": "Alınlıklı pencere",
+      "text": "Cephede sivri kemerli ve alınlıklı dikdörtgen pencereler bulunur.",
+      "sourceId": "inv-p361"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakfiyeye göre medresenin müderrisine günlük ne kadar ücret tahsis edilmiştir?",
+      "options": [
+        "10 akçe",
+        "50 akçe",
+        "100 akçe",
+        "5 akçe"
+      ],
+      "correct": 1,
+      "description": "Medresede ders verecek müderrise günlük 50 akçe gibi yüksek bir ücret tahsis edilmiştir.",
+      "sourceId": "inv-p361"
+    },
+    {
+      "question": "Medrese nasıl bir plana sahiptir?",
+      "options": [
+        "U planlı, on iki hücreli",
+        "L planlı, sekiz kubbeli",
+        "Kareye yakın planlı; üç eyvan ve dört kapalı mekân",
+        "Dikdörtgen planlı, tek kubbeli"
+      ],
+      "correct": 2,
+      "description": "Kareye yakın planlı medrese, eş boyutlu üç eyvan ile dört kapalı mekândan oluşur.",
+      "sourceId": "inv-p361"
+    },
+    {
+      "question": "Restore edilen medrese bugün hangi işlevle kullanılmaktadır?",
+      "options": [
+        "Müze",
+        "Kütüphane",
+        "Öğrenci yurdu",
+        "Restoran"
+      ],
+      "correct": 3,
+      "description": "Bir süre öğrenci yurdu olarak kullanılan medrese, bugün restoran işlevi görmektedir.",
+      "sourceId": "inv-p362"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p361",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Sinan Paşa Külliyesi’nde Medrese\"",
+      "page": "361"
+    },
+    {
+      "id": "inv-p362",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, Yenişehir, \"Sinan Paşa Külliyesi’nde Medrese\"",
+      "page": "362"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

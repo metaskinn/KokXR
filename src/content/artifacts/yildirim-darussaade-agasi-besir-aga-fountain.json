@@ -1,0 +1,97 @@
+{
+  "id": "yildirim-darussaade-agasi-besir-aga-fountain",
+  "name": "Darüssaade Ağası Beşir Ağa Çeşmesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · H. 1156 / M. 1743",
+  "endowment": "Banisi Dârüssaâde Nazırı Moralı (Hacı) Beşir Ağa",
+  "summary": "Emir Sultan Camii'nin kıble tarafındaki dış avlu duvarına gömülü, mermer işçiliği ve on altı mısralık manzum kitabesiyle dikkat çeken 1743 tarihli çeşme.",
+  "history": "Dârüssaâde Ağası Çeşmesi, Emir Sultan Külliyesi'nde caminin kıble tarafındaki dış avlu duvarına gömülü olarak, caminin güneydoğu köşesinde yer alır. H. 1156 / M. 1743 tarihli çeşmenin banisi, caminin tamiratını da yaptıran Dârüssaâde Nazırı Moralı Beşir Ağa'dır.\n\nBilginleri koruyan hayırsever kişiliğiyle tanınan Hacı Beşir Ağa önce musahib-i şehriyârî, 1707'de hazinedar-ı şehriyârî, ardından Şeyhü'l-Harem ve nihayet 1717'de Dârüssaâde Ağası olmuştur. 1746'da vefat eden Beşir Ağa, İstanbul'da birçok cami, medrese, tekke, sebil, kütüphane ve ondan fazla çeşme yaptırmıştır. Çeşmenin kitabesine göre Beşir Ağa yalnızca bu çeşmeyi değil, Emir Sultan'ın camisini ve türbesini de tamir ettirmiştir.\n\nDikdörtgen formlu çeşme 1,20 × 2,80 m ölçülerindedir ve dikkat çekici bir mermer işçiliği sergiler. Kabartma rozetlerle süslü teknenin iki yanında mermer oturma setleri bulunur. Dikdörtgen panoya yerleştirilmiş istiridye kemerli ayna taşının üst ve yan yüzeyleri rumi motiflerle bezelidir; aynanın iki yanında kabartma selvi ağacı motifleri yer alır. Kitabın aynı bölümünde, tek kurnanın bulunduğu ayna taşının iki yanında birer hayat ağacı motifi bulunduğu da belirtilir. Günümüzde kurna kaldırılmış, yerine bir musluk ve üzerine bir tas yuvası eklenmiştir.\n\nKitabeyi çeşme aynasından ayıran mermer blok üzerinde kabartma olarak Enbiyâ Suresi'nin 30. ayeti (\"Biz her canlı şeyi sudan yarattık\") yazılıdır. 100 × 120 cm ölçülerindeki, on altı mısralık sülüs hatlı kitabenin manzum metni \"Ni'met\" mahlasını kullanan şair Ni'metullah Efendi'ye (ö. H. 1186 / M. 1773) aittir. Kitabe, Beşir Ağa'nın cami ve türbeyi onarttığını, bu onarım sırasında ortaya çıkan suyun Fırat suyu gibi tatlı olduğunun anlaşılması üzerine çeşmeyi yaptırdığını anlatır.\n\nÇeşmenin arkasındaki izler, burada abdest için kullanılan muslukların bulunduğunu gösterir. Çeşmenin üzerinde sonradan eklenmiş bir kitabe daha vardır; ancak bu yazıt çeşmeye değil, Emir Sultan Türbesi'nin H. 1261 / M. 1845'te Sultan Abdülmecid tarafından yaptırılan onarımına aittir ve şairi Zîver Paşa'dır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-darussaade-agasi-besir-aga-fountain/fountain.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-darussaade-agasi-besir-aga-fountain/fountain.jpg",
+      "alt": "Taş ve tuğla örgülü avlu duvarına gömülü beyaz mermer çeşme: istiridye kabuğu biçimli kemerli ayna taşı, iki yanında kabartma servi motifleri, önünde tekne ve iki yanında mermer oturma setleri; üstte kabartma yazılı kitabe, sağda duvardaki tuğla kemerli geçit",
+      "description": "Çeşmenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-darussaade-agasi-besir-aga-fountain/inscription.jpg",
+      "alt": "Tuğla ve taş duvar içinde beyaz mermer kitabe: sütunlara ve satırlara bölünmüş kabartma Arap harfli yazılar; altta ayrı bir mermer blok üzerinde tek satır kabartma yazı",
+      "description": "Çeşmenin kitabesi ve altındaki ayet bloğu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "mirror-stone",
+      "image": "/images/yildirim-darussaade-agasi-besir-aga-fountain/fountain.jpg",
+      "x": 30,
+      "y": 52,
+      "title": "İstiridye kemerli ayna taşı",
+      "text": "Dikdörtgen panoya yerleştirilmiş istiridye kemerli ayna taşının üst ve yan yüzeyleri rumi motiflerle bezelidir.",
+      "sourceId": "inv-p312"
+    },
+    {
+      "id": "benches",
+      "image": "/images/yildirim-darussaade-agasi-besir-aga-fountain/fountain.jpg",
+      "x": 19,
+      "y": 76,
+      "title": "Mermer oturma setleri",
+      "text": "Kabartma rozetlerle süslenmiş teknenin her iki yanında mermer oturma setleri bulunur.",
+      "sourceId": "inv-p312"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşmenin banisi kimdir?",
+      "options": [
+        "Zîver Paşa",
+        "Dârüssaâde Nazırı Moralı Beşir Ağa",
+        "Bursa Valisi Hüsnü Paşa",
+        "Ni'metullah Efendi"
+      ],
+      "correct": 1,
+      "description": "H. 1156 / M. 1743 tarihli çeşmenin banisi, caminin tamiratını da yaptıran Dârüssaâde Nazırı Moralı Beşir Ağa'dır.",
+      "sourceId": "inv-p312"
+    },
+    {
+      "question": "Çeşmenin kitabesindeki manzum metnin şairi kimdir?",
+      "options": [
+        "Evliya Çelebi",
+        "Zîver Paşa",
+        "Ahmed Münir Paşa",
+        "Ni'metullah Efendi"
+      ],
+      "correct": 3,
+      "description": "Kitabedeki manzum metin, \"Ni'met\" mahlasını kullanan şair Ni'metullah Efendi'ye aittir. Zîver Paşa ise çeşmenin üzerine sonradan eklenen türbe onarımı kitabesinin şairidir.",
+      "sourceId": "inv-p312"
+    },
+    {
+      "question": "Çeşme, Emir Sultan Camii'nin hangi köşesinde yer alır?",
+      "options": [
+        "Güneydoğu",
+        "Kuzeybatı",
+        "Kuzeydoğu",
+        "Güneybatı"
+      ],
+      "correct": 0,
+      "description": "Çeşme, Emir Sultan Camii'nin güneydoğu köşesinde, avlu duvarına bitişik olarak inşa edilmiştir.",
+      "sourceId": "inv-p312"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p312",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Darüssaade Ağası Beşir Ağa Çeşmesi\"",
+      "page": "312-313"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

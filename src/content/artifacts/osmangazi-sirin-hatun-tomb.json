@@ -1,0 +1,124 @@
+{
+  "id": "osmangazi-sirin-hatun-tomb",
+  "inventoryId": "osmangazi-sirin-hatun-turbesi",
+  "name": "Şirin Hatun Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · II. Bayezid dönemi (Şirin Hatun hayattayken yaptırılmıştır)",
+  "endowment": "Şirin Hatun türbesini hayattayken kendisi yaptırmıştır",
+  "summary": "Muradiye Mahallesi'nde, II. Bayezid'in eşi Şirin Hatun'un hayattayken yaptırdığı, kare planlı ve yüksek sekizgen kasnaklı tromplu kubbeli türbe.",
+  "history": "Şirin Hatun Türbesi, Osmangazi İlçesi, Muradiye Mahallesi, Kaplıca Caddesi No: 62'de, II. Murad Külliyesi türbeleri arasında yer alır.\n\nII. Bayezid'in eşi ve Şehzade Abdullah'ın annesi Şirin Hatun, Trabzon'da bir mescit, Bursa ve Mihaliç'te (Karacabey) birer mektep yaptırmış ve bunlar için vakıflar kurmuştur. Oğlu Abdullah'ın vefatından sonra Bursa'ya yerleşmiş, türbesini hayattayken yaptırmıştır; vefat tarihi bilinmemektedir. Türbede Şirin Hatun, Şehzade Abdullah'ın eşi Ferahşah Hatun ve kızı Aynışah Sultan'a ait üç sanduka vardır.\n\nKare planlı türbe, yüksek sekizgen kasnağa oturan tromplu bir kubbeyle örtülüdür; kubbe geçiş elemanları dışarıdan da belirgindir. Kasnakta bir dolu bir boş sıralanan sivri kemerli sağır pencereler vardır. Duvarlar bir sıra kesme küfeki taşı ve iki sıra tuğlayla örülmüş, kesme taşların arasına dikey tuğlalar yerleştirilerek daha düzgün bir görünüm sağlanmıştır. Taç kapı eyvanının iki yanında mihrap nişleri vardır; aslen ahşap sundurmalı olduğu anlaşılan kavsara, tuğla dolgu üzerine mukarnas kaplamalıdır. Pencereler sivri kemerli, mermer söveli ve demir şebekelidir. Türbeye basık kemerli, çift kanatlı, sade işçilikli ahşap bir kapıdan girilir.\n\nKalem işi süslemeleri ve yazı frizi Mükrime Hatun Türbesi ile birebir aynıdır. Kubbe göbeğindeki 19. yüzyılda eklenmiş uyumsuz Barok süslemeler 2013 restorasyonunda raspa edilmiş ve altındaki 16. yüzyıla ait özgün motifler ortaya çıkarılmıştır. Kubbe kasnağının altında Esmâ-i hüsnâ yazılı frizler, kubbe eteğindeki üçgen göğüslerde ve mukarnaslı tromplarda 16. yüzyıla ait özgün kalem işleri bulunur. Güneydoğu duvarında kelime-i tevhid madalyonu, kuzeydoğu duvarında \"Ya Tevvab\" yazılı madalyon vardır. Sülyen renkli zemin üzerine beyaz sülüsle yazılmış Âyetü'l-kürsî kuşağının altında Rahman suresinin 26. ayeti, üstünde küçük kûfi harflerle Fatiha suresi işlenmiştir.\n\nGeç dönem müdahalelerinde Horasan harçlı derzlerin yerine çimento harcı kullanılmış, kavsaranın mukarnasları dökülmüş ve kesme taş yüzeyler sıvanmıştı. 2013 restorasyonuyla bu unsurlar düzeltilerek türbe özgün hâline kavuşturulmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sirin-hatun-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sirin-hatun-tomb/exterior.jpg",
+      "alt": "Ağaç gölgesinde taş ve tuğla sıralarıyla örülmüş kare gövdeli türbe; sağda içinde beyaz mukarnaslı kavsara bulunan sivri kemerli giriş eyvanı, solda demir şebekeli pencere, üstte sekizgen kasnak",
+      "description": "Taç kapı eyvanı ve cephe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sirin-hatun-tomb/interior.jpg",
+      "alt": "İç mekân: ortada üç beyaz mermer sanduka; mavi-gri duvarlarda kırmızı yazı kuşağı, madalyonlar ve kalem işli pencere alınlıkları",
+      "description": "Üç mermer sanduka",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sirin-hatun-tomb/dome.jpg",
+      "alt": "Kubbenin aşağıdan görünümü: ortada mavi ve turuncu bitkisel motifli göbek, çevresinde yıldız biçimli renkli bordür ve köşelerde gri mukarnaslı tromplar",
+      "description": "Kubbe göbeği ve mukarnaslı tromplar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "portal-muqarnas",
+      "image": "/images/osmangazi-sirin-hatun-tomb/exterior.jpg",
+      "x": 66,
+      "y": 63,
+      "title": "Mukarnaslı kavsara",
+      "text": "Taç kapı eyvanının kavsarası tuğla dolgu üzerine mukarnas kaplamalıdır; mukarnaslar geç dönemde dökülmüş, 2013'te düzeltilmiştir.",
+      "sourceId": "inv-p171"
+    },
+    {
+      "id": "dome-center",
+      "image": "/images/osmangazi-sirin-hatun-tomb/dome.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Kubbe göbeği",
+      "text": "Kubbe göbeğindeki 19. yüzyıl Barok süslemeleri 2013'te raspa edilerek altındaki 16. yüzyıl özgün motifleri ortaya çıkarılmıştır.",
+      "sourceId": "inv-p171"
+    },
+    {
+      "id": "muqarnas-squinch",
+      "image": "/images/osmangazi-sirin-hatun-tomb/dome.jpg",
+      "x": 14,
+      "y": 14,
+      "title": "Mukarnaslı tromp",
+      "text": "Kubbe eteğindeki üçgen göğüslerde ve mukarnaslı tromplarda 16. yüzyıla ait özgün kalem işi desenler bulunur.",
+      "sourceId": "inv-p171"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şirin Hatun kimin eşidir?",
+      "options": [
+        "II. Murad",
+        "Fâtih Sultan Mehmed",
+        "II. Bayezid",
+        "Yavuz Sultan Selim"
+      ],
+      "correct": 2,
+      "description": "Şirin Hatun, II. Bayezid'in eşi ve Şehzade Abdullah'ın annesidir.",
+      "sourceId": "inv-p170"
+    },
+    {
+      "question": "Türbenin kalem işi süslemeleri ve yazı frizi hangi türbeyle birebir aynıdır?",
+      "options": [
+        "Mükrime Hatun Türbesi",
+        "Cem Sultan Türbesi",
+        "Gülşah Hatun Türbesi",
+        "Ebe Hatun Türbesi"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre Şirin Hatun Türbesi'nin kalem işi süslemeleri ve yazı frizi Mükrime Hatun Türbesi ile birebir aynıdır.",
+      "sourceId": "inv-p171"
+    },
+    {
+      "question": "Türbede kaç sanduka vardır?",
+      "options": [
+        "Bir",
+        "İki",
+        "Dört",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Türbede Şirin Hatun, Ferahşah Hatun ve Aynışah Sultan'a ait üç sanduka bulunur.",
+      "sourceId": "inv-p170"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p170",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şirin Hatun Türbesi\"",
+      "page": "170"
+    },
+    {
+      "id": "inv-p171",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şirin Hatun Türbesi\"",
+      "page": "171"
+    },
+    {
+      "id": "inv-p172",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şirin Hatun Türbesi\"",
+      "page": "172"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "osmangazi-huma-hatun-tomb",
+  "inventoryId": "osmangazi-huma-hatun-hatuniye-turbesi",
+  "name": "Hüma Hatun (Hatuniye) Türbesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 853 / M. 1449 (kitabeye göre)",
+  "endowment": "II. Mehmed'in emriyle annesi için yaptırılmıştır",
+  "summary": "II. Murad Külliyesi'nde, Fâtih Sultan Mehmed'in annesi Hüma Hatun için 1449'da yaptırılan, altı köşeli planlı ve kasnaksız kubbeli türbe.",
+  "history": "Halk arasında \"Hatuniye\" veya \"Ak Türbe\" olarak da bilinen yapı, daha yaygın ve doğru adıyla Hüma Hatun Türbesi olarak anılır. Osmangazi İlçesi, Muradiye Mahallesi'nde, II. Murad Külliyesi içinde, Muradiye Camii'nin doğusundadır.\n\nKapı üzerindeki kitabeden, türbenin II. Murad döneminde oğlu II. Mehmed tarafından annesi için H. 853 / M. 1449'da yaptırıldığı anlaşılır. Kitabede Fâtih Sultan Mehmed'in annesi \"Seyyidetü'l-havâtîn\", yani \"Hatunların Efendisi\" unvanıyla anılır. Kitabenin anlamı özetle şöyledir: büyük sultan Murad bin Mehmed bin Bayezid Han zamanında, oğlu Sultan Mehmed Çelebi'nin emriyle annesi için bu nurlu türbe yapılmıştır.\n\nTürbe altı köşeli bir plana sahiptir ve üstü kubbeyle örtülüdür; duvarlar tuğla ve taşla örülmüştür. Her cephede köşelerden başlayan çıkıntılar yükselerek birer kemer oluşturur. Kasnaksız kubbe kurşunla kaplıdır. Türbeye sivri kemerli, küçük eyvan biçimindeki giriş bölümünden basık kemerli bir kapıyla girilir; kapı üstündeki stalaktitlerden yalnızca tuğla olanlar günümüze ulaşmıştır. İç mekân, alt sırada sivri kemer alınlıklı beş ve üst sırada sivri kemerli beş pencereyle aydınlanır.\n\nTürbedeki iki sandukadan biri Fâtih Sultan Mehmed'in annesi Hüma Hatun'a aittir; ikincisinin kime ait olduğu bilinmemektedir. Yapı 1601'de ve sonrasında birçok kez onarılmış; 1844 onarımında içi, dışı, kapıları, saçakları ve avlu kaldırımları yenilenmiştir. 2011'de Bursa Büyükşehir Belediyesi'nin başlattığı Muradiye türbeleri restorasyonunda Hüma Hatun Türbesi de restore edilmiş, klasik dönem kalem işi desenleri ihya edilerek gün yüzüne çıkarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-huma-hatun-tomb/entrance.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-huma-hatun-tomb/entrance.jpg",
+      "alt": "Taş ve tuğla örgülü cephede sivri kemerli giriş nişi: üstte beyaz basamaklı stalaktit dolgusu, altında altın yaldızlı yazılı kitabe ve ahşap kapı; sağda 'Hüma Hatun Türbesi' tabelası",
+      "description": "Giriş eyvanı, kitabe ve kapı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-huma-hatun-tomb/interior.jpg",
+      "alt": "İç mekân: önde kırmızı kadife örtülü sanduka ve 'Hüma Hatun' tabelası, yanında siyah-sırma örtülü ikinci sanduka; renkli kalem işli kemerler, pencereler ve mihrap",
+      "description": "Hüma Hatun'un sandukası",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-huma-hatun-tomb/dome.jpg",
+      "alt": "Kubbenin aşağıdan görünümü: ortada süslemeli göbek ve yaldızlı halka, çevresinde renkli kalem işli kemerler arasında sivri kemerli pencereler",
+      "description": "Kubbe ve pencereler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "stalactites",
+      "image": "/images/osmangazi-huma-hatun-tomb/entrance.jpg",
+      "x": 49,
+      "y": 32,
+      "title": "Kapı üstündeki stalaktitler",
+      "text": "Kapı üzerindeki stalaktitlerden yalnızca tuğla olanlar günümüze ulaşmıştır.",
+      "sourceId": "inv-p158"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/osmangazi-huma-hatun-tomb/entrance.jpg",
+      "x": 49,
+      "y": 51,
+      "title": "Kitabe",
+      "text": "Kapı üzerindeki kitabe, türbenin II. Mehmed tarafından annesi için H. 853 / M. 1449'da yaptırıldığını bildirir.",
+      "sourceId": "inv-p156"
+    },
+    {
+      "id": "huma-sarcophagus",
+      "image": "/images/osmangazi-huma-hatun-tomb/interior.jpg",
+      "x": 32,
+      "y": 79,
+      "title": "Hüma Hatun'un sandukası",
+      "text": "Türbedeki iki sandukadan biri Fâtih Sultan Mehmed'in annesi Hüma Hatun'a aittir; ikincisinin kime ait olduğu bilinmemektedir.",
+      "sourceId": "inv-p158"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbeyi annesi için kim yaptırmıştır?",
+      "options": [
+        "II. Murad",
+        "II. Bayezid",
+        "Çelebi Mehmed",
+        "II. Mehmed"
+      ],
+      "correct": 3,
+      "description": "Kitabeye göre türbe, II. Murad döneminde oğlu II. Mehmed tarafından annesi için yaptırılmıştır.",
+      "sourceId": "inv-p156"
+    },
+    {
+      "question": "Kitabede Hüma Hatun hangi unvanla anılır?",
+      "options": [
+        "Seyyidetü'l-havâtîn",
+        "Valide Sultan",
+        "Mihr-i Mâh",
+        "Haseki"
+      ],
+      "correct": 0,
+      "description": "Kitabede Fâtih'in annesi \"Seyyidetü'l-havâtîn\", yani \"Hatunların Efendisi\" unvanıyla anılır.",
+      "sourceId": "inv-p156"
+    },
+    {
+      "question": "Türbenin planı nasıldır?",
+      "options": [
+        "Kare",
+        "Altı köşeli",
+        "Sekizgen",
+        "Dikdörtgen"
+      ],
+      "correct": 1,
+      "description": "Türbe altı köşeli bir plana sahiptir ve üstü kubbeyle örtülüdür.",
+      "sourceId": "inv-p157"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p156",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hüma Hatun (Hatuniye) Türbesi\"",
+      "page": "156"
+    },
+    {
+      "id": "inv-p157",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hüma Hatun (Hatuniye) Türbesi\"",
+      "page": "157"
+    },
+    {
+      "id": "inv-p158",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Hüma Hatun (Hatuniye) Türbesi\"",
+      "page": "158"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

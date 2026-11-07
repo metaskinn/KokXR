@@ -1,0 +1,97 @@
+{
+  "id": "yildirim-umur-bey-fountain",
+  "name": "Umur Bey Çeşmesi",
+  "city": "Bursa",
+  "district": "Yıldırım",
+  "period": "Osmanlı · Cumâde'l-âhir 931 / Mart 1525",
+  "endowment": "Kitabede hayır sahibi olarak Hacı Umur Bey bin Timurtaş Bey anılır",
+  "summary": "Umur Bey Camii'nin batı duvarına gömülü, kesme taş ve tuğla örgülü, sivri kemerli ve kitabeli 1525 tarihli çeşme.",
+  "history": "Umur Bey Külliyesi'ne ait bu çeşme, Umur Bey Camii'nin batı duvarında, duvara gömülü olarak yer alır. Kesme taş ve üç sıra tuğla ile örülmüş, sivri kemerli bir çeşmedir.\n\nÇeşmenin beyaz mermer üzerine istifli hatla yazılmış kitabesinde \"Sâhibu'l-hayrât el-Merhûm Hacı Umur Bey bin Timurtaş Bey fî şehri Cumâde'l-âhir sene 931\" ifadesi yer alır. Bu ifade \"Hayırların sahibi, merhum Hacı Umur Bey, Timurtaş Bey oğlu. Cumâde'l-âhir ayı sene 931 (M. Mart 1525)\" anlamına gelir.\n\nÇeşme Umur Bey'in vefatından 64 yıl sonra yapılmış olsa da kitabesinde onun adı hayır sahibi olarak yaşatılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/yildirim-umur-bey-fountain/fountain.jpg",
+  "images": [
+    {
+      "file": "/images/yildirim-umur-bey-fountain/fountain.jpg",
+      "alt": "Taş ve tuğla sıralı duvara gömülü çeşme: tuğla ve taş dilimli kemer içinde musluklu beyaz mermer ayna taşı ve altında mermer yalak; kemerin üstünde siyah zemin üzerine sarı harfli küçük kitabe",
+      "description": "Çeşmenin genel görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/yildirim-umur-bey-fountain/inscription.jpg",
+      "alt": "Yakın çekim: siyah zemin üzerine altın sarısı harflerle iki satır hâlinde, harfleri iç içe geçen istifli yazı",
+      "description": "Çeşmenin kitabesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "inscription",
+      "image": "/images/yildirim-umur-bey-fountain/fountain.jpg",
+      "x": 52,
+      "y": 24,
+      "title": "Kitabe",
+      "text": "İstifli hatla yazılmış kitabede hayır sahibi olarak Hacı Umur Bey bin Timurtaş Bey anılır ve Cumâde'l-âhir 931 (Mart 1525) tarihi verilir.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "id": "arch",
+      "image": "/images/yildirim-umur-bey-fountain/fountain.jpg",
+      "x": 50,
+      "y": 42,
+      "title": "Taş ve tuğla örgü",
+      "text": "Çeşme, kesme taş ve üç sıra tuğla ile örülmüştür.",
+      "sourceId": "inv-p326"
+    }
+  ],
+  "test": [
+    {
+      "question": "Umur Bey Çeşmesi caminin hangi duvarında yer alır?",
+      "options": [
+        "Doğu duvarında",
+        "Kuzey duvarında",
+        "Batı duvarında",
+        "Kıble duvarında"
+      ],
+      "correct": 2,
+      "description": "Umur Bey'e ait çeşme, caminin batı duvarında, duvara gömülü şekilde yer alır.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "question": "Çeşmenin kitabesindeki tarih miladi olarak hangi yıla karşılık gelir?",
+      "options": [
+        "1525",
+        "1461",
+        "1454",
+        "1743"
+      ],
+      "correct": 0,
+      "description": "Kitabedeki Cumâde'l-âhir 931 tarihi, Mart 1525'e karşılık gelir.",
+      "sourceId": "inv-p326"
+    },
+    {
+      "question": "Çeşme, Umur Bey'in vefatından kaç yıl sonra yapılmıştır?",
+      "options": [
+        "22 yıl",
+        "64 yıl",
+        "100 yıl",
+        "12 yıl"
+      ],
+      "correct": 1,
+      "description": "Çeşme Umur Bey'in vefatından 64 yıl sonra inşa edilmiş, ancak kitabesinde onun adı hayır sahibi olarak yaşatılmıştır.",
+      "sourceId": "inv-p326"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p326",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Yıldırım, \"Umur Bey Çeşmesi\"",
+      "page": "326"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

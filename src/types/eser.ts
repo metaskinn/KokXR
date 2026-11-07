@@ -92,6 +92,7 @@ export interface Eser {
   ad: string;
   sehir: string;
   ilce: string;
+  yapiTuru?: string;      // Cami, Külliye, Han, Hamam, Medrese, Türbe...; süzgeç ve listelerde kullanılır
   donem: string;
   vakif: string;
   ozet: string;

@@ -60,7 +60,7 @@ erDiagram
   SORU }o--o| KAYNAK : kaynakId
 ```
 
-Tipler: `src/types/eser.ts`. Bulutta `eserler(id, veri jsonb, durum)`, `gorseller(eser_id, yol, alt, kredi)`, `katkilar`; durum `beklemede | onaylandi | reddedildi` ve yalnız onaylanan yayında.
+Tipler: `src/types/eser.ts`. `sehir`, `ilce` ve `yapiTuru` (Cami, Han, Hamam, Türbe...) alanları ana sayfa süzgeçlerini kendiliğinden doldurur; yeni şehir veya yapı türü için kod değişikliği gerekmez (`tests/yonetim.mjs` bunu sınar). Bulutta `eserler(id, veri jsonb, durum)`, `gorseller(eser_id, yol, alt, kredi)`, `katkilar`; durum `beklemede | onaylandi | reddedildi` ve yalnız onaylanan yayında.
 
 ## Yeni eser ekleme
 
@@ -70,7 +70,7 @@ Tipler: `src/types/eser.ts`. Bulutta `eserler(id, veri jsonb, durum)`, `gorselle
 
 ## Yeni şehir ekleme
 
-`src/data/vrEserler.ts` içindeki `vrSehirler` listesine `{ ad, konum: [boylam, enlem], yapilar, yayinlar }` ekleyin; eser JSON'larında `sehir` aynı adı taşımalıdır. Ana sayfanın şehir süzgeci eser verisinden kendiliğinden dolar. VR girişi yalnız eserde `maket` veya `restorasyon` varsa açılır.
+`src/data/vrEserler.ts` içindeki `vrSehirler` listesine `{ ad, konum: [boylam, enlem], yapilar, yayinlar }` ekleyin; eser JSON'larında `sehir` aynı adı taşımalıdır. Ana sayfanın şehir, ilçe ve yapı türü süzgeçleri eser verisinden kendiliğinden dolar; `vrSehirler` yalnız VR/harita girişi içindir (şehir konumu gerekir). VR girişi yalnız eserde `maket` veya `restorasyon` varsa açılır.
 
 ## Erişilebilirlik
 

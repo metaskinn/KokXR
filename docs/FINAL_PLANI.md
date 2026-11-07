@@ -44,7 +44,7 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [x] **G5. demo/yedek:** `npm run demo` (derle + önizle), PWA önbelleğini ısıtan sayfa listesi `docs/demo-senaryosu.md`'ye; internetsiz çalışma kontrolü.
 - [x] **G6. veri/kategori:** **Eser sayısı en az 10 şartı sağlanmış kalır ve güvenli payla 14'e çıkar.** En az 3 yeni türde eser (han, hamam/çeşme, türbe, eğitim yapısı). Metin yalnız envanter kitabından (Drive PDF veya .idml), her bilgiye cilt ve sayfa. Metin çıkarılamazsa eser eklenmez, `[!]`.
 - [!] **G7. veri/yeni-sehir:** Konya veya Hatay envanterinden 1 eser (aynı kaynak kuralı). Demodaki "yeni şehir" adımı gerçek veriyle.
-- [ ] **G8. mimari/sehir-ve-tur:** Şehir ve içerik türü eser verisinden türer; şehir eklemek `vrEserler.ts` düzenlemeden olur. Eser sayfasında 3B olmayan eserler (han, türbe) eşit değerde görünür. Yeni şehir kod değişmeden gelir (README + test).
+- [x] **G8. mimari/sehir-ve-tur:** Şehir ve içerik türü eser verisinden türer; şehir eklemek `vrEserler.ts` düzenlemeden olur. Eser sayfasında 3B olmayan eserler (han, türbe) eşit değerde görünür. Yeni şehir kod değişmeden gelir (README + test).
 - [ ] **G9. yonetim/katki (şartname 5.1.3):** Kullanıcı anısı/fotoğraf formu → `katkilar` (beklemede) → onay sayfasında onayla/reddet → yalnız onaylanan eser sayfasında "Topluluk katkısı, doğrulanmamış" etiketiyle. Kişisel veri toplanmaz (ad/telefon yok). Girdi doğrulama ve metin temizleme testli.
 
 ### C. Keşif ve erişilebilirlik
@@ -78,3 +78,4 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G5 (demo/yedek): `npm run demo` ve `demo:bulut`; çevrimdışı ısıtma listesi ve sınırlar docs/demo-senaryosu.md'de. 360tr gömmesi çevrimdışı açılmaz (yedek bağlantı + fotoğraf modu var).
 - G6 (veri/kategori): 4 yeni eser, hepsi envanter IDML'inden (Drive 'Vakıf Eserleri Envanteri - Bursa Fotoğraf Arşivi'): Koza Han (ticari, s. 648–655), Eyne Bey Hamamı (su yapısı/hamam, s. 684–685), Eyne Bey Subaşı Medresesi (eğitim, s. 556–561), Osman Gazi Türbesi (türbe, s. 520–531). Sayfa numaraları IDML spread sayfa adlarından; cilt bilgisi klasör adı 'I. ve II. Cilt – Osmangazi' olduğundan kaynak satırına 'Osmangazi' yazıldı, cilt numarası kitaptan teyit edilmeli. `scripts/idml_cikar.py` hat aracı. Toplam eser 14.
 - G7: [!] yukarıda.
+- G8 (mimari/sehir-ve-tur): `Eser.yapiTuru` (isteğe bağlı) eklendi, 14 eserde dolduruldu (Cami/Külliye/Han/Hamam/Medrese/Türbe), formda alan, ana sayfada 'Yapı türü' süzgeci. `tests/yonetim.mjs` Konya/Meram/Han eserinin süzgeçlere kod değişmeden geldiğini sınar. VR haritasına şehir eklemek hâlâ konum bilgisi ister (vrSehirler).

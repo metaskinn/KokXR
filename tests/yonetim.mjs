@@ -21,7 +21,7 @@ try {
 
   // Ekleme + onay: onaysız yayında yok, onayla görünür, reddet gizler.
   await p.goto(`${URL_KOK}/yonetim/yeni`)
-  const alanlar = { ad: 'Onay Deneme Eseri', sehir: 'Bursa', ilce: 'Osmangazi', donem: 'Deneme', vakif: 'Deneme', ozet: 'Deneme özeti', tarihce: 'Deneme tarihçesi' }
+  const alanlar = { ad: 'Onay Deneme Eseri', sehir: 'Konya', ilce: 'Meram', yapiTuru: 'Han', donem: 'Deneme', vakif: 'Deneme', ozet: 'Deneme özeti', tarihce: 'Deneme tarihçesi' }
   for (const [k, v] of Object.entries(alanlar)) await p.locator(`#${k}`).fill(v)
   for (let i = 0; i < 3; i++) {
     await p.locator(`#test-${i}-soru`).fill(`Soru ${i + 1}?`)
@@ -35,6 +35,12 @@ try {
   const karar = async (ad) => { await p.goto(`${URL_KOK}/onay`); await p.getByRole('group', { name: /Onay Deneme Eseri/ }).getByRole('button', { name: ad }).click() }
   await karar('Onayla')
   assert.equal(await anaSayfadaVar('Onay Deneme Eseri'), true, 'onaylanan eser yayında değil')
+  // Yeni şehir ve yapı türü kod değişmeden süzgece gelir.
+  assert.ok((await p.getByLabel('Şehir').locator('option').allTextContents()).includes('Konya'), 'yeni şehir süzgeçte yok')
+  assert.ok((await p.getByLabel('Yapı türü').locator('option').allTextContents()).includes('Han'), 'yeni yapı türü süzgeçte yok')
+  await p.getByLabel('Şehir').selectOption('Konya')
+  assert.equal(await p.locator('.eser-karti').count(), 1, 'Konya süzgeci yalnız yeni eseri göstermeli')
+  await p.getByRole('button', { name: 'Süzgeci temizle' }).click()
   await karar('Reddet')
   assert.equal(await anaSayfadaVar('Onay Deneme Eseri'), false, 'reddedilen eser yayında')
 

@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, Route, Routes, useLocation, useParams } from 'react-router-dom'
 import { eserleriGetir, icerigiOku, icerigiYaz } from './data'
 import type { UstKatman } from './data'
+import { bulutVar, eserleriOku, eserKaydet, eserSil } from './data/bulut'
+import { ustKatmaniCoz } from './data'
 import Yonetim from './pages/Yonetim'
 import type { YonetimProps } from './pages/Yonetim'
 import EserFormu from './pages/EserFormu'
@@ -36,8 +38,21 @@ function YonetimFormRotasi(props: YonetimProps) {
 
 export default function App() {
   const [icerik, setIcerik] = useState(icerigiOku)
-  const eserler = eserleriGetir(icerik.ustKatman)
-  function icerikKaydet(veri: UstKatman) { setIcerik(icerigiYaz(veri)) }
+  const [bulutKatmani, setBulutKatmani] = useState<UstKatman>({})
+  // Buluttaki onaylı eserler yerel değişikliklerin altında kalır; bulut yoksa veya erişilemezse yerel içerik çalışır.
+  useEffect(() => {
+    if (!bulutVar) return
+    eserleriOku().then((liste) => setBulutKatmani(ustKatmaniCoz(Object.fromEntries(liste.map((b) => [b.eser.id, b.eser]))))).catch(() => {})
+  }, [])
+  const eserler = eserleriGetir({ ...bulutKatmani, ...icerik.ustKatman })
+  function icerikKaydet(veri: UstKatman) {
+    const onceki = icerik.ustKatman
+    setIcerik(icerigiYaz(veri))
+    if (!bulutVar) return
+    // Oturum yoksa bulut yazması sessizce atlanır; yerel kayıt zaten yapıldı.
+    for (const [id, e] of Object.entries(veri)) if (JSON.stringify(onceki[id]) !== JSON.stringify(e)) eserKaydet(e).catch(() => {})
+    for (const id of Object.keys(onceki)) if (!(id in veri)) eserSil(id).catch(() => {})
+  }
   const yonetimProps = { eserler, ustKatman: icerik.ustKatman, kaydet: icerikKaydet }
   const [rozetler, setRozetler] = useState(rozetleriOku)
   const { pathname } = useLocation()

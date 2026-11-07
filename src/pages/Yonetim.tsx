@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import type { Eser } from '../types/eser'
 import { ustKatmaniCoz, varsayilanIdler } from '../data'
 import type { UstKatman } from '../data'
+import BulutPaneli from '../components/BulutPaneli'
 
 export interface YonetimProps {
   eserler: Eser[]
@@ -38,6 +39,7 @@ export default function Yonetim({ eserler, ustKatman, kaydet }: YonetimProps) {
   }
   return <section className="sayfa yonetim">
     <h1>İçerik yönetimi</h1><DemoNotu />
+    <BulutPaneli eserler={eserler} ustKatman={ustKatman} kaydet={kaydet} />
     <p><Link to="/yonetim/yeni">Yeni eser ekle</Link></p>
     <p role="status">{mesaj}</p>{hata && <p role="alert" className="alan-hatasi">{hata}</p>}
     <h2>Eserler</h2>

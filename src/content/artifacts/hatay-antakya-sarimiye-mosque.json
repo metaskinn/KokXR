@@ -1,0 +1,112 @@
+{
+  "id": "hatay-antakya-sarimiye-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Sarımiye Camii",
+  "period": "İlk inşa bilinmiyor; H. 1131 / M. 1718 onarım kitabesi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sarımiye Camii, minareli taç kapısı ve iki sahınlı harimiyle bölgesel mimariyi Osmanlı bezemeleriyle birleştirir.",
+  "history": "Halk arasında Sermaye Camii de denilen yapının ilk inşa tarihi bilinmez. Kuzeydoğudaki oda eski medrese düzenlemesini düşündürür. Minareli kapıdaki H. 1131 / M. 1718 kitabesi Sarimi adıyla bilinen yapının yeniden imarını bildirir. Adından hareketle çeşitli Memlük ve beylik dönemi şahıslarıyla ilişki kurulsa da kesin sonuç yoktur. Kitap H. 1200 / M. 1786 tarihini de anmakta, 2004’te Vakıflar Genel Müdürlüğünce esaslı onarım yapıldığını belirtmektedir. Ahşap çatı, mahfil ve minber yenilenmiş, mihrap kaplamaları ve sıvalar değiştirilmiştir. Batı avlusunun güneybatısındaki taç kapının üzerinde zarif minare yükselir. Hafif çarpık dikdörtgen harim ortadaki sütunun taşıdığı iki kemerle kıbleye paralel iki sahına ayrılır; kemerler kırma çatının omurgasıdır. Mihrap dışa çıkıntılı, minber ve kuzey mahfili ahşaptır. Kapı kitabesini çevreleyen üçgen alınlığın kornişi ile şerefe geçişlerinde mukarnas bezemeler bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sarimiye-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sarimiye-mosque/book-view-1.jpg",
+      "alt": "Yol kenarında taş minare, örtülü şerefe ve alçak kiremitli yapılar",
+      "description": "Sarımiye Camii — kitaptaki görünüm 1 (s. 310–311)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-sarimiye-mosque/book-view-2.jpg",
+      "alt": "Mavi halılı iç mekânda taş sütun ve kemer, solda minber, sağda ahşap mahfil",
+      "description": "Sarımiye Camii — kitaptaki görünüm 2 (s. 312–313)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sarimiye-mosque/book-view-1.jpg",
+      "x": 21,
+      "y": 32,
+      "title": "Minare",
+      "text": "Örtülü şerefenin altında mukarnas geçişler vardır.",
+      "sourceId": "inv-p314"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sarimiye-mosque/book-view-2.jpg",
+      "x": 52,
+      "y": 50,
+      "title": "Harim sütunu",
+      "text": "Ortadaki sütun iki kemeri taşır ve iki sahını oluşturur.",
+      "sourceId": "inv-p314"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin halk arasında kullanılan diğer adı nedir?",
+      "options": [
+        "Şirince",
+        "Orhaniye",
+        "Sermaye",
+        "Ertuğrul"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Sermaye.",
+      "sourceId": "inv-p312"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "Tek",
+        "Dört",
+        "İki"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p314"
+    },
+    {
+      "question": "Esaslı onarım hangi yıl yapılmıştır?",
+      "options": [
+        "2004",
+        "1902",
+        "1947",
+        "1993"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: 2004.",
+      "sourceId": "inv-p314"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p312",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Sarımiye Camii\"",
+      "page": "312"
+    },
+    {
+      "id": "inv-p313",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Sarımiye Camii\"",
+      "page": "313"
+    },
+    {
+      "id": "inv-p314",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Sarımiye Camii\"",
+      "page": "314"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Sarımiye Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "hatay-antakya-sheikh-abdurrahman-tomb",
+  "name": "Şeyh Abdurrahman Türbesi",
+  "district": "Antakya",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh Abdurrahman Türbesi, Antakya’da taş duvarlarla çevrili bir avlu, türbe binası ve mezarlardan oluşur.",
+  "history": "Yapı Antakya merkezde, Bağyolu Sokak ile Barbaros Sokağı’nın kesiştiği köşede, 4. mıntıka 2052 parseldedir. Yerleşkenin kuzeybatı ucunda türbe binası ve mezarlar bulunur. Türbeye kuzeydoğudaki merdivenlerden ulaşılır; üç tarafı yüksek taş duvarlarla çevrilidir.\n\nAvlunun sağında ve solunda çeşitli boyutlarda on dört taş mezar yer alır. Kitabelerin çoğu aşınmıştır. Girişin solundaki beş mezardan Şeyh Ali oğlu Muhammed el-Rubari’ye ait olanı H.1354 / M.1935 tarihlidir; bu tarih türbenin inşa tarihi değildir. Sağdaki mezarın yazıları da aşınmıştır.\n\nAvlunun güneybatısındaki türbede üç mezar vardır. Kapı üstü kitabesi, türbenin Şeyh Abdurrahman İbn-i Neccar’a ait olduğunu bildirir. Taş platform üzerindeki mermer sandukanın baş ve ayak taşları hafif süslemelidir; iki mezarın baş taşı kavuk biçimindedir. Avlunun doğu arka köşesinde basit bir müştemilat bulunur.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sheikh-abdurrahman-tomb/courtyard-graves.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sheikh-abdurrahman-tomb/courtyard-graves.jpg",
+      "alt": "Ağaçlı avluda solda yüksek taş mezarlar, ortada yol ve geride yeşil kapılı taş yapı",
+      "description": "Ağaçlı avluda solda yüksek taş mezarlar, ortada yol ve geride yeşil kapılı taş yapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sheikh-abdurrahman-tomb/courtyard-graves.jpg",
+      "x": 18,
+      "y": 55,
+      "title": "Avludaki mezarlar",
+      "text": "Avlunun iki yanında farklı büyüklüklerde taş kaplamalı ve işlenmiş on dört mezar bulunur.",
+      "sourceId": "inv-p405"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sheikh-abdurrahman-tomb/courtyard-graves.jpg",
+      "x": 55,
+      "y": 42,
+      "title": "Türbe binası",
+      "text": "Avlunun güneybatısındaki türbe içerisinde üç mezar yer alır.",
+      "sourceId": "inv-p405"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Abdurrahman Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Arsuz",
+        "Samandağ",
+        "Antakya"
+      ],
+      "correct": 3,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "question": "Avlunun sağında ve solunda toplam kaç mezar vardır?",
+      "options": [
+        "On dört",
+        "İki",
+        "Yedi",
+        "Otuz"
+      ],
+      "correct": 0,
+      "description": "Kitap avluda on dört mezar bulunduğunu belirtir.",
+      "sourceId": "inv-p405"
+    },
+    {
+      "question": "Kapı üstü kitabesinde türbe kime ait gösterilir?",
+      "options": [
+        "Mustafa Şevki Paşa",
+        "Şeyh Abdurrahman İbn-i Neccar",
+        "Tomas Antepyan",
+        "Kasım Bey"
+      ],
+      "correct": 1,
+      "description": "Türbenin aidiyeti kapı üzerindeki kitabeden anlaşılır.",
+      "sourceId": "inv-p405"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p405",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Abdurrahman Türbesi\"",
+      "page": "405"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Abdurrahman Türbesi\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "hatay-erzin-mustafali-mosque",
+  "city": "Hatay",
+  "district": "Erzin",
+  "name": "Mustafalı Camii",
+  "period": "Osmanlı · kitapta 1895; kitabe H. 1302 (M. 1895) olarak aktarılır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Erzin Mustafalı Camii, yenilenmiş yapısı içinde eski kitabesi ve figürlü devşirme taşıyla anlatılır.",
+  "history": "Erzin’deki cami kitapta 1895 yapımı olarak tanıtılır; yenilemeler nedeniyle eski niteliğini yitirdiği belirtilir. İki şerefeli uzun minare 1947’de eklenmiş, son cemaat yeri 1960’ta genişletilmiştir. Son cemaat yerindeki taşta damla biçimli motif içinde dinî ibareler vardır. Kapının eski inşa kitabesi korunmuştur; tarihi kitap aynen H. 1302 (M. 1895) olarak verir. Hicri-Miladi eşleştirmedeki belirsizlik giderilmiş gibi sunulmamıştır. Duvarlarda antik kalıntıdan elde edilmiş figürlü bir taş da korunmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-erzin-mustafali-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-erzin-mustafali-mosque/book-view-1.jpg",
+      "alt": "Geniş avluda iki şerefeli yüksek minare ve alçak çatılı cami",
+      "description": "Mustafalı Camii — kitaptaki görünüm 1 (s. 360–361)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-erzin-mustafali-mosque/book-view-2.jpg",
+      "alt": "Kırmızı halılı iç mekânda kemerler, mihrap, minber ve ahşap mahfil",
+      "description": "Mustafalı Camii — kitaptaki görünüm 2 (s. 362–363)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-erzin-mustafali-mosque/book-view-1.jpg",
+      "x": 28,
+      "y": 36,
+      "title": "İki şerefeli minare",
+      "text": "Minare 1947’de eklenmiştir ve iki şerefelidir.",
+      "sourceId": "inv-p362"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-erzin-mustafali-mosque/book-view-1.jpg",
+      "x": 53,
+      "y": 72,
+      "title": "Son cemaat yeri",
+      "text": "Son cemaat yeri 1960’ta genişletilmiştir.",
+      "sourceId": "inv-p362"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi ilçededir?",
+      "options": [
+        "Erzin",
+        "Arsuz",
+        "Belen",
+        "Yayladağı"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Erzin.",
+      "sourceId": "inv-p362"
+    },
+    {
+      "question": "Minare hangi yıl eklenmiştir?",
+      "options": [
+        "1902",
+        "1947",
+        "1842",
+        "2004"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: 1947.",
+      "sourceId": "inv-p362"
+    },
+    {
+      "question": "Son cemaat yeri hangi yıl genişletilmiştir?",
+      "options": [
+        "1875",
+        "1909",
+        "1960",
+        "1990"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: 1960.",
+      "sourceId": "inv-p362"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p362",
+      "text": "Hatay Vakıf Eserleri, Erzin, \"Mustafalı Camii\"",
+      "page": "362"
+    },
+    {
+      "id": "inv-p363",
+      "text": "Hatay Vakıf Eserleri, Erzin, \"Mustafalı Camii\"",
+      "page": "363"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Erzin, \"Mustafalı Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

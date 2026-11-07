@@ -1,0 +1,107 @@
+{
+  "id": "hatay-defne-degirmen-yolu-masjid-school",
+  "city": "Hatay",
+  "district": "Defne",
+  "name": "Değirmen Yolu Mescid-Okul",
+  "period": "Osmanlı · II. Abdülhamit dönemi, 1902",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Defne’deki Değirmen Yolu yapısı, iptidai mektebi olarak yapılıp mescit ve okul işlevleriyle kullanılmıştır.",
+  "history": "Defne ilçesi Değirmen Yolu Mahallesi, 433 parseldeki yapı 1902’de II. Abdülhamit döneminde iptidai mektebi olarak inşa edilmiştir. Kitap müdahale görmeden hem okul hem mescit olarak kullanıldığını belirtir. Dikdörtgen planlı iki katlı kâgir binanın alt katı kalın duvarlı ve moloz taş cephelidir. Zemin kata doğu ve batıdan girilir; özgün karo döşeme korunmuştur. Betonarme olarak tarif edilen birinci kata batıdaki merdivenle çıkılır; zemini şaptır. Kitap bu katı harap, çatıyı sac olarak tanımlar. Müdahalesizlik ifadesi ile malzeme anlatımı ayrıca değerlendirme gerektirir; bunlardan yeni bir onarım tarihi türetilmemiştir.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-defne-degirmen-yolu-masjid-school/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-defne-degirmen-yolu-masjid-school/book-view-1.jpg",
+      "alt": "Sarı sıvalı iki katlı binanın köşe görünümü, pencereler ve sac çatı",
+      "description": "Değirmen Yolu Mescid-Okul — kitaptaki görünüm 1 (s. 350–351)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-defne-degirmen-yolu-masjid-school/book-view-2.jpg",
+      "alt": "Ağaç yanında iki katlı sarı bina, alt katta kapı ve üstte üç pencere",
+      "description": "Değirmen Yolu Mescid-Okul — kitaptaki görünüm 2 (s. 352–353)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-defne-degirmen-yolu-masjid-school/book-view-1.jpg",
+      "x": 37,
+      "y": 37,
+      "title": "İki katlı yapı",
+      "text": "Yapı iki katlı ve dikdörtgen planlıdır.",
+      "sourceId": "inv-p352"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-defne-degirmen-yolu-masjid-school/book-view-2.jpg",
+      "x": 51,
+      "y": 20,
+      "title": "Sac çatı",
+      "text": "Kitap yapı çatısını sac olarak tanımlar.",
+      "sourceId": "inv-p352"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapı ilk olarak hangi işlev için yapılmıştır?",
+      "options": [
+        "Kervansaray",
+        "Darphane",
+        "İptidai mektebi",
+        "Hamam"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: İptidai mektebi.",
+      "sourceId": "inv-p352"
+    },
+    {
+      "question": "İnşa yılı nedir?",
+      "options": [
+        "1574",
+        "1842",
+        "1947",
+        "1902"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: 1902.",
+      "sourceId": "inv-p352"
+    },
+    {
+      "question": "Yapı hangi ilçededir?",
+      "options": [
+        "Defne",
+        "Payas",
+        "Erzin",
+        "Arsuz"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Defne.",
+      "sourceId": "inv-p352"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p352",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Değirmen Yolu Mescid-Okul\"",
+      "page": "352"
+    },
+    {
+      "id": "inv-p353",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Değirmen Yolu Mescid-Okul\"",
+      "page": "353"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Değirmen Yolu Mescid-Okul\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

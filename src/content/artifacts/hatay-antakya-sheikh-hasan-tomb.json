@@ -1,0 +1,95 @@
+{
+  "id": "hatay-antakya-sheikh-hasan-tomb",
+  "name": "Şeyh Hasan Türbesi",
+  "district": "Antakya",
+  "period": "1923 · kitapta aktarılan Vakıflar Genel Müdürlüğü kaydı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh Hasan Türbesi, Antakya’da avlunun ortasında bulunan ve tesis tarihi 1923 olarak kaydedilen bir ziyaretgâhtır.",
+  "history": "Antakya’da 1146 parseldeki türbe, güneydoğu-kuzeybatı doğrultulu düzgün olmayan dikdörtgen parsel üzerine kurulmuştur. Kitap, tesis tarihini Vakıflar Genel Müdürlüğü kayıtlarına dayanarak 1923 olarak verir.\n\nTürbe ve müştemilat avlusuna kuzeybatı köşedeki demir kapıdan girilir. Türbe avlunun ortasındadır. Kuzeybatısında mutfak ve tuvalet, kuzeydoğusunda sundurmalı alan ile oda bulunur. Kaynak yapıyı ziyarete açık bir mabet olarak anlatır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sheikh-hasan-tomb/courtyard-building.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sheikh-hasan-tomb/courtyard-building.jpg",
+      "alt": "Ağaçlı, taş döşeli avluda beyaz cepheli yapı, yeşil kapı ve pencereler",
+      "description": "Ağaçlı, taş döşeli avluda beyaz cepheli yapı, yeşil kapı ve pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sheikh-hasan-tomb/courtyard-building.jpg",
+      "x": 48,
+      "y": 57,
+      "title": "Avlunun ortasındaki türbe",
+      "text": "Türbe avlunun ortasında yer alır.",
+      "sourceId": "inv-p419"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sheikh-hasan-tomb/courtyard-building.jpg",
+      "x": 24,
+      "y": 83,
+      "title": "Avlu",
+      "text": "Türbe ve müştemilat avlusuna kuzeybatı köşesindeki demir kapıdan girilir.",
+      "sourceId": "inv-p419"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Hasan Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Arsuz",
+        "Antakya",
+        "Samandağ"
+      ],
+      "correct": 2,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "question": "Kitap tesis tarihi olarak hangi yılı verir?",
+      "options": [
+        "1131",
+        "1514",
+        "2014",
+        "1923"
+      ],
+      "correct": 3,
+      "description": "Vakıflar Genel Müdürlüğü kayıtlarına göre tesis tarihi 1923’tür.",
+      "sourceId": "inv-p419"
+    },
+    {
+      "question": "Türbe avlunun neresindedir?",
+      "options": [
+        "Ortasında",
+        "Dışında",
+        "Tamamen altında",
+        "Çatısında"
+      ],
+      "correct": 0,
+      "description": "Kitap türbenin avlunun ortasında bulunduğunu belirtir.",
+      "sourceId": "inv-p419"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p419",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Hasan Türbesi\"",
+      "page": "419"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Hasan Türbesi\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

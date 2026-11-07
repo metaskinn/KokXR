@@ -1,0 +1,117 @@
+{
+  "id": "hatay-antakya-hunkar-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Hünkâr Mescidi",
+  "period": "Kesin tarih bilinmiyor; mahalle halkının “150 yıllık” anlatımı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hünkâr Mescidi, köşeye yerleştirilmiş mihrapları ve ahşap tavanlı iki sahınlı harimiyle tanıtılır.",
+  "history": "Yazlık namazgâh avlusu, kısa ezanlığı ve düz ahşap tavanlı loş harimiyle bölgesel bir mahalle mescididir. Tarihine dair kitapta verilen tek kaynak mahalle halkının “150 yıllık mescittir” sözüdür; bu ifade mutlak bir inşa yılına çevrilmemiştir. Hem avlu hem harim mihrabının köşede oluşu evden dönüştürülmüş olabileceğini düşündürür. Dört yanı duvarlı avlu ağaçlıdır. Bir kemerle iki sahına ayrılan harim yalnız kuzeydeki iki pencereden ışık alır; diğer duvarlar komşu yapılar nedeniyle sağırdır. Pencerelerdeki değişiklikler yakın dönemde onarım yapıldığını gösterir.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-hunkar-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-hunkar-masjid/book-view-1.jpg",
+      "alt": "Dar sokakta kemerli giriş ve üstünde küçük ahşap ezanlık",
+      "description": "Hünkâr Mescidi — kitaptaki görünüm 1 (s. 244–245)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-hunkar-masjid/book-view-2.jpg",
+      "alt": "Taş avlunun köşesinde mihrap nişi, pencere ve ahşap bank",
+      "description": "Hünkâr Mescidi — kitaptaki görünüm 2 (s. 246–247)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-hunkar-masjid/book-view-1.jpg",
+      "x": 70,
+      "y": 25,
+      "title": "Ezanlık",
+      "text": "Kısa ve gösterişsiz ezanlık bölgesel özellikler arasındadır.",
+      "sourceId": "inv-p246"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-hunkar-masjid/book-view-2.jpg",
+      "x": 81,
+      "y": 70,
+      "title": "Köşe mihrabı",
+      "text": "Avlu mihrabının köşede bulunması yapının ayırt edici yönüdür.",
+      "sourceId": "inv-p246"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harim hangi örtüye sahiptir?",
+      "options": [
+        "Kurşun kubbe",
+        "Çapraz tonoz",
+        "Cam kubbe",
+        "Düz ahşap tavan"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Düz ahşap tavan.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Tek",
+        "Dört"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "Harim ışığını hangi yönden alır?",
+      "options": [
+        "Güney",
+        "Kuzey",
+        "Doğu",
+        "Batı"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Kuzey.",
+      "sourceId": "inv-p248"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p246",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hünkâr Mescidi\"",
+      "page": "246"
+    },
+    {
+      "id": "inv-p247",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hünkâr Mescidi\"",
+      "page": "247"
+    },
+    {
+      "id": "inv-p248",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hünkâr Mescidi\"",
+      "page": "248"
+    },
+    {
+      "id": "inv-p249",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hünkâr Mescidi\"",
+      "page": "249"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hünkâr Mescidi\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

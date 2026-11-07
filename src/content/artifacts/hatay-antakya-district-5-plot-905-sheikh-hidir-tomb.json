@@ -1,0 +1,100 @@
+{
+  "id": "hatay-antakya-district-5-plot-905-sheikh-hidir-tomb",
+  "name": "5. Mıntıka 905 Parsel Şeyh Hıdır Türbesi",
+  "district": "Antakya",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kitapta 5. Mıntıka 905 Parsel adıyla sunulan Şeyh Hıdır Türbesi, avlu ve müştemilatla birlikte anlatılan bir ziyaret yapısıdır.",
+  "history": "Kitabın başlığı ve Türkçe adres listesi bu kaydı Antakya 5. mıntıka 905 parsel olarak verir. Buna karşılık ana metin, Defne ilçesi Karyer Mahallesi Hıdır Mevkii’nde 1431 parsel ifadesini kullanır. Bu konum bilgileri birbirleriyle uyuşmadığı için ayrı ayrı korunmuştur.\n\nAna metinde türbe taş malzemeli, kareye yakın dikdörtgen planlı, mermer kaplı cepheli, geniş saçaklı ve yuvarlak beyaz kubbeli olarak tarif edilir. Kubbe ve cephelerin sıvalı ve boyalı olduğu da belirtilir. Cephelerde mazgal pencereler; girişte geniş sundurma ve sivri kemerli niş içine alınmış ahşap kapı bulunur.\n\nOrtadaki sanduka mermer kaplıdır. Girişte Arapça yazıt, iç mekânda Zülfikar sembolleri vardır. Avlu ibadet ve toplantı yapıları, kesim ve pişirme yerleriyle çevrilidir. Kitap ziyaretçilerin mevlit okuttuklarını ve kurban kestiklerini aktarır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-district-5-plot-905-sheikh-hidir-tomb/covered-entrance.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-district-5-plot-905-sheikh-hidir-tomb/covered-entrance.jpg",
+      "alt": "İki palmiyenin arasındaki örtülü geçidin sonunda kemerli niş içinde yeşil kapı, yanlarda metal korkuluklar",
+      "description": "İki palmiyenin arasındaki örtülü geçidin sonunda kemerli niş içinde yeşil kapı, yanlarda metal korkuluklar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-district-5-plot-905-sheikh-hidir-tomb/covered-entrance.jpg",
+      "x": 55,
+      "y": 57,
+      "title": "Giriş kapısı",
+      "text": "Ana metinde giriş yönünde ahşap kapı tarif edilir.",
+      "sourceId": "inv-p416"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-district-5-plot-905-sheikh-hidir-tomb/covered-entrance.jpg",
+      "x": 49,
+      "y": 33,
+      "title": "Giriş sundurması",
+      "text": "Türbenin giriş yönünde geniş bir sundurma bulunduğu belirtilir.",
+      "sourceId": "inv-p417"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbenin planı metinde nasıl anlatılır?",
+      "options": [
+        "Daire",
+        "Kareye yakın dikdörtgen",
+        "Üçgen",
+        "Sekizgen"
+      ],
+      "correct": 1,
+      "description": "Ana metin türbeyi kareye yakın dikdörtgen planlı olarak tarif eder.",
+      "sourceId": "inv-p416"
+    },
+    {
+      "question": "Metne göre ortadaki sandukanın kaplaması nedir?",
+      "options": [
+        "Bakır",
+        "Ahşap",
+        "Mermer",
+        "Tuğla"
+      ],
+      "correct": 2,
+      "description": "Ana metin sandukanın mermer kaplamalı olduğunu belirtir.",
+      "sourceId": "inv-p417"
+    },
+    {
+      "question": "İç mekânda hangi semboller anlatılır?",
+      "options": [
+        "Gemi armaları",
+        "Osmanlı tuğraları",
+        "Güneş saatleri",
+        "Zülfikar sembolleri"
+      ],
+      "correct": 3,
+      "description": "Kitap Hz. Ali’nin Zülfikar kılıcını simgeleyen işaretlerden söz eder.",
+      "sourceId": "inv-p417"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p416",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"5. Mıntıka 905 Parsel Şeyh Hıdır Türbesi\"",
+      "page": "416"
+    },
+    {
+      "id": "inv-p417",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"5. Mıntıka 905 Parsel Şeyh Hıdır Türbesi\"",
+      "page": "417"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"5. Mıntıka 905 Parsel Şeyh Hıdır Türbesi\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-ali-cavus-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Ali Çavuş Mescidi",
+  "period": "Muhtemelen 1872 depremi sonrası",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Uzun Çarşı’daki mescit, evden dönüştürülmüş olabileceği düşünülen yamuk planlı küçük bir yapıdır.",
+  "history": "Uzun Çarşı üzerindeki yapının 1872 depreminden hemen sonra yapılmış olabileceği düşünülür. Düzensiz avlusu, yamuk ibadet mekânı, simetrik olmayan kapı ve pencereleri ile kapı ekseninde bulunmayan mihrabı, bir evin mescide dönüştürülmüş olabileceğine işaret eder. Harim düz ahşap tavanlıdır; doğu cephesindeki sade kapıdan girilir. Kuzey kenarı güneyden uzundur. Kitap kapının batısındaki açıklıkları ve güney duvarındaki sade mihrap girintisini tarif eder; toplam altı pencereden söz eder. 1993 onarımında mihrabın iki yanındaki pencerelerin kapatıldığı belirtilir. Süsleme bulunmaz.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-ali-cavus-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-ali-cavus-masjid/book-view-1.jpg",
+      "alt": "Dar avluda merdivenli, üst katı pembe boyalı küçük yapı",
+      "description": "Ali Çavuş Mescidi — kitaptaki görünüm 1 (s. 194–195)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-ali-cavus-masjid/book-view-2.jpg",
+      "alt": "Desenli halılı odada sade mihrap nişi, pencere ve ahşap tavan",
+      "description": "Ali Çavuş Mescidi — kitaptaki görünüm 2 (s. 196–197)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-ali-cavus-masjid/book-view-2.jpg",
+      "x": 49,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Güney duvarında sade bir girinti biçiminde mihrap vardır.",
+      "sourceId": "inv-p197"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-ali-cavus-masjid/book-view-2.jpg",
+      "x": 48,
+      "y": 9,
+      "title": "Ahşap tavan",
+      "text": "İbadet mekânı düz ahşap tavanla örtülüdür.",
+      "sourceId": "inv-p196"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi çarşı üzerindedir?",
+      "options": [
+        "Kapalıçarşı",
+        "Mısır Çarşısı",
+        "Uzun Çarşı",
+        "Arasta Bedesteni"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Uzun Çarşı.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "question": "İbadet mekânının tavanı nasıldır?",
+      "options": [
+        "Kurşun kubbe",
+        "Çapraz tonoz",
+        "Beton kubbe",
+        "Düz ahşap tavan"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Düz ahşap tavan.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "question": "Kitap hangi yıl yapılan onarımı kaydeder?",
+      "options": [
+        "1993",
+        "1574",
+        "1906",
+        "2008"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: 1993.",
+      "sourceId": "inv-p197"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p196",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ali Çavuş Mescidi\"",
+      "page": "196"
+    },
+    {
+      "id": "inv-p197",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ali Çavuş Mescidi\"",
+      "page": "197"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ali Çavuş Mescidi\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

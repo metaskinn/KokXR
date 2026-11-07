@@ -1,0 +1,107 @@
+{
+  "id": "hatay-yayladagi-greek-orthodox-church",
+  "name": "Rum Ortodoks Kilisesi",
+  "district": "Yayladağı",
+  "period": "19. yüzyılın son çeyreği olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Rum Ortodoks Kilisesi, Yayladağı’nda tek nefli naosu ve dışa taşan apsisi bulunan dikdörtgen planlı bir yapıdır.",
+  "history": "Yayladağı ilçesinde 113 ada 1 parseldeki kilise eğimli arazide doğu-batı yönünde uzanır. Kesin inşa tarihini bildiren kitabe yoktur; mimari ve bezeme özelliklerine göre 19. yüzyılın son çeyreğinde yapılmış olabileceği düşünülür. Sade duvarlar kaba yonu ve moloz taşla örülmüştür.\n\n7,75 × 18,84 metre ölçülerindeki yapı, tek nefli naos ve dışa taşan yarım daire apsisten oluşur. Apsisin üç küçük dikdörtgen penceresi vardır; girişini kesme taş kemer belirler. Ana giriş kuzeyde, ikinci giriş güneydeki bahçeye açılır.\n\nBatıdaki ahşap ara kat üç dikme üzerinde durur; zemini ahşap, korkulukları ince çıtalıdır. Güney duvarına bitişik ahşap merdivenle çıkılır. Kuzeybatıda galerinin altında vaftiz teknesi, apsiste 100,5 × 117,5 cm ölçülü betonarme sunak masası vardır. Erken dönem zemin kaplaması özgün hâlini korur; 20 × 20 cm karolar farklı desenler oluşturur. Üst örtü alaturka kiremitli ahşap kırma çatı, tavan ise paşalı ahşap kaplamadır. Türkçe adres listesi ilçeyi Yayladağı olarak verir; İngilizce adres listesi farklı olarak İskenderun kaydı kullanır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-yayladagi-greek-orthodox-church/stone-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-yayladagi-greek-orthodox-church/stone-exterior.jpg",
+      "alt": "Kiremit çatılı uzun taş kilise cephesi, sıra hâlinde kemerli pencereler ve ahşap kapı",
+      "description": "Kiremit çatılı uzun taş kilise cephesi, sıra hâlinde kemerli pencereler ve ahşap kapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-yayladagi-greek-orthodox-church/wooden-gallery.jpg",
+      "alt": "Ahşap tavanlı boş iç mekânda desenli karo döşeme ve geride merdivenli ahşap galeri",
+      "description": "Ahşap tavanlı boş iç mekânda desenli karo döşeme ve geride merdivenli ahşap galeri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-yayladagi-greek-orthodox-church/wooden-gallery.jpg",
+      "x": 52,
+      "y": 59,
+      "title": "Ahşap ara kat",
+      "text": "Batı bölümündeki ahşap ara kat üç dikme ayak üzerine oturur.",
+      "sourceId": "inv-p451"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-yayladagi-greek-orthodox-church/wooden-gallery.jpg",
+      "x": 48,
+      "y": 85,
+      "title": "Karo döşeme",
+      "text": "Özgün zemin kaplaması 20 × 20 cm ölçülü, farklı desenli karolardan oluşur.",
+      "sourceId": "inv-p451"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kilisenin uzun ekseni hangi yöndedir?",
+      "options": [
+        "Kuzey-güney",
+        "Dairesel",
+        "Düşey",
+        "Doğu-batı"
+      ],
+      "correct": 3,
+      "description": "Kitap kiliseyi doğu-batı doğrultusunda uzanan bir yapı olarak tarif eder.",
+      "sourceId": "inv-p450"
+    },
+    {
+      "question": "Kilisenin naosu kaç neflidir?",
+      "options": [
+        "Tek nefli",
+        "Üç nefli",
+        "Beş nefli",
+        "Yedi nefli"
+      ],
+      "correct": 0,
+      "description": "Dikdörtgen planlı yapıda tek nefli naos ve dışa taşan apsis vardır.",
+      "sourceId": "inv-p450"
+    },
+    {
+      "question": "Zemin karolarının ölçüsü nedir?",
+      "options": [
+        "5 × 5 cm",
+        "20 × 20 cm",
+        "60 × 60 cm",
+        "100 × 100 cm"
+      ],
+      "correct": 1,
+      "description": "Kitap özgün döşeme karolarının ölçüsünü 20 × 20 cm olarak verir.",
+      "sourceId": "inv-p451"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p450",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Rum Ortodoks Kilisesi\"",
+      "page": "450"
+    },
+    {
+      "id": "inv-p451",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Rum Ortodoks Kilisesi\"",
+      "page": "451"
+    },
+    {
+      "id": "inv-p454",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Rum Ortodoks Kilisesi\"",
+      "page": "454"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

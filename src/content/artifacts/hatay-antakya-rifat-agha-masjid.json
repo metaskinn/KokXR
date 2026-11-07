@@ -1,0 +1,102 @@
+{
+  "id": "hatay-antakya-rifat-agha-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Rıfat Ağa Mescidi",
+  "period": "İnşa tarihi bilinmiyor",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Rıfat Ağa Mescidi, yan yana iki odadan oluşan ve evden dönüştürülmüş olabileceği düşünülen küçük bir yapıdır.",
+  "history": "Antakya’da binalarla çevrili mescit Rafet Ağa Camii veya Rafet Ağa Mescidi adıyla da bilinir. Yan yana iki odadan birinde mihrap bulunması, yapının konuttan dönüştürülmüş olabileceğini düşündürür. Avlunun kuzeybatısında sac örtülü buluşma alanı vardır. Kaba yonu taşlı, düz örtülü yapının kuzey duvarında kapı, mihrabiye ve iki pencere; güneyinde mihrap ve iki pencere bulunur. Pencereler içten düz atkılı, dıştan yuvarlak kemerlidir. Minaresi yoktur. Banisi ve inşa tarihi bilinmez; Güllübahçe Mahallesi, Gazi Paşa Caddesi’ndeki aynı adlı çeşmenin kitabesi 1922 tarihlidir. Bu tarih mescidin yapımına aktarılmamıştır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-rifat-agha-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-rifat-agha-masjid/book-view-1.jpg",
+      "alt": "Ağaçlı avluda geniş tente altında küçük odalar, kemerli pencereler ve banklar",
+      "description": "Rıfat Ağa Mescidi — kitaptaki görünüm 1 (s. 306–307)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-rifat-agha-masjid/book-view-2.jpg",
+      "alt": "Üzerinde Rıfat Ağa Mescidi levhası bulunan dar giriş, basamaklar ve arkada avlu",
+      "description": "Rıfat Ağa Mescidi — kitaptaki görünüm 2 (s. 308–309)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-rifat-agha-masjid/book-view-1.jpg",
+      "x": 47,
+      "y": 18,
+      "title": "Avlu örtüsü",
+      "text": "Avlunun kuzeybatısındaki sac örtülü bölüm buluşma alanıdır.",
+      "sourceId": "inv-p308"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-rifat-agha-masjid/book-view-1.jpg",
+      "x": 68,
+      "y": 70,
+      "title": "Kemerli pencereler",
+      "text": "Pencereler dışarıdan yuvarlak kemerli olarak tarif edilir.",
+      "sourceId": "inv-p308"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin minaresi var mıdır?",
+      "options": [
+        "İki minarelidir",
+        "Yoktur",
+        "Dört minarelidir",
+        "Üç minarelidir"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Yoktur.",
+      "sourceId": "inv-p308"
+    },
+    {
+      "question": "Yapı kaç yan yana odadan oluşur?",
+      "options": [
+        "Üç",
+        "Dört",
+        "İki",
+        "Altı"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p308"
+    },
+    {
+      "question": "Pencereler dışarıdan hangi biçimdedir?",
+      "options": [
+        "Üçgen alınlıklı",
+        "Dairesel lomboz",
+        "Sivri üçgen",
+        "Yuvarlak kemerli"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Yuvarlak kemerli.",
+      "sourceId": "inv-p308"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p308",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Rıfat Ağa Mescidi\"",
+      "page": "308"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Rıfat Ağa Mescidi\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

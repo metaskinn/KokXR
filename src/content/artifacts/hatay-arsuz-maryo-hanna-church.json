@@ -1,0 +1,109 @@
+{
+  "id": "hatay-arsuz-maryo-hanna-church",
+  "name": "Maryo Hanna Kilisesi",
+  "district": "Arsuz",
+  "period": "1514’te yeniden yapılmıştır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Maryo Hanna Kilisesi, Arsuz merkezinde 1514’te yeniden yapılmış, ikonalar ve bez üzerine baskı resimler barındıran bir kilisedir.",
+  "history": "Kitap, Hristiyanlığın ilk yıllarında Arsuz çevresine Hz. İsa’nın öğretisini yaymak için rahip ve keşişlerin yerleştiğini anlatır. Kilisenin kurucusu olduğuna inanılan Aziz Hanna da bunlardan biri olarak anılır.\n\nArsuz merkezindeki kilise 1514 yılında yeniden yapılmıştır. Kaynak, yapının kullanımının sürdüğünü ve 1600’lü yıllardan kalma bez üzerine yapılmış iki değerli baskı resim ile çok sayıda ikonanın korunduğunu aktarır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-arsuz-maryo-hanna-church/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-arsuz-maryo-hanna-church/courtyard.jpg",
+      "alt": "Ağaçlı avluda açık renk kilise yapıları ve ortada haçlı uzun taş çan kulesi",
+      "description": "Ağaçlı avluda açık renk kilise yapıları ve ortada haçlı uzun taş çan kulesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-arsuz-maryo-hanna-church/icons.jpg",
+      "alt": "İç mekânda altın renkli çerçeveler içinde sıra sıra ikonalar ve önde koyu örtülü masa",
+      "description": "İç mekânda altın renkli çerçeveler içinde sıra sıra ikonalar ve önde koyu örtülü masa",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-arsuz-maryo-hanna-church/interior.jpg",
+      "alt": "Taş kemerler altında ahşap sıralar, önde kürsü ve geride ikonalarla kaplı bölüm",
+      "description": "Taş kemerler altında ahşap sıralar, önde kürsü ve geride ikonalarla kaplı bölüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-arsuz-maryo-hanna-church/icons.jpg",
+      "x": 49,
+      "y": 43,
+      "title": "İkonalar",
+      "text": "Kilisede çok sayıda ikona bulunmaktadır.",
+      "sourceId": "inv-p447"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-arsuz-maryo-hanna-church/courtyard.jpg",
+      "x": 24,
+      "y": 59,
+      "title": "Kilise",
+      "text": "Arsuz merkezindeki kilise 1514 yılında yeniden yapılmıştır.",
+      "sourceId": "inv-p447"
+    }
+  ],
+  "test": [
+    {
+      "question": "Maryo Hanna Kilisesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Arsuz",
+        "Defne",
+        "Samandağ"
+      ],
+      "correct": 1,
+      "description": "Türkçe adres listesinde ilçe Arsuz olarak verilmiştir.",
+      "sourceId": "inv-p454"
+    },
+    {
+      "question": "Kilise hangi yıl yeniden yapılmıştır?",
+      "options": [
+        "1131",
+        "1876",
+        "1514",
+        "2014"
+      ],
+      "correct": 2,
+      "description": "Kitap yeniden yapım tarihini 1514 olarak verir.",
+      "sourceId": "inv-p447"
+    },
+    {
+      "question": "Bez üzerine yapılmış iki baskı resim hangi yüzyıla tarihlenir?",
+      "options": [
+        "12. yüzyıl",
+        "19. yüzyıl",
+        "20. yüzyıl",
+        "17. yüzyıl"
+      ],
+      "correct": 3,
+      "description": "Metinde iki baskı resmin 1600’lü yıllardan kaldığı belirtilir.",
+      "sourceId": "inv-p447"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p447",
+      "text": "Hatay Vakıf Eserleri, Arsuz, \"Maryo Hanna Kilisesi\"",
+      "page": "447"
+    },
+    {
+      "id": "inv-p454",
+      "text": "Hatay Vakıf Eserleri, Arsuz, \"Maryo Hanna Kilisesi\"",
+      "page": "454"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "hatay-antakya-sheikh-hasan-mekzun-el-sincari-maqam",
+  "name": "Şeyh Hasan Mekzun El Sincari Makamı",
+  "district": "Antakya",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh Hasan Mekzun El Sincari Makamı, Serinyol’da kubbeli türbe ve iki katlı müştemilattan oluşan bir ziyaret yeridir.",
+  "history": "Türkçe adres listesinde Antakya, Serinyol, 594 ada 1 parselde gösterilen yapı, türbe ve müştemilattan oluşur. Müştemilatın yol cephesinde mermer kaplı çeşme vardır. Yeşil demir kapının önündeki mermer basamaklarla girilir; avlu döşemesi seramiktir.\n\nKare planlı betonarme türbenin giriş cephesi beyaz seramik kaplı, diğer cepheleri beyaz boyalıdır. Sacdan geniş saçakların üzerinde yuvarlak kubbe bulunur. Üç cephede birer pencere, girişte kemerli kapı vardır. Ortadaki mermer sandukada türbe sahibine ilişkin bilgi bulunmaz.\n\nYakındaki iki katlı müştemilat ibadet ve toplantı için kullanılır; kadın, erkek ve engelli bölümleri vardır. Kitap, yanındaki havuz suyunun ağrılara iyi geldiği inanışını rivayet olarak aktarır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sheikh-hasan-mekzun-el-sincari-maqam/tomb-and-outbuilding.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sheikh-hasan-mekzun-el-sincari-maqam/tomb-and-outbuilding.jpg",
+      "alt": "Solda beyaz-yeşil iki katlı müştemilat, sağda beyaz kubbeli küçük yapı ve önde yeşil korkuluklar",
+      "description": "Solda beyaz-yeşil iki katlı müştemilat, sağda beyaz kubbeli küçük yapı ve önde yeşil korkuluklar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sheikh-hasan-mekzun-el-sincari-maqam/tomb-and-outbuilding.jpg",
+      "x": 76,
+      "y": 53,
+      "title": "Türbenin kubbesi",
+      "text": "Geniş saçaklı türbenin üzerinde yuvarlak kubbe bulunur.",
+      "sourceId": "inv-p435"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sheikh-hasan-mekzun-el-sincari-maqam/tomb-and-outbuilding.jpg",
+      "x": 29,
+      "y": 52,
+      "title": "İki katlı müştemilat",
+      "text": "Yakındaki iki katlı yapı ibadet ve toplantı mekânı olarak kullanılır.",
+      "sourceId": "inv-p435"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Hasan Mekzun El Sincari Makamı kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Antakya",
+        "Arsuz",
+        "Samandağ"
+      ],
+      "correct": 1,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Türbenin planı ve taşıyıcı yapısı nasıl belirtilir?",
+      "options": [
+        "Dairesel ahşap",
+        "Üçgen kerpiç",
+        "Kare planlı betonarme",
+        "Sekizgen tuğla"
+      ],
+      "correct": 2,
+      "description": "Kitap türbeyi kare planlı betonarme yapı olarak tanımlar.",
+      "sourceId": "inv-p435"
+    },
+    {
+      "question": "Müştemilat kaç katlıdır?",
+      "options": [
+        "Bir",
+        "Dört",
+        "Altı",
+        "İki"
+      ],
+      "correct": 3,
+      "description": "İbadet ve toplantı mekânı olan müştemilat iki katlıdır.",
+      "sourceId": "inv-p435"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p435",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Hasan Mekzun El Sincari Makamı\"",
+      "page": "435"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Hasan Mekzun El Sincari Makamı\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

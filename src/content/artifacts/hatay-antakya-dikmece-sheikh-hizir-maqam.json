@@ -1,0 +1,100 @@
+{
+  "id": "hatay-antakya-dikmece-sheikh-hizir-maqam",
+  "name": "Dikmece-Şeyh Hızır Makamı",
+  "district": "Antakya",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Dikmece-Şeyh Hızır Makamı, Antakya’da kubbesiz, kare planlı ve yakınında hazire bulunan sade bir yapıdır.",
+  "history": "Yapı Antakya’ya bağlı Dikmece Köyü sınırları içindedir ve yalnız türbe bölümünden oluşur. Kare planlı, kubbesiz ve tavanlı yapının geniş saçakları dışa taşar.\n\nCephede pencereler ve sundurmalı giriş yönünde bir kapı bulunur. Duvar yönündeki sanduka mermer kaplıdır; üzerinde türbe sahibine ilişkin yazılı kayıt yoktur. Yapının hemen yakınında bir hazire vardır. Kitabın Türkçe adres listesi ilçeyi Antakya olarak verir; İngilizce liste aynı kaydı Arsuz olarak yazmaktadır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-dikmece-sheikh-hizir-maqam/building-and-graves.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-dikmece-sheikh-hizir-maqam/building-and-graves.jpg",
+      "alt": "Ağaçların gölgesinde düz çatılı beyaz küçük yapı, önünde mermer mezarlar ve alçak çevre duvarı",
+      "description": "Ağaçların gölgesinde düz çatılı beyaz küçük yapı, önünde mermer mezarlar ve alçak çevre duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-dikmece-sheikh-hizir-maqam/building-and-graves.jpg",
+      "x": 64,
+      "y": 43,
+      "title": "Kubbesiz yapı",
+      "text": "Kare planlı türbe kubbesiz, tavanlı ve geniş saçaklıdır.",
+      "sourceId": "inv-p411"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-dikmece-sheikh-hizir-maqam/building-and-graves.jpg",
+      "x": 62,
+      "y": 69,
+      "title": "Yakındaki hazire",
+      "text": "Türbenin hemen yakınında bir hazire bulunur.",
+      "sourceId": "inv-p411"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbenin planı hangi biçimdedir?",
+      "options": [
+        "Daire",
+        "Üçgen",
+        "Kare",
+        "Sekizgen"
+      ],
+      "correct": 2,
+      "description": "Metinde türbenin kare planlı olduğu belirtilir.",
+      "sourceId": "inv-p411"
+    },
+    {
+      "question": "Yapının üst örtüsü için hangisi belirtilir?",
+      "options": [
+        "Üç kubbelidir",
+        "Piramidal külahlıdır",
+        "Tamamen açıktır",
+        "Kubbesiz ve tavanlıdır"
+      ],
+      "correct": 3,
+      "description": "Kitap yapının kubbesiz tavanlı olduğunu söyler.",
+      "sourceId": "inv-p411"
+    },
+    {
+      "question": "Sanduka hangi yönde konumlandırılmıştır?",
+      "options": [
+        "Duvar yönünde",
+        "Avlunun dışında",
+        "Çatı üstünde",
+        "Merdivenin altında"
+      ],
+      "correct": 0,
+      "description": "Mermer kaplı sanduka duvar yönüne yerleştirilmiştir.",
+      "sourceId": "inv-p411"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p410",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Dikmece-Şeyh Hızır Makamı\"",
+      "page": "410"
+    },
+    {
+      "id": "inv-p411",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Dikmece-Şeyh Hızır Makamı\"",
+      "page": "411"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Dikmece-Şeyh Hızır Makamı\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

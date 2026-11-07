@@ -1,0 +1,117 @@
+{
+  "id": "hatay-antakya-ahmediye-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Ahmediye Camii",
+  "period": "Osmanlı · 1842",
+  "endowment": "Ahmed Bey",
+  "summary": "Ahmediye Camii, iki sahınlı harimi ve on kenarlı şadırvanıyla Antakya’nın merkezinde yer alır.",
+  "history": "1842 tarihli cami Antakya’nın merkezindedir; bir zamanlar medresesi de bulunmuştur. Banisi Ahmed Bey hakkında başka bilgi verilmez. Harimin güneybatısındaki yuvarlak gövdeli minare 1941’de eklenmiştir. Kapının üstünde Tevbe suresinin 18. ayetinden bir bölüm yer alır. Taş malzemeli dikdörtgen harim, tek ayağa oturan iki kemerle kıbleye paralel iki sahına ayrılır; düz tavanın üzerinde kırma çatı vardır. Kuzey ve güneyde dörder, batıda iki yuvarlak kemerli pencere bulunur; doğuda pencere yoktur. Giriş karşısındaki mihrap yarım daire biçimli sade bir niştir. Dükkânlarla çevrili avludaki on kenarlı şadırvanın altı satırlık kitabesi 1909 tarihlidir; ahşap örtüsü hazne üstündeki ahşap ayaklara oturur. 1997’de cami ve şadırvan onarılmış, 2001’de kemer, sıva ve çürüyen tavan tahtalarıyla ilgili işler tamamlanmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-ahmediye-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-ahmediye-mosque/book-view-1.jpg",
+      "alt": "Ağaç dalları altındaki avluda örtülü şadırvan, kiremitli çatılar ve minare",
+      "description": "Ahmediye Camii — kitaptaki görünüm 1 (s. 212–213)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-ahmediye-mosque/book-view-2.jpg",
+      "alt": "Kırmızı halılı dar iç mekânda sütun, ahşap tavan ve sağda pencereler",
+      "description": "Ahmediye Camii — kitaptaki görünüm 2 (s. 214–215)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-ahmediye-mosque/book-view-1.jpg",
+      "x": 41,
+      "y": 68,
+      "title": "Şadırvan",
+      "text": "Avludaki şadırvan on kenarlı haznelidir.",
+      "sourceId": "inv-p217"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-ahmediye-mosque/book-view-2.jpg",
+      "x": 55,
+      "y": 44,
+      "title": "Taşıyıcı ayak",
+      "text": "İki kemer gözü tek ayağa oturarak iki sahın oluşturur.",
+      "sourceId": "inv-p216"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin banisi kimdir?",
+      "options": [
+        "Affan",
+        "Ahmed Bey",
+        "Halil Ağa",
+        "Tevfik"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Ahmed Bey.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "question": "Minare hangi yıl eklenmiştir?",
+      "options": [
+        "1842",
+        "1906",
+        "1941",
+        "2004"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: 1941.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "question": "Şadırvan kaç kenarlıdır?",
+      "options": [
+        "Sekiz",
+        "On iki",
+        "On altı",
+        "On"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: On.",
+      "sourceId": "inv-p217"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p214",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ahmediye Camii\"",
+      "page": "214"
+    },
+    {
+      "id": "inv-p215",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ahmediye Camii\"",
+      "page": "215"
+    },
+    {
+      "id": "inv-p216",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ahmediye Camii\"",
+      "page": "216"
+    },
+    {
+      "id": "inv-p217",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ahmediye Camii\"",
+      "page": "217"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ahmediye Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

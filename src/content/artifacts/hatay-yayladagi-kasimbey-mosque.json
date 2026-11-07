@@ -1,0 +1,114 @@
+{
+  "id": "hatay-yayladagi-kasimbey-mosque",
+  "name": "Kasımbey Camii",
+  "district": "Yayladağı",
+  "period": "Kitaba göre Abbasiler dönemi · 1131",
+  "endowment": "Kasım Bey tarafından yaptırılmıştır",
+  "summary": "Kasımbey Camii, Yayladağı’nda iki sıra kemerle üç sahına ayrılan ve altıgen taş minaresiyle tanımlanan bir camidir.",
+  "history": "Kitap, Yayladağı sınırlarındaki caminin Abbasiler döneminde, 1131 yılında Avar Türklerinden Savcılar aşiretinin reisi Kasım Bey tarafından yaptırıldığını belirtir.\n\nDoğu-batı yönünde dikdörtgen alana kurulan cami, mihraba paralel iki sıra kemerle üç sahına ayrılır. Sahınların çıtalı tavanlarının üzerinde kiremit kaplı beşik çatı bulunur. İç mekân dikdörtgen mazgal pencerelerle aydınlanır; kuzey cephede yuvarlak kemerli pencereler vardır. Güneydeki mihrap yarım yuvarlak kemerlidir. Sade minberin korkulukları ahşaptır. Kuzeyde sonradan yapılmış iki katlı bir yapı yer alır. Taş minare altıgen biçimi ve geniş şerefesiyle bölgedeki diğer örneklerden ayrılır.\n\nDuvar üzerinde dört kitabe vardır. Giriş üstündeki kitabeler onarımlara ilişkin bilgi verir; birinde 1131’de Kasım Bey’in yaptırdığı, diğerlerinde 1532, 1553 ve 1820 yıllarındaki kapsamlı onarımlar belirtilir. Kitap caminin dört onarım geçirdiğini söyler. Son kapsamlı onarımın 2010’da Vakıflar Genel Müdürlüğü tarafından yapıldığını aktarır. Bu çalışma sırasında avludaki imam odası, Kur’an kursu, şadırvan, çeşme ve lavabolar tarihî yapıya uygun biçimde yeniden inşa edilmiştir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-yayladagi-kasimbey-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-yayladagi-kasimbey-mosque/exterior.jpg",
+      "alt": "Beyaz cepheli, kırmızı kiremit çatılı caminin ahşap direkli ön bölümü ve ağaçlı avlu",
+      "description": "Beyaz cepheli, kırmızı kiremit çatılı caminin ahşap direkli ön bölümü ve ağaçlı avlu",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-yayladagi-kasimbey-mosque/prayer-hall.jpg",
+      "alt": "Taş sütunlarla desteklenen kemerler, ahşap tavan ve geride mihrap ile yeşil minber",
+      "description": "Taş sütunlarla desteklenen kemerler, ahşap tavan ve geride mihrap ile yeşil minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-yayladagi-kasimbey-mosque/minaret.jpg",
+      "alt": "Taş kaide üstünde çokgen gövdeli, geniş ahşap örtülü şerefeli minare",
+      "description": "Taş kaide üstünde çokgen gövdeli, geniş ahşap örtülü şerefeli minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-yayladagi-kasimbey-mosque/prayer-hall.jpg",
+      "x": 56,
+      "y": 37,
+      "title": "Sahınları ayıran kemerler",
+      "text": "Harim, mihraba paralel iki sıra kemerle üç sahına ayrılır.",
+      "sourceId": "inv-p380"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-yayladagi-kasimbey-mosque/minaret.jpg",
+      "x": 50,
+      "y": 54,
+      "title": "Altıgen minare",
+      "text": "Taş minare altıgen olarak yapılmıştır; geniş şerefesiyle farklılaşır.",
+      "sourceId": "inv-p380"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kasımbey Camii kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "Yayladağı",
+        "Arsuz"
+      ],
+      "correct": 2,
+      "description": "Türkçe adres listesinde ilçe Yayladağı olarak verilmiştir.",
+      "sourceId": "inv-p399"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "Bir",
+        "İki",
+        "Beş",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "İki sıra kemer harimi üç sahına ayırır.",
+      "sourceId": "inv-p380"
+    },
+    {
+      "question": "Minarenin gövde biçimi kitapta nasıl tanımlanır?",
+      "options": [
+        "Altıgen",
+        "Silindirik",
+        "Üçgen",
+        "Onikigen"
+      ],
+      "correct": 0,
+      "description": "Minare taş malzeme ile altıgen olarak yapılmıştır.",
+      "sourceId": "inv-p380"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p380",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Kasımbey Camii\"",
+      "page": "380"
+    },
+    {
+      "id": "inv-p381",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Kasımbey Camii\"",
+      "page": "381"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Kasımbey Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

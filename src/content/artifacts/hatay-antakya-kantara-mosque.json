@@ -1,0 +1,122 @@
+{
+  "id": "hatay-antakya-kantara-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Kantara Camii",
+  "period": "İnşa tarihi bilinmiyor; kitaptaki onarım ifadesi: 1864",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kantara Camii, kapı üstü minaresi, medrese odaları ve eski geçitten oluşturulan çeşmesiyle tanıtılır.",
+  "history": "Doğuya doğru genişleyen yamuk avlunun güneyinde beyaz kalker taşlı cami, kuzeyinde medrese hücreleri vardır. Doğu ve batıdan girilen avluda kuyu da bulunur. Mimarı, banisi ve inşa tarihi bilinmez. Kitap girişteki “Maşallah 1264” yazısını 1864 onarımının delili sayar; tarih dönüşümü doğrulanmadan bu biçimiyle aktarılmıştır. Ahşap direkli, kiremitli sundurma batıda kuzeye uzanarak gölgelik oluşturur. Batıdaki minare kısa, sekizgen gövdeli ve ahşap şemsiye örtülüdür. Altındaki beşik tonozlu sokak geçidi 1906’da kapatılıp çeşmeye dönüştürülmüştür. Minare kapısına duvar boyunca merdivenle ulaşılır. Harim ortadaki sütunun taşıdığı iki sivri kemerle iki sahına ayrılır; kemerler yeni kırma ahşap çatıyı taşır. Batıda dört, doğu ve kuzeyde üçer, güneyde iki pencere anlatılır. Mihrap yanındaki konsollar kandil içindir; yeni ahşap minber ajurlu bitkisel bezemelidir. Çeşmenin talik kitabesine göre banisi Tevfik, tarih manzumesinin şairi Sami’dir. Medreseden batıda üç oda kalmıştır; basık kemerli açıklıkları, düz ahşap tavanı ve kiremitli kırma çatısı vardır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-kantara-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-kantara-mosque/book-view-1.jpg",
+      "alt": "Taş cephede kemerli giriş kapısı, üst pencereler ve solda iki pencere",
+      "description": "Kantara Camii — kitaptaki görünüm 1 (s. 264–265)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-kantara-mosque/book-view-2.jpg",
+      "alt": "Ağaçlı avluda kısa gövdeli, ahşap örtülü şerefeli minare ve sundurmalar",
+      "description": "Kantara Camii — kitaptaki görünüm 2 (s. 266–267)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-kantara-mosque/book-view-1.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Harim girişi",
+      "text": "Harime yuvarlak kemerli sade kapıdan girilir.",
+      "sourceId": "inv-p267"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-kantara-mosque/book-view-2.jpg",
+      "x": 56,
+      "y": 36,
+      "title": "Minare",
+      "text": "Kısa sekizgen gövde, ahşap şemsiye örtüsüyle tamamlanır.",
+      "sourceId": "inv-p266"
+    }
+  ],
+  "test": [
+    {
+      "question": "Eski minare altı geçidi neye dönüştürülmüştür?",
+      "options": [
+        "Kütüphaneye",
+        "Türbeye",
+        "Çeşmeye",
+        "Dersliğe"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Çeşmeye.",
+      "sourceId": "inv-p266"
+    },
+    {
+      "question": "Çeşmeyi yaptıran hayırsever kimdir?",
+      "options": [
+        "Affan",
+        "Ahmed Bey",
+        "Halil Ağa",
+        "Tevfik"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Tevfik.",
+      "sourceId": "inv-p270"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Tek",
+        "Dört"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p267"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p266",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kantara Camii\"",
+      "page": "266"
+    },
+    {
+      "id": "inv-p267",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kantara Camii\"",
+      "page": "267"
+    },
+    {
+      "id": "inv-p269",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kantara Camii\"",
+      "page": "269"
+    },
+    {
+      "id": "inv-p270",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kantara Camii\"",
+      "page": "270"
+    },
+    {
+      "id": "inv-p271",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kantara Camii\"",
+      "page": "271"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kantara Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

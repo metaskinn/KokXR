@@ -1,0 +1,95 @@
+{
+  "id": "hatay-antakya-sheikh-isa-and-sheikh-ali-bagdadi-tomb",
+  "name": "Şeyh İsa ve Şeyh Ali Bağdadi Türbesi",
+  "district": "Antakya",
+  "period": "Selçuklu dönemi olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh İsa ve Şeyh Ali Bağdadi Türbesi, kitapta Işıklı Köyü’nde kesme taştan yapılmış kubbeli bir yapı olarak anlatılır.",
+  "history": "Kitap yapıyı merkez ilçenin Işıklı Köyü’nde gösterir; Türkçe adres listesinde Antakya 5. mıntıka 832 parsel bilgisi yer alır. Kesme taştan yapılan kubbeli türbenin Selçuklu döneminde inşa edilmiş olabileceği belirtilir.\n\nŞeyh İsa’nın Hz. Muhammed’in soyundan geldiği, Hanifi Dede ve Şeyh Ömer ile kardeş olduğu bölgesel inanış olarak aktarılır. Ziyaretçilerin hastalıklarına şifa bulma ve çocuk sahibi olma gibi dileklerle burada dua ettikleri anlatılır; bunlar yapıya ilişkin ziyaret geleneğidir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sheikh-isa-and-sheikh-ali-bagdadi-tomb/domed-tomb.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sheikh-isa-and-sheikh-ali-bagdadi-tomb/domed-tomb.jpg",
+      "alt": "Bitişik evler arasında açık renk duvarlı küçük yapı, büyük kemerli niş içinde yeşil kapı ve üstte beyaz kubbe",
+      "description": "Bitişik evler arasında açık renk duvarlı küçük yapı, büyük kemerli niş içinde yeşil kapı ve üstte beyaz kubbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sheikh-isa-and-sheikh-ali-bagdadi-tomb/domed-tomb.jpg",
+      "x": 51,
+      "y": 24,
+      "title": "Kubbe",
+      "text": "Kitap türbeyi kubbeli bir yapı olarak tanımlar.",
+      "sourceId": "inv-p429"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sheikh-isa-and-sheikh-ali-bagdadi-tomb/domed-tomb.jpg",
+      "x": 51,
+      "y": 63,
+      "title": "Türbe yapısı",
+      "text": "Kesme taştan yapılmış türbenin Selçuklu döneminde inşa edildiği düşünülmektedir.",
+      "sourceId": "inv-p429"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh İsa ve Şeyh Ali Bağdadi Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Arsuz",
+        "Antakya",
+        "Samandağ"
+      ],
+      "correct": 2,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Türbenin hangi dönemde yapılmış olabileceği düşünülür?",
+      "options": [
+        "Roma",
+        "Cumhuriyet",
+        "Bizans",
+        "Selçuklu"
+      ],
+      "correct": 3,
+      "description": "Kitap Selçuklu dönemini ihtimal olarak verir.",
+      "sourceId": "inv-p429"
+    },
+    {
+      "question": "Yapının malzemesi nasıl belirtilir?",
+      "options": [
+        "Kesme taş",
+        "Kerpiç",
+        "Çelik",
+        "Tamamen ahşap"
+      ],
+      "correct": 0,
+      "description": "Metinde yapı kesme taştan yapılmış kubbeli türbe olarak anlatılır.",
+      "sourceId": "inv-p429"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p429",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh İsa ve Şeyh Ali Bağdadi Türbesi\"",
+      "page": "429"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh İsa ve Şeyh Ali Bağdadi Türbesi\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

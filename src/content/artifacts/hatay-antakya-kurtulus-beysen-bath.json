@@ -1,0 +1,100 @@
+{
+  "id": "hatay-antakya-kurtulus-beysen-bath",
+  "name": "Kurtuluş (Beysen) Hamamı",
+  "district": "Antakya",
+  "period": "Kitapta Memlük mimarisiyle ilişkilendirilir; kesin inşa tarihi belirsiz",
+  "endowment": "Banisinin Bî’seri olabileceği belirtilir",
+  "summary": "Kurtuluş (Beysen) Hamamı, Antakya’da binalar arasında kalan, üst örtü ışıklıklarıyla aydınlatılan bir hamamdır.",
+  "history": "Kurtuluş Caddesi’nin kuzeyindeki yapı, çevre binalar arasına sıkışmıştır. Soyunmalık, ılıklık, sıcaklık ve külhandan oluşur. Üç yanı yapılarla çevrili olduğu için dış cepheleri hakkında bilgi edinilemediği belirtilir; cadde bağlantısı ve giriş bir kapıyla sağlanır.\n\nHamam üst örtüdeki ışıklıklarla aydınlatılır. Ilıklık kubbesinin altındaki beşik tonozda bulunan ışıklıklar, ana kubbeden gelen gün ışığından yararlanır. Kitabede isim ve tarih “Beyseri 1364” olarak yazılıdır; kitap bu tarihin öne eklenen binalara ait olabileceğini belirtir. Hamamın 1551 yılı kayıtlarında bulunduğu da aktarılır. Sultan Baybars’ın süt kardeşi Bî’seri ile ilişki kurularak banisinin o olabileceği ileri sürülür. Bu aidiyet kesin bilgi olarak verilmez.\n\nMukarnaslı kubbe geçişleri Memlük mimarisiyle ilişkilendirilir. Dinî inanış gereği yapılmış dalma havuzu da vardır. Kitap karşılaştırma için Yeni Hamam’daki benzer havuzun yıkanma hücresine dönüştürüldüğünü söyler. Bölüm başlığı “Beysen”, kitabe aktarımı “Beyseri”, Türkçe adres listesi ise “Beyhan” adını kullanır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-kurtulus-beysen-bath/street-entrance.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-kurtulus-beysen-bath/street-entrance.jpg",
+      "alt": "Sokak boyunca bitişik çok katlı binaların altında taş kemerli iki giriş ve önlerinde park etmiş araçlar",
+      "description": "Sokak boyunca bitişik çok katlı binaların altında taş kemerli iki giriş ve önlerinde park etmiş araçlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-kurtulus-beysen-bath/street-entrance.jpg",
+      "x": 64,
+      "y": 72,
+      "title": "Caddeye açılan giriş",
+      "text": "Hamamın caddeyle bağlantısı ve girişi bir kapı ile sağlanır.",
+      "sourceId": "inv-p466"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-kurtulus-beysen-bath/street-entrance.jpg",
+      "x": 59,
+      "y": 30,
+      "title": "Öndeki binalar",
+      "text": "Kitap, kitabedeki tarihin hamamın önüne eklenmiş binalara ait olabileceğini belirtir.",
+      "sourceId": "inv-p466"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kurtuluş (Beysen) Hamamı kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Arsuz",
+        "Samandağ",
+        "Antakya"
+      ],
+      "correct": 3,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p476"
+    },
+    {
+      "question": "Hamamın aydınlatılması nasıl sağlanır?",
+      "options": [
+        "Üst örtüdeki ışıklıklarla",
+        "Sadece avizeyle",
+        "Tamamen cam duvarlarla",
+        "Açık avludan"
+      ],
+      "correct": 0,
+      "description": "Gün ışığı üst örtüde açılan ışıklıklardan alınır.",
+      "sourceId": "inv-p466"
+    },
+    {
+      "question": "Kitap hangi bölümü hamamın parçaları arasında sayar?",
+      "options": [
+        "Naos",
+        "Külhan",
+        "Medrese",
+        "Ahır"
+      ],
+      "correct": 1,
+      "description": "Hamam soyunmalık, ılıklık, sıcaklık ve külhan bölümlerinden oluşur.",
+      "sourceId": "inv-p466"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p466",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kurtuluş (Beysen) Hamamı\"",
+      "page": "466"
+    },
+    {
+      "id": "inv-p467",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kurtuluş (Beysen) Hamamı\"",
+      "page": "467"
+    },
+    {
+      "id": "inv-p476",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kurtuluş (Beysen) Hamamı\"",
+      "page": "476"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

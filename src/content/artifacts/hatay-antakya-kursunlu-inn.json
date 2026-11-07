@@ -1,0 +1,128 @@
+{
+  "id": "hatay-antakya-kursunlu-inn",
+  "name": "Kurşunlu Han",
+  "district": "Antakya",
+  "period": "Osmanlı · 1569",
+  "endowment": "Dersaadet Kapı Ağası Cafer Ağa’nın eseri olarak belirtilir",
+  "summary": "Kurşunlu Han, Antakya’da han, cami ve çeşmeden oluşan, iki katlı avlulu bir Osmanlı yapılar topluluğudur.",
+  "history": "Düz alandaki topluluk han, cami ve çeşmeden oluşur. Cami avlunun güneydoğusunda, çeşme batı kenarın kuzey köşesindedir. Kitap, küçük ibadet mekânlarının genellikle mescit sayıldığını, burada minare bulunması ve 1751’den itibaren imam atanması nedeniyle cami adının kullanıldığını anlatır. Eskiden kurşun kaplı olduğu düşünülen yapının kurşunlarının bilinmeyen bir tarihte, muhtemelen 18–19. yüzyıllarda cephane için söküldüğü ileri sürülür. 1831–1834 Şer’i Mahkeme Sicillerindeki cephanelik kullanımı bu yorumla ilişkilendirilir. Sokullu veya Köprülü Mehmet Paşa baniliğine ilişkin iddiaların belgeyle desteklenmediği; kurşun alımı ve imam atanmasına dair kayıtların Cafer Ağa baniliğini ve 1569 tarihini gösterdiği belirtilir.\n\nİki katlı hana batı, kuzey ve güney kapılarından girilir. Alt kat sokak dükkânlarıyla çevrilidir; odalar iç avlu etrafında sıralanır. Güneyde sivri kemerli eyvan biçimli taç kapı vardır. Doğu kanattaki çapraz tonozlu ahır sonradan duvarla kapatılmıştır. Avlu ortasındaki üç oda sonraki ekler olarak değerlendirilir. Güneybatıdaki merdiven ikiye ayrılarak güney ve batı odalarına, oradan ikinci kat revakına ulaşır.\n\nKare planlı caminin tek kubbeli harimi, kuzey ve batıda revaklı bölümle çevrilidir. Kitap bu bölümü yazlık namazgâh olarak yorumlar. Kısa kalın minarenin şerefesi şemsiye örtülüdür. Mihrap ve minber sade, sütun başlıkları mukarnaslıdır. Kuzeybatıdaki çeşme sivri kemerli duvar nişinden oluşur; malzeme ve üslup benzerlikleri nedeniyle hanla birlikte 16. yüzyılda yapıldığı düşünülür.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-kursunlu-inn/portal.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-kursunlu-inn/portal.jpg",
+      "alt": "Üzerinde Kurşunlu Han tabelası bulunan yüksek taş kemerli giriş ve yanında sergilenen ürünler",
+      "description": "Üzerinde Kurşunlu Han tabelası bulunan yüksek taş kemerli giriş ve yanında sergilenen ürünler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-kursunlu-inn/upper-portico.jpg",
+      "alt": "Ahşap çatılı uzun üst kat geçidi, taş duvar boyunca pencereler ve karşı tarafta açık korkuluklar",
+      "description": "Ahşap çatılı uzun üst kat geçidi, taş duvar boyunca pencereler ve karşı tarafta açık korkuluklar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-kursunlu-inn/courtyard-mosque.jpg",
+      "alt": "Hanın avlusunda sivri kemerli revaklı cami, kiremit çatı ve kısa örtülü minare",
+      "description": "Hanın avlusunda sivri kemerli revaklı cami, kiremit çatı ve kısa örtülü minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-kursunlu-inn/portal.jpg",
+      "x": 49,
+      "y": 50,
+      "title": "Hanın giriş kapısı",
+      "text": "Hana batı, kuzey ve güney yönlerindeki üç kapıdan girilir.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-kursunlu-inn/upper-portico.jpg",
+      "x": 53,
+      "y": 51,
+      "title": "Üst kat revakı",
+      "text": "Güneybatıdaki merdivenlerden ikinci kat revakına geçilir.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/hatay-antakya-kursunlu-inn/courtyard-mosque.jpg",
+      "x": 53,
+      "y": 72,
+      "title": "Caminin revakı",
+      "text": "Kare planlı caminin kuzey ve batısında revaklı bölüm vardır; kitap burayı yazlık namazgâh olarak yorumlar.",
+      "sourceId": "inv-p470"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kurşunlu Han kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "Arsuz",
+        "Samandağ"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p476"
+    },
+    {
+      "question": "Hanı hangi baninin eseri olarak gösteren kayıtlardan söz edilir?",
+      "options": [
+        "Tomas Antepyan",
+        "Dersaadet Kapı Ağası Cafer Ağa",
+        "Beşirzâde Mustafa Efendi",
+        "Mustafa Şevki Paşa"
+      ],
+      "correct": 1,
+      "description": "Kitap iki kaydın Cafer Ağa baniliğini ve 1569 tarihini gösterdiğini belirtir.",
+      "sourceId": "inv-p469"
+    },
+    {
+      "question": "Hanın kaç yönde giriş kapısı vardır?",
+      "options": [
+        "Bir",
+        "İki",
+        "Üç",
+        "Beş"
+      ],
+      "correct": 2,
+      "description": "Kapılar batı, kuzey ve güney yönlerine açılır.",
+      "sourceId": "inv-p470"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p468",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kurşunlu Han\"",
+      "page": "468"
+    },
+    {
+      "id": "inv-p469",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kurşunlu Han\"",
+      "page": "469"
+    },
+    {
+      "id": "inv-p470",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kurşunlu Han\"",
+      "page": "470"
+    },
+    {
+      "id": "inv-p476",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kurşunlu Han\"",
+      "page": "476"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

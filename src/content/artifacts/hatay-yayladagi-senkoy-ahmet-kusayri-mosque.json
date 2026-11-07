@@ -1,0 +1,122 @@
+{
+  "id": "hatay-yayladagi-senkoy-ahmet-kusayri-mosque",
+  "city": "Hatay",
+  "district": "Yayladağı",
+  "name": "Şenköy Ahmet Kusayri Camii",
+  "period": "İlk yapı için 16. yüzyıl ortası değerlendirmesi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Yayladağı’ndaki Şenköy Ahmet Kusayri manzumesi cami, zaviye ve türbeyi bir araya getirir.",
+  "history": "Kitap, Antakya’nın 35 km güneyindeki Şenköy’de eğimli arazide cami, zaviye ve türbeden oluşan manzumeyi anlatır; adres listesinde ilçe Yayladağı’dır. Ahmed Kusayri’nin 1549’da öldüğü, Kanuni ile görüştüğü ve dönüşünde yollar, medreseler, mescitler, çeşmeler yaptırdığı rivayet olarak aktarılır. Türbenin doğuda eski ve sade, batıda yeni ve gösterişli kapıları vardır.\n\nHarimin önünde on ahşap direkli, kiremitli son cemaat yeri bulunur. Kuzeydoğudaki kare kaideli minarenin yıkılan yuvarlak gövdesi 1957’de yeniden yapılmıştır. Beyaz kalker taşlı dikdörtgen cami kıbleye paralel iki sahınlıdır. Dördü serbest, ikisi gömme altı ayağın taşıdığı çapraz tonozlar ve kuzeyde köşe payeleri vardır. Mihrap önünde tonoz yerini içten kubbeye, dıştan çokgen kasnaklı kiremit örtüye bırakır. Sade mihrap, taş gövdeli ve ahşap korkuluklu minber, giriş üzerindeki ahşap mahfil bulunur. 1714 tarihli onarım kitabesinde Kusayrili Şeyh Muhammed’in oğlu İsmail anılır; başka kitabe 1785 onarımını bildirir. Türbedeki H. 1011 (M. 1602) kabul edilen kitabenin torunu tarafından yenilemeyi göstermesi, ilk yapının 16. yüzyıl ortasında olabileceğine dayanak sayılır. 1464 veya 1525 öncesi iddialar kitapta sağlam dayanaktan yoksun görülür.\n\nKuzeydeki türbenin büyük batı bölümü kubbeli ve sekizgen kasnaklıdır; kalın gömme ayaklar içte artı biçimli plan oluşturur. Merkezde on dört sanduka, sonradan eklenen doğu odasında iki sanduka vardır. Bazı tarikat sancaklarının metal alemlerinde ejder figürleri bulunur. Türbe kapısının güneyde bulunması ve mihrabiye olmaması, caminin o dönemde de mevcut olabileceği şeklinde yorumlanır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-yayladagi-senkoy-ahmet-kusayri-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-yayladagi-senkoy-ahmet-kusayri-mosque/book-view-1.jpg",
+      "alt": "Geniş taş avluda örtülü şadırvan, sağda revaklı cami ve ileride minare",
+      "description": "Şenköy Ahmet Kusayri Camii — kitaptaki görünüm 1 (s. 326–327)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-yayladagi-senkoy-ahmet-kusayri-mosque/book-view-2.jpg",
+      "alt": "Beyaz kemerler altında mihrap nişi, sağında minber ve iki yanda pencereler",
+      "description": "Şenköy Ahmet Kusayri Camii — kitaptaki görünüm 2 (s. 328–329)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-yayladagi-senkoy-ahmet-kusayri-mosque/book-view-2.jpg",
+      "x": 49,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Mihrap yarım daire biçimli sade bir niştir.",
+      "sourceId": "inv-p330"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-yayladagi-senkoy-ahmet-kusayri-mosque/book-view-1.jpg",
+      "x": 63,
+      "y": 36,
+      "title": "Minare",
+      "text": "Minarenin yıkılan yuvarlak gövdesi 1957’de yeniden yapılmıştır.",
+      "sourceId": "inv-p330"
+    }
+  ],
+  "test": [
+    {
+      "question": "Son cemaat yerini kaç ahşap direk taşır?",
+      "options": [
+        "Altı",
+        "On",
+        "Sekiz",
+        "On iki"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: On.",
+      "sourceId": "inv-p330"
+    },
+    {
+      "question": "Minarenin gövdesi hangi yıl yeniden yapılmıştır?",
+      "options": [
+        "1906",
+        "1842",
+        "1957",
+        "2004"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: 1957.",
+      "sourceId": "inv-p330"
+    },
+    {
+      "question": "Büyük türbe bölümünde kaç sanduka vardır?",
+      "options": [
+        "İki",
+        "Altı",
+        "Sekiz",
+        "On dört"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: On dört.",
+      "sourceId": "inv-p332"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p329",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Şenköy Ahmet Kusayri Camii\"",
+      "page": "329"
+    },
+    {
+      "id": "inv-p330",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Şenköy Ahmet Kusayri Camii\"",
+      "page": "330"
+    },
+    {
+      "id": "inv-p331",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Şenköy Ahmet Kusayri Camii\"",
+      "page": "331"
+    },
+    {
+      "id": "inv-p332",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Şenköy Ahmet Kusayri Camii\"",
+      "page": "332"
+    },
+    {
+      "id": "inv-p333",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Şenköy Ahmet Kusayri Camii\"",
+      "page": "333"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Yayladağı, \"Şenköy Ahmet Kusayri Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-nihat-agha-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Nihat Ağa Mescidi",
+  "period": "1930’lara ait kadastral planda yer alır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Nihat Ağa Mescidi, ev tipindeki yapısı ve özgün avlu taş döşemeleriyle tanıtılır.",
+  "history": "Kitap yapıyı ev tipindeki veya evden dönüştürülmüş mescitlerden sayar ve 1930’lara ait kadastral planda yer aldığını belirtir. Giriş ahşap doğramalı tek kanatlı kapıdır. Avlunun güneyinde mihrap, kuzeybatısında harim, batısında oda ve kuzeydoğusunda tuvalet vardır. Sonradan eklenen çiçeklikler ve özgün taş yıkama teknesi de anlatılır. Selçuk Sokak’a bakan kesme taş kaplı çeşme ile özgün kesme taş avlu döşemeleri kaydedilir. Harim girişindeki kesme taş eşiklik, özgün zeminin toprak dolgu olduğuna işaret sayılır; erken ek olarak terrazzo kaplama bulunur. Çeşme aynası ve eşikliğinin geç dönemde moloz taşla kapatıldığı, özgün duvarın korunduğu belirtilir.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-nihat-agha-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-nihat-agha-masjid/book-view-1.jpg",
+      "alt": "Taş döşeli avlu yanında kiremit çatılı küçük yapı ve demirli pencereler",
+      "description": "Nihat Ağa Mescidi — kitaptaki görünüm 1 (s. 284–285)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-nihat-agha-masjid/book-view-2.jpg",
+      "alt": "Ahşap tavanlı odada sıra ve masalar, pencereler ve karşı duvarda mihrap nişi",
+      "description": "Nihat Ağa Mescidi — kitaptaki görünüm 2 (s. 286–287)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-nihat-agha-masjid/book-view-1.jpg",
+      "x": 16,
+      "y": 66,
+      "title": "Giriş kapısı",
+      "text": "Mescide ahşap doğramalı tek kanatlı kapıdan girilir.",
+      "sourceId": "inv-p286"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-nihat-agha-masjid/book-view-1.jpg",
+      "x": 49,
+      "y": 89,
+      "title": "Taş döşeme",
+      "text": "Avlunun özgün kesme taş döşemeleri korunmuştur.",
+      "sourceId": "inv-p286"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin çeşmesi hangi sokağa bakar?",
+      "options": [
+        "Gökşen Sokak",
+        "Selçuk Sokak",
+        "Atatürk Caddesi",
+        "İnönü Caddesi"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Selçuk Sokak.",
+      "sourceId": "inv-p286"
+    },
+    {
+      "question": "Özgün avlu döşemesi hangi malzemedir?",
+      "options": [
+        "Cam",
+        "Plastik",
+        "Kesme taş",
+        "Asfalt"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Kesme taş.",
+      "sourceId": "inv-p286"
+    },
+    {
+      "question": "Giriş kapısı nasıl tanımlanır?",
+      "options": [
+        "Bronz çift kanatlı",
+        "Döner cam",
+        "Demir sürgülü",
+        "Ahşap doğramalı tek kanatlı"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Ahşap doğramalı tek kanatlı.",
+      "sourceId": "inv-p286"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p286",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nihat Ağa Mescidi\"",
+      "page": "286"
+    },
+    {
+      "id": "inv-p287",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nihat Ağa Mescidi\"",
+      "page": "287"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Nihat Ağa Mescidi\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

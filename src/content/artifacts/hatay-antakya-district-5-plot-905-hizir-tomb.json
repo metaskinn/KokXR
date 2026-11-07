@@ -1,0 +1,95 @@
+{
+  "id": "hatay-antakya-district-5-plot-905-hizir-tomb",
+  "name": "5. Mıntıka 905 Parsel Hızır Türbesi",
+  "district": "Antakya",
+  "period": "5 Kasım 1876",
+  "endowment": "Beşirzâde Mustafa Efendi tarafından yaptırılmıştır",
+  "summary": "Antakya’daki Hızır Türbesi, kapı kitabesine göre Beşirzâde Mustafa Efendi’nin 5 Kasım 1876’da yaptırdığı küçük bir makam yapısıdır.",
+  "history": "Kitap, Hızır adına yapılan makamların çoğunun banisi bilinmeyen sade yapılar veya bina içindeki sandukalar olduğunu belirtir. Antakya’daki bu örneğin ise hem banisi hem yapım tarihi bilinmektedir.\n\nKüçük kare yapı kubbeyle örtülmüş ve Hızır’ın manevi zuhuru ve huzuru için makam olarak hazırlanmıştır. Basık kemerli kapı üzerindeki kitabeye göre Beşirzâde Mustafa Efendi tarafından 5 Kasım 1876 tarihinde yaptırılmıştır. Türkçe adres listesi yapıyı Antakya 5. mıntıka 905 parselde gösterir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-district-5-plot-905-hizir-tomb/inscribed-entrance.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-district-5-plot-905-hizir-tomb/inscribed-entrance.jpg",
+      "alt": "Örtülü alanda taş kaplı cephe, kemerli kapı, yeşil parmaklıklı pencereler ve hayır sahiplerinin adlarını taşıyan levhalar",
+      "description": "Örtülü alanda taş kaplı cephe, kemerli kapı, yeşil parmaklıklı pencereler ve hayır sahiplerinin adlarını taşıyan levhalar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-district-5-plot-905-hizir-tomb/inscribed-entrance.jpg",
+      "x": 43,
+      "y": 66,
+      "title": "Kemerli kapı",
+      "text": "Kitap giriş kapısını basık kemerli olarak tanımlar.",
+      "sourceId": "inv-p431"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-district-5-plot-905-hizir-tomb/inscribed-entrance.jpg",
+      "x": 67,
+      "y": 56,
+      "title": "Küçük makam yapısı",
+      "text": "Kitap yapıyı Hızır’ın manevi zuhuru ve huzuru için hazırlanmış küçük bir makam olarak anlatır.",
+      "sourceId": "inv-p431"
+    }
+  ],
+  "test": [
+    {
+      "question": "5. Mıntıka 905 Parsel Hızır Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Defne",
+        "Arsuz",
+        "Samandağ",
+        "Antakya"
+      ],
+      "correct": 3,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Türbeyi kim yaptırmıştır?",
+      "options": [
+        "Beşirzâde Mustafa Efendi",
+        "Mustafa Şevki Paşa",
+        "Kasım Bey",
+        "Tomas Antepyan"
+      ],
+      "correct": 0,
+      "description": "Baninin adı kapı üzerindeki kitabeden öğrenilir.",
+      "sourceId": "inv-p431"
+    },
+    {
+      "question": "Kitabede hangi tarih verilir?",
+      "options": [
+        "23 Nisan 1920",
+        "5 Kasım 1876",
+        "29 Ekim 1923",
+        "10 Kasım 1938"
+      ],
+      "correct": 1,
+      "description": "Kitap kapı kitabesinden 5 Kasım 1876 tarihini aktarır.",
+      "sourceId": "inv-p431"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p431",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"5. Mıntıka 905 Parsel Hızır Türbesi\"",
+      "page": "431"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"5. Mıntıka 905 Parsel Hızır Türbesi\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "hatay-samandag-yogunoluk-armenian-church",
+  "name": "Yoğunoluk Ermeni Kilisesi",
+  "district": "Samandağ",
+  "period": "1774",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Yoğunoluk Ermeni Kilisesi, 1774 tarihli üç nefli taş yapı ile sonradan üzerine yapılan caminin birlikte yer aldığı bir yapıdır.",
+  "history": "Samandağ’ın Yoğunoluk köy merkezindeki kilise, ticari ve sosyal merkezde 1.450 m² parselde yer alır. Güney girişindeki kitabeye göre 1774’te küçük cemaat kilisesi olarak yapılmıştır. Kitap, 1900’lü yıllarda Ermeni vatandaşların bölgeden dağılmasıyla cemaatin kalmadığını, 1940’ta kiremit çatı eklenerek camiye dönüştürüldüğünü aktarır. 1990’da köy halkı kendi bütçesiyle düz damlı kilisenin tam üzerine betonarme cami yapmıştır. Kaynak bu caminin alttaki kiliseye yapısal tehdit oluşturmadığını belirtir; bu ifade kitabın değerlendirmesidir.\n\nİki kattaki toplam 700 m² alanda cami, minare, tuvalet, lojman ve depo bulunur. Kuzeyden güneye eğimli parsel alçak taş istinat duvarlarıyla çevrilidir. Parselin özgün girişi güneydeki dar sokaklardan, sonraki cami girişi doğudan tarif edilir.\n\nKilise 280 m² dikdörtgen, üstteki cami 177 m² kare planlıdır. Güneyden girilen üç nefli kilise doğu-batı doğrultusundadır. Zemini ciddi ölçüde tahrip olduğundan özgün kaplamalara ulaşılamamıştır; iç duvarlar kesme taştır. Kuzey cephesi toprağa gömülüdür ve kilisenin çatı kotundadır. Metnin son kısmında camiye girişin bu cepheden olduğu da yazılıdır; kaynak giriş yönü için iki farklı ifade kullanır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-samandag-yogunoluk-armenian-church/stone-walls.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-samandag-yogunoluk-armenian-church/stone-walls.jpg",
+      "alt": "Bitkilerle kaplanmış taş duvarlar, solda basamaklı dar geçit ve önde yuvarlak taş örgülü çevre duvarı",
+      "description": "Bitkilerle kaplanmış taş duvarlar, solda basamaklı dar geçit ve önde yuvarlak taş örgülü çevre duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-samandag-yogunoluk-armenian-church/doorway-detail.jpg",
+      "alt": "Taş kapı açıklığının üst ve yan bölümünde oyma bitkisel süslemeler ve aşınmış taş yüzey",
+      "description": "Taş kapı açıklığının üst ve yan bölümünde oyma bitkisel süslemeler ve aşınmış taş yüzey",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-samandag-yogunoluk-armenian-church/stone-walls.jpg",
+      "x": 52,
+      "y": 81,
+      "title": "Taş çevre duvarı",
+      "text": "Parsel sınırları çoğunlukla istinat duvarı niteliğindeki alçak taş duvarlarla çevrilidir.",
+      "sourceId": "inv-p453"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-samandag-yogunoluk-armenian-church/doorway-detail.jpg",
+      "x": 17,
+      "y": 56,
+      "title": "Güney giriş açıklığı",
+      "text": "Kilisenin giriş yönü güney olarak belirtilir; güney girişindeki kitabe 1774 tarihini verir.",
+      "sourceId": "inv-p452"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yoğunoluk Ermeni Kilisesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Samandağ",
+        "Antakya",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe Samandağ olarak verilmiştir.",
+      "sourceId": "inv-p454"
+    },
+    {
+      "question": "Kilise kitabesine göre ne zaman yapılmıştır?",
+      "options": [
+        "1131",
+        "1774",
+        "1514",
+        "1936"
+      ],
+      "correct": 1,
+      "description": "Güney girişindeki kitabeden 1774’te yapıldığı anlaşılır.",
+      "sourceId": "inv-p452"
+    },
+    {
+      "question": "Kilisenin iç düzeni kaç neflidir?",
+      "options": [
+        "Tek nefli",
+        "Beş nefli",
+        "Üç nefli",
+        "Yedi nefli"
+      ],
+      "correct": 2,
+      "description": "Kilise doğu-batı doğrultusunda üç nefli olarak anlatılır.",
+      "sourceId": "inv-p453"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p452",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Yoğunoluk Ermeni Kilisesi\"",
+      "page": "452"
+    },
+    {
+      "id": "inv-p453",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Yoğunoluk Ermeni Kilisesi\"",
+      "page": "453"
+    },
+    {
+      "id": "inv-p454",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Yoğunoluk Ermeni Kilisesi\"",
+      "page": "454"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

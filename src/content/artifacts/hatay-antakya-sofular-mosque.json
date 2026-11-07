@@ -1,0 +1,112 @@
+{
+  "id": "hatay-antakya-sofular-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Sofular Camii",
+  "period": "Kitabe üslubu 13. yüzyıl sonunu düşündürür; mevcut biçim 1872 sonrası",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sofular manzumesi, cami, şadırvan, çeşme ve birbirine bağlı iki türbeden oluşur.",
+  "history": "Eğimli arazide geniş avluya yerleşen manzumede cami, şadırvan, çeşme ve iki türbe bulunur. Kıble tarafından girilen avlunun ortasında şadırvan, ileride minare ve onun doğusunda türbeler yer alır. Kitabenin yazı üslubu 13. yüzyıl son çeyreği Memlük dönemini düşündürse de bugünkü yapının çok sayıda depremden sonra, özellikle 1872 depremi ardından biçimlendiği belirtilir. Kuzeybatıdaki taş cami yamuklaşan yatay dikdörtgen planlıdır. Ortadaki sütunun taşıdığı iki sivri kemer kıbleye paralel iki sahın oluşturur. Güneyde, mihrabın batısındaki kapıdan girilir. İçte ahşap tavan, dışta kırma çatı vardır. Güneyde üç, batıda dört pencere bulunur; diğer cepheler kapalıdır. Dışa taşan mihrabın üstünde kandil konsolları vardır. Bağımsız minare kare kaideli, sekizgen gövdeli ve konik külahlıdır. Doğudaki kare türbe içten kubbeli, dıştan yüksek sekizgen kasnaklıdır; bir koridorla ulaşılır ve kuzey kapısından ikinci türbeye geçilir. Sandukalar verev yerleştirilmiştir. Türbelerin camiyle aynı zamanda yapılmış olabileceği düşünülür; kesin tarih bilinmez.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sofular-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sofular-mosque/book-view-1.jpg",
+      "alt": "Sokak köşesinde beyaz sıvalı kiremit çatılı yapı, avlu kapısı ve minare",
+      "description": "Sofular Camii — kitaptaki görünüm 1 (s. 316–317)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-sofular-mosque/book-view-2.jpg",
+      "alt": "Taş cephede ahşap kapı, demirli pencere ve ahşap bank",
+      "description": "Sofular Camii — kitaptaki görünüm 2 (s. 318–319)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sofular-mosque/book-view-1.jpg",
+      "x": 25,
+      "y": 33,
+      "title": "Minare",
+      "text": "Bağımsız minare sekizgen gövde ve konik külaha sahiptir.",
+      "sourceId": "inv-p318"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sofular-mosque/book-view-2.jpg",
+      "x": 22,
+      "y": 60,
+      "title": "Güney girişi",
+      "text": "Camiye mihrabın batısındaki güney kapısından girilir.",
+      "sourceId": "inv-p318"
+    }
+  ],
+  "test": [
+    {
+      "question": "Manzumede kaç türbe bulunur?",
+      "options": [
+        "Bir",
+        "Üç",
+        "Beş",
+        "İki"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p318"
+    },
+    {
+      "question": "Camiye hangi yönden girilir?",
+      "options": [
+        "Güney",
+        "Kuzey",
+        "Doğu",
+        "Batı"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Güney.",
+      "sourceId": "inv-p318"
+    },
+    {
+      "question": "Minarenin gövdesi hangi biçimdedir?",
+      "options": [
+        "Dairesel",
+        "Sekizgen",
+        "Üçgen",
+        "On ikigen"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Sekizgen.",
+      "sourceId": "inv-p318"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p318",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Sofular Camii\"",
+      "page": "318"
+    },
+    {
+      "id": "inv-p319",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Sofular Camii\"",
+      "page": "319"
+    },
+    {
+      "id": "inv-p321",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Sofular Camii\"",
+      "page": "321"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Sofular Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

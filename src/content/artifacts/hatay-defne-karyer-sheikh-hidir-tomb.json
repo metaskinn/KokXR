@@ -1,0 +1,95 @@
+{
+  "id": "hatay-defne-karyer-sheikh-hidir-tomb",
+  "name": "Karyer-Şeyh Hıdır Türbesi",
+  "district": "Defne",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karyer-Şeyh Hıdır Türbesi, avlulu yerleşkede ibadet ve toplantı mekânlarıyla birlikte tarif edilen taş bir ziyaretgâhtır.",
+  "history": "Kitabın Türkçe adres listesi yapıyı Defne, Karyer, 1431 parselde gösterir. Buna karşılık yapı anlatımında Antakya 3. mıntıka 1087 parsel ifadesi kullanılır. Bu iki konum bilgisi kaynakta birbiriyle uyuşmamaktadır.\n\nMetne göre türbe, müştemilat ve çeşitli yapılarla çevrili avludan oluşur. Kareye yakın dikdörtgen planlı taş yapının geniş saçakları ve yuvarlak kubbesi vardır; cephelerde mazgal pencereler, girişte kapı bulunur. Giriş önünde geniş sundurma vardır. Ortadaki sanduka mermer kaplıdır; girişte Arapça kitabe yer alır.\n\nAvluda ibadet ve toplantı için kullanılan bir yapı ile kesim ve pişirme alanları vardır. Kitap, aileler ve gruplar hâlinde gelen ziyaretçilerin mevlit okuttuklarını ve kurban kestiklerini aktarır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-defne-karyer-sheikh-hidir-tomb/entrance.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-defne-karyer-sheikh-hidir-tomb/entrance.jpg",
+      "alt": "Büyük ağacın yanındaki taş avluda sivri kemerli niş içine alınmış açık kapı ve solda merdiven",
+      "description": "Büyük ağacın yanındaki taş avluda sivri kemerli niş içine alınmış açık kapı ve solda merdiven",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-defne-karyer-sheikh-hidir-tomb/entrance.jpg",
+      "x": 53,
+      "y": 54,
+      "title": "Giriş kapısı",
+      "text": "Türbenin giriş yönünde bir kapısı bulunur.",
+      "sourceId": "inv-p407"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-defne-karyer-sheikh-hidir-tomb/entrance.jpg",
+      "x": 47,
+      "y": 32,
+      "title": "Girişteki yazıt",
+      "text": "Kitap girişte Arapça bir kitabe bulunduğunu belirtir.",
+      "sourceId": "inv-p407"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe planı metinde nasıl tarif edilir?",
+      "options": [
+        "Kareye yakın dikdörtgen",
+        "Daire",
+        "Üçgen",
+        "Sekizgen"
+      ],
+      "correct": 0,
+      "description": "Metin yapıyı kareye yakın dikdörtgen planlı olarak tanımlar.",
+      "sourceId": "inv-p407"
+    },
+    {
+      "question": "Metinde sandukanın kaplaması nasıl anlatılır?",
+      "options": [
+        "Ahşap",
+        "Mermer",
+        "Bakır",
+        "Cam"
+      ],
+      "correct": 1,
+      "description": "Türbenin orta kısmındaki sanduka mermer kaplamalıdır.",
+      "sourceId": "inv-p407"
+    },
+    {
+      "question": "Avludaki ek yapı hangi amaçlarla kullanılır?",
+      "options": [
+        "Tiyatro ve sinema",
+        "Demir işleme",
+        "İbadet ve toplantı",
+        "Tahıl öğütme"
+      ],
+      "correct": 2,
+      "description": "Avluda ibadet ve toplantı mekânı ile kesim ve pişirme yerleri tarif edilir.",
+      "sourceId": "inv-p407"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p407",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Karyer-Şeyh Hıdır Türbesi\"",
+      "page": "407"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Karyer-Şeyh Hıdır Türbesi\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

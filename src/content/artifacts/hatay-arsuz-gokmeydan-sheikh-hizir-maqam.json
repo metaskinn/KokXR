@@ -1,0 +1,100 @@
+{
+  "id": "hatay-arsuz-gokmeydan-sheikh-hizir-maqam",
+  "name": "Gökmeydan-Şeyh Hızır Makamı",
+  "district": "Arsuz",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Gökmeydan-Şeyh Hızır Makamı, Arsuz’da büyük bir çınar ağacının yanında kurulmuş mermer kaplı bir ziyaret yapısıdır.",
+  "history": "Şeyh Hızır Ziyaret Makamı, Arsuz ilçesinin Gökmeydan Mahallesi’ndedir. Düz arazideki avluda büyük bir çınar ağacının yanında, kareye yakın dikdörtgen planla yapılmıştır.\n\nYapı bütün cephelerindeki pencerelerden ışık alır. Kapı açıklığı sivri kemerli bir niş içindedir. Duvar kenarına yerleştirilen mermer kaplı sandukada, türbe sahibinin kimliğini bildiren bir kitabe yoktur. Taş örgülü cepheler mermerle kaplanmıştır. Sundurmalı giriş, geniş saçaklı beton çatı ve bunun üzerindeki yuvarlak kubbe yapıyı tanımlar.\n\nYakınında ibadet ve toplantı için kullanılan betonarme bir yapı; avluda ise kurban ve adak kesimi ile pişirme için kullanılabilecek yapılar vardır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-arsuz-gokmeydan-sheikh-hizir-maqam/marble-entrance.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-arsuz-gokmeydan-sheikh-hizir-maqam/marble-entrance.jpg",
+      "alt": "Metal sundurma altında iki renk yatay taş kaplamalı cephe, sivri kemerli niş içinde kapı ve sağda yazı levhası",
+      "description": "Metal sundurma altında iki renk yatay taş kaplamalı cephe, sivri kemerli niş içinde kapı ve sağda yazı levhası",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-arsuz-gokmeydan-sheikh-hizir-maqam/marble-entrance.jpg",
+      "x": 53,
+      "y": 56,
+      "title": "Sivri kemerli kapı nişi",
+      "text": "Kapı açıklığı sivri kemerli bir niş içine alınmıştır.",
+      "sourceId": "inv-p409"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-arsuz-gokmeydan-sheikh-hizir-maqam/marble-entrance.jpg",
+      "x": 77,
+      "y": 44,
+      "title": "Mermer kaplı cephe",
+      "text": "Taş örgülü cepheler mermerle kaplıdır.",
+      "sourceId": "inv-p409"
+    }
+  ],
+  "test": [
+    {
+      "question": "Gökmeydan-Şeyh Hızır Makamı kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Arsuz",
+        "Defne",
+        "Samandağ"
+      ],
+      "correct": 1,
+      "description": "Türkçe adres listesinde ilçe Arsuz olarak verilmiştir.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "question": "Makam hangi ağacın yanında kurulmuştur?",
+      "options": [
+        "Çam",
+        "Servi",
+        "Çınar",
+        "Hurma"
+      ],
+      "correct": 2,
+      "description": "Kitap yapının büyük bir çınar ağacının yanında bulunduğunu belirtir.",
+      "sourceId": "inv-p408"
+    },
+    {
+      "question": "Sanduka üzerinde kimlik kitabesi var mıdır?",
+      "options": [
+        "Üç kitabe vardır",
+        "Yalnızca tarih yazılıdır",
+        "Baninin adı yazılıdır",
+        "Bulunmamaktadır"
+      ],
+      "correct": 3,
+      "description": "Mermer kaplı sandukada türbe sahibinin kimliğine ilişkin kitabe yoktur.",
+      "sourceId": "inv-p409"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p408",
+      "text": "Hatay Vakıf Eserleri, Arsuz, \"Gökmeydan-Şeyh Hızır Makamı\"",
+      "page": "408"
+    },
+    {
+      "id": "inv-p409",
+      "text": "Hatay Vakıf Eserleri, Arsuz, \"Gökmeydan-Şeyh Hızır Makamı\"",
+      "page": "409"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Arsuz, \"Gökmeydan-Şeyh Hızır Makamı\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

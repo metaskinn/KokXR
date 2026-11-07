@@ -1,0 +1,114 @@
+{
+  "id": "hatay-iskenderun-greek-catholic-church",
+  "name": "Rum Katolik Kilisesi",
+  "district": "İskenderun",
+  "period": "19. yüzyılda Tanzimat ve Islahat sonrası bağlamı; kesin tarih belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Rum Katolik Kilisesi, İskenderun Savaş Mahallesi’nde tek ana mekânlı bazilika planlı sade bir yapıdır.",
+  "history": "Kilise İskenderun’da Savaş Mahallesi Ziya Gökalp Caddesi’ndedir. Sade düzenlenmiş tek ana mekânı bazilika planlıdır. Kitap yapı hakkında yazılı bilgi bulunmadığını belirtir ve aktardığı durumda ibadethane olarak kullanılmadığını söyler.\n\nBatıdaki giriş sonradan açılmıştır. Kuzey cephedeki pencere özgün hâlini korur. Girişin doğu ve batısındaki ikişer pencerenin benzerleri güney cephede de bulunur. Dışarıdan başka bir yapıya bitişik doğu duvarında yarım daire planlı üçlü apsisin izleri vardır. Kapı ve pencere açıklıkları düzgün kesme taş işçiliklidir. Dört eğimli ahşap çatı kiremitle kaplıdır.\n\nGüneydeki dükkânların ve kuzeyde farklı malzemeyle yapılmış mekânların sonraki ekler olduğu düşünülür. Kuzey girişinin üzerindeki Arapça kitabe, sonradan yapılan sıva sırasında devşirme olarak yerleştirilmiştir. Kitap yapıyı Tanzimat ve Islahat sonrasında sayıları artan kiliseler arasında değerlendirir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-iskenderun-greek-catholic-church/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-iskenderun-greek-catholic-church/exterior.jpg",
+      "alt": "Sokak köşesinde kiremit çatılı açık renk kilise, taş söveli kemerli uzun pencereler ve köşe duvarı",
+      "description": "Sokak köşesinde kiremit çatılı açık renk kilise, taş söveli kemerli uzun pencereler ve köşe duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-iskenderun-greek-catholic-church/interior.jpg",
+      "alt": "Ahşap tavanlı kilisede ahşap banklar, duvarlarda resimler ve solda yüksek pencereler",
+      "description": "Ahşap tavanlı kilisede ahşap banklar, duvarlarda resimler ve solda yüksek pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-iskenderun-greek-catholic-church/sanctuary.jpg",
+      "alt": "Beyaz duvarlı iç mekânda örtülü sunak, duvar resmi, kemerli nişler ve ahşap kapı",
+      "description": "Beyaz duvarlı iç mekânda örtülü sunak, duvar resmi, kemerli nişler ve ahşap kapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-iskenderun-greek-catholic-church/exterior.jpg",
+      "x": 51,
+      "y": 38,
+      "title": "Pencere açıklıkları",
+      "text": "Kapı ve pencere açıklıklarında düzgün kesme taş işçiliği vardır.",
+      "sourceId": "inv-p448"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-iskenderun-greek-catholic-church/exterior.jpg",
+      "x": 51,
+      "y": 8,
+      "title": "Kiremit çatı",
+      "text": "Yapı dört eğimli ahşap çatıyla örtülüdür; çatının üzeri kiremit kaplıdır.",
+      "sourceId": "inv-p449"
+    }
+  ],
+  "test": [
+    {
+      "question": "Rum Katolik Kilisesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "İskenderun",
+        "Arsuz"
+      ],
+      "correct": 2,
+      "description": "Türkçe adres listesinde ilçe İskenderun olarak verilmiştir.",
+      "sourceId": "inv-p454"
+    },
+    {
+      "question": "Kilisenin planı nasıl tanımlanır?",
+      "options": [
+        "Merkezî sekizgen",
+        "Dairesel",
+        "Haç planlı",
+        "Bazilika planlı"
+      ],
+      "correct": 3,
+      "description": "Yapı tek ana mekândan oluşur ve bazilika plana sahiptir.",
+      "sourceId": "inv-p448"
+    },
+    {
+      "question": "Çatının üzeri neyle kaplıdır?",
+      "options": [
+        "Kiremit",
+        "Kurşun",
+        "Bakır",
+        "Cam"
+      ],
+      "correct": 0,
+      "description": "Dört eğimli ahşap çatının üzeri kiremit kaplıdır.",
+      "sourceId": "inv-p449"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p448",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Rum Katolik Kilisesi\"",
+      "page": "448"
+    },
+    {
+      "id": "inv-p449",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Rum Katolik Kilisesi\"",
+      "page": "449"
+    },
+    {
+      "id": "inv-p454",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Rum Katolik Kilisesi\"",
+      "page": "454"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

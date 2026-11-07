@@ -1,0 +1,116 @@
+{
+  "id": "hatay-antakya-semerciler-masjid",
+  "name": "Semerciler Mescidi",
+  "district": "Antakya",
+  "period": "Tarihi 1873’e kadar uzanmaktadır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Semerciler Mescidi, Antakya Uzun Çarşı’da, adını semer ustalarının bulunduğu sokaktan alan iki sahınlı bir mescittir.",
+  "history": "Mescit adını Antakya Uzun Çarşı’da semer yapan ustaların bulunduğu sokaktan alır. Kitap, çeşitli kaynakların tarihini 1873’e kadar götürdüğünü aktarır. Avluya kuzey ve batıdaki iki kapıdan girilir.\n\nKuzeyde, çarşıya açılan kapının yanında minare yer alır. Kısa yuvarlak gövdesinin şerefesi, ahşap direkler üstüne oturan şemsiye biçimli külahla örtülüdür. Ev ve iş yerleri arasındaki harimin planı hafif eğik bir eşkenar dörtgendir. Ortadaki sütunun taşıdığı iki sivri kemer, mekânı kıbleye paralel iki sahına ayırır.\n\nKıble ve kuzey duvarlarındaki dörder pencere iç mekânı aydınlatır. Harim kapısı ve mihrap sadedir; mihrap nişinde küçük bir pencere de vardır. Mescit 1990’da Vakıflar Genel Müdürlüğü tarafından aslına uygun biçimde restore edilmiştir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-semerciler-masjid/courtyard-facade.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-semerciler-masjid/courtyard-facade.jpg",
+      "alt": "Taş cephede kemerli pencereler ve beyaz kapı, önünde metal çatılı açık bölüm",
+      "description": "Taş cephede kemerli pencereler ve beyaz kapı, önünde metal çatılı açık bölüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-semerciler-masjid/minaret.jpg",
+      "alt": "Dar geçitte basamaklar ve yapılar arasından yükselen ahşap örtülü kısa minare",
+      "description": "Dar geçitte basamaklar ve yapılar arasından yükselen ahşap örtülü kısa minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-semerciler-masjid/mihrab.jpg",
+      "alt": "Ortası küçük pencereli taş mihrap nişi, iki yanında pencereler ve halılı zemin",
+      "description": "Ortası küçük pencereli taş mihrap nişi, iki yanında pencereler ve halılı zemin",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-semerciler-masjid/arches.jpg",
+      "alt": "Taş sütuna oturan sivri kemerler, pencereler ve halıyla kaplı iç mekân",
+      "description": "Taş sütuna oturan sivri kemerler, pencereler ve halıyla kaplı iç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-semerciler-masjid/mihrab.jpg",
+      "x": 51,
+      "y": 56,
+      "title": "Pencereli mihrap",
+      "text": "Sade mihrap nişinin içinde küçük bir pencere bulunur.",
+      "sourceId": "inv-p388"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-semerciler-masjid/arches.jpg",
+      "x": 62,
+      "y": 46,
+      "title": "Sütun ve kemerler",
+      "text": "Ortadaki sütuna binen iki sivri kemer harimi kıbleye paralel iki sahına ayırır.",
+      "sourceId": "inv-p388"
+    }
+  ],
+  "test": [
+    {
+      "question": "Semerciler Mescidi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "Arsuz",
+        "Samandağ"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p399"
+    },
+    {
+      "question": "Mescit adını hangi ustaların sokağından alır?",
+      "options": [
+        "Bakırcılar",
+        "Semer yapan ustalar",
+        "Kuyumcular",
+        "Dokumacılar"
+      ],
+      "correct": 1,
+      "description": "Uzun Çarşı’da semer yapan ustaların sokağında yer alır.",
+      "sourceId": "inv-p388"
+    },
+    {
+      "question": "Mescit hangi yıl aslına uygun restore edilmiştir?",
+      "options": [
+        "1751",
+        "2008",
+        "1990",
+        "2018"
+      ],
+      "correct": 2,
+      "description": "Vakıflar Genel Müdürlüğü 1990’da restorasyon yapmıştır.",
+      "sourceId": "inv-p388"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p388",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Semerciler Mescidi\"",
+      "page": "388"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Semerciler Mescidi\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

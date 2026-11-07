@@ -1,0 +1,117 @@
+{
+  "id": "hatay-antakya-hedbeli-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Hedbeli Mescidi",
+  "period": "19. yüzyıl olduğu varsayılır; kesin tarih bilinmiyor",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hedbeli Mescidi, çarpık duvarlı harimi ve yazlık namazgâh olarak kullanılan avlusuyla anlatılır.",
+  "history": "Dar ara sokakta ve eğimli arazideki yapının doğu ve kıble duvarlarının çarpıklığı, evden ibadethaneye dönüştürülmüş olabileceğini düşündürür. Mimarı, banisi ve kesin tarihi bilinmez; 19. yüzyılda yapılmış olabileceği varsayılır. Avluya batıdaki merdivenle, ahşap şerefeden ibaret mezeneye başka bir merdivenle ulaşılır. Ağaçlı avlu yazlık namazgâhtır; duvar çeşmesi, kuyu ve sebil bulunur. Sonradan eklenen sade avlu mihrabı mezenenin altındadır. Kuzeyden girilen kapalı harim, ortadaki kemerle kıbleye paralel iki bölüme ayrılır. Batıda dört ve mihrabın batısında bir pencere vardır. Mihrap sade niştir. Küçük tas nişi bulunan çeşmenin de 19. yüzyıla ait olduğu tahmin edilir.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-hedbeli-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-hedbeli-masjid/book-view-1.jpg",
+      "alt": "Taş cephede ahşap kapı ve yan yana üç kemerli pencere",
+      "description": "Hedbeli Mescidi — kitaptaki görünüm 1 (s. 232–233)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-hedbeli-masjid/book-view-2.jpg",
+      "alt": "Taş döşeli dar avluda solda cami cephesi ve ileride büyük ağaç",
+      "description": "Hedbeli Mescidi — kitaptaki görünüm 2 (s. 234–235)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-hedbeli-masjid/book-view-1.jpg",
+      "x": 14,
+      "y": 65,
+      "title": "Harim kapısı",
+      "text": "Harime kuzeydeki kapıdan girilir.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-hedbeli-masjid/book-view-2.jpg",
+      "x": 47,
+      "y": 83,
+      "title": "Avlu",
+      "text": "Ağaçlı avlu yazlık namazgâh olarak kullanılır.",
+      "sourceId": "inv-p234"
+    }
+  ],
+  "test": [
+    {
+      "question": "Avluya hangi yöndeki merdivenle çıkılır?",
+      "options": [
+        "Doğu",
+        "Batı",
+        "Kuzey",
+        "Güney"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Batı.",
+      "sourceId": "inv-p236"
+    },
+    {
+      "question": "Avlu yazın hangi amaçla kullanılır?",
+      "options": [
+        "Kervan barınağı",
+        "Hamam",
+        "Namazgâh",
+        "Bedesten"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Namazgâh.",
+      "sourceId": "inv-p234"
+    },
+    {
+      "question": "Harim hangi unsurla ikiye ayrılır?",
+      "options": [
+        "Cam perde",
+        "Dört kubbe",
+        "Dış payandalar",
+        "Ortadaki kemer"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Ortadaki kemer.",
+      "sourceId": "inv-p236"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p234",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hedbeli Mescidi\"",
+      "page": "234"
+    },
+    {
+      "id": "inv-p235",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hedbeli Mescidi\"",
+      "page": "235"
+    },
+    {
+      "id": "inv-p236",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hedbeli Mescidi\"",
+      "page": "236"
+    },
+    {
+      "id": "inv-p237",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hedbeli Mescidi\"",
+      "page": "237"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Hedbeli Mescidi\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

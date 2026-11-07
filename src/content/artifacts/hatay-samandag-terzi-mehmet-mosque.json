@@ -1,0 +1,116 @@
+{
+  "id": "hatay-samandag-terzi-mehmet-mosque",
+  "name": "Terzi Mehmet Camii",
+  "district": "Samandağ",
+  "period": "1936",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Terzi Mehmet Camii, 1936’da yapılmış, 150 kişi kapasiteli, şadırvanlı ve minareli bir camidir.",
+  "history": "Kitap, Hatay’da Samandağ ilçesine yakın bir yerde hizmet veren caminin 512 m² alan üzerine kurulduğunu belirtir. Adres listesinde yapı Samandağ, Alevışık, 1478 parsel olarak kayıtlıdır.\n\n1936’da yapılan caminin şadırvanı ve minaresi vardır; kapasitesi 150 kişidir. Hizmet kalitesini artırmak amacıyla Vakıflar Bölge Müdürlüğü’nün 2016’da başlattığı restorasyon çalışmaları 2018’de tamamlanmıştır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-samandag-terzi-mehmet-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-samandag-terzi-mehmet-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı taş caminin ahşap direkli ön bölümü, geride minare ve sokak",
+      "description": "Kiremit çatılı taş caminin ahşap direkli ön bölümü, geride minare ve sokak",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-samandag-terzi-mehmet-mosque/entrance.jpg",
+      "alt": "Taş duvarda kemerli ahşap giriş kapısı, üstünde kitabe ve iki yanında demir parmaklıklı pencereler",
+      "description": "Taş duvarda kemerli ahşap giriş kapısı, üstünde kitabe ve iki yanında demir parmaklıklı pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-samandag-terzi-mehmet-mosque/prayer-hall.jpg",
+      "alt": "Ahşap kirişli tavana sahip harimde sade mihrap ve ahşap minber",
+      "description": "Ahşap kirişli tavana sahip harimde sade mihrap ve ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-samandag-terzi-mehmet-mosque/minaret.jpg",
+      "alt": "Taş minarenin şerefesi ve sivri külahı, alt tarafta kiremit çatılar",
+      "description": "Taş minarenin şerefesi ve sivri külahı, alt tarafta kiremit çatılar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-samandag-terzi-mehmet-mosque/minaret.jpg",
+      "x": 48,
+      "y": 47,
+      "title": "Minare",
+      "text": "Kitap caminin minareli olduğunu belirtir.",
+      "sourceId": "inv-p392"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-samandag-terzi-mehmet-mosque/exterior.jpg",
+      "x": 50,
+      "y": 57,
+      "title": "Cami yapısı",
+      "text": "1936 tarihli cami 512 m² alan üzerine kurulmuştur.",
+      "sourceId": "inv-p392"
+    }
+  ],
+  "test": [
+    {
+      "question": "Terzi Mehmet Camii kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Samandağ",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 1,
+      "description": "Türkçe adres listesinde ilçe Samandağ olarak verilmiştir.",
+      "sourceId": "inv-p399"
+    },
+    {
+      "question": "Caminin kapasitesi kaç kişidir?",
+      "options": [
+        "50",
+        "500",
+        "150",
+        "1000"
+      ],
+      "correct": 2,
+      "description": "Kitap caminin kapasitesini 150 kişi olarak verir.",
+      "sourceId": "inv-p392"
+    },
+    {
+      "question": "Restorasyon çalışmaları hangi dönemde tamamlanmıştır?",
+      "options": [
+        "1990’da başlayıp 1992’de",
+        "2000’de başlayıp 2002’de",
+        "2020’de başlayıp 2022’de",
+        "2016’da başlayıp 2018’de"
+      ],
+      "correct": 3,
+      "description": "Vakıflar Bölge Müdürlüğü 2016’da başlamış, çalışmaları 2018’de bitirmiştir.",
+      "sourceId": "inv-p392"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p392",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Terzi Mehmet Camii\"",
+      "page": "392"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Terzi Mehmet Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -39,6 +39,8 @@ kokxr/
 
 | Yol | Ne için |
 |---|---|
+| `public/manifest.webmanifest`, `public/ikonlar/` | PWA bildirimi ve simgeler |
+| `scripts/sw-sablon.js` | Service worker şablonu; build sırasında `dist/sw.js` olur |
 | `.nvmrc` | Node 24 sürümü; `nvm use` okur |
 | `.gitignore` | Git'e girmeyen yollar |
 | `.env` | Supabase adresi ve anahtarı; git'e girmez, sohbete yapıştırılmaz |

@@ -4,11 +4,12 @@
 
 1. **Ürün:** Web + WebXR (React, Vite, Three.js). Quest tarayıcıdan açılıyor; Unity kullanılmıyor.
 2. **Çalışıyor:** Bursa'dan 10 eser (tarihçe, galeri, kaynak, kredi, 3 soruluk test, temsilî maket ve VR girişi), vazo, kılıç ve çini atölyeleri, Yolculuk akışı.
-3. **Test:** `test:e2e` üç yapılandırmada 15/15, `test:hizli` ve tarayıcı testleri geçti. Gerçek Quest'te yalnız Ulu Camii denendi.
+3. **Test:** `test:e2e` Chromium 1280/360 ve Firefox 1280'de 15/15, `test:hizli` ve tarayıcı testleri geçti. Gerçek Quest'te yalnız Ulu Camii denendi.
 4. **Yarım:** Yönetim ekranı yalnız `localStorage`'a kaydediyor; giriş ve görsel yükleme yok. Onay ve öğretmen ekranları mokap.
-5. **Eksik:** PWA veya masaüstü paketi, şehir/ilçe/kategori filtresi ve harita, yüksek kontrast, yazı boyutu, sesli anlatım, axe raporu, README.
+5. **PWA:** Kuruldu (`public/manifest.webmanifest`, `public/ikonlar/`, `scripts/sw-sablon.js`, `tests/pwa.mjs`); service worker yalnız derlenmiş sürümde kayıt olur, çevrimdışı açılış testli.
+5b. **Eksik:** masaüstü paketi, şehir/ilçe/kategori filtresi ve harita, yüksek kontrast, yazı boyutu, sesli anlatım, axe raporu, README.
 6. **Doğrulanmadı:** Tarihsel metinler kitapla karşılaştırılmadı; 10 eser `dogrulanmis` işaretli olduğu için bu bir risk. `kokxr.vercel.app` 6 Kasım notuna göre başka ekip üyesinin hesabında, elle yüklenmiş fotoğrafsız eski sürüm; push ile güncellenmeyebilir.
-7. **Sıradaki iş:** Sırayla, ayrı dal ve commit: PWA (`arayuz/...`), Supabase ile kalıcı kayıt + giriş + görsel yükleme (`yonetim/...`), onay akışı (`yonetim/...`).
+7. **Sıradaki iş:** Sırayla, ayrı dal ve commit: Supabase ile kalıcı kayıt + giriş + görsel yükleme (`yonetim/...`), onay akışı (`yonetim/...`).
 8. **Hazır:** `.env` içinde Supabase adresi ve anahtarı var; yeni bağımlılık olarak yalnız Supabase istemcisi onaylı.
 9. **Kurallar:** `master`'a birleştirme ve push için sor. Node 24 kullan (`nvm use 24`). Tarih veya kaynak uydurma.
 10. **Devamı:** Plan `docs/kokkod_kazanma_plani.md`, roller `docs/gorev_dagilimi.md`, dosya haritası `docs/HARITA.md`. Bu belgenin geri kalanını yalnız gerekirse oku.

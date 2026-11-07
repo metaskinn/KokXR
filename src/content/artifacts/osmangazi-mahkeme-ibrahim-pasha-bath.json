@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-mahkeme-ibrahim-pasha-bath",
+  "name": "Mahkeme (İbrahim Paşa) Hamamı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 825 / M. 1421 tarihli vakfiyede kayıtlı; daha önce yapılmış olabilir",
+  "endowment": "Çandarlı İbrâhim Paşa; İznik’teki imaretine vakfedilmiştir",
+  "summary": "Çifte hamam planındaki Mahkeme Hamamı’nın erkekler bölümü kültür merkezi olarak değerlendirilirken kadınlar bölümü geleneksel işlevini sürdürmektedir.",
+  "history": "Hamam, İbrahim Paşa Mahallesi’nde İbrahimpaşa Caddesi üzerinde, Kız Lisesi’ne çıkan Basak Caddesi güzergâhındadır. “Mahkeme Hamamı” adının, bölgede bir dönem Kadı Konağı bulunmasına dayandığı rivayet edilir. Önündeki büyük çınar, çevresinin ayırt edici unsurlarındandır.\n\nHalil Hayreddin Paşa’nın oğlu Çandarlı İbrâhim Paşa tarafından yaptırılmıştır. H. 825 / M. 1421 tarihli vakfiye, hamamın yedi köyle birlikte Paşa’nın İznik’teki imaretine vakfedildiğini kaydeder. Envanter, adının bu belgede geçmesinden hareketle yapının daha önce inşa edilmiş olabileceğini belirtir.\n\nKadınlar ve erkekler için ayrı girişleri ve bölümleri bulunduğundan çifte hamam tipindedir. Erkekler girişindeki anıtsal taç kapı altı sıralı stalaktit bezemelidir. 10,90 × 10,95 m ölçülerindeki kare soğukluk, tromplarla geçilen kubbeyle örtülüdür; ortasında sekiz köşeli mermer havuz vardır. Buradan doğrudan kubbeli sıcaklığa geçilir. Güney ve doğu duvarlarındaki eyvanlarla genişleyen sıcaklığın kuzeyinden yardımcı mekânlara ulaşılır.\n\nKadınlar girişi güney cephededir. 10,70 × 11,20 m ölçülerindeki soğukluk kubbelidir; doğu duvarında lale motifli malakâri, yani alçı kabartma süslemeler bulunur. Küçük bir geçişten ulaşılan sıcaklık kuzey ve doğu eyvanlarıyla genişler.\n\nYangınlar nedeniyle birçok kez onarılan hamam, özellikle 1490 ve 1593’te kapsamlı tamir görmüştür. 1930’larda kadınlar kısmı kullanılmazken erkekler bölümü hamam işlevini sürdürmüştür. 1968’de geçici depo olarak kullanılmıştır. Bursa Büyükşehir Belediyesi’nin 2011 restorasyonundan sonra erkekler kısmı “İbrahim Paşa Kültür Merkezi” olarak değerlendirilmiştir. Kadınlar kısmı “Mahkeme Hamamı” adıyla geleneksel işlevini sürdürmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-mahkeme-ibrahim-pasha-bath/aerial-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-mahkeme-ibrahim-pasha-bath/aerial-exterior.jpg",
+      "alt": "İki büyük kurşun renkli kubbesi ve küçük kubbeleri görülen taş duvarlı hamam, çevresinde sokaklar ve apartmanlar",
+      "description": "İki büyük kurşun renkli kubbesi ve küçük kubbeleri görülen taş duvarlı hamam, çevresinde sokaklar ve apartmanlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-mahkeme-ibrahim-pasha-bath/cultural-center.jpg",
+      "alt": "Mermer döşeli salonda masa ve sandalyeler, büyük tuğla kemerler ve beyaz mukarnaslı kubbe geçişleri",
+      "description": "Mermer döşeli salonda masa ve sandalyeler, büyük tuğla kemerler ve beyaz mukarnaslı kubbe geçişleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-mahkeme-ibrahim-pasha-bath/roof-domes.jpg",
+      "alt": "Önde küçük kubbeler, arkada iki büyük kurşun kaplı kubbe ve pencereli aydınlık fenerleri",
+      "description": "Önde küçük kubbeler, arkada iki büyük kurşun kaplı kubbe ve pencereli aydınlık fenerleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-mahkeme-ibrahim-pasha-bath/aerial-exterior.jpg",
+      "x": 49,
+      "y": 35,
+      "title": "Çifte hamam",
+      "text": "Yapıda kadınlar ve erkekler için ayrı girişler ve ayrı bölümler bulunur.",
+      "sourceId": "inv-p138"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-mahkeme-ibrahim-pasha-bath/cultural-center.jpg",
+      "x": 53,
+      "y": 68,
+      "title": "Kültür merkezi",
+      "text": "Erkekler bölümü 2011 restorasyonu sonrasında İbrahim Paşa Kültür Merkezi olarak kullanılmaktadır.",
+      "sourceId": "inv-p139"
+    },
+    {
+      "id": "point-3",
+      "image": "/images/osmangazi-mahkeme-ibrahim-pasha-bath/roof-domes.jpg",
+      "x": 31,
+      "y": 30,
+      "title": "Kubbeli örtü",
+      "text": "Envanter hem erkekler hem kadınlar bölümünün soğukluk mekânlarının kubbeli olduğunu belirtir.",
+      "sourceId": "inv-p138"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam hangi yapıya vakfedilmiştir?",
+      "options": [
+        "Bursa Ulu Camii’ne",
+        "Paşa’nın İznik’teki imaretine",
+        "Eyne Bey Medresesi’ne",
+        "Mecidiye Camii’ne"
+      ],
+      "correct": 1,
+      "description": "1421 tarihli vakfiye hamamın İznik’teki imarete vakfedildiğini belirtir.",
+      "sourceId": "inv-p137"
+    },
+    {
+      "question": "Erkekler bölümünün yeni işlevi nedir?",
+      "options": [
+        "Otel",
+        "Arşiv",
+        "Kültür merkezi",
+        "Okul"
+      ],
+      "correct": 2,
+      "description": "Erkekler kısmı İbrahim Paşa Kültür Merkezi olarak kullanılmaktadır.",
+      "sourceId": "inv-p139"
+    },
+    {
+      "question": "Kadınlar soğukluğundaki malakâri süslemenin motifi nedir?",
+      "options": [
+        "Gemi",
+        "Üzüm",
+        "Yıldız",
+        "Lale"
+      ],
+      "correct": 3,
+      "description": "Doğu duvarında lale motifli malakâri süslemeler vardır.",
+      "sourceId": "inv-p138"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p137",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Mahkeme (İbrahim Paşa) Hamamı\"",
+      "page": "137"
+    },
+    {
+      "id": "inv-p138",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Mahkeme (İbrahim Paşa) Hamamı\"",
+      "page": "138"
+    },
+    {
+      "id": "inv-p139",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Mahkeme (İbrahim Paşa) Hamamı\"",
+      "page": "139"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

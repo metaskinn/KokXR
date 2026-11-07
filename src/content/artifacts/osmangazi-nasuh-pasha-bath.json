@@ -1,0 +1,128 @@
+{
+  "id": "osmangazi-nasuh-pasha-bath",
+  "name": "Nasuh Paşa Hamamı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Bayezid dönemi; 1483 yılından önce",
+  "endowment": "Mesih Mehmed Paşa; Gelibolu’daki camisine gelir sağlamak amacıyla",
+  "summary": "Mesih Mehmed Paşa’nın yaptırdığı Nasuh Paşa Hamamı, mütevellilerinin adıyla anılan ve kadınlar bölümü 1588’de kaldırılan bir vakıf yapısıdır.",
+  "history": "Hamam, Hocaalizade Mahallesi, Hamam Sokak No: 28’dedir. Kitabesi yoktur. Sultan II. Bayezid devrinde sadrazamlık yapan Mesih Mehmed Paşa tarafından Gelibolu’daki camisine gelir sağlamak üzere 1483’ten önce yaptırılmıştır. Uzun süre vakfın mütevellisi olan Mevlânâ Nasuh Efendi ve oğlu Mehmed Efendi nedeniyle bu adla anılmıştır.\n\nBaşlangıçta çifte hamam olan yapı zamanla tahrip olmuştur. Onarım giderleri nedeniyle batıdaki kadınlar bölümü 6 Nisan 1588’de yıktırılmış, çıkan malzemeyle erkekler kısmı onarılmıştır. Kuzey-güney yönünde uzanan dikdörtgen yapının dış ölçüleri 40,87 × 12,98 m’dir. Bir sıra kesme küfeki taşı ve üç sıra tuğlayla almaşık örülmüş duvarları, kiremit kaplı kubbe ve çatıları vardır.\n\nKuzeydeki dikdörtgen taç kapıdan girilir. Üç basamaklı mermer merdivenle ulaşılan çift kanatlı ahşap kapı, mermer söveli ve basık kemerlidir. Kare soğukluk 10,70 × 10,70 m’dir; mukarnaslı tromplarla sekizgen kasnağa geçilen kubbeyle örtülür. Köşe trompları Türk üçgenleri ve püsküllü stalaktitlerle süslüdür. Doğu ve kuzey duvarlarındaki sivri kemerli pencereler, kasnaktaki yuvarlak kemerli pencereler ve kubbe feneriyle aydınlanır. Ortada fıskiyeli havuz, çevrede alt kat ve on iki basamaklı ahşap merdivenle ulaşılan asma kat soyunmalıkları vardır.\n\nIlıklık yan yana iki kare mekândan oluşur. Kubbelerinde ve kasnaklarında yaprak ve karşılıklı badem motifleri bulunur. Fil gözleri ve aydınlık fenerleriyle ışık alan bu bölümün doğusundaki tuvalet tonozludur. Güneydeki sıcaklık, altıgen merkezi alan ve yedi eyvandan oluşur. Göbek taşı çevresinde dört tonozlu yıkanma hücresi, kuzeyde üç kubbeli halvet vardır. Kubbe ve kasnaklarda mukarnas ve başka bezemeler; eyvanlarda özgün mermer korkuluklar ve kurnalar bulunur. Altıgen kasnaklı merkez kubbe ve fil gözleri iç mekânı aydınlatır. Güney uçta tonozlu külhan ve ona paralel odunluk vardır; yapı dıştan kiremit kaplıdır.\n\nEnvanter 1555, 1568, 1588 ve 1855 depremleri sonrasında çeşitli onarımlar yapıldığını belirtir. Hamamın bir dönem “Kalyoncuoğlu Kızı” olarak tanınan Ovakim adlı Ermeni kadın tarafından vakıftan satın alınıp işletildiği aktarılır. Ovakim’in 1914’te ölümünden sonra Ermeni cemaatinin kullanım hakkını devralma girişimine karşılık, mülkün vakıf statüsü nedeniyle yapının yeniden Vakıflar İdaresi’ne devredildiği kaydedilir. Kitap hamamın işlevini sürdürdüğünü belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-nasuh-pasha-bath/aerial-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-nasuh-pasha-bath/aerial-exterior.jpg",
+      "alt": "Şehir dokusu arasında büyük kiremit kubbeli hamam, kubbe kasnağında taş ve tuğla sıraları ve önde ağaçlar",
+      "description": "Şehir dokusu arasında büyük kiremit kubbeli hamam, kubbe kasnağında taş ve tuğla sıraları ve önde ağaçlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-nasuh-pasha-bath/changing-hall.jpg",
+      "alt": "Ortada örtülü masa ve oturma yerleri, iki kat boyunca ahşap soyunmalıklar ve üstte aydınlık galeri",
+      "description": "Ortada örtülü masa ve oturma yerleri, iki kat boyunca ahşap soyunmalıklar ve üstte aydınlık galeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-nasuh-pasha-bath/dome-transitions.jpg",
+      "alt": "Ahşap galeri üstünde beyaz sıvalı sivri kemerler, köşelerde katmanlı mukarnaslı geçişler",
+      "description": "Ahşap galeri üstünde beyaz sıvalı sivri kemerler, köşelerde katmanlı mukarnaslı geçişler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-nasuh-pasha-bath/aerial-exterior.jpg",
+      "x": 40,
+      "y": 34,
+      "title": "Kiremit kaplı kubbe",
+      "text": "Hamamın dış örtüsü kiremit kaplı kubbe ve çatılardan oluşur.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-nasuh-pasha-bath/changing-hall.jpg",
+      "x": 51,
+      "y": 27,
+      "title": "Asma kat soyunmalıkları",
+      "text": "Soğukluğun çevresinde alt katta ve ahşap merdivenle ulaşılan asma katta soyunmalık hücreleri vardır.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "id": "point-3",
+      "image": "/images/osmangazi-nasuh-pasha-bath/dome-transitions.jpg",
+      "x": 22,
+      "y": 45,
+      "title": "Mukarnaslı tromplar",
+      "text": "Soğukluk kubbesi mukarnaslı tromplarla sekizgen kasnağa oturur; köşeler Türk üçgenleri ve stalaktitlerle süslüdür.",
+      "sourceId": "inv-p144"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam hangi camiye gelir sağlamak için yaptırılmıştır?",
+      "options": [
+        "Bursa’daki Mecidiye Camii’ne",
+        "İznik’teki Yeşil Camii’ye",
+        "Gelibolu’daki Mesih Mehmed Paşa Camii’ne",
+        "Beşikçiler Camii’ne"
+      ],
+      "correct": 2,
+      "description": "Mesih Mehmed Paşa hamamı Gelibolu’daki camisine gelir sağlamak için yaptırmıştır.",
+      "sourceId": "inv-p143"
+    },
+    {
+      "question": "Kadınlar bölümü 1588’de neden yıktırılmıştır?",
+      "options": [
+        "Yüksek bakım ve onarım giderleri nedeniyle",
+        "Yeni bir medrese yapmak için",
+        "Su kaynağı donduğu için",
+        "Kervan yolunu genişletmek için"
+      ],
+      "correct": 0,
+      "description": "Kadınlar bölümünün malzemeleri erkekler kısmının onarımında kullanılmıştır.",
+      "sourceId": "inv-p143"
+    },
+    {
+      "question": "Hamamın adı hangi kişilerle ilişkilidir?",
+      "options": [
+        "İki mimarla",
+        "Mütevelli Nasuh Efendi ve oğlu Mehmed Efendi ile",
+        "İki gezginle",
+        "Kadı ve kâtibiyle"
+      ],
+      "correct": 1,
+      "description": "İsim, uzun süre mütevelli olan Nasuh Efendi ve oğlu Mehmed Efendi’ye bağlanır.",
+      "sourceId": "inv-p143"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p143",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Nasuh Paşa Hamamı\"",
+      "page": "143"
+    },
+    {
+      "id": "inv-p144",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Nasuh Paşa Hamamı\"",
+      "page": "144"
+    },
+    {
+      "id": "inv-p145",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Nasuh Paşa Hamamı\"",
+      "page": "145"
+    },
+    {
+      "id": "inv-p146",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Nasuh Paşa Hamamı\"",
+      "page": "146"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

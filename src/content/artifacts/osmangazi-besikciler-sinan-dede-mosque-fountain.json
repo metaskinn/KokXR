@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-besikciler-sinan-dede-mosque-fountain",
+  "name": "Beşikçiler Sinan Dede Camii Çeşmesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XVII. yüzyılda kullanımda; 1985’te yeniden inşa",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Beşikçiler Sinan Dede Camii yanındaki çeşme, envantere göre XVII. yüzyılda kullanılmış ve 1985’te yeniden inşa edilmiştir.",
+  "history": "Çeşme, Muradiye Mahallesi, Beşikçiler Caddesi No: 23’te caminin hemen yanındadır. Evliya Çelebi’nin aktarımına göre XVII. yüzyılda da kullanımdadır. Envanter, 1985’e kadar özgün mimari özelliklerini koruduğunu ve yalak bölümünün Bursa Arkeoloji Müzesi’ne teslim edildiğini belirtir.\n\n1985’te Mimar Korhan Durusoy’un girişimleriyle özgün yapısına uygun biçimde yeniden inşa edilmiştir. Kitapta musluğun üstüne “Beşikçiler Çeşmesi”, altına “Dr. Raşit Durusoy” yazılarının eklendiği aktarılır. Aynı metin, ayna taşını iki kademeyle içeri çekilmiş; cepheyi mermer kaplamalı ve çift sıra siyah mermer çıtalarla çerçeveli olarak tarif eder.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-besikciler-sinan-dede-mosque-fountain/fountain-niche.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-besikciler-sinan-dede-mosque-fountain/fountain-niche.jpg",
+      "alt": "Moloz taş duvarda taş ve tuğla kemerli dar çeşme nişi, sıvalı yüzeyde küçük sarı renkli musluk ve önünde kaldırım",
+      "description": "Moloz taş duvarda taş ve tuğla kemerli dar çeşme nişi, sıvalı yüzeyde küçük sarı renkli musluk ve önünde kaldırım",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-besikciler-sinan-dede-mosque-fountain/mosque-street.jpg",
+      "alt": "Eğimli sokak kenarında taş ve tuğla cepheli cami, minaresi, avlu duvarı ve yüksek servi ağacı",
+      "description": "Eğimli sokak kenarında taş ve tuğla cepheli cami, minaresi, avlu duvarı ve yüksek servi ağacı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-besikciler-sinan-dede-mosque-fountain/fountain-niche.jpg",
+      "x": 49,
+      "y": 57,
+      "title": "Çeşme",
+      "text": "Envanter, çeşmeyi Muradiye Mahallesi’nde caminin hemen yanında konumlandırır.",
+      "sourceId": "inv-p123"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-besikciler-sinan-dede-mosque-fountain/mosque-street.jpg",
+      "x": 47,
+      "y": 36,
+      "title": "Caminin yanı",
+      "text": "Çeşmenin adresi Beşikçiler Caddesi No: 23 olup caminin hemen yanındadır.",
+      "sourceId": "inv-p123"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşme hangi mahallededir?",
+      "options": [
+        "Kayhan",
+        "Tahtakale",
+        "Muradiye",
+        "Kükürtlü"
+      ],
+      "correct": 2,
+      "description": "Çeşme Muradiye Mahallesi’ndedir.",
+      "sourceId": "inv-p123"
+    },
+    {
+      "question": "Çeşmenin yeniden inşası hangi yıldadır?",
+      "options": [
+        "1985",
+        "2011",
+        "2008",
+        "1955"
+      ],
+      "correct": 0,
+      "description": "Kitapta yeniden inşa tarihi 1985 olarak verilir.",
+      "sourceId": "inv-p123"
+    },
+    {
+      "question": "Eski yalak hangi kuruma teslim edilmiştir?",
+      "options": [
+        "Kent Kütüphanesi",
+        "Bursa Arkeoloji Müzesi",
+        "Belediye Tiyatrosu",
+        "Yazma Eserler Kütüphanesi"
+      ],
+      "correct": 1,
+      "description": "Envanter yalak bölümünün Bursa Arkeoloji Müzesi’ne teslim edildiğini belirtir.",
+      "sourceId": "inv-p123"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p123",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Beşikçiler Sinan Dede Camii Çeşmesi\"",
+      "page": "123"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-ibrahim-pasha-hatice-hatun-bath",
+  "name": "İbrahim Paşa (Hatice Hatun) Hamamı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1485 yılından önce",
+  "endowment": "Sadrazam İbrâhim Paşa; eşi Hatice Hanım’a gelir sağlamak amacıyla",
+  "summary": "Tophane Endüstri Meslek Lisesi bahçesindeki tek hamam, Hatice Hanım’a gelir sağlamak için yaptırılmış ve restorasyonla müze işlevi kazanmıştır.",
+  "history": "Hamam, Alaaddin Bey Mahallesi, 1. Menekşe Sokak No: 2-1’de, Tophane Endüstri Meslek Lisesi’nin bahçesindedir. Envanter, yapının Sadrazam Çandarlı Halil Paşa’nın oğlu Sadrazam İbrâhim Paşa tarafından, Fenârî Şah-Beyzâde Muhittin Bey’in kızı olan eşi Hatice Hanım’a gelir sağlamak için 1485’ten önce yaptırıldığını belirtir. Bu nedenle “Hatice Hanım Hamamı” da denir.\n\nDikdörtgen planlı, orta büyüklükte ve tek hamam tipindeki yapıda soyunmalık, ılıklık, sıcaklık, su deposu ve külhan aynı eksendedir. Duvarları bir sıra moloz taş ve üç sıra tuğla ile almaşık örülmüş, taş aralarına düşey tuğla konulmuştur. Kitap, ilk örtünün kiremit olduğunu, sonraki dönemlerde kurşunla kaplandığını belirtir.\n\nDoğudaki taç kapıdan kare planlı soyunmalığa girilir. Yaklaşık 8,10 m çapındaki kubbesinin merkezinde aydınlık feneri vardır; geçiş Türk üçgenleriyle sağlanır. Ilıklığa açılan kapının iki yanındaki duvar yarıkları soğuk hava akışını engellemek için düzenlenmiştir. Bir tam ve iki yarım kubbeli ılıklığın geçişleri stalaktitlerle bezelidir.\n\nIlıklıktan çapraz geçişlerle ulaşılan doğudaki sıcaklık kare planlıdır. Kubbesine yedi sıra stalaktitle geçilir; cephelerinde üç dilimli nişler vardır. Batı sıcaklığı dikdörtgendir; arka kemeri stalaktitlerle süslüdür ve kubbesi sekiz dilimli kasnağa oturur.\n\n1960’larda büyük ölçüde tahrip olan yapının kubbeleri, fil gözleri ve aydınlık fenerleri çökmüş, soğukluğun iki duvarı yıkılmıştır. Kitap, mülkiyetin Alman uyruklu kişilere geçtiğini aktarır. 1981’de Bursa Eski Eserleri Sevenler Kurumu tarafından istimlâk edilip ardından onarılmıştır. Uzun süre lisenin deposu olarak kullanılan hamam, 2012’de kapsamlı restorasyon geçirerek müze olarak yeniden işlevlendirilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-ibrahim-pasha-hatice-hatun-bath/street-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-ibrahim-pasha-hatice-hatun-bath/street-exterior.jpg",
+      "alt": "Ağaçların arasında taş ve tuğla duvarlı, büyük kiremit kubbeli hamam ve yüksek kemerli giriş cephesi",
+      "description": "Ağaçların arasında taş ve tuğla duvarlı, büyük kiremit kubbeli hamam ve yüksek kemerli giriş cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ibrahim-pasha-hatice-hatun-bath/museum-interior.jpg",
+      "alt": "Mermer döşeli müze salonunda ortada taş havuz, kenarlarda sergi panoları ve tarihî eşyalar",
+      "description": "Mermer döşeli müze salonunda ortada taş havuz, kenarlarda sergi panoları ve tarihî eşyalar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ibrahim-pasha-hatice-hatun-bath/decorated-dome.jpg",
+      "alt": "Alttan görünümde beyaz sıvalı kubbe, merkezde ışıklık ve çevresinde katmanlı mukarnas süslemeler",
+      "description": "Alttan görünümde beyaz sıvalı kubbe, merkezde ışıklık ve çevresinde katmanlı mukarnas süslemeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-ibrahim-pasha-hatice-hatun-bath/street-exterior.jpg",
+      "x": 70,
+      "y": 52,
+      "title": "Taç kapı",
+      "text": "Kare planlı soyunmalığa hamamın doğu cephesindeki taç kapıdan girilir.",
+      "sourceId": "inv-p134"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-ibrahim-pasha-hatice-hatun-bath/decorated-dome.jpg",
+      "x": 48,
+      "y": 50,
+      "title": "Ilıklık kubbeleri",
+      "text": "Ilıklık bölümü bir tam ve iki yarım kubbeyle örtülüdür; geçiş kısımları stalaktit süslemelerle zenginleştirilmiştir.",
+      "sourceId": "inv-p134"
+    },
+    {
+      "id": "point-3",
+      "image": "/images/osmangazi-ibrahim-pasha-hatice-hatun-bath/museum-interior.jpg",
+      "x": 49,
+      "y": 52,
+      "title": "Müze işlevi",
+      "text": "Hamam 2012’de kapsamlı restorasyonun ardından müze olarak yeniden işlevlendirilmiştir.",
+      "sourceId": "inv-p135"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamam kime gelir sağlamak amacıyla yaptırılmıştır?",
+      "options": [
+        "Hatice Hanım’a",
+        "Nasuh Efendi’ye",
+        "Hoca Ali’ye",
+        "Molla Fenârî’ye"
+      ],
+      "correct": 0,
+      "description": "İbrâhim Paşa hamamı eşi Hatice Hanım’a gelir sağlamak için yaptırmıştır.",
+      "sourceId": "inv-p133"
+    },
+    {
+      "question": "Yapı hangi hamam tipindedir?",
+      "options": [
+        "Çifte hamam",
+        "Tek hamam",
+        "Açık kaplıca",
+        "Saray havuzu"
+      ],
+      "correct": 1,
+      "description": "Dikdörtgen planlı yapı tek hamam tipindedir.",
+      "sourceId": "inv-p133"
+    },
+    {
+      "question": "2012 restorasyonundan sonra hangi işlevi kazanmıştır?",
+      "options": [
+        "Okul",
+        "Depo",
+        "Müze",
+        "Hastane"
+      ],
+      "correct": 2,
+      "description": "Envanter 2012 restorasyonu sonrası müze işlevini belirtir.",
+      "sourceId": "inv-p135"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p133",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İbrahim Paşa (Hatice Hatun) Hamamı\"",
+      "page": "133"
+    },
+    {
+      "id": "inv-p134",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İbrahim Paşa (Hatice Hatun) Hamamı\"",
+      "page": "134"
+    },
+    {
+      "id": "inv-p135",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"İbrahim Paşa (Hatice Hatun) Hamamı\"",
+      "page": "135"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

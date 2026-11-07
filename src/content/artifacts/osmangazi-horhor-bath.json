@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-horhor-bath",
+  "name": "Horhor Hamamı",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Yapım tarihi bilinmemektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Çekirge Meydanı’nın alt kotundaki Horhor Hamamı, kitabına göre çifte hamam olarak yapılmış ve onarımlarla özgün mimari özelliklerini yitirmiştir.",
+  "history": "Horhor Hamamı, Kükürtlü Mahallesi, Eski Kaplıca Sokak No: 9’da, “Armutlu Meydanı” olarak da anılan Çekirge Meydanı’na bitişik alt kotta bulunur. Kitabesi olmadığından yapım tarihi ve banisi bilinmemektedir.\n\nKadınlar ve erkekler bölümleriyle çifte hamam olarak inşa edilmiştir. Farklı dönemlerdeki onarımlarla özgün mimari özelliklerini tamamen yitirdiği belirtilir. Basit çatılı yapı, envanterde yalnızca kadınlar hamamı olarak kullanılan ve çeşitli organizasyonlara ev sahipliği yapan bir yer olarak tanıtılır.\n\nHamamın suyunun Çekirge’deki ahşap bir köprünün altından çıktığı ifade edilir. “Horhor kaynağı” olarak bilinen suyun sıcaklığı 37°C olarak verilir. Kaynak suyunun geçmişte Eski Kaplıca çamaşırlığına, kahve ocağına ve kısmen Armutlu Kaplıcası’na da aktığı aktarılır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-horhor-bath/square-and-roof.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-horhor-bath/square-and-roof.jpg",
+      "alt": "Havadan görünümde meydanın alt kotunda alçak çatılı yapı, önünde ağaçlı teras ve çevrede caddeler",
+      "description": "Havadan görünümde meydanın alt kotunda alçak çatılı yapı, önünde ağaçlı teras ve çevrede caddeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-horhor-bath/courtyard.jpg",
+      "alt": "Kiremitli saçak altında duvar süsleri ve dekoratif çeşmeler, saksılı bitkiler ve taş döşeli avlu",
+      "description": "Kiremitli saçak altında duvar süsleri ve dekoratif çeşmeler, saksılı bitkiler ve taş döşeli avlu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-horhor-bath/square-and-roof.jpg",
+      "x": 52,
+      "y": 57,
+      "title": "Basit çatılı yapı",
+      "text": "Kitap, farklı dönemlerde onarılan hamamı basit çatılı bir yapı olarak tanımlar.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-horhor-bath/square-and-roof.jpg",
+      "x": 53,
+      "y": 24,
+      "title": "Çekirge Meydanı",
+      "text": "Hamam, Armutlu Meydanı olarak da anılan Çekirge Meydanı’nın bitişiğinde ve alt kotundadır.",
+      "sourceId": "inv-p128"
+    }
+  ],
+  "test": [
+    {
+      "question": "Horhor kaynağının sıcaklığı kitapta kaç derece verilir?",
+      "options": [
+        "22°C",
+        "45°C",
+        "60°C",
+        "37°C"
+      ],
+      "correct": 3,
+      "description": "Envanter Horhor kaynağı suyunun sıcaklığını 37°C olarak verir.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "question": "Hamam ilk olarak hangi plan türünde yapılmıştır?",
+      "options": [
+        "Çifte hamam",
+        "Tek hamam",
+        "Açık havuz",
+        "Kervansaray"
+      ],
+      "correct": 0,
+      "description": "Kadınlar ve erkekler bölümleri olan çifte hamam olarak inşa edilmiştir.",
+      "sourceId": "inv-p128"
+    },
+    {
+      "question": "Kitaba göre yapının banisi hakkında ne bilinmektedir?",
+      "options": [
+        "Hafsa Sultan’dır",
+        "Bilinmemektedir",
+        "Nasuh Efendi’dir",
+        "Hoca Ali’dir"
+      ],
+      "correct": 1,
+      "description": "Kitabesi bulunmadığı için yapım tarihi ve banisi bilinmemektedir.",
+      "sourceId": "inv-p128"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p128",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Horhor Hamamı\"",
+      "page": "128"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

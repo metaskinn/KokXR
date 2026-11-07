@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-alaaddin-bey-fountain",
+  "name": "Alaaddin Bey Çeşmesi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Erken Osmanlı dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Alaaddin Bey Camii avlu duvarına bitişik çeşme, taş ve tuğla örgüsüyle erken Osmanlı şehir çeşmelerinin örneklerindendir.",
+  "history": "Alaaddin Bey Mahallesi’ndeki Alaaddin Bey Camii’nin avlu duvarına bitişik çeşme, caddeye cepheli ve avlu dışında konumlanır. Envanterde kentteki en eski çeşme olarak kabul edildiği belirtilir. Erken Osmanlı mimarisinin özelliklerini taşıyan yapı, sivri kemerli nişi, geniş aynası, almaşık duvar örgüsü ve kirpi saçağıyla tanımlanır.\n\nGövdesi bir sıra kesme küfeki taşı ve iki sıra tuğlayla örülmüş, aralara düşey tuğlalar yerleştirilmiştir. Ayna bölümünde tuğla sıraları üçe çıkarılmıştır. Cephenin büyük bölümünü kaplayan sivri kemer, beyaz traverten taşları ile aralarındaki tuğla dizilerinden oluşur. Yaklaşık 40 cm yüksekliğindeki kaideye oturan kemerin üstünde iki sıra kirpi saçak ve alaturka kiremitli örtü bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-alaaddin-bey-fountain/street-facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-alaaddin-bey-fountain/street-facade.jpg",
+      "alt": "Taş ve kırmızı tuğla sıralı sivri kemerli çeşme, ortasında açık renk ayna taşı ve musluk, üstünde kiremitli saçak; iki yanda demir parmaklıklı duvar açıklıkları",
+      "description": "Taş ve kırmızı tuğla sıralı sivri kemerli çeşme, ortasında açık renk ayna taşı ve musluk, üstünde kiremitli saçak; iki yanda demir parmaklıklı duvar açıklıkları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-alaaddin-bey-fountain/mosque-surroundings.jpg",
+      "alt": "Havadan görünümde kurşun renkli kubbesi ve minaresiyle cami, ağaçlar, kiremit çatılı evler ve uzakta dağ yamacı",
+      "description": "Havadan görünümde kurşun renkli kubbesi ve minaresiyle cami, ağaçlar, kiremit çatılı evler ve uzakta dağ yamacı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "point-1",
+      "image": "/images/osmangazi-alaaddin-bey-fountain/street-facade.jpg",
+      "x": 49,
+      "y": 49,
+      "title": "Sivri kemerli niş",
+      "text": "Cephenin büyük bölümünü kaplayan sivri kemer, beyaz traverten taşları ve tuğla dizileriyle örülmüştür.",
+      "sourceId": "inv-p122"
+    },
+    {
+      "id": "point-2",
+      "image": "/images/osmangazi-alaaddin-bey-fountain/street-facade.jpg",
+      "x": 50,
+      "y": 29,
+      "title": "Kirpi saçak",
+      "text": "Çeşmenin üst örtüsü iki sıra kirpi saçakla tamamlanmış ve alaturka kiremitle kaplanmıştır.",
+      "sourceId": "inv-p122"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşme caminin hangi bölümüne bitişiktir?",
+      "options": [
+        "Avlu duvarına",
+        "Minare şerefesine",
+        "Harim kubbesine",
+        "Mahfiline"
+      ],
+      "correct": 0,
+      "description": "Çeşme avlu duvarına bitişik, caddeye cepheli olarak inşa edilmiştir.",
+      "sourceId": "inv-p122"
+    },
+    {
+      "question": "Çeşmenin nişi hangi kemer biçimine sahiptir?",
+      "options": [
+        "Düz lento",
+        "Sivri kemer",
+        "Yuvarlak kemer",
+        "At nalı kemer"
+      ],
+      "correct": 1,
+      "description": "Envanter çeşmenin geniş sivri kemerli nişini tarif eder.",
+      "sourceId": "inv-p122"
+    },
+    {
+      "question": "Çeşmenin örtüsünde hangi malzeme bulunur?",
+      "options": [
+        "Cam",
+        "Bakır levha",
+        "Alaturka kiremit",
+        "Ahşap kiremit"
+      ],
+      "correct": 2,
+      "description": "Üst örtü alaturka kiremitle kaplanmıştır.",
+      "sourceId": "inv-p122"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p122",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 2, Osmangazi, \"Alaaddin Bey Çeşmesi\"",
+      "page": "122"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

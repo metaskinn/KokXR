@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-zagferanlik-masjid",
+  "name": "Zağferanlık Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · XV. yüzyılın ilk yarısı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "XV. yüzyılın ilk yarısında mahalle mescidi olarak yapılan, 1938'de satılıp konut olarak kullanıldıktan sonra 2012-2013'te restore edilerek asli işlevine kavuşturulan mescit.",
+  "history": "Zağferanlık Mescidi, Osmangazi İlçesi, Reyhan Mahallesi, Bekir Dede Sokak No: 18'dedir. XV. yüzyılın ilk yarısında mahalle mescidi olarak inşa edilen yapının kitabesi yoktur; bu yüzden banisi hakkında bilgi bulunmamaktadır. Yapının doğusunda türbesi bulunan ve halk arasında \"Bekir Dede\" olarak tanınan kişinin mescidi zaviye olarak kullandığı bilinmektedir.\n\n1938'de satılan mescit bu tarihten sonra konut olarak kullanılmıştır. 2010-2011'de İl Özel İdaresi tarafından kamulaştırılmasının ardından, 2012-2013'te Vakıflar Bölge Müdürlüğü tarafından restore edilerek asli işlevine kavuşturulmuştur.\n\nGünümüzdeki mescit, restorasyon sonrasında genel hatlarıyla dikdörtgen planlı hale gelmiştir ve 8,00 × 14,00 m ölçülerindedir. Son cemaat mahalli ve harimden oluşan yapının üzeri kırma çatıyla örtülmüş ve kiremitle kaplanmıştır. Beden duvarları moloz taştan örülmüş, köşelerde kesme taş tercih edilmiştir.\n\nToplam altı ahşap direkle taşınan, 2,50 × 8,00 m ölçülerindeki revaklı son cemaat mahallinin üzeri de kiremit örtülüdür ve çatısı üç sıra kirpi saçakla sonlanır. Kesme küfeki taşından yapılmış mihrap nişinde aşağıdan yukarıya kademeli olarak daralan bir yaşmak vardır. İç mekânda ahşap küçük bir kürsü ve minber bulunur. Ahşap çatılı harim, taş söveli ve lokma demir şebekeli dört pencereyle aydınlanır.\n\nMescit, bir metre yüksekliğinde, üstü harpuştalı ve demir korkuluklu bir avlu duvarıyla çevrilidir. Avluda altı ahşap ayakla taşınan, ahşap çatılı ve kiremit örtülü bir şadırvan vardır. Altıgen taş kaide üzerine oturan, tuğla örgülü silindirik gövdeli kısa bir minaresi bulunur; tek şerefesinin altında beş sıra tuğladan testere dişi bezeme yapılmıştır. Sivri konik külahla örtülü, kurşun kaplı minarenin kaidesi eski camiden günümüze ulaşan özgün bir unsurdur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-zagferanlik-masjid/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-zagferanlik-masjid/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit örtülü kırma çatılı mescit, önünde ahşap direkli revaklı son cemaat yeri; altıgen taş kaide üzerinde tuğla gövdeli kısa minare; çevresinde evler ve ağaçlar",
+      "description": "Mescit ve minaresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-zagferanlik-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: koyu renk ahşap tavan, kırmızı halı, ortada kesme taştan sade mihrap nişi, iki yanında demir şebekeli taş söveli pencereler, sağda ahşap minber",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-zagferanlik-masjid/top-view.jpg",
+      "alt": "Tepeden görünüm: kiremit kaplı kırma çatı, bir ucunda minarenin kurşun külahı, sağ yanda çokgen kiremit çatılı şadırvan ve ağaçlar",
+      "description": "Çatı ve şadırvanın tepeden görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret-base",
+      "image": "/images/osmangazi-zagferanlik-masjid/aerial-view.jpg",
+      "x": 60,
+      "y": 78,
+      "title": "Minare kaidesi",
+      "text": "Altıgen taş kaide üzerindeki minarenin kaidesi, eski camiden günümüze ulaşan özgün bir unsurdur.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "id": "portico",
+      "image": "/images/osmangazi-zagferanlik-masjid/aerial-view.jpg",
+      "x": 43,
+      "y": 75,
+      "title": "Revaklı son cemaat yeri",
+      "text": "2,50 × 8,00 m ölçülerindeki revaklı son cemaat mahalli toplam altı ahşap direkle taşınır.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-zagferanlik-masjid/prayer-hall.jpg",
+      "x": 48,
+      "y": 53,
+      "title": "Mihrap",
+      "text": "Kesme küfeki taşından yapılmış mihrap nişinde aşağıdan yukarıya kademeli daralan bir yaşmak vardır.",
+      "sourceId": "inv-p487"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidi zaviye olarak kullandığı bilinen kişi kimdir?",
+      "options": [
+        "Emir Sultan",
+        "Somuncu Baba",
+        "Bekir Dede",
+        "Hoca Hasan"
+      ],
+      "correct": 2,
+      "description": "Doğu tarafında türbesi bulunan ve halk arasında \"Bekir Dede\" olarak tanınan kişinin mescidi zaviye olarak kullandığı bilinir.",
+      "sourceId": "inv-p486"
+    },
+    {
+      "question": "1938'de satılan mescit bir süre ne olarak kullanılmıştır?",
+      "options": [
+        "Konut",
+        "Depo",
+        "Okul",
+        "Dükkân"
+      ],
+      "correct": 0,
+      "description": "1938'de satılan mescit bu tarihten sonra konut olarak kullanılmıştır.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "question": "Minarenin hangi bölümü eski camiden günümüze ulaşan özgün bir unsurdur?",
+      "options": [
+        "Külahı",
+        "Şerefesi",
+        "Gövdesi",
+        "Kaidesi"
+      ],
+      "correct": 3,
+      "description": "Minarenin kaidesi eski camiden günümüze ulaşan özgün bir unsurdur.",
+      "sourceId": "inv-p487"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p486",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Zağferanlık Mescidi\"",
+      "page": "486"
+    },
+    {
+      "id": "inv-p487",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Zağferanlık Mescidi\"",
+      "page": "487"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

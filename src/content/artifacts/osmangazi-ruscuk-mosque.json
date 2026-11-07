@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-ruscuk-mosque",
+  "name": "Rusçuk Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1877; 1996'da yıkılıp yeniden inşa edildi",
+  "endowment": "Rusçuklu Mustafa Efendi ve bölge halkının katkılarıyla yaptırılmıştır",
+  "summary": "Rusçuk'tan gelen muhacirlerin mahallesinde 1877'de yapılan, 1996'da yıkılıp yeniden inşa edildiği için bugün tarihî nitelik taşımayan cami.",
+  "history": "Rusçuk Camii, Osmangazi İlçesi, İntizam Mahallesi, Dikyokuş Sokak No: 15'tedir.\n\nMahallenin bulunduğu alan geçmişte bağ ve bahçelik bir bölgeyken, 1876'da Bulgaristan'ın Rusçuk şehrinden gelen muhacirlerin yerleşmesiyle \"Rusçuk Mahallesi\" olarak anılmaya başlanmıştır.\n\nMahallenin mescidi 1877'de Rusçuklu Mustafa Efendi ve bölge halkının katkılarıyla inşa edilmiştir. Girişinde küçük bir avlusu bulunan caminin caddeye açılan dört penceresi, ahşap mahfili ve kürsüsü vardı. Küçük bir minaresi olan camide öğle, ikindi ve akşam namazları kılınırdı.\n\n1996'da mahalle halkı tarafından yıktırılarak yeniden inşa edilen cami, günümüzde tarihî bir nitelik taşımamaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-ruscuk-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-ruscuk-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: apartmanlarla çevrili, kurşun kaplı kubbeli ve yarım kubbeli taş cami, önünde yükselen ince uzun beyaz minare; arkada yamaca yayılan evler",
+      "description": "1996'da yeniden yapılan caminin havadan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-ruscuk-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: duvarları mavi-beyaz çinilerle kaplı harim, vitraylı kemerli pencereler, ortada mermer mihrap, kırmızı halı ve büyük avize",
+      "description": "Bugünkü caminin harimi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "rebuilt-mosque",
+      "image": "/images/osmangazi-ruscuk-mosque/aerial-view.jpg",
+      "x": 33,
+      "y": 55,
+      "title": "1996'da yeniden yapılan cami",
+      "text": "1877'de yapılan mescit, 1996'da mahalle halkı tarafından yıktırılarak yeniden inşa edilmiştir; bugünkü yapı tarihî bir nitelik taşımamaktadır.",
+      "sourceId": "inv-p409"
+    },
+    {
+      "id": "neighborhood",
+      "image": "/images/osmangazi-ruscuk-mosque/aerial-view.jpg",
+      "x": 60,
+      "y": 15,
+      "title": "Rusçuk Mahallesi",
+      "text": "Bağ ve bahçelik olan bölge, 1876'da Rusçuk'tan gelen muhacirlerin yerleşmesiyle \"Rusçuk Mahallesi\" olarak anılmaya başlanmıştır.",
+      "sourceId": "inv-p409"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mahalle adını hangi şehirden gelen muhacirlerden almıştır?",
+      "options": [
+        "Kırım",
+        "Selanik",
+        "Rusçuk",
+        "Tırnova"
+      ],
+      "correct": 2,
+      "description": "1876'da Bulgaristan'ın Rusçuk şehrinden gelen muhacirlerin yerleşmesiyle bölge \"Rusçuk Mahallesi\" olarak anılmaya başlanmıştır.",
+      "sourceId": "inv-p409"
+    },
+    {
+      "question": "Mahallenin mescidi hangi yıl inşa edilmiştir?",
+      "options": [
+        "1877",
+        "1855",
+        "1901",
+        "1996"
+      ],
+      "correct": 0,
+      "description": "Mescit 1877'de Rusçuklu Mustafa Efendi ve bölge halkının katkılarıyla inşa edilmiştir.",
+      "sourceId": "inv-p409"
+    },
+    {
+      "question": "Cami neden günümüzde tarihî bir nitelik taşımamaktadır?",
+      "options": [
+        "Depremde yıkıldığı için",
+        "1996'da yıktırılıp yeniden inşa edildiği için",
+        "Yangında yandığı için",
+        "Taşındığı için"
+      ],
+      "correct": 1,
+      "description": "Cami 1996'da mahalle halkı tarafından yıktırılarak yeniden inşa edilmiştir.",
+      "sourceId": "inv-p409"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p409",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Rusçuk Camii\"",
+      "page": "409"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

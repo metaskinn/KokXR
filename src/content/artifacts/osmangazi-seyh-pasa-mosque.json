@@ -1,0 +1,123 @@
+{
+  "id": "osmangazi-seyh-pasa-mosque",
+  "name": "Şeyh Paşa (Dibekli) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad dönemi; H. Şevval 842 / M. Mart 1439 (kitabeye göre)",
+  "endowment": "Banisi Şeyh Paşa bin Şahabeddin bin Bayezid",
+  "summary": "Kitabesine göre 1439'da Şeyh Paşa bin Şahabeddin bin Bayezid'in yaptırdığı, aslen kubbeli olup sonradan çatılı hâle getirilen cami.",
+  "history": "Şeyh Paşa Camii, Osmangazi İlçesi, Osmangazi Mahallesi, Satı Caddesi'ndedir. Bir zamanlar içinde güzel yazılı levhalar ve kûfi yazılar bulunduğu belirtilen caminin adı Şeyh Paşa Camii olsa da halk arasında daha çok \"Dibekli Camii\" diye bilinir. Eski fotoğraflarda caminin önünde bir dibek görülür; bu nedenle halk bu adı kullanmaktadır.\n\nGirift kitabesinden caminin Şeyh Paşa bin Şahabeddin bin Bayezid tarafından H. Şevval 842 / M. Mart 1439'da yaptırıldığı anlaşılır. 50 × 56 cm ölçülerindeki kitabe, mermer üzerine Selçuklu tarzı sülüs hatla yazılmıştır. Mealen, bu mescidin yapılmasını Allah'ın rahmetine ve mağfiretine muhtaç kul Şeyh Paşa bin Şahabeddin bin Bayezid'in emrettiğini ve inşanın Sultan oğlu Sultan Murad Han'ın hükümdarlığı günlerinde gerçekleştirildiğini bildirir.\n\nCami, tipik Bursa camileri gibi kesme küfeki taşı ve tuğla işçiliğiyle inşa edilmiştir. Aslen kubbeli olan yapı, harap olunca kurşunları satılarak çatılı hâle getirilmiştir. Kare planlı ibadet mekânı ve son cemaat yerinden oluşur. Harim 7,30 m uzunluğunda ve 7,15 m genişliğindedir; duvarları 90 cm kalınlığındadır ve yapı kırma ahşap çatılıdır.\n\nMinare doğu yöndedir. 4,90 m derinliğindeki son cemaat yeri revakı minareyi içine alacak kadar geniştir. Beden duvarları üç sıra tuğla ve bir sıra kesme taşla örülmüştür. Revakın doğu kanadında Barok dönemden kalma talik hatla yazılmış \"Maşaallah\" ifadesi seçilebilmektedir; yan penceresinde altı köşeli tuğla işlemesi vardır. Eski fotoğraflardan son cemaat yeri sofralarının ahşap parmaklıklarla çevrili olduğu anlaşılır. Pencerelerin kemerleri değiştirilmiştir. Mihrabın kavsarası dört sıra stalaktitlidir; bunun dışında belirgin bir özelliği yoktur.\n\n1504, 1523, 1562 ve 1571 yıllarında onarılan yapı, 1950'de Bursa Eski Eserleri Sevenler Kurumu tarafından çatılı olarak yeniden ayağa kaldırılmış, en son 2017'de onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-seyh-pasa-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-seyh-pasa-mosque/aerial-view.jpg",
+      "alt": "Yukarıdan görünüm: kiremit kaplı kırma çatılı, tuğla ve taş sıralı duvarlı cami, köşesinde tuğla gövdeli sivri külahlı minare, solda camekânlı son cemaat yeri; çevrede evler ve dağ manzarası",
+      "description": "Caminin çatısı, minaresi ve son cemaat yeri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seyh-pasa-mosque/side-view.jpg",
+      "alt": "Yukarıdan yan görünüm: üç sıra tuğla ve bir sıra taşla örülmüş duvarlar, kiremit kaplı kırma çatı ve arkada tuğla gövdeli minare; çevrede apartmanlar",
+      "description": "Almaşık duvar örgüsü ve kırma çatı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-seyh-pasa-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavanlı harim, ortada yeşil bordürlü çerçeve içinde beyaz mukarnaslı mihrap, sağda oymalı ahşap minber, duvarlarda hat levhaları ve mavi halı",
+      "description": "Ahşap tavanlı harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-seyh-pasa-mosque/aerial-view.jpg",
+      "x": 58,
+      "y": 58,
+      "title": "Kırma ahşap çatı",
+      "text": "Aslen kubbeli olan yapı, harap olunca kurşunları satılarak çatılı hâle getirilmiştir.",
+      "sourceId": "inv-p436"
+    },
+    {
+      "id": "walls",
+      "image": "/images/osmangazi-seyh-pasa-mosque/side-view.jpg",
+      "x": 50,
+      "y": 78,
+      "title": "Beden duvarları",
+      "text": "Beden duvarları üç sıra tuğla ve bir sıra kesme taşla örülmüştür.",
+      "sourceId": "inv-p436"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-seyh-pasa-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 57,
+      "title": "Mihrap",
+      "text": "Mihrabın kavsarası dört sıra stalaktitlidir; bunun dışında belirgin bir özelliği yoktur.",
+      "sourceId": "inv-p437"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami halk arasında neden \"Dibekli Camii\" olarak anılır?",
+      "options": [
+        "Mihrabında dibek motifi olduğu için",
+        "Banisinin lakabı Dibekli olduğu için",
+        "Eski fotoğraflarda önünde bir dibek görüldüğü için",
+        "Dibekçiler Çarşısı'nda bulunduğu için"
+      ],
+      "correct": 2,
+      "description": "Eski fotoğraflarda caminin önünde bir dibek görülür; bu nedenle halk arasında bu adla anılır.",
+      "sourceId": "inv-p435"
+    },
+    {
+      "question": "Kitabeye göre cami hangi tarihte yaptırılmıştır?",
+      "options": [
+        "H. Şevval 842 / M. Mart 1439",
+        "H. 903 / M. 1498",
+        "H. 767 / M. 1366",
+        "H. 957 / M. 1550"
+      ],
+      "correct": 0,
+      "description": "Kitabeden caminin H. Şevval 842 / M. Mart 1439'da yaptırıldığı anlaşılır.",
+      "sourceId": "inv-p436"
+    },
+    {
+      "question": "Aslen kubbeli olan cami neden çatılı hâle gelmiştir?",
+      "options": [
+        "Depremde kubbesi çöktüğü için",
+        "Harap olunca kurşunları satıldığı için",
+        "Yangında kubbesi yandığı için",
+        "Genişletmek için kubbesi kaldırıldığı için"
+      ],
+      "correct": 1,
+      "description": "Aslen kubbeli olan yapı, harap olması üzerine kurşunları satılarak çatılı hâle getirilmiştir.",
+      "sourceId": "inv-p436"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p435",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şeyh Paşa (Dibekli) Camii\"",
+      "page": "435"
+    },
+    {
+      "id": "inv-p436",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şeyh Paşa (Dibekli) Camii\"",
+      "page": "436"
+    },
+    {
+      "id": "inv-p437",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şeyh Paşa (Dibekli) Camii\"",
+      "page": "437"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

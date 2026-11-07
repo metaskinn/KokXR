@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-veled-i-sarayi-masjid",
+  "name": "Veled-i Sarayi Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad dönemi (tahmini)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Adını bulunduğu Sarayoğlu (Veled-i Saray) Mahallesi'nden alan, tuğla minaresi dışında özgünlüğünü büyük ölçüde yitirmiş II. Murad dönemi mahalle mescidi.",
+  "history": "Veled-i Sarayi Mescidi, Osmangazi İlçesi, Şehreküstü Mahallesi, Ahmet Hamdi Tanpınar Caddesi No: 34'tedir. Banisi kesin olarak bilinmemekle birlikte II. Murad dönemi yapısı olarak değerlendirilir.\n\nOsmanlı döneminde \"Sarayoğlu Mahallesi\" olarak bilinen bölgeye zamanla \"İbn-i Saray\" ve \"Veled-i Saray\" adları da verilmiştir. Rivayete göre mahalle adını mescidin haziresinde yatan Sarıyol Mehmed Dede'den almış, bu ad zamanla \"Sarayoğlu\" biçimine dönüşmüştür. Mescit de adını bulunduğu mahalleden alır. H. 918 / M. 1512 tarihli kadı sicillerinde mahallenin bu adla anıldığı kayıtlıdır.\n\nTuğla minaresi dışında özgün kimliğini büyük ölçüde yitirmiş yapı, yakın dönemdeki yenilemelerle 15. yüzyıl Bursa tipi mahalle mescitlerine uygun şekilde yeniden düzenlenmiştir. Ahşap tavanlı ve iki kademeli, sivri kemerli on iki pencereyle aydınlanan ana mekâna üç bölümlü son cemaat yerinden girilir. Kareye yakın dikdörtgen planlı yapı, Bursa'nın tipik mahalle mescitlerindendir.\n\n20. yüzyıl ortalarına kadar moloz taş örgülü, kırma kiremit çatılı, minaresi yıkık ve harap durumdaki yapı, Bursa Eski Eserleri Sevenler Kurumu ile mahalle sakinleri tarafından onarılmıştır. Kurum kayıtlarına göre 1958'de minare tamir edilmiş ve çevresi açılmıştır. Son olarak 2019'da Bursa Vakıflar Bölge Müdürlüğü tarafından kapsamlı bir restorasyon yapılmıştır. Mescidin küçük avlusunda iki kitabesiz mezar bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-veled-i-sarayi-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-veled-i-sarayi-masjid/exterior.jpg",
+      "alt": "Ağaçlar arasında beyaz sıvalı, kiremit kırma çatılı küçük mescit; sol arkasında tuğla gövdeli minare ve önünde yeşil demir çit",
+      "description": "Mescidin dıştan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veled-i-sarayi-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap kaplama tavan, beyaz duvarlarda kemerli pencereler ve geometrik delikli üst pencereler, ortada beyaz mihrap, sağda ahşap minber ve yeşil halı",
+      "description": "Ahşap tavanlı harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-veled-i-sarayi-masjid/exterior.jpg",
+      "x": 31,
+      "y": 27,
+      "title": "Tuğla minare",
+      "text": "Mescit tuğla minaresi dışında özgün kimliğini büyük ölçüde yitirmiştir; minare 1958'de tamir edilmiştir.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "id": "ceiling",
+      "image": "/images/osmangazi-veled-i-sarayi-masjid/prayer-hall.jpg",
+      "x": 50,
+      "y": 9,
+      "title": "Ahşap tavan",
+      "text": "Yenilemelerle düzenlenen ana mekân ahşap tavanlıdır.",
+      "sourceId": "inv-p463"
+    }
+  ],
+  "test": [
+    {
+      "question": "Rivayete göre mahalle adını kimden almıştır?",
+      "options": [
+        "Sarıyol Mehmed Dede",
+        "Sultan II. Murad",
+        "Ahmet Hamdi Tanpınar",
+        "Hacı Mahmud Çelebi"
+      ],
+      "correct": 0,
+      "description": "Rivayete göre mahalle adını mescidin haziresinde yatan Sarıyol Mehmed Dede'den almış, ad zamanla \"Sarayoğlu\"na dönüşmüştür.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "question": "Mescidin minaresi kurum kayıtlarına göre hangi yıl tamir edilmiştir?",
+      "options": [
+        "1855",
+        "1958",
+        "1512",
+        "2019"
+      ],
+      "correct": 1,
+      "description": "Bursa Eski Eserleri Sevenler Kurumu kayıtlarına göre minare 1958'de tamir edilmiş ve çevresi açılmıştır.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "question": "Mescidin küçük avlusunda ne bulunur?",
+      "options": [
+        "Bir şadırvan",
+        "Bir türbe",
+        "Bir çeşme",
+        "İki kitabesiz mezar"
+      ],
+      "correct": 3,
+      "description": "Mescidin küçük avlusunda iki kitabesiz mezar yer alır.",
+      "sourceId": "inv-p463"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p463",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Veled-i Sarayi Mescidi\"",
+      "page": "463"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

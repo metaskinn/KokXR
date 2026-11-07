@@ -1,0 +1,102 @@
+{
+  "id": "osmangazi-sehrekustu-mosque",
+  "name": "Şehreküstü (Pars Bey) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad dönemi; vakfiyesi 1445 tarihli (bugünkü yapı 1980'lerde yeniden inşa edilmiştir)",
+  "endowment": "Banisi Bedreddin Pars Bey bin Abdullah; zaviyesine bağ, bahçe ve değirmenlerle birlikte Yazır ve Umurbey köylerini vakfetmiştir",
+  "summary": "II. Murad'ın saray adamlarından Pars Bey'in zaviye olarak yaptırdığı, 1980'lerde yıkılarak yerine bugünkü kâgir kubbeli caminin yapıldığı eser.",
+  "history": "Şehreküstü (Pars Bey) Camii, Osmangazi İlçesi, Şehreküstü Mahallesi, 1. Yurdakul Sokak No: 4'tedir.\n\nKitabesi bulunmayan cami, Sultan II. Murad'ın saray adamlarından Bedreddin Pars Bey bin Abdullah tarafından zaviye olarak yaptırılmıştır. Pars Bey zaviyesine bağ, bahçe ve değirmenlerle birlikte Yazır ve Umurbey köylerini vakfetmiştir. Vakfiyenin 1445 tarihli olması, yapının bu tarihten önce inşa edildiğini gösterir.\n\n1801'de zaviyeyle birlikte cami ve türbe de yanmıştır. Bunun üzerine Pars Bey'in akrabalarından Ahmed Baba Efendi zaviyeyi bugün Ulu Camii Caddesi'nde Vakıflar Bankası'nın bulunduğu yere taşımış, cami ve türbeyi ise Şehreküstü'deki eski yerinde yeniden yaptırmıştır. Kırma ahşap çatılı ve alaturka kiremit kaplı bu caminin son cemaat yeri ve zemini de ahşaptı.\n\n1855 depreminde caminin kıble ve batı duvarları zarar görmüş, minaresinin şerefesi yıkılmış ve gövdesi onarılamayacak ölçüde hasar görmüştür. 1950'li yıllarda minare ve diğer bölümler sağlamdı; duvarları moloz taştandı. Bugünkü minare 1974'te yeniden yapılmıştır. 1980'li yıllarda eski cami tamamen yıkılmış ve yerine bugünkü kâgir, kubbeli cami inşa edilmiştir. Bugünkü yapının herhangi bir tarihî özelliği bulunmamaktadır. Cami bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sehrekustu-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sehrekustu-mosque/exterior.jpg",
+      "alt": "Yukarıdan görünüm: kurşun kaplı büyük kubbeli, küçük kubbeli revaklı ve kemerli girişli kâgir cami, sağında tuğla görünümlü ince minare; çevresinde ağaçlar, apartmanlar ve dar bir sokak",
+      "description": "Bugünkü kâgir, kubbeli cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sehrekustu-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi çini kaplı alt duvarlar, kalem işi süslemeli kemerler ve pencereler, ortada mihrap, sağda minber ve turkuaz halı",
+      "description": "Bugünkü caminin harimi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-sehrekustu-mosque/exterior.jpg",
+      "x": 48,
+      "y": 27,
+      "title": "Kâgir kubbeli cami",
+      "text": "1980'li yıllarda eski cami tamamen yıkılmış, yerine bugünkü kâgir, kubbeli cami yapılmıştır.",
+      "sourceId": "inv-p426"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-sehrekustu-mosque/exterior.jpg",
+      "x": 63,
+      "y": 32,
+      "title": "Minare",
+      "text": "1855 depreminde şerefesi yıkılıp gövdesi ağır hasar gören minarenin yerine bugünkü minare 1974'te yeniden yapılmıştır.",
+      "sourceId": "inv-p426"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şehreküstü Camii'ni zaviye olarak kim yaptırmıştır?",
+      "options": [
+        "Ahmed Baba Efendi",
+        "Sultan II. Murad",
+        "Bedreddin Pars Bey bin Abdullah",
+        "Şerafettin Paşa"
+      ],
+      "correct": 2,
+      "description": "Cami, Sultan II. Murad'ın saray adamlarından Bedreddin Pars Bey bin Abdullah tarafından zaviye olarak yaptırılmıştır.",
+      "sourceId": "inv-p425"
+    },
+    {
+      "question": "Pars Bey'in vakfiyesi hangi yıla tarihlidir?",
+      "options": [
+        "1445",
+        "1801",
+        "1366",
+        "1498"
+      ],
+      "correct": 0,
+      "description": "Vakfiyenin 1445 tarihli olması, yapının bu tarihten önce inşa edildiğini gösterir.",
+      "sourceId": "inv-p425"
+    },
+    {
+      "question": "Bugünkü kâgir, kubbeli cami ne zaman yapılmıştır?",
+      "options": [
+        "1801 yangınından hemen sonra",
+        "1855 depreminden sonra",
+        "1950'li yıllarda",
+        "1980'li yıllarda"
+      ],
+      "correct": 3,
+      "description": "1980'li yıllarda eski cami tamamen yıkılmış ve yerine bugünkü kâgir, kubbeli cami yapılmıştır.",
+      "sourceId": "inv-p426"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p425",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehreküstü (Pars Bey) Camii\"",
+      "page": "425"
+    },
+    {
+      "id": "inv-p426",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şehreküstü (Pars Bey) Camii\"",
+      "page": "426"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "osmangazi-sati-fakih-mosque",
+  "name": "Satı Fakih Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · Sultan II. Murad dönemi; tahminen 1426-1430",
+  "endowment": "Banisi Sultan II. Murad ve Fâtih dönemi hocalarından Satı Fakih",
+  "summary": "II. Murad ve Fâtih dönemi hocalarından Satı Fakih'in yaptırdığı, bahçesinde türbesi ve 19. yüzyıl mezar taşlarından oluşan bir hazire bulunan küçük cami.",
+  "history": "Satı Fakih Camii, Osmangazi İlçesi, Mollagürani Mahallesi, Oruçbey Caddesi No: 26'dadır.\n\nCami, Sultan II. Murad ve Fâtih Sultan Mehmed dönemi hocalarından Satı Fakih tarafından yaptırılmıştır. Kaynaklarda adı Sait, Sadi, Sa'd, Sa'dî gibi farklı biçimlerde yazılsa da asıl adı Satı Fakih'tir. Arşiv kayıtlarına göre babası Bayram Bey'dir ve 1426'da hayattadır. Oğlu Murad Fakih, babasının yaptırdığı bu camide imamlık yapmıştır. Belgelerde Satı Fakih adıyla anılan bir mahallenin varlığından söz edilir.\n\nCaminin bahçesinde Satı Fakih'e ait bir türbe bulunur; ancak mezar taşı günümüze ulaşmadığından kesin vefat tarihi bilinmemekte, yapının 1426-1430 yılları arasında inşa edildiği tahmin edilmektedir.\n\nDikdörtgen planlı cami 6,30 × 9,90 m ölçülerindedir. Moloz taş duvarlarla inşa edilmiş, ahşap çatıyla örtülüp kiremitle kaplanmıştır. Günümüzde belirgin bir mimari özelliği yoktur. Cami sağlamdır ve ibadete açıktır.\n\nHazire: Caminin bahçesindeki hazirede 19. yüzyıla ait mezar taşları vardır. Taşları günümüze ulaşanlar arasında Dîvân-ı Hümâyun hâcegânından Seyyid Hacı Ali Efendi, Bedeviyye Şeyhi Seyyid Şeyh Osman Efendi, Mustafa Muhtar, Şerife Şakire Hanım, Seyyid Ali Fehim Efendi ve Şerife Hatice Hatun bulunur. Kayıtlara göre Rumeli kazaskeri olan ve bir mevlit yazdığı bilinen Mehmed Dede Efendi (v. H. 1147 / M. 1735) de hazireye defnedilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-sati-fakih-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-sati-fakih-mosque/exterior.jpg",
+      "alt": "Dar bir sokağın köşesinde moloz taş duvarlı, kiremit çatılı alçak dikdörtgen yapı; arkasında tuğla gövdeli minare, iki yanda renkli eski evler",
+      "description": "Caminin sokaktan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sati-fakih-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: kiremit çatılar arasında tuğla gövdeli, sivri külahlı minare ve önündeki moloz taş duvarlı cami; arkada Uludağ yamaçları",
+      "description": "Cami ve çevresi havadan",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sati-fakih-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: turkuaz halılı küçük harim, alt kısmı ahşap lambri kaplı duvarlar, ortada Kâbe resimli mihrap nişi ve sağda beyaz boyalı minber",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-sati-fakih-mosque/graveyard.jpg",
+      "alt": "Bahçede, turkuaz boyalı duvarın önünde ağaçlar arasında dikili duran sütun biçimli ve sarıklı eski mezar taşları",
+      "description": "Bahçedeki hazire",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "rubble-walls",
+      "image": "/images/osmangazi-sati-fakih-mosque/exterior.jpg",
+      "x": 51,
+      "y": 67,
+      "title": "Moloz taş duvarlar",
+      "text": "6,30 × 9,90 m ölçülerindeki dikdörtgen planlı cami moloz taş duvarlarla inşa edilmiştir.",
+      "sourceId": "inv-p410"
+    },
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-sati-fakih-mosque/exterior.jpg",
+      "x": 48,
+      "y": 48,
+      "title": "Kiremit kaplı çatı",
+      "text": "Caminin üzeri ahşap çatıyla örtülmüş ve kiremitle kaplanmıştır.",
+      "sourceId": "inv-p410"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-sati-fakih-mosque/graveyard.jpg",
+      "x": 28,
+      "y": 60,
+      "title": "Hazire",
+      "text": "Caminin bahçesindeki hazirede 19. yüzyıla ait mezar taşları bulunmaktadır.",
+      "sourceId": "inv-p411"
+    }
+  ],
+  "test": [
+    {
+      "question": "Satı Fakih'in camide imamlık yapan oğlunun adı nedir?",
+      "options": [
+        "Bayram Bey",
+        "Murad Fakih",
+        "Mehmed Dede",
+        "Osman Efendi"
+      ],
+      "correct": 1,
+      "description": "Satı Fakih'in oğlu Murad Fakih, babasının yaptırdığı bu camide imamlık yapmıştır.",
+      "sourceId": "inv-p410"
+    },
+    {
+      "question": "Caminin hangi yıllar arasında inşa edildiği tahmin edilmektedir?",
+      "options": [
+        "1350-1360",
+        "1450-1455",
+        "1426-1430",
+        "1735-1740"
+      ],
+      "correct": 2,
+      "description": "Satı Fakih'in mezar taşı günümüze ulaşmadığından yapının 1426-1430 yılları arasında inşa edildiği tahmin edilmektedir.",
+      "sourceId": "inv-p410"
+    },
+    {
+      "question": "Hazireye defnedildiği kayıtlarda geçen Mehmed Dede Efendi hangi göreviyle bilinir?",
+      "options": [
+        "Bursa kadısı",
+        "Yemen kadısı",
+        "Nakkaşbaşı",
+        "Rumeli kazaskeri"
+      ],
+      "correct": 3,
+      "description": "Rumeli kazaskeri olan ve bir mevlit yazdığı bilinen Mehmed Dede Efendi'nin hazireye defnedildiği kayıtlarda geçmektedir.",
+      "sourceId": "inv-p411"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p410",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Satı Fakih Camii ve Haziresi\"",
+      "page": "410"
+    },
+    {
+      "id": "inv-p411",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Satı Fakih Camii ve Haziresi\"",
+      "page": "411"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

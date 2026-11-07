@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-veziri-mosque",
+  "name": "Veziri (Konuralp-Üç Kurnalı) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · inşa tarihi kesin bilinmiyor; II. Murad (salt. 1421-1451) ya da II. Bayezid (salt. 1481-1512) dönemine bağlanır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Adını batısındaki üç kurnalı zarif çeşmeden de alan, moloz taş duvarlı ve kiremit örtülü kırma çatılı tipik bir Bursa mahalle mescidi.",
+  "history": "Veziri (Konuralp-Üç Kurnalı) Camii, Osmangazi İlçesi, Alipaşa Mahallesi, Veziri Caddesi No: 43'tedir. İnşa tarihi ve yaptıranı kesin olarak bilinmemektedir. II. Murad dönemi (salt. 1421-1451) devlet adamlarından Vezir Üzeyir'e ait olduğu düşünülmektedir; bazı görüşlere göre ise II. Bayezid'in (salt. 1481-1512) bir veziri tarafından yaptırıldığı rivayet edilir.\n\nCaminin batı yönündeki üç kurnalı zarif çeşmesi nedeniyle \"Üç Kurnalı Cami\" olarak da anılır. Camiye adını veren bu çeşmede bugün de üç musluk vardır; sivri kemeri, geniş aynası ve tuğla işçiliğiyle tipik erken dönem Bursa çeşmelerindendir. Çeşmenin önünde yaşlı bir çınar ağacı bulunur.\n\nCami, Bursa'nın tipik mahalle mescitlerinden biridir ve tümüyle moloz taş duvar işçiliğiyle inşa edilmiştir. Giriş cephesi boyalıdır. Son cemaat yeriyle birlikte dikdörtgen plana sahiptir; 6,10 × 7,40 m iç ölçülerindeki caminin girişinde 3,70 m derinliğinde bir son cemaat yeri bulunur. Üzeri kiremit kaplı kırma çatıyla örtülüdür; kiremit çatının çevresi iki sıra kirpi saçakla çevrilmiş, cami girişinde bu düzenleme ahşap bir saçakla sonlanmıştır.\n\nSon cemaat yerinin cephesi dört ahşap direğe dayalı üç sivri kemerlidir. Kemerler daha sonra kapatılmış, alt kısmı ahşap çerçeveli camekânla örtülmüş, üzeri ahşap çatıyla kaplanmıştır. Harimdeki alt pencereler sivri kemerli, üsttekiler dikdörtgen formludur. İçeriden ahşap çatılı caminin orta kısmında motifli bir tavan göbeği vardır; ahşap minberi ve çini mihrabı bulunur.\n\nDoğu cephesindeki minarenin moloz taş kaidesi oldukça yüksek tutulmuş ve kirpi saçağa kadar yükseltilmiştir. Tamamen tuğladan örülen gövdesinde petek ve şerefeyi ayıran iki bilezik bulunur; şerefenin altında dört sıra tuğla stalaktit dikkat çeker.\n\nBir dönem özel mülkiyette olan yapı ticaret amacıyla kullanılmış, bu durum camide birtakım değişikliklere yol açmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-veziri-mosque/entrance-facade.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-veziri-mosque/entrance-facade.jpg",
+      "alt": "Köşe başında, krem boyalı giriş cephesi ve ahşap saçaklı cami; yan duvarı moloz taş, sivri kemerli pencereli; arkada tuğla gövdeli, şerefe altı stalaktitli minare ve iri çınar ağaçları",
+      "description": "Giriş cephesi ve minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veziri-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavan, mavi-beyaz çinilerle kaplı mihrap duvarı, sağda ahşap minber; sivri kemerli alt ve dikdörtgen üst pencereler",
+      "description": "Çini mihrap ve ahşap minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veziri-mosque/street-view.jpg",
+      "alt": "Ağaçlar arasında kiremit çatılı küçük cami, krem boyalı giriş cephesi ve yanında yükselen minare; arkada yamaçtaki evler",
+      "description": "Caminin yukarıdan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-veziri-mosque/entrance-facade.jpg",
+      "x": 41,
+      "y": 33,
+      "title": "Tuğla minare",
+      "text": "Tamamen tuğladan örülen minare gövdesinde, şerefenin altında dört sıra tuğla stalaktit dikkat çeker.",
+      "sourceId": "inv-p473"
+    },
+    {
+      "id": "rubble-wall",
+      "image": "/images/osmangazi-veziri-mosque/entrance-facade.jpg",
+      "x": 59,
+      "y": 66,
+      "title": "Moloz taş duvarlar",
+      "text": "Cami tümüyle moloz taş duvar işçiliğiyle inşa edilmiştir.",
+      "sourceId": "inv-p473"
+    },
+    {
+      "id": "tiled-mihrab",
+      "image": "/images/osmangazi-veziri-mosque/prayer-hall.jpg",
+      "x": 51,
+      "y": 49,
+      "title": "Çini mihrap",
+      "text": "Caminin ahşap minberi ve çini mihrabı bulunmaktadır.",
+      "sourceId": "inv-p473"
+    }
+  ],
+  "test": [
+    {
+      "question": "Camiye \"Üç Kurnalı\" adı neden verilmiştir?",
+      "options": [
+        "Üç kubbesi olduğu için",
+        "Batısındaki üç kurnalı çeşme nedeniyle",
+        "Üç kapısı olduğu için",
+        "Üç vezir tarafından yaptırıldığı için"
+      ],
+      "correct": 1,
+      "description": "Caminin batı yönündeki üç kurnalı zarif çeşmesi nedeniyle \"Üç Kurnalı Cami\" olarak da anılır.",
+      "sourceId": "inv-p472"
+    },
+    {
+      "question": "Caminin beden duvarları hangi teknikle örülmüştür?",
+      "options": [
+        "Kesme taş",
+        "Tamamen tuğla",
+        "Ahşap karkas",
+        "Moloz taş"
+      ],
+      "correct": 3,
+      "description": "Cami tümüyle moloz taş duvar işçiliğiyle inşa edilmiştir.",
+      "sourceId": "inv-p473"
+    },
+    {
+      "question": "Minarenin şerefesinin altında ne dikkat çeker?",
+      "options": [
+        "Çini kuşak",
+        "Dört sıra tuğla stalaktit",
+        "Mermer korkuluk",
+        "Ahşap köşk"
+      ],
+      "correct": 1,
+      "description": "Minarenin şerefesi altında dört sıra tuğla stalaktit dikkat çeker.",
+      "sourceId": "inv-p473"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p472",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Veziri (Konuralp-Üç Kurnalı) Camii\"",
+      "page": "472"
+    },
+    {
+      "id": "inv-p473",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Veziri (Konuralp-Üç Kurnalı) Camii\"",
+      "page": "473"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-serafettin-pasa-mosque",
+  "name": "Şerafettin Paşa (Okçular) Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 15. yüzyıl, Sultan II. Murad dönemi",
+  "endowment": "Banisi Sultan II. Murad'ın beylerinden Şerafettin Paşa",
+  "summary": "Okçular Çarşısı'nda, II. Murad'ın beylerinden Şerafettin Paşa'nın 15. yüzyılda yaptırdığı, tek kubbeli ve tuğla minareli cami.",
+  "history": "Şerafettin Paşa Camii, Osmangazi İlçesi, Alacamescid Mahallesi, 4. Okul Sokak No: 14'tedir. Okçular Çarşısı'ndaki cami, Sultan II. Murad'ın beylerinden Şerafettin Paşa tarafından 15. yüzyılda yaptırılmıştır. Banisinin kabri caminin haziresindedir; talik yazılı mezar taşı kitabesi H. 1312 / M. 1894'te yeniden yazılmıştır. Cami \"Okçular\" ya da \"Nalıncılar Mescidi\" adıyla da bilinir.\n\nÇarşı ve dükkânlarla çevrili olduğu için yapı dışarıdan kolayca fark edilmez. Bursa'daki diğer eserler gibi taş ve tuğladan inşa edilen yapının kemerli ve kalkan duvarlı son cemaat yeri yıkılmış, ahşap olarak yeniden yapılmıştır.\n\nHer kenarı 8,80 m olan kare planlı ana ibadet mekânı, Türk üçgenlerine oturan, sekiz köşe kasnaklı ve iki sıra kirpi saçaklı bir kubbeyle örtülüdür. Bir sıra kırma taş ve üç sıra tuğlayla örülen beden duvarlarında sekiz alt, altı üst ve üç kasnak penceresi bulunur. Kubbe kasnağında bir sıra kesme taş ve üç sıra tuğla kullanılmıştır. Cümle kapısının sağır kemerli ve yedi sıra stalaktitli yaşmağı oldukça dikkat çekicidir; sivri kemerli mihrabın yaşmağı ise beş sıra stalaktitlidir.\n\nBursa'daki erken Osmanlı mimarisinin bir örneği olan minare sekizgen kaide üzerine oturur. Tuğladan üçgenli küp kısmı, yine tuğladan silindirik gövdesi, bileziği ve şerefe altındaki beş sıra testere dişiyle zarif bir görünüme sahiptir.\n\nYapının 1694 ve 1758'de onarıldığı, 1855 depreminde şerefesinin yıkıldığı ve ustaca onarıldığı bilinmektedir. 1916'da Ahmet Faik Efendi tarafından yeniden yaptırıldığını belirten mermer bir kitabe caminin girişine yerleştirilmiştir. Cami bakımlıdır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-serafettin-pasa-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-serafettin-pasa-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: tuğla örgülü silindirik gövdeli, şerefeli minare ve yanında kurşun kaplı kubbe; çevrede çarşının kiremit ve cam çatıları, uzakta şehir",
+      "description": "Minare ve kubbe çarşı çatıları arasında",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-serafettin-pasa-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi çinilerle kaplı mihrap duvarı, ortada mihrap önünde büyük avize, sağda çinili minber, üstte kemerli pencereler ve kırmızı halı",
+      "description": "Çinili mihrap duvarı ve harim",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-serafettin-pasa-mosque/marble-inscription.jpg",
+      "alt": "Ahşap çerçeveli bir bölmede mermer levha: büyük harflerle Şerafettin Paşa'yı ve 1916'da Ahmet Faik Efendi tarafından yaptırıldığını anan Türkçe yazı; altında iki musluklu mermer tekne, üstte parmaklıklı bölme",
+      "description": "1916 tarihli mermer kitabe",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-serafettin-pasa-mosque/aerial-view.jpg",
+      "x": 35,
+      "y": 45,
+      "title": "Minare",
+      "text": "Tuğladan silindirik gövdesi, bileziği ve şerefe altındaki beş sıra testere dişiyle minare zarif bir görünüme sahiptir.",
+      "sourceId": "inv-p430"
+    },
+    {
+      "id": "dome",
+      "image": "/images/osmangazi-serafettin-pasa-mosque/aerial-view.jpg",
+      "x": 56,
+      "y": 66,
+      "title": "Kubbe",
+      "text": "Her kenarı 8,80 m olan kare planlı ana ibadet mekânı, sekiz köşe kasnaklı ve iki sıra kirpi saçaklı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p430"
+    },
+    {
+      "id": "inscription-1916",
+      "image": "/images/osmangazi-serafettin-pasa-mosque/marble-inscription.jpg",
+      "x": 40,
+      "y": 58,
+      "title": "1916 kitabesi",
+      "text": "1916'da Ahmet Faik Efendi tarafından yeniden yaptırıldığını belirten bir kitabe mermer üzerine işlenmiştir.",
+      "sourceId": "inv-p430"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şerafettin Paşa Camii hangi çarşıda yer alır?",
+      "options": [
+        "Okçular Çarşısı",
+        "Kapalıçarşı",
+        "Bedesten",
+        "Uzunçarşı"
+      ],
+      "correct": 0,
+      "description": "Cami Okçular Çarşısı'ndadır; \"Okçular\" ya da \"Nalıncılar Mescidi\" adıyla da bilinir.",
+      "sourceId": "inv-p429"
+    },
+    {
+      "question": "Ana ibadet mekânının planı nasıldır?",
+      "options": [
+        "Dikdörtgen, yan yana iki kubbeli",
+        "Her kenarı 8,80 m olan kare plan",
+        "Ters T plan",
+        "Sekizgen plan"
+      ],
+      "correct": 1,
+      "description": "Her kenarı 8,80 m olan kare planlı ana ibadet mekânı tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p430"
+    },
+    {
+      "question": "1916'da camiyi yeniden yaptıran kişi kimdir?",
+      "options": [
+        "Mahmud Celâleddin Paşa",
+        "Hacı Sevindik",
+        "Ahmed Baba Efendi",
+        "Ahmet Faik Efendi"
+      ],
+      "correct": 3,
+      "description": "1916'da Ahmet Faik Efendi tarafından yeniden yaptırıldığını belirten mermer bir kitabe caminin girişine yerleştirilmiştir.",
+      "sourceId": "inv-p430"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p429",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şerafettin Paşa (Okçular) Camii ve Haziresi\"",
+      "page": "429"
+    },
+    {
+      "id": "inv-p430",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Şerafettin Paşa (Okçular) Camii ve Haziresi\"",
+      "page": "430"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

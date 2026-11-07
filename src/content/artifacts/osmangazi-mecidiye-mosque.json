@@ -1,0 +1,97 @@
+{
+  "id": "osmangazi-mecidiye-mosque",
+  "name": "Mecidiye Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 1877-1878 Osmanlı-Rus Savaşı (93 Harbi) sonrası; son cemaat yerinde H. 1323-1325 / M. 1905-1907 tarihleri",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "93 Harbi'nden sonra Bursa Valisi Ahmet Vefik Paşa'nın Köstence'den gelen Kırım-Tatar göçmenleri için yaptırdığı ahşap tavanlı küçük cami.",
+  "history": "Mecidiye Camii, Osmangazi İlçesi, İvazpaşa Caddesi, Eski Yol Sokak'tadır. Pınarbaşı Mezarlığı'nın üstündeki cami, \"93 Harbi\" olarak bilinen 1877-1878 Osmanlı-Rus Savaşı'ndan sonra, Bursa Valisi Ahmet Vefik Paşa tarafından Romanya'nın Köstence şehrinden gelen Kırım-Tatar göçmenleri için yaptırılmıştır.\n\nSon cemaat yerinin kuzey, doğu ve batı yönleri kapalıdır; doğu duvarı üzerinde H. 1323-1325 / M. 1905-1907 tarihleri yer alır.\n\nCaminin ibadet mekânı 5,70 × 8,10 m ölçülerindedir ve tavanı ahşapla örtülüdür. Çift taraflı merdivenlerle yanları ve önü kapanmıştır. Cami altı pencereyle aydınlanır; mihrabın iki yanındaki pencereler dolap haline getirilmiştir.\n\nCaminin kuzeybatı köşesindeki minareye son cemaat yerinden çıkılır. Dıştan tamamen sıvalı olan minare kısa, ahşap ve silindirik gövdelidir; külahı sivridir. Cami 1985'te büyük bir onarım görmüş, 1988'de mahfil kısmı eklenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-mecidiye-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-mecidiye-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: dar sokakların arasında, kiremit örtülü çatılı, açık yeşil boyalı küçük cami ve yanında dıştan sıvalı, sivri külahlı ince minare; çevresinde evler ve apartmanlar",
+      "description": "Caminin mahalle içindeki görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-mecidiye-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: açık renk tavan, desenli halı, ortada yeşil perde motifli mihrap, iki yanında ahşap dolap kapakları, sağda ahşap minber, yanlarda yuvarlak kemerli büyük pencereler",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cupboards",
+      "image": "/images/osmangazi-mecidiye-mosque/prayer-hall.jpg",
+      "x": 36,
+      "y": 43,
+      "title": "Dolaba dönüştürülen pencereler",
+      "text": "Mihrabın her iki yanındaki pencereler dolap haline getirilmiştir.",
+      "sourceId": "inv-p395"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-mecidiye-mosque/aerial-view.jpg",
+      "x": 48,
+      "y": 37,
+      "title": "Sıvalı minare",
+      "text": "Caminin kuzeybatı köşesindeki minare dıştan tamamen sıvalıdır ve külahı sivridir; minareye son cemaat yerinden çıkılır.",
+      "sourceId": "inv-p395"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mecidiye Camii kimler için yaptırılmıştır?",
+      "options": [
+        "Kırım-Tatar göçmenleri için",
+        "Kaplıcaya gelenler için",
+        "Kale muhafızları için",
+        "Çarşı esnafı için"
+      ],
+      "correct": 0,
+      "description": "Cami, 93 Harbi'nden sonra Köstence'den gelen Kırım-Tatar göçmenleri için yaptırılmıştır.",
+      "sourceId": "inv-p395"
+    },
+    {
+      "question": "Camiyi yaptıran Bursa valisi kimdir?",
+      "options": [
+        "Kara Ali Bey",
+        "Ahmet Vefik Paşa",
+        "Vezir Üzeyir",
+        "Yusuf Ağa"
+      ],
+      "correct": 1,
+      "description": "Cami Bursa Valisi Ahmet Vefik Paşa tarafından yaptırılmıştır.",
+      "sourceId": "inv-p395"
+    },
+    {
+      "question": "Camiye 1988 yılında hangi bölüm eklenmiştir?",
+      "options": [
+        "Minare",
+        "Son cemaat yeri",
+        "Şadırvan",
+        "Mahfil"
+      ],
+      "correct": 3,
+      "description": "Cami 1985'te büyük bir onarım görmüş, 1988'de mahfil kısmı eklenmiştir.",
+      "sourceId": "inv-p395"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p395",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Mecidiye Camii\"",
+      "page": "395"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-veled-i-enbiya-mosque",
+  "name": "Veled-i Enbiya (Enbiyaoğlu) Camii",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 14. yüzyıl sonları; 1499 yenileme",
+  "endowment": "Banisi Seyyid Çelebi bin Enbiya (Veled-i Enbiya); 1499'da Kazzazoğlu Şule Mehmed yenilemiştir",
+  "summary": "14. yüzyıl sonlarında Seyyid Çelebi bin Enbiya'nın yaptırdığı, 1855 depreminden sonra kubbesi yerine kırma çatıyla örtülen mahalle camisi.",
+  "history": "Veled-i Enbiya Camii, Osmangazi İlçesi, Reyhan Mahallesi, Reyhan Caddesi No: 8'dedir. Veled-i Enbiya olarak anılan Seyyid Çelebi bin Enbiya tarafından 14. yüzyılın sonlarında inşa edilen cami, 1499'da hayırsever Kazzazoğlu Şule Mehmed tarafından yenilenmiştir. Mahalle eski kayıtlarda \"Veled-i Enbiya\" adıyla geçer.\n\n7 × 4 m ölçülerinde dikdörtgen planlı son cemaat yeri bugün tamamen kapalıdır ve dört basamaklı taş merdivenle çıkılır. Mermer söveli, yuvarlak kemerli giriş kapısının iki yanında geniş açıklıklı, yuvarlak kemerli iki bölüm vardır; bu alanlar ahşap doğramalı camekânla kapatılmıştır.\n\nBeden duvarları moloz taşla örülen caminin doğu ve batı cepheleri dışındaki bölümleri tamamen yenilenmiştir. Duvarlarla çatı arasında testere formunda üç sıra kirpi saçak bulunur. Mermer söveli çift kanatlı ahşap kapıdan girilen 12 × 12 m ölçülerindeki kare planlı harim, doğu ve batı duvarlarında altta ikişer, üstte birer; kuzey duvarında son cemaat yerine bakan iki alt pencereyle aydınlanır. Yuvarlak tuğla kemerli ve lokma demirli pencereler, zaman içindeki onarımlar nedeniyle özgün biçimlerini yitirmiştir.\n\nRenkli mermer söveli mihrap nişi beyaz sıvalı ve bezemesizdir. Ahşap minber ve kürsü yenidir. Kadınlar mahfili son cemaat yeri içinde perdeyle ayrılmıştır. Batı köşedeki nispeten kısa minare yaklaşık yirmi metre yüksekliğindedir; moloz taş ve tuğladan kare kaide üzerinde tek şerefeli, tuğla örgülü silindirik gövdesi vardır. Şerefe altı beş sıra testere dişi biçiminde tuğlayla bezenmiş, sivri külahı kurşunla kaplanmıştır.\n\nBaşlangıçta kubbeli olarak inşa edilen cami, 1855 depreminden sonraki kapsamlı onarımlarda kırma çatıyla kapatılıp kiremitle örtülmüştür. 1890, 1955, 1973 ve en son 2008'de kapsamlı restorasyonlar geçirmiştir. Cümle kapısının solunda eski bir dibek taşı, karşısında anıtsal nitelikte bir çınar ağacı bulunur. Batı tarafına sonradan bir şadırvan eklenmiş, hazire alanı ise günümüze ulaşmamıştır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-veled-i-enbiya-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-veled-i-enbiya-mosque/aerial-view.jpg",
+      "alt": "Havadan görünüm: evlerin arasında kiremit kaplı kırma çatılı cami, yanında tuğla gövdeli, sivri külahlı minare ve büyük bir ağaç",
+      "description": "Caminin mahalle içindeki görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veled-i-enbiya-mosque/narthex.jpg",
+      "alt": "Pembe sıvalı kapalı son cemaat yeri: taş merdivenle çıkılan yuvarlak kemerli ahşap kapı ve iki yanında yuvarlak kemerli, parmaklıklı geniş camekânlar",
+      "description": "Kapalı son cemaat yeri cephesi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veled-i-enbiya-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı seccade desenli halı, ahşap çerçeveli mihrap ve önünde yeşil perde, sağda ahşap minber, üstte kristal avize",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-veled-i-enbiya-mosque/aerial-view.jpg",
+      "x": 36,
+      "y": 55,
+      "title": "Kiremit kırma çatı",
+      "text": "Başlangıçta kubbeli olan cami, 1855 depreminden sonra kırma çatıyla kapatılıp kiremitle örtülmüştür.",
+      "sourceId": "inv-p459"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-veled-i-enbiya-mosque/aerial-view.jpg",
+      "x": 57,
+      "y": 27,
+      "title": "Minare",
+      "text": "Yaklaşık yirmi metre yüksekliğindeki minarenin tuğla örgülü silindirik gövdesi ve kurşun kaplı sivri külahı vardır.",
+      "sourceId": "inv-p459"
+    },
+    {
+      "id": "narthex-door",
+      "image": "/images/osmangazi-veled-i-enbiya-mosque/narthex.jpg",
+      "x": 32,
+      "y": 66,
+      "title": "Son cemaat yeri girişi",
+      "text": "Dört basamaklı taş merdivenle çıkılan mermer söveli, yuvarlak kemerli kapının iki yanındaki kemerli açıklıklar camekânla kapatılmıştır.",
+      "sourceId": "inv-p459"
+    }
+  ],
+  "test": [
+    {
+      "question": "Veled-i Enbiya Camii'ni 1499'da kim yenilemiştir?",
+      "options": [
+        "Seyyid Çelebi bin Enbiya",
+        "Hacı Şücâ",
+        "Kazzazoğlu Şule Mehmed",
+        "Kara Ali Bey"
+      ],
+      "correct": 2,
+      "description": "14. yüzyıl sonlarında Seyyid Çelebi bin Enbiya'nın yaptırdığı cami 1499'da Kazzazoğlu Şule Mehmed tarafından yenilenmiştir.",
+      "sourceId": "inv-p458"
+    },
+    {
+      "question": "Başlangıçta kubbeli olan cami hangi olaydan sonraki onarımlarda kırma çatıyla örtülmüştür?",
+      "options": [
+        "1855 depremi",
+        "1950 yangını",
+        "1890 seli",
+        "2008 restorasyonu"
+      ],
+      "correct": 0,
+      "description": "Cami 1855 depreminden sonraki kapsamlı onarımlarda kırma çatıyla kapatılıp kiremitle örtülmüştür.",
+      "sourceId": "inv-p459"
+    },
+    {
+      "question": "Cümle kapısının karşısında hangi anıtsal öğe bulunur?",
+      "options": [
+        "Bir şadırvan",
+        "Bir çınar ağacı",
+        "Bir türbe",
+        "Bir çeşme"
+      ],
+      "correct": 1,
+      "description": "Cümle kapısının solunda eski bir dibek taşı, karşısında anıtsal nitelikte bir çınar ağacı vardır.",
+      "sourceId": "inv-p459"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p458",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Veled-i Enbiya (Enbiyaoğlu) Camii\"",
+      "page": "458"
+    },
+    {
+      "id": "inv-p459",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Veled-i Enbiya (Enbiyaoğlu) Camii\"",
+      "page": "459"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

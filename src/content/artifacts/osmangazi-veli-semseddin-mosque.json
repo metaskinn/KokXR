@@ -1,0 +1,118 @@
+{
+  "id": "osmangazi-veli-semseddin-mosque",
+  "name": "Veli Şemseddin (Yahni Kapan) Camii ve Haziresi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · H. 875 / M. 1470 yılından önce; 1855 depreminden sonra 1859'da yeniden inşasına başlanmıştır",
+  "endowment": "Banisi Veli Şemseddin",
+  "summary": "Emir Sultan'ın halifesi Hoca Hasan'ın halifelerinden Veli Şemseddin'in H. 875 / M. 1470'ten önce yaptırdığı, 1855 depreminden sonra yeniden inşa edilen ahşap çatılı cami ve haziresi.",
+  "history": "Veli Şemseddin (Yahni Kapan) Camii, Osmangazi İlçesi, Maksem Mahallesi, Öğreten Caddesi üzerindedir. Üç tarafı sokağa bakan, ahşap çatılı ve kiremit örtülü bir camidir. H. 875 / M. 1470 yılından önce Veli Şemseddin tarafından yaptırılmıştır. Emir Sultan'ın halifesi Hoca Hasan'ın öğrencisi ve halifelerinden olan Veli Şemseddin, mahalleye de adını vermiştir.\n\nYahni Kapan sülalesinin bu camiyle yakın ilişkisi vardır. Yahni Kapanların atası İbrahim Efendi camide imamlık yapmış ve camiyi yeniden tamir ettirmiştir. Bu nedenle yapı uzun süre \"Yahni Kapan Camii\" adıyla anılmıştır.\n\nKareye yakın dikdörtgen planlı yapının iç mekânı 8,15 × 8,25 m ölçülerindedir; tamamen içeriye alınmış son cemaat yeri 4,10 m derinliğindedir. Cümle kapısına iki yandan çifte merdivenle çıkılır. Günümüzde yapı özgün şeklini kaybetmiş, sivil mimarlık örneği bir yapıya dönüşmüştür.\n\n1855 depreminde kubbesi yıkıldığından yerine kiremit örtülü kırma çatı yapılmıştır. Arşiv belgelerinden minarenin nispeten eski olduğu, caminin ise yeni baştan inşa edildiği ve 1859'da başlanan yapımın bir yıl içinde tamamlandığı anlaşılmaktadır.\n\nHaziresinde medfun kişilerden bazıları şunlardır: caminin banisi Veli Şemseddin, Hacı Mustafa, Rabia bint Hacı Mustafa, Yusuf bin Abdüssamed, Seyyid Hacı Ahmed Hasib Efendi, Yahni Kapanzâde, Mehmed Gazâlî, Dersiâm Abdullah Dede ve Şeyh Hacı Mustafa Lutfullah Efendi. Ayrıca burada defnedildiği bilinen, ancak mezar taşları kaybolmuş kişiler arasında Yusuf bin Abdüssamed, Yahni Kapanzâde Seyyid Mustafa Efendi ve Gazâlîzâde Mehmed Efendi de yer almaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-veli-semseddin-mosque/street-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-veli-semseddin-mosque/street-view.jpg",
+      "alt": "Sarı sıvalı, kiremit örtülü kırma çatılı küçük cami; önünde korkuluklu merdiven, solunda tuğla gövdeli yüksek minare ve yanında bir ağaç; arkada apartmanlar ve yamaçtaki evler",
+      "description": "Caminin sokaktan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veli-semseddin-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: yeşil-mavi halılı harim, açık yeşil ahşap tavan, ortada yaldızlı mihrap, sağda yeşil boyalı ahşap minber; duvarlarda hat levhaları ve dikdörtgen pencereler",
+      "description": "Harim ve mihrap duvarı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-veli-semseddin-mosque/graveyard.jpg",
+      "alt": "Ağaçlar ve yeşillik arasında sıralanmış, üzerleri yazılı ve kabartmalı eski mezar taşları; solda moloz taş duvar",
+      "description": "Caminin haziresi",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-veli-semseddin-mosque/street-view.jpg",
+      "x": 63,
+      "y": 30,
+      "title": "Minare",
+      "text": "Arşiv belgelerinden minarenin nispeten eski olduğu, caminin ise 1859'da yeniden inşa edildiği anlaşılmaktadır.",
+      "sourceId": "inv-p471"
+    },
+    {
+      "id": "hipped-roof",
+      "image": "/images/osmangazi-veli-semseddin-mosque/street-view.jpg",
+      "x": 45,
+      "y": 61,
+      "title": "Kiremit örtülü kırma çatı",
+      "text": "1855 depreminde kubbesi yıkılınca yerine kiremit örtülü kırma çatı yapılmıştır.",
+      "sourceId": "inv-p471"
+    },
+    {
+      "id": "graveyard",
+      "image": "/images/osmangazi-veli-semseddin-mosque/graveyard.jpg",
+      "x": 21,
+      "y": 71,
+      "title": "Hazire",
+      "text": "Hazirede caminin banisi Veli Şemseddin ile Yahni Kapan ailesinden kişiler de yatmaktadır.",
+      "sourceId": "inv-p471"
+    }
+  ],
+  "test": [
+    {
+      "question": "Veli Şemseddin kimin öğrencisi ve halifelerindendir?",
+      "options": [
+        "Somuncu Baba",
+        "Emir Sultan'ın halifesi Hoca Hasan",
+        "Üftâde",
+        "Molla Fenârî"
+      ],
+      "correct": 1,
+      "description": "Veli Şemseddin, Emir Sultan'ın halifesi Hoca Hasan'ın öğrencisi ve halifelerindendir.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "question": "Yapı neden uzun süre \"Yahni Kapan Camii\" adıyla anılmıştır?",
+      "options": [
+        "Yakınında Yahni Kapan çarşısı olduğu için",
+        "Bir vezir tarafından yaptırıldığı için",
+        "Yahni Kapanların atası İbrahim Efendi imamlık yapıp camiyi tamir ettirdiği için",
+        "Minaresi Yahni Kapan ustalarınca yapıldığı için"
+      ],
+      "correct": 2,
+      "description": "Yahni Kapanların atası İbrahim Efendi camide imamlık yapmış ve camiyi yeniden tamir ettirmiştir.",
+      "sourceId": "inv-p470"
+    },
+    {
+      "question": "1855 depreminde yıkılan kubbenin yerine ne yapılmıştır?",
+      "options": [
+        "Kiremit örtülü kırma çatı",
+        "Kurşun kaplı yeni bir kubbe",
+        "Beşik tonoz",
+        "Düz beton çatı"
+      ],
+      "correct": 0,
+      "description": "1855 depreminde kubbesi yıkılınca yerine kiremit örtülü kırma çatı yapılmıştır.",
+      "sourceId": "inv-p471"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p470",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Veli Şemseddin (Yahni Kapan) Camii ve Haziresi\"",
+      "page": "470"
+    },
+    {
+      "id": "inv-p471",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Veli Şemseddin (Yahni Kapan) Camii ve Haziresi\"",
+      "page": "471"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

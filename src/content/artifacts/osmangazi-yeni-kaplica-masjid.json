@@ -1,0 +1,106 @@
+{
+  "id": "osmangazi-yeni-kaplica-masjid",
+  "name": "Yeni Kaplıca (Gazi Akdemir) Mescidi",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · kaynakta iki farklı kayıt var: 1680 sonrası (Yusuf Ağa) ve H. 955 / M. 1549 tarihli kayıt (Evhad Fakih)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Yeni Kaplıca Hamamı ile aynı avluda, kaplıcaya gelenlerin cuma namazı kılabilmesi için yaptırılmış ahşap çatılı ve minaresiz mescit.",
+  "history": "Yeni Kaplıca (Gazi Akdemir) Mescidi, Osmangazi İlçesi, Gaziakdemir Mahallesi, Yeni Kaplıca Caddesi No: 7'de, Yeni Kaplıca Hamamı ile aynı avlu içindedir.\n\nKitabesi bulunmayan mescidin, 1680 yılından sonra Yusuf Ağa tarafından, cuma günleri hamama gelenlerin cuma namazlarını kılabilmeleri için inşa ettirildiği bilinmektedir. Ancak H. 28 Zilhicce 955 / M. 28 Ocak 1549 tarihli başka bir kayıtta, mescidin aynı amaçla \"Evhad Fakih\" adlı bir hayırsever tarafından yaptırıldığı bilgisi de yer alır.\n\nMescidin beden duvarları moloz taş ve tuğlayla almaşık teknikte örülmüştür. Dıştan dışa 13,00 × 10,00 m ölçülerindeki yapı ahşap kırma çatıyla örtülmüş, üzeri kiremitle kaplanmıştır.\n\nÜç tarafı duvarla çevrili son cemaat mahalline 10 basamaklı mermer merdivenle çıkılır. 3,50 m derinliğindeki bu bölüm ahşap tavanlıdır ve 2 m yükseklikte kirpi saçağa sahiptir; sağ ve sol kısımları imam odası ile kadınlar mahfili olarak düzenlenmiştir.\n\nHarim 7,65 × 5,00 m ölçülerindedir ve ahşap tavanla örtülüdür. İç mekân, mihrap duvarı hariç her cephede altlı üstlü ikişer pencereyle aydınlanır; alt pencereler dikdörtgen, üst pencereler yuvarlak kemerlidir. Mihrap çokgen planlı bir nişten oluşur ve çevresi iki ayrı renkte mermerle kaplıdır. Minber ve kürsü sade ahşap işçiliklidir.\n\nMescidin, Bursa Mevlevihanesi şeyhi Mehmed Şemseddin Efendi'nin annesinin katkılarıyla 9 Ağustos 1893'te onarıldığına dair bir bilgi bulunmaktadır. Bugün mescit, kaplıcaya gelenlerin ibadet edebildiği küçük ama işlevsel bir yapı olarak kullanılmaktadır. Yapının minaresi yoktur.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-yeni-kaplica-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-yeni-kaplica-masjid/exterior.jpg",
+      "alt": "Beyaz sıvalı, kiremit örtülü kırma çatılı mescit; sağda girişe çıkan uzun mermer merdiven, önünde tenteli küçük bir büfe ve geniş avlu, çevresinde ağaçlar",
+      "description": "Mescidin avludan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-yeni-kaplica-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap tavan, kırmızı halı, iki renkli mermerle çerçevelenmiş mihrap nişi, sağda ahşap minber; üstte mavi çerçeveli yuvarlak kemerli, altta dikdörtgen pencereler",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "marble-stairs",
+      "image": "/images/osmangazi-yeni-kaplica-masjid/exterior.jpg",
+      "x": 73,
+      "y": 63,
+      "title": "Mermer merdiven",
+      "text": "Üç tarafı duvarla çevrili son cemaat mahalline 10 basamaklı mermer merdivenle çıkılır.",
+      "sourceId": "inv-p477"
+    },
+    {
+      "id": "hipped-roof",
+      "image": "/images/osmangazi-yeni-kaplica-masjid/exterior.jpg",
+      "x": 44,
+      "y": 30,
+      "title": "Kiremit örtülü çatı",
+      "text": "Dıştan dışa 13 × 10 m ölçülerindeki yapı ahşap kırma çatıyla örtülmüş ve kiremitle kaplanmıştır.",
+      "sourceId": "inv-p477"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-yeni-kaplica-masjid/prayer-hall.jpg",
+      "x": 26,
+      "y": 55,
+      "title": "Mihrap",
+      "text": "Mihrap çokgen planlı bir nişten oluşur ve çevresi iki ayrı renkte mermerle kaplanmıştır.",
+      "sourceId": "inv-p477"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi amaçla yaptırılmıştır?",
+      "options": [
+        "Kervansaray yolcuları için",
+        "Cuma günleri hamama gelenlerin cuma namazı kılabilmesi için",
+        "Bir tekkenin zikirhanesi olarak",
+        "Kale muhafızları için"
+      ],
+      "correct": 1,
+      "description": "Mescit, cuma günleri hamama gelenlerin cuma namazlarını kılabilmeleri amacıyla yaptırılmıştır.",
+      "sourceId": "inv-p477"
+    },
+    {
+      "question": "Son cemaat mahalline nasıl çıkılır?",
+      "options": [
+        "Ahşap rampa ile",
+        "Çifte taş merdivenle",
+        "Doğrudan sokak seviyesinden",
+        "10 basamaklı mermer merdivenle"
+      ],
+      "correct": 3,
+      "description": "Son cemaat mahalline 10 basamaklı mermer merdivenle çıkılır.",
+      "sourceId": "inv-p477"
+    },
+    {
+      "question": "Mescidin minaresi ile ilgili hangisi doğrudur?",
+      "options": [
+        "Mescidin minaresi yoktur",
+        "Tuğla gövdeli bir minaresi vardır",
+        "İki şerefeli minaresi vardır",
+        "Minaresi 1893'te yıkılmıştır"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre yapının minaresi bulunmamaktadır.",
+      "sourceId": "inv-p477"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p477",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Yeni Kaplıca (Gazi Akdemir) Mescidi\"",
+      "page": "477"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

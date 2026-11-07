@@ -1,0 +1,130 @@
+{
+  "id": "osmangazi-uc-kuzular-mosque-and-grave",
+  "name": "Üç Kuzular (Kozlar) Camii ve Kabri",
+  "city": "Bursa",
+  "district": "Osmangazi",
+  "period": "Osmanlı · 15. yüzyıl (kesin yapım yılı bilinmiyor); bugünkü yapı 1958",
+  "endowment": "Banisi kesin bilinmiyor; Safiyyüddin Efendi, Açıkbaş Mehmed Efendi ve Ali Efendi'nin yaptırdığı düşünülür",
+  "summary": "Uludağ eteklerinde kenti izleyen, adını burada yattığı rivayet edilen üç kardeşten alan ve 1958'de yeniden inşa edilen cami.",
+  "history": "Üç Kuzular Camii, Osmangazi İlçesi, Molla Fenâri Mahallesi, 1. Dere Sokak No: 10'dadır. Uludağ eteklerinde, kenti izleyen bir alanda kurulan cami, türbe ve dergâhın bulunduğu semt Üç Kuzular'a ithaf edildiği için bu adla anılır.\n\nCaminin yapım yılı ve banisi kesin olarak bilinmemektedir. 15. yüzyılda Emir Sultan ile irtibatları bulunan Safiyyüddin Efendi, Açıkbaş Mehmed Efendi ve Ali Efendi adlı üç kardeşin mezarları burada bulunduğundan caminin bu üç zat tarafından yaptırıldığı ve adını buradan aldığı düşünülmektedir. Bazı kaynaklarda \"Üç Kozlar\" adıyla da anılan caminin bu adı, üç ceviz ağacının arasında yer almasından aldığı düşünülmektedir.\n\nCami, türbe ve dergâhtan oluşan yapının eski camisi yıkılmış, yerine Safiyyüddin Efendi'nin oğlu veya damadı olduğu düşünülen Karaca Muhiddin tarafından yeni bir cami yaptırılmıştır. Erken dönem Bursa Hisar İçi camileri tarzında moloz taştan inşa edilen yapı dıştan beyaza boyanmıştır; duvarların arasına yatay ahşap hatıllar yerleştirilmiştir.\n\nKare planlı cami kırma çatıyla örtülüdür ve on yedi pencereyle aydınlanır. Mihrabı çini kaplıdır; minberi ve vaaz kürsüsü ahşap işçiliğiyle dikkat çeker. Doğudaki minarenin kaidesi özgün hâlini korur; silindirik gövdeli tuğla minare aslına uygun olarak yeniden inşa edilmiştir ve şerefe altında beş sıra stalaktitli süsleme vardır.\n\nCami 1950'de yalnızca minaresi ayakta kalacak şekilde yıkılmış, 1958'de mevcut planıyla ve dergâhın yerini de içine alacak biçimde yeniden inşa edilmiştir. 1992 onarımında dış cephesi yeşile boyanmış, 2016'da Bursa Büyükşehir Belediyesi tarafından restore edilerek bugünkü görünümünü kazanmıştır.\n\nCaminin doğu tarafında üç açık mezar bulunur. Bu mezarların Safiyyüddin Efendi, Açıkbaş Mehmed Efendi ve Ali Efendi adlı üç kardeşe ait olduğu rivayet edilir; ancak bu kişiler hakkında ayrıntılı bilgi yoktur. Son yıllarda yenilenen kabirlerde kitabe bulunmamaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/osmangazi-uc-kuzular-mosque-and-grave/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/osmangazi-uc-kuzular-mosque-and-grave/aerial-view.jpg",
+      "alt": "Havadan görünüm: ağaçlar arasında kiremit kırma çatılı beyaz cami ve tuğla gövdeli minare; arkada yamaçlara yayılan Bursa ve ovası",
+      "description": "Caminin Uludağ eteklerinden kente bakan konumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-uc-kuzular-mosque-and-grave/side-view.jpg",
+      "alt": "Beyaz badanalı, kiremit kırma çatılı cami; iki sıra kemerli pencereler ve yanda tuğla gövdeli minare, arkada Uludağ yamaçları",
+      "description": "Caminin yandan görünümü",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-uc-kuzular-mosque-and-grave/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı halılı harim, mavi çinilerle kaplı mihrap, sağda ahşap minber, solda ahşap kürsü ve renkli vitraylı pencereler",
+      "description": "Harim, çini mihrap ve ahşap minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/osmangazi-uc-kuzular-mosque-and-grave/minaret.jpg",
+      "alt": "Yakın plan: tuğla gövdeli minarenin beyaz şerefesi ve gri külahı; arka planda Bursa ovası",
+      "description": "Minarenin şerefe ve külah kısmı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "roof",
+      "image": "/images/osmangazi-uc-kuzular-mosque-and-grave/side-view.jpg",
+      "x": 52,
+      "y": 49,
+      "title": "Kırma çatı",
+      "text": "Kare planlı cami kırma çatıyla örtülüdür ve on yedi pencereyle aydınlanır.",
+      "sourceId": "inv-p444"
+    },
+    {
+      "id": "minaret",
+      "image": "/images/osmangazi-uc-kuzular-mosque-and-grave/minaret.jpg",
+      "x": 59,
+      "y": 74,
+      "title": "Tuğla minare",
+      "text": "Silindirik gövdeli tuğla minare aslına uygun olarak yeniden inşa edilmiştir; kaidesi özgün hâlini korur.",
+      "sourceId": "inv-p444"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/osmangazi-uc-kuzular-mosque-and-grave/prayer-hall.jpg",
+      "x": 51,
+      "y": 48,
+      "title": "Çini kaplı mihrap",
+      "text": "Mihrap çini kaplıdır; minber ve vaaz kürsüsü ahşap işçiliğiyle dikkat çeker.",
+      "sourceId": "inv-p444"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin \"Üç Kozlar\" adıyla da anılmasının nedeni olarak ne düşünülmektedir?",
+      "options": [
+        "Üç kubbesinin olması",
+        "Üç ceviz ağacının arasında yer alması",
+        "Üç kapısının bulunması",
+        "Üç minaresinin olması"
+      ],
+      "correct": 1,
+      "description": "Bazı kaynaklarda \"Üç Kozlar\" diye anılan caminin bu adı üç ceviz ağacının arasında yer almasından aldığı düşünülmektedir.",
+      "sourceId": "inv-p443"
+    },
+    {
+      "question": "Cami 1950'de yıkıldığında hangi bölümü ayakta kalmıştır?",
+      "options": [
+        "Minaresi",
+        "Mihrabı",
+        "Son cemaat yeri",
+        "Türbesi"
+      ],
+      "correct": 0,
+      "description": "Cami 1950'de yalnızca minaresi ayakta kalacak şekilde yıkılmış, 1958'de yeniden inşa edilmiştir.",
+      "sourceId": "inv-p444"
+    },
+    {
+      "question": "Cami 2016'da hangi kurum tarafından restore edilmiştir?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Bursa Eski Eserleri Sevenler Kurumu",
+        "Osmangazi Belediyesi",
+        "Bursa Büyükşehir Belediyesi"
+      ],
+      "correct": 3,
+      "description": "Cami 2016'da Bursa Büyükşehir Belediyesi tarafından restore edilerek bugünkü görünümünü kazanmıştır.",
+      "sourceId": "inv-p444"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p443",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Üç Kuzular (Kozlar) Camii ve Kabri\"",
+      "page": "443"
+    },
+    {
+      "id": "inv-p444",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Üç Kuzular (Kozlar) Camii ve Kabri\"",
+      "page": "444"
+    },
+    {
+      "id": "inv-p445",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, \"Üç Kuzular (Kozlar) Camii ve Kabri\"",
+      "page": "445"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

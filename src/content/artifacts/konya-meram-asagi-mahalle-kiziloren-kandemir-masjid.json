@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-asagi-mahalle-kiziloren-kandemir-masjid",
+  "name": "Aşağı Mahalle (Kızılören Kandemir) Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "H. 1286 / M. 1869-70",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kızılören’deki moloz taş mescit, üç sahınlı harimi ve kalem işi süslü mihrabıyla XIX. yüzyıl mahalle mescitleri arasında yer alır.",
+  "history": "Mescit, Meram’ın Kızılören kasabasındadır. Giriş üzerindeki levhada H. 1286 / M. 1869-70 tarihi bulunur. Vakıflar Genel Müdürlüğü 2001’de yapıyı onarmıştır.\n\nMoloz taşla yapılmış kâgir mescit dikdörtgen planlıdır; içeriden ahşap kirişlerle, dışarıdan kırma çatıyla örtülüdür. Doğu cephesindeki kapıdan girilir. Duvarlarda düz lentolu dikdörtgen pencereler vardır. Harim üç sahınlıdır. Kuzeyde ahşap mahfil, kıble duvarında mihrap ve minber bulunur. Yarım daire planlı, dikdörtgen çerçeveli mihrap kalem işiyle süslüdür. Sağda, güneybatı köşesindeki ahşap minber sadedir. Kitap yapıyı XIX. yüzyıl sonu mahalle mescitleri örnekleri arasında değerlendirir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-asagi-mahalle-kiziloren-kandemir-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-asagi-mahalle-kiziloren-kandemir-masjid/exterior.jpg",
+      "alt": "Kayalık yamaç önündeki taş mescidin metal kaplı kırma çatısı ve kemerli pencereleri",
+      "description": "Kayalık yamaç önündeki taş mescidin metal kaplı kırma çatısı ve kemerli pencereleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-asagi-mahalle-kiziloren-kandemir-masjid/mihrab.jpg",
+      "alt": "Ahşap tavanlı ve kırmızı halılı harimde pembe desenlerle çevrili mihrap ve yeşil duvarlar",
+      "description": "Ahşap tavanlı ve kırmızı halılı harimde pembe desenlerle çevrili mihrap ve yeşil duvarlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-asagi-mahalle-kiziloren-kandemir-masjid/exterior.jpg",
+      "x": 51,
+      "y": 44,
+      "title": "Kırma çatı",
+      "text": "Mescit dıştan kırma çatı, içten ahşap kirişlerle örtülüdür.",
+      "sourceId": "inv-p158"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-asagi-mahalle-kiziloren-kandemir-masjid/mihrab.jpg",
+      "x": 55,
+      "y": 56,
+      "title": "Kalem işi mihrap",
+      "text": "Yarım daire planlı ve dikdörtgen çerçeveli mihrap kalem işi bezemelidir.",
+      "sourceId": "inv-p158"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi yerleşimdedir?",
+      "options": [
+        "Kızılören",
+        "Obruk",
+        "Akşehir",
+        "Sarayönü"
+      ],
+      "correct": 0,
+      "description": "Kitap adresi Meram, Kızılören kasabası olarak verir.",
+      "sourceId": "inv-p158"
+    },
+    {
+      "question": "2001’de onarımı hangi kurum yapmıştır?",
+      "options": [
+        "Konya Müzesi",
+        "Anıtlar Derneği",
+        "Vakıflar Genel Müdürlüğü",
+        "Belediye gaz idaresi"
+      ],
+      "correct": 2,
+      "description": "Yapı 2001’de Vakıflar Genel Müdürlüğü tarafından onarılmıştır.",
+      "sourceId": "inv-p158"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Beş"
+      ],
+      "correct": 1,
+      "description": "Harim üç sahınlıdır.",
+      "sourceId": "inv-p158"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p158",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Aşağı Mahalle (Kızılören Kandemir) Mescidi\"",
+      "page": "158"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

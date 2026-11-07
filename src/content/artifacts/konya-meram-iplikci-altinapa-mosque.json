@@ -1,0 +1,123 @@
+{
+  "id": "konya-meram-iplikci-altinapa-mosque",
+  "name": "İplikçi (Altınapa) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu dönemi; H. 598 / M. 1201’den önce, H. 733 / M. 1332’de yenilenmiş",
+  "endowment": "Vakfiyesine göre yangın geçiren cami H. 992 / M. 1584’te tüccar Hacı Emrullah tarafından tamir ettirilmiştir.",
+  "summary": "Konya’daki ilk Selçuklu eserlerinden sayılan İplikçi Camii, ticaret merkezine yakınlığı nedeniyle ulu cami işlevi görmüş tuğla bir yapıdır.",
+  "history": "Cami, Meram, Kürkçü Mahallesi, Mevlâna Caddesi No. 16’dadır. Konya’da yapılan ilk Selçuklu eserlerinden biri kabul edilir. Alâeddin Camii iç kalede, İplikçi Camii ise ticaret merkezine yakın olduğu için Selçuklu ve Beylikler döneminde ulu cami işlevi görmüştür. H. 598 / M. 1201’den önce Tebrizli Ebu Fazl Abdulcabbar tarafından yaptırıldığı kabul edilir.\n\nGiriş kapısı üstündeki dört satırlık H. 733 / M. 1332 tarihli kitâbeye göre “İplikçi” adıyla bilinen Mes’ud oğlu Hacı Ebubekir camiyi genişletmiş ve yenilemiştir. Başka bir kitâbeye göre Turgut oğlu Ebul Fazl Ahmet Bey H. 834 / M. 1430-31’de camiyi ihya etmiş, Osmanlı dönemine ait bir kitâbeye göre 947 yılında Şeyh Bedrettin oğlu Abdullah oğlu Abdurrahman tamir ettirmiştir. Vakfiyesine göre yangın sonrası H. 992 / M. 1584’te tüccar Hacı Emrullah onarım yaptırmıştır. Cami 1945’te Müzeler Umum Müdürlüğü tarafından bugünkü şekliyle onarılmış, 1951’de Konya Müzesi Klasik Eserler Şubesi yapılmış, 1961’de yeniden ibadete açılmıştır.\n\nEnine dikdörtgen planlı cami kıble duvarına paralel üç sahından oluşur. Beden duvarları ve minare tamamen tuğla, payeler tuğla ve taştır. Haluk Karamağaralı’ya göre özgün plan mihrap duvarına dik yedi sahınlıdır. Cepheler sadedir; üç basık kemerli giriş kapısı ve sivri kemerli pencereler vardır. Sahınlar kare kesitli payelere oturan sivri kemerlerle ayrılır; mihrap ile kuzey kapı eksenindeki üç bölüm kubbelidir. Sonradan eklenen siyah mermer mihrabın alt bölümünde Selçuklu dönemine ait firuze ve patlıcan moru mozaik çinili bir mihrap kalıntısı bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-iplikci-altinapa-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-iplikci-altinapa-mosque/exterior.jpg",
+      "alt": "Uzun, alçak tuğla cami cephesi, önünde ağaçlar ve solda yüksek tuğla minare",
+      "description": "Uzun, alçak tuğla cami cephesi, önünde ağaçlar ve solda yüksek tuğla minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-iplikci-altinapa-mosque/prayer-hall.jpg",
+      "alt": "Kalın payelere oturan sivri kemerler ve tonozlarla örtülü uzun, aydınlık harim",
+      "description": "Kalın payelere oturan sivri kemerler ve tonozlarla örtülü uzun, aydınlık harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-iplikci-altinapa-mosque/window.jpg",
+      "alt": "Sarmaşık ve ağaç dalları arasında tuğla duvarda sivri kemerli pencere",
+      "description": "Sarmaşık ve ağaç dalları arasında tuğla duvarda sivri kemerli pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-iplikci-altinapa-mosque/exterior.jpg",
+      "x": 12,
+      "y": 30,
+      "title": "Tuğla minare",
+      "text": "Caminin beden duvarları ve minaresi tamamen tuğladan yapılmıştır.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-iplikci-altinapa-mosque/prayer-hall.jpg",
+      "x": 22,
+      "y": 60,
+      "title": "Payeler",
+      "text": "Sahınlar kare kesitli payelere oturan sivri kemerlerle birbirinden ayrılır.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-meram-iplikci-altinapa-mosque/window.jpg",
+      "x": 55,
+      "y": 52,
+      "title": "Sivri kemerli pencere",
+      "text": "Cephelerdeki sivri kemerli pencereler iç mekânı aydınlatır.",
+      "sourceId": "inv-p144"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami 1951’de hangi amaçla kullanılmıştır?",
+      "options": [
+        "Kütüphane",
+        "Medrese",
+        "Konya Müzesi Klasik Eserler Şubesi",
+        "Han"
+      ],
+      "correct": 2,
+      "description": "1951’de Konya Müzesi Klasik Eserler Şubesi hâline getirilmiştir.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "question": "Haluk Karamağaralı’ya göre caminin özgün planı kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "Beş",
+        "Dokuz",
+        "Yedi"
+      ],
+      "correct": 3,
+      "description": "Karamağaralı’ya göre plan mihrap duvarına dik yedi sahından oluşur.",
+      "sourceId": "inv-p144"
+    },
+    {
+      "question": "Sonradan eklenen mihrap hangi malzemedendir?",
+      "options": [
+        "Siyah mermer",
+        "Ahşap",
+        "Alçı",
+        "Tuğla"
+      ],
+      "correct": 0,
+      "description": "Mihrap sonradan eklenmiştir ve siyah mermerden yapılmıştır.",
+      "sourceId": "inv-p144"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p142",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"İplikçi (Altınapa) Camii\"",
+      "page": "142"
+    },
+    {
+      "id": "inv-p143",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"İplikçi (Altınapa) Camii\"",
+      "page": "143"
+    },
+    {
+      "id": "inv-p144",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"İplikçi (Altınapa) Camii\"",
+      "page": "144"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

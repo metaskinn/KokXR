@@ -1,0 +1,95 @@
+{
+  "id": "konya-karatay-halkabegus-masjid-tomb",
+  "name": "Halkabegüş Mescidi ve Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Selçuklu · XIII. yüzyıl",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kalenderhâne Mahallesi’ndeki kare planlı kubbeli türbe, üst katında mescit olarak düzenlenmiş bir mekân barındırır.",
+  "history": "Yapı, Kalenderhâne Mahallesi’nde Musalla Mezarlığı ve Konya Kalesi’nin Halkabegüş Kapısı yakınındadır. Selçuklu türbe mimarisini yansıtan XIII. yüzyıl yapısının kimin adına yapıldığı bilinmez. Osmanlı döneminde birkaç kez onarılmış; 1961’de Anıtlar Derneği, 1998’de Karatay Belediyesi tarafından restore edilmiştir.\n\nİlk işlevi türbe olan yapının batı cephesi düzgün kesme taş, öteki cepheleri kaba yonu taştır. Kare planlı yapının tuğla kubbesi sonradan kurşunla kaplanmıştır. Sanduka bulunmayan cenazelik beşik tonozludur. Batıdaki düz lentolu kapıdan çıkılan mescit katı kare planlıdır; kubbeye Türk üçgenleriyle geçilir. Kıble duvarındaki mihrap kitapta yarım dörtgen planlı olarak tarif edilir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-halkabegus-masjid-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-halkabegus-masjid-tomb/exterior.jpg",
+      "alt": "Ağaçlar arasında kare gövdeli taş türbe ve kurşun kaplı kubbesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-halkabegus-masjid-tomb/brick-dome.jpg",
+      "alt": "Tuğla kubbe ve köşe geçişleri, aşağıda küçük pencere ve sarkan avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-halkabegus-masjid-tomb/exterior.jpg",
+      "x": 48,
+      "y": 28,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Tuğla kubbe sonradan kurşunla kaplanmıştır.",
+      "sourceId": "inv-p277"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-halkabegus-masjid-tomb/brick-dome.jpg",
+      "x": 20,
+      "y": 60,
+      "title": "Türk üçgenleri",
+      "text": "Mescit katında kubbeye geçiş Türk üçgenleriyle sağlanır.",
+      "sourceId": "inv-p277"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe hangi yüzyıla tarihlendirilir?",
+      "options": [
+        "XIII. yüzyıl",
+        "XVII. yüzyıl",
+        "XIX. yüzyıl",
+        "XX. yüzyıl"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: XIII. yüzyıl.",
+      "sourceId": "inv-p277"
+    },
+    {
+      "question": "Cenazelik bölümünün örtüsü nasıldır?",
+      "options": [
+        "Ahşap kırma çatı",
+        "Beşik tonoz",
+        "Dokuz kubbe",
+        "Cam tavan"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Beşik tonoz.",
+      "sourceId": "inv-p277"
+    },
+    {
+      "question": "Halkabegüş Mescidi ve Türbesi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Beyşehir",
+        "Karatay",
+        "Bozkır"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p277"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p277",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Halkabegüş Mescidi ve Türbesi\"",
+      "page": "277"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

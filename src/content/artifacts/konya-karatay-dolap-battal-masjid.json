@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-dolap-battal-masjid",
+  "name": "Dolap Battal Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XIX. yüzyıl sonlarında yapıldığı düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Dolap Mektep Mahallesi’ndeki mescit, ahşap direkli iki sahınlı harimi ve güneş tasvirli tavan göbeğiyle tanımlanır.",
+  "history": "Mescit, Karatay, Dolap Mektep Mahallesi, Dolap Mektep Sokak’tadır. İnşa tarihi ve banisi bilinmez; planı, yapım tekniği ve malzemeleri nedeniyle XIX. yüzyıl sonlarına tarihlendirilir. Vakıflar Bölge Müdürlüğü 2015–2016’da onarmıştır.\n\nDerinlemesine dikdörtgen yapı kırma çatılıdır. Alt bölümde moloz taş, üstte kerpiç kullanılmıştır. Sade cephelerde güney ve batıda dikdörtgen, güney ve kuzeyde aydınlatma pencereleri vardır. Kuzey-batı köşe üstte beş sıra mukarnasla pahlanmıştır. Doğu cephesi komşu konuta bitişiktir; giriş kuzeybatı köşededir.\n\nHarim, taş kaidelere oturan iki ahşap direk ve doğu-batı kirişleriyle iki sahına ayrılır. Ahşap tavanın göbeğinde ışınsal doğrulardan oluşan güneş tasviri bulunur. Kuzeyde ahşap direklerin taşıdığı kadınlar mahfili vardır. Kıble duvarındaki ahşap mihrap yağlı boyalı, yarım daire planlı ve yarım kubbe kavsaralıdır. Sağdaki minber ahşaptır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-dolap-battal-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-dolap-battal-masjid/exterior.jpg",
+      "alt": "Beyaz sıvalı küçük mescidin kiremit çatısı, ahşap kapısı ve iki yüksek penceresi",
+      "description": "Beyaz sıvalı küçük mescidin kiremit çatısı, ahşap kapısı ve iki yüksek penceresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-dolap-battal-masjid/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde ahşap tavan ve direk, duvarda pencere ve yuvarlak tepe penceresi",
+      "description": "Kırmızı halılı harimde ahşap tavan ve direk, duvarda pencere ve yuvarlak tepe penceresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-dolap-battal-masjid/exterior.jpg",
+      "x": 50,
+      "y": 23,
+      "title": "Kırma çatı",
+      "text": "Derinlemesine dikdörtgen mescit kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p185"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-dolap-battal-masjid/prayer-hall.jpg",
+      "x": 30,
+      "y": 10,
+      "title": "Ahşap tavan",
+      "text": "Harim ahşap tavanlıdır; göbeğinde ışınsal güneş tasviri bulunur.",
+      "sourceId": "inv-p185"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi mahallededir?",
+      "options": [
+        "Büyüksinan",
+        "Dolap Mektep",
+        "Kürkçü",
+        "Ubeyt"
+      ],
+      "correct": 1,
+      "description": "Kitap adresi Karatay, Dolap Mektep Mahallesi olarak verir.",
+      "sourceId": "inv-p185"
+    },
+    {
+      "question": "Harim kaç sahına ayrılır?",
+      "options": [
+        "Bir",
+        "Üç",
+        "Dört",
+        "İki"
+      ],
+      "correct": 3,
+      "description": "İki ahşap direk ve kirişler harimi iki sahına ayırır.",
+      "sourceId": "inv-p185"
+    },
+    {
+      "question": "Tavan göbeğinde hangi tasvir vardır?",
+      "options": [
+        "Gemi",
+        "Ağaç",
+        "Güneş",
+        "Kuş"
+      ],
+      "correct": 2,
+      "description": "Tavan göbeğinde ışınsal doğrular şeklinde güneş tasviri bulunur.",
+      "sourceId": "inv-p185"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p185",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Dolap Battal Mescidi\"",
+      "page": "185"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

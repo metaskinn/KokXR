@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-furgan-dede-masjid",
+  "name": "Furgan Dede Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "1908",
+  "endowment": "Banisi Furgan Dede",
+  "summary": "Son cemaat yerinin batısında kabri bulunan Furgan Dede tarafından yaptırılan, 1908 tarihli mescit.",
+  "history": "Mescit, Meram, Akbaş Mahallesi, Kamani Mehmet Paşa Sokak, No. 9'da yer almaktadır. Eser, son cemaat yerinin batı bölümünde kabri bulunan Furgan Dede tarafından yaptırılmıştır. Mescide adını veren Furgan Dede'nin Horasan erenlerinden bir muhterem veya Mevlâna Celaleddin-i Rûmî'nin müritlerinden biri olduğu düşünülmektedir.\n\nMescit 1908 yılında inşa edilmiştir ve kuzey-güney yönünde uzanan dikdörtgen plana sahiptir. İçten bağdadi bir kubbeyle, dıştan kırma çatıyla örtülmüştür.\n\nDoğu cephede düz lentolu iki pencere vardır. Kuzey cephede ahşap üçgen alınlıklı, düz lentolu iki pencere ve ortada düz lentolu kapı açıklığı bulunur. Güney cephede de düz lentolu iki pencere ile mihrap aksında bir pencere daha yer alır. Kuzey-güney yönünde uzanan dikdörtgen iç mekânın doğu duvarında bir niş, kıble duvarının ortasında mihrap nişi vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-furgan-dede-masjid/north-facade.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-furgan-dede-masjid/north-facade.jpg",
+      "alt": "Turuncu sıvalı tek katlı mescit; ahşap kapının üstünde \"Furgan Dede Mescidi\" tabelası, iki yanında üstü üçgen alınlıklı ahşap pencereler, kiremit çatı saçağı",
+      "description": "Kuzey cephe ve giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-furgan-dede-masjid/prayer-hall.jpg",
+      "alt": "İç mekân: beyaz kubbe içi, karşıda mihrap nişi ve üstünde küçük pencere, sağda yeşil örtülü minber, ahşap lambri ve kırmızı halı",
+      "description": "Kubbe ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pedimented-window",
+      "image": "/images/konya-meram-furgan-dede-masjid/north-facade.jpg",
+      "x": 59,
+      "y": 45,
+      "title": "Üçgen alınlıklı pencere",
+      "text": "Kuzey cephede ahşap üçgen alınlıklı, düz lentolu iki pencere bulunur.",
+      "sourceId": "inv-p83"
+    },
+    {
+      "id": "entrance",
+      "image": "/images/konya-meram-furgan-dede-masjid/north-facade.jpg",
+      "x": 72,
+      "y": 65,
+      "title": "Giriş kapısı",
+      "text": "Kuzey cephenin ortasında düz lentolu kapı açıklığı yer alır.",
+      "sourceId": "inv-p83"
+    },
+    {
+      "id": "bagdadi-dome",
+      "image": "/images/konya-meram-furgan-dede-masjid/prayer-hall.jpg",
+      "x": 50,
+      "y": 14,
+      "title": "Bağdadi kubbe",
+      "text": "Mescit içten bağdadi bir kubbeyle, dıştan kırma çatıyla örtülmüştür.",
+      "sourceId": "inv-p83"
+    }
+  ],
+  "test": [
+    {
+      "question": "Furgan Dede Mescidi hangi yıl inşa edilmiştir?",
+      "options": [
+        "1845",
+        "1954",
+        "1905",
+        "1908"
+      ],
+      "correct": 3,
+      "description": "Mescit 1908 yılında inşa edilmiştir.",
+      "sourceId": "inv-p83"
+    },
+    {
+      "question": "Furgan Dede'nin kabri nerededir?",
+      "options": [
+        "Son cemaat yerinin batı bölümünde",
+        "Harimin ortasında",
+        "Mescidin bahçesinde",
+        "Mihrabın önünde"
+      ],
+      "correct": 0,
+      "description": "Eseri yaptıran Furgan Dede'nin kabri son cemaat yerinin batı bölümündedir.",
+      "sourceId": "inv-p83"
+    },
+    {
+      "question": "Mescidin iç örtüsü nasıldır?",
+      "options": [
+        "Ahşap düz tavan",
+        "Bağdadi kubbe",
+        "Beşik tonoz",
+        "Taş kubbe"
+      ],
+      "correct": 1,
+      "description": "Mescit içten bağdadi bir kubbeyle, dıştan kırma çatıyla örtülmüştür.",
+      "sourceId": "inv-p83"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p83",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Furgan Dede Mescidi\"",
+      "page": "83"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

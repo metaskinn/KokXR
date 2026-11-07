@@ -1,0 +1,113 @@
+{
+  "id": "konya-karatay-dolap-mektep-masjid",
+  "name": "Dolap Mektep Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Mimari ve plan özelliklerine göre XIX. yüzyıl sonları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Bitişiğinde iki katlı imam evi bulunan, ahşap tavanlı ve kırma çatılı XIX. yüzyıl sonu Karatay mescidi.",
+  "history": "Mescit, Karatay, Dolap Mektep Mahallesi, Dolap Mektep Sokak’tadır. İnşa tarihi ve banisi hakkında kitâbe yoktur; mimari ve plan özelliklerinden hareketle XIX. yüzyıl sonlarına tarihlendirilebilir. 2015’te Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nMescit kareye yakın dikdörtgen planlıdır; içten düz ahşap tavanlı, dıştan kırma çatılıdır. Beden duvarları moloz taştır ve üzeri sıvalıdır. Kuzeyinde yapıya bitişik iki katlı imam evi bulunur. Batı ve güneyde ikişer, girişin bulunduğu kuzeybatı köşede iki dikdörtgen pencere vardır. Bu bölüme sonradan saçakla örtülü, üç basamaklı bir giriş eklenmiştir. Giriş açıklığının kuzeyinde binek taşı olarak kullanılan devşirme bir malzeme bulunur.\n\nHarim dikdörtgen planlı ve ahşap tavanlıdır; tavanda mihrabın önünde daire biçimli, fırfırlı bir tavan göbeği vardır. Kuzey bölümde iki ahşap direğin taşıdığı mahfil yer alır. Kıble duvarının ortasındaki mihrap yarım daire planlıdır; mihrabın güneybatısındaki minber yarım daire tepelikle sonlanır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-dolap-mektep-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-dolap-mektep-masjid/exterior.jpg",
+      "alt": "Alt kısmı taş, üstü beyaz sıvalı, kırma çatılı mescit; köşede saçaklı küçük giriş ve basamaklar",
+      "description": "Mescidin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-dolap-mektep-masjid/mahfil.jpg",
+      "alt": "İç mekân: iki ahşap direğin taşıdığı ahşap korkuluklu mahfil ve altında kapı, kırmızı halı",
+      "description": "Ahşap mahfil",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-dolap-mektep-masjid/mihrab.jpg",
+      "alt": "Koyu ahşap çerçeveli, yarım daire nişli mihrap; üstte hilal süslü tepelik",
+      "description": "Mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "sonradan-eklenen-giris",
+      "image": "/images/konya-karatay-dolap-mektep-masjid/exterior.jpg",
+      "x": 42,
+      "y": 68,
+      "title": "Sonradan eklenen giriş",
+      "text": "Girişin bulunduğu köşeye sonradan saçakla örtülü, üç basamaklı bir giriş eklenmiştir.",
+      "sourceId": "inv-p260"
+    },
+    {
+      "id": "mahfil",
+      "image": "/images/konya-karatay-dolap-mektep-masjid/mahfil.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Mahfil",
+      "text": "Kuzey bölümde iki ahşap direğin taşıdığı mahfil yer alır.",
+      "sourceId": "inv-p260"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-dolap-mektep-masjid/mihrab.jpg",
+      "x": 50,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p260"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin kuzeyinde yapıya bitişik ne bulunur?",
+      "options": [
+        "Medrese",
+        "İki katlı imam evi",
+        "Türbe",
+        "Çeşme"
+      ],
+      "correct": 1,
+      "description": "Yapının kuzeyinde bitişik iki katlı imam evi bulunur.",
+      "sourceId": "inv-p260"
+    },
+    {
+      "question": "Giriş açıklığının kuzeyinde binek taşı olarak ne kullanılmıştır?",
+      "options": [
+        "Mezar taşı",
+        "Değirmen taşı",
+        "Devşirme malzeme",
+        "Ahşap kütük"
+      ],
+      "correct": 2,
+      "description": "Giriş açıklığının kuzeyinde binek taşı olarak kullanılan devşirme malzeme bulunur.",
+      "sourceId": "inv-p260"
+    },
+    {
+      "question": "Mihrabın önündeki tavan göbeği nasıldır?",
+      "options": [
+        "Daire biçimli ve fırfırlı",
+        "Sekizgen ve çinili",
+        "Kare ve kalem işi",
+        "Kubbeli ve camlı"
+      ],
+      "correct": 0,
+      "description": "Ahşap tavanda mihrap önünde daire biçimli, fırfırlı bir tavan göbeği vardır.",
+      "sourceId": "inv-p260"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p260",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Dolap Mektep Mescidi\"",
+      "page": "260"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

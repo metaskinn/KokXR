@@ -1,0 +1,112 @@
+{
+  "id": "hatay-altinozu-fatikli-mosque",
+  "city": "Hatay",
+  "district": "Altınözü",
+  "name": "Fatikli Camii",
+  "period": "16. yüzyıla tarihleme görüşü; en eski kitabe 1875",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Altınözü Fatikli Camii, iki sahınlı harimi ve yapıdan ayrı minaresiyle tanıtılır.",
+  "history": "Altınözü’ne bağlı Fatikli köyündeki caminin planı Antakya örnekleriyle ilişkilendirilir; tonozu ve minaresi farklıdır. Üsluba dayanarak 16. yüzyıla tarihleyenler bulunsa da en eski kitabe 1875’tir; 1872 depremi sonrasında yenilenmiş olabilir. Diğer kitabe 1929 onarımını gösterir. Beş kemerli son cemaat yerinin gerisinde dikdörtgen, iki sahınlı harim vardır. Kitap ahşap çatıdan da söz eder; iç mekân örtüsünü gömme payeler ve mukarnaslı başlıklı sütunların taşıdığı çapraz tonozlar olarak anlatır. Basık kemerli kapı, sade taş mihrap ve minber ile konsollara oturan ahşap mahfil bulunur. Doğu, güney ve batıda pencereler, mihrap nişinde küçük açıklık vardır. Kuzeydoğudan yaklaşık on metre uzakta bağımsız yükselen minare kısa kare kaideli ve çokgen gövdelidir; üstte yuvarlak petek, konik külah ve alemle biter. Şemsiye bölümü yoktur.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-altinozu-fatikli-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-altinozu-fatikli-mosque/book-view-1.jpg",
+      "alt": "Geniş avluda taş minare ve caminin kemerli son cemaat yeri",
+      "description": "Fatikli Camii — kitaptaki görünüm 1 (s. 354–355)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-altinozu-fatikli-mosque/book-view-2.jpg",
+      "alt": "Bağımsız taş minarede uzun gövde, şerefe ve sivri külah",
+      "description": "Fatikli Camii — kitaptaki görünüm 2 (s. 356–357)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-altinozu-fatikli-mosque/book-view-1.jpg",
+      "x": 60,
+      "y": 59,
+      "title": "Son cemaat yeri",
+      "text": "Önde beş kemerli son cemaat mahalli bulunur.",
+      "sourceId": "inv-p356"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-altinozu-fatikli-mosque/book-view-2.jpg",
+      "x": 49,
+      "y": 44,
+      "title": "Bağımsız minare",
+      "text": "Minare camiden ayrı yükselir ve şemsiye bölümü yoktur.",
+      "sourceId": "inv-p358"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi ilçededir?",
+      "options": [
+        "Defne",
+        "Payas",
+        "Belen",
+        "Altınözü"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Altınözü.",
+      "sourceId": "inv-p356"
+    },
+    {
+      "question": "Son cemaat yerinde kaç kemer vardır?",
+      "options": [
+        "Beş",
+        "Üç",
+        "Altı",
+        "Sekiz"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Beş.",
+      "sourceId": "inv-p356"
+    },
+    {
+      "question": "Minareyi Antakya merkez örneklerinden ayıran özellik nedir?",
+      "options": [
+        "Dört şerefeli oluşu",
+        "Şemsiye bölümünün olmaması",
+        "Ahşap gövdesi",
+        "Çifte minare olması"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Şemsiye bölümünün olmaması.",
+      "sourceId": "inv-p358"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p356",
+      "text": "Hatay Vakıf Eserleri, Altınözü, \"Fatikli Camii\"",
+      "page": "356"
+    },
+    {
+      "id": "inv-p358",
+      "text": "Hatay Vakıf Eserleri, Altınözü, \"Fatikli Camii\"",
+      "page": "358"
+    },
+    {
+      "id": "inv-p359",
+      "text": "Hatay Vakıf Eserleri, Altınözü, \"Fatikli Camii\"",
+      "page": "359"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Altınözü, \"Fatikli Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

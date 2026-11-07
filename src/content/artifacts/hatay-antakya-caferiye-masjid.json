@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-caferiye-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Caferiye Mescidi",
+  "period": "İnşa dönemi kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Caferiye Mescidi, dükkânların üstüne yerleşen iki katlı ve düzensiz dikdörtgen planlı bir yapıdır.",
+  "history": "Antakya’da Kurtuluş ve Oğuzlar caddelerinin köşesinde, 4. mıntıka 240 parseldeki mescidin yakınında Sarımiye Camii, Katolik Kilisesi ve sinagog bulunur. Kuzeydoğu-güneybatı doğrultulu düzensiz enine dikdörtgen yapı iki katlıdır. 9,70 × 7,06 metre ölçülü zemin katta asma katlı üç dükkân ve merdiven vardır; biri L planlıdır. Üst kat kuzeybatıda yaklaşık bir metre çıkma yapar. Güney köşesi pahlanarak mihrap, doğuda abdest yeri oluşturulmuştur. Kitap kuzeydoğu duvarını bir yerde sağır tarif ederken ardından alt ve üst pencereler de sayar; bu belirsizlikten soru üretilmemiştir. Diğer cephelerde pencere ve nişler bulunur. Zemin şap, tavan ahşap kaplamadır; kırma çatı Marsilya tipi kiremitle örtülüdür.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-caferiye-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-caferiye-masjid/book-view-1.jpg",
+      "alt": "Dükkânların üstünde çıkmalı, ahşap pencereli ve korkuluklu mescit katı",
+      "description": "Caferiye Mescidi — kitaptaki görünüm 1 (s. 346–347)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-caferiye-masjid/book-view-2.jpg",
+      "alt": "Mavi halılı odada ahşap tavan, avize, mihrap ve sağda ahşap minber",
+      "description": "Caferiye Mescidi — kitaptaki görünüm 2 (s. 348–349)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-caferiye-masjid/book-view-1.jpg",
+      "x": 41,
+      "y": 40,
+      "title": "Çıkmalı üst kat",
+      "text": "Mescit üst katı kuzeybatıda yaklaşık bir metre çıkma yapar.",
+      "sourceId": "inv-p348"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-caferiye-masjid/book-view-2.jpg",
+      "x": 50,
+      "y": 13,
+      "title": "Ahşap tavan",
+      "text": "Mescidin tavanı ahşap kaplamalıdır.",
+      "sourceId": "inv-p349"
+    }
+  ],
+  "test": [
+    {
+      "question": "Zemin katta kaç dükkân vardır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Altı"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Üç.",
+      "sourceId": "inv-p348"
+    },
+    {
+      "question": "Çatı hangi kiremitle örtülüdür?",
+      "options": [
+        "Cam kiremit",
+        "Metal panel",
+        "Marsilya tipi",
+        "Arduvaz"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Marsilya tipi.",
+      "sourceId": "inv-p349"
+    },
+    {
+      "question": "Mescit hangi iki caddenin köşesindedir?",
+      "options": [
+        "İnönü ve Atatürk",
+        "Gazi Paşa ve Selçuk",
+        "Halep ve Hicaz",
+        "Kurtuluş ve Oğuzlar"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Kurtuluş ve Oğuzlar.",
+      "sourceId": "inv-p348"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p348",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Caferiye Mescidi\"",
+      "page": "348"
+    },
+    {
+      "id": "inv-p349",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Caferiye Mescidi\"",
+      "page": "349"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Caferiye Mescidi\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

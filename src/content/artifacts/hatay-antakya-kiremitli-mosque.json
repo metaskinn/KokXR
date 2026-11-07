@@ -1,0 +1,122 @@
+{
+  "id": "hatay-antakya-kiremitli-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Kiremitli Camii",
+  "period": "16. yüzyıla uzanabileceği düşünülür; 1842 onarımı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kiremitli Camii, iki sahınlı harimi ve şemsiye külahlı çokgen minaresiyle bölgesel mimariyi yansıtır.",
+  "history": "Üç tarafı sokaklı caminin geçmişinin 16. yüzyıla uzanabileceği belirtilir. Cami 1842’de, minare 1844’te onarılmıştır. Avluya doğu ve batıdaki sade kapılardan girilir. Güneybatıdaki minare kare kaideli, çokgen gövdeli ve ahşap şemsiye külahlıdır; gövdesinde altı kollu ışıklık vardır. Ahşap direkli son cemaat yeri yazlık namazgâh olarak da düzenlenmiştir; mihrabiye, kapı ve üç pencere sadedir. Beyaz kesme taşlı harim doğu-batı doğrultusunda, doğu duvarı nedeniyle yamuklaşan dikdörtgen planlıdır. Ortadaki sütuna basan iki sivri kemer kıbleye paralel iki sahını ve kırma çatının omurgasını oluşturur. Mihrap sade niştir; minber ahşaptır. Kuzeyde üç, batı ve güneyde ikişer pencere vardır; doğu komşu eve bitişiktir. Yapı 2008’de onarılmıştır. Yanındaki çift musluklu, kemerli çeşme için 1914 ve Hubbizzade Hacı Sadık adı verilir; bu paragrafta “minare” kelimesi kullanılması önceki 1844 minare onarımıyla uyuşmadığından belirsiz ifade korunmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-kiremitli-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-kiremitli-mosque/book-view-1.jpg",
+      "alt": "Taş döşeli avluda cami cephesi, ağaç ve arkada örtülü şerefeli minare",
+      "description": "Kiremitli Camii — kitaptaki görünüm 1 (s. 250–251)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-kiremitli-mosque/book-view-2.jpg",
+      "alt": "Ahşap direkli sundurma altında kapı ve kemerli pencereler",
+      "description": "Kiremitli Camii — kitaptaki görünüm 2 (s. 252–253)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-kiremitli-mosque/book-view-1.jpg",
+      "x": 66,
+      "y": 32,
+      "title": "Şemsiye külahlı minare",
+      "text": "Çokgen gövdeli minarenin ahşap külahı şemsiye biçimindedir.",
+      "sourceId": "inv-p252"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-kiremitli-mosque/book-view-2.jpg",
+      "x": 53,
+      "y": 61,
+      "title": "Harim kapısı",
+      "text": "Son cemaat yerinden harime bir kapı açılır.",
+      "sourceId": "inv-p253"
+    }
+  ],
+  "test": [
+    {
+      "question": "Minarenin külahı hangi biçimdedir?",
+      "options": [
+        "Şemsiye biçiminde",
+        "Soğan biçiminde",
+        "Düz teras",
+        "Küre biçiminde"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Şemsiye biçiminde.",
+      "sourceId": "inv-p252"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "İki",
+        "Dört",
+        "Tek"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p253"
+    },
+    {
+      "question": "Yapı hangi yıl Vakıflar Bölge Müdürlüğünce onarılmıştır?",
+      "options": [
+        "1902",
+        "1941",
+        "2008",
+        "1993"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: 2008.",
+      "sourceId": "inv-p254"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p252",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kiremitli Camii\"",
+      "page": "252"
+    },
+    {
+      "id": "inv-p253",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kiremitli Camii\"",
+      "page": "253"
+    },
+    {
+      "id": "inv-p254",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kiremitli Camii\"",
+      "page": "254"
+    },
+    {
+      "id": "inv-p255",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kiremitli Camii\"",
+      "page": "255"
+    },
+    {
+      "id": "inv-p256",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kiremitli Camii\"",
+      "page": "256"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Kiremitli Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

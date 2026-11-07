@@ -1,0 +1,112 @@
+{
+  "id": "hatay-antakya-osmaniye-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Osmaniye Camii",
+  "period": "Osmanlı · 1895",
+  "endowment": "Kitapta II. Abdülhamid’e atfedilir",
+  "summary": "Osmaniye Camii, kare harimi ve serbest duran şemsiye külahlı minaresiyle tanıtılır.",
+  "history": "Düzgün kesme taşlı kare planlı caminin dört yanı açıktır; kuzey ve güneyde ikişer, doğu ve batıda birer pencere vardır. İçte düz ahşap tavan, dışta kiremitli kırma çatı kullanılmıştır. Kuzeybatıda bağımsız yükselen minare kısa yuvarlak gövdeli ve şemsiye külahlı şerefelidir. Kuzey kapısındaki II. Abdülhamid tuğralı 1895 kitabesi yapının adını Osmaniye olarak verir. Kitabın Nardüzü bölümünde Osmaniye de II. Abdülhamid’e atfedilen camiler arasında anılır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-osmaniye-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-osmaniye-mosque/book-view-1.jpg",
+      "alt": "Taş döşeli avluda kareye yakın cami, kemerli giriş ve pencereler",
+      "description": "Osmaniye Camii — kitaptaki görünüm 1 (s. 298–299)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-osmaniye-mosque/book-view-2.jpg",
+      "alt": "Taş minarede ahşap örtülü şerefe ve altta küçük giriş kapısı",
+      "description": "Osmaniye Camii — kitaptaki görünüm 2 (s. 300–301)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-osmaniye-mosque/book-view-1.jpg",
+      "x": 45,
+      "y": 58,
+      "title": "Giriş kitabesi",
+      "text": "Kuzey kapısındaki kitabe II. Abdülhamid tuğralı ve 1895 tarihlidir.",
+      "sourceId": "inv-p300"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-osmaniye-mosque/book-view-2.jpg",
+      "x": 51,
+      "y": 36,
+      "title": "Minare",
+      "text": "Kısa yuvarlak gövdeli minare örtülü şerefelidir.",
+      "sourceId": "inv-p300"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin planı nasıldır?",
+      "options": [
+        "Daire",
+        "Sekizgen",
+        "Haç biçimli",
+        "Kare"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Kare.",
+      "sourceId": "inv-p300"
+    },
+    {
+      "question": "Kapı kitabesi hangi tarihlidir?",
+      "options": [
+        "1895",
+        "1574",
+        "1941",
+        "2004"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: 1895.",
+      "sourceId": "inv-p300"
+    },
+    {
+      "question": "Minare caminin hangi köşesindedir?",
+      "options": [
+        "Güneydoğu",
+        "Kuzeybatı",
+        "Güneybatı",
+        "Kuzeydoğu"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Kuzeybatı.",
+      "sourceId": "inv-p300"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p300",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Osmaniye Camii\"",
+      "page": "300"
+    },
+    {
+      "id": "inv-p301",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Osmaniye Camii\"",
+      "page": "301"
+    },
+    {
+      "id": "inv-p367",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Osmaniye Camii\"",
+      "page": "367"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Osmaniye Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

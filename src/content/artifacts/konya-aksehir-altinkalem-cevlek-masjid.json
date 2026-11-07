@@ -1,0 +1,105 @@
+{
+  "id": "konya-aksehir-altinkalem-cevlek-masjid",
+  "name": "Altınkalem (Cevlek) Mescidi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Selçuklu · H. 620 / M. 1223",
+  "endowment": "Banisi İsfendiyarzade Eminüddin Yusuf",
+  "summary": "Altınkalem Mahallesi’ndeki tek kubbeli Selçuklu mescidi, tuğla cephesi ve çini mozaik pencere alınlıklarıyla öne çıkar.",
+  "history": "Mescit, Altınkalem Mahallesi, Mescit Sokak’tadır. Giriş üzerindeki sekiz satırlık Arapça, celî sülüs kitabe, İsfendiyarzade Eminüddin Yusuf’un Sultan Alaaddin Keykubad zamanında H. 620 / M. 1223’te yaptırdığını bildirir. Farklı onarımlarda giriş cephesinin alt tuğlaları yapıya uygun olmayan biçimde yenilenmiş, kubbe dıştan betonla sıvanmıştır. Vakıflar Bölge Müdürlüğü 2018’de de tamir etmiştir.\n\nGiriş ve kare planlı harimden oluşan yapının temeli taş, üstü tuğladır. Bazı pencereler özgündür; iki pencerenin alınlıklarında çini mozaik geometrik panolar vardır. Doğu penceresindeki ahşap bezemelerde kıvrık dallar ve palmetler görülür. Sıvalı harimin tuğla kubbesine sivri kemerli tromplarla geçilir. Kuzeydeki ahşap mahfil ile güneybatıdaki minber sonradan eklenmiştir. Mihrap yarım daire planlı ve mukarnas kavsaralıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-altinkalem-cevlek-masjid/brick-facade.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-altinkalem-cevlek-masjid/brick-facade.jpg",
+      "alt": "Tuğla cephede sivri kemerli pencere alınlıklarını çevreleyen turkuaz ve çok renkli çini şeritleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-altinkalem-cevlek-masjid/prayer-hall.jpg",
+      "alt": "Tuğla kubbeli harimde ahşap çerçeveli mihrap, ahşap minber ve turkuaz halı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-altinkalem-cevlek-masjid/brick-facade.jpg",
+      "x": 27,
+      "y": 41,
+      "title": "Çini mozaik alınlık",
+      "text": "Cephedeki iki pencerenin alınlığında çini mozaikten geometrik panolar vardır.",
+      "sourceId": "inv-p325"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-altinkalem-cevlek-masjid/prayer-hall.jpg",
+      "x": 48,
+      "y": 12,
+      "title": "Tuğla kubbe",
+      "text": "Kare harimin tuğla kubbesine sivri kemerli tromplarla geçilir.",
+      "sourceId": "inv-p325"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidi kim yaptırmıştır?",
+      "options": [
+        "Abdülhayoğlu Hasan Paşa",
+        "Halil Bey",
+        "İsfendiyarzade Eminüddin Yusuf",
+        "Hacı Hüseyin Keçeci"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: İsfendiyarzade Eminüddin Yusuf.",
+      "sourceId": "inv-p323"
+    },
+    {
+      "question": "Vakıflar Bölge Müdürlüğünün belirtilen son tamiri hangi yıldadır?",
+      "options": [
+        "1815",
+        "1944",
+        "1961",
+        "2018"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: 2018.",
+      "sourceId": "inv-p323"
+    },
+    {
+      "question": "Altınkalem (Cevlek) Mescidi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Karatay",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Akşehir.",
+      "sourceId": "inv-p323"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p323",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Altınkalem (Cevlek) Mescidi\"",
+      "page": "323"
+    },
+    {
+      "id": "inv-p324",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Altınkalem (Cevlek) Mescidi\"",
+      "page": "324"
+    },
+    {
+      "id": "inv-p325",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Altınkalem (Cevlek) Mescidi\"",
+      "page": "325"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

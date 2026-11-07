@@ -1,0 +1,102 @@
+{
+  "id": "konya-meram-aksinne-kumbetli-gunbentli-masjid",
+  "name": "Aksinne Kümbetli (Günbentli) Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XIII. yüzyıl Selçuklu dönemi olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Aksinne’deki tek kubbeli mescit, restorasyonda bulunan Selçuklu çini ve alçı parçalarıyla XIII. yüzyıla tarihlendirilir.",
+  "history": "Mescit, Meram, Aksinne Mahallesi, Parmakçı Mescidi Sokak No. 23’tedir. Restorasyon sırasında bulunan Selçuklu dönemi çini ve alçı parçaları, yapının XIII. yüzyılda yapılmış olabileceğini düşündürmektedir.\n\nDoğu-batı yönündeki dikdörtgen yapının kare harimi tek kubbelidir. Kitap önce kubbenin tromplara oturduğunu, ardından harimin Türk üçgeni geçişli kubbeyle örtüldüğünü belirtir. Batıdaki sonradan eklenmiş son cemaat yeri kuzey-güney doğrultusunda uzanır; kerpiç, tuğla, kesme ve moloz taşla yapılmış, içten düz dam, dıştan kırma çatıyla örtülmüştür. Restorasyonda batı kapısı tuğladan basık kemerli açıklık biçiminde düzenlenmiştir.\n\nKubbe ve bingiler tuğladır; kubbe içinde zikzaklı tuğla istifi görülür. Kasnakta ana yönlere açılan dört sivri kemerli sağır pencerenin firuze ve patlıcan moru mozaik çinilerinde çarkıfelek, basamak, kare ve eşkenar dörtgen düzenlemeleri bulunur. Kıble duvarındaki mihrap yarım dikdörtgen planlıdır. Restorasyonda mihrap ve yan sekilerde kalıplama tekniğinde alçı bezemeler ile muhtemelen kavsaraya ait mukarnas parçası ortaya çıkarılmıştır. Mihrabın geometrik bezemeleri sekiz kollu yıldız, yarım onikigen, eşkenar dörtgen ve çarkıfelek motiflerinden oluşur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-aksinne-kumbetli-gunbentli-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-aksinne-kumbetli-gunbentli-masjid/exterior.jpg",
+      "alt": "Demir çitle çevrili taş ve tuğla duvarlı mescit, kırmızı renkli tek kubbe ve alçak giriş bölümü",
+      "description": "Demir çitle çevrili taş ve tuğla duvarlı mescit, kırmızı renkli tek kubbe ve alçak giriş bölümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-aksinne-kumbetli-gunbentli-masjid/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde açık renkli mihrap, tuğla kubbe geçişleri ve kemerli bezemeli sağır pencereler",
+      "description": "Kırmızı halılı harimde açık renkli mihrap, tuğla kubbe geçişleri ve kemerli bezemeli sağır pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-aksinne-kumbetli-gunbentli-masjid/exterior.jpg",
+      "x": 47,
+      "y": 30,
+      "title": "Tek kubbe",
+      "text": "Kare planlı harim tek kubbeyle örtülüdür.",
+      "sourceId": "inv-p149"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-aksinne-kumbetli-gunbentli-masjid/prayer-hall.jpg",
+      "x": 50,
+      "y": 43,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım dikdörtgen planlıdır; alçı bezemeleri restorasyonda tespit edilmiştir.",
+      "sourceId": "inv-p150"
+    }
+  ],
+  "test": [
+    {
+      "question": "Restorasyonda hangi dönemden çini ve alçı parçaları bulunmuştur?",
+      "options": [
+        "Cumhuriyet",
+        "Selçuklu",
+        "Bizans",
+        "Roma"
+      ],
+      "correct": 1,
+      "description": "Buluntuların Selçuklu dönemine ait olduğu belirtilir.",
+      "sourceId": "inv-p149"
+    },
+    {
+      "question": "Son cemaat yeri harimin hangi tarafındadır?",
+      "options": [
+        "Doğusunda",
+        "Güneyinde",
+        "Kuzeydoğusunda",
+        "Batısında"
+      ],
+      "correct": 3,
+      "description": "Sonradan eklenen son cemaat yeri mescidin batısındadır.",
+      "sourceId": "inv-p149"
+    },
+    {
+      "question": "Kubbe ve bingiler hangi malzemedendir?",
+      "options": [
+        "Ahşap",
+        "Çelik",
+        "Tuğla",
+        "Mermer"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre kubbe ve bingiler tamamen tuğladandır.",
+      "sourceId": "inv-p150"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p149",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Aksinne Kümbetli (Günbentli) Mescidi\"",
+      "page": "149"
+    },
+    {
+      "id": "inv-p150",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Aksinne Kümbetli (Günbentli) Mescidi\"",
+      "page": "150"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

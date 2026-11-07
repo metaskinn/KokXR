@@ -1,0 +1,95 @@
+{
+  "id": "hatay-samandag-koyunoglu-sheikh-ali-issuvayre-tomb",
+  "name": "Koyunoğlu Şeyh Ali Issuvayre Türbesi",
+  "district": "Samandağ",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Koyunoğlu Şeyh Ali Issuvayre Türbesi, Samandağ’da mezarlık yanında, beyaz kubbeli ve geniş saçaklı bir ziyaretgâhtır.",
+  "history": "Samandağ’a bağlı Koyunoğlu Köyü’ndeki türbe yüksekçe bir tepe üzerinde, mezarlığın yanında bulunur. Kareye yakın dikdörtgen planlı sade yapının geniş saçakları ve beyaz kubbesi vardır.\n\nGirişte yuvarlak kemerli kapı açıklığı, diğer cephelerde yuvarlak kemerli pencereler yer alır. Döşeme karo kaplıdır. Ortadaki mermer sandukanın kime ait olduğuna dair bir yazı yoktur. Kitap ibadet ve toplantı mekânı olarak kullanılan yapının iki katlı olduğunu, hazire, mutfak, pişirme yerleri ve tuvaletin diğer bölümleri oluşturduğunu belirtir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-samandag-koyunoglu-sheikh-ali-issuvayre-tomb/tomb-and-graves.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-samandag-koyunoglu-sheikh-ali-issuvayre-tomb/tomb-and-graves.jpg",
+      "alt": "Ağaçlı açık alanda önde beyaz mezarlar, geride yeşil kapılı ve küçük beyaz kubbeli yapı",
+      "description": "Ağaçlı açık alanda önde beyaz mezarlar, geride yeşil kapılı ve küçük beyaz kubbeli yapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-samandag-koyunoglu-sheikh-ali-issuvayre-tomb/tomb-and-graves.jpg",
+      "x": 61,
+      "y": 39,
+      "title": "Beyaz kubbe",
+      "text": "Geniş saçaklı türbenin üzerinde beyaz renkli kubbe vardır.",
+      "sourceId": "inv-p433"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-samandag-koyunoglu-sheikh-ali-issuvayre-tomb/tomb-and-graves.jpg",
+      "x": 17,
+      "y": 69,
+      "title": "Mezarlık",
+      "text": "Türbe bir mezarlığın yanında yer alır.",
+      "sourceId": "inv-p433"
+    }
+  ],
+  "test": [
+    {
+      "question": "Koyunoğlu Şeyh Ali Issuvayre Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Samandağ",
+        "Antakya",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe Samandağ olarak verilmiştir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Türbe hangi köydedir?",
+      "options": [
+        "Nahırlı",
+        "Koyunoğlu",
+        "Tavla",
+        "Dikmece"
+      ],
+      "correct": 1,
+      "description": "Yapı Samandağ’a bağlı Koyunoğlu Köyü’ndedir.",
+      "sourceId": "inv-p433"
+    },
+    {
+      "question": "Giriş ve pencere açıklıklarının kemerleri nasıldır?",
+      "options": [
+        "Üçgen alınlıklı",
+        "Düz atkılı",
+        "Yuvarlak kemerli",
+        "Dilimli kemerli"
+      ],
+      "correct": 2,
+      "description": "Metin kapı ve pencereleri yuvarlak kemerli olarak tanımlar.",
+      "sourceId": "inv-p433"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p433",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Koyunoğlu Şeyh Ali Issuvayre Türbesi\"",
+      "page": "433"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Koyunoğlu Şeyh Ali Issuvayre Türbesi\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

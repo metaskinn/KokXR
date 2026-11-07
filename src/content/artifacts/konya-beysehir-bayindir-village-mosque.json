@@ -1,0 +1,111 @@
+{
+  "id": "konya-beysehir-bayindir-village-mosque",
+  "name": "Bayındır Köyü Camii",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "H. 767 / M. 1365-66",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Bayındır Köyü Camii, ahşap direkli beş sahınlı harimi ve yoğun kalem işi süslemeleriyle XIV. yüzyıl yapı geleneğini sürdürür.",
+  "history": "Cami, Konya–Beyşehir yolundaki Bayındır Köyü merkezindedir. Giriş üzerindeki dairesel madalyon biçiminde işlenmiş mermer kitabeye göre H. 767 / M. 1365-66’da inşa edilmiştir. Banisi ve ustasına ilişkin kayıt yoktur. Şeyh Muhyiddin Camii adı da kullanılır; bunun daha sonraki bir onarımı yaptıran kişiye ithaf olabileceği düşünülür. Vakıflar Bölge Müdürlüğü yakın dönemde tamir etmiştir.\n\nKareye yakın dikdörtgen yapının duvarlarında moloz taş ve devşirme malzeme kullanılmış, yüzeyleri sıvanmıştır. İçte ahşap tavan, dışta dört yöne eğimli kırma çatı vardır. Doğu ve batı girişleri ile batı duvarında sekizgen gövdeli, tek şerefeli taş minare bulunur. Harimi üçer direkli dört sıra ahşap sütun beş sahına ayırır; orta sahın daha yüksek ve geniştir, tavanında bağdâdi kubbe vardır. Direkler ve özellikle orta sahın tavanı yoğun kalem işleriyle bezelidir. Kuzeyde ahşap mahfil bulunur.\n\nMihrap ve minber özgünlüklerini büyük ölçüde kaybetmiştir. 1954’te eklenen mihrabı Çiftliközü’nden Hasan Usta yapmıştır; yarım daire nişli yüzeyinde bitkisel bezemeler vardır. Ahşap minber bitkisel ve geometrik motiflerle süslüdür. Kitap yapının Beyşehir Eşrefoğlu Camii’nden esinlenmiş olabileceğini belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-bayindir-village-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-bayindir-village-mosque/aerial.jpg",
+      "alt": "Köy evleri arasında kiremit çatılı cami ve taş minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-bayindir-village-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direkli harimde renkli bezemeli mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-bayindir-village-mosque/column-capital.jpg",
+      "alt": "Boyalı ahşap direğin mukarnaslı, çok renkli başlığı ve tavan kirişleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-beysehir-bayindir-village-mosque/column-capital.jpg",
+      "x": 51,
+      "y": 43,
+      "title": "Bezemeli başlık",
+      "text": "Mihrap önündeki bezemeli sütun başlıkları beş sıra mukarnas dizisiyle sonlanır.",
+      "sourceId": "inv-p380"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-beysehir-bayindir-village-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 51,
+      "title": "Mihrap",
+      "text": "1954’te eklenen mihrap Çiftliközü Köyü’nden Hasan Usta tarafından yapılmıştır.",
+      "sourceId": "inv-p381"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Beş.",
+      "sourceId": "inv-p379"
+    },
+    {
+      "question": "1954’teki mihrabı kim yapmıştır?",
+      "options": [
+        "Fertekli Nazif Usta",
+        "Ali Yapıcı",
+        "Kemal Güler",
+        "Çiftliközü’nden Hasan Usta"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Çiftliközü’nden Hasan Usta.",
+      "sourceId": "inv-p381"
+    },
+    {
+      "question": "Bayındır Köyü Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Beyşehir",
+        "Karatay",
+        "Akşehir",
+        "Bozkır"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Beyşehir.",
+      "sourceId": "inv-p379"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p379",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Bayındır Köyü Camii\"",
+      "page": "379"
+    },
+    {
+      "id": "inv-p380",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Bayındır Köyü Camii\"",
+      "page": "380"
+    },
+    {
+      "id": "inv-p381",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Bayındır Köyü Camii\"",
+      "page": "381"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

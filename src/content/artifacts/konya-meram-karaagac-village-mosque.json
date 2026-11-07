@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-karaagac-village-mosque",
+  "name": "Karaağaç Köyü Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "1905 (Latin harfli kitâbeye göre); 1966 onarımı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Latin harfli kitâbesine göre 1905'te yapılan, kerpiç duvarlı ve ahşap tavanlı küçük köy camisi.",
+  "history": "Cami Meram, Karaağaç Köyü merkezindedir. Yapının banisinin kim olduğu bilinmemektedir. Caminin üzerindeki Latin harfli kitâbede 1905 yılında yaptırıldığı belirtilir. Mihrapta caminin tamir tarihi olarak 1966 yazmaktadır; bu onarımda yapının büyük kısmı yenilenmiştir.\n\nCami derinlemesine dikdörtgen planlıdır ve üzeri dört yöne eğimli kırma çatılıdır. Beden duvarları taş temel üzerine, ahşap hatıllarla desteklenerek kerpiçten örülmüştür. Cephe düzenlemesi sade olan yapının beden duvarlarında dikdörtgen pencereler vardır. Harime doğu cephenin kuzey köşesindeki kapıdan geçilir; harim derinlemesine dikdörtgen planlı ve ahşap tavanlıdır.\n\nGiriş kapısının üzerinde beden duvarına oturan ahşap minare yer alır; minare silindirik gövdeli ve köşk tipi şerefelidir. Kuzey duvarında mahfil, kıble duvarında mihrap ve minber bulunur. Kıble duvarının ortasındaki mihrap dikdörtgen formlu, üçgen alınlıklı ve yarım daire planlıdır; minber ahşaptan ve basit düzenlemelidir. Cami, klasik, küçük boyutlu mahalle mescitlerindendir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-karaagac-village-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-karaagac-village-mosque/exterior.jpg",
+      "alt": "Kırsal alanda sıvası dökülmüş, kiremit çatılı tek katlı yapı; arkasında yükselen silindirik gövdeli minare, önde çimenlik ve ağaçlar, bulutlu gökyüzü",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-karaagac-village-mosque/prayer-hall.jpg",
+      "alt": "Harim içi: ahşap tavan, karşıda turkuaz boyalı mihrap, sağda turkuaz korkuluklu ahşap minber, yerde dağınık kilimler ve halılar",
+      "description": "Harim, mihrap ve minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-meram-karaagac-village-mosque/exterior.jpg",
+      "x": 62,
+      "y": 45,
+      "title": "Kırma çatı",
+      "text": "Cami derinlemesine dikdörtgen planlıdır ve üzeri dört yöne eğimli kırma çatılıdır.",
+      "sourceId": "inv-p96"
+    },
+    {
+      "id": "wooden-ceiling",
+      "image": "/images/konya-meram-karaagac-village-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 8,
+      "title": "Ahşap tavan",
+      "text": "Harim derinlemesine dikdörtgen planlı ve ahşap tavanlıdır.",
+      "sourceId": "inv-p96"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-karaagac-village-mosque/prayer-hall.jpg",
+      "x": 46,
+      "y": 45,
+      "title": "Mihrap",
+      "text": "Mihrap kıble duvarının ortasında, dikdörtgen formlu, üçgen alınlıklı ve yarım daire planlıdır.",
+      "sourceId": "inv-p96"
+    }
+  ],
+  "test": [
+    {
+      "question": "Latin harfli kitâbeye göre cami hangi yıl yaptırılmıştır?",
+      "options": [
+        "1966",
+        "1849",
+        "1905",
+        "1908"
+      ],
+      "correct": 2,
+      "description": "Caminin üzerindeki Latin harfli kitâbede 1905 yılında yaptırıldığı belirtilir.",
+      "sourceId": "inv-p96"
+    },
+    {
+      "question": "Caminin beden duvarları hangi malzemeyle örülmüştür?",
+      "options": [
+        "Kerpiç",
+        "Kesme taş",
+        "Tuğla",
+        "Betonarme"
+      ],
+      "correct": 0,
+      "description": "Beden duvarları taş temel üzerine, ahşap hatıllarla desteklenerek kerpiçten örülmüştür.",
+      "sourceId": "inv-p96"
+    },
+    {
+      "question": "Mihrapta hangi tarih tamir tarihi olarak yazılıdır?",
+      "options": [
+        "1905",
+        "1966",
+        "1987",
+        "2019"
+      ],
+      "correct": 1,
+      "description": "Mihrapta caminin tamir tarihi olarak 1966 yazar; bu onarımda yapının büyük kısmı yenilenmiştir.",
+      "sourceId": "inv-p96"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p96",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Karaağaç Köyü Camii\"",
+      "page": "96"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

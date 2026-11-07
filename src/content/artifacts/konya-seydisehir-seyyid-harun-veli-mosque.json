@@ -1,0 +1,111 @@
+{
+  "id": "konya-seydisehir-seyyid-harun-veli-mosque",
+  "name": "Seyyid Harun Veli Camii",
+  "city": "Konya",
+  "district": "Seydişehir",
+  "period": "M. 1302–1320 arası olarak tahmin edilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Seydişehir merkezindeki Seyyid Harun Veli Camii, ahşap direkli üç sahınlı harimi ve kuzeyindeki kümbetlerle bir külliyenin parçasıdır.",
+  "history": "Cami, Seydişehir merkezinde Seyyid Harun Velî Külliyesi içindedir. İnşa kitabesi kaybolmuştur; 1302–1320 arasında yapıldığı tahmin edilir. Vakıflar Bölge Müdürlüğü 2006’da tamir etmiştir. Seyyid Harun’un hayatına ilişkin anlatılar, Abdülkerîm bin Şeyh Mûsâ’nın 1555’te kaleme aldığı Makālât-ı Seyyid Hârûn’a dayanır. Kitap, Horasan’dan Anadolu’ya gelişini menkıbe niteliğindeki anlatıyla aktarır; 1302 civarında Konya’ya geldiğini, yaklaşık iki yıl sonra Küpe Dağı çevresinde Elite (Vervelit) kalıntılarından yararlanarak Seydişehir’i kurduğunu belirtir. Türbe kitabesi ölümünü 3 Mayıs 1320 olarak verir.\n\nKaba yonu taş ve ahşap malzemeli cami derinlemesine dikdörtgen, çok destekli, içten düz dam ve dıştan kırma çatılıdır. Kuzey cephesinde bitişik üç kümbet bulunur; ortalarındaki kapı harime açılır. Batının kuzey köşesinde dışa taşkın yuvarlak kemerli kapı vardır. Kuzeybatıdaki taş minare kare kaideli, silindirik ve tek şerefelidir.\n\nÜç sahınlı sade harimin kuzeyinde ahşap destekli mahfil vardır. Kıble duvarındaki ahşap mihrap dışa taşıntılıdır; sağındaki ahşap minberde bitkisel bezemeler bulunur. Kitap camiyi, Beyşehir Eşrefoğlu Camii’nden yaklaşık on yıl sonra yapılan ahşap direkli plan tipinin bir örneği olarak değerlendirir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-seydisehir-seyyid-harun-veli-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-seydisehir-seyyid-harun-veli-mosque/aerial.jpg",
+      "alt": "Şehir içinde kiremit çatılı geniş cami ve arkasındaki uzun minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-seydisehir-seyyid-harun-veli-mosque/prayer-hall.jpg",
+      "alt": "Geniş harimde ahşap direkler, kirişli tavan ve kafesli üst mahfil",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-seydisehir-seyyid-harun-veli-mosque/wooden-minbar.jpg",
+      "alt": "Ajurlu bitkisel süslemeli konik külahı olan ahşap minberin üst bölümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-seydisehir-seyyid-harun-veli-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 49,
+      "title": "Ahşap direkler",
+      "text": "Üç sahınlı harim ahşap destekli yapı geleneğini yansıtır.",
+      "sourceId": "inv-p477"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-seydisehir-seyyid-harun-veli-mosque/wooden-minbar.jpg",
+      "x": 45,
+      "y": 30,
+      "title": "Ahşap minber",
+      "text": "Mihrabın sağındaki ahşap minber bitkisel süslemelidir.",
+      "sourceId": "inv-p477"
+    }
+  ],
+  "test": [
+    {
+      "question": "Seyyid Harun’un hayatı için adı verilen eser hangisidir?",
+      "options": [
+        "Risale-i Menasıkü’l-Hac",
+        "Seyahatnâme",
+        "Divan-ı Hikmet",
+        "Makālât-ı Seyyid Hârûn"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Makālât-ı Seyyid Hârûn.",
+      "sourceId": "inv-p475"
+    },
+    {
+      "question": "Caminin kuzey cephesine bitişik kaç kümbet vardır?",
+      "options": [
+        "Üç",
+        "Bir",
+        "İki",
+        "Altı"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Üç.",
+      "sourceId": "inv-p476"
+    },
+    {
+      "question": "Seyyid Harun Veli Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Seydişehir",
+        "Akşehir",
+        "Beyşehir"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Seydişehir.",
+      "sourceId": "inv-p475"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p475",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Seydişehir, \"Seyyid Harun Veli Camii\"",
+      "page": "475"
+    },
+    {
+      "id": "inv-p476",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Seydişehir, \"Seyyid Harun Veli Camii\"",
+      "page": "476"
+    },
+    {
+      "id": "inv-p477",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Seydişehir, \"Seyyid Harun Veli Camii\"",
+      "page": "477"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

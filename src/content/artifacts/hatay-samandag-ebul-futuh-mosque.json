@@ -1,0 +1,109 @@
+{
+  "id": "hatay-samandag-ebul-futuh-mosque",
+  "name": "Ebu’l Fütuh Camii",
+  "district": "Samandağ",
+  "period": "1798 olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ebu’l Fütuh Camii, Samandağ merkezinde, ahşap tavanlı ve kiremit kaplı kırma çatılı bir camidir.",
+  "history": "Samandağ ilçe merkezindeki Ebu’l Fütuh Camii’nin Türkçe kitap metnine göre 1798 yılında yapıldığı düşünülmektedir. Bu tarih kesin bir inşa tarihi olarak sunulmaz.\n\nKareye yakın dikdörtgen planlı yapının içi düz ahşap tavanla, dışı kiremit kaplı kırma çatıyla örtülüdür. Mihrabı sade bir niş biçimindedir. Kuzeybatı köşede yükselen minaresi yuvarlak gövdelidir ve şerefesi şemsiye biçimli külahla örtülüdür. Vakıflar Bölge Müdürlüğü camiyi 2008 yılında tamir etmiştir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-samandag-ebul-futuh-mosque/courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-samandag-ebul-futuh-mosque/courtyard.jpg",
+      "alt": "Ağaçlı avluda kiremit çatılı alçak cami, önünde banklar ve geride şemsiye külahlı minare",
+      "description": "Ağaçlı avluda kiremit çatılı alçak cami, önünde banklar ve geride şemsiye külahlı minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-samandag-ebul-futuh-mosque/prayer-hall.jpg",
+      "alt": "Yeşil halılı harimde açık ahşap çatı kirişleri, beyaz duvarda mihrap ve ahşap minber",
+      "description": "Yeşil halılı harimde açık ahşap çatı kirişleri, beyaz duvarda mihrap ve ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-samandag-ebul-futuh-mosque/mihrab.jpg",
+      "alt": "Beyaz duvar içindeki sade taş mihrap nişi ve üstünde yuvarlak hat levhaları",
+      "description": "Beyaz duvar içindeki sade taş mihrap nişi ve üstünde yuvarlak hat levhaları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-samandag-ebul-futuh-mosque/courtyard.jpg",
+      "x": 62,
+      "y": 25,
+      "title": "Minare",
+      "text": "Yuvarlak gövdeli, şemsiye külahlı şerefeye sahip minare kuzeybatı köşede yükselir.",
+      "sourceId": "inv-p376"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-samandag-ebul-futuh-mosque/mihrab.jpg",
+      "x": 54,
+      "y": 67,
+      "title": "Mihrap",
+      "text": "Caminin mihrabı sade bir niştir.",
+      "sourceId": "inv-p376"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ebu’l Fütuh Camii kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Samandağ",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 1,
+      "description": "Türkçe adres listesinde ilçe Samandağ olarak verilmiştir.",
+      "sourceId": "inv-p399"
+    },
+    {
+      "question": "Caminin tavanında hangi malzeme kullanılmıştır?",
+      "options": [
+        "Çelik",
+        "Cam",
+        "Ahşap",
+        "Betonarme kaset"
+      ],
+      "correct": 2,
+      "description": "Cami düz ahşap tavanlıdır.",
+      "sourceId": "inv-p376"
+    },
+    {
+      "question": "Cami hangi yıl tamir edilmiştir?",
+      "options": [
+        "1850",
+        "1936",
+        "2018",
+        "2008"
+      ],
+      "correct": 3,
+      "description": "Vakıflar Bölge Müdürlüğü yapıyı 2008’de tamir etmiştir.",
+      "sourceId": "inv-p376"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p376",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Ebu’l Fütuh Camii\"",
+      "page": "376"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Samandağ, \"Ebu’l Fütuh Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

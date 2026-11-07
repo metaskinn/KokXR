@@ -1,0 +1,95 @@
+{
+  "id": "hatay-defne-sheikh-kasim-tomb",
+  "name": "Şeyh Kasım Türbesi",
+  "district": "Defne",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh Kasım Türbesi, Defne’de yüksekçe bir tepede kurulmuş kare planlı bir ziyaretgâhtır.",
+  "history": "Defne ilçesinde yüksekçe bir tepede bulunan türbe, müştemilatıyla birlikte ziyaretgâh olarak kullanılır. Kitap, adını veren Şeyh Kasım hakkında bilgiye rastlanmadığını belirtir.\n\nKare planlı, sundurmalı girişli ve geniş saçaklı yapının üzerinde yuvarlak kubbe, kubbe tepesinde ay-yıldız motifi vardır. Her cephede bir pencere bulunur. Kapı ahşap, döşeme karo mozaiktir; duvarlar ve kubbe alçı sıvalı ve boyalıdır. Ortadaki sanduka mermer kaplıdır. Kaynak yapıyı bakımlı ve ziyarete açık olarak anlatır. Çevrede toplanma, kurban kesme ve yemek pişirme ihtiyaçlarına hizmet eden yapılar vardır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-defne-sheikh-kasim-tomb/porch.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-defne-sheikh-kasim-tomb/porch.jpg",
+      "alt": "Geniş metal sundurma altında beyaz taş kaplamalı küçük yapı, yeşil kapı ve yeşil pencere",
+      "description": "Geniş metal sundurma altında beyaz taş kaplamalı küçük yapı, yeşil kapı ve yeşil pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-defne-sheikh-kasim-tomb/porch.jpg",
+      "x": 50,
+      "y": 58,
+      "title": "Sundurmalı giriş",
+      "text": "Kare planlı türbenin girişinde sundurma bulunur.",
+      "sourceId": "inv-p427"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-defne-sheikh-kasim-tomb/porch.jpg",
+      "x": 71,
+      "y": 56,
+      "title": "Ahşap kapı",
+      "text": "Türbenin kapısı ahşaptır.",
+      "sourceId": "inv-p427"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Kasım Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "Arsuz",
+        "Samandağ"
+      ],
+      "correct": 1,
+      "description": "Türkçe adres listesinde ilçe Defne olarak verilmiştir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Türbenin döşemesi hangi malzemedir?",
+      "options": [
+        "Cam",
+        "Toprak",
+        "Karo mozaik",
+        "Bakır"
+      ],
+      "correct": 2,
+      "description": "Kitap döşemenin karo mozaik olduğunu belirtir.",
+      "sourceId": "inv-p427"
+    },
+    {
+      "question": "Sanduka nereye yerleştirilmiştir?",
+      "options": [
+        "Çatının üstüne",
+        "Avlunun dışına",
+        "Kapı üstüne",
+        "Türbenin ortasına"
+      ],
+      "correct": 3,
+      "description": "Mermer kaplı sanduka orta kısma yerleştirilmiştir.",
+      "sourceId": "inv-p427"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p427",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Şeyh Kasım Türbesi\"",
+      "page": "427"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Şeyh Kasım Türbesi\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

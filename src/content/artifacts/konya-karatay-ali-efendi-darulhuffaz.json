@@ -1,0 +1,118 @@
+{
+  "id": "konya-karatay-ali-efendi-darulhuffaz",
+  "name": "Ali Efendi Darülhuffazı (Muallimhâne)",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XV. yüzyılın ikinci çeyreği; vakfiye 832 Recep / 1429 Nisan",
+  "endowment": "Salihoğlu Mehmet oğlu Hacı Ali tarafından yaptırılmıştır (832 Recep / 1429 Nisan tarihli vakfiye)",
+  "summary": "Hacı Ali'nin 1429 tarihli vakfiyesiyle kurulan, kübik gövde üzerinde yüksek kasnaklı tek kubbesi olan küçük eğitim yapısı.",
+  "history": "Belgelerde darülhuffaz, darülkurra, medrese veya muallimhane adlarıyla anılan yapı, Karatay, Şerefşirin Mahallesi'nde, Şerafettin Camii'nin (XVII. yüzyıl başı) hemen kuzeydoğusundadır. Kitâbesi bulunmayan Ali Efendi Darülhuffazı, 832 Recep / 1429 Nisan tarihli vakfiyesine göre Salihoğlu Mehmet oğlu Hacı Ali tarafından yaptırılmıştır. Vakıf tarihi ve mimari özellikleri dikkate alınarak XV. yüzyılın ikinci çeyreğine tarihlendirilir.\n\nDıştan kenar uzunlukları yaklaşık 10 m olan kare planlı yapı, sekizgen kasnağa oturan bir kubbeyle örtülüdür. Kübik gövde ve yüksek kasnak, yukarıda içbükey-dışbükey silmeli kornişlerle sonlanır. Gövde ve kasnak düzgün kesme taştandır; tuğla örgülü kubbe dıştan kurşunla kaplıdır ve tepesinde alemi vardır.\n\nBasık kemerli kapıdan sonra, dilimli ve sivri iki kemerle örtülü dehliz tarzı bir girişle geçilen iç mekân tamamen sıvalıdır. Güney duvarının ortasında yarım daire planlı ocak nişi bulunur; kubbeye geçişte istiridye kabuğu biçiminde dilimlenmiş, sivri kemerli tromplar görülür. Kübik gövde üzerinde sekizgen yüksek kasnağa oturan tek kubbeli yapısıyla Beylikler dönemi mimarisinin genel hatlarını yansıtır; bu plan anlayışı cami, mescit ve türbelerden sonra küçük ölçekli eğitim yapılarında da görülmeye başlanmıştır.\n\nEski kent meydanındaki yapı bir dönem sağlık müzesi, müftülük, çocuk kütüphanesi ve uzun süre turizm polisi bürosu olarak hizmet vermiştir. 2015'te Vali Muammer Erol tarafından Kur'an hizmetlerinde kullanılmak üzere Konya İl Müftülüğü'ne tahsis edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-ali-efendi-darulhuffaz/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-ali-efendi-darulhuffaz/exterior.jpg",
+      "alt": "Kesme taş kübik gövdeli, kurşun kaplı tek kubbeli yapı; kubbe tepesinde alem, ön cephede turkuaz kapı ve iki parmaklıklı pencere, sağda büyük ağaç",
+      "description": "Darülhuffazın dış görünüşü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-ali-efendi-darulhuffaz/entrance.jpg",
+      "alt": "Giriş cephesi: turkuaz boyalı çift kanatlı kapı, üstünde dilimli çerçevede yazılı levha, iki yanda demir parmaklıklı pencereler ve önlerinde çiçeklikler",
+      "description": "Giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-ali-efendi-darulhuffaz/dome-interior.jpg",
+      "alt": "İç mekân: beyaz sıvalı kubbe altında asılı pirinç avize, yanlarda sivri kemerli girintiler",
+      "description": "Kubbe altı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/konya-karatay-ali-efendi-darulhuffaz/exterior.jpg",
+      "x": 48,
+      "y": 20,
+      "title": "Kurşun kaplı kubbe ve alem",
+      "text": "Tuğla örgülü kubbe dıştan kurşunla kaplıdır ve tepesinde alemi vardır.",
+      "sourceId": "inv-p94"
+    },
+    {
+      "id": "drum",
+      "image": "/images/konya-karatay-ali-efendi-darulhuffaz/exterior.jpg",
+      "x": 48,
+      "y": 33,
+      "title": "Sekizgen kasnak",
+      "text": "Kare planlı yapı, sekizgen kasnağa oturan bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p94"
+    },
+    {
+      "id": "door",
+      "image": "/images/konya-karatay-ali-efendi-darulhuffaz/entrance.jpg",
+      "x": 52,
+      "y": 70,
+      "title": "Giriş kapısı",
+      "text": "İç mekâna basık kemerli kapıdan sonra dehliz tarzı bir girişle geçilir.",
+      "sourceId": "inv-p95"
+    }
+  ],
+  "test": [
+    {
+      "question": "Vakfiyesine göre Ali Efendi Darülhuffazı'nı kim yaptırmıştır?",
+      "options": [
+        "Salihoğlu Mehmet oğlu Hacı Ali",
+        "Vali Muammer Erol",
+        "Celaleddin Karatay",
+        "Mehmet Ferid Paşa"
+      ],
+      "correct": 0,
+      "description": "832 Recep / 1429 Nisan tarihli vakfiyesine göre yapı Salihoğlu Mehmet oğlu Hacı Ali tarafından yaptırılmıştır.",
+      "sourceId": "inv-p94"
+    },
+    {
+      "question": "Yapının üzeri nasıl örtülmüştür?",
+      "options": [
+        "Kırma çatı",
+        "Beşik tonoz",
+        "Sekizgen kasnağa oturan kubbe",
+        "Ahşap düz tavan"
+      ],
+      "correct": 2,
+      "description": "Kare planlı yapı sekizgen kasnağa oturan, dıştan kurşun kaplı bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p94"
+    },
+    {
+      "question": "Yapı 2015'te hangi kuruma tahsis edilmiştir?",
+      "options": [
+        "Turizm polisi",
+        "Sağlık müzesi",
+        "Çocuk kütüphanesi",
+        "Konya İl Müftülüğü"
+      ],
+      "correct": 3,
+      "description": "2015'te Kur'an hizmetlerinde kullanılmak üzere Konya İl Müftülüğü'ne tahsis edilmiştir.",
+      "sourceId": "inv-p95"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p94",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Ali Efendi Darülhuffazı (Muallimhâne)\"",
+      "page": "94"
+    },
+    {
+      "id": "inv-p95",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Ali Efendi Darülhuffazı (Muallimhâne)\"",
+      "page": "95"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

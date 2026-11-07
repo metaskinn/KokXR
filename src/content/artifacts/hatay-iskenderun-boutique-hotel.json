@@ -1,0 +1,102 @@
+{
+  "id": "hatay-iskenderun-boutique-hotel",
+  "name": "İskenderun Butik Otel",
+  "district": "İskenderun",
+  "period": "20. yüzyılın ilk yılları",
+  "endowment": "1/2 hissesi Abbas Kıllı Reyhanlı Yeni Şehir Camii Vakfına aittir",
+  "summary": "İskenderun Butik Otel, Savaş Mahallesi’nde konut niteliğindeki yapının restorasyonla 2014’te otele dönüştürülmesiyle oluşmuştur.",
+  "history": "Yapı İskenderun ilçesi Savaş Mahallesi, 2. mıntıka 1814 parseldedir. Ziya Gökalp ve Şehit Oğuz Yener caddeleri ile 47. ve 52. sokaklar arasındadır. Taşınmazın vasfı ev, toplam alanı 559 m² olarak belirtilir.\n\nKitap, yapının 20. yüzyılın ilk yıllarında ahşap olduğunu ve çatısının da ahşap oturmalı olduğunu aktarır. Yarısı Abbas Kıllı Reyhanlı Yeni Şehir Camii Vakfına aittir. Hatay Vakıflar Bölge Müdürlüğü’nün restorasyonundan sonra 2014 yılında butik otel olarak hizmet vermeye başlamıştır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-iskenderun-boutique-hotel/hotel-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-iskenderun-boutique-hotel/hotel-exterior.jpg",
+      "alt": "Sokak cephesinde beyaz sıvalı, ahşap kepenkli, ortası balkonlu ve kiremit çatılı otel",
+      "description": "Sokak cephesinde beyaz sıvalı, ahşap kepenkli, ortası balkonlu ve kiremit çatılı otel",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-iskenderun-boutique-hotel/hotel-interior.jpg",
+      "alt": "Ahşap tavanlı salonda taş kemerler, koltuklar ve koyu renk parlak döşeme",
+      "description": "Ahşap tavanlı salonda taş kemerler, koltuklar ve koyu renk parlak döşeme",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-iskenderun-boutique-hotel/hotel-exterior.jpg",
+      "x": 48,
+      "y": 9,
+      "title": "Ahşap çatı",
+      "text": "Kitap erken 20. yüzyıldaki yapının çatısını ahşap oturmalı olarak tanımlar.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-iskenderun-boutique-hotel/hotel-exterior.jpg",
+      "x": 49,
+      "y": 53,
+      "title": "Otele dönüştürülen konut",
+      "text": "Konut niteliğindeki yapı restore edilerek 2014’te butik otel olarak açılmıştır.",
+      "sourceId": "inv-p463"
+    }
+  ],
+  "test": [
+    {
+      "question": "İskenderun Butik Otel kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "İskenderun",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 1,
+      "description": "Türkçe adres listesinde ilçe İskenderun olarak verilmiştir.",
+      "sourceId": "inv-p476"
+    },
+    {
+      "question": "Yapı ne zaman butik otel olarak açılmıştır?",
+      "options": [
+        "1873",
+        "1936",
+        "2014",
+        "1990"
+      ],
+      "correct": 2,
+      "description": "Restorasyonun ardından 2014’te butik otel olarak hizmete girmiştir.",
+      "sourceId": "inv-p463"
+    },
+    {
+      "question": "Taşınmazın toplam alanı kaç metrekaredir?",
+      "options": [
+        "150",
+        "1450",
+        "360",
+        "559"
+      ],
+      "correct": 3,
+      "description": "Kitap toplam alanı 559 m² olarak verir.",
+      "sourceId": "inv-p463"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p463",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"İskenderun Butik Otel\"",
+      "page": "463"
+    },
+    {
+      "id": "inv-p476",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"İskenderun Butik Otel\"",
+      "page": "476"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

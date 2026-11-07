@@ -1,0 +1,97 @@
+{
+  "id": "konya-beysehir-cuma-middle-mosque",
+  "name": "Cuma (Orta) Camii",
+  "city": "Konya",
+  "district": "Beyşehir",
+  "period": "XIII. yüzyılın ilk yarısı olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Beyşehir Hacıarmağan Mahallesindeki yapının kesin inşa tarihi bilinmez; XIII. yüzyılın ilk yarısında yapılmış olabileceği düşünülür.",
+  "history": "Beyşehir Hacıarmağan Mahallesindeki yapının kesin inşa tarihi bilinmez; XIII. yüzyılın ilk yarısında yapılmış olabileceği düşünülür. Çok sayıda onarım geçirmiştir. Kuzeybatı köşesine 1956'da kare kaideli, silindirik gövdeli ve tek şerefeli minare eklenmiştir. Harim, on iki ahşap direğin taşıdığı ahşap tavanla örtülüdür ve dört sahına ayrılır. Vakıflar Genel Müdürlüğü 2003'te onarım yapmıştır. Kitap, yapının genel olarak özgünlüğünü yitirdiğini belirtir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-beysehir-cuma-middle-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-beysehir-cuma-middle-mosque/aerial-view.jpg",
+      "alt": "Kiremit çatılı cami ve minaresinin çevredeki evlerle havadan görünümü",
+      "description": "Kiremit çatılı cami ve minaresinin çevredeki evlerle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-beysehir-cuma-middle-mosque/prayer-hall.jpg",
+      "alt": "Ahşap sütunlu ve ahşap tavanlı, kırmızı halılı harim",
+      "description": "Ahşap sütunlu ve ahşap tavanlı, kırmızı halılı harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-beysehir-cuma-middle-mosque/prayer-hall.jpg",
+      "x": 29,
+      "y": 52,
+      "title": "Ahşap direkler",
+      "text": "Harimde ahşap tavanı on iki ahşap direk taşır.",
+      "sourceId": "inv-p382"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-beysehir-cuma-middle-mosque/prayer-hall.jpg",
+      "x": 45,
+      "y": 15,
+      "title": "Ahşap tavan",
+      "text": "Dört sahınlı harim ahşap tavanla örtülüdür.",
+      "sourceId": "inv-p382"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cuma (Orta) Camii hangi ilçededir?",
+      "options": [
+        "Beyşehir",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Cuma (Orta) Camii, Konya'nın Beyşehir ilçesindedir.",
+      "sourceId": "inv-p382"
+    },
+    {
+      "question": "Harimin ahşap tavanını kaç direk taşır?",
+      "options": [
+        "Dört",
+        "On iki",
+        "Altı",
+        "Sekiz"
+      ],
+      "correct": 1,
+      "description": "On iki.",
+      "sourceId": "inv-p382"
+    },
+    {
+      "question": "Vakıflar Genel Müdürlüğünün belirtilen onarımı hangi yıldadır?",
+      "options": [
+        "1914",
+        "1850",
+        "1972",
+        "2003"
+      ],
+      "correct": 3,
+      "description": "2003.",
+      "sourceId": "inv-p382"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p382",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Beyşehir, \"Cuma (Orta) Camii\"",
+      "page": "382"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

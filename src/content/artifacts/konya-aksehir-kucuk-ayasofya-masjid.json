@@ -1,0 +1,106 @@
+{
+  "id": "konya-aksehir-kucuk-ayasofya-masjid",
+  "name": "Küçük Ayasofya Mescidi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Selçuklu · H. 633 / M. 1236",
+  "endowment": "Banisi Şemseddin Hasan bin Ömer",
+  "summary": "Eski Kale’deki tek kubbeli mescit, kubbesindeki firuze ve patlıcan moru çini mozaik süslemeleriyle önemli bir Selçuklu eseridir.",
+  "history": "Mescit, Eski Kale, Orta Hamam Sokak’tadır. Doğu cephesindeki beş satırlık Arapça celî sülüs kitabe, H. 633 / M. 1236’da Sultan Alâeddin Keykubad döneminde Ömer oğlu Şemseddin Hasan tarafından yaptırıldığını bildirir. 2005’te Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nKare planlı mescit tek kubbeli harim, giriş ve minareden oluşur. Tuğla ve moloz taş kullanılmış, duvarlara ahşap hatıllar konmuştur. Harimin kubbesine Türk üçgenleriyle geçilir. Kubbe eteğinde kûfi yazılı geometrik çini mozaik bordür vardır; firuze kâseler arasında geometrik geçmeli daireler yer alır. Kubbedeki tuğla ve çini düzeni zikzaklarla merkezde altı kollu yıldız oluşturur; çiniler firuze ve patlıcan morudur. Kıble duvarındaki mihrap yenilenmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-kucuk-ayasofya-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-kucuk-ayasofya-masjid/exterior.jpg",
+      "alt": "Taş-tuğla duvarlı mescit üzerinde kurşun kaplı tek kubbe ve küçük pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-kucuk-ayasofya-masjid/prayer-hall.jpg",
+      "alt": "Tuğla kubbenin altında ahşap mihrap ve minber, üstte sivri kemerli pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-kucuk-ayasofya-masjid/inscription.jpg",
+      "alt": "Taş duvara yerleştirilmiş, kemer biçimli çerçevesi olan yazılı kitabe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-kucuk-ayasofya-masjid/prayer-hall.jpg",
+      "x": 42,
+      "y": 11,
+      "title": "Kubbe",
+      "text": "Kare harimi Türk üçgenleriyle geçilen tek kubbe örter.",
+      "sourceId": "inv-p356"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-kucuk-ayasofya-masjid/inscription.jpg",
+      "x": 51,
+      "y": 55,
+      "title": "İnşa kitabesi",
+      "text": "Doğu cephesindeki beş satırlık kitabe 1236 tarihli yapımı bildirir.",
+      "sourceId": "inv-p356"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapının banisi kimdir?",
+      "options": [
+        "Ferruh Şah",
+        "İsmail Fakih",
+        "Şemseddin Hasan bin Ömer",
+        "Halil Bey"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Şemseddin Hasan bin Ömer.",
+      "sourceId": "inv-p356"
+    },
+    {
+      "question": "Kubbedeki çini mozaiklerde hangi renkler kullanılmıştır?",
+      "options": [
+        "Yalnız siyah ve beyaz",
+        "Pembe ve turuncu",
+        "Yalnız sarı",
+        "Firuze ve patlıcan moru"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Firuze ve patlıcan moru.",
+      "sourceId": "inv-p357"
+    },
+    {
+      "question": "Küçük Ayasofya Mescidi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Karatay",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Akşehir.",
+      "sourceId": "inv-p356"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p356",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Küçük Ayasofya Mescidi\"",
+      "page": "356"
+    },
+    {
+      "id": "inv-p357",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Küçük Ayasofya Mescidi\"",
+      "page": "357"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

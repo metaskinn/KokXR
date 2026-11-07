@@ -1,0 +1,102 @@
+{
+  "id": "konya-doganhisar-baskoy-grand-mosque",
+  "name": "Başköy - Ulu Camii",
+  "city": "Konya",
+  "district": "Doğanhisar",
+  "period": "XVIII-XIX. yüzyıl olduğu düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Doğanhisar Başköy Mahallesi'nin ulu camisi hafif eğimli arazi üzerindedir.",
+  "history": "Doğanhisar Başköy Mahallesi'nin ulu camisi hafif eğimli arazi üzerindedir. Planı, cepheleri ve süslemeleri XVIII-XIX. yüzyılı düşündürür. 1957'de ve Vakıflar Genel Müdürlüğünce 2000'li yıllarda onarılmıştır. Dikdörtgen planlı, ahşap direkli ve tavanlı yapı kırma çatılıdır. Avluya altı basamakla çıkılır; merdiven köşelerinde devşirme silindirik sütunlar vardır. Taş cephelerde ahşap hatıllar ve yer yer Antik Çağ devşirme malzemeleri kullanılmıştır. Kuzeybatıdaki bağımsız minare sonradan yapılmıştır.\n\nHarim beş sahınlıdır. Daha geniş orta sahın alçı ve ahşap levhalarla tekne tonoz biçiminde örtülüdür. Harim ve tavan 1957'de kalem işleriyle süslenmiştir. Mihrabın sağındaki madalyonda Kâbe tasviri, üst kuşakta Haşr Suresi ve bitkisel motifler bulunur. Orta örtüde eşkenar dörtgen, oval kartuşlar, dört halifenin isimleri ve bitkisel bezemeler vardır. Giriş eksenindeki ahşap mihrap yarım daire planlı, yarım kubbe kavsaralıdır; nişi istiridye kabuğu ve perde motifleriyle bezelidir. Sağındaki minber benzer teknik ve süslemelere sahiptir. Doğu duvarındaki ahşap vaaz kürsüsü stilize bitkisel motiflidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-doganhisar-baskoy-grand-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-doganhisar-baskoy-grand-mosque/aerial-view.jpg",
+      "alt": "Yerleşim içinde geniş kırma çatılı cami ve yanındaki minare",
+      "description": "Yerleşim içinde geniş kırma çatılı cami ve yanındaki minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-doganhisar-baskoy-grand-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde ahşap sütunlar ve yoğun bezemeli tavan",
+      "description": "Kırmızı halılı harimde ahşap sütunlar ve yoğun bezemeli tavan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-doganhisar-baskoy-grand-mosque/prayer-hall.jpg",
+      "x": 34,
+      "y": 12,
+      "title": "Orta sahın örtüsü",
+      "text": "Daha geniş orta sahın tekne tonoz biçiminde örtülüdür.",
+      "sourceId": "inv-p409"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-doganhisar-baskoy-grand-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Ahşap direkler",
+      "text": "Harim ahşap direkli ve beş sahınlıdır.",
+      "sourceId": "inv-p409"
+    }
+  ],
+  "test": [
+    {
+      "question": "Başköy - Ulu Camii hangi ilçededir?",
+      "options": [
+        "Doğanhisar",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Başköy - Ulu Camii, Konya'nın Doğanhisar ilçesindedir.",
+      "sourceId": "inv-p409"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Beş",
+        "Üç",
+        "Dört"
+      ],
+      "correct": 1,
+      "description": "Beş.",
+      "sourceId": "inv-p409"
+    },
+    {
+      "question": "Harim ve tavanın kalem işi bezemeleri hangi yılda yapılmıştır?",
+      "options": [
+        "1914",
+        "1551",
+        "1880",
+        "1957"
+      ],
+      "correct": 3,
+      "description": "1957.",
+      "sourceId": "inv-p409"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p409",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Doğanhisar, \"Başköy - Ulu Camii\"",
+      "page": "409"
+    },
+    {
+      "id": "inv-p410",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Doğanhisar, \"Başköy - Ulu Camii\"",
+      "page": "410"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

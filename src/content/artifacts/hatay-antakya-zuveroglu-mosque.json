@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-zuveroglu-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Züveroğlu Camii",
+  "period": "Kapı levhasında 1215 (1800)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Züveroğlu Camii, güneyde yazlık namazgâh ve kuzeyde kapalı harimden oluşur.",
+  "history": "İki caddenin köşesindeki yapının evden mescide dönüştürülmüş olabileceği düşünülür. Güneydeki avlu yazlık namazgâhtır; kuzeydeki harime kıble tarafından girilmesi bu yorumu destekler. Özgün kitabesi yoktur. Kapı üzerindeki levhanın 1215 (1800) tarihi yapım tarihi kabul edilir. Doğudan girilen avlunun güneydoğusunda basamaklı minber ve sac örtülü kısa ezanlık, sağında sembolik mihrap, güneybatıda küçük oda vardır. Girişin kuzeyinde küçük sebil yer alır. Harim bir kemerle eşit olmayan iki sahına ayrılır; kuzey sahın geniştir. Kıble duvarının doğusuna yakın mihrap yönü sağlamak için çapraz yerleştirilmiştir. Kırma çatılı harimin güneyinde kapı ve dört pencere, kuzeyinde daha geniş bir pencere bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-zuveroglu-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-zuveroglu-mosque/book-view-1.jpg",
+      "alt": "Taş avluda ağaç, karşıda kiremit çatılı harim kapısı ve kemerli pencereler",
+      "description": "Züveroğlu Camii — kitaptaki görünüm 1 (s. 342–343)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-zuveroglu-mosque/book-view-2.jpg",
+      "alt": "Avlunun köşesinde basamaklarla çıkılan örtülü ezanlık ve duvarda mihrap nişi",
+      "description": "Züveroğlu Camii — kitaptaki görünüm 2 (s. 344–345)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-zuveroglu-mosque/book-view-2.jpg",
+      "x": 50,
+      "y": 35,
+      "title": "Ezanlık",
+      "text": "Avlunun güneydoğusunda kısa örtülü ezanlık bulunur.",
+      "sourceId": "inv-p344"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-zuveroglu-mosque/book-view-2.jpg",
+      "x": 29,
+      "y": 71,
+      "title": "Avlu mihrabı",
+      "text": "Ezanlığın yanında sembolik bir mihrap vardır.",
+      "sourceId": "inv-p344"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kapalı harim avlunun hangi tarafındadır?",
+      "options": [
+        "Kuzey",
+        "Güney",
+        "Doğu",
+        "Batı"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Kuzey.",
+      "sourceId": "inv-p344"
+    },
+    {
+      "question": "Avlu hangi amaçla da kullanılır?",
+      "options": [
+        "Kapalı hamam",
+        "Yazlık namazgâh",
+        "Kervan ahırı",
+        "Bedesten"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Yazlık namazgâh.",
+      "sourceId": "inv-p344"
+    },
+    {
+      "question": "Harim kaç sahına ayrılır?",
+      "options": [
+        "Üç",
+        "Dört",
+        "İki",
+        "Tek"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p344"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p344",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Züveroğlu Camii\"",
+      "page": "344"
+    },
+    {
+      "id": "inv-p345",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Züveroğlu Camii\"",
+      "page": "345"
+    },
+    {
+      "id": "inv-p399",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Züveroğlu Camii\"",
+      "page": "399"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

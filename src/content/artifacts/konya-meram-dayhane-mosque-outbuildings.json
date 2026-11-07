@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-dayhane-mosque-outbuildings",
+  "name": "Dayhane Camii ve Müştemilatı",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "H. 1266 / M. 1849-50 (levhaya göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Eğimli bir arazide, moloz taş duvarlı ve kırma çatılı, avlusunun kuzeyinde imam evi olarak kullanılan müştemilatı bulunan cami.",
+  "history": "Cami Meram, Yeşildere Mahallesi'nde yer almaktadır. Yapının inşasına ve banisine dair kitâbe yoktur. Caminin üzerindeki levhada inşa tarihi olarak H. 1266 / M. 1849-50 yazmaktadır. Yapı 2019 yılında Vakıflar Genel Müdürlüğü tarafından onarılmıştır.\n\nEğimli bir arazi üzerindeki cami dikdörtgen planlı ve kırma çatılıdır. Beden duvarlarında moloz taş kullanılmıştır; cephe düzenlemesi sadedir. Harim, beden duvarlarında açılmış dikdörtgen pencerelerle aydınlatılır. Mihraba dik üç sahına ayrılmış harim içten düz ahşap tavanlıdır.\n\nHarimin kuzeyinde ahşap mahfil, kıble duvarında mihrap ve minber bulunur. Mihrap, beden duvarı üzerinde ahşap kaplamalı, dikdörtgen formlu ve yarım daire planlıdır. Mihrabın sağında sonradan eklenmiş basit formlu bir minber yer alır. Cami avlusunun kuzey bölümüne bitişik müştemilat imam evi olarak kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-dayhane-mosque-outbuildings/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-dayhane-mosque-outbuildings/aerial-view.jpg",
+      "alt": "Dağlarla çevrili köyde, yüksekten görülen mavi metal çatılı beyaz cami; yanında ince minare ve bitişikte daha alçak bir yapı, çevrede düz damlı evler",
+      "description": "Caminin çevresiyle görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-dayhane-mosque-outbuildings/prayer-hall.jpg",
+      "alt": "Harim içi: koyu ahşap çıtalı düz tavan, iki açık renkli ahşap direk, karşıda açık yeşil boyalı mihrap, sağda süslemeli minber, pembe-kırmızı halı",
+      "description": "Harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-meram-dayhane-mosque-outbuildings/aerial-view.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Kırma çatı",
+      "text": "Eğimli arazi üzerindeki cami dikdörtgen planlı ve kırma çatılıdır.",
+      "sourceId": "inv-p97"
+    },
+    {
+      "id": "wooden-ceiling",
+      "image": "/images/konya-meram-dayhane-mosque-outbuildings/prayer-hall.jpg",
+      "x": 50,
+      "y": 10,
+      "title": "Ahşap tavan",
+      "text": "Mihraba dik üç sahına ayrılmış harim içten düz ahşap tavanlıdır.",
+      "sourceId": "inv-p97"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-dayhane-mosque-outbuildings/prayer-hall.jpg",
+      "x": 51,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Mihrap beden duvarı üzerinde ahşap kaplamalı, dikdörtgen formlu ve yarım daire planlıdır.",
+      "sourceId": "inv-p97"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapı 2019 yılında hangi kurum tarafından onarılmıştır?",
+      "options": [
+        "Konya Büyükşehir Belediyesi",
+        "Kültür ve Turizm Bakanlığı",
+        "Meram Belediyesi",
+        "Vakıflar Genel Müdürlüğü"
+      ],
+      "correct": 3,
+      "description": "Yapı 2019'da Vakıflar Genel Müdürlüğü tarafından onarım görmüştür.",
+      "sourceId": "inv-p97"
+    },
+    {
+      "question": "Caminin müştemilatı bugün hangi amaçla kullanılmaktadır?",
+      "options": [
+        "İmam evi",
+        "Kuran kursu",
+        "Gasilhane",
+        "Depo"
+      ],
+      "correct": 0,
+      "description": "Cami avlusunun kuzey bölümüne bitişik müştemilat imam evi olarak kullanılmaktadır.",
+      "sourceId": "inv-p97"
+    },
+    {
+      "question": "Caminin beden duvarlarında hangi malzeme kullanılmıştır?",
+      "options": [
+        "Kerpiç",
+        "Tuğla",
+        "Moloz taş",
+        "Kesme taş"
+      ],
+      "correct": 2,
+      "description": "Caminin beden duvarlarında moloz taş malzeme kullanılmıştır.",
+      "sourceId": "inv-p97"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p97",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Dayhane Camii ve Müştemilatı\"",
+      "page": "97"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

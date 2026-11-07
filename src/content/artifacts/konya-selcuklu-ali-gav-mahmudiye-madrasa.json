@@ -1,0 +1,123 @@
+{
+  "id": "konya-selcuklu-ali-gav-mahmudiye-madrasa",
+  "name": "Ali Gav (Zaviyesi) Mahmudiye Medresesi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · XIII. yüzyılın ilk çeyreğinde yapıldığı düşünülür; H. 1317 / M. 1899-1900 onarımı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Selçuklu çağına tarihlenen, 1899-1900'de Mahmudiye Medresesi adıyla yeniden açılan ve 2013'te yeniden inşa edilen kapalı avlulu medrese.",
+  "history": "Alâeddin Tepesi'nin kuzeyinde, Karatay Medresesi'ne yaklaşık 150 m uzaklıktaki yapı, bir rivayete göre adını XV. yüzyılda medresede şeyhlik yapmış, Hacı Bayram-ı Veli ahfadından Ali Gav Baba'dan almıştır. Diğer bir rivayete göre ad, Konya'nın Selçuklu ordusunca fethi sırasında sur içine sızan Ali adlı bir Türk askerinden gelir. Selçuklu çağına tarihlenen Ali Gav Zaviyesi, giriş kapısı üzerindeki kitâbeye göre H. 1317 / M. 1899-1900'de Vali (Avlonyalı) Mehmet Ferid Paşa tarafından tamir ve ihya ettirilerek \"Mahmudiye Medresesi\" adıyla hizmete açılmıştır.\n\nGüneydeki ana eyvanı ve iki yanındaki kubbeli odalar dışında tüm bölümleri 2012'ye kadar yıkık olan yapı, bugünkü şeklini Konya Büyükşehir Belediyesi'nin 2013'te tamamladığı rekonstrüksiyonla almıştır. 1965'te Vakıflar Genel Müdürlüğü adına Yılmaz Önge'nin yürüttüğü kazı ve onarım, 19,70 x 23,50 m'lik medresenin kapalı avlulu olduğunu ve kare avlunun dört bağımsız sütuna dayanan 6 m çaplı bir kubbeyle örtüldüğünü göstermiştir. Ortasında aydınlık feneri bulunan kubbeye geçiş yelpaze biçimli pandantiflerle sağlanır. Avlunun güneyinde mescit/dershane, kuzeyinde giriş eyvanı ve sivri beşik tonozlu iki eyvan, doğu ve batısında tonozlu öğrenci odaları yer alır.\n\nKuzeybatı köşedeki odada Kemter Baba'ya ait H. 1261 / M. 1845 tarihli, Bektaşi serpuşlu bir mezar taşı vardır. Cephe köşelerinde kesme, orta kısımlarda kaba yonu ve moloz taş kullanılmış; örtü elemanları tuğladır. 1965 kazısında avluda çok sayıda devşirme malzeme, güneybatı köşe odasının zemininde pişmiş topraktan bir tandır, köşe odalarda turkuaz ve lacivert sırlı çiniler ve bir Selçuklu kandili bulunmuştur. Çini parçaları bugün İstanbul Türk-İslam Eserleri Müzesi'nde sergilenmektedir. Medresenin Afyon Boyalıköy ve Isparta Atabey Ertokuş (1224) medreseleriyle çağdaş olduğu ve XIII. yüzyılın ilk çeyreğinde inşa edildiği düşünülmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-ali-gav-mahmudiye-madrasa/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-ali-gav-mahmudiye-madrasa/exterior.jpg",
+      "alt": "Kaba yonu taş duvarlı alçak medrese binası, köşelerde kesme taş, yuvarlak kemerli ahşap kapı; çatıdan yeşil kubbe yükseliyor, önde selviler ve beyaz çakıl",
+      "description": "Medresenin dış görünüşü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-ali-gav-mahmudiye-madrasa/dome-lantern.jpg",
+      "alt": "Alttan görünüm: tuğla kubbenin ortasında üçgen camlı aydınlık feneri ve dört köşede yelpaze biçimli pandantifler",
+      "description": "Avlu kubbesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-ali-gav-mahmudiye-madrasa/courtyard.jpg",
+      "alt": "Avludan bakış: iki taş sütun arasında tuğla tonozlu eyvan, eyvanda koltuklar ve duvarlarda hat levhaları; önde saksı bitkileri",
+      "description": "Avlu ve eyvan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "lantern",
+      "image": "/images/konya-selcuklu-ali-gav-mahmudiye-madrasa/dome-lantern.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Aydınlık feneri",
+      "text": "Avluyu örten kubbenin ortasında aydınlık feneri bulunur.",
+      "sourceId": "inv-p97"
+    },
+    {
+      "id": "pendentive",
+      "image": "/images/konya-selcuklu-ali-gav-mahmudiye-madrasa/dome-lantern.jpg",
+      "x": 22,
+      "y": 18,
+      "title": "Yelpaze biçimli pandantif",
+      "text": "Kubbeye geçiş yelpaze biçimli pandantiflerle sağlanmıştır.",
+      "sourceId": "inv-p97"
+    },
+    {
+      "id": "column",
+      "image": "/images/konya-selcuklu-ali-gav-mahmudiye-madrasa/courtyard.jpg",
+      "x": 13,
+      "y": 40,
+      "title": "Avlu sütunu",
+      "text": "Kazılar, kare avluyu örten 6 m çaplı kubbenin ortada dört bağımsız sütuna dayandığını göstermiştir.",
+      "sourceId": "inv-p97"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapı 1899-1900 onarımından sonra hangi adla hizmete açılmıştır?",
+      "options": [
+        "Mahmudiye Medresesi",
+        "Kemaliye Medresesi",
+        "Sahip Ata Darülhadisi",
+        "Halkalı Medrese"
+      ],
+      "correct": 0,
+      "description": "Vali Mehmet Ferid Paşa'nın tamir ve ihyasından sonra \"Mahmudiye Medresesi\" adıyla hizmete açılmıştır.",
+      "sourceId": "inv-p96"
+    },
+    {
+      "question": "1965'teki kazı ve onarım çalışmalarını kim yürütmüştür?",
+      "options": [
+        "Friedrich Sarre",
+        "Yılmaz Önge",
+        "Yusuf Küçükdağ",
+        "İbrahim Hakkı Konyalı"
+      ],
+      "correct": 1,
+      "description": "1965'te Vakıflar Genel Müdürlüğü adına kazı ve onarımı Yılmaz Önge yürütmüştür.",
+      "sourceId": "inv-p97"
+    },
+    {
+      "question": "Medreseye ait çini parçaları bugün nerede sergilenmektedir?",
+      "options": [
+        "Konya Çini Eserler Müzesi",
+        "Akşehir Arkeoloji Müzesi",
+        "İstanbul Türk-İslam Eserleri Müzesi",
+        "Taş ve Ahşap Eserler Müzesi"
+      ],
+      "correct": 2,
+      "description": "Ali Gav Medresesi'ne ait çini parçaları İstanbul Türk-İslam Eserleri Müzesi'nde sergilenmektedir.",
+      "sourceId": "inv-p98"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p96",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Ali Gav (Zaviyesi) Mahmudiye Medresesi\"",
+      "page": "96"
+    },
+    {
+      "id": "inv-p97",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Ali Gav (Zaviyesi) Mahmudiye Medresesi\"",
+      "page": "97"
+    },
+    {
+      "id": "inv-p98",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Ali Gav (Zaviyesi) Mahmudiye Medresesi\"",
+      "page": "98"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "konya-aksehir-hidirlik-masjid",
+  "name": "Hıdırlık (Hızırlık - Hıdır Dede) Mescidi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "XIII-XIV. yüzyıl (tahmini)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Akşehir'deki Hıdırlık mesire yerinde, asırlık çınarların gölgesinde, mihrabının iki yanında Bizans dönemi mermer levhalar bulunan tek kubbeli mescit.",
+  "history": "Mescit, Akşehir merkez Kızılca Mahalle'de, Hıdırlık mesire yerinin içindedir. Asırlık çınarların gölgesindeki yapının inşa kitâbesi yoktur; planı, malzemesi ve teknik özelliklerinden hareketle XIII-XIV. yüzyıla tarihlendirilebilir. Mescidin bir zaviyesi ve haziresi olduğu, ancak bunların günümüze ulaşmadığı anlaşılır.\n\nKubbesi 1940'ta Akşehir Belediyesi tarafından yenilenmiştir. Bölgedeki gazinolar nedeniyle uzun süre kapalı kalan yapı 1990, 2000 ve 2015'te Vakıflar Bölge Müdürlüğü tarafından onarılmıştır.\n\nKare planlı mescit tromp geçişli tek kubbeyle örtülüdür. Duvarlarda taş, kubbe geçişlerinde ve kubbede tuğla kullanılmıştır. Harime doğu cephedeki tek kapıdan girilir; harim sıvalıdır. Kıble duvarının ortasındaki mihrap yarım dikdörtgen planlıdır. Mihrap nişinin iki yanında Bizans dönemine ait geometrik süslemeli mermer levhalar vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-hidirlik-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-hidirlik-masjid/exterior.jpg",
+      "alt": "Ağaçlar arasında, taş duvarlı ve kurşun kaplı tek kubbeli mescit",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-hidirlik-masjid/interior.jpg",
+      "alt": "Beyaz sıvalı harimde tuğla tromp, ahşap lambri ve kırmızı halı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-hidirlik-masjid/dome.jpg",
+      "alt": "Tuğla örgülü kubbenin içi ve ortasından sarkan çember avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-hidirlik-masjid/marble-slab.jpg",
+      "alt": "Beyaz duvara yerleştirilmiş, geometrik çerçeveli kabartma süslemeli mermer levha",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-hidirlik-masjid/exterior.jpg",
+      "x": 40,
+      "y": 62,
+      "title": "Taş duvarlar",
+      "text": "Yapının duvarlarında taş, kubbe geçişlerinde ve kubbede tuğla kullanılmıştır.",
+      "sourceId": "inv-p333"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-hidirlik-masjid/dome.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Tuğla kubbe",
+      "text": "Kare planlı mescit tromp geçişli tek kubbeyle örtülüdür; kubbe 1940'ta yenilenmiştir.",
+      "sourceId": "inv-p333"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-aksehir-hidirlik-masjid/marble-slab.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Bizans dönemi mermer levha",
+      "text": "Mihrap nişinin iki yanında Bizans dönemine ait geometrik süslemeli mermer levhalar vardır.",
+      "sourceId": "inv-p333"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin kubbesini 1940'ta kim yenilemiştir?",
+      "options": [
+        "Vakıflar Genel Müdürlüğü",
+        "Akşehir Belediyesi",
+        "Mahalle sakinleri",
+        "Akşehir Müzesi"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Akşehir Belediyesi.",
+      "sourceId": "inv-p333"
+    },
+    {
+      "question": "Mihrap nişinin iki yanındaki mermer levhalar hangi döneme aittir?",
+      "options": [
+        "Osmanlı",
+        "Selçuklu",
+        "Roma",
+        "Bizans"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Bizans.",
+      "sourceId": "inv-p333"
+    },
+    {
+      "question": "Harime giriş hangi cepheden sağlanır?",
+      "options": [
+        "Doğu",
+        "Kuzey",
+        "Batı",
+        "Güney"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Doğu.",
+      "sourceId": "inv-p333"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p333",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Hıdırlık (Hızırlık - Hıdır Dede) Mescidi\"",
+      "page": "333"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

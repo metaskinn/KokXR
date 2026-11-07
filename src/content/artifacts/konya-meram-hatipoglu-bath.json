@@ -1,0 +1,100 @@
+{
+  "id": "konya-meram-hatipoglu-bath",
+  "name": "Hatipoğlu (Hasbeyoğlu) Hamamı",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Karamanoğulları · kitâbesine göre H. 827 / M. 1423-24, İbrahim Bey dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Meram Köprüsü'nün güneyinde, kitâbesine göre 1423-24'te Hasbeyoğlu Mehmet tarafından yaptırılan ve bugün lokanta olarak kullanılan çifte hamam.",
+  "history": "Hamam, Meram, Yorgancı Mahallesi'nde, Meram Köprüsü'nün güney tarafında, 645 ada 1 numaralı parselde yer alır. \"Karamanoğlu Mehmet Bey Hamamı\" ve \"Hasbeyoğlu Hamamı\" adlarıyla da anılmaktadır.\n\nHamamın özgün kitâbesi bugün Konya Taş Eserler Müzesi'ndedir. Kabartma tekniğinde ve Selçuklu sülüsüyle yazılan kitâbenin dikey istiflenmiş sağ ve sol şeritlerinde Osmanlı Türkçesi, beş satırlık serlevhalı orta bölümünde Arapça kullanılmıştır. Sol şeritte \"Hacı Hasbeyoğlunu yâd eyleye\" dizesi yer alır. Kitâbesine göre eser H. 827 / M. 1423-24'te, İbrahim Bey döneminde Hasbeyoğlu Mehmet tarafından inşa edilmiştir.\n\nÇifte hamam olarak yapılan bina, \"sıcaklığı üç eyvanlı, iki köşe halvetli hamamlar\" grubundadır. Kuzeydeki erkekler bölümünün kareye yakın planlı soğukluğu büyük üçgenlerle geçilen bir kubbeyle örtülüdür; ortasında sekizgen bir şadırvan vardır. Kubbe eteğindeki 12 sivri kemerli nişten ana yönlerdekiler pencere olarak düzenlenmiş, mekân ayrıca kubbe merkezindeki aydınlık feneriyle aydınlatılmıştır. Ilıklığın kubbesi içten 12 dilime bölünmüştür. Sıcaklığın ortasındaki kare mekân Türk üçgeni geçişli, içten 16 dilimli bir kubbeyle örtülüdür ve ortasında sekizgen göbek taşı bulunur; eyvanlar beş yüzeyli tonozlarla örtülüdür. Doğu eyvanın kuzey ve güneyinde kare planlı, kubbeli birer halvet yer alır.\n\nGüney kanattaki kadınlar bölümü planlama açısından erkekler bölümünün simetriği olarak düzenlenmiştir; girişi kırma çatılı küçük bir rüzgârlıktır. Hamamın doğusunda kuzey-güney yönünde uzanan, ortasından bir kemerle desteklenmiş beşik tonozlu su deposu ve onun doğusunda külhan bulunur.\n\nKaramanoğlu Mehmet Bey Hamamı bugün sağlam biçimde ayakta olmakla birlikte özgün işlevinde değil, lokanta olarak kullanılmaktadır; yeni işlev gereği bazı pencereler kapıya dönüştürülmüş ve iki bölüm arasında yeni geçişler açılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-hatipoglu-bath/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-hatipoglu-bath/aerial-view.jpg",
+      "alt": "Havadan görünüm: üst örtüsü mavi branda ile kaplı, çevresi iskele ve korkuluklarla çevrili taş bir yapı; arkada yeşil su havuzu, beyaz kemerli bir köprü ve sonbahar renginde ağaçlar",
+      "description": "Hamamın havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "bath",
+      "image": "/images/konya-meram-hatipoglu-bath/aerial-view.jpg",
+      "x": 38,
+      "y": 55,
+      "title": "Çifte hamam",
+      "text": "Hamam, sıcaklığı üç eyvanlı ve iki köşe halvetli çifte hamam olarak inşa edilmiştir.",
+      "sourceId": "inv-p215"
+    },
+    {
+      "id": "meram-bridge",
+      "image": "/images/konya-meram-hatipoglu-bath/aerial-view.jpg",
+      "x": 52,
+      "y": 24,
+      "title": "Meram Köprüsü",
+      "text": "Hamam, Meram Köprüsü'nün güney tarafında yer almaktadır.",
+      "sourceId": "inv-p214"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hamamın özgün kitâbesi bugün nerededir?",
+      "options": [
+        "Mevlâna Müzesi'nde",
+        "Konya Taş Eserler Müzesi'nde",
+        "Hamamın giriş kapısında",
+        "İstanbul Arkeoloji Müzesi'nde"
+      ],
+      "correct": 1,
+      "description": "Hamamın özgün kitâbesi günümüzde Konya Taş Eserler Müzesi'ndedir.",
+      "sourceId": "inv-p214"
+    },
+    {
+      "question": "Hamam bugün hangi işlevle kullanılmaktadır?",
+      "options": [
+        "Hamam",
+        "Kütüphane",
+        "Lokanta",
+        "Müze"
+      ],
+      "correct": 2,
+      "description": "Hamam sağlam biçimde ayakta olmakla birlikte işlev değişikliğiyle lokanta olarak kullanılmaktadır.",
+      "sourceId": "inv-p216"
+    },
+    {
+      "question": "Hamam halk arasında hangi adla da anılır?",
+      "options": [
+        "Sultan Hamamı",
+        "Şifa Hamamı",
+        "Yeni Hamam",
+        "Karamanoğlu Mehmet Bey Hamamı"
+      ],
+      "correct": 3,
+      "description": "Hamam \"Karamanoğlu Mehmet Bey Hamamı\" ve \"Hasbeyoğlu Hamamı\" adlarıyla da anılır.",
+      "sourceId": "inv-p214"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p214",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Hatipoğlu (Hasbeyoğlu) Hamamı\"",
+      "page": "214"
+    },
+    {
+      "id": "inv-p215",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Hatipoğlu (Hasbeyoğlu) Hamamı\"",
+      "page": "215"
+    },
+    {
+      "id": "inv-p216",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Hatipoğlu (Hasbeyoğlu) Hamamı\"",
+      "page": "216"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

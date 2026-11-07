@@ -1,0 +1,107 @@
+{
+  "id": "inegol-hurriyet-sari-mosque",
+  "name": "Hürriyet (Sarı) Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Yeni yapı; inşa tarihi kitapta belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hürriyet (Sarı) Camii, eski çatılı caminin yerine geniş bahçede yapılmış, kubbeli ve iki şerefeli minareli yeni bir yapıdır.",
+  "history": "Mahmudiye Mahallesi, Kasım Efendi Caddesi No: 135’te bulunan cami, dış cephesinin sarıya boyanması nedeniyle Sarı Camii olarak da bilinir. Eski caminin yanındaki geniş bahçede tamamen yeni bir yapı inşa edilmiştir. Önceki cami çatılıyken yeni cami kubbeli plan düzenindedir ve kesme taşla yapılmıştır. Kuzeydeki son cemaat yeri dört küçük kubbeyle, ana ibadet mekânı ise bir büyük kubbe ve çevresindeki dört küçük kubbeyle örtülüdür.\n\nYeni cami ibadete açılınca, daha küçük olan ve yola taşarak ulaşımı kısıtlayan eski cami ile minaresi tamamen yıkılmıştır. Eski minare kuzeybatı köşede, kesme taştan ve tek şerefeli iken yeni minare batı cepheye bitişiktir; taş kaideli, betonarme briket gövdeli ve iki şerefelidir. Kitap mevcut yapının düzenli bakım gördüğünü ve ibadete açık olduğunu bildirir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-hurriyet-sari-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-hurriyet-sari-mosque/aerial-view.jpg",
+      "alt": "Büyük kubbeli taş cami, ön ve yanlardaki küçük kubbeler ile solunda iki şerefeli minare",
+      "description": "Büyük kubbeli taş cami, ön ve yanlardaki küçük kubbeler ile solunda iki şerefeli minare",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-hurriyet-sari-mosque/roof-view.jpg",
+      "alt": "Tepeden görünümde büyük merkezi kubbe, küçük kubbeler ve caminin uzun dikdörtgen oturumu",
+      "description": "Tepeden görünümde büyük merkezi kubbe, küçük kubbeler ve caminin uzun dikdörtgen oturumu",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-hurriyet-sari-mosque/aerial-view.jpg",
+      "x": 43,
+      "y": 50,
+      "title": "Ana kubbe",
+      "text": "Yeni yapının ana ibadet mekânı bir büyük kubbe ve çevresindeki dört küçük kubbeyle örtülmüştür.",
+      "sourceId": "inv-p168"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-hurriyet-sari-mosque/aerial-view.jpg",
+      "x": 59,
+      "y": 27,
+      "title": "Yeni minare",
+      "text": "Batı cepheye bitişik yeni minare iki şerefeli olarak yapılmıştır.",
+      "sourceId": "inv-p169"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin Sarı Camii adı nereden gelir?",
+      "options": [
+        "Taş ocağının adından",
+        "Banisinin adından",
+        "Dış cephesinin sarıya boyanmasından",
+        "Mahalle adından"
+      ],
+      "correct": 2,
+      "description": "Sarı Camii adı sarı boyalı dış cepheden gelir.",
+      "sourceId": "inv-p167"
+    },
+    {
+      "question": "Yeni minare kaç şerefelidir?",
+      "options": [
+        "Bir",
+        "İki",
+        "Üç",
+        "Dört"
+      ],
+      "correct": 1,
+      "description": "Yeni minare iki şerefeli olarak tasarlanmıştır.",
+      "sourceId": "inv-p169"
+    },
+    {
+      "question": "Eski cami yeni cami açılınca ne olmuştur?",
+      "options": [
+        "Müzeye çevrilmiştir",
+        "Kütüphane olmuştur",
+        "Depoya çevrilmiştir",
+        "Minaresiyle birlikte yıkılmıştır"
+      ],
+      "correct": 3,
+      "description": "Yeni cami ibadete açılınca eski cami ve minaresi tamamen yıkılmıştır.",
+      "sourceId": "inv-p168"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p167",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hürriyet (Sarı) Camii\"",
+      "page": "167"
+    },
+    {
+      "id": "inv-p168",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hürriyet (Sarı) Camii\"",
+      "page": "168"
+    },
+    {
+      "id": "inv-p169",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hürriyet (Sarı) Camii\"",
+      "page": "169"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

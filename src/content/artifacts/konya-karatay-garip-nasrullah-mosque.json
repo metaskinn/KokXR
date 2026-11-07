@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-garip-nasrullah-mosque",
+  "name": "Garip Nasrullah Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "1908 (kitabın aktardığı kaynaklara göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sedirler Caddesi’ndeki Garip Nasrullah Camii, ahşap direkli harimi ve günümüze izleri kalan köşk minaresiyle tanımlanır.",
+  "history": "Cami, Karatay, Hasandede Mescit Mahallesi, Sedirler Caddesi’ndedir. İnşa tarihi ve banisini bildiren kitâbesi yoktur; kitap kaynaklarda 1908’de yapıldığının belirtildiğini aktarır.\n\nAhşap direkli cami kareye yakın dikdörtgen planlı ve dört yöne eğimli kırma çatılıdır. Kuzeybatıdaki köşk minaresi ortadan kalkmış, izleri kalmıştır. Kuzey kapısından girilen harimin kuzeyinde ahşap kadınlar mahfili bulunur. Kıble duvarındaki mihrap yanlardan silmelerle sınırlanmış dikdörtgen çerçeveli, yarım daire planlı ve yarım kubbe kavsaralıdır. Sağdaki güneybatı minberi taç kapı, aynalık, köşk ve külah bölümlerinden oluşan sade bir düzenlemedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-garip-nasrullah-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-garip-nasrullah-mosque/exterior.jpg",
+      "alt": "Beyaz sıvalı, koyu ahşap kuşaklı ve kiremit çatılı caminin iki cephesi",
+      "description": "Beyaz sıvalı, koyu ahşap kuşaklı ve kiremit çatılı caminin iki cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-garip-nasrullah-mosque/prayer-hall.jpg",
+      "alt": "Mavi halı üzerinde ahşap direkler ve kirişler, karşıda beyaz mihrap",
+      "description": "Mavi halı üzerinde ahşap direkler ve kirişler, karşıda beyaz mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-garip-nasrullah-mosque/exterior.jpg",
+      "x": 50,
+      "y": 23,
+      "title": "Kırma çatı",
+      "text": "Kareye yakın dikdörtgen cami dört yöne eğimli kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p193"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-garip-nasrullah-mosque/prayer-hall.jpg",
+      "x": 51,
+      "y": 62,
+      "title": "Mihrap",
+      "text": "Mihrap yarım daire planlı ve yarım kubbe kavsaralıdır.",
+      "sourceId": "inv-p193"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabın aktardığı kaynaklar hangi inşa yılını verir?",
+      "options": [
+        "1220",
+        "1421",
+        "1930",
+        "1908"
+      ],
+      "correct": 3,
+      "description": "Kitap kaynaklarda 1908 tarihinin belirtildiğini aktarır.",
+      "sourceId": "inv-p193"
+    },
+    {
+      "question": "Köşk minaresinin durumu nasıl anlatılır?",
+      "options": [
+        "Çift şerefesi korunmuştur",
+        "Ortadan kalkmış, izleri kalmıştır",
+        "Mermerle yenilenmiştir",
+        "Yeraltına taşınmıştır"
+      ],
+      "correct": 1,
+      "description": "Kuzeybatıdaki köşk minaresinin ortadan kalktığı, izlerinin bulunduğu belirtilir.",
+      "sourceId": "inv-p193"
+    },
+    {
+      "question": "Kadınlar mahfili hangi malzemedendir?",
+      "options": [
+        "Ahşap",
+        "Çelik",
+        "Mermer",
+        "Tuğla tonoz"
+      ],
+      "correct": 0,
+      "description": "Kuzeyde ahşap kadınlar mahfili bulunur.",
+      "sourceId": "inv-p193"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p193",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Garip Nasrullah Camii\"",
+      "page": "193"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

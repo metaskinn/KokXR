@@ -1,0 +1,97 @@
+{
+  "id": "konya-ilgin-fazil-mosque",
+  "name": "Fazıl Camii",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Kitabeye göre H. 1296 / M. 1877",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ilgın Yukarı Çiğil Beldesi'ndeki caminin giriş kitabesinde H. 1296 / M. 1877 tarihi verilir.",
+  "history": "Ilgın Yukarı Çiğil Beldesi'ndeki caminin giriş kitabesinde H. 1296 / M. 1877 tarihi verilir. Kitap yapıyı sağlam ve ibadete açık olarak tanımlar. Derinlemesine dikdörtgen planlı camiye kuzeybatıdaki kapıdan girilir. Aynı yöndeki minare kare prizmal kaideli ve silindirik gövdelidir. Cephelerde altlı üstlü dikdörtgen pencereler vardır.\n\nİç mekân iki sıra ahşap sütunla üç sahına ayrılır. Sütunlara bindirmeli ahşap tavan bulunur ve sütun başlıkları İon tarzındadır. Kıble duvarındaki mihrap yarım yuvarlak planlıdır; üst kısmı istiridye kabuğu ve bir noktadan yayılan ışık biçimindedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-fazil-mosque/prayer-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-fazil-mosque/prayer-hall.jpg",
+      "alt": "Mavi desenli halılı iç mekânda koyu ahşap direkler ve mihrap",
+      "description": "Mavi desenli halılı iç mekânda koyu ahşap direkler ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-fazil-mosque/aerial-view.jpg",
+      "alt": "Kiremit çatılı cami ve beyaz minaresinin yerleşimle havadan görünümü",
+      "description": "Kiremit çatılı cami ve beyaz minaresinin yerleşimle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-ilgin-fazil-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 40,
+      "title": "Mihrap",
+      "text": "Mihrap üstü istiridye kabuğu ve ışınsal düzenlemededir.",
+      "sourceId": "inv-p446"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-ilgin-fazil-mosque/prayer-hall.jpg",
+      "x": 23,
+      "y": 43,
+      "title": "Ahşap sütunlar",
+      "text": "İki sıra ahşap sütun iç mekânı üç sahına ayırır.",
+      "sourceId": "inv-p446"
+    }
+  ],
+  "test": [
+    {
+      "question": "Fazıl Camii hangi ilçededir?",
+      "options": [
+        "Ilgın",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Fazıl Camii, Konya'nın Ilgın ilçesindedir.",
+      "sourceId": "inv-p446"
+    },
+    {
+      "question": "İç mekân kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Beş"
+      ],
+      "correct": 1,
+      "description": "Üç.",
+      "sourceId": "inv-p446"
+    },
+    {
+      "question": "Sütun başlıkları hangi tarzdadır?",
+      "options": [
+        "Dor",
+        "Korint",
+        "Mukarnas",
+        "İon"
+      ],
+      "correct": 3,
+      "description": "İon.",
+      "sourceId": "inv-p446"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p446",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Fazıl Camii\"",
+      "page": "446"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

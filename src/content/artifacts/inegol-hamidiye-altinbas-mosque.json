@@ -1,0 +1,107 @@
+{
+  "id": "inegol-hamidiye-altinbas-mosque",
+  "name": "Hamidiye (Altınbaş) Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "1960’lı yıllar · Eski mahalle camisinin yerine",
+  "endowment": "Halkın katkıları ve “Altınbaş Hafız” Ahmet Çayırlı Hoca Efendi’nin öncülüğü",
+  "summary": "Hamidiye (Altınbaş) Camii, göçlerle gelişen mahallede eski caminin yerine 1960’lı yıllarda kâgir ve kubbeli olarak yapılmıştır.",
+  "history": "Cami, Cuma Mahallesi, Hastahane Caddesi No: 2’dedir. Kitap, Sultan I. Abdülhamid döneminde Özi Kalesi’nin düşmesi üzerine Kırım’dan gelen Tatar Müslüman göçmenlerin bir bölümünün İnegöl’de Tatarlık Mahallesi’ni kurduğunu anlatır. Balkanlar ve Kafkasya’dan sonraki göçlerle nüfus artmış, Sultan II. Abdülhamid adına inşa edilen cami çevresinde gelişen yerleşim zamanla Hamidiye olarak anılmıştır.\n\nGünümüzdeki cami, eski mahalle camisinin yerine halkın katkısıyla ve “Altınbaş Hafız” olarak tanınan Hocaköylü Ahmet Çayırlı Hoca Efendi’nin öncülüğünde 1960’lı yıllarda kâgir ve kubbeli olarak inşa edilmiştir. Kitapta Ahmet Hamdi Çayırlı’nın 1923’te İnegöl’de doğduğu, İstanbul’da dinî eğitim aldığı, İnegöl’de çeşitli dinî ve hayır hizmetlerinde bulunduğu, 1 Ekim 2006’da vefat ederek Hocaköy Mezarlığı’na defnedildiği belirtilir.\n\nEski ahşap camide olduğu gibi yeni caminin avlusunda da kıraathane yapılmıştır. Kitap bunu İnegöl mahalle camilerinin giriş yakınında kıraathane ve çay ocağı bulundurma geleneğiyle ilişkilendirir. Cami ve müştemilatı Vakıflar Genel Müdürlüğü tarafından 2008 ve 2014’te restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-hamidiye-altinbas-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-hamidiye-altinbas-mosque/aerial-view.jpg",
+      "alt": "Şehir içinde büyük kubbe, çevresinde küçük kubbeler ve tek minareli cami",
+      "description": "Şehir içinde büyük kubbe, çevresinde küçük kubbeler ve tek minareli cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-hamidiye-altinbas-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde büyük avize, ortada mihrap, sağda minber ve yanlarda sütunlu mahfiller",
+      "description": "Kırmızı halılı harimde büyük avize, ortada mihrap, sağda minber ve yanlarda sütunlu mahfiller",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-hamidiye-altinbas-mosque/aerial-view.jpg",
+      "x": 59,
+      "y": 50,
+      "title": "Kubbeli yapı",
+      "text": "Eski mahalle camisinin yerine 1960’lı yıllarda kubbeli bir cami yapılmıştır.",
+      "sourceId": "inv-p158"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-hamidiye-altinbas-mosque/aerial-view.jpg",
+      "x": 58,
+      "y": 67,
+      "title": "Yeni cami",
+      "text": "Günümüzdeki cami halkın katkılarıyla kâgir malzeme kullanılarak inşa edilmiştir.",
+      "sourceId": "inv-p158"
+    }
+  ],
+  "test": [
+    {
+      "question": "Günümüzdeki cami hangi dönemde yapılmıştır?",
+      "options": [
+        "1890’larda",
+        "1920’lerde",
+        "1960’lı yıllarda",
+        "2000’lerde"
+      ],
+      "correct": 2,
+      "description": "Mevcut cami 1960’lı yıllarda eski caminin yerine yapılmıştır.",
+      "sourceId": "inv-p158"
+    },
+    {
+      "question": "Caminin yapımına öncülük eden kişi hangi lakapla tanınır?",
+      "options": [
+        "Altınbaş Hafız",
+        "Noktacı",
+        "Cırğıt Hoca",
+        "Laz İsmail"
+      ],
+      "correct": 0,
+      "description": "Ahmet Çayırlı Hoca Efendi, Altınbaş Hafız lakabıyla tanınır.",
+      "sourceId": "inv-p158"
+    },
+    {
+      "question": "Avluda hangi mahalle geleneği sürdürülmüştür?",
+      "options": [
+        "Kervansaray yapımı",
+        "Medrese hücreleri yapımı",
+        "Hamam yapımı",
+        "Kıraathane yapımı"
+      ],
+      "correct": 3,
+      "description": "Eski camide olduğu gibi mevcut caminin avlusunda da kıraathane yapılmıştır.",
+      "sourceId": "inv-p159"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p155",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hamidiye (Altınbaş) Camii\"",
+      "page": "155"
+    },
+    {
+      "id": "inv-p158",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hamidiye (Altınbaş) Camii\"",
+      "page": "158"
+    },
+    {
+      "id": "inv-p159",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Hamidiye (Altınbaş) Camii\"",
+      "page": "159"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

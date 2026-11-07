@@ -1,0 +1,112 @@
+{
+  "id": "hatay-antakya-agca-masjid",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Ağca Mescidi",
+  "period": "İnşa tarihi bilinmiyor; en az 17. yüzyıla uzanan kayıtlar",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ağca Mescidi, eğimli arazideki avlusu ve iki sahınlı harimiyle bölgenin küçük ibadet yapılarındandır.",
+  "history": "Antakya’da eğimli arazideki mescide kuzeydeki yüksek merdivenle ulaşılır. Yapım tarihi bilinmez. Çörten olarak kullanılan pars veya aslan heykeli 13. yüzyılı düşündürse de başka yapıdan devşirilmiş olabilir. Arşiv kayıtları en az 17. yüzyıla uzanır; kitabesi yapının eskiden cami olduğunu ve 1842’de yenilendiğini belirtir. Mihrap duvarına paralel iki sahınlı harim içte düz ahşap tavan, dışta kırma çatıyla örtülüdür. Mihrap, minber, niş ve kemerler sadedir. Batıda altlı üstlü sekiz pencere, kıble ve kuzey duvarlarında da açıklıklar vardır. Kitap bunları havalandırmayla ilişkilendirir. Kuzey ve batıdaki düzensiz, ağaçlı avlu yazlık mescit ve mahalle buluşma yeri olarak kullanılmıştır; güneybatı duvarına mihrap eklenmiştir. Batıda küçük bir mezene bulunur. Yapı 2018’de Vakıflar Genel Müdürlüğünce onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-agca-masjid/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-agca-masjid/book-view-1.jpg",
+      "alt": "Taş döşeli avluda duvarlar, giriş kapısı ve metal gölgelik",
+      "description": "Ağca Mescidi — kitaptaki görünüm 1 (s. 206–207)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-agca-masjid/book-view-2.jpg",
+      "alt": "Mavi halılı harimde ortadaki sütun, kemer ve solda ahşap minber",
+      "description": "Ağca Mescidi — kitaptaki görünüm 2 (s. 208–209)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-agca-masjid/book-view-2.jpg",
+      "x": 14,
+      "y": 64,
+      "title": "Mihrap",
+      "text": "Mescidin mihrabı oldukça sade olarak tanıtılır.",
+      "sourceId": "inv-p210"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-agca-masjid/book-view-2.jpg",
+      "x": 31,
+      "y": 62,
+      "title": "Minber",
+      "text": "Minber de yapının diğer unsurları gibi sadedir.",
+      "sourceId": "inv-p210"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabeye göre yapı hangi yıl yenilenmiştir?",
+      "options": [
+        "1842",
+        "1574",
+        "1909",
+        "1993"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: 1842.",
+      "sourceId": "inv-p208"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "İki",
+        "Dört",
+        "Tek"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p210"
+    },
+    {
+      "question": "Avlu hangi amaçla da kullanılmıştır?",
+      "options": [
+        "Kervan ahırı",
+        "Kapalı hamam",
+        "Yazlık mescit",
+        "Bedesten"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Yazlık mescit.",
+      "sourceId": "inv-p210"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p208",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ağca Mescidi\"",
+      "page": "208"
+    },
+    {
+      "id": "inv-p209",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ağca Mescidi\"",
+      "page": "209"
+    },
+    {
+      "id": "inv-p210",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ağca Mescidi\"",
+      "page": "210"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Ağca Mescidi\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

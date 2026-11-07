@@ -1,0 +1,123 @@
+{
+  "id": "konya-meram-tahir-ile-zuhre-masjid-and-tomb",
+  "name": "Tahir ile Zühre (Dön Baba-Pir Ahi Sultan) Mescit ve Türbesi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu dönemi; XIII. yüzyıl sonları (kabul edilen tarih)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sahip Ata Fahreddin Ali’nin yaptırdığı kabul edilen mescit, tuğla kubbesindeki çini madalyon ve mozaik çinili mihrabıyla dikkat çeker.",
+  "history": "Mescit, Meram, Beyhekim Mahallesi, Çukur Meydan’dadır. Halk arasında “Tahir ile Zühre Mescidi” olarak bilinir; “Arzu ile Kanber”, “Dön Baba Mescidi” ve banisinden dolayı “Sahip Ata Mescidi” adlarıyla da anılır. İbrahim Hakkı Konyalı bu adların yeni olduğunu ve bunları uyduran kişinin yakın zamana kadar yaşadığını yazmış, Selçuklu paralarına Şir ile Hurşid’i koyduran hükümdarla sevgilisinin burada gömülü olduğu rivayetini de aktarmıştır.\n\nKitâbesi olmasa da yapının XIII. yüzyıl sonlarında Sahip Ata Fahreddin Ali tarafından yaptırıldığı kabul edilir. Sahip Ata, Anadolu Selçuklu döneminin en uzun siyasi kariyerine sahip yöneticilerinden biridir. Mescit ve türbe 1958’de tamir edilmiş, kazılarda topraktan birçok çini parçası çıkmıştır; 1991 ve 2006’da Konya Vakıflar Bölge Müdürlüğü tarafından restore edilmiştir. Türbede Sahip Ata’nın torunlarının gömülü olduğu tahmin edilir.\n\nYapı mescit, türbe ve son cemaat yerinden oluşur; türbe ile son cemaat yeri mescidin doğusundadır. Duvarlarda kesme, moloz taş ve tuğla kullanılmıştır. Son cemaat yeri tuğla zikzaklı basık bir tonozla örtülüdür ve güney duvarında alçı bir mihrap vardır. Kare planlı harim, Türk üçgeni geçişli tuğla bir kubbeyle örtülüdür. Kubbe göbeğindeki madalyonda firuze ve patlıcan moru çiniden “Hz. Muhammed (SAV), Ebu Bekir, Ömer, Osman ve Ali” adları kufi hatla yıldız biçiminde yazılmıştır. Kıble duvarındaki yarım beşgen planlı mihrap mozaik çinilerle süslüdür. Yapı bugün sağlam durumdadır ve ibadete açıktır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-tahir-ile-zuhre-masjid-and-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-tahir-ile-zuhre-masjid-and-tomb/exterior.jpg",
+      "alt": "Yüksek apartmanlar arasında kurşun kubbeli, taş duvarlı alçak yapı ve demir parmaklıklı giriş",
+      "description": "Yüksek apartmanlar arasında kurşun kubbeli, taş duvarlı alçak yapı ve demir parmaklıklı giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-tahir-ile-zuhre-masjid-and-tomb/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde turkuaz çerçeveli mihrap ve yanında yeşil işlemeli örtü",
+      "description": "Kırmızı halılı harimde turkuaz çerçeveli mihrap ve yanında yeşil işlemeli örtü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-tahir-ile-zuhre-masjid-and-tomb/tomb-cenotaph.jpg",
+      "alt": "Kırmızı halı üzerinde işlemeli örtüyle örtülü sanduka",
+      "description": "Kırmızı halı üzerinde işlemeli örtüyle örtülü sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-tahir-ile-zuhre-masjid-and-tomb/prayer-hall.jpg",
+      "x": 59,
+      "y": 30,
+      "title": "Çinili mihrap",
+      "text": "Kıble duvarındaki mihrap mozaik çinilerle süslüdür ve yarım beşgen planlıdır.",
+      "sourceId": "inv-p115"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-tahir-ile-zuhre-masjid-and-tomb/tomb-cenotaph.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Türbe",
+      "text": "Türbede Sahip Ata’nın torunlarının gömülü olduğu tahmin edilir.",
+      "sourceId": "inv-p114"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-meram-tahir-ile-zuhre-masjid-and-tomb/exterior.jpg",
+      "x": 30,
+      "y": 44,
+      "title": "Kubbe",
+      "text": "Kare planlı harim tuğladan örülmüş, Türk üçgeni geçişli bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p115"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin halk arasındaki diğer adlarından biri hangisidir?",
+      "options": [
+        "Arzu ile Kanber",
+        "Leyla ile Mecnun",
+        "Ferhat ile Şirin",
+        "Kerem ile Aslı"
+      ],
+      "correct": 0,
+      "description": "Mescit “Arzu ile Kanber” adıyla da anılır.",
+      "sourceId": "inv-p113"
+    },
+    {
+      "question": "Yapının kim tarafından yaptırıldığı kabul edilir?",
+      "options": [
+        "Celaleddin Karatay",
+        "Sahip Ata Fahreddin Ali",
+        "II. Kılıç Arslan",
+        "Abdülaziz Sultan"
+      ],
+      "correct": 1,
+      "description": "Kitâbesi olmasa da Sahip Ata Fahreddin Ali’nin yaptırdığı kabul edilir.",
+      "sourceId": "inv-p113"
+    },
+    {
+      "question": "Kubbe göbeğindeki madalyonda hangi yazı türü kullanılmıştır?",
+      "options": [
+        "Talik",
+        "Divani",
+        "Kufi",
+        "Rika"
+      ],
+      "correct": 2,
+      "description": "Madalyondaki isimler kufi hatla yazılmıştır.",
+      "sourceId": "inv-p115"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p113",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Tahir ile Zühre (Dön Baba-Pir Ahi Sultan) Mescit ve Türbesi\"",
+      "page": "113"
+    },
+    {
+      "id": "inv-p114",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Tahir ile Zühre (Dön Baba-Pir Ahi Sultan) Mescit ve Türbesi\"",
+      "page": "114"
+    },
+    {
+      "id": "inv-p115",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Tahir ile Zühre (Dön Baba-Pir Ahi Sultan) Mescit ve Türbesi\"",
+      "page": "115"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

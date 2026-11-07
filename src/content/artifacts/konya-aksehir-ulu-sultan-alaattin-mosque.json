@@ -1,0 +1,121 @@
+{
+  "id": "konya-aksehir-ulu-sultan-alaattin-mosque",
+  "name": "Ulu (Sultan Alaattin) Camii",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Selçuklu · H. 610 / M. 1213",
+  "endowment": "Banisi Sait Hacı Necmeddin Necipzade Ebu Sait İbrahim",
+  "summary": "Akşehir Ulu Camii, yedi sahınlı harimi, mihrap önü kubbesi ve çini mozaik mihrabıyla Selçuklu mimarisini yansıtır.",
+  "history": "Cami, Akşehir’de kendi adını taşıyan cadde üzerindedir. Minare kaidesindeki kitabeye göre 1213’te Sait Hacı Necmeddin Necipzade Ebu Sait İbrahim tarafından yaptırılmıştır. Sultan Alâeddin Keykubad döneminde güney ve batıya genişletilerek Konya Alâeddin Camii’ne benzer hâle getirilmiştir. 1811 onarımında Cihanbeyli Yaralı Yusuf Ağa’nın çeşmesi eklenmiştir; avludaki şadırvanın da o sırada yapılmış olduğu düşünülür. 1961’de özgünlüğe uygun olmayan tamir ve kuzeye son cemaat yeri eklemesi, 1987’de güney cephesini duvarla takviye yapılmıştır. Son cemaat yeri 2000’li yıllarda kaldırılmıştır.\n\nTaş, tuğla ve ahşap kullanılan yapı büyük avlu, harim, şadırvan ve minareden oluşur. Kuzeydoğudaki tuğla minare kare kaideli, silindirik gövdeli ve tek şerefelidir. Sekizgen pabucunda firuze ve patlıcan moru sekiz kollu yıldızlı çini mozaik ve sırlı tuğla bezemeleri vardır. Doğu ve kuzey kapılarından girilen harim, mihrap önü kubbesiyle kıble duvarına dik yedi sahından oluşur; kubbeye üçgenlerle geçilir. Kuzey duvarı boyunca mahfil uzanır.\n\nAlçı ve çini mozaikle yapılan mihrap, duvar ağırlığı ve nemden korunması için sivri kemerin içine yerleştirilmiştir. Yarım beşgen niş firuze ve patlıcan moru geometrik mozaiklerle bezelidir. Mukarnas kavsara ile niş arasında kûfi hatla Allah-u Ekber yazısı, bordürlerde altı, dokuz ve on iki kollu yıldızlar vardır. Sağdaki minber yenidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-ulu-sultan-alaattin-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-ulu-sultan-alaattin-mosque/aerial.jpg",
+      "alt": "Geniş kiremit çatılı cami, uzun tuğla minaresi ve çevresindeki şehir",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-ulu-sultan-alaattin-mosque/tiled-mihrab.jpg",
+      "alt": "Tuğla kemer altında turkuaz çini mozaikli mihrap, yanında minber ve önde avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-ulu-sultan-alaattin-mosque/courtyard.jpg",
+      "alt": "Avluda metal çatılı çokgen şadırvan ve arkada cami girişi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-ulu-sultan-alaattin-mosque/tiled-mihrab.jpg",
+      "x": 41,
+      "y": 56,
+      "title": "Çini mozaik mihrap",
+      "text": "Yarım beşgen mihrap nişi firuze ve patlıcan moru çini mozaiklerle süslenmiştir.",
+      "sourceId": "inv-p370"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-ulu-sultan-alaattin-mosque/aerial.jpg",
+      "x": 24,
+      "y": 42,
+      "title": "Tuğla minare",
+      "text": "Avlunun kuzeydoğusundaki minare kare kaideli, silindirik gövdeli ve tek şerefelidir.",
+      "sourceId": "inv-p368"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harim kaç sahından oluşur?",
+      "options": [
+        "İki",
+        "Yedi",
+        "Üç",
+        "Dokuz"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Yedi.",
+      "sourceId": "inv-p368"
+    },
+    {
+      "question": "1811 onarımında çeşmeyi kim ekletmiştir?",
+      "options": [
+        "Emir İshak Bey",
+        "Kemal Güler",
+        "Cihanbeyli Yaralı Yusuf Ağa",
+        "Hacı Cemil"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Cihanbeyli Yaralı Yusuf Ağa.",
+      "sourceId": "inv-p367"
+    },
+    {
+      "question": "Ulu (Sultan Alaattin) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Beyşehir",
+        "Bozkır",
+        "Akşehir"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Akşehir.",
+      "sourceId": "inv-p367"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p367",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ulu (Sultan Alaattin) Camii\"",
+      "page": "367"
+    },
+    {
+      "id": "inv-p368",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ulu (Sultan Alaattin) Camii\"",
+      "page": "368"
+    },
+    {
+      "id": "inv-p369",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ulu (Sultan Alaattin) Camii\"",
+      "page": "369"
+    },
+    {
+      "id": "inv-p370",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ulu (Sultan Alaattin) Camii\"",
+      "page": "370"
+    },
+    {
+      "id": "inv-p371",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ulu (Sultan Alaattin) Camii\"",
+      "page": "371"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

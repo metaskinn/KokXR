@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-gokyurt-village-mosque",
+  "name": "Gökyurt Köyü Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Kitâbesine göre H. 1289 / M. 1874; minare 1957",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Gökyurt Köyü’ndeki 1874 tarihli cami, kesme taş duvarları ve beş sahınlı ahşap destekli harimiyle öne çıkar.",
+  "history": "Cami, Meram, Gökyurt Köyü merkezindedir. Kitâbesine göre H. 1289 / M. 1874’te inşa edilmiş, minaresi 1957’de eklenmiştir.\n\nDoğu-batı doğrultusunda uzanan dikdörtgen planlı cami eğimli bir arazide düzgün kesme taşla yapılmıştır; cephelerdeki ahşap hatıllar dikkat çeker. Doğu ve batı cephelerin iki katında üçer, güney cephede mihrabın iki yanında dörder ve mihrap aksında birer pencere bulunur. Üst kat pencereleri arasındaki siyah madalyonlarda sarı zemin üzerine dört halifenin adları yazılıdır. Giriş kapıları kuzeydoğu ve kuzeybatı cephelerdedir.\n\nHarim, her sırada üç destek olmak üzere dört sıra ahşap destekle kıble duvarına dik beş sahına ayrılır; orta sahın daha geniş ve yüksektir. Kuzeydeki ahşap mahfilin korkuluğuna levhalar asılmıştır. Kıble duvarındaki taş mihrap nişi üçgen şeklinde ve altı sıra mukarnas kavsaralıdır; iki yandaki sütuncelerin başlıkları palmet dizilerinden oluşur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-gokyurt-village-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-gokyurt-village-mosque/aerial-view.jpg",
+      "alt": "Kayalık yamaçtaki köy evleri arasında kiremit çatılı taş cami ve yanında ince minare",
+      "description": "Kayalık yamaçtaki köy evleri arasında kiremit çatılı taş cami ve yanında ince minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-gokyurt-village-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direkli ve ahşap kirişli tavanlı harim, duvarlarda yuvarlak hat levhaları",
+      "description": "Ahşap direkli ve ahşap kirişli tavanlı harim, duvarlarda yuvarlak hat levhaları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-gokyurt-village-mosque/aerial-view.jpg",
+      "x": 22,
+      "y": 40,
+      "title": "Minare",
+      "text": "Caminin minaresi 1957’de eklenmiştir.",
+      "sourceId": "inv-p121"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-gokyurt-village-mosque/prayer-hall.jpg",
+      "x": 35,
+      "y": 60,
+      "title": "Ahşap destekler",
+      "text": "Dört sıra ahşap destek harimi kıble duvarına dik beş sahına ayırır.",
+      "sourceId": "inv-p121"
+    }
+  ],
+  "test": [
+    {
+      "question": "Harim kaç sahından oluşur?",
+      "options": [
+        "Üç",
+        "Beş",
+        "Dört",
+        "Yedi"
+      ],
+      "correct": 1,
+      "description": "Harim kıble duvarına dik beş sahından oluşur.",
+      "sourceId": "inv-p121"
+    },
+    {
+      "question": "Minare hangi yıl eklenmiştir?",
+      "options": [
+        "1874",
+        "1918",
+        "1957",
+        "1991"
+      ],
+      "correct": 2,
+      "description": "Kitap minarenin 1957’de eklendiğini belirtir.",
+      "sourceId": "inv-p121"
+    },
+    {
+      "question": "Üst kat pencereleri arasındaki madalyonlarda ne yazılıdır?",
+      "options": [
+        "Dört halifenin adları",
+        "Ayetler",
+        "İnşa tarihi",
+        "Bani adı"
+      ],
+      "correct": 0,
+      "description": "Siyah madalyonlarda sarı zemin üzerine dört halifenin adları okunur.",
+      "sourceId": "inv-p121"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p121",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Gökyurt Köyü Camii\"",
+      "page": "121"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

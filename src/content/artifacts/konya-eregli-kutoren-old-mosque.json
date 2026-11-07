@@ -1,0 +1,97 @@
+{
+  "id": "konya-eregli-kutoren-old-mosque",
+  "name": "Kutören Eski Camii",
+  "city": "Konya",
+  "district": "Ereğli",
+  "period": "H. 1314 / M. 1896-97",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Ereğli Kutören kasaba mezarlığındaki cami H. 1314 / M. 1896-97'de yapılmıştır.",
+  "history": "Ereğli Kutören kasaba mezarlığındaki cami H. 1314 / M. 1896-97'de yapılmıştır. Vakıflar Bölge Müdürlüğü 2007'de cami ve müştemilatını kapsamlı biçimde yenilemiştir. Avluda su sarnıcı ve imam evi vardır.\n\nKitap yapıyı derinlemesine dikdörtgen planlı, düz damlı ve düzgün kesme taştan olarak tanımlar. Kuzeyde beş bölümlü son cemaat yeri, kuzeydoğuda beden duvarı üstünde minare bulunur. Minare kare kaide üzerinde dört sütun ve konik külahlı köşk/çardak biçimindedir. Enine dikdörtgen harim, mihraba paralel dört sahına ayrılır ve kitapta içten düz damlı olarak anlatılır. Kuzeyde ahşap mahfil vardır. Kıble duvarındaki yarım daire planlı taş mihrabın bordürleri geometrik, nişi kandil ve perde motiflidir. Güneybatıdaki ahşap minber sonradan eklenmiştir. Yapı geç Osmanlı camileri arasında değerlendirilir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-eregli-kutoren-old-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-eregli-kutoren-old-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı taş cami ve sağ köşede küçük köşk biçimli minare",
+      "description": "Kiremit çatılı taş cami ve sağ köşede küçük köşk biçimli minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-eregli-kutoren-old-mosque/prayer-hall.jpg",
+      "alt": "Açık renkli iç mekânda taş sütunlar, mihrap ve ahşap minber",
+      "description": "Açık renkli iç mekânda taş sütunlar, mihrap ve ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-eregli-kutoren-old-mosque/exterior.jpg",
+      "x": 85,
+      "y": 32,
+      "title": "Köşk minare",
+      "text": "Minare dört sütunun taşıdığı konik külahlı köşk biçimindedir.",
+      "sourceId": "inv-p430"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-eregli-kutoren-old-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Taş mihrap",
+      "text": "Kıble duvarının ortasında taş mihrap bulunur.",
+      "sourceId": "inv-p430"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kutören Eski Camii hangi ilçededir?",
+      "options": [
+        "Ereğli",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Kutören Eski Camii, Konya'nın Ereğli ilçesindedir.",
+      "sourceId": "inv-p430"
+    },
+    {
+      "question": "Minare hangi biçimde düzenlenmiştir?",
+      "options": [
+        "Üç şerefeli silindirik",
+        "Dört sütunlu köşk/çardak biçiminde",
+        "İki şerefeli ahşap",
+        "Karesel kulesiz çanlık biçiminde"
+      ],
+      "correct": 1,
+      "description": "Dört sütunlu köşk/çardak biçiminde.",
+      "sourceId": "inv-p430"
+    },
+    {
+      "question": "Avluda imam evi dışında hangi yapı bulunur?",
+      "options": [
+        "Bedesten",
+        "Kervansaray",
+        "Darülhadis",
+        "Su sarnıcı"
+      ],
+      "correct": 3,
+      "description": "Su sarnıcı.",
+      "sourceId": "inv-p430"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p430",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Kutören Eski Camii\"",
+      "page": "430"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

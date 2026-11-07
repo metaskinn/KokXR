@@ -1,0 +1,113 @@
+{
+  "id": "konya-meram-hocacihan-cistern",
+  "name": "Hocacihan Sarnıcı",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Kitapta XII. yüzyıla tarihlendirilir",
+  "endowment": "Banisi Tebrizli Hacı Bahtiyar",
+  "summary": "Hocacihan Hanı'na su sağlayan, beşik tonozlu geniş haznesi bugün kültürel etkinliklerde kullanılan tam gömme sarnıç.",
+  "history": "Sarnıç, Meram'da Yaka Mahallesi'nde, Aziz Mahmut Hüdai Caddesi ile Ezgi Sokak'ın birleştiği köşededir. Banisi, sarnıcın yakınında bir de kervansarayı bulunan Tebrizli Hacı Bahtiyar'dır. Sarnıç \"Devler Sarnıcı\" olarak da anılır.\n\nXII. yüzyıla tarihlendirilen sarnıcın önemli özelliklerinden biri, yakınındaki Hocacihan Hanı'na (Dibidelik Han) su sağlamasıdır. Bölgenin en eski ve en büyük sarnıçlarından biri olan yapı, Yaka Meram'dan gelip Konya-Beyşehir yolunun doğusundan geçen Hocacihan Irmağı'ndan beslenirdi. Yaz aylarında ırmak kuruyunca yaşanan su sıkıntısını gidermek için sarnıç bahar aylarında ırmaktan alınan suyla doldurulurdu. Bugün kuyuyu besleyen kanal izlenememektedir.\n\nYapı \"tam gömme sarnıç\" tipolojisindedir. Geniş haznenin inşasında Sille taşı kullanılmıştır. Toprak altındaki su haznesi doğu-batı doğrultusunda inşa edilmiş ve üzeri beşik tonozla örtülmüştür. Bugün kültürel etkinliklerin yapıldığı bir mekân olarak yeniden işlevlendirilen hazneye muhdes bir girişten ulaşılır.\n\nSarnıcın kullanıldığı dönemlerde su, bileziğin güneyine yerleştirilmiş seren ağaçlarının üzerindeki tapındırık ağacıyla alınırdı. Bugün seren ağaçlarından yalnızca biri ayakta kalabilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-hocacihan-cistern/reservoir-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-hocacihan-cistern/reservoir-hall.jpg",
+      "alt": "Turuncu ışıkla aydınlatılmış, beşik tonozlu uzun taş hazne; zeminde sıra sıra sandalyeler ve en uçta mor ışıklı küçük bir sahne",
+      "description": "Etkinlik mekânı olarak kullanılan hazne",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-hocacihan-cistern/entrance.jpg",
+      "alt": "Taş örgülü, üstü kiremit kaplı bir kütlenin ortasında yuvarlak kemerli cam kapı; solda aşağı inen cam korkuluklu geçit, sağda bilgi panosu",
+      "description": "Hazneye inilen giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-hocacihan-cistern/stairway.jpg",
+      "alt": "İki yanı taş duvarlı, metal korkuluklu dar ve uzun bir merdivenin aşağıdan yukarı görünümü",
+      "description": "Hazneye inen merdiven",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "barrel-vault",
+      "image": "/images/konya-meram-hocacihan-cistern/reservoir-hall.jpg",
+      "x": 50,
+      "y": 15,
+      "title": "Beşik tonoz",
+      "text": "Doğu-batı doğrultusundaki toprak altı su haznesinin üzeri beşik tonozla örtülüdür.",
+      "sourceId": "inv-p239"
+    },
+    {
+      "id": "event-space",
+      "image": "/images/konya-meram-hocacihan-cistern/reservoir-hall.jpg",
+      "x": 50,
+      "y": 75,
+      "title": "Kültürel etkinlik mekânı",
+      "text": "Hazne bugün kültürel etkinliklerin yapıldığı bir mekân olarak yeniden işlevlendirilmiştir.",
+      "sourceId": "inv-p239"
+    },
+    {
+      "id": "new-entrance",
+      "image": "/images/konya-meram-hocacihan-cistern/entrance.jpg",
+      "x": 58,
+      "y": 60,
+      "title": "Muhdes giriş",
+      "text": "Hazne kısmına ulaşım, sonradan yapılmış (muhdes) bir girişten sağlanmaktadır.",
+      "sourceId": "inv-p239"
+    }
+  ],
+  "test": [
+    {
+      "question": "Sarnıç yakınındaki hangi hana su sağlamaktadır?",
+      "options": [
+        "Hocacihan Hanı (Dibidelik Han)",
+        "Zazadin Hanı",
+        "Horozlu Han",
+        "Kızılören Hanı"
+      ],
+      "correct": 0,
+      "description": "Sarnıcın önemli özelliklerinden biri, yakınındaki Hocacihan Hanı'na (Dibidelik Han) su sağlamasıdır.",
+      "sourceId": "inv-p239"
+    },
+    {
+      "question": "Sarnıç halk arasında başka hangi adla anılır?",
+      "options": [
+        "Kırk Sarnıç",
+        "Devler Sarnıcı",
+        "Su Kemeri",
+        "Yeraltı Hanı"
+      ],
+      "correct": 1,
+      "description": "Sarnıç \"Devler Sarnıcı\" olarak da isimlendirilmektedir.",
+      "sourceId": "inv-p239"
+    },
+    {
+      "question": "Sarnıç bahar aylarında neden doldurulurdu?",
+      "options": [
+        "Kışın donmayı önlemek için",
+        "Hanın hamamını ısıtmak için",
+        "Yazın ırmak kuruyunca yaşanan su sıkıntısını gidermek için",
+        "Tarlaları sulamak için"
+      ],
+      "correct": 2,
+      "description": "Yaz aylarında ırmak suyunun kurumasıyla yaşanan su sıkıntısını gidermek için bahar aylarında ırmaktan alınan suyla doldurulurdu.",
+      "sourceId": "inv-p239"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p239",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Hocacihan Sarnıcı\"",
+      "page": "239"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

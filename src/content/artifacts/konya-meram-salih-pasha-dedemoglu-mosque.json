@@ -1,0 +1,104 @@
+{
+  "id": "konya-meram-salih-pasha-dedemoglu-mosque",
+  "name": "Salih Paşa (Dedemoğlu) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "H. 1162 / M. 1748-49",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Kayısılıburun Sokak’taki kerpiç cami, ahşap köşk minaresi ve üç sahınlı harimiyle tanımlanır.",
+  "history": "Cami, Meram’da Kayısılıburun Sokak üzerindedir. Girişindeki yazı H. 1162 / M. 1748-49 tarihini verir. Vakıflar Genel Müdürlüğü yapıyı 1992’de onarmıştır.\n\nKerpiçten inşa edilen caminin batı beden duvarı üzerinde ahşap köşk tipi minare bulunur; minare silindirik gövdeli ve tek şerefelidir. Batıdaki kapıdan girilen harim, mihraba dik uzanan üç sahından oluşur ve düz ahşap tavanla örtülüdür. Kuzeyde ahşap mahfil, kıble duvarında mihrap ve minber vardır. Onarımlarda yenilenen ahşap mihrap duvardan taşan dikdörtgen çerçeveli, yarım daire planlı bir düzenlemeye sahiptir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-salih-pasha-dedemoglu-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-salih-pasha-dedemoglu-mosque/exterior.jpg",
+      "alt": "Ağaçların arkasında sarı sıvalı cami cephesi, giriş kapısı ve çatının üzerinde ahşap köşk minare",
+      "description": "Ağaçların arkasında sarı sıvalı cami cephesi, giriş kapısı ve çatının üzerinde ahşap köşk minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-salih-pasha-dedemoglu-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde beyaz ahşap direkler, solda mihrap ve sağda minber",
+      "description": "Mavi halılı harimde beyaz ahşap direkler, solda mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-salih-pasha-dedemoglu-mosque/minbar.jpg",
+      "alt": "Pencere önünde açık renkli ahşap minber, yeşil örtü ve duvar saati",
+      "description": "Pencere önünde açık renkli ahşap minber, yeşil örtü ve duvar saati",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-salih-pasha-dedemoglu-mosque/exterior.jpg",
+      "x": 41,
+      "y": 24,
+      "title": "Ahşap köşk minare",
+      "text": "Batı beden duvarı üzerindeki köşk tipi minare ahşaptır.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-salih-pasha-dedemoglu-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Üç sahınlı harim",
+      "text": "Düz ahşap tavanlı harim, mihraba dik uzanan üç sahına ayrılmıştır.",
+      "sourceId": "inv-p148"
+    }
+  ],
+  "test": [
+    {
+      "question": "Girişte hangi inşa tarihi yazılıdır?",
+      "options": [
+        "H. 1162 / M. 1748-49",
+        "1421",
+        "1908",
+        "1930"
+      ],
+      "correct": 0,
+      "description": "Girişte H. 1162 / M. 1748-49 tarihi yazılıdır.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "question": "Cami hangi malzemeden inşa edilmiştir?",
+      "options": [
+        "Betonarme",
+        "Tamamen mermer",
+        "Kerpiç",
+        "Çelik"
+      ],
+      "correct": 2,
+      "description": "Kitap, caminin kerpiçten inşa edildiğini belirtir.",
+      "sourceId": "inv-p148"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "Bir",
+        "Üç",
+        "İki",
+        "Beş"
+      ],
+      "correct": 1,
+      "description": "Harim mihraba dik uzanan üç sahınlıdır.",
+      "sourceId": "inv-p148"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p148",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Salih Paşa (Dedemoğlu) Camii\"",
+      "page": "148"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

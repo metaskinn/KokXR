@@ -1,0 +1,123 @@
+{
+  "id": "konya-meram-bulgur-dede-masjid",
+  "name": "Bulgur Dede Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Selçuklu · XIII. yüzyıl (inşa tekniği, malzeme ve süslemelerine göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Anadolu Türk mimarisinde ender görülen fütüvvet yapılarından biri olan, firuze ve patlıcan moru mozaik çinileriyle tanınan Selçuklu mescidi.",
+  "history": "Mescit, Meram İlçesi, Sephavan Mahallesi, Bulgur Dede Sokak'ta, Aziziye Camii'nin batısında yer almaktadır. Anadolu Türk mimarisinde ender rastlanan fütüvvet yapılarından biri olan Bulgur Tekkesi'nin banisi ve inşa tarihi bilinmemektedir. İbrahim Hakkı Konyalı, halk arasında \"bulgurcuk\" denilen kaşıntılı hastalığa yakalananların buraya getirildiğini kaydeder; hastaların burada şifa bulacağına inanıldığı için yapıya \"Bulgur Tekkesi\" adının verildiği rivayet edilir.\n\nMescidin üzerinde kim tarafından ve ne zaman yaptırıldığını gösteren bir kitâbe yoktur; ancak inşa tekniği, malzeme ve süslemeleri bakımından XIII. yüzyılda, Selçuklu devrinde yapıldığı anlaşılmaktadır.\n\nKare planlı mescit; tek kubbeli bir harim, üç bölümlü son cemaat yeri, türbe ve zaviye bölümlerinden oluşur. Kuzeydoğudaki silindirik gövdeli ahşap minare sonradan eklenmiştir. Beden duvarlarının alt seviyesinde iri Gödene taşı, üst kısımlarda ve kubbede tuğla kullanılmıştır. Güney cephede üç, doğu cephede iki adet iki katlı pencere vardır; alttaki pencereler düz lentolu, üsttekiler sivri kemerlidir. Sivri kemerli pencerelerin köşeliklerinde firuze ve patlıcan moru mozaik çinilerden geometrik süslemeler yer alır. Giriş kapısı kuzeydoğudadır.\n\nDoğu-batı yönünde uzanan dikdörtgen planlı son cemaat yerinin özgün üst örtüsü yıkılmış, bugün düz damla örtülmüştür. Kuzeyinde ortada serbest duran iki, yanlarda beden duvarlarına bitişik iki yarım sütun bulunur; sütunların başlık ve kaidelerinin köşeleri mukarnaslıdır. Son cemaat yerinin doğusundaki merdiven harime, batısındaki türbeye çıkar. Bu mekânın güney duvarının ortasındaki anıtsal mihrabın dikdörtgen nişi on sıra mukarnas kavsaralıdır.\n\nKuzey-güney yönünde uzanan dikdörtgen planlı türbe beşik tonozla örtülüdür. Harime sivri kemerli bir kapıdan geçilir; kare planlı harim Türk üçgeni geçişli bir kubbeyle örtülüdür. Duvarlar belli bir yüksekliğe kadar altıgen firuze çinilerle kaplıdır; dökülen çiniler yeniden yapılmıştır. Kıble duvarının ortasındaki dikdörtgen mihrap nişinin iç yüzünde firuze ve patlıcan moru mozaik çinilerden stilize \"Ali\" yazıları ve aralarına serpiştirilmiş çok kollu yıldızlar vardır.\n\nHarimin batısında dikdörtgen planlı, beşik tonoz örtülü zaviye yer alır. Harimin altındaki kare planlı, düz dam örtülü zemin kata harimin kuzeybatısındaki açıklıktan merdivenle inilir. Son cemaat yerindeki mezarın Arapça yazılmış 3 satırlık şahidesi, kabrin Şeyh Mahmud oğlu Seyyid Ahmet'e ait olduğunu ve H. 847 / M. 1443 yılının Şaban ayına tarihlendiğini gösterir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-bulgur-dede-masjid/prayer-hall.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-bulgur-dede-masjid/prayer-hall.jpg",
+      "alt": "Harim içi: tuğla örgülü kubbe, sivri kemerli pencereler, alt kısımları firuze çinilerle kaplı duvarlar, sağda ahşap minber ve kırmızı halı",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-bulgur-dede-masjid/tiled-window.jpg",
+      "alt": "Tuğla duvarda sivri kemerli pencere; kemerin üstü ve köşelikleri firuze ve lacivert geometrik mozaik çinilerle kaplı",
+      "description": "Çini süslemeli pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-bulgur-dede-masjid/mosaic-tiles.jpg",
+      "alt": "Yakın plan: firuze ve koyu mor şeritlerin birbirine geçtiği geometrik mozaik çini deseni, aralarda küçük yıldızlar",
+      "description": "Firuze ve patlıcan moru mozaik çini",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "brick-dome",
+      "image": "/images/konya-meram-bulgur-dede-masjid/prayer-hall.jpg",
+      "x": 60,
+      "y": 9,
+      "title": "Tuğla kubbe",
+      "text": "Beden duvarlarının üst kısımlarında ve kubbede tuğla malzeme kullanılmıştır.",
+      "sourceId": "inv-p75"
+    },
+    {
+      "id": "hexagonal-tiles",
+      "image": "/images/konya-meram-bulgur-dede-masjid/prayer-hall.jpg",
+      "x": 96,
+      "y": 52,
+      "title": "Firuze çini kaplama",
+      "text": "Harimin duvarları belli bir yüksekliğe kadar altıgen firuze çinilerle kaplıdır.",
+      "sourceId": "inv-p76"
+    },
+    {
+      "id": "window-spandrel",
+      "image": "/images/konya-meram-bulgur-dede-masjid/tiled-window.jpg",
+      "x": 15,
+      "y": 45,
+      "title": "Pencere köşelikleri",
+      "text": "Sivri kemerli pencerelerin köşeliklerinde firuze ve patlıcan moru mozaik çinilerden geometrik süslemeler vardır.",
+      "sourceId": "inv-p75"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapıya \"Bulgur Tekkesi\" adının verilmesi hangi rivayete dayanır?",
+      "options": [
+        "Bulgur tüccarlarının yaptırmasına",
+        "Bulgurcuk denilen kaşıntılı hastalığa yakalananların burada şifa bulacağına inanılmasına",
+        "Avlusunda bulgur dövülmesine",
+        "Banisinin lakabına"
+      ],
+      "correct": 1,
+      "description": "İbrahim Hakkı Konyalı, bulgurcuk denilen hastalığa yakalananların buraya getirildiğini kaydeder; şifa bulunacağına inanıldığı için bu adın verildiği rivayet edilir.",
+      "sourceId": "inv-p75"
+    },
+    {
+      "question": "Mescidin minaresi hakkında hangisi doğrudur?",
+      "options": [
+        "Kesme taştan, çift şerefelidir",
+        "Tuğla gövdeli ve çinilidir",
+        "Silindirik gövdeli ahşap minaredir ve sonradan eklenmiştir",
+        "Mescidin minaresi yoktur"
+      ],
+      "correct": 2,
+      "description": "Mescidin kuzeydoğusundaki silindirik gövdeli ahşap minare sonradan eklenmiştir.",
+      "sourceId": "inv-p75"
+    },
+    {
+      "question": "Harimin kubbesine geçiş nasıl sağlanmıştır?",
+      "options": [
+        "Pandantiflerle",
+        "Tromplarla",
+        "Kasnaksız",
+        "Türk üçgeniyle"
+      ],
+      "correct": 3,
+      "description": "Kare planlı harim, Türk üçgeni geçişli bir kubbeyle örtülüdür.",
+      "sourceId": "inv-p76"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p75",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Bulgur Dede Mescidi\"",
+      "page": "75"
+    },
+    {
+      "id": "inv-p76",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Bulgur Dede Mescidi\"",
+      "page": "76"
+    },
+    {
+      "id": "inv-p77",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Bulgur Dede Mescidi\"",
+      "page": "77"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

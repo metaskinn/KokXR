@@ -1,0 +1,104 @@
+{
+  "id": "konya-karatay-toraman-masjid",
+  "name": "Toraman Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XX. yüzyıl başlarında yapıldığı düşünülmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Sarnıç Mahallesi’ndeki Toraman Mescidi, renkli fırfır motifli tavan göbeği ve ahşap iç donanımıyla tanımlanır.",
+  "history": "Mescit, Karatay, Sarnıç Mahallesi, Şeyh Ulema Recep Ağa Caddesi’ndedir. İnşa tarihi ve banisi bilinmez; mimari özellikleriyle XX. yüzyıl başlarına tarihlendirilmektedir.\n\nEnlemesine dikdörtgen planlı yapı içeriden düz ahşap tavan, dışarıdan dört yöne eğimli kırma çatıyla örtülüdür. Moloz taş duvarlar sıvalıdır. Alt sırada düz lentolu dikdörtgen, üstte daha küçük pencereler bulunur. Güney cephenin batı köşesinden harime girilir. Tavanın ortasında renkli fırfır motifli göbek vardır. Kuzeyde ahşap mahfil, kıble duvarında yarım daire planlı ahşap mihrap bulunur. Güneybatıdaki ahşap minberin korkuluk ve süpürgelik bölümleri bezemelidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-toraman-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-toraman-masjid/exterior.jpg",
+      "alt": "Kiremit çatılı alçak yapının açık renk cephesi, kapısı ve iki sıradaki pencereleri; arkada yeşil kubbe",
+      "description": "Kiremit çatılı alçak yapının açık renk cephesi, kapısı ve iki sıradaki pencereleri; arkada yeşil kubbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-toraman-masjid/ceiling-medallion.jpg",
+      "alt": "Beyaz ahşap tavanda çiçekli ve çok renkli ışınsal desenli yuvarlak göbek, ortasında avize",
+      "description": "Beyaz ahşap tavanda çiçekli ve çok renkli ışınsal desenli yuvarlak göbek, ortasında avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-toraman-masjid/mihrab.jpg",
+      "alt": "Yeşil ahşap çerçeveli mihrap, iki yanında pencereler ve kırmızı halı",
+      "description": "Yeşil ahşap çerçeveli mihrap, iki yanında pencereler ve kırmızı halı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-toraman-masjid/ceiling-medallion.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Fırfır motifli tavan göbeği",
+      "text": "Harimin tavan ortasında renkli fırfır motifli göbek bulunur.",
+      "sourceId": "inv-p205"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-toraman-masjid/mihrab.jpg",
+      "x": 48,
+      "y": 53,
+      "title": "Ahşap mihrap",
+      "text": "Kıble duvarındaki ahşap mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p205"
+    }
+  ],
+  "test": [
+    {
+      "question": "Tavan göbeğinde hangi motif vardır?",
+      "options": [
+        "Balıksırtı",
+        "Çift başlı kartal",
+        "Gemi",
+        "Renkli fırfır"
+      ],
+      "correct": 3,
+      "description": "Kitap renkli fırfır motifli tavan göbeğini belirtir.",
+      "sourceId": "inv-p205"
+    },
+    {
+      "question": "Yapının duvar malzemesi nedir?",
+      "options": [
+        "Çelik",
+        "Moloz taş",
+        "Cam",
+        "Tamamen mermer"
+      ],
+      "correct": 1,
+      "description": "Mescit moloz taş malzemeden yapılmış ve sıvanmıştır.",
+      "sourceId": "inv-p205"
+    },
+    {
+      "question": "Harimin planı nasıldır?",
+      "options": [
+        "Enlemesine dikdörtgen",
+        "Dairesel",
+        "Sekizgen",
+        "Üçgen"
+      ],
+      "correct": 0,
+      "description": "Mescit enlemesine dikdörtgen planlıdır.",
+      "sourceId": "inv-p205"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p205",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Toraman Mescidi\"",
+      "page": "205"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

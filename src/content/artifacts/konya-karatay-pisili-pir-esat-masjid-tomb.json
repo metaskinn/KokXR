@@ -1,0 +1,111 @@
+{
+  "id": "konya-karatay-pisili-pir-esat-masjid-tomb",
+  "name": "Pisili (Pir Esat) Mescit ve Türbesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Selçuklu · XIII. yüzyıl; türbe ve zaviye 1440’ta yenilenmiş; yeni cami 1989",
+  "endowment": "Pîr Esad; 1440 yenilemesini yaptıran Mûsâ Paşa; Selçuklu ve Karamanoğulları vakıfları",
+  "summary": "Adak Sokak’taki manzumeden kalan tuğla türbe, eski mescidin yerine 1989’da batıda yapılan yeni camiyle birlikte anılır.",
+  "history": "Adak Sokak’taki mescit, türbe ve zaviyeden oluşan manzume, kitapta XIII. yüzyılın ikinci yarısında Pîr Esad tarafından yaptırılmış olarak anlatılır. Pîr Esad’ın vefat tarihi türbe mezar taşında H. 662 / M. 1264 olarak yer alır. Kitapta ona Pisili Sultan denmesini açıklayan, kedisinin zehirli sütü içerek kendisini kurtardığı bir menkıbe aktarılır; küçük sandukanın kedisine ait olduğu halk inancı olarak belirtilir.\n\nTürbe ve zaviye 1440’ta Karamanoğulları ümerasından Mûsâ Paşa tarafından yeniden yaptırılmış, pek çok vakıf eklenmiştir. Selçuklu döneminde de bu manzumeye vakıflar ayrılmıştır. Kerpiç mescit 1980’lere kadar kullanılmış; 1982’de Dr. A. Rıza Bahadır’ın yeni cami başvurusu sonrasında tescili kaldırılarak yıkılmıştır. Yeni cami eski mescidin otuz metre batısına 1989’da, A. Sami Ülgen’in A tipi projesiyle tek minareli ve merkezî kubbeli yapılmıştır; kuzeyde yedi bölümlü son cemaat yeri bulunur.\n\nGünümüze kalan eski türbe kareye yakın dikdörtgen planlı, çapraz tonozlu ve tamamen tuğladır. Doğuda kapısı, batıda alçı cüz rafı vardır. Ortasında Pîr Esad’a ait beyaz sıvalı sanduka ve başucunda beş satırlık Arapça mezar taşı bulunur. Yarıya kadar yıkılan türbe Vakıflar Bölge Müdürlüğü tarafından onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-pisili-pir-esat-masjid-tomb/new-mosque.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-pisili-pir-esat-masjid-tomb/new-mosque.jpg",
+      "alt": "Gece aydınlatmasıyla merkezî kubbeli, küçük kubbeli revaklı ve tek minareli yeni cami",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-pisili-pir-esat-masjid-tomb/brick-tomb.jpg",
+      "alt": "Ağaçlar yanında düz hatlı tuğla duvarları ve küçük pencereleri olan eski türbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-pisili-pir-esat-masjid-tomb/tomb-interior.jpg",
+      "alt": "Tuğla duvarlı mekânda yeşil örtülü büyük sanduka ve başucundaki taş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-pisili-pir-esat-masjid-tomb/new-mosque.jpg",
+      "x": 43,
+      "y": 38,
+      "title": "Yeni caminin kubbesi",
+      "text": "1989’da yapılan yeni cami merkezî kubbeyle örtülüdür.",
+      "sourceId": "inv-p252"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-pisili-pir-esat-masjid-tomb/brick-tomb.jpg",
+      "x": 44,
+      "y": 54,
+      "title": "Tuğla türbe",
+      "text": "Türbe tamamen tuğladan, kareye yakın dikdörtgen planlı ve çapraz tonozlu yapılmıştır.",
+      "sourceId": "inv-p253"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yeni cami eski mescidin hangi yönünde yapılmıştır?",
+      "options": [
+        "Otuz metre batısında",
+        "Otuz metre doğusunda",
+        "Kuzeyinde",
+        "Güneyinde"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Otuz metre batısında.",
+      "sourceId": "inv-p252"
+    },
+    {
+      "question": "Eski türbenin ana yapı malzemesi nedir?",
+      "options": [
+        "Ahşap",
+        "Tuğla",
+        "Mermer",
+        "Kerpiç"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Tuğla.",
+      "sourceId": "inv-p253"
+    },
+    {
+      "question": "Pisili (Pir Esat) Mescit ve Türbesi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Beyşehir",
+        "Karatay",
+        "Bozkır"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p251"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p251",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Pisili (Pir Esat) Mescit ve Türbesi\"",
+      "page": "251"
+    },
+    {
+      "id": "inv-p252",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Pisili (Pir Esat) Mescit ve Türbesi\"",
+      "page": "252"
+    },
+    {
+      "id": "inv-p253",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Pisili (Pir Esat) Mescit ve Türbesi\"",
+      "page": "253"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

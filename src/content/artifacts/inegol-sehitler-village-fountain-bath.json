@@ -1,0 +1,97 @@
+{
+  "id": "inegol-sehitler-village-fountain-bath",
+  "name": "Şehitler Köyü Çeşmesi ve Hamamı",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "İnşa tarihi kitapta belirtilmemiştir",
+  "endowment": "Doğrudan vakıf kaydı yoktur; köy camisinin belgeleri doğrultusunda vakıf yapısı olduğu değerlendirilmiştir",
+  "summary": "Şehitler Köyü Çeşmesi ve Hamamı, güney duvarındaki çeşmesi, kubbeli hacimleri ve terk edilmiş durumuyla kitapta kayıtlı bir su yapısıdır.",
+  "history": "Şehitler köyü eski kaynaklarda Doma ve Bekceviz adlarıyla anılır. Kurtuluş Savaşı’nda verilen şehitler nedeniyle 1970’ten itibaren Şehitler adı kullanılmaktadır. Tarihî hamamın güney duvarında, eksenin batısında bir çeşme bulunur. Batı ve güney duvarlarının ortasında birer mermer kurna vardır. Çeşmenin kitabesi ve ayrıntılı bilgisi günümüze ulaşmamıştır.\n\nHamamın da kitabesi bulunmaz ve Vakıflar Genel Müdürlüğü Arşivi’nde doğrudan vakıf kaydına rastlanmamıştır. Kitap, köy camisinin vakfiyesine ilişkin belgelerin değerlendirilmesiyle hamamın da vakıf yapısı olduğu kanaatine varıldığını belirtir.\n\nKuzey-güney yönünde düzensiz dikdörtgen planlı hamam; giriş mekânı, daha büyük soyunmalık, kare ılıklık, sıcaklık, daha küçük temizlik birimi ve doğu-batı yönündeki dikdörtgen su deposundan oluşur. Dış duvarları moloz taş ve aralarda tuğlayla örülüdür; sıva kalıntıları görülür. Kubbeleri dıştan beton kaplıdır. Kitap, içinin tamamen sıvalı olduğunu ve hamamın terk edilmiş durumda bulunduğunu bildirir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-sehitler-village-fountain-bath/fountain.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-sehitler-village-fountain-bath/fountain.jpg",
+      "alt": "Yıpranmış taş duvar üzerinde sıvalı kemerli çeşme cephesi ve önünde uzun su teknesi; çevresinde otlar",
+      "description": "Yıpranmış taş duvar üzerinde sıvalı kemerli çeşme cephesi ve önünde uzun su teknesi; çevresinde otlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-sehitler-village-fountain-bath/bath-exterior.jpg",
+      "alt": "Evler arasında taş duvarlı alçak hamam; beton örtü üzerinde küçük kubbeler ve önde yıkık duvarlar",
+      "description": "Evler arasında taş duvarlı alçak hamam; beton örtü üzerinde küçük kubbeler ve önde yıkık duvarlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-sehitler-village-fountain-bath/fountain.jpg",
+      "x": 48,
+      "y": 52,
+      "title": "Güney duvarındaki çeşme",
+      "text": "Çeşme, hamamın güney duvarında eksenin batısında yer alır.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-sehitler-village-fountain-bath/bath-exterior.jpg",
+      "x": 46,
+      "y": 38,
+      "title": "Beton kaplı kubbeler",
+      "text": "Kitap hamamın kubbelerinin dıştan betonla kaplandığını belirtir.",
+      "sourceId": "inv-p196"
+    }
+  ],
+  "test": [
+    {
+      "question": "Köy 1970’ten itibaren hangi adla anılır?",
+      "options": [
+        "Doma",
+        "Şehitler",
+        "Ortaköy",
+        "Tahtaköprü"
+      ],
+      "correct": 1,
+      "description": "Köy 1970’ten itibaren Şehitler adını almıştır.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "question": "Çeşme hamamın hangi duvarındadır?",
+      "options": [
+        "Doğu",
+        "Kuzey",
+        "Güney",
+        "Batı"
+      ],
+      "correct": 2,
+      "description": "Çeşme güney duvarında eksenin batısındadır.",
+      "sourceId": "inv-p196"
+    },
+    {
+      "question": "Kitap hamamın durumunu nasıl kaydeder?",
+      "options": [
+        "Terk edilmiş",
+        "İbadete açık",
+        "Okul olarak kullanımda",
+        "Müze olarak kullanımda"
+      ],
+      "correct": 0,
+      "description": "Kitap hamamın terk edilmiş durumda olduğunu bildirir.",
+      "sourceId": "inv-p196"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p196",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Şehitler Köyü Çeşmesi ve Hamamı\"",
+      "page": "196"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

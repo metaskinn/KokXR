@@ -1,0 +1,102 @@
+{
+  "id": "konya-doganhisar-yegin-mosque",
+  "name": "Yeğin Camii",
+  "city": "Konya",
+  "district": "Doğanhisar",
+  "period": "XVIII-XIX. yüzyıl olarak değerlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Doğanhisar Yeğin Mahallesi merkezindeki cami eğimli arazi üzerindedir.",
+  "history": "Doğanhisar Yeğin Mahallesi merkezindeki cami eğimli arazi üzerindedir. Kitabesi bulunmaz; planı, mimari öğeleri ve bezemeleri XVIII-XIX. yüzyıla işaret eder. Kuzeydoğusuna bağımsız minare sonradan eklenmiştir. Derinlemesine dikdörtgen planlı, ahşap direkli ve tavanlı yapı kırma çatılıdır; doğudaki iki kapıdan girilir.\n\nKuzey üst bölüm kadınlar mahfilidir. Harim ahşap sütunlarla üç sahına ayrılır. Duvarlarda panolar ve madalyonlar içinde celî sülüs yazılar, ayet, hadis, dualar ve Osmanlı arması vardır. Ahşap tavanın dikdörtgen göbeği bitkisel süslemelidir. Kıble duvarının giriş eksenindeki mihrap yarım daire planlı ve yarım kubbe kavsaralıdır. Nişte istiridye kabuğu ve perde motifleri, çevre bordürde bitkisel bezemeler görülür. İkiz sütuncelerin taşıdığı sivri kemerde Ayet'el-Kürsi, alınlık ve dikdörtgen kartuşta mihrap ayeti yazılıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-doganhisar-yegin-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-doganhisar-yegin-mosque/aerial-view.jpg",
+      "alt": "Kiremit çatılı cami, ince minaresi ve çevredeki evler",
+      "description": "Kiremit çatılı cami, ince minaresi ve çevredeki evler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-doganhisar-yegin-mosque/prayer-hall.jpg",
+      "alt": "Ahşap direkli harimde bezemeli mihrap duvarı ve parlak ahşap tavan",
+      "description": "Ahşap direkli harimde bezemeli mihrap duvarı ve parlak ahşap tavan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-doganhisar-yegin-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 51,
+      "title": "Mihrap",
+      "text": "Mihrap nişi istiridye kabuğu ve perde motifleriyle bezelidir.",
+      "sourceId": "inv-p425"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-doganhisar-yegin-mosque/prayer-hall.jpg",
+      "x": 13,
+      "y": 55,
+      "title": "Ahşap sütunlar",
+      "text": "Ahşap sütunlar harimi üç sahına ayırır.",
+      "sourceId": "inv-p425"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yeğin Camii hangi ilçededir?",
+      "options": [
+        "Doğanhisar",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Yeğin Camii, Konya'nın Doğanhisar ilçesindedir.",
+      "sourceId": "inv-p424"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "İki",
+        "Üç",
+        "Dört",
+        "Altı"
+      ],
+      "correct": 1,
+      "description": "Üç.",
+      "sourceId": "inv-p425"
+    },
+    {
+      "question": "Harime hangi cephedeki iki kapıdan girilir?",
+      "options": [
+        "Kuzey",
+        "Batı",
+        "Güney",
+        "Doğu"
+      ],
+      "correct": 3,
+      "description": "Doğu.",
+      "sourceId": "inv-p424"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p424",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Doğanhisar, \"Yeğin Camii\"",
+      "page": "424"
+    },
+    {
+      "id": "inv-p425",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Doğanhisar, \"Yeğin Camii\"",
+      "page": "425"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

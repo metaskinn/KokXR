@@ -1,0 +1,127 @@
+{
+  "id": "hatay-antakya-affan-ertugrul-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Affan (Ertuğrul) Camii",
+  "period": "Osmanlı · 1894/95",
+  "endowment": "Affan adlı hayırsever",
+  "summary": "Affan Camii, dikdörtgen harimi ve II. Abdülhamid tuğralı kitabesiyle tanıtılan bir Osmanlı eseridir.",
+  "history": "Antakya’nın eski mahalleleri içindeki caminin üç yanı sokaklarla çevrilidir. II. Abdülhamid tuğrasının bulunduğu kitabesi 1894/95 tarihini verir. Banisi Affan adlı hayırseverdir; Ertuğrul adının kullanılması kitapta padişahın köklerine duyduğu saygıyla ilişkilendirilir. İki sade kapıyla küçük avluya, tuğralı kitabenin altındaki kapıyla dikdörtgen harime girilir. Harim düz ahşap tavanlıdır; sade mihrap, ahşap minber ve Hızır Peygamber anısına yapılmış makam bulunur. Makam mihrap duvarı ve yan duvarlardaki pencerelerle aydınlatılır. Avlunun güneyine bakan duvarda 1926 tarihli kesme taş çeşme, ortada şadırvan vardır. Minare yuvarlak gövdelidir. 1995 onarımında tavan ve duvarlarda hasır örgü uygulanmış, yapı 2008’de Hatay Vakıflar Bölge Müdürlüğünce restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-affan-ertugrul-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-affan-ertugrul-mosque/book-view-1.jpg",
+      "alt": "Avlu duvarı arkasında yuvarlak gövdeli minare ve kiremitli yapılar",
+      "description": "Affan (Ertuğrul) Camii — kitaptaki görünüm 1 (s. 198–199)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-affan-ertugrul-mosque/book-view-2.jpg",
+      "alt": "Mavi halılı uzun odada ahşap tavan, pencere ve asılı avizeler",
+      "description": "Affan (Ertuğrul) Camii — kitaptaki görünüm 2 (s. 200–201)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-affan-ertugrul-mosque/book-view-1.jpg",
+      "x": 65,
+      "y": 42,
+      "title": "Minare",
+      "text": "Caminin minaresi yuvarlak gövdelidir.",
+      "sourceId": "inv-p204"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-affan-ertugrul-mosque/book-view-2.jpg",
+      "x": 52,
+      "y": 14,
+      "title": "Ahşap tavan",
+      "text": "Dikdörtgen harim düz ahşap tavanlı olarak anlatılır.",
+      "sourceId": "inv-p202"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin diğer adı nedir?",
+      "options": [
+        "Şirince",
+        "Sermaye",
+        "Orhaniye",
+        "Ertuğrul"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Ertuğrul.",
+      "sourceId": "inv-p200"
+    },
+    {
+      "question": "Camiyi yaptıran hayırseverin adı nedir?",
+      "options": [
+        "Affan",
+        "Recez",
+        "Tevfik",
+        "Medeni Halil"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Affan.",
+      "sourceId": "inv-p201"
+    },
+    {
+      "question": "Avlu duvarındaki çeşme hangi tarihlidir?",
+      "options": [
+        "1842",
+        "1926",
+        "1906",
+        "1718"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: 1926.",
+      "sourceId": "inv-p204"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p200",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Affan (Ertuğrul) Camii\"",
+      "page": "200"
+    },
+    {
+      "id": "inv-p201",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Affan (Ertuğrul) Camii\"",
+      "page": "201"
+    },
+    {
+      "id": "inv-p202",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Affan (Ertuğrul) Camii\"",
+      "page": "202"
+    },
+    {
+      "id": "inv-p203",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Affan (Ertuğrul) Camii\"",
+      "page": "203"
+    },
+    {
+      "id": "inv-p204",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Affan (Ertuğrul) Camii\"",
+      "page": "204"
+    },
+    {
+      "id": "inv-p205",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Affan (Ertuğrul) Camii\"",
+      "page": "205"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Affan (Ertuğrul) Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

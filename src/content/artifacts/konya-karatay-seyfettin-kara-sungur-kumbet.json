@@ -1,0 +1,118 @@
+{
+  "id": "konya-karatay-seyfettin-kara-sungur-kumbet",
+  "name": "Seyfettin Kara Sungur Kümbeti",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Anadolu Selçuklu · III. Keyhüsrev dönemi (Seyfettin Karasungur 1266-1284 yılları arasında yaşamıştır); türbe onun vefatından önce yaptırılmıştır",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Celaleddin Karatay'ın kardeşi Seyfettin Karasungur için vefatından önce yaptırılan, sekizgen planlı, dıştan külahla örtülü Selçuklu kümbeti.",
+  "history": "Kümbet, Karatay ilçesi, Şems Mahallesi, Mehterhane Sokak üzerindedir. Türbe önceden Dibi Çıkmaz Sokak üzerinde kalırken sonradan sokak üzerine çıkarılmıştır.\n\nSeyfettin Karasungur'un 1266-1284 yılları arasında, III. Keyhüsrev döneminde yaşadığı bilinmektedir; Celaleddin Karatay'ın kardeşidir. Türbe, Seyfettin Karasungur'un vefatından önce yaptırılmıştır. Bir dönem ahır olarak kullanılan yapı, 1960'lı yıllarda Konya ve Mülhakı Eski Eserler Sevenler Derneği tarafından onarılmış ve adliye deposu olarak kullanılmıştır. 1998'de Vakıflar Bölge Müdürlüğü tarafından yeniden onarılmıştır.\n\nTürbe sekizgen planlıdır; üzeri içten kubbe, dıştan külahla örtülüdür. Alt katta kripta, üst katta ise sembolik sanduka bulunduğu belirtilir. Ana giriş doğu cephededir; doğu cephe bir dönem kapatılmış, girişler batı cepheye açılan küçük bir kapıdan sağlanmış, tadilatlar sırasında bu kapının üzerine bir pencere de açılmıştır.\n\nGövdede taş ve tuğla birlikte kullanılmış; giriş cephesi mermerden, kubbe ve külah tuğladan yapılmıştır. Cephe duvarları köşelerdeki tuğla örgülü plasterlerle külahın eteğine kadar yükselen dikdörtgen panolara ayrılır. Bu süslemelerde yatay ve dikey hatlarla birbirine dolanan sekizgenler ana kompozisyonu oluşturur; bazı cephelerde eşkenar dörtgen kompozisyonlar da görülür. Panolara kemerler ve bunların içine küçük mazgal pencereler yerleştirilmiştir; pencerelerde Bizans dönemi devşirme sütunlar kullanılmıştır.\n\nİçte sekizgen gövde, iki merkezli kemerler yardımıyla on altıgene dönüştürülerek kubbe oturtulmuştur. Kitabın aynı sayfasında türbe içinde sanduka bulunmadığı da yazılıdır; kriptaya inen merdivenler günümüzde kapatılmıştır. Türbe, Selçuklu türbe geleneğini yansıtan en güzel örneklerden biri olarak değerlendirilir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-seyfettin-kara-sungur-kumbet/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-seyfettin-kara-sungur-kumbet/exterior.jpg",
+      "alt": "Gök mavisi önünde tuğla ve taş örgülü, sekizgen gövdeli kümbet; üstte sivri tuğla külah, cephelerde küçük dikdörtgen pencereler ve önünde yeşil bir çalı",
+      "description": "Kümbetin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-seyfettin-kara-sungur-kumbet/dome-interior.jpg",
+      "alt": "Aşağıdan yukarı bakış: tuğla örgülü kubbe iç yüzeyi ve kubbenin altından geçen, kare oluşturacak şekilde kesişen dört koyu ahşap kiriş",
+      "description": "Kubbenin içten görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-seyfettin-kara-sungur-kumbet/interior.jpg",
+      "alt": "Tuğla ve taş duvarlı loş iç mekân; arka duvarda aydınlık bir kapı açıklığı, taş döşeli zeminde ahşap kaplamalı kırmızı-kahve bir sanduka",
+      "description": "İç mekân",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cone",
+      "image": "/images/konya-karatay-seyfettin-kara-sungur-kumbet/exterior.jpg",
+      "x": 48,
+      "y": 20,
+      "title": "Tuğla külah",
+      "text": "Türbenin üzeri dıştan külahla örtülüdür; kubbe ve külah tuğla malzemeden yapılmıştır.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "id": "loophole-window",
+      "image": "/images/konya-karatay-seyfettin-kara-sungur-kumbet/exterior.jpg",
+      "x": 62,
+      "y": 57,
+      "title": "Mazgal pencere",
+      "text": "Cephelerdeki panolara kemerler ve içlerine küçük mazgal pencereler yerleştirilmiştir.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "id": "dome",
+      "image": "/images/konya-karatay-seyfettin-kara-sungur-kumbet/dome-interior.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Kubbe",
+      "text": "İçte sekizgen gövde iki merkezli kemerlerle on altıgene dönüştürülmüş ve kubbe oturtulmuştur.",
+      "sourceId": "inv-p154"
+    }
+  ],
+  "test": [
+    {
+      "question": "Seyfettin Karasungur kimin kardeşidir?",
+      "options": [
+        "Sahip Ata Fahreddin Ali",
+        "Celaleddin Karatay",
+        "I. Alaaddin Keykubat",
+        "Emir İshak Bey"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre Seyfettin Karasungur, Celaleddin Karatay'ın kardeşidir.",
+      "sourceId": "inv-p153"
+    },
+    {
+      "question": "Türbe 1960'lı yıllardaki onarımdan sonra ne olarak kullanılmıştır?",
+      "options": [
+        "Okul",
+        "Müze",
+        "Kütüphane",
+        "Adliye deposu"
+      ],
+      "correct": 3,
+      "description": "Bir dönem ahır olarak kullanılan türbe, 1960'larda onarılıp adliye deposu olarak kullanılmıştır.",
+      "sourceId": "inv-p153"
+    },
+    {
+      "question": "Kümbetin planı nasıldır?",
+      "options": [
+        "Sekizgen",
+        "Kare",
+        "Daire",
+        "Dikdörtgen"
+      ],
+      "correct": 0,
+      "description": "Türbe sekizgen planlıdır; üzeri içten kubbe, dıştan külahla örtülüdür.",
+      "sourceId": "inv-p153"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p153",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Seyfettin Kara Sungur Kümbeti\"",
+      "page": "153"
+    },
+    {
+      "id": "inv-p154",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Seyfettin Kara Sungur Kümbeti\"",
+      "page": "154"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

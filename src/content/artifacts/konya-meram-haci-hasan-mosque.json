@@ -1,0 +1,118 @@
+{
+  "id": "konya-meram-haci-hasan-mosque",
+  "name": "Hacı Hasan Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Kitâbeye göre H. 1215 / M. 1801; yerindeki ilk yapı 1409, Karamanoğulları dönemi",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Karamanoğulları döneminden kalan yapının yerine kitâbesine göre 1801’de yaptırılan ahşap destekli bir camidir.",
+  "history": "Cami, Şükran Mahallesi, Vali Muammer Bey Caddesi No. 48’dedir. Güney duvarındaki kitâbeye göre 1409’da Karamanoğlu döneminde yapılan yapı yıkılarak yerine H. 1215 / M. 1801’de bugünkü cami yaptırılmıştır. Giriş kapısının üzerindeki, talik hatla Osmanlı Türkçesi iki satır hâlinde yazılmış tamir kitâbesi, camiyi önce Mürsel’in yaptığını, Hacı Hasan’ın yeniden inşa ettiğini ve “Gözlülü” denen Hacı Halil Ağa’nın üçüncü bani olduğunu anlatır; kitâbe “Ketebehu Mehmed Rıfat Sene 1215” ile biter. Cami bugün sağlamdır ve ibadete açıktır.\n\nKuzey-güney yönünde uzanan dikdörtgen planlı cami ahşap destekli camilerdendir; kesme taş ve tuğla ile yapılmıştır. Kuzeyde son cemaat yeri, kuzeybatıda tek şerefeli minare vardır. Son cemaat yeri üç kısma ayrılır; batısında mahfile çıkan merdiven bulunur. Dış cephesine sonradan iki çeşme ve abdest muslukları eklenmiştir. Harim kapısının iki yanında baklava dilimi başlıklı silindirik iki mermer sütun dikkat çeker. Minarenin şerefe altı kirpi saçaklı, peteği kısa ve konik külahlıdır.\n\nHarim iki sıra hâlinde ikişer destekle mihraba dik üç sahına ayrılır; çokgen ahşap destekler üstten Bursa kemerleriyle birbirine bağlanır. Orta sahında ahşap oyma şemseli göbek vardır. Kuzeydeki ahşap mahfilin ortası yarım daire şeklinde harime taşar. Anıtsal mihrabın niş ve kavsarası kesme taş, diğer bölümleri mermerdir; yarım daire niş yedi sıra mukarnas kavsaralıdır ve kavsara üstündeki dört kitâbelik kartuşun içi boş bırakılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-haci-hasan-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-haci-hasan-mosque/exterior.jpg",
+      "alt": "Islak meydanın karşısında beyaz cepheli, sivri kemerli pencereli cami ve arkada ince minare",
+      "description": "Islak meydanın karşısında beyaz cepheli, sivri kemerli pencereli cami ve arkada ince minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-haci-hasan-mosque/prayer-hall.jpg",
+      "alt": "Beyaz harimde ahşap direkler arasından görülen mermer mihrap ve şemseli tavan",
+      "description": "Beyaz harimde ahşap direkler arasından görülen mermer mihrap ve şemseli tavan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-haci-hasan-mosque/inscription.jpg",
+      "alt": "Beyaz taş üzerinde aşınmış satırlar hâlinde yazılı dikdörtgen kitâbe levhası",
+      "description": "Beyaz taş üzerinde aşınmış satırlar hâlinde yazılı dikdörtgen kitâbe levhası",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-haci-hasan-mosque/exterior.jpg",
+      "x": 65,
+      "y": 20,
+      "title": "Minare",
+      "text": "Tek şerefeli minare caminin kuzeybatı köşesindedir.",
+      "sourceId": "inv-p138"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-haci-hasan-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 45,
+      "title": "Anıtsal mihrap",
+      "text": "Mihrabın niş ve kavsarası kesme taş, diğer bölümleri mermerdir.",
+      "sourceId": "inv-p139"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-meram-haci-hasan-mosque/prayer-hall.jpg",
+      "x": 37,
+      "y": 55,
+      "title": "Ahşap destekler",
+      "text": "Çokgen ahşap destekler harimi mihraba dik üç sahına ayırır.",
+      "sourceId": "inv-p138"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hacı Hasan Camii hangi tür camilerdendir?",
+      "options": [
+        "Tek kubbeli",
+        "Ahşap destekli",
+        "Çifte minareli",
+        "Avlulu revaklı"
+      ],
+      "correct": 1,
+      "description": "Kitap yapıyı ahşap destekli camiler arasında sayar.",
+      "sourceId": "inv-p138"
+    },
+    {
+      "question": "Mihrap nişi kaç sıra mukarnas kavsaralıdır?",
+      "options": [
+        "Yedi",
+        "Üç",
+        "Beş",
+        "On iki"
+      ],
+      "correct": 0,
+      "description": "Yarım daire şeklindeki niş yedi sıra mukarnas kavsaralıdır.",
+      "sourceId": "inv-p139"
+    },
+    {
+      "question": "Harim kapısının iki yanındaki sütunlar hangi malzemedendir?",
+      "options": [
+        "Ahşap",
+        "Tuğla",
+        "Mermer",
+        "Demir"
+      ],
+      "correct": 2,
+      "description": "Kapının iki yanında silindirik gövdeli iki mermer sütun bulunur.",
+      "sourceId": "inv-p138"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p138",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Hacı Hasan Camii\"",
+      "page": "138"
+    },
+    {
+      "id": "inv-p139",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Hacı Hasan Camii\"",
+      "page": "139"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

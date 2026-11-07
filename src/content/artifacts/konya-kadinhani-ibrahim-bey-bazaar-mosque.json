@@ -1,0 +1,100 @@
+{
+  "id": "konya-kadinhani-ibrahim-bey-bazaar-mosque",
+  "name": "İbrahim Bey (Çarşı) Camii",
+  "city": "Konya",
+  "district": "Kadınhanı",
+  "period": "Osmanlı · 1721 külliye düzenlemesi; 1859 yeniden yapımı",
+  "endowment": "Hacı Mustafa Vakfı; Hacıhasanoğlu Osman ve Ahmet Efendilerin vakıfları",
+  "summary": "Konya Caddesi’ndeki Çarşı Camii, yazlık bölümü ve ahşap direkli harimiyle Kadınhanı’nın vakıf yapılarındandır.",
+  "history": "Cami, Kadınhanı Konya Caddesi’ndedir. Kitap, Nevşehirli Damat İbrahim Paşa döneminde Saideli’deki hanın onarıldığını ve bölgeye yirmi hane yerleştirildiğini; 1721’de mektep, hamam ve dükkânlarla bir külliye oluştuğunu anlatır. Cami Hacı Mustafa Vakfı adına Vakıflar Genel Müdürlüğüne bağlıdır. Metin vakıf kayıtları için “1859 senesinde yaptırılmış, 1858 senesinde çıkan yangında tamamen yanmıştır” ifadesini kullanır; ardından 1859’da halkın yapıyı büyüterek yeniden yaptırdığını belirtir. Bu tarih sırası kitapta bu biçimde yer alır. Yazlık bölüm XIX. yüzyıl sonlarında eklenmiştir.\n\n1885’te Hacıhasanoğlu Osman Efendi ve 1902’de Hacıhasanoğlu Ahmet Efendi cami, mektep ve şadırvan için otuz dükkân, bir ev ve iki kahvehane vakfetmiştir. Dikdörtgen cami harim, yazlık bölüm ve minareden oluşur. Duvarları taş, alt kesimi mermer kaplamadır; kiremitli kırma çatıyla örtülüdür. Kuzey cephesinin ortasındaki tek şerefeli minare kitapta H. 1292 / M. 1876 tarihli verilir.\n\nKuzeybatı girişinden ayakkabılığa ve beş ahşap direkle iki sahına ayrılan yazlık bölüme ulaşılır. Harim on ahşap direkle üç sahına ayrılır; orta sahın daha süslüdür ve tavan bölümlerinde göbekler vardır. Harim ile yazlık bölümün kuzeyinde ahşap mahfil bulunur. Kıble duvarının ortasındaki mihrap dikdörtgen çerçeveli, yarım daire planlı ve yarım kubbe kavsaralıdır. Kitapta cami ibadete açık olarak tanımlanır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-kadinhani-ibrahim-bey-bazaar-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-kadinhani-ibrahim-bey-bazaar-mosque/aerial.jpg",
+      "alt": "Şehir içinde geniş kiremit çatılı cami, ön revak ve ortada taş minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-kadinhani-ibrahim-bey-bazaar-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde koyu renk ahşap direkler, ahşap tavan ve duvarlardaki yuvarlak levhalar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-kadinhani-ibrahim-bey-bazaar-mosque/prayer-hall.jpg",
+      "x": 44,
+      "y": 49,
+      "title": "Ahşap direkler",
+      "text": "Harim on ahşap direkle üç sahına ayrılır.",
+      "sourceId": "inv-p459"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-kadinhani-ibrahim-bey-bazaar-mosque/aerial.jpg",
+      "x": 33,
+      "y": 37,
+      "title": "Minare",
+      "text": "Kuzey cephesinin ortasındaki minare tek şerefelidir.",
+      "sourceId": "inv-p459"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi vakıf adına bağlıdır?",
+      "options": [
+        "Emir İshak Bey Vakfı",
+        "Hacı Cemil Vakfı",
+        "Sultan Dediği Vakfı",
+        "Hacı Mustafa Vakfı"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Hacı Mustafa Vakfı.",
+      "sourceId": "inv-p458"
+    },
+    {
+      "question": "Vakıf için kaç dükkân bağışlandığı belirtilmiştir?",
+      "options": [
+        "Otuz",
+        "On iki",
+        "On altı",
+        "Kırk"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Otuz.",
+      "sourceId": "inv-p459"
+    },
+    {
+      "question": "İbrahim Bey (Çarşı) Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Kadınhanı",
+        "Akşehir",
+        "Beyşehir"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Kadınhanı.",
+      "sourceId": "inv-p458"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p458",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"İbrahim Bey (Çarşı) Camii\"",
+      "page": "458"
+    },
+    {
+      "id": "inv-p459",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"İbrahim Bey (Çarşı) Camii\"",
+      "page": "459"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

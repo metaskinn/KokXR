@@ -1,0 +1,95 @@
+{
+  "id": "hatay-iskenderun-sheikh-turhan-reyhani-tomb",
+  "name": "Şeyh Turhan Reyhani Türbesi",
+  "district": "İskenderun",
+  "period": "H.1320 / M.1902–1903",
+  "endowment": "Vakıflar Genel Müdürlüğü mülkiyetindedir",
+  "summary": "Şeyh Turhan Reyhani Türbesi, İskenderun Mustafa Kemal Mahallesi’nde 1902–1903 tarihli sade bir ziyaretgâhtır.",
+  "history": "İskenderun’un Mustafa Kemal Mahallesi’ndeki türbe, Vakıflar Genel Müdürlüğü’nün mülkiyetindedir. İnşa tarihi H.1320 / M.1902–1903 olarak verilir.\n\nAvlu içindeki yapı kare biçimli ve sade mimarilidir. Her duvarda bir veya iki küçük pencere bulunur. Kenarlardaki nişlerde ibadet sırasında kullanılan tütsülükler vardır. Sandukalar duvarlara paralel konumlanmıştır. Kitap, yakın dönemde yenilenen yapının bölgenin ziyaret ve ibadet geleneğini yaşatan bir mekân olarak korunduğunu belirtir.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-iskenderun-sheikh-turhan-reyhani-tomb/tomb-entrance.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-iskenderun-sheikh-turhan-reyhani-tomb/tomb-entrance.jpg",
+      "alt": "Metal örtü altındaki açık yeşil-beyaz duvarda koyu yeşil kapı çerçevesi ve üstte yazıt levhaları",
+      "description": "Metal örtü altındaki açık yeşil-beyaz duvarda koyu yeşil kapı çerçevesi ve üstte yazıt levhaları",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-iskenderun-sheikh-turhan-reyhani-tomb/tomb-entrance.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Türbe yapısı",
+      "text": "Kare biçimli türbe basit ve sade bir mimariye sahiptir.",
+      "sourceId": "inv-p425"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-iskenderun-sheikh-turhan-reyhani-tomb/tomb-entrance.jpg",
+      "x": 27,
+      "y": 85,
+      "title": "Avlu",
+      "text": "Türbe avlu içerisinde yer alır.",
+      "sourceId": "inv-p425"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Turhan Reyhani Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "İskenderun",
+        "Antakya",
+        "Defne",
+        "Arsuz"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe İskenderun olarak verilmiştir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Türbenin inşa tarihi hangisidir?",
+      "options": [
+        "H.854 / M.1450",
+        "H.1320 / M.1902–1903",
+        "H.1317 / M.1899",
+        "H.1354 / M.1935"
+      ],
+      "correct": 1,
+      "description": "Kitap türbenin H.1320’de inşa edildiğini belirtir.",
+      "sourceId": "inv-p425"
+    },
+    {
+      "question": "Sandukalar nasıl konumlanmıştır?",
+      "options": [
+        "Dış avlu duvarı üstünde",
+        "Çatı üzerinde",
+        "Duvarlara paralel",
+        "Merdiven altında"
+      ],
+      "correct": 2,
+      "description": "Türbe içindeki sandukalar duvarlara paraleldir.",
+      "sourceId": "inv-p425"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p425",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Şeyh Turhan Reyhani Türbesi\"",
+      "page": "425"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Hatay Vakıf Eserleri, İskenderun, \"Şeyh Turhan Reyhani Türbesi\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

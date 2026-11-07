@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-haci-mustafa-aga-mosque",
+  "name": "Hacı Mustafa Ağa (Köprübaşı Mustafa Ağa) Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · mermer kitâbesine göre H. 1243 / M. 1826-27",
+  "endowment": "Bânisi Köprübaşı Mustafa Ağa; kendisi hakkında bilgi bulunmamaktadır",
+  "summary": "Köprübaşı Mustafa Ağa'nın 1826-27'de yaptırdığı, ahşap direklerle beş sahına ayrılan, XIX. yüzyıl mahalle camilerinin güzel bir örneği.",
+  "history": "Cami, Karatay, Aziziye Mahallesi, Köprübaşı Mevkii'ndedir. Üzerindeki mermer kitâbeye göre H. 1243 / M. 1826-27'de yaptırılmıştır. Kitâbe mermer üzerine dört satır, sekiz kartuş hâlinde celî sülüs hatla, oyma kabartma tekniğiyle işlenmiştir. Yapı 2007'de Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir. Bânisi Köprübaşı Mustafa Ağa hakkında bilgi bulunmamaktadır.\n\nCami enine dikdörtgen planlıdır ve kırma çatıyla örtülüdür. Cepheler, alt ve üst bölümlere iki sıra hâlinde yerleştirilmiş dikdörtgen pencerelerle hareketlendirilmiştir.\n\nHarime kuzey beden duvarının ortasındaki kapıdan girilir. Harim, mihraba dik uzanan dört sıra ahşap direkle beş sahına ayrılmıştır. Doğu, batı ve kuzey yönlerde ahşap direklere oturan mahfil vardır.\n\nKıble duvarındaki mihrap yarım daire planlı ve mukarnas kavsaralıdır. Alçı kalıplama tekniğiyle yapılan mihrap nişi iki yandan sütuncelerle sınırlanır ve üç kuşakla çevrilidir: dışta altın yaldızla boyanmış yazı kuşağı, ortada altıgenler içinde kabaralar, içte meander motifleri bulunur.\n\nKöprübaşı Mustafa Ağa'nın yaptırdığı yapı, XIX. yüzyıl mahalle camilerinin güzel bir örneğidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-haci-mustafa-aga-mosque/facade.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-haci-mustafa-aga-mosque/facade.jpg",
+      "alt": "Krem sıvalı, uzun dikdörtgen cami cephesi; alt ve üstte iki sıra dikdörtgen pencere, ortada saçaklı giriş kapısı ve sağ arkada köşk biçimli minare",
+      "description": "Caminin dış cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-haci-mustafa-aga-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı halılı harim, iki yanda koyu renkli ahşap direkler, ortada yaldızlı süslemeli mihrap ve önünde avize, sağda beyaz minber",
+      "description": "Ahşap direkli harim ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "two-row-windows",
+      "image": "/images/konya-karatay-haci-mustafa-aga-mosque/facade.jpg",
+      "x": 44,
+      "y": 55,
+      "title": "İki sıra pencere",
+      "text": "Cepheler, alt ve üst bölümlere iki sıra hâlinde yerleştirilmiş dikdörtgen pencerelerle hareketlendirilmiştir.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "id": "wooden-columns",
+      "image": "/images/konya-karatay-haci-mustafa-aga-mosque/prayer-hall.jpg",
+      "x": 19,
+      "y": 45,
+      "title": "Ahşap direkler",
+      "text": "Harim, mihraba dik uzanan dört sıra ahşap direkle beş sahına ayrılmıştır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-karatay-haci-mustafa-aga-mosque/prayer-hall.jpg",
+      "x": 52,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Alçı kalıplama tekniğiyle yapılan, mukarnas kavsaralı mihrap nişi sütuncelerle sınırlanır ve üç kuşakla çevrilidir.",
+      "sourceId": "inv-p248"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin mermer kitâbesine göre yapım tarihi nedir?",
+      "options": [
+        "H. 955 / M. 1548",
+        "H. 1243 / M. 1826-27",
+        "H. 1096 / M. 1685",
+        "H. 618 / M. 1221"
+      ],
+      "correct": 1,
+      "description": "Cami, mermer kitâbesine göre H. 1243 / M. 1826-27'de yaptırılmıştır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "Harim kaç sahına ayrılmıştır?",
+      "options": [
+        "Üç",
+        "Dört",
+        "Beş",
+        "İki"
+      ],
+      "correct": 2,
+      "description": "Harim, mihraba dik uzanan dört sıra ahşap direkle beş sahına ayrılmıştır.",
+      "sourceId": "inv-p248"
+    },
+    {
+      "question": "Mihrap nişi hangi teknikle yapılmıştır?",
+      "options": [
+        "Çini mozaik",
+        "Ahşap oyma",
+        "Mermer kabartma",
+        "Alçı kalıplama"
+      ],
+      "correct": 3,
+      "description": "Mihrap nişi alçı kalıplama tekniğiyle yapılmıştır.",
+      "sourceId": "inv-p248"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p248",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hacı Mustafa Ağa (Köprübaşı Mustafa Ağa) Camii\"",
+      "page": "248"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

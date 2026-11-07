@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-sitte-i-banu-masjid",
+  "name": "Sitte-i Banu Mescidi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XX. yüzyılın ilk yarısı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şems Camii ve Türbesi'nin güneyinde bulunan, XX. yüzyılın ilk yarısına tarihlenen kare planlı ve kırma çatılı küçük mescit.",
+  "history": "Sitte-i Banu Mescidi, Karatay, Çifte Merdiven Mahallesi, Abdulkadir Erdoğan Sokak üzerindedir. Şems Camii ve Türbesi'nin güneyinde bulunan mescidin ilk inşası ve banisi hakkında herhangi bir bilgi yoktur. Yapı XX. yüzyılın ilk yarısına tarihlendirilmektedir.\n\nMescit kare planlıdır ve üzeri kırma çatıyla örtülüdür. Bugün özgün hâlini kaybetmiş olan yapı taş malzemeden inşa edilmiştir ve cephe düzenlemesi sadedir. Harime kuzey cephedeki kapıdan geçilir. Harim içten düz ahşap tavanlıdır ve mahfil, mihrap ve minberden oluşan sade bir düzene sahiptir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-sitte-i-banu-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-sitte-i-banu-masjid/exterior.jpg",
+      "alt": "Dar bir sokağın köşesinde beyaz ve mor boyalı küçük yapı; ahşap kapı, pencereler ve üst katta çıkma; çevresinde çok katlı binalar",
+      "description": "Mescidin sokaktan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-sitte-i-banu-masjid/prayer-hall.jpg",
+      "alt": "Kırmızı halılı iç mekân; ortada sade mihrap nişi, üstünde hat levhası, duvarda sıra hâlinde yeşil yuvarlak levhalar, ahşap lambri ve çıtalı ahşap tavan",
+      "description": "Kıble duvarı ve mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "mihrab",
+      "image": "/images/konya-karatay-sitte-i-banu-masjid/prayer-hall.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Mihrap",
+      "text": "Harim mahfil, mihrap ve minberden oluşan sade bir düzenlemeye sahiptir.",
+      "sourceId": "inv-p218"
+    },
+    {
+      "id": "wooden-ceiling",
+      "image": "/images/konya-karatay-sitte-i-banu-masjid/prayer-hall.jpg",
+      "x": 62,
+      "y": 8,
+      "title": "Düz ahşap tavan",
+      "text": "Harim içten düz ahşap tavanlıdır.",
+      "sourceId": "inv-p218"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit hangi yapının güneyinde yer alır?",
+      "options": [
+        "Alâeddin Camii",
+        "Mevlâna Dergâhı",
+        "Karatay Medresesi",
+        "Şems Camii ve Türbesi"
+      ],
+      "correct": 3,
+      "description": "Mescit, Şems Camii ve Türbesi'nin güneyinde bulunur.",
+      "sourceId": "inv-p218"
+    },
+    {
+      "question": "Yapı hangi döneme tarihlendirilmektedir?",
+      "options": [
+        "XIII. yüzyıl başı",
+        "XX. yüzyılın ilk yarısı",
+        "XVI. yüzyıl sonu",
+        "XIX. yüzyıl ortası"
+      ],
+      "correct": 1,
+      "description": "İlk inşası ve banisi bilinmeyen yapı XX. yüzyılın ilk yarısına tarihlendirilmektedir.",
+      "sourceId": "inv-p218"
+    },
+    {
+      "question": "Harime hangi cepheden girilir?",
+      "options": [
+        "Kuzey",
+        "Güney",
+        "Doğu",
+        "Batı"
+      ],
+      "correct": 0,
+      "description": "Harime kuzey cephede yer alan kapıyla geçilir.",
+      "sourceId": "inv-p218"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p218",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Sitte-i Banu Mescidi\"",
+      "page": "218"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

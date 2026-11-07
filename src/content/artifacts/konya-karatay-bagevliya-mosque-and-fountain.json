@@ -1,0 +1,100 @@
+{
+  "id": "konya-karatay-bagevliya-mosque-and-fountain",
+  "name": "Bağevliya Cami ve Çeşmesi",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "XX. yüzyıl başlarına tarihlendirilmektedir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Nakipoğlu Mahallesi’ndeki kırma çatılı cami, ahşap köşk minaresi ve üçgen alınlıklı çeşmesiyle birlikte korunur.",
+  "history": "Cami, Nakipoğlu Mahallesi, Bağevliya Sokak’tadır. Mimari özellikleri XX. yüzyıl başlarına tarihlendirilmesini sağlar; banisi ve sanatkârı bilinmez. Vakıflar Bölge Müdürlüğü 2008’de yapıyı tamir ettirmiştir. Dörtgen planlı, kırma çatılı yapı harim, son cemaat yeri, minare ve çeşmeden oluşur. Batı duvarına bitişik köşk tipi minare ahşaptır.\n\nBatıdaki son cemaat yeri düzgün olmayan dörtgen planlıdır; güney duvarında mihrabiye ve iki yanında pencereler bulunur. Derinlemesine dikdörtgen harimin kuzeyinde mahfil, kıble duvarında sonradan eklenen ahşap mihrap ve minber vardır. Güneybatı köşesindeki tek yüzlü çeşme sivri kemerli niş ve üçgen alınlıkla sonlanır; yanlarını kare sütunceler sınırlar. Çeşme yakın dönemde camiyle birlikte onarılmıştır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-bagevliya-mosque-and-fountain/exterior-fountain.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-bagevliya-mosque-and-fountain/exterior-fountain.jpg",
+      "alt": "Beyaz caminin köşesinde sivri kemerli taş çeşme, üstte ahşap minare ve kiremit çatı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-bagevliya-mosque-and-fountain/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde ahşap direkler, kirişli tavan ve karşı duvarda mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-bagevliya-mosque-and-fountain/exterior-fountain.jpg",
+      "x": 66,
+      "y": 65,
+      "title": "Çeşme",
+      "text": "Tek yüzlü çeşme sivri kemerli nişinin üzerinde üçgen alınlıkla sonlanır.",
+      "sourceId": "inv-p209"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-bagevliya-mosque-and-fountain/exterior-fountain.jpg",
+      "x": 33,
+      "y": 18,
+      "title": "Ahşap minare",
+      "text": "Batı duvarına bitişik köşk tipi minare ahşap malzemedendir.",
+      "sourceId": "inv-p208"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi mahallededir?",
+      "options": [
+        "Dedemoğlu",
+        "Nakipoğlu",
+        "Şems",
+        "Kuşçu"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Nakipoğlu.",
+      "sourceId": "inv-p208"
+    },
+    {
+      "question": "Çeşmenin niş kemeri hangi biçimdedir?",
+      "options": [
+        "Düz lento",
+        "At nalı kemer",
+        "Sivri kemer",
+        "Kaş kemer"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Sivri kemer.",
+      "sourceId": "inv-p209"
+    },
+    {
+      "question": "Bağevliya Cami ve Çeşmesi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır",
+        "Karatay"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p208"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p208",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Bağevliya Cami ve Çeşmesi\"",
+      "page": "208"
+    },
+    {
+      "id": "inv-p209",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Bağevliya Cami ve Çeşmesi\"",
+      "page": "209"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "konya-karatay-haci-ivaz-mosque",
+  "name": "Hacı İvaz Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "1821’de yapılan mescidin yerine 1891’de yeniden, bugünkü yapı 1928’de Hacı İvaz tarafından inşa edilmiştir",
+  "endowment": "Bugünkü yapı Hacı İvaz tarafından yeniden inşa edilmiştir; ilk mescit İsmail Efendi’nin yaptırdığı Abid İmam Mescidi’dir",
+  "summary": "1821 tarihli Abid İmam Mescidi’nin yerinde, 1928’de Hacı İvaz’ın yeniden yaptırdığı ahşap direkli mahalle camisi.",
+  "history": "Cami, Karatay, Polatlar Mahallesi, Sedirler Caddesi üzerindedir. Yerinde daha önce İsmail Efendi’nin 1821’de yaptırdığı “Abid İmam Mescidi”nin bulunduğu bilinmektedir. Zamanla tahrip olan bu ilk yapı, 1891’de ahşap direkli ve düz damlı olarak yeniden inşa edilmiştir. Bugünkü yapı 1928’de Hacı İvaz tarafından yeniden inşa edilmiş ve o tarihten sonra “Hacı İvaz Mescidi” olarak anılmıştır.\n\nCami derinlemesine dikdörtgen planlıdır. Ahşap direkli yapı içten ahşap kirişli tavanla, dıştan dört yöne eğimli kırma çatıyla örtülüdür. Yığma teknikle moloz taştan yapılmıştır; doğu ve kuzeyine sonradan ara mekânlar eklenmiştir.\n\nHarime doğu cephenin kuzeyindeki kapıdan geçilir. Derinlemesine dikdörtgen planlı harim üç sahınlıdır; kuzeyinde mahfil, kıble duvarında mihrap ve minber bulunur. Kıble duvarının ortasındaki yarım daire planlı mihrap hafifçe dışa taşkındır, yanlardan düz silmelerle sınırlanmıştır ve nişinin üst kısmında perde motifi görülür. Yapıya sonradan eklenen minber sade biçimlidir. Cami, Konya ve çevresinde yaygın olarak görülen mahalle mescitlerindendir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-haci-ivaz-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-haci-ivaz-mosque/exterior.jpg",
+      "alt": "Kiremit kırma çatılı, açık sarı sıvalı cami; alt kısmında moloz taş kuşak, cephede dikdörtgen pencereler",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-haci-ivaz-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: koyu ahşap kirişli tavan, yeşil boyalı ahşap minber, mihrap köşesi ve avizeler",
+      "description": "Harimde minber ve ahşap tavan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kirma-cati",
+      "image": "/images/konya-karatay-haci-ivaz-mosque/exterior.jpg",
+      "x": 50,
+      "y": 27,
+      "title": "Kırma çatı",
+      "text": "Yapı dıştan dört yöne eğimli kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p269"
+    },
+    {
+      "id": "ahsap-kirisli-tavan",
+      "image": "/images/konya-karatay-haci-ivaz-mosque/prayer-hall.jpg",
+      "x": 42,
+      "y": 8,
+      "title": "Ahşap kirişli tavan",
+      "text": "Ahşap direkli yapı içten ahşap kirişli tavanla örtülüdür.",
+      "sourceId": "inv-p269"
+    },
+    {
+      "id": "minber",
+      "image": "/images/konya-karatay-haci-ivaz-mosque/prayer-hall.jpg",
+      "x": 70,
+      "y": 55,
+      "title": "Minber",
+      "text": "Yapıya sonradan eklenen minber sade bir formdadır.",
+      "sourceId": "inv-p269"
+    }
+  ],
+  "test": [
+    {
+      "question": "Bugünkü yapının yerindeki ilk mescit hangisidir?",
+      "options": [
+        "Kenan Dede Mescidi",
+        "Sikaye Mescidi",
+        "Abid İmam Mescidi",
+        "İplikçi Mescidi"
+      ],
+      "correct": 2,
+      "description": "Yerde daha önce İsmail Efendi’nin 1821’de yaptırdığı Abid İmam Mescidi bulunuyordu.",
+      "sourceId": "inv-p269"
+    },
+    {
+      "question": "Bugünkü yapı hangi yıl Hacı İvaz tarafından yeniden inşa edilmiştir?",
+      "options": [
+        "1821",
+        "1891",
+        "1913",
+        "1928"
+      ],
+      "correct": 3,
+      "description": "Günümüzdeki yapı 1928’de Hacı İvaz tarafından yeniden inşa edilmiştir.",
+      "sourceId": "inv-p269"
+    },
+    {
+      "question": "Mihrap nişinin üst kısmında hangi motif görülür?",
+      "options": [
+        "Perde motifi",
+        "Çok kollu yıldız",
+        "Balıksırtı",
+        "Rumi"
+      ],
+      "correct": 0,
+      "description": "Mihrap nişinin üst kısmında perde motifi görülmektedir.",
+      "sourceId": "inv-p269"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p269",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hacı İvaz Camii\"",
+      "page": "269"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

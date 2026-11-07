@@ -1,0 +1,106 @@
+{
+  "id": "konya-selcuklu-sut-lodge-and-keykavus-daughter-tomb",
+  "name": "Süt Tekkesi (Ferhuniye Mescidi) ve Keykavus Kızı Türbesi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Kitâbeye göre H. 700 / M. 1300; R. 1325 / M. 1909'da yeniden inşa edilmiştir",
+  "endowment": "Kitapta belirtilmemiştir; vakfın mütevellisi Paşazade İbrahim Bey yapıyı R. 1325 / M. 1909'da yeniden inşa ettirmiştir",
+  "summary": "Kitâbesine göre H. 700 / M. 1300'de yapılan, II. İzzeddin Keykavus'un kızı Fatma Hatun'a atfedilen ve halk arasında sütü kesilen kadınların ziyaret ettiği türbe ve tekke.",
+  "history": "Türbe, Selçuklu İlçesi, Ferhuniye Mahallesi, Sultan Mesut Sokak üzerindedir. Giriş kapısı üzerindeki kitâbeye göre H. 700 / M. 1300 yılında yaptırılmış, vakfın mütevellisi Paşazade İbrahim Bey tarafından R. 1325 / M. 1909'da yeniden inşa ettirilmiş ve II. İzzeddin Keykavus'un kızı Fatma Hatun'a atfedilmiştir.\n\nBazı kayıtlarda \"Ferhuniye Tekkesi\" olarak da geçen tekkenin sandukalık bölümüne güneydeki bir kapıdan girilir. Bu bölümde, ana girişin arkasında üç sanduka bulunur; mevcut kitâbeye göre sandukalar Hond Fatma Hatun, annesi ve sütannesine aittir. Kaynaklar yapının 1909'da yenilendiğini belirtir.\n\nTürbe doğu-batı doğrultusunda dikdörtgen planlıdır ve üzeri kırma çatılıdır; cepheleri taştan yapılmış ve yenilenmiştir. Tekkenin hariciyesi XX. yüzyıl başlarında inşa edilmiş, iç sofalı plan tipindedir. Bu ev daha sonra çevresinin kamulaştırılmasıyla yıkılmış ve aynı mimari özelliklere bağlı kalınarak yeniden yapılmıştır.\n\nTekkenin en önemli özelliği, halk arasında sütü kesilen kadınların ziyaret ederek dua ettikleri bir mekân olmasıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-sut-lodge-and-keykavus-daughter-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-sut-lodge-and-keykavus-daughter-tomb/exterior.jpg",
+      "alt": "Kırmızımsı kesme taş cepheli tek katlı küçük yapı; ortada çift kanatlı ahşap kapı, iki yanda demir parmaklıklı pencereler, kapı üstünde taş pano ve geniş saçaklı çatı",
+      "description": "Yapının taş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-sut-lodge-and-keykavus-daughter-tomb/sarcophagi.jpg",
+      "alt": "Ahşap tavanlı, ahşap döşemeli odada yan yana üç sanduka; sandukaların üzeri yazılı örtülerle kaplı",
+      "description": "Sandukalık bölümündeki üç sanduka",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "stone-facade",
+      "image": "/images/konya-selcuklu-sut-lodge-and-keykavus-daughter-tomb/exterior.jpg",
+      "x": 25,
+      "y": 60,
+      "title": "Taş cepheler",
+      "text": "Doğu-batı doğrultusunda dikdörtgen planlı türbenin cepheleri taştan yapılmış ve yenilenmiştir.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "id": "roof",
+      "image": "/images/konya-selcuklu-sut-lodge-and-keykavus-daughter-tomb/exterior.jpg",
+      "x": 50,
+      "y": 20,
+      "title": "Kırma çatı",
+      "text": "Türbenin üzeri kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "id": "three-sarcophagi",
+      "image": "/images/konya-selcuklu-sut-lodge-and-keykavus-daughter-tomb/sarcophagi.jpg",
+      "x": 45,
+      "y": 75,
+      "title": "Üç sanduka",
+      "text": "Mevcut kitâbeye göre sandukalar Hond Fatma Hatun, annesi ve sütannesine aittir.",
+      "sourceId": "inv-p162"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türbe kime atfedilmiştir?",
+      "options": [
+        "Sultan Mesut'un eşine",
+        "II. İzzeddin Keykavus'un kızı Fatma Hatun'a",
+        "Paşazade İbrahim Bey'in annesine",
+        "I. Alaaddin Keykubat'ın kızına"
+      ],
+      "correct": 1,
+      "description": "Türbe, II. İzzeddin Keykavus'un kızı Fatma Hatun'a atfedilmiştir.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "question": "Sandukalık bölümünde kaç sanduka bulunur?",
+      "options": [
+        "Bir",
+        "İki",
+        "Dört",
+        "Üç"
+      ],
+      "correct": 3,
+      "description": "Bu bölümde üç sanduka vardır; kitâbeye göre Hond Fatma Hatun, annesi ve sütannesine aittir.",
+      "sourceId": "inv-p162"
+    },
+    {
+      "question": "Tekkeyi halk arasında özellikle kimler ziyaret eder?",
+      "options": [
+        "Sütü kesilen kadınlar",
+        "Yolculuğa çıkacaklar",
+        "Sınava girecek öğrenciler",
+        "Hasta çocukların babaları"
+      ],
+      "correct": 0,
+      "description": "Tekkenin en önemli özelliği, sütü kesilen kadınların ziyaret ederek dua ettikleri bir mekân olmasıdır.",
+      "sourceId": "inv-p162"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p162",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Süt Tekkesi (Ferhuniye Mescidi) ve Keykavus Kızı Türbesi\"",
+      "page": "162"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

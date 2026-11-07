@@ -1,0 +1,120 @@
+{
+  "id": "konya-meram-emir-nurettin-sephevan-kumbet",
+  "name": "Emir Nurettin (Sephevan) Kümbeti",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Anadolu Selçuklu · benzer örneklere göre XIII. yüzyılın ikinci yarısı",
+  "endowment": "Banisi Celal oğlu İbrahim Nureddin",
+  "summary": "Celal oğlu İbrahim Nureddin’in yaptırdığı, kesme taş kaide üzerinde tuğla gövdeli ve piramidal külahlı sekizgen Selçuklu kümbeti.",
+  "history": "Kümbet Meram, Sahip Ata Mahallesi, Kurs Sokak üzerindedir. Kaynaklarda tekke olarak gösterilen türbe, benzer örneklere bakılarak XIII. yüzyılın ikinci yarısına tarihlendirilir.\n\nEmir Nurettin, Anadolu Selçuklu döneminde yaşamış bir yöneticidir. Türbe, kimliği tam olarak tespit edilemeyen Celal oğlu İbrahim Nureddin tarafından yaptırılmıştır. Yapının kuzeyindeki celi sülüs kitâbede “Baş kumandan, âlim, âdil, müeyyed, muzaffer, mansur Nureddin İbrahim bin Celal. Allah ona rahmet etsin” yazar.\n\nYapı sekizgen planlıdır; içten kubbe, dıştan piramidal külahla örtülüdür. Türbe; “cenazelik, mumyalık, kripta ve asıl mezar hücresi” olarak adlandırılan alt kat, “gövde, mescit, ziyaretgâh” denilen ve sembolik sandukanın bulunduğu üst kat ile örtü sisteminden oluşur. Kaidesi kesme taş, gövdesi ve külahı tuğladır. Cenazelik katı dört kemer üzerinde yükselen basık kubbeli bir örtüye sahiptir. Türbenin ortasında doğu-batı yönünde uzanan bir lahit bulunur.\n\nYapının kuzeye bakan kapısının üzerinde kitâbelik, kitâbeliğin üzerinde bir rozet, rozetin üzerinde de sivri kemerli bir pencere yer alır. İç mekânda bir mihrap nişi bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-emir-nurettin-sephevan-kumbet/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-emir-nurettin-sephevan-kumbet/exterior.jpg",
+      "alt": "Kesme taş kaide üzerinde tuğla örgülü sekizgen gövde ve tuğla piramidal külah; altta kemerli giriş ve demir parmaklık",
+      "description": "Kümbetin genel görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-emir-nurettin-sephevan-kumbet/north-door.jpg",
+      "alt": "Sivri kemerli taş çerçeve içinde ahşap kapı, kapının üstünde yazılı taş kitâbe ve rozet, en üstte sivri kemerli pencere",
+      "description": "Kuzeye bakan giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-emir-nurettin-sephevan-kumbet/inscription-rosette.jpg",
+      "alt": "Yakın çekim: sivri kemerli taş çerçeve içinde altı yapraklı rozet ve altında uzun yazılı kitâbe",
+      "description": "Kitâbelik ve rozet",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-meram-emir-nurettin-sephevan-kumbet/interior.jpg",
+      "alt": "Tuğla duvarlı iç mekân: ortada sade taş lahit, arkada kemerli kapı açıklığı ve üstünde ışık alan sivri kemerli pencere",
+      "description": "İç mekân ve lahit",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "rosette",
+      "image": "/images/konya-meram-emir-nurettin-sephevan-kumbet/inscription-rosette.jpg",
+      "x": 49,
+      "y": 26,
+      "title": "Rozet",
+      "text": "Kuzeye bakan kapının üzerindeki kitâbeliğin üstünde bir rozet yer alır.",
+      "sourceId": "inv-p146"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/konya-meram-emir-nurettin-sephevan-kumbet/inscription-rosette.jpg",
+      "x": 49,
+      "y": 47,
+      "title": "Kitâbelik",
+      "text": "Kapının üzerindeki kitâbede “Nureddin İbrahim bin Celal. Allah ona rahmet etsin” yazar.",
+      "sourceId": "inv-p146"
+    },
+    {
+      "id": "window",
+      "image": "/images/konya-meram-emir-nurettin-sephevan-kumbet/north-door.jpg",
+      "x": 48,
+      "y": 15,
+      "title": "Sivri kemerli pencere",
+      "text": "Rozetin üzerinde sivri kemerli bir pencere bulunur.",
+      "sourceId": "inv-p146"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kümbetin planı nasıldır?",
+      "options": [
+        "Kare",
+        "Daire",
+        "Sekizgen",
+        "Dikdörtgen"
+      ],
+      "correct": 2,
+      "description": "Yapı sekizgen planlıdır; içten kubbe, dıştan piramidal külahla örtülüdür.",
+      "sourceId": "inv-p146"
+    },
+    {
+      "question": "Kümbetin gövdesi ve külahı hangi malzemeden yapılmıştır?",
+      "options": [
+        "Kesme taş",
+        "Moloz taş",
+        "Ahşap",
+        "Tuğla"
+      ],
+      "correct": 3,
+      "description": "Kaidesi kesme taş, gövdesi ve külahı tuğladır.",
+      "sourceId": "inv-p146"
+    },
+    {
+      "question": "Kapının üzerinde sırasıyla aşağıdan yukarı hangi ögeler bulunur?",
+      "options": [
+        "Kitâbelik, rozet, sivri kemerli pencere",
+        "Rozet, pencere, kitâbelik",
+        "Pencere, kitâbelik, rozet",
+        "Mihrap, rozet, pencere"
+      ],
+      "correct": 0,
+      "description": "Kuzeye bakan kapının üzerinde kitâbelik, onun üzerinde rozet, rozetin üzerinde de sivri kemerli bir pencere yer alır.",
+      "sourceId": "inv-p146"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p146",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Meram, \"Emir Nurettin (Sephevan) Kümbeti\"",
+      "page": "146-147"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-ayanbey-mosque",
+  "name": "Ayanbey Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XIX. yüzyıl ortaları",
+  "endowment": "Banisi Ayan üyesi Memiş Paşa'nın oğlu Süleyman Bey",
+  "summary": "Ayan üyesi Memiş Paşa'nın oğlu Süleyman Bey'in XIX. yüzyıl ortalarında yaptırdığı, ahşap destekli üç sahınlı cami.",
+  "history": "Cami, Meram, Ayanbey Sokak, No. 2'de yer almaktadır. Ayan üyesi Memiş Paşa'nın oğlu Süleyman Bey tarafından XIX. yüzyılın ortalarında yaptırılmıştır.\n\nKuzey-güney yönünde dikdörtgen planlı cami içten düz dam, dıştan kırma çatılıdır. Harim mihraba dikey üç sahından oluşur. Cephe görünümleri oldukça sadedir; yapı kuzey ve güney cephelerde ikişer, doğu cephede üç, batı cephede dört pencereyle aydınlatılır. Kuzey cephenin ortasında giriş kapısı vardır.\n\nHarime kuzey cephedeki düz lentolu, çift kanatlı demir kapıyla girilir. Girişin batı tarafında içeri çekilmiş bir minare bulunur. Harim, kuzey-güney yönünde uzanan iki sıra hâlindeki ikişer ahşap destekle mihraba dik üç sahına ayrılmıştır. İç mekânın kuzeyindeki mahfil batıdaki sahına doğru uzatılarak \"L\" şeklini almıştır. Kıble duvarının ortasındaki yarım daire kesitli mihrap ahşaptan ajur tekniğiyle yapılmış ve bitkisel motiflerle bezenmiştir. Tavanda yine ahşaptan oyma tekniğiyle yapılmış, bitkisel motiflerle süslü oval ve madalyon göbekler vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-ayanbey-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-ayanbey-mosque/aerial-view.jpg",
+      "alt": "Yüksekten bakış: kiremit kaplı kırma çatılı beyaz cami, yanında ince beyaz minare, çevresinde ağaçlar ve uzakta şehir silueti",
+      "description": "Caminin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-ayanbey-mosque/prayer-hall.jpg",
+      "alt": "Harim içi: kırmızı ve beyaz çıtalı ahşap tavan, büyük kristal avize, solda oyma süslemeli ahşap mihrap, ortada kırmızı boyalı ahşap direkler, sağda minber, yeşil halı",
+      "description": "Harim, ahşap mihrap ve destekler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minaret",
+      "image": "/images/konya-meram-ayanbey-mosque/aerial-view.jpg",
+      "x": 27,
+      "y": 40,
+      "title": "Minare",
+      "text": "Girişin batı tarafında içeri çekilmiş bir minare yer alır.",
+      "sourceId": "inv-p89"
+    },
+    {
+      "id": "wooden-mihrab",
+      "image": "/images/konya-meram-ayanbey-mosque/prayer-hall.jpg",
+      "x": 32,
+      "y": 52,
+      "title": "Ahşap mihrap",
+      "text": "Yarım daire kesitli mihrap ahşaptan ajur tekniğiyle yapılmış ve bitkisel motiflerle bezenmiştir.",
+      "sourceId": "inv-p89"
+    },
+    {
+      "id": "wooden-support",
+      "image": "/images/konya-meram-ayanbey-mosque/prayer-hall.jpg",
+      "x": 48,
+      "y": 72,
+      "title": "Ahşap destek",
+      "text": "Harim, iki sıra hâlindeki ikişer ahşap destekle mihraba dik üç sahına ayrılmıştır.",
+      "sourceId": "inv-p89"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ayanbey Camii'ni kim yaptırmıştır?",
+      "options": [
+        "Karamanoğlu İbrahim Bey",
+        "Hacı Haydar Efendi",
+        "Ahmet Necip Efendi",
+        "Memiş Paşa'nın oğlu Süleyman Bey"
+      ],
+      "correct": 3,
+      "description": "Cami, Ayan üyesi Memiş Paşa'nın oğlu Süleyman Bey tarafından XIX. yüzyıl ortalarında yaptırılmıştır.",
+      "sourceId": "inv-p89"
+    },
+    {
+      "question": "Harimin kuzeyindeki mahfil hangi biçimi almıştır?",
+      "options": [
+        "\"U\"",
+        "\"L\"",
+        "\"T\"",
+        "Düz"
+      ],
+      "correct": 1,
+      "description": "Mahfil batıdaki sahına doğru uzatılarak \"L\" şeklini almıştır.",
+      "sourceId": "inv-p89"
+    },
+    {
+      "question": "Mihrap hangi teknikle yapılmıştır?",
+      "options": [
+        "Ahşaptan ajur tekniğiyle",
+        "Alçıdan kalıpla",
+        "Mermerden kabartmayla",
+        "Çini kaplamayla"
+      ],
+      "correct": 0,
+      "description": "Yarım daire kesitli mihrap ahşaptan ajur tekniğiyle yapılmış ve bitkisel motiflerle bezenmiştir.",
+      "sourceId": "inv-p89"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p89",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Ayanbey Camii\"",
+      "page": "89"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

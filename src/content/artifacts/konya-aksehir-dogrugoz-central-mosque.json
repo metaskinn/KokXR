@@ -1,0 +1,95 @@
+{
+  "id": "konya-aksehir-dogrugoz-central-mosque",
+  "name": "Doğrugöz Beldesi Merkez Camii",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "XIX. yüzyılın sonları (plan ve mimari elemanlarına göre tahmin)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Doğrugöz'ün ulu camisi; ahşap direkli harimi Müslim Gökçek'in 1950'lerde yaptığı barok tarzda kalem işleriyle süslüdür.",
+  "history": "Cami, Akşehir'e bağlı Doğrugöz Beldesi'nin Köyiçi Mevkii'ndedir ve kasabanın ulu camisidir. İnşa tarihi bilinmemekle birlikte plan ve mimari elemanlarından hareketle XIX. yüzyılın sonlarında yapıldığı düşünülür.\n\nDıştan dikdörtgen planlı yapı sonradan kırma çatıyla örtülmüş; kuzeyine son cemaat yeri ve minare eklenmiştir. Kuzeyde yeni inşa edilen caminin kullanılmaya başlanmasıyla eski cami terk edilmiş, yapı 2002'de esaslı bir onarım görmüştür.\n\nHarim mihraba dik üç sahınlı, ahşap direkli ve ahşap tavanlıdır. Süslemeleri, 1950'lerde Akşehir, Ilgın ve Doğanhisar camilerini de süsleyen Müslim Gökçek yapmıştır; duvarlarda sıva üzerine barok tarzda natüralist, bitkisel bezemeler vardır. Kıble duvarının ortasındaki yarım daire planlı mihrabın nişi iki yandan perde motifiyle süslenmiş, ortasına üç zincirle bir kandil asılmıştır; nişin iki yanını sütunceler sınırlar.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-dogrugoz-central-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-dogrugoz-central-mosque/exterior.jpg",
+      "alt": "Kesme taş köşeli, sıvalı duvarlı ve kırma çatılı cami; arkada minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-dogrugoz-central-mosque/prayer-hall.jpg",
+      "alt": "Koyu ahşap direkler ve tavan kirişleri arasında, çiçek desenli duvarların önünde mavi nişli mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-dogrugoz-central-mosque/prayer-hall.jpg",
+      "x": 30,
+      "y": 50,
+      "title": "Ahşap direkler",
+      "text": "Harim mihraba dik üç sahınlı, ahşap direkli ve ahşap tavanlıdır.",
+      "sourceId": "inv-p327"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-dogrugoz-central-mosque/prayer-hall.jpg",
+      "x": 88,
+      "y": 30,
+      "title": "Kalem işi duvar süslemeleri",
+      "text": "Duvarlarda sıva üzerine barok tarzda natüralist, bitkisel süslemeler yapılmıştır.",
+      "sourceId": "inv-p327"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin süslemelerini kim yapmıştır?",
+      "options": [
+        "Kerimüddin Erdişah",
+        "Müslim Gökçek",
+        "Hacı Mekkî Usta",
+        "Muhammed b. Havlan"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Müslim Gökçek.",
+      "sourceId": "inv-p327"
+    },
+    {
+      "question": "Yapı hangi yıl esaslı bir onarım görmüştür?",
+      "options": [
+        "1950",
+        "1990",
+        "2015",
+        "2002"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: 2002.",
+      "sourceId": "inv-p327"
+    },
+    {
+      "question": "Harim mihraba dik kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "İki",
+        "Dört",
+        "Beş"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Üç.",
+      "sourceId": "inv-p327"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p327",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Doğrugöz Beldesi Merkez Camii\"",
+      "page": "327"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

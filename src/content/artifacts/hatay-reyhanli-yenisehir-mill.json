@@ -1,0 +1,100 @@
+{
+  "id": "hatay-reyhanli-yenisehir-mill",
+  "name": "Reyhanlı Yenişehir Değirmeni",
+  "district": "Reyhanlı",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Reyhanlı Yenişehir Değirmeni, Yenişehir Gölü’nün sularıyla çalışan dört değirmen taşını barındırmış tonozlu bir taş yapıdır.",
+  "history": "Reyhanlı ilçesi Yenişehir Mahallesi 541 parseldeki değirmen, Yenişehir Gölü’nün kuzeybatısında kuzeydoğu-güneybatı yönünde uzanır. Birbirine paralel iki uzun duvarın sınırladığı dikdörtgene yakın yapı beşik tonozla örtülüdür. Kuzeydoğudaki basık kemerli çift kanatlı kapıdan girilir. Aynı yöndeki duvarda girişin güneybatısında dört mazgal pencere vardır. Pencereler arasındaki gömme payeler duvarları güçlendirir. Kapının solunda ek paye ve tonozlu açıklık bulunur. Dış duvar kaba yonu taş ve sıvasız, zemin şap kaplıdır.\n\nAna mekân tabanının altındaki tonozlu kanallar, mazgal pencere aksları boyunca uzanarak suyun tahliyesini sağlar. Kitabın aktardığı durumda su giriş ve çıkış kanalları doldurulmuş, kullanılamaz hâle gelmiştir. Güneydoğuya 1970’lerdeki restorasyonla gazino işlevli bir bölüm eklenmiştir.\n\nKitap, 1930 tarihli kadastro paftası dışında taşınmaza ait belge bulunamadığını söyler; bu tarih inşa tarihi değildir. Özgün kullanımda gölden beslenen dört değirmen taşının bulunduğu ana hacim zamanla değişmiş, olumsuz kullanımın tahribatına rağmen geçmişinin izlerini korumuştur.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-reyhanli-yenisehir-mill/mill-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-reyhanli-yenisehir-mill/mill-exterior.jpg",
+      "alt": "Ağaç gölgesinde uzanan alçak taş duvarlı yapı, solda koyu kemerli giriş ve önde geniş açık alan",
+      "description": "Ağaç gölgesinde uzanan alçak taş duvarlı yapı, solda koyu kemerli giriş ve önde geniş açık alan",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-reyhanli-yenisehir-mill/mill-exterior.jpg",
+      "x": 54,
+      "y": 56,
+      "title": "Taş duvarlar",
+      "text": "Değirmenin dış duvarları sıvasız kaba yonu taşlardan oluşur.",
+      "sourceId": "inv-p464"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-reyhanli-yenisehir-mill/mill-exterior.jpg",
+      "x": 22,
+      "y": 62,
+      "title": "Kemerli giriş",
+      "text": "Ana yapıya kuzeydoğu yönündeki basık kemerli kapıdan girilir.",
+      "sourceId": "inv-p464"
+    }
+  ],
+  "test": [
+    {
+      "question": "Reyhanlı Yenişehir Değirmeni kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "Reyhanlı",
+        "Arsuz"
+      ],
+      "correct": 2,
+      "description": "Türkçe adres listesinde ilçe Reyhanlı olarak verilmiştir.",
+      "sourceId": "inv-p476"
+    },
+    {
+      "question": "Değirmen hangi su kaynağıyla beslenirdi?",
+      "options": [
+        "Asi Nehri",
+        "Nil Nehri",
+        "Van Gölü",
+        "Yenişehir Gölü"
+      ],
+      "correct": 3,
+      "description": "Özgün kullanımda dört değirmen taşı Yenişehir Gölü’nün sularıyla beslenirdi.",
+      "sourceId": "inv-p465"
+    },
+    {
+      "question": "Ana mekânda özgün kullanımda kaç değirmen taşı vardı?",
+      "options": [
+        "Dört",
+        "Bir",
+        "Yedi",
+        "On"
+      ],
+      "correct": 0,
+      "description": "Kitap dört adet değirmen taşından söz eder.",
+      "sourceId": "inv-p465"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p464",
+      "text": "Hatay Vakıf Eserleri, Reyhanlı, \"Reyhanlı Yenişehir Değirmeni\"",
+      "page": "464"
+    },
+    {
+      "id": "inv-p465",
+      "text": "Hatay Vakıf Eserleri, Reyhanlı, \"Reyhanlı Yenişehir Değirmeni\"",
+      "page": "465"
+    },
+    {
+      "id": "inv-p476",
+      "text": "Hatay Vakıf Eserleri, Reyhanlı, \"Reyhanlı Yenişehir Değirmeni\"",
+      "page": "476"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

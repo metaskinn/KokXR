@@ -1,0 +1,104 @@
+{
+  "id": "konya-meram-emir-halil-mosque",
+  "name": "Emir Halil Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XX. yüzyıl; Cumhuriyet döneminde onarım",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hacı Fettah Mezarlığı’nın batısındaki Emir Halil Camii, binalar arasında kalan betonarme bir mahalle mescididir.",
+  "history": "Cami, Meram, Hoca Faruk Mahallesi, Abdullah Çavuş Sokak No. 30’da, Hacı Fettah Mezarlığı’nın batısındadır. İnşa tarihi ve banisi hakkında kitâbe veya kaynak bulunmamaktadır. Kitap, plan ve malzemeden hareketle XX. yüzyılda yapıldığını, sonradan Cumhuriyet döneminde onarıldığını belirtir.\n\nMahalle mescidi olarak kullanılan yapı binaların arasında kalmıştır. Betonarme cami dikdörtgen planlı ve kırma çatılıdır. Mihrap ve minberi oldukça sadedir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-emir-halil-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-emir-halil-mosque/exterior.jpg",
+      "alt": "Sıvalı cephede yuvarlak kemerli geniş pencereler ve sağda ahşap giriş kapısı",
+      "description": "Sıvalı cephede yuvarlak kemerli geniş pencereler ve sağda ahşap giriş kapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-emir-halil-mosque/mihrab.jpg",
+      "alt": "İki büyük kemerli pencere arasında gri çerçeveli mihrap ve kırmızı halı",
+      "description": "İki büyük kemerli pencere arasında gri çerçeveli mihrap ve kırmızı halı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-emir-halil-mosque/minbar.jpg",
+      "alt": "Kırmızı halılı iç mekânda açık renk ahşap minber, kemerli pencereler ve mahfil kenarı",
+      "description": "Kırmızı halılı iç mekânda açık renk ahşap minber, kemerli pencereler ve mahfil kenarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-emir-halil-mosque/mihrab.jpg",
+      "x": 50,
+      "y": 53,
+      "title": "Mihrap",
+      "text": "Caminin mihrap ve minberi oldukça sadedir.",
+      "sourceId": "inv-p156"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-emir-halil-mosque/minbar.jpg",
+      "x": 44,
+      "y": 54,
+      "title": "Minber",
+      "text": "Kitap minberi sade olarak tanımlar.",
+      "sourceId": "inv-p156"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yapının inşasında hangi malzeme kullanılmıştır?",
+      "options": [
+        "Kerpiç",
+        "Tamamen mermer",
+        "Betonarme",
+        "Çelik"
+      ],
+      "correct": 2,
+      "description": "Cami betonarme malzemeyle inşa edilmiştir.",
+      "sourceId": "inv-p156"
+    },
+    {
+      "question": "Cami hangi amaçla kullanılmaktadır?",
+      "options": [
+        "Mahalle mescidi",
+        "Kervansaray",
+        "Medrese",
+        "Hamam"
+      ],
+      "correct": 0,
+      "description": "Kitap yapının mahalle mescidi olarak kullanıldığını belirtir.",
+      "sourceId": "inv-p156"
+    },
+    {
+      "question": "Cami hangi mezarlığın batısındadır?",
+      "options": [
+        "Üçler Mezarlığı",
+        "Araplar Mezarlığı",
+        "Musalla Mezarlığı",
+        "Hacı Fettah Mezarlığı"
+      ],
+      "correct": 3,
+      "description": "Konumu Hacı Fettah Mezarlığı’nın batısı olarak verilir.",
+      "sourceId": "inv-p156"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p156",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Emir Halil Camii\"",
+      "page": "156"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

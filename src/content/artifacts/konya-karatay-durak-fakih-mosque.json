@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-durak-fakih-mosque",
+  "name": "Durak Fakih Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Girişte H. 650 / M. 1252-53; 1955’te onarım",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Durak Fakih Camii, girişindeki Selçuklu tarihini taşıyan, harimine merdivenle çıkılan iki katlı bir yapıdır.",
+  "history": "Cami, Karatay, Aziziye Mahallesi, Mor Sokak’tadır. Giriş üzerinde H. 650 / M. 1252-53 tarihleri bulunur. Yapı 1955’te onarılmıştır.\n\nDerinlemesine dikdörtgen planlı, iki katlı ve kırma çatılıdır. Sade cephelerinde at nalı kemerli dikdörtgen pencereler vardır. Güney cephenin batı köşesindeki kapıdan girilir; girişten yükselen merdiven harime ulaşır. Enlemesine dikdörtgen harim içten ahşap tavanlıdır. Kuzeyde iki ahşap direk ve beden duvarlarına dayanan ahşap mahfil yer alır. Kıble duvarındaki onarılmış mihrap mermer kaplamalı ve sadedir. Sağda güneybatıdaki ahşap minber taç kapı, aynalık ve köşk bölümlerinden oluşur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-durak-fakih-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-durak-fakih-mosque/exterior.jpg",
+      "alt": "Geniş saçaklı beyaz cami cephesinde iki kemerli pencere ve altta küçük açıklıklar",
+      "description": "Geniş saçaklı beyaz cami cephesinde iki kemerli pencere ve altta küçük açıklıklar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-durak-fakih-mosque/mihrab.jpg",
+      "alt": "Mavi halılı harimde mermer çerçeveli mihrap ve yanında büyük pencere",
+      "description": "Mavi halılı harimde mermer çerçeveli mihrap ve yanında büyük pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-durak-fakih-mosque/exterior.jpg",
+      "x": 60,
+      "y": 52,
+      "title": "Kemerli pencereler",
+      "text": "Sade beden duvarlarında at nalı kemerli dikdörtgen pencereler bulunur.",
+      "sourceId": "inv-p203"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-durak-fakih-mosque/mihrab.jpg",
+      "x": 71,
+      "y": 59,
+      "title": "Mermer kaplamalı mihrap",
+      "text": "Onarım gören mihrap mermer kaplamalı sade bir düzenlemedir.",
+      "sourceId": "inv-p203"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami kaç katlıdır?",
+      "options": [
+        "Bir",
+        "Üç",
+        "İki",
+        "Dört"
+      ],
+      "correct": 2,
+      "description": "Kitap camiyi iki katlı olarak tanımlar.",
+      "sourceId": "inv-p203"
+    },
+    {
+      "question": "Harime nasıl ulaşılır?",
+      "options": [
+        "Girişten yükselen merdivenle",
+        "Asansörle",
+        "Yeraltı tüneliyle",
+        "Avlu köprüsüyle"
+      ],
+      "correct": 0,
+      "description": "Giriş bölümünden yukarı yönelen merdiven harime ulaşır.",
+      "sourceId": "inv-p203"
+    },
+    {
+      "question": "Kitapta hangi onarım yılı verilir?",
+      "options": [
+        "1860",
+        "1907",
+        "2003",
+        "1955"
+      ],
+      "correct": 3,
+      "description": "Yapının 1955’te onarıldığı belirtilir.",
+      "sourceId": "inv-p203"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p203",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Durak Fakih Camii\"",
+      "page": "203"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

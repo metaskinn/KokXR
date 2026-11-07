@@ -1,0 +1,94 @@
+{
+  "id": "konya-aksehir-ferruhsah-masjid",
+  "name": "Ferruhşah (Seyit Mahmut Hayrani) Mescidi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Selçuklu · H. 621, Sultan Keykubat dönemi",
+  "endowment": "Kitabede Konyalı Kulu oğlu Ferruh Şah",
+  "summary": "Seyyid Mahmut Hayrani haziresindeki kubbeli mescit, devşirme taşları ve çiniyle bezeli pencere çevreleriyle dikkat çeker.",
+  "history": "Mescit, Anıt Mahallesi, Türbe Sokağı’nda, Seyyid Mahmut Hayrani haziresindedir; Mahmut Hayrani ve Cıncıklı Mescit adlarıyla da anılır. Batıdaki pencereler arasında dört satırlık, celî sülüs Arapça kitabe bulunur; çevresi turkuaz çini mozaiktir. Kitabe, yapının Keyhüsrev oğlu Sultan Keykubat’ın hükümdarlığında, H. 621 Rebiülevvel ayının birinci günü Konyalı Kulu oğlu Ferruh Şah’ın eliyle tamamlandığını belirtir. Mahmut Hayrani’nin zaviyesi olduğu da söylenir. 2006’da Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nKare planlı mescit dıştan kurşun kaplı kubbeyle örtülüdür. Cephelerde taş ve devşirme malzeme; güney ve batıda friz, arşitrav ve templon levhası parçaları bulunur. Batı pencerelerinin kemer köşelikleri ve alınlıklarında tuğla, sırlı seramik kâseler ve çini plakalarla bezemeler vardır; bazı açıklıklar moloz taşla kapatılmıştır. Batıdaki kapının kitabeli, bitkisel ve geometrik bezemeli ahşap kanatları Akşehir Müzesi’nde korunur. Batı kapısından girilen sıvalı harim kare planlı ve kubbelidir; kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-ferruhsah-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-ferruhsah-masjid/exterior.jpg",
+      "alt": "Taş duvarlı küçük mescidin iki kemerli pencere açıklığı, aralarında kitabe ve önünde kiremit saçaklı giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-ferruhsah-masjid/exterior.jpg",
+      "x": 64,
+      "y": 40,
+      "title": "Kitabe",
+      "text": "Batıdaki pencereler arasında turkuaz çini mozaikle çevrili dört satırlık Arapça kitabe vardır.",
+      "sourceId": "inv-p328"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-ferruhsah-masjid/exterior.jpg",
+      "x": 75,
+      "y": 45,
+      "title": "Pencere bezemeleri",
+      "text": "Pencere kemer köşelikleri ve alınlıkları tuğla, sırlı seramik kâseler ve çini plakalarla bezenmiştir.",
+      "sourceId": "inv-p329"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ahşap kapı kanatları nerede korunmaktadır?",
+      "options": [
+        "Mevlâna Müzesi",
+        "İstanbul Arkeoloji Müzesi",
+        "Sırçalı Medrese",
+        "Akşehir Müzesi"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Akşehir Müzesi.",
+      "sourceId": "inv-p329"
+    },
+    {
+      "question": "Yapı hangi başka adla anılır?",
+      "options": [
+        "Cıncıklı Mescit",
+        "Yüksek Camii",
+        "Çukur Camii",
+        "Selçuklu Camisi"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Cıncıklı Mescit.",
+      "sourceId": "inv-p328"
+    },
+    {
+      "question": "Ferruhşah (Seyit Mahmut Hayrani) Mescidi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Akşehir.",
+      "sourceId": "inv-p328"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p328",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ferruhşah (Seyit Mahmut Hayrani) Mescidi\"",
+      "page": "328"
+    },
+    {
+      "id": "inv-p329",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Ferruhşah (Seyit Mahmut Hayrani) Mescidi\"",
+      "page": "329"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

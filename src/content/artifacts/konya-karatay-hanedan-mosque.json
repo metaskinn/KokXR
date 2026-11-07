@@ -1,0 +1,97 @@
+{
+  "id": "konya-karatay-hanedan-mosque",
+  "name": "Hanedan Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Cumhuriyet’in ilk yılları · Türkçe kitâbesine göre 1929",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Girişteki Türkçe kitâbesine göre 1929’da yapılan, minaresiz, taş temelli ve kerpiç duvarlı küçük cami.",
+  "history": "Cami, Karatay, Şeyh Ulema Çavuşoğlu Mahallesi’ndedir. Girişteki Türkçe kitâbesine göre Cumhuriyet’in ilk yıllarında, 1929’da yapılmıştır.\n\nTemelde taş, diğer bölümlerde kerpiç kullanılarak yığma tekniğiyle inşa edilen cami dikdörtgen planlıdır ve üst örtüsü kırma çatıdır. Camide minare yoktur; giriş kuzey cepheden sağlanır. Cepheler altta dikdörtgen pencereler, üstte küçük dikdörtgen tepe pencereleriyle aydınlatılır. Harimin üst örtüsü çıtalı tavandır. Mihrap ve minber sade ve ahşaptır; harimin kuzey duvarında mahfil bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-hanedan-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-hanedan-mosque/exterior.jpg",
+      "alt": "Yeşil boyalı, kiremit kırma çatılı, minaresiz küçük cami; önünde ağaç ve alçak bir ek yapı",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-hanedan-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı halı, ortada sade mihrap, sağda beyaz korkuluklu minber, üstte avizeler ve yazı levhaları",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kirma-cati",
+      "image": "/images/konya-karatay-hanedan-mosque/exterior.jpg",
+      "x": 60,
+      "y": 20,
+      "title": "Kırma çatı",
+      "text": "Dikdörtgen planlı caminin üst örtüsü kırma çatıdır; camide minare yoktur.",
+      "sourceId": "inv-p267"
+    },
+    {
+      "id": "minber",
+      "image": "/images/konya-karatay-hanedan-mosque/prayer-hall.jpg",
+      "x": 83,
+      "y": 48,
+      "title": "Minber",
+      "text": "Harimdeki mihrap ve minber sadedir ve ahşaptan yapılmıştır.",
+      "sourceId": "inv-p267"
+    }
+  ],
+  "test": [
+    {
+      "question": "Türkçe kitâbesine göre Hanedan Camii hangi yıl yapılmıştır?",
+      "options": [
+        "1909",
+        "1929",
+        "1940",
+        "1949"
+      ],
+      "correct": 1,
+      "description": "Girişteki Türkçe kitâbeye göre cami 1929’da yapılmıştır.",
+      "sourceId": "inv-p267"
+    },
+    {
+      "question": "Hanedan Camii’nde hangi öğe bulunmaz?",
+      "options": [
+        "Mahfil",
+        "Mihrap",
+        "Minare",
+        "Minber"
+      ],
+      "correct": 2,
+      "description": "Camide minare bulunmamaktadır.",
+      "sourceId": "inv-p267"
+    },
+    {
+      "question": "Harimin üst örtüsü nasıldır?",
+      "options": [
+        "Çıtalı tavan",
+        "Kubbe",
+        "Beşik tonoz",
+        "Bağdadi kubbe"
+      ],
+      "correct": 0,
+      "description": "Harim üst örtüsü çıtalı tavandır.",
+      "sourceId": "inv-p267"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p267",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Hanedan Camii\"",
+      "page": "267"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

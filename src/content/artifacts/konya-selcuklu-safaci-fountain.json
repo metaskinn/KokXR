@@ -1,0 +1,99 @@
+{
+  "id": "konya-selcuklu-safaci-fountain",
+  "name": "Safacı Çeşmesi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Cumhuriyet dönemi · üzerindeki yazıya göre 1947",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Alâeddin Bulvarı'nda Ak Camii'nin güneybatı köşesinde, üzerinde \"Safacı Çeşmesi 1947\" yazan, şahide biçimli mermer çeşme.",
+  "history": "Çeşme, Selçuklu ilçesinde, Alâeddin Bulvarı üzerinde, Ak Camii'nin (Şazibey Camii) güneybatı köşesinde bulunmaktadır.\n\nEserin üste yakın bir bölümünde Türkçe olarak \"Safacı Çeşmesi 1947\" yazmaktadır. Mermerden, şahide (mezar taşı) biçiminde yapılmıştır; yukarıya doğru daralarak yükselen şahide kısmı, üstte içbükey bir yayla bütünleşen üçgen bir alınlıkla sona erer.\n\nÇeşmenin cephesi, şahide sınırlarını izleyen geniş bir kabartma şeritle kontur olarak vurgulanmıştır; bu şerit alt kısımda daha da kalınlaşır. Yer yer yıpranmaların görüldüğü çeşmede sadelik hakimdir. Aynalık kısmında ayna taşı yoktur. Alt bölüm zamanla özgünlüğünü tamamen yitirmiş, son müdahalelerle ızgaralı bir havuz olarak düzenlenmiş ve gideri şehir şebekesine bağlanmıştır. Çeşme bugün hâlâ kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-safaci-fountain/front-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-safaci-fountain/front-view.jpg",
+      "alt": "Kesme taş duvarlı, kemerli pencereli bir caminin önünde, yukarı doğru daralan ve üstü sivri biten beyaz mermer çeşme; üst kısmında küçük bir yazı levhası, altında taş kaide, solda bir bank",
+      "description": "Çeşme ve Ak Camii cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "inscription",
+      "image": "/images/konya-selcuklu-safaci-fountain/front-view.jpg",
+      "x": 56,
+      "y": 30,
+      "title": "\"Safacı Çeşmesi 1947\"",
+      "text": "Eserin üste yakın bölümünde Türkçe olarak \"Safacı Çeşmesi 1947\" yazmaktadır.",
+      "sourceId": "inv-p232"
+    },
+    {
+      "id": "shahida",
+      "image": "/images/konya-selcuklu-safaci-fountain/front-view.jpg",
+      "x": 56,
+      "y": 58,
+      "title": "Şahide biçimli gövde",
+      "text": "Mermerden yapılan çeşme şahide biçimindedir; yukarı doğru daralarak yükselir ve üçgen alınlıkla sona erer.",
+      "sourceId": "inv-p232"
+    },
+    {
+      "id": "basin",
+      "image": "/images/konya-selcuklu-safaci-fountain/front-view.jpg",
+      "x": 56,
+      "y": 90,
+      "title": "Alt bölüm",
+      "text": "Özgünlüğünü yitiren alt bölüm son müdahalelerle ızgaralı bir havuz olarak düzenlenmiş, gideri şehir şebekesine bağlanmıştır.",
+      "sourceId": "inv-p232"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çeşme hangi malzemeden yapılmıştır?",
+      "options": [
+        "Tuğla",
+        "Mermer",
+        "Ahşap",
+        "Bazalt"
+      ],
+      "correct": 1,
+      "description": "Eser mermer malzemeden, şahide şeklinde yapılmıştır.",
+      "sourceId": "inv-p232"
+    },
+    {
+      "question": "Çeşmenin üzerindeki yazıda hangi yıl yer alır?",
+      "options": [
+        "1909",
+        "1923",
+        "1947",
+        "1975"
+      ],
+      "correct": 2,
+      "description": "Eserin üst kısmında Türkçe olarak \"Safacı Çeşmesi 1947\" yazmaktadır.",
+      "sourceId": "inv-p232"
+    },
+    {
+      "question": "Çeşme hangi caminin güneybatı köşesindedir?",
+      "options": [
+        "Ak Camii (Şazibey Camii)",
+        "Alâeddin Camii",
+        "Şerafeddin Camii",
+        "Aziziye Camii"
+      ],
+      "correct": 0,
+      "description": "Çeşme, Alâeddin Bulvarı'nda Ak Camii'nin (Şazibey Camii) güneybatı köşesinde bulunur.",
+      "sourceId": "inv-p232"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p232",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Safacı Çeşmesi\"",
+      "page": "232"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

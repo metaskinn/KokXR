@@ -1,0 +1,97 @@
+{
+  "id": "konya-eregli-grand-kible-mosque",
+  "name": "Ulu (Kıble) Camii",
+  "city": "Konya",
+  "district": "Ereğli",
+  "period": "Anadolu Selçuklu dönemi; kitapta farklı inşa kayıtları",
+  "endowment": "Vakıf defterinde Karamanoğlu İbrahim Bey’in oğlu Mehmet Bey",
+  "summary": "Ereğli Cami-i Kebir Mahallesi'ndeki yapı Cami-i Ereğli ve Kıble Camii adlarıyla da bilinir.",
+  "history": "Ereğli Cami-i Kebir Mahallesi'ndeki yapı Cami-i Ereğli ve Kıble Camii adlarıyla da bilinir. Kitap Anadolu Selçuklu döneminde yapıldığını ve Karamanoğlu İbrahim Bey zamanında onarıldığını belirtir. Minare kitabesindeki “sinetun” sözcüğünün ebced hesabı H. 510 / M. 1116'ya ve I. Mesut dönemine bağlanır. Buna karşılık Kuyud-i Kadime Arşivi'ndeki 584 numaralı Karaman Vilayeti Vakıflar Defteri, camiyi Karamanoğlu İbrahim Bey'in oğlu Mehmet Bey'in 860/1455-56'da yaptırdığını söyler. Bu farklı kayıtlar kitapta birlikte verilmektedir.\n\nKitabeler Abdülcabbar Zâde'nin H. 1234 / M. 1818-19 ve Emin Bey'in H. 1308 / M. 1890-91 onarımlarını bildirir. Vakıflar Bölge Müdürlüğü 2008'de de onarım yapmıştır. Kitap enine dikdörtgen, kırma çatılı ve moloz taş duvarlı bir yapı tarif eder. Kuzeydoğu minaresi kesme taş ve çinili, kare kaide ve sekizgen pabuç üzerinde silindirik gövdeli ve tek şerefelidir. Harim dört sahınlı olarak anlatılır; iç örtü ahşap kirişler üstünde düz dam şeklinde tanımlanır. Kuzey mahfili sekiz ayağa oturur. Yarım daire planlı mihrabın nişinde üç sivri kemerli silme, sağındaki taş minberde özgün olmayan betonarme sıva vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-eregli-grand-kible-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-eregli-grand-kible-mosque/aerial-view.jpg",
+      "alt": "Yerleşim içindeki cami ve taş minarenin havadan görünümü",
+      "description": "Yerleşim içindeki cami ve taş minarenin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-eregli-grand-kible-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı halılı harimde taş sütunlar ve art arda sivri kemerler",
+      "description": "Kırmızı halılı harimde taş sütunlar ve art arda sivri kemerler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-eregli-grand-kible-mosque/aerial-view.jpg",
+      "x": 40,
+      "y": 43,
+      "title": "Minare",
+      "text": "Minare kare kaide ve sekizgen pabuç üzerinde silindirik gövdelidir.",
+      "sourceId": "inv-p431"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-eregli-grand-kible-mosque/aerial-view.jpg",
+      "x": 65,
+      "y": 55,
+      "title": "Kırma çatı",
+      "text": "Kitap yapının üst örtüsünü kırma çatı olarak tanımlar.",
+      "sourceId": "inv-p431"
+    }
+  ],
+  "test": [
+    {
+      "question": "Ulu (Kıble) Camii hangi ilçededir?",
+      "options": [
+        "Ereğli",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Ulu (Kıble) Camii, Konya'nın Ereğli ilçesindedir.",
+      "sourceId": "inv-p431"
+    },
+    {
+      "question": "Kuzeydeki mahfil kaç ayağa oturur?",
+      "options": [
+        "İki",
+        "Sekiz",
+        "Dört",
+        "On iki"
+      ],
+      "correct": 1,
+      "description": "Sekiz.",
+      "sourceId": "inv-p431"
+    },
+    {
+      "question": "Caminin bir diğer adı hangisidir?",
+      "options": [
+        "Emen Eski Camii",
+        "Hamidiye Camii",
+        "Kabacalı Camii",
+        "Cami-i Ereğli"
+      ],
+      "correct": 3,
+      "description": "Cami-i Ereğli.",
+      "sourceId": "inv-p431"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p431",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ereğli, \"Ulu (Kıble) Camii\"",
+      "page": "431"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

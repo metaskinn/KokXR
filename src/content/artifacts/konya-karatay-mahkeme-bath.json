@@ -1,0 +1,114 @@
+{
+  "id": "konya-karatay-mahkeme-bath",
+  "name": "Mahkeme (Yeni) Hamamı",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Karamanoğulları · Karamanoğlu İbrahim Bey dönemi (kitâbesi yok)",
+  "endowment": "Karamanoğlu İbrahim Bey'in Konya'daki medresesi ve imareti için yaptırılmıştır",
+  "summary": "Karamanoğlu İbrahim Bey'in Konya'daki medresesi ve imareti için yaptırdığı, dört eyvanlı ve dört köşe halvetli, hâlâ kullanılan çifte hamam.",
+  "history": "Hamam, Karatay ilçesi, Şemsi Tebrizi Mahallesi'nde, Şerafeddin Camii'nin kuzeybatısında, 256 ada 16 numaralı parselde yer alır. Üzerinde kitâbe yoktur; ancak Karamanoğlu İbrahim Bey'in Konya'daki medresesi ve imareti için yaptırdığı bilinmektedir. Mahkeme Hamamı, Yeni Hamam ve bunun Arapçası olan \"Hamam-ı Cedid\" adlarıyla da anılır.\n\nKuzey-güney yönünde uzanan hamam, moloz taş ve tuğladan çifte hamam olarak inşa edilmiştir. Sıcaklık kısmı dört eyvanlı ve dört köşe halvetlidir. Yapının doğusu kadınlara, batısı erkeklere ayrılmıştır. Sıcaklıklar simetrik iken diğer kısımlarda simetri gözetilmemiştir. Zaman içinde yapılan çok sayıda niteliksiz müdahale sonucu yapı özgün malzeme dokusunu büyük ölçüde kaybetmiştir.\n\nBatı kanattaki erkekler bölümüne güney cephedeki basık kemerli kapıdan girilir. Soyunmalığın ortasında dıştan daire planlı, içten yivli bir şadırvan vardır; şadırvanın çevresinde mukarnaslı kaideler üzerinde yükselen dört ahşap destek, üst örtüyü ve aydınlık fenerini taşır. Aralık 13 dilimli, ılıklık tromp geçişli ve 32 dilimli bir kubbeyle örtülüdür. Sıcaklığın sekizgen orta mekânını yirmi dilimli bir kubbe örter; ortasında sekizgen bir göbek taşı bulunur.\n\nDoğudaki kadınlar bölümünün soğukluğu düz damla örtülüdür ve ortasında mermerden 18 dilimli bir şadırvan yer alır. Bu bölümün sıcaklığı erkekler bölümünün simetriği olarak inşa edilmiştir. Her iki bölümün sıcaklıklarının kuzeyindeki su deposu ve külhan, belediye imar çalışmaları sırasında bir kısmı yıkıldığından özgün ölçüsünü kaybetmiştir. Hamam günümüzde hâlâ kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-mahkeme-bath/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-mahkeme-bath/aerial-view.jpg",
+      "alt": "Havadan görünüm: gri metal çatılarla örtülü, çevresi dükkânlarla sarılı alçak bir yapı; arkada otopark, ağaçlar ve şehir binaları",
+      "description": "Hamamın havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-mahkeme-bath/street-view.jpg",
+      "alt": "Cadde seviyesinden: geniş saçaklı alçak bir yapının önünde sıralanan dükkânlar ve vitrinler, önde geniş taş kaplı meydan",
+      "description": "Hamamın sokaktan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karatay-mahkeme-bath/top-view.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: düz ve eğimli gri çatılar arasında, koyu renkli küçük kubbeler ve üzerlerinde açık renkli ışık gözleri",
+      "description": "Kubbelerin tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "domes",
+      "image": "/images/konya-karatay-mahkeme-bath/top-view.jpg",
+      "x": 47,
+      "y": 45,
+      "title": "Kubbeler ve ışık gözleri",
+      "text": "Hamamın tonoz ve kubbelerinde farklı sayıda ve ebatta aydınlatma gözleri bulunmaktadır.",
+      "sourceId": "inv-p218"
+    },
+    {
+      "id": "double-bath",
+      "image": "/images/konya-karatay-mahkeme-bath/aerial-view.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Çifte hamam",
+      "text": "Kuzey-güney yönünde uzanan hamam moloz taş ve tuğladan çifte hamam olarak inşa edilmiştir; doğusu kadınlara, batısı erkeklere ayrılmıştır.",
+      "sourceId": "inv-p217"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mahkeme Hamamı'nı kim yaptırmıştır?",
+      "options": [
+        "Sahip Ata",
+        "Karamanoğlu İbrahim Bey",
+        "II. Kılıçarslan",
+        "Hasbeyoğlu Mehmet"
+      ],
+      "correct": 1,
+      "description": "Hamamı Karamanoğlu İbrahim Bey'in Konya'daki medresesi ve imareti için yaptırdığı bilinmektedir.",
+      "sourceId": "inv-p217"
+    },
+    {
+      "question": "\"Hamam-ı Cedid\" adının Türkçe karşılığı olan isim hangisidir?",
+      "options": [
+        "Mahkeme Hamamı",
+        "Sultan Hamamı",
+        "Yeni Hamam",
+        "Çifte Hamam"
+      ],
+      "correct": 2,
+      "description": "Hamam, Yeni Hamam ve bunun Arapçası olan \"Hamam-ı Cedid\" adlarıyla da anılır.",
+      "sourceId": "inv-p217"
+    },
+    {
+      "question": "Kadınlar bölümünün soğukluğunun ortasında ne bulunur?",
+      "options": [
+        "Mermerden 18 dilimli bir şadırvan",
+        "Ahşap bir köşk",
+        "Çini kaplı bir havuz",
+        "Sekizgen bir göbek taşı"
+      ],
+      "correct": 0,
+      "description": "Kadınlar bölümü soğukluğunun ortasında mermer malzemeden yapılmış 18 dilimli bir şadırvan yer alır.",
+      "sourceId": "inv-p219"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p217",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Mahkeme (Yeni) Hamamı\"",
+      "page": "217"
+    },
+    {
+      "id": "inv-p218",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Mahkeme (Yeni) Hamamı\"",
+      "page": "218"
+    },
+    {
+      "id": "inv-p219",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karatay, \"Mahkeme (Yeni) Hamamı\"",
+      "page": "219"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

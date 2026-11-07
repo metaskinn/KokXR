@@ -1,0 +1,151 @@
+{
+  "id": "hatay-antakya-sheikh-ali-mosque-complex",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Şeyh Ali Camii ve Külliyesi",
+  "period": "İlk inşa için 15. yüzyılın ikinci yarısı tahmini; 1580’de varlığı bilinir",
+  "endowment": "Medrese: Halefzâde Cemil Ağa; caminin banisi kitapta belirtilmemiştir",
+  "summary": "Şeyh Ali Külliyesi, kubbeli camisi, taş bezemeli taç kapısı ve yedi hücreli medresesiyle anlatılır.",
+  "history": "Doğu ve batı girişleri bulunan düzensiz avluda cami güneyde, medrese kuzeyde, şadırvan batıdadır. İnşasının 15. yüzyılın ikinci yarısına uzanabileceği düşünülmekle birlikte caminin 1580’de var olduğu belirtilir. Kitap planını Türkmenistan’daki Talhatan Baba Camii ile karşılaştırır. Kuzeydoğudaki minare 2001’e kadar iki şerefeli iken sonradan tek şerefeli hale getirilmiştir; yüksek petek ve sivri külahla tamamlanır.\n\nBeyaz kalker taşlı caminin son cemaat yeri, köşelerde L biçimli ayaklar ve aradaki ince mermer sütunların taşıdığı sivri kemerlerle düzenlenmiş, ahşap sundurmayla örtülmüştür. Sundurmanın taç kapıyı ikiye bölüp üstteki ikiz pencerenin işlevini azalttığı kaydedilir. Kapıda siyah-beyaz taş işçiliği, yan sütunlar, ikiz ve yuvarlak pencereler ile altı satırlık kitabe vardır. Harimin taş kaplı sivri kubbesine köşelerde üçgen yelpazelerle geçilir; iki yanındaki mekânlar kalın gömme ayaklara oturan çapraz tonozlarla örtülüdür.\n\nHarimde yirmi altlık ve on altı üst pencere bulunur. Sivri kemerli mihrap, geniş profilli kornişleriyle geç Osmanlı Batı etkisini yansıtır. Mermer minberde benzer süsleme ve gotik izli süpürgelikler görülür. Kuzeydeki müezzin mahfili ince sütunlara basan üç sepet kulpu kemer ve iki renkli taş işçiliğiyle düzenlenmiştir.\n\nAvlunun kuzeyindeki medrese yedi hücrelidir. Doğudaki üç hücre bir kapı ve birer pencereyle, diğer dört hücre kapı ve ikişer pencereyle avluya açılır. Dört hücre kırma çatı, üçü beton tabliyeyle örtülüdür. Batıdan üçüncü hücrenin kapı kitabesi medresenin 1903’te Halefzâde Cemil Ağa tarafından yaptırıldığını bildirir.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-sheikh-ali-mosque-complex/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-sheikh-ali-mosque-complex/book-view-1.jpg",
+      "alt": "Taş caminin kemerli revağı, solda minare ve sağda örtülü şadırvan",
+      "description": "Şeyh Ali Camii ve Külliyesi — kitaptaki görünüm 1 (s. 160–161)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-sheikh-ali-mosque-complex/book-view-2.jpg",
+      "alt": "Sivri kemerler altında ortada ahşap kapı ve iki yanında pencereler",
+      "description": "Şeyh Ali Camii ve Külliyesi — kitaptaki görünüm 2 (s. 162–163)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-sheikh-ali-mosque-complex/book-view-3.jpg",
+      "alt": "Siyah-beyaz taşlı kapı kemerinin üstünde kitabe ve yuvarlak pencere",
+      "description": "Şeyh Ali Camii ve Külliyesi — kitaptaki görünüm 3 (s. 164–165)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-sheikh-ali-mosque-complex/book-view-4.jpg",
+      "alt": "Halı kaplı harimde beyaz sütunlar, kemerler ve üst pencereler",
+      "description": "Şeyh Ali Camii ve Külliyesi — kitaptaki görünüm 4 (s. 166–167)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-sheikh-ali-mosque-complex/book-view-2.jpg",
+      "x": 51,
+      "y": 38,
+      "title": "Taç kapı",
+      "text": "Taç kapıda siyah-beyaz taş işçiliği ve kitabe bulunur.",
+      "sourceId": "inv-p164"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-sheikh-ali-mosque-complex/book-view-4.jpg",
+      "x": 51,
+      "y": 40,
+      "title": "Kubbe",
+      "text": "Harimin kubbesine köşelerde üçgen yelpazelerle geçilir.",
+      "sourceId": "inv-p166"
+    }
+  ],
+  "test": [
+    {
+      "question": "Medrese kaç hücrelidir?",
+      "options": [
+        "Beş",
+        "Yedi",
+        "Dokuz",
+        "On iki"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Yedi.",
+      "sourceId": "inv-p175"
+    },
+    {
+      "question": "Medreseyi 1903’te kim yaptırmıştır?",
+      "options": [
+        "Medeni Halil Ağa",
+        "Ahmed Bey",
+        "Halefzâde Cemil Ağa",
+        "Hacı Sadık"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Halefzâde Cemil Ağa.",
+      "sourceId": "inv-p175"
+    },
+    {
+      "question": "Taç kapıda hangi iki renk taş işçiliği öne çıkar?",
+      "options": [
+        "Yeşil ve mavi",
+        "Sarı ve mor",
+        "Kırmızı ve yeşil",
+        "Siyah ve beyaz"
+      ],
+      "correct": 3,
+      "description": "Kitaptaki bilgi: Siyah ve beyaz.",
+      "sourceId": "inv-p164"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p163",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "163"
+    },
+    {
+      "id": "inv-p164",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "164"
+    },
+    {
+      "id": "inv-p166",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "166"
+    },
+    {
+      "id": "inv-p167",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "167"
+    },
+    {
+      "id": "inv-p171",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "171"
+    },
+    {
+      "id": "inv-p173",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "173"
+    },
+    {
+      "id": "inv-p174",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "174"
+    },
+    {
+      "id": "inv-p175",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "175"
+    },
+    {
+      "id": "inv-p190",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Şeyh Ali Camii ve Külliyesi\"",
+      "page": "190"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "konya-karatay-aziziye-mosque",
+  "name": "Aziziye Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Osmanlı · ilk yapı 1671–1676; mevcut cami 1872–1874",
+  "endowment": "Pertevniyal Valide Sultan’ın yardımları, eski mabedin gelirleri ve halkın katkıları",
+  "summary": "Karatay’ın tarihi merkezindeki Aziziye Camii, büyük pencereleri ve süslü iki minaresiyle XIX. yüzyıl sanat akımlarını bir araya getirir.",
+  "history": "Aziziye Camii, Mevlâna Külliyesi’nin batısında, tarihi kent merkezinde ve III. derece arkeolojik sit alanındadır. Şeyh Ahmet Efendi Camii ve Yüksek Camii adlarıyla da anılır. İlk yapı H. 1082–1087 / M. 1671–1676’da yapılmış, 1867 Konya Çarşısı yangınında Kapu Camii ile birlikte yanmıştır. Vali Burdurlu Ahmet Tevfik Paşa yeniden imar için İstanbul’dan yardım istemiştir. Kitap, Valide Sultan’ın bir rüya ardından Konya’da hayır yapmak istediğine dair anlatıyı aktarır. Pertevniyal Valide Sultan’ın yardımı, eski mabedin geliri ve halkın katkılarıyla inşaat 1872’de başlayıp 1874’te tamamlanmıştır. 2001–2002 ve 2012–2014’te onarılan yapı kitapta ibadete açık olarak belirtilir.\n\nGödene taşı ve mermerden yapılan cami kare planlı ve tek kubbelidir. Yuvarlak kemerli geniş kapı ve pencereler, korint başlıklı sütunceler ve hareketli cepheler yapının özellikleridir. Kuzeybatı ve kuzeydoğudaki iki taş minarenin gövdeleri yivlidir; şerefelerinde akant yaprakları, konsollar ve kemer taşıyan altı sütun bulunur. Minare kaidelerine mermer çeşmeler bitişiktir. Beş gözlü son cemaat yerinin giriş önü ve köşeleri kubbeli, aradaki iki bölümü tonozludur; örtüyü kompozit başlıklı altı mermer sütun taşır.\n\nHarimin kubbesi sekizgen kasnağa oturur; geçişler tromplarla sağlanır. Büyük açıklıklar iç mekânı aydınlatır. Mihrabın bezemelerinde perde motifi, akant yaprakları, kıvrık dallar, sütunceler ve ayet kitabesi yer alır. Kitap camiyi Osmanlı döneminde Konya’da yapılan son büyük ölçekli yapı ve XIX. yüzyılda etkili sanat akımlarının sentezi olarak değerlendirir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-aziziye-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-aziziye-mosque/exterior.jpg",
+      "alt": "Büyük kemerli pencere ve kapıları, köşe kuleleri ve iki minaresi görülen taş cami",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-aziziye-mosque/prayer-hall.jpg",
+      "alt": "Kırmızı-sarı halılı aydınlık harimde bezemeli mihrap, minber ve büyük avizeler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-aziziye-mosque/minarets.jpg",
+      "alt": "Kubbeli çatı yanında sütunlu şerefeleriyle iki minarenin yakın görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-aziziye-mosque/exterior.jpg",
+      "x": 33,
+      "y": 53,
+      "title": "Büyük pencereler",
+      "text": "Yuvarlak kemerli büyük pencereler iç mekânı aydınlatır; yanlarında korint başlıklı sütunceler vardır.",
+      "sourceId": "inv-p282"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-aziziye-mosque/minarets.jpg",
+      "x": 47,
+      "y": 35,
+      "title": "Sütunlu şerefeler",
+      "text": "Minare şerefelerinde altı sütunun taşıdığı çok dilimli kemerler bulunur.",
+      "sourceId": "inv-p282"
+    }
+  ],
+  "test": [
+    {
+      "question": "1867’de caminin zarar görmesine ne yol açmıştır?",
+      "options": [
+        "Sel baskını",
+        "Konya Çarşısı yangını",
+        "Çatı çökmesi",
+        "Yol genişletmesi"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Konya Çarşısı yangını.",
+      "sourceId": "inv-p280"
+    },
+    {
+      "question": "Mevcut caminin inşaatı hangi yıllarda yapılmıştır?",
+      "options": [
+        "1510–1512",
+        "1671–1676",
+        "1872–1874",
+        "1947–1950"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: 1872–1874.",
+      "sourceId": "inv-p280"
+    },
+    {
+      "question": "Aziziye Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Beyşehir",
+        "Bozkır",
+        "Karatay"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p280"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p280",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Aziziye Camii\"",
+      "page": "280"
+    },
+    {
+      "id": "inv-p281",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Aziziye Camii\"",
+      "page": "281"
+    },
+    {
+      "id": "inv-p282",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Aziziye Camii\"",
+      "page": "282"
+    },
+    {
+      "id": "inv-p283",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Aziziye Camii\"",
+      "page": "283"
+    },
+    {
+      "id": "inv-p284",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Aziziye Camii\"",
+      "page": "284"
+    },
+    {
+      "id": "inv-p285",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Aziziye Camii\"",
+      "page": "285"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

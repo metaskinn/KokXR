@@ -1,0 +1,118 @@
+{
+  "id": "konya-karatay-namik-pasha-mosque",
+  "name": "Namık Paşa Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Geç Osmanlı · kitâbesine göre H. 1306 / M. 1888-1889",
+  "endowment": "Namık Paşa tarafından inşa ettirilmiştir",
+  "summary": "Ataları Konyalı olan Namık Paşa’nın H. 1306 / M. 1888-1889’da Çelebi Mahallesi’nde yaptırdığı kesme taş cami.",
+  "history": "Cami, Karatay, Çelebi Mahallesi, Dolappare Caddesi üzerindedir. Giriş kapısı üzerindeki üç satırlık celî talik kitâbeye göre H. 1306 / M. 1888-1889’da Namık Paşa tarafından inşa ettirilmiştir. 2014-2016 yılları arasında Vakıflar Bölge Müdürlüğü tarafından tamir edilmiştir.\n\nBanisi Namık Paşa, Osmanlı Divanı’ndan öğretmen Halil Ramis Ağa’nın oğlu olarak İstanbul’da doğmuştur; dedesi Konevi sülalesindendir. On dört yaşına kadar babasından eğitim almış, 1816’da Divân-ı Hümâyun’a girmiştir. Mekteb-i Hayriye’yi kurmuş, iki kez Bağdat Valisi olmuş; ayrıca Irak ve Hicaz ordularına mübaşir olmuş, Ticaret Nâzırlığı ve Cidde Valiliği gibi önemli görevlerde bulunmuştur. 1892’de vefat etmiş, kabri Karacaahmet Mezarlığı’ndadır. Atalarının Konyalı olması nedeniyle Çelebi Mahallesi’ndeki bu camiyi yaptırmıştır; hâlen ibadete açık olan cami onun adını yaşatır.\n\nCami derinlemesine dikdörtgen planlıdır; içten düz ahşap tavanlı, dıştan beşik çatılıdır. Harim, son cemaat yeri, mahfil ve minareden oluşan yapıda düzgün kesme taş kullanılmıştır. Kuzeybatı köşedeki minare kare kaideli, silindirik gövdeli ve tek şerefelidir. Kuzeydeki son cemaat bölümünden harime geçilir. Harim derinlemesine dikdörtgen planlı ve üç sahınlıdır; kuzeyinde ahşap mahfil yer alır. Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-namik-pasha-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-namik-pasha-mosque/exterior.jpg",
+      "alt": "Beyaz sıvalı, kiremit beşik çatılı cami; arkasında silindirik gövdeli, tek şerefeli minare",
+      "description": "Cami ve minaresi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-namik-pasha-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: ahşap direkler, solda ahşap mahfil, ortada yeşil çerçeveli mihrap, sağda ahşap minber",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-namik-pasha-mosque/entrance-door.jpg",
+      "alt": "Kesme taş duvarda, üstü oymalı ahşap alınlıklı çift kanatlı ahşap kapı",
+      "description": "Giriş kapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "minare",
+      "image": "/images/konya-karatay-namik-pasha-mosque/exterior.jpg",
+      "x": 39,
+      "y": 22,
+      "title": "Minare",
+      "text": "Kuzeybatı köşedeki minare kare kaideli, silindirik gövdeli ve tek şerefelidir.",
+      "sourceId": "inv-p276"
+    },
+    {
+      "id": "besik-cati",
+      "image": "/images/konya-karatay-namik-pasha-mosque/exterior.jpg",
+      "x": 50,
+      "y": 38,
+      "title": "Beşik çatı",
+      "text": "Cami içten düz ahşap tavanlı, dıştan beşik çatılıdır.",
+      "sourceId": "inv-p276"
+    },
+    {
+      "id": "mihrap",
+      "image": "/images/konya-karatay-namik-pasha-mosque/prayer-hall.jpg",
+      "x": 47,
+      "y": 50,
+      "title": "Mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap yarım daire planlıdır.",
+      "sourceId": "inv-p276"
+    }
+  ],
+  "test": [
+    {
+      "question": "Namık Paşa camiyi neden Konya’da yaptırmıştır?",
+      "options": [
+        "Konya Valisi olduğu için",
+        "Atalarının Konyalı olması nedeniyle",
+        "Konya’da doğduğu için",
+        "Padişahın emriyle"
+      ],
+      "correct": 1,
+      "description": "Atalarının Konyalı olması dolayısıyla Çelebi Mahallesi’ndeki bu camiyi inşa ettirmiştir.",
+      "sourceId": "inv-p276"
+    },
+    {
+      "question": "Namık Paşa’nın kurduğu okul hangisidir?",
+      "options": [
+        "Mekteb-i Hayriye",
+        "Mekteb-i Harbiye",
+        "Darülfünun",
+        "Mekteb-i Mülkiye"
+      ],
+      "correct": 0,
+      "description": "Namık Paşa Mekteb-i Hayriye’yi kurmuştur.",
+      "sourceId": "inv-p275"
+    },
+    {
+      "question": "Kitâbeye göre caminin inşa tarihi nedir?",
+      "options": [
+        "H. 1243 / M. 1826-27",
+        "H. 1228 / M. 1813",
+        "H. 662 / M. 1263",
+        "H. 1306 / M. 1888-1889"
+      ],
+      "correct": 3,
+      "description": "Üç satırlık celî talik kitâbeye göre cami H. 1306 / M. 1888-1889’da inşa ettirilmiştir.",
+      "sourceId": "inv-p275"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p275",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Namık Paşa Camii\"",
+      "page": "275"
+    },
+    {
+      "id": "inv-p276",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Namık Paşa Camii\"",
+      "page": "276"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

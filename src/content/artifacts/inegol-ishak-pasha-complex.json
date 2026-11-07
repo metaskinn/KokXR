@@ -1,0 +1,136 @@
+{
+  "id": "inegol-ishak-pasha-complex",
+  "name": "İshak Paşa Külliyesi",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · Kitapta külliye için 1468-69, medrese için 1482-83 tarihleri verilir",
+  "endowment": "İshak Paşa; 1486-1487 tarihli vakfiyeler; Tâcunnisâ Sultan Hatun’un imarete vakfettiği mülk ve gelirler",
+  "summary": "İnegöl çarşı merkezindeki İshak Paşa Külliyesi, cami, açık avlulu medrese ve Tâcunnisâ Sultan ile İshak Paşa’nın türbesinden oluşur.",
+  "history": "Külliye, Cuma Camii Mahallesi, Ankara Caddesi No: 13’te, İnegöl çarşı merkezindedir. Kitapta İshak Paşa’nın cami ve külliyeye ait diğer yapıların inşasını H. 873 / M. 1468-69’da tamamladığının anlaşıldığı belirtilir. H. 891-892 / M. 1486-1487 tarihli vakfiye kopyaları Vakıflar Genel Müdürlüğü Arşivi’ndedir; belgeler cami dışında imaret, zaviye, medrese, han, türbe ve ahırları da içeren bir kuruluşu gösterir. Zaviyeli cami tipindeki yapının kuzey girişindeki kitabe H. 1294 / M. 1877 onarımına aittir. Minarenin kaide ve pabuç kısmı özgünken üst bölümü sonraki bir onarımda yeniden yapılmıştır.\n\nCaminin kuzeyindeki medresenin dershane kapısı üzerinde üç satırlık özgün mermer kitabe bulunur. Kitap bu kitabeye dayanarak medresenin H. 887 / M. 1482-83’te, Sultan II. Bayezid döneminde inşa edildiğini bildirir. Medrese U planlı ve açık avluludur. Dershanenin iki yanındaki altışar hücre toplam on iki hücreyi oluşturur. Köşe hücreleri üçgen kuşaklı, diğer hücreler pandantifli geçişlere sahip kubbelerle örtülüdür; dershanenin kubbesi üçgen geçiş kuşağına oturur.\n\nCaminin doğusundaki Tâcunnisâ Sultan Hatun Türbesi’nin inşa kitabesi yoktur. Altıgen planlı ve kubbeli yapının kuzey girişi sivri kemerli bir eyvan içindedir. İçerisi alt sırada dört, üst sırada altı pencereyle aydınlanır. Saçakları üç sıra testere dişiyle çevrilidir. H. 891 / M. 1486 vakfiyesi türbenin o tarihte mevcut olduğunu ve bir türbedar görevlendirildiğini gösterir. Vakfiyede İsfendiyar Bey’in kızı Tâcunnisâ Sultan Hatun’un İshak Paşa’nın imaretine mülk ve gelirler vakfettiği de kayıtlıdır.\n\nİshak Paşa’nın baş taşında vefatı H. 4 Safer 892 / M. 10 Şubat 1487 olarak yazılıdır. Kitabın aktardığına göre Ekrem Hakkı Ayverdi, Paşa’nın caminin güneyindeki kabrinin 1937’de türbeye taşındığını belirtir. Türbenin Tâcunnisâ Sultan Hatun için yaptırıldığı, içerideki üç mezardan diğer ikisinin eşi ve kızları Şehzade Hatun’a ait olduğu değerlendirilmektedir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-ishak-pasha-complex/mosque-aerial.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-ishak-pasha-complex/mosque-aerial.jpg",
+      "alt": "Ağaçlar arasında kurşun renkli kubbeleri ve minaresi görülen cami; arka planda şehir yapıları",
+      "description": "Ağaçlar arasında kurşun renkli kubbeleri ve minaresi görülen cami; arka planda şehir yapıları",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-ishak-pasha-complex/madrasa-exterior.jpg",
+      "alt": "Taş ve tuğla duvarlı yapının küçük kubbeleri, bacaları ve dikdörtgen pencereleri",
+      "description": "Taş ve tuğla duvarlı yapının küçük kubbeleri, bacaları ve dikdörtgen pencereleri",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-ishak-pasha-complex/madrasa-courtyard.jpg",
+      "alt": "Tepeden görünümde ağaçlı bir avlunun çevresinde U biçiminde sıralanan küçük kubbeler",
+      "description": "Tepeden görünümde ağaçlı bir avlunun çevresinde U biçiminde sıralanan küçük kubbeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-ishak-pasha-complex/tomb-exterior.jpg",
+      "alt": "Önde çokgen gövdeli kubbeli türbe, arkasında cami ve yanlarda ağaçlar",
+      "description": "Önde çokgen gövdeli kubbeli türbe, arkasında cami ve yanlarda ağaçlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-ishak-pasha-complex/madrasa-courtyard.jpg",
+      "x": 50,
+      "y": 80,
+      "title": "Açık avlulu medrese",
+      "text": "Medrese U planlı ve açık avluludur; dershanenin iki yanındaki altışar hücre toplam on iki hücreyi oluşturur.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-ishak-pasha-complex/tomb-exterior.jpg",
+      "x": 61,
+      "y": 48,
+      "title": "Kubbeli türbe",
+      "text": "Türbe altıgen planlıdır ve kubbeyle örtülüdür.",
+      "sourceId": "inv-p150"
+    }
+  ],
+  "test": [
+    {
+      "question": "Külliyenin medresesi hangi plan düzenine sahiptir?",
+      "options": [
+        "U planlı ve açık avlulu",
+        "Dairesel ve kapalı avlulu",
+        "Sekizgen ve avlusuz",
+        "L planlı ve kapalı avlulu"
+      ],
+      "correct": 0,
+      "description": "Medrese U planlı, açık avlulu bir düzene sahiptir.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "question": "Medresede kaç hücre vardır?",
+      "options": [
+        "Altı",
+        "Sekiz",
+        "On iki",
+        "Yirmi"
+      ],
+      "correct": 2,
+      "description": "Dershanenin iki yanında altışar hücre, toplam on iki hücre bulunur.",
+      "sourceId": "inv-p147"
+    },
+    {
+      "question": "Türbe caminin hangi yönündedir?",
+      "options": [
+        "Batısında",
+        "Doğusunda",
+        "Kuzeyinde",
+        "Güneyinde"
+      ],
+      "correct": 1,
+      "description": "Külliyenin türbesi caminin doğusunda konumlanır.",
+      "sourceId": "inv-p148"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p141",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Külliyesi\"",
+      "page": "141"
+    },
+    {
+      "id": "inv-p142",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Külliyesi\"",
+      "page": "142"
+    },
+    {
+      "id": "inv-p144",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Külliyesi\"",
+      "page": "144"
+    },
+    {
+      "id": "inv-p147",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Külliyesi\"",
+      "page": "147"
+    },
+    {
+      "id": "inv-p148",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Külliyesi\"",
+      "page": "148"
+    },
+    {
+      "id": "inv-p150",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"İshak Paşa Külliyesi\"",
+      "page": "150"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "konya-karatay-mengene-mosque",
+  "name": "Mengene Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Plan ve mimari özelliklerine göre XX. yüzyıl başları",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "İçten bağdadi kubbeli, dıştan kırma çatılı, iki sıra pencereli XX. yüzyıl başı Karatay camisi.",
+  "history": "Cami, Karatay, Kocabekir Mahallesi, Büyük Kumköprü Caddesi üzerindedir. Yapım tarihi ve banisi hakkında bilgiye ulaşılamamıştır; plan ve mimari özellikleri göz önüne alındığında XX. yüzyıl başlarına tarihlendirilebilir. 2015’te Vakıflar Bölge Müdürlüğü tarafından tamir ettirilmiştir.\n\nCaminin cephesi iki sıra pencere düzenindedir. Kuzeyine sonradan bir giriş bölümü eklenmiştir. Harime bu giriş bölümündeki tek kapıdan girilir. Harim içten bağdadi kubbeli, dıştan dört yöne eğimli kırma çatılıdır. Kuzey bölümde mahfil, kıble duvarında mihrap ve minber yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-mengene-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-mengene-mosque/exterior.jpg",
+      "alt": "Kiremit kırma çatılı, iki katlı görünen beyaz cami; ön cephede iki sıra ahşap çerçeveli pencere ve ortada saçaklı giriş",
+      "description": "Caminin giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-mengene-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: mavi halı, iki sıra pencereli beyaz duvarlar, kubbeli tavandan sarkan avize ve karşıda mihrap",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-mengene-mosque/minbar.jpg",
+      "alt": "Ahşap minber ve külahı, yanında Türk bayrağı ve mavi sancak",
+      "description": "Ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "iki-sira-pencere",
+      "image": "/images/konya-karatay-mengene-mosque/exterior.jpg",
+      "x": 25,
+      "y": 45,
+      "title": "İki sıra pencere",
+      "text": "Caminin cephesi iki sıra pencere düzenindedir.",
+      "sourceId": "inv-p256"
+    },
+    {
+      "id": "giris-bolumu",
+      "image": "/images/konya-karatay-mengene-mosque/exterior.jpg",
+      "x": 50,
+      "y": 62,
+      "title": "Giriş bölümü",
+      "text": "Kuzeye sonradan bir giriş bölümü eklenmiştir; harime buradaki tek kapıdan girilir.",
+      "sourceId": "inv-p256"
+    },
+    {
+      "id": "minber",
+      "image": "/images/konya-karatay-mengene-mosque/minbar.jpg",
+      "x": 50,
+      "y": 55,
+      "title": "Minber",
+      "text": "Kıble duvarı üzerinde mihrap ve minber yer alır.",
+      "sourceId": "inv-p256"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mengene Camii’nin harimi içten nasıl örtülüdür?",
+      "options": [
+        "Taş kubbe",
+        "Bağdadi kubbe",
+        "Beşik tonoz",
+        "Açık avlu"
+      ],
+      "correct": 1,
+      "description": "Harim içten bağdadi kubbeli, dıştan dört yöne eğimli kırma çatılıdır.",
+      "sourceId": "inv-p256"
+    },
+    {
+      "question": "Cami hangi yıl Vakıflar Bölge Müdürlüğü tarafından tamir ettirilmiştir?",
+      "options": [
+        "2015",
+        "2007",
+        "1990",
+        "2021"
+      ],
+      "correct": 0,
+      "description": "Yapı 2015’te Vakıflar Bölge Müdürlüğü tarafından tamir ettirilmiştir.",
+      "sourceId": "inv-p256"
+    },
+    {
+      "question": "Caminin hangi yönüne sonradan giriş bölümü eklenmiştir?",
+      "options": [
+        "Güney",
+        "Doğu",
+        "Batı",
+        "Kuzey"
+      ],
+      "correct": 3,
+      "description": "Kuzeye sonradan bir giriş bölümü eklenmiştir.",
+      "sourceId": "inv-p256"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p256",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Mengene Camii\"",
+      "page": "256"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

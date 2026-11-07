@@ -1,0 +1,97 @@
+{
+  "id": "konya-derbent-ciftlikozu-settlement-mosque",
+  "name": "Çiftliközü Beldesi Camii",
+  "city": "Konya",
+  "district": "Derbent",
+  "period": "1924; son yıllarda yeniden inşa",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Derbent Çiftliközü Beldesi merkezindeki cami 1924'te ahşap direkli ve kırma çatılı olarak yapılmıştır.",
+  "history": "Derbent Çiftliközü Beldesi merkezindeki cami 1924'te ahşap direkli ve kırma çatılı olarak yapılmıştır. Minaresi 1961'de inşa edilmiş, mihrap ve minberi 1976'da eklenmiştir. Kitap, son yıllarda eski yapının tamamen yenilenerek yerine betonarme cami yapıldığını bildirir. Yeni cami derinlemesine dikdörtgen planlı ve kubbelidir. Kuzeyde çokgen son cemaat yeri, kuzeydoğu köşede minare bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-derbent-ciftlikozu-settlement-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-derbent-ciftlikozu-settlement-mosque/aerial-view.jpg",
+      "alt": "Yerleşim içindeki kubbeli cami ve minaresinin havadan görünümü",
+      "description": "Yerleşim içindeki kubbeli cami ve minaresinin havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-derbent-ciftlikozu-settlement-mosque/top-view.jpg",
+      "alt": "Caminin büyük kubbesi ve önündeki küçük kubbelerin tepeden görünümü",
+      "description": "Caminin büyük kubbesi ve önündeki küçük kubbelerin tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-derbent-ciftlikozu-settlement-mosque/aerial-view.jpg",
+      "x": 55,
+      "y": 53,
+      "title": "Kubbe",
+      "text": "Yeni caminin üzeri kubbelidir.",
+      "sourceId": "inv-p407"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-derbent-ciftlikozu-settlement-mosque/aerial-view.jpg",
+      "x": 35,
+      "y": 38,
+      "title": "Minare",
+      "text": "Yeni caminin kuzeydoğu köşesinde minare bulunur.",
+      "sourceId": "inv-p407"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çiftliközü Beldesi Camii hangi ilçededir?",
+      "options": [
+        "Derbent",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Çiftliközü Beldesi Camii, Konya'nın Derbent ilçesindedir.",
+      "sourceId": "inv-p407"
+    },
+    {
+      "question": "Yeni caminin üst örtüsü nasıldır?",
+      "options": [
+        "Ahşap düz damlıdır",
+        "Kubbelidir",
+        "Beşik tonozludur",
+        "Açıktır"
+      ],
+      "correct": 1,
+      "description": "Kubbelidir.",
+      "sourceId": "inv-p407"
+    },
+    {
+      "question": "İlk cami hangi yılda yapılmıştır?",
+      "options": [
+        "1521",
+        "1768",
+        "1853",
+        "1924"
+      ],
+      "correct": 3,
+      "description": "1924.",
+      "sourceId": "inv-p407"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p407",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Derbent, \"Çiftliközü Beldesi Camii\"",
+      "page": "407"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

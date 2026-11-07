@@ -1,0 +1,102 @@
+{
+  "id": "konya-karapinar-yagmapinar-masjid",
+  "name": "Yağmapınar Mescidi",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "H. 966 / M. 1558-59",
+  "endowment": "Kanuni Sultan Süleyman",
+  "summary": "Karapınar ilçesi Yağmapınar Mahallesi'ndeki mescit Emirgazi ve Ardistama yolları üzerinde, hazire içindedir.",
+  "history": "Karapınar ilçesi Yağmapınar Mahallesi'ndeki mescit Emirgazi ve Ardistama yolları üzerinde, hazire içindedir. Giriş kitabesine göre H. 966 / M. 1558-59'da Kanuni Sultan Süleyman tarafından yaptırılmıştır. Kuzeydeki kapıdan girilir. Kapı üzerindeki dikdörtgen mermer kitabe, üç satır içinde beş kartuşa ayrılmış, erken celî sülüsle Arapça yazılmıştır.\n\nKare planlı yapı tromplarla geçilen tek kubbeyle örtülüdür; kubbe dıştan sekizgen kasnağa oturur. Duvarlarda bölgede Karacadağ taşı denilen koyu kahverengi düzgün kesme taş kullanılmıştır. Kıble duvarındaki alçı mihrap dikdörtgen çerçeveli ve yarım daire planlıdır. Tepeliğinde eşkenar ve dik üçgen panolar, yanlarında üç bordür vardır. Güneybatıdaki taş minber sonradan yenilenmiştir. Yapı tek kubbeli camiler grubundadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-yagmapinar-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-yagmapinar-masjid/exterior.jpg",
+      "alt": "Ağaçlar arasında koyu taş duvarlı ve tek kubbeli mescit",
+      "description": "Ağaçlar arasında koyu taş duvarlı ve tek kubbeli mescit",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karapinar-yagmapinar-masjid/prayer-hall.jpg",
+      "alt": "Sarı duvarlı iç mekânda mihrap, sağında minber ve desenli halılar",
+      "description": "Sarı duvarlı iç mekânda mihrap, sağında minber ve desenli halılar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karapinar-yagmapinar-masjid/exterior.jpg",
+      "x": 42,
+      "y": 32,
+      "title": "Kubbe",
+      "text": "Tek kubbe dıştan sekizgen kasnak üzerine oturur.",
+      "sourceId": "inv-p466"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karapinar-yagmapinar-masjid/exterior.jpg",
+      "x": 47,
+      "y": 66,
+      "title": "Karacadağ taşı",
+      "text": "Yapıda koyu kahverengi düzgün kesme Karacadağ taşı kullanılmıştır.",
+      "sourceId": "inv-p466"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yağmapınar Mescidi hangi ilçededir?",
+      "options": [
+        "Karapınar",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Yağmapınar Mescidi, Konya'nın Karapınar ilçesindedir.",
+      "sourceId": "inv-p465"
+    },
+    {
+      "question": "Yapıda kullanılan koyu kahverengi taşın yerel adı nedir?",
+      "options": [
+        "Lüle taşı",
+        "Karacadağ taşı",
+        "Oltu taşı",
+        "Kehribar"
+      ],
+      "correct": 1,
+      "description": "Karacadağ taşı.",
+      "sourceId": "inv-p466"
+    },
+    {
+      "question": "Giriş kitabesine göre mescidi kim yaptırmıştır?",
+      "options": [
+        "Ali Paşa",
+        "Hacı Mustafa Ekim",
+        "Nevşehirli İbrahim Paşa",
+        "Kanuni Sultan Süleyman"
+      ],
+      "correct": 3,
+      "description": "Kanuni Sultan Süleyman.",
+      "sourceId": "inv-p465"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p465",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karapınar, \"Yağmapınar Mescidi\"",
+      "page": "465"
+    },
+    {
+      "id": "inv-p466",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karapınar, \"Yağmapınar Mescidi\"",
+      "page": "466"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

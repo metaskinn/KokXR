@@ -1,0 +1,106 @@
+{
+  "id": "konya-meram-gazezler-mosque",
+  "name": "Gazezler Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Osmanlı · XIX. yüzyıl başları",
+  "endowment": "Banisi Ahmet Necip Efendi (olmalıdır)",
+  "summary": "Adını Gazezler (İpekçiler) Mescidi'nden alan, Ahmet Necip Efendi tarafından XIX. yüzyıl başlarında yaptırılmış olması gereken ahşap destekli cami.",
+  "history": "Cami, Meram, Sahibiata Mahallesi, Furgan Dede Caddesi, No. 47'de yer almaktadır. Adını Gazezler (İpekçiler) Mescidi'nden alır; bu bölge Selçuklulardan bu yana Konya ipekçilerinin bulunduğu yerdir. Cami Ahmet Necip Efendi tarafından XIX. yüzyıl başlarında yaptırılmış olmalıdır.\n\nKuzey-güney yönünde uzanan dikdörtgen planlı cami, mihraba dikey uzanan üç sahından oluşur. İçten düz dam, dıştan kırma çatıyla örtülüdür. Güney ve doğu cephelerde iki, batı cephede bir düz lentolu pencere vardır. İki giriş kapısından biri kuzeydoğu, diğeri kuzeybatı cephededir; bugün kuzeydoğudaki kapı kullanılmaktadır.\n\nHarimin iç mekânı, iki sıra hâlinde üçer ahşap destekle mihrap duvarına dik üç sahına ayrılmıştır. Destekler birbirine ve beden duvarlarına Bursa kemeriyle bağlanmıştır. Harimin kuzeyindeki mahfil \"U\" şeklinde yerleştirilmiş olup alttan ahşap desteklerle taşınır. Kıble duvarının ortasındaki ahşap mihrabın nişi yarım daire planlıdır ve yapıya sonradan eklenmiştir. Harimin doğu ve batı duvarlarında birer, kuzey duvarında iki niş vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-gazezler-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-gazezler-mosque/exterior.jpg",
+      "alt": "Sokaktan görünen tek katlı, açık yeşil sıvalı cami; kiremit kaplı kırma çatı, çatıda küçük pencereli çıkma ve hoparlör, cephede \"Gazezler Camii\" tabelası ve iki demir parmaklıklı pencere",
+      "description": "Caminin sokak cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-gazezler-mosque/prayer-hall.jpg",
+      "alt": "Harim içi: ortada ahşap mihrap, iki yanında beyaz boyalı direkler ve kemerler, tavandan sarkan büyük demir avize, kırmızı halı",
+      "description": "Mihrap duvarı ve harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-meram-gazezler-mosque/exterior.jpg",
+      "x": 50,
+      "y": 30,
+      "title": "Kırma çatı",
+      "text": "Cami içten düz dam, dıştan kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p80"
+    },
+    {
+      "id": "flat-lintel-window",
+      "image": "/images/konya-meram-gazezler-mosque/exterior.jpg",
+      "x": 30,
+      "y": 62,
+      "title": "Düz lentolu pencere",
+      "text": "Cephelerde düz lentolu pencereler bulunur.",
+      "sourceId": "inv-p80"
+    },
+    {
+      "id": "wooden-mihrab",
+      "image": "/images/konya-meram-gazezler-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 50,
+      "title": "Ahşap mihrap",
+      "text": "Kıble duvarının ortasındaki ahşap mihrabın nişi yarım daire planlıdır ve yapıya sonradan eklenmiştir.",
+      "sourceId": "inv-p80"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami adını nereden almaktadır?",
+      "options": [
+        "Banisinin lakabından",
+        "Gazezler (İpekçiler) Mescidi'nden",
+        "Bulunduğu caddeden",
+        "Yakındaki bir türbeden"
+      ],
+      "correct": 1,
+      "description": "Cami adını Gazezler (İpekçiler) Mescidi'nden alır; bölge Selçuklulardan beri Konya ipekçilerinin yeridir.",
+      "sourceId": "inv-p80"
+    },
+    {
+      "question": "Harimdeki ahşap destekler birbirine ve duvarlara nasıl bağlanmıştır?",
+      "options": [
+        "Sivri kemerle",
+        "Demir gergilerle",
+        "Bursa kemeriyle",
+        "Ahşap kirişlerle"
+      ],
+      "correct": 2,
+      "description": "Destekler birbirine ve beden duvarlarına Bursa kemeriyle bağlanmıştır.",
+      "sourceId": "inv-p80"
+    },
+    {
+      "question": "Harimin kuzeyindeki mahfil hangi biçimde yerleştirilmiştir?",
+      "options": [
+        "\"U\" şeklinde",
+        "\"L\" şeklinde",
+        "Düz bir sıra hâlinde",
+        "Dairesel"
+      ],
+      "correct": 0,
+      "description": "Mahfil \"U\" şeklinde yerleştirilmiştir ve alttan ahşap desteklerle taşınır.",
+      "sourceId": "inv-p80"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p80",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Gazezler Camii\"",
+      "page": "80"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

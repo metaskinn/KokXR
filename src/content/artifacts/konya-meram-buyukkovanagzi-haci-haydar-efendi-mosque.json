@@ -1,0 +1,111 @@
+{
+  "id": "konya-meram-buyukkovanagzi-haci-haydar-efendi-mosque",
+  "name": "Büyükkovanağzı (Hacı Haydar Efendi) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Geç Osmanlı · H. 1305 / M. 1889-90 (kitâbeye göre, kitaptaki hâliyle)",
+  "endowment": "Mahalle halkına göre banisi Hacı Haydar Efendi",
+  "summary": "Latin harfli kitâbesine göre H. 1305 tarihli, ahşap köşk minaresiyle dikkat çeken geç Osmanlı dönemi camisi.",
+  "history": "Cami, Meram, Büyük Kovanağzı Mahallesi, Küçük Kovanağzı Caddesi, No. 16'da yer almaktadır. Giriş kapısının sağındaki Latin harfleriyle yazılmış kitâbesine göre H. 1305 / M. 1889-90 tarihinde yapılmıştır (tarih kitaptaki hâliyle verilmiştir). Mahalle halkı caminin banisinin Hacı Haydar Efendi olduğunu ifade etmektedir. Yakın zamanda önemli bir tamir geçiren yapı ibadete açıktır.\n\nCami kareye yakın dikdörtgen planlıdır ve ahşap destekli bir plan şemasına sahiptir. Üst örtü içten ahşap düz tavanla örtülü, dıştan kırma çatılıdır. Caminin kuzeydoğusunda yine ahşaptan yapılmış silindirik gövdeli köşk minare dikkat çeker.\n\nCepheler oldukça sadedir; batı cephede iki, kuzey ve doğu cephelerde üçer pencere iç mekânı aydınlatır. Yapının kuzeyinde ahşap desteklerle taşınan ve sonradan camekânlarla kapatılmış son cemaat yeri bulunur. Bu mekânın güney duvarının ortasında düz lentolu giriş kapısı ve iki katlı düz lentolu pencereler vardır.\n\nKuzey-güney yönünde uzanan dikdörtgen planlı harim içten düz damla örtülüdür ve iç mekânda süsleme yoktur. Kuzey tarafta iki ahşap destekle taşınan bir mahfil bulunur. Kıble duvarının ortasındaki mihrap, yanlarda yivli ahşap sütuncelerle sınırlanan alçı bir nişe sahiptir; niş perde ve kandil motifiyle süslenmiştir. Cami mimari, süsleme ve üslup bakımından geç Osmanlı dönemi özelliklerini yansıtır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-buyukkovanagzi-haci-haydar-efendi-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-buyukkovanagzi-haci-haydar-efendi-mosque/exterior.jpg",
+      "alt": "Köşedeki tek katlı cami: kiremit kaplı kırma çatı, çatıdan yükselen ahşap gövdeli köşk minare, önde camla kapatılmış bölüm ve yanında büyük bir ağaç",
+      "description": "Caminin dış görünümü ve köşk minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-buyukkovanagzi-haci-haydar-efendi-mosque/prayer-hall.jpg",
+      "alt": "Harim içi: ahşap tavan, ortada iki yanı turkuaz sütunceli, içi yeşil perde motifiyle boyanmış mihrap nişi, iki yanında perdeli pencereler, sağda minber",
+      "description": "Mihrap duvarı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kiosk-minaret",
+      "image": "/images/konya-meram-buyukkovanagzi-haci-haydar-efendi-mosque/exterior.jpg",
+      "x": 38,
+      "y": 25,
+      "title": "Ahşap köşk minare",
+      "text": "Caminin kuzeydoğusunda ahşaptan yapılmış, silindirik gövdeli köşk minare dikkat çeker.",
+      "sourceId": "inv-p92"
+    },
+    {
+      "id": "glazed-narthex",
+      "image": "/images/konya-meram-buyukkovanagzi-haci-haydar-efendi-mosque/exterior.jpg",
+      "x": 48,
+      "y": 68,
+      "title": "Camekânlı son cemaat yeri",
+      "text": "Yapının kuzeyindeki son cemaat yeri ahşap desteklerle taşınır ve sonradan camekânlarla kapatılmıştır.",
+      "sourceId": "inv-p93"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-buyukkovanagzi-haci-haydar-efendi-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 60,
+      "title": "Mihrap",
+      "text": "Alçı mihrap nişi yanlarda yivli ahşap sütuncelerle sınırlanmış, perde ve kandil motifiyle süslenmiştir.",
+      "sourceId": "inv-p93"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mahalle halkına göre caminin banisi kimdir?",
+      "options": [
+        "Hacı Haydar Efendi",
+        "Ahmet Necip Efendi",
+        "Süleyman Bey",
+        "Arifi Paşa"
+      ],
+      "correct": 0,
+      "description": "Mahalle efradı cami banisinin Hacı Haydar Efendi olduğunu ifade etmektedir.",
+      "sourceId": "inv-p92"
+    },
+    {
+      "question": "Caminin minaresi hangi malzemeden yapılmıştır?",
+      "options": [
+        "Kesme taş",
+        "Tuğla",
+        "Betonarme",
+        "Ahşap"
+      ],
+      "correct": 3,
+      "description": "Caminin kuzeydoğusundaki silindirik gövdeli köşk minare ahşaptan yapılmıştır.",
+      "sourceId": "inv-p92"
+    },
+    {
+      "question": "Mihrap nişi hangi motiflerle süslenmiştir?",
+      "options": [
+        "Servi ve lale",
+        "Perde ve kandil",
+        "Yıldız ve çokgen",
+        "Rumi ve palmet"
+      ],
+      "correct": 1,
+      "description": "Alçı mihrap nişi perde ve kandil motifiyle tezyin edilmiştir.",
+      "sourceId": "inv-p93"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p92",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Büyükkovanağzı (Hacı Haydar Efendi) Camii\"",
+      "page": "92"
+    },
+    {
+      "id": "inv-p93",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Büyükkovanağzı (Hacı Haydar Efendi) Camii\"",
+      "page": "93"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

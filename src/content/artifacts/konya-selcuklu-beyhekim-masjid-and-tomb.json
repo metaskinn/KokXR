@@ -1,0 +1,106 @@
+{
+  "id": "konya-selcuklu-beyhekim-masjid-and-tomb",
+  "name": "Beyhekim Mescit ve Türbesi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu, XIII. yüzyılın ilk yarısı",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Mevlâna'nın hekimi Ekmeleddin Beyhekim'in XIII. yüzyılın ilk yarısında yaptırdığı tek kubbeli mescit ve türbesi.",
+  "history": "Mescit, Selçuklu ilçesi Şair Yurdakul Sokak No. 2'de, Alâeddin Tepesi'nin batısında, kendi adını taşıyan mahalledir. Selçuklu döneminde, XIII. yüzyılın ilk yarısında Nahçıvanlı Tabip Ekmeleddin Beyhekim tarafından yaptırılmıştır. Ekmeleddin İbn Abdüllatif Nahçivanî, Selçuklu dönemindeki başhekimliği nedeniyle “Beyhekim” diye anılır; Mevlâna ve ailesinin hekimi ve Mevlâna'nın gönül dostlarındandır.\n\nYapı, kare planlı ve tek kubbeli harim ile üç bölümlü giriş kısmından oluşur. Girişin sağındaki bölüm, tek sandukanın bulunduğu Beyhekim türbesidir; giriş kısmının güneyi zaviye olarak kullanılır. Üst kısımdaki pencereler yakın zamanda açılmıştır. Beden duvarlarında taş, kubbe ve geçişlerde tuğla kullanılmıştır.\n\nİç mekânda mihrapta ve kubbede çini mozaik tercih edilmiştir. Çini mozaik mihrap 1899'da Almanya'ya götürülmüş, bugün Berlin Pergamon Türk İslam Eserleri Müzesi'nde sergilenmektedir; geri getirilmesi için girişimler sürmektedir. Mihraptan geriye yalnız niş içindeki geometrik bezemeler kalmıştır. Mescidin güneybatısındaki Beyhekim Mezarlığı'nın kalıntılarının bir kısmı 1937'deki inşaatla yol altında kalmış, bir kısmı kaybolmuştur. Kitap, yapıyı Zengi dönemi özelliklerini Anadolu Selçuklu mimarisine yansıtan çok önemli bir eser olarak değerlendirir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-beyhekim-masjid-and-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-beyhekim-masjid-and-tomb/exterior.jpg",
+      "alt": "Alt kısmı kesme taş, üst kısmı tuğla duvarlı, alçak çatılı dikdörtgen yapı; köşeden görünüm",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-beyhekim-masjid-and-tomb/entrance-facade.jpg",
+      "alt": "Taş cepheli girişte ahşap kapı, iki yanında demir parmaklıklı pencereler",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-beyhekim-masjid-and-tomb/interior.jpg",
+      "alt": "Tuğla örgülü kubbe altında geometrik bezemeli mihrap nişi ve sağda ahşap minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-selcuklu-beyhekim-masjid-and-tomb/exterior.jpg",
+      "x": 30,
+      "y": 62,
+      "title": "Taş beden duvarları",
+      "text": "Yapının beden duvarlarında taş, kubbe ve geçiş elemanlarında tuğla kullanılmıştır.",
+      "sourceId": "inv-p301"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-selcuklu-beyhekim-masjid-and-tomb/interior.jpg",
+      "x": 37,
+      "y": 55,
+      "title": "Mihrabın kalan bezemesi",
+      "text": "Çini mozaik mihrap 1899'da Almanya'ya götürülmüş; nişte yalnız geometrik bezemeler kalmıştır.",
+      "sourceId": "inv-p301"
+    }
+  ],
+  "test": [
+    {
+      "question": "Beyhekim kimin hekimliğini yapmıştır?",
+      "options": [
+        "Mevlâna ve ailesinin",
+        "Fatih Sultan Mehmet'in",
+        "Karamanoğlu Mehmed Bey'in",
+        "Sururi Paşa'nın"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Mevlâna ve ailesinin.",
+      "sourceId": "inv-p300"
+    },
+    {
+      "question": "Mescidin çini mozaik mihrabı bugün hangi şehirde sergilenmektedir?",
+      "options": [
+        "İstanbul",
+        "Konya",
+        "Berlin",
+        "Viyana"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Berlin.",
+      "sourceId": "inv-p301"
+    },
+    {
+      "question": "Giriş bölümünün sağındaki kısım nedir?",
+      "options": [
+        "Kütüphane",
+        "Beyhekim'in türbesi",
+        "Abdesthane",
+        "Minare kaidesi"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Beyhekim'in türbesi.",
+      "sourceId": "inv-p300"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p300",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Beyhekim Mescit ve Türbesi\"",
+      "page": "300"
+    },
+    {
+      "id": "inv-p301",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Beyhekim Mescit ve Türbesi\"",
+      "page": "301"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

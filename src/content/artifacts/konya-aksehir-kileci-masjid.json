@@ -1,0 +1,115 @@
+{
+  "id": "konya-aksehir-kileci-masjid",
+  "name": "Kileci Mescidi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "XIII. yüzyıl, Sultan Alâeddin Keykubad dönemi (tahmini)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Akşehir Kileci Mahallesi'ndeki, ahşap kapı ve niş kanatları Selçuklu ahşap sanatının şaheserlerinden sayılan tek kubbeli mescit.",
+  "history": "Mescit, Akşehir Kileci Mahallesi, Bayram Sokak üzerindedir. Kitâbesi ve tarihini verecek bir vakfiyesi yoktur. Plan, malzeme, teknik ve süslemelerinden hareketle XIII. yüzyılda, Sultan Alâeddin Keykubad döneminde inşa edildiği düşünülür. Bânisi bilinmemekle birlikte Akşehir eşrafından, hububat işleriyle uğraşan biri olabileceği düşünülür.\n\nDepremde hasar gören yapı, aslından farklı olarak kırma çatıyla örtülmüş; 2007-2008'de Vakıflar Bölge Müdürlüğü tarafından onarılmıştır. Kare planlı mescit kubbeli harim, üç gözlü son cemaat yeri ve hazireden oluşur. Duvarlarda moloz taş ve devşirme malzeme, kubbede ve son cemaat yerinde tuğla kullanılmıştır. Son cemaat yerindeki sütun ve başlıklar Bizans dönemine ait devşirme parçalardır. Cami 2010'da da Vakıflar Bölge Müdürlüğü tarafından onarılmıştır.\n\nHarime son cemaat yerinin ortasındaki kapıdan girilir. Derin oyma tekniğindeki ahşap kapı kanatlarının sağ üst panosunda Cin Suresi'nden “Mescitler Allah'ındır” ayeti, sol üst panosunda “Allah'tan başkasından istemeyiniz” cümlesi yazılıdır; orta ve alt panolarda rûmi ve palmet süslemeleri vardır. Kare harim tromp geçişli kubbeyle örtülüdür; mihrap nişinin üstü tuğla kemerle vurgulanmıştır, minber son onarımda eklenmiştir. Harimin doğu duvarındaki nişi kapatan ahşap kanatların üst panosunda “Kim bir iyilik işlerse, ona on katı sevap vardır” yazılıdır; elips çerçeveli orta panolarda bitkisel süslemeler arasında çift başlı kartal ve ejder figürleri yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-kileci-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-kileci-masjid/exterior.jpg",
+      "alt": "Mermer sütunlara oturan üç tuğla kemerli son cemaat yeri ve arkasında kurşun kaplı kubbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-kileci-masjid/interior.jpg",
+      "alt": "Beyaz sıvalı harimde tuğla kemerli mihrap nişi, sağda ahşap minber ve kırmızı halı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-aksehir-kileci-masjid/spolia-capital.jpg",
+      "alt": "Tuğla kemerlerin altında, mermer sütunun üzerindeki volütlü taş başlık",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-aksehir-kileci-masjid/exterior.jpg",
+      "x": 50,
+      "y": 45,
+      "title": "Üç gözlü son cemaat yeri",
+      "text": "Son cemaat yeri üç gözlüdür ve tuğla malzemeyle yapılmıştır; 2007-2008'de onarılmıştır.",
+      "sourceId": "inv-p354"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-aksehir-kileci-masjid/spolia-capital.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Devşirme sütun başlığı",
+      "text": "Son cemaat yerindeki sütun ve sütun başlıkları Bizans dönemine ait devşirme malzemelerdir.",
+      "sourceId": "inv-p354"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-aksehir-kileci-masjid/interior.jpg",
+      "x": 45,
+      "y": 45,
+      "title": "Tuğla kemerli mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap nişinin üzeri tuğla kemerle vurgulanmıştır.",
+      "sourceId": "inv-p355"
+    }
+  ],
+  "test": [
+    {
+      "question": "Son cemaat yerindeki sütun ve başlıklar hangi döneme aittir?",
+      "options": [
+        "Selçuklu",
+        "Osmanlı",
+        "Bizans",
+        "Frig"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Bizans.",
+      "sourceId": "inv-p354"
+    },
+    {
+      "question": "Kapı kanadının sağ üst panosunda hangi ifade yazılıdır?",
+      "options": [
+        "“Mescitler Allah'ındır”",
+        "“Kim bir iyilik işlerse, ona on katı sevap vardır”",
+        "“Allah'tan başkasından istemeyiniz”",
+        "Kelime-i tevhid"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: “Mescitler Allah'ındır”.",
+      "sourceId": "inv-p354"
+    },
+    {
+      "question": "Bânisinin hangi işle uğraşan biri olabileceği düşünülür?",
+      "options": [
+        "Kalaycılık",
+        "Dokumacılık",
+        "Ticaret gemiciliği",
+        "Hububat işleri"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Hububat işleri.",
+      "sourceId": "inv-p354"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p354",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Kileci Mescidi\"",
+      "page": "354"
+    },
+    {
+      "id": "inv-p355",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Akşehir, \"Kileci Mescidi\"",
+      "page": "355"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

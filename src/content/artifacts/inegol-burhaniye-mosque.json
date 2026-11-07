@@ -1,0 +1,97 @@
+{
+  "id": "inegol-burhaniye-mosque",
+  "name": "Burhaniye Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "İnşa tarihi kitapta belirtilmemiştir; minare yenilemesi 1998",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Burhaniye Camii, kerpiç ana yapısı ve 1998’de demir profilli olarak yenilenen minaresiyle İnegöl’deki mahalle camilerindendir.",
+  "history": "Burhaniye Mahallesi, Yeşil Bursa Caddesi No: 15’te bulunan yapı, mahalle halkınca Burhaniye Mahallesi Camii olarak bilinir. Ana yapı ve özgün minare kerpiçten yapılmıştır. 1998’den önceki bir depremde minarenin kaide üstündeki bölümü yıkılmıştır. Bunun ardından 1998’de demir profillerden iskelet kurularak dışı sacla kaplanan yeni bir minare inşa edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-burhaniye-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-burhaniye-mosque/exterior.jpg",
+      "alt": "Kiremit çatılı sarı cami, solunda yeşil külahlı minare ve önünde ağaçlar",
+      "description": "Kiremit çatılı sarı cami, solunda yeşil külahlı minare ve önünde ağaçlar",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-burhaniye-mosque/prayer-hall.jpg",
+      "alt": "Sarı duvarlı harim, ahşap duvar kaplamaları, ortada mihrap ve sağda ahşap minber",
+      "description": "Sarı duvarlı harim, ahşap duvar kaplamaları, ortada mihrap ve sağda ahşap minber",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-burhaniye-mosque/exterior.jpg",
+      "x": 59,
+      "y": 39,
+      "title": "Yenilenen minare",
+      "text": "Depremde kaide üstü yıkılan minare, 1998’de demir profil iskelet ve sac kaplamayla yenilenmiştir.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-burhaniye-mosque/exterior.jpg",
+      "x": 37,
+      "y": 76,
+      "title": "Caminin ana yapısı",
+      "text": "Kitap, caminin ana yapısının kerpiç malzemeyle inşa edildiğini belirtir.",
+      "sourceId": "inv-p154"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin ana yapısı hangi malzemeyle inşa edilmiştir?",
+      "options": [
+        "Kesme mermer",
+        "Kerpiç",
+        "Çelik",
+        "Cam"
+      ],
+      "correct": 1,
+      "description": "Ana yapıda kerpiç kullanılmıştır.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "question": "Minare hangi yıl yenilenmiştir?",
+      "options": [
+        "1855",
+        "1937",
+        "1960",
+        "1998"
+      ],
+      "correct": 3,
+      "description": "Deprem sonrası yeni minare 1998’de yapılmıştır.",
+      "sourceId": "inv-p154"
+    },
+    {
+      "question": "Yeni minarenin iskeleti hangi malzemedendir?",
+      "options": [
+        "Demir profil",
+        "Ahşap",
+        "Kerpiç",
+        "Mermer"
+      ],
+      "correct": 0,
+      "description": "Yeni minarede demir profilli iskelet kurulmuş, dış yüzey sacla kaplanmıştır.",
+      "sourceId": "inv-p154"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p154",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Burhaniye Camii\"",
+      "page": "154"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

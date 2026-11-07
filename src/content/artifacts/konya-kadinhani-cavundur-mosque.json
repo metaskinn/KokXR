@@ -1,0 +1,106 @@
+{
+  "id": "konya-kadinhani-cavundur-mosque",
+  "name": "Çavundur Camii",
+  "city": "Konya",
+  "district": "Kadınhanı",
+  "period": "Osmanlı · H. 1178 / M. 1764",
+  "endowment": "Çavundur Boyu; Tarlabaşı ve Gökbayır tarlaları ile Kafur Çeşmesi’ndeki bağ vakıfları",
+  "summary": "Ünveren Mahallesi’ndeki Çavundur Camii, ahşap destekleri ve renkli ahşap mihrabıyla XVIII. yüzyıldan gelen bir mahalle camisidir.",
+  "history": "Cami, Kadınhanı Ünveren Mahallesi, Menekşe Sokak’tadır. Kadınhanı’na yerleştirilen Çavundur Boyu 1764’te yaptırmıştır. Özel İdare arşiv kayıtlarında camiye gelir sağlayan vakıflar Tarlabaşı’nda 20 dönüm 1 evlek, Gökbayır’da 136 dönüm tarla ve Kafur Çeşmesi’nde 1 dönüm 3 evlek harap bağ olarak verilir.\n\nKerpiç yığma yapı zaman içinde onarılmış, içi ve dışı çimentoyla sıvanmış, pencereleri PVC yapılmıştır. Örtüsü dört yöne eğimli kiremitli kırma çatıdır. Kuzeydoğu ve kuzeybatı girişlerinden kuzeydoğudaki yakın dönemde kapatılmıştır. Ahşap direkler harimi mihraba dik üç sahına ayırır; orta sahın daha geniş ve yüksektir. Direkler profilli yastıklara sahiptir.\n\nİki pencere arasındaki mihrap dikdörtgen çerçeveli, yarım daire planlı ve yarım kubbelidir. Ahşap üzerine çakılan ajurlu parçalar beyaz, kırmızı, mavi ve sarıyla renklendirilmiştir. Kuzeydeki mahfili iki ahşap direk ve Bursa kemerleri taşır. Doğudaki ahşap vaaz kürsüsünün kare panolarında çarkıfelek ve kıvrık dal motifleri vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-kadinhani-cavundur-mosque/aerial.jpg",
+  "images": [
+    {
+      "file": "/images/konya-kadinhani-cavundur-mosque/aerial.jpg",
+      "alt": "Ağaçlar içindeki kiremit çatılı caminin çevre duvarı ve avlusuyla üstten görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-kadinhani-cavundur-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde kırmızı-beyaz ahşap direkler ve süslü mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-kadinhani-cavundur-mosque/gallery.jpg",
+      "alt": "Ahşap tavan altında beyaz ajurlu korkulukları ve kırmızı perdeleri olan mahfil",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-kadinhani-cavundur-mosque/prayer-hall.jpg",
+      "x": 49,
+      "y": 52,
+      "title": "Ahşap mihrap",
+      "text": "Mihrap ahşap üzerine çakılan ajurlu parçalarla yapılmış ve renklendirilmiştir.",
+      "sourceId": "inv-p455"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-kadinhani-cavundur-mosque/gallery.jpg",
+      "x": 49,
+      "y": 50,
+      "title": "Mahfil",
+      "text": "Kuzey mahfili iki ahşap direk ve Bursa kemerleriyle taşınır.",
+      "sourceId": "inv-p455"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi topluluk tarafından yaptırılmıştır?",
+      "options": [
+        "Oğulbeyli cemaati",
+        "Çavundur Boyu",
+        "İplikçi esnafı",
+        "Mevlevi dervişleri"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Çavundur Boyu.",
+      "sourceId": "inv-p454"
+    },
+    {
+      "question": "Orta sahın yan sahınlara göre nasıldır?",
+      "options": [
+        "Daha dar ve alçak",
+        "Tamamen açık",
+        "Daha geniş ve yüksek",
+        "Kubbeli ve dairesel"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Daha geniş ve yüksek.",
+      "sourceId": "inv-p455"
+    },
+    {
+      "question": "Çavundur Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Karatay",
+        "Akşehir",
+        "Beyşehir",
+        "Kadınhanı"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Kadınhanı.",
+      "sourceId": "inv-p454"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p454",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"Çavundur Camii\"",
+      "page": "454"
+    },
+    {
+      "id": "inv-p455",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Kadınhanı, \"Çavundur Camii\"",
+      "page": "455"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

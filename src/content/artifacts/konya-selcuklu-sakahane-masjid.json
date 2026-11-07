@@ -1,0 +1,97 @@
+{
+  "id": "konya-selcuklu-sakahane-masjid",
+  "name": "Sakahane (Hıdır İlyas - Davut Ağa) Mescidi",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Kitâbesi yok; kitap XIII. yüzyılda yapılmış olmasını ihtimal dahilinde görür",
+  "endowment": "Kitapta kesin bilgi yok; İbrahim Hakkı Konyalı’ya göre Davut Ağa adlı bir hayırsever yaptırmıştır",
+  "summary": "Alâeddin Tepesi’nin kuzeyinde, kurşun kaplı tek kubbeli, bitişiğindeki Hızır-İlyas makamıyla da anılan kare planlı mescit.",
+  "history": "Mescit, Selçuklu, Ferhuniye Mahallesi, Sultan Mesut Sokak’tadır. Alâeddin Tepesi’nin kuzeyindeki mescidin kitâbesi yoktur.\n\nYusuf Küçükdağ yapının Alâeddin Keykubat’ın yaptırdığı şifahanenin mescidi olduğunu, İbrahim Hakkı Konyalı ise Karamanoğulları döneminde Davut Ağa adlı bir hayırsever tarafından yaptırıldığını ifade eder. Konyalı’ya göre mescit, Sahip Ata’nın eskiden meşhur “Sikaye” denilen çeşme ya da musluğunun yakınında yapıldığı için “Sikaye Mescidi” adını almış, halk telaffuzu zamanla Sikaye’yi “Sakane”ye çevirmiştir. Konyalı, Davut Ağa’nın Bedesten yanında da bir mescidi olduğunu ve bu mescidin Karamanoğulları zamanında yapıldığını tahmin ettiğini belirtir. Kitap, bu bilgilerin ışığında mescidin XIII. yüzyılda yapılmış olmasını ihtimal dahilinde görür.\n\nYapının bitişiğinde, günümüze sağlam ulaşamamış türbede Hızır-İlyas makamı olduğu belirtilir; mescit bu nedenle “Hızır-İlyas” adıyla da anılır. Yakın zamanda esaslı bir tamirat geçiren mescidin mihrabı da bu sırada yenilenmiştir.\n\nMescit kare planlıdır ve kubbeyle örtülüdür; kubbe kurşunla kaplanmıştır. İçte kubbeye geçiş Türk üçgenleriyle sağlanır. Kıble duvarının ortasındaki yarım dörtgen planlı mihrap alçıdandır; son tamiratta yenilenen mihrapta geometrik ve bitkisel süslemeler bulunur. Mescidin XIII. yüzyıl tek kubbeli Selçuklu mescitleri içinde önemli bir yeri vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-sakahane-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-sakahane-masjid/exterior.jpg",
+      "alt": "Kesme taş ve tuğla duvarlı, kurşun kaplı kubbeli kare yapı; önünde taş döşeli alan, yanında ağaçlar",
+      "description": "Mescidin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-sakahane-masjid/dome.jpg",
+      "alt": "Mavi gökyüzü önünde kurşun kaplı kubbe ve tepesinde hilalli alem, ön planda yapraklar",
+      "description": "Kurşun kaplı kubbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "kursun-kapli-kubbe",
+      "image": "/images/konya-selcuklu-sakahane-masjid/exterior.jpg",
+      "x": 45,
+      "y": 25,
+      "title": "Kurşun kaplı kubbe",
+      "text": "Kare planlı mescit kubbeyle örtülüdür; kubbenin üzeri kurşunla kaplanmıştır.",
+      "sourceId": "inv-p295"
+    },
+    {
+      "id": "kare-plan",
+      "image": "/images/konya-selcuklu-sakahane-masjid/exterior.jpg",
+      "x": 45,
+      "y": 62,
+      "title": "Kare plan",
+      "text": "Mescit kare planlıdır; içte kubbeye geçiş Türk üçgenleriyle sağlanır.",
+      "sourceId": "inv-p295"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescit, bitişiğindeki türbe nedeniyle hangi adla da anılır?",
+      "options": [
+        "Hızır-İlyas",
+        "Şems",
+        "Pisili",
+        "Kenan Dede"
+      ],
+      "correct": 0,
+      "description": "Bitişikteki türbede Hızır-İlyas makamı olduğu belirtildiğinden mescit bu adla da anılır.",
+      "sourceId": "inv-p295"
+    },
+    {
+      "question": "İçte kubbeye geçiş nasıl sağlanır?",
+      "options": [
+        "Mukarnas tromplarla",
+        "Pandantiflerle",
+        "Türk üçgenleriyle",
+        "Ahşap kirişlerle"
+      ],
+      "correct": 2,
+      "description": "İçten kubbeye geçişler Türk üçgeniyle sağlanmıştır.",
+      "sourceId": "inv-p295"
+    },
+    {
+      "question": "İbrahim Hakkı Konyalı’ya göre “Sakane” adı nereden gelir?",
+      "options": [
+        "Bir su kuyusundan",
+        "Sahip Ata’nın “Sikaye” denilen çeşmesinden",
+        "Bir sakanın adından",
+        "Sakarya Nehri’nden"
+      ],
+      "correct": 1,
+      "description": "Konyalı’ya göre mescit, Sahip Ata’nın Sikaye denilen çeşmesinin yakınında yapıldığı için Sikaye Mescidi adını almış, halk bunu Sakane’ye çevirmiştir.",
+      "sourceId": "inv-p295"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p295",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Sakahane (Hıdır İlyas - Davut Ağa) Mescidi\"",
+      "page": "295"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

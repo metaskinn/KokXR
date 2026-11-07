@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-askan-mosque",
+  "name": "Aşkan Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "1845",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Adını yakınındaki Aşkan Baba Türbesi'nden alan, 1845'te yapılmış ve yakın zamanda yenilenmiş cami.",
+  "history": "Cami, Meram, Aşkan Mahallesi, Aşkan Caddesi üzerinde yer almaktadır. Adını yakınındaki Aşkan Baba Türbesi'nden almıştır. Aşkan Baba'nın hangi dönemde yaşadığı ve ne zaman vefat ettiği bilinmemektedir; mahalle sakinleri tarafından ermiş bir kişi olarak kabul edilmiştir.\n\n1845 yılında inşa edilen cami yakın zamanda yenilenmiştir. Dıştan dikdörtgen planlıdır ve üzeri kırma çatıyla örtülüdür.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-askan-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-askan-mosque/exterior.jpg",
+      "alt": "Tek katlı cami: metal kaplı kırma çatı ve tepesinde hoparlör, krem sıvalı duvar, önünde camlı ahşap kapalı bir bölüm, sağda kiremit çatılı küçük yapı",
+      "description": "Caminin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-askan-mosque/prayer-hall.jpg",
+      "alt": "Harim içi: solda güneş alan büyük pencere, karşıda ahşap mihrap ve sağında ahşap minber, duvarlarda hat levhaları, tavandan sarkan yeşil halka avize, mor-pembe halı",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-meram-askan-mosque/exterior.jpg",
+      "x": 50,
+      "y": 32,
+      "title": "Kırma çatı",
+      "text": "Dıştan dikdörtgen planlı caminin üzeri kırma çatıyla örtülüdür.",
+      "sourceId": "inv-p90"
+    },
+    {
+      "id": "rectangular-body",
+      "image": "/images/konya-meram-askan-mosque/exterior.jpg",
+      "x": 30,
+      "y": 52,
+      "title": "Dikdörtgen gövde",
+      "text": "1845'te inşa edilen cami dıştan dikdörtgen planlıdır ve yakın zamanda yenilenmiştir.",
+      "sourceId": "inv-p90"
+    }
+  ],
+  "test": [
+    {
+      "question": "Aşkan Camii adını nereden almıştır?",
+      "options": [
+        "Banisinden",
+        "Yakınındaki Aşkan Baba Türbesi'nden",
+        "Bir ipekçi esnafından",
+        "Bir Selçuklu emirinden"
+      ],
+      "correct": 1,
+      "description": "Cami adını yakınındaki Aşkan Baba Türbesi'nden almıştır.",
+      "sourceId": "inv-p90"
+    },
+    {
+      "question": "Cami hangi yıl inşa edilmiştir?",
+      "options": [
+        "1908",
+        "1905",
+        "1845",
+        "1954"
+      ],
+      "correct": 2,
+      "description": "Cami 1845 yılında inşa edilmiş, yakın zamanda yenilenmiştir.",
+      "sourceId": "inv-p90"
+    },
+    {
+      "question": "Aşkan Baba hakkında kitapta hangi bilgi verilir?",
+      "options": [
+        "Mahalle sakinlerince ermiş bir kişi olarak kabul edildiği",
+        "Mevlâna'nın oğlu olduğu",
+        "Karamanoğlu beyi olduğu",
+        "1264'te öldüğü"
+      ],
+      "correct": 0,
+      "description": "Aşkan Baba'nın ne zaman yaşadığı bilinmez; mahalle sakinleri tarafından ermiş bir kişi olarak kabul edilmiştir.",
+      "sourceId": "inv-p90"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p90",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Aşkan Camii\"",
+      "page": "90"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

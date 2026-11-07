@@ -1,0 +1,97 @@
+{
+  "id": "konya-meram-ekmekkocu-masjid",
+  "name": "Ekmekkoçu Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "XIX. yüzyıl (plan ve mimari özelliklerine göre)",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Plan ve mimari özelliklerinden XIX. yüzyılda yapıldığı anlaşılan, son cemaat yeri 1986'da yıkılmış küçük mahalle mescidi.",
+  "history": "Mescit, Meram, Ekmekkoçu Mahallesi, Kubbeli Sokak'ta bulunmaktadır. Mescit hakkında bilgi edinilebilecek herhangi bir kaynak yoktur; bu nedenle eser hakkındaki bilgiler kısıtlıdır ve banisiyle ilgili bir bilgiye de rastlanmamıştır.\n\nMescidin plan özellikleri ve mimari elemanlarından XIX. yüzyılda inşa edildiği anlaşılmaktadır. Son cemaat yeri 1986'da yıkılmıştır. 1987'den sonra yapı esaslı bir tamir geçirmiş, ancak bu tamirde son cemaat yeri yeniden yapılmamıştır. Mescidin doğusundaki hazirede tarihi mezar taşları vardır.\n\nMescit dikdörtgen planlıdır ve son tamirinde üzeri kırma çatıyla örtülmüştür. Harim sade görünümlüdür; kıble duvarında yarım daire planlı bir mihrap nişi yer alır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-ekmekkocu-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-ekmekkocu-masjid/exterior.jpg",
+      "alt": "Beyaz sıvalı tek katlı küçük mescit; kiremit kaplı kırma çatı, küçük saçaklı ahşap giriş kapısı, ahşap çerçeveli dar pencereler, çatıda hoparlör",
+      "description": "Mescidin dış görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-ekmekkocu-masjid/prayer-hall.jpg",
+      "alt": "Harim içi: koyu ahşap kirişli tavan, ortada ahşap direk, solda ahşap mihrap, ortada ahşap minber, duvarlarda yeşil yuvarlak hat levhaları, kırmızı seccadeler",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hipped-roof",
+      "image": "/images/konya-meram-ekmekkocu-masjid/exterior.jpg",
+      "x": 50,
+      "y": 22,
+      "title": "Kırma çatı",
+      "text": "Dikdörtgen planlı mescidin üzeri son tamirinde kırma çatıyla örtülmüştür.",
+      "sourceId": "inv-p91"
+    },
+    {
+      "id": "mihrab",
+      "image": "/images/konya-meram-ekmekkocu-masjid/prayer-hall.jpg",
+      "x": 25,
+      "y": 58,
+      "title": "Mihrap",
+      "text": "Kıble duvarında yarım daire planlı bir mihrap nişi yer alır.",
+      "sourceId": "inv-p91"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidin son cemaat yeri hangi yıl yıkılmıştır?",
+      "options": [
+        "1966",
+        "1986",
+        "1987",
+        "2019"
+      ],
+      "correct": 1,
+      "description": "Son cemaat yeri 1986'da yıkılmış, 1987 sonrasındaki tamirde de yeniden yapılmamıştır.",
+      "sourceId": "inv-p91"
+    },
+    {
+      "question": "Mescidin doğu tarafındaki hazirede ne bulunur?",
+      "options": [
+        "Bir şadırvan",
+        "Bir türbe",
+        "Tarihi mezar taşları",
+        "Bir çeşme"
+      ],
+      "correct": 2,
+      "description": "Mescidin doğu tarafındaki hazirede tarihi mezar taşları bulunmaktadır.",
+      "sourceId": "inv-p91"
+    },
+    {
+      "question": "Mescidin inşa dönemi nasıl belirlenmiştir?",
+      "options": [
+        "İnşa kitâbesinden",
+        "Vakfiyesinden",
+        "Mihraptaki tarihten",
+        "Plan özellikleri ve mimari elemanlarından"
+      ],
+      "correct": 3,
+      "description": "Mescidin XIX. yüzyılda inşa edildiği plan özellikleri ve mimari elemanlarından anlaşılmaktadır.",
+      "sourceId": "inv-p91"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p91",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Ekmekkoçu Mescidi\"",
+      "page": "91"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "konya-meram-erdemsah-kale-i-cerp-masjid",
+  "name": "Erdemşah (Kale-i Cerp) Mescidi",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "H. 617 / M. 1220 · I. Alâeddin Keykubad dönemi",
+  "endowment": "Hacı İsmail oğlu Şemseddin Erdemşah",
+  "summary": "Erdemşah Mescidi, taş ve tuğla cepheleri ile tek kubbeli harimi bulunan bir Selçuklu mescididir.",
+  "history": "Mescit, Meram, Kale-i Cerp Mahallesi, Sakarya Sokak’tadır; mahallesinin adıyla Kale-i Cerp Mescidi olarak da anılır. Kitâbesine göre I. Alâeddin Keykubad döneminde Hacı İsmail oğlu Şemseddin Erdemşah tarafından H. 617 / M. 1220’de yaptırılmıştır. Selçuklu atabeylerinden olan Erdemşah’ın Erzurum İspir’de Mugîseddîn Tuğrul Şah adına da bir cami yaptırdığı İbrahim Hakkı Konyalı’dan aktarılır. Girişte altı satırlık Arapça celî sülüs kitâbe bulunur. Vakıflar Genel Müdürlüğü 2007’de esaslı onarım yapmıştır.\n\nKare planlı kubbeli harim ve giriş bölümünden oluşur. Duvarların altı moloz taş ve tuğla, üstü tuğladır. Malzeme değişimindeki kademelenme yapıya iki katlı görünüm verir. Harim tromp geçişli kubbeyle örtülüdür. Kıble duvarının ortasındaki ahşap mihrap sonradan eklenmiştir. Özgün çini mihrap bezemesinden bir parça Konya Çini Eserler Müzesi’nde sergilenir. Yapı mevcut zeminden yaklaşık iki metre kotta bulunur. Kapı kemer köşeliğinde firuze çini kalıntıları, giriş önünde sonradan eklenmiş ahşap sundurma vardır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-erdemsah-kale-i-cerp-masjid/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-erdemsah-kale-i-cerp-masjid/exterior.jpg",
+      "alt": "İskeleli yüksek binalar arasında kırmızı kubbeli küçük yapı; altta taş, üstte tuğla duvarlar",
+      "description": "İskeleli yüksek binalar arasında kırmızı kubbeli küçük yapı; altta taş, üstte tuğla duvarlar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-erdemsah-kale-i-cerp-masjid/dome.jpg",
+      "alt": "Tuğlaların dairesel dizildiği kubbenin merkezinden sarkan avize",
+      "description": "Tuğlaların dairesel dizildiği kubbenin merkezinden sarkan avize",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-erdemsah-kale-i-cerp-masjid/mihrab.jpg",
+      "alt": "Tuğla kubbe geçişleri altında koyu ahşap mihrap ve üstünde yazı levhası",
+      "description": "Tuğla kubbe geçişleri altında koyu ahşap mihrap ve üstünde yazı levhası",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-erdemsah-kale-i-cerp-masjid/exterior.jpg",
+      "x": 49,
+      "y": 69,
+      "title": "Taş ve tuğla duvarlar",
+      "text": "Alt bölümde moloz taş ve tuğla, üst bölümde tuğla kullanılmış; kademelenme iki katlı görünüm sağlamıştır.",
+      "sourceId": "inv-p167"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-erdemsah-kale-i-cerp-masjid/dome.jpg",
+      "x": 50,
+      "y": 40,
+      "title": "Kubbe",
+      "text": "Kare harimin üzeri tromp geçişli kubbeyle örtülüdür.",
+      "sourceId": "inv-p167"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mescidi kim yaptırmıştır?",
+      "options": [
+        "Kadı Mürsel",
+        "Hacı Veyis Efendi",
+        "Emin Usta",
+        "Hacı İsmail oğlu Şemseddin Erdemşah"
+      ],
+      "correct": 3,
+      "description": "Kitâbe baninin Hacı İsmail oğlu Şemseddin Erdemşah olduğunu belirtir.",
+      "sourceId": "inv-p166"
+    },
+    {
+      "question": "Yapı hangi yıl esaslı onarım görmüştür?",
+      "options": [
+        "1860",
+        "2007",
+        "1915",
+        "1954"
+      ],
+      "correct": 1,
+      "description": "Vakıflar Genel Müdürlüğü 2007’de esaslı onarım yapmıştır.",
+      "sourceId": "inv-p166"
+    },
+    {
+      "question": "Özgün mihrap çinilerinin bir parçası nerede sergilenir?",
+      "options": [
+        "Konya Çini Eserler Müzesi’nde",
+        "Caminin çatısında",
+        "Yusuf Ağa Kütüphanesi’nde",
+        "Obruk Hanı’nda"
+      ],
+      "correct": 0,
+      "description": "Kitap çini parçasının Konya Çini Eserler Müzesi’nde sergilendiğini belirtir.",
+      "sourceId": "inv-p167"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p166",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Erdemşah (Kale-i Cerp) Mescidi\"",
+      "page": "166"
+    },
+    {
+      "id": "inv-p167",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Erdemşah (Kale-i Cerp) Mescidi\"",
+      "page": "167"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "konya-karatay-topraklik-hasan-efendi-mosque",
+  "name": "Topraklık Hasan Efendi Camii",
+  "city": "Konya",
+  "district": "Karatay",
+  "period": "Cumhuriyet · 22 Temmuz 1947’de yeniden yapım",
+  "endowment": "Yeniden yapımı mahalle halkı ve hayırseverler üstlenmiştir",
+  "summary": "Kerimler Caddesi’ndeki caminin kitabesi, mahalle halkı ve hayırseverlerin 1947’de gerçekleştirdiği yeniden yapımı anlatır.",
+  "history": "Kerimler Caddesi’ndeki caminin girişinde celî talik hatla dört satırlık kitabe bulunur. Kitabeye göre yapı 4 Ramazan 1366 / 22 Temmuz 1947’de mahalle halkı ve hayırseverler tarafından bir minare eklenerek yeniden yaptırılmıştır. Vakıflar Bölge Müdürlüğü de yakın zamanda yapıyı onarmıştır.\n\nDerinlemesine dikdörtgen cami içten düz tavan, dıştan eğimli çatıyla örtülüdür. Batı duvarının kuzey köşesindeki minare kare kaideli, silindirik gövdeli ve tek şerefelidir. Harime kuzey duvarının batı köşesinden girilir. İki sahınlı harimin kuzeyinde ahşap mahfil, güneyindeki kıble duvarında mihrap ve minber vardır. Yarım daire planlı mihrabın yüzeyi çinilerle kaplıdır. Kitap yapıyı Cumhuriyet dönemi mahalle camileri arasında değerlendirir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karatay-topraklik-hasan-efendi-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karatay-topraklik-hasan-efendi-mosque/exterior.jpg",
+      "alt": "Ağaçlar içinde kiremit çatılı açık renk cami ve yanında tek şerefeli minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-karatay-topraklik-hasan-efendi-mosque/prayer-hall.jpg",
+      "alt": "Pembe-kırmızı halılı iki sahınlı harimde ortada direk ve sağda mavi çinili mihrap",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-karatay-topraklik-hasan-efendi-mosque/exterior.jpg",
+      "x": 72,
+      "y": 25,
+      "title": "Minare",
+      "text": "Batı duvarının kuzey köşesindeki minare silindirik gövdeli ve tek şerefelidir.",
+      "sourceId": "inv-p273"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-karatay-topraklik-hasan-efendi-mosque/prayer-hall.jpg",
+      "x": 93,
+      "y": 48,
+      "title": "Çinili mihrap",
+      "text": "Kıble duvarının ortasındaki yarım daire planlı mihrabın yüzeyi çinilerle kaplıdır.",
+      "sourceId": "inv-p273"
+    }
+  ],
+  "test": [
+    {
+      "question": "Yeniden yapımı kimler üstlenmiştir?",
+      "options": [
+        "Yalnız saray mimarları",
+        "İplikçi esnafı",
+        "Seyyahlar",
+        "Mahalle halkı ve hayırseverler"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: Mahalle halkı ve hayırseverler.",
+      "sourceId": "inv-p273"
+    },
+    {
+      "question": "Harim kaç sahından oluşur?",
+      "options": [
+        "İki",
+        "Üç",
+        "Beş",
+        "Yedi"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: İki.",
+      "sourceId": "inv-p273"
+    },
+    {
+      "question": "Topraklık Hasan Efendi Camii Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Akşehir",
+        "Karatay",
+        "Beyşehir",
+        "Bozkır"
+      ],
+      "correct": 1,
+      "description": "Kitaba göre: Karatay.",
+      "sourceId": "inv-p273"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p273",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Karatay, \"Topraklık Hasan Efendi Camii\"",
+      "page": "273"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

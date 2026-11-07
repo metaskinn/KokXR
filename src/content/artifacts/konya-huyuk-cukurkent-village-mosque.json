@@ -1,0 +1,102 @@
+{
+  "id": "konya-huyuk-cukurkent-village-mosque",
+  "name": "Çukurkent Köyü Camii",
+  "city": "Konya",
+  "district": "Hüyük",
+  "period": "İlk inşa tarihi bilinmiyor; giriş levhasında M. 1800",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Hüyük Çukurkent Köyü Köyiçi Mevkii'ndeki caminin giriş levhasında M. 1800, harim kapısında H. 1311 / M. 1893-94 ve M. 1972 tarihleri vardır.",
+  "history": "Hüyük Çukurkent Köyü Köyiçi Mevkii'ndeki caminin giriş levhasında M. 1800, harim kapısında H. 1311 / M. 1893-94 ve M. 1972 tarihleri vardır. İlk inşa tarihi bilinmez; 1893-94 ve 1972 tarihlerinin onarımlara ait olabileceği düşünülür. Vakıflar Genel Müdürlüğü 2003'te tamir etmiştir.\n\nDikdörtgen planlı kâgir yapı moloz taş ve ahşapla yapılmıştır. İçten düz damlı, dıştan kırma çatılıdır. Onarımlarda kuzeye son cemaat yeri eklenmiştir. Betonarme minare, pabuç kitabesine göre 1989'da yapılmıştır; kare kaideli, silindirik gövdeli ve tek şerefelidir. Son cemaat yerinden girilen harim mihraba dik üç sahına ayrılır; kuzeyde mahfil, güneyde mihrap ve minber vardır. Ahşap kaplamalı mihrap dikdörtgen çerçeveli, üç bordürlü ve içten çokgen yüzeylidir. Güneybatıdaki sade minber taç kapı, aynalık ve köşkten oluşur. Her ikisinde bitkisel süslemeler bulunur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-huyuk-cukurkent-village-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-huyuk-cukurkent-village-mosque/aerial-view.jpg",
+      "alt": "Köy yerleşimi içinde kiremit çatılı cami ve yüksek beyaz minare",
+      "description": "Köy yerleşimi içinde kiremit çatılı cami ve yüksek beyaz minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-huyuk-cukurkent-village-mosque/prayer-hall.jpg",
+      "alt": "Ahşap kirişli tavan, ahşap direkler, mihrap ve sağda minber",
+      "description": "Ahşap kirişli tavan, ahşap direkler, mihrap ve sağda minber",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-huyuk-cukurkent-village-mosque/prayer-hall.jpg",
+      "x": 53,
+      "y": 54,
+      "title": "Mihrap",
+      "text": "Ahşap kaplamalı mihrap üç bordürlü ve içten çokgen yüzeylidir.",
+      "sourceId": "inv-p439"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-huyuk-cukurkent-village-mosque/prayer-hall.jpg",
+      "x": 9,
+      "y": 55,
+      "title": "Ahşap direkler",
+      "text": "Harim mihraba dik üç sahına ayrılır.",
+      "sourceId": "inv-p438"
+    }
+  ],
+  "test": [
+    {
+      "question": "Çukurkent Köyü Camii hangi ilçededir?",
+      "options": [
+        "Hüyük",
+        "Karatay",
+        "Selçuklu",
+        "Meram"
+      ],
+      "correct": 0,
+      "description": "Çukurkent Köyü Camii, Konya'nın Hüyük ilçesindedir.",
+      "sourceId": "inv-p438"
+    },
+    {
+      "question": "Mihrap ve minberde hangi süslemeler bulunur?",
+      "options": [
+        "Hayvan kabartmaları",
+        "Bitkisel süslemeler",
+        "Çini mozaikler",
+        "Süsleme bulunmaz"
+      ],
+      "correct": 1,
+      "description": "Bitkisel süslemeler.",
+      "sourceId": "inv-p439"
+    },
+    {
+      "question": "Betonarme minare hangi yılda yapılmıştır?",
+      "options": [
+        "1558",
+        "1768",
+        "1911",
+        "1989"
+      ],
+      "correct": 3,
+      "description": "1989.",
+      "sourceId": "inv-p438"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p438",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Hüyük, \"Çukurkent Köyü Camii\"",
+      "page": "438"
+    },
+    {
+      "id": "inv-p439",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Hüyük, \"Çukurkent Köyü Camii\"",
+      "page": "439"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

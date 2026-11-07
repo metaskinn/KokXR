@@ -1,0 +1,118 @@
+{
+  "id": "konya-selcuklu-horozlu-inn",
+  "name": "Horozlu (Rûzbe) Han",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Anadolu Selçuklu · XIII. yüzyıl ikinci yarısı; 1246-1249 yılları arasında yapıldığı düşünülmektedir",
+  "endowment": "Kitâbesi yazısızdır; Emir Câmedâr Esedüddin Rûzbe tarafından yaptırıldığı düşünülmektedir",
+  "summary": "Konya'ya en yakın han olan, kitâbe levhası boş bırakılmış, yüksek kaburgalı tonozlu ve külahlı klasik bir Selçuklu hanı.",
+  "history": "Horozlu Han, Konya'ya en yakın handır; şehrin kuzeyinde, Rûzbe Ovası mevkiinde, Konya-Ankara yolu üzerinde yer alır.\n\nTaç kapının üzerinde mermerden yapılmış üç dilimli bir kitâbe levhası vardır, ancak levha yazısızdır. Bu nedenle yapının ne zaman ve kim tarafından inşa edildiği bilinmemektedir. Hanın 1246-1249 yılları arasında Emir Câmedâr Esedüddin Rûzbe tarafından yaptırıldığı, bânisi yapı tamamlanmak üzereyken öldürüldüğü için kitâbe taşının boş bırakıldığı düşünülmektedir. Mevlevî dedelerinden Eflâkî Dede'nin \"Menâkıbü'l-Ârifîn\" adlı eserinde \"Rûzbih\" olarak anılan hanın adı zamanla \"Horozlu\" biçimine dönüşmüştür.\n\nYıllar içinde avlu kısmı yıkılan ve çeşitli bölümleri harap olan han ilk olarak 1956'da tamir görmüş, ardından 1970'te ve 1980'li yıllarda Vakıflar Genel Müdürlüğü tarafından onarılmıştır. 1985'te restorana dönüştürülen hana yeni birimler eklenmiş, kapalı kısmın kuzey sahını mutfak hâline getirilmiştir.\n\nHan, doğu-batı doğrultusunda açık avlu ve kapalı bölümden oluşan karma bir plana sahiptir. Günümüze yalnızca kapalı bölüm sağlam olarak ulaşmıştır; avlu ve çevresindeki mekânlar asli biçimleriyle, temel üzerinde yaklaşık bir metre yükseklikte dondurulmuştur.\n\nDüzgün kesme taştan yapılan binanın bazı bölümlerinde iki renkli taş işçiliği görülür. Cephelerde belirli aralıklarla çokgen ve silindirik yüzeyli payandalar, bunların arasında da mazgal pencereler bulunur. Doğu cephedeki taç kapı cepheden taşırılmış ve yüksek tutulmuştur; iki yanında süslemesiz sütunceler ve mihrabiyeler yer alır.\n\nKapalı kısım, taç kapıya dik uzanan dörderli dört sıra ayakla beş sahına ayrılmıştır. Taç kapı ekseninde yapı boyunca uzanan ve orta sahını örten kaburgalı beşik tonoz oldukça yüksek tutulmuş, diğer sahınlar enine beşik tonozlarla örtülmüştür. Giriş aksındaki sahının ortasında içten yüksek kasnaklı bir kubbe, bunun üzerinde de dıştan sekizgen, yüksek ve mazgal pencereli kasnağa oturan kurşun kaplı bir külah vardır.\n\nXIII. yüzyılın ikinci yarısına tarihlenen Horozlu (Rûzbe) Han, klasik Selçuklu hanlarındandır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-horozlu-inn/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-horozlu-inn/aerial-view.jpg",
+      "alt": "Havadan görünüm: sanayi yapılarıyla çevrili, kesme taştan uzun kapalı bölüm; ortasında sivri kemerli yüksek taç kapı, üstünde sekizgen kasnaklı külah; önünde alçak duvarlarla sınırlanmış geniş avlu ve avluda iki beyaz çadır",
+      "description": "Hanın çevresiyle havadan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-horozlu-inn/covered-hall.jpg",
+      "alt": "Kapalı bölümün içi: taş ayaklara oturan sivri kemerler ve tonozlar, duvarlarda yanan aplikler; zeminde gri örtülerle kaplı sandalye ve masa grupları",
+      "description": "Kapalı bölümün içi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-selcuklu-horozlu-inn/vault-window.jpg",
+      "alt": "Kaba taş örgülü tonozun altında, kalın taş duvara açılmış derin kemerli nişin ortasında dar, uzun bir pencere aralığı",
+      "description": "Duvardaki dar pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "crown-gate",
+      "image": "/images/konya-selcuklu-horozlu-inn/aerial-view.jpg",
+      "x": 51,
+      "y": 42,
+      "title": "Taç kapı",
+      "text": "Doğu cephedeki taç kapı cepheden taşırılmış ve yüksek tutulmuştur; üzerindeki üç dilimli mermer kitâbe levhası yazısızdır.",
+      "sourceId": "inv-p269"
+    },
+    {
+      "id": "cone",
+      "image": "/images/konya-selcuklu-horozlu-inn/aerial-view.jpg",
+      "x": 51,
+      "y": 10,
+      "title": "Sekizgen kasnaklı külah",
+      "text": "Giriş aksındaki sahının ortasındaki kubbenin üzerine, dıştan sekizgen ve mazgal pencereli kasnağa oturan kurşun kaplı bir külah yapılmıştır.",
+      "sourceId": "inv-p269"
+    },
+    {
+      "id": "loophole",
+      "image": "/images/konya-selcuklu-horozlu-inn/vault-window.jpg",
+      "x": 49,
+      "y": 58,
+      "title": "Mazgal pencere",
+      "text": "Hanın cephelerinde payandaların arasına denk gelen mazgal pencereler bulunur.",
+      "sourceId": "inv-p269"
+    }
+  ],
+  "test": [
+    {
+      "question": "Hanın adı hangi eserde \"Rûzbih\" olarak geçer?",
+      "options": [
+        "Seyahatnâme",
+        "Menâkıbü'l-Ârifîn",
+        "Selçuknâme",
+        "Mesnevî"
+      ],
+      "correct": 1,
+      "description": "Eflâkî Dede'nin Menâkıbü'l-Ârifîn adlı eserinde \"Rûzbih\" olarak geçen hanın adı zamanla \"Horozlu\"ya dönüşmüştür.",
+      "sourceId": "inv-p268"
+    },
+    {
+      "question": "Taç kapının üzerindeki kitâbe levhasının özelliği nedir?",
+      "options": [
+        "Üzerinde yazı yoktur",
+        "Çini kaplıdır",
+        "Osmanlıca bir onarım kaydı taşır",
+        "Sonradan müzeye taşınmıştır"
+      ],
+      "correct": 0,
+      "description": "Taç kapının üzerindeki üç dilimli mermer kitâbe levhası yazısızdır; bu yüzden yapım tarihi ve bânisi kesin bilinmez.",
+      "sourceId": "inv-p268"
+    },
+    {
+      "question": "Horozlu Han hangi yılda restorana dönüştürülmüştür?",
+      "options": [
+        "1956",
+        "1970",
+        "2007",
+        "1985"
+      ],
+      "correct": 3,
+      "description": "1985'te restoran hâline getirilen hana yeni birimler eklenmiş, kapalı kısmın kuzey sahını mutfağa dönüştürülmüştür.",
+      "sourceId": "inv-p269"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p268",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Horozlu (Rûzbe) Han\"",
+      "page": "268"
+    },
+    {
+      "id": "inv-p269",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Selçuklu, \"Horozlu (Rûzbe) Han\"",
+      "page": "269"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

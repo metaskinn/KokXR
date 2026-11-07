@@ -1,0 +1,97 @@
+{
+  "id": "konya-selcuklu-ak-sazi-bey-mosque",
+  "name": "Ak (Şazi Bey) Camii",
+  "city": "Konya",
+  "district": "Selçuklu",
+  "period": "Karamanoğulları dönemi (banisi Şaz Bey bu dönemde yaşamıştır)",
+  "endowment": "Şaz Bey tarafından yaptırılmıştır; kitâbesi ve vakfiyesi yoktur",
+  "summary": "Alâeddin Tepesi’nin kuzeybatısında, Karamanoğulları devlet adamı Şaz Bey’in yaptırdığı, sekizgen kasnaklı tek kubbeli cami.",
+  "history": "Cami, Selçuklu, Ferhuniye Mahallesi, Alâeddin Bulvarı No. 21’dedir; Alâeddin Tepesi’nin kuzeybatısında, tepeyi çeviren anayolun hemen kenarındadır. Esere farklı adlar verilmiştir: duvarları kireçle badanalandığı için “Ak Camii”, bulunduğu yer nedeniyle halk arasında “Yıkık Mahalle Mescidi”, banisine izafeten de “Şaz Bey Camii” denir.\n\nCami, Karamanoğulları döneminde yaşamış ve önemli görevlerde bulunmuş bir devlet adamı olan Şaz Bey tarafından yaptırılmıştır. Kitâbesi ve vakfiyesi yoktur. Zamanla hasar gören yapı, halk tarafından Hacı Kaymaklardan Kasım Ağa’nın önderliğinde yeniden inşa ettirilmiştir. Vakıflar Genel Müdürlüğü 2008’de camide esaslı bir tamirat yapmıştır.\n\nKare planlı yapı, sekizgen kasnağa oturan tek kubbeyle örtülüdür. Harime batıdaki kapıdan girilir; giriş bölümünün üzerinde silindirik ahşap minare yer alır. İçte sekizgen kubbe eteğini çepeçevre dolaşan, siyah üzerine beyaz harflerle yazılmış sülüs yazı kuşağında Nebe Suresi yazılıdır. Kıble duvarının ortasındaki mihrap mermerdir; sağındaki minber yakın zamanda konmuştur.",
+  "verification": "verified",
+  "coverImage": "/images/konya-selcuklu-ak-sazi-bey-mosque/minaret.jpg",
+  "images": [
+    {
+      "file": "/images/konya-selcuklu-ak-sazi-bey-mosque/minaret.jpg",
+      "alt": "Aşağıdan bakışla koyu renkli silindirik ahşap minare, ahşap korkuluklu şerefesi ve kurşun külahı; yanında kubbenin kenarı",
+      "description": "Silindirik ahşap minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-selcuklu-ak-sazi-bey-mosque/prayer-hall.jpg",
+      "alt": "İç mekân: kırmızı halı, kubbe eteğinde yazı kuşağı, ortada mermer mihrap, sağda ahşap minber",
+      "description": "Harim",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ahsap-minare",
+      "image": "/images/konya-selcuklu-ak-sazi-bey-mosque/minaret.jpg",
+      "x": 45,
+      "y": 30,
+      "title": "Ahşap minare",
+      "text": "Giriş bölümünün üzerinde silindirik ahşap minare yer alır.",
+      "sourceId": "inv-p294"
+    },
+    {
+      "id": "mermer-mihrap",
+      "image": "/images/konya-selcuklu-ak-sazi-bey-mosque/prayer-hall.jpg",
+      "x": 50,
+      "y": 57,
+      "title": "Mermer mihrap",
+      "text": "Kıble duvarının ortasındaki mihrap mermer malzemeden yapılmıştır.",
+      "sourceId": "inv-p294"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin “Ak Camii” adını almasının nedeni nedir?",
+      "options": [
+        "Beyaz mermerden yapılması",
+        "Duvarlarının kireçle badanalanması",
+        "Ak Koyunlu bir bey tarafından yaptırılması",
+        "Beyaz çinilerle kaplanması"
+      ],
+      "correct": 1,
+      "description": "Duvarları kireçle badana yapıldığı için “Ak Camii” olarak anılır.",
+      "sourceId": "inv-p294"
+    },
+    {
+      "question": "Kubbe eteğindeki yazı kuşağında hangi sure yazılıdır?",
+      "options": [
+        "Fetih Suresi",
+        "Mülk Suresi",
+        "Nebe Suresi",
+        "Yasin Suresi"
+      ],
+      "correct": 2,
+      "description": "Kubbe eteğini dolaşan sülüs yazı kuşağında Nebe Suresi yazılıdır.",
+      "sourceId": "inv-p294"
+    },
+    {
+      "question": "Yapı halk tarafından kimin önderliğinde yeniden inşa ettirilmiştir?",
+      "options": [
+        "Kasım Ağa",
+        "Davut Ağa",
+        "Mustafa Ağa",
+        "Recep Ağa"
+      ],
+      "correct": 0,
+      "description": "Hasar gören yapı, Hacı Kaymaklardan Kasım Ağa’nın önderliğinde yeniden inşa ettirilmiştir.",
+      "sourceId": "inv-p294"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p294",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Selçuklu, \"Ak (Şazi Bey) Camii\"",
+      "page": "294"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

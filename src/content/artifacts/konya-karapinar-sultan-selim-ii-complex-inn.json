@@ -1,0 +1,123 @@
+{
+  "id": "konya-karapinar-sultan-selim-ii-complex-inn",
+  "name": "Karapınar Sultan II. Selim Külliyesi Hanı",
+  "city": "Konya",
+  "district": "Karapınar",
+  "period": "Osmanlı · Şehzade II. Selim külliyesinin parçası; külliye H. 971 / M. 1563’te tamamlanmıştır",
+  "endowment": "Külliyenin banileri Şehzade Sultan II. Selim ve Kanûni Sultan Süleyman",
+  "summary": "Karapınar’daki Sultan II. Selim Külliyesi’nin kuzey ucunda yer alan, üzeri örtülü bir koridorun iki yanında ahırları bulunan han.",
+  "history": "Han, Şehzade II. Selim’in Karapınar’da yeni yerleşimin çekirdeğini oluşturmak ve kentten geçen İstanbul-Hicaz yolunu kullanacak insanlar için yaptırdığı menzil külliyesinin bir parçasıdır. Cami, sıbyan mektebi, imaret, tabhane, arasta, iki han, çeşme, hamam ve iki yel değirmeninden oluşan külliyenin iki banisi vardır: görünürde Şehzade Sultan II. Selim, arka planda ise Kanûni Sultan Süleyman. Caminin kapısındaki kitâbe H. 971 / M. 1563 tarihini verir; bu tarih caminin ve külliyenin tamamlanma tarihini yansıtır.\n\nKülliyenin kuzey ucunda yer alan han, kuzey-güney doğrultusunda dikdörtgen bir avluya sahiptir ve iki bölümlüdür. Yapı genel olarak merkezde, kuzey-güney istikametinde dikdörtgen planlıdır ve üzeri örtülü bir koridoru vardır. Koridorun her iki ucunda iki renkli taşla örülmüş, giriş kapılarına sahip taç kapılar göze çarpar. Bu kapıların devamında doğu ve batı yönündeki iki uzun kenara açılan birer kapıyla simetrik düzenlenmiş ahırlara geçilir; koridorun iki yanındaki bu ahırlara aslında han da denilebilir.\n\nDikdörtgen biçimli ahırlarda on ikişer kâgir ayak, üzerlerindeki ahşap kırma çatıyı taşır. Ahırların kimi yerlerinde orijinal ocak ve duvar nişi izlerine rastlanır. Yusuf Küçükdağ, hanın ilk hâli harap olduğu için XIX. yüzyıl sonunda daraltılarak iki katlı hâle getirildiğini belirtir. Ahşap merdivenle çıkılan ikinci kat, çeşitli oda ve salonlardan oluşan, otel işlevi de gören bir yapıya dönüştürülmüştür. Zamanla bu ikinci yapım evresi de tahrip olmuş, hanın arazisi muhdes (sonradan eklenmiş) dükkânlarca işgal edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-karapinar-sultan-selim-ii-complex-inn/crown-gate-facade.jpg",
+  "images": [
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-complex-inn/crown-gate-facade.jpg",
+      "alt": "Kesme taş cephe: geniş kemerli, camlı giriş açıklığı, üstte kırmızı ahşap saçaklı çıkıntılı bölüm; iki yanda alçak çatılı yapılar",
+      "description": "Taç kapılı giriş cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-complex-inn/roofs-from-above.jpg",
+      "alt": "Yukarıdan görünüm: ortada kemerli camlı girişi olan taş bölüm, iki yanında metal kaplı eğimli çatılar ve tuğla bacalar",
+      "description": "Koridor girişi ve iki yandaki çatılar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-karapinar-sultan-selim-ii-complex-inn/two-coloured-arch.jpg",
+      "alt": "Açık ve koyu taşların sırayla dizildiği kemerli kapı; iki yanında yazılı levhalar, içeride dükkân ve yukarı çıkan merdiven",
+      "description": "İki renkli taş kemerli kapı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "crown-gate",
+      "image": "/images/konya-karapinar-sultan-selim-ii-complex-inn/crown-gate-facade.jpg",
+      "x": 50,
+      "y": 58,
+      "title": "Taç kapı",
+      "text": "Koridorun iki ucunda giriş kapılarına sahip taç kapılar bulunur.",
+      "sourceId": "inv-p48"
+    },
+    {
+      "id": "two-coloured-stone",
+      "image": "/images/konya-karapinar-sultan-selim-ii-complex-inn/two-coloured-arch.jpg",
+      "x": 50,
+      "y": 8,
+      "title": "İki renkli taş",
+      "text": "Taç kapılar iki renkli taşla örülmüştür.",
+      "sourceId": "inv-p48"
+    },
+    {
+      "id": "barn-roofs",
+      "image": "/images/konya-karapinar-sultan-selim-ii-complex-inn/roofs-from-above.jpg",
+      "x": 14,
+      "y": 50,
+      "title": "Ahırların çatıları",
+      "text": "Koridorun iki yanındaki ahırlarda on ikişer kâgir ayak, üstteki kırma çatıyı taşır.",
+      "sourceId": "inv-p48"
+    }
+  ],
+  "test": [
+    {
+      "question": "Han, Sultan II. Selim Külliyesi’nin neresinde yer alır?",
+      "options": [
+        "Güney ucunda",
+        "Kuzey ucunda",
+        "Caminin avlusunda",
+        "Arastanın ortasında"
+      ],
+      "correct": 1,
+      "description": "Han külliyenin kuzey ucunda yer alır.",
+      "sourceId": "inv-p48"
+    },
+    {
+      "question": "Ahırlarda çatıyı kaçar kâgir ayak taşır?",
+      "options": [
+        "Dörder",
+        "Altışar",
+        "Sekizer",
+        "On ikişer"
+      ],
+      "correct": 3,
+      "description": "Dikdörtgen ahırlarda on ikişer kâgir ayak ahşap kırma çatıyı taşır.",
+      "sourceId": "inv-p48"
+    },
+    {
+      "question": "Han iki katlı hâle getirildikten sonra ikinci kat hangi işlevi de görmüştür?",
+      "options": [
+        "Otel",
+        "Medrese",
+        "Hamam",
+        "Kütüphane"
+      ],
+      "correct": 0,
+      "description": "Ahşap merdivenle çıkılan ikinci kat, oda ve salonlardan oluşan, otel işlevi de gören bir yapıya dönüştürülmüştür.",
+      "sourceId": "inv-p48"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p36",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesi Han\"",
+      "page": "36"
+    },
+    {
+      "id": "inv-p40",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesi Han\"",
+      "page": "40"
+    },
+    {
+      "id": "inv-p48",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Karapınar, \"Karapınar Sultan II. Selim Külliyesi Han\"",
+      "page": "48"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

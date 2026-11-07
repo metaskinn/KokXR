@@ -1,0 +1,106 @@
+{
+  "id": "konya-aksehir-kucuk-ayasofya-masjid-fountain",
+  "name": "Küçük Ayasofya Mescidi Çeşmesi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "H. 1210 / M. 1795-96 (inşa kitâbesine göre)",
+  "endowment": "Banisi \"Monla\" isimli bir kadındır",
+  "summary": "Akşehir'de, kitâbesine göre H. 1210 / M. 1795-96'da \"Monla\" isimli bir kadının yaptırdığı, tuğla teğet kemerli, bağımsız ve tek cepheli çeşme.",
+  "history": "Çeşme, Akşehir, Eski Kale Mahallesi, Süleymanağa Sokak, 13 numarada bulunmaktadır.\n\nÇeşmenin aynalığında, mermer üzerine Osmanlı Türkçesiyle ve talik hatla kabartma olarak işlenmiş, iki satırlık ve ikişer kartuşlu bir inşa kitâbesi vardır. Kitâbenin okunuşu şöyledir: \"Bezl-i himmetle idüb Monla Kadın hayr-ı cemîl / Maksadı dâim Hüdâdan nev-be-nev ecr-i cezîl / (?)Düşer binde Halîmâ böyle hoş târih-i tâm / Mescide valâ keremdir çeşme-i nev selsebîl 1210\".\n\nKitâbesine göre çeşme H. 1210 / M. 1795-96 yılında inşa edilmiştir. Tarih, son satırda hem rakamla verilmiş hem de son mısrada ebcedle işaret edilmiştir. Yapının banisi \"Monla\" isimli bir kadındır; kitâbede usta adı bulunmamaktadır.\n\nYapı bağımsız, tek cepheli ve teğet kemerli bir çeşmedir. İnşasında moloz taş ve tuğla kullanılmıştır. Tuğla örülerek oluşturulan teğet kemer, iki yandaki monolitik mermer ayaklar tarafından taşınır. Kemerin üzengi noktalarından başlayarak her iki yanda cephenin dış kenarlarına örülen tuğla, diş saçağa kadar devam eder. Yapı üst bölümde silmeli taş saçakla korunmaktadır.\n\nGeçirdiği onarımlarla günümüze sağlam bir şekilde ulaşan çeşme hâlen kullanılmaktadır.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-kucuk-ayasofya-masjid-fountain/fountain-facade.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-kucuk-ayasofya-masjid-fountain/fountain-facade.jpg",
+      "alt": "Taş bir yapının köşesine bitişik çeşme: moloz taş cephede tuğladan örülmüş kemer, kemerin iki yanında ve kenarlarında tuğla örgü, üstte taş saçak; kemerin içinde taş ayna, musluk ve önünde metal ızgara ile tahta bir sehpa; arkada yeşil bir yamaç",
+      "description": "Çeşmenin ön cephesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-kucuk-ayasofya-masjid-fountain/inscription.jpg",
+      "alt": "Moloz taş duvara yerleştirilmiş açık renkli mermer levha; üzerinde iki satır hâlinde, her satırı ikiye bölünmüş kabartma Osmanlıca yazı",
+      "description": "İki satırlık, ikişer kartuşlu inşa kitâbesi",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "brick-arch",
+      "image": "/images/konya-aksehir-kucuk-ayasofya-masjid-fountain/fountain-facade.jpg",
+      "x": 52,
+      "y": 40,
+      "title": "Tuğla kemer",
+      "text": "Çeşmenin teğet kemeri tuğla örülerek oluşturulmuş ve iki yandaki monolitik mermer ayaklar tarafından taşınır.",
+      "sourceId": "inv-p237"
+    },
+    {
+      "id": "stone-eaves",
+      "image": "/images/konya-aksehir-kucuk-ayasofya-masjid-fountain/fountain-facade.jpg",
+      "x": 52,
+      "y": 21,
+      "title": "Silmeli taş saçak",
+      "text": "Yapı üst bölümde silmeli taş saçakla koruma altına alınmıştır.",
+      "sourceId": "inv-p237"
+    },
+    {
+      "id": "inscription",
+      "image": "/images/konya-aksehir-kucuk-ayasofya-masjid-fountain/inscription.jpg",
+      "x": 50,
+      "y": 48,
+      "title": "İnşa kitâbesi",
+      "text": "Mermer üzerine talik hatla kabartma olarak işlenmiş, iki satırlık ve ikişer kartuşlu kitâbe, çeşmenin H. 1210 / M. 1795-96'da yapıldığını bildirir.",
+      "sourceId": "inv-p237"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitâbesine göre çeşme hangi yılda inşa edilmiştir?",
+      "options": [
+        "H. 1086 / M. 1675",
+        "H. 1150 / M. 1737",
+        "H. 1210 / M. 1795-96",
+        "H. 1300 / M. 1882-83"
+      ],
+      "correct": 2,
+      "description": "Kitâbesine göre çeşme H. 1210 / M. 1795-96 yılında inşa edilmiştir; tarih hem rakamla hem de ebcedle verilmiştir.",
+      "sourceId": "inv-p237"
+    },
+    {
+      "question": "Çeşmenin teğet kemeri hangi malzemeyle örülmüştür?",
+      "options": [
+        "Tuğla",
+        "Mermer",
+        "Kesme Sille taşı",
+        "Ahşap"
+      ],
+      "correct": 0,
+      "description": "Teğet kemer tuğla örülerek oluşturulmuş; iki yandaki monolitik mermer ayaklar tarafından taşınır.",
+      "sourceId": "inv-p237"
+    },
+    {
+      "question": "Çeşmenin inşa kitâbesi hangi hatla yazılmıştır?",
+      "options": [
+        "Kûfi",
+        "Sülüs",
+        "Nesih",
+        "Talik"
+      ],
+      "correct": 3,
+      "description": "Kitâbe mermer üzerine Osmanlı Türkçesiyle, talik hatla kabartma olarak işlenmiştir.",
+      "sourceId": "inv-p237"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p237",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Küçük Ayasofya Mescidi Çeşmesi\"",
+      "page": "237"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

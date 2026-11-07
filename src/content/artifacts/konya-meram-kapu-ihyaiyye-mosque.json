@@ -1,0 +1,140 @@
+{
+  "id": "konya-meram-kapu-ihyaiyye-mosque",
+  "name": "Meram Kapu (Kapı-İhyaiyye) Camii",
+  "city": "Konya",
+  "district": "Meram",
+  "period": "Osmanlı dönemi; ilk yapı H. 1060 / M. 1650, bugünkü yapı 1868",
+  "endowment": "Arapça vakfiyesine göre Mevlâna Dergâhı postnişinlerinden Pir Hüseyin yaptırmıştır; son cemaat yerinin altında sekiz vakıf dükkânı bulunur.",
+  "summary": "Asıl adı İhyaiyye olan ve Konya Kalesi’nin kapıları arasında bulunduğu için “Kapı Camii” denen yapı, 1867 yangınından sonra 1868’de yeniden inşa edilmiştir.",
+  "history": "Cami, Meram, Sehpevan Mahallesi, Kapı Cami Sokağı üzerindedir. Asıl adı İhyaiyye Camii’dir; Konya Kalesi’nin At Pazarı ve Telli kapıları arasında bulunduğu için halk arasında “Kapı Camii” olarak bilinir. İbrahim Hakkı Konyalı onu Alâeddin Camii’nden sonra şehrin en büyük mabetlerinden biri sayar. Konya halkı için ayrı bir anlamı vardır; bir rivayete göre yatsı ve sabah, bir başka rivayete göre sabah namazının burada evliyasız kılınmadığı anlatılır.\n\nArapça vakfiyesine göre cami H. 1060 / M. 1650’de Mevlâna Dergâhı postnişinlerinden Pir Hüseyin tarafından yaptırılmıştır; ikinci banisi Konya müftüsü Eşenlilerzade Seyyit Abdurrahman’dır. 1867 Konya yangınında büyük hasar görmüş, 1868’de Mevlâna Dergâhı postnişinlerinden Mahmud Sadrettin ve Konya halkı tarafından bugünkü cami yaptırılmıştır. Kuzey kapısındaki kitâbede Hattat Fahri’nin celî sülüsle yazdığı Şair Zehri’nin manzumesi, batı kapısındaki altı satırlık kitâbede ise caminin tarihçesi yer alır. 1998 tamiratında özgün üst örtü değiştirilmiş, 2012’de başlayan Bedesten Sağlıklaştırma Projesi kapsamında dış cepheler ve son cemaat yeri onarılmıştır.\n\nCami enine dikdörtgen bir harim, kuzeyde son cemaat yeri, doğuda minare ve batıda çokgen planlı şadırvandan oluşur. Cephe duvarlarında Selçuklu dönemi dış kale surlarının taşları kullanılmıştır. Son cemaat yerine dokuz basamaklı merdivenle çıkılır; sütunlara oturan dokuz sivri kemerli açıklıkla kuzeye açılır ve altında sekiz vakıf dükkânı bulunur. Yapıya üç yönden girilir. Harim son tamiratta çok kubbeli hâle getirilmiş; 1998’de üst örtü kalem işiyle süslenmiş, sütunlar ahşap lambriyle kaplanmış, yazılar hattat Hüseyin Öksüz, kalem işleri Sinan Hidayetoğlu tarafından yenilenmiştir. Önceden sade olan mihrap Kütahya çinileriyle kaplanmıştır. Batıdaki ahşap kubbeli şadırvan da restore edilmiştir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-meram-kapu-ihyaiyye-mosque/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-meram-kapu-ihyaiyye-mosque/exterior.jpg",
+      "alt": "Kesme taş duvarlı büyük dikdörtgen cami, çok sayıda pencere ve köşede yükselen ince minare",
+      "description": "Kesme taş duvarlı büyük dikdörtgen cami, çok sayıda pencere ve köşede yükselen ince minare",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-kapu-ihyaiyye-mosque/prayer-hall.jpg",
+      "alt": "Turkuaz halılı geniş harimde ahşap kaplı sütunlar, kalem işi süslü tavan ve mahfiller",
+      "description": "Turkuaz halılı geniş harimde ahşap kaplı sütunlar, kalem işi süslü tavan ve mahfiller",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-kapu-ihyaiyye-mosque/west-door-inscription.jpg",
+      "alt": "Taş duvarda yarım daire kemerli kapı ve üstündeki yazılı kitâbe",
+      "description": "Taş duvarda yarım daire kemerli kapı ve üstündeki yazılı kitâbe",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-meram-kapu-ihyaiyye-mosque/minbar.jpg",
+      "alt": "Çinili duvar önünde ahşap oymalı minber ve kemerli pencere",
+      "description": "Çinili duvar önünde ahşap oymalı minber ve kemerli pencere",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-meram-kapu-ihyaiyye-mosque/exterior.jpg",
+      "x": 82,
+      "y": 30,
+      "title": "Minare",
+      "text": "Caminin doğusunda minare bulunur.",
+      "sourceId": "inv-p134"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-meram-kapu-ihyaiyye-mosque/prayer-hall.jpg",
+      "x": 30,
+      "y": 45,
+      "title": "Ahşap kaplı sütunlar",
+      "text": "1998 onarımında sütunlar ahşap lambriyle kaplanmıştır.",
+      "sourceId": "inv-p135"
+    },
+    {
+      "id": "feature-3",
+      "image": "/images/konya-meram-kapu-ihyaiyye-mosque/west-door-inscription.jpg",
+      "x": 50,
+      "y": 12,
+      "title": "Kitâbe",
+      "text": "Caminin kuzey ve batı giriş kapıları üzerinde kitâbeler bulunur.",
+      "sourceId": "inv-p130"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin asıl adı nedir?",
+      "options": [
+        "Selimiye",
+        "İhyaiyye",
+        "Aziziye",
+        "Şerafettin"
+      ],
+      "correct": 1,
+      "description": "Kitap caminin asıl adının İhyaiyye Camii olduğunu belirtir.",
+      "sourceId": "inv-p129"
+    },
+    {
+      "question": "Bugünkü cami hangi yangından sonra yeniden yapılmıştır?",
+      "options": [
+        "1867 Konya yangını",
+        "1919 yangını",
+        "1998 yangını",
+        "1650 yangını"
+      ],
+      "correct": 0,
+      "description": "1867 yangınından sonra 1868’de bugünkü cami yaptırılmıştır.",
+      "sourceId": "inv-p130"
+    },
+    {
+      "question": "Son cemaat yerinin altında kaç vakıf dükkânı bulunur?",
+      "options": [
+        "Dört",
+        "Altı",
+        "Dokuz",
+        "Sekiz"
+      ],
+      "correct": 3,
+      "description": "Son cemaat yerinin altında sekiz vakıf dükkânı vardır.",
+      "sourceId": "inv-p134"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p129",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Meram Kapu (Kapı-İhyaiyye) Camii\"",
+      "page": "129"
+    },
+    {
+      "id": "inv-p130",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Meram Kapu (Kapı-İhyaiyye) Camii\"",
+      "page": "130"
+    },
+    {
+      "id": "inv-p131",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Meram Kapu (Kapı-İhyaiyye) Camii\"",
+      "page": "131"
+    },
+    {
+      "id": "inv-p134",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Meram Kapu (Kapı-İhyaiyye) Camii\"",
+      "page": "134"
+    },
+    {
+      "id": "inv-p135",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Meram, \"Meram Kapu (Kapı-İhyaiyye) Camii\"",
+      "page": "135"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

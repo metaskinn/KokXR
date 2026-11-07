@@ -1,0 +1,102 @@
+{
+  "id": "hatay-antakya-district-3-plot-466-house",
+  "name": "3. Mıntıka 466 Parsel Konut",
+  "district": "Antakya",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "3. Mıntıka 466 Parsel Konut, avlusu ve farklı kat düzenleriyle birden fazla ailenin yaşamına göre bölünmüş geleneksel Antakya evidir.",
+  "history": "Kitap, kullanım ihtiyaçlarıyla yapılmış değişikliklere rağmen konutun geleneksel Antakya evinin özelliklerini büyük ölçüde koruduğunu ve aktarılan durumda kullanılmadığını belirtir. Güneybatı-kuzeydoğu yönünde uzanan konut ve avlu toplam 360 m²’dir.\n\nGirişin kuzeyindeki bölüm iki, güneydeki L planlı bölüm tek katlıdır. Avluda sekili yapı ve havuz bulunur. Ev birden fazla ailenin yaşamasına olanak verecek şekilde bölünmüştür. Kuzeydoğu bölümü iki katlı yapıdan, üst kata çıkan merdivenden ve merdiven altı eklentilerinden oluşur; havuz da bu bölümdedir. Güneybatı bölümünde tek kanatlı kapı, girişte üç oda ve iki tuvalet, terasa çıkan merdiven ile teras bulunur. Türkçe adres listesi 3. mıntıka 466 parsel bilgisini teyit eder; İngilizce listede 4. mıntıka yazılıdır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-district-3-plot-466-house/courtyard-staircase.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-district-3-plot-466-house/courtyard-staircase.jpg",
+      "alt": "Taş döşeli geniş avluda solda üst kata çıkan dış merdiven, tek katlı odalar, ağaçlar ve saksılar",
+      "description": "Taş döşeli geniş avluda solda üst kata çıkan dış merdiven, tek katlı odalar, ağaçlar ve saksılar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-district-3-plot-466-house/courtyard-view.jpg",
+      "alt": "Ağaç ve saksılarla dolu taş döşeli avlunun karşı yönü, çevrede kapı ve pencereli alçak yapılar",
+      "description": "Ağaç ve saksılarla dolu taş döşeli avlunun karşı yönü, çevrede kapı ve pencereli alçak yapılar",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-district-3-plot-466-house/courtyard-staircase.jpg",
+      "x": 14,
+      "y": 40,
+      "title": "Üst kat merdiveni",
+      "text": "Kuzeydoğu bölümünde üst kata ulaşımı sağlayan merdiven bulunur.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-district-3-plot-466-house/courtyard-view.jpg",
+      "x": 47,
+      "y": 70,
+      "title": "Avlu",
+      "text": "Konut ve avlunun toplam alanı 360 m²’dir.",
+      "sourceId": "inv-p487"
+    }
+  ],
+  "test": [
+    {
+      "question": "3. Mıntıka 466 Parsel Konut kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Defne",
+        "Arsuz",
+        "Samandağ"
+      ],
+      "correct": 0,
+      "description": "Türkçe adres listesinde ilçe Antakya olarak verilmiştir.",
+      "sourceId": "inv-p488"
+    },
+    {
+      "question": "Konut ve avlunun toplam alanı kaç metrekaredir?",
+      "options": [
+        "93,15",
+        "360",
+        "559",
+        "1450"
+      ],
+      "correct": 1,
+      "description": "Kitap toplam konut ve avlu alanını 360 m² olarak verir.",
+      "sourceId": "inv-p487"
+    },
+    {
+      "question": "Girişin kuzeyindeki bölüm kaç katlıdır?",
+      "options": [
+        "Bir",
+        "Üç",
+        "İki",
+        "Beş"
+      ],
+      "correct": 2,
+      "description": "Girişin kuzeyindeki bölüm iki, güney bölümü tek katlıdır.",
+      "sourceId": "inv-p487"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p487",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"3. Mıntıka 466 Parsel Konut\"",
+      "page": "487"
+    },
+    {
+      "id": "inv-p488",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"3. Mıntıka 466 Parsel Konut\"",
+      "page": "488"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

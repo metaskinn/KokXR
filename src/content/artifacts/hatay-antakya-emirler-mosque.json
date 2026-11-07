@@ -1,0 +1,112 @@
+{
+  "id": "hatay-antakya-emirler-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Emirler Camii",
+  "period": "1793 tarihi inşa tarihi olarak kabul edilir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şirince adıyla da bilinen Emirler Camii, beyaz kesme taşlı iki sahınlı bir ibadet yapısıdır.",
+  "history": "Eğimli araziye kurulu cami Şirince adıyla da bilinir. Avlunun kuzeyindeki, eski medreseye ait olabileceği düşünülen odanın kitabesinde okunan 1793 yılı caminin yapım tarihi kabul edilir. Kitabedeki Halef oğlu Recez’in kimliği ve yapıyla ilişkisi bilinmez. Ağaçlı avlunun güneyindeki beyaz kesme taşlı harim kıbleye paralel dikdörtgendir; son cemaat yeri yoktur. Ortadaki sütun ile yanlardaki gömme ayaklara oturan iki sivri kemer mekânı iki sahına ayırır. İçte ahşap tavan, dışta kiremitli kırma çatı bulunur. Kuzeyde iki, güneyde dört pencere vardır; doğu ve batı duvarları penceresizdir. Batıda iki dolap nişi, sade mihrap ve minber bulunur. Mihraptaki küçük pencerenin simgesel anlamı kitapta yorum olarak aktarılır.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-emirler-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-emirler-mosque/book-view-1.jpg",
+      "alt": "Taş döşeli avluda taş duvarlar, kapılar, ağaç ve sağda sundurma",
+      "description": "Emirler Camii — kitaptaki görünüm 1 (s. 226–227)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-emirler-mosque/book-view-2.jpg",
+      "alt": "Kemer altından görünen harimde ahşap tavan, mihrap ve sağda ahşap minber",
+      "description": "Emirler Camii — kitaptaki görünüm 2 (s. 228–229)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-emirler-mosque/book-view-2.jpg",
+      "x": 48,
+      "y": 21,
+      "title": "Ahşap tavan",
+      "text": "İçte ahşap tavan, dışta kiremitli kırma çatı vardır.",
+      "sourceId": "inv-p230"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-emirler-mosque/book-view-2.jpg",
+      "x": 66,
+      "y": 66,
+      "title": "Mihrap penceresi",
+      "text": "Mihrabın içine küçük bir pencere konulmuştur.",
+      "sourceId": "inv-p230"
+    }
+  ],
+  "test": [
+    {
+      "question": "Caminin diğer adı nedir?",
+      "options": [
+        "Şirince",
+        "Ertuğrul",
+        "Sermaye",
+        "Orhaniye"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Şirince.",
+      "sourceId": "inv-p228"
+    },
+    {
+      "question": "Harim kaç sahınlıdır?",
+      "options": [
+        "Üç",
+        "İki",
+        "Tek",
+        "Dört"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: İki.",
+      "sourceId": "inv-p230"
+    },
+    {
+      "question": "Caminin temel duvar malzemesi nedir?",
+      "options": [
+        "Ahşap kütük",
+        "Kerpiç",
+        "Beyaz kesme taş",
+        "Cam tuğla"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Beyaz kesme taş.",
+      "sourceId": "inv-p230"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p228",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Emirler Camii\"",
+      "page": "228"
+    },
+    {
+      "id": "inv-p229",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Emirler Camii\"",
+      "page": "229"
+    },
+    {
+      "id": "inv-p230",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Emirler Camii\"",
+      "page": "230"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Emirler Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

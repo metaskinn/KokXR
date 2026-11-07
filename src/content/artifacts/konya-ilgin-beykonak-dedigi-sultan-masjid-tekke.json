@@ -1,0 +1,121 @@
+{
+  "id": "konya-ilgin-beykonak-dedigi-sultan-masjid-tekke",
+  "name": "Beykonak Dediği Sultan Mescit ve Tekkesi",
+  "city": "Konya",
+  "district": "Ilgın",
+  "period": "Anadolu Selçuklu · kitapta H. 576 / M. 1180, I. Keyhüsrev zamanı",
+  "endowment": "Banisi Sanavber Hâtun; Turgutoğlu Pir Hüseyin Bey’in Sultan Dediği için kurduğu vakıf",
+  "summary": "Beykonak’ın güneydoğusundaki tepede yer alan mescit ve tekke, iç içe üç bölüm ile hazire olarak kullanılan avludan oluşur.",
+  "history": "Yapı, Beykonak (Tekke) kasabasının yaklaşık bir kilometre güneydoğusundaki tepededir. Kitap yapıyı H. 576 / M. 1180’e ve I. Keyhüsrev zamanına bağlar. Girişteki yedi satırlık Arapça celî sülüs kitabe, II. Kılıç Arslan’ın azatlı cariyelerinden Sanavber Hâtun’un Mimar Emînüddîn Mirgün’e yaptırdığını bildirir. İkinci, iki satırlık usta kitabesinde “Amelü Osman bin Abdurrahman” okunur; farklı yazı üslubu nedeniyle bu ustanın sonraki bir onarımda çalışmış olabileceği düşünülür.\n\nSultan Dediği’nin Horasan’dan gelişi kitapta menkıbe olarak anlatılır. Turgutoğlu Pir Hüseyin Bey onun için vakıf kurmuş, Mahmuthisar ile Karasevinç köylerinin yarılarını ve bağlı haklarını Şeyh Dediği Zaviyesi’ne ayırmıştır. Tekke 1474–1476 vakıf defterinde ve II. Bayezid dönemindeki üç defterde anılır. 1980’lerde geniş çaplı tamir görmüştür.\n\nKırma taşla inşa edilen, sıvalı ve üstü kurşun kaplı yapı kuzeyde hazire avlusu ile iç içe üç bölümden oluşur. Girişteki sundurmayı iki ahşap kolon taşır. İlk bölüm hazire olarak kullanılır; devşirme çift tavus kuşu motifli levha burada asılıdır. İkinci bölümün ortası kubbeli, yan eyvanları beşik tonozludur. Batı eyvanında Dediği Sultan’ın, doğuda Mehmet Dede ile Ömer Baba’nın mezarları vardır. İki basamakla inilen üçüncü bölüm 5,44 × 5,30 metre ölçülü kare mescittir; tromplarla geçilen kubbeyle örtülüdür. Mihrap, geometrik örgü, geçme, palmet ve rûmi bezemeli devşirme mermer levhalarla sınırlanır. İç ve dıştaki mezar taşları XIV–XVIII. yüzyıllar arasına aittir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-ilgin-beykonak-dedigi-sultan-masjid-tekke/hillside-view.jpg",
+  "images": [
+    {
+      "file": "/images/konya-ilgin-beykonak-dedigi-sultan-masjid-tekke/hillside-view.jpg",
+      "alt": "Taşlı yamaçta, ağaçlar arasında beyaz sıvalı ve metal çatılı tekke yapısı",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-beykonak-dedigi-sultan-masjid-tekke/entrance.jpg",
+      "alt": "İki ahşap direkli metal çatılı sundurma ve arkasında taş duvarlı giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    },
+    {
+      "file": "/images/konya-ilgin-beykonak-dedigi-sultan-masjid-tekke/masjid-interior.jpg",
+      "alt": "Beyaz kubbeli küçük mescitte ortadaki taş mihrap ve iki yanda duvar nişleri",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/konya-ilgin-beykonak-dedigi-sultan-masjid-tekke/entrance.jpg",
+      "x": 49,
+      "y": 47,
+      "title": "Ahşap sundurma",
+      "text": "Avludan giriş iki ahşap kolona dayanan sundurmayla sağlanır.",
+      "sourceId": "inv-p443"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/konya-ilgin-beykonak-dedigi-sultan-masjid-tekke/masjid-interior.jpg",
+      "x": 52,
+      "y": 56,
+      "title": "Devşirme mermer mihrap",
+      "text": "Mescit mihrabını devşirme mermer levhalar sınırlar.",
+      "sourceId": "inv-p444"
+    }
+  ],
+  "test": [
+    {
+      "question": "Batı eyvanında kimin mezarı bulunur?",
+      "options": [
+        "Hacı Veyis",
+        "Seyyid Harun",
+        "Dediği Sultan",
+        "Ferruh Şah"
+      ],
+      "correct": 2,
+      "description": "Kitaba göre: Dediği Sultan.",
+      "sourceId": "inv-p444"
+    },
+    {
+      "question": "Giriş sundurmasını kaç ahşap kolon taşır?",
+      "options": [
+        "Üç",
+        "Dört",
+        "Altı",
+        "İki"
+      ],
+      "correct": 3,
+      "description": "Kitaba göre: İki.",
+      "sourceId": "inv-p443"
+    },
+    {
+      "question": "Beykonak Dediği Sultan Mescit ve Tekkesi Konya’nın hangi ilçesindedir?",
+      "options": [
+        "Ilgın",
+        "Karatay",
+        "Akşehir",
+        "Beyşehir"
+      ],
+      "correct": 0,
+      "description": "Kitaba göre: Ilgın.",
+      "sourceId": "inv-p440"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p440",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Beykonak Dediği Sultan Mescit ve Tekkesi\"",
+      "page": "440"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Beykonak Dediği Sultan Mescit ve Tekkesi\"",
+      "page": "441"
+    },
+    {
+      "id": "inv-p442",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Beykonak Dediği Sultan Mescit ve Tekkesi\"",
+      "page": "442"
+    },
+    {
+      "id": "inv-p443",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Beykonak Dediği Sultan Mescit ve Tekkesi\"",
+      "page": "443"
+    },
+    {
+      "id": "inv-p444",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 1, Ilgın, \"Beykonak Dediği Sultan Mescit ve Tekkesi\"",
+      "page": "444"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
+    }
+  ]
+}

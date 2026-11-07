@@ -1,0 +1,107 @@
+{
+  "id": "hatay-antakya-orhanli-mosque",
+  "city": "Hatay",
+  "district": "Antakya",
+  "name": "Orhanlı Camii",
+  "period": "Osmanlı · H. 1313 (M. 1895/96)",
+  "endowment": "Sultan II. Abdülhamid dönemi; kitapta II. Abdülhamid’e atfedilir",
+  "summary": "Orhanlı Camii, eski yapısından minare ve tuğralı kitabesi korunarak yenilenmiştir.",
+  "history": "Yenilenmiş caminin eski yapısından adı, minaresi ve kitabesi kalmıştır. Kapıda II. Abdülhamid tuğrası ve altında sülüs hatlı dört satırlık kitabe vardır. Kitabe yapının H. 1313 (M. 1895/96) tarihinde Orhaniye adıyla yapıldığını bildirir. Kitap bu adı, aynı dönemdeki Ertuğrul adıyla birlikte Osmanlı kurucularına duyulan bağlılıkla ilişkilendirir. Eski fotoğraflarda kare planlı taş yapı ve kiremit çatı görülür. Batı avlusundaki minare kare kaideli, yuvarlak gövdeli ve ahşap şemsiye külahlıdır. Minare için H. 1340 (M. 1921/22) ihtimali de verilir; kesin tarih sayılmaz.",
+  "verification": "verified",
+  "coverImage": "/images/hatay-antakya-orhanli-mosque/book-view-1.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-antakya-orhanli-mosque/book-view-1.jpg",
+      "alt": "Sokaktan bakışta taş avlu duvarı, giriş kapısı ve solda minare",
+      "description": "Orhanlı Camii — kitaptaki görünüm 1 (s. 302–303)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    },
+    {
+      "file": "/images/hatay-antakya-orhanli-mosque/book-view-2.jpg",
+      "alt": "Halılı harimde ahşap tavan, kemer, solda minber ve üstte mahfil",
+      "description": "Orhanlı Camii — kitaptaki görünüm 2 (s. 304–305)",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-antakya-orhanli-mosque/book-view-1.jpg",
+      "x": 14,
+      "y": 36,
+      "title": "Minare",
+      "text": "Batı avlusundaki minare ahşap şemsiye külahla tamamlanır.",
+      "sourceId": "inv-p305"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-antakya-orhanli-mosque/book-view-1.jpg",
+      "x": 52,
+      "y": 44,
+      "title": "Kapı kitabesi",
+      "text": "Kapı üzerinde tuğra ve dört satırlık sülüs kitabe vardır.",
+      "sourceId": "inv-p305"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kitabede yapının adı nasıl geçer?",
+      "options": [
+        "Orhaniye",
+        "Şirince",
+        "Sermaye",
+        "Ahmediye"
+      ],
+      "correct": 0,
+      "description": "Kitaptaki bilgi: Orhaniye.",
+      "sourceId": "inv-p305"
+    },
+    {
+      "question": "Kitabe kaç satırlıdır?",
+      "options": [
+        "İki",
+        "Dört",
+        "Altı",
+        "Sekiz"
+      ],
+      "correct": 1,
+      "description": "Kitaptaki bilgi: Dört.",
+      "sourceId": "inv-p305"
+    },
+    {
+      "question": "Eski fotoğraflara göre özgün yapı hangi planlıdır?",
+      "options": [
+        "Dairesel",
+        "Sekizgen",
+        "Kare",
+        "Haç biçimli"
+      ],
+      "correct": 2,
+      "description": "Kitaptaki bilgi: Kare.",
+      "sourceId": "inv-p305"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p304",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Orhanlı Camii\"",
+      "page": "304"
+    },
+    {
+      "id": "inv-p305",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Orhanlı Camii\"",
+      "page": "305"
+    },
+    {
+      "id": "inv-p398",
+      "text": "Hatay Vakıf Eserleri, Antakya, \"Orhanlı Camii\"",
+      "page": "398"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

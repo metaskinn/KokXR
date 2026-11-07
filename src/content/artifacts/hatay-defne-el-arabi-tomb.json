@@ -1,0 +1,100 @@
+{
+  "id": "hatay-defne-el-arabi-tomb",
+  "name": "El-Arabi Türbesi",
+  "district": "Defne",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "El-Arabi Türbesi, Defne’nin Nahırlı Köyü’nde yüksekçe bir tepe üzerindeki kubbeli ziyaretgâhtır.",
+  "history": "Nahırlı Köyü’ndeki yapı, yüksekçe bir tepe üzerinde kareye yakın dikdörtgen planla inşa edilmiştir. Sundurmalı girişli ve geniş saçaklı türbeyi beyaz boyalı yuvarlak kubbe örter. Her cephede bir pencere bulunur.\n\nOrtadaki mermer kaplı sanduka yüksek kaide üzerindedir ve sadedir. İçeride Arapça yazıtlar ile Hz. Ali’nin Zülfikar kılıcını simgeleyen işaretler vardır. Çevrede ibadet ve toplantı için kullanılan bir yapı, kesim ve pişirme alanları, dilek ağacı ve mezarlar yer alır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-defne-el-arabi-tomb/hilltop-courtyard.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-defne-el-arabi-tomb/hilltop-courtyard.jpg",
+      "alt": "Ağaçlarla çevrili açık avluda beyaz yapı ve yeşil sundurmalı giriş",
+      "description": "Ağaçlarla çevrili açık avluda beyaz yapı ve yeşil sundurmalı giriş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-defne-el-arabi-tomb/hilltop-courtyard.jpg",
+      "x": 42,
+      "y": 42,
+      "title": "Sundurmalı giriş",
+      "text": "Türbenin geniş saçaklı yapısında sundurmalı giriş bulunur.",
+      "sourceId": "inv-p412"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-defne-el-arabi-tomb/hilltop-courtyard.jpg",
+      "x": 54,
+      "y": 47,
+      "title": "Türbe yapısı",
+      "text": "Nahırlı Köyü’ndeki türbe yüksekçe bir tepede kareye yakın dikdörtgen planla inşa edilmiştir.",
+      "sourceId": "inv-p412"
+    }
+  ],
+  "test": [
+    {
+      "question": "El-Arabi Türbesi kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Arsuz",
+        "Samandağ",
+        "Defne"
+      ],
+      "correct": 3,
+      "description": "Türkçe adres listesinde ilçe Defne olarak verilmiştir.",
+      "sourceId": "inv-p440"
+    },
+    {
+      "question": "Türbe hangi köydedir?",
+      "options": [
+        "Nahırlı",
+        "Alaybeyli",
+        "Vakıflı",
+        "Yoğunoluk"
+      ],
+      "correct": 0,
+      "description": "Kitap yapıyı Defne ilçesi Nahırlı Köyü’nde gösterir.",
+      "sourceId": "inv-p412"
+    },
+    {
+      "question": "İç mekândaki semboller hangi kılıcı simgeler?",
+      "options": [
+        "Excalibur",
+        "Zülfikar",
+        "Durandal",
+        "Joyeuse"
+      ],
+      "correct": 1,
+      "description": "Kitap sembollerin Hz. Ali’nin Zülfikar kılıcını temsil ettiğini belirtir.",
+      "sourceId": "inv-p413"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p412",
+      "text": "Hatay Vakıf Eserleri, Defne, \"El-Arabi Türbesi\"",
+      "page": "412"
+    },
+    {
+      "id": "inv-p413",
+      "text": "Hatay Vakıf Eserleri, Defne, \"El-Arabi Türbesi\"",
+      "page": "413"
+    },
+    {
+      "id": "inv-p440",
+      "text": "Hatay Vakıf Eserleri, Defne, \"El-Arabi Türbesi\"",
+      "page": "440"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "inegol-karacaahmet-caravanserai",
+  "name": "Karacaahmet Kervansarayı",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · Tarihleme tartışmalı: XIV. yüzyıl sonları veya 1455 sonrası",
+  "endowment": "Banisi Karaca Bey; doğrudan vakfiye kaydına ulaşılamamıştır",
+  "summary": "Karacaahmet Kervansarayı, Karaca Bey’in yaptırdığı, üç sahınlı tonozlu planı olan ve 2008’de restore edilen bir ticaret yapısıdır.",
+  "history": "Ortaköy Mahallesi, Kervansaray Caddesi No: 43’teki yapı, II. Murad ve Fâtih Sultan Mehmed dönemlerinin devlet adamı Karaca Bey tarafından yaptırılmıştır. Doğrudan bir vakfiye kaydı bulunamamıştır. Bazı araştırmacılar XIV. yüzyıl sonlarını önerirken Ekrem Hakkı Ayverdi, Karacabey’deki imaretin vakıfları arasında bulunmasına dayanarak 1455 sonrasını daha uygun görür.\n\nKuzey-güney doğrultusunda dikdörtgen planlı yapı, üçerden iki sıra dikdörtgen destekle boylamasına üç sahna ayrılır. Destekleri sivri kemerler bağlar; orta ve yan sahınlar sivri beşik tonozludur. Cephelerde simetrik üçgen kesitli payandalar bulunur. Kitap giriş açıklığını bir yerde yuvarlak kemerli, başka bir yerde basık kemerli olarak tanımlar. Giriş alınlığındaki tuğla balıksırtı bezeme dikkat çeker.\n\n1982’de ağıl olarak kullanılan yapının köşeleri, tonozunun orta bölümü, kapı kemeri, ocak nişleri ve kimi payandaları haraptı. 1983’te kültür mantarı üretim çiftliğine dönüştürülmüş; havuz eklenmiş, nişler pencereye çevrilmiş ve gelişigüzel onarımlar yapılmıştır. Uzun süre harap kalan yapı 2008’de ilgili kamu kurumlarının girişimi ve İnegöl Belediyesi’nin desteğiyle restore edilmiştir. Dışa taşkın sivri kemerli ve kirpi saçaklı taç kapıda bir sıra kesme taş ile üç sıra tuğla, yan duvarlarda iri moloz taş ve tuğla hatıl kullanılmış, üstü alaturka kiremitle örtülmüştür. Kitabın kaydettiği güncel kullanım tarihî restorandır.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-karacaahmet-caravanserai/entrance-exterior.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-karacaahmet-caravanserai/entrance-exterior.jpg",
+      "alt": "Kiremit çatılı uzun taş yapının taş ve tuğla sıralı yüksek sivri kemerli taç kapısı",
+      "description": "Kiremit çatılı uzun taş yapının taş ve tuğla sıralı yüksek sivri kemerli taç kapısı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-karacaahmet-caravanserai/portal-detail.jpg",
+      "alt": "Tuğla sivri kemer altında balıksırtı tuğla bezeme, levha ve altta koyu renk çift kanatlı kapı",
+      "description": "Tuğla sivri kemer altında balıksırtı tuğla bezeme, levha ve altta koyu renk çift kanatlı kapı",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-karacaahmet-caravanserai/entrance-exterior.jpg",
+      "x": 27,
+      "y": 51,
+      "title": "Taç kapı",
+      "text": "Restorasyonda taç kapı bir sıra kesme taş ve üç sıra tuğla ile örülmüştür.",
+      "sourceId": "inv-p192"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-karacaahmet-caravanserai/portal-detail.jpg",
+      "x": 51,
+      "y": 31,
+      "title": "Balıksırtı bezeme",
+      "text": "Giriş kapısının kemer alınlığında tuğladan balıksırtı motifli bezeme vardır.",
+      "sourceId": "inv-p192"
+    }
+  ],
+  "test": [
+    {
+      "question": "Kervansarayın banisi kimdir?",
+      "options": [
+        "Kasım Efendi",
+        "İshak Paşa",
+        "Karaca Bey",
+        "Hacı Hafız"
+      ],
+      "correct": 2,
+      "description": "Kervansaray Karaca Bey tarafından yaptırılmıştır.",
+      "sourceId": "inv-p191"
+    },
+    {
+      "question": "Yapı hangi yıl restore edilmiştir?",
+      "options": [
+        "2008",
+        "1982",
+        "1937",
+        "1896"
+      ],
+      "correct": 0,
+      "description": "Uzun süre harap kalan yapı 2008’de restore edilmiştir.",
+      "sourceId": "inv-p192"
+    },
+    {
+      "question": "Kitap restorasyon sonrası hangi kullanımı kaydeder?",
+      "options": [
+        "Medrese",
+        "Hamam",
+        "Türbe",
+        "Tarihî restoran"
+      ],
+      "correct": 3,
+      "description": "Restorasyonun ardından yapı tarihî restoran olarak kullanılmaya başlanmıştır.",
+      "sourceId": "inv-p194"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p191",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Karacaahmet Kervansarayı\"",
+      "page": "191"
+    },
+    {
+      "id": "inv-p192",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Karacaahmet Kervansarayı\"",
+      "page": "192"
+    },
+    {
+      "id": "inv-p194",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Karacaahmet Kervansarayı\"",
+      "page": "194"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

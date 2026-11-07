@@ -1,0 +1,100 @@
+{
+  "id": "hatay-defne-sheikh-hasan-gatelli-visit-site",
+  "name": "Şeyh Hasan Gatelli (Albitelli) Ziyareti",
+  "district": "Defne",
+  "period": "Kitapta inşa tarihi belirtilmemiştir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Şeyh Hasan Gatelli Ziyareti, Defne Tavuklu Köyü’nde, beyaz kubbeli ve kare planlı bir türbe yapısıdır.",
+  "history": "Defne ilçesi Tavuklu Köyü’ndeki ziyaretgâh yüksekçe bir tepe üzerinde kare planlı olarak yapılmıştır. Sundurmalı girişli yapının yuvarlak kubbesi beyaz boyalıdır.\n\nOrta kısımda yüksek kaideli, mermer kaplı sanduka bulunur; üzerinde türbe sahibine ilişkin yazılı kayıt yoktur. Çevrede ibadet ve toplantı yapısı, kesim ve pişirme yerleri vardır. Hazireden ayrı olarak dağınık çok sayıda mezar bulunduğu anlatılır. Kitap başlıkta yapıyı Şeyh Hasan Gatelli (Albitelli) Ziyareti, adres listesinde Şeyh Hasan Gatelli Türbesi olarak adlandırır.",
+  "city": "Hatay",
+  "verification": "verified",
+  "coverImage": "/images/hatay-defne-sheikh-hasan-gatelli-visit-site/domed-building.jpg",
+  "images": [
+    {
+      "file": "/images/hatay-defne-sheikh-hasan-gatelli-visit-site/domed-building.jpg",
+      "alt": "Ağaçlar arasında beyaz cepheli küçük yapı, geniş saçaklar, beyaz kubbe ve önde açık sundurma",
+      "description": "Ağaçlar arasında beyaz cepheli küçük yapı, geniş saçaklar, beyaz kubbe ve önde açık sundurma",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "feature-1",
+      "image": "/images/hatay-defne-sheikh-hasan-gatelli-visit-site/domed-building.jpg",
+      "x": 63,
+      "y": 18,
+      "title": "Beyaz kubbe",
+      "text": "Yuvarlak kubbe beyaz renkle boyanmıştır.",
+      "sourceId": "inv-p437"
+    },
+    {
+      "id": "feature-2",
+      "image": "/images/hatay-defne-sheikh-hasan-gatelli-visit-site/domed-building.jpg",
+      "x": 31,
+      "y": 47,
+      "title": "Sundurmalı giriş",
+      "text": "Yapı sundurmalı girişe sahiptir.",
+      "sourceId": "inv-p437"
+    }
+  ],
+  "test": [
+    {
+      "question": "Şeyh Hasan Gatelli (Albitelli) Ziyareti kitabın Türkçe adres listesinde hangi ilçede gösterilir?",
+      "options": [
+        "Antakya",
+        "Arsuz",
+        "Defne",
+        "Samandağ"
+      ],
+      "correct": 2,
+      "description": "Türkçe adres listesinde ilçe Defne olarak verilmiştir.",
+      "sourceId": "inv-p441"
+    },
+    {
+      "question": "Ziyaretgâh hangi köydedir?",
+      "options": [
+        "Koyunoğlu",
+        "Alaybeyli",
+        "Vakıflı",
+        "Tavuklu"
+      ],
+      "correct": 3,
+      "description": "Yapı Defne ilçesi Tavuklu Köyü’nde bulunur.",
+      "sourceId": "inv-p436"
+    },
+    {
+      "question": "Sanduka nasıl tarif edilir?",
+      "options": [
+        "Yüksek kaideli ve mermer kaplı",
+        "Ahşap ve asılı",
+        "Tuğladan ve açık",
+        "Camdan ve zemine gömülü"
+      ],
+      "correct": 0,
+      "description": "Türbenin ortasındaki sanduka yüksek kaidelidir ve mermer kaplamalıdır.",
+      "sourceId": "inv-p437"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p436",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Şeyh Hasan Gatelli (Albitelli) Ziyareti\"",
+      "page": "436"
+    },
+    {
+      "id": "inv-p437",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Şeyh Hasan Gatelli (Albitelli) Ziyareti\"",
+      "page": "437"
+    },
+    {
+      "id": "inv-p441",
+      "text": "Hatay Vakıf Eserleri, Defne, \"Şeyh Hasan Gatelli (Albitelli) Ziyareti\"",
+      "page": "441"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
+    }
+  ]
+}

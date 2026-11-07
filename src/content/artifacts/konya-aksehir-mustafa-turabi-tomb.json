@@ -1,0 +1,118 @@
+{
+  "id": "konya-aksehir-mustafa-turabi-tomb",
+  "name": "Mustafa Turabi (Kazan Dede) Türbesi",
+  "city": "Konya",
+  "district": "Akşehir",
+  "period": "Osmanlı · XVI. yüzyıl; kitapta Mustafa Turâbî'nin vefatı \"H. 900 / M. 1582\" olarak verilir ve türbe 1582 yıllarına tarihlendirilir",
+  "endowment": "Kitapta belirtilmemiştir",
+  "summary": "Akşehir'in XVI. yüzyılda yetiştirdiği âlim, hattat ve şair Mustafa Turâbî'nin, kare kaideli ve kubbeli Osmanlı dönemi türbesi.",
+  "history": "Türbe, Akşehir, Altunkalem Mahallesi, Dr. Aziz Perkün Caddesi'nde yer almaktadır. Yapının inşa kitâbesi yoktur. Kitapta türbede medfun Mustafa Turâbî'nin vefat tarihi H. 900 / M. 1582 olarak verilir; onun vefatıyla birlikte yapılmış olması muhtemel türbe 1582 yıllarına tarihlendirilir. Kaynaklarda yapının iki onarım geçirdiği belirtilmekte olup son restorasyonu 2007'de yapılmıştır.\n\nMustafa Turâbî, Akşehir'in XVI. yüzyılda yetiştirdiği meşhur bilim insanlarındandır. Türbe halk arasında Kazan Dede Türbesi, Kayıhan Baba Türbesi, Kayı Dede Türbesi, Turhan Baba Türbesi ve Turaban Baba Türbesi adlarıyla da anılır. Mustafa Turâbî H. 984 / M. 1576'da Halep Müftülüğüne, daha sonra Akşehir Halkalı Medresesi müderrisliğine atanmış; burada uzun yıllar müderrislik yaparak pek çok talebe yetiştirmiştir. Âlim olmasının yanında hattat ve şairdir.\n\nTürbe, kare bir kaideye oturan kübik gövdeli bir yapıdır ve üzeri sekizgen bir kasnağa oturan kubbeyle örtülüdür. Giriş doğu cephedeki dikdörtgen bir kapı açıklığından sağlanır; batı, güney ve kuzey cephelerin ortasında dikdörtgen pencereler bulunur.\n\nİç mekânın ortasında bir sanduka yer alır. Üst örtüye geçişte pandantif kullanılmıştır. Pencerelerin alt kısmında türbeyi tamamen dolaşan bir kuşak vardır; kuşağın altında ona bitişik palmet ve rûmi motifleri yer alır. Türbe, Osmanlı dönemi türbe mimarisinin önemli bir temsilcisidir.",
+  "verification": "verified",
+  "coverImage": "/images/konya-aksehir-mustafa-turabi-tomb/exterior.jpg",
+  "images": [
+    {
+      "file": "/images/konya-aksehir-mustafa-turabi-tomb/exterior.jpg",
+      "alt": "Dağların önünde, moloz taş örgülü kübik gövdeli türbe; üstte kurşun kaplı kubbe ve kasnak, önde ahşap kapı, yan cephede kemerli bir pencere",
+      "description": "Türbenin dıştan görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-mustafa-turabi-tomb/interior.jpg",
+      "alt": "İç mekân: tuğla örgülü kubbe ve köşe geçişleri, duvarda ahşap çerçeveli pencere, önde yeşil örtülü ve üzerinde yazılı sırma şerit bulunan sanduka",
+      "description": "Sanduka ve kubbeye geçiş",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    },
+    {
+      "file": "/images/konya-aksehir-mustafa-turabi-tomb/dome-from-above.jpg",
+      "alt": "Tepeden çekilmiş fotoğraf: kare gövde üzerinde mavi-gri tonlarda kurşun levhalarla kaplı kubbe, merkezde koyu renkli alem tabanı",
+      "description": "Kubbenin tepeden görünümü",
+      "sourceId": "photo-book",
+      "credit": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "dome",
+      "image": "/images/konya-aksehir-mustafa-turabi-tomb/exterior.jpg",
+      "x": 52,
+      "y": 30,
+      "title": "Kubbe ve kasnak",
+      "text": "Türbenin üzeri, sekizgen bir kasnağa oturan kubbeyle örtülüdür.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "id": "cubic-body",
+      "image": "/images/konya-aksehir-mustafa-turabi-tomb/exterior.jpg",
+      "x": 40,
+      "y": 62,
+      "title": "Kübik gövde",
+      "text": "Türbe, kare bir kaideye oturan kübik gövdeli bir yapıdır.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "id": "sarcophagus",
+      "image": "/images/konya-aksehir-mustafa-turabi-tomb/interior.jpg",
+      "x": 50,
+      "y": 65,
+      "title": "Sanduka",
+      "text": "Türbe içinde, ortada bir sanduka yer almaktadır; üst örtüye geçişte pandantif kullanılmıştır.",
+      "sourceId": "inv-p188"
+    }
+  ],
+  "test": [
+    {
+      "question": "Mustafa Turâbî H. 984 / M. 1576'da hangi göreve atanmıştır?",
+      "options": [
+        "Konya Kadılığı",
+        "İstanbul Müftülüğü",
+        "Halep Müftülüğü",
+        "Şam Valiliği"
+      ],
+      "correct": 2,
+      "description": "Mustafa Turâbî H. 984 / M. 1576'da Halep Müftülüğüne, ardından Akşehir Halkalı Medresesi müderrisliğine atanmıştır.",
+      "sourceId": "inv-p188"
+    },
+    {
+      "question": "Türbe halk arasında hangi adla da anılır?",
+      "options": [
+        "Kazan Dede Türbesi",
+        "Arap Dede Türbesi",
+        "Kalender Baba Türbesi",
+        "Ulaş Baba Türbesi"
+      ],
+      "correct": 0,
+      "description": "Türbe halk arasında Kazan Dede, Kayıhan Baba, Kayı Dede, Turhan Baba ve Turaban Baba türbesi adlarıyla da anılır.",
+      "sourceId": "inv-p187"
+    },
+    {
+      "question": "Mustafa Turâbî âlim olmasının yanında hangi alanlarda tanınır?",
+      "options": [
+        "Mimar ve mühendis",
+        "Hattat ve şair",
+        "Hekim ve eczacı",
+        "Tüccar ve denizci"
+      ],
+      "correct": 1,
+      "description": "Âlim bir zat olan Turâbî aynı zamanda hattat ve şairdir.",
+      "sourceId": "inv-p188"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p187",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Mustafa Turabi (Kazan Dede) Türbesi\"",
+      "page": "187"
+    },
+    {
+      "id": "inv-p188",
+      "text": "Vakıf Eserleri Envanteri – Konya, Cilt 2, Akşehir, \"Mustafa Turabi (Kazan Dede) Türbesi\"",
+      "page": "188"
+    },
+    {
+      "id": "photo-book",
+      "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 2"
+    }
+  ]
+}

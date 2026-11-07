@@ -1,0 +1,133 @@
+{
+  "id": "inegol-yildirim-bayezid-cuma-mosque",
+  "name": "Yıldırım Bayezid (Cuma) Camii",
+  "city": "Bursa",
+  "district": "İnegöl",
+  "period": "Osmanlı · Yıldırım Bayezid; II. Abdülhamid devrinde yeniden inşa, mihrapta 1895 tarihi",
+  "endowment": "Sultan Yıldırım Bayezid Han Camii Vakfı; gelir sağlayan vakıf hamamı",
+  "summary": "Yıldırım Bayezid (Cuma) Camii, II. Abdülhamid devrinde yeniden inşa edilen, ahşap destekli kubbesi ve tuğla minaresiyle tanınan bir vakıf camisidir.",
+  "history": "Cuma Mahallesi, Nuri Doğrul Caddesi No: 22’de, İshak Paşa Külliyesi’nin doğusunda yer alır. İnşa kitabesi günümüze ulaşmamıştır. Vakıf belgelerinde Sultan Yıldırım Bayezid’in cami vakfı ve Cuma Camii adıyla kayıtlıdır. Evliya Çelebi 1671 ziyaretinde çatısının kiremitle örtülü olduğunu anlatmıştır.\n\nTemmuz 1893 tarihli belge, harap durumdaki yapının 88.980 kuruş masrafla yeniden inşasını kaydeder. Sonraki belgede inşaatın II. Abdülhamid’in iradesiyle tamamlandığı ve ağustosun on dokuzunda açılış yapıldığı anlatılır. Kitap günümüzdeki biçiminin bu süreçte oluştuğunu belirtir. Mihrap üstündeki kabartmada II. Abdülhamid tuğrası ve H. 1313 / M. 1895 tarihi bulunur.\n\nKuzey-güney doğrultusunda dikdörtgen planlı yapının duvarlarında taş ve tuğla birlikte kullanılmıştır. Kuzeydeki son cemaat yerinin kemer araları metal doğrama ve camla kapatılmıştır. Harimde dört ahşap desteğin sınırladığı kare bölüm üzerinde pandantiflerle geçilen sekizgen kasnağa ahşap kubbe oturur. Fenerli kubbe kurşun, çevresindeki kırma çatı kiremit kaplıdır. Kubbe, kasnak ve pencere çevreleri rumi bitkisel motiflerle bezelidir.\n\nBeş cepheli mihrap nişinin çevresinde geometrik rumi bezemeler, içinde besmeleli kandil motifi, üstte ayet ve tuğralı madalyon vardır. Minber ve kürsü sade ahşaptır. Giriş üzerindeki ahşap direkli kadınlar mahfili öne yarım daire biçiminde taşar. Harimde on, kubbe kasnağında sekiz pencere bulunur. Altıgen taş ve tuğla kaide üzerindeki tuğla minare tek şerefelidir; şerefe altında beş sıra testere dişi örgü ve külah ile şerefe altında çini kuşaklar vardır. Yapısal sağlamlık için çelik bilezikler eklenmiştir.\n\nKitap, gelir sağlamak üzere vakfedilen hamamın mütevelliliğine 1710’da Hacı Mirza Mehmed’in, 1716’da Lütfullah Efendi’nin getirildiğini aktarır. Cami ve hamam, çevresindeki yeni yapı ve çarşılarla gelişen İnegöl’ün Osmanlı dönemi tarihî merkezinin çekirdeği olarak değerlendirilir.",
+  "verification": "verified",
+  "coverImage": "/images/inegol-yildirim-bayezid-cuma-mosque/aerial-view.jpg",
+  "images": [
+    {
+      "file": "/images/inegol-yildirim-bayezid-cuma-mosque/aerial-view.jpg",
+      "alt": "Ağaçlar arasında kiremit çatısı, küçük kurşun renkli kubbesi ve tuğla minaresi görünen cami",
+      "description": "Ağaçlar arasında kiremit çatısı, küçük kurşun renkli kubbesi ve tuğla minaresi görünen cami",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-yildirim-bayezid-cuma-mosque/prayer-hall.jpg",
+      "alt": "Mavi halılı harimde yeşil ahşap direkler, ortada mihrap, sağda minber ve üstte bezemeler",
+      "description": "Mavi halılı harimde yeşil ahşap direkler, ortada mihrap, sağda minber ve üstte bezemeler",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    },
+    {
+      "file": "/images/inegol-yildirim-bayezid-cuma-mosque/mihrab.jpg",
+      "alt": "İki kemerli pencere arasında yeşil ve sarı bezemeli mihrap, üzerinde levhalar ve yuvarlak madalyon",
+      "description": "İki kemerli pencere arasında yeşil ve sarı bezemeli mihrap, üzerinde levhalar ve yuvarlak madalyon",
+      "sourceId": "photo-archive",
+      "credit": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "detail-1",
+      "image": "/images/inegol-yildirim-bayezid-cuma-mosque/prayer-hall.jpg",
+      "x": 20,
+      "y": 41,
+      "title": "Ahşap destekler",
+      "text": "Harimin ortasındaki kubbeli kare bölüm dört ahşap destekle sınırlandırılmıştır.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "id": "detail-2",
+      "image": "/images/inegol-yildirim-bayezid-cuma-mosque/mihrab.jpg",
+      "x": 51,
+      "y": 48,
+      "title": "Mihrap",
+      "text": "Beş cepheli mihrap nişi geometrik desenli rumi motiflerle bezenmiştir.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "id": "detail-3",
+      "image": "/images/inegol-yildirim-bayezid-cuma-mosque/aerial-view.jpg",
+      "x": 35,
+      "y": 37,
+      "title": "Tuğla minare",
+      "text": "Tek şerefeli minarenin silindirik gövdesi tuğladan örülmüştür.",
+      "sourceId": "inv-p186"
+    }
+  ],
+  "test": [
+    {
+      "question": "Cami hangi hükümdar tarafından yaptırılmıştır?",
+      "options": [
+        "Yıldırım Bayezid",
+        "II. Murad",
+        "II. Bayezid",
+        "III. Selim"
+      ],
+      "correct": 0,
+      "description": "Vakıf belgeleri camiyi Sultan Yıldırım Bayezid’in camisi olarak kaydeder.",
+      "sourceId": "inv-p183"
+    },
+    {
+      "question": "Harimdeki merkezi kubbe hangi malzemedendir?",
+      "options": [
+        "Mermer",
+        "Beton",
+        "Ahşap",
+        "Cam"
+      ],
+      "correct": 2,
+      "description": "Dört ahşap destek üzerinde sekizgen kasnağa oturan kubbe ahşaptır.",
+      "sourceId": "inv-p186"
+    },
+    {
+      "question": "Mihrap üzerindeki tuğra kime aittir?",
+      "options": [
+        "I. Abdülhamid",
+        "II. Abdülhamid",
+        "Fâtih Sultan Mehmed",
+        "Yıldırım Bayezid"
+      ],
+      "correct": 1,
+      "description": "Mihrap üstünde II. Abdülhamid tuğralı kabartma madalyon vardır.",
+      "sourceId": "inv-p186"
+    }
+  ],
+  "sources": [
+    {
+      "id": "inv-p183",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Yıldırım Bayezid (Cuma) Camii\"",
+      "page": "183"
+    },
+    {
+      "id": "inv-p184",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Yıldırım Bayezid (Cuma) Camii\"",
+      "page": "184"
+    },
+    {
+      "id": "inv-p185",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Yıldırım Bayezid (Cuma) Camii\"",
+      "page": "185"
+    },
+    {
+      "id": "inv-p186",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Yıldırım Bayezid (Cuma) Camii\"",
+      "page": "186"
+    },
+    {
+      "id": "inv-p188",
+      "text": "Vakıf Eserleri Envanteri – Bursa, Cilt 3, İnegöl, \"Yıldırım Bayezid (Cuma) Camii\"",
+      "page": "188"
+    },
+    {
+      "id": "photo-archive",
+      "text": "Fotoğraf: Vakıf Katılım, Vakıf Eserleri Envanter Projesi – Bursa Fotoğraf Arşivi"
+    }
+  ]
+}

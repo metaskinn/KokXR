@@ -1,3 +1,5 @@
+> Asıl kaynak: `docs/kaynaklar/KOKKOD_Sartname.pdf`. Bu metin PDF ile satır satır karşılaştırıldı (7 Kasım 2026); eksik madde yok. Çelişkide PDF geçerlidir.
+
 # KÖK & KOD HACKATHON
 
 # YARIŞMA ŞARTNAMESİ

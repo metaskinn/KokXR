@@ -59,7 +59,7 @@ kokxr/
 | `docs/kokkod_kazanma_plani.md` | Final planı ve öncelikler |
 | `docs/gorev_dagilimi.md` | 24 saatlik görev dağılımı ve dört rol |
 | `docs/sartname.md` | Şartname metni; bölüm 5 puanlama |
-| `docs/eski dosyalar/` | Resmî şartname PDF'i, ön eleme sunumu, Geliştirme Raporu 1, eski Unity planı |
+| `docs/kaynaklar/` | Resmî şartname PDF'i (asıl kaynak), ön eleme sunumu, Geliştirme Raporu 1 |
 | `docs/sunum-vaatleri.md` | Jüriye verilen vaatler |
 | `docs/ui-tasarim.md` | Arayüz kuralları |
 | `docs/kilic-atolyesi.md`, `cini-atolyesi.md`, `vazo-modeli.md` | Atölye ayrıntıları |

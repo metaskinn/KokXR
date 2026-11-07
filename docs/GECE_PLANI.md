@@ -11,8 +11,8 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 - AGENTS.md'deki token kuralları geçerli.
 
 ## Görevler (sırayla)
-- [ ] 1. arayuz/pwa: regresyon testi bitince commit, belgeleri güncelle.
-- [ ] 2. "docs/eski dosyalar/" boşalt: şartname, sunum, rapor → docs/kaynaklar/; gelistirme-plani.md → _arsiv/docs/. Yolları AGENTS.md, HARITA.md, DURUM.md'de güncelle.
+- [x] 1. arayuz/pwa: regresyon testi bitince commit, belgeleri güncelle.
+- [x] 2. "docs/eski dosyalar/" boşalt: şartname, sunum, rapor → docs/kaynaklar/; gelistirme-plani.md → _arsiv/docs/. Yolları AGENTS.md, HARITA.md, DURUM.md'de güncelle.
 - [ ] 3. duzen/temizlik-2 ve arayuz/pwa'yı master'a birleştir (yerel, push yok). Tam test.
 - [ ] 4. tests/uctan-uca.mjs başarısız adımda 1 koduyla çıksın.
 - [ ] 5. yonetim/supabase: supabase/sema.sql yaz (eserler, gorseller, katkilar + RLS + storage bucket). Kod: .env doluysa Supabase'e kaydet, değilse localStorage'a düş (demo asla kırılmasın). Giriş (Supabase Auth, e-posta) ve görsel yükleme. Tabloları anon anahtarla oluşturamazsın; SQL'in sabah elle çalıştırılma adımlarını "Sabah sorulacaklar"a yaz.
@@ -28,3 +28,6 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 ## Sabah sorulacaklar
 
 ## Gece günlüğü
+
+- 1 (af3e01f): PWA commit. Firefox e2e 15/15, pwa/galeri/yolculuk/maket-xr-dugme/vazo-xr-dugme/maket-ic geçti; ui testi PWA'dan bağımsız odak zamanlaması nedeniyle (stash ile doğrulandı) kırıktı, beklemeyle düzeltildi.
+- 2: eski dosyalar boşaltıldı; şartname PDF ile karşılaştırıldı, eksik yok.

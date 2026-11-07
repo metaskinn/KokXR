@@ -19,7 +19,7 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 - [x] 6. yonetim/onay: onay akışı mokaptan çıksın (beklemede/onaylandı/reddedildi, yalnız onaylanan yayında). Supabase yoksa localStorage ile çalışsın. Bu sayfadan DemoEtiketi'ni kaldır.
 - [ ] 7. arayuz/kesif: ana sayfada şehir/ilçe/kategori filtresi (mevcut veriden).
 - [ ] 8. arayuz/erisilebilirlik: yazı boyutu ve yüksek kontrast düğmesi (hatırlansın), tarihçe için tarayıcı TTS ile "Sesli dinle". axe veya Lighthouse raporunu docs/'a kaydet.
-- [ ] 9. Testler: yönetim ekle/düzenle ve onay akışı için otomatik test.
+- [x] 9. Testler: yönetim ekle/düzenle ve onay akışı için otomatik test.
 - [ ] 10. README.md: kurulum, çalıştırma, testler, mimari ve veri modeli şeması (mermaid), yeni eser/şehir ekleme, kütüphaneler ve lisanslar, fotoğraf kredisi.
 - [ ] 11. docs/demo-senaryosu.md: dakika dakika canlı demo (keşfet → eser detay → sesli dinle → VR'da eline al → görev/rozet → yönetimden eser ekle → onay → yeni şehir), her adımın URL'si.
 - [ ] 12. 5–9 arası dalları master'a birleştir (yerel). Tam test (e2e 3 yapılandırma + tarayıcı testleri), sonuçları günlüğe yaz.
@@ -40,3 +40,4 @@ Her turda: önce bu dosyayı oku, işaretsiz ([ ]) İLK maddeyi yap, bitince [x]
 - 4: tests/uctan-uca.mjs:156 zaten başarısız adımda exitCode=1 veriyor (460a8db); ek iş gerekmedi.
 - 5 (yonetim/supabase): supabase/sema.sql, src/data/bulut.ts (giriş, yükleme, eser kaydı), BulutPaneli. .env boşsa yalnız localStorage. test:hizli ve build geçti.
 - 6 (yonetim/onay): OnayAkisi gerçek oldu (src/data/onay.ts; beklemede/onaylandı/reddedildi, yalnız onaylanan yeni eser yayında, yerel + bulut). DemoEtiketi kaldırıldı. e2e 6b onay adımını içerecek şekilde güncellendi; Chromium 1280 15/15. Konsolda 404: Supabase tabloları henüz kurulu olmadığı için bekleniyor (sema.sql çalışınca kalkar).
+- 9: tests/yonetim.mjs (düzenle, varsayılana dön, ekle, onayla, reddet, sil) geçti; `node scripts/test-tarayici.mjs yonetim`.

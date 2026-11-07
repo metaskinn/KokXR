@@ -42,8 +42,8 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 ### B. Şartnamenin zorunlu açıkları
 - [!] **G4. paket/capacitor (onaylı bağımlılık):** Capacitor ile Android APK (aynı kod). Quest/VR akışı APK'da denenmez; APK keşif, harita, erişilebilirlik içindir. Android SDK yoksa yalnız proje iskeleti ve derleme adımı belgelenir.
 - [x] **G5. demo/yedek:** `npm run demo` (derle + önizle), PWA önbelleğini ısıtan sayfa listesi `docs/demo-senaryosu.md`'ye; internetsiz çalışma kontrolü.
-- [ ] **G6. veri/kategori:** **Eser sayısı en az 10 şartı sağlanmış kalır ve güvenli payla 14'e çıkar.** En az 3 yeni türde eser (han, hamam/çeşme, türbe, eğitim yapısı). Metin yalnız envanter kitabından (Drive PDF veya .idml), her bilgiye cilt ve sayfa. Metin çıkarılamazsa eser eklenmez, `[!]`.
-- [ ] **G7. veri/yeni-sehir:** Konya veya Hatay envanterinden 1 eser (aynı kaynak kuralı). Demodaki "yeni şehir" adımı gerçek veriyle.
+- [x] **G6. veri/kategori:** **Eser sayısı en az 10 şartı sağlanmış kalır ve güvenli payla 14'e çıkar.** En az 3 yeni türde eser (han, hamam/çeşme, türbe, eğitim yapısı). Metin yalnız envanter kitabından (Drive PDF veya .idml), her bilgiye cilt ve sayfa. Metin çıkarılamazsa eser eklenmez, `[!]`.
+- [!] **G7. veri/yeni-sehir:** Konya veya Hatay envanterinden 1 eser (aynı kaynak kuralı). Demodaki "yeni şehir" adımı gerçek veriyle.
 - [ ] **G8. mimari/sehir-ve-tur:** Şehir ve içerik türü eser verisinden türer; şehir eklemek `vrEserler.ts` düzenlemeden olur. Eser sayfasında 3B olmayan eserler (han, türbe) eşit değerde görünür. Yeni şehir kod değişmeden gelir (README + test).
 - [ ] **G9. yonetim/katki (şartname 5.1.3):** Kullanıcı anısı/fotoğraf formu → `katkilar` (beklemede) → onay sayfasında onayla/reddet → yalnız onaylanan eser sayfasında "Topluluk katkısı, doğrulanmamış" etiketiyle. Kişisel veri toplanmaz (ad/telefon yok). Girdi doğrulama ve metin temizleme testli.
 
@@ -63,6 +63,9 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - [ ] **G18. docs/sabah-brifingi.md:** 1 sayfa: ne bitti/bitmedi, 09.00 öncesi 5 adım (Supabase kurulumu, push kararı, Vercel'in `master`'a bağlanması, PWA/APK telefonda deneme, Quest şarjı) ve `gorev_dagilimi.md`'deki 4 kişinin ilk 2 saatlik işi. Sonra dur.
 
 ## Sabah sorulacaklar
+- G7 (Konya/Hatay eseri): Konya ve Hatay envanter PDF'leri `vakifkatilim.com.tr/documents/KurumsalIletisim/...` adreslerinde. Betik indirmesi bu oturumda izin denetiminden geçmedi (ayrıca Firecrawl kredisi bitti). Çözüm: PDF'i tarayıcıdan indirip `~/Downloads`'a koy; metni macOS PDFKit ile çıkarıp 1 eser eklerim (kaynak cilt+sayfa). Konya/Hatay Drive'da yok (yalnız Bursa arşivi).
+- G6 notu: Yeni 4 eserin fotoğrafı yok (Drive görselleri 2–144 MB, araçla indirilemiyor); eser sayfaları fotoğrafsız çalışır. Fotoğraf eklenecekse el ile küçültülüp `public/gorseller/<eser-id>/` altına, `kredi` alanıyla konmalı.
+- Vakıf Katılım yayın adresleri (`src/data/vrEserler.ts`) doğru görünüyor (sayfadaki bağlantılarla aynı); bot istekleri 404 alıyor, tarayıcıda açılır.
 - APK: JDK 21 kurulu değil (makinede 17). Kurulumu sistem değişikliği olduğu için yapmadım. `brew install --cask temurin@21` sonrası `docs/apk.md` adımlarıyla APK derlenir.
 - Supabase tabloları henüz kurulu değil (REST `eserler` 404). `docs/supabase-kurulum.md` adımlarını yap; kurulana kadar yönetim giriş istemez, yerel kayıtla çalışır. Kurulduktan sonra giriş, kayıt, onay ve görsel yükleme gerçek sunucuda denenmeli.
 - `tests/kilic.mjs` 1280'de zaman aşımı (G1 notu): gerçek hata mı yavaşlık mı, G17'de master'da bakılacak.
@@ -73,3 +76,5 @@ Sıra değer sırasıdır. `[ ]` yapılmadı, `[x]` bitti, `[!]` 2 denemede olma
 - G3 (yonetim/bulut-saglamlastir): `YonetimKapisi` bulut hazırsa giriş ister, hazır değilse yerel moda düşer; `bulutHazir()` eklendi; docs/supabase-kurulum.md yazıldı. Gerçek sunucu denemesi tablolar kurulmadığı için yapılamadı.
 - G4 (paket/capacitor): Capacitor eklendi, `android/` iskeleti ve Gradle eşitlemesi tamam, `npm run apk:esitle`. APK derlemesi JDK 21 yokluğundan [!] (docs/apk.md).
 - G5 (demo/yedek): `npm run demo` ve `demo:bulut`; çevrimdışı ısıtma listesi ve sınırlar docs/demo-senaryosu.md'de. 360tr gömmesi çevrimdışı açılmaz (yedek bağlantı + fotoğraf modu var).
+- G6 (veri/kategori): 4 yeni eser, hepsi envanter IDML'inden (Drive 'Vakıf Eserleri Envanteri - Bursa Fotoğraf Arşivi'): Koza Han (ticari, s. 648–655), Eyne Bey Hamamı (su yapısı/hamam, s. 684–685), Eyne Bey Subaşı Medresesi (eğitim, s. 556–561), Osman Gazi Türbesi (türbe, s. 520–531). Sayfa numaraları IDML spread sayfa adlarından; cilt bilgisi klasör adı 'I. ve II. Cilt – Osmangazi' olduğundan kaynak satırına 'Osmangazi' yazıldı, cilt numarası kitaptan teyit edilmeli. `scripts/idml_cikar.py` hat aracı. Toplam eser 14.
+- G7: [!] yukarıda.

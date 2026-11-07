@@ -14,6 +14,7 @@ import { sourceText } from '../../shared/ui/SourceLine'
 import { uluMosqueModel, type Model as BuildingModel } from './uluMosqueModel'
 import { PLAYER_RADIUS, viewBlocked, stopFloor, floorStep } from './walkingCollision'
 import { setupXrSession } from './xrSession'
+import { createNarration } from './xrNarration'
 
 export interface ModelScene {
   shatter: (open: boolean) => void;
@@ -166,6 +167,12 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     markerLayer.append(button)
     return { info, button, position: new THREE.Vector3(info.position[0], info.position[1], info.position[2]) }
   })
+  // Desktop spoken guide: same recordings and proximity rule as in VR. They describe Ulu Camii only.
+  const narration = model === 'ulu-mosque' ? createNarration() : null
+  // Browsers allow audio only after a gesture: any click or key press inside the scene unlocks it (calling it again is harmless).
+  const unlockNarration = () => { if (inside) narration?.unlock() }
+  area.addEventListener('pointerdown', unlockNarration)
+  window.addEventListener('keydown', unlockNarration)
   let activeInfo: string | null = null, nearInfo: string | null = null
   let selectedInfo: string | null = null, closedInfo: string | null = null
   const projection = new THREE.Vector3()
@@ -185,6 +192,10 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     for (const { info, position } of markers) {
       const distance = Math.hypot(gaze.x - position.x, gaze.z - position.z)
       if (inside && distance < info.radius && distance < shortest) { nearest = info.id; shortest = distance }
+    }
+    if (narration) {
+      if (inside && !renderer.xr.isPresenting) narration.update(gaze, markers.map(({ info }) => info))
+      else narration.stop() // outside, or in VR (xrSession plays its own)
     }
     if (nearest !== nearInfo) { nearInfo = nearest; closedInfo = null }
     if (!inside) { selectedInfo = null; closedInfo = null }
@@ -410,6 +421,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     renderer, scene: threeScene, camera, walking, stops, interiorState, closeInfo, layers,
     refreshShadow: () => { renderer.shadowMap.needsUpdate = true },
     titles: markers.map(({ info }) => info),
+    narrated: model === 'ulu-mosque',
     selectInfo: (id) => { selectedInfo = selectedInfo === id ? null : id },
     setShatter: (open) => { fragmented = open },
     isFragmented: () => fragmented,
@@ -603,6 +615,9 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
     clear: () => {
       xr.finish()
       xr.clear()
+      area.removeEventListener('pointerdown', unlockNarration)
+      window.removeEventListener('keydown', unlockNarration)
+      narration?.dispose()
       running = false
       renderer.setAnimationLoop(null)
       observer.disconnect()

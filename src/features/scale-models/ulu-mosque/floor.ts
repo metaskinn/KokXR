@@ -393,12 +393,12 @@ export function interiorFloor(k: Bucket, m: UluMosqueMaterials) {
   const white = (_x: number, _z: number, c: number[]) => { c[0] = c[1] = c[2] = 1 }
   const ux = sx - MARBLE_METER / 2, uz = sz - MARBLE_METER / 2
   k.add(uvMarble(grid(sx - mg, sx + mg, sz - md, sz + md, MARBLE_TOP, MARBLE_G, white), ux, uz), marbleMat)
-  k.add(place(boxG(MARBLE_G, 0.095, MARBLE_D), sx, FLOOR + 0.05, sz), m.marbleDark)
+  k.add(place(boxG(MARBLE_G, 0.09, MARBLE_D), sx, FLOOR + 0.045, sz), m.marbleDark)
   // Marble passage running from the north railing gap to the carpet (seen towards the north in the photo).
   const passageZ0 = sz - bz + 0.35, passageZ1 = sz - md
   // Taken from a texture corner: the dark patches are only at the pool edge.
   k.add(uvMarble(grid(sx - 1.05, sx + 1.05, passageZ0, passageZ1, MARBLE_TOP, 2.1, white), sx - 1.55, passageZ0 - 0.2), marbleMat)
-  k.add(place(boxG(2.1, 0.095, passageZ1 - passageZ0), sx, FLOOR + 0.05, (passageZ0 + passageZ1) / 2), m.marbleDark)
+  k.add(place(boxG(2.1, 0.09, passageZ1 - passageZ0), sx, FLOOR + 0.045, (passageZ0 + passageZ1) / 2), m.marbleDark)
 
   // Door fronts: thin grey stone one meter in from the wall (the strip in front of the door niche in the photo).
   const wallFoot = (wallFar: (x: number, z: number) => number) => (x: number, z: number, c: number[]) => {

@@ -7,7 +7,7 @@
     "build": "tsc -b && vite build",
     "build:acik": "tsc -b && VITE_PUBLIC_BUILD=1 vite build && node scripts/open-publication.mjs dist",
     "preview": "vite preview",
-    "test:hizli": "tsc --noEmit -p tsconfig.app.json && node tests/model-xr-logic.mjs && node tests/xr-snap-turn.mjs && node tests/model-xr-text.mjs && node tests/vase-xr-logic.mjs && node tests/model-assemble-logic.mjs && node tests/credit-data.mjs && node tests/inventory-data.mjs",
+    "test:hizli": "tsc --noEmit -p tsconfig.app.json && node tests/model-xr-logic.mjs && node tests/xr-snap-turn.mjs && node tests/xr-narration.mjs && node tests/model-xr-text.mjs && node tests/vase-xr-logic.mjs && node tests/model-assemble-logic.mjs && node tests/credit-data.mjs && node tests/inventory-data.mjs",
     "test:tarayici": "tsc -b && vite build --logLevel error && node scripts/test-browser.mjs",
     "test:e2e": "node tests/end-to-end.mjs chromium 1280 && node tests/end-to-end.mjs chromium 360 && node tests/end-to-end.mjs firefox 1280"
   },

@@ -109,3 +109,21 @@
 @media (min-width: 761px) { .vr-map-wrapper { position: sticky; top: 0.75rem; } }
 @media (max-width: 760px) { .vr-layout-of { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 560px) { .vr-city .vr-marker-name small { display: none; } }
+
+/* Full inventory list below the map: every building of the printed inventory, filterable. */
+.inventory { margin-top: 2rem; }
+.inventory h2 { margin: 0 0 0.4rem; }
+.inventory-note { margin: 0 0 1rem; color: var(--secondary); }
+.inventory-filters { display: grid; grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)); gap: 0.75rem; align-items: end; margin-bottom: 0.75rem; }
+.inventory-filters label { display: grid; gap: 0.25rem; font-weight: 600; }
+.inventory-filters input[type='search'], .inventory-filters select { min-height: 44px; padding: 0.4rem 0.6rem; border: 1px solid var(--stroke); border-radius: var(--radius); background: var(--surface); color: var(--text); font: inherit; font-weight: 400; }
+.inventory-filters .inventory-check { display: flex; align-items: center; gap: 0.5rem; min-height: 44px; grid-column: 1 / -1; font-weight: 400; }
+.inventory-filters .inventory-check input { width: 1.25rem; height: 1.25rem; }
+.inventory-count { margin: 0 0 0.5rem; color: var(--secondary); }
+.inventory-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+.inventory-list a, .inventory-list li > div { display: flex; flex-direction: column; gap: 0.15rem; height: 100%; padding: 0.6rem 0.8rem; border: 1px solid var(--stroke); border-radius: var(--radius); background: var(--surface); color: var(--text); text-decoration: none; }
+.inventory-list span { color: var(--secondary); font-size: 0.9rem; }
+.inventory-list em { font-style: normal; font-size: 0.9rem; color: var(--secondary); }
+.inventory-list li[data-model='yes'] em { color: var(--text); font-weight: 600; }
+.inventory-more { margin-top: 0.75rem; min-height: 44px; }
+@media (max-width: 640px) { .inventory-filters { grid-template-columns: minmax(0, 1fr); } }

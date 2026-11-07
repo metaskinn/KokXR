@@ -1,0 +1,2831 @@
+[
+  {
+    "id": "osmangazi-ulucami",
+    "name": "Ulucami",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "artifactId": "ulu-mosque",
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-i-murad-hudavendigar-camii",
+    "name": "I. Murad Hudâvendigâr Camii",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "I. Murad Hudâvendigâr Külliyesi",
+    "artifactId": "hudavendigar-complex",
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-i-murad-hudavendigar-medresesi",
+    "name": "I. Murad Hudâvendigâr Medresesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "I. Murad Hudâvendigâr Külliyesi",
+    "artifactId": "hudavendigar-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-i-murad-hudavendigar-imareti",
+    "name": "I. Murad Hudâvendigâr İmareti",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "I. Murad Hudâvendigâr Külliyesi",
+    "artifactId": "hudavendigar-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-cikcik-gircik-bekarlar-hamami",
+    "name": "Cıkcık (Girçık- Bekârlar) Hamamı",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "I. Murad Hudâvendigâr Külliyesi",
+    "artifactId": "hudavendigar-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-i-murad-hudavendigar-turbesi",
+    "name": "I. Murad Hudâvendigâr Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "I. Murad Hudâvendigâr Külliyesi",
+    "artifactId": "hudavendigar-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-muradiye-camii",
+    "name": "Muradiye Camii",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-muradiye-medresesi",
+    "name": "Muradiye Medresesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-muradiye-cesmesi",
+    "name": "Muradiye Çeşmesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ii-murad-muradiye-imareti",
+    "name": "II. Murad (Muradiye) İmareti",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-muradiye-hamami",
+    "name": "Muradiye Hamamı",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sultan-ii-murad-turbesi",
+    "name": "Sultan II. Murad Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sehzade-alaaddin-ali-turbesi",
+    "name": "Şehzade Alâaddin Ali Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-cariyeler-saraylilar-turbesi",
+    "name": "Cariyeler (Saraylılar) Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-cem-sultan-turbesi",
+    "name": "Cem Sultan Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ebe-hatun-turbesi",
+    "name": "Ebe Hatun Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-gulruh-hatun-turbesi",
+    "name": "Gülruh Hatun Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-gulsah-hatun-turbesi",
+    "name": "Gülşah Hatun Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-huma-hatun-hatuniye-turbesi",
+    "name": "Hüma Hatun (Hatuniye) Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-mukrime-hatun-turbesi",
+    "name": "Mükrime Hatun Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sehzade-ahmet-turbesi",
+    "name": "Şehzade Ahmet Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sehzade-mahmut-turbesi",
+    "name": "Şehzade Mahmut Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sehzade-mustafa-turbesi",
+    "name": "Şehzade Mustafa Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sirin-hatun-turbesi",
+    "name": "Şirin Hatun Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hamza-bey-camii",
+    "name": "Hamza Bey Camii",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Hamza Bey Külliyesi",
+    "artifactId": "hamzabey-complex",
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-hamza-bey-turbesi",
+    "name": "Hamza Bey Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Hamza Bey Külliyesi",
+    "artifactId": "hamzabey-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hamza-bey-ailesi-turbesi",
+    "name": "Hamza Bey Ailesi Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Hamza Bey Külliyesi",
+    "artifactId": "hamzabey-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-kara-mustafa-pasa-turbesi",
+    "name": "Kara Mustafa Paşa Türbesi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Hamza Bey Külliyesi",
+    "artifactId": "hamzabey-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-orhan-bey-camii",
+    "name": "Orhan Bey Camii",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Orhan Bey Külliyesi",
+    "artifactId": "orhan-bey-complex",
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-orhan-bey-hamami-aynali-carsi",
+    "name": "Orhan Bey Hamamı (Aynalı Çarşı)",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Orhan Bey Külliyesi",
+    "artifactId": "orhan-bey-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-emir-hani",
+    "name": "Emir Hanı",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Orhan Bey Külliyesi",
+    "artifactId": "orhan-bey-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-demirtas-timurtas-camii-ve-sadirvani",
+    "name": "Demirtaş (Timurtaş) Camii ve Şadırvanı",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Timurtaş Paşa Külliyesi",
+    "artifactId": "timurtas-pasa-complex",
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-demirtas-timurtas-camii-haziresi",
+    "name": "Demirtaş (Timurtaş) Camii Haziresi",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Timurtaş Paşa Külliyesi",
+    "artifactId": "timurtas-pasa-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-timurtas-pasa-hamami",
+    "name": "Timurtaş Paşa Hamamı",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Timurtaş Paşa Külliyesi",
+    "artifactId": "timurtas-pasa-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-abdal-mehmed-camii",
+    "name": "Abdal Mehmed Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-acem-reis-arap-dede-camii-ve-haziresi",
+    "name": "Acem Reis (Arap Dede) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-acemler-camii",
+    "name": "Acemler Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ahmet-dai-camii",
+    "name": "Ahmet Dâî Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ahmet-pasa-fenari-camii-ve-haziresi",
+    "name": "Ahmet Paşa (Fenârî) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-akbiyik-camii-ve-haziresi",
+    "name": "Akbıyık Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-alaeddin-bey-camii-ve-haziresi",
+    "name": "Alâeddin Bey Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-alacahirka-camii",
+    "name": "Alacahırka Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-alanyeri-mescidi",
+    "name": "Alanyeri Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ali-pasa-camii-ve-haziresi",
+    "name": "Ali Paşa Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-altiparmak-camii-ve-haziresi",
+    "name": "Altıparmak Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-arap-mehmet-camii",
+    "name": "Arap Mehmet Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-araplar-camii-ve-haziresi",
+    "name": "Araplar Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-aynali-hoca-tabib-hoca-tayyip-capraz-camii",
+    "name": "Aynalı (Hoca Tabib-Hoca Tayyip-Çapraz) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-azeb-bey-camii",
+    "name": "Azeb Bey Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-basci-ibrahim-bey-camii-ve-haziresi",
+    "name": "Başçı İbrahim Bey Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-besikciler-sinan-dede-camii-ve-haziresi",
+    "name": "Beşikçiler (Sinan Dede) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-cakir-aga-mecnun-dede-camii-ve-haziresi",
+    "name": "Çakır Ağa (Mecnun Dede) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-candarli-ibrahim-pasa-mahkeme-hoca-muslihuddin-camii",
+    "name": "Çandarlı İbrahim Paşa (Mahkeme - Hoca Muslihuddin) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-cerag-cirag-bey-camii",
+    "name": "Çerağ (Çırağ) Bey Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-darulkurra-haraccioglu-haziresi",
+    "name": "Darülkurra (Haraççıoğlu) Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-davutpasa-batpazari-camii",
+    "name": "Davutpaşa (Batpazarı) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-daye-hatun-daye-kadin-taya-kadin-camii-ve-haziresi",
+    "name": "Dâye Hatun (Dâye Kadın - Taya Kadın) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-duhteri-seref-fiskirik-camii",
+    "name": "Duhteri Şeref (Fışkırık) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ebu-ishak-kazeruni-kamberler-camii-zaviye",
+    "name": "Ebu İshak Kâzerûni (Kamberler) Camii (Zaviye)",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-elmalik-camii",
+    "name": "Elmalık Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ertugrul-bey-camii-ve-kabri",
+    "name": "Ertuğrul Bey Camii ve Kabri",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-fidan-mahmudpasa-hani-mescidi",
+    "name": "Fidan (Mahmudpaşa) Hanı Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-geyve-hani-mescidi",
+    "name": "Geyve Hanı Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-gungormez-camii-ve-haziresi",
+    "name": "Güngörmez Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-haci-ali-sevinc-camii",
+    "name": "Hacı Ali Sevinç Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-haci-ivaz-pasa-camii",
+    "name": "Hacı İvaz Paşa Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hacilar-camii",
+    "name": "Hacılar Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hafsa-sultan-bedreddin-camii-ve-haziresi",
+    "name": "Hafsa Sultan (Bedreddin) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hatice-isfendiyar-sultan-atpazari-camii-ve-kabri",
+    "name": "Hatice İsfendiyâr Sultan (Atpazarı) Camii ve Kabri",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hayrettin-pasa-camii",
+    "name": "Hayrettin Paşa Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hidirlik-nilufer-hatun-camii",
+    "name": "Hıdırlık (Nilüfer Hatun) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hoca-alizade-camii-ve-haziresi",
+    "name": "Hoca Alizâde Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hoca-hasan-camii-ve-haziresi",
+    "name": "Hoca Hasan Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-imaret-i-isa-bey-camii",
+    "name": "İmaret-i İsa Bey Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-isa-bey-fenari-guduk-minare-camii",
+    "name": "İsa Bey Fenârî (Güdük Minare) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ismail-hakki-tekkesi-camii-ve-haziresi",
+    "name": "İsmail Hakkı Tekkesi Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-izzeddin-bey-pinarbasi-camii",
+    "name": "İzzeddin Bey (Pınarbaşı) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-kademeri-cukur-camii-ve-haziresi",
+    "name": "Kademeri (Çukur) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-kanberler-sitti-hatun-camii",
+    "name": "Kanberler (Sitti Hatun) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-karaseyh-camii",
+    "name": "Karaşeyh Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-karakadi-camii-ve-haziresi",
+    "name": "Karakâdî Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-kavakli-camii",
+    "name": "Kavaklı Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-kaygan-kayhan-camii-ve-haziresi",
+    "name": "Kaygan (Kayhan) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-kiremitci-sinan-bey-camii",
+    "name": "Kiremitçi Sinan Bey Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-koca-naip-camii-ve-haziresi",
+    "name": "Koca Naip Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-koza-han-mescidi",
+    "name": "Koza Han Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-lamii-celebi-camii",
+    "name": "Lâmiî Çelebi Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-maksem-dusturhan-camii",
+    "name": "Maksem (Düsturhan) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-mantici-cami",
+    "name": "Mantıcı Cami",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-mecidiye-camii",
+    "name": "Mecidiye Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-molla-fenari-camii-ve-haziresi",
+    "name": "Molla Fenârî Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-molla-gurani-yesil-guranli-mescidi",
+    "name": "Molla Gürani (Yeşil-Güranlı) Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-nakkas-ali-mescidi-ve-haziresi",
+    "name": "Nakkaş Ali Mescidi ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-nalbantoglu-camii",
+    "name": "Nalbantoğlu Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-pasa-camii",
+    "name": "Paşa Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ruscuk-camii",
+    "name": "Rusçuk Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sati-fakih-camii-ve-haziresi",
+    "name": "Satı Fakih Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-selcuk-hatun-camii",
+    "name": "Selçuk Hatun Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-selimiye-camii",
+    "name": "Selimiye Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-simkes-sirmakes-camii",
+    "name": "Simkeş (Sırmakeş) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sivasiler-tahtali-camii",
+    "name": "Sivasiler (Tahtalı) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sehabettin-pasa-camii",
+    "name": "Şehabettin Paşa Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sehadet-kale-saray-camii",
+    "name": "Şehadet (Kale-Saray) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sehrekustu-pars-bey-camii",
+    "name": "Şehreküstü (Pars Bey) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-seker-hoca-camii",
+    "name": "Şeker Hoca Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-serafettin-pasa-okcular-camii-ve-haziresi",
+    "name": "Şerafettin Paşa (Okçular) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-seyh-hamit-somuncu-baba-ayazma-camii-ve-haziresi",
+    "name": "Şeyh Hamit (Somuncu Baba-Ayazma) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-seyh-konevi-camii",
+    "name": "Şeyh Konevî Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-seyh-pasa-dibekli-camii",
+    "name": "Şeyh Paşa (Dibekli) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-tahtali-hatipzade-mescidi",
+    "name": "Tahtalı (Hatipzade) Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-tavukcu-mescidi",
+    "name": "Tavukçu Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-tuzpazari-camii",
+    "name": "Tuzpazarı Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-uc-kuzular-kozlar-camii-ve-kabri",
+    "name": "Üç Kuzular (Kozlar) Camii ve Kabri",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hz-uftade-camii",
+    "name": "Hz. Üftâde Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hz-uftade-tekke-camii",
+    "name": "Hz. Üftâde Tekke Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-veled-i-enbiya-enbiyaoglu-camii",
+    "name": "Veled-i Enbiya (Enbiyaoğlu) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-veled-i-habib-camii",
+    "name": "Veled-i Habib Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-veled-i-sarayi-mescidi",
+    "name": "Veled-i Sarayi Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-veled-i-yanic-camii-cesme-ve-haziresi",
+    "name": "Veled-i Yaniç Camii, Çeşme ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-veled-i-veziri-camii-ve-haziresi",
+    "name": "Veled-i Veziri Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-veli-semseddin-yahni-kapan-camii-ve-haziresi",
+    "name": "Veli Şemseddin (Yahni Kapan) Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-veziri-konuralp-uc-kurnali-camii",
+    "name": "Veziri (Konuralp-Üç Kurnalı) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-yeni-bezzaz-reyhan-camii",
+    "name": "Yeni Bezzâz (Reyhan) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-yeni-kaplica-gazi-akdemir-mescidi",
+    "name": "Yeni Kaplıca (Gazi Akdemir) Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-yer-kapi-kara-ali-pasa-bab-i-zemin-camii",
+    "name": "Yer Kapı (Kara Ali Paşa - Bab-ı Zemin) Camii",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-yigit-kohne-camii-ve-haziresi",
+    "name": "Yiğit Köhne Camii ve Haziresi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-zagferanlik-mescidi",
+    "name": "Zağferanlık Mescidi",
+    "district": "Osmangazi",
+    "section": "mosque",
+    "volume": 1,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-koza-hani",
+    "name": "Koza Hanı",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-fidan-hani",
+    "name": "Fidan Hanı",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-geyve-hani",
+    "name": "Geyve Hanı",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ipek-hani",
+    "name": "İpek Hanı",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ic-koza-hani",
+    "name": "İç Koza Hanı",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-pirinc-hani",
+    "name": "Pirinç Hanı",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-tahtakale-hani-davutpasa-hani-yogurt-hani",
+    "name": "Tahtakale Hanı (Davutpaşa Hanı-Yoğurt Hanı)",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-yildirim-bayezid-bedesteni",
+    "name": "Yıldırım Bayezid Bedesteni",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-bali-bey-hani",
+    "name": "Bali Bey Hanı",
+    "district": "Osmangazi",
+    "section": "commercial",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ataturk-ilkogretim-okulu",
+    "name": "Atatürk İlköğretim Okulu",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-eyne-bey-inebey-subasi-medresesi",
+    "name": "Eyne Bey (İnebey) Subaşı Medresesi",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-gokdere-medresesi",
+    "name": "Gökdere Medresesi",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-haraccioglu-medresesi",
+    "name": "Haraççıoğlu Medresesi",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-haraccioglu-darulkurra-mektebi",
+    "name": "Haraççıoğlu (Dârülkurrâ) Mektebi",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hoca-ilyas-ortaokulu",
+    "name": "Hoca İlyas Ortaokulu",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-lalasahinpasa-medresesi",
+    "name": "Lalaşahinpaşa Medresesi",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sitti-hatun-kanberler-mektebi",
+    "name": "Sitti Hatun (Kanberler) Mektebi",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sair-ahmet-pasa-geyikli-medresesi",
+    "name": "Şair Ahmet Paşa (Geyikli) Medresesi",
+    "district": "Osmangazi",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ahmet-vefik-pasa-tiyatrosu",
+    "name": "Ahmet Vefik Paşa Tiyatrosu",
+    "district": "Osmangazi",
+    "section": "civil",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-belediye-binasi",
+    "name": "Belediye Binası",
+    "district": "Osmangazi",
+    "section": "civil",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-bursa-vergi-dairesi-binasi",
+    "name": "Bursa Vergi Dairesi Binası",
+    "district": "Osmangazi",
+    "section": "civil",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-bursa-dullar-evi",
+    "name": "Bursa Dullar Evi",
+    "district": "Osmangazi",
+    "section": "civil",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-fransiz-kilisesi",
+    "name": "Fransız Kilisesi",
+    "district": "Osmangazi",
+    "section": "civil",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-il-kultur-ve-turizm-mudurlugu-konagi",
+    "name": "İl Kültür ve Turizm Müdürlüğü Konağı",
+    "district": "Osmangazi",
+    "section": "civil",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-alaaddin-bey-cesmesi",
+    "name": "Alaaddin Bey Çeşmesi",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-besikciler-sinan-dede-camii-cesmesi",
+    "name": "Beşikçiler Sinan Dede Camii Çeşmesi",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-eyne-bey-inebey-hamami",
+    "name": "Eyne Bey (İnebey) Hamamı",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-eyne-bey-inebey-medresesi-cesmesi",
+    "name": "Eyne Bey (İnebey) Medresesi Çeşmesi",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hafsa-sultan-bedreddin-cesmesi",
+    "name": "Hafsa Sultan (Bedreddin) Çeşmesi",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-horhor-hamami",
+    "name": "Horhor Hamamı",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hocaalizade-cesmesi",
+    "name": "Hocaalizade Çeşmesi",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-mecidiye-camii-cesmesi",
+    "name": "Mecidiye Camii Çeşmesi",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ibrahim-pasa-hatice-hatun-hamami",
+    "name": "İbrahim Paşa (Hatice Hatun) Hamamı",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-mahkeme-ibrahim-pasa-hamami",
+    "name": "Mahkeme (İbrahim Paşa) Hamamı",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-nasuh-pasa-hamami",
+    "name": "Nasuh Paşa Hamamı",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ordekli-hamam-eski-yeni-hamam",
+    "name": "Ördekli Hamam (Eski Yeni Hamam)",
+    "district": "Osmangazi",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-karabas-i-veli-dergahi",
+    "name": "Karabaş-ı Velî Dergâhı",
+    "district": "Osmangazi",
+    "section": "sufi",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-numaniye-dergahi",
+    "name": "Nûmâniye Dergâhı",
+    "district": "Osmangazi",
+    "section": "sufi",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-seyyid-usul-tekkesi-ve-haziresi",
+    "name": "Seyyid Usûl Tekkesi ve Haziresi",
+    "district": "Osmangazi",
+    "section": "sufi",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hz-uftade-tekkesi",
+    "name": "Hz. Üftâde Tekkesi",
+    "district": "Osmangazi",
+    "section": "sufi",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-abdal-mehmed-turbesi",
+    "name": "Abdal Mehmed Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-akbiyik-sultan-semseddin-ahmed-turbesi",
+    "name": "Akbıyık Sultan (Şemseddin Ahmed) Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-azeb-bey-turbesi",
+    "name": "Azeb Bey Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-bekir-dede-turbesi",
+    "name": "Bekir Dede Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-ebu-ishak-turbesi",
+    "name": "Ebû İshak Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-eskici-mehmet-dede-mezari",
+    "name": "Eskici Mehmet Dede Mezarı",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-gulcicek-hatun-turbesi",
+    "name": "Gülçiçek Hatun Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hanimlar-kizlar-turbesi-yilanli-turbe",
+    "name": "Hanımlar Kızlar Türbesi (Yılanlı Türbe)",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hatice-sultan-turbesi",
+    "name": "Hatice Sultan Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-karisdiran-karsiduran-suleyman-bey-turbesi",
+    "name": "Karışdıran (Karşıduran) Süleyman Bey Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-mehmet-bin-seyit-ali-seker-hoca-turbesi",
+    "name": "Mehmet Bin Seyit Ali (Şeker Hoca) Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-molla-gurani-yesil-guranli-turbesi",
+    "name": "Molla Gürani (Yeşil Güranlı) Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-okcu-baba-turbesi",
+    "name": "Okçu Baba Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-orhan-gazi-turbesi",
+    "name": "Orhan Gazi Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-osman-gazi-turbesi",
+    "name": "Osman Gazi Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-seydi-nasir-turbesi",
+    "name": "Seydi Nasır Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-sair-gedik-ahmet-pasa-turbesi",
+    "name": "Şair (Gedik) Ahmet Paşa Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-uc-kozlar-kuzular-turbe-ve-haziresi",
+    "name": "Üç Kozlar (Kuzular) Türbe ve Haziresi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-hz-uftade-turbesi",
+    "name": "Hz. Üftâde Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-veled-i-habib-turbesi",
+    "name": "Veled-i Habib Türbesi",
+    "district": "Osmangazi",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-emir-sultan-camii",
+    "name": "Emir Sultan Camii",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Emir Sultan Külliyesi",
+    "artifactId": "emir-sultan",
+    "hasScaleModel": true
+  },
+  {
+    "id": "yildirim-emir-sultan-hamami",
+    "name": "Emir Sultan Hamamı",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Emir Sultan Külliyesi",
+    "artifactId": "emir-sultan",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-emir-sultan-turbesi",
+    "name": "Emir Sultan Türbesi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Emir Sultan Külliyesi",
+    "artifactId": "emir-sultan",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-darussaade-agasi-besir-aga-cesmesi",
+    "name": "Darüssaade Ağası Beşir Ağa Çeşmesi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Emir Sultan Külliyesi",
+    "artifactId": "emir-sultan",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-umur-bey-camii-ve-haziresi",
+    "name": "Umur Bey Camii ve Haziresi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Umur Bey Külliyesi",
+    "artifactId": "umurbey-complex",
+    "hasScaleModel": true
+  },
+  {
+    "id": "yildirim-umur-bey-cesmesi",
+    "name": "Umur Bey Çeşmesi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Umur Bey Külliyesi",
+    "artifactId": "umurbey-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-umur-bey-haziresi",
+    "name": "Umur Bey Haziresi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Umur Bey Külliyesi",
+    "artifactId": "umurbey-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-umur-bey-turbesi",
+    "name": "Umur Bey Türbesi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Umur Bey Külliyesi",
+    "artifactId": "umurbey-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-yesil-camii",
+    "name": "Yeşil Camii",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yeşil Çelebi Mehmed Külliyesi",
+    "artifactId": "yesil-complex",
+    "hasScaleModel": true
+  },
+  {
+    "id": "yildirim-yesil-imareti",
+    "name": "Yeşil İmareti",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yeşil Çelebi Mehmed Külliyesi",
+    "artifactId": "yesil-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-yesil-sultaniye-medresesi",
+    "name": "Yeşil (Sultaniye) Medresesi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yeşil Çelebi Mehmed Külliyesi",
+    "artifactId": "yesil-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-yesil-turbe",
+    "name": "Yeşil Türbe",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yeşil Çelebi Mehmed Külliyesi",
+    "artifactId": "yesil-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-devlet-hatun-turbesi",
+    "name": "Devlet Hatun Türbesi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yeşil Çelebi Mehmed Külliyesi",
+    "artifactId": "yesil-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-yildirim-bayezid-camii",
+    "name": "Yıldırım Bayezid Camii",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yıldırım Bayezid Külliyesi",
+    "artifactId": "yildirim-complex",
+    "hasScaleModel": true
+  },
+  {
+    "id": "yildirim-yildirim-medresesi",
+    "name": "Yıldırım Medresesi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yıldırım Bayezid Külliyesi",
+    "artifactId": "yildirim-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-yildirim-darussifasi",
+    "name": "Yıldırım Darüşşifası",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yıldırım Bayezid Külliyesi",
+    "artifactId": "yildirim-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-yildirim-bayezid-turbesi",
+    "name": "Yıldırım Bayezid Türbesi",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yıldırım Bayezid Külliyesi",
+    "artifactId": "yildirim-complex",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-acik-umur-bey-namazgah",
+    "name": "Açık (Umur Bey) Namazgâh",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-babadag-camii",
+    "name": "Babadağ Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-beyazit-pasa-catalcesme-camii",
+    "name": "Beyazıt Paşa (Çatalçeşme) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-davut-kadi-eski-ortayol-camii",
+    "name": "Davut Kadı (Eski-Ortayol) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-haci-sevindik-camii",
+    "name": "Hacı Sevindik Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-haci-seyfeddin-camii",
+    "name": "Hacı Seyfeddin Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-hoca-taskin-camii-ve-kabri",
+    "name": "Hoca Taşkın Camii ve Kabri",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-husamettin-tekkesi-halil-aga-camii",
+    "name": "Hüsamettin Tekkesi (Halil Ağa) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-ibn-i-bezzaz-camii-ve-haziresi",
+    "name": "İbn-i Bezzaz Camii ve Haziresi",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-ishak-sah-muftu-onu-camii",
+    "name": "İshak Şah (Müftü Önü) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-mesut-makramavi-camii-ve-haziresi",
+    "name": "Mesut Makramavi Camii ve Haziresi",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-meydancik-camii",
+    "name": "Meydancık Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-molla-arap-balabancik-camii",
+    "name": "Molla Arap (Balabancık) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-musa-baba-camii-ve-haziresi",
+    "name": "Musa Baba Camii ve Haziresi",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-mucelliddin-omer-aga-resulzade-camii",
+    "name": "Mücelliddin Ömer Ağa (Resulzade) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-namazgah-sufi-mehmed-yeni-camii",
+    "name": "Namazgâh (Sufi Mehmed-Yeni) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-pir-emir-camii",
+    "name": "Pir Emir Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-selami-dergahi-camii",
+    "name": "Selami Dergâhı Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-selimzade-camii",
+    "name": "Selimzade Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-setbasi-kara-celebizade-camii",
+    "name": "Setbaşı (Kara Çelebizade) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-sible-camii",
+    "name": "Şible Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-tatarlar-camii",
+    "name": "Tatarlar Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-vefikiye-camii",
+    "name": "Vefikiye Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-yeni-mahalle-camii",
+    "name": "Yeni Mahalle Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-zeyniler-haci-halife-camii",
+    "name": "Zeyniler (Hacı Halife) Camii",
+    "district": "Yıldırım",
+    "section": "mosque",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-abdullatif-kudsi-turbesi",
+    "name": "Abdüllatif Kudsi Türbesi",
+    "district": "Yıldırım",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-asik-yunus-kara-abdurrezzak-turbesi",
+    "name": "Âşık Yunus (Kara Abdürrezzak) Türbesi",
+    "district": "Yıldırım",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-baba-zakir-turbesi",
+    "name": "Baba Zâkir Türbesi",
+    "district": "Yıldırım",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-coban-bey-turbesi",
+    "name": "Çoban Bey Türbesi",
+    "district": "Yıldırım",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-haci-husamettin-turbesi",
+    "name": "Hacı Hüsamettin Türbesi",
+    "district": "Yıldırım",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-pir-emir-pir-emir-mehmet-turbesi",
+    "name": "Pir Emir (Pir Emir Mehmet) Türbesi",
+    "district": "Yıldırım",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-sofu-mehmet-mezari",
+    "name": "Sofu Mehmet Mezarı",
+    "district": "Yıldırım",
+    "section": "tomb",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-hancerli-medresesi",
+    "name": "Hançerli Medresesi",
+    "district": "Yıldırım",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-molla-yegan-medresesi",
+    "name": "Molla Yegan Medresesi",
+    "district": "Yıldırım",
+    "section": "education",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-haci-sevki-efendi-sabaniye-tekkesi",
+    "name": "Hacı Şevki Efendi (Şabaniye) Tekkesi",
+    "district": "Yıldırım",
+    "section": "sufi",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-hancerli-fatma-sultan-hanzade-hamami",
+    "name": "Hançerli Fatma Sultan (Hanzade) Hamamı",
+    "district": "Yıldırım",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-irgandi-koprusu",
+    "name": "Irgandı Köprüsü",
+    "district": "Yıldırım",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-incirli-hamami",
+    "name": "İncirli Hamamı",
+    "district": "Yıldırım",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-molla-arap-cesmesi",
+    "name": "Molla Arap Çeşmesi",
+    "district": "Yıldırım",
+    "section": "water",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yildirim-mahfel",
+    "name": "Mahfel",
+    "district": "Yıldırım",
+    "section": "civil",
+    "volume": 2,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-ayasofya-orhan-camii",
+    "name": "Ayasofya (Orhan) Camii",
+    "district": "İznik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-esrefzade-camii-minaresi-ve-haziresi",
+    "name": "Eşrefzâde Camii, Minaresi ve Haziresi",
+    "district": "İznik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-haci-ozbek-camii",
+    "name": "Hacı Özbek Camii",
+    "district": "İznik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-mahmut-celebi-camii-yakup-ecezade-mescidi",
+    "name": "Mahmut Çelebi Camii (Yakup Ecezade Mescidi)",
+    "district": "İznik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-orhan-gazi-imaret-camii",
+    "name": "Orhan Gazi (İmaret) Camii",
+    "district": "İznik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-seyh-kutbuddin-camii",
+    "name": "Şeyh Kutbüddin Camii",
+    "district": "İznik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-yakub-bey-camii",
+    "name": "Yakub Bey Camii",
+    "district": "İznik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-yesil-imaret-candarli-halil-pasa-camii",
+    "name": "Yeşil (İmaret-Çandarlı Halil Paşa) Camii",
+    "district": "İznik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-alaaddin-i-misri-turbesi",
+    "name": "Alaaddin-i Mısri Türbesi",
+    "district": "İznik",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-candarli-halil-pasa-turbesi",
+    "name": "Çandarlı Halil Paşa Türbesi",
+    "district": "İznik",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-candarli-ibrahim-pasa-turbesi",
+    "name": "Çandarlı İbrahim Paşa Türbesi",
+    "district": "İznik",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-kirgizlar-turbesi",
+    "name": "Kırgızlar Türbesi",
+    "district": "İznik",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-seyh-kutbuddin-turbesi",
+    "name": "Şeyh Kutbüddin Türbesi",
+    "district": "İznik",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-yakup-celebi-turbesi",
+    "name": "Yakup Çelebi Türbesi",
+    "district": "İznik",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-suleyman-pasa-medresesi",
+    "name": "Süleyman Paşa Medresesi",
+    "district": "İznik",
+    "section": "education",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-buyuk-eski-i-murad-meydan-tekke-hamami",
+    "name": "Büyük (Eski-I. Murad-Meydan-Tekke) Hamamı",
+    "district": "İznik",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-haci-hamza-ii-murad-hamami",
+    "name": "Hacı Hamza (II. Murad) Hamamı",
+    "district": "İznik",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-koimesis-tes-theotokos-hyakinthos-manastiri-kilisesi",
+    "name": "Koimesis Tes Theotokos Hyakinthos Manastırı Kilisesi",
+    "district": "İznik",
+    "section": "civil",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "iznik-nilufer-hatun-imareti",
+    "name": "Nilüfer Hatun İmareti",
+    "district": "İznik",
+    "section": "civil",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "gemlik-adliye-koyu-camii",
+    "name": "Adliye Köyü Camii",
+    "district": "Gemlik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "gemlik-balikpazari-yeni-camii-panagia-pazariotissa",
+    "name": "Balıkpazarı (Yeni) Camii (Panagia Pazariotissa)",
+    "district": "Gemlik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "gemlik-kucukkumla-eski-haci-muhyi-camii",
+    "name": "Küçükkumla Eski (Hacı Muhyi) Camii",
+    "district": "Gemlik",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "gursu-orta-camii",
+    "name": "Orta Camii",
+    "district": "Gürsu",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-ishak-pasa-camii",
+    "name": "İshak Paşa Camii",
+    "district": "İnegöl",
+    "section": "complex",
+    "volume": 3,
+    "group": "İshak Paşa Külliyesi",
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-ishak-pasa-medresesi",
+    "name": "İshak Paşa Medresesi",
+    "district": "İnegöl",
+    "section": "complex",
+    "volume": 3,
+    "group": "İshak Paşa Külliyesi",
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-tacunnisa-sultan-ve-ishak-pasa-turbesi-ishak-pasa-mezarligi",
+    "name": "Tâcunnisâ Sultan ve İshak Paşa Türbesi, İshak Paşa Mezarlığı",
+    "district": "İnegöl",
+    "section": "complex",
+    "volume": 3,
+    "group": "İshak Paşa Külliyesi",
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-burhaniye-camii",
+    "name": "Burhaniye Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-hamidiye-altinbas-camii",
+    "name": "Hamidiye (Altınbaş) Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-hancerli-fatma-sultan-yildirim-yukari-imaret-camii",
+    "name": "Hançerli Fatma Sultan (Yıldırım-Yukarı İmaret) Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-hurriyet-sari-camii",
+    "name": "Hürriyet (Sarı) Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-kasim-efendi-yenice-camii",
+    "name": "Kasım Efendi (Yenice) Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-kemalpasa-bosnak-camii",
+    "name": "Kemalpaşa (Boşnak) Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-laz-haci-hafiz-lazlar-camii",
+    "name": "Laz-Hacı Hafız (Lazlar) Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-osmaniye-camasirlik-camii",
+    "name": "Osmaniye (Çamaşırlık) Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-tahtakopru-hamidiye-camii",
+    "name": "Tahtaköprü Hamidiye Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-yildirim-bayezid-cuma-camii",
+    "name": "Yıldırım Bayezid (Cuma) Camii",
+    "district": "İnegöl",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-sungur-pasa-koyu-turbesi",
+    "name": "Sungur Paşa Köyü Türbesi",
+    "district": "İnegöl",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-karacaahmet-kervansarayi",
+    "name": "Karacaahmet Kervansarayı",
+    "district": "İnegöl",
+    "section": "commercial",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "inegol-sehitler-koyu-cesmesi-ve-hamami",
+    "name": "Şehitler Köyü Çeşmesi ve Hamamı",
+    "district": "İnegöl",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "karacabey-haci-cemali-nasrullah-camii",
+    "name": "Hacı Cemali (Nasrullah) Camii",
+    "district": "Karacabey",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "karacabey-imaret-kursunlu-mihalic-camii",
+    "name": "İmaret (Kurşunlu-Mihalıç) Camii",
+    "district": "Karacabey",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "karacabey-kumbetli-dunbekli-tumbekli-camii",
+    "name": "Kümbetli (Dünbekli-Tümbekli) Camii",
+    "district": "Karacabey",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "karacabey-mamuriyet-camii",
+    "name": "Mamuriyet Camii",
+    "district": "Karacabey",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "karacabey-ulu-hudavendigar-camii",
+    "name": "Ulu (Hudâvendigâr) Camii",
+    "district": "Karacabey",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "karacabey-bulbul-hatun-turbesi",
+    "name": "Bülbül Hatun Türbesi",
+    "district": "Karacabey",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "karacabey-issiz-susuz-han",
+    "name": "Issız (Susuz) Han",
+    "district": "Karacabey",
+    "section": "commercial",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "keles-yakub-bey-hamami",
+    "name": "Yakub Bey Hamamı",
+    "district": "Keles",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-aksu-koyu-camii-ve-haziresi",
+    "name": "Aksu Köyü Camii ve Haziresi",
+    "district": "Kestel",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-geyikli-babasultan-camii",
+    "name": "Geyikli Babasultan Camii",
+    "district": "Kestel",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-seyh-vani-mehmet-efendi-camii-ve-haziresi",
+    "name": "Şeyh Vanî Mehmet Efendi Camii ve Haziresi",
+    "district": "Kestel",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-geyikli-babasultan-turbesi",
+    "name": "Geyikli Babasultan Türbesi",
+    "district": "Kestel",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-seyh-vani-mehmet-efendi-turbesi",
+    "name": "Şeyh Vanî Mehmet Efendi Türbesi",
+    "district": "Kestel",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-han-odasi",
+    "name": "Han Odası",
+    "district": "Kestel",
+    "section": "commercial",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-aksu-koyu-hamami",
+    "name": "Aksu Köyü Hamamı",
+    "district": "Kestel",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-eski-sifa-vani-mehmed-hamami",
+    "name": "Eski (Şifa Vanî Mehmed) Hamamı",
+    "district": "Kestel",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "kestel-geyikli-baba-cesmesi",
+    "name": "Geyikli Baba Çeşmesi",
+    "district": "Kestel",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-cami-i-atik-eski-haci-ali-magribi-halil-aga-camii",
+    "name": "Cami-i Atik (Eski Hacı Ali Mağribî Halil Ağa Camii)",
+    "district": "Mudanya",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-eski-tekke-i-atik-cami-i-atik-camii",
+    "name": "Eski (Tekke-i Atik, Cami-i Atik) Camii",
+    "district": "Mudanya",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-haci-mehmet-aga-tekke-i-cedid-koca-ali-efendi-camii",
+    "name": "Hacı Mehmet Ağa (Tekke-i Cedid, Koca Ali Efendi) Camii",
+    "district": "Mudanya",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-hasan-misri-bey-camii",
+    "name": "Hasan Mısrî Bey Camii",
+    "district": "Mudanya",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-omer-bey-camii",
+    "name": "Ömer Bey Camii",
+    "district": "Mudanya",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-yeni-camii",
+    "name": "Yeni Camii",
+    "district": "Mudanya",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-halil-aga-evi",
+    "name": "Halil Ağa Evi",
+    "district": "Mudanya",
+    "section": "civil",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-mudanya-mutareke-evi-muzesi",
+    "name": "Mudanya Mütareke Evi Müzesi",
+    "district": "Mudanya",
+    "section": "civil",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mudanya-mudanya-polis-evi",
+    "name": "Mudanya Polis Evi",
+    "district": "Mudanya",
+    "section": "civil",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mustafakemalpasa-atariye-camii",
+    "name": "Atariye Camii",
+    "district": "Mustafakemalpaşa",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mustafakemalpasa-lala-sahin-pasa-camii-minaresi",
+    "name": "Lala Şahin Paşa Camii Minaresi",
+    "district": "Mustafakemalpaşa",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mustafakemalpasa-selimiye-camii-minaresi",
+    "name": "Selimiye Camii Minaresi",
+    "district": "Mustafakemalpaşa",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mustafakemalpasa-seyh-muftu-camii",
+    "name": "Şeyh Müftü Camii",
+    "district": "Mustafakemalpaşa",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mustafakemalpasa-hamza-bey-turbesi",
+    "name": "Hamza Bey Türbesi",
+    "district": "Mustafakemalpaşa",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mustafakemalpasa-lala-sahin-pasa-kumbeti",
+    "name": "Lala Şahin Paşa Kümbeti",
+    "district": "Mustafakemalpaşa",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "mustafakemalpasa-seyh-muftu-turbesi",
+    "name": "Şeyh Müftü Türbesi",
+    "district": "Mustafakemalpaşa",
+    "section": "tomb",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "nilufer-demirci-koyu-camii",
+    "name": "Demirci Köyü Camii",
+    "district": "Nilüfer",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "nilufer-golyazi-camii",
+    "name": "Gölyazı Camii",
+    "district": "Nilüfer",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "nilufer-ozluce-kilisesi-camii",
+    "name": "Özlüce Kilisesi Camii",
+    "district": "Nilüfer",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "nilufer-golyazi-hamami",
+    "name": "Gölyazı Hamamı",
+    "district": "Nilüfer",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "nilufer-golyazi-sur-duvarlari",
+    "name": "Gölyazı Sur Duvarları",
+    "district": "Nilüfer",
+    "section": "civil",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "orhangazi-muradiye-camii",
+    "name": "Muradiye Camii",
+    "district": "Orhangazi",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "orhangazi-orhan-gazi-camii-gurle",
+    "name": "Orhan Gazi Camii-Gürle",
+    "district": "Orhangazi",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "orhangazi-gurle-koyu-hamami",
+    "name": "Gürle Köyü Hamamı",
+    "district": "Orhangazi",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-kursunlu-camii",
+    "name": "Kurşunlu Camii",
+    "district": "Yenişehir",
+    "section": "complex",
+    "volume": 3,
+    "group": "Sinan Paşa Külliyesi",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-sinan-pasa-kulliyesi-nde-medrese",
+    "name": "Sinan Paşa Külliyesi’nde Medrese",
+    "district": "Yenişehir",
+    "section": "complex",
+    "volume": 3,
+    "group": "Sinan Paşa Külliyesi",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-sinan-pasa-kulliyesi-nde-imaret",
+    "name": "Sinan Paşa Külliyesi’nde İmaret",
+    "district": "Yenişehir",
+    "section": "complex",
+    "volume": 3,
+    "group": "Sinan Paşa Külliyesi",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-kursunlu-han",
+    "name": "Kurşunlu Han",
+    "district": "Yenişehir",
+    "section": "complex",
+    "volume": 3,
+    "group": "Sinan Paşa Külliyesi",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-sinan-pasa-kulliyesi-nde-arasta",
+    "name": "Sinan Paşa Külliyesi’nde Arasta",
+    "district": "Yenişehir",
+    "section": "complex",
+    "volume": 3,
+    "group": "Sinan Paşa Külliyesi",
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-bali-bey-carsi-camii",
+    "name": "Bali Bey (Çarşı) Camii",
+    "district": "Yenişehir",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-cinarli-karabacak-voyvoda-camii",
+    "name": "Çınarlı (Karabaçak-Voyvoda) Camii",
+    "district": "Yenişehir",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-ethem-pasa-camii",
+    "name": "Ethem Paşa Camii",
+    "district": "Yenişehir",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-haci-hasan-camii",
+    "name": "Hacı Hasan Camii",
+    "district": "Yenişehir",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-murat-pasa-kumluk-camii",
+    "name": "Murat Paşa (Kumluk) Camii",
+    "district": "Yenişehir",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-orhan-gazi-camii-ulucami",
+    "name": "Orhan Gazi Camii (Ulucami)",
+    "district": "Yenişehir",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-postinpus-camii-seyyid-mehmet-dede-zaviyesi",
+    "name": "Postinpûş Camii (Seyyid Mehmet Dede Zaviyesi)",
+    "district": "Yenişehir",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-semakizade-haci-huseyin-efendi-camii",
+    "name": "Şemakizade Hacı Hüseyin Efendi Camii",
+    "district": "Yenişehir",
+    "section": "mosque",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-carsi-cifte-belediye-hamami",
+    "name": "Çarşı (Çifte-Belediye) Hamamı",
+    "district": "Yenişehir",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-orhan-gazi-hamami",
+    "name": "Orhan Gazi Hamamı",
+    "district": "Yenişehir",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-yarhisar-koyu-cesmesi",
+    "name": "Yarhisar Köyü Çeşmesi",
+    "district": "Yenişehir",
+    "section": "water",
+    "volume": 3,
+    "hasScaleModel": false
+  }
+]

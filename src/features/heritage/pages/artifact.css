@@ -185,3 +185,12 @@ html:has(.section-nav) { scroll-padding-top: calc(var(--pagenav-h) + var(--s-2))
 .same-complex a { font-weight: 400; }
 .state-block .link-back { display: inline-flex; }
 .not-found-search + p { margin-top: var(--s-4); }
+
+/* Kaynaklar: closed by default, opened on demand. */
+.sources-toggle > summary { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; padding: 0 var(--s-4); border: 1px solid var(--line-strong); border-radius: var(--r-control); background: var(--surface); color: var(--ink); font-weight: 600; cursor: pointer; list-style: none; }
+.sources-toggle > summary::-webkit-details-marker { display: none; }
+.sources-toggle > summary::after { content: ''; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform 150ms ease-out; }
+.sources-toggle[open] > summary::after { transform: rotate(-135deg) translateY(-2px); }
+.sources-toggle[open] > summary { margin-bottom: var(--s-3); }
+.sources-toggle > summary:hover { border-color: var(--action); color: var(--action); }
+@media (prefers-reduced-motion: reduce) { .sources-toggle > summary::after { transition: none; } }

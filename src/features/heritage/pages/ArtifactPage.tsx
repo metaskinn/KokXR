@@ -55,6 +55,7 @@ export default function ArtifactPage({ artifacts }: { artifacts: Artifact[] }) {
 function ArtifactDetail({ artifact, artifacts }: { artifact: Artifact; artifacts: Artifact[] }) {
   const model = artifact.model
   const links = inventoryLinks(artifact, artifacts)
+  const [sourcesOpen, setSourcesOpen] = useState(false)
   const nav = [
     { id: 'fotograflar', long: 'Fotoğraflar', short: 'Fotoğraf' },
     ...(model ? [{ id: 'maket', long: 'Maket', short: 'Maket' }] : []),
@@ -120,7 +121,11 @@ function ArtifactDetail({ artifact, artifacts }: { artifact: Artifact; artifacts
         {artifact.sources.filter((source) => source.id.endsWith('-history')).map((source) => <SourceLine key={source.id} sources={artifact.sources} sourceId={source.id} />)}
       </Section>
       <Section id="kaynaklar" title="Kaynaklar" className="reading">
-        <ol className="source-list">{artifact.sources.map((source) => <li key={source.id}>{sourceText(source)} <SourceLink source={source} /></li>)}</ol>
+        {/* Closed by default: some artifacts cite 15+ pages. The count stays visible so the sourcing is not hidden. */}
+        <details className="sources-toggle" open={sourcesOpen} onToggle={(e) => setSourcesOpen(e.currentTarget.open)}>
+          <summary>{sourcesOpen ? 'Kaynakları gizle' : 'Kaynakları göster'} ({artifact.sources.length})</summary>
+          <ol className="source-list">{artifact.sources.map((source) => <li key={source.id}>{sourceText(source)} <SourceLink source={source} /></li>)}</ol>
+        </details>
         {links.record && <p className="inventory-line">Envanter kaydı: {links.record}</p>}
         {links.siblings.length > 0 && <div className="same-complex">
           <h3>{links.isComplex ? 'Külliyedeki yapılar' : 'Aynı külliyede'}</h3>

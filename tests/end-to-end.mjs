@@ -36,7 +36,7 @@ await control('1b favicon', async () => {
 const appears = (locator, timeout = 10000) => locator.first().waitFor({ timeout }).then(() => true, () => false);
 
 await control('artifacts', async () => {
-  await p.goto(URL); condition(await appears(p.getByRole('heading', { name: 'Eserler', level: 1 })), 'no heading');
+  await p.goto(`${URL}/artifacts`); condition(await appears(p.getByRole('heading', { name: 'Eserler', level: 1 })), 'no heading');
   condition(await p.locator('.artifact-card').count() >= 2, 'cards < 2'); condition(!(await overflow()), 'horizontal overflow'); await screen('main');
 });
 await control('1d hotspot card visible', async () => {

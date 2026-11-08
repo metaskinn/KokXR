@@ -1,0 +1,52 @@
+/* Ana sayfa. Giriş: başlık + gerçek maket görüntüsü; ardından üç giriş yolu, kart değil çizgiyle ayrılmış satırlar. */
+
+.home { padding-top: var(--s-5); }
+
+.home-intro { display: grid; gap: var(--s-5); padding-bottom: var(--section-gap); }
+.home-intro h1 { max-width: 16ch; margin-bottom: var(--s-3); }
+.home-lede { max-width: 34rem; margin-bottom: var(--s-5); font: 400 var(--fs-read)/var(--lh-read) var(--font-text); color: var(--ink-2); }
+
+.home-counts { display: flex; flex-wrap: wrap; gap: var(--s-2); margin: 0 0 var(--s-5); }
+.home-counts div { display: flex; flex-direction: column-reverse; min-width: 88px; padding: var(--s-2) var(--s-3); border: 1px solid var(--line); border-radius: var(--r-control); background: var(--surface); }
+.home-counts dt { font-size: var(--fs-small); color: var(--ink-2); }
+.home-counts dd { margin: 0; font: 600 1.5rem/1.15 var(--font-text); font-variant-numeric: tabular-nums; }
+
+.home-still { margin: 0 calc(var(--gutter) * -1); }
+.home-still a { display: block; background: var(--scene); }
+.home-still img { width: 100%; height: auto; aspect-ratio: 992 / 561; object-fit: cover; }
+.home-still a:focus-visible { outline-offset: -3px; }
+.home-still figcaption { padding: var(--s-2) var(--gutter) 0; font-size: var(--fs-small); line-height: var(--lh-small); color: var(--ink-2); }
+
+.home-way { display: grid; gap: var(--s-3); padding: var(--s-5) 0; border-top: 1px solid var(--line); }
+.home-way h2 a { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; min-height: var(--target); }
+.home-way h2 a:hover { color: var(--action); text-decoration: underline; text-decoration-thickness: 2px; }
+.home-way-body { max-width: var(--measure); }
+.home-way-body > p { max-width: 40rem; }
+.home-note { font-size: var(--fs-small); line-height: var(--lh-small); color: var(--ink-2); }
+
+.home-cities { display: flex; flex-wrap: wrap; gap: var(--s-2); margin: 0; padding: 0; list-style: none; }
+.home-cities .button { gap: var(--s-2); }
+.home-city-count { font-weight: 400; font-size: var(--fs-small); color: var(--ink-2); }
+
+.home-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); margin: 0 0 var(--s-2); padding: 0; list-style: none; }
+.home-strip a { display: grid; gap: var(--s-1); min-height: var(--target); color: var(--ink); text-decoration: none; font-size: var(--fs-small); font-weight: 600; }
+.home-strip img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r-photo); background: var(--scene); }
+.home-strip a:hover span { color: var(--action); text-decoration: underline; }
+
+.home-links { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-4); }
+.home-way .btn-ghost { display: inline-flex; align-items: center; margin-left: calc(var(--s-1) * -1); }
+
+@media (min-width: 900px) {
+  .home { padding-top: var(--s-7); }
+  .home-intro[data-still='yes'] { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; gap: var(--s-6); }
+  .home-still { margin: 0; }
+  .home-still a { border-radius: var(--r-photo); overflow: hidden; }
+  .home-still figcaption { padding-left: 0; padding-right: 0; }
+  .home-way { grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: var(--s-6); padding: var(--s-6) 0; }
+  .home-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-strip img, .home-still img { transition: opacity var(--dur-2) var(--ease-out); }
+  .home-strip a:hover img, .home-still a:hover img { opacity: 0.88; }
+}

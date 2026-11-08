@@ -91,7 +91,8 @@ const STICK_SPEED = 1.2, MAX_DT = 0.1
 const TRANSITION_DECISION = 0.12, TRANSITION_URGENT = 0.2
 const TITLE_COLOR = '#c9d4cf', TITLE_LIGHT = '#ffffff', TITLE_GROWTH = 1.12
 // AR: stick scaling stays around the table size; with no surface found the model waits this far ahead, below the eyes (metres).
-const AR_SCALE_MIN = 0.4, AR_SCALE_MAX = 2.5, AR_AHEAD = 1, AR_BELOW_EYES = 0.6
+// The rig scale is model units per metre and the models are modelled at real size: scale 1 is the true size, the largest AR can show.
+const AR_SCALE_MIN = 0.4, AR_SCALE_MAX = 2.5, AR_REAL_SIZE_SCALE = 1, AR_AHEAD = 1, AR_BELOW_EYES = 0.6
 const AR_HINT = 'Masaya ya da yere bak. Halka çıkınca tetiğe bas.'
 
 /** The model's box; objects marked `userData.noBounds` (e.g. a sky sphere seen only while walking) do not count. */
@@ -673,7 +674,7 @@ export function setupXrSession(s: XrOption): XrSession {
     if (!turn && !growth) return
     angle += turn * dt * STICK_SPEED
     scale = ar
-      ? THREE.MathUtils.clamp(scale * Math.exp(growth * dt * STICK_SPEED), arBase * AR_SCALE_MIN, arBase * AR_SCALE_MAX)
+      ? THREE.MathUtils.clamp(scale * Math.exp(growth * dt * STICK_SPEED), Math.min(arBase * AR_SCALE_MIN, AR_REAL_SIZE_SCALE), arBase * AR_SCALE_MAX)
       : THREE.MathUtils.clamp(scale * Math.exp(growth * dt * STICK_SPEED), TABLE_SCALE_MIN, TABLE_SCALE_MAX)
     applyTable()
     // A carried layer stays in the hand: its carry start is taken again from the hand's new scene position.
@@ -816,7 +817,7 @@ export function setupXrSession(s: XrOption): XrSession {
       scaleBy: (factor) => {
         if (!mobile || !placed || !(factor > 0)) return
         // The rig scale is model units per metre: a larger model is a smaller rig scale.
-        scale = THREE.MathUtils.clamp(scale / factor, arBase * AR_SCALE_MIN, arBase * AR_SCALE_MAX)
+        scale = THREE.MathUtils.clamp(scale / factor, Math.min(arBase * AR_SCALE_MIN, AR_REAL_SIZE_SCALE), arBase * AR_SCALE_MAX)
         applyTable()
       },
       rotateBy: (rad) => {

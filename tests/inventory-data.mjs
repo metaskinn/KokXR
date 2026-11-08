@@ -11,16 +11,16 @@ const details = JSON.parse(readFileSync('src/content/inventory-details.json', 'u
 const ids = new Set(inventory.map((e) => e.id))
 for (const [id, v] of Object.entries(details)) {
   assert.ok(ids.has(id), `details for unknown id ${id}`)
-  assert.ok(v.summary && v.source && /^(Cilt [123], )?s\. \d+(-\d+)?$/.test(v.source), `${id}: summary and source`)
+  assert.ok(v.summary && v.source && /^(Cilt \d+, )?s\. \d+(-\d+)?$/.test(v.source), `${id}: summary and source`)
   assert.ok(v.summary.split(/\s+/).length <= 45, `${id}: summary too long`)
 }
 const sections = ['complex', 'mosque', 'tomb', 'education', 'commercial', 'water', 'sufi', 'civil']
 assert.equal(new Set(inventory.map((e) => e.id)).size, inventory.length, 'ids are unique')
 for (const e of inventory) {
-  assert.ok(e.name && e.district && ['Bursa', 'Konya', 'Hatay'].includes(e.city), `${e.id}: name, city and district`)
+  assert.ok(e.name && e.district && typeof e.city === 'string' && e.city.trim(), `${e.id}: name, city and district`)
   if (e.artifactId) assert.equal(e.city, artifacts[e.artifactId]?.city, `${e.id}: city differs from its artifact`)
   assert.ok(sections.includes(e.section), `${e.id}: section ${e.section}`)
-  assert.ok([1, 2, 3].includes(e.volume), `${e.id}: volume`)
+  assert.ok(Number.isInteger(e.volume) && e.volume >= 1, `${e.id}: volume`)
   assert.equal(typeof e.hasScaleModel, 'boolean', `${e.id}: hasScaleModel`)
   if (e.artifactId) assert.ok(artifacts[e.artifactId], `${e.id}: artifact ${e.artifactId} exists`)
   if (e.hasScaleModel) {
@@ -30,6 +30,13 @@ for (const e of inventory) {
 }
 const flagged = inventory.filter((e) => e.hasScaleModel)
 const withModel = Object.values(artifacts).filter((a) => a.model)
+// Every artifact page has its own inventory row; a complex has at most one head row.
+const linked = new Set(inventory.map((e) => e.artifactId))
+const unlinked = Object.keys(artifacts).filter((id) => !linked.has(id))
+assert.equal(unlinked.length, 0, `artifact pages without an inventory row: ${unlinked.slice(0, 5).join(', ')}`)
+const heads = {}
+for (const e of inventory) if (e.groupHead) heads[e.group] = (heads[e.group] ?? 0) + 1
+assert.ok(Object.values(heads).every((n) => n === 1), 'one head row per complex')
 assert.equal(new Set(flagged.map((e) => e.artifactId)).size, flagged.length, 'one flagged building per model')
 assert.equal(flagged.length, withModel.length, 'every artifact with a model has exactly one flagged building')
 console.log(`Inventory data: ${inventory.length} buildings, ${flagged.length} with a scale model, links and flags passed.`)

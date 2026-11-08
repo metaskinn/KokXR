@@ -52,6 +52,9 @@ create table if not exists inventory (
 );
 -- Migration: the inventory was Bursa-only; every row now names its city.
 alter table inventory add column if not exists city text not null default 'Bursa';
+alter table inventory add column if not exists group_head boolean not null default false;
+alter table inventory drop constraint if exists inventory_volume_check;
+alter table inventory add constraint inventory_volume_check check (volume >= 1);
 create table if not exists inventory_details (
   id   text primary key references inventory (id) on delete cascade,
   data jsonb not null

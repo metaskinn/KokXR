@@ -17,8 +17,8 @@
     "section": "complex",
     "volume": 1,
     "group": "I. Murad Hudâvendigâr Külliyesi",
-    "artifactId": "hudavendigar-complex",
-    "hasScaleModel": true
+    "artifactId": "osmangazi-hudavendigar-mosque",
+    "hasScaleModel": false
   },
   {
     "id": "osmangazi-i-murad-hudavendigar-medresesi",
@@ -28,7 +28,7 @@
     "section": "complex",
     "volume": 1,
     "group": "I. Murad Hudâvendigâr Külliyesi",
-    "artifactId": "hudavendigar-complex",
+    "artifactId": "osmangazi-hudavendigar-madrasa",
     "hasScaleModel": false
   },
   {
@@ -39,7 +39,7 @@
     "section": "complex",
     "volume": 1,
     "group": "I. Murad Hudâvendigâr Külliyesi",
-    "artifactId": "hudavendigar-complex",
+    "artifactId": "osmangazi-hudavendigar-imaret",
     "hasScaleModel": false
   },
   {
@@ -50,7 +50,7 @@
     "section": "complex",
     "volume": 1,
     "group": "I. Murad Hudâvendigâr Külliyesi",
-    "artifactId": "hudavendigar-complex",
+    "artifactId": "osmangazi-cikcik-bath",
     "hasScaleModel": false
   },
   {
@@ -61,7 +61,7 @@
     "section": "complex",
     "volume": 1,
     "group": "I. Murad Hudâvendigâr Külliyesi",
-    "artifactId": "hudavendigar-complex",
+    "artifactId": "osmangazi-hudavendigar-tomb",
     "hasScaleModel": false
   },
   {
@@ -72,8 +72,8 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
-    "hasScaleModel": true
+    "artifactId": "osmangazi-muradiye-mosque",
+    "hasScaleModel": false
   },
   {
     "id": "osmangazi-muradiye-medresesi",
@@ -83,7 +83,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-muradiye-madrasa",
     "hasScaleModel": false
   },
   {
@@ -94,7 +94,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-muradiye-fountain",
     "hasScaleModel": false
   },
   {
@@ -105,7 +105,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-muradiye-imaret",
     "hasScaleModel": false
   },
   {
@@ -116,7 +116,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-muradiye-bath",
     "hasScaleModel": false
   },
   {
@@ -127,7 +127,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-murad-ii-tomb",
     "hasScaleModel": false
   },
   {
@@ -138,7 +138,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-sehzade-alaaddin-ali-tomb",
     "hasScaleModel": false
   },
   {
@@ -149,7 +149,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-cariyeler-saraylilar-tomb",
     "hasScaleModel": false
   },
   {
@@ -160,7 +160,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-cem-sultan-tomb",
     "hasScaleModel": false
   },
   {
@@ -171,7 +171,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-ebe-hatun-tomb",
     "hasScaleModel": false
   },
   {
@@ -182,7 +182,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-gulruh-hatun-tomb",
     "hasScaleModel": false
   },
   {
@@ -193,7 +193,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-gulsah-hatun-tomb",
     "hasScaleModel": false
   },
   {
@@ -204,7 +204,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-huma-hatun-tomb",
     "hasScaleModel": false
   },
   {
@@ -215,7 +215,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-mukrime-hatun-tomb",
     "hasScaleModel": false
   },
   {
@@ -226,7 +226,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-sehzade-ahmet-tomb",
     "hasScaleModel": false
   },
   {
@@ -237,7 +237,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-sehzade-mahmut-tomb",
     "hasScaleModel": false
   },
   {
@@ -248,7 +248,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-sehzade-mustafa-tomb",
     "hasScaleModel": false
   },
   {
@@ -259,7 +259,7 @@
     "section": "complex",
     "volume": 1,
     "group": "II. Murad Külliyesi",
-    "artifactId": "muradiye-complex",
+    "artifactId": "osmangazi-sirin-hatun-tomb",
     "hasScaleModel": false
   },
   {
@@ -270,8 +270,8 @@
     "section": "complex",
     "volume": 1,
     "group": "Hamza Bey Külliyesi",
-    "artifactId": "hamzabey-complex",
-    "hasScaleModel": true
+    "artifactId": "osmangazi-hamza-bey-mosque",
+    "hasScaleModel": false
   },
   {
     "id": "osmangazi-hamza-bey-turbesi",
@@ -281,7 +281,7 @@
     "section": "complex",
     "volume": 1,
     "group": "Hamza Bey Külliyesi",
-    "artifactId": "hamzabey-complex",
+    "artifactId": "osmangazi-hamza-bey-tomb",
     "hasScaleModel": false
   },
   {
@@ -292,7 +292,7 @@
     "section": "complex",
     "volume": 1,
     "group": "Hamza Bey Külliyesi",
-    "artifactId": "hamzabey-complex",
+    "artifactId": "osmangazi-hamza-bey-family-tomb",
     "hasScaleModel": false
   },
   {
@@ -303,7 +303,7 @@
     "section": "complex",
     "volume": 1,
     "group": "Hamza Bey Külliyesi",
-    "artifactId": "hamzabey-complex",
+    "artifactId": "osmangazi-kara-mustafa-pasha-tomb",
     "hasScaleModel": false
   },
   {
@@ -314,8 +314,8 @@
     "section": "complex",
     "volume": 1,
     "group": "Orhan Bey Külliyesi",
-    "artifactId": "orhan-bey-complex",
-    "hasScaleModel": true
+    "artifactId": "osmangazi-orhan-bey-mosque",
+    "hasScaleModel": false
   },
   {
     "id": "osmangazi-orhan-bey-hamami-aynali-carsi",
@@ -325,7 +325,7 @@
     "section": "complex",
     "volume": 1,
     "group": "Orhan Bey Külliyesi",
-    "artifactId": "orhan-bey-complex",
+    "artifactId": "osmangazi-orhan-bey-bath",
     "hasScaleModel": false
   },
   {
@@ -336,7 +336,7 @@
     "section": "complex",
     "volume": 1,
     "group": "Orhan Bey Külliyesi",
-    "artifactId": "orhan-bey-complex",
+    "artifactId": "osmangazi-emir-han",
     "hasScaleModel": false
   },
   {
@@ -347,8 +347,8 @@
     "section": "complex",
     "volume": 1,
     "group": "Timurtaş Paşa Külliyesi",
-    "artifactId": "timurtas-pasa-complex",
-    "hasScaleModel": true
+    "artifactId": "osmangazi-timurtas-mosque",
+    "hasScaleModel": false
   },
   {
     "id": "osmangazi-demirtas-timurtas-camii-haziresi",
@@ -358,7 +358,7 @@
     "section": "complex",
     "volume": 1,
     "group": "Timurtaş Paşa Külliyesi",
-    "artifactId": "timurtas-pasa-complex",
+    "artifactId": "osmangazi-timurtas-mosque-graveyard",
     "hasScaleModel": false
   },
   {
@@ -369,7 +369,7 @@
     "section": "complex",
     "volume": 1,
     "group": "Timurtaş Paşa Külliyesi",
-    "artifactId": "timurtas-pasa-complex",
+    "artifactId": "osmangazi-timurtas-pasha-bath",
     "hasScaleModel": false
   },
   {
@@ -1910,8 +1910,8 @@
     "section": "complex",
     "volume": 2,
     "group": "Emir Sultan Külliyesi",
-    "artifactId": "emir-sultan",
-    "hasScaleModel": true
+    "artifactId": "yildirim-emir-sultan-mosque",
+    "hasScaleModel": false
   },
   {
     "id": "yildirim-emir-sultan-hamami",
@@ -1921,7 +1921,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Emir Sultan Külliyesi",
-    "artifactId": "emir-sultan",
+    "artifactId": "yildirim-emir-sultan-bath",
     "hasScaleModel": false
   },
   {
@@ -1932,7 +1932,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Emir Sultan Külliyesi",
-    "artifactId": "emir-sultan",
+    "artifactId": "yildirim-emir-sultan-tomb",
     "hasScaleModel": false
   },
   {
@@ -1943,7 +1943,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Emir Sultan Külliyesi",
-    "artifactId": "emir-sultan",
+    "artifactId": "yildirim-darussaade-agasi-besir-aga-fountain",
     "hasScaleModel": false
   },
   {
@@ -1954,8 +1954,8 @@
     "section": "complex",
     "volume": 2,
     "group": "Umur Bey Külliyesi",
-    "artifactId": "umurbey-complex",
-    "hasScaleModel": true
+    "artifactId": "yildirim-umur-bey-mosque-and-graveyard",
+    "hasScaleModel": false
   },
   {
     "id": "yildirim-umur-bey-cesmesi",
@@ -1965,7 +1965,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Umur Bey Külliyesi",
-    "artifactId": "umurbey-complex",
+    "artifactId": "yildirim-umur-bey-fountain",
     "hasScaleModel": false
   },
   {
@@ -1976,7 +1976,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Umur Bey Külliyesi",
-    "artifactId": "umurbey-complex",
+    "artifactId": "yildirim-umur-bey-graveyard",
     "hasScaleModel": false
   },
   {
@@ -1987,7 +1987,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Umur Bey Külliyesi",
-    "artifactId": "umurbey-complex",
+    "artifactId": "yildirim-umur-bey-tomb",
     "hasScaleModel": false
   },
   {
@@ -1998,8 +1998,8 @@
     "section": "complex",
     "volume": 2,
     "group": "Yeşil Çelebi Mehmed Külliyesi",
-    "artifactId": "yesil-complex",
-    "hasScaleModel": true
+    "artifactId": "yildirim-yesil-mosque",
+    "hasScaleModel": false
   },
   {
     "id": "yildirim-yesil-imareti",
@@ -2009,7 +2009,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Yeşil Çelebi Mehmed Külliyesi",
-    "artifactId": "yesil-complex",
+    "artifactId": "yildirim-yesil-imaret",
     "hasScaleModel": false
   },
   {
@@ -2020,7 +2020,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Yeşil Çelebi Mehmed Külliyesi",
-    "artifactId": "yesil-complex",
+    "artifactId": "yildirim-yesil-madrasa",
     "hasScaleModel": false
   },
   {
@@ -2031,7 +2031,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Yeşil Çelebi Mehmed Külliyesi",
-    "artifactId": "yesil-complex",
+    "artifactId": "yildirim-yesil-tomb",
     "hasScaleModel": false
   },
   {
@@ -2042,7 +2042,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Yeşil Çelebi Mehmed Külliyesi",
-    "artifactId": "yesil-complex",
+    "artifactId": "yildirim-devlet-hatun-tomb",
     "hasScaleModel": false
   },
   {
@@ -2053,8 +2053,8 @@
     "section": "complex",
     "volume": 2,
     "group": "Yıldırım Bayezid Külliyesi",
-    "artifactId": "yildirim-complex",
-    "hasScaleModel": true
+    "artifactId": "yildirim-yildirim-bayezid-mosque",
+    "hasScaleModel": false
   },
   {
     "id": "yildirim-yildirim-medresesi",
@@ -2064,7 +2064,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Yıldırım Bayezid Külliyesi",
-    "artifactId": "yildirim-complex",
+    "artifactId": "yildirim-yildirim-madrasa",
     "hasScaleModel": false
   },
   {
@@ -2075,7 +2075,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Yıldırım Bayezid Külliyesi",
-    "artifactId": "yildirim-complex",
+    "artifactId": "yildirim-yildirim-hospital",
     "hasScaleModel": false
   },
   {
@@ -2086,7 +2086,7 @@
     "section": "complex",
     "volume": 2,
     "group": "Yıldırım Bayezid Külliyesi",
-    "artifactId": "yildirim-complex",
+    "artifactId": "yildirim-yildirim-bayezid-tomb",
     "hasScaleModel": false
   },
   {
@@ -2727,7 +2727,7 @@
     "section": "complex",
     "volume": 3,
     "group": "İshak Paşa Külliyesi",
-    "artifactId": "inegol-ishak-pasha-complex",
+    "artifactId": "inegol-ishak-pasha-mosque",
     "hasScaleModel": false
   },
   {
@@ -2738,7 +2738,7 @@
     "section": "complex",
     "volume": 3,
     "group": "İshak Paşa Külliyesi",
-    "artifactId": "inegol-ishak-pasha-complex",
+    "artifactId": "inegol-ishak-pasha-madrasa",
     "hasScaleModel": false
   },
   {
@@ -2749,7 +2749,7 @@
     "section": "complex",
     "volume": 3,
     "group": "İshak Paşa Külliyesi",
-    "artifactId": "inegol-ishak-pasha-complex",
+    "artifactId": "inegol-tacunnisa-sultan-ishak-pasha-tomb",
     "hasScaleModel": false
   },
   {
@@ -3300,7 +3300,7 @@
     "section": "complex",
     "volume": 3,
     "group": "Sinan Paşa Külliyesi",
-    "artifactId": "yenisehir-sinan-pasa-complex",
+    "artifactId": "yenisehir-kursunlu-mosque",
     "hasScaleModel": false
   },
   {
@@ -3311,7 +3311,7 @@
     "section": "complex",
     "volume": 3,
     "group": "Sinan Paşa Külliyesi",
-    "artifactId": "yenisehir-sinan-pasa-complex",
+    "artifactId": "yenisehir-sinan-pasa-madrasa",
     "hasScaleModel": false
   },
   {
@@ -3322,7 +3322,7 @@
     "section": "complex",
     "volume": 3,
     "group": "Sinan Paşa Külliyesi",
-    "artifactId": "yenisehir-sinan-pasa-complex",
+    "artifactId": "yenisehir-sinan-pasa-imaret",
     "hasScaleModel": false
   },
   {
@@ -3344,7 +3344,7 @@
     "section": "complex",
     "volume": 3,
     "group": "Sinan Paşa Külliyesi",
-    "artifactId": "yenisehir-sinan-pasa-complex",
+    "artifactId": "yenisehir-sinan-pasa-arasta",
     "hasScaleModel": false
   },
   {
@@ -7034,6 +7034,138 @@
     "section": "civil",
     "volume": 1,
     "artifactId": "hatay-antakya-district-3-plot-466-house",
+    "hasScaleModel": false
+  },
+  {
+    "id": "osmangazi-i-murad-hudavendigar-kulliyesi",
+    "name": "I. Murad Hudâvendigâr Külliyesi",
+    "city": "Bursa",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "I. Murad Hudâvendigâr Külliyesi",
+    "artifactId": "hudavendigar-complex",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-ii-murad-kulliyesi",
+    "name": "II. Murad Külliyesi",
+    "city": "Bursa",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "II. Murad Külliyesi",
+    "artifactId": "muradiye-complex",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-hamza-bey-kulliyesi",
+    "name": "Hamza Bey Külliyesi",
+    "city": "Bursa",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Hamza Bey Külliyesi",
+    "artifactId": "hamzabey-complex",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-orhan-bey-kulliyesi",
+    "name": "Orhan Bey Külliyesi",
+    "city": "Bursa",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Orhan Bey Külliyesi",
+    "artifactId": "orhan-bey-complex",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "osmangazi-timurtas-pasa-kulliyesi",
+    "name": "Timurtaş Paşa Külliyesi",
+    "city": "Bursa",
+    "district": "Osmangazi",
+    "section": "complex",
+    "volume": 1,
+    "group": "Timurtaş Paşa Külliyesi",
+    "artifactId": "timurtas-pasa-complex",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "yildirim-emir-sultan-kulliyesi",
+    "name": "Emir Sultan Külliyesi",
+    "city": "Bursa",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Emir Sultan Külliyesi",
+    "artifactId": "emir-sultan",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "yildirim-umur-bey-kulliyesi",
+    "name": "Umur Bey Külliyesi",
+    "city": "Bursa",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Umur Bey Külliyesi",
+    "artifactId": "umurbey-complex",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "yildirim-yesil-celebi-mehmed-kulliyesi",
+    "name": "Yeşil Çelebi Mehmed Külliyesi",
+    "city": "Bursa",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yeşil Çelebi Mehmed Külliyesi",
+    "artifactId": "yesil-complex",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "yildirim-yildirim-bayezid-kulliyesi",
+    "name": "Yıldırım Bayezid Külliyesi",
+    "city": "Bursa",
+    "district": "Yıldırım",
+    "section": "complex",
+    "volume": 2,
+    "group": "Yıldırım Bayezid Külliyesi",
+    "artifactId": "yildirim-complex",
+    "groupHead": true,
+    "hasScaleModel": true
+  },
+  {
+    "id": "inegol-ishak-pasa-kulliyesi",
+    "name": "İshak Paşa Külliyesi",
+    "city": "Bursa",
+    "district": "İnegöl",
+    "section": "complex",
+    "volume": 3,
+    "group": "İshak Paşa Külliyesi",
+    "artifactId": "inegol-ishak-pasha-complex",
+    "groupHead": true,
+    "hasScaleModel": false
+  },
+  {
+    "id": "yenisehir-sinan-pasa-kulliyesi",
+    "name": "Sinan Paşa Külliyesi",
+    "city": "Bursa",
+    "district": "Yenişehir",
+    "section": "complex",
+    "volume": 3,
+    "group": "Sinan Paşa Külliyesi",
+    "artifactId": "yenisehir-sinan-pasa-complex",
+    "groupHead": true,
     "hasScaleModel": false
   }
 ]

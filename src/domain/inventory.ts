@@ -11,12 +11,14 @@ export interface InventoryItem {
   city: string
   district: string
   section: InventorySection
-  /** Volume of the printed inventory the entry appears in. */
-  volume: 1 | 2 | 3
+  /** Volume of the printed inventory the entry appears in (Hatay has a single book: 1). */
+  volume: number
   /** Complex (külliye) the building is listed under, when the book groups it. */
   group?: string
   /** Artifact that has a model covering this building's complex. Set on complex members and the main building. */
   artifactId?: string
+  /** The complex's own row (its külliye page); the other rows of the group are its buildings, each with its own page. */
+  groupHead?: boolean
   /** True only for the main building that an existing artifact's scale model represents. New entries default to false. */
   hasScaleModel: boolean
 }

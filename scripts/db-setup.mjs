@@ -53,9 +53,9 @@ const details = JSON.parse(readFileSync('src/content/inventory-details.json', 'u
 const col = (k) => inventory.map((e) => e[k] ?? null)
 await db.transaction([
   db.query('delete from inventory'),
-  db.query(`insert into inventory (id, name, district, section, volume, grp, artifact_id, has_scale_model, city)
-    select * from unnest($1::text[], $2::text[], $3::text[], $4::text[], $5::int[], $6::text[], $7::text[], $8::bool[], $9::text[])`,
-    [col('id'), col('name'), col('district'), col('section'), col('volume'), col('group'), col('artifactId'), inventory.map((e) => !!e.hasScaleModel), col('city')]),
+  db.query(`insert into inventory (id, name, district, section, volume, grp, artifact_id, has_scale_model, city, group_head)
+    select * from unnest($1::text[], $2::text[], $3::text[], $4::text[], $5::int[], $6::text[], $7::text[], $8::bool[], $9::text[], $10::bool[])`,
+    [col('id'), col('name'), col('district'), col('section'), col('volume'), col('group'), col('artifactId'), inventory.map((e) => !!e.hasScaleModel), col('city'), inventory.map((e) => !!e.groupHead)]),
   db.query(`insert into inventory_details (id, data) select id, data::jsonb from unnest($1::text[], $2::text[]) as t(id, data)`,
     [Object.keys(details), Object.values(details).map((d) => JSON.stringify(d))]),
 ])

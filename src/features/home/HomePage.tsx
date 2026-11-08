@@ -56,7 +56,7 @@ export default function HomePage({ artifacts }: { artifacts: Artifact[] }) {
       <h2 id="way-models"><Link to="/places">Maketler</Link></h2>
       <div className="home-way-body">
         <p>{models.length > 0
-          ? `${models.length} yapının 3B maketini ekranda çevirebilir, içinde yürüyebilir, Meta Quest’te VR’da açabilirsin.`
+          ? `${models.length} yapının 3B maketini ekranda çevirebilir, içinde yürüyebilir; Meta Quest’te VR’da gezebilir ya da AR’da masana koyabilirsin.`
           : 'Şu an 3B maketi olan eser yok.'}</p>
         <p className="home-note">Maketler temsilîdir; yapıların ölçülerek taranmış kopyası değildir.</p>
         {!PUBLIC_BUILD && strip.length > 0 && <ul className="home-strip">

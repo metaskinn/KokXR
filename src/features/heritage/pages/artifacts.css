@@ -105,7 +105,7 @@
 @media (min-width: 900px) {
   .section-title { padding: var(--s-6) 0 var(--s-5); }
   .hub { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: var(--s-6); align-items: start; }
-  .finder-desktop { position: sticky; top: var(--s-4); display: grid; gap: var(--s-5); }
+  .finder-desktop { position: sticky; top: calc(var(--header-h) + var(--s-4)); display: grid; gap: var(--s-5); align-content: start; max-height: calc(100vh - var(--header-h) - var(--s-6)); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
   .finder-desktop fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 2px; }
   .finder-desktop legend { padding: 0 0 var(--s-2); font: 700 var(--fs-small)/1.3 var(--font-ui); color: var(--ink); }
   .opt { display: flex; align-items: center; gap: var(--s-2); min-height: 36px; padding: 0 var(--s-2); margin: 0 calc(var(--s-2) * -1); border-radius: 6px; cursor: pointer; font-size: 0.9375rem; }

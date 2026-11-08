@@ -51,6 +51,15 @@ function stripedCanvas() {
   })
 }
 
+/** Mihrab stone courses: black, off-white and pink (book p. 115); 256 px = 1 m. */
+function mihrabCanvas() {
+  return canvas(64, 256, (c, W, H) => {
+    const colors = ['#ebe4d6', '#c98f8a', '#ebe4d6', '#25221f']
+    const h = H / colors.length
+    colors.forEach((k, i) => { c.fillStyle = k; c.fillRect(0, i * h, W, h - 2) })
+  })
+}
+
 function pavingCanvas(seed: number) {
   const r = random(seed)
   return canvas(256, 256, (c, W, H) => {
@@ -89,6 +98,10 @@ export function sokulluMaterials() {
     plaster: std({ color: '#e9e2d3', side: THREE.DoubleSide }),
     dark: std({ color: '#2a2622', roughness: 1, side: THREE.DoubleSide }),
     wood: std({ color: '#5a3b24', roughness: 0.7, side: THREE.DoubleSide }),
+    mihrab: std({ map: texture(mihrabCanvas(), 1, 1), roughness: 0.55 }),
+    carpet: std({ color: '#8e2730', roughness: 1 }),
+    /** Daylight in windows and skylights seen from inside. */
+    glow: new THREE.MeshBasicMaterial({ color: '#fff3dc', side: THREE.DoubleSide }),
     water: std({ color: '#4d7d8c', roughness: 0.15, metalness: 0.2 }),
     paving: std({ map: texture(pavingCanvas(13), 3, 3), roughness: 0.95 }),
     grass: std({ map: texture(greenCanvas(17, '#5a6e3a', '#6f8648', '#43552c'), 6, 6), roughness: 1 }),
@@ -134,11 +147,44 @@ export function dome(k: Bucket, m: SM, cx: number, cz: number, y0: number, R: nu
   k.add(place(rotateG([[0.08 * f, 0], [0.12 * f, 0.3 * f], [0.04 * f, 0.6 * f], [0.09 * f, 0.8 * f], [0, 1.2 * f]], 6), cx, y0 + H, cz), m.gold)
 }
 
-/** Polygonal drum with a cornice. */
-export function drum(k: Bucket, m: SM, cx: number, cz: number, y0: number, h: number, R: number, sides = 8) {
+/** Polygonal drum with a cornice. `open`: no caps, with an inner lining, so the dome can be seen from inside. */
+export function drum(k: Bucket, m: SM, cx: number, cz: number, y0: number, h: number, R: number, sides = 8, open = false) {
   const rot = Math.PI / sides
-  k.add(place(flatShadow(cylinderG(R, R, h, sides).rotateY(rot)), cx, y0 + h / 2, cz), m.stone)
-  k.add(place(flatShadow(cylinderG(R + 0.18, R + 0.05, 0.25, sides).rotateY(rot)), cx, y0 + h - 0.1, cz), m.stone)
+  k.add(place(flatShadow(cylinderG(R, R, h, sides, open).rotateY(rot)), cx, y0 + h / 2, cz), m.stone)
+  k.add(place(flatShadow(cylinderG(R + 0.18, R + 0.05, 0.25, sides, open).rotateY(rot)), cx, y0 + h - 0.1, cz), m.stone)
+  if (open) k.add(place(cylinderG(R - 0.25, R - 0.25, h, sides * 2, true), cx, y0 + h / 2, cz), m.stoneInner)
+}
+
+/** Plastered inner shell of a dome, seen from below. */
+export function innerDome(k: Bucket, m: SM, cx: number, cz: number, y0: number, R: number, H: number, seg = 24) {
+  const p: [number, number][] = []
+  for (let t = 0; t <= 10; t++) {
+    const a = (t / 10) * Math.PI / 2
+    p.push([Math.max(0.001, R * Math.cos(a)), H * Math.sin(a)])
+  }
+  k.add(place(rotateG(p, seg, [1, 1]), cx, y0, cz), m.plaster)
+}
+
+/** Horizontal plate over a square bay with a round opening: the transition from the bay to a drum (pendentive zone, simplified). */
+export function ringPlate(x0: number, x1: number, z0: number, z1: number, y0: number, y1: number, r: number) {
+  const cx = (x0 + x1) / 2, cz = (z0 + z1) / 2
+  const s = new THREE.Shape()
+  s.moveTo(x0 - cx, z0 - cz); s.lineTo(x1 - cx, z0 - cz); s.lineTo(x1 - cx, z1 - cz); s.lineTo(x0 - cx, z1 - cz); s.closePath()
+  s.holes.push(new THREE.Path().absarc(0, 0, r, 0, Math.PI * 2, true))
+  // Shape (x, y) extruded along z; rotateX(-90°) maps it to (x, depth, −y).
+  return subtract(s, y1 - y0).rotateX(-Math.PI / 2).translate(cx, y0, cz)
+}
+
+/** Groin (cross) vault over a rectangular bay, seen from below: two crossing barrels, lunettes on all four sides. */
+export function groinVault(cx: number, cz: number, hx: number, hz: number, spring: number, rise: number, n = 12) {
+  const g = new THREE.PlaneGeometry(2 * hx, 2 * hz, n, n).rotateX(Math.PI / 2)
+  const p = g.attributes.position
+  for (let i = 0; i < p.count; i++) {
+    const u = Math.min(1, Math.abs(p.getX(i)) / hx), v = Math.min(1, Math.abs(p.getZ(i)) / hz)
+    p.setY(i, spring + rise * Math.sqrt(1 - Math.min(u, v) ** 2))
+  }
+  g.computeVertexNormals()
+  return g.translate(cx, 0, cz)
 }
 
 /** Low four-sided cover over a vaulted bay, as seen from outside. */

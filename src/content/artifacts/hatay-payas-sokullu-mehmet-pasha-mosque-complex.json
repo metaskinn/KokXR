@@ -185,7 +185,7 @@
   ],
   "model": {
     "model": "hatay-payas-sokullu-mehmet-pasha-mosque-complex",
-    "description": "Temsilî maket, gerçek bir 3B tarama değildir; şimdilik yalnız dış görünüş vardır. Kodla oluşturuldu. Kitapta plan ve ölçü olmadığından bütün boyutlar temsilîdir. Yapıların yerleşimi (ortada kuzey-güney arasta, doğuda han, tabhâneler ve imaret, batıda hamam, sıbyan mektebi, cami ve hanikah), arastanın iki yanındaki yirmi dörder dükkân, ortadaki dua kubbesi, kuzey ve güney taç kapıları ile çeşmeler, hanın dokuz, dokuz ve on iki gözlü revakları ve kapılardaki üç renkli taş kitaptaki metinden alındı. Yükseklikler, pencere yerleri, kubbe çapları, imaretin iç düzeni, hamam kapısının yeri ve ağaçlar fotoğraflara bakılarak temsilî yorumlandı.",
+    "description": "Temsilî maket, gerçek bir 3B tarama değildir. Kodla oluşturuldu. Kitapta plan ve ölçü olmadığından bütün boyutlar temsilîdir. Yapıların yerleşimi (ortada kuzey-güney arasta, doğuda han, tabhâneler ve imaret, batıda hamam, sıbyan mektebi, cami ve hanikah), arastanın iki yanındaki yirmi dörder dükkân, ortadaki dua kubbesi, kuzey ve güney taç kapıları ile çeşmeler, hanın dokuz, dokuz ve on iki gözlü revakları ve kapılardaki üç renkli taş kitaptaki metinden alındı. İçeride gezilebilen yerler arasta, dua kubbesi, caminin harimi ve han avlusudur; öteki yapıların içi yapılmadı. Arastadaki çapraz tonozlar, tonoz tepelerindeki ışıklıklar, dükkân damlarının üstündeki pencereler ve kalın ahşap atkılı, üstü sivri kemerli dükkân cepheleri; caminin dört eşit kollu haçvari planı, sivri kemerle kubbeye bakan çapraz tonozlu eyvanları, pandantifli orta kubbesi, altlı üstlü pencereleri ve mihrabın siyah, kirli beyaz ve pembe taşları kitaptaki metinden alındı. Tonoz ve kubbe yükseklikleri, pandantiflerin basit bir halka olarak gösterilmesi, eyvanlar arasındaki köşe kütleleri, itikâf odalarının yalnız kapılarıyla gösterilmesi, mihrap nişinin sadeleştirilmesi (mukarnas yok), minberin biçimi ve yeri, halı, iç ışık, hanikah avlusunun kuzey geçidi ve pencere yerleri temsilîdir; minber ve halı fotoğraflara bakılarak yorumlandı. Yükseklikler, kubbe çapları, imaretin iç düzeni, hamam kapısının yeri ve ağaçlar da fotoğraflara bakılarak temsilî yorumlandı.",
     "infos": [
       {
         "text": "Külliyenin kitabesi 1574 tarihlidir; kitap arşiv belgelerine dayanarak mimarını Mimar Sinan olarak verir.",
@@ -198,6 +198,56 @@
       {
         "text": "Hanın kuzey ve güney revakları dokuzar, doğu revakı on iki kemer gözlüdür. \"Parçala\" ile damları kaldırıp avluyu üstten görebilirsin.",
         "sourceId": "inv-p105"
+      }
+    ],
+    "interiorInfos": [
+      {
+        "id": "shops",
+        "title": "Dükkân cepheleri",
+        "text": "Koridorun iki yanında sıralanan beşik tonoz örtülü dükkânların cepheleri kalın ahşap kalaslar üzerine düz atkılıdır; bu yalın görüntü üstte birer sivri kemerle hareketlendirilmiştir. Bedestenin içi tonoz tepelerindeki ışıklıklar ve dükkân damlarının üstündeki doğu ve batı pencereleriyle aydınlanır.",
+        "sourceId": "inv-p102",
+        "position": [
+          -12.7,
+          3,
+          -19.5
+        ],
+        "radius": 3
+      },
+      {
+        "id": "dua",
+        "title": "Dua kubbesi",
+        "text": "Arastanın doğu ve batı kanatlarına birer taç kapıyla açılan tam orta yerinde, esnafın sabah işe başlamadan önce dua ettiği, gündelik meselelerin tartışıldığı dua kubbesi yer alır.",
+        "sourceId": "inv-p101",
+        "position": [
+          -10.5,
+          3.5,
+          -5.5
+        ],
+        "radius": 3
+      },
+      {
+        "id": "harim",
+        "title": "Harim",
+        "text": "Harimin namaz kılınacak alanı birbirine eşit, dört kollu haçvari bir plana sahiptir. Ortadaki yüksek kubbenin etrafında, sivri kemeriyle kubbeli mekâna bakan eyvanlar çapraz tonozla örtülmüştür; kubbeye geçişte pandantifler kullanılmıştır.",
+        "sourceId": "inv-p114",
+        "position": [
+          -35,
+          4,
+          33
+        ],
+        "radius": 4
+      },
+      {
+        "id": "mihrab",
+        "title": "Mihrap",
+        "text": "Mihrabın sivri kavsarası mukarnaslarla zenginleştirilmiştir. Mihrap siyah, kirli beyaz ve pembe renkli taş işçiliğiyle etkileyici bir görünüşe sahiptir. Cami altlı üstlü pencereleriyle ferah ve aydınlıktır.",
+        "sourceId": "inv-p115",
+        "position": [
+          -35,
+          2.5,
+          40
+        ],
+        "radius": 2.6
       }
     ]
   }

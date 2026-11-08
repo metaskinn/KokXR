@@ -22,6 +22,32 @@ Organizatörün önerdiği 10 başlık (“özgün dokunuş serbest”). 6 slayt
 
 Boşluklar: yönetim akışının canlı çalıştığı henüz doğrulanmadı (demo-ekleme-duzenleme.md); “kaynak/doğrulanmamış içeriğin önlenmesi” için elle doğrulanan kayıt sayısı [sayı] ekipten gelmeli.
 
+## Organizatör metni (özgün, değiştirilmedi)
+
+Değerli Arkadaşlar,
+
+Sunumlarınızı hazırlarken aşağıdaki başlıkları kullanarak hazırlayabilirsiniz, aynı zamanda sunumlarınız sizin özgün dokunuşları doğrultusunda hazırlanacaktır.
+
+* *Proje Künyesi ve Takım Tanıtımı*: Proje adı, seçilen çalışma alanı (Sesli Rehber, Erişilebilirlik, Oyunlaştırma, Topluluk Arşivi, Rota Planlayıcı, AR veya Serbest) ve hedef platform (mobil/masaüstü). 42 Türkiye / 42 Network kampüs bilgisi ve ekip üyelerinin görev dağılımı paylaşılır.
+
+* *Problem Tanımı ve Çözümün Değeri*: Kültürel mirasın dijitalde keşfedilmesinde karşılaşılan zorluklar. Geliştirilen ürünün hem akademik araştırmalar için güvenilir bir referans olmasını hem de gençler ve genel kamuoyuyla bağ kurmasını sağlayan yönü açıklanır.
+
+* *Ürün Vizyonu ve Değer Önerisi*: Çözümün standart bir katalog uygulamasından farkı. Seçilen özgün konseptin (oyunlaştırma, hikâyeleştirme, rota optimizasyonu vb.) kullanıcı ihtiyacını karşılamada yarattığı fark anlatılır.
+
+* *Kullanıcı Deneyimi ve Arayüz Tasarımı*: Akışların sadeliği, görsel anlatımın gücü, harita entegrasyonu ve il/eser türüne göre filtreleme mekanizmaları. Kullanıcının uygulamada kaybolmadan hedefe en kısa sürede ulaşmasını sağlayan UX kararları gösterilir.
+
+* *Evrensel Erişilebilirlik Yaklaşımı*: Görme/işitme engelli ve yaşlı kullanıcılar başta olmak üzere farklı ihtiyaç gruplarına sunulan çözümler (ekran okuyucu uyumu, sesli anlatım, alternatif metinler, yüksek kontrast, dinamik yazı boyutu veya klavye navigasyonu) aktarılır.
+
+* *Veri Yönetimi ve İçerik Yapısı*: Sağlanan ham veya yarı yapılandırılmış içeriklerin temizlenerek ilişkisel bir veri modeline dönüştürülme süreci. Tarihçe, görsel galeri ve kaynak bilgisi gösterimi ile birlikte doğrulanmamış içeriklerin önlenmesi ve moderasyon akışı açıklanır.
+
+* *Teknik Mimari ve Ölçeklenebilirlik*: Kullanılan programlama dilleri, framework'ler, veritabanı yapısı ve üçüncü taraf servisler. Altyapının gelecekte yeni şehirlerin (örneğin İzmir, Manisa) ve yüzlerce yeni eserin sisteme eklenmesine nasıl olanak tanıdığı mimari açıdan özetlenir.
+
+* *Ürün Demosu (MVP)*: Sunumun en kritik bölümüdür. Statik ekranlar yerine çalışan uygulama açılarak; çoklu eser keşfi, harita/filtreleme, detay görüntüleme ve içerik ekleme/düzenleme gibi temel akışlar uçtan uca canlı olarak sergilenir.
+
+* *Güvenlik, Kalite ve Gelecek Yol Haritası*: Giriş/veri doğrulama kontrolleri, kod kalitesi ve modüler yapı. Projenin uzun vadede sürdürülebilirliği, yeni modüllerin eklenme planı ve kurum vizyonuyla uyumu kısaca belirtilir.
+
+* *Kapanış ve Jüri Soru-Cevap*: Teşekkür slaytı ve projeye ilişkin temel bağlantı/künye bilgileri ekranda tutulurken, jüri üyelerinin teknik, veri ve ürün mimarisine yönelik soruları tüm takım üyelerinin katılımıyla yanıtlanır.
+
 ## Slayt 1: Künye ve ekip (0.00–0.25)
 
 **Ekranda:** KökXR · Bursa'nın vakıf eserleri, kaynaklarıyla ve üç boyutlu · Çalışma alanı: **Serbest (XR)** · Platform: **masaüstü ve mobil web** (Quest/WebXR VR, mobil AR) · 42 [kampüs adı] · Ekip: [isimler ve görevler] · Uygulama: kokxr.vercel.app (QR).

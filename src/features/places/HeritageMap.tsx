@@ -118,7 +118,7 @@ export default function HeritageMap({ city, artifacts, locations, models, highli
       const icon = L.divIcon({ className: 'hm-district', html: `<span>${n}</span>`, iconSize: [44, 44] })
       L.marker(d.at, { icon, keyboard: true, title: `${district}: konumu bulunamayan ${n} eser`, alt: `${district}: konumu bulunamayan ${n} eser` }).addTo(map)
         .bindPopup(() => popup(nav, district, `Bu ${n} eserin binası haritada bulunamadı; işaret yalnız ilçe merkezini gösterir.`,
-          [{ to: `/artifacts?sehir=${encodeURIComponent(city)}&ilce=${encodeURIComponent(district)}`, label: `${district}'daki eserleri gör` }]))
+          [{ to: `/artifacts?sehir=${encodeURIComponent(d.list[0].city)}&ilce=${encodeURIComponent(district)}`, label: `${district}'daki eserleri gör` }]))
     }
 
     modelMarkers.current.clear()

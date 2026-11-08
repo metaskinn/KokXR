@@ -45,7 +45,12 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
   // The list is the first thing on the page: without ?city= the first city that has models is shown.
   const withModel = (artifactId: string) => artifacts.find((e) => e.id === artifactId && e.model)
   const modelCount = (s: (typeof vrCities)[number]) => s.buildings.filter((y) => withModel(y.artifactId)).length
-  const selected = vrCities.find((s) => s.name === param.get('city')) ?? vrCities.find((s) => modelCount(s) > 0) ?? vrCities[0]
+  // "Diğer": every city outside the three inventory cities (e.g. İzmir added from the admin panel); it has no models yet.
+  const OTHER = 'Diğer'
+  const otherArtifacts = useMemo(() => artifacts.filter((e) => !vrCities.some((s) => s.name === e.city)), [artifacts])
+  const other = { name: OTHER, buildings: [] as (typeof vrCities)[number]['buildings'], broadcasts: [] as (typeof vrCities)[number]['broadcasts'] }
+  const isOther = param.get('city') === OTHER
+  const selected = isOther ? other : vrCities.find((s) => s.name === param.get('city')) ?? vrCities.find((s) => modelCount(s) > 0) ?? vrCities[0]
   const support = useVrSupport()
   const [highlight, setHighlight] = useState<string | null>(null)
   const choose = (city: string) => { setHighlight(null); setParam({ city }, { replace: true }) }
@@ -54,7 +59,9 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
   const pagesIn = (city: string) => artifacts.filter((e) => e.city === city).length
 
   const buildings = selected.buildings.map((y) => ({ y, artifact: withModel(y.artifactId) })).filter((b): b is { y: typeof b.y; artifact: Artifact } => !!b.artifact)
-  const cityArtifacts = useMemo(() => artifacts.filter((e) => e.city === selected.name), [artifacts, selected.name])
+  const cityArtifacts = useMemo(() => isOther ? otherArtifacts : artifacts.filter((e) => e.city === selected.name), [artifacts, otherArtifacts, isOther, selected.name])
+  const otherCities = [...new Set(otherArtifacts.map((e) => e.city))].sort((a, b) => a.localeCompare(b, 'tr'))
+  const unplaced = isOther ? otherArtifacts.filter((e) => !e.location).length : 0
   const pins: ModelPin[] = useMemo(() => buildings.map(({ y, artifact }, i) => ({ id: y.artifactId, no: i + 1, name: artifact.name, district: y.district, position: y.position })),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [artifacts, selected.name])
@@ -71,12 +78,16 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
       <p>{total} yapının temsilî 3B maketi var. Ekranda çevirebilir, içinde yürüyebilir, Meta Quest'te VR'da açabilirsin.</p>
       {support === false && <p className="vr-note">Bu tarayıcı VR açamıyor. VR için bu sayfayı Meta Quest tarayıcısında aç.</p>}
     </header>
-    <fieldset className="segment city-segment" style={{ gridTemplateColumns: `repeat(${vrCities.length}, minmax(0, 1fr))` }}>
+    <fieldset className="segment city-segment" style={{ gridTemplateColumns: `repeat(${vrCities.length + 1}, minmax(0, 1fr))` }}>
       <legend className="invisible">Şehir</legend>
       {vrCities.map((s) => <label key={s.name}>
         <input type="radio" name="city" value={s.name} checked={s === selected} onChange={() => choose(s.name)} />
         <strong>{s.name}</strong><small>{modelCount(s)} maket</small>
       </label>)}
+      <label>
+        <input type="radio" name="city" value={OTHER} checked={isOther} onChange={() => choose(OTHER)} />
+        <strong>Diğer</strong><small>{otherArtifacts.length} eser</small>
+      </label>
     </fieldset>
     <div className="vr-layout-of">
       <section className="vr-panel" aria-live="polite" aria-labelledby="vr-panel-title">
@@ -88,6 +99,15 @@ export default function PlacesPage({ artifacts }: { artifacts: Artifact[] }) {
             <p className="position">{y.district}</p>
             <Link className="btn-ghost" to={`/artifact/${y.artifactId}`} aria-label={`${artifact.name}: eser sayfası`}>Eser sayfası</Link>
           </li>)}</ol>
+          : isOther ? <div className="vr-map-empty">
+            <h2>Diğer şehirler</h2>
+            {otherArtifacts.length === 0
+              ? <p>Bursa, Konya ve Hatay dışında henüz eser yok. Yönetim panelinden yeni bir şehirde eser eklenip onaylandığında burada ve haritada görünür.</p>
+              : <>
+                <p>{otherCities.join(', ')}: {otherArtifacts.length} eser. Bu şehirlerde henüz maket yok.{unplaced > 0 && ` ${unplaced} eserin konumu işaretlenmediği için haritada görünmüyor.`}</p>
+                <ul className="other-cities">{otherCities.map((c) => <li key={c}><Link to={`/artifacts?sehir=${encodeURIComponent(c)}`}>{c}'deki eserleri gör</Link></li>)}</ul>
+              </>}
+          </div>
           : <div className="vr-map-empty">
             <h2>{selected.name}'daki yapıların henüz maketi yok</h2>
             <p>{selected.name}'da {pagesIn(selected.name)} eser sayfası var; fotoğraflarına ve tarihçelerine bakabilirsin.</p>

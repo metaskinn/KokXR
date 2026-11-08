@@ -61,6 +61,8 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
   const existingIds = useMemo(() => rows.map((r) => r.id), [rows])
   const [draft, setDraft] = useState<Artifact>(() => artifact ? { ...structuredClone(artifact), types: typesOf(artifact) } : emptyArtifact())
   const [step, setStep] = useState(0)
+  const [stepWarning, setStepWarning] = useState('')
+  const [triedSave, setTriedSave] = useState(false)
   const [dirty, setDirty] = useState(false)
   // A draft left in this browser (closed tab, lost connection) is offered back instead of being silently dropped.
   const [stored, setStored] = useState<Artifact | null>(() => readDraft(draftKey(artifact?.id)))
@@ -127,7 +129,7 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
     const result: Artifact = { ...draft, id, verification: draft.verification === 'verified' && sourced ? 'verified' : 'illustrative' }
     const errors = artifactErrors(result)
     if (!result.types?.length) errors.types = 'En az bir tür seçin.'
-    setErrors(errors); setSaveError('')
+    setErrors(errors); setSaveError(''); setTriedSave(true); setStepWarning('')
     if (Object.keys(errors).length) {
       setMessage('')
       setStep(Math.min(...Object.keys(errors).map(stepOf)))
@@ -178,6 +180,22 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
       setSaveError(err.message)
     } finally { setBusy(false) }
   }
+  /** "Sonraki" checks only the open step: with a missing or wrong field the warning appears here and the step does not change. */
+  function nextStep() {
+    const all = artifactErrors({ ...draft, id })
+    if (!draft.types?.length) all.types = 'En az bir tür seçin.'
+    const here = Object.fromEntries(Object.entries(all).filter(([k]) => stepOf(k) === step))
+    // Errors of other steps stay as they were; this step's list is replaced by the fresh check.
+    setErrors((old) => ({ ...Object.fromEntries(Object.entries(old).filter(([k]) => stepOf(k) !== step)), ...here }))
+    if (Object.keys(here).length) {
+      setStepWarning(`Bu adımda ${Object.keys(here).length} alan eksik ya da hatalı. Düzeltip yeniden deneyin.`)
+      requestAnimationFrame(() => form.current?.querySelector<HTMLElement>('fieldset:not([hidden]) [aria-invalid="true"]')?.focus())
+      return
+    }
+    setStepWarning('')
+    setStep(step + 1)
+    window.scrollTo({ top: 0 })
+  }
   const errorCount = (n: number) => Object.keys(errors).filter((k) => stepOf(k) === n).length
   // What each step still needs; shown in the step bar so nothing is hidden behind "Kaydet".
   const done = [
@@ -215,13 +233,13 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
         <button type="button" className="btn-ghost" onClick={forgetDraft}>Taslağı sil</button></div>
     </div>}
     <nav className="steps" aria-label="Form adımları"><ol>
-      {STEPS.map((name, n) => <li key={name}><button type="button" aria-current={step === n ? 'step' : undefined} onClick={() => setStep(n)} data-state={errorCount(n) ? 'error' : done[n] ? 'done' : undefined}>
+      {STEPS.map((name, n) => <li key={name}><button type="button" aria-current={step === n ? 'step' : undefined} onClick={() => { setStep(n); setStepWarning('') }} data-state={errorCount(n) ? 'error' : done[n] ? 'done' : undefined}>
         <span className="step-no" aria-hidden="true">{errorCount(n) ? '!' : done[n] ? '✓' : n + 1}</span>{name}
         {errorCount(n) > 0 && <span className="invisible"> ({errorCount(n)} hata)</span>}
       </button></li>)}
     </ol></nav>
     <form ref={form} noValidate onSubmit={submit}>
-      {Object.keys(errors).length > 0 && <div role="alert" className="error-summary"><h2>Kayıt tamamlanamadı</h2><p>{Object.keys(errors).length} alanı kontrol edin. İlk hatalı alanın adımı açıldı.</p><ul>{Object.entries(errors).map(([area, message]) => <li key={area}><a href={`#${area}`} onClick={e => { e.preventDefault(); setStep(stepOf(area)); requestAnimationFrame(() => document.getElementById(area)?.focus()) }}>{STEPS[stepOf(area)]} · {document.querySelector(`label[for="${area}"]`)?.textContent ?? area}: {message}</a></li>)}</ul></div>}
+      {triedSave && Object.keys(errors).length > 0 && <div role="alert" className="error-summary"><h2>Kayıt tamamlanamadı</h2><p>{Object.keys(errors).length} alanı kontrol edin. İlk hatalı alanın adımı açıldı.</p><ul>{Object.entries(errors).map(([area, message]) => <li key={area}><a href={`#${area}`} onClick={e => { e.preventDefault(); setStep(stepOf(area)); requestAnimationFrame(() => document.getElementById(area)?.focus()) }}>{STEPS[stepOf(area)]} · {document.querySelector(`label[for="${area}"]`)?.textContent ?? area}: {message}</a></li>)}</ul></div>}
       <p role="status">{message}</p>{saveError && <p role="alert" className="area-error">{saveError}</p>}
 
       <fieldset className="form-section" hidden={step !== 0}><legend>Temel bilgiler</legend>
@@ -345,8 +363,9 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
       </section>
 
       <div className="admin-actions form-end form-bar">
-        <button type="button" className="btn-ghost" disabled={step === 0} onClick={() => setStep(step - 1)}>← Önceki</button>
-        {step < STEPS.length - 1 && <button type="button" onClick={() => setStep(step + 1)}>Sonraki: {STEPS[step + 1]} →</button>}
+        {stepWarning && <p role="alert" className="area-error step-warning">{stepWarning}</p>}
+        <button type="button" className="btn-ghost" disabled={step === 0} onClick={() => { setStep(step - 1); setStepWarning('') }}>← Önceki</button>
+        {step < STEPS.length - 1 && <button type="button" onClick={nextStep}>Sonraki: {STEPS[step + 1]} →</button>}
         <span className="bar-gap" />
         <button type="submit" className="btn-primary" disabled={busy}>{busy ? 'Kaydediliyor…' : 'Kaydet'}</button>
         <button type="button" className="btn-ghost small" onClick={() => { const result = validate(); if (result) downloadJson(result, `${result.id}.json`) }}>JSON indir</button>

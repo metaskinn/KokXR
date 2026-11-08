@@ -136,3 +136,4 @@ a.tile:hover { border-color: var(--action); }
 /* The step bar scrolls sideways on phones instead of widening the page. */
 .admin-main, .admin-page, .admin form, .steps { min-width: 0; max-width: 100%; }
 .steps { overflow: hidden; }
+.step-warning { flex: 1 0 100%; margin: 0; padding: var(--s-3) var(--s-4); border-left: 3px solid var(--danger); background: var(--danger-tint); }

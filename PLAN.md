@@ -1,27 +1,44 @@
-# KökXR — final planı (2 kişi, 4 iş hattı)
+# KökXR — final planı (2 kişi: sunum + diğer işler)
 
 Güncelleme: 8 Kasım 2026, sabah · Teslim: **8 Kasım Pazar 12.30 (Türkiye saati)** · Sunum: **5 dakika**.
 Dal: `main` (`feature/maket-vr` ve UX yenilemesi birleşti). Önceki planlar: `docs/archive/2026-11-07-plan-final-review.md`, `docs/archive/2026-11-07-plan-before-final-review.md`.
 İşaretler: `[x]` yapıldı ve doğrulandı · `[~]` yapıldı, cihazda/canlıda doğrulanmadı · `[ ]` açık · `[-]` artık gerekmiyor.
 
-## 0. Son 2 saat: öncelik sırası (çalışan demo + sunumun doğruluğu)
+## 0. Son 2 saat: iki kişi, önem sırasıyla
 
-Yeni şehir, yeni maket, öğretmen paneli ve kapsamlı erişilebilirlik ayarları bu sürenin dışında. En kritik açık: galeriyle birlikte ekleme/düzenleme akışının sunulacak ortamda kesintisiz çalıştığını kanıtlamak.
+Yeni şehir, yeni maket, öğretmen paneli ve yüksek kontrast/yazı boyutu ayarı bu sürenin dışında. En kritik açık: ekleme/düzenleme zincirinin sunulacak ortamda kesintisiz çalıştığını kanıtlamak. Her kişinin listesi kendi içinde önem sırasındadır; ikisi paralel yürür.
+
+### Kişi 1 — Sunum (konuşmacı)
+
+Dosyalar: `docs/sunum-metni.md`, `docs/sunum-taslagi.pptx`, `docs/demo-ekleme-duzenleme.md`. Kod dosyasına dokunmaz.
 
 | Sıra | İş | Süre | Durum |
 |---|---|---|---|
-| 1 | **Ekleme/düzenleme demosu:** canlıda giriş → ekle → onayla → listede gör → düzenle → yeniden onayla. Demo metinleri ve 3 quiz sorusu hazır: `docs/demo-ekleme-duzenleme.md`. Şifre girmek ekibin işi | 25 dk | [~] metin hazır, canlıda denenmedi |
-| 2 | **Fotoğraflı demo ortamı:** yerel statik önizlemede fotoğraf açılmıyor (görseller Neon nesne deposundan `/api/media` ile geliyor, yerelde yok). Canlıda Ulu Camii ve ikinci eserin galerisi kontrol edilecek; çevrimdışı fotoğraflı yedek hazır değil | 15 dk | [ ] ekip |
-| 3 | **Demo içeriklerinin doğruluğu ve foto izinleri:** yalnız sunulacak iki eserin tarihçe ve kaynak sayfaları kitaptan kontrol. İzin belirsizse izinli alternatif. “Kaynaklı içerik” denir; “akademik olarak doğrulanmış” denmez. İzin denetimi: 2060 görselin hepsinde kredi var, lisans/izin değeri sıfır; `/api/media` giriş istemiyor | 20 dk | [ ] ekip |
-| 4 | **Sunumun eksik bilgileri:** metin, mimari/veri akışı şeması, çalışan/yol haritası tablosu, jüri soruları hazır: `docs/sunum-metni.md`. Ekip isimleri, gerçek 42 kampüsü, görev dağılımı ve QR bağlantısı ekipte | 20 dk | [~] taslak hazır, [ ] ekip bilgileri |
-| 5 | **VR/AR iddiaları:** ana sayfa ve maket şeridi metni “cihaz doğrulaması bekliyor” olarak yumuşatıldı (`HomePage.tsx`, `ModelStrip.tsx`). Slaytlar için aynısı gerekir. Mobil AR ekipçe yapıldı olarak bildirildi; hangi telefon/tarayıcı olduğu kayıtlı değil (WebXR AR genelde Android Chrome + ARCore, iPhone Safari desteklemez) | 10 dk | [x] site metni, [ ] slaytlar, [~] mobil AR doğrulama |
-| 6 | **Yedek video ve süreli prova:** çalışan akıştan 60–90 sn kayıt; bir kez süre tutulur; kimin neyi anlatacağı kesinleşir | 10 dk | [ ] ekip |
-| 7 | **Son test:** `test:hizli` temiz, `test:tarayici` 3/3. E2E eski admin girişini ve moderasyonu karşılamıyor, mevcut hâliyle tam doğrulama kanıtı sayılmaz | 10 dk | [~] E2E 7/9; 2 admin kontrolü yerelde çalışamıyor, DB'li ortamda denenmeli |
-| 8 | **Erişilebilirlik kanıtı:** menü, filtre, galeri klavyeyle ve 360 px / yaklaşık %200'de kontrol edildi, ciddi kusur yok; maket şeridindeki 12 bağlantıya eser adı eklendi. Yüksek kontrast ve yazı boyutu ayarı **yok**, sunumda varmış gibi anlatılmaz. Quiz klavyeyle denendi (Tab, ok tuşları, boşluk, Enter; odak ve ekran okuyucu metni doğru); gerçek ekran okuyucu denenmedi | 10 dk | [x] |
+| 1 | **Slayt boşluklarını doldur:** ekip isimleri ve görev dağılımı, gerçek 42 kampüs adı, QR (kokxr.vercel.app). Yer tutucular `[...]` ile işaretli | 15 dk | [ ] |
+| 2 | **PPTX'i aç ve gözle kontrol et** (taşma, hiza; üretildiği makinede görsel kontrol yapılamadı), düzelt, PDF yedeğini al | 15 dk | [ ] |
+| 3 | **VR/AR cümlesi:** Kişi 2'den gelen cihaz sonucuna göre seç. Denenmediyse “cihaz doğrulaması sürüyor” (taslakta böyle). Mobil AR için telefon + tarayıcıyı slayta ve nota yaz | 10 dk | [~] taslak yumuşak, [ ] cihaz bilgisi |
+| 4 | **Süreli prova ×3:** 5 dk, demo 150 sn. Demo operatörü ve anlatıcı kesinleşir | 30 dk | [ ] |
+| 5 | **Jüri soruları (§7) ve 10 jüri başlığı eşlemesi** (`sunum-metni.md` başı): sesli çalış. Söylenmeyecekler: “akademik olarak doğrulanmış”, “ekran okuyucuyla tam uyumlu”, “1:1 dijital ikiz” | 15 dk | [~] metin hazır, [ ] çalışma |
+| 6 | **Yedek video (60–90 sn)** çalışan akıştan; kayıt Kişi 2'nin denemesi bitince alınır. İkinci bilgisayar/USB kopyası | 10 dk | [ ] |
+| 7 | **11.15–11.45:** PPTX/PDF, video, kablo, görüntü aktarımı, QR ekranda mı | 30 dk | [ ] |
 
-Sıra: önce canlıda kanıtlanması gereken demo zinciri (1, 2), sonra sunumun doğruluğu (3, 4, 5), en sonda zaten büyük oranda kapanmış işler (7, 8). Eski madde numaraları: ekleme/düzenleme=2, fotoğraflı demo=1, doğruluk/izin=3, sunum eksikleri=6, VR/AR=4, yedek video/prova=8, son test=7, erişilebilirlik=5.
+### Kişi 2 — Ürün, veri, cihaz, test
 
-Toplam 120 dk. Sunum 12.30; sürüm kilidi 11.45.
+Dosyalar: kod, içerik, testler, Vercel (bkz. §3).
+
+| Sıra | İş | Süre | Durum |
+|---|---|---|---|
+| 1 | **Ekleme/düzenleme zinciri canlıda:** giriş → ekle → onayla → listede gör → düzenle → yeniden onayla. Metinler hazır: `docs/demo-ekleme-duzenleme.md`. Şifreyi sen girersin; sonra demo kaydını sil/reddet. Sonucu (çalıştı/çalışmadı) Kişi 1'e söyle | 25 dk | [~] metin hazır, canlıda denenmedi |
+| 2 | **Fotoğraflı demo:** canlıda Ulu Camii ve Muradiye galerisi açılıyor mu? Yerel önizlemede açılmaz (görseller `/api/media` ile Neon'dan gelir) | 15 dk | [ ] |
+| 3 | **Doğruluk ve foto izni:** `docs/demo-dogrulama-listesi.md` (86 madde) kitapla işaretle; yanlış çıkanı düzelt. Foto izin kararı: 2060 görselde kredi var, izin yok, `/api/media` girişsiz. Öneri: fotoğrafsız `build:acik` + `/api/media` kapatma (karar senin) | 30 dk | [ ] |
+| 4 | **Cihaz denemesi:** Quest (mermer, 7 anlatım, çıkışta durma) ve sunumda kullanılacak telefon/tarayıcıda AR. Duyulmayan sesi vaat etme. Sonucu Kişi 1'e ver | 25 dk | [ ] |
+| 5 | **Son test:** `test:hizli` temiz (8 Kasım geçti), `test:tarayici` 3/3 (geçti), `test:e2e` 7/9; 2 admin kontrolü DB'li ortamda denenmeli | 10 dk | [~] |
+| 6 | **Vercel kalıcı yazar izni** (Settings → Members/Git): şimdilik yalnız `metaskin` commit'i yayınlanır. Sürüm kilidi öncesi son push da `metaskin` ile | 5 dk | [ ] |
+| 7 | **Zaman kalırsa:** Mevlâna/Sokullu iç mekân mermer taraması (başlandı, tamamlanmadı) | — | [ ] |
+
+Yapıldı ve doğrulandı: VR/AR site metni yumuşatma, maket şeridi bağlantı adları, quiz klavye testi, 360 px/%200 kontrolü (ciddi kusur yok), mermer ve ses düzeltmeleri (masaüstü).
+
+El değişimi: Kişi 2'nin 1 ve 4. maddeleri biter bitmez Kişi 1'in 3 ve 6. maddeleri kesinleşir. Sürüm kilidi **11.45**; sunum **12.30**.
 
 ## 1. Verilen kararlar
 
@@ -32,7 +49,7 @@ Toplam 120 dk. Sunum 12.30; sürüm kilidi 11.45.
 | Quest | Bu gece ve yarın sabah elde; VR düzeltmeleri cihazda doğrulanır |
 | Ses | Yeni dosya yok; **mevcut 7 konumlu anlatım** (`public/sesler/*.mp3`), VR'da ve masaüstü iç mekânda |
 | Mermer | Şadırvan, duvar/sütun/mihrap ve zemin döşeme yanlış görünüyordu (üst üste binme) |
-| Ekip | 2 kişi, her biri AI ile; iş 4 hat olarak düşünülür, hatlar 2 kişiye bölünür |
+| Ekip | 2 kişi, her biri AI ile: Kişi 1 sunum, Kişi 2 ürün/veri/cihaz/test (§0) |
 
 Değer önerisi: **“Bursa’nın vakıf eserlerini kaynaklarıyla keşfet; temsilî 3B mekânda gezerek yapı ayrıntılarıyla bağ kur.”**
 Şartname 5.1.1: çoklu eser, tarihçe/görsel/kaynak, ekleme/düzenleme, canlı uçtan uca demo.
@@ -61,61 +78,45 @@ Değer önerisi: **“Bursa’nın vakıf eserlerini kaynaklarıyla keşfet; tem
 - Yok: yüksek kontrast ve yazı boyutu kontrolü.
 - Mevlâna/Sokullu iç mekânları mermer/üst üste binme için taranmadı.
 
-## 3. İş hatları ve kişi dağılımı
+## 3. Dosya sınırları ve hat ayrıntısı
 
-Her hat tek kişiye aittir. Aynı dosyada iki AI çalışmaz. `App.tsx` yalnız Kişi 2.
+İki kişi, iki yan yana yürüyen iş: **Kişi 1 sunum**, **Kişi 2 diğer her şey** (§0). Aynı dosyada iki AI çalışmaz; sunum dosyaları Kişi 1'in, kod/içerik/test Kişi 2'nin. `App.tsx` yalnız Kişi 2.
 
-### Kişi 1 — VR / cihaz (hat A + hat C)
+Kişi 2'nin dosya sınırı: `src/features/scale-models/`, `src/shared/xr/`, `src/features/workshops/`, `public/sesler/`, `src/features/admin/`, `src/domain/`, `src/content/artifacts/*.json`, `src/features/places/`, `src/features/artifacts/`, `src/app/App.tsx`, `e2e/`.
 
-Dosya sınırı: `src/features/scale-models/`, `src/shared/xr/`, `src/features/workshops/`, `public/sesler/`, ilgili testler.
+**Mermer (VR)**
+- [x] Şadırvan döşemesinde titreşme: iki mermer katmanı aynı yükseklikteydi; `fountain.ts` döşemesi 1 cm yukarı, `floor.ts` koyu kutular 1 cm aşağı. Masaüstünde önce/sonra doğrulandı.
+- [x] Masaüstünde şadırvan, mihrap, minber, levha, doğu kapısı tarandı.
+- [~] Quest'te aynı noktalar (`lightDevice()` yolu).
+- [ ] Mevlâna ve Sokullu iç mekânları.
 
-**Hat A — Mermer düzeltmesi (öncelik 1)**
-- [x] Sorunu tarif et: şadırvan döşemesinde şerit şerit titreşme (iki mermer katmanı aynı yükseklikte).
-- [x] Masaüstü yolunda şadırvan, mihrap, minber, levha, doğu kapısı noktalarını tara.
-- [x] `fountain.ts` döşemesini 1 cm yukarı al; `floor.ts` koyu mermer kutuların üstünü ızgaradan 1 cm aşağı al.
-- [x] `test:hizli` ve masaüstünde ikinci ekran görüntüsü: titreşme gitti.
-- [~] Quest’te aynı noktalardan ekran görüntüsü; `lightDevice()` (lite) yolunda sorun var mı?
-- [ ] Mevlâna ve Sokullu iç mekânlarını aynı yöntemle tara.
+**VR ses**
+- [x] Anlatım yalnız Ulu Camii'nde (`narrated`); askıdaki ses bağlamı yeniden açılır; masaüstü iç mekânda yakınlıkla çalar, VR'a girince masaüstü susar.
+- [~] 7 anlatımın Quest'te tetiklenmesi, birbirini kesmemesi, çıkışta durması, yeniden girişte çalışması; ses seviyesi.
+- [x] `model-interior` zaman aşımı ürün hatası değil, yazılım render yükü (581 sn'de PASS). Gerçek demo cihazında yükleme süresi ölçülmeli.
+- [~] Mobil AR: ekip yapıldığını bildirdi; telefon + tarayıcı kayıtlı değil. Denenmeyen cihaz için “çalışıyor” denmez.
 
-**Hat C — VR ses + cihaz kalitesi (öncelik 2)**
-- [x] Anlatımı yalnız Ulu Camii'ne bağla (`narrated`), askıdaki ses bağlamını yeniden aç.
-- [x] Masaüstü iç mekâna aynı yakınlık anlatımı: tıklama/tuşla açılır, VR'a girince masaüstü anlatımı susar.
-- [~] 7 anlatımın (kapı, şadırvan, minber, mihrap, kubbeler, hat, Kâbe örtüsü) Quest’te tetiklenmesi, birbirini kesmemesi, çıkışta durması, yeniden girişte çalışması.
-- [~] Duyulur ses seviyesi; anlatım metin karşılığı (kartta yazı) kontrolü.
-- [x] `model-interior` zaman aşımı: ürün hatası değil, yazılım render yükü; test 581 sn'de PASS. İç mekân yükleme süresi gerçek demo cihazında yine de ölçülmeli.
-- [~] Mobil AR: ekip yapıldığını bildirdi. Sunumda kullanılacak telefon ve tarayıcıyı yaz, o cihazda bir kez dene; denenmeyen cihaz için “çalışıyor” deme.
-- [ ] Cihazda duyulmayan sesi sunumda vaat etme.
-
-### Kişi 2 — Ürün / veri / sunum (hat B + hat D)
-
-Dosya sınırı: `src/features/admin/`, `src/domain/`, `src/content/artifacts/*.json`, `src/features/places/`, `src/features/artifacts/`, `src/app/App.tsx`, `e2e/`, sunum dosyaları.
-
-**Hat B — Ürün ve veri (öncelik 1)**
-- [ ] Demo eserlerini seç: Ulu Camii + kaynakları kontrol edilmiş ikinci eser.
-- [ ] Demo kayıtlarının tarihçe ve kaynak sayfalarını sağlanan kitapla elle doğrula. Topluca isim tahminiyle bağlama.
+**Ürün ve veri**
 - [x] Envanter → eser bağlantıları: 39 açık `inventoryId`, kalanı `inventoryLinks.ts`.
-- [-] Formdaki zorunlu 3 quiz sorusunu kaldır: quiz ara yüzde geri geldi, kaldırılmayacak.
-- [~] Ekle → onay kuyruğu → yayın → listede gör → düzenle akışını **canlıda** dene (yerelde doğrulandı).
-- [~] Eksik zorunlu alanla kayıt engellenir; kaynaksız “Kaynaklı bilgi” seçilemez (sunucu doğrulaması var, canlıda denenmedi).
-- [ ] Fotoğraf izinleri: izni belirsiz görseli kamuya açık yayında bırakma. Şu an canlı build fotoğraflı.
-- [x] E2E eskimiş kontrolleri güncellendi (anlık `.count()`, sayfalı liste); yeniden çalıştırılacak.
+- [-] Formdaki 3 quiz zorunluluğu kaldırılmayacak (quiz arayüzde).
+- [~] Ekle → onay → yayın → listede gör → düzenle: yerelde doğrulandı, canlıda değil. Eksik alanla kayıt engellenir, kaynaksız “kaynaklı” seçilemez (sunucu doğrulaması var, canlıda denenmedi).
+- [ ] Demo eserleri: Ulu Camii + Muradiye Külliyesi; tarihçe/kaynak sayfaları kitaptan elle doğrulanır, isim tahminiyle bağlanmaz.
+- [ ] Foto izinleri: izni belirsiz görsel kamuya açık yayında bırakılmaz; şu an canlı build fotoğraflı.
+- [x] E2E eskimiş kontroller güncellendi.
 
-**Hat D — Sunum ve prova (öncelik 2, ama erken başlar)**
-- [ ] 6 slaytlık sunumu ürünle eşitle (aşağıda §6); takım görevleri, gerçek 42 kampüsü, bağlantılar.
-- [ ] Eski PPTX’ten çıkarılacaklar: 1:1 dijital ikiz, zaman slider’ı, “akademisyen onaylı”, “her cihaz”. KökMobil ve öğretmen paneli yol haritasına.
-- [x] Moderasyon akışı artık var (onay/ret kuyruğu, işlem kaydı); sunumda “yayın öncesi moderasyon” de, ama canlıda denendiğinden emin olmadan “çalışıyor” deme.
-- [ ] 60–90 sn yedek video (Kişi 1’den cihaz kaydı alınır), yerel build, ikinci bilgisayar kopyası.
-- [ ] Süre tutarak 3 prova; jüri soruları (§7).
+**Sunum (Kişi 1)**
+- [ ] Eski PPTX'ten çıkarılacaklar: 1:1 dijital ikiz, zaman slider'ı, “akademisyen onaylı”, “her cihaz”. KökMobil ve öğretmen paneli yol haritasına.
+- [x] Moderasyon akışı var (onay/ret kuyruğu, işlem kaydı). Sunumda “yayın öncesi moderasyon” denir; canlıda denendiğinden emin olmadan “çalışıyor” denmez.
 
-Not: Kişi 2 yoğun; **zaman daralırsa kes**: ikinci eser doğrulamasından kalan yarısı, kılıç atölyesi.
+**Zaman daralırsa kes:** ikinci eser doğrulamasının kalanı, kılıç atölyesi, Mevlâna/Sokullu taraması.
 
 ## 4. Sıra
 
 1. [x] Demo eserleri ve hat dağılımı, bu gece mermer.
 2. [x] Mermer, ses, `main` birleşimleri, Vercel yayını.
-3. **Şimdi:** `test:tarayici` + `test:e2e`, Quest denemesi, canlı site kontrolü (admin girişi, ses, şadırvan).
-4. **Pazar 08.30–10.15:** Kişi 1 Quest'te; Kişi 2 başarısız testler + slaytlar.
-5. **10.15–11.15:** süre tutarak 3 prova.
+3. **Şimdi:** §0'daki iki liste paralel; her kişi kendi listesini sırayla yürütür.
+4. **Pazar 08.30–10.15:** Kişi 2 canlı zincir, doğruluk listesi, Quest/AR denemesi; Kişi 1 slayt boşlukları, PPTX kontrolü.
+5. **10.15–11.15:** süre tutarak 3 prova (Kişi 1 yönetir, Kişi 2 demoyu yürütür).
 6. **11.15–11.45:** PPTX/PDF, video, kablo, görüntü aktarımı, son kontrol.
 7. **11.45:** sürüm kilidi. Sonrası yalnız sunumu engelleyen arıza.
 8. **12.30:** sunum.

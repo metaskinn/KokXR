@@ -182,5 +182,23 @@
       "id": "photo-book",
       "text": "Fotoğraf: Vakıf Katılım, Hatay Vakıf Eserleri Kitabı"
     }
-  ]
+  ],
+  "model": {
+    "model": "hatay-payas-sokullu-mehmet-pasha-mosque-complex",
+    "description": "Temsilî maket, gerçek bir 3B tarama değildir; şimdilik yalnız dış görünüş vardır. Kodla oluşturuldu. Kitapta plan ve ölçü olmadığından bütün boyutlar temsilîdir. Yapıların yerleşimi (ortada kuzey-güney arasta, doğuda han, tabhâneler ve imaret, batıda hamam, sıbyan mektebi, cami ve hanikah), arastanın iki yanındaki yirmi dörder dükkân, ortadaki dua kubbesi, kuzey ve güney taç kapıları ile çeşmeler, hanın dokuz, dokuz ve on iki gözlü revakları ve kapılardaki üç renkli taş kitaptaki metinden alındı. Yükseklikler, pencere yerleri, kubbe çapları, imaretin iç düzeni, hamam kapısının yeri ve ağaçlar fotoğraflara bakılarak temsilî yorumlandı.",
+    "infos": [
+      {
+        "text": "Külliyenin kitabesi 1574 tarihlidir; kitap arşiv belgelerine dayanarak mimarını Mimar Sinan olarak verir.",
+        "sourceId": "inv-p98"
+      },
+      {
+        "text": "Ortadaki arasta, kuzey-güney yolunun üstü çapraz tonozla örtülerek yapılmıştır; iki yanında yirmi dörder, toplam kırk sekiz dükkân vardır. Ortasında dua kubbesi bulunur.",
+        "sourceId": "inv-p102"
+      },
+      {
+        "text": "Hanın kuzey ve güney revakları dokuzar, doğu revakı on iki kemer gözlüdür. \"Parçala\" ile damları kaldırıp avluyu üstten görebilirsin.",
+        "sourceId": "inv-p105"
+      }
+    ]
+  }
 }

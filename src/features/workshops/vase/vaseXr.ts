@@ -102,16 +102,23 @@ export function vaseStage_(repair: boolean, placed: number): VasePhase {
 // Two side-by-side buttons in the panel's bottom row. uv.y 1 is the top edge.
 const BUTTON_V = { min: 0.07, max: 0.31 }
 const BUTTON_U = [{ min: 0.05, max: 0.48 }, { min: 0.52, max: 0.95 }]
+/** Button columns for `n` buttons (AR adds a third, "Yeniden yerleştir"); two buttons keep the original layout. */
+const buttonSlots = (n: number) => n <= 2 ? BUTTON_U : Array.from({ length: n }, (_, i) => ({ min: 0.04 + i * (0.92 / n) + 0.01, max: 0.04 + (i + 1) * (0.92 / n) - 0.01 }))
 /** Index of the button at panel point (u, v); `null` if there is none. */
-export function panelButton(u: number, v: number): number | null {
+export function panelButton(u: number, v: number, count = 2): number | null {
   if (v < BUTTON_V.min || v > BUTTON_V.max) return null
-  const i = BUTTON_U.findIndex((d) => u >= d.min && u <= d.max)
+  const i = buttonSlots(count).findIndex((d) => u >= d.min && u <= d.max)
   return i < 0 ? null : i
 }
 
-export type PanelAction = 'shatter' | 'exit'
+export type PanelAction = 'shatter' | 'exit' | 'replace'
 
-export function panelText(phase: VasePhase, placed: number, result: string) {
+export function panelText(phase: VasePhase, placed: number, result: string, ar = false) {
+  const t = panelTextCore(phase, placed, result)
+  // In AR the exit says AR, and the turntable can be moved to another surface.
+  return ar ? { ...t, buttons: [t.buttons[0], { id: 'replace' as PanelAction, name: 'Yeniden yerleştir' }, { id: 'exit' as PanelAction, name: "AR'dan çık" }] } : t
+}
+function panelTextCore(phase: VasePhase, placed: number, result: string) {
   const exit = { id: 'exit' as PanelAction, name: "VR'dan çık" }
   if (phase === 'traceless') return {
     title: 'Vazoyu incele', progress: 'İzsiz vazo',
@@ -219,14 +226,15 @@ export function statePanel(realWidth = 64) {
     c.font = `400 38px ${TEXT}`
     c.fillText(hint, G / 2, 250, G - 60)
     const top = Y * (1 - BUTTON_V.max), length = Y * (BUTTON_V.max - BUTTON_V.min)
+    const slots = buttonSlots(buttons.length)
     buttons.forEach(({ name }, i) => {
-      const x = G * BUTTON_U[i].min, en = G * (BUTTON_U[i].max - BUTTON_U[i].min)
+      const x = G * slots[i].min, en = G * (slots[i].max - slots[i].min)
       c.beginPath()
       c.roundRect(x, top, en, length, 16)
       c.fillStyle = over === i ? BRONZE : CAM
       c.fill()
       c.fillStyle = WHITE
-      c.font = `600 48px ${TEXT}`
+      c.font = `600 ${buttons.length > 2 ? 40 : 48}px ${TEXT}`
       c.fillText(name, x + en / 2, top + length / 2, en - 30)
     })
     p.texture.needsUpdate = true
@@ -285,6 +293,18 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   label.obj.renderOrder = 1003
   label.obj.frustumCulled = false
   label.obj.position.set(0, -0.38, -1.2)
+  // AR placement hint, attached to the head until the turntable is placed (rig-local meters).
+  const hint = canvasPlane(1024, 200, 0.62)
+  hint.c.fillStyle = 'rgba(20, 32, 28, 0.82)'
+  hint.c.beginPath(); hint.c.roundRect(0, 0, 1024, 200, 40); hint.c.fill()
+  hint.c.textAlign = 'center'; hint.c.textBaseline = 'middle'; hint.c.fillStyle = '#ffffff'
+  hint.c.font = `600 46px ${TEXT}`; hint.c.fillText('Masaya ya da yere bak.', 512, 72, 960)
+  hint.c.font = `400 40px ${TEXT}`; hint.c.fillText('Halka çıkınca tetiğe bas.', 512, 136, 960)
+  hint.texture.needsUpdate = true
+  hint.obj.material.depthTest = false
+  hint.obj.renderOrder = 1004
+  hint.obj.frustumCulled = false
+  hint.obj.position.set(0, -0.12, -1)
 
   const rayGeometry = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3(0, 0, -RAY_LENGTH)])
   const rayMaterial = new THREE.LineBasicMaterial({ color: '#f8f5ef', toneMapped: false })
@@ -407,13 +427,20 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   }
 
   const finish = () => { session?.end().catch(() => {}) } // end() rejects on an already closed session
+  /** AR: back to placement; the turntable follows the ring again until the next press. */
+  const replace = () => {
+    for (const el of hands) breakGrip(el)
+    settled = false
+    placeNow = false
+    camera.add(hint.obj)
+  }
 
-  const text = () => panelText(b.phase(), b.placedCount(), result)
+  const text = () => panelText(b.phase(), b.placedCount(), result, ar)
   const panelAim = (el: El) => {
     setupRay(el)
     panel.obj.updateWorldMatrix(true, false)
     const hit = raycaster.intersectObject(panel.obj, false)[0]
-    return hit?.uv ? panelButton(hit.uv.x, hit.uv.y) : null
+    return hit?.uv ? panelButton(hit.uv.x, hit.uv.y, text().buttons.length) : null
   }
 
   const head = (el: El, kind: 'trigger' | 'side') => {
@@ -426,7 +453,9 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     // A user aiming at a button does not want to grab a piece: the panel comes first.
     const button = kind === 'trigger' ? panelAim(el) : null
     if (button !== null) {
-      if (text().buttons[button].id === 'exit') finish()
+      const action = text().buttons[button].id
+      if (action === 'exit') finish()
+      else if (action === 'replace') replace()
       else b.shatterRequest()
       return
     }
@@ -472,6 +501,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       prevAlpha = renderer.getClearAlpha()
       renderer.setClearColor(0x000000, 0)
       placeNow = false
+      camera.add(hint.obj)
       void Promise.all([import('./arPlacement'), import('./arLight')]).then(async ([{ createArPlacement }, { createContactShadow, createArLighting }]) => {
         if (session !== fresh || !ar) return
         shadow ??= createContactShadow(XR_TABLE_RADIUS * 1.25)
@@ -514,6 +544,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     environment.removeFromParent()
     panel.obj.removeFromParent()
     if (ar) {
+      hint.obj.removeFromParent()
       placing?.reticle.removeFromParent()
       placing?.dispose()
       placing = null
@@ -600,6 +631,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
           rig.rotation.set(0, r.rotY, 0)
           if (!placeNow) return
           placeNow = false
+          hint.obj.removeFromParent()
           if (placing) placing.reticle.visible = false
           const tableY = spot ? spot.y + -TURNTABLE_BOTTOM / METER : tableHeight(p.y)
           rig.updateWorldMatrix(false, true)
@@ -667,6 +699,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       }
       panel.dispose()
       label.dispose()
+      hint.dispose()
       shadow?.dispose()
       for (const g of [floor.geometry, leg.geometry, rayGeometry, handGeometry]) g.dispose()
       for (const x of [floor.material, leg.material, rayMaterial, handMaterial]) x.dispose()

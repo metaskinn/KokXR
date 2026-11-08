@@ -570,6 +570,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   let ar = false
   let placing: ArPlacement | null = null
   let placeNow = false
+  const culled: THREE.Object3D[] = []
   let arLight: ReturnType<typeof ArLighting> | null = null
   let arLightModule: typeof import('../../../shared/xr/arLight') | null = null
   if (typeof navigator !== 'undefined' && navigator.xr) void import('../../../shared/xr/arLight').then((m) => { arLightModule = m }, () => {})
@@ -586,6 +587,9 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       renderer.getClearColor(prevClear)
       prevAlpha = renderer.getClearAlpha()
       renderer.setClearColor(0x000000, 0)
+      // Scaled rig: three's two-eye frustum can cull the vase when looking down from above; the scene is small, so no culling in AR.
+      culled.length = 0
+      scene.traverse((o) => { if (o.frustumCulled) { culled.push(o); o.frustumCulled = false } })
       placeNow = false
       camera.add(hint.obj)
       void Promise.all([import('../../../shared/xr/arPlacement'), import('../../../shared/xr/arLight')]).then(async ([{ createArPlacement }, { createContactShadow, createArLighting }]) => {
@@ -637,6 +641,8 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       arLight?.stop()
       arLight = null
       shadow?.mesh.removeFromParent()
+      for (const o of culled) o.frustumCulled = true
+      culled.length = 0
       scene.background = prevBackground
       renderer.setClearColor(prevClear, prevAlpha)
       ar = false

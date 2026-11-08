@@ -192,6 +192,7 @@ export function setupXrSession(s: XrOption): XrSession {
   // AR state. The anchor is the centre of the model's underside (model units); the spot is the real surface point (device metres).
   let ar = false
   let placed = false, placeNow = false
+  const culled: THREE.Object3D[] = []
   let placing: ArPlacement | null = null
   let arLight: ReturnType<typeof ArLighting> | null = null
   let shadow: { mesh: THREE.Mesh; dispose(): void } | null = null
@@ -402,6 +403,10 @@ export function setupXrSession(s: XrOption): XrSession {
       disk.visible = false
       groundShown = s.ground?.visible ?? true
       if (s.ground) s.ground.visible = false
+      // The rig is scaled hundreds of times in AR; three's combined two-eye frustum then culls parts of the model
+      // when looking down from above. The model is one object on a table, so culling buys nothing here.
+      culled.length = 0
+      s.root.traverse((o) => { if (o.frustumCulled) { culled.push(o); o.frustumCulled = false } })
       const extent = measureForAr() ?? 1
       scale = arBase
       placed = false
@@ -466,6 +471,8 @@ export function setupXrSession(s: XrOption): XrSession {
       shadow?.mesh.removeFromParent()
       renderer.setClearColor(prevClear, prevAlpha)
       if (s.ground) s.ground.visible = groundShown
+      for (const o of culled) o.frustumCulled = true
+      culled.length = 0
       disk.visible = true
       ar = false
       placed = false

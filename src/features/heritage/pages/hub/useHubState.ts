@@ -2,7 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, type RefObjec
 import { useLocation, useNavigationType, useSearchParams } from 'react-router-dom'
 import { noFilters, type Filters } from './hubData'
 
-export const PAGE = 48
+export const PAGE = 10
 
 /** All list state lives in the URL: q, sehir, ilce, tur, maket=1, n (number of shown items). */
 export function useHubState() {

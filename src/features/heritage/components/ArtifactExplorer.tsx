@@ -59,9 +59,9 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
   const [infoOverflows, setInfoOverflows] = useState(false)
   const info = model.interiorInfos?.find((b) => b.id === infoId)
   const [xrSupport, setXrSupport] = useState(false)
-  // AR (Quest passthrough, Android Chrome) is offered for Ulu Camii only for now; the session code itself is model-agnostic.
+  // AR (Quest passthrough, Android Chrome) for every scale model: the session code is model-agnostic.
   const [arSupport, setArSupport] = useState(false)
-  const arModel = model.model === 'ulu-mosque'
+  const arModel = true
   const [xrKind, setXrKind] = useState<'vr' | 'ar'>('vr')
   // Set while the session is starting and active: page buttons must not change the scene meanwhile.
   const [xrBusy, setXrBusy] = useState(false)

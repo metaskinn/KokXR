@@ -49,16 +49,40 @@ export function vaseRig(head: { x: number; y: number; z: number; yaw: number }) 
 /** The turntable base's underside in model units (vaseScene: cylinder 1.5 high, centred at y = -2). */
 export const TURNTABLE_BOTTOM = -2.75
 
-/** AR: put the model so the turntable stands on a real surface at `spot` (device meters), still viewed from +z along the head's yaw. */
-export function vaseRigAt(spot: { x: number; y: number; z: number }, yaw: number) {
+/** AR: put the model so the turntable stands on a real surface at `spot` (device meters), still viewed from +z along the head's yaw.
+ *  `scale` is model units per device meter (phone pinch changes it); the turntable bottom stays on the spot at any scale. */
+export function vaseRigAt(spot: { x: number; y: number; z: number }, yaw: number, scale = METER) {
   const rotY = -yaw
   const c = Math.cos(rotY), s = Math.sin(rotY)
   return {
-    x: -METER * (spot.x * c + spot.z * s),
-    y: -METER * spot.y + TURNTABLE_BOTTOM,
-    z: -METER * (-spot.x * s + spot.z * c),
+    x: -scale * (spot.x * c + spot.z * s),
+    y: -scale * spot.y + TURNTABLE_BOTTOM,
+    z: -scale * (-spot.x * s + spot.z * c),
     rotY,
   }
+}
+
+/** Phone pinch range for the rig scale: the vase looks between 0.4× and 2× its table size. */
+export const PHONE_SCALE_MIN = METER / 2
+export const PHONE_SCALE_MAX = METER * 2.5
+export function phoneScale(scale: number, factor: number) {
+  if (!(factor > 0) || !Number.isFinite(factor)) return scale
+  // A larger vase is a smaller rig scale (model units per meter).
+  return Math.min(PHONE_SCALE_MAX, Math.max(PHONE_SCALE_MIN, scale / factor))
+}
+
+/** Phone seat check: on a touch screen depth cannot be controlled, so, as on desktop, a piece also seats when the target lies
+ *  on the line of sight through the piece (distance from `target` to the eye→piece line), not only when it is near in 3D. */
+export function phoneSeats(eye: Pointed, piece: Pointed, target: Pointed, threshold: number) {
+  const d: Pointed = [piece[0] - eye[0], piece[1] - eye[1], piece[2] - eye[2]]
+  const length = Math.hypot(...d)
+  const direct = Math.hypot(piece[0] - target[0], piece[1] - target[1], piece[2] - target[2])
+  if (snapsIn(direct, threshold)) return true
+  if (!(length > 0)) return false
+  const f: Pointed = [target[0] - eye[0], target[1] - eye[1], target[2] - eye[2]]
+  const t = (f[0] * d[0] + f[1] * d[1] + f[2] * d[2]) / length
+  if (t <= 0) return false
+  return snapsIn(Math.sqrt(Math.max(0, f[0] ** 2 + f[1] ** 2 + f[2] ** 2 - t * t)), threshold)
 }
 
 // Degrees: +z faces the user. No piece directly in front, so the vase is not blocked. Piece order is shuffled so neighboring pieces do not land in neighboring slots.
@@ -114,27 +138,28 @@ export function panelButton(u: number, v: number, count = 2): number | null {
 
 export type PanelAction = 'shatter' | 'exit' | 'replace'
 
-export function panelText(phase: VasePhase, placed: number, result: string, ar = false) {
-  const t = panelTextCore(phase, placed, result)
+/** `phone`: hints for touch (Android AR with the DOM overlay) instead of controller buttons. */
+export function panelText(phase: VasePhase, placed: number, result: string, ar = false, phone = false) {
+  const t = panelTextCore(phase, placed, result, phone)
   // In AR the exit says AR, and the turntable can be moved to another surface.
   return ar ? { ...t, buttons: [t.buttons[0], { id: 'replace' as PanelAction, name: 'Yeniden yerleştir' }, { id: 'exit' as PanelAction, name: "AR'dan çık" }] } : t
 }
-function panelTextCore(phase: VasePhase, placed: number, result: string) {
+function panelTextCore(phase: VasePhase, placed: number, result: string, phone: boolean) {
   const exit = { id: 'exit' as PanelAction, name: "VR'dan çık" }
   if (phase === 'traceless') return {
     title: 'Vazoyu incele', progress: 'İzsiz vazo',
-    hint: 'Vazoyu tutup çevir. Hazır olunca parçala.',
+    hint: phone ? 'Boş yerde parmağını sürükle: vazo döner. İki parmakla büyüt ya da küçült.' : 'Vazoyu tutup çevir. Hazır olunca parçala.',
     buttons: [{ id: 'shatter' as PanelAction, name: 'Vazoyu parçala' }, exit],
   }
   const progress = `${placed}/${PIECE_COUNT} parça yerinde`
   if (phase === 'done') return {
     title: 'Vazo onarıldı!', progress,
-    hint: 'Vazoyu tutup çevir, onarım izlerini incele.',
+    hint: phone ? 'Vazoyu parmağınla çevir, onarım izlerini incele.' : 'Vazoyu tutup çevir, onarım izlerini incele.',
     buttons: [{ id: 'shatter' as PanelAction, name: 'Yeniden parçala' }, exit],
   }
   return {
     title: 'Vazoyu onar', progress,
-    hint: result || 'Parçayı tetik veya yan tuşla tut, götür, bırak.',
+    hint: result || (phone ? 'Bir parçaya dokun, sürükleyip yerine bırak.' : 'Parçayı tetik veya yan tuşla tut, götür, bırak.'),
     buttons: [{ id: 'shatter' as PanelAction, name: 'Yeniden başlat' }, exit],
   }
 }
@@ -169,10 +194,48 @@ export interface VaseXrContext {
   sessionEnded: () => void
 }
 
+/** Phone AR state for the DOM overlay; `null` when no phone AR session is running. */
+export interface VaseMobileState {
+  /** Before the first tap: the turntable follows the ring. */
+  placing: boolean
+  phase: VasePhase
+  progress: string
+  hint: string
+  /** Name of the shatter/restart button for this phase. */
+  action: string
+}
+
+export interface VaseXrStartOption {
+  /** Phone AR: the WebXR dom-overlay root. Phone mode is on only if the browser grants the overlay. */
+  overlayRoot?: HTMLElement
+  /** Phone AR: called when the overlay state changes, and with `null` when the session ends. */
+  onMobileState?: (state: VaseMobileState | null) => void
+}
+
+/** Phone AR actions; each does nothing outside a phone AR session. Touch points are normalized device coordinates (-1..1, y up). */
+export interface VaseMobileControl {
+  /** The phase's shatter / restart button. */
+  action(): void
+  replace(): void
+  exit(): void
+  /** One finger down: grabs the free piece under the touch. Returns false if there is none (the drag then turns the vase). */
+  touchStart(x: number, y: number): boolean
+  touchMove(x: number, y: number): void
+  /** Finger lifted: the desktop/VR release path (seat check, messages). */
+  touchEnd(): void
+  /** Touch interrupted: the piece goes back without counting an attempt. */
+  touchCancel(): void
+  /** Turns the turntable about its axis (radians). Ignored while a piece is held. */
+  rotateBy(rad: number): void
+  /** The vase looks `factor` times larger, clamped. Ignored while a piece is held. */
+  scaleBy(factor: number): void
+}
+
 export interface VaseXr {
   /** Goes to requestSession immediately when called: must be called inside a user gesture. Leaves no trace in the scene if rejected. */
   /** `ar`: the same repair game in the real room (passthrough on Quest 3, camera on Android); no floor, stand or background. */
-  start: (mode?: 'vr' | 'ar') => Promise<void>
+  start: (mode?: 'vr' | 'ar', option?: VaseXrStartOption) => Promise<void>
+  mobile: VaseMobileControl
   frame: () => void
   finish: () => void
   active: () => boolean
@@ -349,6 +412,7 @@ function placementHint() {
 interface El {
   controller: THREE.XRTargetRaySpace
   ray: THREE.Line
+  marker: THREE.Mesh
   trigger: boolean
   side: boolean
   /** Piece id, VASE for the whole vase. */
@@ -494,7 +558,10 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     el.ray.visible = true
     if (id === null) return
     if (id === VASE) { standSpinning = true; return }
-    const seated = snapsIn(pieces[id].position.distanceTo(targets[id].position), XR_SEAT_THRESHOLD)
+    releasePiece(id, snapsIn(pieces[id].position.distanceTo(targets[id].position), XR_SEAT_THRESHOLD))
+  }
+  /** Shared by the controller and the phone touch: the desktop release path plus the panel/overlay message. */
+  const releasePiece = (id: number, seated: boolean) => {
     b.release(id, seated)
     result = seated ? `Parça ${id + 1} yerine oturdu.` : 'Henüz yerine yaklaşmadı. Yeniden dene.'
     b.select(null)
@@ -516,10 +583,106 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     for (const el of hands) breakGrip(el)
     settled = false
     placeNow = false
-    camera.add(hint.obj)
+    if (mobile) {
+      cancelTouch()
+      phoneTurn = 0
+    } else camera.add(hint.obj)
   }
 
   const text = () => panelText(b.phase(), b.placedCount(), result, ar)
+
+  // ---------- Phone AR (dom-overlay) ----------
+  // The DOM overlay replaces the head hint, label and panel; touches come from the overlay as screen points.
+  let mobile = false
+  let mobileListener: VaseXrStartOption['onMobileState'] | null = null
+  let mobileDrawn = ''
+  let restoreQuality: (() => void) | null = null
+  const undoQuality = () => { restoreQuality?.(); restoreQuality = null }
+  /** Set when two screen touches were down at once; cleared when every finger has lifted (two fingers never place). */
+  let multiTouch = false
+  const screenTouches = () => session ? Array.from(session.inputSources).filter((s) => s.targetRayMode === 'screen').length : 0
+  const onInputSources = () => {
+    const n = screenTouches()
+    if (n > 1) multiTouch = true
+    else if (n === 0) setTimeout(() => { multiTouch = false }, 0) // after the last finger's own select has been ignored
+  }
+  // Placed turntable: surface spot (device meters), view yaw, the user's turn and the rig scale (pinch).
+  const phoneSpot = new THREE.Vector3()
+  let phoneYaw = 0, phoneTurn = 0, phoneRigScale = METER
+  const applyPhoneRig = () => {
+    const r = vaseRigAt(phoneSpot, phoneYaw + phoneTurn, phoneRigScale)
+    rig.position.set(r.x, r.y, r.z)
+    rig.rotation.set(0, r.rotY, 0)
+    rig.scale.setScalar(phoneRigScale)
+    rig.updateWorldMatrix(false, true)
+  }
+  const touchPlane = new THREE.Plane(), touchPoint = new THREE.Vector3(), eye = new THREE.Vector3(), look = new THREE.Vector3()
+  let touch: { id: number; offset: THREE.Vector3; x: number; y: number; moved: boolean } | null = null
+  const touchRay = (x: number, y: number) => {
+    camera.updateWorldMatrix(true, false)
+    raycaster.setFromCamera(new THREE.Vector2(x, y), camera)
+  }
+  const cancelTouch = () => {
+    const held = touch
+    touch = null
+    if (held) { b.gripCancel(held.id); b.select(null) }
+  }
+  const emitMobile = () => {
+    if (!mobile || !mobileListener) return
+    const t = panelText(b.phase(), b.placedCount(), result, true, true)
+    const state: VaseMobileState = { placing: !settled, phase: b.phase(), progress: t.progress, hint: t.hint, action: t.buttons[0].name }
+    const signature = JSON.stringify(state)
+    if (signature === mobileDrawn) return
+    mobileDrawn = signature
+    mobileListener(state)
+  }
+  const mobileControl: VaseMobileControl = {
+    action: () => { if (mobile && settled) { cancelTouch(); b.shatterRequest() } },
+    replace: () => { if (mobile && settled) replace() },
+    exit: () => { if (mobile) finish() },
+    touchStart: (x, y) => {
+      if (!mobile || !settled || touch || !Number.isFinite(x) || !Number.isFinite(y)) return false
+      touchRay(x, y)
+      // The whole vase is not carried on a phone: a drag that does not start on a piece turns the turntable instead.
+      const list = candidates().filter((c) => c.id !== VASE)
+      const id = selectPiece(raycaster.ray.origin.toArray(), raycaster.ray.direction.toArray(), list, 4 * phoneRigScale)
+      if (id === null) return false
+      // Like the desktop drag: the piece moves on a plane through it, facing the camera, keeping the grab offset.
+      camera.getWorldDirection(look)
+      touchPlane.setFromNormalAndCoplanarPoint(look, pieces[id].position)
+      if (!raycaster.ray.intersectPlane(touchPlane, touchPoint)) return false
+      b.gripStarted(id)
+      b.select(id)
+      touch = { id, offset: touchPoint.clone().sub(pieces[id].position), x, y, moved: false }
+      return true
+    },
+    touchMove: (x, y) => {
+      if (!touch || !Number.isFinite(x) || !Number.isFinite(y)) return
+      if (Math.hypot(x - touch.x, y - touch.y) > 0.02) touch.moved = true
+      touchRay(x, y)
+      if (raycaster.ray.intersectPlane(touchPlane, touchPoint)) pieces[touch.id].position.copy(touchPoint).sub(touch.offset)
+    },
+    touchEnd: () => {
+      const held = touch
+      if (!held) return
+      touch = null
+      // A tap without a drag is not an attempt (as on desktop): the piece just goes back.
+      if (!held.moved) { b.gripCancel(held.id); b.select(null); return }
+      camera.getWorldPosition(eye)
+      releasePiece(held.id, phoneSeats(eye.toArray(), pieces[held.id].position.toArray(), targets[held.id].position.toArray(), XR_SEAT_THRESHOLD))
+    },
+    touchCancel: cancelTouch,
+    rotateBy: (rad) => {
+      if (!mobile || !settled || touch || !Number.isFinite(rad)) return
+      phoneTurn += rad
+      applyPhoneRig()
+    },
+    scaleBy: (factor) => {
+      if (!mobile || !settled || touch) return
+      phoneRigScale = phoneScale(phoneRigScale, factor)
+      applyPhoneRig()
+    },
+  }
   const panelAim = (el: El) => {
     setupRay(el)
     panel.obj.updateWorldMatrix(true, false)
@@ -528,6 +691,11 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   }
 
   const head = (el: El, kind: 'trigger' | 'side') => {
+    // Phone: a screen tap only places (never with two fingers); after that the overlay and its touch handling do the work.
+    if (session && mobile) {
+      if (!settled && screenTouches() <= 1 && !multiTouch) placeNow = true
+      return
+    }
     // AR before placement: the first press puts the turntable where the ring is (or in front of you if no surface was found).
     if (session && ar && !settled) { placeNow = true; return }
     if (!session || !settled) return
@@ -547,6 +715,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     if (id !== null) hold(el, id)
   }
   const lift = (el: El, kind: 'trigger' | 'side') => {
+    if (mobile) return
     el[kind] = false
     if (!el.trigger && !el.side && el.held !== null) el.toRelease = true
   }
@@ -554,9 +723,10 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   const hands: El[] = [0, 1].map((i) => {
     const controller = xr.getController(i)
     const ray = new THREE.Line(rayGeometry, rayMaterial)
-    controller.add(ray, new THREE.Mesh(handGeometry, handMaterial))
+    const marker = new THREE.Mesh(handGeometry, handMaterial)
+    controller.add(ray, marker)
     rig.add(controller)
-    const el: El = { controller, ray, trigger: false, side: false, held: null, toRelease: false, offset: new THREE.Matrix4(), listeners: [] }
+    const el: El = { controller, ray, marker, trigger: false, side: false, held: null, toRelease: false, offset: new THREE.Matrix4(), listeners: [] }
     el.listeners = [
       ['selectstart', () => head(el, 'trigger')], ['selectend', () => lift(el, 'trigger')],
       ['squeezestart', () => head(el, 'side')], ['squeezeend', () => lift(el, 'side')],
@@ -578,9 +748,20 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   let prevBackground: THREE.Scene['background'] = null
   const prevClear = new THREE.Color()
   let prevAlpha = 1
-  const enter = (fresh: XRSession, mode: 'vr' | 'ar') => {
+  const enter = (fresh: XRSession, mode: 'vr' | 'ar', phone: boolean) => {
     session = fresh
     ar = mode === 'ar'
+    mobile = ar && phone
+    multiTouch = false
+    mobileDrawn = ''
+    touch = null
+    phoneTurn = 0
+    phoneRigScale = METER
+    if (mobile) {
+      fresh.addEventListener('inputsourceschange', onInputSources)
+      // No rays or hand markers on a phone; the controllers still deliver the screen taps.
+      for (const el of hands) el.controller.removeFromParent()
+    }
     if (ar) {
       prevBackground = scene.background
       scene.background = null
@@ -591,7 +772,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       culled.length = 0
       scene.traverse((o) => { if (o.frustumCulled) { culled.push(o); o.frustumCulled = false } })
       placeNow = false
-      camera.add(hint.obj)
+      if (!mobile) camera.add(hint.obj)
       void Promise.all([import('../../../shared/xr/arPlacement'), import('../../../shared/xr/arLight')]).then(async ([{ createArPlacement }, { createContactShadow, createArLighting }]) => {
         if (session !== fresh || !ar) return
         shadow ??= createContactShadow(XR_TABLE_RADIUS * 1.25)
@@ -613,14 +794,33 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     camera.near = 0.05
     camera.far = 30
     rig.add(camera)
-    camera.add(label.obj)
-    scene.add(rig, panel.obj)
+    // Phone: the DOM overlay shows the label's place (the page), the hint and the panel instead.
+    if (mobile) scene.add(rig)
+    else {
+      camera.add(label.obj)
+      scene.add(rig, panel.obj)
+    }
     if (!ar) scene.add(environment)
     drawn = ''
     result = ''
+    emitMobile()
   }
 
   const undo = () => {
+    cancelTouch()
+    if (mobile) {
+      mobileListener?.(null)
+      session?.removeEventListener('inputsourceschange', onInputSources)
+      for (const el of hands) rig.add(el.controller)
+    }
+    mobile = false
+    mobileListener = null
+    mobileDrawn = ''
+    multiTouch = false
+    phoneTurn = 0
+    phoneRigScale = METER
+    rig.scale.setScalar(METER)
+    undoQuality()
     for (const el of hands) breakGrip(el)
     removeFromStand()
     label.obj.removeFromParent()
@@ -672,19 +872,28 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   }
 
   return {
-    start: async (mode = 'vr') => {
+    mobile: mobileControl,
+    start: async (mode = 'vr', option = {}) => {
       if (session || starting) return
       if (!navigator.xr) throw new Error('WebXR not available in this browser')
+      const root = mode === 'ar' ? option.overlayRoot : undefined
       starting = true
+      // Started without awaiting: no await may come before requestSession, or the browser loses the user gesture.
+      const qualityModule = root ? import('../../scale-models/mobileAr/detect').catch(() => null) : null
       // three's XREstimatedLight only begins on the renderer's 'sessionstart', so it has to exist before setSession.
       // The helpers are preloaded below; creating them here is synchronous and keeps the user gesture.
       if (mode === 'ar' && arLightModule && !arLight) { arLight = arLightModule.createArLighting(renderer, scene); arLight.start() }
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
       let fresh: XRSession | null = null
       try {
-        fresh = await navigator.xr.requestSession(mode === 'ar' ? 'immersive-ar' : 'immersive-vr', { optionalFeatures: mode === 'ar' ? ['local-floor', 'hit-test', 'light-estimation'] : ['local-floor'] })
+        fresh = await navigator.xr.requestSession(mode === 'ar' ? 'immersive-ar' : 'immersive-vr', root
+          ? { optionalFeatures: ['local-floor', 'hit-test', 'light-estimation', 'dom-overlay'], domOverlay: { root } }
+          : { optionalFeatures: mode === 'ar' ? ['local-floor', 'hit-test', 'light-estimation'] : ['local-floor'] })
         // The scene may have closed while waiting for permission: do not leave the user in an empty session.
         if (closed) throw new Error('Scene closed')
+        // Phone: the framebuffer scale only takes effect before setSession.
+        const quality = qualityModule ? await qualityModule : null
+        if (quality) restoreQuality = quality.applyMobileArQuality(renderer)
         await xr.setSession(fresh)
         if (closed || xr.getSession() !== fresh) throw new Error('VR session closed while opening')
       } catch (error) {
@@ -700,15 +909,40 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
           await fresh.end().catch(restore)
         }
         if (!session) { arLight?.stop(); arLight = null }
+        undoQuality()
         throw error
       } finally {
         starting = false
       }
       xr.setFoveation(1)
-      enter(fresh, mode)
+      // Phone mode needs the DOM overlay: without it the head panels stay, and a screen tap still reaches the panel buttons.
+      const overlayGranted = !!root && !!(fresh as XRSession & { domOverlayState?: unknown }).domOverlayState
+      if (overlayGranted) mobileListener = option.onMobileState ?? null
+      else if (root) option.onMobileState?.(null)
+      enter(fresh, mode, overlayGranted)
     },
     frame: () => {
       if (!session) return
+      emitMobile()
+      if (!settled && mobile) {
+        // Phone: the turntable follows the ring (or waits in front of you) until a one-finger tap places it.
+        const frame = xr.getFrame(), space = xr.getReferenceSpace()
+        const pose = frame && space ? frame.getViewerPose(space) : null
+        if (!pose) return
+        const { position: p, orientation: q } = pose.transform
+        const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(new THREE.Quaternion(q.x, q.y, q.z, q.w))
+        phoneYaw = Math.atan2(-forward.x, -forward.z)
+        const hit = placing && frame && space ? placing.update(frame, space) : null
+        if (hit && placing) phoneSpot.copy(placing.reticle.position)
+        else phoneSpot.set(p.x - Math.sin(phoneYaw) * VASE_DISTANCE, tableHeight(p.y) + TURNTABLE_BOTTOM / METER, p.z - Math.cos(phoneYaw) * VASE_DISTANCE)
+        applyPhoneRig()
+        if (!placeNow) return
+        placeNow = false
+        if (placing) placing.reticle.visible = false
+        settled = true
+        emitMobile()
+        return
+      }
       if (!settled) {
         // Until the head pose arrives, where "in front" of the vase is cannot be known.
         const frame = xr.getFrame(), space = xr.getReferenceSpace()
@@ -746,6 +980,9 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
         settled = true
       }
 
+      // Phone: no rays to aim with and no panel to draw; touches move the pieces directly and the overlay shows the text.
+      if (mobile) return
+
       for (const el of hands) if (el.toRelease) release(el)
 
       const highlight: number[] = []
@@ -776,6 +1013,8 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     finish,
     active: () => session !== null,
     reset: () => {
+      // The scene puts the pieces back itself: a touch-held piece is just let go.
+      touch = null
       for (const el of hands) breakGrip(el)
       removeFromStand()
       result = ''
@@ -789,6 +1028,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
         undo()
         open.end().catch(() => {})
       }
+      undoQuality()
       for (const el of hands) {
         for (const [event, f] of el.listeners) el.controller.removeEventListener(event as 'selectstart', f)
         el.controller.removeFromParent()

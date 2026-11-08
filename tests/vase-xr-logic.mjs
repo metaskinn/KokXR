@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import {
   METER, ILLUSTRATIVE_MODEL_LABEL, XR_SEAT_THRESHOLD, XR_TABLE_RADIUS,
   screenThreshold, tableHeight, panelButton, panelText, selectPiece, vaseStage_, vaseRig, xrShelfLayout, snapsIn,
+  vaseRigAt, phoneScale, phoneSeats, PHONE_SCALE_MIN, PHONE_SCALE_MAX,
 } from '../src/features/workshops/vase/vaseXr.ts'
 
 const near = (a, b, tol = 1e-6) => assert(Math.abs(a - b) <= tol, `${a} ≠ ${b}`)
@@ -90,5 +91,29 @@ for (const phase of ['traceless', 'repair', 'done']) {
   assert.equal(buttons[1].name, "VR'dan çık")
   assert.doesNotMatch(title + hint, /yazı|kitabe|tarih/i)
 }
+
+// Phone AR: pinch scale, scaled placement and the line-of-sight seat check.
+assert.equal(phoneScale(METER, 2), METER / 2, 'pinch out makes the vase larger: smaller rig scale')
+assert.equal(phoneScale(METER, 100), PHONE_SCALE_MIN, 'clamped below')
+assert.equal(phoneScale(METER, 0.01), PHONE_SCALE_MAX, 'clamped above')
+assert.equal(phoneScale(METER, 0), METER, 'invalid factor ignored')
+{
+  const spot = { x: 0.3, y: 0.7, z: -0.5 }
+  for (const [yaw, k] of [[0, METER], [1.1, 60], [-2, 220]]) {
+    const r = vaseRigAt(spot, yaw, k)
+    const c = Math.cos(r.rotY), s = Math.sin(r.rotY)
+    // The spot maps to the turntable's underside centre at any yaw and scale.
+    near(r.x + k * (spot.x * c + spot.z * s), 0, 1e-9)
+    near(r.z + k * (-spot.x * s + spot.z * c), 0, 1e-9)
+    near(r.y + k * spot.y, -2.75, 1e-9)
+  }
+  assert.deepEqual(vaseRigAt(spot, 0.4), vaseRigAt(spot, 0.4, METER), 'default scale unchanged')
+}
+assert.equal(phoneSeats([0, 0, 100], [0, 0, 0], [3, 0, 0], XR_SEAT_THRESHOLD), true, 'near in 3D')
+assert.equal(phoneSeats([0, 0, 100], [0, 0, 30], [0, 0, 0], XR_SEAT_THRESHOLD), true, 'behind on the line of sight: depth is not asked of a touch')
+assert.equal(phoneSeats([0, 0, 100], [20, 0, 30], [0, 0, 0], XR_SEAT_THRESHOLD), false, 'off the line of sight')
+assert.equal(phoneSeats([0, 0, 100], [0, 0, 30], [0, 0, 120], XR_SEAT_THRESHOLD), false, 'target behind the eye')
+assert.match(panelText('repair', 1, '', true, true).hint, /dokun/)
+assert.equal(panelText('repair', 1, '', true).hint, panelText('repair', 1, '').hint, 'Quest hint unchanged')
 
 console.log('Vase VR pure calculations passed.')

@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { XR_TABLE_RADIUS, screenThreshold, vaseStage_, setupVaseXr, snapsIn } from './vaseXr'
+import type { VaseMobileControl, VaseXrStartOption } from './vaseXr'
 
 export const pieceNames = ['Alt gövde · sağ', 'Alt gövde · arka', 'Alt gövde · sol', 'Üst gövde · sağ', 'Üst gövde · arka', 'Üst gövde · sol']
 export interface VaseState { repair: boolean; broke: boolean; session: number; placed: number[]; selected: number | null }
@@ -16,8 +17,10 @@ export interface VaseScene {
   /** Frames the vase inside the stage part that the HUD does not cover (CSS pixels from each edge). */
   setSafeInsets: (insets: { top: number; right: number; bottom: number; left: number }) => void
   /** Called inside a user gesture: no await before requestSession. */
-  startXr: (mode?: 'vr' | 'ar') => Promise<void>
+  startXr: (mode?: 'vr' | 'ar', option?: VaseXrStartOption) => Promise<void>
   endXr: () => void
+  /** Phone AR (dom-overlay) buttons and touch; does nothing outside a phone AR session. */
+  mobileAr: VaseMobileControl
   clear: () => void
 }
 interface Notices { select: (id: number | null) => void; release: (id: number, seated: boolean) => void; error: () => void; xrEnded: () => void; xrShatter: () => void }
@@ -320,7 +323,8 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
   return {
     update, reset, cancel,
     setSafeInsets: (insets) => { safe = { ...insets }; area.dataset.safe = `${insets.top},${insets.right},${insets.bottom},${insets.left}`; resize() },
-    startXr: (mode) => xr.start(mode),
+    startXr: (mode, option) => xr.start(mode, option),
+    mobileAr: xr.mobile,
     endXr: () => xr.finish(),
     dragPiece: (x, y) => {
       const id = state.selected

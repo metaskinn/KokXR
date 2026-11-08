@@ -1,5 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
+import { createPortal, flushSync } from 'react-dom'
 import type { VaseState, VaseScene } from './vaseScene'
+import type { VaseMobileState } from './vaseXr'
+import { isMobileArBrowser } from '../../scale-models/mobileAr/detect'
+import VaseArOverlay from './VaseArOverlay'
+import { attachVaseTouch } from './vaseTouch'
 import UiIcon from '../../../shared/ui/UiIcon'
 import '../../../shared/ui/stage-hud.css'
 import { useHudOpen, useSafeInsets } from '../useStageHud'
@@ -22,6 +27,11 @@ export default function VaseWorkshop() {
   const [arSupport, setArSupport] = useState(false)
   const [xrKind, setXrKind] = useState<'vr' | 'ar'>('vr')
   const [vrSupport, setVrSupport] = useState(false)
+  // Phone AR (Android Chrome): the WebXR dom-overlay root, shown only during the session, and its state from vaseXr.
+  const [phone] = useState(isMobileArBrowser)
+  const overlayRoot = useRef<HTMLDivElement>(null)
+  const [overlayOn, setOverlayOn] = useState(false)
+  const [mobileState, setMobileState] = useState<VaseMobileState | null>(null)
   const vrOpen = vr !== 'closedState'
   const locked = state !== 'ready' || vrOpen
   const stage = useRef<HTMLDivElement>(null), hud = useRef<HTMLDivElement>(null), title = useRef<HTMLParagraphElement>(null)
@@ -74,6 +84,22 @@ export default function VaseWorkshop() {
 
   useEffect(() => { scene.current?.update(game) }, [game, state])
 
+  // Phone AR touch on the overlay root only while the turntable is placed; detached on replace and on end.
+  const placedOnPhone = !!mobileState && !mobileState.placing
+  useEffect(() => {
+    const root = overlayRoot.current
+    if (!placedOnPhone || !root) return
+    const control = () => scene.current?.mobileAr
+    return attachVaseTouch(root, {
+      start: (x, y) => control()?.touchStart(x, y) ?? false,
+      move: (x, y) => control()?.touchMove(x, y),
+      end: () => control()?.touchEnd(),
+      cancel: () => control()?.touchCancel(),
+      turn: (rad) => control()?.rotateBy(rad),
+      scale: (factor) => control()?.scaleBy(factor),
+    })
+  }, [placedOnPhone])
+
   function start() {
     setGame((previous) => ({ ...firstGame, repair: true, broke: true, session: previous.session + 1,
       message: 'Parçaları kırık kenarlara ve desenin devamına göre birleştir. Doğru yere yakın bırakılan parça yerine oturur.' }))
@@ -84,12 +110,27 @@ export default function VaseWorkshop() {
     setXrKind(kind)
     setVrError('')
     setVr('opening')
+    const root = kind === 'ar' && phone ? overlayRoot.current : null
+    // The dom-overlay root must be laid out before requestSession. flushSync alone did not commit in time on the scale models
+    // (the request saw display: none), so the style is also set directly; the state keeps React in step for hiding it later.
+    if (root) {
+      root.style.display = ''
+      root.style.position = 'fixed'
+      root.style.inset = '0'
+      flushSync(() => setOverlayOn(true))
+    }
+    const onMobileState = (st: VaseMobileState | null) => {
+      setMobileState(st)
+      if (!st) setOverlayOn(false)
+    }
     // Keep the user gesture: requestSession runs inside this call, without await.
-    scene.current.startXr(kind).then(() => {
+    scene.current.startXr(kind, root ? { overlayRoot: root, onMobileState } : undefined).then(() => {
       setVr('open')
       // Enters VR with the vase as is: if traceless, shattering is on the panel; a partial repair continues.
       setGame((previous) => ({ ...previous, selected: null, message: kind === 'ar' ? 'Atölye AR\'da, gerçek odanda sürüyor.' : 'Atölye VR gözlüğünde sürüyor.' }))
     }).catch(() => {
+      setOverlayOn(false)
+      setMobileState(null)
       setVr('closedState')
       setVrError(kind === 'ar' ? 'AR oturumu açılamadı. Kamera ya da geçiş görüntüsü izni reddedilmiş olabilir. Atölyeyi bu ekranda kullanmaya devam edebilirsin.' : 'VR oturumu açılamadı. İzin reddedilmiş veya gözlük bağlı olmayabilir. Atölyeyi bu ekranda kullanmaya devam edebilirsin.')
     })
@@ -175,5 +216,14 @@ export default function VaseWorkshop() {
         <p className="vase-message" role="status">{message}</p>
       </section>
     </div>
+    {phone && createPortal(
+      <div ref={overlayRoot} className="mar-root" style={overlayOn ? { position: 'fixed', inset: 0 } : { display: 'none' }}>
+        {mobileState && <VaseArOverlay state={mobileState}
+          onAction={() => scene.current?.mobileAr.action()}
+          onReplace={() => scene.current?.mobileAr.replace()}
+          onExit={() => scene.current?.mobileAr.exit()} />}
+      </div>,
+      document.body,
+    )}
   </article>
 }

@@ -13,7 +13,7 @@ import type { Source, ModelHotspot } from '../../domain/artifact'
 import { sourceText } from '../../shared/ui/SourceLine'
 import { uluMosqueModel, type Model as BuildingModel } from './uluMosqueModel'
 import { PLAYER_RADIUS, viewBlocked, stopFloor, floorStep } from './walkingCollision'
-import { setupXrSession } from './xrSession'
+import { setupXrSession, type MobileArControl, type XrStartOption } from './xrSession'
 import { createNarration } from './xrNarration'
 
 export interface ModelScene {
@@ -30,7 +30,9 @@ export interface ModelScene {
   walkRelease: () => void;
   closeInfo: () => void;
   /** Opens a VR or AR session; if refused, the Promise rejects and the scene keeps running. */
-  startXr: (mode?: 'vr' | 'ar') => Promise<void>;
+  startXr: (mode?: 'vr' | 'ar', option?: XrStartOption) => Promise<void>;
+  /** Phone AR overlay actions (Parçala/Birleştir, Yeniden yerleştir, AR'dan çık, pinch, twist). */
+  mobileAr: MobileArControl;
   /** Pixels of the stage covered by the HUD. Outside, the model is framed in the rest (the safe rectangle). */
   setSafeInsets: (insets: SafeInsets) => void;
   clear: () => void;
@@ -542,16 +544,17 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       if (!renderer.xr.isPresenting) project()
     },
     // Don't lose the user gesture: no await before requestSession.
-    startXr: async (mode = 'vr') => {
+    startXr: async (mode = 'vr', xrOption) => {
       if (inside) scene.interior(null)
       fragmented = false
       cameraTarget = null
-      await xr.start(mode)
+      await xr.start(mode, xrOption)
       // In VR the camera is in rig-local space: don't let the mouse overwrite it with desktop coordinates.
       controls.enabled = false
       controls.autoRotate = false
       option.xrChanged?.(true)
     },
+    mobileAr: xr.mobileAr,
     interior: (stopId) => {
       const stop = stops.find((d) => d.id === stopId)
       const input = !!stop && !inside

@@ -1,8 +1,13 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { createPortal, flushSync } from 'react-dom'
 import { Link } from 'react-router-dom'
 import '../../scale-models/model.css'
 import type { Source, Model } from '../../../domain/artifact'
 import type { ModelScene } from '../../scale-models/modelScene'
+import type { MobileArState } from '../../scale-models/xrSession'
+import { isMobileArBrowser } from '../../scale-models/mobileAr/detect'
+import { attachArGestures } from '../../scale-models/mobileAr/gestures'
+import MobileArOverlay from '../../scale-models/mobileAr/MobileArOverlay'
 import SourceLine from '../../../shared/ui/SourceLine'
 import Section from '../../../shared/ui/Section'
 import UiIcon from '../../../shared/ui/UiIcon'
@@ -59,9 +64,14 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
   const [infoOverflows, setInfoOverflows] = useState(false)
   const info = model.interiorInfos?.find((b) => b.id === infoId)
   const [xrSupport, setXrSupport] = useState(false)
-  // AR (Quest passthrough, Android Chrome) for every scale model: the session code is model-agnostic.
+  // AR: on Quest (passthrough) for every scale model; on an Android phone only for Ulu Camii, the one tested for phone AR.
   const [arSupport, setArSupport] = useState(false)
-  const arModel = true
+  const [phone] = useState(isMobileArBrowser)
+  const arModel = !phone || model.model === 'ulu-mosque'
+  // Phone AR: the WebXR dom-overlay root (shown only during the session) and the overlay state from xrSession.
+  const overlayRoot = useRef<HTMLDivElement>(null)
+  const [overlayOn, setOverlayOn] = useState(false)
+  const [mobileState, setMobileState] = useState<MobileArState | null>(null)
   const [xrKind, setXrKind] = useState<'vr' | 'ar'>('vr')
   // Set while the session is starting and active: page buttons must not change the scene meanwhile.
   const [xrBusy, setXrBusy] = useState(false)
@@ -114,8 +124,20 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
         setState('ready')
       } catch { setState('error') }
     }).catch(() => !cancel && setState('error'))
-    return () => { cancel = true; scene.current?.clear(); scene.current = null; setStop(null); setInfoId(null); setXrBusy(false); setXrError(false) }
+    return () => { cancel = true; scene.current?.clear(); scene.current = null; setStop(null); setInfoId(null); setXrBusy(false); setXrError(false); setOverlayOn(false); setMobileState(null) }
   }, [open, model.model, model.interiorInfos, sources])
+
+  // Phone AR: pinch and twist on the overlay root only while the model is placed; detached on replace and on end.
+  const placed = mobileState?.phase === 'placed'
+  useEffect(() => {
+    const root = overlayRoot.current
+    if (!placed || !root) return
+    return attachArGestures(root, {
+      onScale: (factor) => scene.current?.mobileAr.scaleBy(factor),
+      // Screen y points down, so a clockwise twist is positive; seen from above that is a negative turn.
+      onRotate: (delta) => scene.current?.mobileAr.rotateBy(-delta),
+    })
+  }, [placed])
 
   // On an XR browser (Quest) the primary XR button ("AR'da aç" or "VR'da aç") is the first action: focus goes to it once the scene is ready.
   useEffect(() => {
@@ -156,8 +178,17 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
     setStop(null)
     setFragmented(false)
     setXrBusy(true)
+    const root = kind === 'ar' && phone ? overlayRoot.current : null
+    // The dom-overlay root must be laid out before requestSession; flushSync keeps this inside the user gesture.
+    if (root) flushSync(() => setOverlayOn(true))
+    const onMobileState = (st: MobileArState | null) => {
+      setMobileState(st)
+      if (st) setFragmented(st.fragmented)
+      else { setOverlayOn(false); setFragmented(false) }
+    }
     // Browsers start the session only within a user gesture: no await may come before this.
-    s.startXr(kind).catch(() => { setXrBusy(false); setXrError(true) })
+    s.startXr(kind, root ? { overlayRoot: root, onMobileState } : undefined)
+      .catch(() => { setXrBusy(false); setXrError(true); setOverlayOn(false); setMobileState(null) })
   }
 
   function shatter() {
@@ -236,6 +267,15 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
         {fullscreen}
       </>}
     </Hud>}
+    {phone && createPortal(
+      <div ref={overlayRoot} className="mar-root" style={overlayOn ? { position: 'fixed', inset: 0 } : { display: 'none' }}>
+        {mobileState && <MobileArOverlay phase={mobileState.phase} fragmented={mobileState.fragmented}
+          onShatter={() => scene.current?.mobileAr.shatter()}
+          onReplace={() => scene.current?.mobileAr.replace()}
+          onExit={() => scene.current?.mobileAr.exit()} />}
+      </div>,
+      document.body,
+    )}
   </div>
 
   const hint = <p className="hint-text">{stop

@@ -13,6 +13,7 @@ import { CARD_G, MENU_G, titlePanel, infoPanel, labelPanel, hintPanel, xrPanel }
 import type { ArPlacement } from '../../shared/xr/arPlacement'
 import type { createArLighting as ArLighting } from '../../shared/xr/arLight'
 import { PLAYER_RADIUS, viewBlocked, stopFloor, floorStep } from './walkingCollision'
+import { applyMobileArQuality } from './mobileAr/detect'
 
 export interface XrOption {
   renderer: THREE.WebGLRenderer; scene: THREE.Scene; camera: THREE.PerspectiveCamera;
@@ -41,9 +42,31 @@ export interface XrOption {
 
 export type XrMode = 'vr' | 'ar'
 
+/** Phone AR state for the DOM overlay; `null` when no phone AR session is running. */
+export interface MobileArState { phase: 'placing' | 'placed'; fragmented: boolean }
+
+export interface XrStartOption {
+  /** Phone AR: the WebXR dom-overlay root. Its presence turns on the phone mode (no head panels, no menu). */
+  overlayRoot?: HTMLElement;
+  /** Phone AR: called on every phase or shatter change, and with `null` when the session ends. */
+  onMobileState?: (state: MobileArState | null) => void;
+}
+
+/** Phone AR actions; each does nothing outside a phone AR session. */
+export interface MobileArControl {
+  shatter(): void;
+  /** Back to placement: the model follows the ring until the next screen tap. */
+  replace(): void;
+  exit(): void;
+  /** The model looks `factor` times larger; clamped like the Quest stick. Only while placed. */
+  scaleBy(factor: number): void;
+  /** Adds to the same angle the Quest right stick turns. Only while placed. */
+  rotateBy(rad: number): void;
+}
+
 export interface XrSession {
   /** Rejects if refused, leaving no trace in the scene. */
-  start(mode?: XrMode): Promise<void>;
+  start(mode?: XrMode, option?: XrStartOption): Promise<void>;
   frame(dt: number): void;
   /** Closes the open session; otherwise does nothing. */
   finish(): void;
@@ -52,6 +75,7 @@ export interface XrSession {
   /** Whether the assembly game owns the layers. */
   inAssembly(): boolean;
   clear(): void;
+  mobileAr: MobileArControl;
 }
 
 const BACKGROUND = '#1a2b25'
@@ -209,6 +233,14 @@ export function setupXrSession(s: XrOption): XrSession {
   // AR state. The anchor is the centre of the model's underside (model units); the spot is the real surface point (device metres).
   let ar = false
   let placed = false, placeNow = false
+  // Phone AR: the DOM overlay replaces the head-attached hint, label and menu; a tap after placement does nothing.
+  let mobile = false
+  let mobileListener: XrStartOption['onMobileState'] | null = null
+  let restoreQuality: (() => void) | null = null
+  const undoQuality = () => { restoreQuality?.(); restoreQuality = null }
+  const emitMobile = () => {
+    if (mobile) mobileListener?.({ phase: placed ? 'placed' : 'placing', fragmented: s.isFragmented() })
+  }
   const culled: THREE.Object3D[] = []
   let placing: ArPlacement | null = null
   let arLight: ReturnType<typeof ArLighting> | null = null
@@ -297,6 +329,7 @@ export function setupXrSession(s: XrOption): XrSession {
     s.closeInfo()
     showMenu(false)
     hint.obj.visible = true
+    emitMobile()
   }
 
   const action = (id: string) => {
@@ -368,6 +401,8 @@ export function setupXrSession(s: XrOption): XrSession {
     if (!session || transition) return
     // AR placement: any trigger press (or screen tap on a phone) puts the model down where it is previewed.
     if (ar && !placed) { placeNow = true; return }
+    // Phone: after placement a screen tap has no target (no rays, no menu); the overlay buttons do the work.
+    if (mobile) return
     const hit = findHit(controller)
     if (!hit) return
     if (hit.object === card.obj) return s.closeInfo()
@@ -401,11 +436,12 @@ export function setupXrSession(s: XrOption): XrSession {
     return extent
   }
 
-  const enter = (fresh: XRSession, mode: XrMode, lighting: ReturnType<typeof ArLighting> | null) => {
+  const enter = (fresh: XRSession, mode: XrMode, lighting: ReturnType<typeof ArLighting> | null, phone: boolean) => {
     session = fresh
     ar = mode === 'ar'
+    mobile = ar && phone
     rig.add(camera)
-    camera.add(ar ? arLabel.obj : label.obj)
+    if (!mobile) camera.add(ar ? arLabel.obj : label.obj)
     scene.add(rig)
     scene.add(titleGroup)
     prevBack = scene.background
@@ -431,7 +467,7 @@ export function setupXrSession(s: XrOption): XrSession {
       placeNow = false
       arSpot.set(0, 0, -AR_AHEAD)
       arYaw = 0
-      camera.add(hint.obj)
+      if (!mobile) camera.add(hint.obj)
       hint.obj.visible = true
       arLight = lighting
       void Promise.all([import('../../shared/xr/arPlacement'), import('../../shared/xr/arLight')]).then(async ([{ createArPlacement }, { createContactShadow }]) => {
@@ -450,6 +486,7 @@ export function setupXrSession(s: XrOption): XrSession {
       disk.visible = true
     }
     applyTable()
+    emitMobile()
   }
 
   /** AR placement frame: the model previews on the ring (or ahead of the user with no surface); the trigger press fixes it. */
@@ -472,7 +509,8 @@ export function setupXrSession(s: XrOption): XrSession {
     placed = true
     if (placing) placing.reticle.visible = false
     hint.obj.visible = false
-    showMenu(true)
+    if (mobile) emitMobile()
+    else showMenu(true)
   }
 
   const undo = () => {
@@ -496,6 +534,9 @@ export function setupXrSession(s: XrOption): XrSession {
       placed = false
       placeNow = false
     }
+    if (mobile) mobileListener?.(null)
+    mobile = false
+    mobileListener = null
     camera.removeFromParent()
     camera.scale.set(1, 1, 1) // Rounding error left over when detaching from the rig
     rig.removeFromParent()
@@ -523,6 +564,8 @@ export function setupXrSession(s: XrOption): XrSession {
   let turnSpeed = 0 // rad/s, eased (smooth turn)
   const onSessionEnd = () => {
     narration.stop()
+    // Runs after three's own sessionend restore, so the original pixel ratio wins.
+    undoQuality()
     if (!session) return // Closing a half-finished start: the scene was never touched
     undo()
     s.sessionEnded()
@@ -617,8 +660,9 @@ export function setupXrSession(s: XrOption): XrSession {
   }
 
   return {
-    start: async (mode = 'vr') => {
+    start: async (mode = 'vr', option = {}) => {
       if (session || starting) return
+      const root = mode === 'ar' ? option.overlayRoot : undefined
       if (!navigator.xr) throw new Error('WebXR is not available in this browser')
       starting = true
       if (s.narrated && mode === 'vr') narration.unlock() // inside the click that starts VR, so the browser lets the guide play later
@@ -628,9 +672,9 @@ export function setupXrSession(s: XrOption): XrSession {
       let fresh: XRSession | null = null
       let lighting: ReturnType<typeof ArLighting> | null = null
       try {
-        fresh = await navigator.xr.requestSession(mode === 'ar' ? 'immersive-ar' : 'immersive-vr', {
-          optionalFeatures: mode === 'ar' ? ['local-floor', 'hit-test', 'light-estimation'] : ['local-floor'],
-        })
+        fresh = await navigator.xr.requestSession(mode === 'ar' ? 'immersive-ar' : 'immersive-vr', root
+          ? { optionalFeatures: ['local-floor', 'hit-test', 'light-estimation', 'dom-overlay'], domOverlay: { root } }
+          : { optionalFeatures: mode === 'ar' ? ['local-floor', 'hit-test', 'light-estimation'] : ['local-floor'] })
         // The scene may have closed while waiting for permission: don't leave the user in an empty session.
         if (closed) throw new Error('Scene closed')
         // Room lighting listens for the session start, so it must exist before setSession.
@@ -639,6 +683,8 @@ export function setupXrSession(s: XrOption): XrSession {
           lighting = light.createArLighting(renderer, scene)
           lighting.start()
         }
+        // Phone: the framebuffer scale only takes effect before setSession.
+        if (root) restoreQuality = applyMobileArQuality(renderer)
         await xr.setSession(fresh)
         if (closed || xr.getSession() !== fresh) throw new Error('XR session closed while starting')
       } catch (error) {
@@ -647,18 +693,21 @@ export function setupXrSession(s: XrOption): XrSession {
         if (fresh) {
           const restore = () => {
             xr.removeEventListener('sessionend', restore)
+            undoQuality()
             renderer.setPixelRatio(ratio)
             renderer.setSize(size.x, size.y, false)
           }
           xr.addEventListener('sessionend', restore)
           await fresh.end().catch(restore)
         }
+        undoQuality()
         throw error
       } finally {
         starting = false
       }
       xr.setFoveation(1)
-      enter(fresh, mode, lighting)
+      if (root) mobileListener = option.onMobileState ?? null
+      enter(fresh, mode, lighting, !!root)
     },
     frame: (dt) => {
       if (!session) return
@@ -667,7 +716,7 @@ export function setupXrSession(s: XrOption): XrSession {
         if (!frame || !space || !frame.getViewerPose(space)) return
         poseReady = true
         // AR: the menu waits until the model is placed.
-        if (menuOpen && !(ar && !placed)) showMenu(true)
+        if (menuOpen && !(ar && !placed) && !mobile) showMenu(true)
         if (pendingCard) {
           placeCard()
           card.show(pendingCard)
@@ -677,7 +726,7 @@ export function setupXrSession(s: XrOption): XrSession {
       advanceTransition(Math.min(dt, MAX_DT))
       if (ar && !placed) arPreview()
       const input = controllerInput(session.inputSources)
-      if (input.menu && !menuPressed && !transition && !(ar && !placed)) showMenu(!menuOpen)
+      if (input.menu && !menuPressed && !transition && !(ar && !placed) && !mobile) showMenu(!menuOpen)
       menuPressed = input.menu
       const step = Math.min(dt, MAX_DT)
       assembly.frame(step)
@@ -702,6 +751,7 @@ export function setupXrSession(s: XrOption): XrSession {
     clear: () => {
       closed = true
       xr.removeEventListener('sessionend', onSessionEnd)
+      undoQuality()
       const open = session
       // The scene is closing too: sessionEnded is not called and a later sessionend is not listened to.
       if (open) {
@@ -730,6 +780,26 @@ export function setupXrSession(s: XrOption): XrSession {
       darken.material.dispose()
       rayGeometry.dispose()
       rayMaterial.dispose()
+    },
+    mobileAr: {
+      shatter: () => {
+        if (!mobile || !placed) return
+        s.setShatter(!s.isFragmented())
+        emitMobile()
+      },
+      replace: () => { if (mobile && placed) replace() },
+      exit: () => { if (mobile) finish() },
+      scaleBy: (factor) => {
+        if (!mobile || !placed || !(factor > 0)) return
+        // The rig scale is model units per metre: a larger model is a smaller rig scale.
+        scale = THREE.MathUtils.clamp(scale / factor, arBase * AR_SCALE_MIN, arBase * AR_SCALE_MAX)
+        applyTable()
+      },
+      rotateBy: (rad) => {
+        if (!mobile || !placed || !Number.isFinite(rad)) return
+        angle += rad
+        applyTable()
+      },
     },
   }
 }

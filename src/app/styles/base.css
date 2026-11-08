@@ -79,7 +79,7 @@ button[aria-pressed='true'] { background: var(--band); border-color: var(--actio
 
 .tabbar {
   position: fixed; z-index: var(--z-sticky); left: 0; right: 0; bottom: 0;
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); /* one column per tab, any count */
   padding: 0 max(var(--s-2), env(safe-area-inset-right)) env(safe-area-inset-bottom) max(var(--s-2), env(safe-area-inset-left));
   background: var(--surface); border-top: 1px solid var(--line);
 }

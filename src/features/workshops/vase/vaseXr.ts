@@ -62,6 +62,19 @@ export function vaseRigAt(spot: { x: number; y: number; z: number }, yaw: number
   }
 }
 
+/** Phone: the vase taken in hand rises this far off the stand (model units, i.e. cm). */
+export const PHONE_VASE_LIFT = 6
+/** Phone: radians per screen pixel when turning the vase in hand. */
+export const PHONE_VASE_TURN = 0.01
+/** Drag in pixels to [yaw about the vertical, pitch about the camera's right axis]; dragging down tips the top towards you. */
+export function vaseTurnStep(dxPx: number, dyPx: number): [number, number] {
+  return [Number.isFinite(dxPx) ? dxPx * PHONE_VASE_TURN : 0, Number.isFinite(dyPx) ? dyPx * PHONE_VASE_TURN : 0]
+}
+/** Yaw (about +y) of a turned object's local +z axis; used to set the vase back upright while keeping its heading. */
+export function headingOf(forward: Pointed) {
+  return Math.atan2(forward[0], forward[2])
+}
+
 /** Phone pinch range for the rig scale: the vase looks between 0.4× and 2× its table size. */
 export const PHONE_SCALE_MIN = METER / 2
 export const PHONE_SCALE_MAX = METER * 2.5
@@ -148,18 +161,18 @@ function panelTextCore(phase: VasePhase, placed: number, result: string, phone: 
   const exit = { id: 'exit' as PanelAction, name: "VR'dan çık" }
   if (phase === 'traceless') return {
     title: 'Vazoyu incele', progress: 'İzsiz vazo',
-    hint: phone ? 'Boş yerde parmağını sürükle: vazo döner. İki parmakla büyüt ya da küçült.' : 'Vazoyu tutup çevir. Hazır olunca parçala.',
+    hint: phone ? 'Vazoya dokunup sürükle: elinde çevir. Boş yerde sürükle: tabla döner. İki parmak: büyüt.' : 'Vazoyu tutup çevir. Hazır olunca parçala.',
     buttons: [{ id: 'shatter' as PanelAction, name: 'Vazoyu parçala' }, exit],
   }
   const progress = `${placed}/${PIECE_COUNT} parça yerinde`
   if (phase === 'done') return {
     title: 'Vazo onarıldı!', progress,
-    hint: phone ? 'Vazoyu parmağınla çevir, onarım izlerini incele.' : 'Vazoyu tutup çevir, onarım izlerini incele.',
+    hint: phone ? 'Vazoya dokunup sürükle: elinde çevir, onarım izlerini incele.' : 'Vazoyu tutup çevir, onarım izlerini incele.',
     buttons: [{ id: 'shatter' as PanelAction, name: 'Yeniden parçala' }, exit],
   }
   return {
     title: 'Vazoyu onar', progress,
-    hint: result || (phone ? 'Bir parçaya dokun, sürükleyip yerine bırak.' : 'Parçayı tetik veya yan tuşla tut, götür, bırak.'),
+    hint: result || (phone ? 'Parçaya dokun, sürükleyip yerine bırak. Vazoya dokunup sürükle: elinde çevir.' : 'Parçayı tetik veya yan tuşla tut, götür, bırak.'),
     buttons: [{ id: 'shatter' as PanelAction, name: 'Yeniden başlat' }, exit],
   }
 }
@@ -218,9 +231,11 @@ export interface VaseMobileControl {
   action(): void
   replace(): void
   exit(): void
-  /** One finger down: grabs the free piece under the touch. Returns false if there is none (the drag then turns the vase). */
+  /** One finger down: grabs the free piece under the touch, else takes the vase in hand if the touch is on it.
+   *  Returns false if neither (the drag then turns the turntable). */
   touchStart(x: number, y: number): boolean
-  touchMove(x: number, y: number): void
+  /** `dx`, `dy`: screen pixels since the last move (turn the vase in hand). */
+  touchMove(x: number, y: number, dx?: number, dy?: number): void
   /** Finger lifted: the desktop/VR release path (seat check, messages). */
   touchEnd(): void
   /** Touch interrupted: the piece goes back without counting an attempt. */
@@ -512,13 +527,16 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     return selectPiece(raycaster.ray.origin.toArray(), raycaster.ray.direction.toArray(), candidates(), RAY_LENGTH * METER)
   }
 
-  const takeToStand = () => {
+  /** Pieces on the holder: all of them on Quest (it only grabs a whole vase); on a phone mid-repair only the seated ones. */
+  let standPieces: number[] = []
+  const takeToStand = (carried: number[] = pieces.map((_, id) => id)) => {
     if (standOccupied) return
     standOccupied = true
+    standPieces = carried
     scene.add(stand)
     stand.updateWorldMatrix(true, false)
     for (const n of b.wholeObjects) wholeHome.set(n, { position: n.position.clone(), turn: n.quaternion.clone() })
-    for (const n of [...pieces, ...b.wholeObjects]) stand.attach(n)
+    for (const n of [...carried.map((id) => pieces[id]), ...b.wholeObjects]) stand.attach(n)
   }
   const removeFromStand = () => {
     if (!standOccupied) return
@@ -527,8 +545,10 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     stand.position.copy(standHome)
     stand.quaternion.identity()
     stand.updateWorldMatrix(true, false)
-    for (const n of [...pieces, ...b.wholeObjects]) scene.attach(n)
-    pieces.forEach((p, id) => { p.position.copy(targets[id].position); p.quaternion.copy(targets[id].quaternion) })
+    for (const n of [...standPieces.map((id) => pieces[id]), ...b.wholeObjects]) scene.attach(n)
+    for (const id of standPieces) { pieces[id].position.copy(targets[id].position); pieces[id].quaternion.copy(targets[id].quaternion) }
+    standPieces = []
+    vaseInHand = vaseReturning = false
     for (const [n, ev] of wholeHome) { n.position.copy(ev.position); n.quaternion.copy(ev.turn) }
     stand.removeFromParent()
   }
@@ -622,10 +642,39 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     camera.updateWorldMatrix(true, false)
     raycaster.setFromCamera(new THREE.Vector2(x, y), camera)
   }
+  // The vase in hand (phone): lifted off the stand and turned by the drag; on release it eases back upright.
+  let vaseInHand = false, vaseReturning = false
+  const vaseLifted = standHome.clone().add(new THREE.Vector3(0, PHONE_VASE_LIFT, 0))
+  const turnAxis = new THREE.Vector3(), turnStep = new THREE.Quaternion(), upright = new THREE.Quaternion()
+  const putVaseBack = () => {
+    if (!vaseInHand) return
+    vaseInHand = false
+    // Keep the heading: it moves to the turntable (same view at this instant), and the vase returns to its stand frame.
+    // The seated pieces then sit exactly on their targets again, so later seating still works.
+    turnAxis.set(0, 0, 1).applyQuaternion(stand.quaternion)
+    const heading = headingOf(turnAxis.toArray())
+    upright.setFromAxisAngle(turnAxis.set(0, 1, 0), -heading)
+    stand.quaternion.premultiply(upright)
+    phoneTurn += heading
+    applyPhoneRig()
+    vaseReturning = true
+  }
   const cancelTouch = () => {
+    putVaseBack()
     const held = touch
     touch = null
     if (held) { b.gripCancel(held.id); b.select(null) }
+  }
+  /** Phone frame step: lifts the vase in hand, or eases it back down and upright, then off the holder. */
+  const phoneVaseFrame = () => {
+    if (vaseInHand) { stand.position.lerp(vaseLifted, 0.3); return }
+    if (!vaseReturning) return
+    stand.position.lerp(standHome, 0.2)
+    stand.quaternion.slerp(upright.identity(), 0.2)
+    if (stand.position.distanceTo(standHome) < 0.05 && stand.quaternion.angleTo(upright) < 0.002) {
+      vaseReturning = false
+      removeFromStand()
+    }
   }
   const emitMobile = () => {
     if (!mobile || !mobileListener) return
@@ -641,12 +690,25 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     replace: () => { if (mobile && settled) replace() },
     exit: () => { if (mobile) finish() },
     touchStart: (x, y) => {
-      if (!mobile || !settled || touch || !Number.isFinite(x) || !Number.isFinite(y)) return false
+      if (!mobile || !settled || touch || vaseInHand || !Number.isFinite(x) || !Number.isFinite(y)) return false
       touchRay(x, y)
-      // The whole vase is not carried on a phone: a drag that does not start on a piece turns the turntable instead.
+      const origin = raycaster.ray.origin.toArray(), direction = raycaster.ray.direction.toArray(), reach = 4 * phoneRigScale
+      // A free piece first; otherwise the vase body (the same sphere Quest grabs), in every phase once something stands on it.
       const list = candidates().filter((c) => c.id !== VASE)
-      const id = selectPiece(raycaster.ray.origin.toArray(), raycaster.ray.direction.toArray(), list, 4 * phoneRigScale)
-      if (id === null) return false
+      const id = selectPiece(origin, direction, list, reach)
+      if (id === null) {
+        const carried = pieces.map((_, n) => n).filter((n) => !b.isFree(n))
+        if (b.phase() === 'repair' && !carried.length) return false
+        if (selectPiece(origin, direction, [{ id: VASE, center: standHome.toArray(), radius: VASE_RADIUS }], reach) !== VASE) return false
+        if (!vaseReturning) {
+          // Pieces still gliding into place stop there: on the holder their target is in its frame.
+          for (const n of carried) { b.gripStarted(n); pieces[n].position.copy(targets[n].position); pieces[n].quaternion.copy(targets[n].quaternion) }
+          takeToStand(carried)
+        }
+        vaseReturning = false
+        vaseInHand = true
+        return true
+      }
       // Like the desktop drag: the piece moves on a plane through it, facing the camera, keeping the grab offset.
       camera.getWorldDirection(look)
       touchPlane.setFromNormalAndCoplanarPoint(look, pieces[id].position)
@@ -656,13 +718,22 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       touch = { id, offset: touchPoint.clone().sub(pieces[id].position), x, y, moved: false }
       return true
     },
-    touchMove: (x, y) => {
+    touchMove: (x, y, dx = 0, dy = 0) => {
+      if (vaseInHand) {
+        const [yaw, pitch] = vaseTurnStep(dx, dy)
+        stand.quaternion.premultiply(turnStep.setFromAxisAngle(turnAxis.set(0, 1, 0), yaw))
+        camera.updateWorldMatrix(true, false)
+        turnAxis.setFromMatrixColumn(camera.matrixWorld, 0).normalize()
+        stand.quaternion.premultiply(turnStep.setFromAxisAngle(turnAxis, pitch)).normalize()
+        return
+      }
       if (!touch || !Number.isFinite(x) || !Number.isFinite(y)) return
       if (Math.hypot(x - touch.x, y - touch.y) > 0.02) touch.moved = true
       touchRay(x, y)
       if (raycaster.ray.intersectPlane(touchPlane, touchPoint)) pieces[touch.id].position.copy(touchPoint).sub(touch.offset)
     },
     touchEnd: () => {
+      putVaseBack()
       const held = touch
       if (!held) return
       touch = null
@@ -673,12 +744,12 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     },
     touchCancel: cancelTouch,
     rotateBy: (rad) => {
-      if (!mobile || !settled || touch || !Number.isFinite(rad)) return
+      if (!mobile || !settled || touch || vaseInHand || !Number.isFinite(rad)) return
       phoneTurn += rad
       applyPhoneRig()
     },
     scaleBy: (factor) => {
-      if (!mobile || !settled || touch) return
+      if (!mobile || !settled || touch || vaseInHand) return
       phoneRigScale = phoneScale(phoneRigScale, factor)
       applyPhoneRig()
     },
@@ -981,7 +1052,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       }
 
       // Phone: no rays to aim with and no panel to draw; touches move the pieces directly and the overlay shows the text.
-      if (mobile) return
+      if (mobile) { phoneVaseFrame(); return }
 
       for (const el of hands) if (el.toRelease) release(el)
 

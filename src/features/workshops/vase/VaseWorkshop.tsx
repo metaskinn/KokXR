@@ -92,7 +92,7 @@ export default function VaseWorkshop() {
     const control = () => scene.current?.mobileAr
     return attachVaseTouch(root, {
       start: (x, y) => control()?.touchStart(x, y) ?? false,
-      move: (x, y) => control()?.touchMove(x, y),
+      move: (x, y, dx, dy) => control()?.touchMove(x, y, dx, dy),
       end: () => control()?.touchEnd(),
       cancel: () => control()?.touchCancel(),
       turn: (rad) => control()?.rotateBy(rad),

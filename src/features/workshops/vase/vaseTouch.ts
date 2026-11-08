@@ -1,11 +1,12 @@
-// Phone AR touch for the vase: one finger on a piece carries it, one finger elsewhere turns the turntable, two fingers pinch.
+// Phone AR touch for the vase: one finger on a piece carries it, on the vase turns it in hand, elsewhere turns the turntable, two fingers pinch.
 // Same rules as the scale models' gestures.ts (touches that start on a button are the button's; a third finger is ignored).
 import { pinchFactor } from '../../scale-models/mobileAr/gestures'
 
 export interface VaseTouchHandlers {
   /** Normalized device coordinates (-1..1, y up). True if a piece was grabbed. */
   start(x: number, y: number): boolean
-  move(x: number, y: number): void
+  /** `dx`, `dy`: screen pixels since the last move. */
+  move(x: number, y: number, dx: number, dy: number): void
   end(): void
   cancel(): void
   turn(rad: number): void
@@ -51,7 +52,7 @@ export function attachVaseTouch(el: HTMLElement, h: VaseTouchHandlers): () => vo
     const last = pts.get(e.pointerId)
     if (!last) return
     pts.set(e.pointerId, { x: e.clientX, y: e.clientY })
-    if (mode === 'piece' && e.pointerId === first) h.move(...ndc(e.clientX, e.clientY))
+    if (mode === 'piece' && e.pointerId === first) h.move(...ndc(e.clientX, e.clientY), e.clientX - last.x, e.clientY - last.y)
     else if (mode === 'turn') h.turn((e.clientX - last.x) * TURN_PER_PIXEL)
     else if (mode === 'pinch') {
       const d = distance()

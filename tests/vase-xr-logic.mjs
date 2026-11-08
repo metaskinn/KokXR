@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import {
   METER, ILLUSTRATIVE_MODEL_LABEL, XR_SEAT_THRESHOLD, XR_TABLE_RADIUS,
   screenThreshold, tableHeight, panelButton, panelText, selectPiece, vaseStage_, vaseRig, xrShelfLayout, snapsIn,
-  vaseRigAt, phoneScale, phoneSeats, PHONE_SCALE_MIN, PHONE_SCALE_MAX,
+  vaseRigAt, phoneScale, phoneSeats, PHONE_SCALE_MIN, PHONE_SCALE_MAX, vaseTurnStep, headingOf, PHONE_VASE_LIFT,
 } from '../src/features/workshops/vase/vaseXr.ts'
 
 const near = (a, b, tol = 1e-6) => assert(Math.abs(a - b) <= tol, `${a} ≠ ${b}`)
@@ -115,5 +115,14 @@ assert.equal(phoneSeats([0, 0, 100], [20, 0, 30], [0, 0, 0], XR_SEAT_THRESHOLD),
 assert.equal(phoneSeats([0, 0, 100], [0, 0, 30], [0, 0, 120], XR_SEAT_THRESHOLD), false, 'target behind the eye')
 assert.match(panelText('repair', 1, '', true, true).hint, /dokun/)
 assert.equal(panelText('repair', 1, '', true).hint, panelText('repair', 1, '').hint, 'Quest hint unchanged')
+
+// Phone: the vase in hand.
+assert.deepEqual(vaseTurnStep(100, -50), [1, -0.5], 'about 0.01 rad per pixel: yaw from x, pitch from y')
+assert.deepEqual(vaseTurnStep(NaN, 10), [0, 0.1], 'invalid deltas ignored')
+near(headingOf([0, 0, 1]), 0)
+near(headingOf([1, 0, 0]), Math.PI / 2)
+near(headingOf([Math.sin(-2), 0.9, Math.cos(-2)]), -2, 1e-9)
+assert(PHONE_VASE_LIFT > 0 && PHONE_VASE_LIFT < 15, 'a few cm')
+for (const phase of ['traceless', 'repair', 'done']) assert.match(panelText(phase, phase === 'done' ? 6 : 1, '', true, true).hint, /Vazoya dokunup sürükle: elinde çevir/)
 
 console.log('Vase VR pure calculations passed.')

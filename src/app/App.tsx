@@ -49,10 +49,11 @@ export default function App() {
   }, [])
 
   // Each top-level area is active for its own sub pages too (an artifact page belongs to Eserler).
-  const area = pathname.startsWith('/places') ? 'places' : pathname.startsWith('/workshops') ? 'workshops' : pathname.startsWith('/artifact') ? 'artifacts' : ''
+  const area = pathname.startsWith('/places') ? 'places' : pathname.startsWith('/workshops') ? 'workshops' : pathname.startsWith('/artifact') ? 'artifacts' : pathname === '/' ? 'home' : ''
   const back = /^\/artifact\//.test(pathname) ? { to: '/artifacts', label: 'Eserler' }
     : /^\/places\/.+/.test(pathname) ? { to: '/places', label: 'Maketler' } : null
   const tabs = [
+    { to: '/', key: 'home', label: 'Ana sayfa', icon: 'door' },
     { to: '/artifacts', key: 'artifacts', label: 'Eserler', icon: 'arch' },
     { to: '/places', key: 'places', label: 'Maketler', icon: 'cube' },
     { to: '/workshops', key: 'workshops', label: 'Atölyeler', icon: 'vase' },

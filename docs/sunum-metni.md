@@ -22,6 +22,32 @@ Organizatörün önerdiği 10 başlık (“özgün dokunuş serbest”). 6 slayt
 
 Boşluklar: yönetim akışının canlı çalıştığı henüz doğrulanmadı (demo-ekleme-duzenleme.md); “kaynak/doğrulanmamış içeriğin önlenmesi” için elle doğrulanan kayıt sayısı [sayı] ekipten gelmeli.
 
+## Organizatör metni (özgün, değiştirilmedi)
+
+Değerli Arkadaşlar,
+
+Sunumlarınızı hazırlarken aşağıdaki başlıkları kullanarak hazırlayabilirsiniz, aynı zamanda sunumlarınız sizin özgün dokunuşları doğrultusunda hazırlanacaktır.
+
+* *Proje Künyesi ve Takım Tanıtımı*: Proje adı, seçilen çalışma alanı (Sesli Rehber, Erişilebilirlik, Oyunlaştırma, Topluluk Arşivi, Rota Planlayıcı, AR veya Serbest) ve hedef platform (mobil/masaüstü). 42 Türkiye / 42 Network kampüs bilgisi ve ekip üyelerinin görev dağılımı paylaşılır.
+
+* *Problem Tanımı ve Çözümün Değeri*: Kültürel mirasın dijitalde keşfedilmesinde karşılaşılan zorluklar. Geliştirilen ürünün hem akademik araştırmalar için güvenilir bir referans olmasını hem de gençler ve genel kamuoyuyla bağ kurmasını sağlayan yönü açıklanır.
+
+* *Ürün Vizyonu ve Değer Önerisi*: Çözümün standart bir katalog uygulamasından farkı. Seçilen özgün konseptin (oyunlaştırma, hikâyeleştirme, rota optimizasyonu vb.) kullanıcı ihtiyacını karşılamada yarattığı fark anlatılır.
+
+* *Kullanıcı Deneyimi ve Arayüz Tasarımı*: Akışların sadeliği, görsel anlatımın gücü, harita entegrasyonu ve il/eser türüne göre filtreleme mekanizmaları. Kullanıcının uygulamada kaybolmadan hedefe en kısa sürede ulaşmasını sağlayan UX kararları gösterilir.
+
+* *Evrensel Erişilebilirlik Yaklaşımı*: Görme/işitme engelli ve yaşlı kullanıcılar başta olmak üzere farklı ihtiyaç gruplarına sunulan çözümler (ekran okuyucu uyumu, sesli anlatım, alternatif metinler, yüksek kontrast, dinamik yazı boyutu veya klavye navigasyonu) aktarılır.
+
+* *Veri Yönetimi ve İçerik Yapısı*: Sağlanan ham veya yarı yapılandırılmış içeriklerin temizlenerek ilişkisel bir veri modeline dönüştürülme süreci. Tarihçe, görsel galeri ve kaynak bilgisi gösterimi ile birlikte doğrulanmamış içeriklerin önlenmesi ve moderasyon akışı açıklanır.
+
+* *Teknik Mimari ve Ölçeklenebilirlik*: Kullanılan programlama dilleri, framework'ler, veritabanı yapısı ve üçüncü taraf servisler. Altyapının gelecekte yeni şehirlerin (örneğin İzmir, Manisa) ve yüzlerce yeni eserin sisteme eklenmesine nasıl olanak tanıdığı mimari açıdan özetlenir.
+
+* *Ürün Demosu (MVP)*: Sunumun en kritik bölümüdür. Statik ekranlar yerine çalışan uygulama açılarak; çoklu eser keşfi, harita/filtreleme, detay görüntüleme ve içerik ekleme/düzenleme gibi temel akışlar uçtan uca canlı olarak sergilenir.
+
+* *Güvenlik, Kalite ve Gelecek Yol Haritası*: Giriş/veri doğrulama kontrolleri, kod kalitesi ve modüler yapı. Projenin uzun vadede sürdürülebilirliği, yeni modüllerin eklenme planı ve kurum vizyonuyla uyumu kısaca belirtilir.
+
+* *Kapanış ve Jüri Soru-Cevap*: Teşekkür slaytı ve projeye ilişkin temel bağlantı/künye bilgileri ekranda tutulurken, jüri üyelerinin teknik, veri ve ürün mimarisine yönelik soruları tüm takım üyelerinin katılımıyla yanıtlanır.
+
 ## Slayt 1: Künye ve ekip (0.00–0.25)
 
 **Ekranda:** KökXR · Bursa'nın vakıf eserleri, kaynaklarıyla ve üç boyutlu · Çalışma alanı: **Serbest (XR)** · Platform: **masaüstü ve mobil web** (Quest/WebXR VR, mobil AR) · 42 [kampüs adı] · Ekip: [isimler ve görevler] · Uygulama: kokxr.vercel.app (QR).
@@ -82,7 +108,7 @@ Boşluklar: yönetim akışının canlı çalıştığı henüz doğrulanmadı (
 **Veri modeli:** her eser: ad, şehir, ilçe, dönem, vakıf, özet, tarihçe, kaynaklar (kimlik + metin + sayfa), görseller (alt metin + künye), bilgi noktaları, 3 soruluk quiz, isteğe bağlı 3B maket. Bilgi noktası ve quiz sorusu bir kaynağa bağlanır; kaynak yoksa bilgi “kaynaklı” sayılmaz.
 **Ölçeklenebilirlik:** yeni şehir = yeni kayıtlar, kod değişmez. Bursa'ya ek olarak Konya ve Hatay kayıtları eklendi. Harita ve filtre veriden beslenir. Boş şehir “içerik yok” der.
 **Kalite ve güvenlik:** doğrulama hem formda hem sunucuda aynı kodla yapılır (`src/domain/verification.ts`); şifreler ortam değişkeninde; oturum imzalı çerez; yazma istekleri yalnız JSON; yükleme boyutu sınırlı; işlem kaydı tutulur. Testler: tür denetimi + saf mantık testleri + tarayıcı testleri.
-**Dürüst sınırlar:** veri kaynaklıdır, elle doğrulama sürüyor; görsel izinleri belgelenmedi.
+**Dürüst sınırlar:** veri kaynaklıdır, elle doğrulama sürüyor; görsel izinleri alındı ([kimden/nasıl: ekip yazsın]); kayıtlarda henüz izin alanı yok.
 
 ## Slayt 6: Yol haritası ve kapanış (4.30–5.00)
 
@@ -106,7 +132,7 @@ Boşluklar: yönetim akışının canlı çalıştığı henüz doğrulanmadı (
 
 - **Veri nereden?** Sağlanan Vakıf Eserleri Envanteri ve yayımlanmış kitaplar; her bilgi kaynak ve sayfayla bağlı. Elle doğrulanan kayıtlar [sayı].
 - **Moderasyon?** Editör ekler, küratör onaylar; reddet/geri al/sil ve işlem kaydı var. Editörün değişiklikleri küratör onayını bekler (rol tanımı `server/auth.ts`).
-- **Fotoğraf izinleri?** Görsellerin hepsinde kredi satırı var; kredi satırı izin değildir. Yazılı izin süreci sürüyor. Bunu dürüstçe söyle.
+- **Fotoğraf izinleri?** Her görselde kredi satırı var; kullanım izni alındı [kimden, hangi biçimde: ekip yazsın]. Belgeyi elde tut; kayıtlara izin alanı eklemek yol haritasında. İzin belgesi gösterilemiyorsa “alındı” deme.
 - **3B model gerçek mi?** Temsilî, kodla üretilmiş; tarama ya da belgelenmiş rekonstrüksiyon değil.
 - **Yeni şehir?** Aynı veri modeli; Konya ve Hatay eklendi.
 - **Mobil AR?** [ekip doğrulaması]; cihaz ve tarayıcı listesi: [liste].

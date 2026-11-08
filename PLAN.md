@@ -37,7 +37,7 @@ Değer önerisi: **“Bursa’nın vakıf eserlerini kaynaklarıyla keşfet; tem
 
 **Açık**
 - Quest denemesi: mermer, ses, AR cihazda görülmedi. Headless Quest kullanıcı aracısı boş sahne veriyor (neden ayrıştırılmadı).
-- `test:tarayici` ve `test:e2e`: bu birleşimden sonra baştan çalıştırılmadı (bkz. §9).
+- `test:e2e`: bu birleşimden sonra çalıştırılmadı (bkz. §9). `test:tarayici` 3/3 geçti.
 - Tarihsel doğrulama ve fotoğraf izin belgeleri yapılmadı. Kayıtlar “Kaynaklı bilgi”dir, elle doğrulanmış değildir. Vercel build'i `public/images` (667 MB) dahil; izinler doğrulanmadı.
 - Yok: yüksek kontrast ve yazı boyutu kontrolü.
 - Mevlâna/Sokullu iç mekânları mermer/üst üste binme için taranmadı.
@@ -63,7 +63,7 @@ Dosya sınırı: `src/features/scale-models/`, `src/shared/xr/`, `src/features/w
 - [x] Masaüstü iç mekâna aynı yakınlık anlatımı: tıklama/tuşla açılır, VR'a girince masaüstü anlatımı susar.
 - [~] 7 anlatımın (kapı, şadırvan, minber, mihrap, kubbeler, hat, Kâbe örtüsü) Quest’te tetiklenmesi, birbirini kesmemesi, çıkışta durması, yeniden girişte çalışması.
 - [~] Duyulur ses seviyesi; anlatım metin karşılığı (kartta yazı) kontrolü.
-- [ ] `model-interior` test zaman aşımını ayrıştır (§9'daki sonuca bak).
+- [x] `model-interior` zaman aşımı: ürün hatası değil, yazılım render yükü; test 581 sn'de PASS. İç mekân yükleme süresi gerçek demo cihazında yine de ölçülmeli.
 - [ ] AR'ı gerçek cihazda dene (masaya yerleştirme, ışık). Denenmeden sunumda “çalışıyor” deme.
 - [ ] Cihazda duyulmayan sesi sunumda vaat etme.
 
@@ -106,7 +106,7 @@ Not: Kişi 2 yoğun; **zaman daralırsa kes**: ikinci eser doğrulamasından kal
 - Mermer: şadırvan, duvar/sütun/mihrap, zemin Quest’te ve masaüstünde doğru görünür (önce/sonra ekran görüntüsü). Masaüstü: [x]; Quest: [ ].
 - Ses: 7 anlatım Quest’te duyuldu, birbirini kesmedi, çıkış/yeniden girişte çalıştı. Doğrulanmadıysa sunumda ses vaadi yok.
 - Ürün: çoklu keşif + fotoğraf/kaynak + ekleme/düzenleme kesintisiz.
-- Testler: `test:hizli` yeşil [x]; `test:tarayici` ve `test:e2e` yeşil ya da başarısız akış demodan çıkarıldı [ ].
+- Testler: `test:hizli` yeşil [x]; `test:tarayici` yeşil [x]; `test:e2e` yeşil ya da başarısız akış demodan çıkarıldı [ ].
 - Sunum çalışan ürünle aynı şeyi söylüyor; yedek video ve ikinci kopya hazır.
 
 ## 6. Sunum — 5 dakika, 6 slayt
@@ -140,5 +140,5 @@ Zaman katmanı, yeni 3B model, 360° tur, öğretmen paneli, öğrenme analitiğ
 ## 9. Test kaydı
 
 - 8 Kasım: `test:hizli` geçti (tür denetimi dahil, 641ebcb).
-- 8 Kasım: `test:tarayici` (TEST_PORT=4187, yazılım render): derleme geçti; `model-xr-button` (164 sn) ve `vase-xr-button` (13 sn) PASS; `inventory-list` ve `model-interior` bu satır yazılırken sürüyordu, sonuçları bilinmiyor.
+- 8 Kasım: `test:tarayici` (TEST_PORT=4187, yazılım render, `main` 641ebcb): **3/3 PASS**. `model-xr-button` 164 sn, `vase-xr-button` 13 sn, `model-interior` 581 sn (360 px: kart durakta açılır, taşma yok). `inventory-list` testi takım tarafından silindi, çalışmadı. Süreler yazılım render'ında; gerçek cihazda FPS ölçülmedi.
 - `test:e2e` çalıştırılmadı.

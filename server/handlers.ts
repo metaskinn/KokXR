@@ -66,10 +66,11 @@ export async function handle(req: ApiRequest): Promise<ApiResponse> {
 
     // Public: the printed inventory (reference data, edited only through the JSON files and npm run db:setup).
     case 'GET /inventory': {
-      const items = await db`select id, name, district, section, volume, grp, artifact_id, has_scale_model from inventory order by id`
+      // select *: works before and after the migration that adds `city` (rows from before it are Bursa).
+      const items = await db`select * from inventory order by id`
       const details = await db`select id, data from inventory_details` as { id: string; data: unknown }[]
       return json(200, {
-        items: items.map((r) => ({ id: r.id, name: r.name, district: r.district, section: r.section, volume: r.volume, ...(r.grp ? { group: r.grp } : {}), ...(r.artifact_id ? { artifactId: r.artifact_id } : {}), hasScaleModel: r.has_scale_model })),
+        items: items.map((r) => ({ id: r.id, name: r.name, city: r.city ?? 'Bursa', district: r.district, section: r.section, volume: r.volume, ...(r.grp ? { group: r.grp } : {}), ...(r.artifact_id ? { artifactId: r.artifact_id } : {}), ...(r.group_head ? { groupHead: true } : {}), hasScaleModel: r.has_scale_model })),
         details: Object.fromEntries(details.map((d) => [d.id, d.data])),
       }, { 'Cache-Control': 'public, max-age=0, s-maxage=300, stale-while-revalidate=3600' })
     }

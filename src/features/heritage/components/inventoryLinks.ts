@@ -23,7 +23,7 @@ function ownRow(artifact: Artifact): InventoryItem | undefined {
   if (artifact.inventoryId) return inventory.find((row) => row.id === artifact.inventoryId)
   const rows = inventory.filter((row) => row.artifactId === artifact.id)
   if (rows.length <= 1) return rows[0]
-  return rows.find((row) => row.hasScaleModel) ?? rows[0]
+  return rows.find((row) => row.groupHead) ?? rows.find((row) => row.hasScaleModel) ?? rows[0]
 }
 
 /** "Cilt 1, s. 145" + district → "Vakıf Eserleri Envanteri – Bursa, Cilt 1, Osmangazi, s. 145". Only facts in the data are used. */
@@ -43,13 +43,15 @@ export function inventoryLinks(artifact: Artifact, artifacts: Artifact[]): Inven
   const record = recordText(row)
   if (!row.group) return { ...empty, record }
   const groupRows = inventory.filter((r) => r.group === row.group)
-  const complexId = groupRows.find((r) => r.artifactId)?.artifactId
+  // The complex's page is its head row; older data without a head row pointed every member at the complex page.
+  const complexId = (groupRows.find((r) => r.groupHead) ?? groupRows.find((r) => r.artifactId))?.artifactId
   const isComplex = complexId === artifact.id && !artifact.inventoryId
   const complexPage = complexId && complexId !== artifact.id ? artifacts.find((a) => a.id === complexId) : undefined
+  const seen = new Set<string>()
   const pages = groupRows
-    .filter((r) => r.id !== row.id)
-    .map((r) => artifacts.find((a) => a.inventoryId === r.id))
-    .filter((a): a is Artifact => !!a && a.id !== artifact.id)
+    .filter((r) => r.id !== row.id && !r.groupHead)
+    .map((r) => artifacts.find((a) => a.inventoryId === r.id) ?? artifacts.find((a) => a.id === r.artifactId))
+    .filter((a): a is Artifact => !!a && a.id !== artifact.id && a.id !== complexId && !seen.has(a.id) && !!seen.add(a.id))
   return {
     record: isComplex ? undefined : record,
     group: { name: complexPage?.name ?? row.group, artifact: complexPage },

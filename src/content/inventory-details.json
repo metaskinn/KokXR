@@ -2179,5 +2179,1833 @@
   "location": "Aksu Mahallesi",
   "summary": "İçindekiler'de \"Han Odası\" adıyla geçen bu kayıtta kitap, Aksu'daki Beylik Han'ı (bazı belgelerde Kurşunlu Han) anlatır. II. Bayezid döneminde yapılmış, 1660 isyanında kısmen yanmış, sonra onarılmıştır; bugün kemerli girişi ve bazı duvarları ayaktadır.",
   "source": "Cilt 3, s. 251"
+ },
+ "mudanya-sinan-bey-cesmesi": {
+  "summary": "Halil Ağa (Eski) Camii'nin avlu duvarına bitişik, Sinan Bey'in yaptırdığı, iki sivri kemerli açıklıklı ve hâlen akan çeşme.",
+  "source": "Cilt 3, s. 267",
+  "builder": "Sinan Bey",
+  "date": "XVII. yüzyıl",
+  "location": "Mudanya, Mustafakemalpaşa Caddesi, Halil Ağa (Eski) Camii avlu duvarına bitişik"
+ },
+ "karatay-mevlana-turbesi-muze": {
+  "summary": "Mevlâna’nın mezarı çevresinde gelişen külliye, çini kaplı Kubbe-i Hadra ile farklı dönemlerde eklenen dergâh yapılarından oluşur.",
+  "source": "Cilt 1, s. 29",
+  "date": "Selçuklu · 1274; Karamanoğulları ve Osmanlı ekleri"
+ },
+ "karatay-murat-pasa-kizi-fatma-hatun-turbesi": {
+  "summary": "Karaman Beylerbeyi Kuyucu Murat Paşa'nın kızı Fatma Hatun için Mevlâna Müzesi avlusunda yaptırdığı sekiz köşeli türbe.",
+  "source": "Cilt 1, s. 55",
+  "builder": "Karaman Beylerbeyi Kuyucu Murat Paşa",
+  "date": "Osmanlı · H. 993 / M. 1585 (kitâbedeki tarih: 994 / M. 1585-86)"
+ },
+ "karatay-mehmet-bey-turbesi": {
+  "summary": "Hamuşan Mezarlığı'nın doğusunda, Mustafa Paşa oğlu Mehmet Bey için yapıldığı düşünülen, dört mermer sütunlu açık (baldaken) türbe.",
+  "source": "Cilt 1, s. 57",
+  "date": "Osmanlı · H. 941 / M. 1535 (sandukadaki tarihe göre)"
+ },
+ "meram-bulgur-dede-mescidi": {
+  "summary": "Anadolu Türk mimarisinde ender görülen fütüvvet yapılarından biri olan, firuze ve patlıcan moru mozaik çinileriyle tanınan Selçuklu mescidi.",
+  "source": "Cilt 1, s. 75",
+  "date": "Selçuklu · XIII. yüzyıl (inşa tekniği, malzeme ve süslemelerine göre)"
+ },
+ "meram-sukran-mescidi": {
+  "summary": "Konya surlarının doğu kapılarından birine yakın, alt katında dükkân, üst katında mektep ve harim bulunan, ahşap baldaken minareli küçük mescit.",
+  "source": "Cilt 1, s. 78"
+ },
+ "meram-gazezler-camii": {
+  "summary": "Adını Gazezler (İpekçiler) Mescidi'nden alan, Ahmet Necip Efendi tarafından XIX. yüzyıl başlarında yaptırılmış olması gereken ahşap destekli cami.",
+  "source": "Cilt 1, s. 80",
+  "builder": "Ahmet Necip Efendi",
+  "date": "Osmanlı · XIX. yüzyıl başları"
+ },
+ "meram-karakurt-camii": {
+  "summary": "1954'te Cumhuriyet dönemi geleneksel mimari özellikleriyle betonarme olarak yapılan, alt katı depo olan iki sahınlı cami.",
+  "source": "Cilt 1, s. 81",
+  "date": "Cumhuriyet · 1954"
+ },
+ "meram-komurculer-camii": {
+  "summary": "Aslen son dönem Osmanlı eseri olan, 1990'larda taşınarak bugünkü hâlini alan kare planlı, tek kubbeli cami.",
+  "source": "Cilt 1, s. 82",
+  "date": "Geç Osmanlı; 1990'larda taşınarak bugünkü hâlini almış"
+ },
+ "meram-furgan-dede-mescidi": {
+  "summary": "Son cemaat yerinin batısında kabri bulunan Furgan Dede tarafından yaptırılan, 1908 tarihli mescit.",
+  "source": "Cilt 1, s. 83",
+  "builder": "Furgan Dede",
+  "date": "1908"
+ },
+ "meram-anber-reis-feridiye-camii": {
+  "summary": "Selçuklu döneminde yapılan ve 1911'de Konya Valisi Arifi Paşa tarafından yeniden inşa ettirilen, XX. yüzyılın önemli turkuaz çinilerine sahip cami.",
+  "source": "Cilt 1, s. 85",
+  "date": "Selçuklu; 1911'de Konya Valisi Arifi Paşa tarafından yeniden inşa"
+ },
+ "meram-seyh-ebul-vefa-camii": {
+  "summary": "Karamanoğlu İbrahim Bey'in Şeyh Vefa adına yaptırdığı külliyeden geriye kalan ve 1850'de yeniden inşa edilen kubbeli cami.",
+  "source": "Cilt 1, s. 88",
+  "builder": "Karamanoğlu İbrahim Bey",
+  "date": "Karamanoğulları · vakfiye tescili H. 869 / M. 1459 (kitaptaki hâliyle); 1850'de yeniden inşa"
+ },
+ "meram-ayanbey-camii": {
+  "summary": "Ayan üyesi Memiş Paşa'nın oğlu Süleyman Bey'in XIX. yüzyıl ortalarında yaptırdığı, ahşap destekli üç sahınlı cami.",
+  "source": "Cilt 1, s. 89",
+  "builder": "Ayan üyesi Memiş Paşa'nın oğlu Süleyman Bey",
+  "date": "XIX. yüzyıl ortaları"
+ },
+ "meram-askan-camii": {
+  "summary": "Adını yakınındaki Aşkan Baba Türbesi'nden alan, 1845'te yapılmış ve yakın zamanda yenilenmiş cami.",
+  "source": "Cilt 1, s. 90",
+  "date": "1845"
+ },
+ "meram-ekmekkocu-mescidi": {
+  "summary": "Plan ve mimari özelliklerinden XIX. yüzyılda yapıldığı anlaşılan, son cemaat yeri 1986'da yıkılmış küçük mahalle mescidi.",
+  "source": "Cilt 1, s. 91",
+  "date": "XIX. yüzyıl (plan ve mimari özelliklerine göre)"
+ },
+ "meram-buyukkovanagzi-haci-haydar-efendi-camii": {
+  "summary": "Latin harfli kitâbesine göre H. 1305 tarihli, ahşap köşk minaresiyle dikkat çeken geç Osmanlı dönemi camisi.",
+  "source": "Cilt 1, s. 92",
+  "date": "Geç Osmanlı · H. 1305 / M. 1889-90 (kitâbeye göre, kitaptaki hâliyle)"
+ },
+ "meram-yukari-camii-ve-haziresi-saglik-beldesi": {
+  "summary": "Sağlık'ın merkezinde, doğusunda dönem özelliklerini yansıtan mezar taşlarının bulunduğu hazireye sahip, XIX. yüzyıl sonlarına tarihlenen ahşap destekli cami.",
+  "source": "Cilt 1, s. 94",
+  "date": "XIX. yüzyıl sonları (mimari ve süsleme özelliklerine göre)"
+ },
+ "meram-karaagac-koyu-camii": {
+  "summary": "Latin harfli kitâbesine göre 1905'te yapılan, kerpiç duvarlı ve ahşap tavanlı küçük köy camisi.",
+  "source": "Cilt 1, s. 96",
+  "date": "1905 (Latin harfli kitâbeye göre); 1966 onarımı"
+ },
+ "meram-dayhane-camii-ve-mustemilati": {
+  "summary": "Eğimli bir arazide, moloz taş duvarlı ve kırma çatılı, avlusunun kuzeyinde imam evi olarak kullanılan müştemilatı bulunan cami.",
+  "source": "Cilt 1, s. 97",
+  "date": "H. 1266 / M. 1849-50 (levhaya göre)"
+ },
+ "meram-sadreddin-konevi-camii": {
+  "summary": "Ünlü âlim Sadreddin Konevî adına yapılan cami; türbe, zaviye ve kütüphaneyle birlikte H. 673 / M. 1274’te inşa edilmiş bir külliyenin parçasıdır.",
+  "source": "Cilt 1, s. 98",
+  "date": "Anadolu Selçuklu dönemi; inşa kitâbesine göre H. 673 / M. 1274"
+ },
+ "meram-karatay-emir-kemalettin-mescidi": {
+  "summary": "Kemalettin Rumtaş’ın 1248’de yaptırdığı mescit, balıksırtı tuğla kubbesi ve prizmatik üçgen geçişleriyle bilinir.",
+  "source": "Cilt 1, s. 104",
+  "date": "Anadolu Selçuklu dönemi; vakfiyesine göre H. 646 / M. 1248"
+ },
+ "meram-hoca-fakih-ahmet-fakih-camii-ve-turbesi": {
+  "summary": "Selçuklu alimi Ahmet Fakih'in türbesiyle birlikte, yüksek duvarla çevrili bir hazire içinde yer alan kırma çatılı cami.",
+  "source": "Cilt 1, s. 106",
+  "date": "Anadolu Selçuklu · Sultan I. Alâeddin Keykubat dönemi; türbe kitâbesine göre H. 618 / M. 1221"
+ },
+ "meram-saatci-camii": {
+  "summary": "Hoşhavanata Saatçi Mahallesi’ndeki 1871 tarihli cami, kiremit kaplı çatısı ve ahşap mahfiliyle sade bir mahalle camisidir.",
+  "source": "Cilt 1, s. 108",
+  "date": "1871"
+ },
+ "meram-abdulaziz-camii": {
+  "summary": "Selçuklu devlet adamı Abdülaziz’in 1253’te yaptırdığı kare planlı, tromp geçişli tek kubbeli bir camidir.",
+  "source": "Cilt 1, s. 109",
+  "date": "Anadolu Selçuklu dönemi; kitâbesine göre H. 651 / M. 1253"
+ },
+ "meram-tahir-pasa-tursunoglu-dursun-fakih-camii": {
+  "summary": "Dursun Fakih'in yaşadığı dönem ve inşa tekniği nedeniyle XIV. yüzyıl sonlarına tarihlenen, 1888–1889 onarımında Tahir Paşa adını alan tek kubbeli, üç gözlü son cemaat yerli cami.",
+  "source": "Cilt 1, s. 111",
+  "date": "Kitaba göre muhtemelen XIV. yüzyıl sonu; H. 1306 / M. 1888–1889'da Tahir Paşa ve Ali Bey tarafından onarılmış"
+ },
+ "meram-tahir-ile-zuhre-don-baba-pir-ahi-sultan-mescit-ve-turbesi": {
+  "summary": "Sahip Ata Fahreddin Ali’nin yaptırdığı kabul edilen mescit, tuğla kubbesindeki çini madalyon ve mozaik çinili mihrabıyla dikkat çeker.",
+  "source": "Cilt 1, s. 113",
+  "date": "Anadolu Selçuklu dönemi; XIII. yüzyıl sonları (kabul edilen tarih)"
+ },
+ "meram-hoca-hasan-camii": {
+  "summary": "XIII. yüzyıla tarihlenen Hoca Hasan Camii, yivli tuğla minaresi ve iç içe iki nişli mihrabıyla dikkat çeker.",
+  "source": "Cilt 1, s. 116",
+  "date": "Anadolu Selçuklu dönemi; inşa tekniği ve çinilerine göre XIII. yüzyıl"
+ },
+ "meram-abdulmumin-yediler-megaribe-mescidi-ve-mezari": {
+  "summary": "İlk yapım tarihi bilinmeyen Selçuklu dönemi Megaribe Mescidi'nin 1275'te Emîrü'l-Hac oğlu Mahmud tarafından yenilenmesiyle oluşan, tek kubbeli dikdörtgen planlı mescit.",
+  "source": "Cilt 1, s. 118",
+  "date": "Anadolu Selçuklu · III. Gıyaseddin Keyhüsrev dönemi; kitâbeye göre H. 674 / M. 1275'te yenilenmiş"
+ },
+ "meram-gokyurt-koyu-camii": {
+  "summary": "Gökyurt Köyü’ndeki 1874 tarihli cami, kesme taş duvarları ve beş sahınlı ahşap destekli harimiyle öne çıkar.",
+  "source": "Cilt 1, s. 121",
+  "date": "Kitâbesine göre H. 1289 / M. 1874; minare 1957"
+ },
+ "meram-tellioglu-sungurbey-camii": {
+  "summary": "Hacı Fettah Mezarlığı yakınındaki kırma çatılı küçük mescit, giriş kapısı üzerindeki ahşap minaresiyle tanınır.",
+  "source": "Cilt 1, s. 122",
+  "date": "Günümüzdeki yapı XX. yüzyıl eseri"
+ },
+ "meram-sahip-ata-larende-camii": {
+  "summary": "Sahip Ata Fahreddin Ali'nin 1258'de mimar Kelük bin Abdullah'a yaptırdığı, yangından yalnız taç kapısı, kıble duvarı ve çini mihrabı kalmış ahşap direkli cami.",
+  "source": "Cilt 1, s. 123",
+  "builder": "Sahip Ata Fahreddin Ali",
+  "date": "Anadolu Selçuklu · II. Keykâvus dönemi; taç kapı kitâbesine göre H. 656 / M. 1258"
+ },
+ "meram-meram-kapu-kapi-ihyaiyye-camii": {
+  "summary": "Asıl adı İhyaiyye olan ve Konya Kalesi’nin kapıları arasında bulunduğu için “Kapı Camii” denen yapı, 1867 yangınından sonra 1868’de yeniden inşa edilmiştir.",
+  "source": "Cilt 1, s. 129",
+  "date": "Osmanlı dönemi; ilk yapı H. 1060 / M. 1650, bugünkü yapı 1868"
+ },
+ "meram-haci-hasan-camii": {
+  "summary": "Karamanoğulları döneminden kalan yapının yerine kitâbesine göre 1801’de yaptırılan ahşap destekli bir camidir.",
+  "source": "Cilt 1, s. 138",
+  "date": "Kitâbeye göre H. 1215 / M. 1801; yerindeki ilk yapı 1409, Karamanoğulları dönemi"
+ },
+ "meram-seyh-osman-rumi-camii": {
+  "summary": "Şeyh Hasan Rûmi Türbesi'nin de bulunduğu geniş bir avluda yer alan, 1972'de yapılmış cami.",
+  "source": "Cilt 1, s. 140",
+  "date": "Cumhuriyet dönemi · 1972"
+ },
+ "meram-ihtiyarettin-mescidi": {
+  "summary": "Kale Sokak’taki 1918 tarihli İhtiyarettin Mescidi, moloz taştan yapılmış kare planlı sade bir mescittir.",
+  "source": "Cilt 1, s. 141",
+  "date": "Kitâbesine göre H. 1337 / M. 1918"
+ },
+ "meram-iplikci-altinapa-camii": {
+  "summary": "Konya’daki ilk Selçuklu eserlerinden sayılan İplikçi Camii, ticaret merkezine yakınlığı nedeniyle ulu cami işlevi görmüş tuğla bir yapıdır.",
+  "source": "Cilt 1, s. 142",
+  "date": "Anadolu Selçuklu dönemi; H. 598 / M. 1201’den önce, H. 733 / M. 1332’de yenilenmiş"
+ },
+ "meram-tarhana-mescidi": {
+  "summary": "Hacı Fettah Mahallesi’ndeki Tarhana Mescidi, iki ahşap direkli ve ahşap tavanlı harimi olan küçük bir mahalle mescididir.",
+  "source": "Cilt 1, s. 145",
+  "date": "Mimari özelliklerine göre XX. yüzyıl başları"
+ },
+ "meram-veznedar-huseyin-efendi-asri-camii": {
+  "summary": "Alaaddin Tepesi'nin doğusunda, 1940'ta yapılmış; enine dikdörtgen planlı, iki sahınlı ve barok motifli ahşap tavan göbeğiyle dikkat çeken cami.",
+  "source": "Cilt 1, s. 146",
+  "date": "Cumhuriyet dönemi · 1940"
+ },
+ "meram-kadi-mursel-camii": {
+  "summary": "Hacı Mustafa oğlu Mürsel’in 1409’da yaptırdığı, bugünkü hâliyle ahşap hatıllı moloz taş duvarlı bir camidir.",
+  "source": "Cilt 1, s. 147",
+  "date": "Karamanoğulları dönemi; kitâbesine göre 812 / 1409, bugünkü yapı 1907"
+ },
+ "meram-salih-pasa-dedemoglu-camii": {
+  "summary": "Kayısılıburun Sokak’taki kerpiç cami, ahşap köşk minaresi ve üç sahınlı harimiyle tanımlanır.",
+  "source": "Cilt 1, s. 148",
+  "date": "H. 1162 / M. 1748-49"
+ },
+ "meram-aksinne-kumbetli-gunbentli-mescidi": {
+  "summary": "Aksinne’deki tek kubbeli mescit, restorasyonda bulunan Selçuklu çini ve alçı parçalarıyla XIII. yüzyıla tarihlendirilir.",
+  "source": "Cilt 1, s. 149",
+  "date": "XIII. yüzyıl Selçuklu dönemi olduğu düşünülmektedir"
+ },
+ "meram-nasuh-bey-camii-canbazzade-nasuh-bey-daru-l-huffazi": {
+  "summary": "Canbazzade Nasuh Bey’in yaptırdığı yapı, tek kubbeli harimi ve üç kubbeli son cemaat yeriyle bir Karamanoğlu dârü’l-huffazıdır.",
+  "source": "Cilt 1, s. 151",
+  "date": "XV. yüzyılın ikinci yarısı · Karamanoğulları"
+ },
+ "meram-yolcuoglu-gazioglu-camii": {
+  "summary": "Hacı Fettah Mezarlığı’nın batısındaki cami, ahşap mahfili ve sonradan kırma çatıyla örtülen harimiyle tanımlanır.",
+  "source": "Cilt 1, s. 153",
+  "date": "XX. yüzyılın ilk yarısına tarihlendirilebilir"
+ },
+ "meram-gurb-i-cedidi-kosova-mescidi": {
+  "summary": "Gurbi Cedit adıyla vakıf ve tapu kayıtlarına geçen mescit, günümüzde Kosova Camii olarak anılır.",
+  "source": "Cilt 1, s. 154",
+  "date": "H. 1244 / M. 1828-29 tarihli vakfiyede kayıtlı"
+ },
+ "meram-kalecik-mescidi": {
+  "summary": "İplikçi Camii’nin güneyindeki Kalecik Mescidi, Veznedar Hüseyin Paşa tarafından yaptırılmış ve mahalle halkınca yeniden inşa edilmiştir.",
+  "source": "Cilt 1, s. 155",
+  "builder": "Veznedar Hüseyin Paşa",
+  "date": "H. 1253 / M. 1837; yeniden yapım H. 1342 / M. 1923"
+ },
+ "meram-emir-halil-camii": {
+  "summary": "Hacı Fettah Mezarlığı’nın batısındaki Emir Halil Camii, binalar arasında kalan betonarme bir mahalle mescididir.",
+  "source": "Cilt 1, s. 156",
+  "date": "XX. yüzyıl; Cumhuriyet döneminde onarım"
+ },
+ "meram-tahtatepen-ubeyt-haci-adil-camii": {
+  "summary": "Ubeyt Mahallesi’ndeki ahşap destekli cami, Karamanoğlu kökenli olup 1860 yılında yeniden yapılmıştır.",
+  "source": "Cilt 1, s. 157",
+  "date": "Karamanoğlu dönemi; 1860’ta yeniden inşa"
+ },
+ "meram-asagi-mahalle-kiziloren-kandemir-mescidi": {
+  "summary": "Kızılören’deki moloz taş mescit, üç sahınlı harimi ve kalem işi süslü mihrabıyla XIX. yüzyıl mahalle mescitleri arasında yer alır.",
+  "source": "Cilt 1, s. 158",
+  "date": "H. 1286 / M. 1869-70"
+ },
+ "meram-fahrunnisa-caybasi-mescit-ve-turbesi": {
+  "summary": "Çaybaşı’ndaki mescit ve türbe, Mevlâna’nın müridelerinden Nizam Hatun’un Fahrünnisa adıyla yaşatılan hatırasını taşır.",
+  "source": "Cilt 1, s. 159",
+  "date": "Fahrünnisa Hatun hatırası; kitapta onarım H. 1342 / M. 1925"
+ },
+ "meram-hasbey-dar-ul-huffaz-mescidi": {
+  "summary": "Hasbey Mescidi, cenazelik katı ve mozaik çinili mihrabıyla Karamanoğulları dönemine ait tek kubbeli bir yapıdır.",
+  "source": "Cilt 1, s. 163",
+  "date": "H. 824 / M. 1421 · Karamanoğulları"
+ },
+ "meram-erdemsah-kale-i-cerp-mescidi": {
+  "summary": "Erdemşah Mescidi, taş ve tuğla cepheleri ile tek kubbeli harimi bulunan bir Selçuklu mescididir.",
+  "source": "Cilt 1, s. 166",
+  "date": "H. 617 / M. 1220 · I. Alâeddin Keykubad dönemi"
+ },
+ "meram-kurkcu-mescidi": {
+  "summary": "Alâeddin Tepesi’nin güneyindeki Kürkçü Mescidi, onarımda kalem işiyle bezenen tavanı ve perde motifli mihrabıyla tanımlanır.",
+  "source": "Cilt 1, s. 168",
+  "date": "XX. yüzyıl başlarına tarihlendirilmektedir"
+ },
+ "karatay-sultan-selim-selimiye-camii": {
+  "summary": "Mevlâna Müzesi’nin batısındaki cami, merkezî kubbesi, yarım kubbesi ve iki minaresiyle bir selatin camisidir.",
+  "source": "Cilt 1, s. 176",
+  "date": "Osmanlı · XVI. yüzyıl"
+ },
+ "karatay-nuriye-camii": {
+  "summary": "Bilgi levhasına göre 1925'te yapılmış, ahşap köşk tipi minaresi olan, XX. yüzyıl Konya mahalle mescitlerinin güzel bir örneği sayılan cami.",
+  "source": "Cilt 1, s. 184",
+  "date": "Cumhuriyet dönemi · bilgi levhasına göre 1925"
+ },
+ "karatay-dolap-battal-mescidi": {
+  "summary": "Dolap Mektep Mahallesi’ndeki mescit, ahşap direkli iki sahınlı harimi ve güneş tasvirli tavan göbeğiyle tanımlanır.",
+  "source": "Cilt 1, s. 185",
+  "date": "XIX. yüzyıl sonlarında yapıldığı düşünülmektedir"
+ },
+ "karatay-haci-veyis-camii-ve-cesmesi": {
+  "summary": "Aslanlı Kışla Caddesi’ndeki ahşap direkli cami, avlusundaki sivri kemerli taş çeşmeyle birlikte anılır.",
+  "source": "Cilt 1, s. 187",
+  "date": "Osmanlı · XIX. yüzyıl olarak düşünülmektedir"
+ },
+ "karatay-selahaddin-kececiler-camii": {
+  "summary": "Keçeciler’deki cami, 1905-06 tarihli kitabesi ve sade ahşap iç mekânıyla tanınır.",
+  "source": "Cilt 1, s. 191",
+  "date": "Osmanlı · H. 1323 / M. 1905-06"
+ },
+ "karatay-karacihan-camii": {
+  "summary": "Karakayış Caddesi’ndeki Karacihan Camii, üç sahınlı ahşap direkli harim ve U biçimli mahfile sahiptir.",
+  "source": "Cilt 1, s. 192",
+  "date": "Mimari özellikleriyle XIX. yüzyıla tarihlendirilmektedir"
+ },
+ "karatay-garip-nasrullah-camii": {
+  "summary": "Sedirler Caddesi’ndeki Garip Nasrullah Camii, ahşap direkli harimi ve günümüze izleri kalan köşk minaresiyle tanımlanır.",
+  "source": "Cilt 1, s. 193",
+  "date": "1908 (kitabın aktardığı kaynaklara göre)"
+ },
+ "karatay-haci-omerler-camii": {
+  "summary": "Üçler Mezarlığı’nın güneyindeki Hacı Ömerler Camii, bağdadi kubbeli harimi ve perde motifli mihrabıyla tanımlanır.",
+  "source": "Cilt 1, s. 194",
+  "date": "H. 1330 / M. 1911-12"
+ },
+ "karatay-obruk-koyu-camii": {
+  "summary": "Obruk Gölü ve Han’ın kuzeybatısındaki cami, Emin Usta’ya bağlanan ahşap işçiliği ve üç sahınlı harimiyle tanımlanır.",
+  "source": "Cilt 1, s. 195",
+  "date": "XIX. yüzyıl"
+ },
+ "karatay-civiloglu-camii": {
+  "summary": "Cıvıloğlu Camii, Cumhuriyet’in ilk yıllarında yapılmış, üç sahınlı ahşap direkli cami geleneğinin örneklerinden biridir.",
+  "source": "Cilt 1, s. 196",
+  "date": "1930 · Cumhuriyet dönemi"
+ },
+ "karatay-burhan-dede-camii": {
+  "summary": "Burhan Dede Zaviyesi’nin yerindeki cami, 1915 tarihli kitâbesi ve ahşap direklerin taşıdığı bağdadi kubbeleriyle tanımlanır.",
+  "source": "Cilt 1, s. 198",
+  "date": "1915; aynı yerde Selçuklu dönemi zaviyesi"
+ },
+ "karatay-igdeli-sultan-camii": {
+  "summary": "Keçeciler’deki İğdeli Sultan Camii, ahşap direkli ve içten bağdadi kubbeli geç Osmanlı mahalle camilerindendir.",
+  "source": "Cilt 1, s. 199",
+  "date": "1908 (kitabın aktardığı kaynaklara göre)"
+ },
+ "karatay-karakayis-sari-camii": {
+  "summary": "Karakayış Caddesi’ndeki cami, ahşap minaresi ve üç sahınlı harimiyle mahalle camilerindendir.",
+  "source": "Cilt 1, s. 200",
+  "date": "Osmanlı · H. 1257 / M. 1841"
+ },
+ "karatay-tahtali-mescidi": {
+  "summary": "Tahtalı Mescidi, kesme taş duvarları, geniş saçakları ve ahşap tavanıyla Aziziye’de yer alan küçük bir mahalle mescididir.",
+  "source": "Cilt 1, s. 202",
+  "date": "Kitapta kapı lentosundaki tarih: R. 1243 / M. 1927"
+ },
+ "karatay-durak-fakih-camii": {
+  "summary": "Durak Fakih Camii, girişindeki Selçuklu tarihini taşıyan, harimine merdivenle çıkılan iki katlı bir yapıdır.",
+  "source": "Cilt 1, s. 203",
+  "date": "Girişte H. 650 / M. 1252-53; 1955’te onarım"
+ },
+ "karatay-cukur-camii": {
+  "summary": "Yunusoğlu Mahallesi’ndeki Çukur Camii, kare planlı, kırma çatılı ve ahşap düz tavanlı küçük bir mahalle camisidir.",
+  "source": "Cilt 1, s. 204",
+  "date": "Mimari özelliklerine göre XX. yüzyıla tarihlendirilebilir"
+ },
+ "karatay-toraman-mescidi": {
+  "summary": "Sarnıç Mahallesi’ndeki Toraman Mescidi, renkli fırfır motifli tavan göbeği ve ahşap iç donanımıyla tanımlanır.",
+  "source": "Cilt 1, s. 205",
+  "date": "XX. yüzyıl başlarında yapıldığı düşünülmektedir"
+ },
+ "karatay-sarnic-camii": {
+  "summary": "Sedirler Caddesi’ndeki Sarnıç Camii, dört serbest direkli ahşap tavanı ve köşesindeki mukarnaslı pahıyla tanımlanır.",
+  "source": "Cilt 1, s. 206",
+  "date": "XIX. yüzyıl sonlarına tarihlendirilmektedir"
+ },
+ "karatay-araplar-ak-camii": {
+  "summary": "Araplar Mezarlığı’nın batısındaki cami, ahşap direkleri bağlayan bağdadi Bursa kemerleri ve bezemeli harimiyle tanımlanır.",
+  "source": "Cilt 1, s. 207",
+  "date": "R. 1323 / M. 1907"
+ },
+ "karatay-bagevliya-cami-ve-cesmesi": {
+  "summary": "Nakipoğlu Mahallesi’ndeki kırma çatılı cami, ahşap köşk minaresi ve üçgen alınlıklı çeşmesiyle birlikte korunur.",
+  "source": "Cilt 1, s. 208",
+  "date": "XX. yüzyıl başlarına tarihlendirilmektedir"
+ },
+ "karatay-muftu-abdullah-mescidi": {
+  "summary": "Konya Müftüsü Abdullah Vahdi Efendi'nin 1886'daki vefatından önce yaptırdığı, kareye yakın dikdörtgen planlı ve kırma çatılı mahalle mescidi.",
+  "source": "Cilt 1, s. 210",
+  "builder": "Konya Müftüsü Abdullah Vahdi Efendi",
+  "date": "Osmanlı · XIX. yüzyıl sonu; Müftü Abdullah Vahdi Efendi'nin vefatından (1886) önce"
+ },
+ "karatay-ovaloglu-celik-mehmet-pasa-camii": {
+  "summary": "Konya Valisi Çelik Muhammed Paşa'nın 1764'te yaptırdığı, mihrabı Kütahya çinileriyle süslü enlemesine dikdörtgen planlı mahalle camii.",
+  "source": "Cilt 1, s. 212",
+  "date": "Osmanlı · kitâbesine göre H. 1178 / M. 1764"
+ },
+ "karatay-kinaci-camii-mescit": {
+  "summary": "Kitabesine göre 1207'de Yusuf oğlu Mahmut'un yaptırdığı, 1943'te mahalleli tarafından yeniden inşa edilen derinlemesine dikdörtgen planlı mescit.",
+  "source": "Cilt 1, s. 214",
+  "builder": "Yusuf oğlu Mahmut (kitabeye göre)",
+  "date": "Selçuklu · kitabeye göre H. 604 / M. 1207, I. Gıyaseddin Keyhüsrev dönemi; 1943'te yeniden inşa"
+ },
+ "karatay-meydan-i-ahmet-camii": {
+  "summary": "Yerinde 1585'te Meydâni lakaplı Alioğlu Ahmet Bey'in yaptırdığı caminin bulunduğu, bugünkü betonarme binası 2003'te yapılan cami.",
+  "source": "Cilt 1, s. 215",
+  "date": "Osmanlı · vakfiye kayıtlarına göre H. 993 / M. 1585; bugünkü yapı 2003"
+ },
+ "karatay-kadi-izzettin-karpuzoglu-camii": {
+  "summary": "Kadı İzzeddin'in 1254'te yaptırdığı Selçuklu camisinin yerine 1925'te inşa edilen, külliyeden günümüze ulaşan tek yapı olan cami.",
+  "source": "Cilt 1, s. 216",
+  "builder": "Kadı İzzeddin",
+  "date": "Selçuklu kuruluşu H. 652 / M. 1254; bugünkü yapı 1925"
+ },
+ "karatay-sitte-i-banu-mescidi": {
+  "summary": "Şems Camii ve Türbesi'nin güneyinde bulunan, XX. yüzyılın ilk yarısına tarihlenen kare planlı ve kırma çatılı küçük mescit.",
+  "source": "Cilt 1, s. 218",
+  "date": "XX. yüzyılın ilk yarısı"
+ },
+ "karatay-hatuniye-guduk-minare-akincilar-mahmut-mescidi": {
+  "summary": "Vakfiyesine göre 1213-14'te Devlet Hatun'un yaptırdığı, Selçuklu külliyesinden yalnızca Güdük Minare'si kalan ve bugünkü binası 1957'de yapılan mescit.",
+  "source": "Cilt 1, s. 219",
+  "date": "Selçuklu · vakfiyeye göre H. 610 / M. 1213-14; minare kitabesi H. 627 / M. 1229-30; bugünkü mescit 1957"
+ },
+ "karatay-sems-i-tebrizi-camii-ve-turbesi": {
+  "summary": "Şems Mahallesi’ndeki cami ve bitişik türbe, farklı dönemlerin ek ve onarımlarını taşıyan Şems Külliyesi’nin günümüze ulaşan yapılarıdır.",
+  "source": "Cilt 1, s. 223",
+  "date": "Selçuklu · XIII. yüzyıl olarak düşünülmektedir"
+ },
+ "karatay-sircali-demirci-haci-mescidi": {
+  "summary": "Kubbeli harimi, çinili son cemaat kemerleri ve çini mihrabıyla Konya'nın en özgün Selçuklu mescitlerinden biri sayılan yapı.",
+  "source": "Cilt 1, s. 234",
+  "date": "Anadolu Selçuklu · plan ve mimari elemanlarına göre XIII. yüzyıl olabileceği düşünülmektedir"
+ },
+ "karatay-cimilli-sari-mescidi": {
+  "summary": "Plan ve mimari özelliklerine göre XX. yüzyıl başlarına tarihlenen, kare planlı ve dört yöne eğimli kırma çatılı mahalle mescidi.",
+  "source": "Cilt 1, s. 238",
+  "date": "XX. yüzyıl başı (plan ve mimari özelliklerine göre)"
+ },
+ "karatay-zenburi-mescidi": {
+  "summary": "Şems Camii ve türbesinin güneydoğusunda, tuğla kubbesi ve balıksırtı örgülü minaresiyle XIII. yüzyılın ilk yarısına tarihlenen kare planlı Selçuklu mescidi.",
+  "source": "Cilt 1, s. 239",
+  "date": "Selçuklu · plan, malzeme ve teknik özelliklerine göre XIII. yüzyılın ilk yarısı"
+ },
+ "karatay-ickaraarslan-mescidi": {
+  "summary": "Sekizgen kasnaklı kurşun kubbesi, balıksırtı tuğla örgüsü ve çini mihrabıyla Konya'daki Selçuklu mescitlerinin güzel bir örneği.",
+  "source": "Cilt 1, s. 241",
+  "date": "Anadolu Selçuklu · XIII. yüzyıl başlarına tarihlendirilmektedir"
+ },
+ "karatay-sari-yakup-camii": {
+  "summary": "Dedemoğlu Mahallesi’ndeki cami, ahşap köşk minaresi ve sonradan yapılan bağdâdi kubbesiyle dikkat çeker.",
+  "source": "Cilt 1, s. 245",
+  "date": "İlk yapı XV. yüzyıl olarak değerlendirilir; ikinci evre 1863"
+ },
+ "karatay-haci-mustafa-aga-koprubasi-mustafa-aga-camii": {
+  "summary": "Köprübaşı Mustafa Ağa'nın 1826-27'de yaptırdığı, ahşap direklerle beş sahına ayrılan, XIX. yüzyıl mahalle camilerinin güzel bir örneği.",
+  "source": "Cilt 1, s. 248",
+  "builder": "Köprübaşı Mustafa Ağa",
+  "date": "Osmanlı · mermer kitâbesine göre H. 1243 / M. 1826-27"
+ },
+ "karatay-asmali-hatip-sultan-mescidi": {
+  "summary": "1821’de yapılan, 1952’de tuğla minare eklenen, ahşap direklerle üç sahına ayrılmış geç Osmanlı mahalle mescidi.",
+  "source": "Cilt 1, s. 249",
+  "date": "Geç Osmanlı · giriş kapısı üzerindeki bilgilere göre 1821"
+ },
+ "karatay-pisili-pir-esat-mescit-ve-turbesi": {
+  "summary": "Adak Sokak’taki manzumeden kalan tuğla türbe, eski mescidin yerine 1989’da batıda yapılan yeni camiyle birlikte anılır.",
+  "source": "Cilt 1, s. 251",
+  "date": "Selçuklu · XIII. yüzyıl; türbe ve zaviye 1440’ta yenilenmiş; yeni cami 1989"
+ },
+ "karatay-mengene-camii": {
+  "summary": "İçten bağdadi kubbeli, dıştan kırma çatılı, iki sıra pencereli XX. yüzyıl başı Karatay camisi.",
+  "source": "Cilt 1, s. 256",
+  "date": "Plan ve mimari özelliklerine göre XX. yüzyıl başları"
+ },
+ "karatay-alemdar-camii": {
+  "summary": "İlk olarak 1909’da yapılan, 1948’de yeniden inşa edilen ve minaresi 1972’de betonarme olarak yenilenen Karatay camisi.",
+  "source": "Cilt 1, s. 257",
+  "date": "İlk inşa 1909; 1948’de yeniden inşa"
+ },
+ "karatay-saksaganlar-camii": {
+  "summary": "Küçük Kayacık Mahallesi’ndeki cami, taş ve kerpiç duvarlı, ahşap direkli üç sahınlı bir mahalle camisidir.",
+  "source": "Cilt 1, s. 258",
+  "date": "XIX. yüzyıl · 1805–1825 aralığı önerilmektedir"
+ },
+ "karatay-dolap-mektep-mescidi": {
+  "summary": "Bitişiğinde iki katlı imam evi bulunan, ahşap tavanlı ve kırma çatılı XIX. yüzyıl sonu Karatay mescidi.",
+  "source": "Cilt 1, s. 260",
+  "date": "Mimari ve plan özelliklerine göre XIX. yüzyıl sonları"
+ },
+ "karatay-polatlar-haci-cemal-hatip-camii": {
+  "summary": "1813’te Hacı Abdurrahman’ın yaptırdığı; beş bölümlü son cemaat yeri, köşk tipi ahşap minaresi ve ahşap direkli üç sahınlı harimiyle geç Osmanlı mahalle camisi.",
+  "source": "Cilt 1, s. 261",
+  "date": "Geç Osmanlı · Vakıf Temettuat kayıtlarına göre 25 Cemaziyelahir 1228 / 25 Haziran 1813"
+ },
+ "karatay-seyh-ulema-recep-aga-camii": {
+  "summary": "Kerpiç ve taştan, enine dikdörtgen planlı ve dört yöne eğimli kırma çatılı, XX. yüzyıl başına tarihlenen Karatay camisi.",
+  "source": "Cilt 1, s. 263",
+  "date": "Plan ve mimari özelliklerine göre XX. yüzyıl başları"
+ },
+ "karatay-yanik-sedirler-kenan-dede-camii": {
+  "summary": "1646 tarihli Kenan Dede Mescidi’nin yerinde, XX. yüzyıl başında yapıldığı düşünülen çok destekli, üç sahınlı mahalle camisi.",
+  "source": "Cilt 1, s. 264",
+  "date": "Plan ve mimari özelliklerine göre XX. yüzyıl başları; yerinde 1646 tarihli Kenan Dede Mescidi bulunuyordu"
+ },
+ "karatay-digin-camii": {
+  "summary": "“Çaputçu Camii” olarak da bilinen, üzerinde 1920 tarihi yazan, ahşap çokgen gövdeli minareli Karatay camisi.",
+  "source": "Cilt 1, s. 265"
+ },
+ "karatay-hamzaoglu-camii": {
+  "summary": "Batı cephesinde ahşap çardak minaresi bulunan, taş temelli ve kerpiç duvarlı Cumhuriyet dönemi camisi.",
+  "source": "Cilt 1, s. 266",
+  "date": "Cumhuriyet dönemi · mimari özelliklerine göre XX. yüzyıl ortaları"
+ },
+ "karatay-hanedan-camii": {
+  "summary": "Girişteki Türkçe kitâbesine göre 1929’da yapılan, minaresiz, taş temelli ve kerpiç duvarlı küçük cami.",
+  "source": "Cilt 1, s. 267",
+  "date": "Cumhuriyet’in ilk yılları · Türkçe kitâbesine göre 1929"
+ },
+ "karatay-cayir-camii": {
+  "summary": "Cemil Çiçek Caddesi’ndeki cami, ahşap çardak minaresiyle Cumhuriyet döneminde süren yapı geleneğini yansıtır.",
+  "source": "Cilt 1, s. 268",
+  "date": "Cumhuriyet · XX. yüzyıl ortaları olarak düşünülmektedir"
+ },
+ "karatay-haci-ivaz-camii": {
+  "summary": "1821 tarihli Abid İmam Mescidi’nin yerinde, 1928’de Hacı İvaz’ın yeniden yaptırdığı ahşap direkli mahalle camisi.",
+  "source": "Cilt 1, s. 269",
+  "date": "1821’de yapılan mescidin yerine 1891’de yeniden, bugünkü yapı 1928’de Hacı İvaz tarafından inşa edilmiştir"
+ },
+ "karatay-sutcu-camii": {
+  "summary": "Kerpiçten yığma teknikle yapılmış, kırma çatılı, harim, son cemaat yeri ve mahfilden oluşan erken Cumhuriyet dönemi mahalle camii.",
+  "source": "Cilt 1, s. 270",
+  "date": "Cumhuriyet · plan ve mimari özelliklerine göre erken Cumhuriyet dönemi"
+ },
+ "karatay-cataloglu-camii": {
+  "summary": "Giriş kapısında H. 1181 / M. 1767-68 tarihi bulunan, ahşap direklerle üç sahına ayrılmış taş cami.",
+  "source": "Cilt 1, s. 271",
+  "date": "Osmanlı · giriş kapısı üzerindeki tarih H. 1181 / M. 1767-68"
+ },
+ "karatay-topraklik-hasan-efendi-camii": {
+  "summary": "Kerimler Caddesi’ndeki caminin kitabesi, mahalle halkı ve hayırseverlerin 1947’de gerçekleştirdiği yeniden yapımı anlatır.",
+  "source": "Cilt 1, s. 273",
+  "date": "Cumhuriyet · 22 Temmuz 1947’de yeniden yapım"
+ },
+ "karatay-cavusoglu-camii": {
+  "summary": "1940’ta inşa edilip 1949’da ibadete açılan, Bursa kemerli ahşap mahfilli mahalle mescidi.",
+  "source": "Cilt 1, s. 274",
+  "date": "Cumhuriyet’in ilk yılları · 1940’ta inşa, 1949’da ibadete açıldı"
+ },
+ "karatay-namik-pasa-camii": {
+  "summary": "Ataları Konyalı olan Namık Paşa’nın H. 1306 / M. 1888-1889’da Çelebi Mahallesi’nde yaptırdığı kesme taş cami.",
+  "source": "Cilt 1, s. 275",
+  "date": "Geç Osmanlı · kitâbesine göre H. 1306 / M. 1888-1889"
+ },
+ "karatay-halkabegus-mescidi-ve-turbesi": {
+  "summary": "Kalenderhâne Mahallesi’ndeki kare planlı kubbeli türbe, üst katında mescit olarak düzenlenmiş bir mekân barındırır.",
+  "source": "Cilt 1, s. 277",
+  "date": "Selçuklu · XIII. yüzyıl"
+ },
+ "karatay-tolluoglu-camii": {
+  "summary": "Asli öğesi olarak yalnızca taş ve tuğla minaresi korunmuş, içten kubbeli, dıştan kırma çatılı XX. yüzyıl başı camisi.",
+  "source": "Cilt 1, s. 278",
+  "date": "Mimari özelliklerine göre XX. yüzyıl başları"
+ },
+ "karatay-seyh-ulema-yusuf-aga-camii": {
+  "summary": "Tavanı bütünüyle kalem işi süslemelerle bezeli, ahşap minareli, derinlemesine dikdörtgen planlı mahalle camii.",
+  "source": "Cilt 1, s. 279",
+  "date": "XIX. yüzyıl sonu ya da XX. yüzyıl başı (mimari özelliklerine göre); 1947'de büyük ölçüde yenilenmiş"
+ },
+ "karatay-aziziye-camii": {
+  "summary": "Karatay’ın tarihi merkezindeki Aziziye Camii, büyük pencereleri ve süslü iki minaresiyle XIX. yüzyıl sanat akımlarını bir araya getirir.",
+  "source": "Cilt 1, s. 280",
+  "date": "Osmanlı · ilk yapı 1671–1676; mevcut cami 1872–1874"
+ },
+ "selcuklu-besare-bey-mescidi": {
+  "summary": "Alâeddin Tepesi’nin kuzeyinde, Beşare Bey’in 1219’da yaptırdığı, kare planlı ve tek kubbeli Selçuklu mescidi.",
+  "source": "Cilt 1, s. 291",
+  "date": "Selçuklu · kitâbesine göre 15 Cemaziyelevvel 616 / 29 Temmuz 1219"
+ },
+ "selcuklu-ak-sazi-bey-camii": {
+  "summary": "Alâeddin Tepesi’nin kuzeybatısında, Karamanoğulları devlet adamı Şaz Bey’in yaptırdığı, sekizgen kasnaklı tek kubbeli cami.",
+  "source": "Cilt 1, s. 294",
+  "date": "Karamanoğulları dönemi (banisi Şaz Bey bu dönemde yaşamıştır)"
+ },
+ "selcuklu-sakahane-hidir-ilyas-davut-aga-mescidi": {
+  "summary": "Alâeddin Tepesi’nin kuzeyinde, kurşun kaplı tek kubbeli, bitişiğindeki Hızır-İlyas makamıyla da anılan kare planlı mescit.",
+  "source": "Cilt 1, s. 295",
+  "date": "Kitâbesi yok; kitap XIII. yüzyılda yapılmış olmasını ihtimal dahilinde görür"
+ },
+ "selcuklu-zevle-sultan-mescidi": {
+  "summary": "Hamidiye Mahallesi'ndeki tek kubbeli tuğla mescit, kitâbesine göre Alâeddin Keykubat döneminde yapılmış kabul edilir.",
+  "source": "Cilt 1, s. 296",
+  "date": "Anadolu Selçuklu, Alâeddin Keykubat dönemi (kitâbeye dayanarak kabul edilir)"
+ },
+ "selcuklu-zahide-hatun-camii-basarakavak": {
+  "summary": "Başarakavak'taki kırma çatılı, ahşap direkli cami; mevcut yapının XIX. yüzyılda inşa edildiği tahmin edilir.",
+  "source": "Cilt 1, s. 297",
+  "date": "Mevcut yapının XIX. yüzyılda yapıldığı tahmin edilir"
+ },
+ "selcuklu-tatkoy-merkez-camii": {
+  "summary": "Tatköy'ün ulu camisi, kitâbesine göre 1867-68'de eğimli arazide moloz taştan inşa edilmiştir.",
+  "source": "Cilt 1, s. 298",
+  "date": "H. 1284 / M. 1867-68 (batı cephesindeki kitâbeye göre)"
+ },
+ "selcuklu-beyhekim-mescit-ve-turbesi": {
+  "summary": "Mevlâna'nın hekimi Ekmeleddin Beyhekim'in XIII. yüzyılın ilk yarısında yaptırdığı tek kubbeli mescit ve türbesi.",
+  "source": "Cilt 1, s. 300",
+  "date": "Anadolu Selçuklu, XIII. yüzyılın ilk yarısı"
+ },
+ "selcuklu-sultan-alaeddin-ulu-camii": {
+  "summary": "Konya İç Kalesi'ndeki Alâeddin Camii, I. Mesud'dan I. Alâeddin Keykubad'a uzanan evrelerle 1220'de son şeklini almış Anadolu Selçuklu yapısıdır.",
+  "source": "Cilt 1, s. 303",
+  "date": "Anadolu Selçuklu; ilk evre I. Mesud dönemi (minber kitâbesi H. 550 / M. 1155), son şekli 1220"
+ },
+ "selcuklu-ihsaniye-ulu-camii-minaresi": {
+  "summary": "1958'de yeniden yapılan İhsaniye Ulu Camii'nin önceki yapısından günümüze kalan tek şerefeli kesme taş minare.",
+  "source": "Cilt 1, s. 318"
+ },
+ "ahirli-kurucay-eski-camii": {
+  "summary": "Ahırlı'ya bağlı Kuruçay Köyü'nün ulu camisi; eğimli arazide yazlık bölümü ve üç sahınlı harimiyle XIX. yüzyıl sonuna tarihlendirilir.",
+  "source": "Cilt 1, s. 319",
+  "date": "XIX. yüzyılın sonları (plan ve mimari dokusuna göre tahmin)"
+ },
+ "akoren-avdan-beldesi-buyuk-eski-camii": {
+  "summary": "Moloz taştan yığma teknikle yapılmış, renkli taşlarla bezeli minaresi ve ahşap direkli harimiyle Avdan'ın eski büyük camii.",
+  "source": "Cilt 1, s. 320",
+  "date": "Malzeme ve teknik özelliklerine göre XIX-XX. yüzyıl"
+ },
+ "aksehir-altinkalem-cevlek-mescidi": {
+  "summary": "Altınkalem Mahallesi’ndeki tek kubbeli Selçuklu mescidi, tuğla cephesi ve çini mozaik pencere alınlıklarıyla öne çıkar.",
+  "source": "Cilt 1, s. 323",
+  "builder": "İsfendiyarzade Eminüddin Yusuf",
+  "date": "Selçuklu · H. 620 / M. 1223"
+ },
+ "aksehir-cinaralti-camii": {
+  "summary": "Önündeki büyük çınardan adını alan Akşehir'deki cami, Seyyid Necmeddin'in yaptırdığı eski caminin yerine mahalleli tarafından inşa edilmiştir.",
+  "source": "Cilt 1, s. 326"
+ },
+ "aksehir-dogrugoz-beldesi-merkez-camii": {
+  "summary": "Doğrugöz'ün ulu camisi; ahşap direkli harimi Müslim Gökçek'in 1950'lerde yaptığı barok tarzda kalem işleriyle süslüdür.",
+  "source": "Cilt 1, s. 327",
+  "date": "XIX. yüzyılın sonları (plan ve mimari elemanlarına göre tahmin)"
+ },
+ "aksehir-ferruhsah-seyit-mahmut-hayrani-mescidi": {
+  "summary": "Seyyid Mahmut Hayrani haziresindeki kubbeli mescit, devşirme taşları ve çiniyle bezeli pencere çevreleriyle dikkat çeker.",
+  "source": "Cilt 1, s. 328",
+  "date": "Selçuklu · H. 621, Sultan Keykubat dönemi"
+ },
+ "aksehir-guduk-minare-camii": {
+  "summary": "Minaresinin petek üstü uzun süre yıkık kaldığı için “güdük” adını alan, 1227 tarihli tek kubbeli Selçuklu camisi.",
+  "source": "Cilt 1, s. 330",
+  "date": "H. 624 / M. 1227, Sultan Alâeddin Keykubad dönemi (kitâbeye göre)"
+ },
+ "aksehir-haci-hamza-hafiz-hatip-ali-mescidi": {
+  "summary": "Akşehir Yıldırım Mahallesi'ndeki, kitâbesiz ve XIII-XIV. yüzyıla tarihlendirilen kare planlı tek kubbeli mescit.",
+  "source": "Cilt 1, s. 332",
+  "date": "XIII-XIV. yüzyıl (tahmini)"
+ },
+ "aksehir-hidirlik-hizirlik-hidir-dede-mescidi": {
+  "summary": "Akşehir'deki Hıdırlık mesire yerinde, asırlık çınarların gölgesinde, mihrabının iki yanında Bizans dönemi mermer levhalar bulunan tek kubbeli mescit.",
+  "source": "Cilt 1, s. 333",
+  "date": "XIII-XIV. yüzyıl (tahmini)"
+ },
+ "aksehir-imaret-hasan-pasa-camii": {
+  "summary": "Kileci Mahallesi’ndeki Hasan Paşa Camii, tek kubbeli harimi ve Evliya Çelebi’nin yazısını taşıyan sütun bileziğiyle tanınır.",
+  "source": "Cilt 1, s. 335",
+  "builder": "Rumeli Beylerbeyi Abdülhayoğlu Hasan Paşa",
+  "date": "Osmanlı · H. 916 / M. 1510"
+ },
+ "aksehir-iplikci-ambardar-kerim-aga-camii": {
+  "summary": "Kuşçu Mahallesi’ndeki İplikçi Camii, beylikler döneminden gelen yapısı ve taş-tuğla almaşık cepheleriyle tanınır.",
+  "source": "Cilt 1, s. 343",
+  "builder": "Ambardar Kerim Ağa",
+  "date": "Hamitoğulları · H. 738 / M. 1337"
+ },
+ "aksehir-kalayci-mescidi": {
+  "summary": "Akşehir Kuşçu Mahallesi'ndeki, yerinde Ahi Celal Mescidi bulunduğu belirtilen tek kubbeli Ahi yapısı.",
+  "source": "Cilt 1, s. 352",
+  "date": "XII. yüzyıl (plan, malzeme ve teknik özelliklerine göre tahmin)"
+ },
+ "aksehir-kizilca-mescit": {
+  "summary": "Akşehir Kızılca Mahallesi'ndeki, minaresinin kaidesi ilk dönemden kalan, kubbesi balık kılçığı kuşaklı tek kubbeli mescit.",
+  "source": "Cilt 1, s. 353",
+  "date": "XII. yüzyıl (plan, malzeme ve teknik özelliklerine göre tahmin)"
+ },
+ "aksehir-kileci-mescidi": {
+  "summary": "Akşehir Kileci Mahallesi'ndeki, ahşap kapı ve niş kanatları Selçuklu ahşap sanatının şaheserlerinden sayılan tek kubbeli mescit.",
+  "source": "Cilt 1, s. 354",
+  "date": "XIII. yüzyıl, Sultan Alâeddin Keykubad dönemi (tahmini)"
+ },
+ "aksehir-kucuk-ayasofya-mescidi": {
+  "summary": "Eski Kale’deki tek kubbeli mescit, kubbesindeki firuze ve patlıcan moru çini mozaik süslemeleriyle önemli bir Selçuklu eseridir.",
+  "source": "Cilt 1, s. 356",
+  "builder": "Şemseddin Hasan bin Ömer",
+  "date": "Selçuklu · H. 633 / M. 1236"
+ },
+ "aksehir-ortakoy-beldesi-merkez-camii": {
+  "summary": "Ortaköy merkezindeki cami, ahşap tavanlı üç sahınlı harimiyle XIX. yüzyılın çok destekli cami örneklerindendir.",
+  "source": "Cilt 1, s. 360",
+  "date": "XIX. yüzyıl ortalarına tarihlendirilmektedir"
+ },
+ "aksehir-tahtakale-mescidi": {
+  "summary": "Akşehir Kalesi yakınındaki kubbeli mescit, kalenin altındaki konumundan türeyen Tahtakale adıyla bilinir.",
+  "source": "Cilt 1, s. 362",
+  "date": "Selçuklu · XIII. yüzyıl olarak değerlendirilir; 1683’te yeniden yapım"
+ },
+ "aksehir-ulu-sultan-alaattin-camii": {
+  "summary": "Akşehir Ulu Camii, yedi sahınlı harimi, mihrap önü kubbesi ve çini mozaik mihrabıyla Selçuklu mimarisini yansıtır.",
+  "source": "Cilt 1, s. 367",
+  "builder": "Sait Hacı Necmeddin Necipzade Ebu Sait İbrahim",
+  "date": "Selçuklu · H. 610 / M. 1213"
+ },
+ "altinekin-ali-pasa-camii": {
+  "summary": "Altınekin ilçe merkezindeki caminin giriş kitabesi H. 1271 / M. 1854-55 tarihini verir.",
+  "source": "Cilt 1, s. 374",
+  "date": "H. 1271 / M. 1854-55"
+ },
+ "beysehir-bayindir-koyu-camii": {
+  "summary": "Bayındır Köyü Camii, ahşap direkli beş sahınlı harimi ve yoğun kalem işi süslemeleriyle XIV. yüzyıl yapı geleneğini sürdürür.",
+  "source": "Cilt 1, s. 379",
+  "date": "H. 767 / M. 1365-66"
+ },
+ "beysehir-cuma-orta-camii": {
+  "summary": "Beyşehir Hacıarmağan Mahallesindeki yapının kesin inşa tarihi bilinmez; XIII. yüzyılın ilk yarısında yapılmış olabileceği düşünülür.",
+  "source": "Cilt 1, s. 382",
+  "date": "XIII. yüzyılın ilk yarısı olduğu düşünülmektedir"
+ },
+ "beysehir-demirli-mescit": {
+  "summary": "Beyşehir İçerişehir Mahallesi Demirli Sokak'taki mescidin girişinde celî sülüs hatlı iki satır kitabe vardır.",
+  "source": "Cilt 1, s. 383",
+  "date": "H. 714 / M. 1314-15"
+ },
+ "beysehir-emen-eski-camii": {
+  "summary": "Beyşehir Emen Köyü'ndeki cami, minaresinin kitabesine göre H. 1032 / M. 1622'de Mimar Usta Kadı tarafından yapılmıştır.",
+  "source": "Cilt 1, s. 384",
+  "date": "H. 1032 / M. 1622"
+ },
+ "beysehir-gedik-ahmet-pasa-camii": {
+  "summary": "Beyşehir Üstünler Köyü'ndeki caminin banisini belirten kitabe yoktur.",
+  "source": "Cilt 1, s. 385",
+  "date": "Levhasına göre XVI. yüzyıl"
+ },
+ "beysehir-hamidiye-camii": {
+  "summary": "Beyşehir Hamidiye Mahallesi Nazımbey Caddesi'ndeki cami, 1890'da Rusya'dan bölgeye göç eden muhacirler tarafından 1914'te yaptırılmıştır.",
+  "source": "Cilt 1, s. 386",
+  "date": "1914; 1999 yılında yeniden inşa"
+ },
+ "beysehir-hizir-ali-pasa-bayafsar-camii": {
+  "summary": "Bayafşar'da, mihraba dik beşerli ahşap direk sıralarıyla dört sahına ayrılan, ahşap direkli çok destekli cami.",
+  "source": "Cilt 1, s. 387",
+  "date": "Osmanlı · kapı kitâbesinde okunabilen tarih H. 1209 / M. 1794-95; minare H. 1376 / M. 1956"
+ },
+ "beysehir-lutfullah-carsi-camii-minaresi": {
+  "summary": "Beyşehir çarşısında, 1823'te yapılan Lütfullah Çarşı Camii'nin yanına Celeboğlu tarafından sonradan eklenen tek şerefeli minare.",
+  "source": "Cilt 1, s. 389",
+  "date": "Osmanlı · cami 1823'te yapılmış, minare sonradan eklenmiştir"
+ },
+ "bozkir-hisarlik-beldesi-asarlik-camii": {
+  "summary": "Hisarlık’taki eski mezarlık içinde bulunan cami, mihrap, minber ve mahfilindeki yoğun boyalı bezemeleriyle dikkat çeker.",
+  "source": "Cilt 1, s. 390"
+ },
+ "bozkir-siristat-buyuk-camii": {
+  "summary": "Çarşamba Suyu ve Taş Köprü yakınındaki Sırıstat Camii, ahşap direkli üç sahınlı harime sahiptir.",
+  "source": "Cilt 1, s. 392"
+ },
+ "bozkir-sogut-buyuk-cami": {
+  "summary": "Bozkır Söğüt Mahallesi'ndeki caminin kesin inşa tarihi bilinmez.",
+  "source": "Cilt 1, s. 393",
+  "date": "XX. yüzyıl olduğu düşünülmektedir"
+ },
+ "bozkir-ucpinar-beldesi-kursunlu-camii": {
+  "summary": "Üçpınar Hocaköy’deki Kurşunlu Camii, kurşun kaplı kubbesi ve zengin kalem işi bezemeleriyle tanınır.",
+  "source": "Cilt 1, s. 397",
+  "date": "Kaynaklarda 1816 olarak belirtilmektedir"
+ },
+ "celtik-ulu-carsi-merkez-camii": {
+  "summary": "Çeltik Ulu Camii, dokuz kubbeli harimiyle Osmanlı klasik döneminin çok kubbeli planını yansıtır.",
+  "source": "Cilt 1, s. 400"
+ },
+ "cumra-karamanoglu-ibrahim-bey-camii": {
+  "summary": "İçeriçumra’daki cami, enine dikdörtgen planı ve taş mihrap-minberiyle Karamanoğlu mimarisi özellikleri taşır.",
+  "source": "Cilt 1, s. 404",
+  "date": "İlk bani Karamanoğlu İbrahim Bey olarak anılır; giriş kitabesi H. 1283 / M. 1866-67"
+ },
+ "derbent-ciftlikozu-beldesi-camii": {
+  "summary": "Derbent Çiftliközü Beldesi merkezindeki cami 1924'te ahşap direkli ve kırma çatılı olarak yapılmıştır.",
+  "source": "Cilt 1, s. 407",
+  "date": "1924; son yıllarda yeniden inşa"
+ },
+ "doganhisar-baskoy-ulu-camii": {
+  "summary": "Doğanhisar Başköy Mahallesi'nin ulu camisi hafif eğimli arazi üzerindedir.",
+  "source": "Cilt 1, s. 409",
+  "date": "XVIII-XIX. yüzyıl olduğu düşünülmektedir"
+ },
+ "doganhisar-karaaga-beldesi-eski-ulu-camii": {
+  "summary": "Doğanhisar Karaağa Mahallesi'ndeki cami eğimli arazi üzerine kurulmuştur.",
+  "source": "Cilt 1, s. 411",
+  "date": "XVIII-XIX. yüzyıl"
+ },
+ "doganhisar-orta-camii": {
+  "summary": "Doğanhisar Harman Mahallesi'ndeki caminin güneybatı duvarındaki kitabeye göre yapı Sultan Abdülhamit Han döneminde H. 1274 / M. 1857-58'de yapılmıştır.",
+  "source": "Cilt 1, s. 412",
+  "date": "Kitabeye göre Sultan Abdülhamit Han dönemi; H. 1274 / M. 1857-58"
+ },
+ "doganhisar-pazar-carsi-camii": {
+  "summary": "Doğanhisar ilçe merkezindeki cami, Kanuni Sultan Süleyman döneminde H. 928 / M. 1521'de Abdullah bin Abdurrahman usta tarafından yapılmıştır; banisi bilinmez.",
+  "source": "Cilt 1, s. 413",
+  "date": "Kanuni Sultan Süleyman dönemi; H. 928 / M. 1521"
+ },
+ "doganhisar-ayaslar-ulu-yukari-camii": {
+  "summary": "Doğanhisar Ayaslar Mahallesi'ndeki caminin kitabesi yoktur.",
+  "source": "Cilt 1, s. 414",
+  "date": "XVIII-XIX. yüzyıl olarak değerlendirilmektedir"
+ },
+ "doganhisar-doganhisar-ulu-camii": {
+  "summary": "Kanuni döneminde 1548'de yapılan, kalem işleriyle bezeli ahşap direkli, ahşap tavanlı ve Konya'nın en büyük ahşap mihrabına sahip cami.",
+  "source": "Cilt 1, s. 417",
+  "date": "Osmanlı · Kanuni Sultan Süleyman dönemi, kitâbesine göre H. 955 / M. 1548; minare H. 1096 / M. 1685"
+ },
+ "doganhisar-yegin-camii": {
+  "summary": "Doğanhisar Yeğin Mahallesi merkezindeki cami eğimli arazi üzerindedir.",
+  "source": "Cilt 1, s. 424",
+  "date": "XVIII-XIX. yüzyıl olarak değerlendirilmektedir"
+ },
+ "eregli-agalar-boyaci-ali-mescidi": {
+  "summary": "Ereğli Boyacı Ali Mahallesi İstasyon Caddesi üzerindeki mescidin Latin harfli kitabesine göre yapı H. 958 / M. 1551'de Kanuni Sultan Süleyman döneminde Aksaraylı Ali oğlu Hasan tarafından yaptırılmıştır.",
+  "source": "Cilt 1, s. 426",
+  "date": "H. 958 / M. 1551"
+ },
+ "eregli-buyukdede-taskilise-camii": {
+  "summary": "Ereğli Büyükdede Köyü'ndeki yapı ilk olarak Bizans döneminde kilise olarak inşa edilmiştir.",
+  "source": "Cilt 1, s. 427",
+  "date": "Bizans dönemi; kitapta 560 yılları"
+ },
+ "eregli-kutoren-eski-camii": {
+  "summary": "Ereğli Kutören kasaba mezarlığındaki cami H. 1314 / M. 1896-97'de yapılmıştır.",
+  "source": "Cilt 1, s. 430",
+  "date": "H. 1314 / M. 1896-97"
+ },
+ "eregli-ulu-kible-camii": {
+  "summary": "Ereğli Cami-i Kebir Mahallesi'ndeki yapı Cami-i Ereğli ve Kıble Camii adlarıyla da bilinir.",
+  "source": "Cilt 1, s. 431",
+  "date": "Anadolu Selçuklu dönemi; kitapta farklı inşa kayıtları"
+ },
+ "eregli-zengen-beldesi-eski-camii": {
+  "summary": "Zengen’deki eski cami, taş çardak minaresi ve yenilenen kalem işleriyle ahşap destekli yapı geleneğini yansıtır.",
+  "source": "Cilt 1, s. 432",
+  "date": "XIX. yüzyıl sonları – XX. yüzyıl başları"
+ },
+ "huyuk-cavus-eski-merkez-cami": {
+  "summary": "Çavuş Köyü’ndeki eski cami, ahşap tavanı ve duvarlarındaki yoğun kalem işi süslemeleriyle dikkat çeker.",
+  "source": "Cilt 1, s. 436",
+  "date": "XVII. yüzyıla tarihlendirme; XIX. yüzyılda yeniden yapım"
+ },
+ "huyuk-cukurkent-koyu-camii": {
+  "summary": "Hüyük Çukurkent Köyü Köyiçi Mevkii'ndeki caminin giriş levhasında M. 1800, harim kapısında H. 1311 / M. 1893-94 ve M. 1972 tarihleri vardır.",
+  "source": "Cilt 1, s. 438"
+ },
+ "ilgin-beykonak-dedigi-sultan-mescit-ve-tekkesi": {
+  "summary": "Beykonak’ın güneydoğusundaki tepede yer alan mescit ve tekke, iç içe üç bölüm ile hazire olarak kullanılan avludan oluşur.",
+  "source": "Cilt 1, s. 440",
+  "builder": "Sanavber Hâtun",
+  "date": "Anadolu Selçuklu · kitapta H. 576 / M. 1180, I. Keyhüsrev zamanı"
+ },
+ "ilgin-behlul-bey-camii": {
+  "summary": "Behlülbey Mahallesi’ndeki kırma çatılı caminin turkuaz ahşap mihrabı geometrik ve bitkisel bezemelidir.",
+  "source": "Cilt 1, s. 445",
+  "date": "XX. yüzyıl olarak değerlendirilmektedir"
+ },
+ "ilgin-fazil-camii": {
+  "summary": "Ilgın Yukarı Çiğil Beldesi'ndeki caminin giriş kitabesinde H. 1296 / M. 1877 tarihi verilir.",
+  "source": "Cilt 1, s. 446",
+  "date": "Kitabeye göre H. 1296 / M. 1877"
+ },
+ "ilgin-ibrahim-pasa-camii-argithani": {
+  "summary": "Nevşehirli İbrahim Paşa, Ilgın'a bağlı Argıthan Kasabası'nda H. 1133 / M. 1720'de cami, mektep, medrese, on altı ocaklı han, on dört dükkânlı çarşı, altı çeşme ve kuyudan oluşan külliye yaptırmıştır.",
+  "source": "Cilt 1, s. 447",
+  "date": "H. 1133 / M. 1720; XIX. yüzyılda yenilenmiş"
+ },
+ "ilgin-pir-huseyin-ulu-cukur-camii": {
+  "summary": "Ilgın’ın çarşı içindeki ulu camisi, zeminden aşağıda kalması nedeniyle Çukur Camii adıyla da bilinir.",
+  "source": "Cilt 1, s. 448",
+  "builder": "Turgut oğlu Pir Hüseyin Bey",
+  "date": "Karamanoğulları · H. 826 / M. 1422"
+ },
+ "ilgin-sihcarullah-zincirli-camii": {
+  "summary": "Ilgın Şıhcarullah Mahallesi'ndeki caminin inşa kitabesi bulunmamaktadır.",
+  "source": "Cilt 1, s. 450",
+  "date": "Mimari özelliklerine göre XIX. yüzyıl"
+ },
+ "ilgin-yukari-cigil-beldesi-merkez-camii-kebir-camii": {
+  "summary": "Son cemaat yerindeki sütun başlığında 1850 tarihi bulunan, iç mekânı özgün hâlini koruyan ahşap direkli ve ahşap tavanlı cami.",
+  "source": "Cilt 1, s. 451",
+  "date": "Osmanlı · son cemaat yerindeki ahşap sütun başlığında H. 1266 / M. 1850 tarihi"
+ },
+ "kadinhani-cavundur-camii": {
+  "summary": "Ünveren Mahallesi’ndeki Çavundur Camii, ahşap destekleri ve renkli ahşap mihrabıyla XVIII. yüzyıldan gelen bir mahalle camisidir.",
+  "source": "Cilt 1, s. 454",
+  "date": "Osmanlı · H. 1178 / M. 1764"
+ },
+ "kadinhani-haci-mehmetli-camii": {
+  "summary": "Doğanlar Mahallesi’ndeki Hacı Mehmetli Camii, yazlık bölümü ve ahşap direkli harimiyle Topbaşların Camii adıyla da anılır.",
+  "source": "Cilt 1, s. 456",
+  "builder": "Kemal oğlu İsmail Fakih",
+  "date": "Osmanlı · kitapta H. 932 / M. 1516"
+ },
+ "kadinhani-ibrahim-bey-carsi-camii": {
+  "summary": "Konya Caddesi’ndeki Çarşı Camii, yazlık bölümü ve ahşap direkli harimiyle Kadınhanı’nın vakıf yapılarındandır.",
+  "source": "Cilt 1, s. 458",
+  "date": "Osmanlı · 1721 külliye düzenlemesi; 1859 yeniden yapımı"
+ },
+ "kadinhani-kabacali-camii": {
+  "summary": "Kadınhanı Kayabaşı Mahallesi'nde tepelik konumdaki cami Hacı İbrahim Vakfı'na bağlıdır ve 1886'da yaptırılmıştır.",
+  "source": "Cilt 1, s. 460",
+  "date": "1886"
+ },
+ "kadinhani-karamanli-haci-mustafa-camii": {
+  "summary": "Kadınhanı Güngören Mahallesi Konya Caddesi'ndeki cami 1768'de Saideli Nahiyesi Bozulus Türkmenleri Karamanlı Aşireti ağalarından Çavuş Oğulları tarafından yaptırılmıştır.",
+  "source": "Cilt 1, s. 461",
+  "date": "1768"
+ },
+ "kadinhani-pinarbasi-camii": {
+  "summary": "Kadınhanı Güngören Mahallesi'ndeki caminin ilk inşa kitabesi yoktur.",
+  "source": "Cilt 1, s. 462",
+  "date": "Vakıf kayıtlarına göre 1720"
+ },
+ "karapinar-cetmi-camii": {
+  "summary": "Karapınar Çetmi Mahallesi'ndeki caminin inşa tarihi ve banisini bildiren kitabesi yoktur.",
+  "source": "Cilt 1, s. 463",
+  "date": "Arşiv ve kayıtlarda H. 1300 / M. 1882-83"
+ },
+ "karapinar-resadiye-camii": {
+  "summary": "Adalet Sokak’taki Reşadiye Camii, kesme taş duvarları ve sekizgen kasnağa oturan tek kubbesiyle tanınır.",
+  "source": "Cilt 1, s. 464",
+  "date": "Osmanlı · H. 1329 / M. 1911"
+ },
+ "karapinar-yagmapinar-mescidi": {
+  "summary": "Karapınar ilçesi Yağmapınar Mahallesi'ndeki mescit Emirgazi ve Ardistama yolları üzerinde, hazire içindedir.",
+  "source": "Cilt 1, s. 465",
+  "date": "H. 966 / M. 1558-59"
+ },
+ "sarayonu-kucuk-alioglu-camii": {
+  "summary": "Sarayönü Hatıp Mahallesi Pir Hüseyin Bey Caddesi'ndeki cami, Karaçayır Deresi ile Şahin Caddesi arasında, Küçük Ali Oğlu Köprüsü'nün kuzeybatısındadır.",
+  "source": "Cilt 1, s. 467",
+  "date": "Kitabeye göre H. 1281 / M. 1861"
+ },
+ "sarayonu-pir-huseyin-bey-yukari-camii": {
+  "summary": "Sarayönü Yukarı Mahalle’deki cami, ahşap direkli harimi ve mukarnas kavsaralı alçı mihrabıyla dikkat çeker.",
+  "source": "Cilt 1, s. 468",
+  "date": "H. 811 / M. 1408"
+ },
+ "seydisehir-muallimhane-sofuhane-camii-ve-turbesi": {
+  "summary": "Sofuhane Mahallesi’ndeki yapı, Kur’an eğitimi için yaptırılan mektepten camiye dönüşmüş ahşap destekli bir eserdir.",
+  "source": "Cilt 1, s. 472",
+  "date": "Osmanlı · H. 936 / M. 1529-30"
+ },
+ "seydisehir-seyyid-harun-veli-camii": {
+  "summary": "Seydişehir merkezindeki Seyyid Harun Veli Camii, ahşap direkli üç sahınlı harimi ve kuzeyindeki kümbetlerle bir külliyenin parçasıdır.",
+  "source": "Cilt 1, s. 475",
+  "date": "M. 1302–1320 arası olarak tahmin edilmektedir"
+ },
+ "taskent-uzun-seyh-sih-camii": {
+  "summary": "Taşkent ilçe merkezindeki caminin inşa kitabesi yoktur.",
+  "source": "Cilt 1, s. 478",
+  "date": "Kaynaklarda Yavuz Sultan Selim dönemi"
+ },
+ "yunak-piribeyli-beldesi-merkez-camii": {
+  "summary": "Piribeyli’deki kesme taş cami, ahşap direkli üç sahınlı harimi ve kalem işi bezemeli ahşap mihrabıyla tanınır.",
+  "source": "Cilt 1, s. 484",
+  "date": "Kaynaklarda 1896 olarak belirtilmektedir"
+ },
+ "beysehir-esrefoglu-suleyman-bey-kulliyesi": {
+  "summary": "Eşrefoğlu Seyfettin Süleyman Bey'in Beyşehir'de yaptırdığı; ahşap direkli camii, türbe, hamam ve bedestenden oluşan külliye.",
+  "source": "Cilt 2, s. 12",
+  "builder": "Eşrefoğlu Seyfettin Süleyman Bey",
+  "date": "Eşrefoğulları Beyliği · Cami H. 696–699 / M. 1296–1300; türbe H. 701 / M. 1301"
+ },
+ "beysehir-esrefoglu-suleyman-bey-camii": {
+  "summary": "Eşrefoğlu Süleyman Bey'in 1296-99 yıllarında Beyşehir'de Selçuklu geleneğinde ulu cami tarzında yaptırdığı, ahşap direkli ve ahşap tavanlı cami.",
+  "source": "Cilt 2, s. 16",
+  "builder": "Eşrefoğlu Süleyman Bey",
+  "date": "Eşrefoğulları dönemi · Kitâbelere göre H. 696 / M. 1296-97 ile H. 699 / M. 1299-1300 arasında yapılmıştır"
+ },
+ "beysehir-esrefoglu-suleyman-bey-turbesi": {
+  "summary": "Seyfettin Süleyman Bey'in vefatından bir yıl önce, 1301'de Eşrefoğlu Camii'nin doğu duvarına bitişik olarak yaptırdığı, mozaik çinili kubbesiyle bilinen iki katlı türbe.",
+  "source": "Cilt 2, s. 26",
+  "builder": "Seyfettin Süleyman Bey",
+  "date": "Eşrefoğulları dönemi · Giriş kitâbesine göre H. 701 / M. 1301"
+ },
+ "beysehir-esrefoglu-suleyman-bey-hamami": {
+  "summary": "Eşrefoğlu Camii'nin kuzeybatısında, eski kale kapısıyla cami arasında yer alan, 2006-2007 restorasyonuyla yeniden ayağa kaldırılan çifte hamam.",
+  "source": "Cilt 2, s. 28"
+ },
+ "beysehir-esrefoglu-bedesteni": {
+  "summary": "Eşrefoğlu Camii'nin kuzeyinde, iki kâgir ayağın taşıdığı altı kubbeyle örtülü ve dört yanı dükkân sıralarıyla çevrili bedesten.",
+  "source": "Cilt 2, s. 30",
+  "builder": "Eşrefoğlu Süleyman Bey",
+  "date": "Eşrefoğulları dönemi · H. 958 / M. 1551'de onarılmıştır"
+ },
+ "karapinar-karapinar-sultan-ii-selim-kulliyesi": {
+  "summary": "Şehzade II. Selim'in Karapınar'da yeni bir yerleşimin çekirdeği ve İstanbul-Hicaz yolunu kullananlar için yaptırdığı; cami, imaret, hamam, arasta, han ve çeşmeden oluşan menzil külliyesi.",
+  "source": "Cilt 2, s. 33",
+  "date": "Osmanlı · Yapımına 18 Şâban 967 / 14 Mayıs 1560'ta başlanmış, H. 971 / M. 1563'te tamamlanmıştır"
+ },
+ "karapinar-karapinar-sultan-ii-selim-camii": {
+  "summary": "Karapınar Sultan II. Selim Külliyesi'nin güney ucunda, iki şerefeli minaresi ve pandantif geçişli kubbesiyle klasik dönemin taşradaki selâtin camilerinden biri.",
+  "source": "Cilt 2, s. 40",
+  "date": "Osmanlı · İnşa kitâbesi H. 971 / M. 1563; onarım kitâbesi H. 1263 / M. 1847"
+ },
+ "karapinar-karapinar-sultan-ii-selim-kulliyesi-hani": {
+  "summary": "Karapınar’daki Sultan II. Selim Külliyesi’nin kuzey ucunda yer alan, üzeri örtülü bir koridorun iki yanında ahırları bulunan han.",
+  "source": "Cilt 2, s. 40",
+  "date": "Osmanlı · Şehzade II. Selim külliyesinin parçası; külliye H. 971 / M. 1563’te tamamlanmıştır"
+ },
+ "karapinar-karapinar-sultan-ii-selim-kulliyesi-imareti": {
+  "summary": "Cami avlusunun kuzeyinde avluyu \"U\" biçiminde kısmen çeviren, bugüne büyük mekân kayıplarıyla ulaşmış imaret.",
+  "source": "Cilt 2, s. 42",
+  "date": "Osmanlı · Külliye H. 971 / M. 1563'te tamamlanmıştır"
+ },
+ "karapinar-karapinar-sultan-ii-selim-kulliyesi-hamami": {
+  "summary": "Külliyenin doğusunda, camiden sonra özgünlüğünü en iyi koruyan yapı olan; bugün sergi yeri ve etnografik müze deposu olarak kullanılan tek üniteli hamam.",
+  "source": "Cilt 2, s. 44",
+  "date": "Osmanlı · Külliye H. 971 / M. 1563'te tamamlanmıştır"
+ },
+ "karapinar-karapinar-sultan-ii-selim-kulliyesi-cesmesi": {
+  "summary": "Külliyenin kuzey-güney ekseninin kuzey ucunda, \"Çarşı Çeşmesi\" olarak da bilinen, sivri kemerli ve düz saçaklı tek yüzlü sokak çeşmesi.",
+  "source": "Cilt 2, s. 46",
+  "date": "Osmanlı · Kitâbesine göre H. 977 / M. 1569"
+ },
+ "karapinar-karapinar-sultan-ii-selim-kulliyesi-arastasi": {
+  "summary": "Konya-Ereğli tarihi kervan yolu üzerinde, bir sokağın iki yanına dizilmiş dükkânlardan oluşan ve kazı ile onarımdan sonra yeniden kullanılan külliye arastası.",
+  "source": "Cilt 2, s. 47",
+  "date": "Osmanlı · Külliye H. 971 / M. 1563'te tamamlanmıştır"
+ },
+ "ilgin-lala-mustafa-pasa-kulliyesi": {
+  "summary": "Kıbrıs Fâtihi Lala Mustafa Paşa'nın Ilgın'da Mimar Sinan'a yaptırdığı, ticari yapıları ön planda olan büyük menzil külliyesi.",
+  "source": "Cilt 2, s. 53",
+  "builder": "Kıbrıs Fâtihi Lala Mustafa Paşa",
+  "date": "Osmanlı · Sultan Selim oğlu Sultan Murad zamanı; cami kitâbesine göre H. 984 / M. 1576"
+ },
+ "ilgin-lala-mustafa-pasa-kursunlu-camii": {
+  "summary": "Ilgın'daki Lala Mustafa Paşa Külliyesi'nin merkezinde yer alan, tek kubbeli, tek minareli ve üç bölümlü son cemaat yerine sahip Kurşunlu Camii.",
+  "source": "Cilt 2, s. 57",
+  "date": "Osmanlı · külliye H. 984 / M. 1576"
+ },
+ "ilgin-lala-mustafa-pasa-kulliyesi-kervansarayi": {
+  "summary": "Ilgın'daki Lala Mustafa Paşa Külliyesi'nin doğusunda yer alan, kuzeyde büyük, güneyde küçük iki handan oluşan beş sahınlı kervansaray.",
+  "source": "Cilt 2, s. 60",
+  "date": "Osmanlı · ocak konsolundaki kitâbeye göre H. 992 / M. 1584"
+ },
+ "ilgin-lala-mustafa-pasa-kulliyesi-imareti": {
+  "summary": "Lala Mustafa Paşa Külliyesi avlusunun batısında, mutfak ve ambar birimlerinden oluşan kubbeli imaret.",
+  "source": "Cilt 2, s. 63",
+  "date": "Osmanlı · külliye H. 984 / M. 1576"
+ },
+ "ilgin-lala-mustafa-pasa-kulliyesi-arastasi": {
+  "summary": "Lala Mustafa Paşa Külliyesi'nin kuzeyini kaplayan, açık ve kapalı bölümlerden oluşan, halk arasında \"kapalı çarşı\" denen arasta.",
+  "source": "Cilt 2, s. 64",
+  "date": "Osmanlı · külliye H. 984 / M. 1576"
+ },
+ "ilgin-lala-mustafa-pasa-kulliyesi-tabhanesi": {
+  "summary": "Lala Mustafa Paşa Külliyesi'nde, avlunun doğu kenarı boyunca sıralanan ve eyvanlarla avluya açılan odalardan oluşan tabhane.",
+  "source": "Cilt 2, s. 68",
+  "date": "Osmanlı · külliye H. 984 / M. 1576"
+ },
+ "ilgin-lala-mustafa-pasa-kulliyesi-medresesi-sibyan-mektebi": {
+  "summary": "Vakfiyesine göre fakir ve miskinlerin çocuklarına Kur'an-ı Kerim öğretmek için yapılan, içinde kütüphane bulunduğu belirtilen sıbyan mektebi.",
+  "source": "Cilt 2, s. 69",
+  "date": "Osmanlı · külliye H. 984 / M. 1576"
+ },
+ "meram-sircali-medrese": {
+  "summary": "Emir Bedreddin Müslih’in 1242-43’te fıkıh eğitimi için yaptırdığı, açık avlulu, iki katlı ve çini mozaik süslemeli Selçuklu medresesi.",
+  "source": "Cilt 2, s. 75",
+  "builder": "Emir Bedreddin Müslih",
+  "date": "Anadolu Selçuklu · Sultan II. Gıyaseddin Keyhüsrev dönemi, H. 640 / M. 1242-43"
+ },
+ "karatay-kemaliye-kucuk-karatay-medresesi": {
+  "summary": "Kemaleddin Rumtaş’ın yaptırdığı Selçuklu medresesinden günümüze yalnız çini süslemeli mescit eyvanı kalmıştır.",
+  "source": "Cilt 2, s. 82",
+  "builder": "sipehsâlar Kemaleddin Rumtaş (Turumtaş)",
+  "date": "Anadolu Selçuklu · muhtemelen XIII. yüzyılın ikinci çeyreği"
+ },
+ "selcuklu-karatay-medresesi": {
+  "summary": "Emir Celaleddin Karatay'ın 1251'de yaptırdığı, çini mozaikli kubbesiyle tanınan ve bugün Çini Eserler Müzesi olan kapalı avlulu medrese.",
+  "source": "Cilt 2, s. 87",
+  "builder": "Emir Celaleddin Karatay",
+  "date": "Anadolu Selçuklu · taçkapı kitâbesine göre H. 649 / M. 1251"
+ },
+ "karatay-ali-efendi-darulhuffazi-muallimhane": {
+  "summary": "Hacı Ali'nin 1429 tarihli vakfiyesiyle kurulan, kübik gövde üzerinde yüksek kasnaklı tek kubbesi olan küçük eğitim yapısı.",
+  "source": "Cilt 2, s. 94",
+  "date": "XV. yüzyılın ikinci çeyreği; vakfiye 832 Recep / 1429 Nisan"
+ },
+ "selcuklu-ali-gav-zaviyesi-mahmudiye-medresesi": {
+  "summary": "Selçuklu çağına tarihlenen, 1899-1900'de Mahmudiye Medresesi adıyla yeniden açılan ve 2013'te yeniden inşa edilen kapalı avlulu medrese.",
+  "source": "Cilt 2, s. 96",
+  "date": "Anadolu Selçuklu · XIII. yüzyılın ilk çeyreğinde yapıldığı düşünülür; H. 1317 / M. 1899-1900 onarımı"
+ },
+ "selcuklu-ince-minareli-medrese-sahip-ata-darulhadis": {
+  "summary": "Vezir Sahip Ata Fahreddîn Ali'nin hadis öğretimi için yaptırdığı, barok taçkapısı ve çinili minaresiyle tanınan darülhadis.",
+  "source": "Cilt 2, s. 101",
+  "builder": "Selçuklu Veziri Sahip Ata Fahreddîn Ali",
+  "date": "Anadolu Selçuklu · 1261-62'de hizmete açıldığı kabul edilir (vakfiye H. 662 / M. 1264)"
+ },
+ "aksehir-tas-halkali-sahip-ata-medrese": {
+  "summary": "1250'de Emir-i Dad Hüseyin oğlu Ali'nin yaptırdığı, açık avlulu ve dört eyvanlı, bugün Akşehir Arkeoloji Müzesi olan medrese.",
+  "source": "Cilt 2, s. 108",
+  "date": "Anadolu Selçuklu · inşa kitâbesine göre H. 648 Muharrem / M. 1250 Nisan-Mayıs"
+ },
+ "beysehir-ismail-aga-medresesi-tas-medrese": {
+  "summary": "Beyşehir'de Eşrefoğlu Süleyman Bey Külliyesi içinde, 1369-70'te Emir İsmail Ağa'nın yenilettiği açık avlulu, iki eyvanlı medrese.",
+  "source": "Cilt 2, s. 113",
+  "date": "Eşrefoğlu Süleyman Bey Camii (1296-1299) ile çağdaş olduğu düşünülür; H. 771 / M. 1369-70 yenilemesi"
+ },
+ "meram-cemal-ali-dede-turut-turbesi": {
+  "summary": "Mevlâna’nın çağdaşı Cemal Ali Dede’ye ait, çinili kemerli cephesiyle Selçuklu eyvanlı türbelerinin önemli bir örneği.",
+  "source": "Cilt 2, s. 119",
+  "date": "Anadolu Selçuklu · tahminen XIII. yüzyılın sonları (kitâbesi yoktur)"
+ },
+ "meram-atesbaz-veli-kumbeti-ve-zaviyesi": {
+  "summary": "Mevlâna’nın aşçısı Ateşbaz Veli’nin dıştan sekizgen, içten kare planlı külahlı kümbeti ve yanındaki 1897 tarihli zaviye.",
+  "source": "Cilt 2, s. 125",
+  "date": "Anadolu Selçuklu · kitâbeye göre H. 685 / M. 1285; zaviye H. 1315 / M. 1897"
+ },
+ "meram-tavus-baba-turbesi": {
+  "summary": "Meram’da Tavus Baba tepesindeki, özgün hâlinden yalnız cenazelik katı kalmış eyvan tarzı türbe.",
+  "source": "Cilt 2, s. 128",
+  "date": "Anadolu Selçuklu · mevcut hâliyle XIII. yüzyıl olabileceği düşünülmektedir (kitâbesi yoktur)"
+ },
+ "meram-turgutoglu-turbesi": {
+  "summary": "Turgutoğulları Beyliği’nin sultanı Pir Hüseyin Bey’in 1432’de yaptırdığı, kare planlı ve yüksek tuğla kubbeli türbe.",
+  "source": "Cilt 2, s. 131",
+  "builder": "Turgutoğlu Emir Şahoğlu Pir Hüseyin Bey",
+  "date": "Turgutoğulları Beyliği · kitâbeye göre H. 835 / M. 1432"
+ },
+ "meram-sahip-ata-hanikahi-ve-turbesi": {
+  "summary": "Sahip Ata Külliyesi'nde cami ile hanikah arasında yer alan, altı çinili sandukasıyla Anadolu Selçuklu döneminin en zengin çini süslemeli türbelerinden biri ile bugün Vakıf Eserler Müzesi olan hanikah.",
+  "source": "Cilt 2, s. 134",
+  "date": "Anadolu Selçuklu · Türbe 1279'da yapılmış, H. 682 / M. 1283'te yenilenmiş; hanikah 1283"
+ },
+ "meram-seyh-hasan-i-rumi-turbesi": {
+  "summary": "Osman Rûmi Camii’nin yanındaki avluda, Şeyh Osman Rûmi’nin kardeşi olduğu rivayet edilen Şeyh Hasan Rûmi’nin piramidal külahlı türbesi.",
+  "source": "Cilt 2, s. 144",
+  "date": "Mimari özelliklerine göre XIII. ve XIV. yüzyıl başları (kitâbesi yoktur)"
+ },
+ "meram-seyh-osman-rumi-turbesi": {
+  "summary": "Mevlâna’nın Şam’daki medrese arkadaşı Şeyh Osman Rûmi’nin, batı cephesi eyvan gibi açık bırakılmış piramidal külahlı türbesi.",
+  "source": "Cilt 2, s. 144",
+  "date": "Anadolu Selçuklu · üzerindeki levhaya göre XIII. yüzyıl"
+ },
+ "meram-emir-nurettin-sephevan-kumbeti": {
+  "summary": "Celal oğlu İbrahim Nureddin’in yaptırdığı, kesme taş kaide üzerinde tuğla gövdeli ve piramidal külahlı sekizgen Selçuklu kümbeti.",
+  "source": "Cilt 2, s. 146",
+  "builder": "Celal oğlu İbrahim Nureddin",
+  "date": "Anadolu Selçuklu · benzer örneklere göre XIII. yüzyılın ikinci yarısı"
+ },
+ "meram-sadr-sedir-sultan-turbesi": {
+  "summary": "Hekim ve şair Sadr Sultan'ın (Ebubekir Bin Zeki El Konevi) yattığı, günümüze ulaşmamış bir zaviyeden kalan kare planlı türbe.",
+  "source": "Cilt 2, s. 148",
+  "date": "XIV. yüzyıl (Kâtip Çelebi'ye göre Sadr Sultan'ın vefatı H. 794 / M. 1391-92)"
+ },
+ "karatay-seyh-aliman-alaman-isgalaman-yahsi-turbesi": {
+  "summary": "İlk olarak mescit olarak yapılıp sonradan türbeye dönüştürüldüğü düşünülen, kurşun kaplı kubbeli ve mermer mihraplı küçük Selçuklu yapısı.",
+  "source": "Cilt 2, s. 149",
+  "date": "Anadolu Selçuklu · zaviye kitâbesine göre H. 687 / M. 1288"
+ },
+ "karatay-arap-dede-turbesi": {
+  "summary": "Sedirler Sarnıç Camii'nin doğusunda, bakımını mahalle halkının üstlendiği tek mekânlı küçük türbe.",
+  "source": "Cilt 2, s. 152"
+ },
+ "karatay-seyfettin-kara-sungur-kumbeti": {
+  "summary": "Celaleddin Karatay'ın kardeşi Seyfettin Karasungur için vefatından önce yaptırılan, sekizgen planlı, dıştan külahla örtülü Selçuklu kümbeti.",
+  "source": "Cilt 2, s. 153"
+ },
+ "karatay-ishak-pasa-turbesi": {
+  "summary": "Şems Parkı içinde, Emir İshak Bey için yaptırılan, kesme taş gövdeli ve tuğla kubbeli sade türbe.",
+  "source": "Cilt 2, s. 155",
+  "date": "XVI. yüzyıl başları; vakfiyesi H. 915 / M. 1505 tarihli"
+ },
+ "karatay-ic-karaaslan-necmettin-karaarslan-kumbeti": {
+  "summary": "Selçuklu devlet adamı Necmeddin Karaarslan'ın, en özgün Selçuklu sandukalarından birini barındıran sekizgen kümbeti.",
+  "source": "Cilt 2, s. 156",
+  "date": "Anadolu Selçuklu · XIII. yüzyıl"
+ },
+ "karatay-burhaneddin-fakih-dede-turbesi": {
+  "summary": "Karamanoğlu döneminde H. 860 / M. 1456'da yapılan, kare planlı, içten kubbe dıştan piramidal külahla örtülü taş türbe.",
+  "source": "Cilt 2, s. 158",
+  "date": "Karamanoğlu dönemi · H. 860 / M. 1456"
+ },
+ "selcuklu-emir-ebu-ishak-kazeruni-tekkesi-turbesi": {
+  "summary": "Karamanoğlu Mehmet Bey döneminde Ebu İshak İbrahim Kazerûnî adına yaptırılan, zaviye ve türbe olarak günümüze ulaşan dikdörtgen planlı yapı.",
+  "source": "Cilt 2, s. 160",
+  "date": "Karamanoğlu Mehmet Bey dönemi · kitâbeye göre H. 821 / M. 1418"
+ },
+ "selcuklu-sut-tekkesi-ferhuniye-mescidi-ve-keykavus-kizi-turbesi": {
+  "summary": "Kitâbesine göre H. 700 / M. 1300'de yapılan, II. İzzeddin Keykavus'un kızı Fatma Hatun'a atfedilen ve halk arasında sütü kesilen kadınların ziyaret ettiği türbe ve tekke.",
+  "source": "Cilt 2, s. 162",
+  "date": "Kitâbeye göre H. 700 / M. 1300; R. 1325 / M. 1909'da yeniden inşa edilmiştir"
+ },
+ "selcuklu-kalenderhane-kalender-baba-turbesi": {
+  "summary": "Kalender Baba olarak bilinen Ebubekir Niksari'nin zaviyesine ait olduğu anlaşılan, sekizgen planlı ve kriptalı XIII. yüzyıl Selçuklu türbesi.",
+  "source": "Cilt 2, s. 163",
+  "date": "Anadolu Selçuklu · XIII. yüzyıl (plan, malzeme ve örtü sistemine göre)"
+ },
+ "selcuklu-ulas-baba-kumbeti": {
+  "summary": "Selçuklu döneminde yaşamış Kalenderî şeyhi Derviş Ulaş'a (Ulaş Baba) ait olduğu düşünülen, içten kubbe dıştan külahla örtülü iki katlı kümbet.",
+  "source": "Cilt 2, s. 166",
+  "date": "Anadolu Selçuklu · plan, malzeme ve örtü sistemine göre XIII. yüzyılın sonu – XIV. yüzyılın başı"
+ },
+ "selcuklu-kesikbas-kumbeti": {
+  "summary": "Kitâbesi olmayan, plan ve malzemesine göre XIII. yüzyıla tarihlenen, sekizgen planlı ve piramidal külahlı tuğla Selçuklu kümbeti.",
+  "source": "Cilt 2, s. 173",
+  "date": "Anadolu Selçuklu · XIII. yüzyıl (plan, malzeme ve örtü sistemine göre)"
+ },
+ "selcuklu-ii-kilicarslan-kumbeti-kumbet-hane": {
+  "summary": "Alâeddin Camii avlusunda, Selçuklu sultanlarının yattığı, Anadolu'da ongen planlı tek örnek olan ve \"Sultanlar Türbesi\" olarak da bilinen anıtsal kümbet.",
+  "source": "Cilt 2, s. 175",
+  "date": "Anadolu Selçuklu · türbe kitâbesine göre H. 594 / M. 1197"
+ },
+ "selcuklu-birinci-izzettin-keykavus-yarim-anonim-kumbeti": {
+  "summary": "Alâeddin Camii avlusunda, Selçuklu Sultanı I. İzzeddin Keykavus için yapılan ama sultan Sivas'a defnedildiği için yarım kalan mermer kümbet.",
+  "source": "Cilt 2, s. 182",
+  "date": "Anadolu Selçuklu · XIII. yüzyıl"
+ },
+ "selcuklu-tacul-vezir-kumbeti": {
+  "summary": "Vezir Taceddin Ahmet'in XIII. yüzyılda medresesiyle birlikte yaptırdığı, cenazelik katlı, piramidal külahlı Selçuklu türbesi.",
+  "source": "Cilt 2, s. 184",
+  "date": "Anadolu Selçuklu · XIII. yüzyıl; külliyenin medresesi H. 637 / M. 1239"
+ },
+ "emirgazi-emirgazi-emrullah-gazi-turbesi": {
+  "summary": "İlçeye adını veren Emir (Emrullah) Gazi'nin, Emirgazi Şehitliği içindeki tek katlı, daire planlı ve konik külahlı türbesi.",
+  "source": "Cilt 2, s. 186",
+  "date": "XIV. yüzyıl sonları – XV. yüzyıl başları (plan, örtü ve malzemeye göre tahmin)"
+ },
+ "aksehir-mustafa-turabi-kazan-dede-turbesi": {
+  "summary": "Akşehir'in XVI. yüzyılda yetiştirdiği âlim, hattat ve şair Mustafa Turâbî'nin, kare kaideli ve kubbeli Osmanlı dönemi türbesi.",
+  "source": "Cilt 2, s. 187"
+ },
+ "aksehir-seyit-mahmut-hayrani-turbesi": {
+  "summary": "Akşehir'de iki aşamada yapılan, kare kaide üzerinde on altıgen dilimli gövdesi ve konik külahıyla nadir örneklerden olan türbe.",
+  "source": "Cilt 2, s. 189",
+  "date": "Anadolu Selçuklu; ilk aşama baldaken türbe, ikinci aşama 1420"
+ },
+ "aksehir-seyh-eyup-yagli-dede-turbesi": {
+  "summary": "Ahşap sandukasındaki tarihe göre H. 769 / M. 1367-1368'de yapılmış olması gereken, dıştan kare, içten baldaken düzenini hatırlatan Akşehir türbesi.",
+  "source": "Cilt 2, s. 196",
+  "date": "Sandukadaki tarihe göre H. 769 / M. 1367-1368"
+ },
+ "aksehir-tacettin-dede-turbesi": {
+  "summary": "Kapı kitâbesine göre H. 906 / M. 1500'de vefat eden Berdaili Taç Ahmet bin Misafir için yapıldığı anlaşılan, kare planlı tek kubbeli türbe.",
+  "source": "Cilt 2, s. 198",
+  "date": "Kapı kitâbesine göre H. 906 / M. 1500 civarı"
+ },
+ "beysehir-yarim-anonim-turbe": {
+  "summary": "Beyşehir Eşrefoğlu Camii'nin kuzeydoğu cephesinde, üst örtüsü günümüze ulaşmamış, kare planlı ve yapanı bilinmeyen türbe.",
+  "source": "Cilt 2, s. 200",
+  "date": "Osmanlı · kitâbedeki ebced hesabına göre H. 969 / M. 1561"
+ },
+ "doganhisar-yazlica-koyu-kuzucu-sultan-kumbeti": {
+  "summary": "Selçuklu çağında Horasan'dan gelen Kuzucu Sultan'ın Yazlıca Köyü'ndeki, XIV. yüzyıla tarihlenen sekizgen planlı kümbeti.",
+  "source": "Cilt 2, s. 202"
+ },
+ "seydisehir-halife-sultan-turbesi": {
+  "summary": "Seyyid Harun Veli'nin kızı Halife Sultan için Seyyid Harun Camii'ne bitişik olarak 1367'de yapılan, kare planlı ve kubbeli türbe.",
+  "source": "Cilt 2, s. 203",
+  "date": "Beylikler dönemi · kitâbesine göre H. 768 / 10 Mayıs 1367"
+ },
+ "seydisehir-seyit-harun-veli-turbesi": {
+  "summary": "Seydişehir'in kurucusu Seyyid Harun Veli'nin 1320'deki ölümünün ardından camisinin kuzey cephesine bitişik olarak yapılan türbe.",
+  "source": "Cilt 2, s. 205",
+  "date": "Kitâbeye göre Seydi Harun'un 23 Rebiülevvel 720 (Nisan 1320) tarihindeki ölümü üzerine, 1320'li yıllar"
+ },
+ "seydisehir-sultan-hatun-turbesi": {
+  "summary": "Turgutoğullarından Sultan Hatun ile Rüstem Bey adına yaptırılan, Seyyid Harun Veli Camii'nin kuzeyindeki kare planlı, baldaken biçimli türbe.",
+  "source": "Cilt 2, s. 208",
+  "date": "Turgutoğulları Beyliği · en eski mezar taşına göre 1422 civarı"
+ },
+ "meram-sahip-ata-sultan-hamami": {
+  "summary": "Sahip Ata Külliyesi'ne gelir sağlamak için yapılan, Anadolu Selçuklu döneminin bilinen en büyük hamamı olan dört eyvanlı, dört köşe halvetli çifte hamam.",
+  "source": "Cilt 2, s. 212",
+  "date": "Anadolu Selçuklu · Kitâbesi yok; külliyeye gelir için 656-678 / 1258-1279-80 arasında inşa edilmiş olmalıdır"
+ },
+ "meram-hatipoglu-hasbeyoglu-hamami": {
+  "summary": "Meram Köprüsü'nün güneyinde, kitâbesine göre 1423-24'te Hasbeyoğlu Mehmet tarafından yaptırılan ve bugün lokanta olarak kullanılan çifte hamam.",
+  "source": "Cilt 2, s. 214",
+  "date": "Karamanoğulları · kitâbesine göre H. 827 / M. 1423-24, İbrahim Bey dönemi"
+ },
+ "karatay-mahkeme-yeni-hamami": {
+  "summary": "Karamanoğlu İbrahim Bey'in Konya'daki medresesi ve imareti için yaptırdığı, dört eyvanlı ve dört köşe halvetli, hâlâ kullanılan çifte hamam.",
+  "source": "Cilt 2, s. 217",
+  "date": "Karamanoğulları · Karamanoğlu İbrahim Bey dönemi (kitâbesi yok)"
+ },
+ "aksehir-sifa-hamami": {
+  "summary": "Subaşı Emir Şerafeddin Ahmet Bey'in H. 730 / M. 1329-30'da yaptırdığı, bugün de iki bölümüyle hizmet veren simetrik planlı çifte hamam.",
+  "source": "Cilt 2, s. 220",
+  "date": "Kitâbeye göre H. 730 / M. 1329-30"
+ },
+ "eregli-rustem-pasa-sifa-hamami": {
+  "summary": "Ereğli'de, Konya hamamları arasında \"yıldızvari sıcaklıklı\" plan tipinde inşa edilmiş tek örnek olan ve hâlâ kullanılan hamam.",
+  "source": "Cilt 2, s. 223",
+  "date": "Karamanoğulları · bazı araştırmacılara göre XV. yüzyıl; kitâbesi yok"
+ },
+ "seydisehir-seyyit-harun-veli-hamami": {
+  "summary": "Seyyid Harun Veli külliyesiyle birlikte XIV. yüzyılın ilk çeyreğinde yapılmış olması kuvvetle muhtemel, sıcaklık planı Konya'da tek örnek olan çifte hamam.",
+  "source": "Cilt 2, s. 227",
+  "date": "Kitâbesi yok; büyük olasılıkla XIV. yüzyılın ilk çeyreği (702-720 / 1302-03 ile 1320-21 arası)"
+ },
+ "meram-hoca-fakih-cesmesi": {
+  "summary": "Meram'da Hocafakih Caddesi'ndeki bir külliyenin kuzey duvarında, sebil ve sarnıçla birlikte yer alan, teğet kemerli nişli tek cepheli çeşme.",
+  "source": "Cilt 2, s. 231",
+  "date": "Kitâbesi yok; kitaba göre 1325 R. / 1909-10 selinden sonra duvarla birlikte yenilenmiş olması kuvvetle muhtemel"
+ },
+ "selcuklu-safaci-cesmesi": {
+  "summary": "Alâeddin Bulvarı'nda Ak Camii'nin güneybatı köşesinde, üzerinde \"Safacı Çeşmesi 1947\" yazan, şahide biçimli mermer çeşme.",
+  "source": "Cilt 2, s. 232",
+  "date": "Cumhuriyet dönemi · üzerindeki yazıya göre 1947"
+ },
+ "karatay-bagevliya-camii-cesmesi": {
+  "summary": "Karatay'da Bağevliya Camii'nin önünde duran, üçgen alınlıklı ve teğet kemer nişli, bugün kullanılmayan taş çeşme.",
+  "source": "Cilt 2, s. 235",
+  "date": "Kitâbesi yok · XIX. yüzyıl sonları ya da XX. yüzyıl başlarında inşa edilmiş olması muhtemel"
+ },
+ "karatay-karakayis-sari-cami-cesmesi": {
+  "summary": "Karakayış Sarı Camii'nin batısında bulunan, kitâbesine göre 1675 yılında inşa edilmiş, tam kemerli nişli bağımsız çeşme.",
+  "source": "Cilt 2, s. 236",
+  "date": "Osmanlı · Kitâbeye göre H. 1086 Rebiülevvel / M. 1675 Mayıs-Haziran"
+ },
+ "aksehir-kucuk-ayasofya-mescidi-cesmesi": {
+  "summary": "Akşehir'de, kitâbesine göre H. 1210 / M. 1795-96'da \"Monla\" isimli bir kadının yaptırdığı, tuğla teğet kemerli, bağımsız ve tek cepheli çeşme.",
+  "source": "Cilt 2, s. 237",
+  "builder": "\"Monla\" isimli bir kadındır",
+  "date": "H. 1210 / M. 1795-96 (inşa kitâbesine göre)"
+ },
+ "meram-hocacihan-sarnici": {
+  "summary": "Hocacihan Hanı'na su sağlayan, beşik tonozlu geniş haznesi bugün kültürel etkinliklerde kullanılan tam gömme sarnıç.",
+  "source": "Cilt 2, s. 239",
+  "builder": "Tebrizli Hacı Bahtiyar",
+  "date": "Kitapta XII. yüzyıla tarihlendirilir"
+ },
+ "meram-deli-osman-hani": {
+  "summary": "Adını \"Cambaz Deli Osman Ağa\"dan alan, moloz taştan, tek mekânlı ve bugün restoran olarak kullanılan sade bir han.",
+  "source": "Cilt 2, s. 242",
+  "date": "Mimari özelliklerine göre XIX. yüzyıl sonu ya da XX. yüzyıl başı"
+ },
+ "meram-akyokus-hoca-cihan-hani": {
+  "summary": "Konya-Beyşehir yolu üzerinde, iki sıra ayakla üç sahına ayrılan, erken dönem Selçuklu hanlarına örnek gösterilen ve bugün restoran olan han.",
+  "source": "Cilt 2, s. 244",
+  "date": "Anadolu Selçuklu · Altunapa vakfiyesine göre XII. yüzyıl"
+ },
+ "meram-kiziloren-kurucesme-hani": {
+  "summary": "Konya-Beyşehir yolu üzerinde, kitâbesine göre 1207-08'de inşa edilen, kapalı ve açık bölümlü karma tip klasik Selçuklu hanı.",
+  "source": "Cilt 2, s. 246",
+  "date": "Anadolu Selçuklu · Kitâbeye göre H. 604 / M. 1207-08, I. Gıyâseddin Keyhüsrev'in ikinci saltanatı"
+ },
+ "meram-emir-kandemir-hani": {
+  "summary": "Konya-Beyşehir yolu üzerinde, kırmızı tüf taşından, iki katlı gösterişli batı cephesiyle dikkat çeken karma tip Selçuklu hanı.",
+  "source": "Cilt 2, s. 250",
+  "date": "Anadolu Selçuklu · Kitâbeye göre H. 603 / M. 1206-07, I. Gıyâseddin Keyhüsrev dönemi"
+ },
+ "meram-inlice-han": {
+  "summary": "İnlice Kasabası yolu üzerinde, bugün yalnızca batı duvarı ayakta kalan, \"Yıkık Han\" olarak da bilinen moloz taş han kalıntısı.",
+  "source": "Cilt 2, s. 254"
+ },
+ "meram-sukran-mescidi-zemin-kat-dukkan-ve-magaza": {
+  "summary": "Şükran Mescidi'nin alt katında yer alan ve bugün yastık, yorgan, battaniye gibi ürünlerin satıldığı üç dükkân.",
+  "source": "Cilt 2, s. 255"
+ },
+ "karatay-vakif-is-hani-vakiflar-bolge-mudurlugu-hizmet-binasi": {
+  "summary": "1953-1955 yıllarında İkinci Ulusalcı Mimarlık üslubunda yapılan, bugün Vakıflar Bankası ile Konya'daki iki kamu kurumunun kullandığı dört katlı iş hanı.",
+  "source": "Cilt 2, s. 256",
+  "date": "Cumhuriyet dönemi · 1953-1955; İkinci Ulusalcı Mimarlık üslubu"
+ },
+ "selcuklu-elikesik-han": {
+  "summary": "Konya-Derbent yolunda, Başara Vadisi'nde yer alan, mermer ayaklarla üç sahına bölünen ve 2007'de aslına uygun yeniden ayağa kaldırılan Selçuklu hanı.",
+  "source": "Cilt 2, s. 258",
+  "date": "Anadolu Selçuklu · Benzer hanlara göre XIII. yüzyılın ilk yarısı"
+ },
+ "selcuklu-dokuzun-derbent-sadiye-igdisleri-hani": {
+  "summary": "Konya-Afyon yolu üzerinde, Şadiye Köyü'nde, 1210 yılında yapılmış, açık ve kapalı avlulu klasik Selçuklu menzil hanı.",
+  "source": "Cilt 2, s. 260",
+  "builder": "iğdişler emiri Ebubekir oğlu Hacı İbrahim",
+  "date": "Anadolu Selçuklu · I. Gıyaseddin Keyhüsrev dönemi, kitâbeye göre Muharrem 607 / Haziran-Temmuz 1210"
+ },
+ "selcuklu-zazadin-sadeddin-kopek-hani": {
+  "summary": "Sâdeddin Köpek'in 1235-1237 yıllarında iki aşamada yaptırdığı, kale görünümlü ve Anadolu Selçukluların Konya'daki en büyük kervansarayı.",
+  "source": "Cilt 2, s. 262",
+  "builder": "Sâdeddin Köpek (Muhammed oğlu Köpek)",
+  "date": "Anadolu Selçuklu · kapalı bölüm H. 633 / M. 1235-36, açık avlulu bölüm H. 634 / M. 1236-1237"
+ },
+ "selcuklu-horozlu-ruzbe-han": {
+  "summary": "Konya'ya en yakın han olan, kitâbe levhası boş bırakılmış, yüksek kaburgalı tonozlu ve külahlı klasik bir Selçuklu hanı.",
+  "source": "Cilt 2, s. 268",
+  "date": "Anadolu Selçuklu · XIII. yüzyıl ikinci yarısı; 1246-1249 yılları arasında yapıldığı düşünülmektedir"
+ },
+ "altinekin-dedeler-hani": {
+  "summary": "Altınekin Dedeler Kasabası'nın merkezinde, giriş üstündeki \"Maşallah H. 1285\" yazısına göre 1868-69'da yapılmış, ahşap direklerle üç sahına ayrılan han.",
+  "source": "Cilt 2, s. 270",
+  "builder": "veya ustası bilinmemektedir",
+  "date": "Osmanlı · Giriş üstündeki taşa göre H. 1285 / M. 1868-69"
+ },
+ "altinekin-zalmanda-hani": {
+  "summary": "Altınekin Koçkaya Köyü yakınında, kitâbesi olmayan, sivri kemerli ayaklarla üç sahına bölünmüş, eyvan biçimli girişli taş han.",
+  "source": "Cilt 2, s. 271",
+  "date": "1446 tarihli vakfiyeye dayanarak XV. yüzyılın ilk yarısı olabileceği düşünülür"
+ },
+ "altinekin-zivarik-han": {
+  "summary": "Altınekin merkezinde, kaba yonu taş ve devşirme malzemeyle yapılmış, beş sahınlı, bugün restoran olarak kullanılan Karamanoğulları dönemi hanı.",
+  "source": "Cilt 2, s. 273"
+ },
+ "eregli-cagalzade-bedesteni": {
+  "summary": "Ereğli çarşısının içinde, yeni ticarethanelerle çevrili, beşik tonozlu ve üç kapılı dikdörtgen bedesten.",
+  "source": "Cilt 2, s. 277",
+  "date": "Kitâbesi yok · mimari özelliklerine göre XVI.-XV. yüzyıla tarihlendirilir"
+ },
+ "eregli-rustem-pasa-kervansarayi": {
+  "summary": "Veziriazam Rüstem Paşa'nın vasiyeti üzerine 1561'de hac yolu üzerindeki Ereğli'de yapılan, bugün millet kıraathanesi olarak kullanılan Osmanlı kervansarayı.",
+  "source": "Cilt 2, s. 278",
+  "date": "Osmanlı · 1561; Veziriazam Rüstem Paşa'nın vefatından sonra vasiyeti üzerine yaptırılmıştır"
+ },
+ "kadinhani-raziye-hatun-sultan-kervansarayi": {
+  "summary": "Kadınhanı'na adını veren, 1223-24'te Mahmut kızı Râziye Hatun'un yaptırdığı ve Konya'da hanım sultanların yaptırdığı tek han olan Selçuklu kervansarayı.",
+  "source": "Cilt 2, s. 282",
+  "builder": "Danişmendoğullarından Muzafferüddin Mahmut Bey'in kızı Râziye Hatun",
+  "date": "Anadolu Selçuklu · kitâbeye göre H. 620 / M. 1223-24"
+ },
+ "karapinar-kazan-hoyugu-koyu-tas-han": {
+  "summary": "Karapınar ile Ereğli arasında, Kazan Höyüğü Köyü'nde, ocaklık ve salon olmak üzere iki bölümden oluşan, Selçuklu dönemine ait olduğu düşünülen taş han.",
+  "source": "Cilt 2, s. 285",
+  "date": "Kitâbesi yok · Selçuklu dönemi hanlarından olduğu düşünülmektedir"
+ },
+ "karatay-yusuf-aga-abit-celebi-kutuphanesi": {
+  "summary": "Sultan Selim Camii'nin güneybatı köşesinde, 1796'da Yusuf Ağa'nın yaptırdığı, köşelerinde ağırlık kuleleri bulunan kubbeli kütüphane; bugün yazma eserler kütüphanesi.",
+  "source": "Cilt 2, s. 288",
+  "date": "Osmanlı · H. 1210 / M. 1796 (Şair Rıfat'ın yazdığı inşa kitâbesine göre)"
+ },
+ "aksehir-konut-aksehir-eski-kale-mahallesi": {
+  "summary": "Akşehir'de Ayasofya Mescidi'nin yanında, taş ve kerpiç duvarlı, ahşap elemanlı, iç sofalı plan tipinde üç katlı geç Osmanlı evi.",
+  "source": "Cilt 2, s. 291",
+  "date": "Osmanlı'nın son dönemi · mimari ve teknik özelliklerine göre XIX. yüzyıl sonları – XX. yüzyılın ilk yarısı"
+ },
+ "antakya-habib-i-neccar-camii-ve-kulliyesi": {
+  "summary": "Antakya’daki külliye cami, medrese, şadırvan ve türbeleri bir avlu çevresinde bir araya getirir.",
+  "source": "s. 55",
+  "date": "İlk inşa için M.S. 636 anlatımı; Memlük ve Osmanlı onarımları"
+ },
+ "antakya-ulu-camii-ve-kulliyesi": {
+  "summary": "Antakya Ulu Camii Külliyesi, iki sahınlı camisiyle birlikte medrese, yazlık mescit ve hizmet yapılarını barındırır.",
+  "source": "s. 73",
+  "date": "Memlük · 13. yüzyılın ikinci yarısına tarihleme"
+ },
+ "payas-sokullu-mehmet-pasa-kulliyesi": {
+  "summary": "Payas’taki menzil külliyesi, arasta çevresinde konaklama, ibadet, eğitim ve temizlik yapılarını toplar.",
+  "source": "s. 95",
+  "builder": "Sokullu Mehmet Paşa",
+  "date": "Osmanlı · 1574 tarihli kitabe"
+ },
+ "antakya-meydan-camii-ve-kulliyesi": {
+  "summary": "Meydan Camii Külliyesi, üç sahınlı harimi, medrese odaları, muvakkithanesi ve şadırvanıyla tanıtılır.",
+  "source": "s. 121",
+  "date": "İlk inşa belirsiz; 16. yüzyıla tarihleme önerisi"
+ },
+ "belen-kanuni-sultan-suleyman-kervansarayi": {
+  "summary": "Belen’deki menzil yapıları, Kanuni döneminde inşa edilmiş kervansaray, cami ve hamamdan oluşur.",
+  "source": "s. 139",
+  "builder": "Kanuni Sultan Süleyman",
+  "date": "Osmanlı · 1550–1566"
+ },
+ "antakya-seyh-ali-camii-ve-kulliyesi": {
+  "summary": "Şeyh Ali Külliyesi, kubbeli camisi, taş bezemeli taç kapısı ve yedi hücreli medresesiyle anlatılır.",
+  "source": "s. 159",
+  "date": "İlk inşa için 15. yüzyılın ikinci yarısı tahmini; 1580’de varlığı bilinir"
+ },
+ "antakya-ali-cavus-mescidi": {
+  "summary": "Uzun Çarşı’daki mescit, evden dönüştürülmüş olabileceği düşünülen yamuk planlı küçük bir yapıdır.",
+  "source": "s. 194",
+  "date": "Muhtemelen 1872 depremi sonrası"
+ },
+ "antakya-affan-ertugrul-camii": {
+  "summary": "Affan Camii, dikdörtgen harimi ve II. Abdülhamid tuğralı kitabesiyle tanıtılan bir Osmanlı eseridir.",
+  "source": "s. 198",
+  "date": "Osmanlı · 1894/95"
+ },
+ "antakya-agca-mescidi": {
+  "summary": "Ağca Mescidi, eğimli arazideki avlusu ve iki sahınlı harimiyle bölgenin küçük ibadet yapılarındandır.",
+  "source": "s. 206"
+ },
+ "antakya-ahmediye-camii": {
+  "summary": "Ahmediye Camii, iki sahınlı harimi ve on kenarlı şadırvanıyla Antakya’nın merkezinde yer alır.",
+  "source": "s. 212",
+  "date": "Osmanlı · 1842"
+ },
+ "antakya-debruz-mescidi": {
+  "summary": "Debruz Mescidi, güneydoğu köşesindeki mihrabı ve küçük avlusuyla evden dönüştürüldüğü düşünülen bir yapıdır.",
+  "source": "s. 218",
+  "date": "Muhtemelen 1872 depremi sonrası düzenleme"
+ },
+ "antakya-deveci-bekiroglu-camii": {
+  "summary": "Deveci Bekiroğlu Camii, İplik Pazarı Mahallesi’nde bulunan ve 1985’te tescillenen yapıdır.",
+  "source": "s. 222"
+ },
+ "antakya-emirler-camii": {
+  "summary": "Şirince adıyla da bilinen Emirler Camii, beyaz kesme taşlı iki sahınlı bir ibadet yapısıdır.",
+  "source": "s. 226",
+  "date": "1793 tarihi inşa tarihi olarak kabul edilir"
+ },
+ "antakya-hedbeli-mescidi": {
+  "summary": "Hedbeli Mescidi, çarpık duvarlı harimi ve yazlık namazgâh olarak kullanılan avlusuyla anlatılır.",
+  "source": "s. 232"
+ },
+ "antakya-halil-aga-camii": {
+  "summary": "Halil Ağa Camii, özgün kapı kitabesi korunmuş kâgir bir yapıdır.",
+  "source": "s. 238",
+  "date": "Kitaptaki tarih: 119 (M. 1729)"
+ },
+ "antakya-hunkar-mescidi": {
+  "summary": "Hünkâr Mescidi, köşeye yerleştirilmiş mihrapları ve ahşap tavanlı iki sahınlı harimiyle tanıtılır.",
+  "source": "s. 244"
+ },
+ "antakya-kiremitli-camii": {
+  "summary": "Kiremitli Camii, iki sahınlı harimi ve şemsiye külahlı çokgen minaresiyle bölgesel mimariyi yansıtır.",
+  "source": "s. 250",
+  "date": "16. yüzyıla uzanabileceği düşünülür; 1842 onarımı"
+ },
+ "antakya-karhane-mescidi": {
+  "summary": "Kerhan Mescidi, iş yerleri arasındaki üst katta bulunan yamuk planlı küçük bir ibadet yapısıdır.",
+  "source": "s. 258",
+  "date": "1936’dan daha eski olmadığı düşünülür"
+ },
+ "antakya-kantara-camii": {
+  "summary": "Kantara Camii, kapı üstü minaresi, medrese odaları ve eski geçitten oluşturulan çeşmesiyle tanıtılır.",
+  "source": "s. 264"
+ },
+ "antakya-kurt-fakih-tufaki-camii": {
+  "summary": "Kürt Fakih Camii, rozetli avlu kapısı ve ahşap örtülü minaresiyle tanıtılan küçük bir mahalle camisidir.",
+  "source": "s. 272",
+  "date": "16. yüzyıla tarihleme önerisi; 1872 depremi sonrası biçimlenme"
+ },
+ "antakya-mahremiye-camii": {
+  "summary": "Uzun Çarşı’daki Mahremiye Camii, kapı üstü minaresi ve taş bezemeli iki sahınlı harimiyle anlatılır.",
+  "source": "s. 278",
+  "date": "1720’den beri; 16. yüzyıla tarihleme görüşü de vardır"
+ },
+ "antakya-nihat-aga-mescidi": {
+  "summary": "Nihat Ağa Mescidi, ev tipindeki yapısı ve özgün avlu taş döşemeleriyle tanıtılır.",
+  "source": "s. 284",
+  "date": "1930’lara ait kadastral planda yer alır"
+ },
+ "antakya-nakip-camii": {
+  "summary": "Nakip Camii manzumesi, iki sahınlı caminin yanında medrese ve kütüphane yapıları içerir.",
+  "source": "s. 288",
+  "date": "1762–1872 arasında farklı dönemler"
+ },
+ "antakya-osmaniye-camii": {
+  "summary": "Osmaniye Camii, kare harimi ve serbest duran şemsiye külahlı minaresiyle tanıtılır.",
+  "source": "s. 298",
+  "date": "Osmanlı · 1895"
+ },
+ "antakya-orhanli-camii": {
+  "summary": "Orhanlı Camii, eski yapısından minare ve tuğralı kitabesi korunarak yenilenmiştir.",
+  "source": "s. 302",
+  "date": "Osmanlı · H. 1313 (M. 1895/96)"
+ },
+ "antakya-rifataga-civelek-mescidi": {
+  "summary": "Rıfat Ağa Mescidi, yan yana iki odadan oluşan ve evden dönüştürülmüş olabileceği düşünülen küçük bir yapıdır.",
+  "source": "s. 306"
+ },
+ "antakya-sarimiye-camii": {
+  "summary": "Sarımiye Camii, minareli taç kapısı ve iki sahınlı harimiyle bölgesel mimariyi Osmanlı bezemeleriyle birleştirir.",
+  "source": "s. 310"
+ },
+ "antakya-sofular-camii": {
+  "summary": "Sofular manzumesi, cami, şadırvan, çeşme ve birbirine bağlı iki türbeden oluşur.",
+  "source": "s. 316",
+  "date": "Kitabe üslubu 13. yüzyıl sonunu düşündürür; mevcut biçim 1872 sonrası"
+ },
+ "antakya-seyh-muhammet-camii": {
+  "summary": "Şeyh Muhammed Camii, alt katında fırın bulunan yapısı ve özgün minareli taç kapısıyla tanıtılır.",
+  "source": "s. 322",
+  "date": "Kitabe: H. 1131 (1718/1719); inşa mı onarım mı belirsiz"
+ },
+ "yayladagi-senkoy-seyh-ahmet-kuseyri-camii": {
+  "summary": "Yayladağı’ndaki Şenköy Ahmet Kusayri manzumesi cami, zaviye ve türbeyi bir araya getirir.",
+  "source": "s. 326",
+  "date": "İlk yapı için 16. yüzyıl ortası değerlendirmesi"
+ },
+ "antakya-sekercik-camii": {
+  "summary": "Şekercik Camii’nin özgün minareli taç kapısı ile yanındaki çeşmesi kitapta öne çıkarılır.",
+  "source": "s. 334",
+  "date": "Muhtemelen 1869; çeşme kitabesi H. 1286 (1869/1870)"
+ },
+ "antakya-uctum-mescidi": {
+  "summary": "Uçtum Mescidi, iki sokağın kesişiminde yer alan ahşap tavanlı küçük bir taş yapıdır.",
+  "source": "s. 338",
+  "date": "1876"
+ },
+ "antakya-zuveroglu-camii": {
+  "summary": "Züveroğlu Camii, güneyde yazlık namazgâh ve kuzeyde kapalı harimden oluşur.",
+  "source": "s. 342",
+  "date": "Kapı levhasında 1215 (1800)"
+ },
+ "antakya-caferiye-mescidi": {
+  "summary": "Caferiye Mescidi, dükkânların üstüne yerleşen iki katlı ve düzensiz dikdörtgen planlı bir yapıdır.",
+  "source": "s. 346"
+ },
+ "defne-degirmenyolu-mescid-okul": {
+  "summary": "Defne’deki Değirmen Yolu yapısı, iptidai mektebi olarak yapılıp mescit ve okul işlevleriyle kullanılmıştır.",
+  "source": "s. 350",
+  "date": "Osmanlı · II. Abdülhamit dönemi, 1902"
+ },
+ "altinozu-fatikli-camii": {
+  "summary": "Altınözü Fatikli Camii, iki sahınlı harimi ve yapıdan ayrı minaresiyle tanıtılır.",
+  "source": "s. 354",
+  "date": "16. yüzyıla tarihleme görüşü; en eski kitabe 1875"
+ },
+ "erzin-mustafali-camii": {
+  "summary": "Erzin Mustafalı Camii, yenilenmiş yapısı içinde eski kitabesi ve figürlü devşirme taşıyla anlatılır.",
+  "source": "s. 360",
+  "date": "Osmanlı · kitapta 1895; kitabe H. 1302 (M. 1895) olarak aktarılır"
+ },
+ "arsuz-narduzu-camii": {
+  "summary": "Arsuz Nardüzü Camii, tek sahınlı harimi ve II. Abdülhamit tuğralı kitabesiyle anlatılır.",
+  "source": "s. 364",
+  "date": "Osmanlı · H. 1313 (M. 1895–96)"
+ },
+ "reyhanli-yenisehir-camii": {
+  "summary": "Yenişehir Camii, beyaz kalker taşından yapılmış, kıbleye paralel iki sahınlı harimi ve ahşap direkli son cemaat yeri bulunan bir Reyhanlı camisidir.",
+  "source": "s. 368",
+  "date": "Osmanlı · H.1317 / M.1899"
+ },
+ "samandag-ebul-futtuh-camii": {
+  "summary": "Ebu’l Fütuh Camii, Samandağ merkezinde, ahşap tavanlı ve kiremit kaplı kırma çatılı bir camidir.",
+  "source": "s. 374",
+  "date": "1798 olduğu düşünülmektedir"
+ },
+ "yayladagi-kasimbey-camii": {
+  "summary": "Kasımbey Camii, Yayladağı’nda iki sıra kemerle üç sahına ayrılan ve altıgen taş minaresiyle tanımlanan bir camidir.",
+  "source": "s. 378",
+  "builder": "Kasım Bey",
+  "date": "Kitaba göre Abbasiler dönemi · 1131"
+ },
+ "antakya-selvili-camii": {
+  "summary": "Selvili Camii, bahçeli avlusunda yazlık namazgâh ve dört odalı medrese kalıntısı bulunan, iki sahınlı bir yapıdır.",
+  "source": "s. 382",
+  "date": "1842 öncesi; 1873 tarihli inşa veya onarım kitabesi"
+ },
+ "antakya-semerciler-camii": {
+  "summary": "Semerciler Mescidi, Antakya Uzun Çarşı’da, adını semer ustalarının bulunduğu sokaktan alan iki sahınlı bir mescittir.",
+  "source": "s. 386",
+  "date": "Tarihi 1873’e kadar uzanmaktadır"
+ },
+ "samandag-terzi-mehmet-camii": {
+  "summary": "Terzi Mehmet Camii, 1936’da yapılmış, 150 kişi kapasiteli, şadırvanlı ve minareli bir camidir.",
+  "source": "s. 390",
+  "date": "1936"
+ },
+ "iskenderun-kaptanpasa-camii-minaresi": {
+  "summary": "Kaptan Paşa Camii’nin iki renk taş sıralı eski minaresi, ahşap caminin 1969’da değiştirilmesinden sonra korunmuştur.",
+  "source": "s. 394",
+  "date": "Eski cami H.1280 / M.1863–1864"
+ },
+ "antakya-seyh-abdurrahman-turbesi": {
+  "summary": "Şeyh Abdurrahman Türbesi, Antakya’da taş duvarlarla çevrili bir avlu, türbe binası ve mezarlardan oluşur.",
+  "source": "s. 404"
+ },
+ "defne-seyh-hidir-turbesi": {
+  "summary": "Karyer-Şeyh Hıdır Türbesi, avlulu yerleşkede ibadet ve toplantı mekânlarıyla birlikte tarif edilen taş bir ziyaretgâhtır.",
+  "source": "s. 406"
+ },
+ "arsuz-seyh-hizir-turbesi": {
+  "summary": "Gökmeydan-Şeyh Hızır Makamı, Arsuz’da büyük bir çınar ağacının yanında kurulmuş mermer kaplı bir ziyaret yapısıdır.",
+  "source": "s. 408"
+ },
+ "antakya-seyh-hizir-makami": {
+  "summary": "Dikmece-Şeyh Hızır Makamı, Antakya’da kubbesiz, kare planlı ve yakınında hazire bulunan sade bir yapıdır.",
+  "source": "s. 410"
+ },
+ "defne-el-arabi-turbesi": {
+  "summary": "El-Arabi Türbesi, Defne’nin Nahırlı Köyü’nde yüksekçe bir tepe üzerindeki kubbeli ziyaretgâhtır.",
+  "source": "s. 412"
+ },
+ "defne-seyh-ibrahim-ve-seyh-ali-turbesi": {
+  "summary": "Şeyh İbrahim ve Şeyh Ali Türbesi, Tavla Köyü’nde briket ve taş örgülü, yedi mezarlı kare planlı bir türbedir.",
+  "source": "s. 414"
+ },
+ "antakya-seyh-hidir-turbesi": {
+  "summary": "Kitapta 5. Mıntıka 905 Parsel adıyla sunulan Şeyh Hıdır Türbesi, avlu ve müştemilatla birlikte anlatılan bir ziyaret yapısıdır.",
+  "source": "s. 416"
+ },
+ "antakya-seyh-hasan-turbesi": {
+  "summary": "Şeyh Hasan Türbesi, Antakya’da avlunun ortasında bulunan ve tesis tarihi 1923 olarak kaydedilen bir ziyaretgâhtır.",
+  "source": "s. 418",
+  "date": "1923 · kitapta aktarılan Vakıflar Genel Müdürlüğü kaydı"
+ },
+ "kirikhan-beyazid-i-bestami-turbesi": {
+  "summary": "Beyazıd-ı Bestami Türbesi, Alaybeyli’de Darbısak Kalesi tepesinin güney yamacında, 1890’da yaptırılmış bir makam yapısıdır.",
+  "source": "s. 420",
+  "builder": "Mustafa Şevki Paşa",
+  "date": "1890"
+ },
+ "iskenderun-seyh-turhan-reyhani-turbesi": {
+  "summary": "Şeyh Turhan Reyhani Türbesi, İskenderun Mustafa Kemal Mahallesi’nde 1902–1903 tarihli sade bir ziyaretgâhtır.",
+  "source": "s. 424",
+  "date": "H.1320 / M.1902–1903"
+ },
+ "defne-seyh-kasem-turbesi": {
+  "summary": "Şeyh Kasım Türbesi, Defne’de yüksekçe bir tepede kurulmuş kare planlı bir ziyaretgâhtır.",
+  "source": "s. 426"
+ },
+ "antakya-seyh-isa-turbesi": {
+  "summary": "Şeyh İsa ve Şeyh Ali Bağdadi Türbesi, kitapta Işıklı Köyü’nde kesme taştan yapılmış kubbeli bir yapı olarak anlatılır.",
+  "source": "s. 428",
+  "date": "Selçuklu dönemi olduğu düşünülmektedir"
+ },
+ "antakya-seyh-hizir-turbesi": {
+  "summary": "Antakya’daki Hızır Türbesi, kapı kitabesine göre Beşirzâde Mustafa Efendi’nin 5 Kasım 1876’da yaptırdığı küçük bir makam yapısıdır.",
+  "source": "s. 430",
+  "builder": "Beşirzâde Mustafa Efendi",
+  "date": "5 Kasım 1876"
+ },
+ "samandag-koyunoglu-seyh-ali-issuvayre-turbesi": {
+  "summary": "Koyunoğlu Şeyh Ali Issuvayre Türbesi, Samandağ’da mezarlık yanında, beyaz kubbeli ve geniş saçaklı bir ziyaretgâhtır.",
+  "source": "s. 432"
+ },
+ "antakya-seyh-hasan-mekzun-el-sincari-makami": {
+  "summary": "Şeyh Hasan Mekzun El Sincari Makamı, Serinyol’da kubbeli türbe ve iki katlı müştemilattan oluşan bir ziyaret yeridir.",
+  "source": "s. 434"
+ },
+ "defne-seyh-hasan-gatelli-turbesi": {
+  "summary": "Şeyh Hasan Gatelli Ziyareti, Defne Tavuklu Köyü’nde, beyaz kubbeli ve kare planlı bir türbe yapısıdır.",
+  "source": "s. 436"
+ },
+ "samandag-mizrakli-seyh-hasan-el-hekim-turbesi": {
+  "summary": "Mızraklı Şeyh Hasan El-Hekim Türbesi, Samandağ’da yüksekçe bir tepede, kubbeli kare yapı ve çevresindeki hizmet mekânlarıyla yer alır.",
+  "source": "s. 438"
+ },
+ "iskenderun-suryani-katolik-kilisesi": {
+  "summary": "Süryani Katolik Kilisesi, İskenderun’un tarihî çarşısında yer alan, bir dönem sinema olarak kullanılmış taş bir kilisedir.",
+  "source": "s. 444",
+  "date": "20. yüzyılın ilk çeyreği olduğu düşünülmektedir"
+ },
+ "arsuz-maryo-hanna-kilisesi": {
+  "summary": "Maryo Hanna Kilisesi, Arsuz merkezinde 1514’te yeniden yapılmış, ikonalar ve bez üzerine baskı resimler barındıran bir kilisedir.",
+  "source": "s. 446",
+  "date": "1514’te yeniden yapılmıştır"
+ },
+ "iskenderun-rum-katolik-kilisesi": {
+  "summary": "Rum Katolik Kilisesi, İskenderun Savaş Mahallesi’nde tek ana mekânlı bazilika planlı sade bir yapıdır.",
+  "source": "s. 448"
+ },
+ "yayladagi-rum-ortodoks-kilisesi": {
+  "summary": "Rum Ortodoks Kilisesi, Yayladağı’nda tek nefli naosu ve dışa taşan apsisi bulunan dikdörtgen planlı bir yapıdır.",
+  "source": "s. 450",
+  "date": "19. yüzyılın son çeyreği olduğu düşünülmektedir"
+ },
+ "samandag-yogunoluk-koyu-ermeni-kilisesi": {
+  "summary": "Yoğunoluk Ermeni Kilisesi, 1774 tarihli üç nefli taş yapı ile sonradan üzerine yapılan caminin birlikte yer aldığı bir yapıdır.",
+  "source": "s. 452",
+  "date": "1774"
+ },
+ "iskenderun-butik-otel": {
+  "summary": "İskenderun Butik Otel, Savaş Mahallesi’nde konut niteliğindeki yapının restorasyonla 2014’te otele dönüştürülmesiyle oluşmuştur.",
+  "source": "s. 462",
+  "date": "20. yüzyılın ilk yılları"
+ },
+ "reyhanli-reyhanli-yenisehir-degirmeni": {
+  "summary": "Reyhanlı Yenişehir Değirmeni, Yenişehir Gölü’nün sularıyla çalışan dört değirmen taşını barındırmış tonozlu bir taş yapıdır.",
+  "source": "s. 464"
+ },
+ "antakya-kurtulus-beyhan-hamami": {
+  "summary": "Kurtuluş (Beysen) Hamamı, Antakya’da binalar arasında kalan, üst örtü ışıklıklarıyla aydınlatılan bir hamamdır.",
+  "source": "s. 466",
+  "date": "Kitapta Memlük mimarisiyle ilişkilendirilir; kesin inşa tarihi belirsiz"
+ },
+ "antakya-kursunlu-han": {
+  "summary": "Kurşunlu Han, Antakya’da han, cami ve çeşmeden oluşan, iki katlı avlulu bir Osmanlı yapılar topluluğudur.",
+  "source": "s. 468",
+  "builder": "Dersaadet Kapı Ağası Cafer Ağa",
+  "date": "Osmanlı · 1569"
+ },
+ "kumlu-kircaoglu-hoyugu": {
+  "summary": "Kumlu ilçesinde, Kırcaoğlu köyü yolu üzerinde yer alan, Prehistorik ve Tunç Çağı seramik parçalarının bulunduğu konik biçimli höyük.",
+  "source": "s. 474",
+  "date": "Höyükte Prehistorik ve Tunç Çağı'na ait seramik parçaları bulunmuştur"
+ },
+ "samandag-samandag-vakifli-koyu-konut": {
+  "summary": "Vakıflı Köyü’ndeki konut, Tomas Antepyan’ın 1915 sonrasında yaptırdığı, iki katlı ve bahçeli bir taş evdir.",
+  "source": "s. 480",
+  "builder": "Tomas Antepyan",
+  "date": "20. yüzyılın ilk yılları; 1915 sonrasında"
+ },
+ "antakya-vakif-kultur-konaklari": {
+  "summary": "Vakıf Kültür Konakları, Habib-i Neccar Camii çevresindeki dört parseli ve üzerlerindeki yapıları konu alan bir kayıttır.",
+  "source": "s. 482"
+ },
+ "antakya-4-mintika-78-parsel-eski-ev": {
+  "summary": "4. Mıntıka 78 Parsel Eski Ev, Antakya’da L planlı avlu düzenine sahip geleneksel bir sivil mimari örneğidir.",
+  "source": "s. 484"
+ },
+ "antakya-3-mintika-466-parsel-konut": {
+  "summary": "3. Mıntıka 466 Parsel Konut, avlusu ve farklı kat düzenleriyle birden fazla ailenin yaşamına göre bölünmüş geleneksel Antakya evidir.",
+  "source": "s. 486"
+ },
+ "osmangazi-i-murad-hudavendigar-kulliyesi": {
+  "summary": "Çekirge'de ovaya bakan külliye. Alt katı cami, üst katı medrese olan camisi, Osmanlı mimarisinde ilk ve tek örnek olarak anılır.",
+  "source": "Cilt 1, s. 83"
+ },
+ "osmangazi-ii-murad-kulliyesi": {
+  "summary": "Bursa'daki son selatin külliyesi: cami, medrese, hamam, imaret, sıbyan mektebi, çeşme ve on üç türbeden oluşan bir vakıf yerleşkesi.",
+  "source": "Cilt 1, s. 115"
+ },
+ "osmangazi-hamza-bey-kulliyesi": {
+  "summary": "Hamzabey Mahallesi'nde, ovaya hâkim konumda bir külliye. Ana yapısı tabhaneli planlı Hamza Bey Camii; yanında üç türbe ayakta, medrese ve imaret günümüze ulaşmamış.",
+  "source": "Cilt 1, s. 177"
+ },
+ "osmangazi-orhan-bey-kulliyesi": {
+  "summary": "Orhan Bey'in sur dışında yaptırdığı, camisi, hanı ve hamamı bugüne ulaşan ilk Osmanlı külliyelerinden biri.",
+  "source": "Cilt 1, s. 191"
+ },
+ "osmangazi-timurtas-pasa-kulliyesi": {
+  "summary": "Altı tuğla ayak üzerinde yükselen, altında şadırvan bulunan minaresiyle mahallesinin simgesi olmuş 1390 tarihli külliye.",
+  "source": "Cilt 1, s. 219"
+ },
+ "yildirim-emir-sultan-kulliyesi": {
+  "summary": "Bursa'ya hâkim bir tepede, cami ile türbesi aynı revaklı avluyu paylaşan; Emîr Sultan adına kurulmuş külliye.",
+  "source": "Cilt 2, s. 273"
+ },
+ "yildirim-umur-bey-kulliyesi": {
+  "summary": "Kara Timurtaş Paşa'nın oğlu Umur Bey'in yaptırdığı iki mekânlı cami, taş vakfiyeleri, çeşmesi, türbesi ve haziresiyle bir külliye.",
+  "source": "Cilt 2, s. 318"
+ },
+ "yildirim-yesil-celebi-mehmed-kulliyesi": {
+  "summary": "Çelebi Sultan Mehmed'in yaptırdığı cami, türbe, medrese ve imaretten oluşan külliye. Osmanlı mimarisinde çok renkli sır altı tekniğinin ilk uygulandığı yapı topluluğudur.",
+  "source": "Cilt 2, s. 337"
+ },
+ "yildirim-yildirim-bayezid-kulliyesi": {
+  "summary": "Şehrin doğusuna hâkim tepede kurulan; camisi, medresesi, türbesi ve Osmanlı'nın ilk hastanesi sayılan darüşşifasıyla bilinen külliye.",
+  "source": "Cilt 2, s. 415"
+ },
+ "inegol-ishak-pasa-kulliyesi": {
+  "summary": "İnegöl çarşı merkezindeki İshak Paşa Külliyesi, cami, açık avlulu medrese ve Tâcunnisâ Sultan ile İshak Paşa’nın türbesinden oluşur.",
+  "source": "Cilt 3, s. 141"
+ },
+ "yenisehir-sinan-pasa-kulliyesi": {
+  "summary": "Yemen Fâtihi Koca Sinan Paşa'nın yaptırdığı; Kurşunlu Camii, medrese, imaret, Kurşunlu Han ve arastadan oluşan külliye.",
+  "source": "Cilt 3, s. 353"
  }
 }

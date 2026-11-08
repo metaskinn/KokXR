@@ -39,7 +39,7 @@ create table if not exists media (
 );
 create index if not exists media_artifact_idx on media (artifact_id);
 
--- Printed inventory "Bursa Vakıf Eserleri" (340 buildings) and the facts read from its pages.
+-- Printed inventories (Bursa 1-3, Konya 1-2, Hatay) and the facts read from their pages.
 create table if not exists inventory (
   id          text primary key,
   name        text not null,
@@ -50,6 +50,11 @@ create table if not exists inventory (
   artifact_id text,
   has_scale_model boolean not null default false
 );
+-- Migration: the inventory was Bursa-only; every row now names its city.
+alter table inventory add column if not exists city text not null default 'Bursa';
+alter table inventory add column if not exists group_head boolean not null default false;
+alter table inventory drop constraint if exists inventory_volume_check;
+alter table inventory add constraint inventory_volume_check check (volume >= 1);
 create table if not exists inventory_details (
   id   text primary key references inventory (id) on delete cascade,
   data jsonb not null

@@ -4,20 +4,22 @@ Güncelleme: 8 Kasım 2026, sabah · Teslim: **8 Kasım Pazar 12.30 (Türkiye sa
 Dal: `main` (`feature/maket-vr` ve UX yenilemesi birleşti). Önceki planlar: `docs/archive/2026-11-07-plan-final-review.md`, `docs/archive/2026-11-07-plan-before-final-review.md`.
 İşaretler: `[x]` yapıldı ve doğrulandı · `[~]` yapıldı, cihazda/canlıda doğrulanmadı · `[ ]` açık · `[-]` artık gerekmiyor.
 
-## 0. Son 2 saat: öncelik listesi (çalışan demo + sunumun doğruluğu)
+## 0. Son 2 saat: öncelik sırası (çalışan demo + sunumun doğruluğu)
 
 Yeni şehir, yeni maket, öğretmen paneli ve kapsamlı erişilebilirlik ayarları bu sürenin dışında. En kritik açık: galeriyle birlikte ekleme/düzenleme akışının sunulacak ortamda kesintisiz çalıştığını kanıtlamak.
 
-| # | İş | Süre | Durum |
+| Sıra | İş | Süre | Durum |
 |---|---|---|---|
-| 1 | **Fotoğraflı demo ortamı:** yerel statik önizlemede fotoğraf açılmıyor (görseller Neon nesne deposundan `/api/media` ile geliyor, yerelde yok). Canlıda Ulu Camii ve ikinci eserin galerisi kontrol edilecek; çevrimdışı fotoğraflı yedek hazır değil | 15 dk | [ ] ekip |
-| 2 | **Ekleme/düzenleme demosu:** canlıda giriş → ekle → onayla → listede gör → düzenle → yeniden onayla. Demo metinleri ve 3 quiz sorusu hazır: `docs/demo-ekleme-duzenleme.md`. Şifre girmek ekibin işi | 25 dk | [~] metin hazır, canlıda denenmedi |
+| 1 | **Ekleme/düzenleme demosu:** canlıda giriş → ekle → onayla → listede gör → düzenle → yeniden onayla. Demo metinleri ve 3 quiz sorusu hazır: `docs/demo-ekleme-duzenleme.md`. Şifre girmek ekibin işi | 25 dk | [~] metin hazır, canlıda denenmedi |
+| 2 | **Fotoğraflı demo ortamı:** yerel statik önizlemede fotoğraf açılmıyor (görseller Neon nesne deposundan `/api/media` ile geliyor, yerelde yok). Canlıda Ulu Camii ve ikinci eserin galerisi kontrol edilecek; çevrimdışı fotoğraflı yedek hazır değil | 15 dk | [ ] ekip |
 | 3 | **Demo içeriklerinin doğruluğu ve foto izinleri:** yalnız sunulacak iki eserin tarihçe ve kaynak sayfaları kitaptan kontrol. İzin belirsizse izinli alternatif. “Kaynaklı içerik” denir; “akademik olarak doğrulanmış” denmez. İzin denetimi: 2060 görselin hepsinde kredi var, lisans/izin değeri sıfır; `/api/media` giriş istemiyor | 20 dk | [ ] ekip |
-| 4 | **VR/AR iddiaları:** ana sayfa ve maket şeridi metni “cihaz doğrulaması bekliyor” olarak yumuşatıldı (`HomePage.tsx`, `ModelStrip.tsx`). Slaytlar için aynısı gerekir. Mobil AR ekipçe yapıldı olarak bildirildi; hangi telefon/tarayıcı olduğu kayıtlı değil (WebXR AR genelde Android Chrome + ARCore, iPhone Safari desteklemez) | 10 dk | [x] site metni, [ ] slaytlar, [~] mobil AR doğrulama |
-| 5 | **Erişilebilirlik kanıtı:** menü, filtre, galeri klavyeyle ve 360 px / yaklaşık %200'de kontrol edildi, ciddi kusur yok; maket şeridindeki 12 bağlantıya eser adı eklendi. Yüksek kontrast ve yazı boyutu ayarı **yok**, sunumda varmış gibi anlatılmaz. Quiz klavye ve gerçek ekran okuyucu denenmedi | 10 dk | [x] çoğu, [ ] quiz |
-| 6 | **Sunumun eksik bilgileri:** metin, mimari/veri akışı şeması, çalışan/yol haritası tablosu, jüri soruları hazır: `docs/sunum-metni.md`. Ekip isimleri, gerçek 42 kampüsü, görev dağılımı ve QR bağlantısı ekipte | 20 dk | [~] taslak hazır, [ ] ekip bilgileri |
+| 4 | **Sunumun eksik bilgileri:** metin, mimari/veri akışı şeması, çalışan/yol haritası tablosu, jüri soruları hazır: `docs/sunum-metni.md`. Ekip isimleri, gerçek 42 kampüsü, görev dağılımı ve QR bağlantısı ekipte | 20 dk | [~] taslak hazır, [ ] ekip bilgileri |
+| 5 | **VR/AR iddiaları:** ana sayfa ve maket şeridi metni “cihaz doğrulaması bekliyor” olarak yumuşatıldı (`HomePage.tsx`, `ModelStrip.tsx`). Slaytlar için aynısı gerekir. Mobil AR ekipçe yapıldı olarak bildirildi; hangi telefon/tarayıcı olduğu kayıtlı değil (WebXR AR genelde Android Chrome + ARCore, iPhone Safari desteklemez) | 10 dk | [x] site metni, [ ] slaytlar, [~] mobil AR doğrulama |
+| 6 | **Yedek video ve süreli prova:** çalışan akıştan 60–90 sn kayıt; bir kez süre tutulur; kimin neyi anlatacağı kesinleşir | 10 dk | [ ] ekip |
 | 7 | **Son test:** `test:hizli` temiz, `test:tarayici` 3/3. E2E eski admin girişini ve moderasyonu karşılamıyor, mevcut hâliyle tam doğrulama kanıtı sayılmaz | 10 dk | [~] E2E 7/9; 2 admin kontrolü yerelde çalışamıyor, DB'li ortamda denenmeli |
-| 8 | **Yedek video ve süreli prova:** çalışan akıştan 60–90 sn kayıt; bir kez süre tutulur; kimin neyi anlatacağı kesinleşir | 10 dk | [ ] ekip |
+| 8 | **Erişilebilirlik kanıtı:** menü, filtre, galeri klavyeyle ve 360 px / yaklaşık %200'de kontrol edildi, ciddi kusur yok; maket şeridindeki 12 bağlantıya eser adı eklendi. Yüksek kontrast ve yazı boyutu ayarı **yok**, sunumda varmış gibi anlatılmaz. Quiz klavyeyle denendi (Tab, ok tuşları, boşluk, Enter; odak ve ekran okuyucu metni doğru); gerçek ekran okuyucu denenmedi | 10 dk | [x] |
+
+Sıra: önce canlıda kanıtlanması gereken demo zinciri (1, 2), sonra sunumun doğruluğu (3, 4, 5), en sonda zaten büyük oranda kapanmış işler (7, 8). Eski madde numaraları: ekleme/düzenleme=2, fotoğraflı demo=1, doğruluk/izin=3, sunum eksikleri=6, VR/AR=4, yedek video/prova=8, son test=7, erişilebilirlik=5.
 
 Toplam 120 dk. Sunum 12.30; sürüm kilidi 11.45.
 
@@ -92,7 +94,7 @@ Dosya sınırı: `src/features/admin/`, `src/domain/`, `src/content/artifacts/*.
 - [ ] Demo eserlerini seç: Ulu Camii + kaynakları kontrol edilmiş ikinci eser.
 - [ ] Demo kayıtlarının tarihçe ve kaynak sayfalarını sağlanan kitapla elle doğrula. Topluca isim tahminiyle bağlama.
 - [x] Envanter → eser bağlantıları: 39 açık `inventoryId`, kalanı `inventoryLinks.ts`.
-- [-] Formdaki zorunlu 3 quiz sorusunu kaldır: quiz arayüzde geri geldi, kaldırılmayacak.
+- [-] Formdaki zorunlu 3 quiz sorusunu kaldır: quiz ara yüzde geri geldi, kaldırılmayacak.
 - [~] Ekle → onay kuyruğu → yayın → listede gör → düzenle akışını **canlıda** dene (yerelde doğrulandı).
 - [~] Eksik zorunlu alanla kayıt engellenir; kaynaksız “Kaynaklı bilgi” seçilemez (sunucu doğrulaması var, canlıda denenmedi).
 - [ ] Fotoğraf izinleri: izni belirsiz görseli kamuya açık yayında bırakma. Şu an canlı build fotoğraflı.

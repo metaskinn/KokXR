@@ -3,6 +3,25 @@
 Köşeli parantez `[...]` = ekibin doldurması gereken bilgi (bende yok). Rakamlar ve iddialar depodan doğrulandı; doğrulanamayanlar ayrıca işaretli.
 Sunum: **8 Kasım Pazar 12.30**. Konuşmacı dağılımı en altta.
 
+## Jüri başlıkları ve slayt eşlemesi
+
+Organizatörün önerdiği 10 başlık (“özgün dokunuş serbest”). 6 slayta şöyle sığdırdık:
+
+| # | Jüri başlığı | Slayt | Not |
+|---|---|---|---|
+| 1 | Proje künyesi ve takım tanıtımı | 1 | Ad, alan (Serbest/XR), platform, 42 kampüs, görev dağılımı: ekip doldurur |
+| 2 | Problem tanımı ve çözümün değeri | 2 | Araştırmacı (kaynak + sayfa) ve genç (mekânı gezerek öğrenme) |
+| 3 | Ürün vizyonu ve değer önerisi | 2 | Katalogdan farkı: bilgi mekânda; özgün konsept = kaynaklı bilgi + 3B maket |
+| 4 | Kullanıcı deneyimi ve arayüz tasarımı | 3 | Akış, harita, il/ilçe/tür filtresi |
+| 5 | Evrensel erişilebilirlik yaklaşımı | 3 | Yalnız denenenler; ekran okuyucu, yüksek kontrast, yazı boyutu yol haritasında |
+| 6 | Veri yönetimi ve içerik yapısı | 5 | Veri modeli, kaynak bağı, moderasyon akışı (editör → küratör) |
+| 7 | Teknik mimari ve ölçeklenebilirlik | 5 | Yeni şehir = yeni kayıt, kod değişmez |
+| 8 | Ürün demosu (MVP) | 4 | Keşif, harita/filtre, detay, ekleme/düzenleme; canlı uygulama |
+| 9 | Güvenlik, kalite ve gelecek yol haritası | 5–6 | Ortak doğrulama, roller, işlem kaydı; yol haritası tablosu |
+| 10 | Kapanış ve jüri soru-cevap | 6 | Bağlantı ve QR ekranda kalır; tüm ekip yanıtlar |
+
+Boşluklar: yönetim akışının canlı çalıştığı henüz doğrulanmadı (demo-ekleme-duzenleme.md); “kaynak/doğrulanmamış içeriğin önlenmesi” için elle doğrulanan kayıt sayısı [sayı] ekipten gelmeli.
+
 ## Slayt 1: Künye ve ekip (0.00–0.25)
 
 **Ekranda:** KökXR · Bursa'nın vakıf eserleri, kaynaklarıyla ve üç boyutlu · Çalışma alanı: **Serbest (XR)** · Platform: **masaüstü ve mobil web** (Quest/WebXR VR, mobil AR) · 42 [kampüs adı] · Ekip: [isimler ve görevler] · Uygulama: kokxr.vercel.app (QR).

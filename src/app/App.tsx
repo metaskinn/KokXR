@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, Navigate, Route, Routes, useLocation, useNavigationType } from 'react-router-dom'
-import { bundledArtifacts, forThisBuild, fromBucket } from '../infrastructure/contentRepository'
+import { bundledArtifacts, forThisBuild, fromBucket, withBundledModels } from '../infrastructure/contentRepository'
 import { replaceInventory } from '../content/inventory'
 import { api } from '../infrastructure/api'
 import AdminLayout from '../features/admin/AdminLayout'
@@ -27,7 +27,7 @@ export default function App() {
     // Inventory first, so the re-render caused by the new artifact list already sees the database inventory.
     void Promise.allSettled([api.inventory(), api.publishedArtifacts()]).then(([inv, list]) => {
       if (inv.status === 'fulfilled') replaceInventory(inv.value.items, inv.value.details)
-      if (list.status === 'fulfilled' && Array.isArray(list.value) && list.value.length) setArtifacts(forThisBuild(fromBucket(list.value)))
+      if (list.status === 'fulfilled' && Array.isArray(list.value) && list.value.length) setArtifacts(withBundledModels(forThisBuild(fromBucket(list.value))))
     })
   }, [])
   useEffect(refresh, [refresh])

@@ -1,5 +1,5 @@
 // Maketler (/places): Leaflet map, 10 model markers in Bursa, list hover highlights the marker, marker opens the model page.
-// Konya has no models: empty box plus map. No horizontal overflow on phones. Does not wait for OSM tiles (may be offline).
+// Konya has one model (Mevlâna): row plus marker. No horizontal overflow on phones. Does not wait for OSM tiles (may be offline).
 // Run: with the dev server up, TEST_URL=http://127.0.0.1:5173 node tests/vr-artifacts.mjs
 import { chromium } from 'playwright'
 
@@ -47,12 +47,13 @@ async function check(width) {
   await page.goBack()
   await page.locator('.hm-model').first().waitFor()
 
-  // Konya: no models, empty box, map still there
+  // Konya: one model (Mevlâna Külliyesi), its row and marker, map still there
   await page.goto(`${url}/places?city=Konya`)
-  await page.locator('.vr-map-empty').waitFor()
   await page.locator('.leaflet-container').waitFor()
   await page.locator('.hm-legend').waitFor()
-  condition(await page.locator('.hm-model').count() === 0, `${width}: Konya must have no model markers`)
+  await page.locator('.hm-model').first().waitFor()
+  condition(await page.locator('.hm-model').count() === 1, `${width}: Konya must have one model marker`)
+  condition(await page.locator('.vr-buildings a', { hasText: 'Mevlâna' }).count() > 0, `${width}: Mevlâna row missing`)
   condition(await overflow(page) <= 0, `${width}: horizontal overflow in Konya`)
   await page.screenshot({ path: `${view}/maketler-konya-${width}.png` })
   condition(!errors.length, errors.join(' | '))

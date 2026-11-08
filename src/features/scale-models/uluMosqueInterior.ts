@@ -145,7 +145,9 @@ export function uluMosqueInterior(m: UluMosqueMaterials, k: Bucket, kRoof: Bucke
     if (open) continue
     // The space in front of the mihrab and the Kaaba cover stays empty
     if ((i === 2 && j === LINE - 1) || (i === COLUMN - 1 && j === 0)) continue
-    addChandelier(k, m, x, z, DRUM_BASE + drumH + domeH - 0.5)
+    // Over the müezzin mahfil the ring hangs higher, otherwise it nearly touches the mahfil's railing (platform top 3.8 m).
+    const overMahfil = Math.abs(x - MAHFIL.x) < MAHFIL.wX + 1 && Math.abs(z - MAHFIL.z) < MAHFIL.wZ + 2
+    addChandelier(k, m, x, z, DRUM_BASE + drumH + domeH - 0.5, overMahfil ? 6.3 : 4.5)
   }
 
   // --- Mihrab: facade from an archive photo, relief tiers, muqarnas (ulu-mosque/mihrab.ts) ---

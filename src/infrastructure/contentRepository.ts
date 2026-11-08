@@ -18,3 +18,10 @@ export const forThisBuild = (list: Artifact[]): Artifact[] => PUBLIC_BUILD ? lis
 export const fromBucket = (list: Artifact[]): Artifact[] => JSON.parse(JSON.stringify(list).replaceAll('"/images/', '"/api/media/images/'))
 
 export const bundledArtifacts: Artifact[] = forThisBuild(Object.values(artifactFiles))
+
+/**
+ * A 3D scale model is code shipped with this build (src/features/scale-models/buildings/*), not editable content:
+ * the database copy may predate it. The bundled `model` field fills in where the database record has none.
+ */
+const bundledModels = new Map(bundledArtifacts.filter((a) => a.model).map((a) => [a.id, a.model!]))
+export const withBundledModels = (list: Artifact[]): Artifact[] => list.map((a) => a.model || !bundledModels.has(a.id) ? a : { ...a, model: bundledModels.get(a.id) })

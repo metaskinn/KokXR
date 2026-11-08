@@ -28,7 +28,9 @@ for (const e of inventory) {
   }
 }
 const flagged = inventory.filter((e) => e.hasScaleModel)
-const withModel = Object.values(artifacts).filter((a) => a.model)
+// The inventory file covers Bursa only; Konya and Hatay models (Mevlâna, Sokullu) have no inventory row to flag.
+const inInventory = new Set(inventory.map((e) => e.artifactId))
+const withModel = Object.values(artifacts).filter((a) => a.model && (inInventory.has(a.id) || a.city === 'Bursa'))
 assert.equal(new Set(flagged.map((e) => e.artifactId)).size, flagged.length, 'one flagged building per model')
 assert.equal(flagged.length, withModel.length, 'every artifact with a model has exactly one flagged building')
 console.log(`Inventory data: ${inventory.length} buildings, ${flagged.length} with a scale model, links and flags passed.`)

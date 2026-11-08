@@ -330,8 +330,8 @@ export function addInnerDome(m: UluMosqueMaterials, kDrum: Bucket, kDome: Bucket
 }
 
 /** DJI_0312/0339: thin dark ring, star arms, long hangers and small bulbs. */
-export function addChandelier(k: Bucket, m: UluMosqueMaterials, x: number, z: number, apex: number) {
-  const ay = 4.5, R = 1.4, bossY = ay + 2.3, N = 12
+export function addChandelier(k: Bucket, m: UluMosqueMaterials, x: number, z: number, apex: number, ringY = 4.5) {
+  const ay = ringY, R = 1.4, bossY = Math.min(ay + 2.3, apex - 0.4), N = 12
   const dir = new THREE.Vector3(0, 1, 0), q = new THREE.Quaternion(), delta = new THREE.Vector3()
   const tel = (a: THREE.Vector3, b: THREE.Vector3, r: number) => {
     delta.subVectors(b, a)

@@ -19,8 +19,10 @@ export function menuItems(d: { inside: boolean; fragmented: boolean; inAssembly?
     return [{ id: 'outside', name: 'Dışarı çık' }, ...d.stops.map(({ id, name }) => ({ id: `stop:${id}`, name })), exit]
   }
   // While shattered, "Birleştir" is already there; a second assemble label next to it would confuse.
-  if (d.fragmented) return [{ id: 'inside', name: 'İçeri gir' }, { id: 'shatter', name: 'Birleştir' }, exit]
-  return [{ id: 'inside', name: 'İçeri gir' }, { id: 'shatter', name: 'Parçala' }, { id: 'assemble', name: 'Maketi birleştir' }, exit]
+  // Exterior-only models (no interior stops yet) do not offer "İçeri gir".
+  const inside = d.stops.length ? [{ id: 'inside', name: 'İçeri gir' }] : []
+  if (d.fragmented) return [...inside, { id: 'shatter', name: 'Birleştir' }, exit]
+  return [...inside, { id: 'shatter', name: 'Parçala' }, { id: 'assemble', name: 'Maketi birleştir' }, exit]
 }
 
 // Must not run at module load: this file loads with the desktop scene, and the model would fail to open in browsers without the API.

@@ -36,7 +36,9 @@ export const vrCities: VrCity[] = [
     name: 'Konya',
     map: 'konya',
     position: [32.49, 37.87],
-    buildings: [],
+    buildings: [
+      { name: 'Mevlâna Külliyesi', district: 'Karatay', artifactId: 'konya-karatay-mevlana-tomb-museum', position: [32.50496, 37.87068], source: 'OSM way/491583514 (Mevlâna Müzesi)' },
+    ],
     broadcasts: [
       { name: 'Konya Vakıf Eserleri, Cilt 1', address: `${PUBLIC_ROOT}/yayinlarimiz/konya-envanteri-1_cilt-web.pdf` },
       { name: 'Cilt 2', address: `${PUBLIC_ROOT}/yayinlarimiz/konya-envanteri-2_cilt-web.pdf` },
@@ -46,7 +48,9 @@ export const vrCities: VrCity[] = [
     name: 'Hatay',
     map: 'hatay',
     position: [36.16, 36.2],
-    buildings: [],
+    buildings: [
+      { name: 'Sokullu Mehmet Paşa Külliyesi', district: 'Payas', artifactId: 'hatay-payas-sokullu-mehmet-pasha-mosque-complex', position: [36.2033, 36.75425], source: 'OSM relation/7325781 (Sokullu Mehmet Paşa Külliyesi)' },
+    ],
     broadcasts: [{ name: 'Hatay Vakıf Eserleri', address: `${PUBLIC_ROOT}/hatay-vakif-eserleri.pdf` }],
   },
 ]

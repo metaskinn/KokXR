@@ -1,4 +1,5 @@
-// Representative model of the Mevlâna Complex (Konya, Karatay). Units in meters; north -z, east +x. Exterior only for now.
+// Representative model of the Mevlâna Complex (Konya, Karatay). Units in meters; north -z, east +x. Interior of the main block in
+// konya-karatay-mevlana-tomb-museum-pieces/interior.ts.
 // Sourced (Vakıf Eserleri Envanteri – Konya, Cilt 1): the türbe is a domed baldachin on four piers with a 16-segment body and a
 // conical cap in green tile (pp. 32-33); the semahane north of the türbe, square, under a 12 m dome (p. 38); the square domed
 // mescit west of the semahane with a three-domed narthex and a 19th-century minaret on its west side (pp. 40-41); the matbah
@@ -8,8 +9,10 @@
 // west). Heights, window positions, the matbah massing, tomb positions, the selsebil and the Şeb-i Arus pool are representative.
 import * as THREE from 'three'
 import type { Model } from '../uluMosqueModel'
+import type { Box } from '../uluMosqueInterior'
 import { Bucket, boxG, cylinderG, rotateG, flatShadow, place, type Mat } from '../uluMosquePiece'
 import { mevlanaMaterials } from './konya-karatay-mevlana-tomb-museum-pieces/materials'
+import { DOORS, FLOOR, MESCIT_FLOOR, interior, pierced } from './konya-karatay-mevlana-tomb-museum-pieces/interior'
 
 const PEDESTAL_R = 42
 const T = 1 // wall thickness
@@ -24,8 +27,12 @@ export const building = (): Model => {
   const u = m.u
   const k = new Bucket(), kRoof = new Bucket(), kDrum = new Bucket(), kDome = new Bucket()
 
-  const B = (x0: number, x1: number, y0: number, y1: number, z0: number, z1: number, mat: Mat, kv = k) =>
+  /** Collision: every ground-standing box of the base bucket at least 0.9 m tall; low items are added by hand. */
+  const solids: Box[] = [], circles: { x: number; z: number; r: number }[] = []
+  const B = (x0: number, x1: number, y0: number, y1: number, z0: number, z1: number, mat: Mat, kv = k) => {
     kv.add(place(boxG(x1 - x0, y1 - y0, z1 - z0), (x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2), mat)
+    if (kv === k && y0 <= 0.4 && y1 - y0 >= 0.9) solids.push({ x0, x1, z0, z1 })
+  }
   const flatUV = (g: THREE.BufferGeometry) => {
     const p = g.attributes.position, uv = g.attributes.uv
     for (let i = 0; i < uv.count; i++) uv.setXY(i, p.getX(i), p.getZ(i))
@@ -49,8 +56,10 @@ export const building = (): Model => {
     kv.add(place(flatShadow(cylinderG(R + 0.15, R + 0.2, 0.2, sides).rotateY(Math.PI / sides)), cx, y0 + h - 0.1, cz), u.lead)
   }
   /** Dark window or door panel on a wall: `along` is the wall direction. */
-  const opening = (x: number, z: number, y0: number, w: number, h: number, along: 'x' | 'z', depth = T + 0.08) =>
+  const opening = (x: number, z: number, y0: number, w: number, h: number, along: 'x' | 'z', depth = T + 0.24) =>
     along === 'x' ? B(x - w / 2, x + w / 2, y0, y0 + h, z - depth / 2, z + depth / 2, m.window) : B(x - depth / 2, x + depth / 2, y0, y0 + h, z - w / 2, z + w / 2, m.window)
+
+  const NX0 = -5, NX1 = 0.5, NZ0 = -18.5, NZ1 = -7.5, NH = 5.6 // mescit narthex
 
   // ---------------------------------------------------------------- GROUND
   k.add(flatUV(new THREE.CircleGeometry(PEDESTAL_R, 80).rotateX(-Math.PI / 2).translate(0, 0.01, 0)), u.paving)
@@ -71,41 +80,37 @@ export const building = (): Model => {
     k.add(new THREE.IcosahedronGeometry(h * 0.33, 1).scale(1, 1.15, 1).translate(x, h * 0.66, z), m.leaf)
   }
   tree(9, 17.5, 8); tree(20, 16.5, 9); tree(35, -10, 8); tree(35.5, 4, 7)
+  for (const [x, z] of [[9, 17.5], [20, 16.5], [35, -10], [35.5, 4]] as const) circles.push({ x, z, r: 0.35 })
 
   // ---------------------------------------------------------------- MAIN BLOCK: hall (Huzur-ı Pîr + türbe), mescit, semahane
-  // Floors (visible when "Parçala" lifts the roofs)
-  B(1.5, 27, 0, 0.08, -5.5, 6.5, u.marble)
-  B(1.5, 13.5, 0, 0.08, -19, -6.5, m.floor)
-  B(14.5, 27, 0, 0.08, -19, -6.5, u.wood)
-  // Walls along x
-  B(0.5, 14, 0, MASJID_H, -20, -19, m.ashlar); B(14, 28, 0, SEMA_H, -20, -19, m.ashlar)
-  B(0.5, 14, 0, MASJID_H, -6.5, -5.5, m.ashlar); B(14, 28, 0, SEMA_H, -6.5, -5.5, m.ashlar)
-  B(0.5, 28, 0, HALL_H, 6.5, 7.5, m.ashlar)
-  // Walls along z (between the x walls)
-  B(0.5, 1.5, 0, MASJID_H, -19, -6.5, m.ashlar); B(0.5, 1.5, 0, HALL_H, -5.5, 6.5, m.ashlar)
-  B(27, 28, 0, SEMA_H, -19, -6.5, m.ashlar); B(27, 28, 0, HALL_H, -5.5, 6.5, m.ashlar)
-  B(13.5, 14.5, 0, SEMA_H, -19, -6.5, m.ashlar)
-  // Windows and doors (representative positions)
+  // Floors (visible when "Parçala" lifts the roofs); the mescit floor is two steps up (p. 41)
+  B(1.5, 27, 0, FLOOR, -5.5, 6.5, u.marble)
+  B(1.5, 13.5, 0, MESCIT_FLOOR, -19, -6.5, m.floor)
+  B(14.5, 27, 0, FLOOR, -19, -6.5, u.wood)
+  // Walls; those with doors are pierced (doors in interior.ts)
+  const blockers: Box[] = []
+  const W = (along: 'x' | 'z', a0: number, a1: number, c0: number, c1: number, h: number, doors = [] as typeof DOORS.cerag[]) =>
+    blockers.push(...pierced(B, along, a0, a1, c0, c1, 0, h, doors, m.ashlar))
+  W('x', 0.5, 14, -20, -19, MASJID_H); W('x', 14, 28, -20, -19, SEMA_H)
+  W('x', 0.5, 14, -6.5, -5.5, MASJID_H, [DOORS.mescitHall]); W('x', 14, 28, -6.5, -5.5, SEMA_H, [DOORS.semaHall])
+  W('x', 0.5, 28, 6.5, 7.5, HALL_H)
+  W('z', -19, -6.5, 0.5, 1.5, MASJID_H, [DOORS.cerag]); W('z', -5.5, 6.5, 0.5, 1.5, HALL_H, [DOORS.hallWest])
+  W('z', -19, -6.5, 27, 28, SEMA_H); W('z', -5.5, 6.5, 27, 28, HALL_H)
+  W('z', -19, -6.5, 13.5, 14.5, SEMA_H, [DOORS.mescitSema])
+  // Windows (representative positions)
   for (const x of [4, 7.5, 11, 17.5, 20.75, 24]) { opening(x, -19.5, 2, 1.1, 1.8, 'x'); opening(x, -19.5, 6.6, 0.9, 1.6, 'x') }
   for (const z of [-16, -12.75, -9.5]) { opening(27.5, z, 2, 1.1, 1.8, 'z'); opening(27.5, z, 6.6, 0.9, 1.6, 'z') }
   for (const x of [4.69, 11.06, 23.81]) opening(x, 7, 2, 1.1, 1.8, 'x')
   for (const z of [-2.5, 3.5]) opening(27.5, z, 2, 1.1, 1.8, 'z')
-  opening(1, 0.5, 0, 2, 3.2, 'z') // hall entrance from the courtyard (representative)
-  opening(1, -12.75, 0.3, 1.8, 3, 'z') // Çerağ Kapısı on the mescit's west side (p. 40)
   for (const z of [-16, -9.5]) opening(1, z, 2.4, 0.9, 1.6, 'z')
-  // Hall interior seen from above: piers between the bays; the türbe bay has the two-tier marble sanduka (pp. 32, 36)
-  for (const x of [7.875, 14.25, 20.625]) B(x - 0.6, x + 0.6, 0, HALL_H, 0, 1, m.ashlar)
-  B(TURBE.x - 1.5, TURBE.x + 1.5, 0.08, 0.7, TURBE.z - 0.8, TURBE.z + 0.8, u.marble)
-  B(TURBE.x - 1.1, TURBE.x + 1.1, 0.7, 1.25, TURBE.z - 0.5, TURBE.z + 0.5, u.marble)
-  B(TURBE.x - 1.12, TURBE.x + 1.12, 1.25, 1.3, TURBE.z - 0.52, TURBE.z + 0.52, m.cloth)
-  // Mescit mihrab (south wall, p. 40) and semahane wooden railing (photo p. 39)
-  B(6.6, 8.4, 0, 3.4, -6.6, -6.5, u.marbleDark)
-  for (const [x0, x1, z0, z1] of [[16, 25.5, -17.6, -17.45], [16, 25.5, -8, -7.85], [16, 16.15, -17.6, -7.85], [25.35, 25.5, -17.6, -7.85]] as const) B(x0, x1, 0.08, 1, z0, z1, m.railing)
+  const inside = interior(m, B, k, kRoof, solids)
 
   // Roofs (lead) — layer "Çatılar"
   B(0.3, 14, MASJID_H, MASJID_H + 0.45, -20.2, -6.3, u.lead, kRoof)
   B(14, 28.2, SEMA_H, SEMA_H + 0.45, -20.2, -6.3, u.lead, kRoof)
-  B(0.3, 28.2, HALL_H, HALL_H + 0.45, -6.3, 7.7, u.lead, kRoof)
+  // Hall roof, open over the türbe bay so the türbe's inner dome rises into the Kubbe-i Hadra base
+  B(0.3, TURBE.x - 3, HALL_H, HALL_H + 0.45, -6.3, 7.7, u.lead, kRoof); B(TURBE.x + 3, 28.2, HALL_H, HALL_H + 0.45, -6.3, 7.7, u.lead, kRoof)
+  B(TURBE.x - 3, TURBE.x + 3, HALL_H, HALL_H + 0.45, -6.3, TURBE.z - 3, u.lead, kRoof); B(TURBE.x - 3, TURBE.x + 3, HALL_H, HALL_H + 0.45, TURBE.z + 3, 7.7, u.lead, kRoof)
   // Drums and domes
   drum(MASJID.x, MASJID.z, MASJID_H + 0.45, 1.4, 6.1, 12)
   dome(MASJID.x, MASJID.z, MASJID_H + 1.85, 5.9, 4.4, kDome, 1.4)
@@ -120,8 +125,9 @@ export const building = (): Model => {
   // ---------------------------------------------------------------- KUBBE-İ HADRA
   // Square base above the hall roof, then the 16-segment body and the conical cap in green tile (p. 32).
   const TB = HALL_H + 0.45, TT = 10.6, BODY = 7, R = 3
-  B(TURBE.x - 3, TURBE.x + 3, TB, TT, TURBE.z - 3, TURBE.z + 3, m.ashlar, kDrum)
-  B(TURBE.x - 3.15, TURBE.x + 3.15, TT - 0.2, TT, TURBE.z - 3.15, TURBE.z + 3.15, u.lead, kDrum)
+  for (const [x0, x1, z0, z1] of [[-3, 3, -3, -2.85], [-3, 3, 2.85, 3], [-3, -2.85, -2.85, 2.85], [2.85, 3, -2.85, 2.85]]) // hollow
+    B(TURBE.x + x0, TURBE.x + x1, TB, TT, TURBE.z + z0, TURBE.z + z1, m.ashlar, kDrum)
+  B(TURBE.x - 3.15, TURBE.x + 3.15, TT - 0.12, TT, TURBE.z - 3.15, TURBE.z + 3.15, u.lead, kDrum)
   const lobeR = R * Math.sin(Math.PI / 16), lobeC = R * Math.cos(Math.PI / 16)
   kDrum.add(place(cylinderG(lobeC, lobeC, BODY, 32), TURBE.x, TT + BODY / 2, TURBE.z), m.tile)
   for (let i = 0; i < 16; i++) {
@@ -141,11 +147,11 @@ export const building = (): Model => {
   B(9, 27.5, 0, 6, -22.5, -20, m.ashlar); B(8.8, 27.7, 6, 6.4, -22.7, -20, u.lead, kRoof)
 
   // ---------------------------------------------------------------- NARTHEX AND MINARET (mescit west side, p. 41)
-  const NX0 = -5, NX1 = 0.5, NZ0 = -18.5, NZ1 = -7.5, NH = 5.6
   B(NX0, NX1, 0, 0.3, NZ0, NZ1, u.marble)
   B(NX0, NX1, 0, NH, NZ0, NZ0 + 0.6, m.ashlar); B(NX0, NX1, 0, NH, NZ1 - 0.6, NZ1, m.ashlar)
   for (const z of [-17.9, -14.3, -11.0, -8.1]) {
     k.add(cylinderG(0.28, 0.3, 4.2, 12).translate(NX0 + 0.45, 0.3 + 2.1, z), u.marble)
+    circles.push({ x: NX0 + 0.45, z, r: 0.3 })
     B(NX0 + 0.1, NX0 + 0.8, 4.5, 4.8, z - 0.35, z + 0.35, u.marble)
   }
   B(NX0, NX0 + 0.9, 4.8, NH, NZ0, NZ1, m.ashlar)
@@ -192,6 +198,7 @@ export const building = (): Model => {
   // ---------------------------------------------------------------- ŞADIRVAN: eight small columns, roof with a 16-segment centre, two-tier bowl (pp. 50-51)
   {
     const { x, z } = SADIRVAN
+    circles.push({ x, z, r: 3.5 })
     k.add(place(flatShadow(cylinderG(4, 4, 0.25, 8).rotateY(Math.PI / 8)), x, 0.125, z), u.marble)
     k.add(place(flatShadow(cylinderG(3, 3, 0.7, 8).rotateY(Math.PI / 8)), x, 0.6, z), u.marble)
     k.add(place(cylinderG(2.8, 2.8, 0.02, 8).rotateY(Math.PI / 8), x, 0.92, z), u.water)
@@ -215,11 +222,13 @@ export const building = (): Model => {
   // ---------------------------------------------------------------- SELSEBİL AND ŞEB-İ ARUS POOL (named in the book, form and position representative)
   k.add(place(flatShadow(cylinderG(1.1, 1.2, 0.9, 6)), -16.8, 0.45, 6), u.marble)
   k.add(place(cylinderG(0.95, 0.95, 0.02, 6), -16.8, 0.91, 6), u.water)
+  circles.push({ x: -16.8, z: 6, r: 1.2 }); solids.push({ x0: -7.5, x1: -3.5, z0: 1.5, z1: 4 })
   B(-7.5, -3.5, 0, 0.5, 1.5, 4, u.marble); B(-7.3, -3.7, 0.5, 0.51, 1.7, 3.8, u.water)
 
   // ---------------------------------------------------------------- SIX TOMBS IN THE GARDEN (count from p. 29; positions and form representative)
   for (const [x, z] of [[-2.4, 9.6], [-1.6, 16], [31, 10], [30.5, -1], [29, 20], [-5.5, 22]] as const) {
     B(x - 2.5, x + 2.5, 0, 0.4, z - 2.5, z + 2.5, m.ashlar)
+    circles.push({ x, z, r: 2.3 })
     k.add(place(flatShadow(cylinderG(2.1, 2.1, 4, 8).rotateY(Math.PI / 8)), x, 2.4, z), m.ashlar)
     opening(x, z - 2.0, 0.4, 0.9, 2, 'x', 0.15)
     kRoof.add(place(flatShadow(cylinderG(2.05, 2.3, 0.3, 8).rotateY(Math.PI / 8)), x, 4.55, z), u.lead)
@@ -238,15 +247,17 @@ export const building = (): Model => {
       { group: drumGroup, height: 30, name: 'Kasnaklar' },
       { group: domeGroup, height: 44, name: 'Kubbeler' },
     ],
-    // Exterior-only model: no interior stops, so "İçeri gir" stays disabled.
-    stops: [],
+    stops: inside.stops,
     walking: {
-      limit: { x0: -PEDESTAL_R, x1: PEDESTAL_R, z0: -PEDESTAL_R, z1: PEDESTAL_R },
-      boxes: [], circles: [], floors: [], viewBlockers: [],
-      eyeY: 1.7, baseY: 0,
+      limit: { x0: -PEDESTAL_R, x1: PEDESTAL_R, z0: -PEDESTAL_R, z1: PEDESTAL_R, circle: { x: 0, z: 0, r: PEDESTAL_R } },
+      boxes: solids.filter((b) => b.x1 > b.x0 && b.z1 > b.z0),
+      circles,
+      floors: [...inside.floors, { x0: NX0 + 0.75, x1: NX1, z0: NZ0, z1: NZ1, h0: 0.3 - FLOOR, h1: 0.3 - FLOOR }],
+      viewBlockers: blockers,
+      eyeY: FLOOR + 1.7, baseY: FLOOR,
     },
     camera: { position: [-58, 46, 66], target: [2, 7, -2] },
     pedestalRadius: PEDESTAL_R + 1,
-    innerLights: [[SEMA.x, 8, SEMA.z], [MASJID.x, 7.5, MASJID.z], [TURBE.x, 6, TURBE.z]],
+    innerLights: [[SEMA.x, 6.5, SEMA.z], [MASJID.x, 6.5, MASJID.z], [TURBE.x, 5, TURBE.z], [6.3, 4.5, 0.5]],
   }
 }

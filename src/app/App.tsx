@@ -10,6 +10,7 @@ import MediaPage from '../features/admin/MediaPage'
 import InventoryAdminPage from '../features/admin/InventoryAdminPage'
 import AuditPage from '../features/admin/AuditPage'
 import { AdminFormRoute } from '../features/admin/ArtifactForm'
+import HomePage from '../features/home/HomePage'
 import ArtifactsPage from '../features/heritage/pages/ArtifactsPage'
 import ArtifactPage from '../features/heritage/pages/ArtifactPage'
 import NotFound from '../shared/ui/NotFound'
@@ -48,7 +49,7 @@ export default function App() {
   }, [])
 
   // Each top-level area is active for its own sub pages too (an artifact page belongs to Eserler).
-  const area = pathname.startsWith('/places') ? 'places' : pathname.startsWith('/workshops') ? 'workshops' : pathname.startsWith('/artifact') || pathname === '/' ? 'artifacts' : ''
+  const area = pathname.startsWith('/places') ? 'places' : pathname.startsWith('/workshops') ? 'workshops' : pathname.startsWith('/artifact') ? 'artifacts' : ''
   const back = /^\/artifact\//.test(pathname) ? { to: '/artifacts', label: 'Eserler' }
     : /^\/places\/.+/.test(pathname) ? { to: '/places', label: 'Maketler' } : null
   const tabs = [
@@ -66,7 +67,7 @@ export default function App() {
     </div></header>
     <main id="main-content" tabIndex={-1}>
       <Routes>
-        <Route path="/" element={<Navigate to="/artifacts" replace />} />
+        <Route path="/" element={<HomePage artifacts={artifacts} />} />
         <Route path="/artifacts" element={<ArtifactsPage artifacts={artifacts} />} />
         <Route path="/places" element={<PlacesPage artifacts={artifacts} />} />
         <Route path="/places/yapi/:id" element={<InventoryPage artifacts={artifacts} />} />

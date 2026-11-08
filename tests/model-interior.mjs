@@ -34,7 +34,8 @@ async function toWall(page, keyBtn, maxMs = 200000) {
   while (Date.now() - head < maxMs && !stopped) {
     await page.waitForTimeout(400)
     const now = await position(page), k = await frame(page)
-    if (!now || !previous || now[0] !== previous[0] || now[1] !== previous[1]) { previous = now; fixedFrame = k }
+    // Pressed into a corner the position jitters by ~1 cm; that still counts as standing still.
+    if (!now || !previous || Math.abs(now[0] - previous[0]) > 0.02 || Math.abs(now[1] - previous[1]) > 0.02) { previous = now; fixedFrame = k }
     else stopped = k - fixedFrame >= 8
   }
   await page.keyboard.up(keyBtn)

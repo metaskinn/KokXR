@@ -1,4 +1,6 @@
-// Representative exterior model of the Sokullu Mehmet Paşa Complex in Payas (Hatay). Not a real 3D scan; no interior yet.
+// Representative model of the Sokullu Mehmet Paşa Complex in Payas (Hatay). Not a real 3D scan.
+// Interior: the arasta street (cross vaults, shop fronts, dua kubbesi), the mosque prayer hall (cross plan, central dome on
+// pendentives, cross-vaulted iwans, mihrab, minbar) and the open han courtyard; the other buildings stay closed masses.
 // Source: Hatay Vakıf Eserleri, pp. 98–119 (PDF pp. 50–60). The book has no plan and gives no dimensions, so every size here is representative.
 // From the text: north–south arasta with 24 + 24 shops, a dua kubbesi in the middle with east and west gates,
 // north and south portals with fountains (p. 102); the han to the east with 9 + 9 + 12 porticoes, tabhanes west of its courtyard
@@ -9,8 +11,10 @@
 import * as THREE from 'three'
 import { Bucket, cylinderG, place } from '../uluMosquePiece'
 import type { Model } from '../uluMosqueModel'
-import type { InteriorWalk } from '../uluMosqueInterior'
-import { sokulluMaterials, blockG, panelG, archWall, dome, drum, vaultCover, tree, type SM } from './hatay-payas-sokullu-mehmet-pasha-mosque-complex-pieces/common'
+import type { Box, InteriorStop, InteriorWalk } from '../uluMosqueInterior'
+import {
+  sokulluMaterials, blockG, panelG, archWall, dome, drum, vaultCover, tree, innerDome, ringPlate, groinVault, type SM,
+} from './hatay-payas-sokullu-mehmet-pasha-mosque-complex-pieces/common'
 
 /** Plan is drawn around the arasta axis; everything is shifted onto the pedestal centre. */
 const OX = -10.5, OZ = -5.5
@@ -18,16 +22,30 @@ const PEDESTAL = 72
 
 // Arasta: corridor x ±2.8, shops 2.8..7 deep on each side; 6 bays of 5.6 m (two shops each) per half, dua kubbesi bay in the middle.
 const CW = 2.8, SHOP_OUT = 7, BAY = 5.6, HALF = 2.8 + 6 * BAY, SHOP_H = 4.7, CORR_H = 8.4
+/** Corridor cross vaults: springing and rise (representative). */
+const V_SPRING = 5.4, V_RISE = 2.8
+// Mosque (plan coordinates): hall x MX0..MX1, z HZ0..HZ1; centre square ±4 under the dome; walls 1 m.
+const MCX = -24.5, MW = 17, MX0 = MCX - MW / 2, MX1 = MCX + MW / 2, HZ0 = 30, HZ1 = HZ0 + MW, MZ = (HZ0 + HZ1) / 2, MT = 1, ARM = 4
+const EYE = 1.65
+
+/** Collision boxes and circles collected while building (plan coordinates). */
+let walls: Box[] = []
+let posts: { x: number; z: number; r: number }[] = []
 
 export const building = (): Model => {
   const m = sokulluMaterials()
   const k = new Bucket(), kRoof = new Bucket(), kVault = new Bucket(), kDrum = new Bucket(), kDome = new Bucket()
-  const box = (kv: Bucket, mat: THREE.Material, x0: number, x1: number, y0: number, y1: number, z0: number, z1: number) => kv.add(blockG(x0, x1, y0, y1, z0, z1), mat)
+  walls = []; posts = []
+  const box = (kv: Bucket, mat: THREE.Material, x0: number, x1: number, y0: number, y1: number, z0: number, z1: number) => {
+    kv.add(blockG(x0, x1, y0, y1, z0, z1), mat)
+    // Every block standing on the ground blocks walking
+    if (y0 <= 0.05 && y1 >= 0.5) walls.push({ x0, x1, z0, z1 })
+  }
   /** Flat roof slab with a small overhang. */
   const slab = (x0: number, x1: number, z0: number, z1: number, y: number) => box(kRoof, m.roof, x0 - 0.2, x1 + 0.2, y, y + 0.35, z0 - 0.2, z1 + 0.2)
 
   site(k, m)
-  arasta(k, kVault, kDrum, kDome, m, box, slab)
+  arasta(k, kRoof, kVault, kDrum, kDome, m, box, slab)
   han(k, m, box, slab)
   hamam(k, kRoof, kVault, kDrum, kDome, m, box, slab)
   mosque(k, kRoof, kDrum, kDome, m, box, slab)
@@ -37,8 +55,28 @@ export const building = (): Model => {
   root.add(...groups)
   for (const g of [root, ...groups]) g.children.forEach((c) => { if (c instanceof THREE.Mesh) c.geometry.translate(OX, 0, OZ) })
 
-  // Exterior only for now: no interior stops, so "İçeri gir" stays disabled. The walk area is a minimal valid placeholder.
-  const walking: InteriorWalk = { limit: { x0: -1, x1: 1, z0: -1, z1: 1 }, boxes: [], circles: [], floors: [], viewBlockers: [], eyeY: 1.6, baseY: 0.05 }
+  // Walking: the whole pedestal; every ground-standing block, arch pier and tree trunk is a collision box (world coordinates).
+  const shift = (b: Box): Box => ({ x0: b.x0 + OX, x1: b.x1 + OX, z0: b.z0 + OZ, z1: b.z1 + OZ })
+  const boxes = walls.map(shift)
+  const R = PEDESTAL - 2
+  const walking: InteriorWalk = {
+    limit: { x0: -R, x1: R, z0: -R, z1: R, circle: { x: 0, z: 0, r: R } },
+    boxes,
+    circles: posts.map((c) => ({ x: c.x + OX, z: c.z + OZ, r: c.r })),
+    floors: [],
+    viewBlockers: boxes.filter((b) => (b.x1 - b.x0) * (b.z1 - b.z0) > 4),
+    eyeY: EYE,
+    baseY: 0.05,
+  }
+  const stop = (id: string, name: string, x: number, z: number, lx: number, ly: number, lz: number): InteriorStop =>
+    ({ id, name, position: [x + OX, EYE, z + OZ], look: [lx + OX, ly, lz + OZ] })
+  const stops: InteriorStop[] = [
+    stop('arasta', 'Arasta', 0, -24, 0, 3.6, 0),
+    stop('dua', 'Dua kubbesi', 0, 1.6, 0, 9.6, -0.6),
+    stop('cami', 'Cami', MCX, HZ0 + 2.2, MCX, 3.6, HZ1),
+    stop('kubbe', 'Cami kubbesi', MCX, MZ - 2.5, MCX, 15, MZ),
+    stop('han', 'Han avlusu', 26, -9, 50, 3, -9),
+  ]
 
   return {
     root,
@@ -48,14 +86,28 @@ export const building = (): Model => {
       { group: groups[2], height: 36, name: 'Kasnaklar' },
       { group: groups[3], height: 48, name: 'Kubbeler' },
     ],
-    stops: [],
+    stops,
     walking,
+    innerLights: [[OX, 6.6, -18 + OZ], [OX, 7, OZ], [OX, 6.6, 18 + OZ], [MCX + OX, 9, MZ + OZ]],
     camera: { position: [72, 62, -96], target: [0, 4, 0] },
     pedestalRadius: PEDESTAL,
   }
 }
 
 type BoxFn = (kv: Bucket, mat: THREE.Material, x0: number, x1: number, y0: number, y1: number, z0: number, z1: number) => void
+
+/** archWall that also adds the solid parts between its openings to the collision boxes when it stands on the ground. */
+function aw(axis: 'x' | 'z', c: number, a0: number, a1: number, y0: number, y1: number, t: number, holes: { at: number; w: number; h: number }[]) {
+  if (y0 <= 0.05) {
+    const cuts = holes.map((o) => [o.at - o.w / 2, o.at + o.w / 2]).sort((p, q) => p[0] - q[0])
+    let from = a0
+    for (const [h0, h1] of [...cuts, [a1, a1]]) {
+      if (h0 - from > 0.02) walls.push(axis === 'x' ? { x0: from, x1: h0, z0: c - t / 2, z1: c + t / 2 } : { x0: c - t / 2, x1: c + t / 2, z0: from, z1: h0 })
+      from = Math.max(from, h1)
+    }
+  }
+  return archWall(axis, c, a0, a1, y0, y1, t, holes)
+}
 type SlabFn = (x0: number, x1: number, z0: number, z1: number, y: number) => void
 
 /** Ground, paved streets around the complex and a few representative trees. */
@@ -68,11 +120,11 @@ function site(k: Bucket, m: SM) {
   k.add(flatUv(new THREE.CircleGeometry(PEDESTAL - 0.6, 80).rotateX(-Math.PI / 2).translate(-OX, 0.01, -OZ)), m.grass)
   k.add(flatUv(blockG(-42, 63, 0, 0.05, -40, 50)), m.paving)
   const trees: [number, number, number][] = [[-26, 14, 6], [-20, 20, 5], [-28, 22, 5], [-24, -14, 5], [-28, -11, 4], [36, 0, 6], [28, -8, 5], [40, 10, 5], [-46, -20, 8], [68, -20, 8], [62, 36, 7], [-40, 56, 7]]
-  trees.forEach(([x, z, s], i) => tree(k, m, x, z, s, 50 + i))
+  trees.forEach(([x, z, s], i) => { tree(k, m, x, z, s, 50 + i); posts.push({ x, z, r: s * 0.08 }) })
 }
 
 /** Arasta-bedesten: shops on both sides of a cross-vaulted street, central dua kubbesi, north and south portals, two fountains. */
-function arasta(k: Bucket, kVault: Bucket, kDrum: Bucket, kDome: Bucket, m: SM, box: BoxFn, slab: SlabFn) {
+function arasta(k: Bucket, kRoof: Bucket, kVault: Bucket, kDrum: Bucket, kDome: Bucket, m: SM, box: BoxFn, slab: SlabFn) {
   for (const s of [-1, 1]) {
     // Shop blocks (24 per side) and the corridor walls rising above the shop roofs
     for (const h of [-1, 1]) {
@@ -86,9 +138,13 @@ function arasta(k: Bucket, kVault: Bucket, kDrum: Bucket, kDome: Bucket, m: SM, 
         // Shop fronts face the corridor: flat wooden lintel and door, a pointed arch above (p. 102)
         const n = s < 0 ? 'x+' : 'x-'
         k.add(panelG(n, s * (CW - 0.01), zc, 1.25, 1.8, 2.4), m.wood)
-        k.add(panelG(n, s * (CW - 0.01), zc, 3.3, 2.2, 1.4, true), m.dark)
-        // Upper windows on the east and west faces above the shop roofs (p. 102)
-        if (i % 2 === 0) k.add(panelG(s < 0 ? 'x-' : 'x+', s * (CW + 0.61), zc + 1.4, 6.5, 0.7, 1.1, true), m.dark)
+        box(k, m.wood, Math.min(s * CW, s * (CW - 0.14)), Math.max(s * CW, s * (CW - 0.14)), 2.45, 2.75, zc - 1.2, zc + 1.2) // thick wooden lintel
+        k.add(panelG(n, s * (CW - 0.01), zc, 3.55, 2.2, 1.6, true), m.dark)
+        // Upper windows on the east and west faces above the shop roofs (p. 102), open to the inside too
+        if (i % 2 === 0) {
+          k.add(panelG(s < 0 ? 'x-' : 'x+', s * (CW + 0.61), zc + 1.4, 6.5, 0.7, 1.1, true), m.dark)
+          k.add(panelG(n, s * (CW - 0.02), zc + 1.4, 6.5, 0.7, 1.1, true), m.glow)
+        }
       }
       // Cross vaults seen from outside: a low cover per bay with a skylight on top (p. 102)
       for (let b = 0; b < 6; b++) {
@@ -96,7 +152,15 @@ function arasta(k: Bucket, kVault: Bucket, kDrum: Bucket, kDome: Bucket, m: SM, 
         if (s < 0) {
           vaultCover(kVault, m, 0, zc, CORR_H, 2 * CW + 1.2, BAY, 1.2)
           box(kVault, m.roof, -0.35, 0.35, CORR_H + 0.9, CORR_H + 1.5, zc - 0.35, zc + 0.35)
+          // Inside: the cross vault itself, a skylight at its crown (p. 102) and a pointed transverse arch at each bay edge
+          kVault.add(groinVault(0, zc, CW, BAY / 2, V_SPRING, V_RISE), m.plaster)
+          kVault.add(place(new THREE.PlaneGeometry(0.6, 0.6).rotateX(Math.PI / 2), 0, V_SPRING + V_RISE - 0.03, zc), m.glow)
         }
+      }
+      for (let b = 0; b <= 6; b++) {
+        if (s > 0) continue
+        const z = z0 + b * BAY
+        kVault.add(archWall('x', z, -CW, CW, 0, CORR_H, 0.4, [{ at: 0, w: 2 * CW - 0.1, h: V_SPRING + V_RISE - 0.15 }]), m.stoneInner)
       }
     }
     // Middle bay: east and west gates in three-colour stone (p. 102); the east one is the han portal (p. 104)
@@ -104,20 +168,20 @@ function arasta(k: Bucket, kVault: Bucket, kDrum: Bucket, kDome: Bucket, m: SM, 
     box(k, m.stone, Math.min(gx, s * SHOP_OUT), Math.max(gx, s * SHOP_OUT), 0, 6, -2.8, -1.8)
     box(k, m.stone, Math.min(gx, s * SHOP_OUT), Math.max(gx, s * SHOP_OUT), 0, 6, 1.8, 2.8)
     box(k, m.stone, Math.min(gx, s * SHOP_OUT), Math.max(gx, s * SHOP_OUT), 4.2, 6, -1.8, 1.8)
-    k.add(archWall('z', s * (CW + 0.3), -2.8, 2.8, 0, CORR_H, 0.6, [{ at: 0, w: 3.2, h: 5.2 }]), m.striped)
-    k.add(archWall('z', s * SHOP_OUT + s * 0.3, -2.8, 2.8, 0, 7.5, 0.6, [{ at: 0, w: 3.2, h: 5.2 }]), m.striped)
+    k.add(aw('z', s * (CW + 0.3), -2.8, 2.8, 0, CORR_H, 0.6, [{ at: 0, w: 3.2, h: 5.2 }]), m.striped)
+    k.add(aw('z', s * SHOP_OUT + s * 0.3, -2.8, 2.8, 0, 7.5, 0.6, [{ at: 0, w: 3.2, h: 5.2 }]), m.striped)
     slab(Math.min(gx, s * SHOP_OUT), Math.max(gx, s * SHOP_OUT), -2.8, 2.8, 6)
   }
-  // Dua kubbesi: octagonal drum and lead dome over the middle bay
-  box(k, m.stone, -CW - 0.6, CW + 0.6, CORR_H - 0.4, CORR_H, -3.1, 3.1)
-  slab(-CW - 0.6, CW + 0.6, -3.1, 3.1, CORR_H)
-  drum(kDrum, m, 0, 0, CORR_H + 0.3, 1.4, 3.1)
+  // Dua kubbesi: octagonal drum and lead dome over the middle bay, open from below (pendentive zone simplified to a ring)
+  kRoof.add(ringPlate(-CW - 0.6, CW + 0.6, -3.1, 3.1, CORR_H - 0.4, CORR_H + 0.3, 2.75), m.stone)
+  drum(kDrum, m, 0, 0, CORR_H + 0.3, 1.4, 3.1, 8, true)
   dome(kDome, m, 0, 0, CORR_H + 1.7, 3.2, 2.9)
+  innerDome(kDome, m, 0, 0, CORR_H + 1.7, 2.85, 2.55)
   // North and south portals with pointed openings; a fountain beside each, at the north-west and south-east corners (pp. 102, 110)
   for (const s of [-1, 1]) {
     const z = s * (HALF + 0.6)
-    k.add(archWall('x', z, -5, 5, 0, 10, 1.2, [{ at: 0, w: 4, h: 7 }]), m.stone)
-    k.add(archWall('x', z + s * 0.75, -3, 3, 0, 8.6, 0.3, [{ at: 0, w: 4, h: 7 }]), m.striped)
+    k.add(aw('x', z, -5, 5, 0, 10, 1.2, [{ at: 0, w: 4, h: 7 }]), m.stone)
+    k.add(aw('x', z + s * 0.75, -3, 3, 0, 8.6, 0.3, [{ at: 0, w: 4, h: 7 }]), m.striped)
     box(k, m.roof, -5.2, 5.2, 10, 10.4, z - 0.8, z + 0.8)
     const fx = s < 0 ? -6.2 : 6.2
     box(k, m.stone, fx - 1.2, fx + 1.2, 0, 3.4, z - 0.6, z + 0.6)
@@ -143,7 +207,7 @@ function han(k: Bucket, m: SM, box: BoxFn, slab: SlabFn) {
     }
     // North / south portico: 9 pointed arches
     const zA = s * (ZC - DEPTH)
-    k.add(archWall('x', zA, X0, X1, 0, POR_H, 0.7, Array.from({ length: 9 }, (_, i) => ({ at: X0 + (i + 0.5) * P, w: 2.7, h: 3.6 }))), m.stone)
+    k.add(aw('x', zA, X0, X1, 0, POR_H, 0.7, Array.from({ length: 9 }, (_, i) => ({ at: X0 + (i + 0.5) * P, w: 2.7, h: 3.6 }))), m.stone)
     slab(X0, X1 + DEPTH, Math.min(zA, zIn), Math.max(zA, zIn), POR_H)
   }
   box(k, m.stone, X1 + DEPTH, X1 + DEPTH + ROOM, 0, ROOM_H, -ZC, ZC)
@@ -154,7 +218,7 @@ function han(k: Bucket, m: SM, box: BoxFn, slab: SlabFn) {
     k.add(panelG('x-', X1 + DEPTH - 0.01, z + 0.8, 1.6, 0.8, 1), m.dark)
   }
   // East portico: 12 arches
-  k.add(archWall('z', X1, -ZC, ZC, 0, POR_H, 0.7, Array.from({ length: 12 }, (_, j) => ({ at: -ZC + (j + 0.5) * P, w: 2.7, h: 3.6 }))), m.stone)
+  k.add(aw('z', X1, -ZC, ZC, 0, POR_H, 0.7, Array.from({ length: 12 }, (_, j) => ({ at: -ZC + (j + 0.5) * P, w: 2.7, h: 3.6 }))), m.stone)
   slab(X1, X1 + DEPTH, -ZC + DEPTH, ZC - DEPTH, POR_H)
   // Courtyard paving
   box(k, m.paving, X0, X1, 0.05, 0.08, -ZC + DEPTH, ZC - DEPTH)
@@ -232,48 +296,89 @@ function mosque(k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bucket, m: SM, b
   const cx = (X0 + X1) / 2
   // Hanikah rooms on the east, west and north sides of the garden courtyard, behind porticoes
   const rows: [number, number, number, number][] = [
-    [X0, X1, Z0, Z0 + ROOM], [X0, X0 + ROOM, Z0 + ROOM, ZM], [X1 - ROOM, X1, Z0 + ROOM, ZM],
+    [X0, cx - 1.2, Z0, Z0 + ROOM], [cx + 1.2, X1, Z0, Z0 + ROOM], [X0, X0 + ROOM, Z0 + ROOM, ZM], [X1 - ROOM, X1, Z0 + ROOM, ZM],
   ]
   for (const [a, b, c, d] of rows) {
     box(k, m.stone, a, b, 0, H, c, d)
     slab(a, b, c, d, H)
   }
-  // North entrance gap on the courtyard axis
-  k.add(panelG('z-', Z0 - 0.01, cx, 1.5, 1.6, 3, true), m.dark)
+  // North entrance passage on the courtyard axis (representative), roofed over
+  box(k, m.stone, cx - 1.2, cx + 1.2, 3.2, H, Z0, Z0 + ROOM)
+  slab(cx - 1.2, cx + 1.2, Z0, Z0 + ROOM, H)
   const iA = X0 + ROOM + POR, iB = X1 - ROOM - POR
   const bays = (a: number, b: number, n: number) => Array.from({ length: n }, (_, i) => ({ at: a + (i + 0.5) * (b - a) / n, w: (b - a) / n * 0.7, h: 3 }))
-  k.add(archWall('x', Z0 + ROOM + POR, iA - POR, iB + POR, 0, 3.8, 0.5, bays(iA - POR, iB + POR, 7)), m.stone)
+  k.add(aw('x', Z0 + ROOM + POR, iA - POR, iB + POR, 0, 3.8, 0.5, bays(iA - POR, iB + POR, 7)), m.stone)
   slab(iA - POR, iB + POR, Z0 + ROOM, Z0 + ROOM + POR, 3.8)
   for (const [x, s] of [[iA, -1], [iB, 1]] as const) {
-    k.add(archWall('z', x, Z0 + ROOM + POR, ZM, 0, 3.8, 0.5, bays(Z0 + ROOM + POR, ZM, 6)), m.stone)
+    k.add(aw('z', x, Z0 + ROOM + POR, ZM, 0, 3.8, 0.5, bays(Z0 + ROOM + POR, ZM, 6)), m.stone)
     slab(Math.min(x, x + s * POR), Math.max(x, x + s * POR), Z0 + ROOM + POR, ZM, 3.8)
   }
   // Şadırvan on the axis between the north entrance and the mosque door
   k.add(place(cylinderG(1.6, 1.7, 0.7, 8), cx, 0.35, 16), m.stone)
   k.add(place(cylinderG(1.4, 1.4, 0.04, 8), cx, 0.7, 16), m.water)
   k.add(place(cylinderG(0.25, 0.3, 1.4, 8), cx, 1.2, 16), m.stone)
+  posts.push({ x: cx, z: 16, r: 1.7 })
 
-  // Mosque: last-congregation portico, square hall, cross arms, polygonal drum with buttresses, lead dome
-  const W = 17, mx0 = cx - W / 2, mx1 = cx + W / 2, P0 = ZM, P1 = ZM + 4, H0 = P1, H1 = P1 + W
-  k.add(archWall('x', P0 + 0.3, mx0, mx1, 0, 5, 0.6, bays(mx0, mx1, 5).map((o) => ({ ...o, h: 4 }))), m.stone)
+  // Mosque: last-congregation portico, then the hall: cross plan with four equal arms around a central dome (p. 114)
+  const mx0 = MX0, mx1 = MX1, P0 = ZM, P1 = ZM + 4, H0 = HZ0, H1 = HZ1, mz = MZ, A = ARM, T = MT
+  k.add(aw('x', P0 + 0.3, mx0, mx1, 0, 5, 0.6, bays(mx0, mx1, 5).map((o) => ({ ...o, h: 4 }))), m.stone)
   slab(mx0, mx1, P0, P1, 5)
-  k.add(panelG('z-', H0 - 0.01, cx, 1.6, 1.8, 3.2, true), m.wood)
-  box(k, m.stone, mx0, mx1, 0, 8, H0, H1)
-  slab(mx0, mx1, H0, H1, 8)
-  const mz = (H0 + H1) / 2
-  box(kRoof, m.stone, cx - 4, cx + 4, 8.35, 10.5, H0 + 0.3, H1 - 0.3)
-  box(kRoof, m.stone, mx0 + 0.3, mx1 - 0.3, 8.35, 10.5, mz - 4, mz + 4)
-  box(kRoof, m.roof, cx - 4.2, cx + 4.2, 10.5, 10.8, H0 + 0.1, H1 - 0.1)
-  box(kRoof, m.roof, mx0 + 0.1, mx1 - 0.1, 10.5, 10.8, mz - 4.2, mz + 4.2)
-  // Windows in two rows on the hall walls (p. 115)
-  for (const y of [2.2, 5.6]) for (const t of [-5, 0, 5]) {
+  // Outer walls; the north one has the door from the portico
+  k.add(aw('x', H0 + T / 2, mx0, mx1, 0, 8, T, [{ at: cx, w: 1.8, h: 3.4 }]), m.stone)
+  box(k, m.stone, mx0, mx1, 0, 8, H1 - T, H1)
+  box(k, m.stone, mx0, mx0 + T, 0, 8, H0, H1)
+  box(k, m.stone, mx1 - T, mx1, 0, 8, H0, H1)
+  // Corner masses between the arms; the two northern ones stand for the itikâf rooms (p. 114), shown by their doors
+  for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]] as const) {
+    const xa = sx < 0 ? mx0 + T : cx + A, xb = sx < 0 ? cx - A : mx1 - T
+    const za = sz < 0 ? H0 + T : mz + A, zb = sz < 0 ? mz - A : H1 - T
+    box(k, m.stone, xa, xb, 0, 8, za, zb)
+    if (sz < 0) k.add(panelG(sx < 0 ? 'x+' : 'x-', cx + sx * (A - 0.01), (za + zb) / 2, 1.1, 0.9, 2.1), m.wood)
+  }
+  // Flat roof over walls, corners and iwans, open over the centre square
+  for (const [a, b, c, d] of [[mx0, mx1, H0, mz - A], [mx0, mx1, mz + A, H1], [mx0, cx - A, mz - A, mz + A], [cx + A, mx1, mz - A, mz + A]]) {
+    box(k, m.roof, a, b, 8, 8.35, c, d)
+  }
+  // Raised cross arms around the drum (outside), hollow at the centre
+  for (const [a, b, c, d] of [[cx - A, cx + A, H0 + 0.3, mz - A], [cx - A, cx + A, mz + A, H1 - 0.3], [mx0 + 0.3, cx - A, mz - A, mz + A], [cx + A, mx1 - 0.3, mz - A, mz + A]]) {
+    box(kRoof, m.stone, a, b, 8.35, 10.5, c, d)
+    box(kRoof, m.roof, a, b, 10.5, 10.8, c, d)
+  }
+  // Iwans: cross vaults inside, each opening to the domed centre with a pointed arch (p. 114)
+  const iw = (MW - 2 * T) / 2 - A
+  for (const [vx, vz, hx, hz] of [[cx, H0 + T + iw / 2, A, iw / 2], [cx, H1 - T - iw / 2, A, iw / 2], [mx0 + T + iw / 2, mz, iw / 2, A], [mx1 - T - iw / 2, mz, iw / 2, A]]) {
+    kRoof.add(groinVault(vx, vz, hx, hz, 6, 1.8), m.plaster)
+  }
+  for (const sz of [-1, 1]) k.add(archWall('x', mz + sz * A, cx - A, cx + A, 0, 8.35, 0.5, [{ at: cx, w: 7.2, h: 7.6 }]), m.stoneInner)
+  for (const sx of [-1, 1]) k.add(archWall('z', cx + sx * A, mz - A, mz + A, 0, 8.35, 0.5, [{ at: mz, w: 7.2, h: 7.6 }]), m.stoneInner)
+  // Pendentive zone (simplified to a ring) under the drum; open from below
+  kRoof.add(ringPlate(cx - A, cx + A, mz - A, mz + A, 8.35, 10.8, 3.9), m.stoneInner)
+  // Floor carpet (representative, after the photos)
+  k.add(place(new THREE.PlaneGeometry(MW - 2 * T, MW - 2 * T).rotateX(-Math.PI / 2), cx, 0.06, mz), m.carpet)
+  // Windows in two rows (p. 115) on the end walls of the west, east and qibla iwans; daylight seen from inside
+  for (const y of [2.2, 5.2]) for (const t of [-2.6, 2.6]) {
     k.add(panelG('x-', mx0 - 0.01, mz + t, y, 1, 1.6, y > 3), m.dark)
     k.add(panelG('x+', mx1 + 0.01, mz + t, y, 1, 1.6, y > 3), m.dark)
-    if (t !== 0) k.add(panelG('z+', H1 + 0.01, cx + t, y, 1, 1.6, y > 3), m.dark)
+    k.add(panelG('z+', H1 + 0.01, cx + t, y, 1, 1.6, y > 3), m.dark)
+    k.add(panelG('x+', mx0 + T + 0.01, mz + t, y, 1, 1.6, y > 3), m.glow)
+    k.add(panelG('x-', mx1 - T - 0.01, mz + t, y, 1, 1.6, y > 3), m.glow)
+    k.add(panelG('z-', H1 - T - 0.01, cx + t, y, 1, 1.6, y > 3), m.glow)
   }
-  // Mihrab block projecting on the qibla wall
+  // Mihrab: rectangular block outside; inside a pointed niche framed in black, off-white and pink stone (pp. 114–115)
   box(k, m.stone, cx - 1.6, cx + 1.6, 0, 6.5, H1, H1 + 1)
-  drum(kDrum, m, cx, mz, 10.8, 2.6, 4.6)
+  box(k, m.mihrab, cx - 1.3, cx + 1.3, 0.06, 4.8, H1 - T - 0.25, H1 - T)
+  k.add(panelG('z-', H1 - T - 0.27, cx, 2.1, 1.3, 3.2, true), m.dark)
+  // Minbar to the right of the mihrab: stair, platform, posts and a pointed roof (representative; wooden as in the photos)
+  const bx0 = cx - 2.1, bx1 = cx - 1.45
+  for (let i = 0; i < 9; i++) {
+    const z = H1 - T - 4.2 + i * 0.4
+    box(k, m.wood, bx0, bx1, 0.06, 0.32 + i * 0.3, z, z + 0.4)
+  }
+  box(k, m.wood, bx0, bx1, 0.06, 2.7, H1 - T - 0.6, H1 - T)
+  for (const x of [bx0 + 0.06, bx1 - 0.06]) box(k, m.wood, x - 0.05, x + 0.05, 2.7, 4.4, H1 - T - 0.6, H1 - T - 0.5)
+  k.add(place(new THREE.ConeGeometry(0.55, 1.3, 4).rotateY(Math.PI / 4), (bx0 + bx1) / 2, 5.05, H1 - T - 0.3), m.wood)
+  walls.push({ x0: bx0, x1: bx1, z0: H1 - T - 4.2, z1: H1 - T })
+  drum(kDrum, m, cx, mz, 10.8, 2.6, 4.6, 8, true)
   // Flying buttresses at the drum corners
   for (let i = 0; i < 4; i++) {
     const a = Math.PI / 4 + (i * Math.PI) / 2
@@ -282,6 +387,7 @@ function mosque(k: Bucket, kRoof: Bucket, kDrum: Bucket, kDome: Bucket, m: SM, b
     kDrum.add(place(g, cx + Math.cos(a) * 5.2, 10.8, mz + Math.sin(a) * 5.2), m.stone)
   }
   dome(kDome, m, cx, mz, 13.4, 4.9, 4.3, 32)
+  innerDome(kDome, m, cx, mz, 13.4, 4.35, 3.9, 32)
   // Minaret at the north-west corner: square base, round shaft, open şerefe, lead cone
   const nx = mx0 - 1.5, nz = P0 + 1.5
   box(k, m.stone, nx - 1.4, nx + 1.4, 0, 9, nz - 1.4, nz + 1.4)

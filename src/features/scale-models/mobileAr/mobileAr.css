@@ -36,3 +36,15 @@
 @media (prefers-reduced-transparency: reduce) {
   .mar-card, .mar-bar { background: var(--glass-solid, #18221f); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
+
+/* Turn buttons above the action bar: two round targets at the screen edges, thumbs reach them. */
+.mar-bottom { display: flex; flex-direction: column; gap: 10px; pointer-events: none; }
+.mar-bottom > * { pointer-events: auto; }
+.mar-turn { display: flex; justify-content: space-between; pointer-events: none; }
+.mar-turn > * { pointer-events: auto; }
+.mar-round { width: 56px; height: 56px; min-width: 56px; padding: 0; border-radius: 50%; justify-content: center; }
+.mar-turn .mar-btn.mar-round {
+  flex: 0 0 56px; width: 56px; height: 56px; padding: 0; border-radius: 50%;
+  background: var(--glass, rgb(16 24 21 / 0.66));
+  -webkit-backdrop-filter: var(--glass-blur, blur(14px) saturate(1.2)); backdrop-filter: var(--glass-blur, blur(14px) saturate(1.2));
+}

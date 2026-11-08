@@ -62,6 +62,8 @@ export interface MobileArControl {
   scaleBy(factor: number): void;
   /** Adds to the same angle the Quest right stick turns. Only while placed. */
   rotateBy(rad: number): void;
+  /** Slides the model on the real surface by a screen drag (pixels): right is the viewer's right, up is away. Only while placed. */
+  moveBy(dxPx: number, dyPx: number): void;
 }
 
 export interface XrSession {
@@ -820,6 +822,15 @@ export function setupXrSession(s: XrOption): XrSession {
       rotateBy: (rad) => {
         if (!mobile || !placed || !Number.isFinite(rad)) return
         angle += rad
+        applyTable()
+      },
+      moveBy: (dxPx, dyPx) => {
+        if (!mobile || !placed || !Number.isFinite(dxPx) || !Number.isFinite(dyPx)) return
+        // About 1.5 mm per screen pixel: a thumb-wide drag moves the model a hand's width on the table.
+        const k = 0.0015, yaw = headYaw()
+        const right = { x: Math.cos(yaw), z: -Math.sin(yaw) }, forward = { x: -Math.sin(yaw), z: -Math.cos(yaw) }
+        arSpot.x += (right.x * dxPx - forward.x * dyPx) * k
+        arSpot.z += (right.z * dxPx - forward.z * dyPx) * k
         applyTable()
       },
     },

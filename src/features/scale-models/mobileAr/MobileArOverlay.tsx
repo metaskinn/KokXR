@@ -11,6 +11,8 @@ export interface MobileArOverlayProps {
   onReplace(): void
   /** AR'dan çık */
   onExit(): void
+  /** Turn buttons: -1 left, +1 right (one step per tap). */
+  onTurn?(dir: -1 | 1): void
 }
 
 /**
@@ -18,7 +20,7 @@ export interface MobileArOverlayProps {
  * The wrapper ignores pointer events, so only the buttons and cards take touches. Each interactive element
  * handles `beforexrselect` (preventDefault + stopPropagation), so a tap on it does not also place or select in the scene.
  */
-export default function MobileArOverlay({ phase, fragmented, onShatter, onReplace, onExit }: MobileArOverlayProps) {
+export default function MobileArOverlay({ phase, fragmented, onShatter, onReplace, onExit, onTurn }: MobileArOverlayProps) {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -47,7 +49,12 @@ export default function MobileArOverlay({ phase, fragmented, onShatter, onReplac
 
   return (
     <div ref={ref} className="mar" data-phase="placed">
-      <p className="mar-card mar-gesture">İki parmakla büyüt, çevirerek döndür.</p>
+      <p className="mar-card mar-gesture">Tek parmakla sağa sola sürükle: döndür. İki parmakla: büyüt ya da kaydır.</p>
+      <div className="mar-bottom">
+      {onTurn && <div className="mar-turn">
+        <button type="button" className="mar-btn mar-round" onClick={() => onTurn(-1)} aria-label="Sola döndür" data-xr-ui><UiIcon name="back" /></button>
+        <button type="button" className="mar-btn mar-round" onClick={() => onTurn(1)} aria-label="Sağa döndür" data-xr-ui><UiIcon name="next" /></button>
+      </div>}
       <div className="mar-bar">
         <button type="button" className="mar-btn mar-primary" onClick={onShatter} aria-pressed={fragmented} data-xr-ui>
           <UiIcon name="explode" /> {fragmented ? 'Birleştir' : 'Parçala'}
@@ -58,6 +65,7 @@ export default function MobileArOverlay({ phase, fragmented, onShatter, onReplac
         <button type="button" className="mar-btn" onClick={onExit} data-xr-ui>
           <UiIcon name="exit" /> AR'dan çık
         </button>
+      </div>
       </div>
     </div>
   )

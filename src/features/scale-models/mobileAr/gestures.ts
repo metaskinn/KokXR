@@ -1,4 +1,4 @@
-// Two-finger pinch and twist for phone AR. Pure maths plus a small pointer-event tracker; no three.js.
+// Phone AR touch: one-finger drag, two-finger pinch, twist and pan. Pure maths plus a small pointer-event tracker; no three.js.
 
 const MIN_FACTOR = 0.8
 const MAX_FACTOR = 1.25
@@ -20,10 +20,18 @@ export function twistDelta(prev: [number, number, number, number], next: [number
   return d
 }
 
-/** Two-finger pinch and twist on `el`. Single touches are ignored; a third pointer is ignored. Returns detach(). */
+/** Centre of a two-finger segment. */
+export function midpoint(seg: [number, number, number, number]): [number, number] {
+  return [(seg[0] + seg[2]) / 2, (seg[1] + seg[3]) / 2]
+}
+
+/**
+ * Touch gestures on `el`: two fingers pinch (onScale), twist (onRotate) and move together (onPan, screen pixels);
+ * one finger dragging gives onDrag (screen pixels). A third pointer is ignored. Returns detach().
+ */
 export function attachArGestures(
   el: HTMLElement,
-  cb: { onScale(factor: number): void; onRotate(deltaRad: number): void },
+  cb: { onScale(factor: number): void; onRotate(deltaRad: number): void; onPan?(dx: number, dy: number): void; onDrag?(dx: number, dy: number): void },
 ): () => void {
   const pts = new Map<number, { x: number; y: number }>()
   const active: number[] = [] // ids of the two tracked pointers
@@ -37,6 +45,8 @@ export function attachArGestures(
   }
 
   const onDown = (e: PointerEvent) => {
+    // A touch that starts on a button belongs to the button: no drag, no capture (capture would swallow its click).
+    if (e.target instanceof Element && e.target.closest('button, [data-xr-ui]')) return
     if (active.length >= 2 && !active.includes(e.pointerId)) return
     pts.set(e.pointerId, { x: e.clientX, y: e.clientY })
     if (!active.includes(e.pointerId)) active.push(e.pointerId)
@@ -47,9 +57,18 @@ export function attachArGestures(
   }
   const onMove = (e: PointerEvent) => {
     if (!active.includes(e.pointerId)) return
+    const last = pts.get(e.pointerId)
     pts.set(e.pointerId, { x: e.clientX, y: e.clientY })
+    if (active.length === 1) {
+      if (last && cb.onDrag) { cb.onDrag(e.clientX - last.x, e.clientY - last.y); e.preventDefault() }
+      return
+    }
     const next = segment()
     if (!next || !prev) return
+    if (cb.onPan) {
+      const [ax, ay] = midpoint(prev), [bx, by] = midpoint(next)
+      if (ax !== bx || ay !== by) cb.onPan(bx - ax, by - ay)
+    }
     const f = pinchFactor(Math.hypot(prev[2] - prev[0], prev[3] - prev[1]), Math.hypot(next[2] - next[0], next[3] - next[1]))
     const d = twistDelta(prev, next)
     if (f !== 1) cb.onScale(f)

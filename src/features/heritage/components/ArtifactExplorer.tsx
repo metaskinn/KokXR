@@ -136,6 +136,9 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
       onScale: (factor) => scene.current?.mobileAr.scaleBy(factor),
       // Screen y points down, so a clockwise twist is positive; seen from above that is a negative turn.
       onRotate: (delta) => scene.current?.mobileAr.rotateBy(-delta),
+      // Two fingers moving together slide the model on the table; one finger dragging sideways turns it.
+      onPan: (dx, dy) => scene.current?.mobileAr.moveBy(dx, dy),
+      onDrag: (dx) => scene.current?.mobileAr.rotateBy(dx * 0.01),
     })
   }, [placed])
 
@@ -279,7 +282,8 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
         {mobileState && <MobileArOverlay phase={mobileState.phase} fragmented={mobileState.fragmented}
           onShatter={() => scene.current?.mobileAr.shatter()}
           onReplace={() => scene.current?.mobileAr.replace()}
-          onExit={() => scene.current?.mobileAr.exit()} />}
+          onExit={() => scene.current?.mobileAr.exit()}
+          onTurn={(dir: -1 | 1) => scene.current?.mobileAr.rotateBy(dir * Math.PI / 12)} />}
       </div>,
       document.body,
     )}

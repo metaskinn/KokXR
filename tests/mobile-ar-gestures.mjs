@@ -21,3 +21,9 @@ const d2 = twistDelta(seg(-3.0), seg(3.0))
 assert.ok(d2 < 0 && Math.abs(d2 + (2 * Math.PI - 6.0)) < 1e-9, 'wraps backward across -PI')
 assert.ok(Math.abs(twistDelta(seg(0), seg(Math.PI))) <= Math.PI + 1e-12)
 console.log('Mobile AR gestures: pinch clamp, zero cases and twist wrapping passed.')
+
+{
+  const { midpoint } = await import('../src/features/scale-models/mobileAr/gestures.ts')
+  assert.deepEqual(midpoint([0, 0, 10, 20]), [5, 10])
+  console.log('Mobile AR gestures: two-finger midpoint passed.')
+}

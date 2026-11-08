@@ -64,10 +64,10 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
   const [infoOverflows, setInfoOverflows] = useState(false)
   const info = model.interiorInfos?.find((b) => b.id === infoId)
   const [xrSupport, setXrSupport] = useState(false)
-  // AR: on Quest (passthrough) for every scale model; on an Android phone only for Ulu Camii, the one tested for phone AR.
+  // AR for every scale model: on Quest (passthrough) and on Android Chrome phones (dom-overlay buttons, touch gestures).
   const [arSupport, setArSupport] = useState(false)
   const [phone] = useState(isMobileArBrowser)
-  const arModel = !phone || model.model === 'ulu-mosque'
+  const arModel = true
   // Phone AR: the WebXR dom-overlay root (shown only during the session) and the overlay state from xrSession.
   const overlayRoot = useRef<HTMLDivElement>(null)
   const [overlayOn, setOverlayOn] = useState(false)

@@ -50,6 +50,28 @@ export function tableRig(angle: number, scale: number): RigPose {
   return { x: D * Math.sin(angle), y: -TABLE_Y * scale, z: -D * Math.cos(angle), rotY: Math.PI - angle }
 }
 
+/** AR: the model's widest side on a real table, in metres. */
+export const AR_TABLE_SIZE = 0.45
+
+/** AR rig scale (model units per metre) that makes a model `extent` units across about AR_TABLE_SIZE wide. */
+export function arScale(extent: number): number {
+  return Math.max(1, extent) / AR_TABLE_SIZE
+}
+
+/**
+ * AR placement: `anchor` (model units, the centre of the model's underside) stands on the real surface at `spot` (device metres).
+ * `rotY` turns the room around the model; the anchor stays on the spot for any rotation or scale.
+ */
+export function arTableRig(anchor: { x: number; y: number; z: number }, spot: { x: number; y: number; z: number }, rotY: number, scale: number): RigPose {
+  const c = Math.cos(rotY), s = Math.sin(rotY)
+  return {
+    x: anchor.x - scale * (spot.x * c + spot.z * s),
+    y: anchor.y - scale * spot.y,
+    z: anchor.z - scale * (-spot.x * s + spot.z * c),
+    rotY,
+  }
+}
+
 /** Interior stop (1× scale): moves the head to the x/z of `position` and turns the view toward `look`. `headYaw` is the head's horizontal heading within the rig. */
 export function stopRig(position: number[], look: number[], headLocal: Plane, floorY: number, headYaw = 0): RigPose {
   const rotY = Math.atan2(-(look[0] - position[0]), -(look[2] - position[2])) - headYaw

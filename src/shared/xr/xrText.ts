@@ -6,9 +6,15 @@ export const ILLUSTRATIVE_LABEL = 'Temsilî maket · Gerçek bir 3B tarama deği
 /** Height ratio of the title band at the top of the menu panel. */
 export const MENU_TITLE_RATIO = 0.2
 
-export function menuItems(d: { inside: boolean; fragmented: boolean; inAssembly?: boolean; stops: { id: string; name: string }[] }): MenuItem[] {
-  const exit = { id: 'exit', name: "VR'dan çık" }
+export function menuItems(d: { inside: boolean; fragmented: boolean; inAssembly?: boolean; ar?: boolean; stops: { id: string; name: string }[] }): MenuItem[] {
+  const exit = { id: 'exit', name: d.ar ? "AR'dan çık" : "VR'dan çık" }
   if (d.inAssembly) return [{ id: 'assembleFromStart', name: 'Yeniden başlat' }, { id: 'assembleRelease', name: 'Birleştirmeyi bırak' }, exit]
+  // AR shows the model on a real table only: walking inside 1:1 makes no sense in a room, so there are no interior items.
+  if (d.ar) {
+    const replace = { id: 'replace', name: 'Yeniden yerleştir' }
+    if (d.fragmented) return [{ id: 'shatter', name: 'Birleştir' }, replace, exit]
+    return [{ id: 'shatter', name: 'Parçala' }, { id: 'assemble', name: 'Maketi birleştir' }, replace, exit]
+  }
   if (d.inside) {
     return [{ id: 'outside', name: 'Dışarı çık' }, ...d.stops.map(({ id, name }) => ({ id: `stop:${id}`, name })), exit]
   }

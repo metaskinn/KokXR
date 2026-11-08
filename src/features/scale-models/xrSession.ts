@@ -1,13 +1,17 @@
-// VR session: rig, controllers, view transitions. Touches the scene itself only through XrOption.
+// VR and AR session: rig, controllers, view transitions. Touches the scene itself only through XrOption.
+// AR (passthrough on Quest, camera on Android) has only the table mode: the model stands on a real table or floor.
 import * as THREE from 'three'
-import { TITLE_FAR, TITLE_NEAR, TABLE_SCALE_INITIAL, TABLE_SCALE_MAX, TABLE_SCALE_MIN, rotateAroundHead, titlePlace, stopRig, controllerInput, tableRig, deadZone, nonOverlapAngle, walkStep, type RigPose } from '../../shared/xr/xrMotion'
+import { TITLE_FAR, TITLE_NEAR, TABLE_SCALE_INITIAL, arScale, arTableRig, TABLE_SCALE_MAX, TABLE_SCALE_MIN, rotateAroundHead, titlePlace, stopRig, controllerInput, tableRig, deadZone, nonOverlapAngle, walkStep, type RigPose } from '../../shared/xr/xrMotion'
 import { FLOOR_Y, type InteriorStop, type InteriorWalk } from './uluMosqueInterior'
 import { smoothTurn } from '../../shared/xr/xrSnapTurn'
 import { createNarration } from './xrNarration'
 import { setupModelAssembly } from './modelAssembleXr'
 import type { ModelLayer } from './uluMosqueModel'
 import { menuItems } from '../../shared/xr/xrText'
-import { CARD_G, MENU_G, titlePanel, infoPanel, labelPanel, xrPanel } from '../../shared/xr/xrPanel'
+import { CARD_G, MENU_G, titlePanel, infoPanel, labelPanel, hintPanel, xrPanel } from '../../shared/xr/xrPanel'
+// Types only: the AR helpers load with a dynamic import, so Node tests that import this file do not pull in three/examples.
+import type { ArPlacement } from '../../shared/xr/arPlacement'
+import type { createArLighting as ArLighting } from '../../shared/xr/arLight'
 import { PLAYER_RADIUS, viewBlocked, stopFloor, floorStep } from './walkingCollision'
 
 export interface XrOption {
@@ -29,11 +33,17 @@ export interface XrOption {
   selectInfo: (id: string) => void;
   /** The scene restores camera, near/far, size and React state. */
   sessionEnded: () => void;
+  /** The whole model: AR measures it to size it for a table and to stand its underside on the surface. */
+  root: THREE.Object3D;
+  /** Virtual ground under the model (pedestal); hidden in AR so the real table shows. */
+  ground?: THREE.Object3D;
 }
+
+export type XrMode = 'vr' | 'ar'
 
 export interface XrSession {
   /** Rejects if refused, leaving no trace in the scene. */
-  start(): Promise<void>;
+  start(mode?: XrMode): Promise<void>;
   frame(dt: number): void;
   /** Closes the open session; otherwise does nothing. */
   finish(): void;
@@ -54,6 +64,9 @@ const PANEL_GAP = (MENU_G / 2 + CARD_G / 2 + 0.06) / PANEL_DISTANCE
 const STICK_SPEED = 1.2, MAX_DT = 0.1
 const TRANSITION_DECISION = 0.12, TRANSITION_URGENT = 0.2
 const TITLE_COLOR = '#c9d4cf', TITLE_LIGHT = '#ffffff', TITLE_GROWTH = 1.12
+// AR: stick scaling stays around the table size; with no surface found the model waits this far ahead, below the eyes (metres).
+const AR_SCALE_MIN = 0.4, AR_SCALE_MAX = 2.5, AR_AHEAD = 1, AR_BELOW_EYES = 0.6
+const AR_HINT = 'Masaya ya da yere bak. Halka çıkınca tetiğe bas.'
 
 export function setupXrSession(s: XrOption): XrSession {
   const { renderer, scene, camera, walking, stops } = s
@@ -118,6 +131,8 @@ export function setupXrSession(s: XrOption): XrSession {
   let transition: { t: number; is: () => void; wasDone: boolean } | null = null
   const doTransition = (is: () => void) => {
     if (transition) return
+    // AR: a black fade would hide the real room; the change happens at once.
+    if (ar) return is()
     transition = { t: 0, is, wasDone: false }
     darken.visible = true
   }
@@ -138,12 +153,17 @@ export function setupXrSession(s: XrOption): XrSession {
 
   // The label is attached to the head: it stays at the bottom of the view even if the menu closes, the card covers it or the head turns.
   const label = labelPanel()
-  label.obj.material.transparent = true
-  label.obj.material.depthTest = false
-  label.obj.material.depthWrite = false
-  label.obj.renderOrder = 1003
-  label.obj.frustumCulled = false
-  label.obj.position.set(0, -0.38, -1.2)
+  const arLabel = labelPanel('Menü: Y / B · Sağ çubuk: döndür, büyüt')
+  // AR placement hint: slightly above the centre of view, so the ring on the table below stays visible.
+  const hint = hintPanel(AR_HINT)
+  for (const [panel, y, z] of [[label, -0.38, -1.2], [arLabel, -0.38, -1.2], [hint, 0.14, -1.1]] as const) {
+    panel.obj.material.transparent = true
+    panel.obj.material.depthTest = false
+    panel.obj.material.depthWrite = false
+    panel.obj.renderOrder = 1003
+    panel.obj.frustumCulled = false
+    panel.obj.position.set(0, y, z)
+  }
 
   // Titles are in the scene, not the rig, and take part in the depth test: those behind a wall are hidden.
   const titles = s.titles.map(({ id, title, position }) => ({ id, position, ...titlePanel(title) }))
@@ -169,13 +189,25 @@ export function setupXrSession(s: XrOption): XrSession {
   let poseReady = false
   let pendingCard: { title: string; text: string; source: string } | null = null
 
+  // AR state. The anchor is the centre of the model's underside (model units); the spot is the real surface point (device metres).
+  let ar = false
+  let placed = false, placeNow = false
+  let placing: ArPlacement | null = null
+  let arLight: ReturnType<typeof ArLighting> | null = null
+  let shadow: { mesh: THREE.Mesh; dispose(): void } | null = null
+  let arBase = TABLE_SCALE_INITIAL, arYaw = 0, groundShown = true
+  const arAnchor = new THREE.Vector3(), arSpot = new THREE.Vector3()
+  const prevClear = new THREE.Color()
+  let prevAlpha = 1
+
   const applyRig = (r: RigPose) => {
     rig.position.set(r.x, r.y, r.z)
     rig.rotation.set(0, r.rotY, 0)
   }
   const applyTable = () => {
     rig.scale.setScalar(scale)
-    applyRig(tableRig(angle, scale))
+    // AR: the model stays on the real spot; the stick turns it around its own centre and scales it in place.
+    applyRig(ar ? arTableRig(arAnchor, arSpot, Math.PI - angle - arYaw, scale) : tableRig(angle, scale))
   }
 
   // The XR camera is updated at the start of each frame; its position is the (local) head pose inside the rig.
@@ -198,7 +230,7 @@ export function setupXrSession(s: XrOption): XrSession {
   // The card sits below the gaze: it doesn't cover the scene, the eye drops slightly to read.
   const placeCard = () => { placePanelAt(card.obj, menu.obj, -1); card.obj.position.y -= CARD_BOTTOM }
 
-  const drawMenu = () => menu.draw(menuItems({ inside, fragmented: s.isFragmented(), inAssembly: assembly.inGame(), stops }))
+  const drawMenu = () => menu.draw(menuItems({ inside, fragmented: s.isFragmented(), inAssembly: assembly.inGame(), ar, stops }))
   const showMenu = (open: boolean) => {
     menuOpen = open
     menu.obj.visible = open
@@ -240,8 +272,20 @@ export function setupXrSession(s: XrOption): XrSession {
 
   const finish = () => { session?.end().catch(() => {}) } // end() rejects on an already closed session
 
+  /** AR: back to placement; the model follows the ring again until the next trigger press. */
+  const replace = () => {
+    placed = false
+    placeNow = false
+    s.closeInfo()
+    showMenu(false)
+    hint.obj.visible = true
+  }
+
   const action = (id: string) => {
     if (id === 'exit') return finish()
+    if (id === 'replace') return replace()
+    // There is no 1:1 interior in AR: a real room cannot hold the building.
+    if (ar && (id === 'inside' || id.startsWith('stop:') || id === 'outside')) return
     // Inside, the menu closes when a stop is selected: the view stays clear and the card opens straight ahead. Reopens with Y/B.
     if (id === 'inside' || id.startsWith('stop:')) {
       const target = id === 'inside' ? stops[0]?.id : id.slice('stop:'.length)
@@ -264,7 +308,7 @@ export function setupXrSession(s: XrOption): XrSession {
       doTransition(() => {
         s.setShatter(false)
         angle = 0
-        scale = TABLE_SCALE_INITIAL
+        scale = ar ? arBase : TABLE_SCALE_INITIAL
         applyTable()
         assembly.begin()
       })
@@ -303,6 +347,8 @@ export function setupXrSession(s: XrOption): XrSession {
 
   const wasSelected = (controller: THREE.XRTargetRaySpace) => {
     if (!session || transition) return
+    // AR placement: any trigger press (or screen tap on a phone) puts the model down where it is previewed.
+    if (ar && !placed) { placeNow = true; return }
     const hit = findHit(controller)
     if (!hit) return
     if (hit.object === card.obj) return s.closeInfo()
@@ -325,24 +371,106 @@ export function setupXrSession(s: XrOption): XrSession {
   const resetRays = () => controllers.forEach(({ ray }) => { ray.scale.z = 1 })
   const assembly = setupModelAssembly({ scene, camera, layers: s.layers, controllers, refreshShadow: s.refreshShadow, completed: () => showMenu(true) })
 
-  const enter = (fresh: XRSession) => {
+  /** AR: sizes the model for a table and finds its underside. Measured on every start: layers or buildings may differ. */
+  const measureForAr = () => {
+    const box = new THREE.Box3().setFromObject(s.root)
+    if (box.isEmpty()) return null
+    const size = box.getSize(new THREE.Vector3()), centre = box.getCenter(new THREE.Vector3())
+    const extent = Math.max(size.x, size.z)
+    arBase = arScale(extent)
+    arAnchor.set(centre.x, box.min.y, centre.z)
+    return extent
+  }
+
+  const enter = (fresh: XRSession, mode: XrMode, lighting: ReturnType<typeof ArLighting> | null) => {
     session = fresh
+    ar = mode === 'ar'
     rig.add(camera)
-    camera.add(label.obj)
+    camera.add(ar ? arLabel.obj : label.obj)
     scene.add(rig)
     scene.add(titleGroup)
     prevBack = scene.background
-    scene.background = new THREE.Color(BACKGROUND)
     // Near/far work in rig-local meters (the view matrix is divided by the rig scale): at 100×, near is 5 scene units.
-    camera.near = 0.05
+    camera.near = ar ? 0.02 : 0.05
     camera.far = 900
-    disk.visible = true
+    if (ar) {
+      // The real room must show through: no background, transparent clear, no virtual floor or pedestal.
+      scene.background = null
+      renderer.getClearColor(prevClear)
+      prevAlpha = renderer.getClearAlpha()
+      renderer.setClearColor(0x000000, 0)
+      disk.visible = false
+      groundShown = s.ground?.visible ?? true
+      if (s.ground) s.ground.visible = false
+      const extent = measureForAr() ?? 1
+      scale = arBase
+      placed = false
+      placeNow = false
+      arSpot.set(0, 0, -AR_AHEAD)
+      arYaw = 0
+      camera.add(hint.obj)
+      hint.obj.visible = true
+      arLight = lighting
+      void Promise.all([import('../../shared/xr/arPlacement'), import('../../shared/xr/arLight')]).then(async ([{ createArPlacement }, { createContactShadow }]) => {
+        if (session !== fresh || !ar) return
+        shadow ??= createContactShadow((extent / 2) * 1.08)
+        // Just above the underside so it does not flicker against the model's lowest face.
+        shadow.mesh.position.set(arAnchor.x, arAnchor.y + 0.05, arAnchor.z)
+        scene.add(shadow.mesh)
+        const p = await createArPlacement(fresh)
+        if (session !== fresh || !ar) { p?.dispose(); return }
+        placing = p
+        if (p) rig.add(p.reticle)
+      }).catch(() => { /* AR still works without the ring: the model waits in front of the user until the trigger */ })
+    } else {
+      scene.background = new THREE.Color(BACKGROUND)
+      disk.visible = true
+    }
     applyTable()
+  }
+
+  /** AR placement frame: the model previews on the ring (or ahead of the user with no surface); the trigger press fixes it. */
+  const arPreview = () => {
+    const frame = xr.getFrame(), space = xr.getReferenceSpace()
+    const hit = placing && frame && space ? placing.update(frame, space) : null
+    const head = headLocal().position
+    if (hit && placing) {
+      arSpot.copy(placing.reticle.position)
+      const dx = arSpot.x - head.x, dz = arSpot.z - head.z
+      // Faces the user: the side seen first is the same as at the VR table.
+      arYaw = Math.hypot(dx, dz) > 0.05 ? Math.atan2(-dx, -dz) : headYaw()
+    } else {
+      arYaw = headYaw()
+      arSpot.set(head.x - Math.sin(arYaw) * AR_AHEAD, Math.max(0, head.y - AR_BELOW_EYES), head.z - Math.cos(arYaw) * AR_AHEAD)
+    }
+    applyTable()
+    if (!placeNow) return
+    placeNow = false
+    placed = true
+    if (placing) placing.reticle.visible = false
+    hint.obj.visible = false
+    showMenu(true)
   }
 
   const undo = () => {
     assembly.finish()
     label.obj.removeFromParent()
+    arLabel.obj.removeFromParent()
+    hint.obj.removeFromParent()
+    if (ar) {
+      placing?.reticle.removeFromParent()
+      placing?.dispose()
+      placing = null
+      arLight?.stop()
+      arLight = null
+      shadow?.mesh.removeFromParent()
+      renderer.setClearColor(prevClear, prevAlpha)
+      if (s.ground) s.ground.visible = groundShown
+      disk.visible = true
+      ar = false
+      placed = false
+      placeNow = false
+    }
     camera.removeFromParent()
     camera.scale.set(1, 1, 1) // Rounding error left over when detaching from the rig
     rig.removeFromParent()
@@ -453,25 +581,39 @@ export function setupXrSession(s: XrOption): XrSession {
     const turn = deadZone(input.rightX), growth = deadZone(input.rightY)
     if (!turn && !growth) return
     angle += turn * dt * STICK_SPEED
-    scale = THREE.MathUtils.clamp(scale * Math.exp(growth * dt * STICK_SPEED), TABLE_SCALE_MIN, TABLE_SCALE_MAX)
+    scale = ar
+      ? THREE.MathUtils.clamp(scale * Math.exp(growth * dt * STICK_SPEED), arBase * AR_SCALE_MIN, arBase * AR_SCALE_MAX)
+      : THREE.MathUtils.clamp(scale * Math.exp(growth * dt * STICK_SPEED), TABLE_SCALE_MIN, TABLE_SCALE_MAX)
     applyTable()
   }
 
   return {
-    start: async () => {
+    start: async (mode = 'vr') => {
       if (session || starting) return
       if (!navigator.xr) throw new Error('WebXR is not available in this browser')
       starting = true
-      if (s.narrated) narration.unlock() // inside the click that starts VR, so the browser lets the guide play later
+      if (s.narrated && mode === 'vr') narration.unlock() // inside the click that starts VR, so the browser lets the guide play later
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
+      // Started without awaiting: no await may come before requestSession, or the browser loses the user gesture.
+      const lightModule = mode === 'ar' ? import('../../shared/xr/arLight').catch(() => null) : null
       let fresh: XRSession | null = null
+      let lighting: ReturnType<typeof ArLighting> | null = null
       try {
-        fresh = await navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })
+        fresh = await navigator.xr.requestSession(mode === 'ar' ? 'immersive-ar' : 'immersive-vr', {
+          optionalFeatures: mode === 'ar' ? ['local-floor', 'hit-test', 'light-estimation'] : ['local-floor'],
+        })
         // The scene may have closed while waiting for permission: don't leave the user in an empty session.
         if (closed) throw new Error('Scene closed')
+        // Room lighting listens for the session start, so it must exist before setSession.
+        const light = lightModule ? await lightModule : null
+        if (light) {
+          lighting = light.createArLighting(renderer, scene)
+          lighting.start()
+        }
         await xr.setSession(fresh)
-        if (closed || xr.getSession() !== fresh) throw new Error('VR session closed while starting')
+        if (closed || xr.getSession() !== fresh) throw new Error('XR session closed while starting')
       } catch (error) {
+        lighting?.stop()
         // If setSession was interrupted, the renderer size may be corrupted (it writes an empty pixel ratio on close); it's restored on close.
         if (fresh) {
           const restore = () => {
@@ -487,7 +629,7 @@ export function setupXrSession(s: XrOption): XrSession {
         starting = false
       }
       xr.setFoveation(1)
-      enter(fresh)
+      enter(fresh, mode, lighting)
     },
     frame: (dt) => {
       if (!session) return
@@ -495,7 +637,8 @@ export function setupXrSession(s: XrOption): XrSession {
         const frame = xr.getFrame(), space = xr.getReferenceSpace()
         if (!frame || !space || !frame.getViewerPose(space)) return
         poseReady = true
-        if (menuOpen) showMenu(true)
+        // AR: the menu waits until the model is placed.
+        if (menuOpen && !(ar && !placed)) showMenu(true)
         if (pendingCard) {
           placeCard()
           card.show(pendingCard)
@@ -503,8 +646,9 @@ export function setupXrSession(s: XrOption): XrSession {
         }
       }
       advanceTransition(Math.min(dt, MAX_DT))
+      if (ar && !placed) arPreview()
       const input = controllerInput(session.inputSources)
-      if (input.menu && !menuPressed && !transition) showMenu(!menuOpen)
+      if (input.menu && !menuPressed && !transition && !(ar && !placed)) showMenu(!menuOpen)
       menuPressed = input.menu
       const step = Math.min(dt, MAX_DT)
       assembly.frame(step)
@@ -543,6 +687,9 @@ export function setupXrSession(s: XrOption): XrSession {
       menu.dispose()
       card.dispose()
       label.dispose()
+      arLabel.dispose()
+      hint.dispose()
+      shadow?.dispose()
       titles.forEach((b) => b.dispose())
       disk.geometry.dispose()
       disk.material.dispose()

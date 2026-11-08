@@ -2,8 +2,8 @@
 // The pure calculations in the top section are also used by the desktop scene; at runtime the file depends only on three, and the Node test imports it directly.
 import * as THREE from 'three'
 // AR helpers load only when AR starts (the Node test imports this file and needs only the pure functions above).
-import type { ArPlacement } from './arPlacement'
-import type { createArLighting as ArLighting } from './arLight'
+import type { ArPlacement } from '../../../shared/xr/arPlacement'
+import type { createArLighting as ArLighting } from '../../../shared/xr/arLight'
 
 export const ILLUSTRATIVE_MODEL_LABEL = 'Temsilî model · Tarihî eser değildir'
 export const PIECE_COUNT = 6
@@ -571,6 +571,8 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   let placing: ArPlacement | null = null
   let placeNow = false
   let arLight: ReturnType<typeof ArLighting> | null = null
+  let arLightModule: typeof import('../../../shared/xr/arLight') | null = null
+  if (typeof navigator !== 'undefined' && navigator.xr) void import('../../../shared/xr/arLight').then((m) => { arLightModule = m }, () => {})
   let shadow: { mesh: THREE.Mesh; dispose(): void } | null = null
   let prevBackground: THREE.Scene['background'] = null
   const prevClear = new THREE.Color()
@@ -586,13 +588,13 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       renderer.setClearColor(0x000000, 0)
       placeNow = false
       camera.add(hint.obj)
-      void Promise.all([import('./arPlacement'), import('./arLight')]).then(async ([{ createArPlacement }, { createContactShadow, createArLighting }]) => {
+      void Promise.all([import('../../../shared/xr/arPlacement'), import('../../../shared/xr/arLight')]).then(async ([{ createArPlacement }, { createContactShadow, createArLighting }]) => {
         if (session !== fresh || !ar) return
         shadow ??= createContactShadow(XR_TABLE_RADIUS * 1.25)
         shadow.mesh.position.y = TURNTABLE_BOTTOM + 0.05
         scene.add(shadow.mesh)
-        arLight = createArLighting(renderer, scene)
-        arLight.start()
+        // Normally created before the session starts (see start()); this is the fallback if the helpers were not loaded yet.
+        if (!arLight) { arLight = createArLighting(renderer, scene); arLight.start() }
         const p = await createArPlacement(fresh)
         if (session !== fresh || !ar) { p?.dispose(); return }
         placing = p
@@ -668,6 +670,9 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       if (session || starting) return
       if (!navigator.xr) throw new Error('WebXR not available in this browser')
       starting = true
+      // three's XREstimatedLight only begins on the renderer's 'sessionstart', so it has to exist before setSession.
+      // The helpers are preloaded below; creating them here is synchronous and keeps the user gesture.
+      if (mode === 'ar' && arLightModule && !arLight) { arLight = arLightModule.createArLighting(renderer, scene); arLight.start() }
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
       let fresh: XRSession | null = null
       try {
@@ -688,6 +693,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
           xr.addEventListener('sessionend', restore)
           await fresh.end().catch(restore)
         }
+        if (!session) { arLight?.stop(); arLight = null }
         throw error
       } finally {
         starting = false

@@ -29,8 +29,8 @@ export interface ModelScene {
   walkKey: (keyBtn: string, pressed: boolean) => void;
   walkRelease: () => void;
   closeInfo: () => void;
-  /** Opens a VR session; if refused, the Promise rejects and the scene keeps running. */
-  startXr: () => Promise<void>;
+  /** Opens a VR or AR session; if refused, the Promise rejects and the scene keeps running. */
+  startXr: (mode?: 'vr' | 'ar') => Promise<void>;
   /** Pixels of the stage covered by the HUD. Outside, the model is framed in the rest (the safe rectangle). */
   setSafeInsets: (insets: SafeInsets) => void;
   clear: () => void;
@@ -418,7 +418,7 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
   }
 
   const xr = setupXrSession({
-    renderer, scene: threeScene, camera, walking, stops, interiorState, closeInfo, layers,
+    renderer, scene: threeScene, camera, walking, stops, interiorState, closeInfo, layers, root, ground: pedestal,
     refreshShadow: () => { renderer.shadowMap.needsUpdate = true },
     titles: markers.map(({ info }) => info),
     narrated: model === 'ulu-mosque',
@@ -542,11 +542,11 @@ export function createModelScene(area: HTMLElement, model: string, smallMove: bo
       if (!renderer.xr.isPresenting) project()
     },
     // Don't lose the user gesture: no await before requestSession.
-    startXr: async () => {
+    startXr: async (mode = 'vr') => {
       if (inside) scene.interior(null)
       fragmented = false
       cameraTarget = null
-      await xr.start()
+      await xr.start(mode)
       // In VR the camera is in rig-local space: don't let the mouse overwrite it with desktop coordinates.
       controls.enabled = false
       controls.autoRotate = false

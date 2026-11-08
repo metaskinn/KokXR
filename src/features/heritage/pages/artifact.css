@@ -141,6 +141,8 @@ html:has(.section-nav) { scroll-padding-top: calc(var(--pagenav-h) + var(--s-2))
 .source-list { margin: 0; padding: 0 0 0 1.25rem; color: var(--ink); font-size: 0.9375rem; line-height: 1.5; overflow-wrap: anywhere; }
 .source-list li { margin-bottom: var(--s-2); padding-left: var(--s-1); }
 .source-list li::marker { color: var(--ink-2); }
+.source-link { display: inline-flex; align-items: center; gap: var(--s-1); min-height: var(--target); margin-left: var(--s-1); font-size: var(--fs-small); font-weight: 600; white-space: nowrap; }
+.source-link .file-mark { padding: 0 var(--s-1); border: 1px solid var(--line-strong); border-radius: var(--r-control); font-size: 0.6875rem; letter-spacing: 0.04em; line-height: 1.4; }
 .same-complex { margin-top: var(--s-5); }
 .same-complex h3 { margin: 0 0 var(--s-2); font: 600 1.0625rem/1.4 var(--font-ui); }
 .same-complex ul { margin: 0; padding: 0; list-style: none; display: grid; }

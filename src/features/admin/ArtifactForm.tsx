@@ -1,7 +1,9 @@
 import { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
-import type { Artifact } from '../../domain/artifact'
+import type { Artifact, Source } from '../../domain/artifact'
+import { INVENTORY_BOOKS, bookCitationText, parseBookCitation, sourceLinkInfo } from '../../content/inventoryBooks'
+import type { BookCitation } from '../../content/inventoryBooks'
 import { artifactErrors, artifactId, maybeSourced, uniqueId } from '../../domain/verification'
 import type { Errors } from '../../domain/verification'
 import { TYPE_LABELS } from '../../domain/artifactTypes'
@@ -53,6 +55,8 @@ function emptyArtifact(): Artifact {
 const STEPS = ['Temel bilgiler', 'Kaynaklar', 'Görseller', 'Bilgi noktaları', 'Test soruları', 'Önizleme'] as const
 const stepOf = (area: string) => /^source-/.test(area) ? 1 : /^(image-|coverImage|images)/.test(area) ? 2 : /^(point-|hotspots)/.test(area) ? 3 : /^test/.test(area) ? 4 : 0
 const NEW = '__yeni__'
+type SourceKind = 'book' | 'other'
+const isBookText = (text: string) => { const c = parseBookCitation(text); return !!c && bookCitationText(c) === text }
 const draftKey = (id?: string) => `kokxr-admin-taslak:${id ?? 'yeni'}`
 const readDraft = (key: string): Artifact | null => { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) as Artifact : null } catch { return null } }
 const plain = (v: string) => artifactId(v).replace(/-(camii|cami|mescidi|turbesi|hamami|hani|medresesi|cesmesi|kulliyesi)$/, '')
@@ -76,6 +80,10 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
   const id = savedId ?? uniqueId(artifactId(draft.name), existingIds)
   const [busy, setBusy] = useState(false)
   const sourced = maybeSourced(draft)
+  // Source type chosen in this session; otherwise a text in the book format (exact round trip) counts as a book source.
+  const [kinds, setKinds] = useState<Record<string, SourceKind>>({})
+  const kindOf = (k: Source): SourceKind => kinds[k.id] ?? (isBookText(k.text) ? 'book' : 'other')
+  const defaultCitation = (): BookCitation => ({ book: INVENTORY_BOOKS.find(b => b.city === draft.city) ?? INVENTORY_BOOKS[0], district: draft.district, item: '' })
   function update(patch: Partial<Artifact>) { setDraft(t => ({ ...t, ...patch })); setMessage(''); setDirty(true) }
   useEffect(() => {
     if (!dirty) return
@@ -115,10 +123,16 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
     const attrs = { ...errorAttrs(areaId), value: value, required: requiredField, onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => toggle(e.target.value) }
     return area(areaId, label, long ? <textarea {...attrs} rows={4} /> : <input {...attrs} />)
   }
-  function selectSource(areaId: string, value: string, toggle: (v: string) => void) {
-    return area(areaId, 'Kaynak', <select {...errorAttrs(areaId)} value={value} onChange={e => toggle(e.target.value)}>
-      <option value="">Kaynak yok (temsili)</option>{draft.sources.map((k, i) => <option key={k.id} value={k.id}>{i + 1}. {k.text || 'Yeni kaynak'}</option>)}
-    </select>)
+  /** Images may stay without a source (they carry a credit line); test questions and info points must choose one. */
+  function selectSource(areaId: string, value: string, toggle: (v: string) => void, mandatory = false) {
+    const choices = draft.sources.filter((k) => !mandatory || k.text.trim())
+    return <div key={areaId}>
+      {area(areaId, 'Kaynak', <select {...errorAttrs(areaId)} required={mandatory} value={value} onChange={e => toggle(e.target.value)}>
+        {mandatory ? <option value="" disabled>Kaynak seçin</option> : <option value="">Kaynak yok (temsili)</option>}
+        {choices.map((k) => <option key={k.id} value={k.id}>{draft.sources.indexOf(k) + 1}. {k.text || 'Yeni kaynak'}</option>)}
+      </select>)}
+      {mandatory && !choices.length && <p className="help">Önce Kaynaklar adımında bir kaynak ekle. <button type="button" className="btn-ghost" onClick={() => { setStep(1); setStepWarning('') }}>Kaynaklar adımına git</button></p>}
+    </div>
   }
   function selectImage(areaId: string, label: string, value: string, toggle: (v: string) => void) {
     return area(areaId, label, <select {...errorAttrs(areaId)} value={value} onChange={e => toggle(e.target.value)}>
@@ -202,8 +216,8 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
     !!(draft.name.trim() && draft.city.trim() && draft.district.trim() && draft.period.trim() && draft.endowment.trim() && draft.summary.trim() && draft.history.trim() && draft.types?.length),
     draft.sources.some((k) => k.text.trim()),
     draft.images.length > 0 && !!draft.coverImage,
-    draft.hotspots.length > 0,
-    draft.test.every((t) => t.question.trim() && t.options.every((o) => o.trim()) && t.description.trim()),
+    draft.hotspots.length > 0 && draft.hotspots.every((n) => draft.sources.some((k) => k.id === n.sourceId && k.text.trim())),
+    draft.test.every((t) => t.question.trim() && t.options.every((o) => o.trim()) && t.description.trim() && draft.sources.some((k) => k.id === t.sourceId && k.text.trim())),
     false,
   ]
   const checks = [
@@ -277,12 +291,41 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
           <label className="form-check" htmlFor="verification"><input type="checkbox" id="verification" disabled={!sourced} checked={sourced && draft.verification === 'verified'} onChange={(e) => update({ verification: e.target.checked ? 'verified' : 'illustrative' })} /> <span>Kaynaklı bilgi olarak işaretle</span></label>
           <p className="help" id="verification-help">{sourced ? 'Koşullar sağlandı. İşaretlenirse eser sayfasında "Kaynaklı bilgi" olarak gösterilir.' : 'Koşullar tamamlanmadan kayıt "Temsilî içerik" olarak kalır; kesin bilgi gibi sunulmaz.'}</p>
         </div>
-        {draft.sources.map((k, i) => <fieldset className="sub-form" key={k.id}><legend>Kaynak {i + 1}</legend>
-          {text(`source-${i}-text`, 'Kaynak metni', k.text, v => update({ sources: draft.sources.map((x, j) => j === i ? { ...x, text: v } : x) }), true)}
-          {text(`source-${i}-page`, 'Sayfa (isteğe bağlı)', k.page ?? '', v => update({ sources: draft.sources.map((x, j) => j === i ? { ...x, page: v } : x) }), false, false)}
+        {draft.sources.map((k, i) => {
+          const patch = (p: Partial<Source>) => update({ sources: draft.sources.map((x, j) => j === i ? { ...x, ...p } : x) })
+          const citation = kindOf(k) === 'book' ? parseBookCitation(k.text) ?? defaultCitation() : undefined
+          const setCitation = (c: BookCitation) => patch({ text: bookCitationText(c) })
+          const link = sourceLinkInfo(k)
+          return <fieldset className="sub-form" key={k.id}><legend>Kaynak {i + 1}</legend>
+          {area(`source-${i}-kind`, 'Kaynak türü', <select id={`source-${i}-kind`} value={citation ? 'book' : 'other'} onChange={e => {
+            const kind = e.target.value as SourceKind
+            setKinds((m) => ({ ...m, [k.id]: kind }))
+            if (kind === 'book') { const { url: _url, ...rest } = k; void _url; update({ sources: draft.sources.map((x, j) => j === i ? { ...rest, text: bookCitationText(parseBookCitation(k.text) ?? defaultCitation()) } : x) }) }
+          }}><option value="book">Vakıf Katılım envanter kitabı</option><option value="other">Diğer kaynak</option></select>)}
+          {citation ? <>
+            {area(`source-${i}-book`, 'Kitap', <select id={`source-${i}-book`} value={citation.book.id} onChange={e => setCitation({ ...citation, book: INVENTORY_BOOKS.find(b => b.id === e.target.value)! })}>
+              {INVENTORY_BOOKS.map(b => <option key={b.id} value={b.id}>{b.label}</option>)}</select>)}
+            {text(`source-${i}-district`, 'İlçe', citation.district, v => setCitation({ ...citation, district: v }), false, false)}
+            {text(`source-${i}-item`, 'Bölüm / madde adı (isteğe bağlı)', citation.item, v => setCitation({ ...citation, item: v.replace(/"/g, '') }), false, false)}
+            {text(`source-${i}-page`, 'Sayfa (sayı ya da aralık, ör. 177 veya 177-178)', k.page ?? '', v => patch({ page: v || undefined }), false, false)}
+            <p className="help" id={`source-${i}-text`} tabIndex={-1}>Kaynak metni: {bookCitationText(citation)}{k.page ? `, s. ${k.page}` : ''}</p>
+            {errors[`source-${i}-text`] && <p className="area-error">{errors[`source-${i}-text`]}</p>}
+            <p className="help">{link?.kind === 'book'
+              ? <a href={link.href} target="_blank" rel="noreferrer">PDF'te aç{link.page ? ` (s. ${link.page})` : ''}<span className="invisible"> (yeni sekmede açılır)</span></a>
+              : 'Sayfa numarası kitapta bulunamadı; numarayı kontrol et.'}</p>
+          </> : <>
+            {text(`source-${i}-text`, 'Kaynak metni', k.text, v => patch({ text: v }), true)}
+            {text(`source-${i}-page`, 'Sayfa (isteğe bağlı)', k.page ?? '', v => patch({ page: v || undefined }), false, false)}
+            {area(`source-${i}-url`, 'Bağlantı (isteğe bağlı, http/https)', <input {...errorAttrs(`source-${i}-url`)} type="url" inputMode="url" placeholder="https://" value={k.url ?? ''} onChange={e => patch({ url: e.target.value.trim() || undefined })} />)}
+          </>}
           <button type="button" onClick={() => update({ sources: draft.sources.filter(x => x.id !== k.id), test: draft.test.map(s => s.sourceId === k.id ? { ...s, sourceId: '' } : s), hotspots: draft.hotspots.map(n => n.sourceId === k.id ? { ...n, sourceId: '' } : n), images: draft.images.map(g => g.sourceId === k.id ? { ...g, sourceId: '' } : g) })}>Kaynak {i + 1} sil</button>
-        </fieldset>)}
-        <button type="button" onClick={() => update({ sources: [...draft.sources, { id: uniqueId('source', draft.sources.map(k => k.id)), text: '' }] })}>Kaynak ekle</button>
+        </fieldset>})}
+        <button type="button" onClick={() => {
+          const id = uniqueId('source', draft.sources.map(k => k.id))
+          const book = INVENTORY_BOOKS.some(b => b.city === draft.city)
+          setKinds((m) => ({ ...m, [id]: book ? 'book' : 'other' }))
+          update({ sources: [...draft.sources, { id, text: book ? bookCitationText(defaultCitation()) : '' }] })
+        }}>Kaynak ekle</button>
       </fieldset>
 
       <fieldset className="form-section" hidden={step !== 2}><legend>Görseller</legend>
@@ -318,7 +361,7 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
           return <fieldset className="sub-form" key={n.id}><legend>Bilgi noktası {i + 1}</legend>
             {text(`point-${i}-title`, 'Başlık', n.title, v => toggle({ title: v }))}
             {text(`point-${i}-text`, 'Bilgi metni', n.text, v => toggle({ text: v }), true)}
-            {selectSource(`point-${i}-source-id`, n.sourceId, v => toggle({ sourceId: v }))}
+            {selectSource(`point-${i}-source-id`, n.sourceId, v => toggle({ sourceId: v }), true)}
             {selectImage(`point-${i}-image`, 'Noktanın görseli', n.image, v => toggle({ image: v }))}
             <div className="coordinates">{(['x', 'y'] as const).map(a => area(`point-${i}-${a}`, `${a.toUpperCase()} (%)`, <input {...errorAttrs(`point-${i}-${a}`)} type="number" min={0} max={100} step="any" required value={Number.isNaN(n[a]) ? '' : n[a]} onChange={e => toggle({ [a]: e.target.valueAsNumber })} />))}</div>
             <button type="button" onClick={() => update({ hotspots: draft.hotspots.filter(x => x.id !== n.id) })}>Bilgi noktası {i + 1} sil</button>
@@ -335,7 +378,7 @@ export default function ArtifactForm({ artifact, rows, role }: { artifact?: Arti
             {s.options.map((v, j) => text(`test-${i}-option-${j}`, `Seçenek ${j + 1}`, v, value => toggle({ options: s.options.map((x, k) => k === j ? value : x) })))}
             {area(`test-${i}-correct`, 'Doğru seçenek', <select {...errorAttrs(`test-${i}-correct`)} value={s.correct} onChange={e => toggle({ correct: Number(e.target.value) })}>{s.options.map((v, j) => <option key={j} value={j}>{j + 1}. {v || 'Boş seçenek'}</option>)}</select>)}
             {text(`test-${i}-description`, 'Cevap açıklaması', s.description, v => toggle({ description: v }), true)}
-            {selectSource(`test-${i}-source-id`, s.sourceId, v => toggle({ sourceId: v }))}
+            {selectSource(`test-${i}-source-id`, s.sourceId, v => toggle({ sourceId: v }), true)}
           </details>
         })}
       </fieldset>

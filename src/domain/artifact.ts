@@ -1,6 +1,7 @@
 export type Verification = "verified" | "illustrative";
 
-export interface Source { id: string; text: string; page?: string; }
+/** `url`: optional web address (http/https) of the source; a Vakıf Katılım book citation links to its PDF page instead. */
+export interface Source { id: string; text: string; page?: string; url?: string; }
 
 export interface Image {
   file: string;          // public/images/<artifactId>/...

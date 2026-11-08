@@ -4,7 +4,7 @@ import type { Artifact } from '../../../domain/artifact'
 import Gallery from '../components/Gallery'
 import { inventoryLinks } from '../components/inventoryLinks'
 import Section from '../../../shared/ui/Section'
-import SourceLine, { sourceText } from '../../../shared/ui/SourceLine'
+import SourceLine, { SourceLink, sourceText } from '../../../shared/ui/SourceLine'
 import NotFound from '../../../shared/ui/NotFound'
 import UiIcon from '../../../shared/ui/UiIcon'
 import './artifact.css'
@@ -120,7 +120,7 @@ function ArtifactDetail({ artifact, artifacts }: { artifact: Artifact; artifacts
         {artifact.sources.filter((source) => source.id.endsWith('-history')).map((source) => <SourceLine key={source.id} sources={artifact.sources} sourceId={source.id} />)}
       </Section>
       <Section id="kaynaklar" title="Kaynaklar" className="reading">
-        <ol className="source-list">{artifact.sources.map((source) => <li key={source.id}>{sourceText(source)}</li>)}</ol>
+        <ol className="source-list">{artifact.sources.map((source) => <li key={source.id}>{sourceText(source)} <SourceLink source={source} /></li>)}</ol>
         {links.record && <p className="inventory-line">Envanter kaydı: {links.record}</p>}
         {links.siblings.length > 0 && <div className="same-complex">
           <h3>{links.isComplex ? 'Külliyedeki yapılar' : 'Aynı külliyede'}</h3>

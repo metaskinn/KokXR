@@ -13,6 +13,13 @@ export function imageUrlValid(address: string): boolean {
   catch { return false }
 }
 
+/** Web address of a source: http or https only, no credentials, at most 2000 characters. */
+export function sourceUrlValid(address: string): boolean {
+  if (address.length > 2000) return false
+  try { const url = new URL(address); return ['http:', 'https:'].includes(url.protocol) && !!url.hostname && !url.username && !url.password }
+  catch { return false }
+}
+
 export function artifactErrors(artifact: Artifact): Errors {
   const errors: Errors = {}
   const required = (id: string, value: string) => { if (!value.trim()) errors[id] = 'Bu alan zorunludur.' }
@@ -26,7 +33,10 @@ export function artifactErrors(artifact: Artifact): Errors {
   artifact.sources.forEach((k, i) => {
     required(`source-${i}-text`, k.text)
     if (!k.id || sourceIds.indexOf(k.id) !== i) errors[`source-${i}-text`] = 'Kaynak kimliği boş veya tekrarlı.'
+    if (k.url !== undefined && !sourceUrlValid(k.url)) errors[`source-${i}-url`] = 'http:// veya https:// ile başlayan geçerli bir adres girin.'
   })
+  // Test questions and info points must cite a source that has text; images keep an optional source (they carry a credit line).
+  const filledSource = (id: string | undefined) => !!id && artifact.sources.some(k => k.id === id && k.text.trim())
   if (artifact.test.length !== 3) errors.test = 'Tam üç soru gereklidir.'
   artifact.test.forEach((s, i) => {
     required(`test-${i}-question`, s.question)
@@ -34,7 +44,7 @@ export function artifactErrors(artifact: Artifact): Errors {
     if (s.options.length !== 4) errors[`test-${i}-question`] = 'Dört seçenek gereklidir.'
     s.options.forEach((v, j) => required(`test-${i}-option-${j}`, v))
     if (!Number.isInteger(s.correct) || s.correct < 0 || s.correct > 3) errors[`test-${i}-correct`] = 'Doğru seçeneği seçin.'
-    if (s.sourceId && !sourceIds.includes(s.sourceId)) errors[`test-${i}-source-id`] = 'Geçerli bir kaynak seçin veya kaynağı kaldırın.'
+    if (!filledSource(s.sourceId)) errors[`test-${i}-source-id`] = 'Bir kaynak seçin.'
   })
   artifact.images.forEach((g, i) => {
     if (!imageUrlValid(g.file)) errors[`image-${i}-file`] = 'Yerel /images/... yolu veya http/https URL girin.'
@@ -51,7 +61,7 @@ export function artifactErrors(artifact: Artifact): Errors {
     if (!n.id || artifact.hotspots.findIndex(x => x.id === n.id) !== i) errors[`point-${i}-title`] = 'Bilgi noktası kimliği boş veya tekrarlı.'
     if (n.image && !artifact.images.some(g => g.file === n.image)) errors[`point-${i}-image`] = 'Galeriden bir görsel seçin.'
     for (const axis of ['x', 'y'] as const) if (!Number.isFinite(n[axis]) || n[axis] < 0 || n[axis] > 100) errors[`point-${i}-${axis}`] = '0 ile 100 arasında sayı girin.'
-    if (n.sourceId && !sourceIds.includes(n.sourceId)) errors[`point-${i}-source-id`] = 'Geçerli bir kaynak seçin veya kaynağı kaldırın.'
+    if (!filledSource(n.sourceId)) errors[`point-${i}-source-id`] = 'Bir kaynak seçin.'
   })
   if (artifact.location !== undefined) {
     const { lng, lat } = artifact.location ?? {}
@@ -70,7 +80,7 @@ export function artifactValid(v: unknown): v is Artifact {
   if (!obj(v) || !texts(v, ['id', 'name', 'city', 'district', 'period', 'endowment', 'summary', 'history', 'coverImage']) || !['illustrative', 'verified'].includes(String(v.verification))) return false
   if (v.location !== undefined && !(obj(v.location) && typeof v.location.lng === 'number' && typeof v.location.lat === 'number')) return false
   if (v.types !== undefined && !(Array.isArray(v.types) && v.types.every(t => typeof t === 'string'))) return false
-  if (!list(v.sources, n => texts(n, ['id', 'text']) && optionalText(n, 'page')) ||
+  if (!list(v.sources, n => texts(n, ['id', 'text']) && optionalText(n, 'page') && (n.url === undefined || (typeof n.url === 'string' && sourceUrlValid(n.url)))) ||
     !list(v.images, n => texts(n, ['file', 'alt', 'sourceId']) && optionalText(n, 'description') && optionalText(n, 'credit')) ||
     !list(v.test, n => texts(n, ['question', 'description', 'sourceId']) && Array.isArray(n.options) && n.options.every(s => typeof s === 'string') && typeof n.correct === 'number') ||
     !list(v.hotspots, n => texts(n, ['id', 'image', 'title', 'text', 'sourceId']) && typeof n.x === 'number' && typeof n.y === 'number')) return false

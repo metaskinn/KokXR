@@ -42,7 +42,9 @@ await control('artifacts', async () => {
 await control('1d hotspot card visible', async () => {
   await p.goto(`${URL}/artifact/ulu-mosque`);
   await p.getByRole('button', { name: /fotoğraf: İç mekândaki şadırvan/ }).click();
-  await p.locator('.info-point').first().click(); await p.waitForTimeout(600);
+  // The public build ships without photos, so points appear only in the list; use whichever trigger exists.
+  const trigger = p.locator('.info-point, .gallery-points button').first(); await trigger.waitFor({ timeout: 10000 }); await trigger.click();
+  await p.locator('.info-card').first().waitFor({ timeout: 10000 });
   const visible = await p.evaluate(() => { const el = [...document.querySelectorAll('h3, .info-card, [id^="point-"]')].find((e) => /Şadırvan|şadırvan/.test(e.textContent) && e.getBoundingClientRect().height > 0); if (!el) return false; const r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0 });
   condition(visible, 'card not in visible area');
 });
@@ -53,9 +55,13 @@ await control('2 model: open, rotate, zoom, shatter, keyboard', async () => {
   const a = p.locator('.model-area'); await a.scrollIntoViewIfNeeded(); const b = await a.boundingBox();
   await p.mouse.move(b.x + b.width / 2, b.y + b.height / 2); await p.mouse.down(); await p.mouse.move(b.x + b.width / 2 + 150, b.y + b.height / 2, { steps: 8 }); await p.mouse.up();
   await p.mouse.wheel(0, -300);
+  // On phones the secondary controls sit behind the "Kontroller" toggle.
+  const openHud = async () => { const t = p.locator('.hud-toggle[aria-expanded="false"]'); if (await t.count() && await t.first().isVisible()) await t.first().click() };
+  await openHud();
   await p.getByRole('button', { name: 'Parçala' }).click(); await p.waitForTimeout(1500); await screen('model-fragmented');
-  await p.getByRole('button', { name: 'Birleştir' }).click();
+  await openHud(); await p.getByRole('button', { name: 'Birleştir' }).click();
   await a.focus(); await p.keyboard.press('ArrowLeft'); await p.keyboard.press('+');
+  await openHud();
   await p.getByRole('button', { name: 'Görünümü sıfırla' }).click();
   condition(await p.getByText('Temsili maket').count(), 'illustrative label missing');
 });

@@ -13,7 +13,7 @@ export default function ModelStrip({ artifacts, onOpen }: { artifacts: Artifact[
     <div className="model-strip-head">
       <div>
         <h2 id="model-strip-title">3B maketli eserler</h2>
-        <p>{artifacts.length} yapının temsilî maketi var. Ekranda çevir, Meta Quest’te VR’da aç.</p>
+        <p>{artifacts.length} yapının temsilî maketi var. Ekranda çevir; Meta Quest’te VR desteği cihaz doğrulaması bekliyor.</p>
       </div>
       <Link className="btn-ghost" to="/artifacts?maket=1">Hepsi</Link>
     </div>
@@ -22,7 +22,7 @@ export default function ModelStrip({ artifacts, onOpen }: { artifacts: Artifact[
       <div className="model-card-body">
         <h3><Link to={`/artifact/${a.id}`} onClick={onOpen}>{a.name}</Link></h3>
         <p className="position">{a.district}, {a.city}</p>
-        <Link className="btn-ghost" to={`/places/${a.id}`} onClick={onOpen}><UiIcon name="cube" />Maketi incele</Link>
+        <Link className="btn-ghost" to={`/places/${a.id}`} onClick={onOpen} aria-label={`${a.name}: maketi incele`}><UiIcon name="cube" />Maketi incele</Link>
       </div>
     </li>)}</ol>
   </section>

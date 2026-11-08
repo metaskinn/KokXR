@@ -26,7 +26,7 @@ export async function createArPlacement(session: XRSession): Promise<ArPlacement
     const dot = new THREE.CircleGeometry(0.008, 24).rotateX(-Math.PI / 2)
     geometries.push(dot)
     material = new THREE.MeshBasicMaterial({
-      color: '#f0e1bc',
+      color: '#e6eeea',
       toneMapped: false,
       transparent: true,
       opacity: 0.9,

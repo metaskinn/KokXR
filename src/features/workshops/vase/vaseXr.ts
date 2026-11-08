@@ -100,10 +100,11 @@ export function vaseStage_(repair: boolean, placed: number): VasePhase {
 }
 
 // Two side-by-side buttons in the panel's bottom row. uv.y 1 is the top edge.
-const BUTTON_V = { min: 0.07, max: 0.31 }
-const BUTTON_U = [{ min: 0.05, max: 0.48 }, { min: 0.52, max: 0.95 }]
+// The drawn pills fill exactly these areas, so what the ray hits is what the user sees.
+const BUTTON_V = { min: 0.1, max: 0.3 }
+const BUTTON_U = [{ min: 0.055, max: 0.49 }, { min: 0.51, max: 0.945 }]
 /** Button columns for `n` buttons (AR adds a third, "Yeniden yerleştir"); two buttons keep the original layout. */
-const buttonSlots = (n: number) => n <= 2 ? BUTTON_U : Array.from({ length: n }, (_, i) => ({ min: 0.04 + i * (0.92 / n) + 0.01, max: 0.04 + (i + 1) * (0.92 / n) - 0.01 }))
+const buttonSlots = (n: number) => n <= 2 ? BUTTON_U : Array.from({ length: n }, (_, i) => ({ min: 0.035 + i * (0.93 / n) + 0.005, max: 0.035 + (i + 1) * (0.93 / n) - 0.005 }))
 /** Index of the button at panel point (u, v); `null` if there is none. */
 export function panelButton(u: number, v: number, count = 2): number | null {
   if (v < BUTTON_V.min || v > BUTTON_V.max) return null
@@ -187,14 +188,21 @@ const VASE_RADIUS = 22
 const VASE_HAND_DISTANCE = 0.25
 const TURNTABLE_TOP = -1.25
 const TEXT = 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
-const FLOOR = '#f8f5ef', CAM = '#244e40', TEXT_ = '#253a34', BRONZE = '#8e6236', WHITE = '#ffffff'
+// In-headset UI: dark translucent glass over the room or the scene, one çini-green action.
+const GLASS = 'rgba(17, 25, 23, 0.86)', GLASS_EDGE = 'rgba(255, 255, 255, 0.14)', GLASS_TOP = 'rgba(255, 255, 255, 0.26)'
+const INK_ON_GLASS = '#eef2ef', SOFT = 'rgba(226, 234, 230, 0.74)', MUTED = '#9fc4b7'
+const ACTION = '#12695a', ACTION_OVER = '#1b7f6d', TRACK = 'rgba(255, 255, 255, 0.13)', FILL = '#6fbfa6'
+const RAY = '#d5e6df'
+/** Canvas pixels per drawing unit: layouts are written at 1024 wide and rendered at twice that for a crisp texture. */
+const DPR = 2
 
 export function canvasPlane(width: number, height: number, realWidth: number) {
   const el = document.createElement('canvas')
-  el.width = width
-  el.height = height
+  el.width = width * DPR
+  el.height = height * DPR
   const c = el.getContext('2d', { willReadFrequently: true })
   if (!c) throw new Error('Canvas unavailable')
+  c.setTransform(DPR, 0, 0, DPR, 0, 0)
   const texture = new THREE.CanvasTexture(el)
   texture.colorSpace = THREE.SRGBColorSpace
   texture.anisotropy = 8
@@ -204,38 +212,100 @@ export function canvasPlane(width: number, height: number, realWidth: number) {
   return { c, texture, obj, dispose: () => { texture.dispose(); material.dispose(); geometry.dispose() } }
 }
 
-/** Title, progress, hint and two buttons matching `panelButton`. `realWidth` is in scene units. */
+/** Rounded glass sheet with a soft inner edge and a thin highlight along the top. */
+function glass(c: CanvasRenderingContext2D, w: number, h: number, r: number, alpha = 1) {
+  c.clearRect(0, 0, w, h)
+  c.globalAlpha = alpha
+  c.beginPath(); c.roundRect(0, 0, w, h, r)
+  c.fillStyle = GLASS; c.fill()
+  c.globalAlpha = 1
+  c.beginPath(); c.roundRect(1.5, 1.5, w - 3, h - 3, r - 1.5)
+  c.lineWidth = 1.5; c.strokeStyle = GLASS_EDGE; c.stroke()
+  c.beginPath(); c.moveTo(r, 2.5); c.lineTo(w - r, 2.5)
+  c.lineWidth = 1.5; c.strokeStyle = GLASS_TOP; c.stroke()
+}
+
+/** Splits `text` into at most `max` lines that fit `width`; the last line is squeezed by fillText if needed. */
+function wrap(c: CanvasRenderingContext2D, text: string, width: number, max: number) {
+  const lines: string[] = []
+  let line = ''
+  for (const word of text.split(/\s+/)) {
+    const next = line ? `${line} ${word}` : word
+    if (line && c.measureText(next).width > width && lines.length < max - 1) { lines.push(line); line = word } else line = next
+  }
+  if (line) lines.push(line)
+  return lines
+}
+
+/** Largest font size from `size` down to `min` at which every text in `texts` fits `width`; one size keeps a button row even. */
+function fitAll(c: CanvasRenderingContext2D, texts: string[], width: number, weight: number, size: number, min: number) {
+  for (; size > min; size -= 2) {
+    c.font = `${weight} ${size}px ${TEXT}`
+    if (texts.every((t) => c.measureText(t).width <= width)) return size
+  }
+  return min
+}
+
+/** Title, progress, hint and buttons matching `panelButton`. `realWidth` is in scene units. */
 export function statePanel(realWidth = 64) {
-  const G = 1024, Y = 512
+  const G = 1024, Y = 512, PAD = 56
   const p = canvasPlane(G, Y, realWidth)
-  const draw = ({ title, progress, hint, buttons }: { title: string; progress: string; hint: string; buttons: { name: string }[] }, over: number | null) => {
+  const draw = ({ title, progress, hint, buttons }: { title: string; progress: string; hint: string; buttons: { name: string }[] }, over: number | null = null) => {
     const { c } = p
-    c.fillStyle = FLOOR
-    c.fillRect(0, 0, G, Y)
-    c.fillStyle = BRONZE
-    c.fillRect(0, 0, G, 100)
+    glass(c, G, Y, 32)
+    c.textBaseline = 'alphabetic'
+    c.textAlign = 'left'
+
+    // Progress sits to the right of the title; a fraction like "2/6" also draws a thin bar under both.
+    c.font = `500 36px ${TEXT}`
+    const progressWidth = Math.min(c.measureText(progress).width, 380)
+    c.fillStyle = INK_ON_GLASS
+    c.font = `700 54px ${TEXT}`
+    c.fillText(title, PAD, 112, G - 2 * PAD - progressWidth - 32)
+    c.textAlign = 'right'
+    c.fillStyle = MUTED
+    c.font = `500 36px ${TEXT}`
+    c.fillText(progress, G - PAD, 110, 380)
+    c.textAlign = 'left'
+    const fraction = /(\d+)\s*\/\s*(\d+)/.exec(progress)
+    const barY = 146
+    c.beginPath(); c.roundRect(PAD, barY, G - 2 * PAD, 6, 3)
+    c.fillStyle = TRACK; c.fill()
+    if (fraction && +fraction[2] > 0) {
+      const share = Math.min(1, +fraction[1] / +fraction[2])
+      if (share > 0) {
+        c.beginPath(); c.roundRect(PAD, barY, Math.max(6, (G - 2 * PAD) * share), 6, 3)
+        c.fillStyle = FILL; c.fill()
+      }
+    }
+
+    c.fillStyle = SOFT
+    c.font = `400 38px ${TEXT}`
+    wrap(c, hint, G - 2 * PAD, 2).forEach((line, i) => c.fillText(line, PAD, 218 + i * 50, G - 2 * PAD))
+
+    const top = Y * (1 - BUTTON_V.max), height = Y * (BUTTON_V.max - BUTTON_V.min)
+    const slots = buttonSlots(buttons.length)
     c.textAlign = 'center'
     c.textBaseline = 'middle'
-    c.fillStyle = WHITE
-    c.font = `700 56px ${TEXT}`
-    c.fillText(title, G / 2, 50, G - 80)
-    c.fillStyle = CAM
-    c.font = `700 52px ${TEXT}`
-    c.fillText(progress, G / 2, 165, G - 80)
-    c.fillStyle = TEXT_
-    c.font = `400 38px ${TEXT}`
-    c.fillText(hint, G / 2, 250, G - 60)
-    const top = Y * (1 - BUTTON_V.max), length = Y * (BUTTON_V.max - BUTTON_V.min)
-    const slots = buttonSlots(buttons.length)
+    const inner = G * (slots[0].max - slots[0].min) - (buttons.length > 2 ? 24 : 40)
+    const size = fitAll(c, buttons.map((b) => b.name), inner, 600, buttons.length > 2 ? 38 : 42, 32)
     buttons.forEach(({ name }, i) => {
-      const x = G * slots[i].min, en = G * (slots[i].max - slots[i].min)
-      c.beginPath()
-      c.roundRect(x, top, en, length, 16)
-      c.fillStyle = over === i ? BRONZE : CAM
-      c.fill()
-      c.fillStyle = WHITE
-      c.font = `600 ${buttons.length > 2 ? 40 : 48}px ${TEXT}`
-      c.fillText(name, x + en / 2, top + length / 2, en - 30)
+      const x = G * slots[i].min, width = G * (slots[i].max - slots[i].min)
+      const hovered = over === i
+      c.beginPath(); c.roundRect(x + 1.5, top + 1.5, width - 3, height - 3, (height - 3) / 2)
+      if (i === 0) {
+        c.fillStyle = hovered ? ACTION_OVER : ACTION; c.fill()
+        c.lineWidth = hovered ? 3 : 1.5
+        c.strokeStyle = hovered ? 'rgba(255, 255, 255, 0.7)' : 'rgba(255, 255, 255, 0.16)'
+      } else {
+        if (hovered) { c.fillStyle = 'rgba(255, 255, 255, 0.12)'; c.fill() }
+        c.lineWidth = hovered ? 3 : 2
+        c.strokeStyle = hovered ? 'rgba(255, 255, 255, 0.7)' : 'rgba(255, 255, 255, 0.3)'
+      }
+      c.stroke()
+      c.fillStyle = INK_ON_GLASS
+      c.font = `600 ${size}px ${TEXT}`
+      c.fillText(name, x + width / 2, top + height / 2 + 2, inner)
     })
     p.texture.needsUpdate = true
   }
@@ -245,15 +315,35 @@ export function statePanel(realWidth = 64) {
 function labelPanel() {
   const G = 1024, Y = 72
   const p = canvasPlane(G, Y, 0.6)
-  p.c.fillStyle = BRONZE
-  p.c.fillRect(0, 0, G, Y)
-  p.c.fillStyle = WHITE
-  p.c.font = `700 40px ${TEXT}`
-  p.c.textAlign = 'center'
-  p.c.textBaseline = 'middle'
-  p.c.fillText(ILLUSTRATIVE_MODEL_LABEL, G / 2, Y / 2, G - 80)
+  const { c } = p
+  c.font = `500 36px ${TEXT}`
+  const width = Math.min(G, c.measureText(ILLUSTRATIVE_MODEL_LABEL).width + 64)
+  c.translate((G - width) / 2, 0)
+  glass(c, width, Y, Y / 2, 0.9)
+  c.fillStyle = INK_ON_GLASS
+  c.textAlign = 'center'
+  c.textBaseline = 'middle'
+  c.fillText(ILLUSTRATIVE_MODEL_LABEL, width / 2, Y / 2 + 2, width - 48)
   p.texture.needsUpdate = true
   return { obj: p.obj, dispose: p.dispose }
+}
+
+/** AR placement hint, attached to the head until the turntable is placed. */
+function placementHint() {
+  const G = 1024, Y = 200
+  const p = canvasPlane(G, Y, 0.62)
+  const { c } = p
+  glass(c, G, Y, 32)
+  c.textAlign = 'center'
+  c.textBaseline = 'alphabetic'
+  c.fillStyle = INK_ON_GLASS
+  c.font = `600 46px ${TEXT}`
+  c.fillText('Masaya ya da yere bak.', G / 2, 88, G - 96)
+  c.fillStyle = SOFT
+  c.font = `400 38px ${TEXT}`
+  c.fillText('Halka çıkınca tetiğe bas.', G / 2, 146, G - 96)
+  p.texture.needsUpdate = true
+  return p
 }
 
 interface El {
@@ -294,22 +384,16 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   label.obj.frustumCulled = false
   label.obj.position.set(0, -0.38, -1.2)
   // AR placement hint, attached to the head until the turntable is placed (rig-local meters).
-  const hint = canvasPlane(1024, 200, 0.62)
-  hint.c.fillStyle = 'rgba(20, 32, 28, 0.82)'
-  hint.c.beginPath(); hint.c.roundRect(0, 0, 1024, 200, 40); hint.c.fill()
-  hint.c.textAlign = 'center'; hint.c.textBaseline = 'middle'; hint.c.fillStyle = '#ffffff'
-  hint.c.font = `600 46px ${TEXT}`; hint.c.fillText('Masaya ya da yere bak.', 512, 72, 960)
-  hint.c.font = `400 40px ${TEXT}`; hint.c.fillText('Halka çıkınca tetiğe bas.', 512, 136, 960)
-  hint.texture.needsUpdate = true
+  const hint = placementHint()
   hint.obj.material.depthTest = false
   hint.obj.renderOrder = 1004
   hint.obj.frustumCulled = false
   hint.obj.position.set(0, -0.12, -1)
 
   const rayGeometry = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3(0, 0, -RAY_LENGTH)])
-  const rayMaterial = new THREE.LineBasicMaterial({ color: '#f8f5ef', toneMapped: false })
+  const rayMaterial = new THREE.LineBasicMaterial({ color: RAY, toneMapped: false, transparent: true, opacity: 0.7 })
   const handGeometry = new THREE.SphereGeometry(0.015, 12, 8)
-  const handMaterial = new THREE.MeshBasicMaterial({ color: '#f0e1bc', toneMapped: false })
+  const handMaterial = new THREE.MeshBasicMaterial({ color: INK_ON_GLASS, toneMapped: false })
 
   // Bottom shares and bounding spheres are measured with the pieces in their target pose; the center is the piece's local origin.
   const box = new THREE.Box3()

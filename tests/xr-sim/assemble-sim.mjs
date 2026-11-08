@@ -69,7 +69,7 @@ async function open() {
   await page.addInitScript({ path: S + '/package/node_modules/iwer/build/iwer.min.js' })
   await page.addInitScript({ path: S + '/sim-page.js' })
   await page.addInitScript(pageHelpers)
-  await page.goto(`${url}/places/ulu-mosque`)
+  await page.goto(`${url}/places/${process.env.PLACE ?? 'ulu-mosque'}`)
   await page.locator('.model-area canvas').waitFor()
   await page.locator('.model-box').scrollIntoViewIfNeeded()
   await page.waitForFunction(() => [...document.querySelectorAll('.model-control button')].some((d) => d.textContent === 'İçeri gir' && !d.disabled) && window.__t?.frame > 2, null, { polling: 250 })
@@ -178,14 +178,14 @@ try {
   assert.deepEqual(await x.writings(), [], 'texture drawn in the frame loop')
   step('No canvas drawing in 30 frames')
 
-  // The stick does not move the model during the game.
+  // During the game the stick does not turn the model (the shelf stays on the right) but does change its size.
   const rig0 = (await x.d()).rig
-  await page.evaluate(() => __sim.stick('right', 1, 1))
+  await page.evaluate(() => __sim.stick('right', 1, 0))
   await x.frame(6)
   await page.evaluate(() => __sim.stick('right', 0, 0))
   await x.frame(2)
-  assert.deepEqual((await x.d()).rig, rig0, 'stick moved the rig during the game')
-  step('Right stick does not move the rig during the game')
+  assert.deepEqual((await x.d()).rig, rig0, 'stick X turned the rig during the game')
+  step('Right stick X does not turn the rig during the game (Y scaling is checked at the restart)')
 
   // The trigger grabs too (most people try it first); releasing it puts the layer back on the shelf.
   await x.hold(ROOF, 'right', 'trigger')
@@ -292,6 +292,17 @@ try {
   await x.hold(DRUM, 'left')
   await page.evaluate(() => __b.controllerScroll('left', [0, 0.1, 0]))
   await x.frame()
+  // Right stick Y scales the model during the game, without turning it; the held layer stays in the hand.
+  const rigHeld = (await x.d()).rig, heldAt = (await x.d()).layer[DRUM]
+  await page.evaluate(() => __sim.stick('right', 0, 1))
+  await x.frame(6)
+  await page.evaluate(() => __sim.stick('right', 0, 0))
+  await x.frame(2)
+  d = await x.d()
+  assert.notEqual(d.rig.scale, rigHeld.scale, 'stick Y did not change the scale during the game')
+  assert.equal(d.rig.rotY, rigHeld.rotY, 'stick Y turned the rig')
+  assert.ok(Math.hypot(...d.layer[DRUM].map((v, i) => v - heldAt[i])) < 0.5, `held layer jumped when scaling: ${heldAt} -> ${d.layer[DRUM]}`)
+  step('Right stick Y scales during the game; held layer stays in the hand', { scale: d.rig.scale })
   await x.press('right', 'b-button'); await x.release('right', 'b-button')
   assert.ok((await x.d()).menu, 'menu did not open with B')
   await x.menu('4-menu-game')

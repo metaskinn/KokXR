@@ -1,6 +1,6 @@
 // Model assembly in VR: grab a layer with the grip button, carry it to its place, seat it. The rig and menu belong to xrSession; this only moves layers.
 import * as THREE from 'three'
-import { releaseResult, assemblyText, selectLayer, shelfLayout, carriedPlace, type ReleaseResult, type LayerCandidate, type Box, type Pointed } from './modelAssembleLogic'
+import { releaseResult, assemblyText, selectLayer, shelfLayout, carriedPlace, assemblySize, SEAT_THRESHOLD, RAY_RANGE, type ReleaseResult, type LayerCandidate, type Box, type Pointed } from './modelAssembleLogic'
 import type { ModelLayer } from './uluMosqueModel'
 import { titlePanel, assemblyPanel } from '../../shared/xr/xrPanel'
 
@@ -21,6 +21,10 @@ export interface ModelAssembly {
   finish: () => void
   /** Whether the game owns the layers: the scene's explode loop and the rig stick must not touch them. */
   inGame: () => boolean
+  /** Model size relative to Ulu Camii (≥ 1): the shelf, seat threshold and ray reach grow with it; the session fits the start scale to it. */
+  size: () => number
+  /** The rig scale changed: held layers stay where they are and follow the hand from its new scene position. */
+  reanchor: () => void
   frame: (dt: number) => void
   clear: () => void
 }
@@ -70,6 +74,7 @@ export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
   let game = false, ending = false
   let seatedOne = 0, doneRemaining = 0
   let boxes: Box[] = [], centers: Pointed[] = [], radii: number[] = [], shelves: Pointed[] = []
+  let size = 1, seatThreshold = SEAT_THRESHOLD, reach = RAY_RANGE
   /** Layers gliding to their own place, not to the hand. */
   const floating = new Map<number, THREE.Vector3>()
 
@@ -83,12 +88,15 @@ export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
     })
     centers = boxes.map(({ min, max }) => [(min[0] + max[0]) / 2, (min[1] + max[1]) / 2, (min[2] + max[2]) / 2])
     radii = boxes.map(({ min, max }) => Math.max(max[0] - min[0], max[1] - min[1], max[2] - min[2]) / 2)
-    shelves = shelfLayout(boxes)
+    size = assemblySize(boxes)
+    seatThreshold = SEAT_THRESHOLD * size
+    reach = RAY_RANGE * size
+    shelves = shelfLayout(boxes, size)
     namePanels.forEach(({ obj }, id) => {
       // On the shelf, at the model-side end of the edge facing the user, closest to view. At the rig's initial angle the user is in the -z direction.
-      obj.position.set(boxes[id].max[0] - NAME_HALF, centers[id][1], boxes[id].min[2] - 2)
+      obj.position.set(boxes[id].max[0] - NAME_HALF * size, centers[id][1], boxes[id].min[2] - 2 * size)
       obj.rotation.y = Math.PI
-      obj.scale.setScalar(NAME_SCALE)
+      obj.scale.setScalar(NAME_SCALE * size)
     })
   }
 
@@ -109,7 +117,7 @@ export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
   const handCandidate = (el: El) => {
     el.controller.updateWorldMatrix(true, false, true)
     raycaster.setFromXRController(el.controller)
-    return selectLayer(raycaster.ray.origin.toArray(), raycaster.ray.direction.toArray(), candidates())
+    return selectLayer(raycaster.ray.origin.toArray(), raycaster.ray.direction.toArray(), candidates(), reach)
   }
 
   const draw = (last?: { result: ReleaseResult; id: number }) => panel.draw(assemblyText(seatedOne, names, last))
@@ -146,7 +154,7 @@ export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
     const id = el.held
     if (id === null) return
     releaseHand(el)
-    const result = releaseResult(id, seatedOne, layers[id].group.position.length())
+    const result = releaseResult(id, seatedOne, layers[id].group.position.length(), seatThreshold)
     if (result === 'seated') {
       seatedOne++
       floating.set(id, new THREE.Vector3())
@@ -213,6 +221,17 @@ export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
     },
     finish,
     inGame: () => game,
+    size: () => {
+      measure()
+      return size
+    },
+    reanchor: () => {
+      for (const el of hands) {
+        if (el.held === null) continue
+        el.handStart = handPlace(el)
+        el.pieceStart = layers[el.held].group.position.toArray()
+      }
+    },
     frame: (dt) => {
       if (doneRemaining > 0) {
         doneRemaining -= dt
@@ -226,7 +245,7 @@ export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
         if (el.held !== null) {
           const y = carriedPlace(el.pieceStart, el.handStart, handPlace(el))
           layers[el.held].group.position.set(...y)
-          if (targetBox.userData.id === el.held) targetMaterial.color.set(BOX_COLOR[releaseResult(el.held, seatedOne, Math.hypot(...y))])
+          if (targetBox.userData.id === el.held) targetMaterial.color.set(BOX_COLOR[releaseResult(el.held, seatedOne, Math.hypot(...y), seatThreshold)])
         } else if (el.controller.visible) {
           const id = handCandidate(el)
           if (id !== null) aimPoint.add(id)
@@ -235,7 +254,7 @@ export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
       namePanels.forEach(({ obj }, id) => {
         const glossy = aimPoint.has(id)
         obj.material.color.set(glossy ? NAME_LIGHT : NAME_COLOR)
-        obj.scale.setScalar(glossy ? NAME_SCALE * NAME_GROWTH : NAME_SCALE)
+        obj.scale.setScalar((glossy ? NAME_SCALE * NAME_GROWTH : NAME_SCALE) * size)
       })
 
       const ratio = 1 - Math.exp(-dt * SEAT_SPEED)

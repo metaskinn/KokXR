@@ -5,24 +5,47 @@ export interface Box { min: Pointed; max: Pointed }
 export interface LayerCandidate { id: number; center: Pointed; radius: number }
 export type ReleaseResult = 'seated' | 'row' | 'far'
 
-/** A layer seats when this close to its target. Scene units: cm when the rig is 100×. */
+/** A layer seats when this close to its target. Scene units: cm when the rig is 100×. Tuned for Bursa Ulu Camii (size 1). */
 export const SEAT_THRESHOLD = 18
 /** Layers are wider than the hand and the shelf is beyond arm's reach: if the hand moves 1 cm the layer moves 2 cm. */
 export const HAND_GAIN = 2
 /** Ray range (scene units). */
 export const RAY_RANGE = 300
+/** Footprint (scene units) of Ulu Camii's layers together (~72 wide); a little slack keeps Ulu Camii at size exactly 1. */
+export const REFERENCE_FOOTPRINT = 75
 
 // At the rig's initial angle the user's right is the scene's -x direction: the shelf is just to the right of the model.
 const RAF_X = -85, SHELF_BASE = 18, SHELF_GAP = 10
+/** Minimum gap between the layers' home footprint and the shelf, at size 1. */
+const SHELF_CLEAR = 10
 
-/** Shelf slots (offset relative to the layer's home). The top layer goes to the bottom shelf, so the model's own stacking isn't given away. */
-export function shelfLayout(boxes: Box[]): Pointed[] {
+/** Assembly size relative to Ulu Camii: the widest horizontal side of all layers' boxes together. Never below 1, small models play like Ulu Camii. */
+export function assemblySize(boxes: Box[], reference = REFERENCE_FOOTPRINT): number {
+  if (!boxes.length) return 1
+  let x0 = Infinity, x1 = -Infinity, z0 = Infinity, z1 = -Infinity
+  for (const { min, max } of boxes) {
+    x0 = Math.min(x0, min[0]); x1 = Math.max(x1, max[0])
+    z0 = Math.min(z0, min[2]); z1 = Math.max(z1, max[2])
+  }
+  const footprint = Math.max(x1 - x0, z1 - z0)
+  return Number.isFinite(footprint) ? Math.max(1, footprint / reference) : 1
+}
+
+/** Shelf slots (offset relative to the layer's home). The top layer goes to the bottom shelf, so the model's own stacking isn't given away.
+ * `size` scales the shelf with the model; the shelf also moves outward until it clears the layers' home footprint. */
+export function shelfLayout(boxes: Box[], size = 1): Pointed[] {
   const result: Pointed[] = []
-  let base = SHELF_BASE
+  let edge = Infinity, half = 0
+  for (const { min, max } of boxes) {
+    edge = Math.min(edge, min[0])
+    half = Math.max(half, (max[0] - min[0]) / 2)
+  }
+  const x = Math.min(RAF_X * size, edge - SHELF_CLEAR * size - half)
+  let base = SHELF_BASE * size
   for (let id = boxes.length - 1; id >= 0; id--) {
     const { min, max } = boxes[id]
-    result[id] = [RAF_X - (min[0] + max[0]) / 2, base - min[1], -(min[2] + max[2]) / 2]
-    base += max[1] - min[1] + SHELF_GAP
+    result[id] = [x - (min[0] + max[0]) / 2, base - min[1], -(min[2] + max[2]) / 2]
+    base += max[1] - min[1] + SHELF_GAP * size
   }
   return result
 }

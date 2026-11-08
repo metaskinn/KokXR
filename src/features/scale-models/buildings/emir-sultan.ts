@@ -296,6 +296,7 @@ export const building = (): Model => {
   // Sky seen from the courtyard: drawn only while walking.
   const sky = new THREE.Mesh(new THREE.SphereGeometry(240, 32, 16), skyMaterial(0, OZ + 1.5, 33))
   sky.frustumCulled = false
+  sky.userData.noBounds = true // Not part of the model's size (AR table fit)
   root.add(sky)
 
   return {

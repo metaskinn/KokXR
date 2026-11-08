@@ -68,6 +68,23 @@ const TITLE_COLOR = '#c9d4cf', TITLE_LIGHT = '#ffffff', TITLE_GROWTH = 1.12
 const AR_SCALE_MIN = 0.4, AR_SCALE_MAX = 2.5, AR_AHEAD = 1, AR_BELOW_EYES = 0.6
 const AR_HINT = 'Masaya ya da yere bak. Halka çıkınca tetiğe bas.'
 
+/** The model's box; objects marked `userData.noBounds` (e.g. a sky sphere seen only while walking) do not count. */
+function modelBounds(root: THREE.Object3D): THREE.Box3 {
+  root.updateWorldMatrix(true, true)
+  const box = new THREE.Box3(), part = new THREE.Box3()
+  const visit = (o: THREE.Object3D) => {
+    if (o.userData.noBounds) return
+    const geometry = (o as THREE.Mesh).geometry as THREE.BufferGeometry | undefined
+    if (geometry?.attributes?.position) {
+      if (!geometry.boundingBox) geometry.computeBoundingBox()
+      box.union(part.copy(geometry.boundingBox!).applyMatrix4(o.matrixWorld))
+    }
+    o.children.forEach(visit)
+  }
+  visit(root)
+  return box
+}
+
 export function setupXrSession(s: XrOption): XrSession {
   const { renderer, scene, camera, walking, stops } = s
   const xr = renderer.xr
@@ -304,12 +321,13 @@ export function setupXrSession(s: XrOption): XrSession {
       return
     }
     // The model returns to its initial angle and scale: the shelf should be on the user's right, within reach.
+    // A large complex starts smaller (VR), so the model and its shelf both fit in view and the hand travel stays as for Ulu Camii.
     if (id === 'assemble') {
       showMenu(false)
       doTransition(() => {
         s.setShatter(false)
         angle = 0
-        scale = ar ? arBase : TABLE_SCALE_INITIAL
+        scale = ar ? arBase : THREE.MathUtils.clamp(TABLE_SCALE_INITIAL * assembly.size(), TABLE_SCALE_MIN, TABLE_SCALE_MAX)
         applyTable()
         assembly.begin()
       })
@@ -374,7 +392,7 @@ export function setupXrSession(s: XrOption): XrSession {
 
   /** AR: sizes the model for a table and finds its underside. Measured on every start: layers or buildings may differ. */
   const measureForAr = () => {
-    const box = new THREE.Box3().setFromObject(s.root)
+    const box = modelBounds(s.root)
     if (box.isEmpty()) return null
     const size = box.getSize(new THREE.Vector3()), centre = box.getCenter(new THREE.Vector3())
     const extent = Math.max(size.x, size.z)
@@ -584,14 +602,18 @@ export function setupXrSession(s: XrOption): XrSession {
     updateTitles()
   }
 
+  /** During the assembly game only the size changes: turning would carry the shelf away from the user's right. */
   const tableFrame = (input: ReturnType<typeof controllerInput>, dt: number) => {
-    const turn = deadZone(input.rightX), growth = deadZone(input.rightY)
+    const inGame = assembly.inGame()
+    const turn = inGame ? 0 : deadZone(input.rightX), growth = deadZone(input.rightY)
     if (!turn && !growth) return
     angle += turn * dt * STICK_SPEED
     scale = ar
       ? THREE.MathUtils.clamp(scale * Math.exp(growth * dt * STICK_SPEED), arBase * AR_SCALE_MIN, arBase * AR_SCALE_MAX)
       : THREE.MathUtils.clamp(scale * Math.exp(growth * dt * STICK_SPEED), TABLE_SCALE_MIN, TABLE_SCALE_MAX)
     applyTable()
+    // A carried layer stays in the hand: its carry start is taken again from the hand's new scene position.
+    if (inGame) assembly.reanchor()
   }
 
   return {
@@ -660,7 +682,7 @@ export function setupXrSession(s: XrOption): XrSession {
       const step = Math.min(dt, MAX_DT)
       assembly.frame(step)
       if (inside) innerFrame(input, step)
-      else if (!assembly.inGame()) tableFrame(input, step)
+      else tableFrame(input, step)
     },
     finish,
     showInfo: (k) => {

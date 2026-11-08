@@ -1,7 +1,7 @@
 // Pure calculations for VR model assembly. Run: node tests/model-assemble-logic.mjs
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { HAND_GAIN, RAY_RANGE, SEAT_THRESHOLD, releaseResult, assemblyText, selectLayer, shelfLayout, carriedPlace } from '../src/features/scale-models/modelAssembleLogic.ts'
+import { HAND_GAIN, RAY_RANGE, SEAT_THRESHOLD, assemblySize, releaseResult, assemblyText, selectLayer, shelfLayout, carriedPlace } from '../src/features/scale-models/modelAssembleLogic.ts'
 
 // The module stays free of three
 assert(!/from 'three'/.test(readFileSync(new URL('../src/features/scale-models/modelAssembleLogic.ts', import.meta.url), 'utf8')))
@@ -34,6 +34,28 @@ for (let i = 0; i < 3; i++) {
 }
 // Threshold reachable by hand: the hand travel for the farthest layer must not exceed arm length.
 assert(Math.max(...shelf.map((r) => Math.hypot(...r))) / HAND_GAIN < 70, 'hand travel too long')
+
+// Scale: Ulu Camii-sized layers keep size 1 and the same shelf; a complex 3× larger gets a larger shelf beside it, not inside it.
+assert.equal(assemblySize(boxes), 1)
+assert.equal(assemblySize([]), 1)
+assert.deepEqual(shelfLayout(boxes, 1), shelf)
+const big = boxes.map(({ min, max }) => ({ min: min.map((v) => v * 3), max: max.map((v) => v * 3) }))
+const k = assemblySize(big)
+assert(k > 2.5 && k < 3.1, `size of the 3× model: ${k}`)
+const bigShelf = shelfLayout(big, k)
+const bigBase = (i) => big[i].min[1] + bigShelf[i][1], bigCeiling = (i) => big[i].max[1] + bigShelf[i][1]
+assert(bigBase(2) < bigBase(1) && bigBase(1) < bigBase(0), '3×: top layer is not on the bottom shelf')
+assert(bigCeiling(2) < bigBase(1) && bigCeiling(1) < bigBase(0), '3×: shelves overlap')
+const bodyEdge = Math.min(...big.map((b) => b.min[0]))
+for (let i = 0; i < 3; i++) {
+  assert(bigShelf[i][0] + big[i].max[0] < bodyEdge, '3×: shelf intersects the body')
+  assert(Math.hypot(...bigShelf[i]) > SEAT_THRESHOLD * k * 3, '3×: shelf too close to the target')
+}
+// With the rig started at 100·k, the hand travel in metres stays as for the reference model.
+assert(Math.max(...bigShelf.map((r) => Math.hypot(...r))) / HAND_GAIN / k < 70, '3×: hand travel too long')
+// Seat threshold and reach passed in scaled
+assert.equal(releaseResult(0, 0, SEAT_THRESHOLD * 2, SEAT_THRESHOLD * k), 'seated')
+assert.equal(selectLayer([0, 0, 0], [0, 0, -1], [{ id: 0, center: [0, 0, -RAY_RANGE * 2], radius: 30 }], RAY_RANGE * k), 0)
 
 // Selection: aiming comes before touching, the most central hit wins
 const a = (id, center, radius = 30) => ({ id, center, radius })

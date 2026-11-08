@@ -67,7 +67,7 @@ export function assemblyText(seatedOne: number, names: string[], last?: { result
   const progress = `${seatedOne}/${names.length} katman yerinde`
   if (seatedOne >= names.length) return { top: `Tamamlandı: ${progress}`, message: 'Maket birleşti.', note: ORDER_NOTE }
   const top = `Maketi birleştir: ${progress}`
-  let message = 'Kavrama tuşuyla tut, yerine götür, bırak. Menü: B veya Y.'
+  let message = 'Tetik ya da kavrama tuşuyla tut, yerine götür, bırak. Menü: B veya Y.'
   if (last?.result === 'seated') message = `${names[last.id]} yerine oturdu.`
   else if (last?.result === 'row') message = `Önce ${names[seatedOne]} oturmalı. Sıra alttan üste gider.`
   else if (last?.result === 'far') message = 'Yerine yaklaşmadı. Yeniden dene.'

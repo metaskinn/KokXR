@@ -187,14 +187,15 @@ try {
   assert.deepEqual((await x.d()).rig, rig0, 'stick moved the rig during the game')
   step('Right stick does not move the rig during the game')
 
-  // Trigger does not grab, grip does.
+  // The trigger grabs too (most people try it first); releasing it puts the layer back on the shelf.
   await x.hold(ROOF, 'right', 'trigger')
   const before = (await x.d()).layer[ROOF]
   await page.evaluate(() => __b.controllerScroll('right', [0, 0.1, 0]))
   await x.frame()
-  assert.deepEqual((await x.d()).layer[ROOF], before, 'trigger grabbed the layer')
+  assert.notDeepEqual((await x.d()).layer[ROOF], before, 'trigger did not grab the layer')
   await x.release('right', 'trigger')
-  step('Trigger does not grab a layer')
+  await x.frame(30)
+  step('Trigger grabs a layer as well')
 
   // Wrong order: domes first.
   await x.hold(DOME)

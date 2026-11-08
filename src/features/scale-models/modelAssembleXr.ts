@@ -166,7 +166,8 @@ export function setupModelAssembly(b: AssemblyContext): ModelAssembly {
 
   const hands: El[] = b.controllers.map(({ controller, ray }) => {
     const el: El = { controller, ray, held: null, toRelease: false, handStart: [0, 0, 0], pieceStart: [0, 0, 0], listeners: [] }
-    el.listeners = [['squeezestart', () => head(el)], ['squeezeend', () => lift(el)], ['disconnected', () => breakGrip(el)]]
+    // Both the grip and the trigger grab: on Quest most people reach for the trigger first.
+    el.listeners = [['squeezestart', () => head(el)], ['squeezeend', () => lift(el)], ['selectstart', () => head(el)], ['selectend', () => lift(el)], ['disconnected', () => breakGrip(el)]]
     for (const [event, f] of el.listeners) controller.addEventListener(event as 'squeezestart', f)
     return el
   })

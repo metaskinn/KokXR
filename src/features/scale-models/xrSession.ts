@@ -235,6 +235,14 @@ export function setupXrSession(s: XrOption): XrSession {
   let placed = false, placeNow = false
   // Phone AR: the DOM overlay replaces the head-attached hint, label and menu; a tap after placement does nothing.
   let mobile = false
+  /** Phone: set when two screen touches were down at once; cleared when every finger has lifted. */
+  let multiTouch = false
+  const onInputSources = () => {
+    if (!session) return
+    const n = Array.from(session.inputSources).filter((s) => s.targetRayMode === 'screen').length
+    if (n > 1) multiTouch = true
+    else if (n === 0) setTimeout(() => { multiTouch = false }, 0) // after the last finger's own select has been ignored
+  }
   let mobileListener: XrStartOption['onMobileState'] | null = null
   let restoreQuality: (() => void) | null = null
   const undoQuality = () => { restoreQuality?.(); restoreQuality = null }
@@ -400,7 +408,14 @@ export function setupXrSession(s: XrOption): XrSession {
   const wasSelected = (controller: THREE.XRTargetRaySpace) => {
     if (!session || transition) return
     // AR placement: any trigger press (or screen tap on a phone) puts the model down where it is previewed.
-    if (ar && !placed) { placeNow = true; return }
+    if (ar && !placed) {
+      // On a phone two fingers are two transient screen inputs: that is a gesture, not a tap, so it does not place.
+      const screenTouches = Array.from(session.inputSources).filter((s) => s.targetRayMode === 'screen').length
+      // Once a second finger has been down, the rest of that touch (including lifting the last finger) is a gesture.
+      if (screenTouches > 1 || multiTouch) return
+      placeNow = true
+      return
+    }
     // Phone: after placement a screen tap has no target (no rays, no menu); the overlay buttons do the work.
     if (mobile) return
     const hit = findHit(controller)
@@ -440,6 +455,8 @@ export function setupXrSession(s: XrOption): XrSession {
     session = fresh
     ar = mode === 'ar'
     mobile = ar && phone
+    multiTouch = false
+    if (mobile) fresh.addEventListener('inputsourceschange', onInputSources)
     rig.add(camera)
     if (!mobile) camera.add(ar ? arLabel.obj : label.obj)
     scene.add(rig)
@@ -535,6 +552,8 @@ export function setupXrSession(s: XrOption): XrSession {
       placeNow = false
     }
     if (mobile) mobileListener?.(null)
+    session?.removeEventListener('inputsourceschange', onInputSources)
+    multiTouch = false
     mobile = false
     mobileListener = null
     camera.removeFromParent()
@@ -706,8 +725,11 @@ export function setupXrSession(s: XrOption): XrSession {
         starting = false
       }
       xr.setFoveation(1)
-      if (root) mobileListener = option.onMobileState ?? null
-      enter(fresh, mode, lighting, !!root)
+      // Phone mode needs the DOM overlay: if the browser did not grant it, keep the head panels and menu so the user can still leave.
+      const overlayGranted = !!root && !!(fresh as XRSession & { domOverlayState?: unknown }).domOverlayState
+      if (overlayGranted) mobileListener = option.onMobileState ?? null
+      else if (root) option.onMobileState?.(null)
+      enter(fresh, mode, lighting, overlayGranted)
     },
     frame: (dt) => {
       if (!session) return

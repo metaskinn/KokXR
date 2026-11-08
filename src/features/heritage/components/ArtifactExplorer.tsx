@@ -188,7 +188,8 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
     }
     // Browsers start the session only within a user gesture: no await may come before this.
     s.startXr(kind, root ? { overlayRoot: root, onMobileState } : undefined)
-      .catch(() => { setXrBusy(false); setXrError(true); setOverlayOn(false); setMobileState(null) })
+      // A start that finishes after the page left (or after a new scene replaced this one) must not touch the UI.
+      .catch(() => { if (scene.current !== s) return; setXrBusy(false); setXrError(true); setOverlayOn(false); setMobileState(null) })
   }
 
   function shatter() {

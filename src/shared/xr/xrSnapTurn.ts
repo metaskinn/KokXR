@@ -8,3 +8,16 @@ export function snapTurn(rightX: number, ready: boolean): { angle: number; ready
   if (ready && Math.abs(rightX) >= SNAP_THRESHOLD) return { angle: rightX > 0 ? -XR_SNAP_ANGLE : XR_SNAP_ANGLE, ready: false }
   return { angle: 0, ready }
 }
+
+// Smooth turn: the rig turns continuously while the stick is held. Speed grows with the push and eases in and out,
+// so a turn never starts or stops in one frame. The comfort vignette is shown while turning.
+export const XR_TURN_SPEED = Math.PI / 2 // 90 degrees per second at full push
+const TURN_DEAD_ZONE = 0.2, TURN_EASE = 8 // 1/s: how fast the speed follows the stick
+
+/** Turn speed for this frame (rad/s, positive = left). `speed` is last frame's value. */
+export function smoothTurn(rightX: number, speed: number, dt: number): number {
+  const push = Math.abs(rightX) < TURN_DEAD_ZONE ? 0 : (Math.abs(rightX) - TURN_DEAD_ZONE) / (1 - TURN_DEAD_ZONE)
+  const target = -Math.sign(rightX) * push * push * XR_TURN_SPEED
+  const next = speed + (target - speed) * Math.min(1, dt * TURN_EASE)
+  return Math.abs(next) < 1e-3 && target === 0 ? 0 : next
+}

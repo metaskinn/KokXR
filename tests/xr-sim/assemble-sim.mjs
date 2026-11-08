@@ -50,7 +50,8 @@ function pageHelpers() {
         presenting: renderer.xr.isPresenting, inAssembly: T.xr.inAssembly(), fragmented: T.fragmented, inside: T.inside,
         layer: layers.map((k) => k.group.position.toArray().map((v) => Number(v.toFixed(2)))),
         child: layers.map((k) => k.group.children.filter((c) => c.geometry?.type === 'PlaneGeometry').length),
-        menu: menu?.visible ?? false, cameraChild: camera.children.length, cameraParent: camera.parent?.type ?? null, sceneChild: scene.children.length,
+        // The comfort vignette stays on the camera; it is hidden while standing still, so only visible children count.
+        menu: menu?.visible ?? false, cameraChild: camera.children.filter((c) => c.visible).length, cameraParent: camera.parent?.type ?? null, sceneChild: scene.children.length,
         rig: camera.parent ? { p: camera.parent.position.toArray().map((v) => Number(v.toFixed(2))), rotY: Number(camera.parent.rotation.y.toFixed(3)), scale: camera.parent.scale.x } : null,
         near: camera.near, far: camera.far, control: T.controls.enabled,
       }
@@ -68,8 +69,7 @@ async function open() {
   await page.addInitScript({ path: S + '/package/node_modules/iwer/build/iwer.min.js' })
   await page.addInitScript({ path: S + '/sim-page.js' })
   await page.addInitScript(pageHelpers)
-  await page.goto(`${url}/artifact/ulu-mosque`)
-  await page.getByRole('button', { name: /maketini eline al/ }).click()
+  await page.goto(`${url}/places/ulu-mosque`)
   await page.locator('.model-area canvas').waitFor()
   await page.locator('.model-box').scrollIntoViewIfNeeded()
   await page.waitForFunction(() => [...document.querySelectorAll('.model-control button')].some((d) => d.textContent === 'İçeri gir' && !d.disabled) && window.__t?.frame > 2, null, { polling: 250 })

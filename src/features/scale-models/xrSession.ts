@@ -2,7 +2,7 @@
 import * as THREE from 'three'
 import { TITLE_FAR, TITLE_NEAR, TABLE_SCALE_INITIAL, TABLE_SCALE_MAX, TABLE_SCALE_MIN, rotateAroundHead, titlePlace, stopRig, controllerInput, tableRig, deadZone, nonOverlapAngle, walkStep, type RigPose } from '../../shared/xr/xrMotion'
 import { FLOOR_Y, type InteriorStop, type InteriorWalk } from './uluMosqueInterior'
-import { snapTurn } from '../../shared/xr/xrSnapTurn'
+import { smoothTurn } from '../../shared/xr/xrSnapTurn'
 import { createNarration } from './xrNarration'
 import { setupModelAssembly } from './modelAssembleXr'
 import type { ModelLayer } from './uluMosqueModel'
@@ -92,10 +92,23 @@ export function setupXrSession(s: XrOption): XrSession {
   darken.visible = false
   rig.add(darken)
 
-  // Comfort vignette: a dark ring around the view fades in while the stick walks, which reduces motion sickness.
+  // Comfort vignette: the edge of the view darkens softly while the stick walks, which reduces motion sickness.
+  // The clear centre covers about 70 degrees and fades out towards the edge; the ring reaches past the headset's field of view,
+  // so no bright band is left at the rim (the old hard 44-degree ring read as a "round window" on Quest).
+  const vignetteShape = new THREE.RingGeometry(0.14, 1.2, 48, 6)
+  {
+    const pos = vignetteShape.attributes.position
+    const alpha = new Float32Array(pos.count * 4)
+    for (let i = 0; i < pos.count; i++) {
+      const r = Math.hypot(pos.getX(i), pos.getY(i))
+      const t = Math.min(1, Math.max(0, (r - 0.14) / 0.16))
+      alpha.set([0, 0, 0, t * t * (3 - 2 * t)], i * 4)
+    }
+    vignetteShape.setAttribute('color', new THREE.BufferAttribute(alpha, 4))
+  }
   const vignette = new THREE.Mesh(
-    new THREE.RingGeometry(0.08, 0.4, 32),
-    new THREE.MeshBasicMaterial({ color: '#000000', transparent: true, opacity: 0, depthTest: false, depthWrite: false, side: THREE.DoubleSide }),
+    vignetteShape,
+    new THREE.MeshBasicMaterial({ color: '#ffffff', vertexColors: true, transparent: true, opacity: 0, depthTest: false, depthWrite: false, side: THREE.DoubleSide }),
   )
   vignette.position.set(0, 0, -0.2)
   vignette.renderOrder = 1999
@@ -354,7 +367,7 @@ export function setupXrSession(s: XrOption): XrSession {
   }
 
   const narration = createNarration()
-  let snapReady = true
+  let turnSpeed = 0 // rad/s, eased (smooth turn)
   const onSessionEnd = () => {
     narration.stop()
     if (!session) return // Closing a half-finished start: the scene was never touched
@@ -411,9 +424,10 @@ export function setupXrSession(s: XrOption): XrSession {
         }
       }
     }
-    const moving = Math.abs(input.leftX) > 0.1 || Math.abs(input.leftY) > 0.1
+    // A worn stick drifts a little; only a deliberate push counts as walking.
+    const moving = Math.hypot(input.leftX, input.leftY) > 0.25 || Math.abs(turnSpeed) > 0.3
     const vignetteMaterial = vignette.material as THREE.MeshBasicMaterial
-    vignetteMaterial.opacity = moving ? Math.min(0.65, vignetteMaterial.opacity + dt * 4) : Math.max(0, vignetteMaterial.opacity - dt * 4)
+    vignetteMaterial.opacity = moving ? Math.min(0.55, vignetteMaterial.opacity + dt * 3) : Math.max(0, vignetteMaterial.opacity - dt * 4)
     vignette.visible = vignetteMaterial.opacity > 0
     const fresh = walkStep(head, { x: forwardWorld.x, z: forwardWorld.z }, { x: input.leftX, y: input.leftY }, dt,
       (x, z) => floorStep(walking, x, z, PLAYER_RADIUS, innerFloor) === null)
@@ -423,9 +437,8 @@ export function setupXrSession(s: XrOption): XrSession {
     rig.position.x += fresh.x - head.x
     rig.position.z += fresh.z - head.z
 
-    const turn = snapTurn(input.rightX, snapReady)
-    snapReady = turn.ready
-    const a = turn.angle
+    turnSpeed = smoothTurn(input.rightX, turnSpeed, dt)
+    const a = turnSpeed * dt
     if (a !== 0) {
       const r = rotateAroundHead({ x: rig.position.x, z: rig.position.z }, fresh, a)
       rig.position.x = r.x

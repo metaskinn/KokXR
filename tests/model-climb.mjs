@@ -1,4 +1,4 @@
-// Ulu Mosque interior: the minbar, kursu and mahfil can be climbed on foot with real collision data, without falling off edges.
+// Ulu Mosque interior: the minbar and mahfil can be climbed on foot with real collision data, without falling off edges.
 // Run: with the dev server up, TEST_URL=http://127.0.0.1:5173 node tests/model-climb.mjs
 import { chromium } from 'playwright'
 
@@ -31,12 +31,11 @@ const result = await page.evaluate(async () => {
     minbarIn: walk([MX, Z0 + 5.5, 4.7], [[MX, Z0 - 0.75], [MX - 3, Z0 - 0.75]]),
     minbarSide: walk([MX, Z0 + 3, 2.15], [[MX - 3, Z0 + 3]]),
     minbarOuter: walk([MX + 2, Z0 + 3, 0], [[MX, Z0 + 3]]),
-    kursu: walk([KURSU.x - 0.1, KURSU.z - KURSU.r - 2.2, 0], [[KURSU.x - 0.1, KURSU.z]]),
     kursuOuter: walk([KURSU.x - 2, KURSU.z, 0], [[KURSU.x, KURSU.z]]),
     mahfil: walk([MAHFIL.x + 2.65, MAHFIL.z - 6.95, 0], [[MAHFIL.x + 2.65, MAHFIL.z - 2], [MAHFIL.x, MAHFIL.z]]),
     mahfilEdge: walk([MAHFIL.x, MAHFIL.z, 3.8], [[MAHFIL.x, MAHFIL.z + 5]]),
     mahfilBottom: walk([MAHFIL.x, MAHFIL.z - 4, 0], [[MAHFIL.x, MAHFIL.z + 4]]),
-    stops: { minbar: floorAt('minbar-top'), kursu: floorAt('kursu-top'), mahfil: floorAt('mahfil-top'), entrance: floorAt('entrance'), fountain: floorAt('fountain') },
+    stops: { minbar: floorAt('minbar-top'), mahfil: floorAt('mahfil-top'), entrance: floorAt('entrance'), fountain: floorAt('fountain') },
   }
 })
 const condition = (k, m) => { if (!k) throw new Error(m + ' ' + JSON.stringify(result)) }
@@ -44,11 +43,10 @@ condition(!result.minbar.blocked && result.minbar.h > 4, 'could not climb the mi
 condition(!result.minbarIn.blocked && result.minbarIn.h === 0, 'could not descend the minbar')
 condition(result.minbarSide.blocked && result.minbarSide.h > 1.5, 'fell off the side of the minbar')
 condition(result.minbarOuter.blocked && result.minbarOuter.h === 0, 'entered the minbar from the side')
-condition(!result.kursu.blocked && result.kursu.h > 2, 'could not climb the kursu')
 condition(result.kursuOuter.blocked && result.kursuOuter.h === 0, 'passed through the kursu body')
 condition(!result.mahfil.blocked && result.mahfil.h > 3.5, 'could not climb the mahfil')
 condition(result.mahfilEdge.blocked && result.mahfilEdge.h > 3.5, 'fell off the mahfil')
 condition(!result.mahfilBottom.blocked && result.mahfilBottom.h === 0, 'could not pass under the mahfil')
-condition(result.stops.minbar > 3 && result.stops.kursu > 2 && result.stops.mahfil > 3.5 && result.stops.entrance === 0 && result.stops.fountain === 0, 'stop floors are wrong')
-console.log('Climb: ascending and descending minbar, kursu and mahfil, no falling off edges, stops passed.')
+condition(result.stops.minbar > 3 && result.stops.mahfil > 3.5 && result.stops.entrance === 0 && result.stops.fountain === 0, 'stop floors are wrong')
+console.log('Climb: ascending and descending minbar and mahfil, no falling off edges, stops passed.')
 await browser.close()

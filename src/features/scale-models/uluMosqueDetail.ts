@@ -111,14 +111,9 @@ export function uluMosqueDetails(m: UluMosqueMaterials, k: Bucket) {
   }
   buildMahfil(m, k, { x: MAHFIL.x, z: MAHFIL.z, wZ: MAHFIL.wZ, floor: FLOOR })
   const { x: kursuX, z: kursuZ, r: kursuR } = KURSU
-  // The north side of the upper wall is open: the entrance reached by the steps.
-  marbleKursu(m, k, { x: kursuX, z: kursuZ, r: kursuR, floor: FLOOR, entrance: 1.1 })
+  // The basin wall is a closed ring; the kürsü is a solid obstacle, not walkable.
+  marbleKursu(m, k, { x: kursuX, z: kursuZ, r: kursuR, floor: FLOOR })
   woodKursu(m, k, FLOOR)
-  // Steps connecting to the pier
-  for (let n = 0; n < 6; n++) {
-    k.add(place(boxG(0.8, 0.34, 0.5), kursuX, FLOOR + 0.17 + n * 0.34, kursuZ - kursuR - 1.6 + n * 0.32), m.innerMarble)
-    k.add(place(boxG(0.8, n * 0.34 + 0.02, 0.5), kursuX, FLOOR + (n * 0.34) / 2, kursuZ - kursuR - 1.6 + n * 0.32), m.marbleDark)
-  }
 
   // --- Wooden chests (taps and spouts are in ulu-mosque/fountain.ts) ---
   for (const [x, z] of [[sx - 4.3, sz - 4.3], [sx + 4.3, sz - 4.3], [sx - 4.3, sz + 4.3], [sx + 4.3, sz + 4.3]]) buildChest(m, k, x, z, z < sz ? 1 : -1, FLOOR)

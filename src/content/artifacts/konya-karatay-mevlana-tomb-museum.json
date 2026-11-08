@@ -170,7 +170,7 @@
   ],
   "model": {
     "model": "konya-karatay-mevlana-tomb-museum",
-    "description": "Temsilî maket, gerçek bir 3B tarama değildir. Kodla oluşturuldu ve şimdilik yalnızca dış görünüşü kapsar. Yapıların yeri ve birbirine göre konumu envanterdeki dik kuşbakışı fotoğraftan oranlandı. Türbenin on altı dilimli gövdesi ve yeşil çinili külahı, semahanenin 12 m çaplı kubbesi, mescidin üç kubbeli son cemaat yeri ve minaresi, L biçimli on sekiz kubbeli derviş hücresi, şadırvanın sekiz sütunu ve bahçedeki altı türbe envanterden alındı. Yükseklikler, pencere ve kapı yerleri, matbahın kütlesi, türbelerin konumu ve biçimi, selsebil ile Şeb-i Arus havuzu temsilîdir.",
+    "description": "Temsilî maket, gerçek bir 3B tarama değildir. Kodla oluşturuldu; dış görünüşün yanında ana yapının içi de gezilebilir: Huzur-ı Pîr ve türbe, semahane ve mescit. Yapıların yeri ve birbirine göre konumu envanterdeki dik kuşbakışı fotoğraftan oranlandı. Türbenin on altı dilimli gövdesi ve yeşil çinili külahı, semahanenin 12 m çaplı kubbesi, mescidin üç kubbeli son cemaat yeri ve minaresi, L biçimli on sekiz kubbeli derviş hücresi, şadırvanın sekiz sütunu ve bahçedeki altı türbe envanterden alındı. İçeride türbenin dört fil ayağı üzerindeki kubbeli baldakeni, Kanuni'nin iki kademeli mermer sandukası, ahşap kündekâri sanduka ve kuzeydeki gümüş kafes; semahanede mutrip, mahfiller ve Naat Kürsüsü; mescitte iki basamak yüksek zemin, mermer mihrap, Çerağ Kapısı, naat kürsüsü ve müezzin mahfili ile mescidin semahaneye ve Huzur-ı Pîr'e açılan kapıları envanterdeki anlatıma göre yerleştirildi. Yükseklikler, pencere ve kapı yerleri ile ölçüleri, iç kubbelerin yüksekliği ve boyama deseni, ayak ve mahfil ölçüleri, ahşap sandukanın yeri, Huzur-ı Pîr'deki öteki sandukaların sayısı ve yeri (kitaptaki fotoğrafa bakılarak), matbahın kütlesi, türbelerin konumu ve biçimi, selsebil ile Şeb-i Arus havuzu temsilîdir.",
     "infos": [
       {
         "text": "Türbe dört fil ayağı üzerinde, kubbeli baldaken düzeninde yapılmıştır.",
@@ -191,6 +191,56 @@
       {
         "text": "On sekiz kubbeli derviş hücresi, ön avluyu batı ve kuzeyden L biçiminde kuşatır.",
         "sourceId": "inv-p48"
+      }
+    ],
+    "interiorInfos": [
+      {
+        "id": "sanduka",
+        "title": "Mevlâna'nın sandukası",
+        "text": "Kanuni Sultan Süleyman XVI. yüzyılda Mevlâna ile 1312'de vefat eden oğlu Sultan Veled'in mezarları üzerine beyaz ve gri mermerden, iki kademeli, gülbezek motifleriyle süslü sanduka yaptırmıştır. Mevlâna için 1274'te yapılan ahşap sandukanın bu tarihte babasının mezarı üzerine konulduğu düşünülmektedir.",
+        "sourceId": "inv-p36",
+        "position": [
+          17.44,
+          1.3,
+          3.5
+        ],
+        "radius": 3.6
+      },
+      {
+        "id": "baldaken",
+        "title": "Fil ayakları ve kubbe",
+        "text": "Türbe dört fil ayağı üzerinde, kubbeli baldaken düzenindedir. İç mekândaki fil ayakları ve kubbe ile güney duvarındaki kalem işi süslemeler II. Bayezid döneminde Halepli Mehmed oğlu Mevlevi Abdurrahman'a yaptırılmıştır.",
+        "sourceId": "inv-p33",
+        "position": [
+          17.44,
+          2,
+          -0.6
+        ],
+        "radius": 2.6
+      },
+      {
+        "id": "semahane",
+        "title": "Semahane",
+        "text": "Kare planlıdır ve 12 m çapında yüksek bir kubbeyle örtülüdür. Kuzeyde musiki icra edenler için yerden yüksek mutrip, yanında ve doğusunda erkekler mahfili, üst katta önü ahşap kafesli kadınlar mahfili, güneyde ahşap Naat Kürsüsü bulunur.",
+        "sourceId": "inv-p38",
+        "position": [
+          20.75,
+          2,
+          -7.6
+        ],
+        "radius": 3
+      },
+      {
+        "id": "mescit",
+        "title": "Mescit",
+        "text": "Mescidin zemini yerden iki basamak yükseltilmiştir. Gri mermerden mihrabı 2011 restorasyonunda kısmen yenilenmiştir. Ana giriş Çerağ Kapısı batıdadır; semahaneye ve Huzur-ı Pîr'e açılan geçiş kapıları da bulunur.",
+        "sourceId": "inv-p41",
+        "position": [
+          7.5,
+          2,
+          -10
+        ],
+        "radius": 3.5
       }
     ]
   }

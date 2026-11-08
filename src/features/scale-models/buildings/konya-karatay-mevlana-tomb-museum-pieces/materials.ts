@@ -52,6 +52,19 @@ function tileCanvas(seed: number) {
   })
 }
 
+/** Inner dome: kalem-işi-like ribs and bands, drawn once around and once up the dome (UV 0..1). Pattern representative. */
+function domeInnerCanvas() {
+  return canvas(512, 256, (c, W, H) => {
+    c.fillStyle = '#efe3c8'; c.fillRect(0, 0, W, H)
+    c.fillStyle = '#a8402e'; c.fillRect(0, 0, W, H * 0.06)
+    c.fillStyle = '#2f5d57'; c.fillRect(0, H * 0.06, W, H * 0.025)
+    c.fillStyle = '#b7863a'; c.fillRect(0, H * 0.42, W, H * 0.02)
+    c.strokeStyle = 'rgba(168,64,46,0.55)'; c.lineWidth = 3
+    for (let i = 0; i < 16; i++) { const x = (i + 0.5) * W / 16; c.beginPath(); c.moveTo(x, H * 0.09); c.lineTo(x, H * 0.92); c.stroke() }
+    c.fillStyle = '#a8402e'; c.fillRect(0, H * 0.9, W, H * 0.1)
+  })
+}
+
 function speckleCanvas(seed: number, base: string, a: string, b: string) {
   const r = random(seed)
   return canvas(256, 256, (c, W, H) => {
@@ -79,6 +92,10 @@ export function mevlanaMaterials() {
     cloth: std({ color: '#1f6b46', roughness: 0.9 }),
     railing: std({ color: '#6b4527', roughness: 0.6 }),
     floor: std({ color: '#cfc6b6', roughness: 0.8 }),
+    plaster: std({ color: '#efe6d3', roughness: 0.9, side: THREE.DoubleSide }),
+    domeInner: std({ map: (() => { const t = new THREE.CanvasTexture(domeInnerCanvas()); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = THREE.RepeatWrapping; return t })(), roughness: 0.9, side: THREE.DoubleSide }),
+    silver: std({ color: '#c9ccd1', roughness: 0.35, metalness: 0.7 }),
+    niche: std({ color: '#7d8580', roughness: 0.45 }),
   }
 }
 export type MM = ReturnType<typeof mevlanaMaterials>

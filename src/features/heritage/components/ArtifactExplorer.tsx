@@ -179,8 +179,14 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
     setFragmented(false)
     setXrBusy(true)
     const root = kind === 'ar' && phone ? overlayRoot.current : null
-    // The dom-overlay root must be laid out before requestSession; flushSync keeps this inside the user gesture.
-    if (root) flushSync(() => setOverlayOn(true))
+    // The dom-overlay root must be laid out before requestSession. flushSync alone did not commit in time (the request saw
+    // display: none), so the style is also set directly; the state keeps React in step for hiding it later.
+    if (root) {
+      root.style.display = ''
+      root.style.position = 'fixed'
+      root.style.inset = '0'
+      flushSync(() => setOverlayOn(true))
+    }
     const onMobileState = (st: MobileArState | null) => {
       setMobileState(st)
       if (st) setFragmented(st.fragmented)

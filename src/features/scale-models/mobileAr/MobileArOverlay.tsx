@@ -33,7 +33,7 @@ export default function MobileArOverlay({ phase, fragmented, onShatter, onReplac
   if (phase === 'placing') {
     return (
       <div ref={ref} className="mar" data-phase="placing">
-        <p className="mar-card mar-hint" role="status" data-xr-ui>
+        <p className="mar-card mar-hint" role="status">
           Telefonu masaya ya da yere doğrult. Halka çıkınca ekrana dokun.
         </p>
         <div className="mar-bar">
@@ -47,7 +47,7 @@ export default function MobileArOverlay({ phase, fragmented, onShatter, onReplac
 
   return (
     <div ref={ref} className="mar" data-phase="placed">
-      <p className="mar-card mar-gesture" data-xr-ui>İki parmakla büyüt, çevirerek döndür.</p>
+      <p className="mar-card mar-gesture">İki parmakla büyüt, çevirerek döndür.</p>
       <div className="mar-bar">
         <button type="button" className="mar-btn mar-primary" onClick={onShatter} aria-pressed={fragmented} data-xr-ui>
           <UiIcon name="explode" /> {fragmented ? 'Birleştir' : 'Parçala'}

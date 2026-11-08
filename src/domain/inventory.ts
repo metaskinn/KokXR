@@ -2,12 +2,13 @@
 export type InventorySection = 'complex' | 'mosque' | 'tomb' | 'education' | 'commercial' | 'water' | 'sufi' | 'civil'
 
 /**
- * One building from the contents pages of "Bursa Vakıf Eserleri" (Vakıf Katılım, 2026), volumes 1-3.
+ * One building from the contents pages of the printed inventories (Vakıf Katılım, 2026): Bursa volumes 1-3, Konya 1-2, Hatay.
  * Only the name, district, section and volume come from the book; descriptions and photos are separate artifact data.
  */
 export interface InventoryItem {
   id: string
   name: string
+  city: string
   district: string
   section: InventorySection
   /** Volume of the printed inventory the entry appears in. */

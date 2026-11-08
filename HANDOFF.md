@@ -176,7 +176,7 @@ Screenshots are written to the `test-sonuclari/` folder (outside git). Expected:
 
 ## 4. Architecture and data model
 
-- **All content is in JSON:** `src/content/artifacts/<id>.json`. A new artifact = a new JSON + `public/images/<id>/` photos; **the code does not change**
+- **Content lives in Neon Postgres** (seeded from `src/content/artifacts/<id>.json`); photos are in the private Neon bucket (`images/<id>/…`), managed from `/admin`. `public/images/` keeps only scale-model textures and `model-still.jpg`. See README. **The code does not change** for a new artifact
   (`src/infrastructure/contentRepository.ts` automatically loads all JSON files in the folder with `import.meta.glob`).
 - **Type definitions:** `src/domain/artifact.ts` (`Eser`, `Kaynak`, `Gorsel`, `BilgiNoktasi`, `Soru`, `Tur`, `Tur360`, `RestorasyonGorevi`, `Maket`).
   Optional fields: `tur` (walkthrough), `tur360`, `restorasyon`, `maket` — the related section is not shown for an artifact that does not have it.
@@ -258,7 +258,7 @@ Two agents never touch the same file at the same time.
 | File | Content |
 |---|---|
 | `AGENTS.md` | Project rules for all agents |
-| `docs/plan.md` | Web MVP plan, specification mapping |
+| `docs/archive/2026-11-02-web-mvp-plan.md` | Old web MVP plan (archived) |
 | `docs/archive/status.md` | End-of-day status note |
 | `docs/archive/next-task.md` | The last task given to Codex (Task 4 — completed) |
 | `docs/archive/test-report.md`, `docs/archive/test-report-2.md` | Antigravity report and the latest end-to-end test |

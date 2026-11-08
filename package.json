@@ -4,15 +4,23 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && tsc --noEmit -p tsconfig.server.json && vite build",
     "build:acik": "tsc -b && VITE_PUBLIC_BUILD=1 vite build && node scripts/open-publication.mjs dist",
     "preview": "vite preview",
-    "test:hizli": "tsc --noEmit -p tsconfig.app.json && node tests/model-xr-logic.mjs && node tests/xr-snap-turn.mjs && node tests/xr-narration.mjs && node tests/model-xr-text.mjs && node tests/vase-xr-logic.mjs && node tests/model-assemble-logic.mjs && node tests/credit-data.mjs && node tests/inventory-data.mjs",
+    "test:hizli": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.server.json && node tests/model-xr-logic.mjs && node tests/xr-snap-turn.mjs && node tests/xr-narration.mjs && node tests/model-xr-text.mjs && node tests/vase-xr-logic.mjs && node tests/model-assemble-logic.mjs && node tests/credit-data.mjs && node tests/inventory-data.mjs",
     "test:tarayici": "tsc -b && vite build --logLevel error && node scripts/test-browser.mjs",
-    "test:e2e": "node tests/end-to-end.mjs chromium 1280 && node tests/end-to-end.mjs chromium 360 && node tests/end-to-end.mjs firefox 1280"
+    "test:e2e": "node tests/end-to-end.mjs chromium 1280 && node tests/end-to-end.mjs chromium 360 && node tests/end-to-end.mjs firefox 1280",
+    "db:setup": "node scripts/db-setup.mjs"
   },
   "type": "module",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1164.0",
+    "@aws-sdk/s3-presigned-post": "^3.1164.0",
+    "@aws-sdk/s3-request-presigner": "^3.1164.0",
+    "@neon/config": "^1.13.0",
+    "@neon/env": "^2.1.0",
+    "@neondatabase/serverless": "^1.2.0",
+    "files-sdk": "^3.1.2",
     "leaflet": "^1.9.4",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

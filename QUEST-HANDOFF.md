@@ -4,7 +4,7 @@
 
 > Written: evening of 4 November 2026. The work was stopped here because the user changed computers.
 > **To the AI agent in the new session:** First read this file, then `AGENTS.md`, `HANDOFF.md` and
-> `docs/superpowers/plans/2026-11-04-ulu-mosque-quest.md`. Then continue from the "Next tasks" section.
+> `docs/archive/2026-11-04-ulu-mosque-quest.md`. Then continue from the "Next tasks" section.
 > Speak Turkish with the user.
 
 ## Starting on the new computer
@@ -31,7 +31,7 @@ The **Immersive Web Emulator** extension must be reinstalled in Chrome (it was i
 
 ## What is being done
 
-The user wanted to adapt Ulu Camii to Meta Quest and asked for a new branch to be opened. Previously there was no VR task in the project; VR was recorded as "will not be done / vision" (`docs/plan.md:44`). This work deliberately changes that decision on this branch.
+The user wanted to adapt Ulu Camii to Meta Quest and asked for a new branch to be opened. Previously there was no VR task in the project; VR was recorded as "will not be done / vision" (`docs/archive/2026-11-02-web-mvp-plan.md:44`). This work deliberately changes that decision on this branch.
 
 Experience: In Quest Browser `VR'da aç` → scale model on the table (rotate, enlarge, split) → `İçeri gir` → walk at real scale → source-backed information card when approaching a structure → exit.
 

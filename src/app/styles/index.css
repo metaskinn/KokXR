@@ -65,9 +65,21 @@ dd { margin: 0; }
 .admin-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); }
 .admin-actions a { display: inline-flex; align-items: center; padding: 0 var(--s-1); min-height: var(--target); }
 .admin button { overflow-wrap: anywhere; max-width: 100%; }
+.admin-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-3); margin-block: var(--s-4); }
+.admin-filters { display: flex; flex-wrap: wrap; gap: var(--s-4); }
+.admin-filters .form-area { flex: 1 1 14rem; }
+.admin-login { max-width: 24rem; }
+.label.status-pending { border-color: var(--action); }
+.label.status-rejected { border-color: var(--danger); color: var(--danger); }
+.review-note { padding: var(--s-2) var(--s-3); background: var(--danger-tint); border-left: 3px solid var(--danger); }
+.reject-form { margin-top: var(--s-3); }
+.admin .danger { border-color: var(--danger); color: var(--danger); }
+.upload-preview { max-width: 12rem; max-height: 8rem; border-radius: var(--r-control); }
+.audit-list { padding-left: var(--s-5); font-size: var(--fs-small); }
 .form-section { border-top: 1px solid var(--line); margin-top: var(--s-6); padding-top: var(--s-5); }
 .form-section > legend { font: 600 var(--fs-title)/var(--lh-title) var(--font-ui); }
 fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.form-check { display: inline-flex; align-items: center; gap: var(--s-2); margin: 0 var(--s-4) var(--s-2) 0; min-height: 44px; }
 .sub-form { margin-block: var(--s-4); padding: var(--s-5); border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
 .form-area { display: flex; flex-direction: column; gap: var(--s-1); margin-block: var(--s-4); font-weight: 600; font-size: var(--fs-small); min-width: 0; }
 .admin input, .admin textarea, .admin select { display: block; width: 100%; min-width: 0; max-width: 100%; min-height: var(--target); padding: var(--s-2) var(--s-3); font: inherit; font-weight: 400; color: var(--ink); background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--r-control); }

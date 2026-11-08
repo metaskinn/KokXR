@@ -32,8 +32,11 @@ await control('1a first Tab skip link', async () => {
 await control('1b favicon', async () => {
   const r = await p.request.get(`${URL}/favicon.svg`); condition(r.ok(), `favicon ${r.status()}`);
 });
+// Waits for the element instead of counting right after navigation.
+const appears = (locator, timeout = 10000) => locator.first().waitFor({ timeout }).then(() => true, () => false);
+
 await control('artifacts', async () => {
-  await p.goto(URL); condition(await p.getByRole('heading', { name: 'Eserler', level: 1 }).count(), 'no heading');
+  await p.goto(URL); condition(await appears(p.getByRole('heading', { name: 'Eserler', level: 1 })), 'no heading');
   condition(await p.locator('.artifact-card').count() >= 2, 'cards < 2'); condition(!(await overflow()), 'horizontal overflow'); await screen('main');
 });
 await control('1d hotspot card visible', async () => {
@@ -78,15 +81,24 @@ await control('6b admin: add and delete new artifact', async () => {
     await p.locator(`#test-${i}-description`).fill('Açıklama');
   }
   condition(await p.locator('#verification option[value="verified"]').evaluate((o) => o.disabled), '"Kaynaklı bilgi" selectable without sources');
+  await p.getByRole('button', { name: 'Kaydet' }).click(); await p.waitForTimeout(500);
+  condition(await p.locator('#types-error').count(), 'saved without a type');
+  await p.locator('#types-hamam').check();
   await p.getByRole('button', { name: 'Kaydet' }).click(); await p.waitForTimeout(700);
   const error = await p.locator('.error-summary').textContent().catch(() => null); condition(!error, `save error: ${error}`);
-  await p.goto(URL); condition(await p.getByText('Deneme Eseri').count(), 'new artifact missing on home page');
+  // The list is paged; find the new artifact through the search box.
+  await p.goto(URL); await p.locator('#artifact-search').fill('Deneme Eseri');
+  condition(await appears(p.getByText('Deneme Eseri')), 'new artifact missing on home page');
+  await p.goto(`${URL}/artifacts?tur=hamam&q=Deneme`); condition(await appears(p.getByText('Deneme Eseri')), 'new artifact missing under its type filter');
+  await p.goto(`${URL}/artifacts?tur=cami&q=Deneme`); await p.waitForTimeout(500); condition(!(await p.locator('.artifact-card', { hasText: 'Deneme Eseri' }).count()), 'new artifact shown under another type');
   await p.getByText('Deneme Eseri').first().click(); condition(await p.getByRole('heading', { name: 'Deneme Eseri' }).count(), 'artifact page did not open');
   await p.goto(`${URL}/admin`); await p.getByRole('button', { name: /Sil\s*: Deneme Eseri/ }).click();
-  await p.goto(URL); condition(!(await p.getByText('Deneme Eseri').count()), 'not deleted');
+  await p.goto(URL); await p.locator('#artifact-search').fill('Deneme Eseri'); await p.waitForTimeout(700);
+  condition(!(await p.getByText('Deneme Eseri').count()), 'not deleted');
 });
 await control('7b page not found', async () => {
-  await p.goto(`${URL}/artifact/none`); condition(await p.getByText('Sayfa bulunamadı').count(), '404 text missing');
+  await p.goto(`${URL}/artifact/none`); condition(await appears(p.getByRole('heading', { name: 'Bu adreste eser yok' })), 'missing-artifact text missing');
+  await p.goto(`${URL}/no-such-page`); condition(await appears(p.getByRole('heading', { name: 'Sayfa bulunamadı' })), '404 text missing');
 });
 await control('7c overflow (all pages)', async () => {
   const overhang = [];

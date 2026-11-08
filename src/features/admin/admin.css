@@ -1,0 +1,82 @@
+/* Admin dashboard: side menu + main area. Uses the site tokens (src/app/styles/tokens.css). */
+.admin-shell { padding-block: var(--s-5); }
+.admin-shell > .admin-login, .admin-shell > [role] { max-width: 28rem; margin-inline: auto; }
+.admin-frame { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: var(--s-6); align-items: start; }
+.admin-main { min-width: 0; }
+.admin-page { overflow-wrap: anywhere; }
+.admin-page h1 { margin-top: 0; }
+
+.admin-side { position: sticky; top: calc(var(--topbar-h, 56px) + var(--s-4)); display: flex; flex-direction: column; gap: var(--s-4); padding: var(--s-4); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); }
+.admin-side-title { margin: 0; font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); }
+.admin-side ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.admin-side nav a { display: flex; align-items: center; min-height: var(--target); padding: 0 var(--s-3); border-radius: var(--r-control); color: var(--ink); text-decoration: none; }
+.admin-side nav a:hover { background: var(--mat); }
+.admin-side nav a[aria-current='page'] { background: var(--action); color: var(--on-action); font-weight: 600; }
+.admin-new { display: flex; align-items: center; justify-content: center; min-height: var(--target); border: 1px solid var(--action); border-radius: var(--r-control); color: var(--action); font-weight: 600; text-decoration: none; }
+.admin-new[aria-current='page'] { background: var(--action); color: var(--on-action); }
+.admin-who { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); padding-top: var(--s-3); border-top: 1px solid var(--line); }
+.admin-who p { margin: 0; }
+.admin-who small { color: var(--ink-2); }
+
+@media (max-width: 860px) {
+  .admin-frame { grid-template-columns: minmax(0, 1fr); gap: var(--s-4); }
+  .admin-side { position: static; }
+  .admin-side ul { grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); }
+}
+
+/* Overview */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: var(--s-4); margin-block: var(--s-5); }
+.tile { display: flex; flex-direction: column; gap: var(--s-1); padding: var(--s-4) var(--s-5); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); color: var(--ink); text-decoration: none; }
+a.tile:hover { border-color: var(--action); }
+.tile-label { font-size: var(--fs-small); color: var(--ink-2); }
+.tile-value { font-size: 2rem; line-height: 1.1; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tile-note { font-size: var(--fs-small); color: var(--ink-2); }
+
+.dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: var(--s-4); }
+.panel { padding: var(--s-4) var(--s-5); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); min-width: 0; }
+.panel h2 { margin: 0 0 var(--s-3); font-size: var(--fs-ui); }
+.hint { font-size: var(--fs-small); color: var(--ink-2); }
+.plain-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+.plain-list small { color: var(--ink-2); }
+.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Bars: one hue (the brand action color), thin, 4px rounded data end, recessive track. */
+.bar-table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
+.bar-table caption { text-align: left; color: var(--ink-2); padding-bottom: var(--s-2); }
+.bar-table th { text-align: left; font-weight: 400; padding: 3px var(--s-3) 3px 0; white-space: nowrap; }
+.bar-table td { padding: 3px 0; }
+.bar-table .num { padding-left: var(--s-3); }
+.bar-cell { width: 60%; }
+.bar { display: block; height: 10px; min-width: 2px; background: var(--action); border-radius: 0 4px 4px 0; }
+.bar-table tr:hover th, .bar-table tr:hover .num { font-weight: 600; }
+
+.spark { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 2px; align-items: end; height: 96px; margin: 0; padding: 0; list-style: none; border-bottom: 1px solid var(--line-strong); }
+.spark li { height: 100%; display: flex; align-items: end; }
+.spark-bar { display: block; width: 100%; background: var(--action); border-radius: 4px 4px 0 0; }
+.spark-bar[data-zero] { background: var(--line); }
+.spark li:hover .spark-bar { background: var(--action-hover); }
+.spark-axis { display: flex; justify-content: space-between; margin: var(--s-1) 0 0; font-size: var(--fs-small); color: var(--ink-2); }
+
+.quality-table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
+.quality-table th { text-align: left; font-weight: 400; padding: var(--s-2) 0; border-bottom: 1px solid var(--line); }
+.quality-table td { padding: var(--s-2) 0 var(--s-2) var(--s-3); border-bottom: 1px solid var(--line); }
+.chip { display: inline-block; white-space: nowrap; padding: 1px var(--s-2); border-radius: var(--r-pill); font-size: var(--fs-small); font-weight: 600; border: 1px solid currentColor; }
+.chip-warn { color: var(--danger); background: var(--danger-tint); }
+.chip-ok { color: var(--action); }
+
+/* Media and tables */
+.media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: var(--s-4); list-style: none; padding: 0; }
+.media-grid li { min-width: 0; }
+.media-thumb { display: block; aspect-ratio: 4 / 3; background: var(--mat); border-radius: var(--r-control); overflow: hidden; }
+.media-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.media-name { margin: var(--s-1) 0 0; font-size: var(--fs-small); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.media-meta { margin: 0; font-size: var(--fs-small); color: var(--ink-2); }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
+.data-table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
+.data-table th, .data-table td { text-align: left; padding: var(--s-2) var(--s-3); border-bottom: 1px solid var(--line); vertical-align: top; }
+.data-table thead th { font-weight: 700; background: var(--mat); }
+.data-table tbody th { font-weight: 600; }
+.data-table small { color: var(--ink-2); }
+
+.admin-filters input, .admin-filters select { width: 100%; min-height: var(--target); padding: 0 var(--s-3); border: 1px solid var(--line-strong); border-radius: var(--r-control); background: var(--surface); color: var(--ink); font: inherit; }

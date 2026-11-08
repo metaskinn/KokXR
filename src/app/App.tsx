@@ -1,10 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
-import { Link, Navigate, Route, Routes, useLocation, useNavigationType, useParams } from 'react-router-dom'
-import { getArtifacts, readContent, writeContent } from '../infrastructure/contentRepository'
-import type { Overlay } from '../infrastructure/contentRepository'
-import AdminPage from '../features/admin/AdminPage'
-import type { AdminProps } from '../features/admin/AdminPage'
-import ArtifactForm from '../features/admin/ArtifactForm'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { Link, Navigate, Route, Routes, useLocation, useNavigationType } from 'react-router-dom'
+import { bundledArtifacts, forThisBuild, fromBucket } from '../infrastructure/contentRepository'
+import { replaceInventory } from '../content/inventory'
+import { api } from '../infrastructure/api'
+import AdminLayout from '../features/admin/AdminLayout'
+import ArtifactsAdminPage from '../features/admin/AdminPage'
+import DashboardPage from '../features/admin/DashboardPage'
+import MediaPage from '../features/admin/MediaPage'
+import InventoryAdminPage from '../features/admin/InventoryAdminPage'
+import AuditPage from '../features/admin/AuditPage'
+import { AdminFormRoute } from '../features/admin/ArtifactForm'
 import ArtifactsPage from '../features/heritage/pages/ArtifactsPage'
 import ArtifactPage from '../features/heritage/pages/ArtifactPage'
 import NotFound from '../shared/ui/NotFound'
@@ -15,18 +20,17 @@ import PlacesPage, { PlacePage } from '../features/places/PlacesPage'
 import InventoryPage from '../features/places/InventoryPage'
 import UiIcon from '../shared/ui/UiIcon'
 
-function AdminFormRoute(props: AdminProps) {
-  const { id } = useParams()
-  const artifact = props.artifacts.find(e => e.id === id)
-  if (id && !artifact) return <NotFound />
-  return <ArtifactForm key={id ?? 'fresh'} {...props} artifact={artifact} />
-}
-
 export default function App() {
-  const [content, setContent] = useState(readContent)
-  const artifacts = getArtifacts(content.overlay)
-  function saveContent(data: Overlay) { setContent(writeContent(data)) }
-  const adminProps = { artifacts, overlay: content.overlay, save: saveContent }
+  // The bundled copy shows at once; the database's published list replaces it when the API answers (offline: bundled stays).
+  const [artifacts, setArtifacts] = useState(bundledArtifacts)
+  const refresh = useCallback(() => {
+    // Inventory first, so the re-render caused by the new artifact list already sees the database inventory.
+    void Promise.allSettled([api.inventory(), api.publishedArtifacts()]).then(([inv, list]) => {
+      if (inv.status === 'fulfilled') replaceInventory(inv.value.items, inv.value.details)
+      if (list.status === 'fulfilled' && Array.isArray(list.value) && list.value.length) setArtifacts(forThisBuild(fromBucket(list.value)))
+    })
+  }, [])
+  useEffect(refresh, [refresh])
   const { pathname } = useLocation()
   const navigationType = useNavigationType()
   const prevRoute = useRef(pathname)
@@ -61,7 +65,6 @@ export default function App() {
       <nav aria-label="Ana gezinme">{tabs.map((t) => <Link key={t.key} to={t.to} aria-current={area === t.key ? 'page' : undefined}>{t.label}</Link>)}</nav>
     </div></header>
     <main id="main-content" tabIndex={-1}>
-      {content.warning && <p className="admin-note" role="alert">{content.warning}</p>}
       <Routes>
         <Route path="/" element={<Navigate to="/artifacts" replace />} />
         <Route path="/artifacts" element={<ArtifactsPage artifacts={artifacts} />} />
@@ -74,9 +77,16 @@ export default function App() {
           <Route path="sword" element={<SwordWorkshop />} />
         </Route>
         <Route path="/artifact/:id" element={<ArtifactPage artifacts={artifacts} />} />
-        <Route path="/admin" element={<AdminPage {...adminProps} />} />
-        <Route path="/admin/new" element={<AdminFormRoute {...adminProps} />} />
-        <Route path="/admin/artifact/:id" element={<AdminFormRoute {...adminProps} />} />
+        <Route path="/admin" element={<AdminLayout artifacts={artifacts} onPublished={refresh} />}>
+          <Route index element={<DashboardPage />} />
+          <Route path="eserler" element={<ArtifactsAdminPage />} />
+          <Route path="onay" element={<ArtifactsAdminPage queue />} />
+          <Route path="medya" element={<MediaPage />} />
+          <Route path="envanter" element={<InventoryAdminPage />} />
+          <Route path="kayit" element={<AuditPage />} />
+          <Route path="new" element={<AdminFormRoute />} />
+          <Route path="artifact/:id" element={<AdminFormRoute />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>

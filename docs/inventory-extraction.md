@@ -7,8 +7,8 @@ Vakıf Katılım, 2026, volumes 1-3). Today each entry has only name, district, 
 
 - `src/content/inventory.json`: the 340 entries, generated from the contents pages. Every name was checked against the raw
   contents text of the PDFs (339 matched verbatim; one differed only by a hyphenated line break).
-- `src/domain/inventory.ts` (types), `src/content/inventory.ts` (labels), `src/features/places/InventoryList.tsx` (UI on the Places page).
-- `tests/inventory-data.mjs` (data integrity, in `npm run test:hizli`) and `tests/inventory-list.mjs` (browser test).
+- `src/domain/inventory.ts` (types), `src/content/inventory.ts` (labels), `src/features/heritage/components/inventoryLinks.ts` (the "Envanter kaydı" and same-complex links on the artifact page). The old `/places/yapi/:id` address redirects to the artifact page (`src/features/places/InventoryPage.tsx`).
+- `tests/inventory-data.mjs` (data integrity, in `npm run test:hizli`).
 - Only the 10 buildings that already have an artifact with a `model` are flagged `hasScaleModel: true`. New entries stay `false`.
 
 ## Sources

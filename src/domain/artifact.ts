@@ -99,6 +99,8 @@ export interface Artifact {
   summary: string;
   history: string;
   verification: Verification;
+  /** Building type keys (src/domain/artifactTypes.ts). Built-in artifacts leave it unset and use src/content/artifact-types.json. */
+  types?: string[];
   coverImage: string;
   images: Image[];
   hotspots: Hotspot[];

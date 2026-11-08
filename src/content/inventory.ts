@@ -2,9 +2,13 @@ import type { InventoryDetails, InventoryItem, InventorySection } from '../domai
 import data from './inventory.json'
 import detailsData from './inventory-details.json'
 
-export const inventory = data as InventoryItem[]
+// Bundled copy; replaced by the database copy (GET /api/inventory) when the API answers. ES module live bindings carry the new value to importers.
+export let inventory = data as InventoryItem[]
 /** Facts per inventory id; buildings whose book pages could not be read reliably are absent. */
-export const inventoryDetails = detailsData as Record<string, InventoryDetails>
+export let inventoryDetails = detailsData as Record<string, InventoryDetails>
+export function replaceInventory(items: InventoryItem[], details: Record<string, InventoryDetails>) {
+  if (Array.isArray(items) && items.length && details && typeof details === 'object') { inventory = items; inventoryDetails = details }
+}
 
 export const sectionLabels: Record<InventorySection, string> = {
   complex: 'Külliye',

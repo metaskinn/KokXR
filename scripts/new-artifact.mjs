@@ -35,4 +35,4 @@ const draft = {
 }
 mkdirSync('drafts/artifacts', { recursive: true })
 writeFileSync(file, JSON.stringify(draft, null, 2) + '\n')
-console.log(`Draft written: ${file}\nNext: add photos under public/images/${slug}/, 3 questions, then move the file to src/content/artifacts/.`)
+console.log(`Draft written: ${file}\nNext (or use /admin instead): fill the fields and 3 questions, move the file to src/content/artifacts/, put photos in a temporary public/images/${slug}/ and run node scripts/storage-upload-images.mjs, then npm run db:setup.`)

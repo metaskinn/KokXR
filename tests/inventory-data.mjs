@@ -33,14 +33,14 @@ assert.equal(new Set(flagged.map((e) => e.artifactId)).size, flagged.length, 'on
 assert.equal(flagged.length, withModel.length, 'every artifact with a model has exactly one flagged building')
 console.log(`Inventory data: ${inventory.length} buildings, ${flagged.length} with a scale model, links and flags passed.`)
 
-// Artifact modules: each artifact's inventoryId must point at a real inventory row, once per row, and its images must exist.
-import { existsSync } from 'node:fs'
+// Artifact modules: each artifact's inventoryId must point at a real inventory row, once per row, and its image paths must be bucket keys.
+// Photos live in the private bucket, not in public/; whether each key is really there is checked online by scripts/storage-check.mjs.
 const seen = new Map()
 for (const a of Object.values(artifacts)) {
   if (!a.inventoryId) continue
   assert.ok(ids.has(a.inventoryId), `${a.id}: inventoryId ${a.inventoryId} is not in the inventory`)
   assert.ok(!seen.has(a.inventoryId), `${a.id} and ${seen.get(a.inventoryId)} both claim ${a.inventoryId}`)
   seen.set(a.inventoryId, a.id)
-  for (const g of a.images ?? []) assert.ok(existsSync(`public${g.file}`), `${a.id}: missing image ${g.file}`)
+  for (const g of a.images ?? []) assert.ok(/^\/(api\/media\/)?images\/[a-z0-9-]+\/[^/]+/.test(g.file), `${a.id}: image path is not a bucket key: ${g.file}`)
 }
 console.log(`Artifact modules: ${seen.size} linked to the inventory.`)

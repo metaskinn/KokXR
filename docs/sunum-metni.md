@@ -82,7 +82,7 @@ Boşluklar: yönetim akışının canlı çalıştığı henüz doğrulanmadı (
 **Veri modeli:** her eser: ad, şehir, ilçe, dönem, vakıf, özet, tarihçe, kaynaklar (kimlik + metin + sayfa), görseller (alt metin + künye), bilgi noktaları, 3 soruluk quiz, isteğe bağlı 3B maket. Bilgi noktası ve quiz sorusu bir kaynağa bağlanır; kaynak yoksa bilgi “kaynaklı” sayılmaz.
 **Ölçeklenebilirlik:** yeni şehir = yeni kayıtlar, kod değişmez. Bursa'ya ek olarak Konya ve Hatay kayıtları eklendi. Harita ve filtre veriden beslenir. Boş şehir “içerik yok” der.
 **Kalite ve güvenlik:** doğrulama hem formda hem sunucuda aynı kodla yapılır (`src/domain/verification.ts`); şifreler ortam değişkeninde; oturum imzalı çerez; yazma istekleri yalnız JSON; yükleme boyutu sınırlı; işlem kaydı tutulur. Testler: tür denetimi + saf mantık testleri + tarayıcı testleri.
-**Dürüst sınırlar:** veri kaynaklıdır, elle doğrulama sürüyor; görsel izinleri belgelenmedi.
+**Dürüst sınırlar:** veri kaynaklıdır, elle doğrulama sürüyor; görsel izinleri alındı ([kimden/nasıl: ekip yazsın]); kayıtlarda henüz izin alanı yok.
 
 ## Slayt 6: Yol haritası ve kapanış (4.30–5.00)
 
@@ -106,7 +106,7 @@ Boşluklar: yönetim akışının canlı çalıştığı henüz doğrulanmadı (
 
 - **Veri nereden?** Sağlanan Vakıf Eserleri Envanteri ve yayımlanmış kitaplar; her bilgi kaynak ve sayfayla bağlı. Elle doğrulanan kayıtlar [sayı].
 - **Moderasyon?** Editör ekler, küratör onaylar; reddet/geri al/sil ve işlem kaydı var. Editörün değişiklikleri küratör onayını bekler (rol tanımı `server/auth.ts`).
-- **Fotoğraf izinleri?** Görsellerin hepsinde kredi satırı var; kredi satırı izin değildir. Yazılı izin süreci sürüyor. Bunu dürüstçe söyle.
+- **Fotoğraf izinleri?** Her görselde kredi satırı var; kullanım izni alındı [kimden, hangi biçimde: ekip yazsın]. Belgeyi elde tut; kayıtlara izin alanı eklemek yol haritasında. İzin belgesi gösterilemiyorsa “alındı” deme.
 - **3B model gerçek mi?** Temsilî, kodla üretilmiş; tarama ya da belgelenmiş rekonstrüksiyon değil.
 - **Yeni şehir?** Aynı veri modeli; Konya ve Hatay eklendi.
 - **Mobil AR?** [ekip doğrulaması]; cihaz ve tarayıcı listesi: [liste].

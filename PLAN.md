@@ -30,11 +30,11 @@ Dosyalar: kod, içerik, testler, Vercel (bkz. §3).
 |---|---|---|---|
 | 1 | **Ekleme/düzenleme zinciri canlıda:** giriş → ekle → onayla → listede gör → düzenle → yeniden onayla. Metinler hazır: `docs/demo-ekleme-duzenleme.md`. Şifreyi sen girersin; sonra demo kaydını sil/reddet. Sonucu (çalıştı/çalışmadı) Kişi 1'e söyle | 25 dk | [~] metin hazır, canlıda denenmedi |
 | 2 | **Fotoğraflı demo:** canlıda Ulu Camii ve Muradiye galerisi açılıyor mu? Yerel önizlemede açılmaz (görseller `/api/media` ile Neon'dan gelir) | 15 dk | [ ] |
-| 3 | **Doğruluk ve foto izni:** `docs/demo-dogrulama-listesi.md` (86 madde) kitapla işaretle; yanlış çıkanı düzelt. Foto izin kararı: 2060 görselde kredi var, izin yok, `/api/media` girişsiz. Öneri: fotoğrafsız `build:acik` + `/api/media` kapatma (karar senin) | 30 dk | [ ] |
+| 3 | **Doğruluk:** `docs/demo-dogrulama-listesi.md` (86 madde) kitapla işaretle; yanlış çıkanı düzelt. **Foto izni:** kullanıcı “izin var” dedi (8 Kasım); repoda belge/alan yok (2060 görselde yalnız kredi). Karar: fotoğraflı yayın kalır, kod değişmez. Jüri “izin?” derse yazılı kanıt elde hazır olsun | 20 dk | [~] izin beyanı var, [ ] liste |
 | 4 | **Cihaz denemesi:** Quest (mermer, 7 anlatım, çıkışta durma) ve sunumda kullanılacak telefon/tarayıcıda AR. Duyulmayan sesi vaat etme. Sonucu Kişi 1'e ver | 25 dk | [ ] |
 | 5 | **Son test:** `test:hizli` temiz (8 Kasım geçti), `test:tarayici` 3/3 (geçti), `test:e2e` 7/9; 2 admin kontrolü DB'li ortamda denenmeli | 10 dk | [~] |
 | 6 | **Vercel kalıcı yazar izni** (Settings → Members/Git): şimdilik yalnız `metaskin` commit'i yayınlanır. Sürüm kilidi öncesi son push da `metaskin` ile | 5 dk | [ ] |
-| 7 | **Zaman kalırsa:** Mevlâna/Sokullu iç mekân mermer taraması (başlandı, tamamlanmadı) | — | [ ] |
+| 7 | ~~Mevlâna/Sokullu iç mekân mermer taraması~~ | — | [-] kullanıcı kararı: önemsiz, yapılmayacak |
 
 Yapıldı ve doğrulandı: VR/AR site metni yumuşatma, maket şeridi bağlantı adları, quiz klavye testi, 360 px/%200 kontrolü (ciddi kusur yok), mermer ve ses düzeltmeleri (masaüstü).
 
@@ -88,7 +88,7 @@ Kişi 2'nin dosya sınırı: `src/features/scale-models/`, `src/shared/xr/`, `sr
 - [x] Şadırvan döşemesinde titreşme: iki mermer katmanı aynı yükseklikteydi; `fountain.ts` döşemesi 1 cm yukarı, `floor.ts` koyu kutular 1 cm aşağı. Masaüstünde önce/sonra doğrulandı.
 - [x] Masaüstünde şadırvan, mihrap, minber, levha, doğu kapısı tarandı.
 - [~] Quest'te aynı noktalar (`lightDevice()` yolu).
-- [ ] Mevlâna ve Sokullu iç mekânları.
+- [-] Mevlâna ve Sokullu iç mekânları: önemsiz bulundu, taranmayacak.
 
 **VR ses**
 - [x] Anlatım yalnız Ulu Camii'nde (`narrated`); askıdaki ses bağlamı yeniden açılır; masaüstü iç mekânda yakınlıkla çalar, VR'a girince masaüstü susar.
@@ -101,7 +101,7 @@ Kişi 2'nin dosya sınırı: `src/features/scale-models/`, `src/shared/xr/`, `sr
 - [-] Formdaki 3 quiz zorunluluğu kaldırılmayacak (quiz arayüzde).
 - [~] Ekle → onay → yayın → listede gör → düzenle: yerelde doğrulandı, canlıda değil. Eksik alanla kayıt engellenir, kaynaksız “kaynaklı” seçilemez (sunucu doğrulaması var, canlıda denenmedi).
 - [ ] Demo eserleri: Ulu Camii + Muradiye Külliyesi; tarihçe/kaynak sayfaları kitaptan elle doğrulanır, isim tahminiyle bağlanmaz.
-- [ ] Foto izinleri: izni belirsiz görsel kamuya açık yayında bırakılmaz; şu an canlı build fotoğraflı.
+- [~] Foto izinleri: kullanıcı izin olduğunu bildirdi; kayıtta yok. Canlı build fotoğraflı kalır. İzin belgesini elde tut.
 - [x] E2E eskimiş kontroller güncellendi.
 
 **Sunum (Kişi 1)**

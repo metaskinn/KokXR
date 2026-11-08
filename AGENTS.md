@@ -27,7 +27,6 @@ Read only the row the task needs.
 
 | Topic | Location |
 |---|---|
-| Presentation promises | `docs/presentation-promises.md` |
 | Admin panel plan | `docs/admin-panel-plan.md` |
 | Competition rules, scoring | `docs/specification.md` (section 5) |
 | **Plan and status (start work here)** | `PLAN.md` |

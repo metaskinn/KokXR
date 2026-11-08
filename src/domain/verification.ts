@@ -1,6 +1,9 @@
 import type { Artifact } from './artifact'
+import { TYPE_KEYS } from './artifactTypes.js'
 
 export type Errors = Record<string, string>
+/** Upper text lengths; the longest built-in values are well below these (history ~4500). Checked in the form and again on the server. */
+export const LIMITS = { name: 160, city: 60, district: 80, period: 400, endowment: 400, summary: 800, history: 16000 } as const
 export const maybeSourced = (artifact: Artifact) => artifact.sources.some(k => k.text.trim()) &&
   [...artifact.test, ...artifact.hotspots].every(n => artifact.sources.some(k => k.id === n.sourceId && k.text.trim()))
 
@@ -14,6 +17,10 @@ export function artifactErrors(artifact: Artifact): Errors {
   const errors: Errors = {}
   const required = (id: string, value: string) => { if (!value.trim()) errors[id] = 'Bu alan zorunludur.' }
   for (const area of ['name', 'city', 'district', 'period', 'endowment', 'summary', 'history'] as const) required(area, artifact[area])
+  for (const [area, max] of Object.entries(LIMITS)) { const v = artifact[area as keyof typeof LIMITS]; if (typeof v === 'string' && v.length > max) errors[area] = `En fazla ${max} karakter.` }
+  const tooMany = (key: string, n: number, max: number) => { if (n > max) errors[key] = `En fazla ${max} kayıt eklenebilir.` }
+  tooMany('sources', artifact.sources.length, 60); tooMany('images', artifact.images.length, 60); tooMany('hotspots', artifact.hotspots.length, 60)
+  if (artifact.types !== undefined && (!artifact.types.length || artifact.types.some(t => !TYPE_KEYS.includes(t)))) errors.types = 'En az bir geçerli tür seçin.'
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(artifact.id)) errors.name = 'Ad, geçerli bir eser kimliği üretmelidir.'
   const sourceIds = artifact.sources.map(k => k.id)
   artifact.sources.forEach((k, i) => {
@@ -33,6 +40,8 @@ export function artifactErrors(artifact: Artifact): Errors {
     if (!imageUrlValid(g.file)) errors[`image-${i}-file`] = 'Yerel /images/... yolu veya http/https URL girin.'
     if (artifact.images.findIndex(x => x.file === g.file) !== i) errors[`image-${i}-file`] = 'Bu görsel zaten eklenmiş.'
     required(`image-${i}-alt`, g.alt)
+    // Uploaded photos must say whose they are and under which permission (photo licences are an open issue).
+    if (g.file.startsWith('/api/media/') && !g.credit?.trim()) errors[`image-${i}-credit`] = 'Yüklenen görsel için künye ve kullanım izni zorunludur.'
     if (g.sourceId && !sourceIds.includes(g.sourceId)) errors[`image-${i}-source-id`] = 'Geçerli bir kaynak seçin veya kaynağı kaldırın.'
   })
   if ((artifact.images.length > 0 || artifact.coverImage) && !artifact.images.some(g => g.file === artifact.coverImage)) errors.coverImage = 'Galeriden bir kapak görseli seçin.'
@@ -54,6 +63,7 @@ const list = (v: unknown, control: (n: Record<string, unknown>) => boolean): boo
 const optionalText = (v: Record<string, unknown>, a: string) => v[a] === undefined || typeof v[a] === 'string'
 export function artifactValid(v: unknown): v is Artifact {
   if (!obj(v) || !texts(v, ['id', 'name', 'city', 'district', 'period', 'endowment', 'summary', 'history', 'coverImage']) || !['illustrative', 'verified'].includes(String(v.verification))) return false
+  if (v.types !== undefined && !(Array.isArray(v.types) && v.types.every(t => typeof t === 'string'))) return false
   if (!list(v.sources, n => texts(n, ['id', 'text']) && optionalText(n, 'page')) ||
     !list(v.images, n => texts(n, ['file', 'alt', 'sourceId']) && optionalText(n, 'description') && optionalText(n, 'credit')) ||
     !list(v.test, n => texts(n, ['question', 'description', 'sourceId']) && Array.isArray(n.options) && n.options.every(s => typeof s === 'string') && typeof n.correct === 'number') ||

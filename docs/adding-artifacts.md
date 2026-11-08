@@ -1,6 +1,6 @@
 # Adding an artifact (modular)
 
-One artifact = one JSON file in `src/content/artifacts/` + its photos in `public/images/<slug>/`. The app discovers the file
+**Preferred: add artifacts from the admin panel (`/admin`)** — photos are uploaded to the private Neon bucket and the record waits for curator approval. The file route below is for bulk loading: one artifact = one JSON file in `src/content/artifacts/` + its photos uploaded with `node scripts/storage-upload-images.mjs` (photos are no longer kept in `public/images/`; only scale-model textures are), then `npm run db:setup`. The app discovers the file
 automatically (`import.meta.glob`), so no shared file is edited and two people adding different works never conflict.
 
 1. `node scripts/new-artifact.mjs <inventory-id> <english-slug>` writes a draft to `drafts/artifacts/<slug>.json` from the

@@ -1,24 +1,62 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import type { Artifact } from '../../domain/artifact'
 import { artifactErrors, artifactId, maybeSourced, uniqueId } from '../../domain/verification'
 import type { Errors } from '../../domain/verification'
-import type { AdminProps } from './AdminPage'
-import { DemoNote, downloadJson } from './AdminPage'
+import { TYPE_LABELS } from '../../domain/artifactTypes'
+import { typesOf } from '../../content/artifactTypeIndex'
+import { downloadJson } from './AdminPage'
+import { useAdmin } from './context'
+import { api, ApiError, STATUS_LABELS } from '../../infrastructure/api'
+import type { AdminRecord, Role } from '../../infrastructure/api'
+import NotFound from '../../shared/ui/NotFound'
+
+/** /admin/new and /admin/artifact/:id: signs in, loads the record (pending draft first), then shows the form. */
+export function AdminFormRoute() {
+  const { id } = useParams()
+  const { role } = useAdmin()
+  return <section className="admin-page admin">
+    <Link to="/admin/eserler">← Eserler</Link><h1>{id ? 'Eseri düzenle' : 'Yeni eser ekle'}</h1>
+    <FormLoader key={id ?? 'fresh'} id={id} role={role} />
+  </section>
+}
+
+function FormLoader({ id, role }: { id?: string; role: Role }) {
+  const [record, setRecord] = useState<AdminRecord | null | undefined>(undefined)
+  const [ids, setIds] = useState<string[] | null>(null)
+  const [error, setError] = useState('')
+  useEffect(() => {
+    if (id) api.get(id).then(setRecord, (e) => { if (e instanceof ApiError && e.status === 404) setRecord(null); else setError((e as Error).message) })
+    else api.list().then((rows) => setIds(rows.map((r) => r.id)), (e) => setError((e as Error).message))
+  }, [id])
+  if (error) return <p role="alert" className="area-error">{error}</p>
+  if (id && record === null) return <NotFound />
+  if (id ? !record : !ids) return <p role="status">Yükleniyor…</p>
+  const artifact = record ? record.draft ?? record.published ?? undefined : undefined
+  return <>
+    {record && <p className="admin-note">Durum: <strong>{STATUS_LABELS[record.status]}</strong>
+      {record.draft && record.published ? ' — bekleyen değişiklik gösteriliyor; onaylanana kadar sitede yayındaki sürüm görünür.' : ''}
+      {record.status === 'rejected' && record.review_note ? ` Ret gerekçesi: ${record.review_note}` : ''}</p>}
+    <ArtifactForm artifact={artifact} existingIds={ids ?? []} role={role} />
+  </>
+}
 
 function emptyArtifact(): Artifact {
-  return { id: '', name: '', city: '', district: '', period: '', endowment: '', summary: '', history: '', verification: 'illustrative', coverImage: '', images: [], hotspots: [], sources: [],
+  return { id: '', name: '', city: '', district: '', period: '', endowment: '', summary: '', history: '', verification: 'illustrative', types: [], coverImage: '', images: [], hotspots: [], sources: [],
     test: Array.from({ length: 3 }, () => ({ question: '', options: ['', '', '', ''], correct: 0, description: '', sourceId: '' })) }
 }
-export default function ArtifactForm({ artifact, artifacts, overlay, save }: AdminProps & { artifact?: Artifact }) {
-  const [draft, setDraft] = useState<Artifact>(() => artifact ? structuredClone(artifact) : emptyArtifact())
+export default function ArtifactForm({ artifact, existingIds, role }: { artifact?: Artifact; existingIds: string[]; role: Role }) {
+  const [draft, setDraft] = useState<Artifact>(() => artifact ? { ...structuredClone(artifact), types: typesOf(artifact) } : emptyArtifact())
   const [errors, setErrors] = useState<Errors>({})
-  const [message, setMessage] = useState('')
+  // After the first save of a new artifact the address changes; the confirmation travels in the navigation state.
+  const [message, setMessage] = useState<string>((useLocation().state as { saved?: string } | null)?.saved ?? '')
   const [saveError, setSaveError] = useState('')
   const form = useRef<HTMLFormElement>(null)
   const navigate = useNavigate()
-  const id = artifact?.id ?? uniqueId(artifactId(draft.name), artifacts.map(e => e.id))
+  const [savedId, setSavedId] = useState(artifact?.id)
+  const id = savedId ?? uniqueId(artifactId(draft.name), existingIds)
+  const [busy, setBusy] = useState(false)
   const sourced = maybeSourced(draft)
   function update(patch: Partial<Artifact>) { setDraft(t => ({ ...t, ...patch })); setMessage('') }
   function errorAttrs(area: string) {
@@ -45,6 +83,7 @@ export default function ArtifactForm({ artifact, artifacts, overlay, save }: Adm
   function validate(): Artifact | undefined {
     const result: Artifact = { ...draft, id, verification: draft.verification === 'verified' && sourced ? 'verified' : 'illustrative' }
     const errors = artifactErrors(result)
+    if (!result.types?.length) errors.types = 'En az bir tür seçin.'
     setErrors(errors); setSaveError('')
     if (Object.keys(errors).length) {
       setMessage('')
@@ -56,25 +95,60 @@ export default function ArtifactForm({ artifact, artifacts, overlay, save }: Adm
     }
     return result
   }
-  function submit(event: FormEvent) {
+  const [uploading, setUploading] = useState(false)
+  const [uploadMessage, setUploadMessage] = useState('')
+  async function uploadImage(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0]
+    event.target.value = ''
+    if (!file) return
+    if (!id) { setUploadMessage('Önce eserin adını girin; görsel eser kimliğinin altına kaydedilir.'); return }
+    if (file.size > 3_000_000) { setUploadMessage('Görsel en fazla 3 MB olabilir.'); return }
+    setUploading(true); setUploadMessage('')
+    try {
+      const data = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader()
+        reader.onload = () => resolve(String(reader.result).replace(/^data:[^,]*,/, ''))
+        reader.onerror = () => reject(new Error('Dosya okunamadı.'))
+        reader.readAsDataURL(file)
+      })
+      const { url } = await api.upload(id, data)
+      update({ images: [...draft.images, { file: url, alt: '', description: '', credit: '', sourceId: '' }], coverImage: draft.coverImage || url })
+      setUploadMessage(`${file.name} yüklendi. Alt metin ile künye ve izin bilgisini doldurun.`)
+    } catch (e) { setUploadMessage(`Yüklenemedi: ${(e as Error).message}`) }
+    finally { setUploading(false) }
+  }
+  async function submit(event: FormEvent) {
     event.preventDefault()
     const result = validate()
-    if (!result) return
+    if (!result || busy) return
+    setBusy(true)
     try {
-      save({ ...overlay, [result.id]: result })
-      setDraft(result)
-      setMessage('Eser kaydedildi. Ana sayfa ve eser sayfası güncellendi.')
-      if (!artifact) navigate(`/admin/artifact/${result.id}`, { replace: true })
-    } catch (e) { setSaveError((e as Error).message) }
+      await api.save(result, !savedId)
+      setDraft(result); setSavedId(result.id)
+      const saved = role === 'curator' ? 'Kaydedildi. Yayımlamak için listeden onaylayın.' : 'Kaydedildi. Küratör onayından sonra sitede görünecek.'
+      setMessage(saved)
+      if (!savedId) navigate(`/admin/artifact/${result.id}`, { replace: true, state: { saved } })
+    } catch (e) {
+      const err = e as ApiError
+      if (err.details) setErrors(err.details)
+      setSaveError(err.message)
+    } finally { setBusy(false) }
   }
-  return <section className="page admin">
-    <Link to="/admin">← Yönetim listesine dön</Link><h1>{artifact ? 'Eseri düzenle' : 'Yeni eser ekle'}</h1><DemoNote />
+  return <>
     <p>Zorunlu alanları doldurun. Görsel ve kaynak eklemek isteğe bağlıdır; eklenen kayıtların alanları zorunludur. Tarihsel bilgi ve görseller için kaynak ve kullanım iznini kontrol edin.</p>
     <form ref={form} noValidate onSubmit={submit}>
       {Object.keys(errors).length > 0 && <div role="alert" className="error-summary"><h2>Kayıt tamamlanamadı</h2><p>{Object.keys(errors).length} alanı kontrol edin. İlk hatalı alana odaklanıldı.</p><ul>{Object.entries(errors).map(([area, message]) => <li key={area}><a href={`#${area}`} onClick={e => { e.preventDefault(); document.getElementById(area)?.focus() }}>{document.querySelector(`label[for="${area}"]`)?.textContent ?? area}: {message}</a></li>)}</ul></div>}
       <p role="status">{message}</p>{saveError && <p role="alert" className="area-error">{saveError}</p>}
       <fieldset className="form-section"><legend>Eser bilgileri</legend>
         {(['name', 'city', 'district', 'period', 'endowment', 'summary', 'history'] as const).map((a, i) => text(a, ['Ad', 'Şehir', 'İlçe', 'Dönem', 'Vakıf', 'Özet', 'Tarihçe'][i], draft[a], v => update({ [a]: v }), ['summary', 'history'].includes(a)))}
+        <fieldset className="sub-form" aria-describedby={errors.types ? 'types-error' : 'types-help'}><legend>Tür</legend>
+          <p id="types-help">Eserler sayfasındaki tür filtresinde kullanılır. Birden fazla seçilebilir.</p>
+          {TYPE_LABELS.map(([key, label], i) => <label key={key} className="form-check" htmlFor={i === 0 ? 'types' : `types-${key}`}>
+            <input type="checkbox" id={i === 0 ? 'types' : `types-${key}`} aria-invalid={i === 0 && !!errors.types} checked={!!draft.types?.includes(key)}
+              onChange={e => update({ types: e.target.checked ? TYPE_LABELS.map(([k]) => k).filter(k => k === key || draft.types?.includes(k)) : (draft.types ?? []).filter(k => k !== key) })} /> {label}
+          </label>)}
+          {errors.types && <p id="types-error" className="area-error">{errors.types}</p>}
+        </fieldset>
         <p className="identity">Eser kimliği: <strong>{id || 'Addan otomatik üretilecek'}</strong>. Kaydedildikten sonra değişmez.</p>
         <label className="form-area" htmlFor="verification">Doğrulama durumu
           <select id="verification" value={sourced ? draft.verification : 'illustrative'} aria-describedby="verification-help" onChange={e => update({ verification: e.target.value as Artifact['verification'] })}>
@@ -92,7 +166,7 @@ export default function ArtifactForm({ artifact, artifacts, overlay, save }: Adm
         <button type="button" onClick={() => update({ sources: [...draft.sources, { id: uniqueId('source', draft.sources.map(k => k.id)), text: '' }] })}>Kaynak ekle</button>
       </fieldset>
       <fieldset className="form-section"><legend>Görseller</legend>
-        <p>Yeni görsel için http/https URL kullanın. Mevcut görsellerin dosya yolu korunur. Dosya yüklenmez.</p>
+        <p>Görseli bilgisayardan yükleyin (JPEG, PNG veya WebP, en fazla 3 MB; özel depoya kaydedilir) ya da http/https URL girin. Yüklenen görselde künye ve kullanım izni zorunludur. Mevcut görsellerin dosya yolu korunur.</p>
         {draft.images.map((g, i) => {
           const toggle = (patch: Partial<typeof g>) => update({ images: draft.images.map((x, j) => j === i ? { ...x, ...patch } : x) })
           const existing = artifact?.images.some(x => x.file === g.file)
@@ -103,11 +177,18 @@ export default function ArtifactForm({ artifact, artifacts, overlay, save }: Adm
             }} />)}
             {text(`image-${i}-alt`, 'Alt metin', g.alt, v => toggle({ alt: v }))}
             {text(`image-${i}-description`, 'Görsel açıklaması (isteğe bağlı)', g.description ?? '', v => toggle({ description: v }), false, false)}
-            {text(`image-${i}-credit`, 'Kredi satırı (isteğe bağlı)', g.credit ?? '', v => toggle({ credit: v }), false, false)}
+            {g.file.startsWith('/api/media/') && <img className="upload-preview" src={g.file} alt="" />}
+            {text(`image-${i}-credit`, g.file.startsWith('/api/media/') ? 'Künye ve kullanım izni' : 'Kredi satırı (isteğe bağlı)', g.credit ?? '', v => toggle({ credit: v }), false, g.file.startsWith('/api/media/'))}
             {selectSource(`image-${i}-source-id`, g.sourceId, v => toggle({ sourceId: v }))}
           </fieldset>
         })}
-        <button type="button" onClick={() => update({ images: [...draft.images, { file: '', alt: '', description: '', sourceId: '' }] })}>URL ile görsel ekle</button>
+        <div className="admin-actions">
+          <label className="file-picker" htmlFor="image-upload">{uploading ? 'Yükleniyor…' : 'Bilgisayardan görsel yükle'}
+            <input id="image-upload" type="file" accept="image/jpeg,image/png,image/webp" disabled={uploading} aria-describedby="image-upload-help" onChange={uploadImage} />
+          </label>
+          <button type="button" onClick={() => update({ images: [...draft.images, { file: '', alt: '', description: '', sourceId: '' }] })}>URL ile görsel ekle</button>
+        </div>
+        <p id="image-upload-help" role="status">{uploadMessage}</p>
         {selectImage('coverImage', 'Kapak görseli', draft.coverImage, v => update({ coverImage: v }))}
       </fieldset>
       <fieldset className="form-section"><legend>Bilgi noktaları</legend><p>Görselsiz noktalar yalnızca keşif listesinde gösterilir. Görsel seçilen noktaların konumu yüzde olarak belirtilir.</p>
@@ -136,7 +217,7 @@ export default function ArtifactForm({ artifact, artifacts, overlay, save }: Adm
           </fieldset>
         })}
       </fieldset>
-      <div className="admin-actions form-end"><button type="submit">Kaydet</button><button type="button" onClick={() => { const result = validate(); if (result) downloadJson(result, `${result.id}.json`) }}>JSON olarak indir</button><Link to="/admin">Listeye dön</Link></div>
+      <div className="admin-actions form-end"><button type="submit" disabled={busy}>{busy ? 'Kaydediliyor…' : 'Kaydet'}</button><button type="button" onClick={() => { const result = validate(); if (result) downloadJson(result, `${result.id}.json`) }}>JSON olarak indir</button><Link to="/admin">Listeye dön</Link></div>
     </form>
-  </section>
+  </>
 }

@@ -1,22 +1,12 @@
 import type { Artifact } from '../../../../domain/artifact'
-import typeData from '../../../../content/artifact-types.json'
+import { typesOf } from '../../../../content/artifactTypeIndex'
+export { TYPE_LABELS, typeLabel } from '../../../../domain/artifactTypes'
+export { typesOf } from '../../../../content/artifactTypeIndex'
 
-/** Turkish case and accent folding for search (same rule as places/InventoryList.tsx; copied to keep the features apart). */
+/** Turkish case and accent folding for search. */
 export const fold = (s: string) => s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i')
 
 export const collator = new Intl.Collator('tr')
-
-/** Type keys in display order; the keys come from src/content/artifact-types.json (scripts/artifact-types.mjs). */
-export const TYPE_LABELS: [string, string][] = [
-  ['cami', 'Cami ve mescit'], ['turbe', 'Türbe ve hazire'], ['kulliye', 'Külliye'], ['medrese', 'Medrese ve mektep'],
-  ['han', 'Han ve çarşı'], ['hamam', 'Hamam'], ['su', 'Çeşme ve su yapısı'], ['tekke', 'Tekke ve zaviye'],
-  ['kilise', 'Kilise'], ['imaret', 'İmaret ve darüşşifa'], ['sivil', 'Sivil yapı'], ['diger', 'Diğer'],
-]
-export const typeLabel = (key: string) => TYPE_LABELS.find(([k]) => k === key)?.[1] ?? key
-
-const types = typeData as Record<string, string[]>
-/** Artifacts added later through the admin overlay have no entry yet and count as "Diğer". */
-export const typesOf = (a: Artifact) => types[a.id]?.length ? types[a.id] : ['diger']
 
 export interface Filters { q: string; city: string; district: string; type: string; model: boolean }
 export const noFilters: Filters = { q: '', city: '', district: '', type: '', model: false }

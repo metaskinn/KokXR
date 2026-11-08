@@ -1,7 +1,7 @@
 # KökXR — final planı (2 kişi, 4 iş hattı)
 
 Güncelleme: 7 Kasım 2026, gece · Teslim: **8 Kasım Pazar 12.30 (Türkiye saati)** · Sunum: **5 dakika**.
-Dal: `feature/maket-vr`. Önceki planlar: `docs/archive/2026-11-07-plan-final-review.md`, `docs/archive/2026-11-07-plan-before-final-review.md`.
+Dal: `main` (`feature/maket-vr` ve UX yenilemesi birleşti). Önceki planlar: `docs/archive/2026-11-07-plan-final-review.md`, `docs/archive/2026-11-07-plan-before-final-review.md`.
 
 ## 1. Verilen kararlar
 
@@ -18,14 +18,17 @@ Değer önerisi: **“Bursa’nın vakıf eserlerini kaynaklarıyla keşfet; tem
 Şartname 5.1.1: çoklu eser, tarihçe/görsel/kaynak, ekleme/düzenleme, canlı uçtan uca demo.
 “Akademik onaylı”, “1:1 dijital ikiz”, “öğrenmeyi artırır” gibi doğrulanmamış iddialar kullanılmaz.
 
-## 2. Durum (inceleme kaydı)
+## 2. Durum (8 Kasım 2026, `main` 331935a sonrası)
 
-- `test:hizli` geçti. `test:tarayici` 3/4: `model-interior` 30 sn bekleme sınırına takıldı, nedeni ayrıştırılmadı.
-- E2E başarısız (6/9, 7/9, 6/9). Testler yönlendirmeden sonra anlık `.count()` yapıyor; bekleyen ayrı kontrolde 280 kart, ekleme, düzenleme ve kalıcılık geçti. Büyük olasılıkla test zamanlaması; kesin değil.
-- Hiçbir eserde `inventoryId` dolu değil; envanterden eser sayfasına bağlantı güvenilir değil.
-- Yeni eser formu hâlâ 3 quiz sorusu istiyor; quiz arayüzden kaldırılmış.
-- Quest denemesi, tarihsel doğrulama ve fotoğraf izin belgeleri yapılmadı.
-- Kodda mermer: `uluMosqueFloor.ts` (üretilen doku), `uluMosqueTextures.ts` satır ~547–563 (`marble`, `marblePaving`, `innerMarble`; `lightDevice()` ise “lite” yolu). Ses: `xrNarration.ts`, 7 kayıt.
+- `test:hizli` geçti. `test:tarayici` 3/3 geçti.
+- E2E Chromium 1280'de 3 kontrol eskimiş testten kalıyordu (anlık `.count()`, sayfalı liste, yeni "Bu adreste eser yok" metni); test güncellendi.
+- Eserler sayfası: şehir/ilçe/tür filtresi, arama, sayfalama var. Tür verisi `src/content/artifact-types.json` (`scripts/artifact-types.mjs`); yönetimden eklenen eserde `types` alanı formdan girilir.
+- Quiz arayüzde (`Quiz.tsx`); formdaki 3 soru zorunluluğu bununla tutarlı.
+- 706 eserin 39'unda açık `inventoryId`; geri kalanı `inventoryLinks.ts` içindeki eşleşmeyle bağlanır.
+- Neon Postgres + API eklendi (8 Kasım gece): 706 eser veritabanında; editör/küratör girişi, onay/ret/geri al/sil, işlem kaydı, sunucu tarafı doğrulama. Yerelde uçtan uca doğrulandı; Vercel'e ortam değişkenleri girilip dağıtılmadı.
+- Neon Object Storage (özel `uploads` bucket'ı): repo görselleri yüklendi, `media` tablosunda kayıtlı; site görselleri `/api/media` üzerinden imzalı adresle alıyor; admin'den görsel yükleme var. Envanter (340) veritabanında, `GET /api/inventory`.
+- Yok: yüksek kontrast ve yazı boyutu kontrolü, eser haritası (veride koordinat yok).
+- Quest denemesi, tarihsel doğrulama ve fotoğraf izin belgeleri yapılmadı. Kayıtlar “Kaynaklı bilgi”dir, elle doğrulanmış değildir.
 
 ## 3. İş hatları ve kişi dağılımı
 

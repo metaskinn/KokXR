@@ -1,7 +1,7 @@
 // Ulu Camii minbar zone: kündekâri minbar, muezzin mahfil, marble and wooden preaching kürsüs, cabinets, chest and rahles.
 // Forms from archive photos, the eight posts and the inscriptions from the inventory book. Textures and inscriptions are
 // perspective-corrected crops of the archive photo (scripts/minbar_crop.py); the code generates no writing.
-// Representative parts: the kiosk's east face carries the crop of its west face, the kürsü's steps are for walking, proportions are at model scale.
+// Representative parts: the kiosk's east face carries the crop of its west face, the marble kürsü is a closed solid (not walkable), proportions are at model scale.
 // Lattice and ring railings are real geometry, not transparent layers; everything merges into two materials (two draw calls).
 import * as THREE from 'three'
 import { PUBLIC_BUILD } from '../../../shared/config/publicBuild'
@@ -384,11 +384,11 @@ export function buildMahfil(m: UluMosqueMaterials, k: Bucket, o: MahfilSize) {
   for (const [a, b, c, d] of MAHFIL_LOWER_RAILING) balustrade(m, k, mx + a, mz + b, mx + c, mz + d, Z, 0.68)
 }
 
-export interface KursuSize { x: number; z: number; r: number; floor: number; entrance: number }
+export interface KursuSize { x: number; z: number; r: number; floor: number }
 /** Rococo marble kürsü: stone base, knobbed stand, veined basin, gold-ornamented inscription, two knobs (g103; inventory: H. 1231). */
 export function marbleKursu(m: UluMosqueMaterials, k: Bucket, o: KursuSize) {
   const { atlas } = textures(m)
-  const { x, z, floor: Z, entrance: G } = o
+  const { x, z, floor: Z } = o
   const outer = PUBLIC_BUILD ? m.innerMarble : atlas
   // To preserve the vein length, v follows a triangle wave with height; u goes once around the circumference (the region is mirrored within itself).
   const marbleMap = <T extends THREE.BufferGeometry>(g: T) => {
@@ -408,17 +408,17 @@ export function marbleKursu(m: UluMosqueMaterials, k: Bucket, o: KursuSize) {
   const belly: [number, number][] = [[0.58, 1.68], [0.74, 1.76], [0.94, 1.9], [1.03, 2.05], [1.07, 2.2]]
   k.add(place(marbleMap(rotateG(belly, 28, [1, 1])), x, Z, z), outer)
   k.add(place(marbleMap(rotateG([[1, 2.2], [0.1, 2.2]], 28, [1, 1])), x, Z, z), outer)
-  // Basin wall: the north entrance is open
+  // Basin wall: closed ring (the walk-in opening was dropped)
   const profile = [[1.0, 2.2], [1.0, 3.12], [1.12, 3.14], [1.13, 3.26], [0.96, 3.26], [0.96, 2.2]].map(([r, y]) => new THREE.Vector2(r, y))
-  const inner = new THREE.LatheGeometry(profile, 28, Math.PI + G / 2, Math.PI * 2 - G)
+  const inner = new THREE.LatheGeometry(profile, 28)
   k.add(place(marbleMap(inner), x, Z, z), outer)
   const outerP = [[1.07, 2.2], [1.11, 2.7], [1.13, 3.14]].map(([r, y]) => new THREE.Vector2(r, y))
-  k.add(place(marbleMap(new THREE.LatheGeometry(outerP, 28, Math.PI + G / 2, Math.PI * 2 - G)), x, Z, z), outer)
+  k.add(place(marbleMap(new THREE.LatheGeometry(outerP, 28)), x, Z, z), outer)
   // Inscription: the couplet from the photo, facing west
   const kit = new THREE.CylinderGeometry(1.135, 1.115, 0.7, 12, 1, true, -Math.PI / 2 - 0.82, 1.64)
   k.add(place(match(kit, 'inscription'), x, Z + 2.72, z), atlas)
   // Gold band and knobs
-  for (const y of [3.12]) k.add(place(new THREE.TorusGeometry(1.125, 0.016, 4, 28, Math.PI * 2 - G).rotateZ(-Math.PI / 2 + G / 2).rotateX(Math.PI / 2), x, Z + y, z), m.goldDark)
+  for (const y of [3.12]) k.add(place(new THREE.TorusGeometry(1.125, 0.016, 4, 28, Math.PI * 2).rotateX(Math.PI / 2), x, Z + y, z), m.goldDark)
   for (const a of [-Math.PI / 2 - 0.9, -Math.PI / 2 + 0.9, Math.PI / 2 + 0.3, Math.PI / 2 - 0.3]) {
     k.add(place(rotateG([[0.05, 0], [0.09, 0.05], [0.1, 0.12], [0.03, 0.22], [0, 0.26]], 8), x + Math.sin(a) * 1.03, Z + 3.26, z + Math.cos(a) * 1.03), m.innerMarble)
   }

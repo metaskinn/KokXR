@@ -42,7 +42,6 @@ export const interiorStops: InteriorStop[] = [
   { id: 'dome', name: 'Kubbe', position: [-13.8, 2.4, 3.2], look: [-13.8, 21, 7.6] },
   // On top of structures: reachable on foot too; these stops are shortcuts.
   { id: 'minbar-top', name: 'Minbere çık', position: [MINBAR_X, BAY_Y + minbarH(4.6), MINBAR_Z0 + 4.6], look: [8, 4, 3] },
-  { id: 'kursu-top', name: 'Kürsüye çık', position: [KURSU.x - 0.1, BAY_Y + 2.2, KURSU.z], look: [-4, 5, 2] },
   { id: 'mahfil-top', name: 'Mahfile çık', position: [MAHFIL.x, BAY_Y + MAHFIL_H, MAHFIL.z], look: [0, 6.4, MIHRAB_Z] },
 ]
 
@@ -85,17 +84,13 @@ export function interiorWalkArea(): InteriorWalk {
       // The west side of the front railing is open: since a pier faces the door, the minbar is approached from this side.
       { x0: MINBAR_X + 0.8, x1: MINBAR_X + 1.7, z0: MIHRAB_Z - 9.5, z1: MIHRAB_Z - 9.3 },
     ],
-    circles: [{ x: sx, z: sz, r: 3.75 }, { x: kx, z: kz, r: kr + 0.05, top: 1.2 }, ...[-1, 1].map((s) => ({ x: s * CANDLESTICK.x, z: MIHRAB_Z - CANDLESTICK.z, r: CANDLESTICK.r }))],
+    circles: [{ x: sx, z: sz, r: 3.75 }, { x: kx, z: kz, r: kr + 0.05 }, ...[-1, 1].map((s) => ({ x: s * CANDLESTICK.x, z: MIHRAB_Z - CANDLESTICK.z, r: CANDLESTICK.r }))],
     floors: [
       // Mahfil: passable underneath, the stair rises from the northeast.
       { x0: mx - 3.35, x1: mx + 3.35, z0: mz - 2.35, z1: mz + 2.3, h0: MAHFIL_H, h1: MAHFIL_H, underPassable: true },
       { x0: mx + 2.05, x1: mx + 3.25, z0: mz - 6.8, z1: mz - 2.35, h0: 0, h1: 3.62 },
       // Minbar stair
       { x0: MINBAR_X - MY, x1: MINBAR_X + MY, z0: MINBAR_Z0 + MINBAR_RAMP.s0, z1: MINBAR_Z0 + MINBAR_RAMP.s1, h0: 0, h1: MINBAR_RAMP.h1 },
-      // Kürsü: steps, entrance and inner floor
-      { x0: kx - 0.42, x1: kx + 0.42, z0: kz - kr - 1.7, z1: kz - kr, h0: 0, h1: 2.1 },
-      { x0: kx - 0.42, x1: kx + 0.42, z0: kz - kr, z1: kz - 0.7, h0: 2.2, h1: 2.2 },
-      { x0: kx - 0.72, x1: kx + 0.72, z0: kz - 0.72, z1: kz + 0.72, h0: 2.2, h1: 2.2 },
     ],
     viewBlockers: piers,
     eyeY: BAY_Y,

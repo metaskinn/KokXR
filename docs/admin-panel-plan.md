@@ -1,6 +1,8 @@
 # Admin panel plan (end to end, clean)
 
-Status: approved, stage 1 pending · 2026-11-07
+Status: **largely implemented with a different stack** · 2026-11-08 (was: approved, stage 1 pending · 2026-11-07)
+
+Implementation note (2026-11-08): the team built this on Neon Postgres + object storage instead of the local `fileStorage`/`@vercel/blob` route below. In code: `server/` (`auth.ts`, `handlers.ts`, `db.ts`, `storage.ts`, `schema.sql`), `src/features/admin/` (dashboard, artifacts, approval queue `/admin/onay`, media, inventory, audit log) and `src/infrastructure/api.ts`. Login, pending/published/rejected states, image upload and the audit log exist. Verified locally by the author; **not yet tried on the live site**. The stage table below is the original plan, kept for history; stages 3, 9 and 11 (stepwise form, in-form preview, docs) were not confirmed.
 
 ## Why
 

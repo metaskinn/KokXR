@@ -1,6 +1,9 @@
 // Vase repair in VR: grab a piece with the Quest controller, carry it to its place, seat it. Touches the vase scene only through VaseXrContext.
 // The pure calculations in the top section are also used by the desktop scene; at runtime the file depends only on three, and the Node test imports it directly.
 import * as THREE from 'three'
+// AR helpers load only when AR starts (the Node test imports this file and needs only the pure functions above).
+import type { ArPlacement } from './arPlacement'
+import type { createArLighting as ArLighting } from './arLight'
 
 export const ILLUSTRATIVE_MODEL_LABEL = 'Temsilî model · Tarihî eser değildir'
 export const PIECE_COUNT = 6
@@ -39,6 +42,21 @@ export function vaseRig(head: { x: number; y: number; z: number; yaw: number }) 
     x: -METER * (localX * c + localZ * s),
     y: -METER * tableHeight(head.y),
     z: -METER * (-localX * s + localZ * c),
+    rotY,
+  }
+}
+
+/** The turntable base's underside in model units (vaseScene: cylinder 1.5 high, centred at y = -2). */
+export const TURNTABLE_BOTTOM = -2.75
+
+/** AR: put the model so the turntable stands on a real surface at `spot` (device meters), still viewed from +z along the head's yaw. */
+export function vaseRigAt(spot: { x: number; y: number; z: number }, yaw: number) {
+  const rotY = -yaw
+  const c = Math.cos(rotY), s = Math.sin(rotY)
+  return {
+    x: -METER * (spot.x * c + spot.z * s),
+    y: -METER * spot.y + TURNTABLE_BOTTOM,
+    z: -METER * (-spot.x * s + spot.z * c),
     rotY,
   }
 }
@@ -399,6 +417,8 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   }
 
   const head = (el: El, kind: 'trigger' | 'side') => {
+    // AR before placement: the first press puts the turntable where the ring is (or in front of you if no surface was found).
+    if (session && ar && !settled) { placeNow = true; return }
     if (!session || !settled) return
     el[kind] = true
     el.toRelease = false
@@ -435,6 +455,10 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
 
   // AR: the virtual floor, stand and dark background would hide the real room; they come back when the session ends.
   let ar = false
+  let placing: ArPlacement | null = null
+  let placeNow = false
+  let arLight: ReturnType<typeof ArLighting> | null = null
+  let shadow: { mesh: THREE.Mesh; dispose(): void } | null = null
   let prevBackground: THREE.Scene['background'] = null
   const prevClear = new THREE.Color()
   let prevAlpha = 1
@@ -447,6 +471,19 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       renderer.getClearColor(prevClear)
       prevAlpha = renderer.getClearAlpha()
       renderer.setClearColor(0x000000, 0)
+      placeNow = false
+      void Promise.all([import('./arPlacement'), import('./arLight')]).then(async ([{ createArPlacement }, { createContactShadow, createArLighting }]) => {
+        if (session !== fresh || !ar) return
+        shadow ??= createContactShadow(XR_TABLE_RADIUS * 1.25)
+        shadow.mesh.position.y = TURNTABLE_BOTTOM + 0.05
+        scene.add(shadow.mesh)
+        arLight = createArLighting(renderer, scene)
+        arLight.start()
+        const p = await createArPlacement(fresh)
+        if (session !== fresh || !ar) { p?.dispose(); return }
+        placing = p
+        if (p) rig.add(p.reticle)
+      }).catch(() => { /* AR still works without placement and lighting: the turntable waits in front of the user */ })
     }
     measure()
     b.xrMode(true, xrShelfLayout(bottomShares, TURNTABLE_TOP))
@@ -477,6 +514,12 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     environment.removeFromParent()
     panel.obj.removeFromParent()
     if (ar) {
+      placing?.reticle.removeFromParent()
+      placing?.dispose()
+      placing = null
+      arLight?.stop()
+      arLight = null
+      shadow?.mesh.removeFromParent()
       scene.background = prevBackground
       renderer.setClearColor(prevClear, prevAlpha)
       ar = false
@@ -513,7 +556,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
       let fresh: XRSession | null = null
       try {
-        fresh = await navigator.xr.requestSession(mode === 'ar' ? 'immersive-ar' : 'immersive-vr', { optionalFeatures: ['local-floor'] })
+        fresh = await navigator.xr.requestSession(mode === 'ar' ? 'immersive-ar' : 'immersive-vr', { optionalFeatures: mode === 'ar' ? ['local-floor', 'hit-test', 'light-estimation'] : ['local-floor'] })
         // The scene may have closed while waiting for permission: do not leave the user in an empty session.
         if (closed) throw new Error('Scene closed')
         await xr.setSession(fresh)
@@ -546,7 +589,24 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
         if (!pose) return
         const { position: p, orientation: q } = pose.transform
         const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(new THREE.Quaternion(q.x, q.y, q.z, q.w))
-        const r = vaseRig({ x: p.x, y: p.y, z: p.z, yaw: Math.atan2(-forward.x, -forward.z) })
+        const yaw = Math.atan2(-forward.x, -forward.z)
+        let r = vaseRig({ x: p.x, y: p.y, z: p.z, yaw })
+        if (ar) {
+          // Until the press, the turntable follows the ring over real surfaces (a preview); with no surface it waits in front of you.
+          const hit = placing && frame && space ? placing.update(frame, space) : null
+          const spot = hit && placing ? placing.reticle.position : null
+          if (spot) r = vaseRigAt({ x: spot.x, y: spot.y, z: spot.z }, yaw)
+          rig.position.set(r.x, r.y, r.z)
+          rig.rotation.set(0, r.rotY, 0)
+          if (!placeNow) return
+          placeNow = false
+          if (placing) placing.reticle.visible = false
+          const tableY = spot ? spot.y + -TURNTABLE_BOTTOM / METER : tableHeight(p.y)
+          rig.updateWorldMatrix(false, true)
+          panel.obj.position.y = METER * (p.y - tableY) - 5
+          settled = true
+          return
+        }
         rig.position.set(r.x, r.y, r.z)
         rig.rotation.set(0, r.rotY, 0)
         // The stand reaches from the floor to the turntable; the floor is set at rig height.
@@ -607,6 +667,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       }
       panel.dispose()
       label.dispose()
+      shadow?.dispose()
       for (const g of [floor.geometry, leg.geometry, rayGeometry, handGeometry]) g.dispose()
       for (const x of [floor.material, leg.material, rayMaterial, handMaterial]) x.dispose()
     },

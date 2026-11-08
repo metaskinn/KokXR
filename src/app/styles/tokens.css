@@ -113,6 +113,7 @@
   --target-primary: 48px;
   --tabbar-h: 64px;
   --topbar-h: 48px;
+  --header-h: 49px; /* measured height of the sticky .site-header (65px from 900px up, where the nav shows) */
   --pagenav-h: 44px;
 
   /* Hareket */
@@ -147,3 +148,4 @@
   --surface: #f4f5f2;      /* Quest: geniş saf beyaz yüzey yok */
   --ground: #e9ece8;
 }
+@media (min-width: 900px) { :root { --header-h: 65px; } }

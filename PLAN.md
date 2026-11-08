@@ -61,7 +61,7 @@ Değer önerisi: **“Bursa’nın vakıf eserlerini kaynaklarıyla keşfet; tem
 - Canlı: `kokxr.vercel.app` Vercel'de Ready (Production). Vercel yalnız yetkili commit yazarının commit'ini yayınlıyor (`metaskin`); `selamisimsek` ve `Muhammet Ali Divan` commit'leri Blocked olur. Geçici çözüm: yetkili yazarla commit + push. Kalıcı çözüm panelde (Settings → Members/Git).
 - 706 eser kaydı; 340 yapılık envanter; 39 eserde açık `inventoryId`, kalanı `inventoryLinks.ts` ile bağlanır.
 - Eserler sayfası: şehir/ilçe/tür filtresi, arama, sayfalama. Tür verisi `src/content/artifact-types.json`.
-- Quiz arayüzde (`Quiz.tsx`); formdaki 3 soru zorunluluğu bununla tutarlı, kaldırılmayacak.
+- Quiz eser sayfasından **kaldırıldı** (8 Kasım, kullanıcı kararı; `Quiz.tsx` ve eserlerdeki `test` verisi duruyor). Admin formundaki 3 soru zorunluluğu ayrıca duruyor: kaldırılıp kaldırılmayacağı açık.
 - Neon Postgres + API: 706 eser veritabanında; editör/küratör girişi, onay/ret/geri al/sil, işlem kaydı, sunucu tarafı doğrulama. Admin: panel, eserler, onay kuyruğu, medya, envanter, kayıt (`/admin/*`). Neon Object Storage: görseller `/api/media` üzerinden, admin'den yükleme. Yerelde uçtan uca doğrulandı; Vercel'de ortam değişkenleri girildi (`DATABASE_URL`, `SESSION_SECRET`, `ADMIN_PASSWORD`, AWS_*), **canlıda giriş ve ekleme denenmedi**.
 - Ana sayfa (`/`): VR, AR ve keşfe üç giriş. Eser haritası (Leaflet + OpenStreetMap, yaklaşık konumlar).
 - AR: Ulu Camii ve vazo, ayrıca `xrSession` model bağımsız olduğu için tüm maketler; masaya yerleştirme, oda ışığı. Ekip mobilde AR'ın yapıldığını bildirdi; **bu oturumda cihazda görülmedi**, telefon/tarayıcı listesi kayıtlı değil.
@@ -98,7 +98,7 @@ Kişi 2'nin dosya sınırı: `src/features/scale-models/`, `src/shared/xr/`, `sr
 
 **Ürün ve veri**
 - [x] Envanter → eser bağlantıları: 39 açık `inventoryId`, kalanı `inventoryLinks.ts`.
-- [-] Formdaki 3 quiz zorunluluğu kaldırılmayacak (quiz arayüzde).
+- [ ] Formdaki 3 quiz zorunluluğu: quiz sayfadan kalktığı için gereksiz, kaldırılırsa `verification.ts`, form, 706 JSON ve `docs/demo-ekleme-duzenleme.md` etkilenir. Karar bekliyor.
 - [~] Ekle → onay → yayın → listede gör → düzenle: yerelde doğrulandı, canlıda değil. Eksik alanla kayıt engellenir, kaynaksız “kaynaklı” seçilemez (sunucu doğrulaması var, canlıda denenmedi).
 - [ ] Demo eserleri: Ulu Camii + Muradiye Külliyesi; tarihçe/kaynak sayfaları kitaptan elle doğrulanır, isim tahminiyle bağlanmaz.
 - [~] Foto izinleri: kullanıcı izin olduğunu bildirdi; kayıtta yok. Canlı build fotoğraflı kalır. İzin belgesini elde tut.

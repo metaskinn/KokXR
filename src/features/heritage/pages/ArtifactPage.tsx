@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import type { Artifact } from '../../../domain/artifact'
 import Gallery from '../components/Gallery'
-import Quiz from '../components/Quiz'
 import { inventoryLinks } from '../components/inventoryLinks'
 import Section from '../../../shared/ui/Section'
 import SourceLine, { sourceText } from '../../../shared/ui/SourceLine'
@@ -60,7 +59,6 @@ function ArtifactDetail({ artifact, artifacts }: { artifact: Artifact; artifacts
     { id: 'fotograflar', long: 'Fotoğraflar', short: 'Fotoğraf' },
     ...(model ? [{ id: 'maket', long: 'Maket', short: 'Maket' }] : []),
     { id: 'tarihce', long: 'Tarihçe', short: 'Tarihçe' },
-    ...(artifact.test.length ? [{ id: 'sorular', long: 'Sorular', short: 'Soru' }] : []),
     { id: 'kaynaklar', long: 'Kaynaklar', short: 'Kaynak' },
   ]
   const active = useActiveSection(nav.map((n) => n.id))
@@ -121,10 +119,6 @@ function ArtifactDetail({ artifact, artifacts }: { artifact: Artifact; artifacts
         </div>
         {artifact.sources.filter((source) => source.id.endsWith('-history')).map((source) => <SourceLine key={source.id} sources={artifact.sources} sourceId={source.id} />)}
       </Section>
-      {artifact.test.length > 0 && <Section id="sorular" title="Sorular">
-        <p className="section-sub">{artifact.test.length} soru. Cevaplar kaydedilmez.</p>
-        <Quiz name={artifact.id} questions={artifact.test} sources={artifact.sources} />
-      </Section>}
       <Section id="kaynaklar" title="Kaynaklar" className="reading">
         <ol className="source-list">{artifact.sources.map((source) => <li key={source.id}>{sourceText(source)}</li>)}</ol>
         {links.record && <p className="inventory-line">Envanter kaydı: {links.record}</p>}

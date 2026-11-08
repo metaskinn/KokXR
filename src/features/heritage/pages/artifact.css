@@ -80,7 +80,7 @@ button.info-point[aria-expanded='true'], button.info-point[aria-expanded='true']
 .artifact-tag dd { margin: 0; font-size: 0.9375rem; line-height: 1.5; }
 
 /* Sayfa içi gezinme: telefonda yapışkan çubuk, masaüstünde sağ sütunda liste */
-.section-nav { position: sticky; top: 0; z-index: var(--z-sticky); margin: var(--s-4) calc(var(--gutter) * -1) 0; background: var(--ground); border-bottom: 1px solid var(--line); }
+.section-nav { position: sticky; top: var(--header-h); z-index: var(--z-sticky); margin: var(--s-4) calc(var(--gutter) * -1) 0; background: var(--ground); border-bottom: 1px solid var(--line); }
 .section-nav > p { display: none; }
 .section-nav ul { display: flex; gap: 0; margin: 0; padding: 0 var(--gutter); list-style: none; overflow-x: auto; scrollbar-width: none; }
 .section-nav a { display: inline-flex; align-items: center; min-height: var(--pagenav-h); padding: 0 var(--s-3); color: var(--ink-2); font-weight: 600; font-size: 0.9375rem; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; }
@@ -163,7 +163,7 @@ html:has(.section-nav) { scroll-padding-top: calc(var(--pagenav-h) + var(--s-2))
   .artifact-side { grid-area: side; }
   .gallery-scene { margin: 0; padding: var(--s-4); border-radius: var(--r-photo); }
   .image-area img { max-height: min(64vh, 600px); }
-  .artifact-side { position: sticky; top: var(--s-4); display: grid; gap: var(--s-3); align-content: start; }
+  .artifact-side { position: sticky; top: calc(var(--header-h) + var(--s-4)); display: grid; gap: var(--s-3); align-content: start; }
   .section-nav { position: static; margin: var(--s-4) 0 0; background: none; border: 0; }
   .section-nav > p { display: block; margin: 0 0 var(--s-1); font-size: var(--fs-small); font-weight: 700; color: var(--ink); }
   .section-nav ul { display: grid; padding: 0; border-left: 1px solid var(--line); }

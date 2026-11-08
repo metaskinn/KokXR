@@ -29,6 +29,12 @@ export function FinderDesktop({ filters, facets, pick }: { filters: Filters; fac
       <span>{label}</span>{count !== undefined && <small>{count}</small>}
     </label>
   return <aside className="finder-desktop" aria-label="Filtreler">
+    <fieldset><legend>3B maket / AR</legend>
+      <label className="opt" data-zero={facets.modelCount === 0 ? '' : undefined}>
+        <input type="checkbox" checked={filters.model} onChange={(e) => pick({ model: e.target.checked })} />
+        <span>Yalnız maketli (AR dahil)</span><small>{facets.modelCount}</small>
+      </label>
+    </fieldset>
     <fieldset><legend>Şehir</legend>
       {opt('sehir-d', !filters.city, () => pick({ city: '', district: '' }), 'Tümü', facets.total)}
       {facets.cities.map(([city, n]) => opt('sehir-d', filters.city === city, () => pick({ city, district: '' }), city, n))}
@@ -46,12 +52,6 @@ export function FinderDesktop({ filters, facets, pick }: { filters: Filters; fac
     <fieldset><legend>Tür</legend>
       {opt('tur-d', !filters.type, () => pick({ type: '' }), 'Tüm türler')}
       {facets.types.map(([key, n]) => opt('tur-d', filters.type === key, () => pick({ type: key }), TYPE_LABELS.find(([k]) => k === key)![1], n))}
-    </fieldset>
-    <fieldset><legend>3B maket</legend>
-      <label className="opt" data-zero={facets.modelCount === 0 ? '' : undefined}>
-        <input type="checkbox" checked={filters.model} onChange={(e) => pick({ model: e.target.checked })} />
-        <span>Yalnız 3B maketli</span><small>{facets.modelCount}</small>
-      </label>
     </fieldset>
   </aside>
 }
@@ -91,7 +91,7 @@ export function FinderMobile({ filters, facets, pick }: { filters: Filters; face
         <UiIcon name="down" />
       </div>
       <button type="button" className="chip-toggle" aria-pressed={filters.model} onClick={() => pick({ model: !filters.model })}>
-        <UiIcon name="cube" />3B maketli
+        <UiIcon name="cube" />3B maket / AR
       </button>
     </div>
   </div>

@@ -65,7 +65,7 @@ Sunumlarınızı hazırlarken aşağıdaki başlıkları kullanarak hazırlayabi
 
 ## Slayt 3: Kullanıcı deneyimi ve erişilebilirlik (0.55–1.20)
 
-**Ekranda:** Akış: Ana sayfa → Eserler (şehir, ilçe, tür filtresi, arama) → Eser sayfası (galeri, tarihçe, kaynaklar, quiz) → 3B maket.
+**Ekranda:** Akış: Ana sayfa → Eserler (şehir, ilçe, tür filtresi, arama) → Eser sayfası (galeri, tarihçe, kaynaklar) → 3B maket.
 **Erişilebilirlik (kontrol edilenler):** klavyeyle tüm akış, görünür odak halkası, “ana içeriğe atla” bağlantısı, görsellerde alt metin, tek h1 ve landmark bölgeleri, 360 px ve %200 yakınlaştırmada taşma yok, azaltılmış hareket desteği, kontrast ölçüldü (gövde metni 6,97:1).
 **Söyleme:** “ekran okuyucuyla tam uyumlu”, “yüksek kontrast”, “yazı boyutu ayarı”. Bunlar yok ya da denenmedi. Doğrusu: “klavye, odak, alt metin ve kontrast yaklaşımıyla erişilebilirliğe temel attık; gerçek ekran okuyucu testi yol haritasında.”
 

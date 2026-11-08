@@ -59,6 +59,10 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
   const [infoOverflows, setInfoOverflows] = useState(false)
   const info = model.interiorInfos?.find((b) => b.id === infoId)
   const [xrSupport, setXrSupport] = useState(false)
+  // AR (Quest passthrough, Android Chrome) is offered for Ulu Camii only for now; the session code itself is model-agnostic.
+  const [arSupport, setArSupport] = useState(false)
+  const arModel = model.model === 'ulu-mosque'
+  const [xrKind, setXrKind] = useState<'vr' | 'ar'>('vr')
   // Set while the session is starting and active: page buttons must not change the scene meanwhile.
   const [xrBusy, setXrBusy] = useState(false)
   const [xrError, setXrError] = useState(false)
@@ -79,13 +83,16 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
   useEffect(() => {
     let cancel = false
     const inspect = async () => {
-      let support = false
+      let support = false, arOk = false
       try { support = !!(await navigator.xr?.isSessionSupported('immersive-vr')) } catch { support = false }
-      if (!cancel) setXrSupport(support)
+      if (arModel) {
+        try { arOk = !!(await navigator.xr?.isSessionSupported('immersive-ar')) } catch { arOk = false }
+      }
+      if (!cancel) { setXrSupport(support); setArSupport(arOk) }
     }
     void inspect()
     return () => { cancel = true }
-  }, [])
+  }, [arModel])
 
   useEffect(() => {
     if (!open || !area.current) return
@@ -110,13 +117,13 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
     return () => { cancel = true; scene.current?.clear(); scene.current = null; setStop(null); setInfoId(null); setXrBusy(false); setXrError(false) }
   }, [open, model.model, model.interiorInfos, sources])
 
-  // On a VR browser (Quest) "VR'da aç" is the first action: focus goes to it once the scene is ready.
+  // On an XR browser (Quest) the primary XR button ("AR'da aç" or "VR'da aç") is the first action: focus goes to it once the scene is ready.
   useEffect(() => {
-    if (openNow && ready && xrSupport && !focusedVr.current && vrButton.current) {
+    if (openNow && ready && (xrSupport || arSupport) && !focusedVr.current && vrButton.current) {
       focusedVr.current = true
       vrButton.current.focus({ preventScroll: true })
     }
-  }, [openNow, ready, xrSupport])
+  }, [openNow, ready, xrSupport, arSupport])
 
   // The card collapses whenever it changes; "Devamı" appears only if the text was actually truncated.
   useEffect(() => { setInfoOpen(false) }, [infoId])
@@ -141,15 +148,16 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
     if (action[e.key]) { e.preventDefault(); action[e.key](); setAuto(false); s.auto(false) }
   }
 
-  function openVr() {
+  function openXr(kind: 'vr' | 'ar') {
     const s = scene.current
     if (!s) return
+    setXrKind(kind)
     setXrError(false)
     setStop(null)
     setFragmented(false)
     setXrBusy(true)
     // Browsers start the session only within a user gesture: no await may come before this.
-    s.startXr().catch(() => { setXrBusy(false); setXrError(true) })
+    s.startXr(kind).catch(() => { setXrBusy(false); setXrError(true) })
   }
 
   function shatter() {
@@ -180,7 +188,8 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
   const fullscreen = document.fullscreenEnabled
     ? <HudButton icon="full" label="Tam ekran" onClick={() => document.fullscreenElement ? document.exitFullscreen() : box.current?.requestFullscreen()} />
     : null
-  const goInside = <HudButton icon="door" label="İçeri gir" className={xrSupport ? undefined : 'hud-primary'} disabled={!ready || !stops.length} onClick={() => goToStop(stops[0]?.id ?? null)} />
+  const anyXr = xrSupport || arSupport
+  const goInside = <HudButton icon="door" label="İçeri gir" className={anyXr ? undefined : 'hud-primary'} disabled={!ready || !stops.length} onClick={() => goToStop(stops[0]?.id ?? null)} />
 
   const stage = <div className="model-box stage" ref={box}>
     <div className="model-area" ref={area} tabIndex={0} role="application" onKeyDown={keyBtn}
@@ -205,17 +214,21 @@ export default function ArtifactExplorer({ model, sources, name, artifactId, ope
       {artifactId && <Link to={`/artifact/${artifactId}`}>Eser sayfasına git</Link>}
     </div>}
     {/* Does not block dragging the scene: the user can keep using the model. */}
-    {xrError && <p className="model-state glass" aria-live="polite">VR oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin.</p>}
+    {xrError && <p className="model-state glass" aria-live="polite">{xrKind === 'ar' ? 'AR' : 'VR'} oturumu başlatılamadı. Maketi ekranda kullanmaya devam edebilirsin.</p>}
     {state !== 'error' && <Hud id="model-hud-more" label="Maket kontrolleri" hudRef={hud} open={hudOpen} setOpen={setHudOpen} groupClassName="model-control"
       primary={stop
         ? <HudButton icon="exit" label="Dışarı çık" onClick={() => goToStop(null)} />
-        : xrSupport ? <HudButton ref={vrButton} icon="vr" label="VR'da aç" className="hud-primary" disabled={!ready} onClick={openVr} /> : goInside}
+        : arSupport ? <>
+          <HudButton ref={vrButton} icon="cube" label="AR'da aç" className="hud-primary" disabled={!ready} onClick={() => openXr('ar')} />
+          {xrSupport && <HudButton icon="vr" label="VR'da aç" disabled={!ready} onClick={() => openXr('vr')} />}
+        </>
+        : xrSupport ? <HudButton ref={vrButton} icon="vr" label="VR'da aç" className="hud-primary" disabled={!ready} onClick={() => openXr('vr')} /> : goInside}
       extra={stop ? stops.map((d) => <button type="button" key={d.id} aria-pressed={stop === d.id} onClick={() => goToStop(d.id)}>{d.name}</button>) : null}
       footer={stop
         ? <p className="model-keys" aria-hidden="true"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> yürü · <kbd>←</kbd><kbd>→</kbd> dön · <kbd>Shift</kbd> hızlan</p>
         : <p className="model-keys" aria-hidden="true"><kbd>←</kbd><kbd>→</kbd> çevir · <kbd>+</kbd><kbd>−</kbd> yakınlaş</p>}>
       {stop ? fullscreen : <>
-        {xrSupport && goInside}
+        {anyXr && goInside}
         <HudButton icon="explode" label={fragmented ? 'Birleştir' : 'Parçala'} onClick={shatter} aria-pressed={fragmented} disabled={!ready} />
         <HudButton icon="orbit" label="Kendi kendine dönsün" short="Dönsün" aria-pressed={auto} disabled={!ready}
           onClick={() => { setAuto(!auto); scene.current?.auto(!auto) }} />

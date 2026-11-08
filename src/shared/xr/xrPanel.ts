@@ -60,13 +60,25 @@ function centered(c: CanvasRenderingContext2D, writing: string, x: number, y: nu
   c.fillText(writing, x, y, maxVal)
 }
 
-/** Illustrative label: visible for the whole session, even with menu and card closed. */
-export function labelPanel() {
+/** Illustrative label: visible for the whole session, even with menu and card closed. `hint` is the controls line. */
+export function labelPanel(hint = 'Menü: Y / B · Sol çubuk: yürü · Sağ çubuk: dön') {
   const height = 130
   const { c, texture, obj, dispose } = panel(0.72, PILL_W, height)
   glassSurface(c, 0, 0, PILL_W, height, 36, 3)
   centered(c, ILLUSTRATIVE_LABEL, PILL_W / 2, 39, 32, 600, GOLD, PILL_W - 80)
-  centered(c, 'Menü: Y / B · Sol çubuk: yürü · Sağ çubuk: dön', PILL_W / 2, 91, 30, 500, TEXT_COLOR, PILL_W - 60)
+  centered(c, hint, PILL_W / 2, 91, 30, 500, TEXT_COLOR, PILL_W - 60)
+  texture.needsUpdate = true
+  return { obj, dispose }
+}
+
+/** Short instruction attached to the head (e.g. AR placement): one or two lines, wrapped at word boundaries. */
+export function hintPanel(text: string) {
+  const height = 150
+  const { c, texture, obj, dispose } = panel(0.6, PILL_W, height)
+  glassSurface(c, 0, 0, PILL_W, height, 32, 3)
+  c.font = `600 36px ${FONT}`
+  const lines = wrapLine(text, (t) => c.measureText(t).width, PILL_W - 80).slice(0, 2)
+  lines.forEach((line, i) => centered(c, line, PILL_W / 2, height / 2 + (i - (lines.length - 1) / 2) * 46, 36, 600, TEXT_COLOR, PILL_W - 60))
   texture.needsUpdate = true
   return { obj, dispose }
 }

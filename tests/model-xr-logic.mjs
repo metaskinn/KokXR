@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { viewBlocked, collides, PLAYER_RADIUS } from '../src/features/scale-models/walkingCollision.ts'
 import {
   deadZone, XR_WALK_SPEED, XR_TURN_SPEED, walkStep, smoothTurn, rotateAroundHead, tableRig, stopRig, controllerInput, nonOverlapAngle, titlePlace,
-  TABLE_Y, TABLE_DISTANCE, TABLE_SCALE_INITIAL, TABLE_SCALE_MIN, TABLE_SCALE_MAX,
+  TABLE_Y, TABLE_DISTANCE, TABLE_SCALE_INITIAL, TABLE_SCALE_MIN, TABLE_SCALE_MAX, AR_TABLE_SIZE, arScale, arTableRig,
 } from '../src/shared/xr/xrMotion.ts'
 const near = (g, b) => { for (const a in b) assert(Math.abs(g[a] - b[a]) < 1e-6, `${a}: ${g[a]} ≠ ${b[a]}`) }
 
@@ -125,3 +125,15 @@ assert.equal(controllerInput([{ handedness:'right', gamepad:{ axes:[], buttons:b
 assert.equal(controllerInput(new Set([{ handedness:'right', gamepad:{ axes:[0,0,.5,0], buttons:[] } }])).rightX, .5)
 
 console.log('Model XR logic: dead zone, walking and sliding, smooth turn, rig positions, info titles, collision and controller input passed.')
+
+// AR: the anchor lands exactly on the real spot, whatever the rotation and scale.
+{
+  near({ v: arScale(90) * AR_TABLE_SIZE }, { v: 90 })
+  const anchor = { x: 3, y: -1.5, z: -2 }, spot = { x: 0.4, y: 0.75, z: -0.9 }
+  for (const rotY of [0, 1, Math.PI, -2.3]) for (const scale of [50, 200, 311]) {
+    const r = arTableRig(anchor, spot, rotY, scale)
+    const c = Math.cos(rotY), s = Math.sin(rotY)
+    // world = rig + R(rotY) · scale · local
+    near({ x: r.x + scale * (spot.x * c + spot.z * s), y: r.y + scale * spot.y, z: r.z + scale * (-spot.x * s + spot.z * c) }, anchor)
+  }
+}

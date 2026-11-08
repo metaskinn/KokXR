@@ -2,8 +2,8 @@
 // The pure calculations in the top section are also used by the desktop scene; at runtime the file depends only on three, and the Node test imports it directly.
 import * as THREE from 'three'
 // AR helpers load only when AR starts (the Node test imports this file and needs only the pure functions above).
-import type { ArPlacement } from './arPlacement'
-import type { createArLighting as ArLighting } from './arLight'
+import type { ArPlacement } from '../../../shared/xr/arPlacement'
+import type { createArLighting as ArLighting } from '../../../shared/xr/arLight'
 
 export const ILLUSTRATIVE_MODEL_LABEL = 'Temsilî model · Tarihî eser değildir'
 export const PIECE_COUNT = 6
@@ -472,7 +472,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
       prevAlpha = renderer.getClearAlpha()
       renderer.setClearColor(0x000000, 0)
       placeNow = false
-      void Promise.all([import('./arPlacement'), import('./arLight')]).then(async ([{ createArPlacement }, { createContactShadow, createArLighting }]) => {
+      void Promise.all([import('../../../shared/xr/arPlacement'), import('../../../shared/xr/arLight')]).then(async ([{ createArPlacement }, { createContactShadow, createArLighting }]) => {
         if (session !== fresh || !ar) return
         shadow ??= createContactShadow(XR_TABLE_RADIUS * 1.25)
         shadow.mesh.position.y = TURNTABLE_BOTTOM + 0.05

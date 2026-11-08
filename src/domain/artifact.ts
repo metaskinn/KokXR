@@ -110,5 +110,7 @@ export interface Artifact {
   tour360?: Tour360;
   restoration?: RestorationTask;
   model?: Model;
+  /** Building location marked on the map in the admin form (WGS84). Without it the Maketler map uses src/content/artifact-locations.json. */
+  location?: { lng: number; lat: number };
   timeLayer?: TimeRecord[];
 }

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import type { Artifact } from '../../domain/artifact'
@@ -9,8 +9,10 @@ import { typesOf } from '../../content/artifactTypeIndex'
 import { downloadJson } from './AdminPage'
 import { useAdmin } from './context'
 import { api, ApiError, STATUS_LABELS } from '../../infrastructure/api'
-import type { AdminRecord, Role } from '../../infrastructure/api'
+import type { AdminRecord, AdminRow, Role } from '../../infrastructure/api'
 import NotFound from '../../shared/ui/NotFound'
+
+const LocationPicker = lazy(() => import('./LocationPicker'))
 
 /** /admin/new and /admin/artifact/:id: signs in, loads the record (pending draft first), then shows the form. */
 export function AdminFormRoute() {
@@ -24,21 +26,22 @@ export function AdminFormRoute() {
 
 function FormLoader({ id, role }: { id?: string; role: Role }) {
   const [record, setRecord] = useState<AdminRecord | null | undefined>(undefined)
-  const [ids, setIds] = useState<string[] | null>(null)
+  const [rows, setRows] = useState<AdminRow[] | null>(null)
   const [error, setError] = useState('')
   useEffect(() => {
     if (id) api.get(id).then(setRecord, (e) => { if (e instanceof ApiError && e.status === 404) setRecord(null); else setError((e as Error).message) })
-    else api.list().then((rows) => setIds(rows.map((r) => r.id)), (e) => setError((e as Error).message))
+    // The list feeds the city/district choices and the duplicate warning, for new and existing records alike.
+    api.list().then(setRows, (e) => setError((e as Error).message))
   }, [id])
   if (error) return <p role="alert" className="area-error">{error}</p>
   if (id && record === null) return <NotFound />
-  if (id ? !record : !ids) return <p role="status">Yükleniyor…</p>
+  if ((id && !record) || !rows) return <p role="status">Yükleniyor…</p>
   const artifact = record ? record.draft ?? record.published ?? undefined : undefined
   return <>
     {record && <p className="admin-note">Durum: <strong>{STATUS_LABELS[record.status]}</strong>
       {record.draft && record.published ? ' — bekleyen değişiklik gösteriliyor; onaylanana kadar sitede yayındaki sürüm görünür.' : ''}
       {record.status === 'rejected' && record.review_note ? ` Ret gerekçesi: ${record.review_note}` : ''}</p>}
-    <ArtifactForm artifact={artifact} existingIds={ids ?? []} role={role} />
+    <ArtifactForm artifact={artifact} rows={rows} role={role} />
   </>
 }
 
@@ -46,8 +49,21 @@ function emptyArtifact(): Artifact {
   return { id: '', name: '', city: '', district: '', period: '', endowment: '', summary: '', history: '', verification: 'illustrative', types: [], coverImage: '', images: [], hotspots: [], sources: [],
     test: Array.from({ length: 3 }, () => ({ question: '', options: ['', '', '', ''], correct: 0, description: '', sourceId: '' })) }
 }
-export default function ArtifactForm({ artifact, existingIds, role }: { artifact?: Artifact; existingIds: string[]; role: Role }) {
+/** Steps of the form; every field id maps to one of them, so an error can open its step. */
+const STEPS = ['Temel bilgiler', 'Kaynaklar', 'Görseller', 'Bilgi noktaları', 'Test soruları', 'Önizleme'] as const
+const stepOf = (area: string) => /^source-/.test(area) ? 1 : /^(image-|coverImage|images)/.test(area) ? 2 : /^(point-|hotspots)/.test(area) ? 3 : /^test/.test(area) ? 4 : 0
+const NEW = '__yeni__'
+const draftKey = (id?: string) => `kokxr-admin-taslak:${id ?? 'yeni'}`
+const readDraft = (key: string): Artifact | null => { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) as Artifact : null } catch { return null } }
+const plain = (v: string) => artifactId(v).replace(/-(camii|cami|mescidi|turbesi|hamami|hani|medresesi|cesmesi|kulliyesi)$/, '')
+
+export default function ArtifactForm({ artifact, rows, role }: { artifact?: Artifact; rows: AdminRow[]; role: Role }) {
+  const existingIds = useMemo(() => rows.map((r) => r.id), [rows])
   const [draft, setDraft] = useState<Artifact>(() => artifact ? { ...structuredClone(artifact), types: typesOf(artifact) } : emptyArtifact())
+  const [step, setStep] = useState(0)
+  const [dirty, setDirty] = useState(false)
+  // A draft left in this browser (closed tab, lost connection) is offered back instead of being silently dropped.
+  const [stored, setStored] = useState<Artifact | null>(() => readDraft(draftKey(artifact?.id)))
   const [errors, setErrors] = useState<Errors>({})
   // After the first save of a new artifact the address changes; the confirmation travels in the navigation state.
   const [message, setMessage] = useState<string>((useLocation().state as { saved?: string } | null)?.saved ?? '')
@@ -58,7 +74,34 @@ export default function ArtifactForm({ artifact, existingIds, role }: { artifact
   const id = savedId ?? uniqueId(artifactId(draft.name), existingIds)
   const [busy, setBusy] = useState(false)
   const sourced = maybeSourced(draft)
-  function update(patch: Partial<Artifact>) { setDraft(t => ({ ...t, ...patch })); setMessage('') }
+  function update(patch: Partial<Artifact>) { setDraft(t => ({ ...t, ...patch })); setMessage(''); setDirty(true) }
+  useEffect(() => {
+    if (!dirty) return
+    const t = setTimeout(() => { try { localStorage.setItem(draftKey(artifact?.id), JSON.stringify(draft)) } catch { /* storage full or blocked: the form still works */ } }, 600)
+    return () => clearTimeout(t)
+  }, [draft, dirty, artifact?.id])
+  const forgetDraft = () => { try { localStorage.removeItem(draftKey(artifact?.id)) } catch { /* ignore */ } setStored(null) }
+
+  // City and district come from the existing records, so the filters and the map do not split on spelling ("bursa", "Bursa ").
+  const cities = useMemo(() => [...new Set(rows.map((r) => r.city))].sort((a, b) => a.localeCompare(b, 'tr')), [rows])
+  const districts = useMemo(() => [...new Set(rows.filter((r) => r.city === draft.city).map((r) => r.district))].sort((a, b) => a.localeCompare(b, 'tr')), [rows, draft.city])
+  const [newCity, setNewCity] = useState(() => !!artifact && !cities.includes(artifact.city))
+  const [newDistrict, setNewDistrict] = useState(() => !!artifact && !rows.some((r) => r.city === artifact.city && r.district === artifact.district))
+  const near = useMemo(() => {
+    const same = rows.filter((r) => r.city === draft.city && r.district === draft.district && r.id !== artifact?.id)
+    return (same.length ? same : rows.filter((r) => r.city === draft.city)).map((r) => r.id)
+  }, [rows, draft.city, draft.district, artifact?.id])
+  // Same building under a slightly different name ("Ulu Camii" vs "Bursa Ulu Camii"): compare the names without the type word and the city.
+  const duplicates = useMemo(() => {
+    const words = (name: string, city: string) => plain(name).split('-').filter((w) => w && w !== artifactId(city))
+    const mine = words(draft.name, draft.city)
+    if (mine.join('').length < 3) return []
+    return rows.filter((r) => {
+      if (r.id === artifact?.id || (draft.city && r.city !== draft.city)) return false
+      const theirs = words(r.name, r.city)
+      return mine.join('-') === theirs.join('-') || (mine.length > 0 && mine.every((w) => theirs.includes(w)) && theirs.length - mine.length <= 1)
+    })
+  }, [rows, draft.name, draft.city, artifact?.id])
   function errorAttrs(area: string) {
     return { id: area, 'aria-invalid': !!errors[area], 'aria-describedby': errors[area] ? `${area}-error` : undefined }
   }
@@ -87,6 +130,7 @@ export default function ArtifactForm({ artifact, existingIds, role }: { artifact
     setErrors(errors); setSaveError('')
     if (Object.keys(errors).length) {
       setMessage('')
+      setStep(Math.min(...Object.keys(errors).map(stepOf)))
       requestAnimationFrame(() => {
         const first = Array.from(form.current?.querySelectorAll<HTMLElement>('[aria-invalid="true"]') ?? [])[0]
         first?.focus()
@@ -124,7 +168,7 @@ export default function ArtifactForm({ artifact, existingIds, role }: { artifact
     setBusy(true)
     try {
       await api.save(result, !savedId)
-      setDraft(result); setSavedId(result.id)
+      setDraft(result); setSavedId(result.id); setDirty(false); forgetDraft()
       const saved = role === 'curator' ? 'Kaydedildi. Yayımlamak için listeden onaylayın.' : 'Kaydedildi. Küratör onayından sonra sitede görünecek.'
       setMessage(saved)
       if (!savedId) navigate(`/admin/artifact/${result.id}`, { replace: true, state: { saved } })
@@ -134,30 +178,87 @@ export default function ArtifactForm({ artifact, existingIds, role }: { artifact
       setSaveError(err.message)
     } finally { setBusy(false) }
   }
+  const errorCount = (n: number) => Object.keys(errors).filter((k) => stepOf(k) === n).length
+  // What each step still needs; shown in the step bar so nothing is hidden behind "Kaydet".
+  const done = [
+    !!(draft.name.trim() && draft.city.trim() && draft.district.trim() && draft.period.trim() && draft.endowment.trim() && draft.summary.trim() && draft.history.trim() && draft.types?.length),
+    draft.sources.some((k) => k.text.trim()),
+    draft.images.length > 0 && !!draft.coverImage,
+    draft.hotspots.length > 0,
+    draft.test.every((t) => t.question.trim() && t.options.every((o) => o.trim()) && t.description.trim()),
+    false,
+  ]
+  const checks = [
+    { ok: draft.sources.some((k) => k.text.trim()), text: 'En az bir dolu kaynak' },
+    { ok: draft.test.every((t) => draft.sources.some((k) => k.id === t.sourceId && k.text.trim())), text: 'Her test sorusu bir kaynağa bağlı' },
+    { ok: draft.hotspots.every((n) => draft.sources.some((k) => k.id === n.sourceId && k.text.trim())), text: 'Her bilgi noktası bir kaynağa bağlı' },
+  ]
+  const cover = draft.images.find((g) => g.file === draft.coverImage)
+  const citySelect = area('city', 'Şehir', newCity
+    ? <span className="combo"><input {...errorAttrs('city')} required value={draft.city} placeholder="Yeni şehrin adı (ör. İzmir)" onChange={(e) => update({ city: e.target.value, district: '' })} />
+      <button type="button" className="btn-ghost" onClick={() => { setNewCity(false); update({ city: '', district: '' }) }}>Listeden seç</button></span>
+    : <select {...errorAttrs('city')} required value={draft.city} onChange={(e) => { if (e.target.value === NEW) { setNewCity(true); setNewDistrict(true); update({ city: '', district: '' }) } else { setNewDistrict(false); update({ city: e.target.value, district: '' }) } }}>
+      <option value="">Şehir seçin</option>{cities.map((c) => <option key={c} value={c}>{c}</option>)}<option value={NEW}>+ Yeni şehir ekle…</option>
+    </select>)
+  const districtSelect = area('district', 'İlçe', newDistrict || newCity
+    ? <span className="combo"><input {...errorAttrs('district')} required value={draft.district} placeholder="İlçenin adı" onChange={(e) => update({ district: e.target.value })} />
+      {!newCity && <button type="button" className="btn-ghost" onClick={() => { setNewDistrict(false); update({ district: '' }) }}>Listeden seç</button>}</span>
+    : <select {...errorAttrs('district')} required value={draft.district} disabled={!draft.city} onChange={(e) => { if (e.target.value === NEW) { setNewDistrict(true); update({ district: '' }) } else update({ district: e.target.value }) }}>
+      <option value="">{draft.city ? 'İlçe seçin' : 'Önce şehri seçin'}</option>{districts.map((d) => <option key={d} value={d}>{d}</option>)}<option value={NEW}>+ Yeni ilçe ekle…</option>
+    </select>)
+
   return <>
-    <p>Zorunlu alanları doldurun. Görsel ve kaynak eklemek isteğe bağlıdır; eklenen kayıtların alanları zorunludur. Tarihsel bilgi ve görseller için kaynak ve kullanım iznini kontrol edin.</p>
+    <p>Altı adımda doldurun; adımlar arasında serbestçe geçebilirsiniz. Yazdıklarınız bu tarayıcıda taslak olarak saklanır. Tarihsel bilgi ve görseller için kaynak ve kullanım iznini kontrol edin.</p>
+    {stored && !dirty && JSON.stringify(stored) !== JSON.stringify(draft) && <div className="admin-note draft-note" role="status">
+      <p><strong>Kaydedilmemiş bir taslak bulundu</strong>{stored.name ? ` (${stored.name})` : ''}. Kaldığınız yerden devam etmek ister misiniz?</p>
+      <div className="admin-actions"><button type="button" className="btn-primary" onClick={() => { setDraft(stored); setDirty(true); setStored(null) }}>Taslağı geri yükle</button>
+        <button type="button" className="btn-ghost" onClick={forgetDraft}>Taslağı sil</button></div>
+    </div>}
+    <nav className="steps" aria-label="Form adımları"><ol>
+      {STEPS.map((name, n) => <li key={name}><button type="button" aria-current={step === n ? 'step' : undefined} onClick={() => setStep(n)} data-state={errorCount(n) ? 'error' : done[n] ? 'done' : undefined}>
+        <span className="step-no" aria-hidden="true">{errorCount(n) ? '!' : done[n] ? '✓' : n + 1}</span>{name}
+        {errorCount(n) > 0 && <span className="invisible"> ({errorCount(n)} hata)</span>}
+      </button></li>)}
+    </ol></nav>
     <form ref={form} noValidate onSubmit={submit}>
-      {Object.keys(errors).length > 0 && <div role="alert" className="error-summary"><h2>Kayıt tamamlanamadı</h2><p>{Object.keys(errors).length} alanı kontrol edin. İlk hatalı alana odaklanıldı.</p><ul>{Object.entries(errors).map(([area, message]) => <li key={area}><a href={`#${area}`} onClick={e => { e.preventDefault(); document.getElementById(area)?.focus() }}>{document.querySelector(`label[for="${area}"]`)?.textContent ?? area}: {message}</a></li>)}</ul></div>}
+      {Object.keys(errors).length > 0 && <div role="alert" className="error-summary"><h2>Kayıt tamamlanamadı</h2><p>{Object.keys(errors).length} alanı kontrol edin. İlk hatalı alanın adımı açıldı.</p><ul>{Object.entries(errors).map(([area, message]) => <li key={area}><a href={`#${area}`} onClick={e => { e.preventDefault(); setStep(stepOf(area)); requestAnimationFrame(() => document.getElementById(area)?.focus()) }}>{STEPS[stepOf(area)]} · {document.querySelector(`label[for="${area}"]`)?.textContent ?? area}: {message}</a></li>)}</ul></div>}
       <p role="status">{message}</p>{saveError && <p role="alert" className="area-error">{saveError}</p>}
-      <fieldset className="form-section"><legend>Eser bilgileri</legend>
-        {(['name', 'city', 'district', 'period', 'endowment', 'summary', 'history'] as const).map((a, i) => text(a, ['Ad', 'Şehir', 'İlçe', 'Dönem', 'Vakıf', 'Özet', 'Tarihçe'][i], draft[a], v => update({ [a]: v }), ['summary', 'history'].includes(a)))}
-        <fieldset className="sub-form" aria-describedby={errors.types ? 'types-error' : 'types-help'}><legend>Tür</legend>
+
+      <fieldset className="form-section" hidden={step !== 0}><legend>Temel bilgiler</legend>
+        {text('name', 'Ad', draft.name, v => update({ name: v }))}
+        {duplicates.length > 0 && <div className="admin-note warn" role="status"><p><strong>Benzer adlı {duplicates.length === 1 ? 'bir eser' : `${duplicates.length} eser`} zaten var.</strong> Aynı yapıysa yeni kayıt açmak yerine onu düzenleyin:</p>
+          <ul>{duplicates.slice(0, 5).map((r) => <li key={r.id}><Link to={`/admin/artifact/${r.id}`}>{r.name}</Link> · {r.district}, {r.city}</li>)}</ul></div>}
+        <div className="form-row">{citySelect}{districtSelect}</div>
+        {newCity && <p className="help">Yeni şehir eklemek için ayrı bir kurulum gerekmez: kayıt onaylanınca şehir, Eserler sayfasındaki filtrede ve Maketler haritasında kendiliğinden görünür.</p>}
+        {text('period', 'Dönem', draft.period, v => update({ period: v }))}
+        {text('endowment', 'Vakıf', draft.endowment, v => update({ endowment: v }))}
+        {text('summary', 'Özet', draft.summary, v => update({ summary: v }), true)}
+        {text('history', 'Tarihçe', draft.history, v => update({ history: v }), true)}
+        <fieldset className="sub-form type-picker" aria-describedby={errors.types ? 'types-error' : 'types-help'}><legend>Tür</legend>
           <p id="types-help">Eserler sayfasındaki tür filtresinde kullanılır. Birden fazla seçilebilir.</p>
-          {TYPE_LABELS.map(([key, label], i) => <label key={key} className="form-check" htmlFor={i === 0 ? 'types' : `types-${key}`}>
+          <div className="check-grid">{TYPE_LABELS.map(([key, label], i) => <label key={key} className="form-check" htmlFor={i === 0 ? 'types' : `types-${key}`}>
             <input type="checkbox" id={i === 0 ? 'types' : `types-${key}`} aria-invalid={i === 0 && !!errors.types} checked={!!draft.types?.includes(key)}
-              onChange={e => update({ types: e.target.checked ? TYPE_LABELS.map(([k]) => k).filter(k => k === key || draft.types?.includes(k)) : (draft.types ?? []).filter(k => k !== key) })} /> {label}
-          </label>)}
+              onChange={e => update({ types: e.target.checked ? TYPE_LABELS.map(([k]) => k).filter(k => k === key || draft.types?.includes(k)) : (draft.types ?? []).filter(k => k !== key) })} /> <span>{label}</span>
+          </label>)}</div>
           {errors.types && <p id="types-error" className="area-error">{errors.types}</p>}
         </fieldset>
+        <fieldset className="sub-form" aria-describedby={errors.location ? 'location-error' : undefined}><legend>Haritadaki konum (isteğe bağlı)</legend>
+          <p>Haritaya tıklayarak yapının yerini işaretleyin; işareti sürükleyerek düzeltebilirsiniz. Konum, Maketler sayfasındaki haritada kullanılır.</p>
+          {step === 0 && <Suspense fallback={<p role="status">Harita yükleniyor…</p>}>
+            <LocationPicker value={draft.location} onChange={(p) => update({ location: p })} near={near} label={`${draft.name || 'Eser'} için konum seçme haritası`} />
+          </Suspense>}
+          {errors.location && <p id="location-error" className="area-error">{errors.location}</p>}
+        </fieldset>
         <p className="identity">Eser kimliği: <strong>{id || 'Addan otomatik üretilecek'}</strong>. Kaydedildikten sonra değişmez.</p>
-        <label className="form-area" htmlFor="verification">Doğrulama durumu
-          <select id="verification" value={sourced ? draft.verification : 'illustrative'} aria-describedby="verification-help" onChange={e => update({ verification: e.target.value as Artifact['verification'] })}>
-            <option value="illustrative">Temsili içerik</option><option value="verified" disabled={!sourced}>Kaynaklı bilgi</option>
-          </select>
-        </label>
-        <p id="verification-help">Kaynaklı bilgi için en az bir dolu kaynak ve her test sorusu ile bilgi noktasında geçerli kaynak gerekir. {sourced ? 'Koşullar sağlandı; kaynaklı bilgi seçebilirsiniz.' : 'Koşullar sağlanmadığı için kayıt Temsili içerik olarak kalır.'}</p>
       </fieldset>
-      <fieldset className="form-section"><legend>Kaynaklar</legend>
+
+      <fieldset className="form-section" hidden={step !== 1}><legend>Kaynaklar</legend>
+        <div className="verify-box">
+          <p><strong>Doğrulama durumu: {sourced && draft.verification === 'verified' ? 'Kaynaklı bilgi' : 'Temsilî içerik'}</strong></p>
+          <ul className="checklist">{checks.map((c) => <li key={c.text} data-ok={c.ok ? 'yes' : 'no'}><span aria-hidden="true">{c.ok ? '✓' : '○'}</span> {c.text}<span className="invisible">{c.ok ? ': tamam' : ': eksik'}</span></li>)}</ul>
+          <label className="form-check" htmlFor="verification"><input type="checkbox" id="verification" disabled={!sourced} checked={sourced && draft.verification === 'verified'} onChange={(e) => update({ verification: e.target.checked ? 'verified' : 'illustrative' })} /> <span>Kaynaklı bilgi olarak işaretle</span></label>
+          <p className="help" id="verification-help">{sourced ? 'Koşullar sağlandı. İşaretlenirse eser sayfasında "Kaynaklı bilgi" olarak gösterilir.' : 'Koşullar tamamlanmadan kayıt "Temsilî içerik" olarak kalır; kesin bilgi gibi sunulmaz.'}</p>
+        </div>
         {draft.sources.map((k, i) => <fieldset className="sub-form" key={k.id}><legend>Kaynak {i + 1}</legend>
           {text(`source-${i}-text`, 'Kaynak metni', k.text, v => update({ sources: draft.sources.map((x, j) => j === i ? { ...x, text: v } : x) }), true)}
           {text(`source-${i}-page`, 'Sayfa (isteğe bağlı)', k.page ?? '', v => update({ sources: draft.sources.map((x, j) => j === i ? { ...x, page: v } : x) }), false, false)}
@@ -165,7 +266,8 @@ export default function ArtifactForm({ artifact, existingIds, role }: { artifact
         </fieldset>)}
         <button type="button" onClick={() => update({ sources: [...draft.sources, { id: uniqueId('source', draft.sources.map(k => k.id)), text: '' }] })}>Kaynak ekle</button>
       </fieldset>
-      <fieldset className="form-section"><legend>Görseller</legend>
+
+      <fieldset className="form-section" hidden={step !== 2}><legend>Görseller</legend>
         <p>Görseli bilgisayardan yükleyin (JPEG, PNG veya WebP, en fazla 3 MB; özel depoya kaydedilir) ya da http/https URL girin. Yüklenen görselde künye ve kullanım izni zorunludur. Mevcut görsellerin dosya yolu korunur.</p>
         {draft.images.map((g, i) => {
           const toggle = (patch: Partial<typeof g>) => update({ images: draft.images.map((x, j) => j === i ? { ...x, ...patch } : x) })
@@ -191,7 +293,8 @@ export default function ArtifactForm({ artifact, existingIds, role }: { artifact
         <p id="image-upload-help" role="status">{uploadMessage}</p>
         {selectImage('coverImage', 'Kapak görseli', draft.coverImage, v => update({ coverImage: v }))}
       </fieldset>
-      <fieldset className="form-section"><legend>Bilgi noktaları</legend><p>Görselsiz noktalar yalnızca keşif listesinde gösterilir. Görsel seçilen noktaların konumu yüzde olarak belirtilir.</p>
+
+      <fieldset className="form-section" hidden={step !== 3}><legend>Bilgi noktaları</legend><p>Görselsiz noktalar yalnızca keşif listesinde gösterilir. Görsel seçilen noktaların konumu yüzde olarak belirtilir.</p>
         {draft.hotspots.map((n, i) => {
           const toggle = (patch: Partial<typeof n>) => update({ hotspots: draft.hotspots.map((x, j) => j === i ? { ...x, ...patch } : x) })
           return <fieldset className="sub-form" key={n.id}><legend>Bilgi noktası {i + 1}</legend>
@@ -205,19 +308,49 @@ export default function ArtifactForm({ artifact, existingIds, role }: { artifact
         })}
         <button type="button" onClick={() => update({ hotspots: [...draft.hotspots, { id: uniqueId('point', draft.hotspots.map(n => n.id)), title: '', text: '', sourceId: '', image: draft.images[0]?.file ?? '', x: 50, y: 50 }] })}>Bilgi noktası ekle</button>
       </fieldset>
-      <fieldset className="form-section"><legend>Test soruları (tam 3 soru)</legend>
+
+      <fieldset className="form-section" hidden={step !== 4}><legend>Test soruları (tam 3 soru)</legend>
         {draft.test.map((s, i) => {
           const toggle = (patch: Partial<typeof s>) => update({ test: draft.test.map((x, j) => j === i ? { ...x, ...patch } : x) })
-          return <fieldset className="sub-form" key={i}><legend>Soru {i + 1}</legend>
+          return <details className="sub-form test-q" key={i} open={i === 0 || Object.keys(errors).some(k => k.startsWith(`test-${i}-`))}><summary>Soru {i + 1}{s.question ? `: ${s.question}` : ''}</summary>
             {text(`test-${i}-question`, 'Soru metni', s.question, v => toggle({ question: v }))}
             {s.options.map((v, j) => text(`test-${i}-option-${j}`, `Seçenek ${j + 1}`, v, value => toggle({ options: s.options.map((x, k) => k === j ? value : x) })))}
             {area(`test-${i}-correct`, 'Doğru seçenek', <select {...errorAttrs(`test-${i}-correct`)} value={s.correct} onChange={e => toggle({ correct: Number(e.target.value) })}>{s.options.map((v, j) => <option key={j} value={j}>{j + 1}. {v || 'Boş seçenek'}</option>)}</select>)}
             {text(`test-${i}-description`, 'Cevap açıklaması', s.description, v => toggle({ description: v }), true)}
             {selectSource(`test-${i}-source-id`, s.sourceId, v => toggle({ sourceId: v }))}
-          </fieldset>
+          </details>
         })}
       </fieldset>
-      <div className="admin-actions form-end"><button type="submit" disabled={busy}>{busy ? 'Kaydediliyor…' : 'Kaydet'}</button><button type="button" onClick={() => { const result = validate(); if (result) downloadJson(result, `${result.id}.json`) }}>JSON olarak indir</button><Link to="/admin">Listeye dön</Link></div>
+
+      <section className="form-section preview" hidden={step !== 5} aria-labelledby="preview-title">
+        <h2 id="preview-title">Önizleme</h2>
+        <p className="help">Eser sayfasının özeti böyle görünecek. {role === 'curator' ? 'Kaydedince onay listesine düşer.' : 'Kaydedince küratör onayına gider; onaylanana kadar sitede görünmez.'}</p>
+        <article className="preview-card">
+          {cover ? <img src={cover.file} alt={cover.alt} /> : <div className="preview-empty">Kapak görseli yok</div>}
+          <div>
+            <p className="preview-meta">{[draft.district, draft.city].filter(Boolean).join(', ') || 'Konum yazılmadı'} · {draft.period || 'Dönem yazılmadı'}</p>
+            <h3>{draft.name || 'Adsız eser'}</h3>
+            <p className="badge" data-kind={sourced && draft.verification === 'verified' ? 'verified' : 'illustrative'}>{sourced && draft.verification === 'verified' ? 'Kaynaklı bilgi' : 'Temsilî içerik'}</p>
+            <p>{draft.summary || 'Özet yazılmadı.'}</p>
+            <dl className="preview-facts">
+              <div><dt>Vakıf</dt><dd>{draft.endowment || '—'}</dd></div>
+              <div><dt>Tür</dt><dd>{TYPE_LABELS.filter(([k]) => draft.types?.includes(k)).map(([, l]) => l).join(', ') || '—'}</dd></div>
+              <div><dt>Haritada</dt><dd>{draft.location ? 'İşaretlenen konumda' : 'İlçe merkezinde (yaklaşık)'}</dd></div>
+              <div><dt>İçerik</dt><dd>{draft.images.length} görsel · {draft.sources.length} kaynak · {draft.hotspots.length} bilgi noktası · 3 soru</dd></div>
+            </dl>
+            {draft.history && <details><summary>Tarihçe</summary><p className="preview-history">{draft.history}</p></details>}
+            {draft.sources.some((k) => k.text.trim()) && <><h4>Kaynaklar</h4><ol>{draft.sources.filter((k) => k.text.trim()).map((k) => <li key={k.id}>{k.text}{k.page ? `, s. ${k.page}` : ''}</li>)}</ol></>}
+          </div>
+        </article>
+      </section>
+
+      <div className="admin-actions form-end form-bar">
+        <button type="button" className="btn-ghost" disabled={step === 0} onClick={() => setStep(step - 1)}>← Önceki</button>
+        {step < STEPS.length - 1 && <button type="button" onClick={() => setStep(step + 1)}>Sonraki: {STEPS[step + 1]} →</button>}
+        <span className="bar-gap" />
+        <button type="submit" className="btn-primary" disabled={busy}>{busy ? 'Kaydediliyor…' : 'Kaydet'}</button>
+        <button type="button" className="btn-ghost small" onClick={() => { const result = validate(); if (result) downloadJson(result, `${result.id}.json`) }}>JSON indir</button>
+      </div>
     </form>
   </>
 }

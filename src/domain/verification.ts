@@ -53,6 +53,11 @@ export function artifactErrors(artifact: Artifact): Errors {
     for (const axis of ['x', 'y'] as const) if (!Number.isFinite(n[axis]) || n[axis] < 0 || n[axis] > 100) errors[`point-${i}-${axis}`] = '0 ile 100 arasında sayı girin.'
     if (n.sourceId && !sourceIds.includes(n.sourceId)) errors[`point-${i}-source-id`] = 'Geçerli bir kaynak seçin veya kaynağı kaldırın.'
   })
+  if (artifact.location !== undefined) {
+    const { lng, lat } = artifact.location ?? {}
+    // Bursa, Konya and Hatay today; the box is Türkiye so a new city (İzmir, Manisa) also fits.
+    if (typeof lng !== 'number' || typeof lat !== 'number' || lng < 25 || lng > 45 || lat < 35 || lat > 43) errors.location = 'Konum Türkiye sınırları içinde olmalı.'
+  }
   return errors
 }
 
@@ -63,6 +68,7 @@ const list = (v: unknown, control: (n: Record<string, unknown>) => boolean): boo
 const optionalText = (v: Record<string, unknown>, a: string) => v[a] === undefined || typeof v[a] === 'string'
 export function artifactValid(v: unknown): v is Artifact {
   if (!obj(v) || !texts(v, ['id', 'name', 'city', 'district', 'period', 'endowment', 'summary', 'history', 'coverImage']) || !['illustrative', 'verified'].includes(String(v.verification))) return false
+  if (v.location !== undefined && !(obj(v.location) && typeof v.location.lng === 'number' && typeof v.location.lat === 'number')) return false
   if (v.types !== undefined && !(Array.isArray(v.types) && v.types.every(t => typeof t === 'string'))) return false
   if (!list(v.sources, n => texts(n, ['id', 'text']) && optionalText(n, 'page')) ||
     !list(v.images, n => texts(n, ['file', 'alt', 'sourceId']) && optionalText(n, 'description') && optionalText(n, 'credit')) ||

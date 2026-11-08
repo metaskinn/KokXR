@@ -80,3 +80,59 @@ a.tile:hover { border-color: var(--action); }
 .data-table small { color: var(--ink-2); }
 
 .admin-filters input, .admin-filters select { width: 100%; min-height: var(--target); padding: 0 var(--s-3); border: 1px solid var(--line-strong); border-radius: var(--r-control); background: var(--surface); color: var(--ink); font: inherit; }
+
+/* ── Eser formu: adımlar, konum, önizleme ─────────────────────────────── */
+.admin .form-section[hidden], .admin .preview[hidden] { display: none !important; }
+/* Tür kutuları: genel `.admin input { width: 100% }` kuralı onay kutusunu da genişletiyordu, yazılar harf harf bölünüyordu. */
+.admin .form-check input[type='checkbox'] { display: inline-block; flex: none; width: 20px; height: 20px; min-height: 0; padding: 0; margin: 0; accent-color: var(--action); }
+.admin .form-check { display: inline-flex; align-items: center; gap: var(--s-2); margin: 0; min-height: 44px; font-weight: 500; font-size: var(--fs-body, 1rem); cursor: pointer; }
+.check-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 0 var(--s-4); }
+.form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0 var(--s-4); }
+.combo { display: flex; gap: var(--s-2); align-items: stretch; }
+.combo input { flex: 1; }
+.admin .help { color: var(--ink-2); font-size: var(--fs-small); margin: 0 0 var(--s-3); }
+.admin-note.warn { border-left-color: #b4690e; }
+.admin-note.warn ul { margin: var(--s-2) 0 0; }
+.draft-note p { margin: 0 0 var(--s-3); }
+
+.steps { position: sticky; top: 0; z-index: 5; margin: var(--s-4) 0 var(--s-5); padding: var(--s-2) 0; background: var(--ground); border-bottom: 1px solid var(--line); }
+.steps ol { display: flex; gap: var(--s-1); margin: 0; padding: 0; list-style: none; overflow-x: auto; }
+.steps button { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; padding: 0 var(--s-3); border: 1px solid transparent; border-radius: var(--r-control); background: none; color: var(--ink-2); font-weight: 600; white-space: nowrap; }
+.steps button[aria-current='step'] { border-color: var(--action); background: var(--band); color: var(--action); }
+.step-no { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid currentColor; font-size: 0.75rem; }
+.steps button[data-state='done'] .step-no { background: var(--action); border-color: var(--action); color: var(--on-action); }
+.steps button[data-state='error'] { color: var(--danger); }
+.steps button[data-state='error'] .step-no { background: var(--danger); border-color: var(--danger); color: #fff; }
+
+.form-bar { position: sticky; bottom: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); margin-top: var(--s-6); padding: var(--s-3) 0; background: var(--ground); border-top: 1px solid var(--line); }
+.form-bar .bar-gap { flex: 1; }
+.btn-ghost.small { font-size: var(--fs-small); }
+
+.verify-box { margin-bottom: var(--s-5); padding: var(--s-4) var(--s-5); border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
+.verify-box p { margin: 0 0 var(--s-2); }
+.checklist { margin: 0 0 var(--s-3); padding: 0; list-style: none; }
+.checklist li { padding: 2px 0; color: var(--ink-2); }
+.checklist li[data-ok='yes'] { color: var(--action); }
+
+.test-q > summary { min-height: 44px; display: flex; align-items: center; font-weight: 600; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.lp-map { height: 320px; border: 1px solid var(--line-strong); border-radius: var(--r-control); }
+.lp-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-2); }
+.lp-row p { margin: var(--s-2) 0; color: var(--ink-2); font-size: var(--fs-small); }
+.lp-pin { background: none; border: 0; }
+.lp-pin span { display: block; width: 28px; height: 28px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--action); border: 3px solid #fff; box-shadow: 0 1px 4px rgb(0 0 0 / 35%); }
+
+.preview-card { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--s-5); padding: var(--s-5); border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
+.preview-card img, .preview-empty { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-photo); background: var(--mat); }
+.preview-empty { display: grid; place-items: center; color: var(--ink-2); }
+.preview-card h3 { margin: var(--s-1) 0 var(--s-2); font-family: var(--font-display, serif); font-size: 1.75rem; }
+.preview-meta { margin: 0; color: var(--ink-2); font-size: var(--fs-small); }
+.preview-card .badge { display: inline-block; margin: 0 0 var(--s-3); padding: 2px var(--s-2); border-radius: var(--r-control); font-size: var(--fs-small); font-weight: 600; background: var(--mat); }
+.preview-card .badge[data-kind='verified'] { background: var(--band); color: var(--action); }
+.preview-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2) var(--s-4); margin: var(--s-4) 0; }
+.preview-facts dt { color: var(--ink-2); font-size: var(--fs-small); }
+.preview-history { white-space: pre-line; max-height: 16rem; overflow: auto; }
+@media (max-width: 760px) { .preview-card { grid-template-columns: 1fr; } .preview-facts { grid-template-columns: 1fr; } }
+/* The step bar scrolls sideways on phones instead of widening the page. */
+.admin-main, .admin-page, .admin form, .steps { min-width: 0; max-width: 100%; }
+.steps { overflow: hidden; }

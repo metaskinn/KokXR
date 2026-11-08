@@ -71,9 +71,14 @@ export default function HeritageMap({ city, artifacts, locations, models, highli
     const byMahalle = new Map<string, { at: [number, number]; name: string; list: Artifact[] }>()
     let exact = 0
 
+    // An artifact added in the admin panel has no entry in the location file: its own marked point wins, otherwise its district centre.
+    const districtCentre = new Map<string, [number, number]>()
+    for (const a of artifacts) { const l = locations[a.id]; if (l?.k === 'ilce') districtCentre.set(`${a.city}|${a.district}`, l.p) }
+    const locationOf = (a: Artifact): ArtifactLocation | undefined => a.location ? { p: [a.location.lng, a.location.lat], k: 'yapi' }
+      : locations[a.id] ?? (districtCentre.has(`${a.city}|${a.district}`) ? { p: districtCentre.get(`${a.city}|${a.district}`)!, k: 'ilce' } : undefined)
     for (const a of artifacts) {
       if (modelIds.has(a.id)) continue
-      const loc = locations[a.id]
+      const loc = locationOf(a)
       if (!loc) continue
       const ll: [number, number] = [loc.p[1], loc.p[0]]
       if (loc.k === 'ilce') {

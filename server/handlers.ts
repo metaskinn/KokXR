@@ -14,7 +14,7 @@ const fail = (status: number, error: string, details?: unknown) => json(status, 
 
 /** Only these top-level fields are stored; anything else in a request body is dropped. */
 const FIELDS = ['id', 'inventoryId', 'name', 'city', 'district', 'period', 'endowment', 'summary', 'history', 'verification', 'types',
-  'coverImage', 'images', 'hotspots', 'test', 'sources', 'tour', 'tour360', 'restoration', 'model', 'timeLayer'] as const
+  'coverImage', 'images', 'hotspots', 'test', 'sources', 'tour', 'tour360', 'restoration', 'model', 'timeLayer', 'location'] as const
 
 /** Structural and content checks shared with the admin form (src/domain/verification.ts). */
 export function cleanArtifact(input: unknown, id: string): { artifact?: Artifact; errors?: Record<string, string> } {

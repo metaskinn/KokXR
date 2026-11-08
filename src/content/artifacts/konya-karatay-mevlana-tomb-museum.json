@@ -167,5 +167,31 @@
       "id": "photo-book",
       "text": "Fotoğraf: Vakıf Katılım, Konya Vakıf Eserleri Kitabı Cilt 1"
     }
-  ]
+  ],
+  "model": {
+    "model": "konya-karatay-mevlana-tomb-museum",
+    "description": "Temsilî maket, gerçek bir 3B tarama değildir. Kodla oluşturuldu ve şimdilik yalnızca dış görünüşü kapsar. Yapıların yeri ve birbirine göre konumu envanterdeki dik kuşbakışı fotoğraftan oranlandı. Türbenin on altı dilimli gövdesi ve yeşil çinili külahı, semahanenin 12 m çaplı kubbesi, mescidin üç kubbeli son cemaat yeri ve minaresi, L biçimli on sekiz kubbeli derviş hücresi, şadırvanın sekiz sütunu ve bahçedeki altı türbe envanterden alındı. Yükseklikler, pencere ve kapı yerleri, matbahın kütlesi, türbelerin konumu ve biçimi, selsebil ile Şeb-i Arus havuzu temsilîdir.",
+    "infos": [
+      {
+        "text": "Türbe dört fil ayağı üzerinde, kubbeli baldaken düzeninde yapılmıştır.",
+        "sourceId": "inv-p32"
+      },
+      {
+        "text": "On altı dilimli gövde ve külah, Karamanoğlu Alâeddin Bey'in 1386'da yaptırdığı çinilerle kaplanmıştır. Çiniler son olarak 2021'de yenilenmiştir.",
+        "sourceId": "inv-p33"
+      },
+      {
+        "text": "Semahane türbenin kuzeyindedir; kare planlıdır ve 12 m çapında yüksek bir kubbeyle örtülüdür. \"Parçala\" ile örtüleri kaldırıp planı üstten görebilirsin.",
+        "sourceId": "inv-p38"
+      },
+      {
+        "text": "Mescit semahanenin batısında, ona bitişik ve kare planlıdır. Batı cephesinde üç kubbeli son cemaat yeri ile XIX. yüzyılda yapılmış minaresi bulunur.",
+        "sourceId": "inv-p41"
+      },
+      {
+        "text": "On sekiz kubbeli derviş hücresi, ön avluyu batı ve kuzeyden L biçiminde kuşatır.",
+        "sourceId": "inv-p48"
+      }
+    ]
+  }
 }

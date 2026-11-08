@@ -1,0 +1,50 @@
+/* Telefon AR katmanı (WebXR dom-overlay). Koyu yarı saydam cam: kamera görüntüsü üstünde okunur.
+   Sarmalayıcı dokunuşu geçirir; yalnız kartlar ve düğmeler dokunuş alır. Merkez boş kalır. */
+.mar {
+  position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between;
+  gap: 12px; pointer-events: none; box-sizing: border-box;
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  font-family: var(--font-ui, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif);
+  color: var(--glass-ink, #f4f5f2);
+}
+.mar > * { pointer-events: auto; }
+.mar-card, .mar-bar {
+  background: var(--glass, rgb(16 24 21 / 0.66));
+  -webkit-backdrop-filter: var(--glass-blur, blur(14px) saturate(1.2)); backdrop-filter: var(--glass-blur, blur(14px) saturate(1.2));
+  border: 1px solid var(--glass-line, rgb(255 255 255 / 0.28)); border-radius: var(--r-card, 12px);
+  box-shadow: 0 2px 6px rgb(10 20 17 / 0.18);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .mar-card, .mar-bar { background: var(--glass-fallback, rgb(16 24 21 / 0.88)); }
+}
+.mar-card { margin: 0; padding: 12px 16px; font-size: 1rem; line-height: 1.4; text-align: center; align-self: center; max-width: 28rem; }
+.mar-hint { font-weight: 600; }
+.mar-gesture { font-size: 0.875rem; padding: 8px 14px; }
+.mar-bar { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px; margin-top: auto; }
+.mar-btn {
+  flex: 1 1 8.5rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px; min-width: 48px; padding: 0 14px; cursor: pointer; touch-action: manipulation;
+  font-family: inherit; font-size: 0.9375rem; font-weight: 600; line-height: 1.15; color: var(--glass-ink, #f4f5f2);
+  background: transparent; border: 1px solid var(--glass-line, rgb(255 255 255 / 0.28)); border-radius: var(--r-control, 8px);
+  -webkit-tap-highlight-color: transparent;
+}
+.mar-btn:active { background: var(--glass-pressed, rgb(255 255 255 / 0.22)); border-color: var(--glass-ink, #f4f5f2); }
+.mar-btn:focus-visible { outline: 2px solid var(--glass-focus, #fff); outline-offset: 2px; }
+.mar-primary { background: var(--glass-primary, #a6decf); color: var(--glass-primary-ink, #0b2620); border-color: var(--glass-primary, #a6decf); font-weight: 700; }
+.mar-primary:active { background: var(--glass-primary-hover, #bce8dc); color: var(--glass-primary-ink, #0b2620); }
+.mar-btn .icon { flex: none; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media (prefers-reduced-transparency: reduce) {
+  .mar-card, .mar-bar { background: var(--glass-solid, #18221f); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* Turn buttons above the action bar: two round targets at the screen edges, thumbs reach them. */
+.mar-bottom { display: flex; flex-direction: column; gap: 10px; pointer-events: none; }
+.mar-bottom > * { pointer-events: auto; }
+.mar-turn { display: flex; justify-content: space-between; pointer-events: none; }
+.mar-turn > * { pointer-events: auto; }
+.mar-round { width: 56px; height: 56px; min-width: 56px; padding: 0; border-radius: 50%; justify-content: center; }
+.mar-turn .mar-btn.mar-round {
+  flex: 0 0 56px; width: 56px; height: 56px; padding: 0; border-radius: 50%;
+  background: var(--glass, rgb(16 24 21 / 0.66));
+  -webkit-backdrop-filter: var(--glass-blur, blur(14px) saturate(1.2)); backdrop-filter: var(--glass-blur, blur(14px) saturate(1.2));
+}

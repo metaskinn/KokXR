@@ -145,7 +145,8 @@ export interface VaseXrContext {
 
 export interface VaseXr {
   /** Goes to requestSession immediately when called: must be called inside a user gesture. Leaves no trace in the scene if rejected. */
-  start: () => Promise<void>
+  /** `ar`: the same repair game in the real room (passthrough on Quest 3, camera on Android); no floor, stand or background. */
+  start: (mode?: 'vr' | 'ar') => Promise<void>
   frame: () => void
   finish: () => void
   active: () => boolean
@@ -432,8 +433,21 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     return el
   })
 
-  const enter = (fresh: XRSession) => {
+  // AR: the virtual floor, stand and dark background would hide the real room; they come back when the session ends.
+  let ar = false
+  let prevBackground: THREE.Scene['background'] = null
+  const prevClear = new THREE.Color()
+  let prevAlpha = 1
+  const enter = (fresh: XRSession, mode: 'vr' | 'ar') => {
     session = fresh
+    ar = mode === 'ar'
+    if (ar) {
+      prevBackground = scene.background
+      scene.background = null
+      renderer.getClearColor(prevClear)
+      prevAlpha = renderer.getClearAlpha()
+      renderer.setClearColor(0x000000, 0)
+    }
     measure()
     b.xrMode(true, xrShelfLayout(bottomShares, TURNTABLE_TOP))
     fallback.near = camera.near
@@ -443,7 +457,8 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     camera.far = 30
     rig.add(camera)
     camera.add(label.obj)
-    scene.add(rig, environment, panel.obj)
+    scene.add(rig, panel.obj)
+    if (!ar) scene.add(environment)
     drawn = ''
     result = ''
   }
@@ -461,6 +476,11 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
     rig.rotation.set(0, 0, 0)
     environment.removeFromParent()
     panel.obj.removeFromParent()
+    if (ar) {
+      scene.background = prevBackground
+      renderer.setClearColor(prevClear, prevAlpha)
+      ar = false
+    }
     session = null
     settled = false
     b.emphasize([])
@@ -486,14 +506,14 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
   }
 
   return {
-    start: async () => {
+    start: async (mode = 'vr') => {
       if (session || starting) return
       if (!navigator.xr) throw new Error('WebXR not available in this browser')
       starting = true
       const ratio = renderer.getPixelRatio(), size = renderer.getSize(new THREE.Vector2())
       let fresh: XRSession | null = null
       try {
-        fresh = await navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor'] })
+        fresh = await navigator.xr.requestSession(mode === 'ar' ? 'immersive-ar' : 'immersive-vr', { optionalFeatures: ['local-floor'] })
         // The scene may have closed while waiting for permission: do not leave the user in an empty session.
         if (closed) throw new Error('Scene closed')
         await xr.setSession(fresh)
@@ -515,7 +535,7 @@ export function setupVaseXr(b: VaseXrContext): VaseXr {
         starting = false
       }
       xr.setFoveation(1)
-      enter(fresh)
+      enter(fresh, mode)
     },
     frame: () => {
       if (!session) return

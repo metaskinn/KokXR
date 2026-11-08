@@ -18,6 +18,10 @@ export default function VaseWorkshop() {
   const [xrSupport, setXrSupport] = useState(false)
   const [vr, setVr] = useState<'closedState' | 'opening' | 'open'>('closedState')
   const [vrError, setVrError] = useState('')
+  // AR (Quest 3 passthrough, Android Chrome): the same repair game in the real room.
+  const [arSupport, setArSupport] = useState(false)
+  const [xrKind, setXrKind] = useState<'vr' | 'ar'>('vr')
+  const [vrSupport, setVrSupport] = useState(false)
   const vrOpen = vr !== 'closedState'
   const locked = state !== 'ready' || vrOpen
   const stage = useRef<HTMLDivElement>(null), hud = useRef<HTMLDivElement>(null), title = useRef<HTMLParagraphElement>(null)
@@ -29,7 +33,9 @@ export default function VaseWorkshop() {
     const inspect = async () => {
       let support = false
       try { support = !!(await navigator.xr?.isSessionSupported('immersive-vr')) } catch { support = false }
-      if (!cancel) setXrSupport(support)
+      let arOk = false
+      try { arOk = !!(await navigator.xr?.isSessionSupported('immersive-ar')) } catch { arOk = false }
+      if (!cancel) { setXrSupport(support || arOk); setVrSupport(support); setArSupport(arOk) }
     }
     void inspect()
     return () => { cancel = true }
@@ -73,18 +79,19 @@ export default function VaseWorkshop() {
       message: 'Parçaları kırık kenarlara ve desenin devamına göre birleştir. Doğru yere yakın bırakılan parça yerine oturur.' }))
   }
 
-  function startVr() {
+  function startVr(kind: 'vr' | 'ar' = 'vr') {
     if (!scene.current) return
+    setXrKind(kind)
     setVrError('')
     setVr('opening')
     // Keep the user gesture: requestSession runs inside this call, without await.
-    scene.current.startXr().then(() => {
+    scene.current.startXr(kind).then(() => {
       setVr('open')
       // Enters VR with the vase as is: if traceless, shattering is on the panel; a partial repair continues.
-      setGame((previous) => ({ ...previous, selected: null, message: 'Atölye VR gözlüğünde sürüyor.' }))
+      setGame((previous) => ({ ...previous, selected: null, message: kind === 'ar' ? 'Atölye AR\'da, gerçek odanda sürüyor.' : 'Atölye VR gözlüğünde sürüyor.' }))
     }).catch(() => {
       setVr('closedState')
-      setVrError('VR oturumu açılamadı. İzin reddedilmiş veya gözlük bağlı olmayabilir. Atölyeyi bu ekranda kullanmaya devam edebilirsin.')
+      setVrError(kind === 'ar' ? 'AR oturumu açılamadı. Kamera ya da geçiş görüntüsü izni reddedilmiş olabilir. Atölyeyi bu ekranda kullanmaya devam edebilirsin.' : 'VR oturumu açılamadı. İzin reddedilmiş veya gözlük bağlı olmayabilir. Atölyeyi bu ekranda kullanmaya devam edebilirsin.')
     })
   }
 
@@ -105,8 +112,12 @@ export default function VaseWorkshop() {
     if (moves[e.key]) { e.preventDefault(); moves[e.key]() }
   }
   const vrButton = xrSupport && (vr === 'open'
-    ? <button type="button" className="hud-primary" onClick={() => scene.current?.endXr()}><UiIcon name="exit" /><span>VR'dan çık</span></button>
-    : <button type="button" className="hud-primary" disabled={state !== 'ready' || vr === 'opening'} onClick={startVr}><UiIcon name="vr" /><span>VR'da aç</span></button>)
+    ? <button type="button" className="hud-primary" onClick={() => scene.current?.endXr()}><UiIcon name="exit" /><span>{xrKind === 'ar' ? "AR'dan çık" : "VR'dan çık"}</span></button>
+    : <>
+      {/* AR is the bright action where it exists (Quest 3, Android); VR stays next to it. */}
+      {arSupport && <button type="button" className="hud-primary" disabled={state !== 'ready' || vr === 'opening'} onClick={() => startVr('ar')}><UiIcon name="cube" /><span>AR'da aç</span></button>}
+      {vrSupport && <button type="button" className={arSupport ? undefined : 'hud-primary'} disabled={state !== 'ready' || vr === 'opening'} onClick={() => startVr('vr')}><UiIcon name="vr" /><span>VR'da aç</span></button>}
+    </>)
 
   return <article className="page workshop vase-workshop">
     <header className="workshop-head">

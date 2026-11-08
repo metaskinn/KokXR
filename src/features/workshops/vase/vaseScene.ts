@@ -16,7 +16,7 @@ export interface VaseScene {
   /** Frames the vase inside the stage part that the HUD does not cover (CSS pixels from each edge). */
   setSafeInsets: (insets: { top: number; right: number; bottom: number; left: number }) => void
   /** Called inside a user gesture: no await before requestSession. */
-  startXr: () => Promise<void>
+  startXr: (mode?: 'vr' | 'ar') => Promise<void>
   endXr: () => void
   clear: () => void
 }
@@ -320,7 +320,7 @@ export async function createVaseScene(area: HTMLElement, notify: Notices): Promi
   return {
     update, reset, cancel,
     setSafeInsets: (insets) => { safe = { ...insets }; area.dataset.safe = `${insets.top},${insets.right},${insets.bottom},${insets.left}`; resize() },
-    startXr: () => xr.start(),
+    startXr: (mode) => xr.start(mode),
     endXr: () => xr.finish(),
     dragPiece: (x, y) => {
       const id = state.selected
